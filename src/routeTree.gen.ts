@@ -12,10 +12,15 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as DevelopersRouteImport } from './routes/developers'
+import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as AreasRouteImport } from './routes/areas'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DashboardIndexRouteImport } from './routes/dashboard.index'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as DevelopersSlugRouteImport } from './routes/developers.$slug'
+import { Route as DashboardLeadsRouteImport } from './routes/dashboard.leads'
+import { Route as DashboardFavoritesRouteImport } from './routes/dashboard.favorites'
+import { Route as DashboardCompareRouteImport } from './routes/dashboard.compare'
 import { Route as AreasSlugRouteImport } from './routes/areas.$slug'
 
 const ProjectsRoute = ProjectsRouteImport.update({
@@ -33,6 +38,11 @@ const DevelopersRoute = DevelopersRouteImport.update({
   path: '/developers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AreasRoute = AreasRouteImport.update({
   id: '/areas',
   path: '/areas',
@@ -42,6 +52,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardIndexRoute = DashboardIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DashboardRoute,
 } as any)
 const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   id: '/$slug',
@@ -53,6 +68,21 @@ const DevelopersSlugRoute = DevelopersSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => DevelopersRoute,
 } as any)
+const DashboardLeadsRoute = DashboardLeadsRouteImport.update({
+  id: '/leads',
+  path: '/leads',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardFavoritesRoute = DashboardFavoritesRouteImport.update({
+  id: '/favorites',
+  path: '/favorites',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardCompareRoute = DashboardCompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const AreasSlugRoute = AreasSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -62,12 +92,17 @@ const AreasSlugRoute = AreasSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/areas': typeof AreasRouteWithChildren
+  '/dashboard': typeof DashboardRouteWithChildren
   '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/areas/$slug': typeof AreasSlugRoute
+  '/dashboard/compare': typeof DashboardCompareRoute
+  '/dashboard/favorites': typeof DashboardFavoritesRoute
+  '/dashboard/leads': typeof DashboardLeadsRoute
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -76,31 +111,45 @@ export interface FileRoutesByTo {
   '/map': typeof MapRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/areas/$slug': typeof AreasSlugRoute
+  '/dashboard/compare': typeof DashboardCompareRoute
+  '/dashboard/favorites': typeof DashboardFavoritesRoute
+  '/dashboard/leads': typeof DashboardLeadsRoute
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/dashboard': typeof DashboardIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/areas': typeof AreasRouteWithChildren
+  '/dashboard': typeof DashboardRouteWithChildren
   '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/areas/$slug': typeof AreasSlugRoute
+  '/dashboard/compare': typeof DashboardCompareRoute
+  '/dashboard/favorites': typeof DashboardFavoritesRoute
+  '/dashboard/leads': typeof DashboardLeadsRoute
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/areas'
+    | '/dashboard'
     | '/developers'
     | '/map'
     | '/projects'
     | '/areas/$slug'
+    | '/dashboard/compare'
+    | '/dashboard/favorites'
+    | '/dashboard/leads'
     | '/developers/$slug'
     | '/projects/$slug'
+    | '/dashboard/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -109,23 +158,33 @@ export interface FileRouteTypes {
     | '/map'
     | '/projects'
     | '/areas/$slug'
+    | '/dashboard/compare'
+    | '/dashboard/favorites'
+    | '/dashboard/leads'
     | '/developers/$slug'
     | '/projects/$slug'
+    | '/dashboard'
   id:
     | '__root__'
     | '/'
     | '/areas'
+    | '/dashboard'
     | '/developers'
     | '/map'
     | '/projects'
     | '/areas/$slug'
+    | '/dashboard/compare'
+    | '/dashboard/favorites'
+    | '/dashboard/leads'
     | '/developers/$slug'
     | '/projects/$slug'
+    | '/dashboard/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AreasRoute: typeof AreasRouteWithChildren
+  DashboardRoute: typeof DashboardRouteWithChildren
   DevelopersRoute: typeof DevelopersRouteWithChildren
   MapRoute: typeof MapRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
@@ -154,6 +213,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DevelopersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/areas': {
       id: '/areas'
       path: '/areas'
@@ -168,6 +234,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dashboard/': {
+      id: '/dashboard/'
+      path: '/'
+      fullPath: '/dashboard/'
+      preLoaderRoute: typeof DashboardIndexRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/projects/$slug': {
       id: '/projects/$slug'
       path: '/$slug'
@@ -181,6 +254,27 @@ declare module '@tanstack/react-router' {
       fullPath: '/developers/$slug'
       preLoaderRoute: typeof DevelopersSlugRouteImport
       parentRoute: typeof DevelopersRoute
+    }
+    '/dashboard/leads': {
+      id: '/dashboard/leads'
+      path: '/leads'
+      fullPath: '/dashboard/leads'
+      preLoaderRoute: typeof DashboardLeadsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/favorites': {
+      id: '/dashboard/favorites'
+      path: '/favorites'
+      fullPath: '/dashboard/favorites'
+      preLoaderRoute: typeof DashboardFavoritesRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/compare': {
+      id: '/dashboard/compare'
+      path: '/compare'
+      fullPath: '/dashboard/compare'
+      preLoaderRoute: typeof DashboardCompareRouteImport
+      parentRoute: typeof DashboardRoute
     }
     '/areas/$slug': {
       id: '/areas/$slug'
@@ -201,6 +295,24 @@ const AreasRouteChildren: AreasRouteChildren = {
 }
 
 const AreasRouteWithChildren = AreasRoute._addFileChildren(AreasRouteChildren)
+
+interface DashboardRouteChildren {
+  DashboardCompareRoute: typeof DashboardCompareRoute
+  DashboardFavoritesRoute: typeof DashboardFavoritesRoute
+  DashboardLeadsRoute: typeof DashboardLeadsRoute
+  DashboardIndexRoute: typeof DashboardIndexRoute
+}
+
+const DashboardRouteChildren: DashboardRouteChildren = {
+  DashboardCompareRoute: DashboardCompareRoute,
+  DashboardFavoritesRoute: DashboardFavoritesRoute,
+  DashboardLeadsRoute: DashboardLeadsRoute,
+  DashboardIndexRoute: DashboardIndexRoute,
+}
+
+const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
+  DashboardRouteChildren,
+)
 
 interface DevelopersRouteChildren {
   DevelopersSlugRoute: typeof DevelopersSlugRoute
@@ -229,6 +341,7 @@ const ProjectsRouteWithChildren = ProjectsRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AreasRoute: AreasRouteWithChildren,
+  DashboardRoute: DashboardRouteWithChildren,
   DevelopersRoute: DevelopersRouteWithChildren,
   MapRoute: MapRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
