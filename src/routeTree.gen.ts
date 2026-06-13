@@ -11,8 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MapRouteImport } from './routes/map'
+import { Route as DevelopersRouteImport } from './routes/developers'
+import { Route as AreasRouteImport } from './routes/areas'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
+import { Route as DevelopersSlugRouteImport } from './routes/developers.$slug'
+import { Route as AreasSlugRouteImport } from './routes/areas.$slug'
 
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
@@ -22,6 +26,16 @@ const ProjectsRoute = ProjectsRouteImport.update({
 const MapRoute = MapRouteImport.update({
   id: '/map',
   path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevelopersRoute = DevelopersRouteImport.update({
+  id: '/developers',
+  path: '/developers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreasRoute = AreasRouteImport.update({
+  id: '/areas',
+  path: '/areas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -34,36 +48,85 @@ const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => ProjectsRoute,
 } as any)
+const DevelopersSlugRoute = DevelopersSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => DevelopersRoute,
+} as any)
+const AreasSlugRoute = AreasSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => AreasRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/areas': typeof AreasRouteWithChildren
+  '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
   '/projects': typeof ProjectsRouteWithChildren
+  '/areas/$slug': typeof AreasSlugRoute
+  '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/areas': typeof AreasRouteWithChildren
+  '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
   '/projects': typeof ProjectsRouteWithChildren
+  '/areas/$slug': typeof AreasSlugRoute
+  '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/areas': typeof AreasRouteWithChildren
+  '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
   '/projects': typeof ProjectsRouteWithChildren
+  '/areas/$slug': typeof AreasSlugRoute
+  '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/map' | '/projects' | '/projects/$slug'
+  fullPaths:
+    | '/'
+    | '/areas'
+    | '/developers'
+    | '/map'
+    | '/projects'
+    | '/areas/$slug'
+    | '/developers/$slug'
+    | '/projects/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/map' | '/projects' | '/projects/$slug'
-  id: '__root__' | '/' | '/map' | '/projects' | '/projects/$slug'
+  to:
+    | '/'
+    | '/areas'
+    | '/developers'
+    | '/map'
+    | '/projects'
+    | '/areas/$slug'
+    | '/developers/$slug'
+    | '/projects/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/areas'
+    | '/developers'
+    | '/map'
+    | '/projects'
+    | '/areas/$slug'
+    | '/developers/$slug'
+    | '/projects/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AreasRoute: typeof AreasRouteWithChildren
+  DevelopersRoute: typeof DevelopersRouteWithChildren
   MapRoute: typeof MapRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
 }
@@ -84,6 +147,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MapRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/developers': {
+      id: '/developers'
+      path: '/developers'
+      fullPath: '/developers'
+      preLoaderRoute: typeof DevelopersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas': {
+      id: '/areas'
+      path: '/areas'
+      fullPath: '/areas'
+      preLoaderRoute: typeof AreasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -98,8 +175,44 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsSlugRouteImport
       parentRoute: typeof ProjectsRoute
     }
+    '/developers/$slug': {
+      id: '/developers/$slug'
+      path: '/$slug'
+      fullPath: '/developers/$slug'
+      preLoaderRoute: typeof DevelopersSlugRouteImport
+      parentRoute: typeof DevelopersRoute
+    }
+    '/areas/$slug': {
+      id: '/areas/$slug'
+      path: '/$slug'
+      fullPath: '/areas/$slug'
+      preLoaderRoute: typeof AreasSlugRouteImport
+      parentRoute: typeof AreasRoute
+    }
   }
 }
+
+interface AreasRouteChildren {
+  AreasSlugRoute: typeof AreasSlugRoute
+}
+
+const AreasRouteChildren: AreasRouteChildren = {
+  AreasSlugRoute: AreasSlugRoute,
+}
+
+const AreasRouteWithChildren = AreasRoute._addFileChildren(AreasRouteChildren)
+
+interface DevelopersRouteChildren {
+  DevelopersSlugRoute: typeof DevelopersSlugRoute
+}
+
+const DevelopersRouteChildren: DevelopersRouteChildren = {
+  DevelopersSlugRoute: DevelopersSlugRoute,
+}
+
+const DevelopersRouteWithChildren = DevelopersRoute._addFileChildren(
+  DevelopersRouteChildren,
+)
 
 interface ProjectsRouteChildren {
   ProjectsSlugRoute: typeof ProjectsSlugRoute
@@ -115,6 +228,8 @@ const ProjectsRouteWithChildren = ProjectsRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AreasRoute: AreasRouteWithChildren,
+  DevelopersRoute: DevelopersRouteWithChildren,
   MapRoute: MapRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
 }

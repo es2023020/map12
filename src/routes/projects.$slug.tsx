@@ -55,7 +55,7 @@ function CompoundPage() {
       <section className="mx-auto max-w-7xl px-4 pt-6 lg:px-8">
         <div className="grid h-[420px] gap-2 overflow-hidden rounded-3xl md:grid-cols-4 md:grid-rows-2">
           <img src={c.gallery[0] ?? c.hero} alt={c.name} className="h-full w-full object-cover md:col-span-2 md:row-span-2" />
-          {c.gallery.slice(1, 5).map((g, i) => (
+          {c.gallery.slice(1, 5).map((g: string, i: number) => (
             <img key={i} src={g} alt="" className="h-full w-full object-cover" />
           ))}
         </div>
@@ -86,7 +86,7 @@ function CompoundPage() {
           {/* Unit types */}
           <Section title="Unit types">
             <div className="flex flex-wrap gap-2">
-              {c.types.map((t) => (
+              {c.types.map((t: string) => (
                 <span key={t} className="rounded-full border border-border bg-card px-3 py-1.5 text-sm">{t}</span>
               ))}
             </div>
@@ -95,7 +95,7 @@ function CompoundPage() {
           {/* Amenities */}
           <Section title="Amenities">
             <ul className="grid gap-2 sm:grid-cols-2">
-              {c.amenities.map((a) => (
+              {c.amenities.map((a: string) => (
                 <li key={a} className="inline-flex items-center gap-2 text-sm text-foreground/80">
                   <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/15 text-accent">
                     <Check className="h-3 w-3" />
