@@ -32,7 +32,7 @@ export function Navbar() {
         </Link>
         <nav className="ml-2 hidden items-center gap-1 md:flex">
           {links.map((l) => {
-            const active = pathname === l.to || (l.to !== "/" && pathname.startsWith(l.to));
+            const active = pathname === l.to || pathname.startsWith(l.to + "/");
             return (
               <Link
                 key={l.to}
