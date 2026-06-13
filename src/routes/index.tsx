@@ -7,7 +7,7 @@ import { compounds } from "@/data/compounds";
 import { areas } from "@/data/areas";
 import { developers } from "@/data/developers";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Building2, Users, Sparkles, Search } from "lucide-react";
+import { ArrowRight, MapPin, Building2, Users, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
