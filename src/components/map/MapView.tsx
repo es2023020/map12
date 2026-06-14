@@ -1,20 +1,32 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap, ZoomControl } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, useMap, ZoomControl } from "react-leaflet";
 import L from "leaflet";
-import { Link } from "@tanstack/react-router";
 import type { Compound } from "@/data/compounds";
-import { areas } from "@/data/areas";
+import { areas, areaColor } from "@/data/areas";
+import { landmarks as allLandmarks, landmarkColors, type Landmark } from "@/data/landmarks";
 
-function makeIcon(c: Compound) {
-  const cls = c.beachfront ? "pt-pin beach" : "pt-pin";
-  const html = `<div class="${cls}"><span class="dot"></span><span>${c.name}</span></div>`;
-  return L.divIcon({ html, className: "", iconSize: [10, 10], iconAnchor: [5, 5] });
+function projectIcon(c: Compound, active: boolean) {
+  const color = areaColor(c.area);
+  const star = c.flagship ? `<span class="pt-dot-star">★</span>` : "";
+  const html = `<div class="pt-dot-wrap"><div class="pt-dot ${active ? "active" : ""}" style="background:${color}"></div>${star}</div>`;
+  return L.divIcon({
+    html,
+    className: "pt-dot-icon",
+    iconSize: active ? [20, 20] : [14, 14],
+    iconAnchor: active ? [10, 10] : [7, 7],
+  });
+}
+
+function landmarkIcon(l: Landmark) {
+  const color = landmarkColors[l.category];
+  const html = `<div class="pt-lm"><span class="pt-lm-dot" style="background:${color}"></span><span class="pt-lm-label">${l.name}</span></div>`;
+  return L.divIcon({ html, className: "pt-lm-icon", iconSize: [10, 10], iconAnchor: [5, 5] });
 }
 
 function FlyTo({ center, zoom }: { center?: [number, number]; zoom?: number }) {
   const map = useMap();
   useEffect(() => {
-    if (center) map.flyTo(center, zoom ?? map.getZoom(), { duration: 0.9 });
+    if (center) map.flyTo(center, zoom ?? map.getZoom(), { duration: 1.0 });
   }, [center?.[0], center?.[1], zoom]); // eslint-disable-line
   return null;
 }
@@ -24,13 +36,33 @@ type Props = {
   initialCenter?: [number, number];
   initialZoom?: number;
   focus?: Compound | null;
+  activeSlug?: string | null;
+  onSelect?: (slug: string) => void;
+  showLandmarks?: boolean;
+  landmarks?: Landmark[];
   className?: string;
 };
 
-export function MapView({ compounds, initialCenter = [30.95, 28.8], initialZoom = 9, focus, className }: Props) {
+export function MapView({
+  compounds,
+  initialCenter = [29.5, 31.0],
+  initialZoom = 6,
+  focus,
+  activeSlug,
+  onSelect,
+  showLandmarks = true,
+  landmarks: lmProp,
+  className,
+}: Props) {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
-  const icons = useMemo(() => new Map(compounds.map((c) => [c.slug, makeIcon(c)])), [compounds]);
+  const activeId = activeSlug ?? focus?.slug ?? null;
+  const icons = useMemo(
+    () => new Map(compounds.map((c) => [c.slug, projectIcon(c, c.slug === activeId)])),
+    [compounds, activeId],
+  );
+  const lmList = lmProp ?? allLandmarks;
+  const lmIcons = useMemo(() => new Map(lmList.map((l) => [l.id, landmarkIcon(l)])), [lmList]);
   const containerRef = useRef<HTMLDivElement>(null);
 
   if (!ready) {
@@ -41,11 +73,13 @@ export function MapView({ compounds, initialCenter = [30.95, 28.8], initialZoom 
     );
   }
 
+  const focused = focus ?? (activeId ? compounds.find((c) => c.slug === activeId) ?? null : null);
+
   return (
     <div className={className}>
       <MapContainer
-        center={focus ? [focus.lat, focus.lng] : initialCenter}
-        zoom={focus ? 13 : initialZoom}
+        center={focused ? [focused.lat, focused.lng] : initialCenter}
+        zoom={focused ? Math.max(13, initialZoom) : initialZoom}
         zoomControl={false}
         scrollWheelZoom
         preferCanvas
@@ -54,37 +88,28 @@ export function MapView({ compounds, initialCenter = [30.95, 28.8], initialZoom 
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> · &copy; <a href="https://carto.com/">CARTO</a>'
           url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+          subdomains={["a", "b", "c", "d"]}
           maxZoom={19}
         />
         <ZoomControl position="bottomright" />
-        <FlyTo center={focus ? [focus.lat, focus.lng] : undefined} zoom={focus ? 14 : undefined} />
-        {compounds.map((c) => (
-          <Marker key={c.slug} position={[c.lat, c.lng]} icon={icons.get(c.slug)!}>
-            <Popup closeButton={false}>
-              <div className="w-full">
-                <div className="relative h-28 w-full overflow-hidden">
-                  <img src={c.hero} alt={c.name} className="h-full w-full object-cover" />
-                  {c.beachfront && (
-                    <span className="absolute left-2 top-2 rounded-full bg-sunset px-2 py-0.5 text-[10px] font-semibold text-white">Beachfront</span>
-                  )}
-                </div>
-                <div className="p-3">
-                  <div className="font-display text-base font-semibold leading-tight text-primary">{c.name}</div>
-                  <div className="mt-0.5 text-[11px] text-muted-foreground">
-                    {c.developer} {c.km ? `· km ${c.km}` : ""}
-                  </div>
-                  <div className="mt-2 flex items-center justify-between">
-                    <span className="font-display text-sm font-semibold text-primary">From EGP {c.priceFrom}M</span>
-                    <Link to="/projects/$slug" params={{ slug: c.slug }}
-                      className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-medium text-primary-foreground hover:bg-primary/90">
-                      View
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
+        <FlyTo center={focused ? [focused.lat, focused.lng] : undefined} zoom={focused ? Math.max(14, initialZoom) : undefined} />
+        {showLandmarks && lmList.map((l) => {
+          if (Number.isNaN(l.lat) || Number.isNaN(l.lng)) return null;
+          return (
+            <Marker key={l.id} position={[l.lat, l.lng]} icon={lmIcons.get(l.id)!} interactive={false} keyboard={false} />
+          );
+        })}
+        {compounds.map((c) => {
+          if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;
+          return (
+            <Marker
+              key={c.slug}
+              position={[c.lat, c.lng]}
+              icon={icons.get(c.slug)!}
+              eventHandlers={onSelect ? { click: () => onSelect(c.slug) } : undefined}
+            />
+          );
+        })}
       </MapContainer>
     </div>
   );
