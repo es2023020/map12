@@ -191,3 +191,40 @@
 .pt-pin:hover { transform: scale(1.08); }
 .pt-pin .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--color-accent); }
 .pt-pin.beach .dot { background: var(--color-sunset); }
+
+/* Property Atlas tile filter — quiet basemap, loud data */
+.leaflet-tile-pane {
+  filter: grayscale(0.4) contrast(0.95) brightness(1.04) saturate(0.85);
+}
+
+/* Project dot pins */
+.pt-dot-icon { background: transparent !important; border: 0 !important; }
+.pt-dot-wrap { position: relative; width: 100%; height: 100%; }
+.pt-dot {
+  width: 14px; height: 14px; border-radius: 999px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px oklch(0.18 0.04 240 / 0.45);
+  transition: transform .15s ease;
+  cursor: pointer;
+}
+.pt-dot:hover { transform: scale(1.4); }
+.pt-dot.active {
+  width: 20px; height: 20px;
+  box-shadow: 0 0 0 4px oklch(0.78 0.13 78 / 0.35), 0 1px 3px oklch(0.18 0.04 240 / 0.5);
+  transform: none;
+}
+.pt-dot-star {
+  position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+  font-size: 11px; color: #CA8A04; text-shadow: 0 0 2px #fff, 0 0 2px #fff;
+  pointer-events: none;
+}
+
+/* Landmark layer — non-interactive labels */
+.pt-lm-icon { background: transparent !important; border: 0 !important; pointer-events: none; }
+.pt-lm { display: flex; align-items: center; gap: 4px; pointer-events: none; white-space: nowrap; transform: translate(-4px, -4px); }
+.pt-lm-dot { width: 6px; height: 6px; border-radius: 999px; border: 1.5px solid #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.3); flex-shrink: 0; }
+.pt-lm-label {
+  font: 600 10px/1.1 var(--font-sans);
+  color: #1f3a5f;
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}

@@ -46,7 +46,7 @@ function AreaPage() {
         <p className="max-w-3xl text-foreground/80">{a.blurb}</p>
 
         <div className="mt-8 h-[480px] overflow-hidden rounded-3xl border border-border">
-          <MapClient compounds={list} initialCenter={a.center} initialZoom={a.zoom} className="h-full w-full" />
+          <MapClient compounds={list} initialCenter={a.center} initialZoom={a.zoom} showLandmarks className="h-full w-full" />
         </div>
 
         <h2 className="mt-12 font-display text-2xl font-semibold text-primary">All {list.length} projects in {a.name}</h2>

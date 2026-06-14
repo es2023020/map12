@@ -118,7 +118,7 @@ function CompoundPage() {
           {/* Mini-map */}
           <Section title="Location">
             <div className="h-[320px] overflow-hidden rounded-2xl border border-border">
-              <MapClient compounds={[c]} focus={c} className="h-full w-full" />
+              <MapClient compounds={[c]} focus={c} showLandmarks={false} className="h-full w-full" />
             </div>
             <div className="mt-2 text-xs text-muted-foreground inline-flex items-center gap-1">
               <MapPin className="h-3 w-3" /> {area?.name}{c.km ? ` · km ${c.km}` : ""} · {c.lat.toFixed(4)}, {c.lng.toFixed(4)}
