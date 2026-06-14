@@ -21,6 +21,10 @@ export type Compound = {
   paymentPlan: string;
   areaSize?: string; // total feddan
   unitSizes?: string;
+  city?: string;
+  type?: "Residential" | "Mixed-use" | "Resort" | "Coastal";
+  flagship?: boolean;
+  highlights?: string[];
 };
 
 const beachImgs = [
