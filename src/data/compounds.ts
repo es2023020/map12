@@ -181,6 +181,59 @@ const cairoRaw: Array<{
   { name: "O West", area: "sheikh-zayed", lat: 30.055, lng: 30.910, developer: "Orascom Development", price: 13, year: 2026 },
 ];
 
+// New areas: 6th October, NAC, Mostakbal, Heliopolis, Sokhna, Red Sea, South Sinai, Fayoum
+const extraRaw: Array<{
+  name: string; area: string; lat: number; lng: number; developer: string; price: number; year: number; beach?: boolean; type?: Compound["type"];
+}> = [
+  // 6TH OCTOBER
+  { name: "Palm Hills October", area: "6th-october", lat: 29.965, lng: 30.940, developer: "Palm Hills Developments", price: 9, year: 2024 },
+  { name: "Mountain View iCity October", area: "6th-october", lat: 29.985, lng: 30.910, developer: "Mountain View", price: 11, year: 2026 },
+  { name: "Zayed 2000", area: "6th-october", lat: 29.978, lng: 30.955, developer: "Wadi Degla", price: 7, year: 2023 },
+  { name: "Sun Capital", area: "6th-october", lat: 29.940, lng: 30.890, developer: "Arabia Holding", price: 6, year: 2025 },
+  { name: "Badya", area: "6th-october", lat: 29.910, lng: 30.880, developer: "Palm Hills Developments", price: 8, year: 2027, type: "Mixed-use" },
+  // NEW ADMINISTRATIVE CAPITAL
+  { name: "Il Bosco City", area: "new-administrative-capital", lat: 30.020, lng: 31.745, developer: "Misr Italia", price: 9, year: 2026 },
+  { name: "La Verde", area: "new-administrative-capital", lat: 30.015, lng: 31.730, developer: "La Verde Developments", price: 8, year: 2026 },
+  { name: "Anakaji", area: "new-administrative-capital", lat: 30.030, lng: 31.760, developer: "Misr Italia", price: 10, year: 2027 },
+  { name: "Capital Heights", area: "new-administrative-capital", lat: 30.025, lng: 31.720, developer: "Safwa Urban Development", price: 7, year: 2026 },
+  { name: "City Oval", area: "new-administrative-capital", lat: 30.010, lng: 31.755, developer: "Mountain View", price: 9, year: 2027 },
+  { name: "Iconic Tower District", area: "new-administrative-capital", lat: 30.025, lng: 31.745, developer: "ACUD", price: 14, year: 2026, type: "Mixed-use" },
+  // MOSTAKBAL CITY
+  { name: "Bloomfields", area: "mostakbal-city", lat: 30.078, lng: 31.665, developer: "Tatweer Misr", price: 9, year: 2027 },
+  { name: "Mountain View Aliva", area: "mostakbal-city", lat: 30.072, lng: 31.650, developer: "Mountain View", price: 10, year: 2027 },
+  { name: "Cleo Mostakbal", area: "mostakbal-city", lat: 30.080, lng: 31.672, developer: "Hyde Park", price: 9, year: 2027 },
+  { name: "La Vista City", area: "mostakbal-city", lat: 30.085, lng: 31.658, developer: "La Vista Developments", price: 8, year: 2026 },
+  // HELIOPOLIS
+  { name: "Heliopark", area: "heliopolis", lat: 30.103, lng: 31.355, developer: "Heliopolis Company", price: 7, year: 2025 },
+  { name: "New Heliopolis", area: "heliopolis", lat: 30.140, lng: 31.420, developer: "New Heliopolis", price: 6, year: 2024 },
+  { name: "Sheraton Residences", area: "heliopolis", lat: 30.095, lng: 31.345, developer: "Tabarak Holding", price: 8, year: 2025 },
+  // AIN SOKHNA
+  { name: "Telal Sokhna", area: "ain-sokhna", lat: 29.605, lng: 32.335, developer: "Roya Developments", price: 7, year: 2025, beach: true, type: "Resort" },
+  { name: "IL Monte Galala", area: "ain-sokhna", lat: 29.580, lng: 32.350, developer: "Tatweer Misr", price: 9, year: 2026, beach: true, type: "Resort" },
+  { name: "Stella di Mare", area: "ain-sokhna", lat: 29.615, lng: 32.320, developer: "Talaat Moustafa Group", price: 8, year: 2024, beach: true, type: "Resort" },
+  { name: "Murano", area: "ain-sokhna", lat: 29.590, lng: 32.340, developer: "M Squared", price: 6, year: 2026, beach: true, type: "Resort" },
+  // RED SEA
+  { name: "El Gouna", area: "red-sea", lat: 27.395, lng: 33.677, developer: "Orascom Development", price: 18, year: 2024, beach: true, type: "Resort" },
+  { name: "Makadi Heights", area: "red-sea", lat: 26.978, lng: 33.880, developer: "Orascom Development", price: 9, year: 2026, beach: true, type: "Resort" },
+  { name: "Soma Bay", area: "red-sea", lat: 26.840, lng: 33.985, developer: "Abu Soma Development", price: 14, year: 2026, beach: true, type: "Resort" },
+  { name: "Sahl Hasheesh", area: "red-sea", lat: 27.080, lng: 33.890, developer: "ERC Egypt", price: 12, year: 2025, beach: true, type: "Resort" },
+  // SOUTH SINAI
+  { name: "Soma Sharm", area: "south-sinai", lat: 27.870, lng: 34.300, developer: "Travco", price: 11, year: 2025, beach: true, type: "Resort" },
+  { name: "Nabq Bay Residences", area: "south-sinai", lat: 28.060, lng: 34.420, developer: "Pickalbatros", price: 7, year: 2024, beach: true, type: "Resort" },
+  { name: "Ras Sudr Riviera", area: "south-sinai", lat: 29.580, lng: 32.700, developer: "Maven Developments", price: 5, year: 2026, beach: true, type: "Resort" },
+  // FAYOUM
+  { name: "Byoum Lakeside", area: "fayoum", lat: 29.470, lng: 30.635, developer: "Tamayoz Developments", price: 5, year: 2025, type: "Resort" },
+  { name: "Lazib Inn Tunis", area: "fayoum", lat: 29.385, lng: 30.405, developer: "Lazib", price: 4, year: 2024, type: "Resort" },
+];
+
+// Flagship slugs — surfaced by the agency as priorities.
+const FLAGSHIPS = new Set([
+  "marassi", "hacienda-bay", "mivida", "mountain-view-icity-new-cairo",
+  "soul", "jefaira", "almaza-bay", "hyde-park-new-cairo", "el-gouna",
+  "silversands", "alam-al-roum", "mountain-view-ras-el-hekma", "june",
+  "il-monte-galala", "il-bosco-city", "bloomfields", "o-west", "belle-vie",
+]);
+
 const allAmenities = [
   "Private Beach", "Crystal Lagoon", "Marina", "18-Hole Golf", "Clubhouse",
   "Kids Area", "Gym & Spa", "Beach Bar", "Co-working", "24/7 Security",
