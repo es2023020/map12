@@ -319,7 +319,41 @@ const cairoCompounds: Compound[] = cairoRaw.map((c, idx) => {
   };
 });
 
-export const compounds: Compound[] = [...sahelCompounds, ...cairoCompounds];
+const extraCompounds: Compound[] = extraRaw.map((c, idx) => {
+  const slug = slugify(c.name);
+  const beach = !!c.beach;
+  return {
+    slug,
+    name: c.name,
+    area: c.area,
+    lat: c.lat,
+    lng: c.lng,
+    developer: c.developer,
+    developerSlug: slugify(c.developer),
+    priceFrom: c.price,
+    deliveryYear: c.year,
+    status: c.year <= 2024 ? "Delivered" : c.year <= 2026 ? "Under Construction" : "Off-Plan",
+    beachfront: beach,
+    types: typesFor(c.price, beach),
+    amenities: buildAmenities(idx + 23, beach),
+    hero: pick(beach ? beachImgs : cityImgs, idx + 4),
+    gallery: gallery(idx + 4, beach),
+    blurb: `${c.name} by ${c.developer} — a ${c.type ?? "Residential"} community offering refined living with full amenities and strong location advantages.`,
+    paymentPlan: paymentPlan(c.price),
+    areaSize: `${Math.round(60 + (idx * 29) % 380)} feddan`,
+    unitSizes: `${Math.round(95 + (idx * 13) % 70)}–${Math.round(250 + (idx * 23) % 240)} m²`,
+    type: c.type ?? (beach ? "Resort" : "Residential"),
+  };
+});
+
+const merged: Compound[] = [...sahelCompounds, ...cairoCompounds, ...extraCompounds];
+
+export const compounds: Compound[] = merged.map((c) => ({
+  ...c,
+  type: c.type ?? (c.beachfront ? "Coastal" : "Residential"),
+  flagship: FLAGSHIPS.has(c.slug) || undefined,
+  highlights: c.amenities,
+}));
 export const compoundBySlug = (slug: string) => compounds.find((c) => c.slug === slug);
 export const compoundsByArea = (area: string) => compounds.filter((c) => c.area === area);
 export const compoundsByDeveloper = (devSlug: string) =>
