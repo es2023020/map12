@@ -165,7 +165,6 @@ const cairoRaw: Array<{
   { name: "Zed East", area: "new-cairo", lat: 30.045, lng: 31.498, developer: "Ora Developers", price: 13, year: 2027 },
   { name: "Taj City", area: "new-cairo", lat: 30.063, lng: 31.408, developer: "Madinet Masr", price: 8, year: 2026 },
   { name: "Sodic East", area: "new-cairo", lat: 30.080, lng: 31.660, developer: "SODIC", price: 10, year: 2027 },
-  { name: "Bloomfields", area: "new-cairo", lat: 30.060, lng: 31.660, developer: "Tatweer Misr", price: 9, year: 2027 },
   // SHEIKH ZAYED
   { name: "Beverly Hills", area: "sheikh-zayed", lat: 30.050, lng: 30.970, developer: "SODIC", price: 14, year: 2010 },
   { name: "Allegria", area: "sheikh-zayed", lat: 30.020, lng: 30.965, developer: "SODIC", price: 22, year: 2014 },
