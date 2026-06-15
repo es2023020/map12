@@ -357,7 +357,32 @@ const extraCompounds: Compound[] = extraRaw.map((c, idx) => {
   };
 });
 
-const merged: Compound[] = [...sahelCompounds, ...cairoCompounds, ...extraCompounds];
+const newZayedCompounds: Compound[] = newZayedRaw.map((c, idx) => {
+  const slug = slugify(c.name);
+  return {
+    slug,
+    name: c.name,
+    area: c.area,
+    lat: c.lat,
+    lng: c.lng,
+    developer: c.developer,
+    developerSlug: slugify(c.developer),
+    priceFrom: c.price,
+    deliveryYear: c.year,
+    status: c.year <= 2024 ? "Delivered" : c.year <= 2026 ? "Under Construction" : "Off-Plan",
+    beachfront: false,
+    types: typesFor(c.price, false),
+    amenities: buildAmenities(idx + 51, false),
+    hero: pick(cityImgs, idx + 1),
+    gallery: gallery(idx + 1, false),
+    blurb: `${c.name} by ${c.developer} — a flagship master-plan in New Sheikh Zayed offering large-plot villas, lower density, and the latest generation of West-Cairo design language.`,
+    paymentPlan: paymentPlan(c.price),
+    areaSize: `${Math.round(60 + (idx * 41) % 380)} feddan`,
+    unitSizes: `${Math.round(120 + (idx * 13) % 80)}–${Math.round(320 + (idx * 19) % 240)} m²`,
+  };
+});
+
+const merged: Compound[] = [...sahelCompounds, ...cairoCompounds, ...extraCompounds, ...newZayedCompounds];
 
 export const compounds: Compound[] = merged.map((c) => ({
   ...c,
