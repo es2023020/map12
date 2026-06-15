@@ -1,12 +1,18 @@
 import { Link } from "@tanstack/react-router";
+import { useStore } from "@/lib/store";
+import logoAsset from "@/assets/proptrack-logo.png.asset.json";
 
 export function Footer() {
+  const user = useStore((s) => s.user);
   return (
     <footer className="mt-16 border-t border-border/60 bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 lg:grid-cols-4 lg:px-8">
         <div>
-          <div className="font-display text-2xl font-semibold">
-            Prop<span className="text-accent">Track</span>
+          <div className="flex items-center gap-3">
+            <img src={logoAsset.url} alt="PropTrack" className="h-10 w-10 object-contain" />
+            <div className="font-display text-2xl font-semibold">
+              Prop<span className="text-accent">Track</span>
+            </div>
           </div>
           <p className="mt-3 max-w-xs text-sm text-primary-foreground/70">
             Real-estate intelligence for Egyptian brokers. Every compound, on one map.
@@ -18,14 +24,21 @@ export function Footer() {
           { to: "/areas", label: "Areas" },
           { to: "/developers", label: "Developers" },
         ]} />
-        <FooterCol title="For Brokers" links={[
-          { to: "/dashboard", label: "Dashboard" },
-          { to: "/dashboard/leads", label: "Leads" },
-          { to: "/dashboard/favorites", label: "Favorites" },
-          { to: "/dashboard/compare", label: "Compare" },
-        ]} />
-        <FooterCol title="Company" links={[
+        {user ? (
+          <FooterCol title="For Brokers" links={[
+            { to: "/dashboard", label: "Dashboard" },
+            { to: "/dashboard/leads", label: "Leads" },
+            { to: "/dashboard/favorites", label: "Favorites" },
+            { to: "/dashboard/compare", label: "Compare" },
+          ]} />
+        ) : (
+          <FooterCol title="For Brokers" links={[
+            { to: "/auth", label: "Sign in to access" },
+          ]} />
+        )}
+        <FooterCol title="Company" links={user ? [
           { to: "/admin", label: "Subscriptions" },
+        ] : [
           { to: "/auth", label: "Sign in" },
         ]} />
       </div>

@@ -181,6 +181,17 @@ const cairoRaw: Array<{
   { name: "O West", area: "sheikh-zayed", lat: 30.055, lng: 30.910, developer: "Orascom Development", price: 13, year: 2026 },
 ];
 
+const newZayedRaw: typeof cairoRaw = [
+  { name: "SODIC The Estates", area: "new-zayed", lat: 30.075, lng: 30.890, developer: "SODIC", price: 18, year: 2026 },
+  { name: "ZED West", area: "new-zayed", lat: 30.078, lng: 30.875, developer: "Ora Developers", price: 16, year: 2027 },
+  { name: "Solana", area: "new-zayed", lat: 30.082, lng: 30.870, developer: "Ora Developers", price: 14, year: 2027 },
+  { name: "Sky Condos", area: "new-zayed", lat: 30.085, lng: 30.860, developer: "SODIC", price: 13, year: 2027 },
+  { name: "June Sheikh Zayed", area: "new-zayed", lat: 30.080, lng: 30.855, developer: "SODIC", price: 15, year: 2027 },
+  { name: "Karmell New Zayed", area: "new-zayed", lat: 30.090, lng: 30.890, developer: "SODIC", price: 17, year: 2028 },
+  { name: "Belle Vie New Zayed", area: "new-zayed", lat: 30.092, lng: 30.880, developer: "Emaar Misr", price: 16, year: 2027 },
+  { name: "Vinci Capital", area: "new-zayed", lat: 30.070, lng: 30.870, developer: "Misr Italia", price: 12, year: 2027 },
+];
+
 // New areas: 6th October, NAC, Mostakbal, Heliopolis, Sokhna, Red Sea, South Sinai, Fayoum
 const extraRaw: Array<{
   name: string; area: string; lat: number; lng: number; developer: string; price: number; year: number; beach?: boolean; type?: Compound["type"];
@@ -346,7 +357,32 @@ const extraCompounds: Compound[] = extraRaw.map((c, idx) => {
   };
 });
 
-const merged: Compound[] = [...sahelCompounds, ...cairoCompounds, ...extraCompounds];
+const newZayedCompounds: Compound[] = newZayedRaw.map((c, idx) => {
+  const slug = slugify(c.name);
+  return {
+    slug,
+    name: c.name,
+    area: c.area,
+    lat: c.lat,
+    lng: c.lng,
+    developer: c.developer,
+    developerSlug: slugify(c.developer),
+    priceFrom: c.price,
+    deliveryYear: c.year,
+    status: c.year <= 2024 ? "Delivered" : c.year <= 2026 ? "Under Construction" : "Off-Plan",
+    beachfront: false,
+    types: typesFor(c.price, false),
+    amenities: buildAmenities(idx + 51, false),
+    hero: pick(cityImgs, idx + 1),
+    gallery: gallery(idx + 1, false),
+    blurb: `${c.name} by ${c.developer} — a flagship master-plan in New Sheikh Zayed offering large-plot villas, lower density, and the latest generation of West-Cairo design language.`,
+    paymentPlan: paymentPlan(c.price),
+    areaSize: `${Math.round(60 + (idx * 41) % 380)} feddan`,
+    unitSizes: `${Math.round(120 + (idx * 13) % 80)}–${Math.round(320 + (idx * 19) % 240)} m²`,
+  };
+});
+
+const merged: Compound[] = [...sahelCompounds, ...cairoCompounds, ...extraCompounds, ...newZayedCompounds];
 
 export const compounds: Compound[] = merged.map((c) => ({
   ...c,
