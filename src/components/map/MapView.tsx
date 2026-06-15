@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { MapContainer, TileLayer, Marker, useMap, ZoomControl } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, useMap, ZoomControl, LayersControl } from "react-leaflet";
 import L from "leaflet";
 import type { Compound } from "@/data/compounds";
 import { areas, areaColor } from "@/data/areas";
