@@ -1,0 +1,2 @@
+- [TanStack Router code-splitter naming](tanstack-codesplitter-naming.md) — importing a named component into a route file can collide; use inline helper functions instead
+- [Logo fallback pattern](logo-fallback-pattern.md) — use absolute-positioned initials bg so user-passed className can't override it; clearbit blocked in Replit sandbox but works in production

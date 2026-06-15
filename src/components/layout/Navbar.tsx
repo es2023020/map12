@@ -1,9 +1,8 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
-import { Map, Building2, LayoutDashboard, ShieldCheck, Heart, Menu } from "lucide-react";
+import { Map, Building2, LayoutDashboard, ShieldCheck, Heart, Menu, X } from "lucide-react";
 import { useState } from "react";
-import logoAsset from "@/assets/proptrack-logo.png.asset.json";
 
 const publicLinks = [
   { to: "/map" as const, label: "Map", icon: Map },
@@ -24,11 +23,11 @@ export function Navbar() {
   const links = user ? [...publicLinks, ...brokerLinks] : publicLinks;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/95 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-4 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
-          <img src={logoAsset.url} alt="PropTrack" className="h-9 w-9 object-contain" />
-          <span>
+        <Link to="/" className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-tight shrink-0">
+          <img src="/logo.png" alt="PropTrack" className="h-9 w-9 object-contain" />
+          <span className="hidden sm:inline">
             Prop<span className="text-accent">Track</span>
           </span>
         </Link>
@@ -67,20 +66,42 @@ export function Navbar() {
               <span className="font-medium">{user.name}</span>
             </Link>
           ) : (
-            <Link to="/auth"><Button size="sm" className="rounded-full">Sign in</Button></Link>
+            <Link to="/auth" className="hidden md:block"><Button size="sm" className="rounded-full">Sign in</Button></Link>
           )}
-          <button className="rounded-md p-2 md:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
-            <Menu className="h-5 w-5" />
+          <button
+            className="rounded-md p-2 md:hidden text-muted-foreground hover:text-primary hover:bg-secondary transition-colors"
+            onClick={() => setOpen(!open)}
+            aria-label="Menu"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>
       {open && (
-        <div className="border-t border-border/60 bg-background md:hidden">
-          <nav className="flex flex-col p-2">
-            {links.map((l) => (
-              <Link key={l.to} to={l.to} onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2 text-sm font-medium hover:bg-secondary">{l.label}</Link>
-            ))}
+        <div className="border-t border-border/60 bg-background/98 backdrop-blur-xl md:hidden">
+          <nav className="flex flex-col divide-y divide-border/40 px-2 py-1">
+            {links.map((l) => {
+              const active = pathname === l.to || pathname.startsWith(l.to + "/");
+              return (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  onClick={() => setOpen(false)}
+                  className={`flex items-center gap-3 px-3 py-3 text-sm font-medium transition-colors rounded-lg my-0.5 ${
+                    active ? "bg-secondary text-primary" : "text-muted-foreground hover:bg-secondary/60 hover:text-primary"
+                  }`}
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
+            {!user && (
+              <div className="px-3 py-3">
+                <Link to="/auth" onClick={() => setOpen(false)}>
+                  <Button size="sm" className="w-full rounded-full">Sign in</Button>
+                </Link>
+              </div>
+            )}
           </nav>
         </div>
       )}

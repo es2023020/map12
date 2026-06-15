@@ -6,6 +6,7 @@ export type Developer = {
   count: number;
   logo: string;
   blurb: string;
+  website?: string;
 };
 
 const blurbs: Record<string, string> = {
@@ -17,7 +18,58 @@ const blurbs: Record<string, string> = {
   "Inertia": "Soul, Joulz, Jefaira — boutique master-plans.",
   "Hyde Park": "Hyde Park New Cairo, Seashore, LVLS.",
   "Talaat Moustafa Group": "Egypt's largest developer — Madinaty, Rehab, Stella, South Med.",
+  "City Edge": "New Cairo, El Alamein, October — government-backed quality communities.",
+  "Ora Developers": "Naguib Sawiris-backed — Zed Towers, Sheikh Zayed.",
+  "Misr Italia": "IL Monte Galala, LaVista — Red Sea and the North Coast.",
+  "Rooya Group": "Golf Central, Stone Park — East Cairo and the Red Sea.",
+  "Al Ahly Sabbour": "Sixty Iconic Tower, North Edge — East Cairo backbone developer.",
+  "Hassan Allam Properties": "Palm Parks, Swan Lake — 6th of October and North Coast.",
+  "Iwan Developments": "Arabella — New Cairo's established family community.",
+  "Wadi Degla": "Palm Hills Katameya, Royal Meadows — premium East Cairo.",
+  "Mena Developments": "Bali — El Alamein's upcoming resort city.",
+  "Modon": "Alam Al Roum — premium Sidi Heneish resort.",
+  "Travco": "Jamila — large-scale Sahel beachfront.",
+  "Better Home": "Sun Capital, Spring — 6th of October established communities.",
+  "Badya": "Palm Hills' urban city project — Sheikh Zayed.",
 };
+
+const logoMap: Record<string, string> = {
+  "emaar-misr": "https://logo.clearbit.com/emaarmisr.com",
+  "palm-hills-developments": "https://logo.clearbit.com/palmhillsdevelopments.com",
+  "sodic": "https://logo.clearbit.com/sodic.com.eg",
+  "mountain-view": "https://logo.clearbit.com/mountainviewegypt.com",
+  "tatweer-misr": "https://logo.clearbit.com/tatweermisrdevelopments.com",
+  "inertia": "https://logo.clearbit.com/inertia-eg.com",
+  "hyde-park": "https://logo.clearbit.com/hydeparke.com",
+  "talaat-moustafa-group": "https://logo.clearbit.com/talaatmoustafa.com",
+  "city-edge": "https://logo.clearbit.com/cityedge.com.eg",
+  "ora-developers": "https://logo.clearbit.com/oradevelopers.com",
+  "misr-italia": "https://logo.clearbit.com/misritalia.com.eg",
+  "rooya-group": "https://logo.clearbit.com/rooyagroup.com",
+  "al-ahly-sabbour": "https://logo.clearbit.com/sabbour.com",
+  "hassan-allam-properties": "https://logo.clearbit.com/hassanallamproperties.com",
+  "iwan-developments": "https://logo.clearbit.com/iwandevelopments.com",
+  "wadi-degla": "https://logo.clearbit.com/wadidegla.com",
+  "mena-developments": "https://logo.clearbit.com/menadev.com.eg",
+};
+
+const websiteMap: Record<string, string> = {
+  "emaar-misr": "https://emaarmisr.com",
+  "palm-hills-developments": "https://palmhillsdevelopments.com",
+  "sodic": "https://sodic.com.eg",
+  "mountain-view": "https://mountainviewegypt.com",
+  "tatweer-misr": "https://tatweermisrdevelopments.com",
+  "inertia": "https://inertia-eg.com",
+  "hyde-park": "https://hydeparke.com",
+  "talaat-moustafa-group": "https://talaatmoustafa.com",
+  "city-edge": "https://cityedge.com.eg",
+  "ora-developers": "https://oradevelopers.com",
+  "misr-italia": "https://misritalia.com.eg",
+};
+
+function fallbackLogo(name: string) {
+  return `https://ui-avatars.com/api/?background=1f3a5f&color=fff&bold=true&size=128&name=${encodeURIComponent(name)}`;
+}
 
 const map = new Map<string, { name: string; count: number }>();
 for (const c of compounds) {
@@ -31,8 +83,9 @@ export const developers: Developer[] = Array.from(map.entries())
     slug,
     name: v.name,
     count: v.count,
-    logo: `https://ui-avatars.com/api/?background=1f3a5f&color=fff&bold=true&size=128&name=${encodeURIComponent(v.name)}`,
+    logo: logoMap[slug] ?? fallbackLogo(v.name),
     blurb: blurbs[v.name] ?? `${v.name} — active developer with ${v.count} ${v.count === 1 ? "project" : "projects"} on PropTrack.`,
+    website: websiteMap[slug],
   }))
   .sort((a, b) => b.count - a.count);
 

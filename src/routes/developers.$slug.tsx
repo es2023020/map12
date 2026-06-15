@@ -1,11 +1,30 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useState } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { MapClient } from "@/components/map/MapClient";
 import { CompoundCard } from "@/components/CompoundCard";
 import { developerBySlug } from "@/data/developers";
 import { compoundsByDeveloper } from "@/data/compounds";
 import { areas } from "@/data/areas";
-import { ArrowLeft, Building2, Wallet, Calendar, MapPin, Globe, Phone, Map as MapIcon } from "lucide-react";
+import {
+  ArrowLeft, Building2, Wallet, Calendar, MapPin,
+  Globe, Phone, Map as MapIcon, ExternalLink
+} from "lucide-react";
+
+function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
+  const [loaded, setLoaded] = useState(false);
+  const initials = name.split(" ").slice(0, 2).map((w) => w[0] ?? "").join("").toUpperCase();
+  return (
+    <div className={`relative overflow-hidden shrink-0 ${className}`}>
+      <div className="absolute inset-0 flex items-center justify-center bg-primary">
+        <span className="text-primary-foreground font-bold text-sm select-none">{initials}</span>
+      </div>
+      <img src={src} alt={name}
+        className={`absolute inset-0 h-full w-full object-contain bg-white transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"}`}
+        onLoad={() => setLoaded(true)} onError={() => {}} />
+    </div>
+  );
+}
 
 export const Route = createFileRoute("/developers/$slug")({
   loader: ({ params }) => {
@@ -33,9 +52,10 @@ function DevPage() {
     : 0;
   const deliveredCount = list.filter((c) => c.status === "Delivered").length;
   const offPlanCount = list.filter((c) => c.status === "Off-Plan").length;
+  const underConstructionCount = list.filter((c) => c.status === "Under Construction").length;
   const uniqueAreas = Array.from(new Set(list.map((c) => c.area)));
+  const beachfrontCount = list.filter((c) => c.beachfront).length;
 
-  // Map center — average of all their projects
   const mapCenter: [number, number] = list.length > 0
     ? [
         list.reduce((s, c) => s + c.lat, 0) / list.length,
@@ -45,32 +65,47 @@ function DevPage() {
 
   return (
     <Shell>
-      {/* Header */}
-      <div className="border-b border-border/60 bg-gradient-to-b from-primary to-primary/90 text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
+      {/* Hero header */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
+        <div className="relative mx-auto max-w-7xl px-4 py-10 lg:py-14 lg:px-8">
           <Link to="/developers" className="inline-flex items-center gap-1 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
             <ArrowLeft className="h-3.5 w-3.5" /> All developers
           </Link>
-          <div className="mt-4 flex flex-wrap items-start gap-5">
-            <img src={d.logo} alt={d.name} className="h-20 w-20 rounded-2xl border border-white/20 shadow-lg" />
+          <div className="mt-5 flex flex-wrap items-start gap-5">
+            <LogoBadge
+              src={d.logo}
+              name={d.name}
+              className="h-20 w-20 shrink-0 rounded-2xl border border-white/20 shadow-lg"
+            />
             <div className="min-w-0 flex-1">
-              <h1 className="font-display text-4xl font-semibold tracking-tight">{d.name}</h1>
+              <h1 className="font-display text-3xl md:text-4xl font-semibold tracking-tight">{d.name}</h1>
               <p className="mt-1 text-primary-foreground/70">{d.count} projects on PropTrack</p>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-primary-foreground/80">{d.blurb}</p>
             </div>
-            <div className="flex flex-col gap-2 shrink-0">
+            <div className="flex flex-col gap-2 shrink-0 w-full sm:w-auto">
               <a
                 href="tel:+201234567890"
-                className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-white/20 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-2.5 text-sm font-medium text-primary-foreground hover:bg-white/20 transition-colors"
               >
                 <Phone className="h-4 w-4" /> Contact advisor
               </a>
               <Link
                 to="/map"
-                className="inline-flex items-center gap-2 rounded-full bg-accent/80 border border-accent px-4 py-2 text-sm font-medium text-white hover:bg-accent transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-accent/80 border border-accent px-4 py-2.5 text-sm font-medium text-white hover:bg-accent transition-colors"
               >
                 <MapIcon className="h-4 w-4" /> View on map
               </Link>
+              {d.website && (
+                <a
+                  href={d.website}
+                  target="_blank" rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2.5 text-sm font-medium text-primary-foreground/80 hover:bg-white/15 transition-colors"
+                >
+                  <Globe className="h-4 w-4" /> Official website
+                  <ExternalLink className="h-3 w-3 opacity-60" />
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -79,17 +114,32 @@ function DevPage() {
       {/* Stats bar */}
       <div className="border-b border-border/60 bg-card">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="grid grid-cols-2 divide-x divide-border md:grid-cols-4">
+          <div className="grid grid-cols-2 divide-x divide-border sm:grid-cols-4">
             <StatBar icon={Building2} label="Total projects" value={String(list.length)} />
             <StatBar icon={Wallet} label="Avg. starting price" value={`EGP ${avgPrice}M`} />
-            <StatBar icon={Calendar} label="Delivered" value={`${deliveredCount} projects`} className="hidden md:flex" />
-            <StatBar icon={Globe} label="Markets" value={`${uniqueAreas.length} ${uniqueAreas.length === 1 ? "area" : "areas"}`} className="hidden md:flex" />
+            <StatBar icon={Calendar} label="Delivered" value={`${deliveredCount} projects`} className="hidden sm:flex" />
+            <StatBar icon={MapPin} label="Markets" value={`${uniqueAreas.length} ${uniqueAreas.length === 1 ? "area" : "areas"}`} className="hidden sm:flex" />
           </div>
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
-        {/* Areas active in */}
+      <div className="mx-auto max-w-7xl px-4 py-8 lg:py-12 lg:px-8">
+
+        {/* Status pills + beachfront */}
+        <div className="mb-8 flex flex-wrap gap-2">
+          {[
+            { label: "Delivered", count: deliveredCount, cls: "text-emerald-700 bg-emerald-50 border-emerald-200" },
+            { label: "Under Construction", count: underConstructionCount, cls: "text-amber-700 bg-amber-50 border-amber-200" },
+            { label: "Off-Plan", count: offPlanCount, cls: "text-blue-700 bg-blue-50 border-blue-200" },
+            ...(beachfrontCount > 0 ? [{ label: "Beachfront", count: beachfrontCount, cls: "text-cyan-700 bg-cyan-50 border-cyan-200" }] : []),
+          ].filter((x) => x.count > 0).map(({ label, count, cls }) => (
+            <span key={label} className={`rounded-full border px-3 py-1 text-xs font-medium ${cls}`}>
+              {label}: {count}
+            </span>
+          ))}
+        </div>
+
+        {/* Active areas */}
         {uniqueAreas.length > 0 && (
           <div className="mb-10">
             <h2 className="mb-3 font-display text-lg font-semibold text-primary">Active in</h2>
@@ -115,15 +165,13 @@ function DevPage() {
           </div>
         )}
 
-        {/* Map of all their projects */}
+        {/* Map */}
         {list.length > 0 && (
           <div className="mb-12">
-            <h2 className="mb-4 font-display text-2xl font-semibold text-primary">
-              <span className="inline-flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-accent" /> Project locations
-              </span>
+            <h2 className="mb-4 font-display text-xl md:text-2xl font-semibold text-primary inline-flex items-center gap-2">
+              <MapPin className="h-5 w-5 text-accent" /> Project locations
             </h2>
-            <div className="h-[380px] overflow-hidden rounded-3xl border border-border shadow-soft">
+            <div className="h-[300px] md:h-[400px] overflow-hidden rounded-3xl border border-border shadow-soft">
               <MapClient
                 compounds={list}
                 initialCenter={mapCenter}
@@ -135,24 +183,17 @@ function DevPage() {
           </div>
         )}
 
-        {/* Status breakdown */}
-        <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
-          <h2 className="font-display text-2xl font-semibold text-primary">
+        {/* Project grid header */}
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">
             All {list.length} projects by {d.name}
           </h2>
-          <div className="flex flex-wrap gap-2 text-xs">
-            {[
-              { label: "Delivered", count: deliveredCount, color: "text-emerald-600 bg-emerald-50 border-emerald-200" },
-              { label: "Under Construction", count: list.filter((c) => c.status === "Under Construction").length, color: "text-amber-600 bg-amber-50 border-amber-200" },
-              { label: "Off-Plan", count: offPlanCount, color: "text-blue-600 bg-blue-50 border-blue-200" },
-            ].map(({ label, count, color }) => count > 0 ? (
-              <span key={label} className={`rounded-full border px-3 py-1 font-medium ${color}`}>
-                {label}: {count}
-              </span>
-            ) : null)}
-          </div>
+          <Link to="/projects" className="text-sm text-accent hover:underline">
+            Browse all projects →
+          </Link>
         </div>
 
+        {/* Projects */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {list.map((c) => <CompoundCard key={c.slug} c={c} />)}
         </div>
@@ -179,7 +220,7 @@ function StatBar({
   className?: string;
 }) {
   return (
-    <div className={`flex items-center gap-3 px-5 py-4 ${className}`}>
+    <div className={`flex items-center gap-3 px-4 py-4 md:px-5 ${className}`}>
       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
         <Icon className="h-4 w-4" />
       </span>
