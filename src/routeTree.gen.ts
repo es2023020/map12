@@ -9,16 +9,19 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SuggestionsRouteImport } from './routes/suggestions'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as DevelopersRouteImport } from './routes/developers'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as CalculatorRouteImport } from './routes/calculator'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AreasRouteImport } from './routes/areas'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
+import { Route as DevelopersIndexRouteImport } from './routes/developers.index'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard.index'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as DevelopersSlugRouteImport } from './routes/developers.$slug'
@@ -27,6 +30,11 @@ import { Route as DashboardFavoritesRouteImport } from './routes/dashboard.favor
 import { Route as DashboardCompareRouteImport } from './routes/dashboard.compare'
 import { Route as AreasSlugRouteImport } from './routes/areas.$slug'
 
+const SuggestionsRoute = SuggestionsRouteImport.update({
+  id: '/suggestions',
+  path: '/suggestions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -50,6 +58,11 @@ const DevelopersRoute = DevelopersRouteImport.update({
 const DashboardRoute = DashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CalculatorRoute = CalculatorRouteImport.update({
+  id: '/calculator',
+  path: '/calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -76,6 +89,11 @@ const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => ProjectsRoute,
+} as any)
+const DevelopersIndexRoute = DevelopersIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DevelopersRoute,
 } as any)
 const DashboardIndexRoute = DashboardIndexRouteImport.update({
   id: '/',
@@ -118,11 +136,13 @@ export interface FileRoutesByFullPath {
   '/admin': typeof AdminRoute
   '/areas': typeof AreasRouteWithChildren
   '/auth': typeof AuthRoute
+  '/calculator': typeof CalculatorRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/suggestions': typeof SuggestionsRoute
   '/areas/$slug': typeof AreasSlugRoute
   '/dashboard/compare': typeof DashboardCompareRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
@@ -130,6 +150,7 @@ export interface FileRoutesByFullPath {
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/dashboard/': typeof DashboardIndexRoute
+  '/developers/': typeof DevelopersIndexRoute
   '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -137,9 +158,10 @@ export interface FileRoutesByTo {
   '/admin': typeof AdminRoute
   '/areas': typeof AreasRouteWithChildren
   '/auth': typeof AuthRoute
-  '/developers': typeof DevelopersRouteWithChildren
+  '/calculator': typeof CalculatorRoute
   '/map': typeof MapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/suggestions': typeof SuggestionsRoute
   '/areas/$slug': typeof AreasSlugRoute
   '/dashboard/compare': typeof DashboardCompareRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
@@ -147,6 +169,7 @@ export interface FileRoutesByTo {
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/dashboard': typeof DashboardIndexRoute
+  '/developers': typeof DevelopersIndexRoute
   '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesById {
@@ -155,11 +178,13 @@ export interface FileRoutesById {
   '/admin': typeof AdminRoute
   '/areas': typeof AreasRouteWithChildren
   '/auth': typeof AuthRoute
+  '/calculator': typeof CalculatorRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/suggestions': typeof SuggestionsRoute
   '/areas/$slug': typeof AreasSlugRoute
   '/dashboard/compare': typeof DashboardCompareRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
@@ -167,6 +192,7 @@ export interface FileRoutesById {
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/dashboard/': typeof DashboardIndexRoute
+  '/developers/': typeof DevelopersIndexRoute
   '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRouteTypes {
@@ -176,11 +202,13 @@ export interface FileRouteTypes {
     | '/admin'
     | '/areas'
     | '/auth'
+    | '/calculator'
     | '/dashboard'
     | '/developers'
     | '/map'
     | '/projects'
     | '/sitemap.xml'
+    | '/suggestions'
     | '/areas/$slug'
     | '/dashboard/compare'
     | '/dashboard/favorites'
@@ -188,6 +216,7 @@ export interface FileRouteTypes {
     | '/developers/$slug'
     | '/projects/$slug'
     | '/dashboard/'
+    | '/developers/'
     | '/projects/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -195,9 +224,10 @@ export interface FileRouteTypes {
     | '/admin'
     | '/areas'
     | '/auth'
-    | '/developers'
+    | '/calculator'
     | '/map'
     | '/sitemap.xml'
+    | '/suggestions'
     | '/areas/$slug'
     | '/dashboard/compare'
     | '/dashboard/favorites'
@@ -205,6 +235,7 @@ export interface FileRouteTypes {
     | '/developers/$slug'
     | '/projects/$slug'
     | '/dashboard'
+    | '/developers'
     | '/projects'
   id:
     | '__root__'
@@ -212,11 +243,13 @@ export interface FileRouteTypes {
     | '/admin'
     | '/areas'
     | '/auth'
+    | '/calculator'
     | '/dashboard'
     | '/developers'
     | '/map'
     | '/projects'
     | '/sitemap.xml'
+    | '/suggestions'
     | '/areas/$slug'
     | '/dashboard/compare'
     | '/dashboard/favorites'
@@ -224,6 +257,7 @@ export interface FileRouteTypes {
     | '/developers/$slug'
     | '/projects/$slug'
     | '/dashboard/'
+    | '/developers/'
     | '/projects/'
   fileRoutesById: FileRoutesById
 }
@@ -232,15 +266,24 @@ export interface RootRouteChildren {
   AdminRoute: typeof AdminRoute
   AreasRoute: typeof AreasRouteWithChildren
   AuthRoute: typeof AuthRoute
+  CalculatorRoute: typeof CalculatorRoute
   DashboardRoute: typeof DashboardRouteWithChildren
   DevelopersRoute: typeof DevelopersRouteWithChildren
   MapRoute: typeof MapRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SuggestionsRoute: typeof SuggestionsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/suggestions': {
+      id: '/suggestions'
+      path: '/suggestions'
+      fullPath: '/suggestions'
+      preLoaderRoute: typeof SuggestionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -274,6 +317,13 @@ declare module '@tanstack/react-router' {
       path: '/dashboard'
       fullPath: '/dashboard'
       preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calculator': {
+      id: '/calculator'
+      path: '/calculator'
+      fullPath: '/calculator'
+      preLoaderRoute: typeof CalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -310,6 +360,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/projects/'
       preLoaderRoute: typeof ProjectsIndexRouteImport
       parentRoute: typeof ProjectsRoute
+    }
+    '/developers/': {
+      id: '/developers/'
+      path: '/'
+      fullPath: '/developers/'
+      preLoaderRoute: typeof DevelopersIndexRouteImport
+      parentRoute: typeof DevelopersRoute
     }
     '/dashboard/': {
       id: '/dashboard/'
@@ -393,10 +450,12 @@ const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
 
 interface DevelopersRouteChildren {
   DevelopersSlugRoute: typeof DevelopersSlugRoute
+  DevelopersIndexRoute: typeof DevelopersIndexRoute
 }
 
 const DevelopersRouteChildren: DevelopersRouteChildren = {
   DevelopersSlugRoute: DevelopersSlugRoute,
+  DevelopersIndexRoute: DevelopersIndexRoute,
 }
 
 const DevelopersRouteWithChildren = DevelopersRoute._addFileChildren(
@@ -422,11 +481,13 @@ const rootRouteChildren: RootRouteChildren = {
   AdminRoute: AdminRoute,
   AreasRoute: AreasRouteWithChildren,
   AuthRoute: AuthRoute,
+  CalculatorRoute: CalculatorRoute,
   DashboardRoute: DashboardRouteWithChildren,
   DevelopersRoute: DevelopersRouteWithChildren,
   MapRoute: MapRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SuggestionsRoute: SuggestionsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

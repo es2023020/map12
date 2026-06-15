@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
-import { Map, Building2, LayoutDashboard, ShieldCheck, Heart, Menu, X } from "lucide-react";
+import { Map, Building2, LayoutDashboard, ShieldCheck, Heart, Menu, X, Calculator, Sparkles } from "lucide-react";
 import { useState } from "react";
 
 const publicLinks = [
@@ -9,6 +9,8 @@ const publicLinks = [
   { to: "/projects" as const, label: "Projects", icon: Building2 },
   { to: "/areas" as const, label: "Areas" },
   { to: "/developers" as const, label: "Developers" },
+  { to: "/calculator" as const, label: "Calculator", icon: Calculator },
+  { to: "/suggestions" as const, label: "Unit Finder", icon: Sparkles },
 ];
 const brokerLinks = [
   { to: "/dashboard" as const, label: "Broker", icon: LayoutDashboard },
@@ -24,22 +26,27 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/95 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-4 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-tight shrink-0">
           <img src="/logo.png" alt="PropTrack" className="h-9 w-9 object-contain" />
           <span className="hidden sm:inline">
             Prop<span className="text-accent">Track</span>
           </span>
         </Link>
-        <nav className="ml-2 hidden items-center gap-1 md:flex">
+        <nav className="ml-2 hidden items-center gap-0.5 md:flex">
           {links.map((l) => {
             const active = pathname === l.to || pathname.startsWith(l.to + "/");
+            const isHighlight = l.to === "/suggestions";
             return (
               <Link
                 key={l.to}
                 to={l.to}
                 className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                  active ? "bg-secondary text-primary" : "text-muted-foreground hover:bg-secondary/60 hover:text-primary"
+                  active
+                    ? "bg-secondary text-primary"
+                    : isHighlight
+                    ? "text-accent hover:bg-accent/10"
+                    : "text-muted-foreground hover:bg-secondary/60 hover:text-primary"
                 }`}
               >
                 {l.label}

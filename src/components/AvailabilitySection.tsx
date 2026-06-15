@@ -125,7 +125,7 @@ export function AvailabilitySection({ data }: Props) {
       {/* CTA */}
       <div className="mt-5 flex flex-wrap items-center gap-3">
         <a
-          href="tel:+201234567890"
+          href="tel:01233374501"
           className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 transition-colors"
         >
           <Phone className="h-4 w-4" />

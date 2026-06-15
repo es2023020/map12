@@ -85,7 +85,7 @@ function DevPage() {
             </div>
             <div className="flex flex-col gap-2 shrink-0 w-full sm:w-auto">
               <a
-                href="tel:+201234567890"
+                href="tel:01233374501"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-2.5 text-sm font-medium text-primary-foreground hover:bg-white/20 transition-colors"
               >
                 <Phone className="h-4 w-4" /> Contact advisor

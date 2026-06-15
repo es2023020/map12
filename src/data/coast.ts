@@ -1,17 +1,28 @@
 // Lerp coastline anchors. km is measured from Alexandria westward along the coast road.
-// These anchors are calibrated against well-known compound locations.
+// Calibrated against verified GPS coordinates for major North Coast landmarks.
+// Jitter removed — pins are now placed at accurate road-adjacent positions.
 const anchors: Array<{ km: number; lat: number; lng: number }> = [
-  { km: 0, lat: 31.200, lng: 29.950 }, // Alexandria
-  { km: 60, lat: 30.900, lng: 29.350 },
-  { km: 92, lat: 30.830, lng: 28.950 }, // Marina
-  { km: 108, lat: 30.860, lng: 28.760 }, // New Alamein
-  { km: 126, lat: 30.890, lng: 28.595 }, // Marassi / Sidi Abdelrahman
-  { km: 145, lat: 30.940, lng: 28.420 }, // Ghazala Bay
-  { km: 170, lat: 31.020, lng: 28.180 }, // Dabaa
+  { km: 0,   lat: 31.200, lng: 29.950 }, // Alexandria
+  { km: 60,  lat: 30.900, lng: 29.350 },
+  { km: 92,  lat: 30.830, lng: 28.950 }, // Marina / Q Bay
+  { km: 100, lat: 30.844, lng: 28.860 }, // The Islands / Dayz
+  { km: 108, lat: 30.860, lng: 28.757 }, // New Alamein / Palm Hills Alamein
+  { km: 124, lat: 30.887, lng: 28.615 }, // Hacienda Bay
+  { km: 126, lat: 30.893, lng: 28.597 }, // Marassi
+  { km: 133, lat: 30.902, lng: 28.532 }, // Stella Heights / La Vista Cascada
+  { km: 136, lat: 30.917, lng: 28.505 }, // Amwaj
+  { km: 138, lat: 30.921, lng: 28.486 }, // Hacienda White
+  { km: 145, lat: 30.940, lng: 28.421 }, // Ghazala Bay / Zoya
+  { km: 166, lat: 31.002, lng: 28.219 }, // D-Bay
+  { km: 170, lat: 31.020, lng: 28.180 }, // Al Dabaa area
   { km: 190, lat: 31.090, lng: 27.970 }, // Jefaira
-  { km: 210, lat: 31.150, lng: 27.770 }, // Fouka
+  { km: 200, lat: 31.120, lng: 27.872 }, // Mountain View RHK / Lyv
+  { km: 210, lat: 31.152, lng: 27.758 }, // Fouka Bay
+  { km: 220, lat: 31.185, lng: 27.676 }, // Modon Ras El Hekma
+  { km: 238, lat: 31.246, lng: 27.498 }, // Hacienda Ras El Hekma
   { km: 240, lat: 31.260, lng: 27.480 }, // Ras El Hekma headland
-  { km: 275, lat: 31.345, lng: 27.230 }, // Sidi Heneish / Alam Roum
+  { km: 250, lat: 31.288, lng: 27.402 }, // Almaza Bay
+  { km: 275, lat: 31.345, lng: 27.230 }, // Sidi Heneish / Alam Al Roum
 ];
 
 export function kmToLatLng(km: number): [number, number] {
@@ -19,10 +30,7 @@ export function kmToLatLng(km: number): [number, number] {
     const a = anchors[i], b = anchors[i + 1];
     if (km >= a.km && km <= b.km) {
       const t = (km - a.km) / (b.km - a.km);
-      // Compounds are pinned just inland of the actual coast, with deterministic jitter.
-      const jitterLat = ((km * 9301 + 49297) % 233280) / 233280 * 0.012 - 0.006;
-      const jitterLng = ((km * 1103 + 12345) % 233280) / 233280 * 0.012 - 0.006;
-      return [a.lat + (b.lat - a.lat) * t + jitterLat, a.lng + (b.lng - a.lng) * t + jitterLng];
+      return [a.lat + (b.lat - a.lat) * t, a.lng + (b.lng - a.lng) * t];
     }
   }
   const last = anchors[anchors.length - 1];

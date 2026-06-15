@@ -482,7 +482,7 @@ function DetailPanel({
               className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
               <Building2 className="h-4 w-4" /> View full project page
             </Link>
-            <a href="tel:+201234567890"
+            <a href="tel:01233374501"
               className="flex w-full items-center justify-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm font-medium text-primary hover:bg-secondary transition-colors">
               <Phone className="h-4 w-4" /> Contact advisor
             </a>
