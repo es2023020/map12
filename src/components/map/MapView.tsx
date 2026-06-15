@@ -1,19 +1,33 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { MapContainer, TileLayer, Marker, useMap, ZoomControl, LayersControl } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, ZoomControl, LayersControl, ScaleControl } from "react-leaflet";
 import L from "leaflet";
 import type { Compound } from "@/data/compounds";
 import { areas, areaColor } from "@/data/areas";
 import { landmarks as allLandmarks, landmarkColors, type Landmark } from "@/data/landmarks";
+import { availability } from "@/data/availability";
+
+function getAvailableCount(slug: string): number {
+  return availability.find((a) => a.slug === slug)?.totalAvailable ?? 0;
+}
 
 function projectIcon(c: Compound, active: boolean) {
   const color = areaColor(c.area);
+  const avail = getAvailableCount(c.slug);
+  const availBadge = avail > 0
+    ? `<span class="pt-dot-avail">${avail > 99 ? "99+" : avail}</span>`
+    : "";
   const star = c.flagship ? `<span class="pt-dot-star">★</span>` : "";
-  const html = `<div class="pt-dot-wrap"><div class="pt-dot ${active ? "active" : ""}" style="background:${color}"></div>${star}</div>`;
+  const sizeClass = active ? "pt-dot-lg" : "pt-dot-sm";
+  const html = `<div class="pt-dot-wrap">
+    <div class="pt-dot ${sizeClass} ${active ? "active" : ""}" style="background:${color}"></div>
+    ${star}
+    ${availBadge}
+  </div>`;
   return L.divIcon({
     html,
     className: "pt-dot-icon",
-    iconSize: active ? [20, 20] : [14, 14],
-    iconAnchor: active ? [10, 10] : [7, 7],
+    iconSize: active ? [22, 22] : [14, 14],
+    iconAnchor: active ? [11, 11] : [7, 7],
   });
 }
 
@@ -77,12 +91,51 @@ export function MapView({
 
   return (
     <div className={className}>
+      <style>{`
+        .pt-dot-avail {
+          position: absolute;
+          top: -7px;
+          right: -9px;
+          background: #f97316;
+          color: #fff;
+          font-size: 8px;
+          font-weight: 700;
+          border-radius: 99px;
+          padding: 1px 3px;
+          line-height: 1.3;
+          white-space: nowrap;
+          border: 1px solid white;
+          z-index: 2;
+        }
+        .pt-popup-img {
+          width: 100%;
+          height: 120px;
+          object-fit: cover;
+          border-radius: 8px 8px 0 0;
+          display: block;
+        }
+        .pt-popup-body { padding: 10px 12px 12px; }
+        .pt-popup-name { font-size: 13px; font-weight: 700; color: #1a2b3c; margin: 0 0 2px; line-height: 1.3; }
+        .pt-popup-dev { font-size: 11px; color: #64748b; margin: 0 0 8px; }
+        .pt-popup-stats { display: flex; gap: 10px; margin-bottom: 8px; }
+        .pt-popup-stat { flex: 1; }
+        .pt-popup-stat-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; margin-bottom: 1px; }
+        .pt-popup-stat-value { font-size: 12px; font-weight: 600; color: #1a2b3c; }
+        .pt-popup-avail { font-size: 11px; color: #16a34a; font-weight: 600; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 4px 8px; display: inline-block; margin-bottom: 8px; }
+        .pt-popup-types { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 8px; }
+        .pt-popup-type { font-size: 10px; background: #f1f5f9; color: #475569; border-radius: 99px; padding: 2px 7px; font-weight: 500; }
+        .pt-popup-btn { display: block; width: 100%; text-align: center; background: #1a2b3c; color: #fff; border-radius: 6px; padding: 7px 10px; font-size: 12px; font-weight: 600; text-decoration: none; margin-top: 4px; }
+        .pt-popup-btn:hover { background: #2a3f55; }
+        .leaflet-popup-content-wrapper { border-radius: 10px !important; padding: 0 !important; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important; border: 1px solid #e2e8f0 !important; }
+        .leaflet-popup-content { margin: 0 !important; width: 220px !important; }
+        .leaflet-popup-tip-container { margin-top: -1px; }
+      `}</style>
       <MapContainer
         center={focused ? [focused.lat, focused.lng] : initialCenter}
         zoom={focused ? Math.max(13, initialZoom) : initialZoom}
         zoomControl={false}
         scrollWheelZoom
-        preferCanvas
+        preferCanvas={false}
         style={{ height: "100%", width: "100%" }}
       >
         <LayersControl position="topright">
@@ -111,22 +164,70 @@ export function MapView({
           </LayersControl.BaseLayer>
         </LayersControl>
         <ZoomControl position="bottomright" />
+        <ScaleControl position="bottomleft" metric imperial={false} />
         <FlyTo center={focused ? [focused.lat, focused.lng] : undefined} zoom={focused ? Math.max(14, initialZoom) : undefined} />
+
         {showLandmarks && lmList.map((l) => {
           if (Number.isNaN(l.lat) || Number.isNaN(l.lng)) return null;
           return (
             <Marker key={l.id} position={[l.lat, l.lng]} icon={lmIcons.get(l.id)!} interactive={false} keyboard={false} />
           );
         })}
+
         {compounds.map((c) => {
           if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;
+          const areaColor_ = areaColor(c.area);
+          const avail = getAvailableCount(c.slug);
+          const availStr = avail > 0 ? `<div class="pt-popup-avail">✓ ${avail} units available</div>` : "";
+          const typesHtml = (c.types ?? []).slice(0, 4).map((t: string) =>
+            `<span class="pt-popup-type">${t}</span>`
+          ).join("");
+          const popupHtml = `
+            <img class="pt-popup-img" src="${c.hero}" alt="${c.name}" loading="lazy" />
+            <div class="pt-popup-body">
+              <p class="pt-popup-name">${c.name}</p>
+              <p class="pt-popup-dev">${c.developer}</p>
+              <div class="pt-popup-stats">
+                <div class="pt-popup-stat">
+                  <div class="pt-popup-stat-label">From</div>
+                  <div class="pt-popup-stat-value">EGP ${c.priceFrom}M</div>
+                </div>
+                <div class="pt-popup-stat">
+                  <div class="pt-popup-stat-label">Delivery</div>
+                  <div class="pt-popup-stat-value">${c.deliveryYear}</div>
+                </div>
+                <div class="pt-popup-stat">
+                  <div class="pt-popup-stat-label">Status</div>
+                  <div class="pt-popup-stat-value" style="color:${c.status === 'Delivered' ? '#16a34a' : c.status === 'Under Construction' ? '#d97706' : '#2563eb'};font-size:10px;">${c.status}</div>
+                </div>
+              </div>
+              ${availStr}
+              <div class="pt-popup-types">${typesHtml}</div>
+              <a class="pt-popup-btn" href="/projects/${c.slug}">View full project →</a>
+            </div>
+          `;
+          const tooltipContent = `<strong>${c.name}</strong> · EGP ${c.priceFrom}M+`;
+
           return (
             <Marker
               key={c.slug}
               position={[c.lat, c.lng]}
               icon={icons.get(c.slug)!}
               eventHandlers={onSelect ? { click: () => onSelect(c.slug) } : undefined}
-            />
+            >
+              <Popup closeButton={true} maxWidth={220} minWidth={220}>
+                <div dangerouslySetInnerHTML={{ __html: popupHtml }} />
+              </Popup>
+              <Tooltip
+                direction="top"
+                offset={[0, -8]}
+                opacity={0.96}
+                permanent={false}
+              >
+                <div style={{ fontSize: 11, fontWeight: 700, marginBottom: 1 }}>{c.name}</div>
+                <div style={{ fontSize: 10, color: "#64748b" }}>EGP {c.priceFrom}M+{avail > 0 ? ` · ${avail} units avail.` : ""}</div>
+              </Tooltip>
+            </Marker>
           );
         })}
       </MapContainer>

@@ -205,6 +205,28 @@ export const areas: Area[] = [
     center: [29.480, 30.630],
     zoom: 11,
   },
+  {
+    slug: "sarai",
+    name: "Sarai (New Cairo East)",
+    region: "greater-cairo",
+    color: "#10B981",
+    city: "Cairo",
+    blurb: "Madinet Masr's flagship integrated community — parks, schools, malls and thousands of homes east of New Cairo.",
+    hero: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=80",
+    center: [30.097, 31.628],
+    zoom: 13,
+  },
+  {
+    slug: "alexandria",
+    name: "Alexandria",
+    region: "other",
+    color: "#0284C7",
+    city: "Alexandria",
+    blurb: "Egypt's second city on the Mediterranean — established compounds, summer retreats and urban apartments.",
+    hero: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1600&q=80",
+    center: [31.190, 29.940],
+    zoom: 12,
+  },
 ];
 
 export const areaBySlug = (slug: string) => areas.find((a) => a.slug === slug);

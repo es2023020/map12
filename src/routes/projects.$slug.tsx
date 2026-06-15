@@ -6,6 +6,8 @@ import { compoundBySlug, compoundsByArea } from "@/data/compounds";
 import { areaBySlug } from "@/data/areas";
 import { developerBySlug } from "@/data/developers";
 import { CompoundCard } from "@/components/CompoundCard";
+import { availabilityBySlug } from "@/data/availability";
+import { AvailabilitySection } from "@/components/AvailabilitySection";
 import { useStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
 import {
@@ -210,6 +212,13 @@ function CompoundPage() {
             <StatCard icon={Ruler} label="Unit sizes" value={c.unitSizes ?? "—"} />
             <StatCard icon={Building2} label="Project size" value={c.areaSize ?? "—"} />
           </div>
+
+          {/* Live Availability from developer sheets */}
+          {availabilityBySlug(c.slug) && (
+            <Section title="Live Availability">
+              <AvailabilitySection data={availabilityBySlug(c.slug)!} />
+            </Section>
+          )}
 
           {/* Unit types */}
           <Section title="Unit types">
