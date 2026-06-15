@@ -65,20 +65,47 @@ function MapPage() {
 
   return (
     <Shell noFooter>
-      <div className="relative flex h-[calc(100vh-4rem)] flex-col lg:flex-row">
-        {/* Mobile top bar */}
-        <div className="flex shrink-0 items-center gap-2 border-b border-border/60 bg-card px-3 py-2 lg:hidden">
-          <button onClick={() => setSidebarOpen(true)} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground">
-            <Menu className="h-3.5 w-3.5" /> Browse {filtered.length} projects
+      <div className="relative h-[calc(100vh-4rem)] w-full overflow-hidden">
+        {/* Full-bleed map underneath */}
+        <div className="absolute inset-0">
+          <MapClient
+            compounds={filtered}
+            landmarks={visibleLandmarks}
+            showLandmarks={showLandmarks}
+            activeSlug={activeSlug}
+            onSelect={(slug) => setActiveSlug(slug)}
+            initialCenter={mapCenter}
+            initialZoom={mapZoom}
+            className="h-full w-full"
+          />
+        </div>
+
+        {/* Map key (desktop) */}
+        <div className="pointer-events-none absolute right-4 bottom-24 z-10 hidden rounded-2xl border border-border/60 bg-card/95 p-3 text-[10px] shadow-soft backdrop-blur md:block">
+          <div className="font-semibold uppercase tracking-[0.16em] text-muted-foreground">Map key</div>
+          <div className="mt-2 flex flex-col gap-1.5">
+            <KeyRow color="#3B82F6" label="Project · area-coloured" />
+            <KeyRow color="#CA8A04" label="★ Flagship" />
+            <KeyRow color="#EA580C" label="Mall" />
+            <KeyRow color="#2563EB" label="Airport" />
+            <KeyRow color="#9333EA" label="University" />
+            <KeyRow color="#06B6D4" label="Beach" />
+          </div>
+        </div>
+
+        {/* Mobile toggle */}
+        <div className="absolute left-3 top-3 z-30 flex items-center gap-2 lg:hidden">
+          <button onClick={() => setSidebarOpen(true)} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground shadow-lg">
+            <Menu className="h-3.5 w-3.5" /> {filtered.length} projects
           </button>
-          <button onClick={() => setShowLandmarks((v) => !v)} className={`ml-auto inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] font-medium ${showLandmarks ? "border-accent text-accent" : "border-border text-muted-foreground"}`}>
+          <button onClick={() => setShowLandmarks((v) => !v)} className={`inline-flex items-center gap-1 rounded-full border bg-card/95 px-2.5 py-1 text-[11px] font-medium shadow ${showLandmarks ? "border-accent text-accent" : "border-border text-muted-foreground"}`}>
             <Layers className="h-3 w-3" /> Landmarks
           </button>
         </div>
 
-        {/* Sidebar */}
+        {/* Floating overlay sidebar */}
         <aside
-          className={`${sidebarOpen ? "fixed inset-0 z-40 flex w-full" : "hidden"} flex-col border-r border-border/60 bg-card lg:relative lg:z-0 lg:flex lg:w-[380px]`}
+          className={`${sidebarOpen ? "fixed inset-0 z-40 m-0 flex w-full max-w-none rounded-none" : "hidden"} flex-col overflow-hidden border border-border/60 bg-card/95 shadow-2xl backdrop-blur lg:absolute lg:left-4 lg:top-4 lg:bottom-4 lg:z-20 lg:flex lg:w-[380px] lg:rounded-2xl`}
         >
           <div className="border-b border-border/60 p-4">
             <div className="flex items-center justify-between gap-2">
@@ -118,14 +145,23 @@ function MapPage() {
                     All developers
                   </button>
                   {[...developers].sort((a, b) => a.name.localeCompare(b.name)).map((d) => (
-                    <button
-                      key={d.slug}
-                      onClick={() => { setDev(d.slug); setDevOpen(false); }}
-                      className="flex w-full items-center justify-between gap-2 px-3 py-2 text-left text-sm hover:bg-secondary"
-                    >
-                      <span className="truncate">{d.name}</span>
-                      <span className="text-[10px] text-muted-foreground">{d.count}</span>
-                    </button>
+                    <div key={d.slug} className="flex items-center gap-1 border-b border-border/40 last:border-b-0">
+                      <button
+                        onClick={() => { setDev(d.slug); setDevOpen(false); }}
+                        className="flex flex-1 items-center justify-between gap-2 px-3 py-2 text-left text-sm hover:bg-secondary"
+                      >
+                        <span className="truncate">{d.name}</span>
+                        <span className="text-[10px] text-muted-foreground">{d.count}</span>
+                      </button>
+                      <Link
+                        to="/developers/$slug" params={{ slug: d.slug }}
+                        onClick={() => setDevOpen(false)}
+                        className="px-2 py-2 text-accent hover:bg-secondary"
+                        title={`Open ${d.name} page`}
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </Link>
+                    </div>
                   ))}
                 </div>
               )}
@@ -145,7 +181,10 @@ function MapPage() {
 
           {/* Area chips */}
           <div className="border-b border-border/60 p-3">
-            <div className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">Areas</div>
+            <div className="mb-1.5 flex items-center justify-between">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">Areas</span>
+              <Link to="/areas" className="text-[10px] font-medium text-accent hover:underline">Browse all →</Link>
+            </div>
             <div className="flex flex-wrap gap-1.5">
               <button
                 onClick={() => setAreaSlug(null)}
@@ -153,16 +192,27 @@ function MapPage() {
               >
                 All · {compounds.length}
               </button>
-              {areas.map((a) => (
-                <button
-                  key={a.slug}
-                  onClick={() => setAreaSlug(a.slug === areaSlug ? null : a.slug)}
-                  className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors ${areaSlug === a.slug ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:text-primary"}`}
-                >
-                  <span className="h-2 w-2 rounded-full" style={{ background: a.color }} />
-                  {a.name} · {areaCounts.get(a.slug) ?? 0}
-                </button>
-              ))}
+              {areas.map((a) => {
+                const isActive = areaSlug === a.slug;
+                return (
+                  <span key={a.slug} className={`inline-flex items-center overflow-hidden rounded-full border ${isActive ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground"}`}>
+                    <button
+                      onClick={() => setAreaSlug(isActive ? null : a.slug)}
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium hover:text-primary"
+                    >
+                      <span className="h-2 w-2 rounded-full" style={{ background: a.color }} />
+                      {a.name} · {areaCounts.get(a.slug) ?? 0}
+                    </button>
+                    <Link
+                      to="/areas/$slug" params={{ slug: a.slug }}
+                      className={`border-l px-1.5 py-1 ${isActive ? "border-primary-foreground/30 hover:bg-primary/80" : "border-border hover:bg-secondary"}`}
+                      title={`Open ${a.name} page`}
+                    >
+                      <ExternalLink className="h-3 w-3" />
+                    </Link>
+                  </span>
+                );
+              })}
             </div>
           </div>
 
@@ -174,26 +224,38 @@ function MapPage() {
           {/* Result list */}
           <div className="min-h-0 flex-1 overflow-y-auto">
             {filtered.map((c) => (
-              <button
+              <div
                 key={c.slug}
-                onClick={() => { setActiveSlug(c.slug); setSidebarOpen(false); }}
-                className={`flex w-full items-start gap-3 border-b border-border/60 p-3 text-left transition-colors ${activeSlug === c.slug ? "bg-secondary" : "hover:bg-secondary/50"}`}
+                className={`flex items-start gap-2 border-b border-border/60 p-3 transition-colors ${activeSlug === c.slug ? "bg-secondary" : "hover:bg-secondary/50"}`}
               >
-                <span className="mt-1.5 h-3 w-3 shrink-0 rounded-full ring-2 ring-white" style={{ background: areaColor(c.area) }} />
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex min-w-0 items-center gap-1.5">
-                      <span className="truncate font-display text-sm font-semibold text-primary">{c.name}</span>
-                      {c.flagship && <Star className="h-3 w-3 shrink-0 fill-amber-400 text-amber-500" />}
+                <button
+                  onClick={() => { setActiveSlug(c.slug); setSidebarOpen(false); }}
+                  className="flex min-w-0 flex-1 items-start gap-3 text-left"
+                  title="Preview on map"
+                >
+                  <span className="mt-1.5 h-3 w-3 shrink-0 rounded-full ring-2 ring-white" style={{ background: areaColor(c.area) }} />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex min-w-0 items-center gap-1.5">
+                        <span className="truncate font-display text-sm font-semibold text-primary">{c.name}</span>
+                        {c.flagship && <Star className="h-3 w-3 shrink-0 fill-amber-400 text-amber-500" />}
+                      </div>
+                      <span className="shrink-0 text-[11px] font-semibold text-primary">EGP {c.priceFrom}M</span>
                     </div>
-                    <span className="shrink-0 text-[11px] font-semibold text-primary">EGP {c.priceFrom}M</span>
+                    <div className="truncate text-[11px] text-muted-foreground">{c.developer}</div>
+                    <div className="mt-0.5 inline-flex items-center gap-1 text-[10px] uppercase tracking-wider text-muted-foreground">
+                      <MapPin className="h-2.5 w-2.5" /> {areas.find((a) => a.slug === c.area)?.name ?? c.area}
+                    </div>
                   </div>
-                  <div className="truncate text-[11px] text-muted-foreground">{c.developer}</div>
-                  <div className="mt-0.5 inline-flex items-center gap-1 text-[10px] uppercase tracking-wider text-muted-foreground">
-                    <MapPin className="h-2.5 w-2.5" /> {areas.find((a) => a.slug === c.area)?.name ?? c.area}
-                  </div>
-                </div>
-              </button>
+                </button>
+                <Link
+                  to="/projects/$slug" params={{ slug: c.slug }}
+                  className="shrink-0 self-center rounded-full p-1.5 text-accent hover:bg-accent/10"
+                  title="Open full page"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </Link>
+              </div>
             ))}
             {filtered.length === 0 && (
               <div className="p-8 text-center text-sm text-muted-foreground">No projects match. Try widening filters.</div>
@@ -201,36 +263,9 @@ function MapPage() {
           </div>
         </aside>
 
-        {/* Map */}
-        <div className="relative min-h-[400px] flex-1">
-          <MapClient
-            compounds={filtered}
-            landmarks={visibleLandmarks}
-            showLandmarks={showLandmarks}
-            activeSlug={activeSlug}
-            onSelect={(slug) => setActiveSlug(slug)}
-            initialCenter={mapCenter}
-            initialZoom={mapZoom}
-            className="h-full w-full"
-          />
-
-          {/* Map key */}
-          <div className="pointer-events-none absolute left-4 top-4 hidden rounded-2xl border border-border/60 bg-card/95 p-3 text-[10px] shadow-soft backdrop-blur md:block">
-            <div className="font-semibold uppercase tracking-[0.16em] text-muted-foreground">Map key</div>
-            <div className="mt-2 flex flex-col gap-1.5">
-              <KeyRow color="#3B82F6" label="Project · area-coloured" />
-              <KeyRow color="#CA8A04" label="★ Flagship" />
-              <KeyRow color="#EA580C" label="Mall" />
-              <KeyRow color="#2563EB" label="Airport" />
-              <KeyRow color="#9333EA" label="University" />
-              <KeyRow color="#06B6D4" label="Beach" />
-            </div>
-          </div>
-        </div>
-
         {/* Detail slide-in panel */}
         {active && (
-          <div className="fixed inset-0 z-30 flex justify-end lg:absolute lg:inset-y-0 lg:right-0 lg:z-10">
+          <div className="fixed inset-0 z-40 flex justify-end lg:absolute lg:inset-y-0 lg:right-0 lg:z-30">
             <button
               onClick={() => setActiveSlug(null)}
               className="absolute inset-0 bg-primary/30 backdrop-blur-[1px] lg:hidden"
@@ -305,21 +340,33 @@ function MapPage() {
                   </div>
                 </div>
 
-                {/* Developer card */}
-                {activeDev && (
-                  <details className="rounded-xl border border-border bg-card p-3 [&_summary::-webkit-details-marker]:hidden">
-                    <summary className="flex cursor-pointer items-center gap-3">
-                      <img src={activeDev.logo} alt={activeDev.name} className="h-10 w-10 rounded-lg" />
-                      <div className="min-w-0 flex-1">
-                        <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Developer</div>
+                {/* Area + Developer quick-jumps */}
+                <div className="grid grid-cols-2 gap-2">
+                  {activeArea && (
+                    <Link
+                      to="/areas/$slug" params={{ slug: activeArea.slug }}
+                      className="flex items-center gap-2 rounded-xl border border-border bg-card p-2.5 text-xs hover:border-accent hover:bg-accent/5"
+                    >
+                      <span className="h-7 w-7 shrink-0 rounded-lg" style={{ background: activeArea.color }} />
+                      <div className="min-w-0">
+                        <div className="text-[9px] uppercase tracking-wider text-muted-foreground">Area</div>
+                        <div className="truncate font-medium text-primary">{activeArea.name}</div>
+                      </div>
+                    </Link>
+                  )}
+                  {activeDev && (
+                    <Link
+                      to="/developers/$slug" params={{ slug: activeDev.slug }}
+                      className="flex items-center gap-2 rounded-xl border border-border bg-card p-2.5 text-xs hover:border-accent hover:bg-accent/5"
+                    >
+                      <img src={activeDev.logo} alt={activeDev.name} className="h-7 w-7 shrink-0 rounded-lg" />
+                      <div className="min-w-0">
+                        <div className="text-[9px] uppercase tracking-wider text-muted-foreground">Developer</div>
                         <div className="truncate font-medium text-primary">{activeDev.name}</div>
                       </div>
-                      <ChevronDown className="h-4 w-4 text-muted-foreground" />
-                    </summary>
-                    <p className="mt-3 text-xs leading-relaxed text-foreground/75">{activeDev.blurb}</p>
-                    <div className="mt-2 text-[11px] text-muted-foreground">{activeDev.count} {activeDev.count === 1 ? "project" : "projects"} on PropTrack</div>
-                  </details>
-                )}
+                    </Link>
+                  )}
+                </div>
 
                 <Link
                   to="/projects/$slug" params={{ slug: active.slug }}
