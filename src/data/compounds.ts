@@ -181,6 +181,17 @@ const cairoRaw: Array<{
   { name: "O West", area: "sheikh-zayed", lat: 30.055, lng: 30.910, developer: "Orascom Development", price: 13, year: 2026 },
 ];
 
+const newZayedRaw: typeof cairoRaw = [
+  { name: "SODIC The Estates", area: "new-zayed", lat: 30.075, lng: 30.890, developer: "SODIC", price: 18, year: 2026 },
+  { name: "ZED West", area: "new-zayed", lat: 30.078, lng: 30.875, developer: "Ora Developers", price: 16, year: 2027 },
+  { name: "Solana", area: "new-zayed", lat: 30.082, lng: 30.870, developer: "Ora Developers", price: 14, year: 2027 },
+  { name: "Sky Condos", area: "new-zayed", lat: 30.085, lng: 30.860, developer: "SODIC", price: 13, year: 2027 },
+  { name: "June Sheikh Zayed", area: "new-zayed", lat: 30.080, lng: 30.855, developer: "SODIC", price: 15, year: 2027 },
+  { name: "Karmell New Zayed", area: "new-zayed", lat: 30.090, lng: 30.890, developer: "SODIC", price: 17, year: 2028 },
+  { name: "Belle Vie New Zayed", area: "new-zayed", lat: 30.092, lng: 30.880, developer: "Emaar Misr", price: 16, year: 2027 },
+  { name: "Vinci Capital", area: "new-zayed", lat: 30.070, lng: 30.870, developer: "Misr Italia", price: 12, year: 2027 },
+];
+
 // New areas: 6th October, NAC, Mostakbal, Heliopolis, Sokhna, Red Sea, South Sinai, Fayoum
 const extraRaw: Array<{
   name: string; area: string; lat: number; lng: number; developer: string; price: number; year: number; beach?: boolean; type?: Compound["type"];
