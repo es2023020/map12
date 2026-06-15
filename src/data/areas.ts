@@ -107,6 +107,17 @@ export const areas: Area[] = [
     zoom: 12,
   },
   {
+    slug: "new-zayed",
+    name: "New Sheikh Zayed",
+    region: "greater-cairo",
+    color: "#6366F1",
+    city: "Giza",
+    blurb: "The newest western extension — large-plot villas, lower density, premium master-plans.",
+    hero: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
+    center: [30.080, 30.880],
+    zoom: 12,
+  },
+  {
     slug: "6th-october",
     name: "6th of October",
     region: "greater-cairo",
