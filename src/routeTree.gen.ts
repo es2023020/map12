@@ -9,7 +9,6 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SuggestionsRouteImport } from './routes/suggestions'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MapRouteImport } from './routes/map'
@@ -29,12 +28,8 @@ import { Route as DashboardLeadsRouteImport } from './routes/dashboard.leads'
 import { Route as DashboardFavoritesRouteImport } from './routes/dashboard.favorites'
 import { Route as DashboardCompareRouteImport } from './routes/dashboard.compare'
 import { Route as AreasSlugRouteImport } from './routes/areas.$slug'
+import { Route as UnitsProjectSlugTypeSlugRouteImport } from './routes/units.$projectSlug.$typeSlug'
 
-const SuggestionsRoute = SuggestionsRouteImport.update({
-  id: '/suggestions',
-  path: '/suggestions',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -130,6 +125,12 @@ const AreasSlugRoute = AreasSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => AreasRoute,
 } as any)
+const UnitsProjectSlugTypeSlugRoute =
+  UnitsProjectSlugTypeSlugRouteImport.update({
+    id: '/units/$projectSlug/$typeSlug',
+    path: '/units/$projectSlug/$typeSlug',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -142,7 +143,6 @@ export interface FileRoutesByFullPath {
   '/map': typeof MapRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/suggestions': typeof SuggestionsRoute
   '/areas/$slug': typeof AreasSlugRoute
   '/dashboard/compare': typeof DashboardCompareRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
@@ -152,6 +152,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/': typeof DashboardIndexRoute
   '/developers/': typeof DevelopersIndexRoute
   '/projects/': typeof ProjectsIndexRoute
+  '/units/$projectSlug/$typeSlug': typeof UnitsProjectSlugTypeSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -161,7 +162,6 @@ export interface FileRoutesByTo {
   '/calculator': typeof CalculatorRoute
   '/map': typeof MapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/suggestions': typeof SuggestionsRoute
   '/areas/$slug': typeof AreasSlugRoute
   '/dashboard/compare': typeof DashboardCompareRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
@@ -171,6 +171,7 @@ export interface FileRoutesByTo {
   '/dashboard': typeof DashboardIndexRoute
   '/developers': typeof DevelopersIndexRoute
   '/projects': typeof ProjectsIndexRoute
+  '/units/$projectSlug/$typeSlug': typeof UnitsProjectSlugTypeSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -184,7 +185,6 @@ export interface FileRoutesById {
   '/map': typeof MapRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/suggestions': typeof SuggestionsRoute
   '/areas/$slug': typeof AreasSlugRoute
   '/dashboard/compare': typeof DashboardCompareRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
@@ -194,6 +194,7 @@ export interface FileRoutesById {
   '/dashboard/': typeof DashboardIndexRoute
   '/developers/': typeof DevelopersIndexRoute
   '/projects/': typeof ProjectsIndexRoute
+  '/units/$projectSlug/$typeSlug': typeof UnitsProjectSlugTypeSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -208,7 +209,6 @@ export interface FileRouteTypes {
     | '/map'
     | '/projects'
     | '/sitemap.xml'
-    | '/suggestions'
     | '/areas/$slug'
     | '/dashboard/compare'
     | '/dashboard/favorites'
@@ -218,6 +218,7 @@ export interface FileRouteTypes {
     | '/dashboard/'
     | '/developers/'
     | '/projects/'
+    | '/units/$projectSlug/$typeSlug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -227,7 +228,6 @@ export interface FileRouteTypes {
     | '/calculator'
     | '/map'
     | '/sitemap.xml'
-    | '/suggestions'
     | '/areas/$slug'
     | '/dashboard/compare'
     | '/dashboard/favorites'
@@ -237,6 +237,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/developers'
     | '/projects'
+    | '/units/$projectSlug/$typeSlug'
   id:
     | '__root__'
     | '/'
@@ -249,7 +250,6 @@ export interface FileRouteTypes {
     | '/map'
     | '/projects'
     | '/sitemap.xml'
-    | '/suggestions'
     | '/areas/$slug'
     | '/dashboard/compare'
     | '/dashboard/favorites'
@@ -259,6 +259,7 @@ export interface FileRouteTypes {
     | '/dashboard/'
     | '/developers/'
     | '/projects/'
+    | '/units/$projectSlug/$typeSlug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -272,18 +273,11 @@ export interface RootRouteChildren {
   MapRoute: typeof MapRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  SuggestionsRoute: typeof SuggestionsRoute
+  UnitsProjectSlugTypeSlugRoute: typeof UnitsProjectSlugTypeSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/suggestions': {
-      id: '/suggestions'
-      path: '/suggestions'
-      fullPath: '/suggestions'
-      preLoaderRoute: typeof SuggestionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -417,6 +411,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AreasSlugRouteImport
       parentRoute: typeof AreasRoute
     }
+    '/units/$projectSlug/$typeSlug': {
+      id: '/units/$projectSlug/$typeSlug'
+      path: '/units/$projectSlug/$typeSlug'
+      fullPath: '/units/$projectSlug/$typeSlug'
+      preLoaderRoute: typeof UnitsProjectSlugTypeSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -487,7 +488,7 @@ const rootRouteChildren: RootRouteChildren = {
   MapRoute: MapRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  SuggestionsRoute: SuggestionsRoute,
+  UnitsProjectSlugTypeSlugRoute: UnitsProjectSlugTypeSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

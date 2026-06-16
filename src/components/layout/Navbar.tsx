@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
-import { Map, Building2, LayoutDashboard, ShieldCheck, Heart, Menu, X, Calculator, Sparkles } from "lucide-react";
+import { Map, Building2, LayoutDashboard, ShieldCheck, Heart, Menu, X, Calculator } from "lucide-react";
 import { useState } from "react";
 
 const publicLinks = [
@@ -10,7 +10,6 @@ const publicLinks = [
   { to: "/areas" as const, label: "Areas" },
   { to: "/developers" as const, label: "Developers" },
   { to: "/calculator" as const, label: "Calculator", icon: Calculator },
-  { to: "/suggestions" as const, label: "Unit Finder", icon: Sparkles },
 ];
 const brokerLinks = [
   { to: "/dashboard" as const, label: "Broker", icon: LayoutDashboard },
@@ -36,7 +35,6 @@ export function Navbar() {
         <nav className="ml-2 hidden items-center gap-0.5 md:flex">
           {links.map((l) => {
             const active = pathname === l.to || pathname.startsWith(l.to + "/");
-            const isHighlight = l.to === "/suggestions";
             return (
               <Link
                 key={l.to}
@@ -44,8 +42,6 @@ export function Navbar() {
                 className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
                   active
                     ? "bg-secondary text-primary"
-                    : isHighlight
-                    ? "text-accent hover:bg-accent/10"
                     : "text-muted-foreground hover:bg-secondary/60 hover:text-primary"
                 }`}
               >

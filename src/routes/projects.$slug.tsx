@@ -216,7 +216,7 @@ function CompoundPage() {
           {/* Live Availability from developer sheets */}
           {availabilityBySlug(c.slug) && (
             <Section title="Live Availability">
-              <AvailabilitySection data={availabilityBySlug(c.slug)!} />
+              <AvailabilitySection data={availabilityBySlug(c.slug)!} projectSlug={c.slug} />
             </Section>
           )}
 

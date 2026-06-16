@@ -1,11 +1,14 @@
+import { Link } from "@tanstack/react-router";
 import type { ProjectAvailability } from "@/data/availability";
-import { Phone, TrendingUp, Home, BarChart2, Clock } from "lucide-react";
+import { unitTypeSlug } from "@/data/availability";
+import { Phone, TrendingUp, Home, BarChart2, Clock, ArrowRight } from "lucide-react";
 
 interface Props {
   data: ProjectAvailability;
+  projectSlug?: string;
 }
 
-export function AvailabilitySection({ data }: Props) {
+export function AvailabilitySection({ data, projectSlug }: Props) {
   const totalMin = Math.min(...data.breakdown.map((b) => b.minPriceM));
   const totalMax = Math.max(...data.breakdown.map((b) => b.maxPriceM));
 
@@ -43,17 +46,34 @@ export function AvailabilitySection({ data }: Props) {
                 <th className="px-4 py-3 text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Size (m²)</th>
                 <th className="px-4 py-3 text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Price (EGP M)</th>
                 <th className="hidden sm:table-cell px-4 py-3 text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">% of Total</th>
+                {projectSlug && (
+                  <th className="px-4 py-3 text-center text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hidden sm:table-cell">Units</th>
+                )}
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
               {data.breakdown.map((row, i) => {
                 const pct = Math.round((row.available / data.totalAvailable) * 100);
+                const slug = projectSlug ? unitTypeSlug(row) : null;
+                const hasListings = Boolean(row.units && row.units.length > 0);
+                const label = `${row.type}${row.beds ? ` · ${row.beds}BR` : ""}${row.cluster ? ` (${row.cluster})` : ""}`;
+
                 return (
-                  <tr key={i} className="bg-card hover:bg-secondary/30 transition-colors">
+                  <tr key={i} className="group bg-card hover:bg-secondary/30 transition-colors">
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-2">
                         <span className="inline-block h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: typeColor(row.type) }} />
-                        <span className="font-medium text-primary">{row.type}</span>
+                        {projectSlug && slug ? (
+                          <Link
+                            to="/units/$projectSlug/$typeSlug"
+                            params={{ projectSlug, typeSlug: slug }}
+                            className="font-medium text-primary hover:text-accent transition-colors inline-flex items-center gap-1"
+                          >
+                            {label}
+                          </Link>
+                        ) : (
+                          <span className="font-medium text-primary">{label}</span>
+                        )}
                       </div>
                     </td>
                     <td className="px-4 py-3 text-right">
@@ -62,9 +82,7 @@ export function AvailabilitySection({ data }: Props) {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-right text-muted-foreground">
-                      {row.minSqm === row.maxSqm
-                        ? `${row.minSqm}`
-                        : `${row.minSqm}–${row.maxSqm}`}
+                      {row.minSqm === row.maxSqm ? `${row.minSqm}` : `${row.minSqm}–${row.maxSqm}`}
                     </td>
                     <td className="px-4 py-3 text-right">
                       <span className="font-semibold text-primary">
@@ -82,6 +100,24 @@ export function AvailabilitySection({ data }: Props) {
                         <span className="w-8 text-right text-xs text-muted-foreground">{pct}%</span>
                       </div>
                     </td>
+                    {projectSlug && (
+                      <td className="px-4 py-3 text-center hidden sm:table-cell">
+                        {slug && (
+                          <Link
+                            to="/units/$projectSlug/$typeSlug"
+                            params={{ projectSlug, typeSlug: slug }}
+                            className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold transition-colors ${
+                              hasListings
+                                ? "bg-emerald-100 text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-950/30 dark:text-emerald-400"
+                                : "bg-secondary text-muted-foreground hover:bg-secondary/80"
+                            }`}
+                          >
+                            {hasListings ? `${row.units!.length} listed` : "View"}
+                            <ArrowRight className="h-3 w-3" />
+                          </Link>
+                        )}
+                      </td>
+                    )}
                   </tr>
                 );
               })}
@@ -153,28 +189,22 @@ function MiniStat({ icon, label, value, accent }: { icon: React.ReactNode; label
 
 function typeColor(type: string): string {
   const map: Record<string, string> = {
-    "Apartment": "#6366F1",
-    "Garden Apartment": "#8B5CF6",
-    "Villa": "#14B8A6",
-    "Town House": "#F59E0B",
-    "Twin House": "#F97316",
-    "Chalet": "#0EA5E9",
-    "Cabin": "#10B981",
-    "Beach House": "#06B6D4",
-    "Duplex": "#A855F7",
-    "Penthouse": "#EC4899",
-    "Studio": "#84CC16",
-    "Grand View Villa": "#14B8A6",
-    "Millennial Apartment": "#6366F1",
-    "Garden Millennial": "#8B5CF6",
-    "I-Villa": "#F97316",
-    "I-Apartment": "#6366F1",
-    "Park Villa": "#14B8A6",
-    "Lake House": "#0EA5E9",
-    "One Storey": "#F59E0B",
-    "Sky Loft": "#A855F7",
-    "Cabana": "#06B6D4",
-    "One Storey Villa": "#F97316",
+    "Apartment": "#6366F1", "Garden Apartment": "#8B5CF6",
+    "Villa": "#14B8A6", "Town House": "#F59E0B", "Townhome": "#F59E0B",
+    "Twin House": "#F97316", "Twinhome": "#F97316",
+    "Chalet": "#0EA5E9", "Cabin": "#10B981",
+    "Beach House": "#06B6D4", "Duplex": "#A855F7",
+    "Penthouse": "#EC4899", "Studio": "#84CC16",
+    "Grand View Villa": "#14B8A6", "Millennial Apartment": "#6366F1",
+    "Garden Millennial": "#8B5CF6", "I-Villa": "#F97316",
+    "I-Apartment": "#6366F1", "Park Villa": "#14B8A6",
+    "Lake House": "#0EA5E9", "One Storey": "#F59E0B",
+    "Sky Loft": "#A855F7", "Cabana": "#06B6D4",
+    "One Storey Villa": "#F97316", "Standalone Villa": "#14B8A6",
+    "Twin Villa": "#F97316", "Sky Villa": "#EC4899",
+    "Typical Loft": "#A855F7", "Boardwalk Apartment": "#0EA5E9",
+    "Garden Apartment NHF": "#8B5CF6", "Serviced Office": "#6B7280",
+    "Admin Office": "#6B7280", "Medical Clinic": "#EF4444",
   };
   return map[type] ?? "#6B7280";
 }
