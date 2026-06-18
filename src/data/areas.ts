@@ -231,3 +231,28 @@ export const areas: Area[] = [
 
 export const areaBySlug = (slug: string) => areas.find((a) => a.slug === slug);
 export const areaColor = (slug: string) => areaBySlug(slug)?.color ?? "#3B82F6";
+
+const locationStrings: Record<string, string> = {
+  "sidi-heneish": "North Coast (Sidi Heneish), Matrouh Governorate, Egypt",
+  "ras-el-hekma": "Ras El Hekma, North Coast, Matrouh Governorate, Egypt",
+  "al-dabaa": "Al Dabaa, North Coast, Matrouh Governorate, Egypt",
+  "ghazala-bay": "Ghazala Bay, North Coast, Matrouh Governorate, Egypt",
+  "sidi-abdelrahman": "North Coast (Sidi Abdel Rahman), Matrouh Governorate, Egypt",
+  "new-alamein": "New Alamein City, Matrouh Governorate, Egypt",
+  "new-cairo": "New Cairo, Cairo Governorate, Egypt",
+  "sheikh-zayed": "Sheikh Zayed, Giza Governorate, Egypt",
+  "new-zayed": "New Zayed, Giza Governorate, Egypt",
+  "6th-october": "6th of October City, Giza Governorate, Egypt",
+  "new-administrative-capital": "New Administrative Capital, Cairo Governorate, Egypt",
+  "mostakbal-city": "Mostakbal City, New Cairo, Cairo Governorate, Egypt",
+  "heliopolis": "New Heliopolis, Cairo Governorate, Egypt",
+  "ain-sokhna": "Ain Sokhna, Red Sea Governorate, Egypt",
+  "red-sea": "Hurghada, Red Sea Governorate, Egypt",
+  "south-sinai": "South Sinai Governorate, Egypt",
+  "fayoum": "Fayoum, Fayoum Governorate, Egypt",
+  "sarai": "Sarai, New Cairo East, Cairo Governorate, Egypt",
+  "alexandria": "Alexandria Governorate, Egypt",
+};
+
+export const areaLocationString = (slug: string): string =>
+  locationStrings[slug] ?? areaBySlug(slug)?.name ?? slug;

@@ -10,28 +10,32 @@ export type Developer = {
 };
 
 const blurbs: Record<string, string> = {
-  "Emaar Misr": "Behind Marassi & Mivida — a global benchmark developer with mature master-plans.",
+  "Emaar Misr": "Behind Marassi & Mivida — a global benchmark developer with mature master-plans. Emaar Misr brings world-class Dubai standards to Egypt's North Coast and New Cairo.",
   "Palm Hills Developments": "Egypt's premier lifestyle developer — Hacienda North Coast series, Badya, 97 Hills, Palm Hills Jirian and 15+ active projects across Cairo and the coast.",
   "SODIC": "Premium homes in West Cairo, East Cairo and Sahel — Villette, Karmell, VYE, Botanica, June, and SODIC East.",
   "Mountain View": "iCity & iVilla series across Cairo, Mostakbal City and Ras El Hekma — 12 active projects, Crystal, Jirian, Grand Valley, Aliva.",
   "Madinet Masr": "Cairo's integrated city developer — Sarai, Taj City, TALALA, ELM TREE PARK, The Butterfly and 9+ active communities across New Cairo East.",
-  "Tatweer Misr": "Fouka Bay, Bloomfields, Salt — design-forward integrated communities.",
-  "Inertia": "Soul, Joulz, Jefaira — boutique master-plans.",
-  "Hyde Park": "Hyde Park New Cairo, Seashore, LVLS.",
-  "Talaat Moustafa Group": "Egypt's largest developer — Madinaty, Rehab, Stella, South Med.",
-  "City Edge": "New Cairo, El Alamein, October — government-backed quality communities.",
-  "Ora Developers": "Naguib Sawiris-backed — Zed Towers, Sheikh Zayed.",
-  "Misr Italia": "IL Monte Galala, LaVista — Red Sea and the North Coast.",
+  "Tatweer Misr": "Fouka Bay, Bloomfields, Salt, IL Monte Galala — design-forward integrated communities on the North Coast, Ain Sokhna and Mostakbal City.",
+  "Inertia": "Jefaira, Soul, Bianchi ILios — boutique beachfront master-plans with a focus on understated Mediterranean design.",
+  "Hyde Park": "Hyde Park New Cairo, Seashore North Coast, LVLS, Cleo Mostakbal — premium East Cairo backbone developer.",
+  "Talaat Moustafa Group": "Egypt's largest developer by scale — Madinaty, Al Rehab, Stella, South Med and Ghazala Bay.",
+  "City Edge": "New Alamein, 6th of October and NAC — government-backed quality communities at accessible price points.",
+  "Ora Developers": "Naguib Sawiris-backed developer — ZED Towers, ZED East, Solana, Silversands and D.O.S.E.",
+  "Misr Italia": "IL Bosco City, Vinci, Solare — signature Italian-inspired communities in New Capital, Sheikh Zayed and North Coast.",
   "Rooya Group": "Golf Central, Stone Park — East Cairo and the Red Sea.",
-  "Al Ahly Sabbour": "Sixty Iconic Tower, North Edge — East Cairo backbone developer.",
-  "Hassan Allam Properties": "Swan Lake, Haptown — 6th of October and North Coast.",
+  "Al Ahly Sabbour": "Amwaj, Youd, The Square Sabbour — New Cairo and North Coast backbone developer.",
+  "Hassan Allam Properties": "Swan Lake, Haptown, Beit Al Bahr — North Coast and Ain Sokhna premium resort communities.",
   "Iwan Developments": "Arabella — New Cairo's established family community.",
-  "Wadi Degla": "Palm Hills Katameya, Royal Meadows — premium East Cairo.",
+  "Wadi Degla": "Direction White, D-Bay, Zahra — North Coast and New Alamein communities.",
   "Mena Developments": "Bali — El Alamein's upcoming resort city.",
-  "Modon": "Alam Al Roum — premium Sidi Heneish resort.",
-  "Travco": "Jamila — large-scale Sahel beachfront.",
+  "Modon": "Modon Ras El Hekma — a premium resort community by the Saudi developer Modon in the new Ras El Hekma coastal city.",
+  "Alam Al Roum Developments": "Alam Al Roum — an exclusive ultra-low-density resort at km 275 in Sidi Heneish, Egypt's furthest-north premium coast destination.",
+  "Travco": "Almaza Bay — large-scale Sahel beachfront community at Sidi Heneish.",
   "Better Home": "Sun Capital, Spring — 6th of October established communities.",
-  "Badya": "Palm Hills' urban city project — Sheikh Zayed.",
+  "Memaar El Morshedy": "Blumar North Coast, Anakaji New Capital — Al Morshedy Group's signature coastal resort and capital-city communities.",
+  "La Vista Developments": "La Vista Ras El Hekma, La Vista Bay, La Vista Cascada Ain Sokhna, La Vista City — premium resort living across Egypt's key markets.",
+  "Eagle Hills": "Marbay Ain Sokhna — the Abu Dhabi-based developer's Egyptian resort flagship on the Red Sea coast.",
+  "Reedy Group": "Azzar Island Ain Sokhna — a distinctive island-concept resort community.",
 };
 
 const logoMap: Record<string, string> = {
@@ -53,6 +57,11 @@ const logoMap: Record<string, string> = {
   "iwan-developments": "https://logo.clearbit.com/iwandevelopments.com",
   "wadi-degla": "https://logo.clearbit.com/wadidegla.com",
   "mena-developments": "https://logo.clearbit.com/menadev.com.eg",
+  "memaar-el-morshedy": "https://logo.clearbit.com/morshedy.com",
+  "la-vista-developments": "https://logo.clearbit.com/lavistadevelopments.com",
+  "eagle-hills": "https://logo.clearbit.com/eaglehills.ae",
+  "modon": "https://logo.clearbit.com/modon.sa",
+  "travco": "https://logo.clearbit.com/travco.com",
 };
 
 const websiteMap: Record<string, string> = {
@@ -68,6 +77,15 @@ const websiteMap: Record<string, string> = {
   "city-edge": "https://cityedge.com.eg",
   "ora-developers": "https://oradevelopers.com",
   "misr-italia": "https://misritalia.com.eg",
+  "rooya-group": "https://rooyagroup.com",
+  "al-ahly-sabbour": "https://sabbour.com",
+  "hassan-allam-properties": "https://hassanallamproperties.com",
+  "iwan-developments": "https://iwandevelopments.com",
+  "wadi-degla": "https://wadidegla.com",
+  "memaar-el-morshedy": "https://morshedy.com",
+  "la-vista-developments": "https://lavistadevelopments.com",
+  "eagle-hills": "https://eaglehills.ae",
+  "modon": "https://modon.sa",
 };
 
 function fallbackLogo(name: string) {

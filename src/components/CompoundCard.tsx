@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Heart, MapPin, Waves, Calendar, GitCompareArrows } from "lucide-react";
 import { useStore } from "@/lib/store";
-import { titleArea } from "@/lib/format";
+import { areaBySlug } from "@/data/areas";
 import type { Compound } from "@/data/compounds";
 
 export function CompoundCard({ c }: { c: Compound }) {
@@ -48,7 +48,7 @@ export function CompoundCard({ c }: { c: Compound }) {
           </div>
         </div>
         <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
-          <span className="inline-flex items-center gap-1"><MapPin className="h-3 w-3" /> {titleArea(c.area)}{c.km ? ` · km ${c.km}` : ""}</span>
+          <span className="inline-flex items-center gap-1"><MapPin className="h-3 w-3" /> {areaBySlug(c.area)?.name ?? c.area}{c.km ? ` · km ${c.km}` : ""}</span>
           <span className="inline-flex items-center gap-1"><Calendar className="h-3 w-3" /> {c.deliveryYear}</span>
         </div>
         <div className="mt-3 flex items-baseline gap-1.5">

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { MapClient } from "@/components/map/MapClient";
 import { compoundBySlug, compoundsByArea } from "@/data/compounds";
-import { areaBySlug } from "@/data/areas";
+import { areaBySlug, areaLocationString } from "@/data/areas";
 import { developerBySlug } from "@/data/developers";
 import { CompoundCard } from "@/components/CompoundCard";
 import { availabilityBySlug } from "@/data/availability";
@@ -266,7 +266,7 @@ function CompoundPage() {
             <div className="mt-3 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-accent" />
-                {area?.name}{c.km ? ` · km ${c.km}` : ""}
+                {areaLocationString(c.area)}{c.km ? ` · km ${c.km}` : ""}
               </span>
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`}
