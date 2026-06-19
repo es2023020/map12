@@ -1,7 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
-import logoAsset from "@/assets/proptrack-logo.png.asset.json";
-
 export function Footer() {
   const user = useStore((s) => s.user);
   return (
@@ -9,7 +7,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 lg:grid-cols-4 lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="PropTrack" className="h-10 w-10 object-contain" />
+            <img src="/logo.png" alt="PropTrack" className="h-10 w-10 object-contain" />
             <div className="font-display text-2xl font-semibold">
               Prop<span className="text-accent">Track</span>
             </div>

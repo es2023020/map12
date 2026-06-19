@@ -8,8 +8,6 @@ import { areas } from "@/data/areas";
 import { developers } from "@/data/developers";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Building2, Users, Sparkles } from "lucide-react";
-import logoAsset from "@/assets/proptrack-logo.png.asset.json";
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -17,7 +15,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Every Sahel compound on one map, plus New Cairo and Sheikh Zayed. Built for Egyptian real-estate brokers." },
       { property: "og:title", content: "PropTrack — Real-estate intelligence for Egyptian brokers" },
       { property: "og:description", content: "Interactive map of every Sahel, New Cairo and Sheikh Zayed compound. Project library, broker dashboard, lead pipeline." },
-        { property: "og:image", content: logoAsset.url },
+      { property: "og:image", content: "/logo.png" },
     ],
   }),
   component: Index,
@@ -36,7 +34,7 @@ function Index() {
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-24">
           <div>
             <div className="flex items-center gap-3">
-              <img src={logoAsset.url} alt="PropTrack" className="h-14 w-14 object-contain drop-shadow-xl" />
+              <img src="/logo.png" alt="PropTrack" className="h-14 w-14 object-contain drop-shadow-xl" />
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
                 <Sparkles className="h-3.5 w-3.5" /> Built for Egyptian brokers
               </span>

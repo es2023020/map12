@@ -17,20 +17,20 @@ const blurbs: Record<string, string> = {
   "Madinet Masr": "Cairo's integrated city developer — Sarai, Taj City, TALALA, ELM TREE PARK, The Butterfly, Club Views and 9+ active communities across New Cairo East.",
   "Tatweer Misr": "Fouka Bay, D-Bay, Bloomfields, Salt, IL Monte Galala — design-forward integrated communities across the North Coast, Ain Sokhna and Mostakbal City.",
   "Inertia": "Jefaira, Soul, Bianchi ILios — boutique beachfront master-plans with a focus on understated Mediterranean design.",
-  "Hyde Park": "Hyde Park New Cairo, Seashore Ras El Hekma, LVLS, Hyde Park West, Cleo Mostakbal — premium East Cairo backbone developer.",
+  "Hyde Park": "Hyde Park New Cairo, Seashore Ras El Hekma, Hyde Park West, Cleo Mostakbal — premium East Cairo backbone developer with signature park-fronted communities.",
   "Talaat Moustafa Group": "Egypt's largest developer by scale — Madinaty, Al Rehab, Stella, South Med and Ghazala Bay across Cairo and the North Coast.",
   "City Edge": "New Alamein, 6th of October and NAC — government-backed quality communities: Lagoons, Mazarine, North Edge Towers, Downtown New Alamein.",
   "Ora Developers": "Naguib Sawiris-backed developer — ZED Towers, ZED East, Solana, Silversands and D.O.S.E.",
-  "Misr Italia": "IL Bosco City, Vinci, Solare — signature Italian-inspired communities in New Capital, Sheikh Zayed and North Coast.",
-  "Al Ahly Sabbour": "Amwaj, Youd, The Square Sabbour, At East — North Coast and Mostakbal City backbone developer with 20+ years of delivery.",
-  "Hassan Allam Properties": "Swan Lake, Haptown, Beit Al Bahr — North Coast and Ain Sokhna premium resort communities.",
-  "Wadi Degla": "Direction White, Zahra, Zayed 2000 — North Coast and New Alamein communities.",
+  "Misr Italia": "IL Bosco City, Stone Residence, Vinci, Solare — signature Italian-inspired communities in New Capital, New Cairo, Sheikh Zayed and North Coast.",
+  "Al Ahly Sabbour": "Amwaj, Gaia, Summer, Youd, The Square Sabbour, At East — North Coast backbone developer with 20+ years of Egyptian market delivery.",
+  "Hassan Allam Properties": "Swan Lake, The Mornings, Haptown, Beit Al Bahr — premium integrated communities across North Coast, New Cairo and Ain Sokhna.",
+  "Wadi Degla": "Direction White, Zahra, Zayed 2000, Murano Ain Sokhna — North Coast, New Alamein and Red Sea coastal communities.",
   "Modon": "Modon Ras El Hekma — a premium resort community by the Saudi developer Modon in the new Ras El Hekma coastal city.",
   "Alam Al Roum Developments": "Alam Al Roum — an exclusive ultra-low-density resort at km 275 in Sidi Heneish, Egypt's furthest-north premium coast destination. A Qatari Diar affiliated development.",
   "Travco": "Almaza Bay — large-scale Sahel beachfront community at Sidi Heneish, backed by Travco's hospitality expertise.",
   "Memaar El Morshedy": "Blumar North Coast, Anakaji New Capital — Al Morshedy Group's signature coastal resort and capital-city communities.",
   "La Vista Developments": "La Vista Ras El Hekma, La Vista Bay, La Vista Cascada Ain Sokhna, La Vista City — premium resort living across Egypt's key markets.",
-  "Eagle Hills": "Marbay Ain Sokhna — the Abu Dhabi-based developer's Egyptian resort flagship on the Red Sea coast.",
+  "Eagle Hills": "The Abu Dhabi-based global developer with hospitality and residential communities across the UAE and wider region.",
   "Reedy Group": "Azzar Island Ain Sokhna — a distinctive island-concept resort community on Egypt's Red Sea coast.",
   "Madaar": "Azha Ras El Hekma, Caesar Bay — premium beachfront resort compounds by Madaar Development on Egypt's North Coast.",
   "NGD": "Botanica Sheikh Zayed — Nature Group Developments' award-winning botanically themed residential community in West Cairo.",
@@ -48,7 +48,13 @@ const blurbs: Record<string, string> = {
   "Mena Developments": "Bali — El Alamein's upcoming resort city.",
   "Better Home": "Sun Capital, Spring — 6th of October established communities at accessible price points.",
   "Rooya Group": "Golf Central, Stone Park — East Cairo and the Red Sea.",
-  "M Squared": "Murano, El Masyaf Ain Sokhna — M Squared's premium resort compounds on the Ain Sokhna coast.",
+  "M Squared": "El Masyaf, Masaya Ain Sokhna — M Squared's premium resort compounds on the Ain Sokhna coast.",
+  "Roya Developments": "Sky North, Ogami, Telal, Telal Sokhna, Telal Soul — Egypt's leading resort developer with a strong North Coast and Ain Sokhna portfolio spanning km 60 to km 275.",
+  "Stella Di Mare": "Stella Heights, Stella Sidi Abdel Rahman, Stella di Mare Ain Sokhna — the Egyptian resort developer behind some of the North Coast's most established beachfront communities.",
+  "Master Group Developments": "City Oval New Administrative Capital — Master Group's flagship mixed-use community in Egypt's new capital city.",
+  "Al Marasem Developments": "Marbay Ain Sokhna — Al Marasem's premium Red Sea resort in the Ain Sokhna coastal corridor.",
+  "Horizon Egypt Developments": "Sa'ada Sahel — Horizon's beachfront North Coast resort community at km 183 Ras El Hekma.",
+  "Al Attal Holding": "Ras Sudr Riviera — Al Attal's coastal resort destination on the Gulf of Suez in South Sinai.",
 };
 
 const logoMap: Record<string, string> = {
@@ -88,6 +94,12 @@ const logoMap: Record<string, string> = {
   "ngd": "https://logo.clearbit.com/ngdevelopments.com",
   "mercon": "https://logo.clearbit.com/mercondevelopments.com",
   "m-squared": "https://logo.clearbit.com/msquaredegypt.com",
+  "roya-developments": "https://logo.clearbit.com/royadevelopments.com",
+  "stella-di-mare": "https://logo.clearbit.com/stelladimare.com",
+  "master-group-developments": "https://logo.clearbit.com/mastergroup.com.eg",
+  "al-marasem-developments": "https://logo.clearbit.com/almarasem.com",
+  "horizon-egypt-developments": "https://logo.clearbit.com/horizonegypt.com",
+  "al-attal-holding": "https://logo.clearbit.com/alattaldevelopment.com",
 };
 
 const websiteMap: Record<string, string> = {
@@ -120,6 +132,12 @@ const websiteMap: Record<string, string> = {
   "al-futtaim": "https://alfuttaim.com",
   "madaar": "https://madaar.com",
   "acud": "https://acud.gov.eg",
+  "roya-developments": "https://royadevelopments.com",
+  "stella-di-mare": "https://stelladimare.com",
+  "master-group-developments": "https://mastergroup.com.eg",
+  "al-marasem-developments": "https://almarasem.com",
+  "horizon-egypt-developments": "https://horizonegypt.com",
+  "al-attal-holding": "https://alattaldevelopment.com",
 };
 
 function fallbackLogo(name: string) {
