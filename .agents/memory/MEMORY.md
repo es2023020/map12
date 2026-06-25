@@ -1,4 +1,0 @@
-- [TanStack Router code-splitter naming](tanstack-codesplitter-naming.md) — importing a named component into a route file can collide; use inline helper functions instead
-- [Logo fallback pattern](logo-fallback-pattern.md) — use absolute-positioned initials bg so user-passed className can't override it; clearbit blocked in Replit sandbox but works in production
-- [TanStack Router nested routes layout fix](tanstack-nested-routes.md) — when a route has children, it must use Outlet; use route.tsx (Outlet only) + route.index.tsx (content) pattern
-- [Nawy CDN image pattern](nawy-cdn-images.md) — nawy.com hosts real Egyptian compound images at prod-images.nawy.com; fetch the compound page and extract /processed/compound_image/ URLs; use /processed/compound/cover_image/ for the hero

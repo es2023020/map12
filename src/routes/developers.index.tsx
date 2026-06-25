@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { developers } from "@/data/developers";
-import { Search, Building2, TrendingUp, Globe, ArrowUpRight } from "lucide-react";
+import { developersWithProfiles } from "@/data/profiles.generated";
+import { Search, Building2, TrendingUp, Globe, ArrowUpRight, FileText } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
@@ -137,9 +138,32 @@ function DevelopersPage() {
                   {d.count} {d.count === 1 ? "project" : "projects"}
                 </div>
               </div>
-              {d.website && (
-                <Globe className="h-3.5 w-3.5 text-muted-foreground/40 group-hover:text-accent shrink-0 transition-colors" />
-              )}
+              <div className="flex items-center gap-1 shrink-0">
+                {developersWithProfiles.includes(d.slug) && (
+                  <a
+                    href={`/profiles/${d.slug}.pdf`}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="p-1.5 rounded-lg text-muted-foreground/40 hover:text-accent hover:bg-accent/5 transition-colors"
+                    title="View Company Profile"
+                  >
+                    <FileText className="h-4 w-4" />
+                  </a>
+                )}
+                {d.website && (
+                  <a
+                    href={d.website}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="p-1.5 rounded-lg text-muted-foreground/40 hover:text-accent hover:bg-accent/5 transition-colors"
+                    title="Official Website"
+                  >
+                    <Globe className="h-4 w-4" />
+                  </a>
+                )}
+              </div>
             </Link>
           ))}
         </div>

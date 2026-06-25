@@ -7,9 +7,16 @@ export type Developer = {
   logo: string;
   blurb: string;
   website?: string;
+  foundingYear?: number;
+  landBank?: string;
+  unitsDelivered?: string;
+  structure?: string;
 };
 
 const blurbs: Record<string, string> = {
+  "LMD": "LMD Developments — premium real estate developer behind signature residential and mixed-use communities in Cairo, Greece, Dubai and Sahel.",
+  "The Waterway Developments": "The Waterway Developments — signature boutique developer behind premium Cairo settlements and the luxury Waterway resort in Sahel.",
+
   "Emaar Misr": "Behind Marassi & Mivida — a global benchmark developer with mature master-plans. Emaar Misr brings world-class Dubai standards to Egypt's North Coast and New Cairo, plus Belle Vie and Cairo Gate in Sheikh Zayed.",
   "Palm Hills Developments": "Egypt's premier lifestyle developer — Hacienda North Coast series, Badya, 97 Hills, Bamboo III, Cleo Water Residence, and 15+ active projects across Cairo and the coast.",
   "SODIC": "Premium homes in West Cairo, East Cairo and Sahel — Villette, Karmell, VYE, Allegria, Beverly Hills, Eastown, June, Caesar and SODIC East.",
@@ -23,7 +30,7 @@ const blurbs: Record<string, string> = {
   "Ora Developers": "Naguib Sawiris-backed developer — ZED Towers, ZED East, Solana, Silversands and D.O.S.E.",
   "Misr Italia": "IL Bosco City, Stone Residence, Vinci, Solare — signature Italian-inspired communities in New Capital, New Cairo, Sheikh Zayed and North Coast.",
   "Al Ahly Sabbour": "Amwaj, Gaia, Summer, Youd, The Square Sabbour, At East — North Coast backbone developer with 20+ years of Egyptian market delivery.",
-  "Hassan Allam Properties": "Swan Lake, The Mornings, Haptown, Beit Al Bahr — premium integrated communities across North Coast, New Cairo and Ain Sokhna.",
+  "Hassan Allam Properties": "Swan Lake, The Mornings, Haptown — premium integrated communities across North Coast and New Cairo.",
   "Wadi Degla": "Direction White, Zahra, Zayed 2000, Murano Ain Sokhna — North Coast, New Alamein and Red Sea coastal communities.",
   "Modon": "Modon Ras El Hekma — a premium resort community by the Saudi developer Modon in the new Ras El Hekma coastal city.",
   "Alam Al Roum Developments": "Alam Al Roum — an exclusive ultra-low-density resort at km 275 in Sidi Heneish, Egypt's furthest-north premium coast destination. A Qatari Diar affiliated development.",
@@ -36,6 +43,8 @@ const blurbs: Record<string, string> = {
   "NGD": "Botanica Sheikh Zayed — Nature Group Developments' award-winning botanically themed residential community in West Cairo.",
   "Maven Developments": "Cali Coast Ras El Hekma, Playa — Maven's California-inspired coastal resort communities on the North Coast.",
   "Maven": "Cali Coast Ras El Hekma, Playa Ghazala Bay — Maven's California-inspired coastal resort communities on the North Coast.",
+  "Beit Al Bahr Developments": "Beit Al Bahr at km 241 Sidi Heneish — BAM alliance (El Abd, Guira, J Developments) with ~450 acres and 3.5 km private beachfront.",
+  "Mabany Edris": "Koun Ras El Hekma — Mabany Edris' flagship North Coast resort at km 201 with lagoon-front chalets, villas and twin houses.",
   "Marakez Properties": "District 5, Crescent Walk, Aeon, Ramla — Majid Al Futtaim's Egyptian residential arm delivering integrated communities in New Cairo and Ras El Hekma.",
   "Marakez": "District 5, Crescent Walk, Aeon, Ramla, Marsa Baghush — Majid Al Futtaim's Egyptian residential arm across New Cairo and the North Coast.",
   "Mercon": "Dayz New Alamein — a vibrant lifestyle resort community by Mercon Developments on the New Alamein coastline.",
@@ -55,9 +64,15 @@ const blurbs: Record<string, string> = {
   "Al Marasem Developments": "Marbay Ain Sokhna — Al Marasem's premium Red Sea resort in the Ain Sokhna coastal corridor.",
   "Horizon Egypt Developments": "Sa'ada Sahel — Horizon's beachfront North Coast resort community at km 183 Ras El Hekma.",
   "Al Attal Holding": "Ras Sudr Riviera — Al Attal's coastal resort destination on the Gulf of Suez in South Sinai.",
+  "SKY AD. Developments": "Sky North at km 246 Sidi Heneish — a boutique North Coast launch by SKY AD. Developments.",
+  "Sky Abu Dhabi Developments": "Sky North at km 246 — Diamond Group's Sidi Heneish resort with lagoons, hotel and ~80% green landscape.",
+  "Shehab A. Mazhar": "Marsa Baghush at km 240 — a premium coastal community developed by Shehab A. Mazhar on Egypt's furthest Sahel stretch.",
 };
 
 const logoMap: Record<string, string> = {
+  "lmd": "https://logo.clearbit.com/lmd.com.eg",
+  "the-waterway-developments": "https://logo.clearbit.com/thewaterway.com",
+
   "emaar-misr": "https://logo.clearbit.com/emaarmisr.com",
   "palm-hills-developments": "https://logo.clearbit.com/palmhillsdevelopments.com",
   "sodic": "https://logo.clearbit.com/sodic.com.eg",
@@ -103,6 +118,9 @@ const logoMap: Record<string, string> = {
 };
 
 const websiteMap: Record<string, string> = {
+  "lmd": "https://lmd.com.eg",
+  "the-waterway-developments": "https://thewaterway.com",
+
   "emaar-misr": "https://emaarmisr.com",
   "palm-hills-developments": "https://palmhillsdevelopments.com",
   "sodic": "https://sodic.com.eg",
@@ -140,6 +158,54 @@ const websiteMap: Record<string, string> = {
   "al-attal-holding": "https://alattaldevelopment.com",
 };
 
+const foundingYears: Record<string, number> = {
+  "sodic": 1996,
+  "hassan-allam-properties": 1999,
+  "tatweer-misr": 2014,
+  "hyde-park": 2007,
+  "madinet-masr": 1959,
+  "lmd": 2007,
+  "la-vista-developments": 1991,
+  "misr-italia": 1998,
+  "ora-developers": 2016,
+  "the-waterway-developments": 2010,
+};
+
+const landBanks: Record<string, string> = {
+  "sodic": "17,000,000 m²",
+  "hassan-allam-properties": "8,645,799 m²",
+  "madinet-masr": "40,000,000 m²",
+  "hyde-park": "6,081,337 m²",
+  "lmd": "12,000,000 m²",
+  "tatweer-misr": "5,800,000 m²",
+  "la-vista-developments": "9,500,000 m²",
+  "the-waterway-developments": "2,200,000 m²",
+  "misr-italia": "6,000,000 m²",
+};
+
+const unitsDeliveredMap: Record<string, string> = {
+  "sodic": "14,000+",
+  "hassan-allam-properties": "19,521",
+  "hyde-park": "3,200+",
+  "madinet-masr": "12,000+",
+  "lmd": "5,000+",
+  "la-vista-developments": "10,000+",
+  "tatweer-misr": "8,500+",
+};
+
+const structures: Record<string, string> = {
+  "sodic": "Publicly Traded (EGX: OCDI.CA) - 85.5% owned by Aldar ADQ Consortium",
+  "hassan-allam-properties": "Private / Family-run (3 Generations) - Mohamed Allam, CEO",
+  "tatweer-misr": "Shareholding Company (S.A.E) - Non-Family Owned (Arafa, Daoud, Ahram Groups)",
+  "hyde-park": "Joint Ownership Consortium (HDB 36.9%, EBA 24%, NUCA 20.9%, Holding Co 18.2%)",
+  "madinet-masr": "Publicly Traded (EGX: MASR.CA) - Established 1959",
+  "lmd": "Private Shareholding - Founded by Eng. Amr Sultan, CEO",
+  "la-vista-developments": "Private Shareholding",
+  "misr-italia": "Private Shareholding (Mohamed Hany El Assal & Mohamed Khaled El Assal, CEOs)",
+  "ora-developers": "Private (Naguib Sawiris)",
+  "the-waterway-developments": "Private (Founded by Hossam Hassan & Ahmed El Sewedy)",
+};
+
 function fallbackLogo(name: string) {
   return `https://ui-avatars.com/api/?background=1f3a5f&color=fff&bold=true&size=128&name=${encodeURIComponent(name)}`;
 }
@@ -159,6 +225,10 @@ export const developers: Developer[] = Array.from(map.entries())
     logo: logoMap[slug] ?? fallbackLogo(v.name),
     blurb: blurbs[v.name] ?? `${v.name} — active developer with ${v.count} ${v.count === 1 ? "project" : "projects"} on PropTrack.`,
     website: websiteMap[slug],
+    foundingYear: foundingYears[slug],
+    landBank: landBanks[slug],
+    unitsDelivered: unitsDeliveredMap[slug],
+    structure: structures[slug],
   }))
   .sort((a, b) => b.count - a.count);
 

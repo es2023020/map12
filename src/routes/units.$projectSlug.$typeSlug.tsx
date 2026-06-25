@@ -279,6 +279,7 @@ function UnitTypePage() {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/calculator"
+              search={{ project: compound.slug }}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-primary hover:border-accent hover:text-accent transition-colors"
             >
               <Calculator className="h-4 w-4" />

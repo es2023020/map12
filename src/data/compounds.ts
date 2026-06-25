@@ -1,4 +1,9 @@
 import { kmToLatLng } from "./coast";
+import { compoundRegistry } from "./compound-registry";
+import { projectImages } from "./project-images";
+import { projectLocations } from "./project-locations";
+import { sahelDetails } from "./sahel-details";
+import { areas } from "./areas";
 
 export type Compound = {
   slug: string;
@@ -56,32 +61,34 @@ const sahelRaw: SahelInput[] = [
   ["Almaza Bay", 250, "sidi-heneish", "Travco", 12, 2026, true],
   ["Hacienda Heneish", 248, "sidi-heneish", "Palm Hills Developments", 16, 2027, true],
   ["Silversands", 247, "sidi-heneish", "Ora Developers", 22, 2027, true],
-  ["Sky North", 246, "sidi-heneish", "Roya Developments", 11, 2027, false],
+  ["Sky North", 246, "sidi-heneish", "Sky AD. Developments", 11, 2029, false],
   ["Summer", 246, "sidi-heneish", "Al Ahly Sabbour", 9, 2026, true],
-  ["Marsa Baghush", 240, "sidi-heneish", "Marakez", 13, 2027, true],
+  ["Marsa Baghush", 240, "sidi-heneish", "Shehab A. Mazhar", 13, 2027, true],
+  ["Beit Al Bahr", 241, "sidi-heneish", "Beit Al Bahr Developments", 15, 2027, true],
   // RAS EL HEKMA
+  ["MarBay Ras El Hekma", 200, "ras-el-hekma", "Al Marasem Developments", 12.0, 2027, true],
+
   ["Hacienda Ras El Hekma", 238, "ras-el-hekma", "Palm Hills Developments", 15, 2027, true],
   ["Modon Ras El Hekma", 220, "ras-el-hekma", "Modon", 20, 2028, true],
   ["Ramla", 215, "ras-el-hekma", "Marakez", 10, 2027, true],
   ["Azha", 214, "ras-el-hekma", "Madaar", 9, 2026, true],
-  ["Naia Bay", 212, "ras-el-hekma", "Jadeer Developments", 8, 2026, true],
+  ["Naia Bay", 212, "ras-el-hekma", "Jumeirah Egypt", 8, 2026, true],
   ["Fouka Bay", 211, "ras-el-hekma", "Tatweer Misr", 10, 2026, true],
   ["Hacienda West", 208, "ras-el-hekma", "Palm Hills Developments", 14, 2027, true],
   ["Hyde Park North - Seashore", 207, "ras-el-hekma", "Hyde Park", 13, 2027, true],
-  ["Ogami", 205, "ras-el-hekma", "Roya Developments", 12, 2027, true],
+  ["Ogami", 205, "ras-el-hekma", "SODIC", 12, 2027, true],
   ["La Vista Ras El Hekma", 204, "ras-el-hekma", "La Vista Developments", 11, 2027, true],
   ["Caesar Sodic", 202, "ras-el-hekma", "SODIC", 14, 2027, true],
-  ["Koun", 202, "ras-el-hekma", "MAVEN Developments", 10, 2027, true],
+  ["Koun", 201, "ras-el-hekma", "Mabany Edris", 10, 2027, true],
   ["Caesar Bay", 201, "ras-el-hekma", "Madaar", 12, 2026, true],
-  ["Lyv", 200, "ras-el-hekma", "Cred Developments", 13, 2027, true],
+  ["Lyv", 200, "ras-el-hekma", "Cred", 13, 2027, true],
   ["Mountain View Ras El Hekma", 200, "ras-el-hekma", "Mountain View", 16, 2028, true],
   ["Solare", 199, "ras-el-hekma", "Misr Italia", 10, 2027, true],
   ["Swan Lake", 197, "ras-el-hekma", "Hassan Allam Properties", 11, 2026, true],
-  ["Seashell Ras El Hekma", 195, "ras-el-hekma", "Al Marasem", 9, 2026, true],
-  ["Gaia", 140, "sidi-abdelrahman", "Al Ahly Sabbour", 9, 2026, true],
+  ["Seashell Ras El Hekma", 195, "ras-el-hekma", "Al Marasem Developments", 9, 2026, true],
   ["June", 194, "ras-el-hekma", "SODIC", 14, 2027, true],
-  ["Direction White", 193, "ras-el-hekma", "Wadi Degla", 8, 2026, true],
-  ["Cali Coast Ras El Hekma", 193, "ras-el-hekma", "Maven", 10, 2027, true],
+  ["Direction White", 193, "ras-el-hekma", "Arabella Developments", 8, 2026, true],
+  ["Cali Coast Ras El Hekma", 193, "ras-el-hekma", "Maven Developments", 10, 2027, true],
   ["The Med", 192, "ras-el-hekma", "PRE Developments", 11, 2027, true],
   ["D-Bay", 190, "ras-el-hekma", "Tatweer Misr", 7, 2026, true],
   ["Jefaira", 190, "ras-el-hekma", "Inertia", 12, 2026, true],
@@ -94,6 +101,7 @@ const sahelRaw: SahelInput[] = [
   ["Soul", 180, "ras-el-hekma", "Emaar Misr", 13, 2027, true],
   ["LVLS", 179, "ras-el-hekma", "Mountain View", 11, 2027, true],
   // AL DABAA
+  ["D.O.S.E", 174, "al-dabaa", "Akam Al Rajhi Developments", 9, 2026, true],
   ["The Waterway", 173, "al-dabaa", "Equity", 8, 2025, false],
   ["Seazen", 172, "al-dabaa", "Cred", 8, 2026, true],
   ["La Vista Bay", 169, "al-dabaa", "La Vista Developments", 9, 2025, true],
@@ -104,14 +112,14 @@ const sahelRaw: SahelInput[] = [
   // GHAZALA BAY
   ["Playa", 146, "ghazala-bay", "Maven Developments", 7, 2026, true],
   ["Ghazala Bay", 145, "ghazala-bay", "Talaat Moustafa Group", 6, 2024, true],
-  ["Zoya", 145, "ghazala-bay", "ADD Properties", 8, 2026, true],
+  ["Zoya", 145, "ghazala-bay", "LMD", 8, 2026, true],
   // SIDI ABDELRAHMAN
   ["Telal", 142, "sidi-abdelrahman", "Roya Developments", 9, 2025, true],
-  ["Hacienda Red", 139, "sidi-abdelrahman", "Palm Hills Developments", 14, 2026, true],
   ["Hacienda White", 138, "sidi-abdelrahman", "Palm Hills Developments", 13, 2024, true],
   ["Blumar", 137, "sidi-abdelrahman", "Memaar El Morshedy", 6, 2024, true],
   ["Amwaj", 136, "sidi-abdelrahman", "Al Ahly Sabbour", 8, 2025, true],
-  ["Seashell", 135, "sidi-abdelrahman", "Al Marasem", 8, 2025, true],
+  ["Gaia", 136, "sidi-abdelrahman", "Al Ahly Sabbour", 9, 2026, true],
+  ["Seashell", 135, "sidi-abdelrahman", "Al Marasem Developments", 8, 2025, true],
   ["Bianchi ILios", 135, "sidi-abdelrahman", "Inertia", 9, 2026, true],
   ["Shamasi", 134, "sidi-abdelrahman", "MQR Developments", 7, 2026, true],
   ["Masaya", 134, "sidi-abdelrahman", "M Squared", 8, 2026, true],
@@ -122,7 +130,7 @@ const sahelRaw: SahelInput[] = [
   ["Hacienda Bay", 124, "sidi-abdelrahman", "Palm Hills Developments", 16, 2024, true],
   // NEW ALAMEIN
   ["Zahra", 123, "new-alamein", "Wadi Degla", 7, 2026, true],
-  ["Il Latini City Edge", 109, "new-alamein", "City Edge Developments", 9, 2026, false],
+  ["Il Latini City Edge", 109, "new-alamein", "City Edge", 9, 2026, false],
   ["Il Latini SED", 109, "new-alamein", "SED Developments", 9, 2026, false],
   ["Lagoons Al Alamein", 109, "new-alamein", "City Edge", 8, 2026, true],
   ["Downtown New Alamein", 108, "new-alamein", "City Edge", 12, 2025, false],
@@ -139,49 +147,54 @@ const sahelRaw: SahelInput[] = [
 const cairoRaw: Array<{
   name: string; area: string; lat: number; lng: number; developer: string; price: number; year: number;
 }> = [
+  { name: "The Waterway New Cairo", area: "new-cairo", lat: 30.0487, lng: 31.4860, developer: "The Waterway Developments", price: 15.0, year: 2023 },
+  // AL MARASEM NEW CAIRO PROJECTS
+  { name: "Fifth Square", area: "new-cairo", lat: 30.0410, lng: 31.5035, developer: "Al Marasem Developments", price: 13.4, year: 2024 },
+  { name: "Lake Residence by Rotana", area: "new-cairo", lat: 30.0415, lng: 31.5040, developer: "Al Marasem Developments", price: 10.0, year: 2026 },
+  { name: "Marville", area: "new-cairo", lat: 30.0395, lng: 31.5015, developer: "Al Marasem Developments", price: 11.0, year: 2027 },
+
   // NEW CAIRO / TAGAMO3
-  { name: "D.O.S.E", area: "new-cairo", lat: 30.008, lng: 31.462, developer: "Ora Developers", price: 9, year: 2026 },
-  { name: "Mountain View iCity New Cairo", area: "new-cairo", lat: 30.012, lng: 31.498, developer: "Mountain View", price: 12, year: 2026 },
-  { name: "Mivida", area: "new-cairo", lat: 30.014, lng: 31.479, developer: "Emaar Misr", price: 18, year: 2024 },
-  { name: "Hyde Park New Cairo", area: "new-cairo", lat: 30.020, lng: 31.493, developer: "Hyde Park", price: 14, year: 2026 },
-  { name: "Eastown", area: "new-cairo", lat: 30.005, lng: 31.470, developer: "SODIC", price: 9, year: 2024 },
-  { name: "Villette", area: "new-cairo", lat: 30.034, lng: 31.503, developer: "SODIC", price: 11, year: 2026 },
-  { name: "Katameya Heights", area: "new-cairo", lat: 30.000, lng: 31.450, developer: "Tameer", price: 25, year: 2020 },
-  { name: "Katameya Dunes", area: "new-cairo", lat: 29.990, lng: 31.440, developer: "Starlight Developments", price: 30, year: 2018 },
-  { name: "Al Rehab", area: "new-cairo", lat: 30.058, lng: 31.490, developer: "Talaat Moustafa Group", price: 4, year: 2010 },
-  { name: "Madinaty", area: "new-cairo", lat: 30.110, lng: 31.660, developer: "Talaat Moustafa Group", price: 6, year: 2024 },
-  { name: "Cairo Festival City", area: "new-cairo", lat: 30.029, lng: 31.408, developer: "Al-Futtaim", price: 11, year: 2022 },
-  { name: "Palm Hills Katameya", area: "new-cairo", lat: 30.005, lng: 31.460, developer: "Palm Hills Developments", price: 16, year: 2024 },
-  { name: "Stone Residence", area: "new-cairo", lat: 30.028, lng: 31.466, developer: "Misr Italia", price: 10, year: 2025 },
-  { name: "The Square Sabbour", area: "new-cairo", lat: 30.022, lng: 31.482, developer: "Al Ahly Sabbour", price: 9, year: 2025 },
-  { name: "Lake View Residence", area: "new-cairo", lat: 30.027, lng: 31.488, developer: "Hassan Allam Properties", price: 12, year: 2026 },
-  { name: "Zed East", area: "new-cairo", lat: 30.045, lng: 31.498, developer: "Ora Developers", price: 13, year: 2027 },
-  { name: "Taj City", area: "new-cairo", lat: 30.063, lng: 31.408, developer: "Madinet Masr", price: 8, year: 2026 },
-  { name: "Sodic East", area: "new-cairo", lat: 30.080, lng: 31.660, developer: "SODIC", price: 10, year: 2027 },
+  { name: "Mountain View iCity New Cairo", area: "new-cairo", lat: 30.0120, lng: 31.4980, developer: "Mountain View", price: 12, year: 2026 },
+  { name: "Mivida", area: "new-cairo", lat: 30.0120, lng: 31.5150, developer: "Emaar Misr", price: 18, year: 2024 },
+  { name: "Hyde Park New Cairo", area: "new-cairo", lat: 30.0035, lng: 31.5085, developer: "Hyde Park", price: 14, year: 2026 },
+  { name: "Eastown", area: "new-cairo", lat: 30.0125, lng: 31.4990, developer: "SODIC", price: 9, year: 2024 },
+  { name: "Villette", area: "new-cairo", lat: 30.0180, lng: 31.5230, developer: "SODIC", price: 11, year: 2026 },
+  { name: "Sky Condos", area: "new-cairo", lat: 30.0190, lng: 31.5220, developer: "SODIC", price: 13, year: 2027 },
+  { name: "Katameya Heights", area: "new-cairo", lat: 30.0010, lng: 31.4350, developer: "Tameer", price: 25, year: 2020 },
+  { name: "Katameya Dunes", area: "new-cairo", lat: 29.9820, lng: 31.4880, developer: "Starlight Developments", price: 30, year: 2018 },
+  { name: "Al Rehab", area: "new-cairo", lat: 30.0620, lng: 31.4890, developer: "Talaat Moustafa Group", price: 4, year: 2010 },
+  { name: "Madinaty", area: "new-cairo", lat: 30.0900, lng: 31.6300, developer: "Talaat Moustafa Group", price: 6, year: 2024 },
+  { name: "Cairo Festival City", area: "new-cairo", lat: 30.0255, lng: 31.4055, developer: "Al-Futtaim", price: 11, year: 2022 },
+  { name: "Palm Hills Katameya", area: "new-cairo", lat: 30.0380, lng: 31.5250, developer: "Palm Hills Developments", price: 16, year: 2024 },
+  { name: "Stone Residence", area: "new-cairo", lat: 29.9920, lng: 31.4110, developer: "Misr Italia", price: 10, year: 2025 },
+  { name: "The Square Sabbour", area: "new-cairo", lat: 30.0020, lng: 31.5300, developer: "Al Ahly Sabbour", price: 9, year: 2025 },
+  { name: "Lake View Residence", area: "new-cairo", lat: 30.0200, lng: 31.4860, developer: "Hassan Allam Properties", price: 12, year: 2026 },
+  { name: "Zed East", area: "new-cairo", lat: 29.9980, lng: 31.5180, developer: "Ora Developers", price: 13, year: 2027 },
+  { name: "Taj City", area: "new-cairo", lat: 30.0820, lng: 31.3970, developer: "Madinet Masr", price: 8, year: 2026 },
+  { name: "Sodic East", area: "new-cairo", lat: 30.1380, lng: 31.6250, developer: "SODIC", price: 10, year: 2027 },
   // SHEIKH ZAYED
-  { name: "Beverly Hills", area: "sheikh-zayed", lat: 30.050, lng: 30.970, developer: "SODIC", price: 14, year: 2010 },
-  { name: "Allegria", area: "sheikh-zayed", lat: 30.020, lng: 30.965, developer: "SODIC", price: 22, year: 2014 },
-  { name: "Westown Residences", area: "sheikh-zayed", lat: 30.018, lng: 30.985, developer: "SODIC", price: 13, year: 2024 },
-  { name: "SODIC West", area: "sheikh-zayed", lat: 30.012, lng: 30.960, developer: "SODIC", price: 12, year: 2025 },
-  { name: "Palm Hills Sheikh Zayed", area: "sheikh-zayed", lat: 30.050, lng: 30.955, developer: "Palm Hills Developments", price: 11, year: 2024 },
-  { name: "Hyde Park West", area: "sheikh-zayed", lat: 30.060, lng: 30.940, developer: "Hyde Park", price: 12, year: 2027 },
-  { name: "Belle Vie", area: "sheikh-zayed", lat: 30.043, lng: 30.945, developer: "Emaar Misr", price: 15, year: 2026 },
-  { name: "ZED Towers", area: "sheikh-zayed", lat: 30.030, lng: 30.990, developer: "Ora Developers", price: 11, year: 2025 },
-  { name: "Cairo Gate", area: "sheikh-zayed", lat: 30.055, lng: 30.990, developer: "Emaar Misr", price: 17, year: 2027 },
-  { name: "Vinci", area: "sheikh-zayed", lat: 30.045, lng: 30.928, developer: "Misr Italia", price: 10, year: 2027 },
-  { name: "Karmell", area: "sheikh-zayed", lat: 30.040, lng: 30.935, developer: "SODIC", price: 12, year: 2027 },
-  { name: "O West", area: "sheikh-zayed", lat: 30.055, lng: 30.910, developer: "Orascom Development", price: 13, year: 2026 },
+  { name: "Beverly Hills", area: "sheikh-zayed", lat: 30.0860, lng: 30.9820, developer: "SODIC", price: 14, year: 2010 },
+  { name: "Allegria", area: "sheikh-zayed", lat: 30.0780, lng: 30.9720, developer: "SODIC", price: 22, year: 2014 },
+  { name: "Westown Residences", area: "sheikh-zayed", lat: 30.0820, lng: 30.9850, developer: "SODIC", price: 13, year: 2024 },
+  { name: "SODIC West", area: "sheikh-zayed", lat: 30.0830, lng: 30.9700, developer: "SODIC", price: 12, year: 2025 },
+  { name: "Palm Hills Sheikh Zayed", area: "sheikh-zayed", lat: 30.0180, lng: 30.9750, developer: "Palm Hills Developments", price: 11, year: 2024 },
+  { name: "Hyde Park West", area: "sheikh-zayed", lat: 30.0650, lng: 30.9650, developer: "Hyde Park", price: 12, year: 2027 },
+  { name: "Belle Vie", area: "sheikh-zayed", lat: 30.0950, lng: 30.9250, developer: "Emaar Misr", price: 15, year: 2026 },
+  { name: "ZED Towers", area: "sheikh-zayed", lat: 30.0240, lng: 30.9980, developer: "Ora Developers", price: 11, year: 2025 },
+  { name: "Cairo Gate", area: "sheikh-zayed", lat: 30.0380, lng: 31.0200, developer: "Emaar Misr", price: 17, year: 2027 },
+  { name: "O West", area: "sheikh-zayed", lat: 29.9650, lng: 30.9050, developer: "Orascom Development", price: 13, year: 2026 },
+  // NEW ADMINISTRATIVE CAPITAL
+  { name: "Vinci", area: "new-administrative-capital", lat: 30.0130, lng: 31.7250, developer: "Misr Italia", price: 10, year: 2027 },
+  // NEW ZAYED
+  { name: "Karmell", area: "new-zayed", lat: 30.1250, lng: 30.8750, developer: "SODIC", price: 12, year: 2027 },
 ];
 
 const newZayedRaw: typeof cairoRaw = [
-  { name: "SODIC The Estates", area: "new-zayed", lat: 30.075, lng: 30.890, developer: "SODIC", price: 18, year: 2026 },
-  { name: "ZED West", area: "new-zayed", lat: 30.078, lng: 30.875, developer: "Ora Developers", price: 16, year: 2027 },
-  { name: "Solana", area: "new-zayed", lat: 30.082, lng: 30.870, developer: "Ora Developers", price: 14, year: 2027 },
-  { name: "Sky Condos", area: "new-zayed", lat: 30.085, lng: 30.860, developer: "SODIC", price: 13, year: 2027 },
-  { name: "June Sheikh Zayed", area: "new-zayed", lat: 30.080, lng: 30.855, developer: "SODIC", price: 15, year: 2027 },
-  { name: "Karmell New Zayed", area: "new-zayed", lat: 30.090, lng: 30.890, developer: "SODIC", price: 17, year: 2028 },
-  { name: "Belle Vie New Zayed", area: "new-zayed", lat: 30.092, lng: 30.880, developer: "Emaar Misr", price: 16, year: 2027 },
-  { name: "Vinci Capital", area: "new-zayed", lat: 30.070, lng: 30.870, developer: "Misr Italia", price: 12, year: 2027 },
+  { name: "SODIC The Estates", area: "new-zayed", lat: 30.1320, lng: 30.8650, developer: "SODIC", price: 18, year: 2026 },
+  { name: "ZED West", area: "new-zayed", lat: 30.1220, lng: 30.8750, developer: "Ora Developers", price: 16, year: 2027 },
+  { name: "Solana", area: "new-zayed", lat: 30.1080, lng: 30.8750, developer: "Ora Developers", price: 14, year: 2027 },
+  { name: "Belle Vie New Zayed", area: "new-zayed", lat: 30.1350, lng: 30.8800, developer: "Emaar Misr", price: 16, year: 2027 },
+  { name: "Vinci Capital", area: "new-zayed", lat: 30.1050, lng: 30.8550, developer: "Misr Italia", price: 12, year: 2027 },
 ];
 
 // New areas: 6th October, NAC, Mostakbal, Heliopolis, Sokhna, Red Sea, South Sinai, Fayoum
@@ -195,7 +208,7 @@ const extraRaw: Array<{
   { name: "Sun Capital", area: "6th-october", lat: 29.940, lng: 30.890, developer: "Arabia Holding", price: 6, year: 2025 },
   { name: "Badya", area: "6th-october", lat: 29.910, lng: 30.880, developer: "Palm Hills Developments", price: 8, year: 2027, type: "Mixed-use" },
   // NEW ADMINISTRATIVE CAPITAL
-  { name: "Il Bosco City", area: "new-administrative-capital", lat: 30.020, lng: 31.745, developer: "Misr Italia", price: 9, year: 2026 },
+  { name: "Il Bosco City", area: "mostakbal-city", lat: 30.078, lng: 31.665, developer: "Misr Italia", price: 9, year: 2026 },
   { name: "La Verde", area: "new-administrative-capital", lat: 30.015, lng: 31.730, developer: "La Verde Developments", price: 8, year: 2026 },
   { name: "Anakaji", area: "new-administrative-capital", lat: 30.030, lng: 31.760, developer: "Memaar El Morshedy", price: 10, year: 2027 },
   { name: "Capital Heights", area: "new-administrative-capital", lat: 30.025, lng: 31.720, developer: "Safwa Urban Development", price: 7, year: 2026 },
@@ -215,13 +228,13 @@ const extraRaw: Array<{
   { name: "IL Monte Galala", area: "ain-sokhna", lat: 29.580, lng: 32.350, developer: "Tatweer Misr", price: 9, year: 2026, beach: true, type: "Resort" },
   { name: "Stella di Mare", area: "ain-sokhna", lat: 29.615, lng: 32.320, developer: "Stella Di Mare", price: 8, year: 2024, beach: true, type: "Resort" },
   { name: "Murano", area: "ain-sokhna", lat: 29.590, lng: 32.340, developer: "Wadi Degla", price: 6, year: 2026, beach: true, type: "Resort" },
-  { name: "Beit Al Bahr", area: "ain-sokhna", lat: 29.598, lng: 32.328, developer: "Hassan Allam Properties", price: 7, year: 2025, beach: true, type: "Resort" },
   { name: "El Masyaf", area: "ain-sokhna", lat: 29.572, lng: 32.355, developer: "M Squared", price: 11, year: 2027, beach: true, type: "Resort" },
   { name: "Azzar Island", area: "ain-sokhna", lat: 29.585, lng: 32.342, developer: "Reedy Group", price: 10, year: 2027, beach: true, type: "Resort" },
+  { name: "Hacienda Red", area: "ain-sokhna", lat: 29.608, lng: 32.325, developer: "Palm Hills Developments", price: 14, year: 2027, beach: true, type: "Resort" },
   { name: "Hacienda Waters", area: "ain-sokhna", lat: 29.610, lng: 32.322, developer: "Palm Hills Developments", price: 15, year: 2027, beach: true, type: "Resort" },
   { name: "La Vista Cascada", area: "ain-sokhna", lat: 29.592, lng: 32.348, developer: "La Vista Developments", price: 8, year: 2025, beach: true, type: "Resort" },
   { name: "Marbay", area: "ain-sokhna", lat: 29.618, lng: 32.315, developer: "Al Marasem Developments", price: 12, year: 2027, beach: true, type: "Resort" },
-  { name: "Playa Seashell", area: "ain-sokhna", lat: 29.602, lng: 32.332, developer: "Al Marasem", price: 9, year: 2026, beach: true, type: "Resort" },
+  { name: "Playa Seashell", area: "ain-sokhna", lat: 29.602, lng: 32.332, developer: "Al Marasem Developments", price: 9, year: 2026, beach: true, type: "Resort" },
   // RED SEA
   { name: "El Gouna", area: "red-sea", lat: 27.395, lng: 33.677, developer: "Orascom Development", price: 18, year: 2024, beach: true, type: "Resort" },
   { name: "Makadi Heights", area: "red-sea", lat: 26.978, lng: 33.880, developer: "Orascom Development", price: 9, year: 2026, beach: true, type: "Resort" },
@@ -232,7 +245,7 @@ const extraRaw: Array<{
   { name: "Nabq Bay Residences", area: "south-sinai", lat: 28.060, lng: 34.420, developer: "Pickalbatros", price: 7, year: 2024, beach: true, type: "Resort" },
   { name: "Ras Sudr Riviera", area: "south-sinai", lat: 29.580, lng: 32.700, developer: "Al Attal Holding", price: 5, year: 2026, beach: true, type: "Resort" },
   // FAYOUM
-  { name: "Byoum Lakeside", area: "fayoum", lat: 29.470, lng: 30.635, developer: "Orascom Hotels & Development", price: 5, year: 2025, type: "Resort" },
+  { name: "Byoum Lakeside", area: "fayoum", lat: 29.470, lng: 30.635, developer: "Orascom Development", price: 5, year: 2025, type: "Resort" },
   { name: "Lazib Inn Tunis", area: "fayoum", lat: 29.385, lng: 30.405, developer: "Lazib", price: 4, year: 2024, type: "Resort" },
 ];
 
@@ -264,154 +277,11 @@ function gallery(seed: number, beach: boolean) {
   return [0, 1, 2, 3].map((i) => pool[(seed + i) % pool.length]);
 }
 
-// Real project images from the agency database
-const localImgs: Record<string, string[]> = {
-  "iconic-tower-district": [1,2,3].map(i => `/projects/iconic-tower-district/${i}.jpg`),
-  "amwaj": [1,2,3,4,5,6,7,8,9,10].map(i => `/projects/amwaj/${i}.jpg`),
-  "at-east": [1,2,3,4].map(i => `/projects/at-east/${i}.jpg`),
-  "gaia": [1,2,3,4,5].map(i => `/projects/gaia/${i}.jpg`),
-  "dose": [1,2,3,4,5].map(i => `/projects/dose/${i}.jpg`),
-  "bianchi-ilios": [1,2,3,4,5,6,7].map(i => `/projects/bianchi-ilios/${i}.jpg`),
-  "cairo-festival-city": [1,2,3,4,5,6,7,8,9].map(i => `/projects/cairo-festival-city/${i}.jpg`),
-  "almaza-bay": [1,2,3,4,5,6].map(i => `/projects/almaza-bay/${i}.jpg`),
-  "anakaji": [1,2,3,4,5].map(i => `/projects/anakaji/${i}.jpg`),
-  "direction-white": [1,2,3,4].map(i => `/projects/direction-white/${i}.jpg`),
-  "caesar-bay": [1,2,3,4,5,6,7,8,9].map(i => `/projects/caesar-bay/${i}.jpg`),
-  "azzar-island": [1,2,3,4,5,6].map(i => `/projects/azzar-island/${i}.jpg`),
-  "belle-vie": [1,2,3,4,5,6,7,8,9,10,11,12,13,14].map(i => `/projects/belle-vie/${i}.jpg`),
-  "belle-vie-new-zayed": [1,2,3,4,5,6,7].map(i => `/projects/belle-vie-new-zayed/${i}.jpg`),
-  "cairo-gate": [1,2,3,4,5,6].map(i => `/projects/cairo-gate/${i}.jpg`),
-  "ghazala-bay": [1,2,3,4].map(i => `/projects/ghazala-bay/${i}.jpg`),
-  "heliopark": [1,2,3,4,5].map(i => `/projects/heliopark/${i}.jpg`),
-  "hyde-park-new-cairo": [1,2,3,4,5,6].map(i => `/projects/hyde-park-new-cairo/${i}.jpg`),
-  "hyde-park-west": [1,2,3,4,5,6].map(i => `/projects/hyde-park-west/${i}.jpg`),
-  "hyde-park-north-seashore": [1,2,3,4,5,6,7,8,9].map(i => `/projects/hyde-park-north-seashore/${i}.jpg`),
-  "azha": [1,2,3,4,5,6,7,8,9,10].map(i => `/projects/azha/${i}.jpg`),
-  "club-views": [1,2,3,4,5,6].map(i => `/projects/club-views/${i}.jpg`),
-  "elm-tree-park": [1,2,3,4,5,6].map(i => `/projects/elm-tree-park/${i}.jpg`),
-  "aeon": [1,2].map(i => `/projects/aeon/${i}.jpg`),
-  "crescent-walk": [1,2,3,4,5,6,7,8].map(i => `/projects/crescent-walk/${i}.jpg`),
-  "district-5": [1,2,3].map(i => `/projects/district-5/${i}.jpg`),
-  "cali-coast-ras-el-hekma": [1,2,3,4,5,6,7,8,9,10,11].map(i => `/projects/cali-coast-ras-el-hekma/${i}.jpg`),
-  "dayz": [1,2,3].map(i => `/projects/dayz/${i}.jpg`),
-  "m-squared": [1,2,3,4,5].map(i => `/projects/m-squared/${i}.jpg`),
-  "botanica": [1,2,3,4,5,6,7].map(i => `/projects/botanica/${i}.jpg`),
-  "byoum-lakeside": [1,2,3,4,5,6,7,8].map(i => `/projects/byoum-lakeside/${i}.jpg`),
-  "el-gouna": [1,2,3,4,5,6,7,8,9,10,11,12,13,14].map(i => `/projects/el-gouna/${i}.jpg`),
-  "97-hills": [1,2,3,4,5].map(i => `/projects/97-hills/${i}.jpg`),
-  "badya": [1,2,3,4,5,6,7,8,9,10].map(i => `/projects/badya/${i}.jpg`),
-  "bamboo-iii": [1,2,3,4,5,6].map(i => `/projects/bamboo-iii/${i}.jpg`),
-  "cleo-water-residence": [1,2,3,4].map(i => `/projects/cleo-water-residence/${i}.jpg`),
-  "hacienda-bay": [1,2,3].map(i => `/projects/hacienda-bay/${i}.jpg`),
-  "hacienda-blue": [1,2,3,4,5].map(i => `/projects/hacienda-blue/${i}.jpg`),
-  "hacienda-heneish": [1,2,3,4].map(i => `/projects/hacienda-heneish/${i}.jpg`),
-  "hacienda-red": [1,2,3].map(i => `/projects/hacienda-red/${i}.jpg`),
-  "hacienda-waters": [1,2,3,4].map(i => `/projects/hacienda-waters/${i}.jpg`),
-  "hacienda-west": [1,2,3,4].map(i => `/projects/hacienda-west/${i}.jpg`),
-  "hacienda-white": [1,2,3,4].map(i => `/projects/hacienda-white/${i}.jpg`),
-  "alam-al-roum": [1,2,3,4].map(i => `/projects/alam-al-roum/${i}.jpg`),
-  "allegria": [1,2,3,4,5,6,7,8,9].map(i => `/projects/allegria/${i}.jpg`),
-  "beverly-hills": [1,2,3,4,5,6,7,8].map(i => `/projects/beverly-hills/${i}.jpg`),
-  "caesar-sodic": [1,2,3,4,5,6].map(i => `/projects/caesar-sodic/${i}.jpg`),
-  "eastown": [1,2,3,4,5,6,7,8,9,10,11,12,13,14].map(i => `/projects/eastown/${i}.jpg`),
-  "capital-heights": [1,2,3,4].map(i => `/projects/capital-heights/${i}.jpg`),
-  "bloomfields": [1,2,3,4,5,6].map(i => `/projects/bloomfields/${i}.jpg`),
-  "d-bay": [1,2,3,4,5,6].map(i => `/projects/d-bay/${i}.jpg`),
-  "fouka-bay": [1,2,3,4,5,6,7].map(i => `/projects/fouka-bay/${i}.jpg`),
-  "al-rehab": [1,2,3,4,5].map(i => `/projects/al-rehab/${i}.jpg`),
-  "blumar": [1,2,3,4,5].map(i => `/projects/blumar/${i}.jpg`),
-  "il-bosco-city": [1,2,3,4,5,6].map(i => `/projects/il-bosco-city/${i}.jpg`),
-  "telal-soul": [1,2,3,4,5,6].map(i => `/projects/telal-soul/${i}.jpg`),
-  "the-mornings": [1,2,3,4,5].map(i => `/projects/the-mornings/${i}.jpg`),
-  "beit-al-bahr": [1,2,3,4,5,6].map(i => `/projects/beit-al-bahr/${i}.jpg`),
-  "city-oval": [1,2,3,4,5,6].map(i => `/projects/city-oval/${i}.jpg`),
-  "downtown-new-alamein": [1,2,3].map(i => `/projects/downtown-new-alamein/${i}.jpg`),
-  "esse-residence": [1,2,3].map(i => `/projects/esse-residence/${i}.jpg`),
-  "jamila": [1,2,3,4,5,6].map(i => `/projects/jamila/${i}.jpg`),
-  "june": [1,2,3,4,5,6].map(i => `/projects/june/${i}.jpg`),
-  "june-sheikh-zayed": [1,2,3,4,5,6].map(i => `/projects/june-sheikh-zayed/${i}.jpg`),
-  "karmell": [1,2,3,4,5,6].map(i => `/projects/karmell/${i}.jpg`),
-  "karmell-new-zayed": [1,2,3,4,5,6].map(i => `/projects/karmell-new-zayed/${i}.jpg`),
-  "katameya-dunes": [1].map(i => `/projects/katameya-dunes/${i}.jpg`),
-  "katameya-heights": [1].map(i => `/projects/katameya-heights/${i}.jpg`),
-  "koun": [1,2,3,4,5,6].map(i => `/projects/koun/${i}.jpg`),
-  "lagoons-al-alamein": [1,2,3,4,5,6].map(i => `/projects/lagoons-al-alamein/${i}.jpg`),
-  "lake-view-residence": [1,2,3,4,5,6].map(i => `/projects/lake-view-residence/${i}.jpg`),
-  "lasirena-sahel": [1,2,3,4,5,6].map(i => `/projects/lasirena-sahel/${i}.jpg`),
-  "la-vista-bay": [1,2,3,4,5,6].map(i => `/projects/la-vista-bay/${i}.jpg`),
-  "la-vista-bay-east": [1,2,3,4,5].map(i => `/projects/la-vista-bay-east/${i}.jpg`),
-  "la-vista-cascada": [1,2,3,4,5,6].map(i => `/projects/la-vista-cascada/${i}.jpg`),
-  "la-vista-city": [1,2,3,4,5,6].map(i => `/projects/la-vista-city/${i}.jpg`),
-  "la-vista-ras-el-hekma": [1,2,3,4,5,6].map(i => `/projects/la-vista-ras-el-hekma/${i}.jpg`),
-  "lvls": [1,2,3,4,5,6].map(i => `/projects/lvls/${i}.jpg`),
-  "lyv": [1,2,3,4,5,6].map(i => `/projects/lyv/${i}.jpg`),
-  "madinaty": [1,2,3,4,5,6].map(i => `/projects/madinaty/${i}.jpg`),
-  "marassi": [1,2,3,4,5,6].map(i => `/projects/marassi/${i}.jpg`),
-  "marina": [1,2,3,4,5,6].map(i => `/projects/marina/${i}.jpg`),
-  "masaya": [1,2,3,4,5,6].map(i => `/projects/masaya/${i}.jpg`),
-  "mivida": [1].map(i => `/projects/mivida/${i}.jpg`),
-  "mountain-view-aliva": [1,2,3,4,5,6].map(i => `/projects/mountain-view-aliva/${i}.jpg`),
-  "mountain-view-chillout": [1,2,3,4,5,6].map(i => `/projects/mountain-view-chillout/${i}.jpg`),
-  "mountain-view-crystal": [1,2,3,4,5,6].map(i => `/projects/mountain-view-crystal/${i}.jpg`),
-  "mountain-view-grand-valley": [1,2,3,4,5,6].map(i => `/projects/mountain-view-grand-valley/${i}.jpg`),
-  "mountain-view-icity-new-cairo": [1,2,3,4,5,6].map(i => `/projects/mountain-view-icity-new-cairo/${i}.jpg`),
-  "mountain-view-icity-october": [1,2,3,4,5,6].map(i => `/projects/mountain-view-icity-october/${i}.jpg`),
-  "mountain-view-jirian": [1,2,3,4,5,6].map(i => `/projects/mountain-view-jirian/${i}.jpg`),
-  "mountain-view-kingsway": [1,2,3,4,5,6].map(i => `/projects/mountain-view-kingsway/${i}.jpg`),
-  "mountain-view-mv4": [1,2,3,4,5,6].map(i => `/projects/mountain-view-mv4/${i}.jpg`),
-  "mountain-view-ras-el-hekma": [1,2,3,4,5,6].map(i => `/projects/mountain-view-ras-el-hekma/${i}.jpg`),
-  "murano": [1,2,3,4,5,6].map(i => `/projects/murano/${i}.jpg`),
-  "north-edge-towers": [1,2,3,4,5,6].map(i => `/projects/north-edge-towers/${i}.jpg`),
-  "o-west": [1,2,3,4,5,6].map(i => `/projects/o-west/${i}.jpg`),
-  "ogami": [1,2,3,4,5,6].map(i => `/projects/ogami/${i}.jpg`),
-  "origami": [1,2,3,4,5,6].map(i => `/projects/origami/${i}.jpg`),
-  "origami-golf": [1,2,3,4,5,6].map(i => `/projects/origami-golf/${i}.jpg`),
-  "palm-hills-alexandria": [1,2,3,4,5,6].map(i => `/projects/palm-hills-alexandria/${i}.jpg`),
-  "palm-hills-jirian": [1,2,3,4,5,6].map(i => `/projects/palm-hills-jirian/${i}.jpg`),
-  "palm-hills-katameya": [1,2,3,4,5,6].map(i => `/projects/palm-hills-katameya/${i}.jpg`),
-  "palm-hills-new-alamein": [1,2,3,4,5,6].map(i => `/projects/palm-hills-new-alamein/${i}.jpg`),
-  "palm-hills-october": [1,2,3,4,5,6].map(i => `/projects/palm-hills-october/${i}.jpg`),
-  "palm-hills-one": [1,2,3,4,5,6].map(i => `/projects/palm-hills-one/${i}.jpg`),
-  "palm-hills-sheikh-zayed": [1,2,3,4,5,6].map(i => `/projects/palm-hills-sheikh-zayed/${i}.jpg`),
-  "px": [1,2,3,4,5,6].map(i => `/projects/px/${i}.jpg`),
-  "q-bay": [1,2,3,4,5,6].map(i => `/projects/q-bay/${i}.jpg`),
-  "rai-valleys": [1,2,3].map(i => `/projects/rai-valleys/${i}.jpg`),
-  "saada-sahel": [1,2,3,4,5,6].map(i => `/projects/saada-sahel/${i}.jpg`),
-  "safia": [1,2,3].map(i => `/projects/safia/${i}.jpg`),
-  "sahl-hasheesh": [1,2].map(i => `/projects/sahl-hasheesh/${i}.jpg`),
-  "seashell": [1,2,3,4,5,6].map(i => `/projects/seashell/${i}.jpg`),
-  "seashell-ras-el-hekma": [1,2,3,4,5,6].map(i => `/projects/seashell-ras-el-hekma/${i}.jpg`),
-  "shamasi": [1,2,3,4,5,6].map(i => `/projects/shamasi/${i}.jpg`),
-  "silversands": [1,2,3,4,5,6].map(i => `/projects/silversands/${i}.jpg`),
-  "sky-condos": [1,2,3,4,5,6].map(i => `/projects/sky-condos/${i}.jpg`),
-  "sodic-east": [1,2,3,4,5,6].map(i => `/projects/sodic-east/${i}.jpg`),
-  "sodic-west": [1,2,3,4,5,6].map(i => `/projects/sodic-west/${i}.jpg`),
-  "solare": [1,2,3,4,5,6].map(i => `/projects/solare/${i}.jpg`),
-  "soma-bay": [1,2,3,4,5,6].map(i => `/projects/soma-bay/${i}.jpg`),
-  "soma-sharm": [1,2,3,4,5,6].map(i => `/projects/soma-sharm/${i}.jpg`),
-  "south-med": [1,2,3,4,5,6].map(i => `/projects/south-med/${i}.jpg`),
-  "stella-di-mare": [1,2,3,4,5,6].map(i => `/projects/stella-di-mare/${i}.jpg`),
-  "stella-heights": [1,2,3,4,5,6].map(i => `/projects/stella-heights/${i}.jpg`),
-  "stella-sidi-abdel-rahman": [1,2,3,4,5,6].map(i => `/projects/stella-sidi-abdel-rahman/${i}.jpg`),
-  "swan-lake": [1,2,3,4,5,6].map(i => `/projects/swan-lake/${i}.jpg`),
-  "taj-city": [1,2,3,4,5,6].map(i => `/projects/taj-city/${i}.jpg`),
-  "talala": [1,2,3,4,5,6].map(i => `/projects/talala/${i}.jpg`),
-  "telal": [1,2,3,4,5,6].map(i => `/projects/telal/${i}.jpg`),
-  "telal-sokhna": [1,2,3,4,5,6].map(i => `/projects/telal-sokhna/${i}.jpg`),
-  "the-butterfly": [1,2,3,4,5,6].map(i => `/projects/the-butterfly/${i}.jpg`),
-  "the-med": [1,2,3,4,5,6].map(i => `/projects/the-med/${i}.jpg`),
-  "villette": [1,2,3,4,5,6].map(i => `/projects/villette/${i}.jpg`),
-  "westown-residences": [1,2,3,4,5,6].map(i => `/projects/westown-residences/${i}.jpg`),
-  "zahra": [1,2,3,4,5,6].map(i => `/projects/zahra/${i}.jpg`),
-  "zayed-2000": [1,2,3].map(i => `/projects/zayed-2000/${i}.jpg`),
-  "zoya": [1,2,3,4,5,6].map(i => `/projects/zoya/${i}.jpg`),
-};
-
 function heroFor(slug: string, fallback: string): string {
-  return localImgs[slug]?.[0] ?? fallback;
+  return projectImages[slug]?.[0] ?? fallback;
 }
 function galleryFor(slug: string, fallback: string[]): string[] {
-  return localImgs[slug] ?? fallback;
+  return projectImages[slug] ?? fallback;
 }
 
 function typesFor(price: number, beach: boolean) {
@@ -1226,7 +1096,7 @@ const newProjects: Compound[] = [
     name: "District 5",
     area: "new-cairo",
     lat: 30.010, lng: 31.462,
-    developer: "Marakez Properties",
+    developer: "Marakez",
     developerSlug: "marakez-properties",
     priceFrom: 11,
     deliveryYear: 2027,
@@ -1248,7 +1118,7 @@ const newProjects: Compound[] = [
     name: "Crescent Walk",
     area: "new-cairo",
     lat: 30.012, lng: 31.456,
-    developer: "Marakez Properties",
+    developer: "Marakez",
     developerSlug: "marakez-properties",
     priceFrom: 8,
     deliveryYear: 2027,
@@ -1266,12 +1136,12 @@ const newProjects: Compound[] = [
     highlights: ["74 units available", "PS / PC / PE parcels", "1BR from EGP 8.46M", "Villa up to EGP 72M"],
   },
   {
-    slug: "ramla-resort",
+    slug: "ramla",
     name: "Ramla",
     area: "ras-el-hekma",
     km: 195,
     lat: 31.095, lng: 27.770,
-    developer: "Marakez Properties",
+    developer: "Marakez",
     developerSlug: "marakez-properties",
     priceFrom: 22,
     deliveryYear: 2026,
@@ -1298,7 +1168,7 @@ const newProjects: Compound[] = [
     name: "Aeon",
     area: "new-cairo",
     lat: 30.020, lng: 31.470,
-    developer: "Marakez Properties",
+    developer: "Marakez",
     developerSlug: "marakez-properties",
     priceFrom: 36,
     deliveryYear: 2027,
@@ -1334,7 +1204,7 @@ const newProjects: Compound[] = [
     amenities: ["Crystal Lagoon", "Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Club", "24/7 Security", "Cycling Track", "Landscape Parks", "Smart Home", "Co-working"],
     hero: "/projects/at-east/1.jpg",
     gallery: ["/projects/at-east/1.jpg","/projects/at-east/2.jpg","/projects/at-east/3.jpg","/projects/at-east/4.jpg"],
-    blurb: "At East by Al Ahly Sabbour in Mostakbal City — a fully integrated masterplan of 87 available units spanning core & shell apartments (1BR from EGP 5M), penthouses, sky villas, town houses, twin villas and standalone villas (up to 6BR, EGP 42.75M). Multiple payment plan discounts including up to 50% cash discount.",
+    blurb: "At East by Al Ahly Sabbour in the New Administrative Capital — a fully integrated masterplan of 87 available units spanning core & shell apartments (1BR from EGP 5M), penthouses, sky villas, town houses, twin villas and standalone villas (up to 6BR, EGP 42.75M). Multiple payment plan discounts including up to 50% cash discount.",
     paymentPlan: "5%+5% over 8 years (various discount plans)",
     areaSize: "155 feddan",
     unitSizes: "65–370 m²",
@@ -1454,12 +1324,113 @@ const merged: Compound[] = _allOrdered.filter((c) => {
   return true;
 });
 
-export const compounds: Compound[] = merged.map((c) => ({
-  ...c,
-  type: c.type ?? (c.beachfront ? "Coastal" : "Residential"),
-  flagship: c.flagship ?? (FLAGSHIPS.has(c.slug) || undefined),
-  highlights: c.highlights ?? c.amenities,
-}));
+const areaCenters = Object.fromEntries(areas.map((a) => [a.slug, a.center])) as Record<
+  string,
+  [number, number]
+>;
+
+const COAST_AREAS = new Set([
+  "sidi-heneish",
+  "ras-el-hekma",
+  "al-dabaa",
+  "ghazala-bay",
+  "sidi-abdelrahman",
+  "new-alamein",
+]);
+
+function coordOffset(slug: string): [number, number] {
+  let h = 0;
+  for (let i = 0; i < slug.length; i++) h = (h * 31 + slug.charCodeAt(i)) | 0;
+  return [((h % 80) - 40) * 0.00035, (((h >> 8) % 80) - 40) * 0.00035];
+}
+
+function applyOfficialData(c: Compound): Compound {
+  const loc = projectLocations[c.slug];
+  const sahel = sahelDetails[c.slug];
+  let next: Compound = { ...c };
+
+  if (loc) {
+    const area = loc.area;
+    let lat = c.lat;
+    let lng = c.lng;
+    if (c.km != null && COAST_AREAS.has(area)) {
+      [lat, lng] = kmToLatLng(c.km);
+    } else {
+      const base = areaCenters[area];
+      if (base) {
+        const [dx, dy] = coordOffset(c.slug);
+        lat = base[0] + dx;
+        lng = base[1] + dy;
+      }
+    }
+    next = { ...next, area, city: loc.location, lat, lng };
+  }
+
+  if (sahel) {
+    next = {
+      ...next,
+      developer: sahel.developer ?? next.developer,
+      developerSlug: slugify(sahel.developer ?? next.developer),
+      blurb: sahel.blurb ?? next.blurb,
+      areaSize: sahel.areaSize ?? next.areaSize,
+      unitSizes: sahel.unitSizes ?? next.unitSizes,
+      priceFrom: sahel.priceFrom ?? next.priceFrom,
+      deliveryYear: sahel.deliveryYear ?? next.deliveryYear,
+      status: sahel.status ?? next.status,
+      paymentPlan: sahel.paymentPlan ?? next.paymentPlan,
+      highlights: sahel.highlights ?? next.highlights,
+    };
+  }
+
+  const reg = compoundRegistry[c.slug];
+  if (reg) {
+    const area = reg.area ?? next.area;
+    let lat = reg.lat ?? next.lat;
+    let lng = reg.lng ?? next.lng;
+    const km = reg.km ?? next.km;
+
+    if (reg.lat == null && reg.lng == null) {
+      if (km != null && COAST_AREAS.has(area)) {
+        [lat, lng] = kmToLatLng(km);
+      } else if (reg.area && areaCenters[reg.area]) {
+        const [dx, dy] = coordOffset(c.slug);
+        lat = areaCenters[reg.area][0] + dx;
+        lng = areaCenters[reg.area][1] + dy;
+      }
+    }
+
+    next = {
+      ...next,
+      ...(reg.name ? { name: reg.name } : {}),
+      area,
+      ...(km != null ? { km } : {}),
+      lat,
+      lng,
+      ...(reg.developer
+        ? { developer: reg.developer, developerSlug: slugify(reg.developer) }
+        : {}),
+      ...(reg.city ? { city: reg.city } : {}),
+      ...(reg.beachfront != null ? { beachfront: reg.beachfront } : {}),
+      ...(reg.type ? { type: reg.type } : {}),
+      ...(reg.priceFrom != null ? { priceFrom: reg.priceFrom } : {}),
+      ...(reg.deliveryYear != null ? { deliveryYear: reg.deliveryYear } : {}),
+    };
+  }
+
+  return next;
+}
+
+export const compounds: Compound[] = merged.map((c) => {
+  const enriched = applyOfficialData(c);
+  return {
+    ...enriched,
+    hero: heroFor(enriched.slug, enriched.hero),
+    gallery: galleryFor(enriched.slug, enriched.gallery),
+    type: enriched.type ?? (enriched.beachfront ? "Coastal" : "Residential"),
+    flagship: enriched.flagship ?? (FLAGSHIPS.has(enriched.slug) || undefined),
+    highlights: enriched.highlights ?? enriched.amenities,
+  };
+});
 export const compoundBySlug = (slug: string) => compounds.find((c) => c.slug === slug);
 export const compoundsByArea = (area: string) => compounds.filter((c) => c.area === area);
 export const compoundsByDeveloper = (devSlug: string) =>

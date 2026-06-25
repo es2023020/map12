@@ -12,6 +12,7 @@ import {
   Layers, Map as MapIcon, List, SlidersHorizontal, ArrowLeft, Phone,
   Building2, Waves
 } from "lucide-react";
+import { availability } from "@/data/availability";
 function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
   const [loaded, setLoaded] = useState(false);
   const initials = name.split(" ").slice(0, 2).map((w) => w[0] ?? "").join("").toUpperCase();
@@ -28,6 +29,11 @@ function LogoBadge({ src, name, className = "" }: { src: string; name: string; c
 }
 
 export const Route = createFileRoute("/map")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    area: typeof search.area === "string" ? search.area : "",
+    dev: typeof search.dev === "string" ? search.dev : "",
+    q: typeof search.q === "string" ? search.q : "",
+  }),
   head: () => ({
     meta: [
       { title: "Property Atlas — Interactive Map | PropTrack" },
@@ -38,34 +44,105 @@ export const Route = createFileRoute("/map")({
 });
 
 function MapPage() {
-  const [q, setQ] = useState("");
-  const [dev, setDev] = useState<string>("");
-  const [areaSlug, setAreaSlug] = useState<string | null>(null);
+  const { area: areaParam, dev: devParam, q: qParam } = Route.useSearch();
+  const [q, setQ] = useState(qParam || "");
+  const [dev, setDev] = useState<string>(devParam || "");
+  const [areaSlug, setAreaSlug] = useState<string | null>(areaParam || null);
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
   const [showLandmarks, setShowLandmarks] = useState(true);
   const [flagshipOnly, setFlagshipOnly] = useState(false);
   const [devOpen, setDevOpen] = useState(false);
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
-  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(!!(areaParam || devParam || qParam));
+
+  const availabilityMap = useMemo(() => {
+    return new Map(availability.map((a) => [a.slug, a]));
+  }, []);
+
+  const matchMapCompound = (
+    c: any,
+    qVal: string,
+    areaVal: string | null,
+    devVal: string,
+    flagshipVal: boolean
+  ) => {
+    if (areaVal && c.area !== areaVal) return false;
+    if (devVal && c.developerSlug !== devVal) return false;
+    if (flagshipVal && !c.flagship) return false;
+    if (qVal) {
+      const avail = availabilityMap.get(c.slug);
+      let availText = "";
+      if (avail) {
+        const terms = new Set<string>();
+        terms.add(`${avail.totalAvailable} units`);
+        if (avail.note) terms.add(avail.note);
+        for (const b of avail.breakdown) {
+          if (b.type) terms.add(b.type);
+          if (b.beds) {
+            terms.add(`${b.beds} beds`);
+            terms.add(`${b.beds}br`);
+            terms.add(`${b.beds} bedroom`);
+            terms.add(`${b.beds} bedrooms`);
+          }
+          if (b.finishing) terms.add(b.finishing);
+          if (b.cluster) terms.add(b.cluster);
+          if (b.deliveryNote) terms.add(b.deliveryNote);
+          if (b.paymentPlan) terms.add(b.paymentPlan);
+          
+          for (const u of b.units ?? []) {
+            if (u.cluster) terms.add(u.cluster);
+            if (u.finishing) terms.add(u.finishing);
+            if (u.view) terms.add(u.view);
+            if (u.deliveryNote) terms.add(u.deliveryNote);
+            if (u.paymentPlan) terms.add(u.paymentPlan);
+            if (u.status) terms.add(u.status);
+            if (u.areaNote) terms.add(u.areaNote);
+          }
+        }
+        availText = Array.from(terms).join(" ");
+      }
+
+      const hay = `${c.name} ${c.developer} ${c.area} ${c.city ?? ""} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase();
+      
+      const stopWords = new Set(["in", "for", "with", "a", "an", "the", "at", "by", "of", "and", "on"]);
+      const queryWords = qVal
+        .toLowerCase()
+        .split(/\s+/)
+        .filter((w) => w && !stopWords.has(w));
+        
+      if (queryWords.length > 0 && !queryWords.every((word) => hay.includes(word))) return false;
+    }
+    return true;
+  };
 
   const filtered = useMemo(() => {
-    return compounds.filter((c) => {
-      if (areaSlug && c.area !== areaSlug) return false;
-      if (dev && c.developerSlug !== dev) return false;
-      if (flagshipOnly && !c.flagship) return false;
-      if (q) {
-        const hay = `${c.name} ${c.developer} ${c.area} ${c.city ?? ""} ${c.blurb}`.toLowerCase();
-        if (!hay.includes(q.toLowerCase())) return false;
-      }
-      return true;
-    });
-  }, [areaSlug, dev, flagshipOnly, q]);
+    return compounds.filter((c) => matchMapCompound(c, q, areaSlug, dev, flagshipOnly));
+  }, [areaSlug, dev, flagshipOnly, q, availabilityMap]);
+
+  // Dynamic active options for cascading UI
+  const activeDevelopers = useMemo(() => {
+    const list = compounds.filter((c) => matchMapCompound(c, q, areaSlug, "", flagshipOnly));
+    const slugs = new Set(list.map((c) => c.developerSlug));
+    return developers.filter((d) => slugs.has(d.slug));
+  }, [q, areaSlug, flagshipOnly, availabilityMap]);
 
   const areaCounts = useMemo(() => {
     const m = new Map<string, number>();
-    compounds.forEach((c) => m.set(c.area, (m.get(c.area) ?? 0) + 1));
+    areas.forEach((a) => {
+      const count = compounds.filter((c) => matchMapCompound(c, q, a.slug, dev, flagshipOnly)).length;
+      m.set(a.slug, count);
+    });
     return m;
-  }, []);
+  }, [q, dev, flagshipOnly, availabilityMap]);
+
+  const devCounts = useMemo(() => {
+    const m = new Map<string, number>();
+    developers.forEach((d) => {
+      const count = compounds.filter((c) => matchMapCompound(c, q, areaSlug, d.slug, flagshipOnly)).length;
+      m.set(d.slug, count);
+    });
+    return m;
+  }, [q, areaSlug, flagshipOnly, availabilityMap]);
 
   const visibleLandmarks = useMemo(
     () => (areaSlug ? landmarks.filter((l) => l.area === areaSlug) : landmarks),
@@ -123,19 +200,24 @@ function MapPage() {
             </div>
 
             {/* Search */}
-            <div className="relative">
-              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Input
-                value={q}
-                onChange={(e) => setQ(e.target.value)}
-                placeholder="Search project, developer, area…"
-                className="pl-9 text-sm"
-              />
-              {q && (
-                <button onClick={() => setQ("")} className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-0.5 text-muted-foreground hover:text-primary">
-                  <X className="h-3.5 w-3.5" />
-                </button>
-              )}
+            <div className="space-y-1">
+              <div className="relative">
+                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Input
+                  value={q}
+                  onChange={(e) => setQ(e.target.value)}
+                  placeholder="Search project, developer, keywords…"
+                  className="pl-9 text-sm"
+                />
+                {q && (
+                  <button onClick={() => setQ("")} className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-0.5 text-muted-foreground hover:text-primary">
+                    <X className="h-3.5 w-3.5" />
+                  </button>
+                )}
+              </div>
+              <p className="text-[10px] text-muted-foreground leading-normal px-1">
+                Try searching <span className="italic font-medium text-primary">"3 beds sea view"</span> or <span className="italic font-medium text-primary">"chalet ready"</span>.
+              </p>
             </div>
 
             {/* Expandable filters */}
@@ -155,12 +237,12 @@ function MapPage() {
                     <div className="absolute z-30 mt-1 max-h-64 w-full overflow-y-auto rounded-md border border-border bg-card shadow-lg">
                       <button onClick={() => { setDev(""); setDevOpen(false); }}
                         className="block w-full px-3 py-2 text-left text-sm hover:bg-secondary">All developers</button>
-                      {[...developers].sort((a, b) => a.name.localeCompare(b.name)).map((d) => (
+                      {[...activeDevelopers].sort((a, b) => a.name.localeCompare(b.name)).map((d) => (
                         <div key={d.slug} className="flex items-center border-b border-border/30 last:border-b-0">
                           <button onClick={() => { setDev(d.slug); setDevOpen(false); }}
                             className="flex flex-1 items-center justify-between gap-2 px-3 py-1.5 text-left text-sm hover:bg-secondary">
                             <span className="truncate">{d.name}</span>
-                            <span className="text-[10px] text-muted-foreground">{d.count}</span>
+                            <span className="text-[10px] text-muted-foreground">{devCounts.get(d.slug) ?? 0}</span>
                           </button>
                           <Link to="/developers/$slug" params={{ slug: d.slug }} onClick={() => setDevOpen(false)}
                             className="px-2 py-1.5 text-accent hover:bg-secondary">
@@ -418,6 +500,44 @@ function DetailPanel({
             <MiniStat label="Delivery" value={String(active.deliveryYear)} />
             <MiniStat label="Sizes" value={active.unitSizes ?? "—"} />
           </div>
+
+          {/* Live Availability Info */}
+          {(() => {
+            const avail = availability.find((a) => a.slug === active.slug);
+            if (!avail || avail.totalAvailable === 0) return null;
+            return (
+              <div className="rounded-xl border border-emerald-100 bg-emerald-50/50 p-3 dark:border-emerald-950/20 dark:bg-emerald-950/10">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">Live Availability</span>
+                  </div>
+                  <span className="text-[9px] text-emerald-600 dark:text-emerald-400">Updated {avail.lastUpdated}</span>
+                </div>
+                <div className="mt-1.5 flex items-baseline gap-1">
+                  <span className="text-lg font-bold text-emerald-900 dark:text-emerald-100">{avail.totalAvailable}</span>
+                  <span className="text-xs text-emerald-700 dark:text-emerald-400">units available</span>
+                </div>
+                {avail.breakdown.length > 0 && (
+                  <div className="mt-2 border-t border-emerald-100/50 pt-2 dark:border-emerald-900/20">
+                    <div className="text-[9px] font-semibold uppercase tracking-wider text-emerald-700/80 dark:text-emerald-400/80 mb-1">Available Types</div>
+                    <div className="flex flex-wrap gap-1">
+                      {avail.breakdown.slice(0, 4).map((b) => (
+                        <span key={b.type} className="rounded bg-emerald-100/70 dark:bg-emerald-950/50 px-1.5 py-0.5 text-[9px] font-medium text-emerald-800 dark:text-emerald-300">
+                          {b.type} ({b.available})
+                        </span>
+                      ))}
+                      {avail.breakdown.length > 4 && (
+                        <span className="rounded bg-emerald-100/70 dark:bg-emerald-950/50 px-1.5 py-0.5 text-[9px] font-medium text-emerald-800 dark:text-emerald-300">
+                          +{avail.breakdown.length - 4} more
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })()}
 
           {/* Description */}
           <p className="text-sm leading-relaxed text-foreground/80">

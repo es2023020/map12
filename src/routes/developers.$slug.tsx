@@ -6,9 +6,10 @@ import { CompoundCard } from "@/components/CompoundCard";
 import { developerBySlug } from "@/data/developers";
 import { compoundsByDeveloper } from "@/data/compounds";
 import { areas } from "@/data/areas";
+import { developersWithProfiles } from "@/data/profiles.generated";
 import {
   ArrowLeft, Building2, Wallet, Calendar, MapPin,
-  Globe, Phone, Map as MapIcon, ExternalLink
+  Globe, Phone, Map as MapIcon, ExternalLink, FileText
 } from "lucide-react";
 
 function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
@@ -92,10 +93,21 @@ function DevPage() {
               </a>
               <Link
                 to="/map"
+                search={{ dev: d.slug }}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-accent/80 border border-accent px-4 py-2.5 text-sm font-medium text-white hover:bg-accent transition-colors"
               >
                 <MapIcon className="h-4 w-4" /> View on map
               </Link>
+              {developersWithProfiles.includes(d.slug) && (
+                <a
+                  href={`/profiles/${d.slug}.pdf`}
+                  target="_blank" rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-2.5 text-sm font-medium text-primary-foreground hover:bg-white/20 transition-colors"
+                >
+                  <FileText className="h-4 w-4 text-accent" /> Company profile
+                  <ExternalLink className="h-3 w-3 opacity-60" />
+                </a>
+              )}
               {d.website && (
                 <a
                   href={d.website}
@@ -124,6 +136,39 @@ function DevPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-8 lg:py-12 lg:px-8">
+
+        {/* Corporate Profile Card */}
+        {(d.foundingYear || d.landBank || d.unitsDelivered || d.structure) && (
+          <div className="mb-8 rounded-2xl border border-border/60 bg-card p-6 shadow-soft">
+            <h2 className="mb-4 font-display text-base font-semibold text-primary">Corporate Profile (Verified Facts)</h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {d.foundingYear && (
+                <div>
+                  <div className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Founding Year</div>
+                  <div className="mt-1.5 font-display text-base font-semibold text-primary">{d.foundingYear}</div>
+                </div>
+              )}
+              {d.structure && (
+                <div>
+                  <div className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Corporate Structure</div>
+                  <div className="mt-1.5 font-display text-sm font-semibold text-primary leading-tight">{d.structure}</div>
+                </div>
+              )}
+              {d.landBank && (
+                <div>
+                  <div className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Total Land Bank</div>
+                  <div className="mt-1.5 font-display text-base font-semibold text-primary">{d.landBank}</div>
+                </div>
+              )}
+              {d.unitsDelivered && (
+                <div>
+                  <div className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Units Delivered</div>
+                  <div className="mt-1.5 font-display text-base font-semibold text-primary">{d.unitsDelivered}</div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Status pills + beachfront */}
         <div className="mb-8 flex flex-wrap gap-2">
@@ -188,7 +233,7 @@ function DevPage() {
           <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">
             All {list.length} projects by {d.name}
           </h2>
-          <Link to="/projects" className="text-sm text-accent hover:underline">
+          <Link to="/projects" search={{ dev: d.slug }} className="text-sm text-accent hover:underline">
             Browse all projects →
           </Link>
         </div>

@@ -81,7 +81,7 @@ function AuthPage() {
                 {mode === "signin" ? "Sign in" : "Create account"}
               </Button>
               <p className="text-center text-xs text-muted-foreground">
-                v1 uses local sign-in for demo. Connect Lovable Cloud to enable real authentication.
+                Demo sign-in stores your session locally in this browser.
               </p>
             </form>
           )}

@@ -11,10 +11,19 @@ node_modules
 dist
 dist-ssr
 .output
+.vercel
 .vinxi
 .tanstack/**
 .nitro
 *.local
+
+# Platform scaffolding (not part of the app)
+.lovable
+.local
+.agents
+.replit
+_extract_*
+zipFile.zip
 
 # Wrangler / Cloudflare
 .wrangler/

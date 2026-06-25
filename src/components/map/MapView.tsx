@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, ZoomControl, LayersControl, ScaleControl } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, ZoomControl, LayersControl, ScaleControl, LayerGroup } from "react-leaflet";
 import L from "leaflet";
 import type { Compound } from "@/data/compounds";
 import { areas, areaColor } from "@/data/areas";
@@ -154,6 +154,21 @@ export function MapView({
               maxZoom={19}
             />
           </LayersControl.BaseLayer>
+          <LayersControl.BaseLayer name="Satellite Hybrid">
+            <LayerGroup>
+              <TileLayer
+                attribution="Tiles &copy; Esri"
+                url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+                maxZoom={19}
+              />
+              <TileLayer
+                attribution="&copy; CARTO"
+                url="https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png"
+                subdomains={["a", "b", "c", "d"]}
+                maxZoom={19}
+              />
+            </LayerGroup>
+          </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Light">
             <TileLayer
               attribution="&copy; OpenStreetMap &copy; CARTO"
@@ -182,10 +197,11 @@ export function MapView({
           const typesHtml = (c.types ?? []).slice(0, 4).map((t: string) =>
             `<span class="pt-popup-type">${t}</span>`
           ).join("");
+          const kmBadge = c.km ? `<span style="display:inline-block; font-size:10px; background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; padding:1px 5px; border-radius:4px; font-weight:600; margin-left:6px; vertical-align:middle;">km ${c.km}</span>` : "";
           const popupHtml = `
             <img class="pt-popup-img" src="${c.hero}" alt="${c.name}" loading="lazy" />
             <div class="pt-popup-body">
-              <p class="pt-popup-name">${c.name}</p>
+              <p class="pt-popup-name">${c.name}${kmBadge}</p>
               <p class="pt-popup-dev">${c.developer}</p>
               <div class="pt-popup-stats">
                 <div class="pt-popup-stat">
@@ -206,7 +222,6 @@ export function MapView({
               <a class="pt-popup-btn" href="/projects/${c.slug}">View full project →</a>
             </div>
           `;
-          const tooltipContent = `<strong>${c.name}</strong> · EGP ${c.priceFrom}M+`;
 
           return (
             <Marker
@@ -224,7 +239,9 @@ export function MapView({
                 opacity={0.96}
                 permanent={false}
               >
-                <div style={{ fontSize: 11, fontWeight: 700, marginBottom: 1 }}>{c.name}</div>
+                <div style={{ fontSize: 11, fontWeight: 700, marginBottom: 1 }}>
+                  {c.name} {c.km ? `(km ${c.km})` : ""}
+                </div>
                 <div style={{ fontSize: 10, color: "#64748b" }}>EGP {c.priceFrom}M+{avail > 0 ? ` · ${avail} units avail.` : ""}</div>
               </Tooltip>
             </Marker>

@@ -4,6 +4,7 @@ import { Shell } from "@/components/layout/Shell";
 import { MapClient } from "@/components/map/MapClient";
 import { compoundBySlug, compoundsByArea } from "@/data/compounds";
 import { areaBySlug, areaLocationString } from "@/data/areas";
+import { projectLocations } from "@/data/project-locations";
 import { developerBySlug } from "@/data/developers";
 import { CompoundCard } from "@/components/CompoundCard";
 import { availabilityBySlug } from "@/data/availability";
@@ -13,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import {
   Heart, MapPin, Waves, Calendar, Building2, Wallet, Ruler,
   Check, ArrowLeft, Phone, ChevronLeft, ChevronRight, Globe,
-  X, ExternalLink, Star
+  X, ExternalLink, Star, Calculator
 } from "lucide-react";
 function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
   const [logoLoaded, setLogoLoaded] = useState(false);
@@ -251,10 +252,16 @@ function CompoundPage() {
               <p className="mt-3 text-sm text-muted-foreground">
                 Bespoke plans available — contact your PropTrack advisor for current launch offers and exclusive discounts.
               </p>
-              <a href="tel:01233374501"
-                className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
-                <Phone className="h-4 w-4" /> Speak to an advisor
-              </a>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <a href="tel:01233374501"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
+                  <Phone className="h-4 w-4" /> Speak to an advisor
+                </a>
+                <Link to="/calculator" search={{ project: c.slug }}
+                  className="inline-flex items-center gap-2 rounded-full border border-accent bg-card px-5 py-2.5 text-sm font-semibold text-accent hover:bg-accent/5 transition-colors">
+                  <Calculator className="h-4 w-4" /> Calculate installments
+                </Link>
+              </div>
             </div>
           </Section>
 
@@ -266,10 +273,10 @@ function CompoundPage() {
             <div className="mt-3 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-accent" />
-                {areaLocationString(c.area)}{c.km ? ` · km ${c.km}` : ""}
+                {c.city ?? areaLocationString(c.area)}{c.km ? ` · km ${c.km}` : ""}
               </span>
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`}
+                href={projectLocations[c.slug]?.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`}
                 target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-1 text-sm text-accent hover:underline"
               >
@@ -292,6 +299,12 @@ function CompoundPage() {
                 <Heart className={`mr-2 h-4 w-4 ${isFav ? "fill-sunset text-sunset" : ""}`} />
                 {isFav ? "Saved to favorites" : "Save to favorites"}
               </Button>
+              <Link to="/calculator" search={{ project: c.slug }} className="block w-full">
+                <Button variant="outline" className="w-full rounded-full border-accent text-accent hover:bg-accent/5" size="lg">
+                  <Calculator className="mr-2 h-4 w-4" />
+                  Installment Calculator
+                </Button>
+              </Link>
             </div>
 
             {/* Developer card */}
@@ -339,6 +352,11 @@ function CompoundPage() {
             <div className="text-[10px] uppercase tracking-wider text-muted-foreground">From</div>
             <div className="font-display text-lg font-semibold text-primary">EGP {c.priceFrom}M</div>
           </div>
+          <Link to="/calculator" search={{ project: c.slug }} className="shrink-0">
+            <Button variant="outline" size="sm" className="rounded-full border-accent text-accent">
+              <Calculator className="h-4 w-4" />
+            </Button>
+          </Link>
           <Button onClick={() => toggleFav(c.slug)} variant="outline" size="sm" className="rounded-full shrink-0">
             <Heart className={`h-4 w-4 ${isFav ? "fill-sunset text-sunset" : ""}`} />
           </Button>

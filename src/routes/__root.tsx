@@ -7,10 +7,13 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+
+const SITE_NAME = "PropTrack";
+const SITE_DESCRIPTION =
+  "Egypt Prop Insights is a real estate intelligence platform for Egyptian brokers.";
 
 function NotFoundComponent() {
   return (
@@ -37,9 +40,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -77,18 +77,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Egypt Prop Insights is a real estate intelligence platform for Egyptian brokers." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Egypt Prop Insights is a real estate intelligence platform for Egyptian brokers." },
+      { title: `${SITE_NAME} — Egypt's property intelligence platform` },
+      { name: "description", content: SITE_DESCRIPTION },
+      { property: "og:title", content: `${SITE_NAME} — Real-estate intelligence for Egyptian brokers` },
+      { property: "og:description", content: SITE_DESCRIPTION },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/logo.png" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Egypt Prop Insights is a real estate intelligence platform for Egyptian brokers." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/07ad4a1a-55ae-4905-9ba5-877ce655a93d/id-preview-531d5f70--6e06d092-a4ec-4428-a7fa-10b220259bfe.lovable.app-1781418582050.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/07ad4a1a-55ae-4905-9ba5-877ce655a93d/id-preview-531d5f70--6e06d092-a4ec-4428-a7fa-10b220259bfe.lovable.app-1781418582050.png" },
+      { name: "twitter:title", content: `${SITE_NAME} — Real-estate intelligence for Egyptian brokers` },
+      { name: "twitter:description", content: SITE_DESCRIPTION },
+      { name: "twitter:image", content: "/logo.png" },
     ],
     links: [
       {
@@ -132,7 +130,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
   );

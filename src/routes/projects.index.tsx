@@ -7,12 +7,22 @@ import { areas } from "@/data/areas";
 import { developers } from "@/data/developers";
 import { Input } from "@/components/ui/input";
 import { Search, SlidersHorizontal, X, ChevronDown, ChevronUp } from "lucide-react";
+import { availability } from "@/data/availability";
 
-const PRICE_MAX = Math.max(...compounds.map((c) => c.priceFrom));
-const PRICE_MIN = Math.min(...compounds.map((c) => c.priceFrom));
+// Compute true max price from availability data (highest real price) or fall back to compound list
+const availMaxPrices = availability.flatMap((a) => a.breakdown.map((b) => b.maxPriceM));
+const compoundPrices = compounds.map((c) => c.priceFrom);
+const allPrices = [...availMaxPrices, ...compoundPrices].filter((p) => p > 0);
+const PRICE_MAX = Math.max(...allPrices);
+const PRICE_MIN = Math.min(...compoundPrices);
 const ALL_TYPES = Array.from(new Set(compounds.flatMap((c) => c.types))).sort();
 
 export const Route = createFileRoute("/projects/")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    area: typeof search.area === "string" ? search.area : "",
+    dev: typeof search.dev === "string" ? search.dev : "",
+    q: typeof search.q === "string" ? search.q : "",
+  }),
   head: () => ({
     meta: [
       { title: "All Projects — PropTrack" },
@@ -23,14 +33,15 @@ export const Route = createFileRoute("/projects/")({
 });
 
 function ProjectsPage() {
-  const [q, setQ] = useState("");
-  const [area, setArea] = useState("");
-  const [dev, setDev] = useState("");
+  const { area: areaParam, dev: devParam, q: qParam } = Route.useSearch();
+  const [q, setQ] = useState(qParam || "");
+  const [area, setArea] = useState(areaParam || "");
+  const [dev, setDev] = useState(devParam || "");
   const [status, setStatus] = useState("");
   const [type, setType] = useState("");
   const [maxPrice, setMaxPrice] = useState(PRICE_MAX);
   const [sort, setSort] = useState<"name" | "price-asc" | "price-desc" | "delivery">("name");
-  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(!!(areaParam || devParam || qParam));
 
   const hasFilters = !!(q || area || dev || status || type || maxPrice < PRICE_MAX);
 
@@ -38,26 +49,104 @@ function ProjectsPage() {
     setQ(""); setArea(""); setDev(""); setStatus(""); setType(""); setMaxPrice(PRICE_MAX);
   }
 
-  const filtered = useMemo(() => {
-    let list = compounds.filter((c) => {
-      if (q) {
-        const hay = `${c.name} ${c.developer} ${c.area} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")}`.toLowerCase();
-        if (!hay.includes(q.toLowerCase())) return false;
+  const availabilityMap = useMemo(() => {
+    return new Map(availability.map((a) => [a.slug, a]));
+  }, []);
+
+  const matchCompound = (
+    c: any,
+    qVal: string,
+    areaVal: string,
+    devVal: string,
+    statusVal: string,
+    typeVal: string,
+    maxPriceVal: number
+  ) => {
+    if (qVal) {
+      const avail = availabilityMap.get(c.slug);
+      let availText = "";
+      if (avail) {
+        const terms = new Set<string>();
+        terms.add(`${avail.totalAvailable} units`);
+        if (avail.note) terms.add(avail.note);
+        for (const b of avail.breakdown) {
+          if (b.type) terms.add(b.type);
+          if (b.beds) {
+            terms.add(`${b.beds} beds`);
+            terms.add(`${b.beds}br`);
+            terms.add(`${b.beds} bedroom`);
+            terms.add(`${b.beds} bedrooms`);
+          }
+          if (b.finishing) terms.add(b.finishing);
+          if (b.cluster) terms.add(b.cluster);
+          if (b.deliveryNote) terms.add(b.deliveryNote);
+          if (b.paymentPlan) terms.add(b.paymentPlan);
+          
+          for (const u of b.units ?? []) {
+            if (u.cluster) terms.add(u.cluster);
+            if (u.finishing) terms.add(u.finishing);
+            if (u.view) terms.add(u.view);
+            if (u.deliveryNote) terms.add(u.deliveryNote);
+            if (u.paymentPlan) terms.add(u.paymentPlan);
+            if (u.status) terms.add(u.status);
+            if (u.areaNote) terms.add(u.areaNote);
+          }
+        }
+        availText = Array.from(terms).join(" ");
       }
-      if (area && c.area !== area) return false;
-      if (dev && c.developerSlug !== dev) return false;
-      if (status && c.status !== status) return false;
-      if (type && !c.types.includes(type)) return false;
-      if (c.priceFrom > maxPrice) return false;
-      return true;
-    });
+
+      const hay = `${c.name} ${c.developer} ${c.area} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase();
+      
+      const stopWords = new Set(["in", "for", "with", "a", "an", "the", "at", "by", "of", "and", "on"]);
+      const queryWords = qVal
+        .toLowerCase()
+        .split(/\s+/)
+        .filter((w) => w && !stopWords.has(w));
+        
+      if (queryWords.length > 0 && !queryWords.every((word) => hay.includes(word))) return false;
+    }
+    if (areaVal && c.area !== areaVal) return false;
+    if (devVal && c.developerSlug !== devVal) return false;
+    if (statusVal && c.status !== statusVal) return false;
+    if (typeVal && !c.types.includes(typeVal)) return false;
+    if (c.priceFrom > maxPriceVal) return false;
+    return true;
+  };
+
+  const filtered = useMemo(() => {
+    let list = compounds.filter((c) => matchCompound(c, q, area, dev, status, type, maxPrice));
     return [...list].sort((a, b) => {
       if (sort === "name") return a.name.localeCompare(b.name);
       if (sort === "price-asc") return a.priceFrom - b.priceFrom;
       if (sort === "price-desc") return b.priceFrom - a.priceFrom;
       return a.deliveryYear - b.deliveryYear;
     });
-  }, [q, area, dev, status, type, maxPrice, sort]);
+  }, [q, area, dev, status, type, maxPrice, sort, availabilityMap]);
+
+  // Dynamic cascading option computations:
+  const activeAreas = useMemo(() => {
+    const list = compounds.filter((c) => matchCompound(c, q, "", dev, status, type, maxPrice));
+    const slugs = new Set(list.map((c) => c.area));
+    return areas.filter((a) => slugs.has(a.slug));
+  }, [q, dev, status, type, maxPrice, availabilityMap]);
+
+  const activeDevelopers = useMemo(() => {
+    const list = compounds.filter((c) => matchCompound(c, q, area, "", status, type, maxPrice));
+    const slugs = new Set(list.map((c) => c.developerSlug));
+    return developers.filter((d) => slugs.has(d.slug));
+  }, [q, area, status, type, maxPrice, availabilityMap]);
+
+  const activeStatuses = useMemo(() => {
+    const list = compounds.filter((c) => matchCompound(c, q, area, dev, "", type, maxPrice));
+    const statuses = new Set(list.map((c) => c.status));
+    return ["Delivered", "Under Construction", "Off-Plan"].filter((s) => statuses.has(s));
+  }, [q, area, dev, type, maxPrice, availabilityMap]);
+
+  const activeTypes = useMemo(() => {
+    const list = compounds.filter((c) => matchCompound(c, q, area, dev, status, "", maxPrice));
+    const types = new Set(list.flatMap((c) => c.types));
+    return ALL_TYPES.filter((t) => types.has(t));
+  }, [q, area, dev, status, maxPrice, availabilityMap]);
 
   const FilterPanel = (
     <div className="space-y-5">
@@ -69,23 +158,26 @@ function ProjectsPage() {
           <button onClick={clearAll} className="text-xs text-accent hover:underline">Clear all</button>
         )}
       </div>
-      <div className="relative">
-        <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-        <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search projects…" className="pl-9" />
+      <div className="space-y-1">
+        <div className="relative">
+          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search projects, developer, keywords..." className="pl-9 text-sm" />
+        </div>
+        <p className="text-[10px] text-muted-foreground leading-normal px-1">
+          Try searching like <span className="italic font-medium text-primary">"3 beds chalet sea view"</span> or <span className="italic font-medium text-primary">"ready to move marassi"</span>.
+        </p>
       </div>
       <FilterSelect label="Area" value={area} onChange={setArea}
-        options={[{ value: "", label: "All areas" }, ...areas.map((a) => ({ value: a.slug, label: a.name }))]} />
+        options={[{ value: "", label: "All areas" }, ...activeAreas.map((a) => ({ value: a.slug, label: a.name }))]} />
       <FilterSelect label="Developer" value={dev} onChange={setDev}
-        options={[{ value: "", label: "All developers" }, ...developers.map((d) => ({ value: d.slug, label: d.name }))]} />
+        options={[{ value: "", label: "All developers" }, ...activeDevelopers.map((d) => ({ value: d.slug, label: d.name }))]} />
       <FilterSelect label="Status" value={status} onChange={setStatus}
         options={[
           { value: "", label: "Any status" },
-          { value: "Delivered", label: "Delivered" },
-          { value: "Under Construction", label: "Under Construction" },
-          { value: "Off-Plan", label: "Off-Plan" },
+          ...activeStatuses.map((s) => ({ value: s, label: s }))
         ]} />
       <FilterSelect label="Unit Type" value={type} onChange={setType}
-        options={[{ value: "", label: "Any type" }, ...ALL_TYPES.map((t) => ({ value: t, label: t }))]} />
+        options={[{ value: "", label: "Any type" }, ...activeTypes.map((t) => ({ value: t, label: t }))]} />
       <div>
         <div className="mb-2 flex items-center justify-between text-xs font-medium uppercase tracking-wider text-muted-foreground">
           <span>Max price</span>
