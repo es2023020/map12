@@ -13,45 +13,52 @@ export function AvailabilitySection({ data, projectSlug }: Props) {
   const totalMax = Math.max(...data.breakdown.map((b) => b.maxPriceM));
 
   return (
-    <div>
+    <div className="space-y-6">
       {/* Header banner */}
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-teal-50 px-5 py-4 dark:border-emerald-900/40 dark:from-emerald-950/30 dark:to-teal-950/30">
+      <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-emerald-500/20 bg-gradient-to-r from-emerald-50/60 to-teal-50/60 px-6 py-5 dark:border-emerald-500/10 dark:from-emerald-950/20 dark:to-teal-950/20 backdrop-blur-md shadow-sm">
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-sm">
+          <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-md">
             <Home className="h-5 w-5" />
+            <span className="absolute -top-1.5 -right-1.5 flex h-3.5 w-3.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white dark:border-slate-900"></span>
+            </span>
           </span>
           <div>
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Live Availability</div>
-            <div className="font-display text-xl font-bold text-emerald-900 dark:text-emerald-100">
+            <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse inline-block" />
+              Live Connected Inventory
+            </div>
+            <div className="font-display text-2xl font-extrabold text-emerald-950 dark:text-emerald-50 leading-tight">
               {data.totalAvailable.toLocaleString()} units available
             </div>
           </div>
         </div>
         <div className="text-right">
-          <div className="text-[11px] text-emerald-700 dark:text-emerald-400">Price range</div>
-          <div className="font-display text-base font-semibold text-emerald-900 dark:text-emerald-100">
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Connected price range</div>
+          <div className="font-display text-lg font-bold text-emerald-950 dark:text-emerald-50">
             EGP {totalMin.toFixed(1)}M – {totalMax.toFixed(1)}M
           </div>
         </div>
       </div>
 
       {/* Unit breakdown table */}
-      <div className="mt-4 overflow-hidden rounded-2xl border border-border">
+      <div className="overflow-hidden rounded-2xl border border-border shadow-soft bg-card">
         <div className="overflow-x-auto">
-          <table className="w-full text-sm">
+          <table className="w-full text-sm border-collapse">
             <thead>
-              <tr className="border-b border-border bg-secondary/60">
-                <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Unit Type</th>
-                <th className="px-4 py-3 text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Available</th>
-                <th className="px-4 py-3 text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Size (m²)</th>
-                <th className="px-4 py-3 text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Price (EGP M)</th>
-                <th className="hidden sm:table-cell px-4 py-3 text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">% of Total</th>
+              <tr className="border-b border-border bg-secondary/40">
+                <th className="px-5 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Unit Type</th>
+                <th className="px-5 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Available</th>
+                <th className="px-5 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Size (m²)</th>
+                <th className="px-5 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Price (EGP M)</th>
+                <th className="hidden sm:table-cell px-5 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">% of Total</th>
                 {projectSlug && (
-                  <th className="px-4 py-3 text-center text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hidden sm:table-cell">Units</th>
+                  <th className="px-5 py-3.5 text-center text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden sm:table-cell">Listings</th>
                 )}
               </tr>
             </thead>
-            <tbody className="divide-y divide-border">
+            <tbody className="divide-y divide-border/60">
               {data.breakdown.map((row, i) => {
                 const pct = Math.round((row.available / data.totalAvailable) * 100);
                 const slug = projectSlug ? unitTypeSlug(row) : null;
@@ -59,61 +66,61 @@ export function AvailabilitySection({ data, projectSlug }: Props) {
                 const label = `${row.type}${row.beds ? ` · ${row.beds}BR` : ""}${row.cluster ? ` (${row.cluster})` : ""}`;
 
                 return (
-                  <tr key={i} className="group bg-card hover:bg-secondary/30 transition-colors">
-                    <td className="px-4 py-3">
-                      <div className="flex items-center gap-2">
-                        <span className="inline-block h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: typeColor(row.type) }} />
+                  <tr key={i} className="group hover:bg-secondary/20 transition-colors">
+                    <td className="px-5 py-3.5">
+                      <div className="flex items-center gap-2.5">
+                        <span className="inline-block h-3 w-3 shrink-0 rounded-full border border-white/20 shadow-sm" style={{ background: typeColor(row.type) }} />
                         {projectSlug && slug ? (
                           <Link
                             to="/units/$projectSlug/$typeSlug"
                             params={{ projectSlug, typeSlug: slug }}
-                            className="font-medium text-primary hover:text-accent transition-colors inline-flex items-center gap-1"
+                            className="font-semibold text-primary hover:text-accent transition-colors inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
                           >
                             {label}
                           </Link>
                         ) : (
-                          <span className="font-medium text-primary">{label}</span>
+                          <span className="font-semibold text-primary">{label}</span>
                         )}
                       </div>
                     </td>
-                    <td className="px-4 py-3 text-right">
-                      <span className="inline-flex items-center justify-center rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">
+                    <td className="px-5 py-3.5 text-right">
+                      <span className="inline-flex items-center justify-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary">
                         {row.available}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-right text-muted-foreground">
+                    <td className="px-5 py-3.5 text-right text-muted-foreground font-medium">
                       {row.minSqm === row.maxSqm ? `${row.minSqm}` : `${row.minSqm}–${row.maxSqm}`}
                     </td>
-                    <td className="px-4 py-3 text-right">
-                      <span className="font-semibold text-primary">
+                    <td className="px-5 py-3.5 text-right">
+                      <span className="font-bold text-primary">
                         {row.minPriceM.toFixed(1)}–{row.maxPriceM.toFixed(1)}
                       </span>
                     </td>
-                    <td className="hidden sm:table-cell px-4 py-3">
-                      <div className="flex items-center justify-end gap-2">
-                        <div className="h-1.5 w-20 overflow-hidden rounded-full bg-border">
+                    <td className="hidden sm:table-cell px-5 py-3.5">
+                      <div className="flex items-center justify-end gap-2.5">
+                        <div className="h-2 w-20 overflow-hidden rounded-full bg-secondary">
                           <div
-                            className="h-full rounded-full bg-accent transition-all"
+                            className="h-full rounded-full transition-all duration-500"
                             style={{ width: `${pct}%`, background: typeColor(row.type) }}
                           />
                         </div>
-                        <span className="w-8 text-right text-xs text-muted-foreground">{pct}%</span>
+                        <span className="w-8 text-right text-xs font-semibold text-muted-foreground">{pct}%</span>
                       </div>
                     </td>
                     {projectSlug && (
-                      <td className="px-4 py-3 text-center hidden sm:table-cell">
+                      <td className="px-5 py-3.5 text-center hidden sm:table-cell">
                         {slug && (
                           <Link
                             to="/units/$projectSlug/$typeSlug"
                             params={{ projectSlug, typeSlug: slug }}
-                            className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold transition-colors ${
+                            className={`inline-flex items-center gap-1 rounded-full px-3.5 py-1 text-xs font-bold shadow-soft transition-all duration-200 hover:scale-[1.03] ${
                               hasListings
-                                ? "bg-emerald-100 text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-950/30 dark:text-emerald-400"
-                                : "bg-secondary text-muted-foreground hover:bg-secondary/80"
+                                ? "bg-emerald-600 text-white hover:bg-emerald-700"
+                                : "bg-secondary text-primary hover:bg-secondary/80"
                             }`}
                           >
                             {hasListings ? `${row.units!.length} listed` : "View"}
-                            <ArrowRight className="h-3 w-3" />
+                            <ArrowRight className="h-3.5 w-3.5" />
                           </Link>
                         )}
                       </td>
@@ -127,48 +134,48 @@ export function AvailabilitySection({ data, projectSlug }: Props) {
       </div>
 
       {/* Stats row */}
-      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         <MiniStat
-          icon={<BarChart2 className="h-4 w-4" />}
+          icon={<BarChart2 className="h-4.5 w-4.5" />}
           label="Unit categories"
           value={String(data.breakdown.length)}
         />
         <MiniStat
-          icon={<TrendingUp className="h-4 w-4" />}
+          icon={<TrendingUp className="h-4.5 w-4.5" />}
           label="Entry price"
           value={`EGP ${totalMin.toFixed(1)}M`}
           accent
         />
         <MiniStat
-          icon={<Home className="h-4 w-4" />}
+          icon={<Home className="h-4.5 w-4.5" />}
           label="Max size"
           value={`${Math.max(...data.breakdown.map((b) => b.maxSqm))} m²`}
         />
         <MiniStat
-          icon={<Clock className="h-4 w-4" />}
+          icon={<Clock className="h-4.5 w-4.5" />}
           label="Data as of"
           value={data.lastUpdated}
         />
       </div>
 
       {data.note && (
-        <div className="mt-4 flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 dark:border-amber-900/40 dark:bg-amber-950/20">
+        <div className="flex items-start gap-2.5 rounded-xl border border-amber-200 bg-amber-50/50 px-4 py-3.5 dark:border-amber-900/40 dark:bg-amber-950/20">
           <span className="mt-0.5 text-amber-600">ⓘ</span>
-          <p className="text-sm text-amber-800 dark:text-amber-200">{data.note}</p>
+          <p className="text-xs font-medium text-amber-800 dark:text-amber-200">{data.note}</p>
         </div>
       )}
 
       {/* CTA */}
-      <div className="mt-5 flex flex-wrap items-center gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
         <a
           href="tel:01233374501"
-          className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 transition-colors"
+          className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-bold text-white shadow-soft hover:bg-emerald-700 transition-colors"
         >
           <Phone className="h-4 w-4" />
-          Get live availability list
+          Request Updated Live List
         </a>
-        <span className="text-xs text-muted-foreground">
-          Source: {data.developer} — updated {data.lastUpdated}
+        <span className="text-xs font-medium text-muted-foreground bg-secondary/50 border border-border px-3 py-1 rounded-full">
+          Developer Feed: {data.developer} · Checked {data.lastUpdated}
         </span>
       </div>
     </div>

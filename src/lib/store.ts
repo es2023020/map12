@@ -7,7 +7,7 @@ export type Lead = {
   name: string;
   phone: string;
   budget: number; // EGP M
-  interest: string; // compound slug or area
+  interest: string; // compound slug or destination
   notes?: string;
   stage: LeadStage;
   createdAt: number;

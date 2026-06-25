@@ -25,7 +25,7 @@ function ComparePage() {
 
   const rows: Array<{ label: string; get: (c: NonNullable<ReturnType<typeof compoundBySlug>>) => string }> = [
     { label: "Developer", get: (c) => c.developer },
-    { label: "Area", get: (c) => c.area },
+    { label: "Destination", get: (c) => c.destination },
     { label: "Status", get: (c) => c.status },
     { label: "Delivery", get: (c) => String(c.deliveryYear) },
     { label: "Starting price", get: (c) => `EGP ${c.priceFrom}M` },

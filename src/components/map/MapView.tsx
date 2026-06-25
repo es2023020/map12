@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, ZoomControl, LayersControl, ScaleControl, LayerGroup } from "react-leaflet";
 import L from "leaflet";
 import type { Compound } from "@/data/compounds";
-import { areas, areaColor } from "@/data/areas";
+import { destinations, destinationColor } from "@/data/destinations";
 import { landmarks as allLandmarks, landmarkColors, type Landmark } from "@/data/landmarks";
 import { availability } from "@/data/availability";
 
@@ -11,7 +11,7 @@ function getAvailableCount(slug: string): number {
 }
 
 function projectIcon(c: Compound, active: boolean) {
-  const color = areaColor(c.area);
+  const color = destinationColor(c.destination);
   const avail = getAvailableCount(c.slug);
   const availBadge = avail > 0
     ? `<span class="pt-dot-avail">${avail > 99 ? "99+" : avail}</span>`
@@ -191,7 +191,7 @@ export function MapView({
 
         {compounds.map((c) => {
           if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;
-          const areaColor_ = areaColor(c.area);
+          const areaColor_ = destinationColor(c.destination);
           const avail = getAvailableCount(c.slug);
           const availStr = avail > 0 ? `<div class="pt-popup-avail">✓ ${avail} units available</div>` : "";
           const typesHtml = (c.types ?? []).slice(0, 4).map((t: string) =>
@@ -252,4 +252,4 @@ export function MapView({
   );
 }
 
-export { areas };
+export { destinations };

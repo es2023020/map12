@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { MapClient } from "@/components/map/MapClient";
 import { compounds } from "@/data/compounds";
-import { areas, areaColor } from "@/data/areas";
+import { destinations, destinationColor } from "@/data/destinations";
 import { developers } from "@/data/developers";
 import { landmarks } from "@/data/landmarks";
 import { Input } from "@/components/ui/input";
@@ -30,7 +30,7 @@ function LogoBadge({ src, name, className = "" }: { src: string; name: string; c
 
 export const Route = createFileRoute("/map")({
   validateSearch: (search: Record<string, unknown>) => ({
-    area: typeof search.area === "string" ? search.area : "",
+    destination: typeof search.destination === "string" ? search.destination : "",
     dev: typeof search.dev === "string" ? search.dev : "",
     q: typeof search.q === "string" ? search.q : "",
   }),
@@ -44,16 +44,16 @@ export const Route = createFileRoute("/map")({
 });
 
 function MapPage() {
-  const { area: areaParam, dev: devParam, q: qParam } = Route.useSearch();
+  const { destination: destinationParam, dev: devParam, q: qParam } = Route.useSearch();
   const [q, setQ] = useState(qParam || "");
   const [dev, setDev] = useState<string>(devParam || "");
-  const [areaSlug, setAreaSlug] = useState<string | null>(areaParam || null);
+  const [destinationSlug, setAreaSlug] = useState<string | null>(destinationParam || null);
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
   const [showLandmarks, setShowLandmarks] = useState(true);
   const [flagshipOnly, setFlagshipOnly] = useState(false);
   const [devOpen, setDevOpen] = useState(false);
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
-  const [filtersOpen, setFiltersOpen] = useState(!!(areaParam || devParam || qParam));
+  const [filtersOpen, setFiltersOpen] = useState(!!(destinationParam || devParam || qParam));
 
   const availabilityMap = useMemo(() => {
     return new Map(availability.map((a) => [a.slug, a]));
@@ -62,11 +62,11 @@ function MapPage() {
   const matchMapCompound = (
     c: any,
     qVal: string,
-    areaVal: string | null,
+    destinationVal: string | null,
     devVal: string,
     flagshipVal: boolean
   ) => {
-    if (areaVal && c.area !== areaVal) return false;
+    if (destinationVal && c.destination !== destinationVal) return false;
     if (devVal && c.developerSlug !== devVal) return false;
     if (flagshipVal && !c.flagship) return false;
     if (qVal) {
@@ -102,7 +102,7 @@ function MapPage() {
         availText = Array.from(terms).join(" ");
       }
 
-      const hay = `${c.name} ${c.developer} ${c.area} ${c.city ?? ""} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase();
+      const hay = `${c.name} ${c.developer} ${c.destination} ${c.city ?? ""} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase();
       
       const stopWords = new Set(["in", "for", "with", "a", "an", "the", "at", "by", "of", "and", "on"]);
       const queryWords = qVal
@@ -116,19 +116,19 @@ function MapPage() {
   };
 
   const filtered = useMemo(() => {
-    return compounds.filter((c) => matchMapCompound(c, q, areaSlug, dev, flagshipOnly));
-  }, [areaSlug, dev, flagshipOnly, q, availabilityMap]);
+    return compounds.filter((c) => matchMapCompound(c, q, destinationSlug, dev, flagshipOnly));
+  }, [destinationSlug, dev, flagshipOnly, q, availabilityMap]);
 
   // Dynamic active options for cascading UI
   const activeDevelopers = useMemo(() => {
-    const list = compounds.filter((c) => matchMapCompound(c, q, areaSlug, "", flagshipOnly));
+    const list = compounds.filter((c) => matchMapCompound(c, q, destinationSlug, "", flagshipOnly));
     const slugs = new Set(list.map((c) => c.developerSlug));
     return developers.filter((d) => slugs.has(d.slug));
-  }, [q, areaSlug, flagshipOnly, availabilityMap]);
+  }, [q, destinationSlug, flagshipOnly, availabilityMap]);
 
   const areaCounts = useMemo(() => {
     const m = new Map<string, number>();
-    areas.forEach((a) => {
+    destinations.forEach((a) => {
       const count = compounds.filter((c) => matchMapCompound(c, q, a.slug, dev, flagshipOnly)).length;
       m.set(a.slug, count);
     });
@@ -138,25 +138,25 @@ function MapPage() {
   const devCounts = useMemo(() => {
     const m = new Map<string, number>();
     developers.forEach((d) => {
-      const count = compounds.filter((c) => matchMapCompound(c, q, areaSlug, d.slug, flagshipOnly)).length;
+      const count = compounds.filter((c) => matchMapCompound(c, q, destinationSlug, d.slug, flagshipOnly)).length;
       m.set(d.slug, count);
     });
     return m;
-  }, [q, areaSlug, flagshipOnly, availabilityMap]);
+  }, [q, destinationSlug, flagshipOnly, availabilityMap]);
 
   const visibleLandmarks = useMemo(
-    () => (areaSlug ? landmarks.filter((l) => l.area === areaSlug) : landmarks),
-    [areaSlug],
+    () => (destinationSlug ? landmarks.filter((l) => l.destination === destinationSlug) : landmarks),
+    [destinationSlug],
   );
 
   const active = activeSlug ? compounds.find((c) => c.slug === activeSlug) ?? null : null;
-  const activeArea = active ? areas.find((a) => a.slug === active.area) : null;
+  const activeDestination = active ? destinations.find((a) => a.slug === active.destination) : null;
   const activeDev = active ? developers.find((d) => d.slug === active.developerSlug) : null;
-  const selectedArea = areaSlug ? areas.find((a) => a.slug === areaSlug) : null;
+  const selectedDestination = destinationSlug ? destinations.find((a) => a.slug === destinationSlug) : null;
 
-  const mapCenter: [number, number] = selectedArea?.center ?? [29.5, 31.0];
-  const mapZoom = selectedArea?.zoom ?? 6;
-  const hasFilters = !!(q || dev || areaSlug || flagshipOnly);
+  const mapCenter: [number, number] = selectedDestination?.center ?? [29.5, 31.0];
+  const mapZoom = selectedDestination?.zoom ?? 6;
+  const hasFilters = !!(q || dev || destinationSlug || flagshipOnly);
 
   function clearAll() {
     setQ(""); setDev(""); setAreaSlug(null); setFlagshipOnly(false); setActiveSlug(null);
@@ -267,19 +267,19 @@ function MapPage() {
             )}
           </div>
 
-          {/* Area chips */}
+          {/* Destination chips */}
           <div className="border-b border-border/60 px-3 py-2.5 shrink-0">
             <div className="mb-1.5 flex items-center justify-between">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">Areas</span>
-              <Link to="/areas" className="text-[10px] font-medium text-accent hover:underline">Browse all →</Link>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">Destinations</span>
+              <Link to="/destinations" className="text-[10px] font-medium text-accent hover:underline">Browse all →</Link>
             </div>
             <div className="flex flex-wrap gap-1">
               <button onClick={() => setAreaSlug(null)}
-                className={`rounded-full border px-2 py-0.5 text-[11px] font-medium transition-colors ${areaSlug === null ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:text-primary"}`}>
+                className={`rounded-full border px-2 py-0.5 text-[11px] font-medium transition-colors ${destinationSlug === null ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:text-primary"}`}>
                 All · {compounds.length}
               </button>
-              {areas.map((a) => {
-                const isActive = areaSlug === a.slug;
+              {destinations.map((a) => {
+                const isActive = destinationSlug === a.slug;
                 return (
                   <span key={a.slug} className={`inline-flex items-center overflow-hidden rounded-full border text-[11px] ${isActive ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground"}`}>
                     <button onClick={() => setAreaSlug(isActive ? null : a.slug)}
@@ -287,7 +287,7 @@ function MapPage() {
                       <span className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: a.color }} />
                       {a.name.split(" ")[0]} · {areaCounts.get(a.slug) ?? 0}
                     </button>
-                    <Link to="/areas/$slug" params={{ slug: a.slug }}
+                    <Link to="/destinations/$slug" params={{ slug: a.slug }}
                       className={`border-l px-1 py-0.5 ${isActive ? "border-primary-foreground/30" : "border-border"} hover:opacity-80`}>
                       <ExternalLink className="h-2.5 w-2.5" />
                     </Link>
@@ -310,7 +310,7 @@ function MapPage() {
                 onClick={() => { setActiveSlug(c.slug === activeSlug ? null : c.slug); setMobileView("map"); }}
                 className={`flex w-full items-start gap-2 border-b border-border/60 px-3 py-2.5 text-left transition-colors ${activeSlug === c.slug ? "bg-accent/8 border-l-2 border-l-accent" : "hover:bg-secondary/50"}`}
               >
-                <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full ring-1 ring-white/30" style={{ background: areaColor(c.area) }} />
+                <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full ring-1 ring-white/30" style={{ background: destinationColor(c.destination) }} />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex min-w-0 items-center gap-1">
@@ -322,7 +322,7 @@ function MapPage() {
                   <div className="truncate text-[11px] text-muted-foreground">{c.developer}</div>
                   <div className="mt-0.5 inline-flex items-center gap-1 text-[10px] uppercase tracking-wider text-muted-foreground">
                     <MapPin className="h-2.5 w-2.5" />
-                    {areas.find((a) => a.slug === c.area)?.name ?? c.area}
+                    {destinations.find((a) => a.slug === c.destination)?.name ?? c.destination}
                     {c.km ? ` · km ${c.km}` : ""}
                   </div>
                 </div>
@@ -406,7 +406,7 @@ function MapPage() {
           <aside className="hidden md:flex flex-col w-[340px] lg:w-[380px] shrink-0 border-l border-border/60 bg-card shadow-lg overflow-hidden">
             <DetailPanel
               active={active}
-              activeArea={activeArea}
+              activeDestination={activeDestination}
               activeDev={activeDev}
               onClose={() => setActiveSlug(null)}
             />
@@ -436,12 +436,12 @@ function MapPage() {
 /* ─── Right Detail Panel ─────────────────────────────────── */
 function DetailPanel({
   active,
-  activeArea,
+  activeDestination,
   activeDev,
   onClose,
 }: {
   active: any;
-  activeArea: any;
+  activeDestination: any;
   activeDev: any;
   onClose: () => void;
 }) {
@@ -471,8 +471,8 @@ function DetailPanel({
         </Link>
         <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
           <div className="inline-flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-primary-foreground/80">
-            <span className="h-2 w-2 rounded-full" style={{ background: activeArea?.color }} />
-            {activeArea?.name} {active.km ? `· km ${active.km}` : ""}
+            <span className="h-2 w-2 rounded-full" style={{ background: activeDestination?.color }} />
+            {activeDestination?.name} {active.km ? `· km ${active.km}` : ""}
           </div>
           <h2 className="mt-0.5 font-display text-xl font-semibold leading-tight">{active.name}</h2>
           <p className="text-xs text-primary-foreground/80">by {active.developer}</p>

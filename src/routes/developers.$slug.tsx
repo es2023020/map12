@@ -5,7 +5,7 @@ import { MapClient } from "@/components/map/MapClient";
 import { CompoundCard } from "@/components/CompoundCard";
 import { developerBySlug } from "@/data/developers";
 import { compoundsByDeveloper } from "@/data/compounds";
-import { areas } from "@/data/areas";
+import { destinations } from "@/data/destinations";
 import { developersWithProfiles } from "@/data/profiles.generated";
 import {
   ArrowLeft, Building2, Wallet, Calendar, MapPin,
@@ -54,7 +54,7 @@ function DevPage() {
   const deliveredCount = list.filter((c) => c.status === "Delivered").length;
   const offPlanCount = list.filter((c) => c.status === "Off-Plan").length;
   const underConstructionCount = list.filter((c) => c.status === "Under Construction").length;
-  const uniqueAreas = Array.from(new Set(list.map((c) => c.area)));
+  const uniqueDestinations = Array.from(new Set(list.map((c) => c.destination)));
   const beachfrontCount = list.filter((c) => c.beachfront).length;
 
   const mapCenter: [number, number] = list.length > 0
@@ -130,7 +130,7 @@ function DevPage() {
             <StatBar icon={Building2} label="Total projects" value={String(list.length)} />
             <StatBar icon={Wallet} label="Avg. starting price" value={`EGP ${avgPrice}M`} />
             <StatBar icon={Calendar} label="Delivered" value={`${deliveredCount} projects`} className="hidden sm:flex" />
-            <StatBar icon={MapPin} label="Markets" value={`${uniqueAreas.length} ${uniqueAreas.length === 1 ? "area" : "areas"}`} className="hidden sm:flex" />
+            <StatBar icon={MapPin} label="Markets" value={`${uniqueDestinations.length} ${uniqueDestinations.length === 1 ? "destination" : "destinations"}`} className="hidden sm:flex" />
           </div>
         </div>
       </div>
@@ -184,24 +184,24 @@ function DevPage() {
           ))}
         </div>
 
-        {/* Active areas */}
-        {uniqueAreas.length > 0 && (
+        {/* Active destinations */}
+        {uniqueDestinations.length > 0 && (
           <div className="mb-10">
             <h2 className="mb-3 font-display text-lg font-semibold text-primary">Active in</h2>
             <div className="flex flex-wrap gap-2">
-              {uniqueAreas.map((aSlug) => {
-                const area = areas.find((a) => a.slug === aSlug);
-                if (!area) return null;
-                const areaCount = list.filter((c) => c.area === aSlug).length;
+              {uniqueDestinations.map((aSlug) => {
+                const destination = destinations.find((a) => a.slug === aSlug);
+                if (!destination) return null;
+                const areaCount = list.filter((c) => c.destination === aSlug).length;
                 return (
                   <Link
                     key={aSlug}
-                    to="/areas/$slug"
+                    to="/destinations/$slug"
                     params={{ slug: aSlug }}
                     className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-sm hover:border-accent hover:text-accent transition-colors"
                   >
-                    <span className="h-2.5 w-2.5 rounded-full shrink-0" style={{ background: area.color }} />
-                    {area.name}
+                    <span className="h-2.5 w-2.5 rounded-full shrink-0" style={{ background: destination.color }} />
+                    {destination.name}
                     <span className="text-xs text-muted-foreground">{areaCount}</span>
                   </Link>
                 );

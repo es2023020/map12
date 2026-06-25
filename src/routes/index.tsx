@@ -4,7 +4,7 @@ import { Shell } from "@/components/layout/Shell";
 import { CompoundCard } from "@/components/CompoundCard";
 import { MapClient } from "@/components/map/MapClient";
 import { compounds } from "@/data/compounds";
-import { areas } from "@/data/areas";
+import { destinations } from "@/data/destinations";
 import { developers } from "@/data/developers";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Building2, Users, Sparkles } from "lucide-react";
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const featured = compounds.filter((c) => ["marassi", "jefaira", "soul", "mivida", "almaza-bay", "hacienda-bay"].includes(c.slug));
-  const sahelCompounds = compounds.filter((c) => areas.find((a) => a.slug === c.area)?.region === "north-coast");
+  const sahelCompounds = compounds.filter((c) => destinations.find((a) => a.slug === c.destination)?.region === "north-coast");
 
   return (
     <Shell>
@@ -61,7 +61,7 @@ function Index() {
             <div className="mt-10 grid max-w-md grid-cols-3 gap-6">
               <Stat label="Compounds" value={String(compounds.length)} />
               <Stat label="Developers" value={String(developers.length)} />
-              <Stat label="Areas" value={String(areas.length)} />
+              <Stat label="Destinations" value={String(destinations.length)} />
             </div>
           </div>
           <div className="relative h-[420px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl lg:h-[520px]">
@@ -70,12 +70,12 @@ function Index() {
         </div>
       </section>
 
-      {/* Areas strip */}
+      {/* Destinations strip */}
       <section className="mx-auto max-w-7xl px-4 py-14 lg:px-8">
-        <SectionHeader title="Areas we cover" subtitle="From Sidi Heneish to Tagamo3." link={{ to: "/areas", label: "All areas" }} />
+        <SectionHeader title="Destinations we cover" subtitle="From Sidi Heneish to Tagamo3." link={{ to: "/destinations", label: "All destinations" }} />
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {areas.map((a) => (
-            <Link key={a.slug} to="/areas/$slug" params={{ slug: a.slug }}
+          {destinations.map((a) => (
+            <Link key={a.slug} to="/destinations/$slug" params={{ slug: a.slug }}
               className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card shadow-soft">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src={a.hero} alt={a.name} loading="lazy"
@@ -105,7 +105,7 @@ function Index() {
       <section className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
         <div className="grid gap-6 md:grid-cols-3">
           {[
-            { icon: MapPin, title: "Map-first intelligence", body: "Every project pinned, filterable by area, developer, price and delivery year. Smooth as Google Maps, branded for brokers." },
+            { icon: MapPin, title: "Map-first intelligence", body: "Every project pinned, filterable by destination, developer, price and delivery year. Smooth as Google Maps, branded for brokers." },
             { icon: Building2, title: "Compound deep-dives", body: "Developer, payment plan, unit mix, amenities and a mini-map — everything your client asks for in one page." },
             { icon: Users, title: "Broker workspace", body: "Lead pipeline, favorites, side-by-side compare, and tier-based subscriptions." },
           ].map((v) => (

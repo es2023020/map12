@@ -3,12 +3,12 @@ import { compoundRegistry } from "./compound-registry";
 import { projectImages } from "./project-images";
 import { projectLocations } from "./project-locations";
 import { sahelDetails } from "./sahel-details";
-import { areas } from "./areas";
+import { destinations } from "./destinations";
 
 export type Compound = {
   slug: string;
   name: string;
-  area: string; // area slug
+  destination: string; // destination slug
   km?: number;
   lat: number;
   lng: number;
@@ -52,7 +52,7 @@ const pick = (arr: string[], seed: number) => arr[seed % arr.length];
 const slugify = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-type SahelInput = [name: string, km: number, area: string, developer: string, priceFrom: number, year: number, beach?: boolean];
+type SahelInput = [name: string, km: number, destination: string, developer: string, priceFrom: number, year: number, beach?: boolean];
 
 const sahelRaw: SahelInput[] = [
   // SIDI HENEISH
@@ -145,108 +145,108 @@ const sahelRaw: SahelInput[] = [
 ];
 
 const cairoRaw: Array<{
-  name: string; area: string; lat: number; lng: number; developer: string; price: number; year: number;
+  name: string; destination: string; lat: number; lng: number; developer: string; price: number; year: number;
 }> = [
-  { name: "The Waterway New Cairo", area: "new-cairo", lat: 30.0487, lng: 31.4860, developer: "The Waterway Developments", price: 15.0, year: 2023 },
+  { name: "The Waterway New Cairo", destination: "new-cairo", lat: 30.0487, lng: 31.4860, developer: "The Waterway Developments", price: 15.0, year: 2023 },
   // AL MARASEM NEW CAIRO PROJECTS
-  { name: "Fifth Square", area: "new-cairo", lat: 30.0410, lng: 31.5035, developer: "Al Marasem Developments", price: 13.4, year: 2024 },
-  { name: "Lake Residence by Rotana", area: "new-cairo", lat: 30.0415, lng: 31.5040, developer: "Al Marasem Developments", price: 10.0, year: 2026 },
-  { name: "Marville", area: "new-cairo", lat: 30.0395, lng: 31.5015, developer: "Al Marasem Developments", price: 11.0, year: 2027 },
+  { name: "Fifth Square", destination: "new-cairo", lat: 30.0410, lng: 31.5035, developer: "Al Marasem Developments", price: 13.4, year: 2024 },
+  { name: "Lake Residence by Rotana", destination: "new-cairo", lat: 30.0415, lng: 31.5040, developer: "Al Marasem Developments", price: 10.0, year: 2026 },
+  { name: "Marville", destination: "new-cairo", lat: 30.0395, lng: 31.5015, developer: "Al Marasem Developments", price: 11.0, year: 2027 },
 
   // NEW CAIRO / TAGAMO3
-  { name: "Mountain View iCity New Cairo", area: "new-cairo", lat: 30.0120, lng: 31.4980, developer: "Mountain View", price: 12, year: 2026 },
-  { name: "Mivida", area: "new-cairo", lat: 30.0120, lng: 31.5150, developer: "Emaar Misr", price: 18, year: 2024 },
-  { name: "Hyde Park New Cairo", area: "new-cairo", lat: 30.0035, lng: 31.5085, developer: "Hyde Park", price: 14, year: 2026 },
-  { name: "Eastown", area: "new-cairo", lat: 30.0125, lng: 31.4990, developer: "SODIC", price: 9, year: 2024 },
-  { name: "Villette", area: "new-cairo", lat: 30.0180, lng: 31.5230, developer: "SODIC", price: 11, year: 2026 },
-  { name: "Sky Condos", area: "new-cairo", lat: 30.0190, lng: 31.5220, developer: "SODIC", price: 13, year: 2027 },
-  { name: "Katameya Heights", area: "new-cairo", lat: 30.0010, lng: 31.4350, developer: "Tameer", price: 25, year: 2020 },
-  { name: "Katameya Dunes", area: "new-cairo", lat: 29.9820, lng: 31.4880, developer: "Starlight Developments", price: 30, year: 2018 },
-  { name: "Al Rehab", area: "new-cairo", lat: 30.0620, lng: 31.4890, developer: "Talaat Moustafa Group", price: 4, year: 2010 },
-  { name: "Madinaty", area: "new-cairo", lat: 30.0900, lng: 31.6300, developer: "Talaat Moustafa Group", price: 6, year: 2024 },
-  { name: "Cairo Festival City", area: "new-cairo", lat: 30.0255, lng: 31.4055, developer: "Al-Futtaim", price: 11, year: 2022 },
-  { name: "Palm Hills Katameya", area: "new-cairo", lat: 30.0380, lng: 31.5250, developer: "Palm Hills Developments", price: 16, year: 2024 },
-  { name: "Stone Residence", area: "new-cairo", lat: 29.9920, lng: 31.4110, developer: "Misr Italia", price: 10, year: 2025 },
-  { name: "The Square Sabbour", area: "new-cairo", lat: 30.0020, lng: 31.5300, developer: "Al Ahly Sabbour", price: 9, year: 2025 },
-  { name: "Lake View Residence", area: "new-cairo", lat: 30.0200, lng: 31.4860, developer: "Hassan Allam Properties", price: 12, year: 2026 },
-  { name: "Zed East", area: "new-cairo", lat: 29.9980, lng: 31.5180, developer: "Ora Developers", price: 13, year: 2027 },
-  { name: "Taj City", area: "new-cairo", lat: 30.0820, lng: 31.3970, developer: "Madinet Masr", price: 8, year: 2026 },
-  { name: "Sodic East", area: "new-cairo", lat: 30.1380, lng: 31.6250, developer: "SODIC", price: 10, year: 2027 },
+  { name: "Mountain View iCity New Cairo", destination: "new-cairo", lat: 30.0120, lng: 31.4980, developer: "Mountain View", price: 12, year: 2026 },
+  { name: "Mivida", destination: "new-cairo", lat: 30.0120, lng: 31.5150, developer: "Emaar Misr", price: 18, year: 2024 },
+  { name: "Hyde Park New Cairo", destination: "new-cairo", lat: 30.0035, lng: 31.5085, developer: "Hyde Park", price: 14, year: 2026 },
+  { name: "Eastown", destination: "new-cairo", lat: 30.0125, lng: 31.4990, developer: "SODIC", price: 9, year: 2024 },
+  { name: "Villette", destination: "new-cairo", lat: 30.0180, lng: 31.5230, developer: "SODIC", price: 11, year: 2026 },
+  { name: "Sky Condos", destination: "new-cairo", lat: 30.0190, lng: 31.5220, developer: "SODIC", price: 13, year: 2027 },
+  { name: "Katameya Heights", destination: "new-cairo", lat: 30.0010, lng: 31.4350, developer: "Tameer", price: 25, year: 2020 },
+  { name: "Katameya Dunes", destination: "new-cairo", lat: 29.9820, lng: 31.4880, developer: "Starlight Developments", price: 30, year: 2018 },
+  { name: "Al Rehab", destination: "new-cairo", lat: 30.0620, lng: 31.4890, developer: "Talaat Moustafa Group", price: 4, year: 2010 },
+  { name: "Madinaty", destination: "new-cairo", lat: 30.0900, lng: 31.6300, developer: "Talaat Moustafa Group", price: 6, year: 2024 },
+  { name: "Cairo Festival City", destination: "new-cairo", lat: 30.0255, lng: 31.4055, developer: "Al-Futtaim", price: 11, year: 2022 },
+  { name: "Palm Hills Katameya", destination: "new-cairo", lat: 30.0380, lng: 31.5250, developer: "Palm Hills Developments", price: 16, year: 2024 },
+  { name: "Stone Residence", destination: "new-cairo", lat: 29.9920, lng: 31.4110, developer: "Misr Italia", price: 10, year: 2025 },
+  { name: "The Square Sabbour", destination: "new-cairo", lat: 30.0020, lng: 31.5300, developer: "Al Ahly Sabbour", price: 9, year: 2025 },
+  { name: "Lake View Residence", destination: "new-cairo", lat: 30.0200, lng: 31.4860, developer: "Hassan Allam Properties", price: 12, year: 2026 },
+  { name: "Zed East", destination: "new-cairo", lat: 29.9980, lng: 31.5180, developer: "Ora Developers", price: 13, year: 2027 },
+  { name: "Taj City", destination: "new-cairo", lat: 30.0820, lng: 31.3970, developer: "Madinet Masr", price: 8, year: 2026 },
+  { name: "Sodic East", destination: "new-cairo", lat: 30.1380, lng: 31.6250, developer: "SODIC", price: 10, year: 2027 },
   // SHEIKH ZAYED
-  { name: "Beverly Hills", area: "sheikh-zayed", lat: 30.0860, lng: 30.9820, developer: "SODIC", price: 14, year: 2010 },
-  { name: "Allegria", area: "sheikh-zayed", lat: 30.0780, lng: 30.9720, developer: "SODIC", price: 22, year: 2014 },
-  { name: "Westown Residences", area: "sheikh-zayed", lat: 30.0820, lng: 30.9850, developer: "SODIC", price: 13, year: 2024 },
-  { name: "SODIC West", area: "sheikh-zayed", lat: 30.0830, lng: 30.9700, developer: "SODIC", price: 12, year: 2025 },
-  { name: "Palm Hills Sheikh Zayed", area: "sheikh-zayed", lat: 30.0180, lng: 30.9750, developer: "Palm Hills Developments", price: 11, year: 2024 },
-  { name: "Hyde Park West", area: "sheikh-zayed", lat: 30.0650, lng: 30.9650, developer: "Hyde Park", price: 12, year: 2027 },
-  { name: "Belle Vie", area: "sheikh-zayed", lat: 30.0950, lng: 30.9250, developer: "Emaar Misr", price: 15, year: 2026 },
-  { name: "ZED Towers", area: "sheikh-zayed", lat: 30.0240, lng: 30.9980, developer: "Ora Developers", price: 11, year: 2025 },
-  { name: "Cairo Gate", area: "sheikh-zayed", lat: 30.0380, lng: 31.0200, developer: "Emaar Misr", price: 17, year: 2027 },
-  { name: "O West", area: "sheikh-zayed", lat: 29.9650, lng: 30.9050, developer: "Orascom Development", price: 13, year: 2026 },
+  { name: "Beverly Hills", destination: "sheikh-zayed", lat: 30.0860, lng: 30.9820, developer: "SODIC", price: 14, year: 2010 },
+  { name: "Allegria", destination: "sheikh-zayed", lat: 30.0780, lng: 30.9720, developer: "SODIC", price: 22, year: 2014 },
+  { name: "Westown Residences", destination: "sheikh-zayed", lat: 30.0820, lng: 30.9850, developer: "SODIC", price: 13, year: 2024 },
+  { name: "SODIC West", destination: "sheikh-zayed", lat: 30.0830, lng: 30.9700, developer: "SODIC", price: 12, year: 2025 },
+  { name: "Palm Hills Sheikh Zayed", destination: "sheikh-zayed", lat: 30.0180, lng: 30.9750, developer: "Palm Hills Developments", price: 11, year: 2024 },
+  { name: "Hyde Park West", destination: "sheikh-zayed", lat: 30.0650, lng: 30.9650, developer: "Hyde Park", price: 12, year: 2027 },
+  { name: "Belle Vie", destination: "sheikh-zayed", lat: 30.0950, lng: 30.9250, developer: "Emaar Misr", price: 15, year: 2026 },
+  { name: "ZED Towers", destination: "sheikh-zayed", lat: 30.0240, lng: 30.9980, developer: "Ora Developers", price: 11, year: 2025 },
+  { name: "Cairo Gate", destination: "sheikh-zayed", lat: 30.0380, lng: 31.0200, developer: "Emaar Misr", price: 17, year: 2027 },
+  { name: "O West", destination: "sheikh-zayed", lat: 29.9650, lng: 30.9050, developer: "Orascom Development", price: 13, year: 2026 },
   // NEW ADMINISTRATIVE CAPITAL
-  { name: "Vinci", area: "new-administrative-capital", lat: 30.0130, lng: 31.7250, developer: "Misr Italia", price: 10, year: 2027 },
+  { name: "Vinci", destination: "new-administrative-capital", lat: 30.0130, lng: 31.7250, developer: "Misr Italia", price: 10, year: 2027 },
   // NEW ZAYED
-  { name: "Karmell", area: "new-zayed", lat: 30.1250, lng: 30.8750, developer: "SODIC", price: 12, year: 2027 },
+  { name: "Karmell", destination: "new-zayed", lat: 30.1250, lng: 30.8750, developer: "SODIC", price: 12, year: 2027 },
 ];
 
 const newZayedRaw: typeof cairoRaw = [
-  { name: "SODIC The Estates", area: "new-zayed", lat: 30.1320, lng: 30.8650, developer: "SODIC", price: 18, year: 2026 },
-  { name: "ZED West", area: "new-zayed", lat: 30.1220, lng: 30.8750, developer: "Ora Developers", price: 16, year: 2027 },
-  { name: "Solana", area: "new-zayed", lat: 30.1080, lng: 30.8750, developer: "Ora Developers", price: 14, year: 2027 },
-  { name: "Belle Vie New Zayed", area: "new-zayed", lat: 30.1350, lng: 30.8800, developer: "Emaar Misr", price: 16, year: 2027 },
-  { name: "Vinci Capital", area: "new-zayed", lat: 30.1050, lng: 30.8550, developer: "Misr Italia", price: 12, year: 2027 },
+  { name: "SODIC The Estates", destination: "new-zayed", lat: 30.1320, lng: 30.8650, developer: "SODIC", price: 18, year: 2026 },
+  { name: "ZED West", destination: "new-zayed", lat: 30.1220, lng: 30.8750, developer: "Ora Developers", price: 16, year: 2027 },
+  { name: "Solana", destination: "new-zayed", lat: 30.1080, lng: 30.8750, developer: "Ora Developers", price: 14, year: 2027 },
+  { name: "Belle Vie New Zayed", destination: "new-zayed", lat: 30.1350, lng: 30.8800, developer: "Emaar Misr", price: 16, year: 2027 },
+  { name: "Vinci Capital", destination: "new-zayed", lat: 30.1050, lng: 30.8550, developer: "Misr Italia", price: 12, year: 2027 },
 ];
 
-// New areas: 6th October, NAC, Mostakbal, Heliopolis, Sokhna, Red Sea, South Sinai, Fayoum
+// New destinations: 6th October, NAC, Mostakbal, Heliopolis, Sokhna, Red Sea, South Sinai, Fayoum
 const extraRaw: Array<{
-  name: string; area: string; lat: number; lng: number; developer: string; price: number; year: number; beach?: boolean; type?: Compound["type"];
+  name: string; destination: string; lat: number; lng: number; developer: string; price: number; year: number; beach?: boolean; type?: Compound["type"];
 }> = [
   // 6TH OCTOBER
-  { name: "Palm Hills October", area: "6th-october", lat: 29.965, lng: 30.940, developer: "Palm Hills Developments", price: 9, year: 2024 },
-  { name: "Mountain View iCity October", area: "6th-october", lat: 29.985, lng: 30.910, developer: "Mountain View", price: 11, year: 2026 },
-  { name: "Zayed 2000", area: "6th-october", lat: 29.978, lng: 30.955, developer: "Wadi Degla", price: 7, year: 2023 },
-  { name: "Sun Capital", area: "6th-october", lat: 29.940, lng: 30.890, developer: "Arabia Holding", price: 6, year: 2025 },
-  { name: "Badya", area: "6th-october", lat: 29.910, lng: 30.880, developer: "Palm Hills Developments", price: 8, year: 2027, type: "Mixed-use" },
+  { name: "Palm Hills October", destination: "6th-october", lat: 29.965, lng: 30.940, developer: "Palm Hills Developments", price: 9, year: 2024 },
+  { name: "Mountain View iCity October", destination: "6th-october", lat: 29.985, lng: 30.910, developer: "Mountain View", price: 11, year: 2026 },
+  { name: "Zayed 2000", destination: "6th-october", lat: 29.978, lng: 30.955, developer: "Wadi Degla", price: 7, year: 2023 },
+  { name: "Sun Capital", destination: "6th-october", lat: 29.940, lng: 30.890, developer: "Arabia Holding", price: 6, year: 2025 },
+  { name: "Badya", destination: "6th-october", lat: 29.910, lng: 30.880, developer: "Palm Hills Developments", price: 8, year: 2027, type: "Mixed-use" },
   // NEW ADMINISTRATIVE CAPITAL
-  { name: "Il Bosco City", area: "mostakbal-city", lat: 30.078, lng: 31.665, developer: "Misr Italia", price: 9, year: 2026 },
-  { name: "La Verde", area: "new-administrative-capital", lat: 30.015, lng: 31.730, developer: "La Verde Developments", price: 8, year: 2026 },
-  { name: "Anakaji", area: "new-administrative-capital", lat: 30.030, lng: 31.760, developer: "Memaar El Morshedy", price: 10, year: 2027 },
-  { name: "Capital Heights", area: "new-administrative-capital", lat: 30.025, lng: 31.720, developer: "Safwa Urban Development", price: 7, year: 2026 },
-  { name: "City Oval", area: "new-administrative-capital", lat: 30.010, lng: 31.755, developer: "Master Group Developments", price: 9, year: 2027 },
-  { name: "Iconic Tower District", area: "new-administrative-capital", lat: 30.025, lng: 31.745, developer: "ACUD", price: 14, year: 2026, type: "Mixed-use" },
+  { name: "Il Bosco City", destination: "mostakbal-city", lat: 30.078, lng: 31.665, developer: "Misr Italia", price: 9, year: 2026 },
+  { name: "La Verde", destination: "new-administrative-capital", lat: 30.015, lng: 31.730, developer: "La Verde Developments", price: 8, year: 2026 },
+  { name: "Anakaji", destination: "new-administrative-capital", lat: 30.030, lng: 31.760, developer: "Memaar El Morshedy", price: 10, year: 2027 },
+  { name: "Capital Heights", destination: "new-administrative-capital", lat: 30.025, lng: 31.720, developer: "Safwa Urban Development", price: 7, year: 2026 },
+  { name: "City Oval", destination: "new-administrative-capital", lat: 30.010, lng: 31.755, developer: "Master Group Developments", price: 9, year: 2027 },
+  { name: "Iconic Tower District", destination: "new-administrative-capital", lat: 30.025, lng: 31.745, developer: "ACUD", price: 14, year: 2026, type: "Mixed-use" },
   // MOSTAKBAL CITY
-  { name: "Bloomfields", area: "mostakbal-city", lat: 30.078, lng: 31.665, developer: "Tatweer Misr", price: 9, year: 2027 },
-  { name: "Mountain View Aliva", area: "mostakbal-city", lat: 30.072, lng: 31.650, developer: "Mountain View", price: 10, year: 2027 },
-  { name: "Cleo Mostakbal", area: "mostakbal-city", lat: 30.080, lng: 31.672, developer: "Hyde Park", price: 9, year: 2027 },
-  { name: "La Vista City", area: "mostakbal-city", lat: 30.085, lng: 31.658, developer: "La Vista Developments", price: 8, year: 2026 },
+  { name: "Bloomfields", destination: "mostakbal-city", lat: 30.078, lng: 31.665, developer: "Tatweer Misr", price: 9, year: 2027 },
+  { name: "Mountain View Aliva", destination: "mostakbal-city", lat: 30.072, lng: 31.650, developer: "Mountain View", price: 10, year: 2027 },
+  { name: "Cleo Mostakbal", destination: "mostakbal-city", lat: 30.080, lng: 31.672, developer: "Hyde Park", price: 9, year: 2027 },
+  { name: "La Vista City", destination: "mostakbal-city", lat: 30.085, lng: 31.658, developer: "La Vista Developments", price: 8, year: 2026 },
   // HELIOPOLIS
-  { name: "Heliopark", area: "heliopolis", lat: 30.103, lng: 31.355, developer: "Heliopolis Company", price: 7, year: 2025 },
-  { name: "New Heliopolis", area: "heliopolis", lat: 30.140, lng: 31.420, developer: "New Heliopolis", price: 6, year: 2024 },
-  { name: "Sheraton Residences", area: "heliopolis", lat: 30.095, lng: 31.345, developer: "Tabarak Holding", price: 8, year: 2025 },
+  { name: "Heliopark", destination: "heliopolis", lat: 30.103, lng: 31.355, developer: "Heliopolis Company", price: 7, year: 2025 },
+  { name: "New Heliopolis", destination: "heliopolis", lat: 30.140, lng: 31.420, developer: "New Heliopolis", price: 6, year: 2024 },
+  { name: "Sheraton Residences", destination: "heliopolis", lat: 30.095, lng: 31.345, developer: "Tabarak Holding", price: 8, year: 2025 },
   // AIN SOKHNA
-  { name: "Telal Sokhna", area: "ain-sokhna", lat: 29.605, lng: 32.335, developer: "Roya Developments", price: 7, year: 2025, beach: true, type: "Resort" },
-  { name: "IL Monte Galala", area: "ain-sokhna", lat: 29.580, lng: 32.350, developer: "Tatweer Misr", price: 9, year: 2026, beach: true, type: "Resort" },
-  { name: "Stella di Mare", area: "ain-sokhna", lat: 29.615, lng: 32.320, developer: "Stella Di Mare", price: 8, year: 2024, beach: true, type: "Resort" },
-  { name: "Murano", area: "ain-sokhna", lat: 29.590, lng: 32.340, developer: "Wadi Degla", price: 6, year: 2026, beach: true, type: "Resort" },
-  { name: "El Masyaf", area: "ain-sokhna", lat: 29.572, lng: 32.355, developer: "M Squared", price: 11, year: 2027, beach: true, type: "Resort" },
-  { name: "Azzar Island", area: "ain-sokhna", lat: 29.585, lng: 32.342, developer: "Reedy Group", price: 10, year: 2027, beach: true, type: "Resort" },
-  { name: "Hacienda Red", area: "ain-sokhna", lat: 29.608, lng: 32.325, developer: "Palm Hills Developments", price: 14, year: 2027, beach: true, type: "Resort" },
-  { name: "Hacienda Waters", area: "ain-sokhna", lat: 29.610, lng: 32.322, developer: "Palm Hills Developments", price: 15, year: 2027, beach: true, type: "Resort" },
-  { name: "La Vista Cascada", area: "ain-sokhna", lat: 29.592, lng: 32.348, developer: "La Vista Developments", price: 8, year: 2025, beach: true, type: "Resort" },
-  { name: "Marbay", area: "ain-sokhna", lat: 29.618, lng: 32.315, developer: "Al Marasem Developments", price: 12, year: 2027, beach: true, type: "Resort" },
-  { name: "Playa Seashell", area: "ain-sokhna", lat: 29.602, lng: 32.332, developer: "Al Marasem Developments", price: 9, year: 2026, beach: true, type: "Resort" },
+  { name: "Telal Sokhna", destination: "ain-sokhna", lat: 29.605, lng: 32.335, developer: "Roya Developments", price: 7, year: 2025, beach: true, type: "Resort" },
+  { name: "IL Monte Galala", destination: "ain-sokhna", lat: 29.580, lng: 32.350, developer: "Tatweer Misr", price: 9, year: 2026, beach: true, type: "Resort" },
+  { name: "Stella di Mare", destination: "ain-sokhna", lat: 29.615, lng: 32.320, developer: "Stella Di Mare", price: 8, year: 2024, beach: true, type: "Resort" },
+  { name: "Murano", destination: "ain-sokhna", lat: 29.590, lng: 32.340, developer: "Wadi Degla", price: 6, year: 2026, beach: true, type: "Resort" },
+  { name: "El Masyaf", destination: "ain-sokhna", lat: 29.572, lng: 32.355, developer: "M Squared", price: 11, year: 2027, beach: true, type: "Resort" },
+  { name: "Azzar Island", destination: "ain-sokhna", lat: 29.585, lng: 32.342, developer: "Reedy Group", price: 10, year: 2027, beach: true, type: "Resort" },
+  { name: "Hacienda Red", destination: "ain-sokhna", lat: 29.608, lng: 32.325, developer: "Palm Hills Developments", price: 14, year: 2027, beach: true, type: "Resort" },
+  { name: "Hacienda Waters", destination: "ain-sokhna", lat: 29.610, lng: 32.322, developer: "Palm Hills Developments", price: 15, year: 2027, beach: true, type: "Resort" },
+  { name: "La Vista Cascada", destination: "ain-sokhna", lat: 29.592, lng: 32.348, developer: "La Vista Developments", price: 8, year: 2025, beach: true, type: "Resort" },
+  { name: "Marbay", destination: "ain-sokhna", lat: 29.618, lng: 32.315, developer: "Al Marasem Developments", price: 12, year: 2027, beach: true, type: "Resort" },
+  { name: "Playa Seashell", destination: "ain-sokhna", lat: 29.602, lng: 32.332, developer: "Al Marasem Developments", price: 9, year: 2026, beach: true, type: "Resort" },
   // RED SEA
-  { name: "El Gouna", area: "red-sea", lat: 27.395, lng: 33.677, developer: "Orascom Development", price: 18, year: 2024, beach: true, type: "Resort" },
-  { name: "Makadi Heights", area: "red-sea", lat: 26.978, lng: 33.880, developer: "Orascom Development", price: 9, year: 2026, beach: true, type: "Resort" },
-  { name: "Soma Bay", area: "red-sea", lat: 26.840, lng: 33.985, developer: "Abu Soma Development", price: 14, year: 2026, beach: true, type: "Resort" },
-  { name: "Sahl Hasheesh", area: "red-sea", lat: 27.080, lng: 33.890, developer: "ERC Egypt", price: 12, year: 2025, beach: true, type: "Resort" },
+  { name: "El Gouna", destination: "red-sea", lat: 27.395, lng: 33.677, developer: "Orascom Development", price: 18, year: 2024, beach: true, type: "Resort" },
+  { name: "Makadi Heights", destination: "red-sea", lat: 26.978, lng: 33.880, developer: "Orascom Development", price: 9, year: 2026, beach: true, type: "Resort" },
+  { name: "Soma Bay", destination: "red-sea", lat: 26.840, lng: 33.985, developer: "Abu Soma Development", price: 14, year: 2026, beach: true, type: "Resort" },
+  { name: "Sahl Hasheesh", destination: "red-sea", lat: 27.080, lng: 33.890, developer: "ERC Egypt", price: 12, year: 2025, beach: true, type: "Resort" },
   // SOUTH SINAI
-  { name: "Soma Sharm", area: "south-sinai", lat: 27.870, lng: 34.300, developer: "Travco", price: 11, year: 2025, beach: true, type: "Resort" },
-  { name: "Nabq Bay Residences", area: "south-sinai", lat: 28.060, lng: 34.420, developer: "Pickalbatros", price: 7, year: 2024, beach: true, type: "Resort" },
-  { name: "Ras Sudr Riviera", area: "south-sinai", lat: 29.580, lng: 32.700, developer: "Al Attal Holding", price: 5, year: 2026, beach: true, type: "Resort" },
+  { name: "Soma Sharm", destination: "south-sinai", lat: 27.870, lng: 34.300, developer: "Travco", price: 11, year: 2025, beach: true, type: "Resort" },
+  { name: "Nabq Bay Residences", destination: "south-sinai", lat: 28.060, lng: 34.420, developer: "Pickalbatros", price: 7, year: 2024, beach: true, type: "Resort" },
+  { name: "Ras Sudr Riviera", destination: "south-sinai", lat: 29.580, lng: 32.700, developer: "Al Attal Holding", price: 5, year: 2026, beach: true, type: "Resort" },
   // FAYOUM
-  { name: "Byoum Lakeside", area: "fayoum", lat: 29.470, lng: 30.635, developer: "Orascom Development", price: 5, year: 2025, type: "Resort" },
-  { name: "Lazib Inn Tunis", area: "fayoum", lat: 29.385, lng: 30.405, developer: "Lazib", price: 4, year: 2024, type: "Resort" },
+  { name: "Byoum Lakeside", destination: "fayoum", lat: 29.470, lng: 30.635, developer: "Orascom Development", price: 5, year: 2025, type: "Resort" },
+  { name: "Lazib Inn Tunis", destination: "fayoum", lat: 29.385, lng: 30.405, developer: "Lazib", price: 4, year: 2024, type: "Resort" },
 ];
 
 // Flagship slugs — surfaced by the agency as priorities.
@@ -259,7 +259,7 @@ const FLAGSHIPS = new Set([
 
 const allAmenities = [
   "Private Beach", "Crystal Lagoon", "Marina", "18-Hole Golf", "Clubhouse",
-  "Kids Area", "Gym & Spa", "Beach Bar", "Co-working", "24/7 Security",
+  "Kids Destination", "Gym & Spa", "Beach Bar", "Co-working", "24/7 Security",
   "Cycling Track", "Restaurants Strip", "Mosque", "Smart Home", "Pet Park",
 ];
 
@@ -297,13 +297,13 @@ function paymentPlan(price: number) {
   return `${dp}% down payment over ${years} years equal installments`;
 }
 
-const sahelCompounds: Compound[] = sahelRaw.map(([name, km, area, dev, price, year, beach], idx) => {
+const sahelCompounds: Compound[] = sahelRaw.map(([name, km, destination, dev, price, year, beach], idx) => {
   const [lat, lng] = kmToLatLng(km);
   const slug = slugify(name);
   return {
     slug,
     name,
-    area,
+    destination,
     km,
     lat,
     lng,
@@ -317,7 +317,7 @@ const sahelCompounds: Compound[] = sahelRaw.map(([name, km, area, dev, price, ye
     amenities: buildAmenities(idx + 3, !!beach),
     hero: heroFor(slug, pick(beachImgs, idx)),
     gallery: galleryFor(slug, gallery(idx, true)),
-    blurb: `${name} sits at km ${km} on the North Coast in ${area.replace(/-/g, " ")}, developed by ${dev}. A ${beach ? "beachfront" : "lagoon-front"} community designed for premium summer living.`,
+    blurb: `${name} sits at km ${km} on the North Coast in ${destination.replace(/-/g, " ")}, developed by ${dev}. A ${beach ? "beachfront" : "lagoon-front"} community designed for premium summer living.`,
     paymentPlan: paymentPlan(price),
     areaSize: `${Math.round(80 + (idx * 37) % 350)} feddan`,
     unitSizes: `${Math.round(85 + (idx * 9) % 60)}–${Math.round(220 + (idx * 21) % 250)} m²`,
@@ -329,7 +329,7 @@ const cairoCompounds: Compound[] = cairoRaw.map((c, idx) => {
   return {
     slug,
     name: c.name,
-    area: c.area,
+    destination: c.destination,
     lat: c.lat,
     lng: c.lng,
     developer: c.developer,
@@ -342,7 +342,7 @@ const cairoCompounds: Compound[] = cairoRaw.map((c, idx) => {
     amenities: buildAmenities(idx + 11, false),
     hero: heroFor(slug, pick(cityImgs, idx)),
     gallery: galleryFor(slug, gallery(idx, false)),
-    blurb: `${c.name} is a flagship development in ${c.area === "new-cairo" ? "New Cairo (Tagamo3)" : "Sheikh Zayed"} by ${c.developer}, offering modern residences with full amenities for year-round living.`,
+    blurb: `${c.name} is a flagship development in ${c.destination === "new-cairo" ? "New Cairo (Tagamo3)" : "Sheikh Zayed"} by ${c.developer}, offering modern residences with full amenities for year-round living.`,
     paymentPlan: paymentPlan(c.price),
     areaSize: `${Math.round(50 + (idx * 41) % 400)} feddan`,
     unitSizes: `${Math.round(100 + (idx * 11) % 80)}–${Math.round(280 + (idx * 19) % 250)} m²`,
@@ -355,7 +355,7 @@ const extraCompounds: Compound[] = extraRaw.map((c, idx) => {
   return {
     slug,
     name: c.name,
-    area: c.area,
+    destination: c.destination,
     lat: c.lat,
     lng: c.lng,
     developer: c.developer,
@@ -381,7 +381,7 @@ const newZayedCompounds: Compound[] = newZayedRaw.map((c, idx) => {
   return {
     slug,
     name: c.name,
-    area: c.area,
+    destination: c.destination,
     lat: c.lat,
     lng: c.lng,
     developer: c.developer,
@@ -442,7 +442,7 @@ const newProjects: Compound[] = [
   {
     slug: "palm-parks",
     name: "Palm Parks",
-    area: "6th-october",
+    destination: "6th-october",
     lat: 29.962, lng: 30.932,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -451,7 +451,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Cycling Track", "Landscape Parks", "Smart Home"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Cycling Track", "Landscape Parks", "Smart Home"],
     hero: luxuryVillaImgs[0],
     gallery: [luxuryVillaImgs[0], modernApartImgs[0], modernApartImgs[1], luxuryVillaImgs[1]],
     blurb: "Palm Parks is Palm Hills' newest apartment destination in 6th of October City, offering thoughtfully designed 2–3 bedroom homes with panoramic views over landscaped gardens. Positioned minutes from the Ring Road and Mall of Arabia, it combines urban connectivity with resort-grade amenities.",
@@ -464,7 +464,7 @@ const newProjects: Compound[] = [
   {
     slug: "97-hills",
     name: "97 Hills",
-    area: "new-cairo",
+    destination: "new-cairo",
     lat: 30.028, lng: 31.492,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -473,7 +473,7 @@ const newProjects: Compound[] = [
     status: "Off-Plan",
     beachfront: false,
     types: ["Apartment", "Town House", "Twin House", "Villa"],
-    amenities: ["Clubhouse", "Crystal Lagoon", "18-Hole Golf Views", "Kids Area", "Gym & Spa", "24/7 Security", "Cycling Track", "Restaurants Strip", "Smart Home", "Co-working"],
+    amenities: ["Clubhouse", "Crystal Lagoon", "18-Hole Golf Views", "Kids Destination", "Gym & Spa", "24/7 Security", "Cycling Track", "Restaurants Strip", "Smart Home", "Co-working"],
     hero: "/projects/97-hills/1.jpg",
     gallery: ["/projects/97-hills/1.jpg","/projects/97-hills/2.jpg","/projects/97-hills/3.jpg","/projects/97-hills/4.jpg","/projects/97-hills/5.jpg"],
     blurb: "97 Hills redefines luxury in New Cairo's 5th Settlement. A mixed-use masterplan spanning 97 feddan, offering apartments and standalone villas with views over a championship golf course. Developed by Palm Hills with their signature master-planning quality.",
@@ -487,7 +487,7 @@ const newProjects: Compound[] = [
   {
     slug: "palm-hills-alexandria",
     name: "Palm Hills Alexandria",
-    area: "alexandria",
+    destination: "alexandria",
     lat: 31.185, lng: 29.945,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -496,7 +496,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment", "Town House", "Villa"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Cycling Track", "Landscape Parks", "Mosque"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Cycling Track", "Landscape Parks", "Mosque"],
     hero: modernApartImgs[6],
     gallery: [modernApartImgs[6], luxuryVillaImgs[4], modernApartImgs[0], luxuryVillaImgs[5]],
     blurb: "Palm Hills Alexandria brings the brand's legendary quality to Egypt's second city. Located in the heart of Alexandria's premium suburbs, the compound offers apartments, townhouses and standalone villas with full amenities for year-round Mediterranean living.",
@@ -509,7 +509,7 @@ const newProjects: Compound[] = [
   {
     slug: "bamboo-iii",
     name: "Bamboo III",
-    area: "new-cairo",
+    destination: "new-cairo",
     lat: 30.010, lng: 31.470,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -518,7 +518,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment", "Town House"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks", "Mosque", "Smart Home"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks", "Mosque", "Smart Home"],
     hero: "/projects/bamboo-iii/1.jpg",
     gallery: ["/projects/bamboo-iii/1.jpg","/projects/bamboo-iii/2.jpg","/projects/bamboo-iii/3.jpg","/projects/bamboo-iii/4.jpg","/projects/bamboo-iii/5.jpg","/projects/bamboo-iii/6.jpg"],
     blurb: "Bamboo III is the third and final phase of Palm Hills' celebrated Bamboo community in New Cairo. Offering oversized apartments (191–192 m²) and premium townhouses, this phase is ideal for families seeking space and quality in Cairo's best suburb.",
@@ -531,7 +531,7 @@ const newProjects: Compound[] = [
   {
     slug: "the-crown-extension",
     name: "The Crown Extension",
-    area: "new-cairo",
+    destination: "new-cairo",
     lat: 30.018, lng: 31.483,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -540,7 +540,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Cycling Track", "Landscape Parks", "Co-working", "Smart Home"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Cycling Track", "Landscape Parks", "Co-working", "Smart Home"],
     hero: modernApartImgs[2],
     gallery: [modernApartImgs[2], modernApartImgs[0], luxuryVillaImgs[2], modernApartImgs[4]],
     blurb: "The Crown Extension expands Palm Hills' Crown compound with a new phase of ultra-premium large apartments in New Cairo. Sizes range from 217 to 223 m² — perfect for family buyers who won't compromise on space. All units face green spaces.",
@@ -553,7 +553,7 @@ const newProjects: Compound[] = [
   {
     slug: "palm-hills-jirian",
     name: "Palm Hills Jirian",
-    area: "mostakbal-city",
+    destination: "mostakbal-city",
     lat: 30.075, lng: 31.658,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -562,7 +562,7 @@ const newProjects: Compound[] = [
     status: "Off-Plan",
     beachfront: false,
     types: ["Apartment", "Villa", "Town House"],
-    amenities: ["Clubhouse", "Crystal Lagoon", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Cycling Track", "Restaurants Strip", "Smart Home", "Mosque", "Co-working"],
+    amenities: ["Clubhouse", "Crystal Lagoon", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Cycling Track", "Restaurants Strip", "Smart Home", "Mosque", "Co-working"],
     hero: luxuryVillaImgs[3],
     gallery: [luxuryVillaImgs[3], modernApartImgs[0], luxuryVillaImgs[0], modernApartImgs[1]],
     blurb: "Palm Hills Jirian is an expansive mixed-use community in Mostakbal City, east of New Cairo. With 465 available units across apartments, townhouses and villas, this is Palm Hills' largest current launch. The Jirian lagoon is the centrepiece of a resort-quality master plan.",
@@ -576,7 +576,7 @@ const newProjects: Compound[] = [
   {
     slug: "palm-hills-one",
     name: "Palm Hills One",
-    area: "new-cairo",
+    destination: "new-cairo",
     lat: 30.032, lng: 31.500,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -599,7 +599,7 @@ const newProjects: Compound[] = [
   {
     slug: "px",
     name: "PX",
-    area: "sheikh-zayed",
+    destination: "sheikh-zayed",
     lat: 30.042, lng: 30.928,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -608,7 +608,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment", "Town House"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Cycling Track", "Landscape Parks", "Smart Home", "Co-working"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Cycling Track", "Landscape Parks", "Smart Home", "Co-working"],
     hero: modernApartImgs[3],
     gallery: [modernApartImgs[3], modernApartImgs[0], luxuryVillaImgs[0], modernApartImgs[2]],
     blurb: "PX by Palm Hills is a bold new community in Sheikh Zayed, merging modern design with west-Cairo's best connectivity. Apartments from 78 m² and townhouses up to 214 m² offer flexible entry points for first-home buyers and investors alike.",
@@ -621,7 +621,7 @@ const newProjects: Compound[] = [
   {
     slug: "village-de-la-capitale",
     name: "Village de la Capitale",
-    area: "new-administrative-capital",
+    destination: "new-administrative-capital",
     lat: 30.018, lng: 31.740,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -630,7 +630,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment", "Villa"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks", "Smart Home", "Mosque", "Schools Nearby"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks", "Smart Home", "Mosque", "Schools Nearby"],
     hero: modernApartImgs[4],
     gallery: [modernApartImgs[4], modernApartImgs[1], luxuryVillaImgs[2], modernApartImgs[0]],
     blurb: "Village de la Capitale is Palm Hills' entry into Egypt's New Administrative Capital — a strategic bet on the country's future administrative and commercial heart. Apartments start at EGP 13.6M and villas reach up to EGP 41.7M, making this one of the best-value Palm Hills launches.",
@@ -647,7 +647,7 @@ const newProjects: Compound[] = [
   {
     slug: "mountain-view-jirian",
     name: "Mountain View Jirian",
-    area: "mostakbal-city",
+    destination: "mostakbal-city",
     lat: 30.079, lng: 31.662,
     developer: "Mountain View",
     developerSlug: "mountain-view",
@@ -669,7 +669,7 @@ const newProjects: Compound[] = [
   {
     slug: "mountain-view-kingsway",
     name: "Mountain View Kingsway",
-    area: "new-cairo",
+    destination: "new-cairo",
     lat: 30.026, lng: 31.488,
     developer: "Mountain View",
     developerSlug: "mountain-view",
@@ -678,10 +678,10 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Town House"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks", "Smart Home"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks", "Smart Home"],
     hero: luxuryVillaImgs[6],
     gallery: [luxuryVillaImgs[6], luxuryVillaImgs[0], modernApartImgs[2], luxuryVillaImgs[1]],
-    blurb: "Mountain View Kingsway is a boutique townhouse community in the heart of New Cairo's 5th Settlement. With just 2 available units remaining at EGP 16.7–17M, this is Mountain View's most sought-after current offering in the area.",
+    blurb: "Mountain View Kingsway is a boutique townhouse community in the heart of New Cairo's 5th Settlement. With just 2 available units remaining at EGP 16.7–17M, this is Mountain View's most sought-after current offering in the destination.",
     paymentPlan: "10% down · 8 years equal installments",
     areaSize: "30 feddan",
     unitSizes: "185–185 m²",
@@ -691,7 +691,7 @@ const newProjects: Compound[] = [
   {
     slug: "mountain-view-grand-valley",
     name: "Mountain View Grand Valley",
-    area: "6th-october",
+    destination: "6th-october",
     lat: 29.972, lng: 30.908,
     developer: "Mountain View",
     developerSlug: "mountain-view",
@@ -703,7 +703,7 @@ const newProjects: Compound[] = [
     amenities: ["Clubhouse", "Olympic Pool", "Gym & Spa", "Kids Club", "24/7 Security", "Cycling Track", "Golf Views", "Restaurants Strip"],
     hero: luxuryVillaImgs[0],
     gallery: [luxuryVillaImgs[0], luxuryVillaImgs[4], luxuryVillaImgs[2], luxuryVillaImgs[5]],
-    blurb: "Mountain View Grand Valley is a pure villa community in 6th of October, featuring 62 available Grand View Villas — all at 250 m² built-up area. A serene low-density enclave with golf course adjacency, delivering in 2026.",
+    blurb: "Mountain View Grand Valley is a pure villa community in 6th of October, featuring 62 available Grand View Villas — all at 250 m² built-up destination. A serene low-density enclave with golf course adjacency, delivering in 2026.",
     paymentPlan: "10% down · 8 years equal installments",
     areaSize: "80 feddan",
     unitSizes: "250–250 m²",
@@ -713,7 +713,7 @@ const newProjects: Compound[] = [
   {
     slug: "mountain-view-chillout",
     name: "Mountain View Chillout",
-    area: "6th-october",
+    destination: "6th-october",
     lat: 29.962, lng: 30.922,
     developer: "Mountain View",
     developerSlug: "mountain-view",
@@ -722,7 +722,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Town House"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks"],
     hero: modernApartImgs[7],
     gallery: [modernApartImgs[7], luxuryVillaImgs[1], modernApartImgs[3], luxuryVillaImgs[3]],
     blurb: "Mountain View Chillout is a tight-knit townhouse community in 6th of October — 4 final units available at EGP 22–25M, delivering this year. Perfect for buyers seeking a ready-soon west-Cairo home.",
@@ -735,7 +735,7 @@ const newProjects: Compound[] = [
   {
     slug: "mountain-view-crystal",
     name: "Mountain View Crystal",
-    area: "ras-el-hekma",
+    destination: "ras-el-hekma",
     lat: 31.155, lng: 28.030,
     developer: "Mountain View",
     developerSlug: "mountain-view",
@@ -758,7 +758,7 @@ const newProjects: Compound[] = [
   {
     slug: "mountain-view-mv4",
     name: "Mountain View MV4",
-    area: "6th-october",
+    destination: "6th-october",
     lat: 29.967, lng: 30.898,
     developer: "Mountain View",
     developerSlug: "mountain-view",
@@ -767,7 +767,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Town House", "Villa"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks", "Smart Home"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks", "Smart Home"],
     hero: luxuryVillaImgs[7],
     gallery: [luxuryVillaImgs[7], luxuryVillaImgs[3], modernApartImgs[4], luxuryVillaImgs[0]],
     blurb: "Mountain View MV4 is the 4th phase of the celebrated iCity October campus — 22 units remaining across townhouses and villas, delivering in 2026. A limited opportunity to join one of West Cairo's most established communities.",
@@ -784,7 +784,7 @@ const newProjects: Compound[] = [
   {
     slug: "esse-residence",
     name: "Esse Residence",
-    area: "sarai",
+    destination: "sarai",
     lat: 30.097, lng: 31.628,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",
@@ -793,7 +793,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment", "Villa"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks", "Schools Nearby", "Commercial Strip"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks", "Schools Nearby", "Commercial Strip"],
     hero: modernApartImgs[5],
     gallery: [modernApartImgs[5], modernApartImgs[0], modernApartImgs[1], luxuryVillaImgs[2]],
     blurb: "Esse Residence is Madinet Masr's mid-range apartment and villa community within Sarai — offering one of the most affordable entry points in the entire east-Cairo corridor. With 174 available units from EGP 4M, it's ideal for first-time buyers and investors.",
@@ -806,7 +806,7 @@ const newProjects: Compound[] = [
   {
     slug: "rai-valleys",
     name: "Rai Valleys",
-    area: "sarai",
+    destination: "sarai",
     lat: 30.096, lng: 31.626,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",
@@ -828,7 +828,7 @@ const newProjects: Compound[] = [
   {
     slug: "the-butterfly",
     name: "The Butterfly",
-    area: "new-cairo",
+    destination: "new-cairo",
     lat: 30.068, lng: 31.412,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",
@@ -837,10 +837,10 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment", "Villa"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks", "Mosque", "Commercial Strip"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks", "Mosque", "Commercial Strip"],
     hero: modernApartImgs[6],
     gallery: [modernApartImgs[6], modernApartImgs[2], luxuryVillaImgs[3], modernApartImgs[0]],
-    blurb: "The Butterfly is Madinet Masr's bold mixed-use community in New Cairo's Taj City area. Its distinctive butterfly-shaped masterplan frames 367 available units — apartments from EGP 6M and villas up to EGP 35M — within a lush green corridor near AUC and Cairo's main highway.",
+    blurb: "The Butterfly is Madinet Masr's bold mixed-use community in New Cairo's Taj City destination. Its distinctive butterfly-shaped masterplan frames 367 available units — apartments from EGP 6M and villas up to EGP 35M — within a lush green corridor near AUC and Cairo's main highway.",
     paymentPlan: "5% down · 8 years equal installments",
     areaSize: "75 feddan",
     unitSizes: "74–259 m²",
@@ -850,7 +850,7 @@ const newProjects: Compound[] = [
   {
     slug: "club-views",
     name: "Club Views",
-    area: "sarai",
+    destination: "sarai",
     lat: 30.098, lng: 31.631,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",
@@ -859,7 +859,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment", "Villa"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks", "Club Views"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks", "Club Views"],
     hero: "/projects/club-views/1.jpg",
     gallery: ["/projects/club-views/1.jpg","/projects/club-views/2.jpg","/projects/club-views/3.jpg","/projects/club-views/4.jpg","/projects/club-views/5.jpg","/projects/club-views/6.jpg"],
     blurb: "Club Views sits at the heart of the Sarai masterplan, with direct frontage onto the community clubhouse and sports facilities. 212 available units — apartments from EGP 5M and villas up to EGP 25M — all with views of Sarai's central park.",
@@ -872,7 +872,7 @@ const newProjects: Compound[] = [
   {
     slug: "talala",
     name: "TALALA",
-    area: "sarai",
+    destination: "sarai",
     lat: 30.094, lng: 31.622,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",
@@ -881,7 +881,7 @@ const newProjects: Compound[] = [
     status: "Off-Plan",
     beachfront: false,
     types: ["Apartment", "Villa"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks", "Schools Nearby", "Mosque", "Commercial Strip", "Cycling Track"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks", "Schools Nearby", "Mosque", "Commercial Strip", "Cycling Track"],
     hero: modernApartImgs[0],
     gallery: [modernApartImgs[0], modernApartImgs[5], luxuryVillaImgs[0], modernApartImgs[2]],
     blurb: "TALALA is Madinet Masr's largest master-planned community to date — over 1,040 available units across apartments and villas within Sarai's final mega-zone. With entry-level apartments from EGP 4M and villas reaching EGP 46M, TALALA suits every segment of the market.",
@@ -895,7 +895,7 @@ const newProjects: Compound[] = [
   {
     slug: "sheya-residence",
     name: "Sheya Residence",
-    area: "sarai",
+    destination: "sarai",
     lat: 30.093, lng: 31.629,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",
@@ -904,7 +904,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks"],
     hero: modernApartImgs[1],
     gallery: [modernApartImgs[1], modernApartImgs[3], modernApartImgs[6], modernApartImgs[0]],
     blurb: "Sheya Residence is a boutique apartment building within Sarai — 26 available units from EGP 6M to EGP 20M, spanning 81 to 220 m². Perfect for buyers seeking a smaller, more intimate community inside Madinet Masr's thriving masterplan.",
@@ -917,7 +917,7 @@ const newProjects: Compound[] = [
   {
     slug: "elm-tree-park",
     name: "ELM TREE PARK",
-    area: "sarai",
+    destination: "sarai",
     lat: 30.095, lng: 31.625,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",
@@ -926,7 +926,7 @@ const newProjects: Compound[] = [
     status: "Off-Plan",
     beachfront: false,
     types: ["Apartment", "Villa"],
-    amenities: ["Elm Tree Boulevard", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks", "Tree-lined Streets", "Schools Nearby"],
+    amenities: ["Elm Tree Boulevard", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks", "Tree-lined Streets", "Schools Nearby"],
     hero: "/projects/elm-tree-park/1.jpg",
     gallery: ["/projects/elm-tree-park/1.jpg","/projects/elm-tree-park/2.jpg","/projects/elm-tree-park/3.jpg","/projects/elm-tree-park/4.jpg","/projects/elm-tree-park/5.jpg","/projects/elm-tree-park/6.jpg"],
     blurb: "ELM TREE PARK is named for its signature tree-lined boulevards — 521 available units (apartments and villas) within the Sarai masterplan. A green-first design philosophy puts parks and elm tree corridors at the heart of every neighbourhood block.",
@@ -939,7 +939,7 @@ const newProjects: Compound[] = [
   {
     slug: "origami",
     name: "ORIGAMI",
-    area: "sarai",
+    destination: "sarai",
     lat: 30.100, lng: 31.620,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",
@@ -948,7 +948,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks", "Smart Home"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks", "Smart Home"],
     hero: modernApartImgs[7],
     gallery: [modernApartImgs[7], modernApartImgs[1], modernApartImgs[5], modernApartImgs[3]],
     blurb: "ORIGAMI by Madinet Masr takes its name from the Japanese art of geometric folding — reflected in its angular, award-winning architectural language. 23 boutique apartments from 115 to 131 m² at EGP 10–12M offer an artisan approach to urban living in Sarai.",
@@ -961,7 +961,7 @@ const newProjects: Compound[] = [
   {
     slug: "origami-golf",
     name: "Origami Golf",
-    area: "sarai",
+    destination: "sarai",
     lat: 30.099, lng: 31.618,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",
@@ -970,7 +970,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment"],
-    amenities: ["Golf Course Views", "Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscape Parks"],
+    amenities: ["Golf Course Views", "Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscape Parks"],
     hero: modernApartImgs[2],
     gallery: [modernApartImgs[2], modernApartImgs[4], luxuryVillaImgs[5], modernApartImgs[0]],
     blurb: "Origami Golf offers 8 exclusive apartments with direct views over Sarai's championship golf course — 81 to 129 m² priced at EGP 7–12M. A rare combination of premium golf-front living at an accessible price point.",
@@ -987,7 +987,7 @@ const newProjects: Compound[] = [
   {
     slug: "vye-sodic",
     name: "VYE SODIC",
-    area: "new-zayed",
+    destination: "new-zayed",
     lat: 30.082, lng: 30.878,
     developer: "SODIC",
     developerSlug: "sodic",
@@ -1009,7 +1009,7 @@ const newProjects: Compound[] = [
   {
     slug: "botanica",
     name: "Botanica",
-    area: "sheikh-zayed",
+    destination: "sheikh-zayed",
     lat: 30.052, lng: 30.925,
     developer: "NGD",
     developerSlug: "ngd",
@@ -1018,7 +1018,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Chalet"],
-    amenities: ["Botanical Gardens", "Swimming Pools", "Spa", "Kids Area", "24/7 Security", "Cycling Paths", "Yoga Studio", "Organic Market", "Smart Home"],
+    amenities: ["Botanical Gardens", "Swimming Pools", "Spa", "Kids Destination", "24/7 Security", "Cycling Paths", "Yoga Studio", "Organic Market", "Smart Home"],
     hero: "/projects/botanica/1.jpg",
     gallery: ["/projects/botanica/1.jpg","/projects/botanica/2.jpg","/projects/botanica/3.jpg","/projects/botanica/4.jpg","/projects/botanica/5.jpg","/projects/botanica/6.jpg","/projects/botanica/7.jpg"],
     blurb: "Botanica by NGD is a nature-immersive chalet community in Sheikh Zayed — 156 available units from EGP 17–20M, all in a compact 123–144 m² format designed for weekend and seasonal living. Inspired by botanical gardens, every street is lined with curated planting and scent corridors.",
@@ -1035,7 +1035,7 @@ const newProjects: Compound[] = [
   {
     slug: "cali-coast-ras-el-hekma",
     name: "Cali Coast Ras El Hekma",
-    area: "ras-el-hekma",
+    destination: "ras-el-hekma",
     km: 193,
     lat: 31.09, lng: 27.77,
     developer: "Maven Developments",
@@ -1045,7 +1045,7 @@ const newProjects: Compound[] = [
     status: "Off-Plan",
     beachfront: true,
     types: ["Boardwalk Apartment", "Chalet", "Duplex", "Town House", "Twin House"],
-    amenities: ["Private Beach", "Crystal Lagoon", "Marina", "Clubhouse", "Beach Bar", "Gym & Spa", "Kids Area", "24/7 Security", "Cycling Track", "Restaurants Strip"],
+    amenities: ["Private Beach", "Crystal Lagoon", "Marina", "Clubhouse", "Beach Bar", "Gym & Spa", "Kids Destination", "24/7 Security", "Cycling Track", "Restaurants Strip"],
     hero: "/projects/cali-coast-ras-el-hekma/1.jpg",
     gallery: ["/projects/cali-coast-ras-el-hekma/1.jpg","/projects/cali-coast-ras-el-hekma/2.jpg","/projects/cali-coast-ras-el-hekma/3.jpg","/projects/cali-coast-ras-el-hekma/4.jpg","/projects/cali-coast-ras-el-hekma/5.jpg","/projects/cali-coast-ras-el-hekma/6.jpg","/projects/cali-coast-ras-el-hekma/7.jpg","/projects/cali-coast-ras-el-hekma/8.jpg","/projects/cali-coast-ras-el-hekma/9.jpg","/projects/cali-coast-ras-el-hekma/10.jpg","/projects/cali-coast-ras-el-hekma/11.jpg"],
     blurb: "Cali Coast by Maven Developments at km 193 Ras El Hekma — a Mediterranean-inspired lagoon resort with Boardwalk Condos, chalets, duplexes, townhouses and twin houses overlooking direct-access sea and lagoon. 28 units currently available, from EGP 6.4M for a 1-bedroom Boardwalk apartment to EGP 36.7M for a ready-to-move Twin House.",
@@ -1062,7 +1062,7 @@ const newProjects: Compound[] = [
   {
     slug: "youd",
     name: "Youd",
-    area: "ras-el-hekma",
+    destination: "ras-el-hekma",
     km: 187,
     lat: 31.082, lng: 27.748,
     developer: "Al Ahly Sabbour",
@@ -1072,7 +1072,7 @@ const newProjects: Compound[] = [
     status: "Off-Plan",
     beachfront: true,
     types: ["Apartment", "Twin Villa", "Standalone Villa"],
-    amenities: ["Private Beach", "Crystal Lagoon", "Clubhouse", "Gym & Spa", "Beach Bar", "Kids Area", "24/7 Security", "Cycling Track", "Mosque"],
+    amenities: ["Private Beach", "Crystal Lagoon", "Clubhouse", "Gym & Spa", "Beach Bar", "Kids Destination", "24/7 Security", "Cycling Track", "Mosque"],
     hero: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&q=80",
@@ -1094,7 +1094,7 @@ const newProjects: Compound[] = [
   {
     slug: "district-5",
     name: "District 5",
-    area: "new-cairo",
+    destination: "new-cairo",
     lat: 30.010, lng: 31.462,
     developer: "Marakez",
     developerSlug: "marakez-properties",
@@ -1103,7 +1103,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment", "Garden Apartment", "Duplex", "Loft"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Retail Strips", "Parks", "Smart Home", "Co-working"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Retail Strips", "Parks", "Smart Home", "Co-working"],
     hero: "/projects/district-5/1.jpg",
     gallery: ["/projects/district-5/1.jpg","/projects/district-5/2.jpg","/projects/district-5/3.jpg"],
     blurb: "District 5 by Marakez Properties — a premium residential masterplan in New Cairo's 5th Settlement. NHF and NHN clusters with semi-finished and fully-finished apartments from 1BR to 3BR, plus garden apartments, duplexes and lofts. 46 units across both clusters, priced EGP 11.3M–26.1M.",
@@ -1116,7 +1116,7 @@ const newProjects: Compound[] = [
   {
     slug: "crescent-walk",
     name: "Crescent Walk",
-    area: "new-cairo",
+    destination: "new-cairo",
     lat: 30.012, lng: 31.456,
     developer: "Marakez",
     developerSlug: "marakez-properties",
@@ -1125,7 +1125,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Apartment", "Garden Apartment", "Townhome", "Twinhome", "Villa"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Landscaped Parks", "Retail Strip", "Smart Home"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Landscaped Parks", "Retail Strip", "Smart Home"],
     hero: "/projects/crescent-walk/1.jpg",
     gallery: ["/projects/crescent-walk/1.jpg","/projects/crescent-walk/2.jpg","/projects/crescent-walk/3.jpg","/projects/crescent-walk/4.jpg","/projects/crescent-walk/5.jpg","/projects/crescent-walk/6.jpg","/projects/crescent-walk/7.jpg","/projects/crescent-walk/8.jpg"],
     blurb: "Crescent Walk by Marakez Properties — New Cairo's most complete Marakez community spanning apartments to standalone villas across three parcels: PS (South), PC (Central) and PE (East). 74 units from fully-finished 1BR apartments at EGP 8.46M to semi-finished 7BR villas at EGP 72M.",
@@ -1138,7 +1138,7 @@ const newProjects: Compound[] = [
   {
     slug: "ramla",
     name: "Ramla",
-    area: "ras-el-hekma",
+    destination: "ras-el-hekma",
     km: 195,
     lat: 31.095, lng: 27.770,
     developer: "Marakez",
@@ -1148,7 +1148,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: true,
     types: ["Chalet", "Twinhome", "Townhome", "Villa"],
-    amenities: ["Private Beach", "Crystal Lagoon", "Marina", "Clubhouse", "Beach Bar", "Gym & Spa", "Kids Area", "24/7 Security", "Restaurants Strip"],
+    amenities: ["Private Beach", "Crystal Lagoon", "Marina", "Clubhouse", "Beach Bar", "Gym & Spa", "Kids Destination", "24/7 Security", "Restaurants Strip"],
     hero: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1600&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1600&q=80",
@@ -1166,7 +1166,7 @@ const newProjects: Compound[] = [
   {
     slug: "aeon",
     name: "Aeon",
-    area: "new-cairo",
+    destination: "new-cairo",
     lat: 30.020, lng: 31.470,
     developer: "Marakez",
     developerSlug: "marakez-properties",
@@ -1192,7 +1192,7 @@ const newProjects: Compound[] = [
   {
     slug: "at-east",
     name: "At East",
-    area: "mostakbal-city",
+    destination: "mostakbal-city",
     lat: 30.082, lng: 31.662,
     developer: "Al Ahly Sabbour",
     developerSlug: "al-ahly-sabbour",
@@ -1214,7 +1214,7 @@ const newProjects: Compound[] = [
   {
     slug: "the-mornings",
     name: "The Mornings",
-    area: "new-cairo",
+    destination: "new-cairo",
     lat: 30.022, lng: 31.485,
     developer: "Hassan Allam Properties",
     developerSlug: "hassan-allam-properties",
@@ -1223,7 +1223,7 @@ const newProjects: Compound[] = [
     status: "Off-Plan",
     beachfront: false,
     types: ["Apartment", "Admin Office", "Medical Clinic"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Area", "24/7 Security", "Retail Strip", "Medical Centre", "Landscape Parks"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Retail Strip", "Medical Centre", "Landscape Parks"],
     hero: "/projects/the-mornings/1.jpg",
     gallery: ["/projects/the-mornings/1.jpg","/projects/the-mornings/2.jpg","/projects/the-mornings/3.jpg","/projects/the-mornings/4.jpg","/projects/the-mornings/5.jpg"],
     blurb: "The Mornings by Hassan Allam Properties in New Cairo — 68 available units including 1–3 bedroom apartments (50–160 m², EGP 4.3M–13.4M), admin offices and medical clinics. Core & shell delivered with an optional fully-finished upgrade. 25% cash discount available. Mixed-use community designed for modern urban living.",
@@ -1240,7 +1240,7 @@ const newProjects: Compound[] = [
   {
     slug: "telal-soul",
     name: "Telal Soul",
-    area: "sidi-abdelrahman",
+    destination: "sidi-abdelrahman",
     km: 143,
     lat: 30.940, lng: 28.425,
     developer: "Roya Developments",
@@ -1250,7 +1250,7 @@ const newProjects: Compound[] = [
     status: "Off-Plan",
     beachfront: true,
     types: ["Chalet", "Twin House", "Standalone Villa"],
-    amenities: ["Private Beach", "Crystal Lagoon", "Clubhouse", "Beach Bar", "Gym & Spa", "Kids Area", "24/7 Security", "Cycling Track", "Restaurants Strip"],
+    amenities: ["Private Beach", "Crystal Lagoon", "Clubhouse", "Beach Bar", "Gym & Spa", "Kids Destination", "24/7 Security", "Cycling Track", "Restaurants Strip"],
     hero: "/projects/telal-soul/1.jpg",
     gallery: ["/projects/telal-soul/1.jpg","/projects/telal-soul/2.jpg","/projects/telal-soul/3.jpg","/projects/telal-soul/4.jpg","/projects/telal-soul/5.jpg"],
     blurb: "Telal Soul by Roya Developments at km 143 Sidi Abdelrahman — 1,300m of private beachfront with 38 available units across fully-finished chalets (3BR, 135 m², from EGP 12.4M), twin houses (4BR, 225–250 m², from EGP 41.25M) and standalone villas (5BR, 315 m², from EGP 52.1M). Reserve with 100K EGP fully refundable deposit.",
@@ -1267,7 +1267,7 @@ const newProjects: Compound[] = [
   {
     slug: "cleo-water-residence",
     name: "Cleo Water Residence",
-    area: "sidi-abdelrahman",
+    destination: "sidi-abdelrahman",
     km: 135,
     lat: 30.942, lng: 28.455,
     developer: "Palm Hills Developments",
@@ -1277,7 +1277,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: true,
     types: ["Chalet", "Cabin", "Twin House"],
-    amenities: ["Private Beach", "Lagoon Pools", "Clubhouse", "Gym & Spa", "Kids Area", "24/7 Security", "Beach Bar", "Restaurants", "Cycling Track"],
+    amenities: ["Private Beach", "Lagoon Pools", "Clubhouse", "Gym & Spa", "Kids Destination", "24/7 Security", "Beach Bar", "Restaurants", "Cycling Track"],
     hero: "/projects/cleo-water-residence/1.jpg",
     gallery: ["/projects/cleo-water-residence/1.jpg","/projects/cleo-water-residence/2.jpg","/projects/cleo-water-residence/3.jpg","/projects/cleo-water-residence/4.jpg"],
     blurb: "Cleo Water Residence by Palm Hills Developments — a boutique North Coast resort community at Sidi Abdelrahman featuring chalets, cabins and twin houses steps from a private beach. Palm Hills' water-themed Sahel offering with signature resort amenities and the developer's trusted delivery record.",
@@ -1294,7 +1294,7 @@ const newProjects: Compound[] = [
   {
     slug: "diplo-village",
     name: "Diplo Village",
-    area: "sidi-abdelrahman",
+    destination: "sidi-abdelrahman",
     km: 126,
     lat: 30.943, lng: 28.468,
     developer: "NCB",
@@ -1304,7 +1304,7 @@ const newProjects: Compound[] = [
     status: "Under Construction",
     beachfront: false,
     types: ["Chalet", "Apartment", "Town House"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym", "Kids Area", "24/7 Security", "Green Spaces", "Retail Strip"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym", "Kids Destination", "24/7 Security", "Green Spaces", "Retail Strip"],
     hero: "/projects/diplo-village/1.jpg",
     gallery: ["/projects/diplo-village/1.jpg","/projects/diplo-village/2.jpg","/projects/diplo-village/3.jpg","/projects/diplo-village/4.jpg","/projects/diplo-village/5.jpg"],
     blurb: "Diplo Village by NCB at km 126 Sidi Abdelrahman — a compact and value-focused North Coast community offering chalets, apartments and townhouses near Egypt's most active Sahel stretch. Affordable entry into the North Coast at competitive price points.",
@@ -1324,7 +1324,7 @@ const merged: Compound[] = _allOrdered.filter((c) => {
   return true;
 });
 
-const areaCenters = Object.fromEntries(areas.map((a) => [a.slug, a.center])) as Record<
+const areaCenters = Object.fromEntries(destinations.map((a) => [a.slug, a.center])) as Record<
   string,
   [number, number]
 >;
@@ -1350,20 +1350,20 @@ function applyOfficialData(c: Compound): Compound {
   let next: Compound = { ...c };
 
   if (loc) {
-    const area = loc.area;
+    const destination = loc.destination;
     let lat = c.lat;
     let lng = c.lng;
-    if (c.km != null && COAST_AREAS.has(area)) {
+    if (c.km != null && COAST_AREAS.has(destination)) {
       [lat, lng] = kmToLatLng(c.km);
     } else {
-      const base = areaCenters[area];
+      const base = areaCenters[destination];
       if (base) {
         const [dx, dy] = coordOffset(c.slug);
         lat = base[0] + dx;
         lng = base[1] + dy;
       }
     }
-    next = { ...next, area, city: loc.location, lat, lng };
+    next = { ...next, destination, city: loc.location, lat, lng };
   }
 
   if (sahel) {
@@ -1384,25 +1384,25 @@ function applyOfficialData(c: Compound): Compound {
 
   const reg = compoundRegistry[c.slug];
   if (reg) {
-    const area = reg.area ?? next.area;
+    const destination = reg.destination ?? next.destination;
     let lat = reg.lat ?? next.lat;
     let lng = reg.lng ?? next.lng;
     const km = reg.km ?? next.km;
 
     if (reg.lat == null && reg.lng == null) {
-      if (km != null && COAST_AREAS.has(area)) {
+      if (km != null && COAST_AREAS.has(destination)) {
         [lat, lng] = kmToLatLng(km);
-      } else if (reg.area && areaCenters[reg.area]) {
+      } else if (reg.destination && areaCenters[reg.destination]) {
         const [dx, dy] = coordOffset(c.slug);
-        lat = areaCenters[reg.area][0] + dx;
-        lng = areaCenters[reg.area][1] + dy;
+        lat = areaCenters[reg.destination][0] + dx;
+        lng = areaCenters[reg.destination][1] + dy;
       }
     }
 
     next = {
       ...next,
       ...(reg.name ? { name: reg.name } : {}),
-      area,
+      destination,
       ...(km != null ? { km } : {}),
       lat,
       lng,
@@ -1432,6 +1432,6 @@ export const compounds: Compound[] = merged.map((c) => {
   };
 });
 export const compoundBySlug = (slug: string) => compounds.find((c) => c.slug === slug);
-export const compoundsByArea = (area: string) => compounds.filter((c) => c.area === area);
+export const compoundsByDestination = (destination: string) => compounds.filter((c) => c.destination === destination);
 export const compoundsByDeveloper = (devSlug: string) =>
   compounds.filter((c) => c.developerSlug === devSlug);

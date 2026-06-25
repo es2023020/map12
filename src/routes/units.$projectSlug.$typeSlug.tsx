@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useState, useMemo } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { compoundBySlug } from "@/data/compounds";
 import { breakdownByTypeSlug, unitTypeSlug } from "@/data/availability";
@@ -7,7 +8,7 @@ import type { Compound } from "@/data/compounds";
 import {
   ArrowLeft, Phone, Ruler, Calendar, MapPin, Wallet,
   CheckCircle2, AlertCircle, Info, Building2, ExternalLink,
-  Calculator
+  Calculator, Filter, ArrowUpDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -43,14 +44,58 @@ function UnitTypePage() {
   const { typeSlug: currentTypeSlug } = Route.useParams();
   const { compound, project: avail, breakdown: bd } = Route.useLoaderData();
 
+  const [sortBy, setSortBy] = useState<"price-asc" | "price-desc" | "size-asc" | "size-desc">("price-asc");
+  const [filterView, setFilterView] = useState<string>("");
+  const [filterFinishing, setFilterFinishing] = useState<string>("");
+  const [filterStatus, setFilterStatus] = useState<string>("");
+
   const title = bd.beds
     ? `${bd.type} — ${bd.beds} Bedroom${bd.beds > 1 ? "s" : ""}`
     : bd.type;
 
   const clusterLabel = bd.cluster ? ` · ${bd.cluster}` : "";
   const hasUnits = Boolean(bd.units && bd.units.length > 0);
-  const uniqueDeliveries = Array.from(new Set(bd.units?.map((u) => u.deliveryNote).filter(Boolean) ?? []));
-  const uniqueViews = Array.from(new Set(bd.units?.map((u) => u.view).filter(Boolean) ?? []));
+
+  const uniqueViews = useMemo(() => {
+    return Array.from(new Set(bd.units?.map((u) => u.view).filter(Boolean) ?? [])) as string[];
+  }, [bd.units]);
+
+  const uniqueDeliveries = useMemo(() => {
+    return Array.from(new Set(bd.units?.map((u) => u.deliveryNote).filter(Boolean) ?? [])) as string[];
+  }, [bd.units]);
+
+  const uniqueFinishings = useMemo(() => {
+    return Array.from(new Set(bd.units?.map((u) => u.finishing).filter(Boolean) ?? [])) as string[];
+  }, [bd.units]);
+
+  const uniqueStatuses = useMemo(() => {
+    return Array.from(new Set(bd.units?.map((u) => u.status).filter(Boolean) ?? [])) as string[];
+  }, [bd.units]);
+
+  const filteredUnits = useMemo(() => {
+    if (!bd.units) return [];
+    let list = [...bd.units];
+    if (filterView) {
+      list = list.filter((u) => u.view === filterView);
+    }
+    if (filterFinishing) {
+      list = list.filter((u) => u.finishing === filterFinishing);
+    }
+    if (filterStatus) {
+      list = list.filter((u) => u.status === filterStatus);
+    }
+
+    list.sort((a, b) => {
+      if (sortBy === "price-asc") return a.priceEGP - b.priceEGP;
+      if (sortBy === "price-desc") return b.priceEGP - a.priceEGP;
+      if (sortBy === "size-asc") return a.areaSqm - b.areaSqm;
+      if (sortBy === "size-desc") return b.areaSqm - a.areaSqm;
+      return 0;
+    });
+
+    return list;
+  }, [bd.units, sortBy, filterView, filterFinishing, filterStatus]);
+
   const otherTypes = avail.breakdown.filter((b) => unitTypeSlug(b) !== currentTypeSlug);
 
   return (
@@ -112,7 +157,7 @@ function UnitTypePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8 space-y-12 pb-32 lg:pb-10">
+      <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8 space-y-10 pb-32 lg:pb-10">
 
         {/* Feature pills */}
         {(uniqueViews.length > 0 || uniqueDeliveries.length > 0) && (
@@ -132,113 +177,185 @@ function UnitTypePage() {
 
         {/* ── Individual unit listings ── */}
         {hasUnits ? (
-          <section>
-            <div className="mb-4 flex items-center justify-between flex-wrap gap-3">
-              <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">
-                All {bd.units!.length} available unit{bd.units!.length !== 1 ? "s" : ""}
-              </h2>
+          <section className="space-y-6">
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div>
+                <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">
+                  Available Listings ({filteredUnits.length} shown)
+                </h2>
+                <p className="text-xs text-muted-foreground mt-0.5">Filter and sort current live developer feeds.</p>
+              </div>
               <span className="text-xs text-muted-foreground bg-emerald-50 border border-emerald-200 rounded-full px-3 py-1 dark:bg-emerald-950/20 dark:border-emerald-900/40">
-                Source: {avail.developer} · {avail.lastUpdated}
+                Verified: {avail.developer} · {avail.lastUpdated}
               </span>
+            </div>
+
+            {/* Filter and Sort Toolbar */}
+            <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-secondary/20 p-4">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider mr-2">
+                <Filter className="h-3.5 w-3.5" /> Filter list
+              </div>
+              {uniqueViews.length > 1 && (
+                <select
+                  value={filterView}
+                  onChange={(e) => setFilterView(e.target.value)}
+                  className="rounded-lg border border-border bg-card px-3 py-1.5 text-xs text-primary focus:outline-none focus:ring-1 focus:ring-accent"
+                >
+                  <option value="">All Views</option>
+                  {uniqueViews.map((v) => (
+                    <option key={v} value={v}>{v}</option>
+                  ))}
+                </select>
+              )}
+              {uniqueFinishings.length > 1 && (
+                <select
+                  value={filterFinishing}
+                  onChange={(e) => setFilterFinishing(e.target.value)}
+                  className="rounded-lg border border-border bg-card px-3 py-1.5 text-xs text-primary focus:outline-none focus:ring-1 focus:ring-accent"
+                >
+                  <option value="">All Finishings</option>
+                  {uniqueFinishings.map((f) => (
+                    <option key={f} value={f}>{f}</option>
+                  ))}
+                </select>
+              )}
+              {uniqueStatuses.length > 1 && (
+                <select
+                  value={filterStatus}
+                  onChange={(e) => setFilterStatus(e.target.value)}
+                  className="rounded-lg border border-border bg-card px-3 py-1.5 text-xs text-primary focus:outline-none focus:ring-1 focus:ring-accent"
+                >
+                  <option value="">All Statuses</option>
+                  {uniqueStatuses.map((s) => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
+              )}
+              
+              <div className="ml-auto flex items-center gap-1.5">
+                <span className="text-xs font-semibold text-muted-foreground flex items-center gap-1"><ArrowUpDown className="h-3 w-3" /> Sort by</span>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
+                  className="rounded-lg border border-border bg-card px-3 py-1.5 text-xs text-primary focus:outline-none focus:ring-1 focus:ring-accent font-semibold"
+                >
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="size-asc">Size: Smallest first</option>
+                  <option value="size-desc">Size: Largest first</option>
+                </select>
+              </div>
             </div>
 
             {/* Mobile cards */}
             <div className="grid gap-4 sm:hidden">
-              {bd.units!.map((unit, i) => (
-                <UnitCard key={unit.id} unit={unit} index={i + 1} />
-              ))}
+              {filteredUnits.length > 0 ? (
+                filteredUnits.map((unit, i) => (
+                  <UnitCard key={unit.id} unit={unit} index={i + 1} />
+                ))
+              ) : (
+                <div className="rounded-xl border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
+                  No units match your selected filters. Clear filters to see all listings.
+                </div>
+              )}
             </div>
 
             {/* Desktop table */}
-            <div className="hidden sm:block overflow-hidden rounded-2xl border border-border shadow-sm">
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-border bg-secondary/60">
-                      <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground w-10">#</th>
-                      {bd.units!.some((u) => u.cluster) && (
-                        <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Cluster</th>
-                      )}
-                      <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Size</th>
-                      <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hidden lg:table-cell">Extra Area</th>
-                      <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hidden md:table-cell">View</th>
-                      <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hidden lg:table-cell">Delivery</th>
-                      <th className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Finishing</th>
-                      <th className="px-4 py-3 text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Price</th>
-                      <th className="px-4 py-3 text-center text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-border">
-                    {bd.units!.map((unit, i) => (
-                      <tr
-                        key={unit.id}
-                        className={`bg-card hover:bg-secondary/30 transition-colors ${unit.status === "Last Unit" ? "bg-amber-50/50 dark:bg-amber-950/10" : ""}`}
-                      >
-                        <td className="px-4 py-3 text-muted-foreground text-xs">{i + 1}</td>
+            {filteredUnits.length > 0 ? (
+              <div className="hidden sm:block overflow-hidden rounded-2xl border border-border shadow-soft bg-card">
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-border bg-secondary/50">
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground w-10">#</th>
                         {bd.units!.some((u) => u.cluster) && (
-                          <td className="px-4 py-3">
-                            {unit.cluster && (
-                              <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">{unit.cluster}</span>
+                          <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Cluster</th>
+                        )}
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground font-semibold">Size</th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden lg:table-cell">Extra Area</th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden md:table-cell">View</th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden lg:table-cell">Delivery</th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Finishing</th>
+                        <th className="px-4 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Price</th>
+                        <th className="px-4 py-3.5 text-center text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-border/60">
+                      {filteredUnits.map((unit, i) => (
+                        <tr
+                          key={unit.id}
+                          className={`hover:bg-secondary/20 transition-colors ${unit.status === "Last Unit" ? "bg-amber-50/20 dark:bg-amber-950/5" : ""}`}
+                        >
+                          <td className="px-4 py-3.5 text-muted-foreground text-xs font-semibold">{i + 1}</td>
+                          {bd.units!.some((u) => u.cluster) && (
+                            <td className="px-4 py-3.5">
+                              {unit.cluster && (
+                                <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary">{unit.cluster}</span>
+                              )}
+                            </td>
+                          )}
+                          <td className="px-4 py-3.5">
+                            <span className="font-bold text-primary">{unit.areaSqm} m²</span>
+                          </td>
+                          <td className="px-4 py-3.5 text-muted-foreground text-xs hidden lg:table-cell font-medium">
+                            {unit.areaNote ?? <span className="text-border">—</span>}
+                          </td>
+                          <td className="px-4 py-3.5 hidden md:table-cell">
+                            {unit.view ? (
+                              <span className="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 px-2 py-0.5 rounded">{unit.view}</span>
+                            ) : (
+                              <span className="text-border text-xs">—</span>
                             )}
                           </td>
-                        )}
-                        <td className="px-4 py-3">
-                          <span className="font-semibold text-primary">{unit.areaSqm} m²</span>
-                        </td>
-                        <td className="px-4 py-3 text-muted-foreground text-xs hidden lg:table-cell">
-                          {unit.areaNote ?? <span className="text-border">—</span>}
-                        </td>
-                        <td className="px-4 py-3 hidden md:table-cell">
-                          {unit.view ? (
-                            <span className="text-xs font-medium text-blue-600 dark:text-blue-400">{unit.view}</span>
-                          ) : (
-                            <span className="text-border text-xs">—</span>
-                          )}
-                        </td>
-                        <td className="px-4 py-3 hidden lg:table-cell">
-                          {unit.deliveryNote ? (
-                            <span className={`text-xs font-medium ${
-                              unit.deliveryNote === "Ready to Move"
-                                ? "text-emerald-600"
-                                : unit.deliveryNote.includes("1 ")
-                                ? "text-amber-600"
-                                : "text-muted-foreground"
-                            }`}>{unit.deliveryNote}</span>
-                          ) : (
-                            <span className="text-border text-xs">—</span>
-                          )}
-                        </td>
-                        <td className="px-4 py-3">
-                          <FinishingBadge label={unit.finishing} />
-                        </td>
-                        <td className="px-4 py-3 text-right">
-                          <span className="font-display text-sm font-bold text-primary whitespace-nowrap">
-                            {fmtShort(unit.priceEGP)}
-                          </span>
-                        </td>
-                        <td className="px-4 py-3 text-center">
-                          {unit.status === "Last Unit" ? (
-                            <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-950/30 dark:text-amber-400">
-                              <AlertCircle className="h-3 w-3" /> Last Unit
+                          <td className="px-4 py-3.5 hidden lg:table-cell">
+                            {unit.deliveryNote ? (
+                              <span className={`text-xs font-bold ${
+                                unit.deliveryNote === "Ready to Move"
+                                  ? "text-emerald-600"
+                                  : unit.deliveryNote.includes("1 ")
+                                  ? "text-amber-600"
+                                  : "text-muted-foreground"
+                              }`}>{unit.deliveryNote}</span>
+                            ) : (
+                              <span className="text-border text-xs">—</span>
+                            )}
+                          </td>
+                          <td className="px-4 py-3.5">
+                            <FinishingBadge label={unit.finishing} />
+                          </td>
+                          <td className="px-4 py-3.5 text-right">
+                            <span className="font-display text-sm font-extrabold text-primary whitespace-nowrap">
+                              {fmtShort(unit.priceEGP)}
                             </span>
-                          ) : (
-                            <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-400">
-                              <CheckCircle2 className="h-3 w-3" /> Available
-                            </span>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                          </td>
+                          <td className="px-4 py-3.5 text-center">
+                            {unit.status === "Last Unit" ? (
+                              <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-0.5 text-[10px] font-bold text-amber-700 dark:bg-amber-950/30 dark:text-amber-400">
+                                <AlertCircle className="h-3 w-3" /> Last Unit
+                              </span>
+                            ) : (
+                              <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2.5 py-0.5 text-[10px] font-bold text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-400">
+                                <CheckCircle2 className="h-3 w-3" /> Available
+                              </span>
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="hidden sm:block rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground bg-card">
+                No units match your selected filters. Clear filters to see all listings.
+              </div>
+            )}
 
             {/* Payment plan note */}
             {bd.paymentPlan && (
-              <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 dark:border-blue-900/40 dark:bg-blue-950/20">
-                <div className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">Payment plan</div>
-                <p className="text-sm text-blue-800 dark:text-blue-200">{bd.paymentPlan}</p>
+              <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50/50 px-4 py-3.5 dark:border-blue-900/40 dark:bg-blue-950/20">
+                <div className="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">Standard Payment Plan</div>
+                <p className="text-sm font-medium text-blue-800 dark:text-blue-200">{bd.paymentPlan}</p>
               </div>
             )}
           </section>
@@ -263,7 +380,7 @@ function UnitTypePage() {
                     Call your PropTrack advisor for a complete unit-by-unit breakdown with exact floor plates, views and current offers.
                   </p>
                   <a href="tel:01233374501" className="mt-3 inline-block">
-                    <Button size="sm" className="rounded-full gap-1.5">
+                    <Button size="sm" className="rounded-full gap-1.5 font-bold">
                       <Phone className="h-4 w-4" /> 01233374501
                     </Button>
                   </a>

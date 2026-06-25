@@ -41,7 +41,7 @@ function LeadsPage() {
             <Input placeholder="Client name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
             <Input placeholder="Phone" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
             <Input type="number" placeholder="Budget (EGP M)" value={form.budget} onChange={(e) => setForm({ ...form, budget: Number(e.target.value) })} />
-            <Input placeholder="Interest (compound or area)" value={form.interest} onChange={(e) => setForm({ ...form, interest: e.target.value })} />
+            <Input placeholder="Interest (compound or destination)" value={form.interest} onChange={(e) => setForm({ ...form, interest: e.target.value })} />
             <Input className="md:col-span-2" placeholder="Notes" value={form.notes} onChange={(e) => setForm({ ...form, notes: e.target.value })} />
           </div>
           <div className="mt-4 flex justify-end gap-2">

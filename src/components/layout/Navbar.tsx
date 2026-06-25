@@ -7,7 +7,7 @@ import { useState } from "react";
 const publicLinks = [
   { to: "/map" as const, label: "Map", icon: Map },
   { to: "/projects" as const, label: "Projects", icon: Building2 },
-  { to: "/areas" as const, label: "Areas" },
+  { to: "/destinations" as const, label: "Destinations" },
   { to: "/developers" as const, label: "Developers" },
   { to: "/calculator" as const, label: "Calculator", icon: Calculator },
 ];

@@ -2,13 +2,13 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Shell } from "@/components/layout/Shell";
 import { MapClient } from "@/components/map/MapClient";
 import { CompoundCard } from "@/components/CompoundCard";
-import { areaBySlug, areas } from "@/data/areas";
-import { compoundsByArea, compounds } from "@/data/compounds";
+import { destinationBySlug, destinations } from "@/data/destinations";
+import { compoundsByDestination, compounds } from "@/data/compounds";
 import { ArrowLeft, MapPin, Building2, Wallet, Calendar, Waves, TrendingUp, Map as MapIcon } from "lucide-react";
 
-export const Route = createFileRoute("/areas/$slug")({
+export const Route = createFileRoute("/destinations/$slug")({
   loader: ({ params }) => {
-    const a = areaBySlug(params.slug);
+    const a = destinationBySlug(params.slug);
     if (!a) throw notFound();
     return a;
   },
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/areas/$slug")({
 
 function AreaPage() {
   const a = Route.useLoaderData();
-  const list = compoundsByArea(a.slug);
+  const list = compoundsByDestination(a.slug);
 
   const avgPrice = list.length > 0
     ? Math.round(list.reduce((s, c) => s + c.priceFrom, 0) / list.length)
@@ -36,8 +36,8 @@ function AreaPage() {
   const minPrice = list.length > 0 ? Math.min(...list.map((c) => c.priceFrom)) : 0;
   const maxPrice = list.length > 0 ? Math.max(...list.map((c) => c.priceFrom)) : 0;
 
-  // Get related areas in the same region
-  const relatedAreas = areas.filter((x) => x.region === a.region && x.slug !== a.slug).slice(0, 4);
+  // Get related destinations in the same region
+  const relatedAreas = destinations.filter((x) => x.region === a.region && x.slug !== a.slug).slice(0, 4);
 
   return (
     <Shell>
@@ -46,8 +46,8 @@ function AreaPage() {
         <img src={a.hero} alt={a.name} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 mx-auto max-w-7xl px-4 pb-8 text-primary-foreground lg:px-8">
-          <Link to="/areas" className="inline-flex items-center gap-1 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
-            <ArrowLeft className="h-3.5 w-3.5" /> All areas
+          <Link to="/destinations" className="inline-flex items-center gap-1 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+            <ArrowLeft className="h-3.5 w-3.5" /> All destinations
           </Link>
           <div className="mt-2 flex items-center gap-2">
             <span className="h-4 w-4 rounded-full ring-2 ring-white/40" style={{ background: a.color }} />
@@ -84,14 +84,14 @@ function AreaPage() {
           <div className="mt-4 flex flex-wrap gap-2">
             <Link
               to="/map"
-              search={{ area: a.slug }}
+              search={{ destination: a.slug }}
               className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-primary hover:border-accent hover:text-accent transition-colors"
             >
               <MapIcon className="h-4 w-4" /> View on map
             </Link>
             <Link
               to="/projects"
-              search={{ area: a.slug }}
+              search={{ destination: a.slug }}
               className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-primary hover:border-accent hover:text-accent transition-colors"
             >
               <Building2 className="h-4 w-4" /> All {list.length} projects
@@ -140,22 +140,22 @@ function AreaPage() {
           </div>
           {list.length === 0 && (
             <div className="rounded-2xl border border-dashed border-border p-16 text-center text-muted-foreground">
-              No projects tracked yet in this area.
+              No projects tracked yet in this destination.
             </div>
           )}
         </div>
 
-        {/* Related areas */}
+        {/* Related destinations */}
         {relatedAreas.length > 0 && (
           <div className="mt-16">
-            <h2 className="mb-5 font-display text-xl font-semibold text-primary">Other areas in the same region</h2>
+            <h2 className="mb-5 font-display text-xl font-semibold text-primary">Other destinations in the same region</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {relatedAreas.map((ra) => {
-                const raCount = compounds.filter((c) => c.area === ra.slug).length;
+                const raCount = compounds.filter((c) => c.destination === ra.slug).length;
                 return (
                   <Link
                     key={ra.slug}
-                    to="/areas/$slug"
+                    to="/destinations/$slug"
                     params={{ slug: ra.slug }}
                     className="group overflow-hidden rounded-xl border border-border/60 bg-card transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-accent/40"
                   >

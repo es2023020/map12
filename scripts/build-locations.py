@@ -13,7 +13,7 @@ def slugify(s: str) -> str:
     return re.sub(r"^-|-$", "", re.sub(r"[^a-z0-9]+", "-", s.lower()))
 
 
-def loc_to_area(loc: str) -> str:
+def loc_to_destination(loc: str) -> str:
     l = loc.lower()
     if "sidi heneish" in l or "heneish" in l:
         return "sidi-heneish"
@@ -85,7 +85,7 @@ def parse_projects(text: str) -> list[dict]:
     return projects
 
 
-SLUG_AREA: dict[str, str] = {
+SLUG_DESTINATION: dict[str, str] = {
     "alam-al-roum": "sidi-heneish",
     "jamila": "sidi-heneish",
     "almaza-bay": "sidi-heneish",
@@ -117,30 +117,30 @@ def main() -> None:
     out: dict[str, dict] = {}
     for p in projects:
         slug = slugify(p["name"])
-        area = loc_to_area(p["location"])
+        destination = loc_to_destination(p["location"])
         if slug == "azha":
-            area = "ras-el-hekma"
+            destination = "ras-el-hekma"
             p["location"] = "Ras El Hekma, North Coast, Matrouh Governorate, Egypt"
-        if area == "north-coast-generic":
-            area = "ras-el-hekma"
+        if destination == "north-coast-generic":
+            destination = "ras-el-hekma"
         if slug == "beit-al-bahr":
-            area = "sidi-heneish"
+            destination = "sidi-heneish"
             p["location"] = "Sidi Heneish, North Coast (km 241), Matrouh Governorate, Egypt"
             p["maps"] = "https://maps.google.com/?q=Beit+Al+Bahr+Sidi+Heneish+North+Coast+Egypt"
         if slug == "koun":
-            area = "ras-el-hekma"
+            destination = "ras-el-hekma"
             p["location"] = "Ras El Hekma, North Coast (km 201), Matrouh Governorate, Egypt"
             p["maps"] = "https://maps.google.com/?q=Koun+Ras+El+Hekma+North+Coast+Egypt"
         if slug == "hyde-park-north":
             slug = "hyde-park-north-seashore"
             p["name"] = "Hyde Park North - Seashore"
-            area = "ras-el-hekma"
+            destination = "ras-el-hekma"
             p["location"] = "Ras El Hekma, North Coast, Matrouh Governorate, Egypt"
-        if slug in SLUG_AREA:
-            area = SLUG_AREA[slug]
+        if slug in SLUG_DESTINATION:
+            destination = SLUG_DESTINATION[slug]
         out[slug] = {
             "name": p["name"],
-            "area": area,
+            "destination": destination,
             "location": p["location"],
             "mapsUrl": p["maps"],
         }
@@ -149,7 +149,7 @@ def main() -> None:
         "// Source: Egypt_Real_Estate_Projects_Locations.pdf",
         "export type ProjectLocation = {",
         "  name: string;",
-        "  area: string;",
+        "  destination: string;",
         "  location: string;",
         "  mapsUrl: string;",
         "};",
@@ -161,7 +161,7 @@ def main() -> None:
         loc = v["location"].replace('"', "'")
         maps = v["mapsUrl"].replace('"', "'")
         lines.append(
-            f'  "{slug}": {{ name: "{v["name"]}", area: "{v["area"]}", location: "{loc}", mapsUrl: "{maps}" }},'
+            f'  "{slug}": {{ name: "{v["name"]}", destination: "{v["destination"]}", location: "{loc}", mapsUrl: "{maps}" }},'
         )
     lines.append("};")
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")

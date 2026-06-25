@@ -14,7 +14,7 @@ const anchors: Array<{ km: number; lat: number; lng: number }> = [
   { km: 138, lat: 30.920, lng: 28.486 }, // Hacienda White
   { km: 145, lat: 30.932, lng: 28.421 }, // Ghazala Bay / Zoya
   { km: 166, lat: 30.995, lng: 28.219 }, // D-Bay
-  { km: 170, lat: 31.012, lng: 28.180 }, // Al Dabaa area
+  { km: 170, lat: 31.012, lng: 28.180 }, // Al Dabaa destination
   { km: 190, lat: 31.075, lng: 27.970 }, // Jefaira
   { km: 200, lat: 31.108, lng: 27.872 }, // Mountain View RHK / Lyv
   { km: 210, lat: 31.140, lng: 27.758 }, // Fouka Bay

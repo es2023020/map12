@@ -207,7 +207,7 @@ function CalculatorPage() {
               <div className="font-semibold text-primary text-[11px] group-hover:text-accent transition-colors truncate">{p.name}</div>
               <div className="text-[9px] text-muted-foreground truncate">{p.developer}</div>
               <div className="mt-2 flex items-center justify-between">
-                <span className="text-[9px] text-muted-foreground truncate max-w-[50px]">{p.area.replace(/-/g, " ")}</span>
+                <span className="text-[9px] text-muted-foreground truncate max-w-[50px]">{p.destination.replace(/-/g, " ")}</span>
                 <span className="text-[10px] font-bold text-primary">From {p.priceFrom}M</span>
               </div>
             </Link>
@@ -306,8 +306,8 @@ function CalculatorPage() {
                         <span className="font-medium text-primary">{selectedProject.developer}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Area</span>
-                        <span className="font-medium text-primary">{selectedProject.area.replace(/-/g, " ")}</span>
+                        <span className="text-muted-foreground">Destination</span>
+                        <span className="font-medium text-primary">{selectedProject.destination.replace(/-/g, " ")}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Delivery</span>

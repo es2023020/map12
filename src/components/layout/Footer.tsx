@@ -19,7 +19,7 @@ export function Footer() {
         <FooterCol title="Explore" links={[
           { to: "/map", label: "Interactive Map" },
           { to: "/projects", label: "All Projects" },
-          { to: "/areas", label: "Areas" },
+          { to: "/destinations", label: "Destinations" },
           { to: "/developers", label: "Developers" },
         ]} />
         {user ? (

@@ -1,4 +1,4 @@
-export type Area = {
+export type Destination = {
   slug: string;
   name: string;
   region: "north-coast" | "greater-cairo" | "red-sea" | "sinai" | "other";
@@ -11,7 +11,7 @@ export type Area = {
   zoom: number;
 };
 
-export const areas: Area[] = [
+export const destinations: Destination[] = [
   {
     slug: "sidi-heneish",
     name: "Sidi Heneish",
@@ -229,8 +229,8 @@ export const areas: Area[] = [
   },
 ];
 
-export const areaBySlug = (slug: string) => areas.find((a) => a.slug === slug);
-export const areaColor = (slug: string) => areaBySlug(slug)?.color ?? "#3B82F6";
+export const destinationBySlug = (slug: string) => destinations.find((a) => a.slug === slug);
+export const destinationColor = (slug: string) => destinationBySlug(slug)?.color ?? "#3B82F6";
 
 const locationStrings: Record<string, string> = {
   "sidi-heneish": "North Coast (Sidi Heneish), Matrouh Governorate, Egypt",
@@ -254,5 +254,5 @@ const locationStrings: Record<string, string> = {
   "alexandria": "Alexandria Governorate, Egypt",
 };
 
-export const areaLocationString = (slug: string): string =>
-  locationStrings[slug] ?? areaBySlug(slug)?.name ?? slug;
+export const destinationLocationString = (slug: string): string =>
+  locationStrings[slug] ?? destinationBySlug(slug)?.name ?? slug;

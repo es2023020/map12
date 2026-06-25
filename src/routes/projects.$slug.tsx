@@ -2,8 +2,8 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { MapClient } from "@/components/map/MapClient";
-import { compoundBySlug, compoundsByArea } from "@/data/compounds";
-import { areaBySlug, areaLocationString } from "@/data/areas";
+import { compoundBySlug, compoundsByDestination } from "@/data/compounds";
+import { destinationBySlug, destinationLocationString } from "@/data/destinations";
 import { projectLocations } from "@/data/project-locations";
 import { developerBySlug } from "@/data/developers";
 import { CompoundCard } from "@/components/CompoundCard";
@@ -125,15 +125,20 @@ function Gallery({ images, name }: { images: string[]; name: string }) {
 
 function CompoundPage() {
   const c = Route.useLoaderData();
-  const area = areaBySlug(c.area);
+  const destination = destinationBySlug(c.destination);
   const dev = developerBySlug(c.developerSlug);
   const isFav = useStore((s) => s.favorites.includes(c.slug));
   const toggleFav = useStore((s) => s.toggleFavorite);
   const addRecent = useStore((s) => s.addRecent);
   useEffect(() => { addRecent(c.slug); }, [c.slug, addRecent]);
 
-  const related = compoundsByArea(c.area).filter((x) => x.slug !== c.slug).slice(0, 4);
+  const related = compoundsByDestination(c.destination).filter((x) => x.slug !== c.slug).slice(0, 4);
   const allImages = c.gallery && c.gallery.length > 0 ? c.gallery : [c.hero];
+
+  const avail = availabilityBySlug(c.slug);
+  const livePaymentPlans = avail
+    ? Array.from(new Set(avail.breakdown.map((b) => b.paymentPlan).filter(Boolean)))
+    : [];
 
   return (
     <Shell>
@@ -145,9 +150,9 @@ function CompoundPage() {
               <ArrowLeft className="h-3.5 w-3.5" /> All projects
             </Link>
             <span>/</span>
-            {area && (
+            {destination && (
               <>
-                <Link to="/areas/$slug" params={{ slug: area.slug }} className="hover:text-primary transition-colors">{area.name}</Link>
+                <Link to="/destinations/$slug" params={{ slug: destination.slug }} className="hover:text-primary transition-colors">{destination.name}</Link>
                 <span>/</span>
               </>
             )}
@@ -182,11 +187,11 @@ function CompoundPage() {
                 <Star className="h-3 w-3 fill-amber-500 text-amber-500" /> Flagship
               </span>
             )}
-            {area && (
-              <Link to="/areas/$slug" params={{ slug: area.slug }}
+            {destination && (
+              <Link to="/destinations/$slug" params={{ slug: destination.slug }}
                 className="inline-flex items-center gap-1 rounded-full border border-border bg-card px-2.5 py-1 text-xs text-muted-foreground hover:text-accent hover:border-accent transition-colors">
                 <MapPin className="h-3 w-3" />
-                {area.name}{c.km ? ` · km ${c.km}` : ""}
+                {destination.name}{c.km ? ` · km ${c.km}` : ""}
               </Link>
             )}
           </div>
@@ -247,8 +252,12 @@ function CompoundPage() {
           {/* Payment plan */}
           <Section title="Payment plan">
             <div className="rounded-2xl border border-border bg-gradient-to-br from-primary/5 to-accent/5 p-5">
-              <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Recommended plan</div>
-              <div className="mt-1 font-display text-2xl font-semibold text-primary">{c.paymentPlan}</div>
+              <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                {livePaymentPlans.length > 1 ? "Available plans" : "Recommended plan"}
+              </div>
+              <div className="mt-1 font-display text-2xl font-semibold text-primary">
+                {livePaymentPlans.length > 0 ? livePaymentPlans.join(" / ") : c.paymentPlan}
+              </div>
               <p className="mt-3 text-sm text-muted-foreground">
                 Bespoke plans available — contact your PropTrack advisor for current launch offers and exclusive discounts.
               </p>
@@ -273,7 +282,7 @@ function CompoundPage() {
             <div className="mt-3 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-accent" />
-                {c.city ?? areaLocationString(c.area)}{c.km ? ` · km ${c.km}` : ""}
+                {c.city ?? destinationLocationString(c.destination)}{c.km ? ` · km ${c.km}` : ""}
               </span>
               <a
                 href={projectLocations[c.slug]?.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`}
@@ -320,16 +329,16 @@ function CompoundPage() {
               </Link>
             )}
 
-            {/* Area card */}
-            {area && (
-              <Link to="/areas/$slug" params={{ slug: area.slug }}
+            {/* Destination card */}
+            {destination && (
+              <Link to="/destinations/$slug" params={{ slug: destination.slug }}
                 className="mt-3 flex items-center gap-3 rounded-xl border border-border bg-secondary/50 p-3 hover:bg-secondary transition-colors">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg" style={{ background: area.color + "22" }}>
-                  <MapPin className="h-5 w-5" style={{ color: area.color }} />
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg" style={{ background: destination.color + "22" }}>
+                  <MapPin className="h-5 w-5" style={{ color: destination.color }} />
                 </span>
                 <div className="min-w-0">
-                  <div className="text-xs text-muted-foreground">Area</div>
-                  <div className="truncate font-medium text-primary">{area.name}</div>
+                  <div className="text-xs text-muted-foreground">Destination</div>
+                  <div className="truncate font-medium text-primary">{destination.name}</div>
                   {c.km && <div className="text-xs text-muted-foreground">km {c.km}</div>}
                 </div>
               </Link>
@@ -371,10 +380,10 @@ function CompoundPage() {
         <section className="bg-gradient-sand">
           <div className="mx-auto max-w-7xl px-4 py-10 lg:py-14 lg:px-8">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="font-display text-2xl font-semibold text-primary">More in {area?.name}</h2>
-              {area && (
-                <Link to="/areas/$slug" params={{ slug: area.slug }}
-                  className="text-sm text-accent hover:underline">View all in {area.name} →</Link>
+              <h2 className="font-display text-2xl font-semibold text-primary">More in {destination?.name}</h2>
+              {destination && (
+                <Link to="/destinations/$slug" params={{ slug: destination.slug }}
+                  className="text-sm text-accent hover:underline">View all in {destination.name} →</Link>
               )}
             </div>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

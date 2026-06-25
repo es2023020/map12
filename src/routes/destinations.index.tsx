@@ -1,15 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/layout/Shell";
-import { areas } from "@/data/areas";
+import { destinations } from "@/data/destinations";
 import { compounds } from "@/data/compounds";
 import { MapPin, Waves, Building2 } from "lucide-react";
 
-export const Route = createFileRoute("/areas/")({
+export const Route = createFileRoute("/destinations/")({
   head: () => ({
     meta: [
-      { title: "Areas — PropTrack" },
+      { title: "Destinations — PropTrack" },
       { name: "description", content: "Every coastal zone and Cairo district covered by PropTrack." },
-      { property: "og:title", content: "Areas — PropTrack" },
+      { property: "og:title", content: "Destinations — PropTrack" },
       { property: "og:description", content: "Sahel zones from Sidi Heneish to New Alamein, plus New Cairo, Sheikh Zayed, Red Sea, Sinai and more." },
     ],
   }),
@@ -65,9 +65,9 @@ function AreasIndex() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Property Atlas</div>
-              <h1 className="mt-1 font-display text-4xl font-semibold tracking-tight text-primary">Areas</h1>
+              <h1 className="mt-1 font-display text-4xl font-semibold tracking-tight text-primary">Destinations</h1>
               <p className="mt-2 max-w-xl text-muted-foreground">
-                {areas.length} market zones covered — from the Mediterranean coast to the Red Sea, across Greater Cairo and beyond.
+                {destinations.length} market zones covered — from the Mediterranean coast to the Red Sea, across Greater Cairo and beyond.
               </p>
             </div>
             <div className="flex gap-6 text-center">
@@ -76,7 +76,7 @@ function AreasIndex() {
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Projects</div>
               </div>
               <div>
-                <div className="font-display text-3xl font-semibold text-primary">{areas.length}</div>
+                <div className="font-display text-3xl font-semibold text-primary">{destinations.length}</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Zones</div>
               </div>
             </div>
@@ -87,9 +87,9 @@ function AreasIndex() {
       {/* Regions */}
       <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8 space-y-14">
         {REGION_GROUPS.map((g) => {
-          const regionAreas = areas.filter((a) => a.region === g.region);
-          if (regionAreas.length === 0) return null;
-          const regionCount = regionAreas.reduce((sum, a) => sum + compounds.filter((c) => c.area === a.slug).length, 0);
+          const regionDestinations = destinations.filter((a) => a.region === g.region);
+          if (regionDestinations.length === 0) return null;
+          const regionCount = regionDestinations.reduce((sum, a) => sum + compounds.filter((c) => c.destination === a.slug).length, 0);
 
           return (
             <section key={g.region}>
@@ -104,12 +104,12 @@ function AreasIndex() {
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {regionAreas.map((a) => {
-                  const count = compounds.filter((c) => c.area === a.slug).length;
+                {regionDestinations.map((a) => {
+                  const count = compounds.filter((c) => c.destination === a.slug).length;
                   return (
                     <Link
                       key={a.slug}
-                      to="/areas/$slug"
+                      to="/destinations/$slug"
                       params={{ slug: a.slug }}
                       className="group overflow-hidden rounded-2xl border border-border/60 bg-card shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lg hover:border-accent/40"
                     >

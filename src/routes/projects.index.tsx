@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { CompoundCard } from "@/components/CompoundCard";
 import { compounds } from "@/data/compounds";
-import { areas } from "@/data/areas";
+import { destinations } from "@/data/destinations";
 import { developers } from "@/data/developers";
 import { Input } from "@/components/ui/input";
 import { Search, SlidersHorizontal, X, ChevronDown, ChevronUp } from "lucide-react";
@@ -19,31 +19,31 @@ const ALL_TYPES = Array.from(new Set(compounds.flatMap((c) => c.types))).sort();
 
 export const Route = createFileRoute("/projects/")({
   validateSearch: (search: Record<string, unknown>) => ({
-    area: typeof search.area === "string" ? search.area : "",
+    destination: typeof search.destination === "string" ? search.destination : "",
     dev: typeof search.dev === "string" ? search.dev : "",
     q: typeof search.q === "string" ? search.q : "",
   }),
   head: () => ({
     meta: [
       { title: "All Projects — PropTrack" },
-      { name: "description", content: "Browse every compound in the PropTrack database. Filter by area, developer, price and delivery year." },
+      { name: "description", content: "Browse every compound in the PropTrack database. Filter by destination, developer, price and delivery year." },
     ],
   }),
   component: ProjectsPage,
 });
 
 function ProjectsPage() {
-  const { area: areaParam, dev: devParam, q: qParam } = Route.useSearch();
+  const { destination: destinationParam, dev: devParam, q: qParam } = Route.useSearch();
   const [q, setQ] = useState(qParam || "");
-  const [area, setArea] = useState(areaParam || "");
+  const [destination, setArea] = useState(destinationParam || "");
   const [dev, setDev] = useState(devParam || "");
   const [status, setStatus] = useState("");
   const [type, setType] = useState("");
   const [maxPrice, setMaxPrice] = useState(PRICE_MAX);
   const [sort, setSort] = useState<"name" | "price-asc" | "price-desc" | "delivery">("name");
-  const [filtersOpen, setFiltersOpen] = useState(!!(areaParam || devParam || qParam));
+  const [filtersOpen, setFiltersOpen] = useState(!!(destinationParam || devParam || qParam));
 
-  const hasFilters = !!(q || area || dev || status || type || maxPrice < PRICE_MAX);
+  const hasFilters = !!(q || destination || dev || status || type || maxPrice < PRICE_MAX);
 
   function clearAll() {
     setQ(""); setArea(""); setDev(""); setStatus(""); setType(""); setMaxPrice(PRICE_MAX);
@@ -56,7 +56,7 @@ function ProjectsPage() {
   const matchCompound = (
     c: any,
     qVal: string,
-    areaVal: string,
+    destinationVal: string,
     devVal: string,
     statusVal: string,
     typeVal: string,
@@ -95,7 +95,7 @@ function ProjectsPage() {
         availText = Array.from(terms).join(" ");
       }
 
-      const hay = `${c.name} ${c.developer} ${c.area} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase();
+      const hay = `${c.name} ${c.developer} ${c.destination} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase();
       
       const stopWords = new Set(["in", "for", "with", "a", "an", "the", "at", "by", "of", "and", "on"]);
       const queryWords = qVal
@@ -105,7 +105,7 @@ function ProjectsPage() {
         
       if (queryWords.length > 0 && !queryWords.every((word) => hay.includes(word))) return false;
     }
-    if (areaVal && c.area !== areaVal) return false;
+    if (destinationVal && c.destination !== destinationVal) return false;
     if (devVal && c.developerSlug !== devVal) return false;
     if (statusVal && c.status !== statusVal) return false;
     if (typeVal && !c.types.includes(typeVal)) return false;
@@ -114,39 +114,39 @@ function ProjectsPage() {
   };
 
   const filtered = useMemo(() => {
-    let list = compounds.filter((c) => matchCompound(c, q, area, dev, status, type, maxPrice));
+    let list = compounds.filter((c) => matchCompound(c, q, destination, dev, status, type, maxPrice));
     return [...list].sort((a, b) => {
       if (sort === "name") return a.name.localeCompare(b.name);
       if (sort === "price-asc") return a.priceFrom - b.priceFrom;
       if (sort === "price-desc") return b.priceFrom - a.priceFrom;
       return a.deliveryYear - b.deliveryYear;
     });
-  }, [q, area, dev, status, type, maxPrice, sort, availabilityMap]);
+  }, [q, destination, dev, status, type, maxPrice, sort, availabilityMap]);
 
   // Dynamic cascading option computations:
-  const activeAreas = useMemo(() => {
+  const activeDestinations = useMemo(() => {
     const list = compounds.filter((c) => matchCompound(c, q, "", dev, status, type, maxPrice));
-    const slugs = new Set(list.map((c) => c.area));
-    return areas.filter((a) => slugs.has(a.slug));
+    const slugs = new Set(list.map((c) => c.destination));
+    return destinations.filter((a) => slugs.has(a.slug));
   }, [q, dev, status, type, maxPrice, availabilityMap]);
 
   const activeDevelopers = useMemo(() => {
-    const list = compounds.filter((c) => matchCompound(c, q, area, "", status, type, maxPrice));
+    const list = compounds.filter((c) => matchCompound(c, q, destination, "", status, type, maxPrice));
     const slugs = new Set(list.map((c) => c.developerSlug));
     return developers.filter((d) => slugs.has(d.slug));
-  }, [q, area, status, type, maxPrice, availabilityMap]);
+  }, [q, destination, status, type, maxPrice, availabilityMap]);
 
   const activeStatuses = useMemo(() => {
-    const list = compounds.filter((c) => matchCompound(c, q, area, dev, "", type, maxPrice));
+    const list = compounds.filter((c) => matchCompound(c, q, destination, dev, "", type, maxPrice));
     const statuses = new Set(list.map((c) => c.status));
     return ["Delivered", "Under Construction", "Off-Plan"].filter((s) => statuses.has(s));
-  }, [q, area, dev, type, maxPrice, availabilityMap]);
+  }, [q, destination, dev, type, maxPrice, availabilityMap]);
 
   const activeTypes = useMemo(() => {
-    const list = compounds.filter((c) => matchCompound(c, q, area, dev, status, "", maxPrice));
+    const list = compounds.filter((c) => matchCompound(c, q, destination, dev, status, "", maxPrice));
     const types = new Set(list.flatMap((c) => c.types));
     return ALL_TYPES.filter((t) => types.has(t));
-  }, [q, area, dev, status, maxPrice, availabilityMap]);
+  }, [q, destination, dev, status, maxPrice, availabilityMap]);
 
   const FilterPanel = (
     <div className="space-y-5">
@@ -167,8 +167,8 @@ function ProjectsPage() {
           Try searching like <span className="italic font-medium text-primary">"3 beds chalet sea view"</span> or <span className="italic font-medium text-primary">"ready to move marassi"</span>.
         </p>
       </div>
-      <FilterSelect label="Area" value={area} onChange={setArea}
-        options={[{ value: "", label: "All areas" }, ...activeAreas.map((a) => ({ value: a.slug, label: a.name }))]} />
+      <FilterSelect label="Destination" value={destination} onChange={setArea}
+        options={[{ value: "", label: "All destinations" }, ...activeDestinations.map((a) => ({ value: a.slug, label: a.name }))]} />
       <FilterSelect label="Developer" value={dev} onChange={setDev}
         options={[{ value: "", label: "All developers" }, ...activeDevelopers.map((d) => ({ value: d.slug, label: d.name }))]} />
       <FilterSelect label="Status" value={status} onChange={setStatus}
