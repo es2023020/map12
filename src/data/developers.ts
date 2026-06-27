@@ -14,6 +14,8 @@ export type Developer = {
 };
 
 const blurbs: Record<string, string> = {
+  "New Giza Developments": "New Giza Developments (NGD) — premier developer behind premium upscale residential communities like Newgiza and the signature coastal projects Seashell and Playa Seashell in Sahel.",
+  "El Batal Developments": "El Batal Developments (Rock Developments) — one of Egypt's oldest developers, delivering quality residential and commercial properties in Heliopolis, New Cairo, Obour, and the New Capital.",
   "LMD": "LMD Developments — premium real estate developer behind signature residential and mixed-use communities in Cairo, Greece, Dubai and Sahel.",
   "The Waterway Developments": "The Waterway Developments — signature boutique developer behind premium Cairo settlements and the luxury Waterway resort in Sahel.",
 
@@ -70,6 +72,8 @@ const blurbs: Record<string, string> = {
 };
 
 const logoMap: Record<string, string> = {
+  "new-giza-developments": "https://logo.clearbit.com/newgiza.com",
+  "el-batal-developments": "https://ui-avatars.com/api/?background=c5a880&color=fff&bold=true&size=128&name=El+Batal",
   "lmd": "https://logo.clearbit.com/lmd.com.eg",
   "the-waterway-developments": "https://logo.clearbit.com/thewaterway.com",
 
@@ -118,6 +122,7 @@ const logoMap: Record<string, string> = {
 };
 
 const websiteMap: Record<string, string> = {
+  "new-giza-developments": "https://newgiza.com",
   "lmd": "https://lmd.com.eg",
   "the-waterway-developments": "https://thewaterway.com",
 
@@ -159,6 +164,8 @@ const websiteMap: Record<string, string> = {
 };
 
 const foundingYears: Record<string, number> = {
+  "new-giza-developments": 2007,
+  "el-batal-developments": 2002,
   "sodic": 1996,
   "hassan-allam-properties": 1999,
   "tatweer-misr": 2014,
@@ -172,6 +179,8 @@ const foundingYears: Record<string, number> = {
 };
 
 const landBanks: Record<string, string> = {
+  "new-giza-developments": "6,300,000 m²",
+  "el-batal-developments": "1,500,000 m²",
   "sodic": "17,000,000 m²",
   "hassan-allam-properties": "8,645,799 m²",
   "madinet-masr": "40,000,000 m²",
@@ -184,6 +193,8 @@ const landBanks: Record<string, string> = {
 };
 
 const unitsDeliveredMap: Record<string, string> = {
+  "new-giza-developments": "4,500+",
+  "el-batal-developments": "5,000+",
   "sodic": "14,000+",
   "hassan-allam-properties": "19,521",
   "hyde-park": "3,200+",
@@ -194,6 +205,8 @@ const unitsDeliveredMap: Record<string, string> = {
 };
 
 const structures: Record<string, string> = {
+  "new-giza-developments": "Private Joint Stock Company - Mahmoud El Gammal, Chairman",
+  "el-batal-developments": "Private Joint Stock Company - Eng. Samir Doss, Chairman",
   "sodic": "Publicly Traded (EGX: OCDI.CA) - 85.5% owned by Aldar ADQ Consortium",
   "hassan-allam-properties": "Private / Family-run (3 Generations) - Mohamed Allam, CEO",
   "tatweer-misr": "Shareholding Company (S.A.E) - Non-Family Owned (Arafa, Daoud, Ahram Groups)",

@@ -102,7 +102,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "playa-seashell": {
     destination: "ras-el-hekma",
     km: 206,
-    developer: "Al Marasem Developments",
+    developer: "New Giza Developments",
     city: "Ras El Hekma, North Coast (km 206), Matrouh Governorate, Egypt",
     mapsUrl: "https://maps.google.com/?q=Playa+Seashell+Ras+El+Hekma+Egypt",
     beachfront: true,
@@ -164,6 +164,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "seashell-ras-el-hekma": {
     destination: "ras-el-hekma",
     km: 195,
+    developer: "New Giza Developments",
     city: "Ras El Hekma, North Coast (km 195), Matrouh Governorate, Egypt",
   },
   "gaia": {
@@ -388,6 +389,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "seashell": {
     destination: "sidi-abdelrahman",
     km: 135,
+    developer: "New Giza Developments",
     city: "Sidi Abdel Rahman, North Coast (km 135), Matrouh Governorate, Egypt",
     mapsUrl: "https://maps.google.com/?q=Seashell+Sahel+Egypt",
   },
@@ -521,14 +523,34 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   },
 
   // ── Cairo / NAC placement ──
-  "district-5": { destination: "mostakbal-city" },
+  "district-5": { destination: "new-cairo" },
   "il-bosco-city": { destination: "mostakbal-city" },
-  "at-east": { destination: "new-administrative-capital" },
-  "crescent-walk": { destination: "new-administrative-capital" },
+  "at-east": { destination: "mostakbal-city" },
+  "crescent-walk": { destination: "new-cairo" },
   karmell: { destination: "new-zayed" },
   "bamboo-iii": { destination: "new-cairo", city: "New Cairo, Cairo Governorate, Egypt" },
   "talala": { destination: "sarai", city: "Sarai, New Cairo East, Cairo Governorate, Egypt" },
   "sheya-residence": { destination: "sarai", city: "Sarai, New Cairo East, Cairo Governorate, Egypt" },
+  "the-mornings": { developer: "Al Ahly Sabbour" },
+  "stone-residence": { developer: "PRE Developments" },
+  
+  // Shorouk Mappings — La Vista Shorouk compounds
+  "el-patio-sola": { destination: "shorouk" },
+  "patio-5-east": { destination: "shorouk" },
+  "patio-casa": { destination: "shorouk" },
+  "patio-prime": { destination: "shorouk" },
+  // Patio Jade is in the New Administrative Capital (R4 district, next to La Vista City) — NOT Shorouk
+  "patio-jade": { destination: "new-administrative-capital" },
+  // Patio Vida and Hills are in New Cairo (6th Settlement) — NOT Shorouk
+  "patio-vida": { destination: "new-cairo" },
+  "patio-hills": { destination: "new-cairo" },
+  
+  // Obour Mapping
+  "rock-ville": { destination: "obour", lat: 30.220, lng: 31.540 },
+  
+  // Zayed Mappings
+  "palm-hills-jirian": { destination: "new-zayed" },
+  "mountain-view-jirian": { destination: "new-zayed" },
 
   // ── Developer Corrections & Scoped Defaults ──
   "sky-north": {
