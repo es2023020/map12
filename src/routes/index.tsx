@@ -8,6 +8,8 @@ import { destinations } from "@/data/destinations";
 import { developers } from "@/data/developers";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Building2, Users, Sparkles } from "lucide-react";
+import { NewLaunchesSlider } from "@/components/NewLaunchesSlider";
+import { NewLaunchesDashboard } from "@/components/NewLaunchesDashboard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -27,8 +29,10 @@ function Index() {
 
   return (
     <Shell>
-      <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
-        <div className="absolute inset-0 opacity-30" style={{
+      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=2000&q=80')] bg-cover bg-center opacity-30 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-0" />
+        <div className="absolute inset-0 opacity-50 mix-blend-screen" style={{
           backgroundImage: "radial-gradient(ellipse at 20% 0%, oklch(0.72 0.12 195 / .5), transparent 50%), radial-gradient(ellipse at 80% 100%, oklch(0.7 0.18 40 / .4), transparent 60%)",
         }} />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-24">
@@ -69,6 +73,9 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* New Launches Slider */}
+      <NewLaunchesSlider />
 
       {/* Destinations strip */}
       <section className="mx-auto max-w-7xl px-4 py-14 lg:px-8">
@@ -139,6 +146,8 @@ function Index() {
           </div>
         </div>
       </section>
+      
+      <NewLaunchesDashboard />
     </Shell>
   );
 }

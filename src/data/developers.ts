@@ -14,6 +14,16 @@ export type Developer = {
 };
 
 const blurbs: Record<string, string> = {
+  "New Plan Developments": "New Plan Developments — an innovative real estate developer known for luxury resorts and premium residential compounds across Egypt.",
+  "Upwyde Developments": "Upwyde Developments — a visionary developer creating urban-chic residential and commercial projects in prime locations like Sheikh Zayed and New Cairo.",
+  "Living Yards Developments": "Living Yards Developments — pioneers of fully-integrated, smart communities offering premium apartments and vibrant promenades.",
+  "IL Cazar Developments": "IL Cazar Developments — a luxury real estate developer delivering exclusive sanctuaries and elevated living experiences in New Cairo and the New Capital.",
+  "Jadeer Developments": "Jadeer Developments — a modern, design-forward developer focusing on smart communities and vibrant public spaces in the New Capital.",
+  "Vie Communities": "Vie Communities — redefining urban living with eco-friendly designs, innovative architecture, and vibrant hubs in New Cairo.",
+  "Somabay Developments": "Somabay Developments — the premier developer behind the world-class Somabay peninsula, offering unparalleled luxury on the Red Sea coast.",
+  "Al Qamzi Developments": "Al Qamzi Developments — a distinguished real estate developer bringing premium coastal and residential projects to the Egyptian market.",
+  "Mardev Developments": "Mardev Developments — delivering architectural elegance and comprehensive amenities through Spanish-inspired designs in the New Capital.",
+  "Melee Development": "Melee Development — a community-centric developer focused on fostering connection through vast green parks and dynamic social hubs in Sheikh Zayed.",
   "New Giza Developments": "New Giza Developments (NGD) — premier developer behind premium upscale residential communities like Newgiza and the signature coastal projects Seashell and Playa Seashell in Sahel.",
   "El Batal Developments": "El Batal Developments (Rock Developments) — one of Egypt's oldest developers, delivering quality residential and commercial properties in Heliopolis, New Cairo, Obour, and the New Capital.",
   "LMD": "LMD Developments — premium real estate developer behind signature residential and mixed-use communities in Cairo, Greece, Dubai and Sahel.",
@@ -72,6 +82,16 @@ const blurbs: Record<string, string> = {
 };
 
 const logoMap: Record<string, string> = {
+  "new-plan-developments": "https://ui-avatars.com/api/?background=2d3e50&color=fff&bold=true&size=128&name=New+Plan",
+  "upwyde-developments": "https://ui-avatars.com/api/?background=ff9f1c&color=fff&bold=true&size=128&name=Upwyde",
+  "living-yards-developments": "https://ui-avatars.com/api/?background=2ec4b6&color=fff&bold=true&size=128&name=Living+Yards",
+  "il-cazar-developments": "https://ui-avatars.com/api/?background=011627&color=fff&bold=true&size=128&name=IL+Cazar",
+  "jadeer-developments": "https://ui-avatars.com/api/?background=e71d36&color=fff&bold=true&size=128&name=Jadeer",
+  "vie-communities": "https://ui-avatars.com/api/?background=343a40&color=fff&bold=true&size=128&name=Vie",
+  "somabay-developments": "https://ui-avatars.com/api/?background=1d3557&color=fff&bold=true&size=128&name=Somabay",
+  "al-qamzi-developments": "https://ui-avatars.com/api/?background=457b9d&color=fff&bold=true&size=128&name=Al+Qamzi",
+  "mardev-developments": "https://ui-avatars.com/api/?background=e63946&color=fff&bold=true&size=128&name=Mardev",
+  "melee-development": "https://ui-avatars.com/api/?background=2a9d8f&color=fff&bold=true&size=128&name=Melee",
   "new-giza-developments": "https://logo.clearbit.com/newgiza.com",
   "el-batal-developments": "https://ui-avatars.com/api/?background=c5a880&color=fff&bold=true&size=128&name=El+Batal",
   "lmd": "https://logo.clearbit.com/lmd.com.eg",

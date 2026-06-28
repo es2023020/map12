@@ -181,6 +181,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "direction-white": {
     destination: "ras-el-hekma",
     km: 193,
+    developer: "Arabella Developments",
+    priceFrom: 9.7,
     city: "Ras El Hekma, North Coast (km 193), Matrouh Governorate, Egypt",
   },
   "cali-coast-ras-el-hekma": {
