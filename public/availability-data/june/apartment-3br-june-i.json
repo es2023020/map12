@@ -1,0 +1,80 @@
+[
+  {
+    "id": "P7-L-09",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 0,
+    "priceEGP": 28973000,
+    "status": "Available",
+    "cluster": "JUNE I",
+    "areaNote": "Design: L-2B-M",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "P7-L-10",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 0,
+    "priceEGP": 28940000,
+    "status": "Available",
+    "cluster": "JUNE I",
+    "areaNote": "Design: L-2B-M",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "P7-L-11",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 0,
+    "priceEGP": 28940000,
+    "status": "Available",
+    "cluster": "JUNE I",
+    "areaNote": "Design: L-2B-M",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "P7-L-47",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 0,
+    "priceEGP": 44821000,
+    "status": "Available",
+    "cluster": "JUNE I",
+    "areaNote": "Design: L-4B-S",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "P7-L-66",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 0,
+    "priceEGP": 28217000,
+    "status": "Available",
+    "cluster": "JUNE I",
+    "areaNote": "Design: L-2B-M",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "P7-L-67",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 0,
+    "priceEGP": 26768000,
+    "status": "Available",
+    "cluster": "JUNE I",
+    "areaNote": "Design: L-2B-M",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

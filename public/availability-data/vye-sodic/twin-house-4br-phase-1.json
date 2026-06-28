@@ -1,0 +1,38 @@
+[
+  {
+    "id": "vye-sodic-7",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 19200000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Garden View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "vye-sodic-8",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 229,
+    "priceEGP": 22080000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Main Street",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "vye-sodic-9",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 239,
+    "priceEGP": 24960000,
+    "status": "Last Unit",
+    "cluster": "Phase 1",
+    "view": "Lagoon View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 9 years equal installments"
+  }
+]

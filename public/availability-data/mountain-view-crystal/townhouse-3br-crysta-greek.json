@@ -1,0 +1,80 @@
+[
+  {
+    "id": "BI1-77-TH4-B",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 26452341,
+    "status": "Available",
+    "cluster": "Crysta-Pearl",
+    "areaNote": "| Roof: 20 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "BI1-78-TH4-C",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 26452341,
+    "status": "Available",
+    "cluster": "Crysta-Pearl",
+    "areaNote": "| Roof: 20 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "BI1-80-TH4-C",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 27312389,
+    "status": "Available",
+    "cluster": "Crysta-Pearl",
+    "areaNote": "| Roof: 20 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "BI1-82-TH4-C",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 27309985,
+    "status": "Available",
+    "cluster": "Crysta-Pearl",
+    "areaNote": "| Roof: 20 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "BI1-88-TH4-C",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 27119398,
+    "status": "Available",
+    "cluster": "Crysta-Pearl",
+    "areaNote": "| Roof: 20 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "GI2-5-TH4-00-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 24885356,
+    "status": "Available",
+    "cluster": "Crysta-Greek",
+    "areaNote": "| Roof: 15 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 9 years equal installments"
+  }
+]

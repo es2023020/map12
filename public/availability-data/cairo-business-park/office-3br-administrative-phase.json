@@ -1,0 +1,54 @@
+[
+  {
+    "id": "CBP-OF-01",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 199,
+    "priceEGP": 22000000,
+    "status": "Available",
+    "cluster": "Administrative Phase",
+    "areaNote": "Ready to move",
+    "view": "Landscape",
+    "deliveryNote": "Ready To Move",
+    "paymentPlan": "10% DP · 7 years"
+  },
+  {
+    "id": "CBP-OF-02",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 264,
+    "priceEGP": 29500000,
+    "status": "Available",
+    "cluster": "Administrative Phase",
+    "areaNote": "Ready to move",
+    "view": "Landscape",
+    "deliveryNote": "Ready To Move",
+    "paymentPlan": "10% DP · 7 years"
+  },
+  {
+    "id": "CBP-OF-03",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 55,
+    "priceEGP": 6300000,
+    "status": "Available",
+    "cluster": "Administrative Phase",
+    "areaNote": "Hilton Garden Inn proximity",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% DP · 7 years"
+  },
+  {
+    "id": "CBP-OF-04",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "priceEGP": 20500000,
+    "status": "Available",
+    "cluster": "Administrative Phase",
+    "areaNote": "Hilton Garden Inn proximity",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% DP · 7 years"
+  }
+]

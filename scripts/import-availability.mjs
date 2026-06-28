@@ -204,11 +204,36 @@ function main() {
     }
   }
 
+  function getUnitTypeSlug(b) {
+    const parts = [b.type.toLowerCase().replace(/[^a-z0-9]+/g, "-")];
+    if (b.beds) parts.push(`${b.beds}br`);
+    if (b.cluster) parts.push(b.cluster.toLowerCase().replace(/[^a-z0-9]+/g, "-"));
+    return parts.join("-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+  }
+
+  // Clear previous availability-data folder if it exists
+  const availabilityDataDir = path.join(ROOT, "public", "availability-data");
+  if (fs.existsSync(availabilityDataDir)) {
+    fs.rmSync(availabilityDataDir, { recursive: true, force: true });
+  }
+
   for (const [slug, breakdown] of breakdownBySlug) {
     for (const b of breakdown) {
       const key = `${slug}::${b.type}`;
       const units = unitsByKey.get(key);
-      if (units?.length) b.units = units;
+      if (units?.length) {
+        // Do not add units to breakdown object to keep TS file light
+        // b.units = units;
+        
+        // Save units to public/availability-data/[slug]/[typeSlug].json
+        const dir = path.join(availabilityDataDir, slug);
+        if (!fs.existsSync(dir)) {
+          fs.mkdirSync(dir, { recursive: true });
+        }
+        const typeSlug = getUnitTypeSlug(b);
+        const file = path.join(dir, `${typeSlug}.json`);
+        fs.writeFileSync(file, JSON.stringify(units, null, 2), "utf8");
+      }
     }
   }
 

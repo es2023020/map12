@@ -1,0 +1,15 @@
+[
+  {
+    "id": "SE-SV-01",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 320,
+    "priceEGP": 45000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Land: 450 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% DP · 8 years"
+  }
+]

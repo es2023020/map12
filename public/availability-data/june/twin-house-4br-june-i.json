@@ -1,0 +1,41 @@
+[
+  {
+    "id": "P7-54A",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 0,
+    "priceEGP": 54294000,
+    "status": "Available",
+    "cluster": "JUNE I",
+    "areaNote": "Design: TWINHOUSE-WPH",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "P7-57A",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 0,
+    "priceEGP": 56975000,
+    "status": "Available",
+    "cluster": "JUNE I",
+    "areaNote": "Design: TWINHOUSE-WPH",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "P7-59B",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 0,
+    "priceEGP": 56746000,
+    "status": "Available",
+    "cluster": "JUNE I",
+    "areaNote": "Design: TWINHOUSE-WPH",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

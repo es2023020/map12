@@ -1,0 +1,28 @@
+[
+  {
+    "id": "BIV-TW-34-00-1",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 23755781,
+    "status": "Available",
+    "cluster": "Phase-1",
+    "areaNote": "| Roof: 55 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "IV1-TW-05-00-1",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 23916837,
+    "status": "Available",
+    "cluster": "Phase-1",
+    "areaNote": "| Roof: 55 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 9 years equal installments"
+  }
+]

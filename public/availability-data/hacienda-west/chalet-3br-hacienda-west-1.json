@@ -1,0 +1,88 @@
+[
+  {
+    "id": "WST-BLA-4741",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 111,
+    "priceEGP": 24817250,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2027-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-BLA-4742",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 111,
+    "priceEGP": 24678800,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2027-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-BLA-4743",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 111,
+    "priceEGP": 24678800,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2027-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-BLA-4744",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 111,
+    "priceEGP": 24678800,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2027-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-BLA-4745",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 111,
+    "priceEGP": 24678800,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2027-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-SCH-176AG",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 205,
+    "priceEGP": 37011151,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "areaNote": "Garden: 272.4 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2025-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-SCH-178BG",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 205,
+    "priceEGP": 36259581,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "areaNote": "Garden: 272.4 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2025-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

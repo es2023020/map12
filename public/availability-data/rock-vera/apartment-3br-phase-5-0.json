@@ -1,0 +1,54 @@
+[
+  {
+    "id": "VR-CO-G-02",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 314,
+    "priceEGP": 62356000,
+    "status": "Available",
+    "cluster": "Phase 5.0",
+    "areaNote": "Floor: G | Building: CO | Extra Space: 132.0 sqm | Design: CO",
+    "view": "Corner, Garden & Street",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "VR-CO-1-05",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 25,
+    "priceEGP": 3750000,
+    "status": "Available",
+    "cluster": "Phase 5.0",
+    "areaNote": "Floor: 1.0 | Building: CO | Design: CO",
+    "view": "Street",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "VR-CO-1-04",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 25,
+    "priceEGP": 3750000,
+    "status": "Available",
+    "cluster": "Phase 5.0",
+    "areaNote": "Floor: 1.0 | Building: CO | Design: CO",
+    "view": "Street",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "VR-CO-1-13",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 38,
+    "priceEGP": 5959008,
+    "status": "Available",
+    "cluster": "Phase 5.0",
+    "areaNote": "Floor: 1.0 | Building: CO | Design: CO",
+    "view": "Street&Garden",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  }
+]

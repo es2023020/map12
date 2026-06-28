@@ -1,0 +1,27 @@
+[
+  {
+    "id": "CR-TW-096-B-GF",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 155,
+    "priceEGP": 39341656,
+    "status": "Available",
+    "cluster": "Crete-Twin House-TW-Sep 2025",
+    "areaNote": "Garden: 141.59 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down payment over 9 years equal installments"
+  },
+  {
+    "id": "TN-TW-096-B-GF",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 154,
+    "priceEGP": 36600413,
+    "status": "Available",
+    "cluster": "R&T-Twin House-TW Feb 2026",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down payment over 9 years equal installments"
+  }
+]

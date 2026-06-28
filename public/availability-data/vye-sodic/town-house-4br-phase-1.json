@@ -1,0 +1,38 @@
+[
+  {
+    "id": "vye-sodic-4",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 19200000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Lagoon View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "vye-sodic-5",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 209,
+    "priceEGP": 22080000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Clubhouse View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "vye-sodic-6",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 239,
+    "priceEGP": 24960000,
+    "status": "Last Unit",
+    "cluster": "Phase 1",
+    "view": "Pool View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 9 years equal installments"
+  }
+]

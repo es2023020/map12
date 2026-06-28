@@ -1,0 +1,93 @@
+[
+  {
+    "id": "ATOH2A05",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "priceEGP": 49890721,
+    "status": "Available",
+    "cluster": "Elmasyaf",
+    "areaNote": "Floor: ارضي و أول",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "ATOH5A01",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "priceEGP": 52515501,
+    "status": "Available",
+    "cluster": "Elmasyaf",
+    "areaNote": "Floor: ارضي و أول",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "ATOH5A02",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "priceEGP": 42583294,
+    "status": "Available",
+    "cluster": "Elmasyaf",
+    "areaNote": "Floor: ارضي و أول",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "ATOH5A04",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "priceEGP": 54935266,
+    "status": "Available",
+    "cluster": "Elmasyaf",
+    "areaNote": "Floor: ارضي و أول",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "ATOH5B01",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "priceEGP": 54921911,
+    "status": "Available",
+    "cluster": "Elmasyaf",
+    "areaNote": "Floor: ارضي و أول",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "ATOH5B08",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "priceEGP": 52076431,
+    "status": "Available",
+    "cluster": "Elmasyaf",
+    "areaNote": "Floor: ارضي و أول",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "LTOH0501",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 165,
+    "priceEGP": 37800688,
+    "status": "Available",
+    "cluster": "Elmasyaf",
+    "areaNote": "Floor: أرضي و أول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

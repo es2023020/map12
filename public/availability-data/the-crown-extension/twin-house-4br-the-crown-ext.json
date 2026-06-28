@@ -1,0 +1,98 @@
+[
+  {
+    "id": "CRX-TIN-11A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 36225000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "2030-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "CRX-TIN-32B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 36240000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "2030-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "CRX-TIN-33A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 36270000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "2030-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "CRX-TIN-33B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 36285000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "2030-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "CRX-TIN-34A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 36270000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "2030-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "CRX-TIN-34B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 36285000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "2030-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "CRX-TIN-65A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 36225000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "2030-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "CRX-TIN-65B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 36240000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "2030-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  }
+]

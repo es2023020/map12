@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ALX-VL1-279-B",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 376,
+    "priceEGP": 65032000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "view": "Landscape",
+    "deliveryNote": "2027-12-31",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "ALX-VL1-296-B",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 376,
+    "priceEGP": 65032000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "view": "Landscape",
+    "deliveryNote": "2027-12-31",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "ALX-VL1-300-P",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 383,
+    "priceEGP": 78142000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "view": "Landscape",
+    "deliveryNote": "2027-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "ALX-VL1-305-P",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 383,
+    "priceEGP": 78142000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "view": "Landscape",
+    "deliveryNote": "2027-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "ALX-VL1-306-P",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 383,
+    "priceEGP": 78142000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "view": "Landscape",
+    "deliveryNote": "2027-06-30",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "ALX-VL2-307-P",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 283,
+    "priceEGP": 58063000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "view": "Landscape",
+    "deliveryNote": "2027-12-31",
+    "paymentPlan": "10% down · 8 years equal installments"
+  }
+]

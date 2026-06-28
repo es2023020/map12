@@ -1,0 +1,67 @@
+[
+  {
+    "id": "RG-CO-1-27",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 62,
+    "priceEGP": 15529140,
+    "status": "Available",
+    "cluster": "Phase 1.0",
+    "areaNote": "Floor: 1.0 | Building: CO | Design: C",
+    "view": "Over View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "RG-CO-1-52",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 62,
+    "priceEGP": 16305597,
+    "status": "Available",
+    "cluster": "Phase 1.0",
+    "areaNote": "Floor: 1.0 | Building: CO | Design: C",
+    "view": "Over View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "RG-CO-2-23",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 343,
+    "priceEGP": 68406798,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Floor: 2.0 | Building: 1.0 | Design: CO",
+    "view": "Atrium",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "RG-CO-3-05",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 41,
+    "priceEGP": 8332111,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Floor: 3.0 | Building: 1.0 | Design: CO",
+    "view": "Atrium",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "RG-CO-3-33",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 103,
+    "priceEGP": 20521462,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Floor: 3.0 | Building: 1.0 | Design: CO",
+    "view": "Atrium",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  }
+]

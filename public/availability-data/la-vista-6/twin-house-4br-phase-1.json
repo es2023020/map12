@@ -1,0 +1,28 @@
+[
+  {
+    "id": "LV-A-6-004",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 400,
+    "priceEGP": 60000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 400 sqm | - Sea View",
+    "view": "Sea View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-A-6-007",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 18950000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 180 sqm | – 21,690,000 - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years equal installments"
+  }
+]

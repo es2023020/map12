@@ -1,0 +1,27 @@
+[
+  {
+    "id": "SL-AMPM-01",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 147,
+    "priceEGP": 36400000,
+    "status": "Available",
+    "cluster": "AM:PM",
+    "areaNote": "Suez Road face",
+    "view": "Street View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% DP · 7 years"
+  },
+  {
+    "id": "SL-AMPM-02",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 244,
+    "priceEGP": 58600000,
+    "status": "Available",
+    "cluster": "AM:PM",
+    "view": "Street View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% DP · 7 years"
+  }
+]

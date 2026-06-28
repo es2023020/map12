@@ -1,0 +1,54 @@
+[
+  {
+    "id": "LV-PAZ-002",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 14250000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 150 sqm | to 14,850,000 - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-PAZ-003",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 13500000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 150 sqm | to 14,100,000 - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-PAZ-004",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 14250000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 150 sqm | to 14,850,000 - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-PAZ-005",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 13500000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 150 sqm | to 14,250,000 - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years equal installments"
+  }
+]

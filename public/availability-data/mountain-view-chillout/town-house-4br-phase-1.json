@@ -1,0 +1,38 @@
+[
+  {
+    "id": "mountain-view-chillout-1",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 210,
+    "priceEGP": 26400000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Pool View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "mountain-view-chillout-2",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 215,
+    "priceEGP": 30360000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "mountain-view-chillout-3",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 34320000,
+    "status": "Last Unit",
+    "cluster": "Phase 1",
+    "view": "Sea View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 7 years equal installments"
+  }
+]

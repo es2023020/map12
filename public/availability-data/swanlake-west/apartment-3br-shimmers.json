@@ -1,0 +1,41 @@
+[
+  {
+    "id": "SLW-APT-01",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 151,
+    "priceEGP": 22900000,
+    "status": "Available",
+    "cluster": "Shimmers",
+    "areaNote": "Lagoon View",
+    "view": "Water View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP · 10 years"
+  },
+  {
+    "id": "SLW-APT-02",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 172,
+    "priceEGP": 26600000,
+    "status": "Available",
+    "cluster": "Shimmers",
+    "areaNote": "Lagoon View",
+    "view": "Water View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP · 10 years"
+  },
+  {
+    "id": "SLW-APT-03",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 204,
+    "priceEGP": 25300000,
+    "status": "Available",
+    "cluster": "Twain",
+    "areaNote": "Lagoon View",
+    "view": "Water View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP · 10 years"
+  }
+]

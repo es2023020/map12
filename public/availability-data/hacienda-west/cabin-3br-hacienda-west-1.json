@@ -1,0 +1,100 @@
+[
+  {
+    "id": "WST-LDG-512-M",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 112,
+    "priceEGP": 37872880,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2025-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-LDG-514-M",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 112,
+    "priceEGP": 37872880,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2025-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-LDG-516",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 39384800,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2025-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-LDG-517-M",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 118,
+    "priceEGP": 38730820,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2025-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-LDG-518",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 118,
+    "priceEGP": 38730820,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2025-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-LDG-519",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 179,
+    "priceEGP": 56416580,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "view": "Landscape",
+    "deliveryNote": "2025-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-CAB-B057",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 127,
+    "priceEGP": 84256790,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "areaNote": "Garden: 102 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2025-12-31",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "WST-CAB-B058",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 127,
+    "priceEGP": 84256790,
+    "status": "Available",
+    "cluster": "Hacienda West (1)",
+    "areaNote": "Garden: 102 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2025-12-31",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

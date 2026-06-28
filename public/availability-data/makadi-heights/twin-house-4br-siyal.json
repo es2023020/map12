@@ -1,0 +1,67 @@
+[
+  {
+    "id": "SI/016B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 144,
+    "priceEGP": 24709999,
+    "status": "Available",
+    "cluster": "Siyal",
+    "areaNote": "Garden: 179 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "SI/024A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "priceEGP": 25970000,
+    "status": "Available",
+    "cluster": "Siyal",
+    "areaNote": "Garden: 211 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "SI/034A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "priceEGP": 25269999,
+    "status": "Available",
+    "cluster": "Siyal",
+    "areaNote": "Garden: 206 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "SI/034B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 144,
+    "priceEGP": 24740000,
+    "status": "Available",
+    "cluster": "Siyal",
+    "areaNote": "Garden: 205 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "SI/035A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "priceEGP": 24940000,
+    "status": "Available",
+    "cluster": "Siyal",
+    "areaNote": "Garden: 195 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  }
+]

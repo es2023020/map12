@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SL-PH-101",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 115,
+    "priceEGP": 23900000,
+    "status": "Available",
+    "cluster": "The Phoenix",
+    "areaNote": "Garden: 85 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% DP · 7 years"
+  },
+  {
+    "id": "SL-PH-102",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 128,
+    "priceEGP": 19500000,
+    "status": "Available",
+    "cluster": "The Phoenix",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% DP · 7 years"
+  },
+  {
+    "id": "SL-PH-201",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 155,
+    "priceEGP": 31300000,
+    "status": "Available",
+    "cluster": "The Phoenix",
+    "areaNote": "Garden: 107 sqm",
+    "view": "Pool View",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% DP · 7 years"
+  },
+  {
+    "id": "SL-TE-101",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 85,
+    "priceEGP": 8100000,
+    "status": "Available",
+    "cluster": "Terraces",
+    "view": "Central Park View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP · 10 years"
+  },
+  {
+    "id": "SL-TE-102",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 125,
+    "priceEGP": 13200000,
+    "status": "Available",
+    "cluster": "Terraces",
+    "view": "Central Park View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP · 10 years"
+  },
+  {
+    "id": "SL-TE-201",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 15800000,
+    "status": "Available",
+    "cluster": "Terraces",
+    "view": "Central Park View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP · 10 years"
+  },
+  {
+    "id": "SL-GL-101",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 85,
+    "priceEGP": 8300000,
+    "status": "Available",
+    "cluster": "The Great Lawn Apartments",
+    "view": "Central Park View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP · 10 years"
+  },
+  {
+    "id": "SL-GL-102",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 143,
+    "priceEGP": 14100000,
+    "status": "Available",
+    "cluster": "The Great Lawn Apartments",
+    "view": "Central Park View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP · 10 years"
+  },
+  {
+    "id": "SL-GL-201",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 171,
+    "priceEGP": 17100000,
+    "status": "Available",
+    "cluster": "The Great Lawn Apartments",
+    "view": "Central Park View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP · 10 years"
+  }
+]

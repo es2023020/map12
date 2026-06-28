@@ -1,0 +1,67 @@
+[
+  {
+    "id": "PC-10A",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 241,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "Single Family",
+    "areaNote": "Floor: Ground+First+Second",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "8% DP + 4% first installment + rest over 8 years"
+  },
+  {
+    "id": "PC-11A",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 241,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "Single Family",
+    "areaNote": "Floor: Ground+First+Second",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "8% DP + 4% first installment + rest over 8 years"
+  },
+  {
+    "id": "PC-11B",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 244,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "Single Family",
+    "areaNote": "Floor: Ground+First+Second",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "8% DP + 4% first installment + rest over 8 years"
+  },
+  {
+    "id": "PE-18B",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 244,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "Single Family",
+    "areaNote": "Floor: Ground+First+Second",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "8% DP + 4% first installment + rest over 8 years"
+  },
+  {
+    "id": "PE-25B",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 244,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "Single Family",
+    "areaNote": "Floor: Ground+First",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "8% DP + 4% first installment + rest over 8 years"
+  }
+]

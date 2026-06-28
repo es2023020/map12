@@ -1,0 +1,54 @@
+[
+  {
+    "id": "LVRH-TW01",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 140,
+    "priceEGP": 26800000,
+    "status": "Available",
+    "cluster": "Islands",
+    "areaNote": "Garden: 40 sqm",
+    "view": "Landscape",
+    "deliveryNote": "Ready To Move",
+    "paymentPlan": "20% DP + 4 years"
+  },
+  {
+    "id": "LVRH-TW02",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 66000000,
+    "status": "Available",
+    "cluster": "Islands",
+    "areaNote": "Garden: 60 sqm",
+    "view": "Sea View",
+    "deliveryNote": "Ready To Move",
+    "paymentPlan": "20% DP + 4 years"
+  },
+  {
+    "id": "LVRH-LTW01",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 160,
+    "priceEGP": 27800000,
+    "status": "Available",
+    "cluster": "Lagoons",
+    "areaNote": "Garden: 40 sqm",
+    "view": "Lagoon View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP + 7 years"
+  },
+  {
+    "id": "LVRH-LTW02",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 250,
+    "priceEGP": 46300000,
+    "status": "Available",
+    "cluster": "Lagoons",
+    "areaNote": "Garden: 80 sqm",
+    "view": "Lagoon View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP + 7 years"
+  }
+]

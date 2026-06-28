@@ -11,14 +11,43 @@ import {
   Calculator, Filter, ArrowUpDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { createServerFn } from "@tanstack/react-start";
+import * as fs from "node:fs";
+import * as path from "node:path";
+import process from "node:process";
+
+export const getUnitsList = createServerFn({ method: "GET" })
+  .validator((d: { projectSlug: string; typeSlug: string }) => d)
+  .handler(async ({ data: { projectSlug, typeSlug } }) => {
+    try {
+      const jsonPath = path.resolve(process.cwd(), "public", "availability-data", projectSlug, `${typeSlug}.json`);
+      if (fs.existsSync(jsonPath)) {
+        return JSON.parse(fs.readFileSync(jsonPath, "utf-8")) as UnitListing[];
+      }
+    } catch (e) {
+      console.error("Error reading unit file:", e);
+    }
+    return [] as UnitListing[];
+  });
 
 export const Route = createFileRoute("/units/$projectSlug/$typeSlug")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const compound = compoundBySlug(params.projectSlug);
     if (!compound) throw notFound();
     const result = breakdownByTypeSlug(params.projectSlug, params.typeSlug);
     if (!result) throw notFound();
-    return { compound, project: result.project, breakdown: result.breakdown };
+    
+    // Call server function to fetch units
+    const units = await getUnitsList({ data: { projectSlug: params.projectSlug, typeSlug: params.typeSlug } });
+    
+    return {
+      compound,
+      project: result.project,
+      breakdown: {
+        ...result.breakdown,
+        units
+      }
+    };
   },
   head: ({ loaderData }) => ({
     meta: loaderData ? [

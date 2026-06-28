@@ -1,0 +1,28 @@
+[
+  {
+    "id": "LV-EL-P-005",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 137,
+    "priceEGP": 10448000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 137 sqm | to 13,010,000",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-008",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 206,
+    "priceEGP": 13370000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 206 sqm | to 18,790,000",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  }
+]

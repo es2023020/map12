@@ -1,0 +1,28 @@
+[
+  {
+    "id": "R2 H5-H55",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 168,
+    "priceEGP": 13806000,
+    "status": "Available",
+    "cluster": "H55",
+    "areaNote": "Floor: 2ND",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "R2 H5-H56",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 190,
+    "priceEGP": 15615000,
+    "status": "Available",
+    "cluster": "H56",
+    "areaNote": "Floor: 2ND",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years equal installments"
+  }
+]

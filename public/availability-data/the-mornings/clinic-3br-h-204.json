@@ -1,0 +1,67 @@
+[
+  {
+    "id": "0 H-H-201",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 77,
+    "priceEGP": 13498000,
+    "status": "Available",
+    "cluster": "H-201",
+    "areaNote": "Floor: 2.ND",
+    "view": "n/a",
+    "deliveryNote": "2027",
+    "paymentPlan": "5%+5% over 8 years · 25% cash discount available"
+  },
+  {
+    "id": "0 H-H-204",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 43,
+    "priceEGP": 7725000,
+    "status": "Available",
+    "cluster": "H-204",
+    "areaNote": "Floor: 2.ND",
+    "view": "n/a",
+    "deliveryNote": "2027",
+    "paymentPlan": "5%+5% over 8 years · 25% cash discount available"
+  },
+  {
+    "id": "0 H-H-205",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 43,
+    "priceEGP": 7725000,
+    "status": "Available",
+    "cluster": "H-205",
+    "areaNote": "Floor: 2.ND",
+    "view": "n/a",
+    "deliveryNote": "2027",
+    "paymentPlan": "5%+5% over 8 years · 25% cash discount available"
+  },
+  {
+    "id": "0 H-H-206",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 43,
+    "priceEGP": 7725000,
+    "status": "Available",
+    "cluster": "H-206",
+    "areaNote": "Floor: 2.ND",
+    "view": "n/a",
+    "deliveryNote": "2027",
+    "paymentPlan": "5%+5% over 8 years · 25% cash discount available"
+  },
+  {
+    "id": "0 H-H-207",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 43,
+    "priceEGP": 7725000,
+    "status": "Available",
+    "cluster": "H-207",
+    "areaNote": "Floor: 2.ND",
+    "view": "n/a",
+    "deliveryNote": "2027",
+    "paymentPlan": "5%+5% over 8 years · 25% cash discount available"
+  }
+]

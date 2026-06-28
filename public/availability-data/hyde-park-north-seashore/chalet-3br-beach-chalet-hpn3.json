@@ -1,0 +1,80 @@
+[
+  {
+    "id": "HPN3/SVB-55/G03",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 76,
+    "priceEGP": 13090000,
+    "status": "Available",
+    "cluster": "Shorevill",
+    "areaNote": "Floor: None | Garden: 47.2 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPN3/SVB-53/G02",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 77,
+    "priceEGP": 13250000,
+    "status": "Available",
+    "cluster": "Shorevill",
+    "areaNote": "Floor: None | Garden: 47.3 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPN3/SVB-52/G03",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 76,
+    "priceEGP": 13030000,
+    "status": "Available",
+    "cluster": "Shorevill",
+    "areaNote": "Floor: None | Garden: 47.2 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPN3/SVA-41/201",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 104,
+    "priceEGP": 19470000,
+    "status": "Available",
+    "cluster": "Shorevill",
+    "areaNote": "Floor: 2",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPN3/SVA-39/102",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 135,
+    "priceEGP": 22230000,
+    "status": "Available",
+    "cluster": "Shorevill",
+    "areaNote": "Floor: 1",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPN3/BCB-22/G04",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "priceEGP": 22450000,
+    "status": "Available",
+    "cluster": "Beach Chalet - HPN3",
+    "areaNote": "Floor: None | Garden: 58.9 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "HPC/WR-1C/601",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "priceEGP": 15400000,
+    "status": "Available",
+    "cluster": "Water Residence",
+    "areaNote": "Floor: 6",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPC/WR-3C/306",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "priceEGP": 15470000,
+    "status": "Available",
+    "cluster": "Water Residence",
+    "areaNote": "Floor: 3",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPC/WR-3C/601",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "priceEGP": 15240000,
+    "status": "Available",
+    "cluster": "Water Residence",
+    "areaNote": "Floor: 6",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

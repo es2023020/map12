@@ -1,0 +1,62 @@
+[
+  {
+    "id": "97H-TIN-035-A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 38119000,
+    "status": "Available",
+    "cluster": "97H-Phase1",
+    "view": "Landscape",
+    "deliveryNote": "2030-12-31",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "97H-TIN-073-A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 38308000,
+    "status": "Available",
+    "cluster": "97H-Phase1",
+    "view": "Landscape",
+    "deliveryNote": "2030-12-31",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "97H-TIN-242-A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 37962000,
+    "status": "Available",
+    "cluster": "97H-Phase1",
+    "view": "Landscape",
+    "deliveryNote": "2030-12-31",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "97H-TIN-243-A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 37962000,
+    "status": "Available",
+    "cluster": "97H-Phase1",
+    "view": "Landscape",
+    "deliveryNote": "2030-12-31",
+    "paymentPlan": "10% down · 9 years equal installments"
+  },
+  {
+    "id": "97H-TIN-243-B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 37962000,
+    "status": "Available",
+    "cluster": "97H-Phase1",
+    "view": "Landscape",
+    "deliveryNote": "2030-12-31",
+    "paymentPlan": "10% down · 9 years equal installments"
+  }
+]

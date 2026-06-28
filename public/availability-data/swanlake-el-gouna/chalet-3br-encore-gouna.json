@@ -1,0 +1,41 @@
+[
+  {
+    "id": "SLG-EN-01",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 115,
+    "priceEGP": 25800000,
+    "status": "Available",
+    "cluster": "Encore Gouna",
+    "areaNote": "Greek design, sandy beach",
+    "view": "Lagoon View",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% DP · 6 years"
+  },
+  {
+    "id": "SLG-EN-02",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 129,
+    "priceEGP": 27600000,
+    "status": "Available",
+    "cluster": "Encore Gouna",
+    "areaNote": "Greek design, sandy beach",
+    "view": "Lagoon View",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% DP · 6 years"
+  },
+  {
+    "id": "SLG-EN-03",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 165,
+    "priceEGP": 35100000,
+    "status": "Available",
+    "cluster": "Encore Gouna",
+    "areaNote": "Greek design, sandy beach",
+    "view": "Lagoon View",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% DP · 6 years"
+  }
+]

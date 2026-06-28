@@ -1,0 +1,67 @@
+[
+  {
+    "id": "HPS/TW/20A",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "priceEGP": 31300000,
+    "status": "Available",
+    "cluster": "Signature Villas",
+    "areaNote": "Floor: None",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPS/TW/31B",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "priceEGP": 32780000,
+    "status": "Available",
+    "cluster": "Signature Villas",
+    "areaNote": "Floor: None",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPS/TW/32A",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "priceEGP": 32820000,
+    "status": "Available",
+    "cluster": "Signature Villas",
+    "areaNote": "Floor: None",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPS/TW/32B",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "priceEGP": 32340000,
+    "status": "Available",
+    "cluster": "Signature Villas",
+    "areaNote": "Floor: None",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPS/TW/49A",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "priceEGP": 32090000,
+    "status": "Available",
+    "cluster": "Signature Villas",
+    "areaNote": "Floor: None",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "HWS-VLA-101",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 374,
+    "priceEGP": 107688000,
+    "status": "Available",
+    "cluster": "HWS-Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2029-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HWS-VLA-106",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 374,
+    "priceEGP": 110110000,
+    "status": "Available",
+    "cluster": "HWS-Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2029-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HWS-VLA-118",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 374,
+    "priceEGP": 109839000,
+    "status": "Available",
+    "cluster": "HWS-Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2029-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HWS-VLA-119",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 374,
+    "priceEGP": 107688000,
+    "status": "Available",
+    "cluster": "HWS-Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2029-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HWS-VLB-201",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 278,
+    "priceEGP": 72179000,
+    "status": "Available",
+    "cluster": "HWS-Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2029-06-30",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

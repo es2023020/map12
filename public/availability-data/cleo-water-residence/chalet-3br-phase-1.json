@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cleo-water-residence-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 90,
+    "priceEGP": 10000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Pool View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "cleo-water-residence-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 11500000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "cleo-water-residence-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 13000000,
+    "status": "Last Unit",
+    "cluster": "Phase 1",
+    "view": "Sea View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 8 years equal installments"
+  }
+]

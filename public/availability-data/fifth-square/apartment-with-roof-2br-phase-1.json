@@ -1,0 +1,54 @@
+[
+  {
+    "id": "fs-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 187,
+    "priceEGP": 24600000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "+ 120m Roof",
+    "view": "Main Street",
+    "deliveryNote": "Ready to Move",
+    "paymentPlan": "25% DP over 6 years"
+  },
+  {
+    "id": "fs-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 170,
+    "priceEGP": 22300000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "+ 115m Roof",
+    "view": "Garden",
+    "deliveryNote": "Ready to Move",
+    "paymentPlan": "25% DP over 6 years"
+  },
+  {
+    "id": "fs-4",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 167,
+    "priceEGP": 22000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "+ 115m Roof",
+    "view": "Garden",
+    "deliveryNote": "Ready to Move",
+    "paymentPlan": "25% DP over 6 years"
+  },
+  {
+    "id": "fs-7",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 134,
+    "priceEGP": 19500000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "+ 48m Roof, Very prime location",
+    "view": "Lagoon",
+    "deliveryNote": "Ready to Move",
+    "paymentPlan": "25% DP over 6 years"
+  }
+]

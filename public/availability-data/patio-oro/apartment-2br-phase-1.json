@@ -1,0 +1,54 @@
+[
+  {
+    "id": "LV-PATI-001",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 40,
+    "priceEGP": 18200000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 40 sqm | – 25M Semi - Finished",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 6 years equal installments"
+  },
+  {
+    "id": "LV-PATI-003",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 30,
+    "priceEGP": 18000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 30 sqm | Fully Finished",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 6 years equal installments"
+  },
+  {
+    "id": "LV-PATI-004",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 40,
+    "priceEGP": 18200000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 40 sqm | – 30M Fully Finished",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 6 years equal installments"
+  },
+  {
+    "id": "LV-PATI-006",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 40,
+    "priceEGP": 18900000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 40 sqm | – 20.5M Semi - Finished",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 6 years equal installments"
+  }
+]

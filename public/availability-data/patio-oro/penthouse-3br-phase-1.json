@@ -1,0 +1,28 @@
+[
+  {
+    "id": "LV-PATI-002",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 164,
+    "priceEGP": 100,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 164 sqm | m - 21.5M Semi - Finished",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 6 years equal installments"
+  },
+  {
+    "id": "LV-PATI-005",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 220,
+    "priceEGP": 100,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 220 sqm | m - 26.5M – 32.8M Fully Finished",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 6 years equal installments"
+  }
+]

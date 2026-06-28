@@ -1,0 +1,54 @@
+[
+  {
+    "id": "B1-01",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "priceEGP": 32405573,
+    "status": "Available",
+    "cluster": "Mist",
+    "areaNote": "Floor: أرضي وأول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "B1-05",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "priceEGP": 28323178,
+    "status": "Available",
+    "cluster": "Mist",
+    "areaNote": "Floor: أرضي وأول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "B1-06",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "priceEGP": 28573826,
+    "status": "Available",
+    "cluster": "Mist",
+    "areaNote": "Floor: أرضي وأول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "B1-07",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "priceEGP": 33902870,
+    "status": "Available",
+    "cluster": "Mist",
+    "areaNote": "Floor: أرضي وأول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down · 7 years equal installments"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "LVBE-CH101",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 21000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% DP + 7 years"
+  },
+  {
+    "id": "LVBE-CHG01",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 24000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Garden: 60 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% DP + 7 years"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "HT-P226-01",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 130,
+    "priceEGP": 11200000,
+    "status": "Available",
+    "cluster": "Park 226",
+    "areaNote": "Lagoon View",
+    "view": "Water View",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% DP · 10 years"
+  },
+  {
+    "id": "HT-P226-02",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 176,
+    "priceEGP": 16300000,
+    "status": "Available",
+    "cluster": "Park 226",
+    "areaNote": "Lagoon View",
+    "view": "Water View",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% DP · 10 years"
+  },
+  {
+    "id": "HT-P226-03",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 198,
+    "priceEGP": 1800000,
+    "status": "Available",
+    "cluster": "Park 226",
+    "areaNote": "Lagoon View",
+    "view": "Water View",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% DP · 10 years"
+  },
+  {
+    "id": "HT-PV-01",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 168,
+    "priceEGP": 15500000,
+    "status": "Available",
+    "cluster": "Park View",
+    "areaNote": "RTM in 6 Months",
+    "view": "Landscape",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% DP · 8 years"
+  },
+  {
+    "id": "HT-PV-02",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 195,
+    "priceEGP": 16600000,
+    "status": "Available",
+    "cluster": "Park View",
+    "areaNote": "RTM in 6 Months",
+    "view": "Landscape",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% DP · 8 years"
+  }
+]

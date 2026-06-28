@@ -1,0 +1,67 @@
+[
+  {
+    "id": "MV4-A-VB-128-0",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 245,
+    "priceEGP": 37623325,
+    "status": "Available",
+    "cluster": "Army Share Apr 2026",
+    "areaNote": "| Roof: 55.54 sqm",
+    "view": "NA",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "MV4-A-VB-129-0",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 245,
+    "priceEGP": 37029638,
+    "status": "Available",
+    "cluster": "Army Share Apr 2026",
+    "areaNote": "| Roof: 55.54 sqm",
+    "view": "NA",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "MV4-A-VB-130-0",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 245,
+    "priceEGP": 36615833,
+    "status": "Available",
+    "cluster": "Army Share Apr 2026",
+    "areaNote": "| Roof: 55.54 sqm",
+    "view": "NA",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "MV4-A-VB-131-0",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 245,
+    "priceEGP": 37165685,
+    "status": "Available",
+    "cluster": "Army Share Apr 2026",
+    "areaNote": "| Roof: 55.54 sqm",
+    "view": "NA",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "MV4-A-VC-127-0",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 230,
+    "priceEGP": 34707385,
+    "status": "Available",
+    "cluster": "Army Share Apr 2026",
+    "areaNote": "| Roof: 41.31 sqm",
+    "view": "NA",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 7 years equal installments"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "JS-CH-01",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 90,
+    "priceEGP": 6000000,
+    "status": "Available",
+    "cluster": "Aqua Zone",
+    "areaNote": "Sea view Galala",
+    "view": "Sea View",
+    "deliveryNote": "2029",
+    "paymentPlan": "10% DP · 7 years"
+  },
+  {
+    "id": "JS-CH-02",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 135,
+    "priceEGP": 8500000,
+    "status": "Available",
+    "cluster": "Aqua Zone",
+    "areaNote": "Sea view Galala",
+    "view": "Sea View",
+    "deliveryNote": "2029",
+    "paymentPlan": "10% DP · 7 years"
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "LV-EL-P-001",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 85,
+    "priceEGP": 6773000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 85 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-002",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 85,
+    "priceEGP": 5940000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 85 sqm | to 6,006,000",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-003",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 137,
+    "priceEGP": 8570000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 137 sqm | to 11,600,000",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-004",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 137,
+    "priceEGP": 8736000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 137 sqm | to 10,380,00",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-006",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 212,
+    "priceEGP": 11720000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 212 sqm | to 17,210,000",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-007",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 212,
+    "priceEGP": 11260000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 212 sqm | to 16,770,000",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  }
+]

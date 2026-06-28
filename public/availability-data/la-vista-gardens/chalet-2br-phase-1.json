@@ -1,0 +1,80 @@
+[
+  {
+    "id": "LV-ENS-001",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 14250000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 150 sqm | – 14,850,000 - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 5 years equal installments"
+  },
+  {
+    "id": "LV-ENS-002",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "priceEGP": 12350000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 130 sqm | - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 5 years equal installments"
+  },
+  {
+    "id": "LV-ENS-003",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "priceEGP": 11700000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 130 sqm | - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 5 years equal installments"
+  },
+  {
+    "id": "LV-ENS-004",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 14250000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 150 sqm | to 14,850,000 - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 5 years equal installments"
+  },
+  {
+    "id": "LV-ENS-005",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 13500000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 150 sqm | to 13,800,000 - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 5 years equal installments"
+  },
+  {
+    "id": "LV-ENS-006",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 115,
+    "priceEGP": 9200000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 115 sqm | - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 5 years equal installments"
+  }
+]

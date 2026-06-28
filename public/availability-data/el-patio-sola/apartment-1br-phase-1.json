@@ -1,0 +1,80 @@
+[
+  {
+    "id": "LV-EL-P-001",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 84,
+    "priceEGP": 5930000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 84 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-002",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 123,
+    "priceEGP": 8330000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 123 sqm | Land/Garden: 20 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-003",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 123,
+    "priceEGP": 7990000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 123 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-004",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 208,
+    "priceEGP": 30,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 208 sqm | m to 60m 10,530,000 to 16,070,000",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-005",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 208,
+    "priceEGP": 9920000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 208 sqm | to 14,610,000",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-006",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 270,
+    "priceEGP": 17820000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 270 sqm | Land/Garden: 60 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  }
+]

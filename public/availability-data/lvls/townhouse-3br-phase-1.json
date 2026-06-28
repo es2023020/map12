@@ -1,0 +1,41 @@
+[
+  {
+    "id": "LV-SM-TH-143-D",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 35999106,
+    "status": "Available",
+    "cluster": "Phase-2",
+    "areaNote": "| Roof: 15 sqm",
+    "view": "D",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "LV-SM-TH-181-B",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 37700941,
+    "status": "Available",
+    "cluster": "Phase-1",
+    "areaNote": "| Roof: 15 sqm",
+    "view": "Middle",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "LV-SM-TH-230-A",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 28937945,
+    "status": "Available",
+    "cluster": "Phase-1",
+    "areaNote": "| Roof: 15 sqm",
+    "view": "Corner",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

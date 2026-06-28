@@ -1,0 +1,28 @@
+[
+  {
+    "id": "LV-PATI-002",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 264,
+    "priceEGP": 34500000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 264 sqm | Price: 34,500,000 & 35,200,000 EGP",
+    "view": "Landscape",
+    "deliveryNote": "2026",
+    "paymentPlan": "25% down · 4 years equal installments"
+  },
+  {
+    "id": "LV-PATI-005",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 264,
+    "priceEGP": 34500000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 264 sqm | Price: 34,500,000 & 35,200,000 EGP",
+    "view": "Landscape",
+    "deliveryNote": "2026",
+    "paymentPlan": "25% down · 4 years equal installments"
+  }
+]

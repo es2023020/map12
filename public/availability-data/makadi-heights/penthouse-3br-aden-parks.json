@@ -1,0 +1,110 @@
+[
+  {
+    "id": "AD/102-2-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 19010000,
+    "status": "Available",
+    "cluster": "Aden Parks",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "AD/105-2-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 19010000,
+    "status": "Available",
+    "cluster": "Aden Parks",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "AD/106-2-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 19010000,
+    "status": "Available",
+    "cluster": "Aden Parks",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "AD/107-2-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 19010000,
+    "status": "Available",
+    "cluster": "Aden Parks",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "AD/108-2-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 19010000,
+    "status": "Available",
+    "cluster": "Aden Parks",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "AD/112-2-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 16895000,
+    "status": "Available",
+    "cluster": "Aden Parks",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "AD/113-2-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 16895000,
+    "status": "Available",
+    "cluster": "Aden Parks",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "AD/94-2-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 16895000,
+    "status": "Available",
+    "cluster": "Aden Parks",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  },
+  {
+    "id": "AD/96-2-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "priceEGP": 18255000,
+    "status": "Available",
+    "cluster": "Aden Parks",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% downpayment over 7 years"
+  }
+]

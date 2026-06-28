@@ -1,0 +1,28 @@
+[
+  {
+    "id": "TB-APT-01",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 115,
+    "priceEGP": 8900000,
+    "status": "Available",
+    "cluster": "The Brooks Residence",
+    "areaNote": "Yasser El Beltagy design",
+    "view": "Lawn View",
+    "deliveryNote": "2028",
+    "paymentPlan": "8% Maint · 10 years"
+  },
+  {
+    "id": "TB-APT-02",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 190,
+    "priceEGP": 12000000,
+    "status": "Available",
+    "cluster": "The Brooks Residence",
+    "areaNote": "Yasser El Beltagy design",
+    "view": "Lawn View",
+    "deliveryNote": "2028",
+    "paymentPlan": "8% Maint · 10 years"
+  }
+]

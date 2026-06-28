@@ -1,0 +1,41 @@
+[
+  {
+    "id": "NHF-11-51",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 343,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "NHF",
+    "areaNote": "Floor: FIFTH",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "NHF: 10% DP over 7 years · NHN: 5%+5% over 8 years"
+  },
+  {
+    "id": "NHF-15B-22",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 218,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "NHF",
+    "areaNote": "Floor: SECOND",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "NHF: 10% DP over 7 years · NHN: 5%+5% over 8 years"
+  },
+  {
+    "id": "NHF-13A-G2",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 218,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "NHF",
+    "areaNote": "Floor: GROUND | Garden: 91 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "NHF: 10% DP over 7 years · NHN: 5%+5% over 8 years"
+  }
+]

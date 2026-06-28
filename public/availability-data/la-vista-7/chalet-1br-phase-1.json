@@ -1,0 +1,28 @@
+[
+  {
+    "id": "LV-A-7-001",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "priceEGP": 12325000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 145 sqm | - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2025",
+    "paymentPlan": "10% down · 5 years equal installments"
+  },
+  {
+    "id": "LV-A-7-002",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 11250000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 150 sqm | to 13,500,000 - Pool View",
+    "view": "Pool View",
+    "deliveryNote": "2025",
+    "paymentPlan": "10% down · 5 years equal installments"
+  }
+]

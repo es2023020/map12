@@ -1,0 +1,28 @@
+[
+  {
+    "id": "TB-VIL-01",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 235,
+    "priceEGP": 25900000,
+    "status": "Available",
+    "cluster": "The Brooks Villas",
+    "areaNote": "Land: 164 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "8% Maint · 10 years"
+  },
+  {
+    "id": "TB-VIL-02",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 244,
+    "priceEGP": 29600000,
+    "status": "Available",
+    "cluster": "The Brooks Villas",
+    "areaNote": "Land: 218 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "8% Maint · 10 years"
+  }
+]

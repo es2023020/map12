@@ -1,0 +1,62 @@
+[
+  {
+    "id": "RL-SA-065-1-GF",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 62108018,
+    "status": "Available",
+    "cluster": "R&T-Villa-SA Feb 2026",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down payment over 9 years equal installments"
+  },
+  {
+    "id": "RL-SA-069-C-GF",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 58219581,
+    "status": "Available",
+    "cluster": "R&T-Villa-SA Feb 2026",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down payment over 9 years equal installments"
+  },
+  {
+    "id": "RL-SA-070-A-GF",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 58931675,
+    "status": "Available",
+    "cluster": "R&T-Villa-SA Feb 2026",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down payment over 9 years equal installments"
+  },
+  {
+    "id": "RL-SA-070-B-GF",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 54567498,
+    "status": "Available",
+    "cluster": "R&T-Villa-SA Feb 2026",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down payment over 9 years equal installments"
+  },
+  {
+    "id": "RL-SA-070-C-GF",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "priceEGP": 56722932,
+    "status": "Available",
+    "cluster": "R&T-Villa-SA Feb 2026",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down payment over 9 years equal installments"
+  }
+]

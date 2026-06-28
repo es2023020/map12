@@ -62,7 +62,7 @@ export function AvailabilitySection({ data, projectSlug }: Props) {
               {data.breakdown.map((row, i) => {
                 const pct = Math.round((row.available / data.totalAvailable) * 100);
                 const slug = projectSlug ? unitTypeSlug(row) : null;
-                const hasListings = Boolean(row.units && row.units.length > 0);
+                const hasListings = row.available > 0;
                 const label = `${row.type}${row.beds ? ` · ${row.beds}BR` : ""}${row.cluster ? ` (${row.cluster})` : ""}`;
 
                 return (
@@ -119,7 +119,7 @@ export function AvailabilitySection({ data, projectSlug }: Props) {
                                 : "bg-secondary text-primary hover:bg-secondary/80"
                             }`}
                           >
-                            {hasListings ? `${row.units!.length} listed` : "View"}
+                            {hasListings ? `${row.available} listed` : "View"}
                             <ArrowRight className="h-3.5 w-3.5" />
                           </Link>
                         )}

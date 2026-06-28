@@ -1,0 +1,41 @@
+[
+  {
+    "id": "HPN3/6Plex/15E",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 182,
+    "priceEGP": 34340000,
+    "status": "Available",
+    "cluster": "Town Island - (HPN3)",
+    "areaNote": "Floor: None",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPN3/7Plex/11G",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 182,
+    "priceEGP": 41800000,
+    "status": "Available",
+    "cluster": "Town Island - (HPN3)",
+    "areaNote": "Floor: None",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "HPN3/6Plex/9F",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 182,
+    "priceEGP": 39290000,
+    "status": "Available",
+    "cluster": "Town Island - (HPN3)",
+    "areaNote": "Floor: None",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

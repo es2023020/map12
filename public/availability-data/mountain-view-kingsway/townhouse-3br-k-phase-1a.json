@@ -1,0 +1,26 @@
+[
+  {
+    "id": "KI1-TH4-157-C",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 16742949,
+    "status": "Available",
+    "cluster": "K-Phase-1A",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "KI1-TH4-165-C",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 16600455,
+    "status": "Available",
+    "cluster": "K-Phase-1A",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "10% down · 8 years equal installments"
+  }
+]

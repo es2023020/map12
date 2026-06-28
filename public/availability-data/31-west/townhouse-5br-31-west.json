@@ -1,0 +1,80 @@
+[
+  {
+    "id": "TH1102",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 225,
+    "priceEGP": 25486081,
+    "status": "Available",
+    "cluster": "31 West",
+    "areaNote": "Floor: أرضي و أول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "TH1103",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 225,
+    "priceEGP": 25318186,
+    "status": "Available",
+    "cluster": "31 West",
+    "areaNote": "Floor: أرضي و أول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "TH1201",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 225,
+    "priceEGP": 29206213,
+    "status": "Available",
+    "cluster": "31 West",
+    "areaNote": "Floor: أرضي و أول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "TH1204",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 225,
+    "priceEGP": 29602648,
+    "status": "Available",
+    "cluster": "31 West",
+    "areaNote": "Floor: أرضي و أول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "TH1304",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 225,
+    "priceEGP": 25985671,
+    "status": "Available",
+    "cluster": "31 West",
+    "areaNote": "Floor: أرضي و أول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "TH1305",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 225,
+    "priceEGP": 25514746,
+    "status": "Available",
+    "cluster": "31 West",
+    "areaNote": "Floor: أرضي و أول وغرف سطح",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down · 7 years equal installments"
+  }
+]

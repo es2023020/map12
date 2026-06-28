@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ASV0113",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 365,
+    "priceEGP": 208081582,
+    "status": "Available",
+    "cluster": "Elmasyaf",
+    "areaNote": "Floor: ارضي",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2027",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  },
+  {
+    "id": "ASV017",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 365,
+    "priceEGP": 238042926,
+    "status": "Available",
+    "cluster": "Elmasyaf",
+    "areaNote": "Floor: ارضي",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2030",
+    "paymentPlan": "10% down payment over 8 years equal installments"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "LVRH-V01",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 320,
+    "priceEGP": 100000000,
+    "status": "Available",
+    "cluster": "Islands",
+    "areaNote": "Garden: 100 sqm",
+    "view": "Landscape",
+    "deliveryNote": "Ready To Move",
+    "paymentPlan": "20% DP + 4 years"
+  },
+  {
+    "id": "LVRH-LV01",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 340,
+    "priceEGP": 67800000,
+    "status": "Available",
+    "cluster": "Lagoons",
+    "areaNote": "Garden: 100 sqm",
+    "view": "Lagoon View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% DP + 7 years"
+  }
+]

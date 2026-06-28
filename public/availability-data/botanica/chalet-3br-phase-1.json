@@ -1,0 +1,38 @@
+[
+  {
+    "id": "botanica-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 123,
+    "priceEGP": 17000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Pool View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "botanica-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 133,
+    "priceEGP": 19550000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "botanica-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 144,
+    "priceEGP": 22100000,
+    "status": "Last Unit",
+    "cluster": "Phase 1",
+    "view": "Sea View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 8 years equal installments"
+  }
+]

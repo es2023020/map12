@@ -1,0 +1,26 @@
+[
+  {
+    "id": "D4-T18-4",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 241,
+    "priceEGP": 30044440,
+    "status": "Available",
+    "cluster": "Trio",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2028",
+    "paymentPlan": "10% down · 7 years equal installments"
+  },
+  {
+    "id": "D4-T18-5",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 241,
+    "priceEGP": 30044440,
+    "status": "Available",
+    "cluster": "Trio",
+    "view": "Landscape",
+    "deliveryNote": "6/5/2028",
+    "paymentPlan": "10% down · 7 years equal installments"
+  }
+]

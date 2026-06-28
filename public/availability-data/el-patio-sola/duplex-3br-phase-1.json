@@ -1,0 +1,28 @@
+[
+  {
+    "id": "LV-EL-P-008",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 360,
+    "priceEGP": 20480000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 360 sqm | Land/Garden: 40 sqm | to 22,440,000",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "LV-EL-P-009",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 310,
+    "priceEGP": 20380000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "BUA: 310 sqm | Land/Garden: 28 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  }
+]
