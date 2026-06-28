@@ -92,7 +92,7 @@ const sahelRaw: SahelInput[] = [
   ["The Med", 192, "ras-el-hekma", "PRE Developments", 11, 2027, true],
   ["D-Bay", 190, "ras-el-hekma", "Tatweer Misr", 7, 2026, true],
   ["Jefaira", 190, "ras-el-hekma", "Inertia", 12, 2026, true],
-  ["The C", 188, "ras-el-hekma", "Coldwell Banker", 9, 2026, true],
+  ["The C", 188, "ras-el-hekma", "Il cazar", 9, 2026, true],
   ["Youd", 187, "ras-el-hekma", "Al Ahly Sabbour", 8, 2028, true],
   ["Salt", 185, "ras-el-hekma", "Tatweer Misr", 8, 2026, true],
   ["Katameya Coast", 184, "ras-el-hekma", "Starlight Developments", 9, 2026, true],
