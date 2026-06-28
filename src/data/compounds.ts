@@ -504,7 +504,7 @@ const newProjects: Compound[] = [
   {
     slug: "sadaf",
     name: "Sadaf",
-    destination: "north-coast",
+    destination: "sidi-abdelrahman",
     lat: 30.950, lng: 28.500,
     developer: "New Plan Developments",
     developerSlug: "new-plan-developments",
@@ -2282,10 +2282,10 @@ const newProjects: Compound[] = [
   {
     slug: "botanica",
     name: "Botanica",
-    destination: "sheikh-zayed",
-    lat: 30.052, lng: 30.925,
-    developer: "NGD",
-    developerSlug: "ngd",
+    destination: "new-administrative-capital",
+    lat: 30.025, lng: 31.745,  // R7 district, NAC
+    developer: "New Generation Developments",
+    developerSlug: "new-generation-developments",
     priceFrom: 17,
     deliveryYear: 2027,
     status: "Under Construction",
