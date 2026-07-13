@@ -1,0 +1,54 @@
+[
+  {
+    "id": "HT-VL-0-1",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 27800000,
+    "status": "Available",
+    "cluster": "The Valleys",
+    "areaNote": "Middle",
+    "view": "Landscape & Water Bodies",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 9 years"
+  },
+  {
+    "id": "HT-VL-0-2",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 27800000,
+    "status": "Available",
+    "cluster": "The Valleys",
+    "areaNote": "Middle",
+    "view": "Landscape & Water Bodies",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 9 years"
+  },
+  {
+    "id": "HT-VL-1-1",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 210,
+    "priceEGP": 30900000,
+    "status": "Available",
+    "cluster": "The Valleys",
+    "areaNote": "Corner",
+    "view": "Landscape & Water Bodies",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 9 years"
+  },
+  {
+    "id": "HT-VL-1-2",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 210,
+    "priceEGP": 30900000,
+    "status": "Available",
+    "cluster": "The Valleys",
+    "areaNote": "Corner",
+    "view": "Landscape & Water Bodies",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 9 years"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "ORA-SIL-1-1",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 300,
+    "priceEGP": 68300000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "ORA-SIL-1-2",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 300,
+    "priceEGP": 68600000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "ORA-SIL-1-3",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 300,
+    "priceEGP": 68900000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "ORA-SIL-1-4",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 300,
+    "priceEGP": 69200000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "ORA-SIL-1-5",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 300,
+    "priceEGP": 69500000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "ORA-SIL-1-6",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 300,
+    "priceEGP": 69800000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "ORA-SIL-1-7",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 300,
+    "priceEGP": 70100000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 8 years"
+  }
+]

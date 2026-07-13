@@ -1,0 +1,26 @@
+[
+  {
+    "id": "HT-VL-2-1",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 188,
+    "priceEGP": 33000000,
+    "status": "Available",
+    "cluster": "The Valleys",
+    "view": "Landscape & Water Bodies",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 9 years"
+  },
+  {
+    "id": "HT-VL-2-2",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 188,
+    "priceEGP": 33000000,
+    "status": "Available",
+    "cluster": "The Valleys",
+    "view": "Landscape & Water Bodies",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% down · 9 years"
+  }
+]

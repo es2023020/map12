@@ -1,0 +1,28 @@
+[
+  {
+    "id": "fs-6",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 160,
+    "priceEGP": 21800000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "+ 66m Garden",
+    "view": "Pool",
+    "deliveryNote": "Ready to Move",
+    "paymentPlan": "25% DP over 6 years"
+  },
+  {
+    "id": "fs-10",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 136,
+    "priceEGP": 18500000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "+ 61m Garden, Very prime location",
+    "view": "Pool",
+    "deliveryNote": "1 Year",
+    "paymentPlan": "25% DP over 6 years"
+  }
+]

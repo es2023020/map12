@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ZN-OG-13-401PHJ",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 153,
+    "priceEGP": 17224000,
+    "status": "Available",
+    "cluster": "Ogma",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-OG-35-401PHG",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 98,
+    "priceEGP": 15324000,
+    "status": "Available",
+    "cluster": "Ogma",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-OG-36-401PHH",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 103,
+    "priceEGP": 14663000,
+    "status": "Available",
+    "cluster": "Ogma",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-OG-12-401PHG",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 98,
+    "priceEGP": 16621000,
+    "status": "Available",
+    "cluster": "Ogma",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-OG-32-401PHH",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 103,
+    "priceEGP": 16507000,
+    "status": "Available",
+    "cluster": "Ogma",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-OG-37-401PHG",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 98,
+    "priceEGP": 13673000,
+    "status": "Available",
+    "cluster": "Ogma",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  }
+]

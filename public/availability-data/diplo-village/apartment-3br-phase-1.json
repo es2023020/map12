@@ -1,0 +1,38 @@
+[
+  {
+    "id": "diplo-village-4",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 80,
+    "priceEGP": 5000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Lagoon View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 6 years equal installments"
+  },
+  {
+    "id": "diplo-village-5",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "priceEGP": 5750000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Clubhouse View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 6 years equal installments"
+  },
+  {
+    "id": "diplo-village-6",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 6500000,
+    "status": "Last Unit",
+    "cluster": "Phase 1",
+    "view": "Pool View",
+    "deliveryNote": "2026",
+    "paymentPlan": "10% down · 6 years equal installments"
+  }
+]

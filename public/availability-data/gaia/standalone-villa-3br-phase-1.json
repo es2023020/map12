@@ -1,0 +1,28 @@
+[
+  {
+    "id": "L6-L6",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 265,
+    "priceEGP": 47670000,
+    "status": "Available",
+    "cluster": "L6",
+    "areaNote": "Floor: GRD | Garden: 229.0 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "L6",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 265,
+    "priceEGP": 47670000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Garden: 229.0 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "telal-soul-7",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 260,
+    "priceEGP": 18000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Garden View",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% DP over 8 or 10 years equal installments"
+  },
+  {
+    "id": "telal-soul-8",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 287,
+    "priceEGP": 20700000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Main Street",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% DP over 8 or 10 years equal installments"
+  },
+  {
+    "id": "telal-soul-9",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 315,
+    "priceEGP": 23400000,
+    "status": "Last Unit",
+    "cluster": "Phase 1",
+    "view": "Lagoon View",
+    "deliveryNote": "2030",
+    "paymentPlan": "5% DP over 8 or 10 years equal installments"
+  }
+]

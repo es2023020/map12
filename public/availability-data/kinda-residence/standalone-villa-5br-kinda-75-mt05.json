@@ -1,0 +1,28 @@
+[
+  {
+    "id": "Kinda - 75 - MT05 - 01",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 392,
+    "priceEGP": 53028424,
+    "status": "Available",
+    "cluster": "Kinda - 75 - MT05",
+    "areaNote": "Floor: V",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "Kinda - 75 - MH13 - 01",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 460,
+    "priceEGP": 77861337,
+    "status": "Available",
+    "cluster": "Kinda - 75 - MH13",
+    "areaNote": "Floor: V",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  }
+]

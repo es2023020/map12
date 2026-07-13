@@ -1,0 +1,62 @@
+[
+  {
+    "id": "TM-101",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 200,
+    "priceEGP": 12800000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "TM-103",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 200,
+    "priceEGP": 14400000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "TM-105",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 200,
+    "priceEGP": 16000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "TM-107",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 200,
+    "priceEGP": 17600000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "TM-109",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 200,
+    "priceEGP": 19200000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  }
+]

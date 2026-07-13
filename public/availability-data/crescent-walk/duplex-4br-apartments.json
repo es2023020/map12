@@ -1,0 +1,54 @@
+[
+  {
+    "id": "PS-02-41",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 241,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "Apartments",
+    "areaNote": "Floor: Fourth",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "8% DP + 4% first installment + rest over 8 years"
+  },
+  {
+    "id": "PS-02-42",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 208,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "Apartments",
+    "areaNote": "Floor: Fourth",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "8% DP + 4% first installment + rest over 8 years"
+  },
+  {
+    "id": "PS-13-41",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 208,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "Apartments",
+    "areaNote": "Floor: Fourth",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "8% DP + 4% first installment + rest over 8 years"
+  },
+  {
+    "id": "PS-13-42",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 241,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "Apartments",
+    "areaNote": "Floor: Fourth",
+    "view": "Landscape",
+    "deliveryNote": "2027",
+    "paymentPlan": "8% DP + 4% first installment + rest over 8 years"
+  }
+]

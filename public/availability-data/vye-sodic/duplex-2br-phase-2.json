@@ -1,0 +1,98 @@
+[
+  {
+    "id": "VYE-U-101",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 15400000,
+    "status": "Available",
+    "cluster": "Phase 2",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 7 years"
+  },
+  {
+    "id": "VYE-U-103",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 16200000,
+    "status": "Available",
+    "cluster": "Phase 2",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 7 years"
+  },
+  {
+    "id": "VYE-U-105",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 17000000,
+    "status": "Available",
+    "cluster": "Phase 2",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 7 years"
+  },
+  {
+    "id": "VYE-U-107",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 17800000,
+    "status": "Available",
+    "cluster": "Phase 2",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 7 years"
+  },
+  {
+    "id": "VYE-U-109",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 18600000,
+    "status": "Available",
+    "cluster": "Phase 2",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 7 years"
+  },
+  {
+    "id": "VYE-U-111",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 19400000,
+    "status": "Available",
+    "cluster": "Phase 2",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 7 years"
+  },
+  {
+    "id": "VYE-U-113",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 20200000,
+    "status": "Available",
+    "cluster": "Phase 2",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 7 years"
+  },
+  {
+    "id": "VYE-U-115",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 21000000,
+    "status": "Available",
+    "cluster": "Phase 2",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 7 years"
+  }
+]

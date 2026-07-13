@@ -1,0 +1,122 @@
+[
+  {
+    "id": "CRX-TIN-11A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 281,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "225.5",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "CRX-TIN-32B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 281,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "225.5",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "CRX-TIN-33A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 281,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "225.5",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "CRX-TIN-33B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 281,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "225.5",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "CRX-TIN-34A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 281,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "225.5",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "CRX-TIN-34B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 281,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "225.5",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "CRX-TIN-65A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 281,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "225.5",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "CRX-TIN-65B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 281,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "225.5",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "CRX-TIN-11B",
+    "beds": 28,
+    "finishing": "Core & Shell",
+    "areaSqm": 225,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "None",
+    "paymentPlan": "10% down · 8 years equal installments"
+  },
+  {
+    "id": "CRX-TIN-12A",
+    "beds": 28,
+    "finishing": "Core & Shell",
+    "areaSqm": 225,
+    "priceEGP": 0,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "view": "Landscape",
+    "deliveryNote": "None",
+    "paymentPlan": "10% down · 8 years equal installments"
+  }
+]

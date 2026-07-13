@@ -1,0 +1,26 @@
+[
+  {
+    "id": "HBLU-VLB-321",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 278,
+    "priceEGP": 69620000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2030-06-30",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "HBLU-VLB-331",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 278,
+    "priceEGP": 69620000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1",
+    "view": "Landscape",
+    "deliveryNote": "2030-06-30",
+    "paymentPlan": "5% down · 8 years"
+  }
+]

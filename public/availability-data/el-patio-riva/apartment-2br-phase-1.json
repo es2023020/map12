@@ -1,0 +1,41 @@
+[
+  {
+    "id": "LVR-A101",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 85,
+    "priceEGP": 5973000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Typical",
+    "view": "Landscape",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "LVR-A201",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 131,
+    "priceEGP": 9550000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Typical",
+    "view": "Landscape",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "LVR-A301",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 184,
+    "priceEGP": 14010000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Typical",
+    "view": "Landscape",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years"
+  }
+]

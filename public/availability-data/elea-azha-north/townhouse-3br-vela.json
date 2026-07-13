@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ZN-VE-38-38TH-M",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 165,
+    "priceEGP": 27503000,
+    "status": "Available",
+    "cluster": "Vela",
+    "areaNote": "Garden: 76.0 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-VE-72-72TH-M",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 165,
+    "priceEGP": 27503000,
+    "status": "Available",
+    "cluster": "Vela",
+    "areaNote": "Garden: 76.0 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "SL-OFF-A02",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 497,
+    "priceEGP": 128100000,
+    "status": "Available",
+    "cluster": "AM:PM",
+    "areaNote": "1st Floor",
+    "view": "Suez Road View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years"
+  },
+  {
+    "id": "SL-OFF-A04",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 195,
+    "priceEGP": 47500000,
+    "status": "Available",
+    "cluster": "AM:PM",
+    "areaNote": "5th Floor",
+    "view": "Suez Road View",
+    "deliveryNote": "2027",
+    "paymentPlan": "10% down · 7 years"
+  }
+]

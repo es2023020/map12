@@ -1,0 +1,62 @@
+[
+  {
+    "id": "UTC The Peak P1-V-V-89",
+    "beds": 6,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 110656888,
+    "status": "Available",
+    "cluster": "The Peak",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "UTC The Peak P1-V-V-18",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 68973888,
+    "status": "Available",
+    "cluster": "The Peak",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "UTC The Peak P1-V-V-72",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 99089888,
+    "status": "Available",
+    "cluster": "The Peak",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "UTC The Peak P1-V-V-73",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 141123888,
+    "status": "Available",
+    "cluster": "The Peak",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "UTC The Peak P1-V-V-113",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 103788888,
+    "status": "Available",
+    "cluster": "The Peak",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years"
+  }
+]

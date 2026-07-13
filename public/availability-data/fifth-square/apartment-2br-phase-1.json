@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fs-1",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 115,
+    "priceEGP": 14600000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Garden",
+    "deliveryNote": "Ready to Move",
+    "paymentPlan": "25% DP over 6 years"
+  },
+  {
+    "id": "fs-8",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 95,
+    "priceEGP": 13400000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Garden",
+    "deliveryNote": "1 Year",
+    "paymentPlan": "25% DP over 6 years"
+  },
+  {
+    "id": "fs-9",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 115,
+    "priceEGP": 14000000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Garden",
+    "deliveryNote": "1 Year",
+    "paymentPlan": "25% DP over 6 years"
+  },
+  {
+    "id": "fs-11",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 158,
+    "priceEGP": 20500000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Garden",
+    "deliveryNote": "1 Year",
+    "paymentPlan": "25% DP over 6 years"
+  }
+]

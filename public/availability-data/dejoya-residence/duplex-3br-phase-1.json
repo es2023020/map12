@@ -1,0 +1,80 @@
+[
+  {
+    "id": "DJR-DU-15-1",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 282,
+    "priceEGP": 22380000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Garden Duplex",
+    "view": "Landscape & Lagoons",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · up to 15 years equal installments"
+  },
+  {
+    "id": "DJR-DU-15-2",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 282,
+    "priceEGP": 22380000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Garden Duplex",
+    "view": "Landscape & Lagoons",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · up to 15 years equal installments"
+  },
+  {
+    "id": "DJR-DU-15-3",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 282,
+    "priceEGP": 22380000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Garden Duplex",
+    "view": "Landscape & Lagoons",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · up to 15 years equal installments"
+  },
+  {
+    "id": "DJR-DU-16-1",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 290,
+    "priceEGP": 23100000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Garden Duplex",
+    "view": "Landscape & Lagoons",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · up to 15 years equal installments"
+  },
+  {
+    "id": "DJR-DU-16-2",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 290,
+    "priceEGP": 23100000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Garden Duplex",
+    "view": "Landscape & Lagoons",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · up to 15 years equal installments"
+  },
+  {
+    "id": "DJR-DU-16-3",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 290,
+    "priceEGP": 23100000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "areaNote": "Garden Duplex",
+    "view": "Landscape & Lagoons",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · up to 15 years equal installments"
+  }
+]

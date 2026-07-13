@@ -1,0 +1,62 @@
+[
+  {
+    "id": "SALT-TO-3-1",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 28150000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Lagoon & Sea View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "SALT-TO-3-2",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 28300000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Lagoon & Sea View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "SALT-TO-3-3",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 28450000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Lagoon & Sea View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "SALT-TO-3-4",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 28600000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Lagoon & Sea View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years"
+  },
+  {
+    "id": "SALT-TO-3-5",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 28750000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "view": "Lagoon & Sea View",
+    "deliveryNote": "2029",
+    "paymentPlan": "5% down · 8 years"
+  }
+]

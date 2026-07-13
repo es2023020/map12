@@ -1,0 +1,93 @@
+[
+  {
+    "id": "ZN-LU-27-27TW-D-1",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 210,
+    "priceEGP": 38653000,
+    "status": "Available",
+    "cluster": "Lunas",
+    "areaNote": "Garden: 126.05 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-LU-25-25TW-D-1",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 210,
+    "priceEGP": 38715000,
+    "status": "Available",
+    "cluster": "Lunas",
+    "areaNote": "Garden: 131.05 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-LU-36-36TW-E",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 34191000,
+    "status": "Available",
+    "cluster": "Lunas",
+    "areaNote": "Garden: 119.7 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-LU-26-26TW-D-2",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 215,
+    "priceEGP": 39118000,
+    "status": "Available",
+    "cluster": "Lunas",
+    "areaNote": "Garden: 138.25 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-LU-28-28TW-D-2",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 215,
+    "priceEGP": 39205000,
+    "status": "Available",
+    "cluster": "Lunas",
+    "areaNote": "Garden: 145.25 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-LU-29-29TW-D-1",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 210,
+    "priceEGP": 39530000,
+    "status": "Available",
+    "cluster": "Lunas",
+    "areaNote": "Garden: 136.05 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  },
+  {
+    "id": "ZN-LU-34-34TW-E",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 34191000,
+    "status": "Available",
+    "cluster": "Lunas",
+    "areaNote": "Garden: 119.7 sqm",
+    "view": "Landscape",
+    "deliveryNote": "2028",
+    "paymentPlan": "5% down · 8 years equal installments"
+  }
+]
