@@ -33,6 +33,7 @@ import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as DevelopersSlugRouteImport } from './routes/developers.$slug'
 import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
 import { Route as DashboardProfileRouteImport } from './routes/dashboard.profile'
+import { Route as DashboardMapsRouteImport } from './routes/dashboard.maps'
 import { Route as DashboardLeadsRouteImport } from './routes/dashboard.leads'
 import { Route as DashboardFavoritesRouteImport } from './routes/dashboard.favorites'
 import { Route as DashboardCompareRouteImport } from './routes/dashboard.compare'
@@ -162,6 +163,11 @@ const DashboardProfileRoute = DashboardProfileRouteImport.update({
   path: '/profile',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardMapsRoute = DashboardMapsRouteImport.update({
+  id: '/maps',
+  path: '/maps',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardLeadsRoute = DashboardLeadsRouteImport.update({
   id: '/leads',
   path: '/leads',
@@ -228,6 +234,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/compare': typeof DashboardCompareRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
   '/dashboard/leads': typeof DashboardLeadsRoute
+  '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/developers/$slug': typeof DevelopersSlugRoute
@@ -258,6 +265,7 @@ export interface FileRoutesByTo {
   '/dashboard/compare': typeof DashboardCompareRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
   '/dashboard/leads': typeof DashboardLeadsRoute
+  '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/developers/$slug': typeof DevelopersSlugRoute
@@ -293,6 +301,7 @@ export interface FileRoutesById {
   '/dashboard/compare': typeof DashboardCompareRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
   '/dashboard/leads': typeof DashboardLeadsRoute
+  '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/developers/$slug': typeof DevelopersSlugRoute
@@ -329,6 +338,7 @@ export interface FileRouteTypes {
     | '/dashboard/compare'
     | '/dashboard/favorites'
     | '/dashboard/leads'
+    | '/dashboard/maps'
     | '/dashboard/profile'
     | '/destinations/$slug'
     | '/developers/$slug'
@@ -359,6 +369,7 @@ export interface FileRouteTypes {
     | '/dashboard/compare'
     | '/dashboard/favorites'
     | '/dashboard/leads'
+    | '/dashboard/maps'
     | '/dashboard/profile'
     | '/destinations/$slug'
     | '/developers/$slug'
@@ -393,6 +404,7 @@ export interface FileRouteTypes {
     | '/dashboard/compare'
     | '/dashboard/favorites'
     | '/dashboard/leads'
+    | '/dashboard/maps'
     | '/dashboard/profile'
     | '/destinations/$slug'
     | '/developers/$slug'
@@ -595,6 +607,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardProfileRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/maps': {
+      id: '/dashboard/maps'
+      path: '/maps'
+      fullPath: '/dashboard/maps'
+      preLoaderRoute: typeof DashboardMapsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/leads': {
       id: '/dashboard/leads'
       path: '/leads'
@@ -661,6 +680,7 @@ interface DashboardRouteChildren {
   DashboardCompareRoute: typeof DashboardCompareRoute
   DashboardFavoritesRoute: typeof DashboardFavoritesRoute
   DashboardLeadsRoute: typeof DashboardLeadsRoute
+  DashboardMapsRoute: typeof DashboardMapsRoute
   DashboardProfileRoute: typeof DashboardProfileRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
 }
@@ -672,6 +692,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardCompareRoute: DashboardCompareRoute,
   DashboardFavoritesRoute: DashboardFavoritesRoute,
   DashboardLeadsRoute: DashboardLeadsRoute,
+  DashboardMapsRoute: DashboardMapsRoute,
   DashboardProfileRoute: DashboardProfileRoute,
   DashboardIndexRoute: DashboardIndexRoute,
 }

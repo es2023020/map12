@@ -1,7 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useStore, type Lead } from "@/lib/store";
 import { compounds } from "@/data/compounds";
 import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 import { 
   Sparkles, 
   AlertCircle, 
@@ -14,7 +15,8 @@ import {
   ArrowRight,
   BrainCircuit,
   Search,
-  Sparkle
+  Sparkle,
+  X
 } from "lucide-react";
 
 export const Route = createFileRoute("/dashboard/ai-assistant")({
@@ -78,7 +80,7 @@ function AIAssistantPage() {
                                 c.developer.toLowerCase().includes(interestKeyword);
         
         // Match entry price
-        const matchesBudget = c.startPrice <= lead.budget;
+        const matchesBudget = c.priceFrom <= lead.budget;
         
         return matchesInterest && matchesBudget;
       }).slice(0, 3); // Top 3 matches
@@ -213,7 +215,7 @@ function AIAssistantPage() {
                             <div className="text-[9px] text-muted-foreground mt-0.5">{match.destination}</div>
                           </div>
                           <div className="flex items-center justify-between text-[9px] border-t border-border/30 pt-1 mt-1">
-                            <span className="font-semibold text-primary">EGP {match.startPrice}M+</span>
+                            <span className="font-semibold text-primary">EGP {match.priceFrom}M+</span>
                             <Link to={`/projects/${match.slug}`} className="text-accent hover:underline flex items-center gap-0.5 font-bold">
                               View <ArrowRight className="h-2 w-2" />
                             </Link>

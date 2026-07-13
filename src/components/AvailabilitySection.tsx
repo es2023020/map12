@@ -30,7 +30,11 @@ export function AvailabilitySection({ data, projectSlug }: Props) {
               Live Connected Inventory
             </div>
             <div className="font-display text-2xl font-extrabold text-emerald-950 dark:text-emerald-50 leading-tight">
-              {data.totalAvailable.toLocaleString()} units available
+              {data.totalAvailable > 0 ? (
+                <>{data.totalAvailable.toLocaleString()} units available</>
+              ) : (
+                <span className="text-amber-600 dark:text-amber-400">Not updated yet</span>
+              )}
             </div>
           </div>
         </div>
@@ -84,8 +88,8 @@ export function AvailabilitySection({ data, projectSlug }: Props) {
                       </div>
                     </td>
                     <td className="px-5 py-3.5 text-right">
-                      <span className="inline-flex items-center justify-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary">
-                        {row.available}
+                      <span className={`inline-flex items-center justify-center rounded-full px-2.5 py-0.5 text-xs font-bold ${row.available > 0 ? 'bg-primary/10 text-primary' : 'bg-amber-100 text-amber-700 dark:bg-amber-950/30 dark:text-amber-400'}`}>
+                        {row.available > 0 ? row.available : "Not updated yet"}
                       </span>
                     </td>
                     <td className="px-5 py-3.5 text-right text-muted-foreground font-medium">

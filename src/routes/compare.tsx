@@ -7,7 +7,7 @@ import { useStore } from "@/lib/store";
 import { 
   GitCompareArrows, Search, ChevronDown, Check, Star, 
   MapPin, Calendar, Building2, Wallet, Waves, ArrowRight,
-  TrendingDown, Info, ShieldCheck, ArrowUpDown, Sliders
+  TrendingDown, Info, ShieldCheck, ArrowUpDown, Sliders, Download
 } from "lucide-react";
 
 export const Route = createFileRoute("/compare")({
@@ -225,8 +225,8 @@ function ComparePage() {
       },
       { 
         label: "Active Listings Volume", 
-        displayA: `${specsA.qty} units available ${largerQty === "A" ? "★ Higher" : ""}`,
-        displayB: `${specsB.qty} units available ${largerQty === "B" ? "★ Higher" : ""}`,
+        displayA: specsA.qty > 0 ? `${specsA.qty} units available ${largerQty === "A" ? "★ Higher" : ""}` : `Not updated yet`,
+        displayB: specsB.qty > 0 ? `${specsB.qty} units available ${largerQty === "B" ? "★ Higher" : ""}` : `Not updated yet`,
         icon: Star,
         isDifferent: specsA.qty !== specsB.qty
       },
@@ -239,6 +239,31 @@ function ComparePage() {
     }
     return comparisonRows;
   }, [comparisonRows, showDiffsOnly]);
+
+  // Download PDF using browser print dialog (print only the comparison report)
+  const handleDownloadPDF = () => {
+    const printContent = document.getElementById("comparison-report-container");
+    if (!printContent) return;
+    const originalTitle = document.title;
+    document.title = `PropTrack — ${compA?.name ?? "Project A"} vs ${compB?.name ?? "Project B"}`;
+    const style = document.createElement("style");
+    style.id = "print-only-style";
+    style.innerHTML = `
+      @media print {
+        body > * { display: none !important; }
+        #comparison-report-container { display: block !important; }
+        #comparison-report-container * { display: revert !important; }
+        .no-print { display: none !important; }
+      }
+    `;
+    document.head.appendChild(style);
+    window.print();
+    document.title = originalTitle;
+    setTimeout(() => {
+      const s = document.getElementById("print-only-style");
+      if (s) s.remove();
+    }, 1000);
+  };
 
   return (
     <Shell>
@@ -430,7 +455,7 @@ function ComparePage() {
         </div>
 
         {compA && compB && specsA && specsB ? (
-          <div className="space-y-8 animate-fade-in">
+          <div id="comparison-report-container" className="space-y-8 animate-fade-in">
             {/* Visual Analytics / Metrics Bar */}
             <div className="grid gap-6 md:grid-cols-3 bg-secondary/20 p-6 rounded-3xl border border-border/60 shadow-soft">
               {/* Starting Price Metric */}
@@ -553,9 +578,18 @@ function ComparePage() {
                   {highlightDiffs ? "Highlights On" : "Highlights Off"}
                 </button>
               </div>
-              <span className="text-xs text-muted-foreground font-semibold">
-                Showing {visibleRows.length} attributes
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-muted-foreground font-semibold">
+                  Showing {visibleRows.length} attributes
+                </span>
+                <button
+                  onClick={handleDownloadPDF}
+                  className="no-print inline-flex items-center gap-1.5 rounded-full bg-accent text-accent-foreground px-4 py-1.5 text-xs font-bold transition-all hover:bg-accent/80 shadow-sm"
+                >
+                  <Download className="h-3.5 w-3.5" />
+                  Download PDF
+                </button>
+              </div>
             </div>
 
             {/* Project Header Cards */}

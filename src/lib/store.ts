@@ -1,5 +1,13 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { persist, createJSONStorage } from "zustand/middleware";
+
+// Session-scoped login: on every page load we check if a browser session is still active.
+// sessionStorage is cleared when the browser tab/window is fully closed, so this
+// guarantees the user must re-login after closing the app.
+const SESSION_KEY = "proptrack-session-active";
+const isSessionActive = () => typeof sessionStorage !== "undefined" && sessionStorage.getItem(SESSION_KEY) === "1";
+const markSessionActive = () => { if (typeof sessionStorage !== "undefined") sessionStorage.setItem(SESSION_KEY, "1"); };
+const clearSession = () => { if (typeof sessionStorage !== "undefined") sessionStorage.removeItem(SESSION_KEY); };
 
 export type LeadStage = "new" | "contacted" | "viewing" | "negotiating" | "closed";
 export type ActivityType = "note" | "whatsapp" | "stage" | "meeting" | "system";
@@ -251,6 +259,7 @@ export const useStore = create<State>()(
               customBrochures: savedData?.customBrochures || [],
               customProfiles: savedData?.customProfiles || []
             });
+            markSessionActive();
             return true;
           }
           return false;
@@ -323,6 +332,7 @@ export const useStore = create<State>()(
               userData: nextUserData
             };
           });
+          markSessionActive();
           return true;
         },
 
@@ -357,6 +367,7 @@ export const useStore = create<State>()(
             customBrochures: [],
             customProfiles: []
           });
+          clearSession();
         },
 
         toggleFavorite: (slug) =>
@@ -621,6 +632,23 @@ export const useStore = create<State>()(
         }
       };
     },
-    { name: "proptrack-broker" },
+    {
+      name: "proptrack-broker",
+      onRehydrateStorage: () => (state) => {
+        // If the browser session was closed (sessionStorage cleared), wipe the user
+        // field from the rehydrated state so the user must log in again.
+        if (state && state.user && !isSessionActive()) {
+          state.user = null;
+          state.favorites = [];
+          state.compareList = [];
+          state.leads = [];
+          state.agentNotes = "### Agent Scratchpad\n";
+          state.agentTasks = [];
+          state.customShortcuts = [];
+          state.customBrochures = [];
+          state.customProfiles = [];
+        }
+      },
+    },
   ),
 );

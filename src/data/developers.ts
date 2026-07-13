@@ -11,11 +11,6 @@ export type Developer = {
   landBank?: string;
   unitsDelivered?: string;
   structure?: string;
-  "Dunes Development": "Dunes Development — premium West Cairo developer behind high-end residential and commercial communities like V-Levels and V-Residence in Sheikh Zayed.",
-  "Arkan Palm": "Arkan Palm Developments — developer of prestigious landmarks in West Cairo including NMQ, 205 Sheikh Zayed, and ONE33.",
-  "RMC Developments": "RMC Developments (Resort Management & Construction) — established resort developer behind the iconic original Ghazala Bay destination on the North Coast.",
-  "G Developments": "G Developments — premier developer behind upscale coastal resorts like Playa Ghazala Bay on the North Coast.",
-  "Arabella Developments": "Arabella Group — premium real estate developer with over 35 years of construction history, known for Arabella Plaza Mall and Direction White in Sahel.",
 };
 
 const blurbs: Record<string, string> = {

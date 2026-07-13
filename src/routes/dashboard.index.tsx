@@ -28,6 +28,7 @@ import {
   Share2,
   Eye
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/dashboard/")({
   component: DashboardOverview,

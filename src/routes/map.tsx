@@ -501,10 +501,9 @@ function DetailPanel({
             <MiniStat label="Sizes" value={active.unitSizes ?? "—"} />
           </div>
 
-          {/* Live Availability Info */}
           {(() => {
             const avail = availability.find((a) => a.slug === active.slug);
-            if (!avail || avail.totalAvailable === 0) return null;
+            if (!avail) return null;
             return (
               <div className="rounded-xl border border-emerald-100 bg-emerald-50/50 p-3 dark:border-emerald-950/20 dark:bg-emerald-950/10">
                 <div className="flex items-center justify-between">
@@ -514,11 +513,17 @@ function DetailPanel({
                   </div>
                   <span className="text-[9px] text-emerald-600 dark:text-emerald-400">Updated {avail.lastUpdated}</span>
                 </div>
-                <div className="mt-1.5 flex items-baseline gap-1">
-                  <span className="text-lg font-bold text-emerald-900 dark:text-emerald-100">{avail.totalAvailable}</span>
-                  <span className="text-xs text-emerald-700 dark:text-emerald-400">units available</span>
-                </div>
-                {avail.breakdown.length > 0 && (
+                {avail.totalAvailable > 0 ? (
+                  <div className="mt-1.5 flex items-baseline gap-1">
+                    <span className="text-lg font-bold text-emerald-900 dark:text-emerald-100">{avail.totalAvailable}</span>
+                    <span className="text-xs text-emerald-700 dark:text-emerald-400">units available</span>
+                  </div>
+                ) : (
+                  <div className="mt-1.5">
+                    <span className="text-sm font-bold text-amber-600 dark:text-amber-400">Not updated yet</span>
+                  </div>
+                )}
+                {avail.totalAvailable > 0 && avail.breakdown.length > 0 && (
                   <div className="mt-2 border-t border-emerald-100/50 pt-2 dark:border-emerald-900/20">
                     <div className="text-[9px] font-semibold uppercase tracking-wider text-emerald-700/80 dark:text-emerald-400/80 mb-1">Available Types</div>
                     <div className="flex flex-wrap gap-1">

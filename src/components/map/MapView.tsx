@@ -122,6 +122,7 @@ export function MapView({
         .pt-popup-stat-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; margin-bottom: 1px; }
         .pt-popup-stat-value { font-size: 12px; font-weight: 600; color: #1a2b3c; }
         .pt-popup-avail { font-size: 11px; color: #16a34a; font-weight: 600; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 4px 8px; display: inline-block; margin-bottom: 8px; }
+        .pt-popup-avail-none { font-size: 11px; color: #d97706; font-weight: 600; background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 4px 8px; display: inline-block; margin-bottom: 8px; }
         .pt-popup-types { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 8px; }
         .pt-popup-type { font-size: 10px; background: #f1f5f9; color: #475569; border-radius: 99px; padding: 2px 7px; font-weight: 500; }
         .pt-popup-btn { display: block; width: 100%; text-align: center; background: #1a2b3c; color: #fff; border-radius: 6px; padding: 7px 10px; font-size: 12px; font-weight: 600; text-decoration: none; margin-top: 4px; }
@@ -139,7 +140,7 @@ export function MapView({
         style={{ height: "100%", width: "100%" }}
       >
         <LayersControl position="topright">
-          <LayersControl.BaseLayer checked name="Streets">
+          <LayersControl.BaseLayer name="Streets">
             <TileLayer
               attribution="&copy; OpenStreetMap &copy; CARTO"
               url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
@@ -154,24 +155,8 @@ export function MapView({
               maxZoom={19}
             />
           </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Wikimapia Satellite Hybrid">
-            <TileLayer
-              attribution="Map &copy; Wikimapia"
-              url="http://i{s}.wikimapia.org/?x={x}&y={y}&zoom={z}&type=hybrid&key=3F982F58-7F9183CE-7062C621-4D295418-CAED2D59-CB05F1E2-22EEB064-1E90E75"
-              subdomains={["0", "1", "2", "3"]}
-              maxZoom={19}
-            />
-          </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Wikimapia Road Map">
-            <TileLayer
-              attribution="Map &copy; Wikimapia"
-              url="http://i{s}.wikimapia.org/?x={x}&y={y}&zoom={z}&type=map&key=3F982F58-7F9183CE-7062C621-4D295418-CAED2D59-CB05F1E2-22EEB064-1E90E75"
-              subdomains={["0", "1", "2", "3"]}
-              maxZoom={19}
-            />
-          </LayersControl.BaseLayer>
 
-          <LayersControl.BaseLayer name="Satellite Hybrid">
+          <LayersControl.BaseLayer checked name="Satellite Hybrid">
             <LayerGroup>
               <TileLayer
                 attribution="Tiles &copy; Esri"
@@ -210,7 +195,7 @@ export function MapView({
           if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;
           const areaColor_ = destinationColor(c.destination);
           const avail = getAvailableCount(c.slug);
-          const availStr = avail > 0 ? `<div class="pt-popup-avail">✓ ${avail} units available</div>` : "";
+          const availStr = avail > 0 ? `<div class="pt-popup-avail">✓ ${avail} units available</div>` : `<div class="pt-popup-avail-none">⏳ Not updated yet</div>`;
           const typesHtml = (c.types ?? []).slice(0, 4).map((t: string) =>
             `<span class="pt-popup-type">${t}</span>`
           ).join("");

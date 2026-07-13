@@ -190,18 +190,14 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   },
   "d-bay": {
     destination: "al-dabaa",
-    km: 166,
-    city: "Al Dabaa, North Coast (km 166), Matrouh Governorate, Egypt",
+    km: 165,
+    city: "Al Dabaa, North Coast (km 165), Matrouh Governorate, Egypt",
     mapsUrl: "https://maps.google.com/?q=D-Bay+Sahel+Egypt",
-    lat: 31.12017,
-    lng: 27.84821,
   },
   "d-o-s-e": {
     destination: "al-dabaa",
     km: 174,
     city: "Al Dabaa, North Coast (km 174), Matrouh Governorate, Egypt",
-    lat: 30.02551,
-    lng: 31.48399,
   },
   "dayz": {
     destination: "new-alamein",
@@ -233,6 +229,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.47777,
   },
   "district-5": {
+  },
   "il-bosco-city": { destination: "mostakbal-city" },
   "at-east": { destination: "mostakbal-city" },
   "crescent-walk": { destination: "new-cairo" },
@@ -254,9 +251,6 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "patio-vida": { destination: "new-cairo" },
   "patio-hills": { destination: "new-cairo" },
   
-  // Obour Mapping
-    lat: 30.02597,
-  
   // Zayed Mappings
   "palm-hills-jirian": { destination: "new-zayed" },
   "mountain-view-jirian": { destination: "new-zayed" },
@@ -264,8 +258,6 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   // ── Developer Corrections & Scoped Defaults ──
   "sky-north": {
     developer: "Sky Abu Dhabi Developments",
-  },
-    lng: 31.47855,
   },
   "downtown-new-alamein": {
     destination: "new-alamein",
@@ -281,6 +273,14 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "el-patio-town": {
   },
   "el-patio-vera": {
+  },
+  "el-masyaf": {
+    destination: "ras-el-hekma",
+    km: 212,
+    developer: "M Squared",
+    city: "Ras El Hekma, North Coast (km 212), Matrouh Governorate, Egypt",
+    beachfront: true,
+    type: "Resort",
   },
   "elea-azha-north": {
     lat: 29.59864,
@@ -381,8 +381,6 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     destination: "ras-el-hekma",
     km: 207,
     city: "Ras El Hekma, North Coast (km 207), Matrouh Governorate, Egypt",
-    lat: 30.02836,
-    lng: 31.47844,
   },
   "il-latini-city-edge": {
     destination: "new-alamein",
@@ -416,8 +414,6 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     destination: "ras-el-hekma",
     km: 194,
     city: "Ras El Hekma, North Coast (km 194), Matrouh Governorate, Egypt",
-    lat: 30.02508,
-    lng: 31.47826,
   },
   "kai-sokhna": {
   },
@@ -425,8 +421,6 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     destination: "ras-el-hekma",
     km: 184,
     city: "Ras El Hekma, North Coast (km 184), Matrouh Governorate, Egypt",
-    lat: 30.02736,
-    lng: 31.48038,
   },
   "keeva": {
   },
@@ -440,8 +434,6 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     mapsUrl: "https://maps.google.com/?q=Koun+Ras+El+Hekma+North+Coast+Egypt",
     beachfront: true,
     type: "Resort",
-    lat: 30.02948,
-    lng: 31.48103,
   },
   "kynd-residence-gaia": {
     lat: 30.92912,
@@ -728,6 +720,14 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     lat: 29.60253,
     lng: 32.32882,
+  },
+  "playa-seashell": {
+    destination: "ras-el-hekma",
+    km: 206,
+    developer: "G Developments",
+    city: "Ras El Hekma, North Coast (km 206), Matrouh Governorate, Egypt",
+    beachfront: true,
+    type: "Resort",
   },
   "px": {
     lat: 30.03306,

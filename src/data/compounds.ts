@@ -72,15 +72,17 @@ const sahelRaw: SahelInput[] = [
   ["Modon Ras El Hekma", 220, "ras-el-hekma", "Modon", 20, 2028, true],
   ["Ramla", 215, "ras-el-hekma", "Marakez", 10, 2027, true],
   ["Azha", 214, "ras-el-hekma", "Madaar", 9, 2026, true],
+  ["El Masyaf", 212, "ras-el-hekma", "M Squared", 15, 2029, true],
   ["Naia Bay", 212, "ras-el-hekma", "Jumeirah Egypt", 8, 2026, true],
   ["Fouka Bay", 211, "ras-el-hekma", "Tatweer Misr", 10, 2026, true],
   ["Hacienda West", 208, "ras-el-hekma", "Palm Hills Developments", 14, 2027, true],
   ["Hyde Park North - Seashore", 207, "ras-el-hekma", "Hyde Park", 13, 2027, true],
-  ["Ogami", 205, "ras-el-hekma", "SODIC", 12, 2027, true],
+  ["Playa Seashell", 206, "ras-el-hekma", "G Developments", 14, 2027, true],
+  ["Ogami", 205, "ras-el-hekma", "SODIC", 22, 2029, true],
   ["La Vista Ras El Hekma", 204, "ras-el-hekma", "La Vista Developments", 11, 2027, true],
   ["Caesar Sodic", 202, "ras-el-hekma", "SODIC", 14, 2027, true],
-  ["Koun", 201, "ras-el-hekma", "Mabany Edris", 10, 2027, true],
-  ["Caesar Bay", 201, "ras-el-hekma", "Madaar", 12, 2026, true],
+  ["Koun", 202, "ras-el-hekma", "Mabany Edris", 6, 2027, true],
+  ["Caesar Bay", 201, "ras-el-hekma", "SODIC", 9, 2026, true],
   ["Lyv", 200, "ras-el-hekma", "Cred", 13, 2027, true],
   ["Mountain View Ras El Hekma", 200, "ras-el-hekma", "Mountain View", 16, 2028, true],
   ["Solare", 199, "ras-el-hekma", "Misr Italia", 10, 2027, true],
@@ -90,7 +92,6 @@ const sahelRaw: SahelInput[] = [
   ["Direction White", 193, "ras-el-hekma", "Arabella Developments", 8, 2026, true],
   ["Cali Coast Ras El Hekma", 193, "ras-el-hekma", "Maven Developments", 10, 2027, true],
   ["The Med", 192, "ras-el-hekma", "PRE Developments", 11, 2027, true],
-  ["D-Bay", 190, "ras-el-hekma", "Tatweer Misr", 7, 2026, true],
   ["Jefaira", 190, "ras-el-hekma", "Inertia", 12, 2026, true],
   ["The C", 188, "ras-el-hekma", "Ilcazar", 9, 2026, true],
   ["Youd", 187, "ras-el-hekma", "Al Ahly Sabbour", 8, 2028, true],
@@ -101,6 +102,7 @@ const sahelRaw: SahelInput[] = [
   ["Soul", 180, "ras-el-hekma", "Emaar Misr", 13, 2027, true],
   ["LVLS", 179, "ras-el-hekma", "Mountain View", 11, 2027, true],
   // AL DABAA
+  ["D-Bay", 165, "al-dabaa", "Tatweer Misr", 7, 2026, true],
   ["D.O.S.E", 174, "al-dabaa", "Akam Al Rajhi Developments", 9, 2026, true],
   ["The Waterway", 173, "al-dabaa", "Equity", 8, 2025, false],
   ["Seazen", 172, "al-dabaa", "Al Qamzi Developments", 8, 2026, true],
@@ -127,6 +129,7 @@ const sahelRaw: SahelInput[] = [
   ["Stella Sidi Abdel Rahman", 125, "sidi-abdelrahman", "Stella Di Mare", 7, 2024, true],
   ["Diplo 3", 125, "sidi-abdelrahman", "NCB", 6, 2025, false],
   ["Hacienda Bay", 124, "sidi-abdelrahman", "Palm Hills Developments", 16, 2024, true],
+  ["Plage", 120, "sidi-abdelrahman", "Mountain View", 12, 2027, true],
   // NEW ALAMEIN
   ["Zahra", 123, "new-alamein", "Wadi Degla", 7, 2026, true],
   ["Il Latini City Edge", 109, "new-alamein", "City Edge", 9, 2026, false],
@@ -144,7 +147,7 @@ const sahelRaw: SahelInput[] = [
 ];
 
 const cairoRaw: Array<{
-  name: string; destination: string; lat: number; lng: number; developer: string; price: number; year: number;
+  name: string; destination: string; lat: number; lng: number; developer: string; price: number; year: number; hero?: string; gallery?: string[];
 }> = [
   { name: "The Waterway New Cairo", destination: "new-cairo", lat: 30.0487, lng: 31.4860, developer: "The Waterway Developments", price: 15.0, year: 2023 },
   // AL MARASEM NEW CAIRO PROJECTS
@@ -197,7 +200,7 @@ const newZayedRaw: typeof cairoRaw = [
 
 // New destinations: 6th October, NAC, Mostakbal, Heliopolis, Sokhna, Red Sea, South Sinai, Fayoum
 const extraRaw: Array<{
-  name: string; destination: string; lat: number; lng: number; developer: string; price: number; year: number; beach?: boolean; type?: Compound["type"];
+  name: string; destination: string; lat: number; lng: number; developer: string; price: number; year: number; beach?: boolean; type?: Compound["type"]; hero?: string; gallery?: string[];
 }> = [
   // 6TH OCTOBER
   { name: "Palm Hills October", destination: "6th-october", lat: 29.965, lng: 30.940, developer: "Palm Hills Developments", price: 9, year: 2024 },
@@ -226,12 +229,10 @@ const extraRaw: Array<{
   { name: "IL Monte Galala", destination: "ain-sokhna", lat: 29.580, lng: 32.350, developer: "Tatweer Misr", price: 9, year: 2026, beach: true, type: "Resort" },
   { name: "Stella di Mare", destination: "ain-sokhna", lat: 29.615, lng: 32.320, developer: "Stella Di Mare", price: 8, year: 2024, beach: true, type: "Resort" },
   { name: "Murano", destination: "ain-sokhna", lat: 29.590, lng: 32.340, developer: "Wadi Degla", price: 6, year: 2026, beach: true, type: "Resort" },
-  { name: "El Masyaf", destination: "ain-sokhna", lat: 29.572, lng: 32.355, developer: "M Squared", price: 11, year: 2027, beach: true, type: "Resort" },
   { name: "Azzar Island", destination: "ain-sokhna", lat: 29.585, lng: 32.342, developer: "Reedy Group", price: 10, year: 2027, beach: true, type: "Resort" },
   { name: "Hacienda Red", destination: "ain-sokhna", lat: 29.608, lng: 32.325, developer: "Palm Hills Developments", price: 14, year: 2027, beach: true, type: "Resort" },
   { name: "Hacienda Waters", destination: "ain-sokhna", lat: 29.610, lng: 32.322, developer: "Palm Hills Developments", price: 15, year: 2027, beach: true, type: "Resort" },
   { name: "La Vista Cascada", destination: "ain-sokhna", lat: 29.592, lng: 32.348, developer: "La Vista Developments", price: 8, year: 2025, beach: true, type: "Resort" },
-  { name: "Playa Seashell", destination: "ain-sokhna", lat: 29.602, lng: 32.332, developer: "New Giza Developments", price: 9, year: 2026, beach: true, type: "Resort" },
   // RED SEA
   { name: "El Gouna", destination: "red-sea", lat: 27.395, lng: 33.677, developer: "Orascom Development", price: 18, year: 2024, beach: true, type: "Resort" },
   { name: "Makadi Heights", destination: "red-sea", lat: 26.978, lng: 33.880, developer: "Orascom Development", price: 9, year: 2026, beach: true, type: "Resort" },

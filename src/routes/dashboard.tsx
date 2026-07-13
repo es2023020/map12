@@ -45,6 +45,7 @@ const tabs = [
   { to: "/dashboard/campaigns" as const, label: "WhatsApp Campaigns", icon: Megaphone },
   { to: "/dashboard/favorites" as const, label: "Favorites Library", icon: Heart },
   { to: "/dashboard/compare" as const, label: "Unit Compare Engine", icon: GitCompareArrows },
+  { to: "/dashboard/maps" as const, label: "Maps Library", icon: Map },
   { to: "/dashboard/profile" as const, label: "My Profile Details", icon: User },
 ];
 
