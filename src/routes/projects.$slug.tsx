@@ -9,6 +9,7 @@ import { developerBySlug } from "@/data/developers";
 import { CompoundCard } from "@/components/CompoundCard";
 import { availabilityBySlug } from "@/data/availability";
 import { AvailabilitySection } from "@/components/AvailabilitySection";
+import { BrochureButton } from "@/components/BrochureButton";
 import { useStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
 import {
@@ -211,12 +212,15 @@ function CompoundPage() {
 
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/80">{c.blurb}</p>
 
-          {/* Key stats */}
+          {/* Key stats + Brochure */}
           <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
             <StatCard icon={Wallet} label="Starting from" value={`EGP ${c.priceFrom}M`} accent />
             <StatCard icon={Calendar} label="Delivery" value={String(c.deliveryYear)} />
             <StatCard icon={Ruler} label="Unit sizes" value={c.unitSizes ?? "—"} />
             <StatCard icon={Building2} label="Project size" value={c.areaSize ?? "—"} />
+          </div>
+          <div className="mt-4">
+            <BrochureButton projectSlug={c.slug} projectName={c.name} />
           </div>
 
           {/* Live Availability from developer sheets */}

@@ -357,7 +357,7 @@ function DashboardOverview() {
                 <div className="flex items-center justify-between border-t border-border/40 pt-2.5 mt-2">
                   <span className="font-bold text-primary text-xs">EGP {match.priceFrom}M+</span>
                   <div className="flex gap-2">
-                    <Link to={`/projects/${match.slug}`} className="text-[10px] font-bold text-accent hover:underline">Details →</Link>
+                    <Link to="/projects/$slug" params={{ slug: match.slug }} className="text-[10px] font-bold text-accent hover:underline">Details →</Link>
                   </div>
                 </div>
               </div>

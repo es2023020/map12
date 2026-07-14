@@ -216,7 +216,7 @@ function AIAssistantPage() {
                           </div>
                           <div className="flex items-center justify-between text-[9px] border-t border-border/30 pt-1 mt-1">
                             <span className="font-semibold text-primary">EGP {match.priceFrom}M+</span>
-                            <Link to={`/projects/${match.slug}`} className="text-accent hover:underline flex items-center gap-0.5 font-bold">
+                            <Link to="/projects/$slug" params={{ slug: match.slug }} className="text-accent hover:underline flex items-center gap-0.5 font-bold">
                               View <ArrowRight className="h-2 w-2" />
                             </Link>
                           </div>

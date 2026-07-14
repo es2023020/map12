@@ -71,7 +71,7 @@ const sahelRaw: SahelInput[] = [
   ["Hacienda Ras El Hekma", 238, "ras-el-hekma", "Palm Hills Developments", 15, 2027, true],
   ["Modon Ras El Hekma", 220, "ras-el-hekma", "Modon", 20, 2028, true],
   ["Ramla", 215, "ras-el-hekma", "Marakez", 10, 2027, true],
-  ["Azha", 214, "ras-el-hekma", "Madaar", 9, 2026, true],
+  ["Azha North Coast", 214, "ras-el-hekma", "Madaar", 9, 2026, true],
   ["El Masyaf", 212, "ras-el-hekma", "M Squared", 15, 2029, true],
   ["Naia Bay", 212, "ras-el-hekma", "Jumeirah Egypt", 8, 2026, true],
   ["Fouka Bay", 211, "ras-el-hekma", "Tatweer Misr", 10, 2026, true],
@@ -99,6 +99,7 @@ const sahelRaw: SahelInput[] = [
   ["Katameya Coast", 184, "ras-el-hekma", "Starlight Developments", 9, 2026, true],
   ["Safia", 183, "sidi-abdelrahman", "Maxim Developments", 8, 2026, true],
   ["Sa'ada Sahel", 183, "ras-el-hekma", "Horizon Egypt Developments", 9, 2027, true],
+  ["AZZAR Islands", 182, "ras-el-hekma", "Reedy Group", 10, 2027, true],
   ["Soul", 180, "ras-el-hekma", "Emaar Misr", 13, 2027, true],
   ["LVLS", 179, "ras-el-hekma", "Mountain View", 11, 2027, true],
   // AL DABAA
@@ -196,6 +197,7 @@ const newZayedRaw: typeof cairoRaw = [
   { name: "ZED West", destination: "new-zayed", lat: 30.1220, lng: 30.8750, developer: "Ora Developers", price: 16, year: 2027 },
 { name: "Solana", destination: "new-zayed", lat: 30.1080, lng: 30.8750, developer: "Ora Developers", price: 14, year: 2027, hero: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=80", gallery: ["https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=80", "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=80"] },
   { name: "Belle Vie New Zayed", destination: "new-zayed", lat: 30.1350, lng: 30.8800, developer: "Emaar Misr", price: 16, year: 2027 },
+  { name: "Elm Tree New Zayed", destination: "new-zayed", lat: 30.0824, lng: 30.8819, developer: "Westway Developments", price: 10, year: 2027 },
 ];
 
 // New destinations: 6th October, NAC, Mostakbal, Heliopolis, Sokhna, Red Sea, South Sinai, Fayoum
@@ -208,6 +210,7 @@ const extraRaw: Array<{
   { name: "Zayed 2000", destination: "6th-october", lat: 29.978, lng: 30.955, developer: "Wadi Degla", price: 7, year: 2023 },
   { name: "Sun Capital", destination: "6th-october", lat: 29.940, lng: 30.890, developer: "Arabia Holding", price: 6, year: 2025, hero: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80", gallery: ["https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80"] },
   { name: "Badya", destination: "6th-october", lat: 29.910, lng: 30.880, developer: "Palm Hills Developments", price: 8, year: 2027, type: "Mixed-use" },
+  { name: "Bamboo Extension", destination: "6th-october", lat: 30.0188, lng: 31.0293, developer: "M Squared Developments", price: 8, year: 2027 },
   // NEW ADMINISTRATIVE CAPITAL
   { name: "Il Bosco City", destination: "mostakbal-city", lat: 30.078, lng: 31.665, developer: "Misr Italia", price: 9, year: 2026 },
   { name: "La Verde", destination: "new-administrative-capital", lat: 30.015, lng: 31.730, developer: "La Verde Developments", price: 8, year: 2026 },
@@ -215,6 +218,8 @@ const extraRaw: Array<{
   { name: "Capital Heights", destination: "new-administrative-capital", lat: 30.025, lng: 31.720, developer: "Safwa Urban Development", price: 7, year: 2026 },
   { name: "City Oval", destination: "new-administrative-capital", lat: 30.010, lng: 31.755, developer: "Master Group Developments", price: 9, year: 2027 },
   { name: "Iconic Tower District", destination: "new-administrative-capital", lat: 30.025, lng: 31.745, developer: "ACUD", price: 14, year: 2026, type: "Mixed-use" },
+  { name: "Esse Residence NAC", destination: "new-administrative-capital", lat: 30.0067, lng: 31.7543, developer: "Cred Developments", price: 9, year: 2027 },
+  { name: "Business District NAC", destination: "new-administrative-capital", lat: 30.0167, lng: 31.7584, developer: "ACUD", price: 14, year: 2026, type: "Mixed-use" },
   // MOSTAKBAL CITY
   { name: "Bloomfields", destination: "mostakbal-city", lat: 30.078, lng: 31.665, developer: "Tatweer Misr", price: 9, year: 2027 },
   { name: "Mountain View Aliva", destination: "mostakbal-city", lat: 30.072, lng: 31.650, developer: "Mountain View", price: 10, year: 2027 },
@@ -233,6 +238,8 @@ const extraRaw: Array<{
   { name: "Hacienda Red", destination: "ain-sokhna", lat: 29.608, lng: 32.325, developer: "Palm Hills Developments", price: 14, year: 2027, beach: true, type: "Resort" },
   { name: "Hacienda Waters", destination: "ain-sokhna", lat: 29.610, lng: 32.322, developer: "Palm Hills Developments", price: 15, year: 2027, beach: true, type: "Resort" },
   { name: "La Vista Cascada", destination: "ain-sokhna", lat: 29.592, lng: 32.348, developer: "La Vista Developments", price: 8, year: 2025, beach: true, type: "Resort" },
+  { name: "Azha Sokhna", destination: "ain-sokhna", lat: 29.6637, lng: 32.3553, developer: "Madaar Developments", price: 15, year: 2025, beach: true, type: "Resort" },
+  { name: "Blumar Sokhna", destination: "ain-sokhna", lat: 29.5995, lng: 32.3537, developer: "Wadi Degla Developments", price: 8, year: 2026, beach: true, type: "Resort" },
   // RED SEA
   { name: "El Gouna", destination: "red-sea", lat: 27.395, lng: 33.677, developer: "Orascom Development", price: 18, year: 2024, beach: true, type: "Resort" },
   { name: "Makadi Heights", destination: "red-sea", lat: 26.978, lng: 33.880, developer: "Orascom Development", price: 9, year: 2026, beach: true, type: "Resort" },
@@ -3264,6 +3271,11 @@ function applyOfficialData(c: Compound): Compound {
       ...(reg.type ? { type: reg.type } : {}),
       ...(reg.priceFrom != null ? { priceFrom: reg.priceFrom } : {}),
       ...(reg.deliveryYear != null ? { deliveryYear: reg.deliveryYear } : {}),
+      ...(reg.blurb ? { blurb: reg.blurb } : {}),
+      ...(reg.paymentPlan ? { paymentPlan: reg.paymentPlan } : {}),
+      ...(reg.amenities ? { amenities: reg.amenities } : {}),
+      ...(reg.types ? { types: reg.types } : {}),
+      ...(reg.highlights ? { highlights: reg.highlights } : {}),
     };
   }
 

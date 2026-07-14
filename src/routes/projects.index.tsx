@@ -139,7 +139,7 @@ function ProjectsPage() {
   const activeStatuses = useMemo(() => {
     const list = compounds.filter((c) => matchCompound(c, q, destination, dev, "", type, maxPrice));
     const statuses = new Set(list.map((c) => c.status));
-    return ["Delivered", "Under Construction", "Off-Plan"].filter((s) => statuses.has(s));
+    return ["Delivered", "Under Construction", "Off-Plan"].filter((s) => statuses.has(s as any));
   }, [q, destination, dev, type, maxPrice, availabilityMap]);
 
   const activeTypes = useMemo(() => {

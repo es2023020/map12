@@ -170,8 +170,8 @@ export const useStore = create<State>()(
   persist(
     (originalSet, get) => {
       // Define a custom set function that intercepts and saves state to userData
-      const set = (nextStateOrFn: any) => {
-        originalSet((state: any) => {
+      const set = (nextStateOrFn: Partial<State> | ((state: State) => Partial<State>)) => {
+        originalSet((state: State) => {
           const next = typeof nextStateOrFn === "function" ? nextStateOrFn(state) : nextStateOrFn;
           const merged = { ...state, ...next };
           if (merged.user) {
