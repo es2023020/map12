@@ -1,10 +1,10 @@
 {
   "brochures": [
     {
-      "filename": "SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-      "clean_name": "Sa'Ada New Cairo Sales Brochure   Jan '26",
-      "path": "/brochures/SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-      "size_mb": 143.79
+      "filename": "cairo-gate-brochure.pdf",
+      "clean_name": "Cairo Gate Brochure",
+      "path": "/brochures/cairo-gate-brochure.pdf",
+      "size_mb": 0.06
     }
   ],
   "profiles": [
@@ -159,6 +159,12 @@
       "size_mb": 6.43
     },
     {
+      "filename": "SKYWALK Presentation 2026.pdf",
+      "clean_name": "Skywalk Presentation 2026",
+      "path": "/profiles/SKYWALK Presentation 2026.pdf",
+      "size_mb": 5.2
+    },
+    {
       "filename": "sodic.pdf",
       "clean_name": "Sodic",
       "path": "/profiles/sodic.pdf",
@@ -187,12 +193,6 @@
       "clean_name": "Updated Company Profile",
       "path": "/profiles/Updated Company Profile.pdf",
       "size_mb": 43.5
-    },
-    {
-      "filename": "�WA Business.pdf",
-      "clean_name": "�Wa Business",
-      "path": "/profiles/�WA Business.pdf",
-      "size_mb": 113.15
     }
   ],
   "projects_media": {
@@ -282,11 +282,6 @@
         "filename": "1.jpg",
         "type": "image",
         "path": "/projects/al-rehab/1.jpg"
-      },
-      {
-        "filename": "2.jpg",
-        "type": "image",
-        "path": "/projects/al-rehab/2.jpg"
       },
       {
         "filename": "3.jpg",
@@ -395,19 +390,9 @@
         "path": "/projects/almaza-bay/4.jpg"
       },
       {
-        "filename": "5.jpg",
-        "type": "image",
-        "path": "/projects/almaza-bay/5.jpg"
-      },
-      {
         "filename": "6.jpg",
         "type": "image",
         "path": "/projects/almaza-bay/6.jpg"
-      },
-      {
-        "filename": "7.jpg",
-        "type": "image",
-        "path": "/projects/almaza-bay/7.jpg"
       }
     ],
     "amwaj": [
@@ -538,56 +523,56 @@
         "path": "/projects/at-east/4.jpg"
       }
     ],
-    "azha": [
+    "azha north coast": [
       {
         "filename": "1.jpg",
         "type": "image",
-        "path": "/projects/azha/1.jpg"
+        "path": "/projects/azha north coast/1.jpg"
       },
       {
         "filename": "10.jpg",
         "type": "image",
-        "path": "/projects/azha/10.jpg"
+        "path": "/projects/azha north coast/10.jpg"
       },
       {
         "filename": "2.jpg",
         "type": "image",
-        "path": "/projects/azha/2.jpg"
+        "path": "/projects/azha north coast/2.jpg"
       },
       {
         "filename": "3.jpg",
         "type": "image",
-        "path": "/projects/azha/3.jpg"
+        "path": "/projects/azha north coast/3.jpg"
       },
       {
         "filename": "4.jpg",
         "type": "image",
-        "path": "/projects/azha/4.jpg"
+        "path": "/projects/azha north coast/4.jpg"
       },
       {
         "filename": "5.jpg",
         "type": "image",
-        "path": "/projects/azha/5.jpg"
+        "path": "/projects/azha north coast/5.jpg"
       },
       {
         "filename": "6.jpg",
         "type": "image",
-        "path": "/projects/azha/6.jpg"
+        "path": "/projects/azha north coast/6.jpg"
       },
       {
         "filename": "7.jpg",
         "type": "image",
-        "path": "/projects/azha/7.jpg"
+        "path": "/projects/azha north coast/7.jpg"
       },
       {
         "filename": "8.jpg",
         "type": "image",
-        "path": "/projects/azha/8.jpg"
+        "path": "/projects/azha north coast/8.jpg"
       },
       {
         "filename": "9.jpg",
         "type": "image",
-        "path": "/projects/azha/9.jpg"
+        "path": "/projects/azha north coast/9.jpg"
       }
     ],
     "azzar-island": [
@@ -2878,6 +2863,13 @@
         "path": "/projects/keeva/4.jpg"
       }
     ],
+    "kinda-residence": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/kinda-residence/1.jpg"
+      }
+    ],
     "koun": [
       {
         "filename": "1.jpg",
@@ -2908,6 +2900,13 @@
         "filename": "6.jpg",
         "type": "image",
         "path": "/projects/koun/6.jpg"
+      }
+    ],
+    "kynd-residence-gaia": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/kynd-residence-gaia/1.jpg"
       }
     ],
     "la-verde": [
@@ -4497,6 +4496,206 @@
         "filename": "5.jpg",
         "type": "image",
         "path": "/projects/o-west/5.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0025.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0025.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0026.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0026.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0035.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0035.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0036.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0036.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0037.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0037.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0038.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0038.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0039.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0039.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0040.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0040.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0041.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0041.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0042.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0042.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0043.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0043.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0044.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0044.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0045.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0045.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0103.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0103.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0104.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0104.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0105.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0105.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0106.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0106.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0107.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0107.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0108.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0108.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0109.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0109.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0110.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0110.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0111.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0111.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0112.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0112.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0113.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0113.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0114.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0114.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0115.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0115.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0116.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0116.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0117.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0117.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0118.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0118.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0119.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0119.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0120.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0120.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0121.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0121.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0122.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0122.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0123.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0123.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0124.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0124.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0125.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0125.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0126.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0126.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0127.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0127.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0128.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0128.jpg"
+      },
+      {
+        "filename": "IMG-20250509-WA0130.jpg",
+        "type": "image",
+        "path": "/projects/o-west/IMG-20250509-WA0130.jpg"
       }
     ],
     "ogami": [
@@ -6413,6 +6612,13 @@
         "path": "/projects/telal-soul/5.jpg"
       }
     ],
+    "the-brooks": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/the-brooks/1.jpg"
+      }
+    ],
     "the-butterfly": [
       {
         "filename": "1.jpg",
@@ -6640,6 +6846,13 @@
         "path": "/projects/the-waterway/9.jpg"
       }
     ],
+    "trio": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/trio/1.jpg"
+      }
+    ],
     "uptown-cairo": [
       {
         "filename": "1.jpg",
@@ -6692,6 +6905,13 @@
         "filename": "5.jpg",
         "type": "image",
         "path": "/projects/v-levels/5.jpg"
+      }
+    ],
+    "vea-new-cairo": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/vea-new-cairo/1.jpg"
       }
     ],
     "villette": [
@@ -7051,52 +7271,12 @@
     ]
   },
   "brochures_by_project": {
-    "cairo-festival-city": [
-      {
-        "filename": "SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "clean_name": "Sa'Ada New Cairo Sales Brochure   Jan '26",
-        "path": "/brochures/SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "size_mb": 143.79
-      }
-    ],
     "cairo-gate": [
       {
-        "filename": "SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "clean_name": "Sa'Ada New Cairo Sales Brochure   Jan '26",
-        "path": "/brochures/SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "size_mb": 143.79
-      }
-    ],
-    "hyde-park-new-cairo": [
-      {
-        "filename": "SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "clean_name": "Sa'Ada New Cairo Sales Brochure   Jan '26",
-        "path": "/brochures/SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "size_mb": 143.79
-      }
-    ],
-    "mountain-view-icity-new-cairo": [
-      {
-        "filename": "SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "clean_name": "Sa'Ada New Cairo Sales Brochure   Jan '26",
-        "path": "/brochures/SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "size_mb": 143.79
-      }
-    ],
-    "palm-hills-new-cairo": [
-      {
-        "filename": "SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "clean_name": "Sa'Ada New Cairo Sales Brochure   Jan '26",
-        "path": "/brochures/SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "size_mb": 143.79
-      }
-    ],
-    "uptown-cairo": [
-      {
-        "filename": "SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "clean_name": "Sa'Ada New Cairo Sales Brochure   Jan '26",
-        "path": "/brochures/SA'ADA New Cairo Sales Brochure - Jan '26.pdf",
-        "size_mb": 143.79
+        "filename": "cairo-gate-brochure.pdf",
+        "clean_name": "Cairo Gate Brochure",
+        "path": "/brochures/cairo-gate-brochure.pdf",
+        "size_mb": 0.06
       }
     ]
   }

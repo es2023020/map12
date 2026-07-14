@@ -53,7 +53,65 @@ export function unitTypeSlug(b: UnitBreakdown): string {
 
 import { availability as _availability } from "./availability.generated";
 
-export const availability = _availability;
+const staticAvailability = _availability;
+
+export const availability: ProjectAvailability[] = new Proxy(staticAvailability, {
+  get(target, prop, receiver) {
+    let activeList = staticAvailability;
+    if (typeof window !== "undefined") {
+      try {
+        const storeStr = localStorage.getItem("proptrack-broker");
+        if (storeStr) {
+          const parsed = JSON.parse(storeStr);
+          if (parsed?.state?.availabilityList?.length) {
+            activeList = parsed.state.availabilityList;
+          }
+        }
+      } catch (e) {
+        // fallback
+      }
+    }
+    const val = Reflect.get(activeList, prop, receiver);
+    if (typeof val === "function") {
+      return val.bind(activeList);
+    }
+    return val;
+  },
+  getOwnPropertyDescriptor(target, prop) {
+    let activeList = staticAvailability;
+    if (typeof window !== "undefined") {
+      try {
+        const storeStr = localStorage.getItem("proptrack-broker");
+        if (storeStr) {
+          const parsed = JSON.parse(storeStr);
+          if (parsed?.state?.availabilityList?.length) {
+            activeList = parsed.state.availabilityList;
+          }
+        }
+      } catch (e) {
+        // fallback
+      }
+    }
+    return Reflect.getOwnPropertyDescriptor(activeList, prop);
+  },
+  ownKeys(target) {
+    let activeList = staticAvailability;
+    if (typeof window !== "undefined") {
+      try {
+        const storeStr = localStorage.getItem("proptrack-broker");
+        if (storeStr) {
+          const parsed = JSON.parse(storeStr);
+          if (parsed?.state?.availabilityList?.length) {
+            activeList = parsed.state.availabilityList;
+          }
+        }
+      } catch (e) {
+        // fallback
+      }
+    }
+    return Reflect.ownKeys(activeList);
+  }
+});
 
 
 export function availabilityBySlug(slug: string): ProjectAvailability | undefined {

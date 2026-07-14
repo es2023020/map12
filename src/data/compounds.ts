@@ -3258,7 +3258,7 @@ function applyOfficialData(c: Compound): Compound {
   return next;
 }
 
-export const compounds: Compound[] = merged.map((c) => {
+const staticCompounds: Compound[] = merged.map((c) => {
   const enriched = applyOfficialData(c);
   return {
     ...enriched,
@@ -3268,6 +3268,64 @@ export const compounds: Compound[] = merged.map((c) => {
     flagship: enriched.flagship ?? (FLAGSHIPS.has(enriched.slug) || undefined),
     highlights: enriched.highlights ?? enriched.amenities,
   };
+});
+
+export const compounds: Compound[] = new Proxy(staticCompounds, {
+  get(target, prop, receiver) {
+    let activeList = staticCompounds;
+    if (typeof window !== "undefined") {
+      try {
+        const storeStr = localStorage.getItem("proptrack-broker");
+        if (storeStr) {
+          const parsed = JSON.parse(storeStr);
+          if (parsed?.state?.compoundsList?.length) {
+            activeList = parsed.state.compoundsList;
+          }
+        }
+      } catch (e) {
+        // fallback
+      }
+    }
+    const val = Reflect.get(activeList, prop, receiver);
+    if (typeof val === "function") {
+      return val.bind(activeList);
+    }
+    return val;
+  },
+  getOwnPropertyDescriptor(target, prop) {
+    let activeList = staticCompounds;
+    if (typeof window !== "undefined") {
+      try {
+        const storeStr = localStorage.getItem("proptrack-broker");
+        if (storeStr) {
+          const parsed = JSON.parse(storeStr);
+          if (parsed?.state?.compoundsList?.length) {
+            activeList = parsed.state.compoundsList;
+          }
+        }
+      } catch (e) {
+        // fallback
+      }
+    }
+    return Reflect.getOwnPropertyDescriptor(activeList, prop);
+  },
+  ownKeys(target) {
+    let activeList = staticCompounds;
+    if (typeof window !== "undefined") {
+      try {
+        const storeStr = localStorage.getItem("proptrack-broker");
+        if (storeStr) {
+          const parsed = JSON.parse(storeStr);
+          if (parsed?.state?.compoundsList?.length) {
+            activeList = parsed.state.compoundsList;
+          }
+        }
+      } catch (e) {
+        // fallback
+      }
+    }
+    return Reflect.ownKeys(activeList);
+  }
 });
 export const compoundBySlug = (slug: string) => compounds.find((c) => c.slug === slug);
 export const compoundsByDestination = (destination: string) => compounds.filter((c) => c.destination === destination);

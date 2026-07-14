@@ -10,8 +10,7 @@ export type Destination = {
   center: [number, number];
   zoom: number;
 };
-
-export const destinations: Destination[] = [
+const staticDestinations: Destination[] = [
   {
     slug: "sidi-heneish",
     name: "Sidi Heneish",
@@ -250,6 +249,65 @@ export const destinations: Destination[] = [
     zoom: 12,
   },
 ];
+
+export const destinations: Destination[] = new Proxy(staticDestinations, {
+  get(target, prop, receiver) {
+    let activeList = staticDestinations;
+    if (typeof window !== "undefined") {
+      try {
+        const storeStr = localStorage.getItem("proptrack-broker");
+        if (storeStr) {
+          const parsed = JSON.parse(storeStr);
+          if (parsed?.state?.destinationsList?.length) {
+            activeList = parsed.state.destinationsList;
+          }
+        }
+      } catch (e) {
+        // fallback
+      }
+    }
+    const val = Reflect.get(activeList, prop, receiver);
+    if (typeof val === "function") {
+      return val.bind(activeList);
+    }
+    return val;
+  },
+  getOwnPropertyDescriptor(target, prop) {
+    let activeList = staticDestinations;
+    if (typeof window !== "undefined") {
+      try {
+        const storeStr = localStorage.getItem("proptrack-broker");
+        if (storeStr) {
+          const parsed = JSON.parse(storeStr);
+          if (parsed?.state?.destinationsList?.length) {
+            activeList = parsed.state.destinationsList;
+          }
+        }
+      } catch (e) {
+        // fallback
+      }
+    }
+    return Reflect.getOwnPropertyDescriptor(activeList, prop);
+  },
+  ownKeys(target) {
+    let activeList = staticDestinations;
+    if (typeof window !== "undefined") {
+      try {
+        const storeStr = localStorage.getItem("proptrack-broker");
+        if (storeStr) {
+          const parsed = JSON.parse(storeStr);
+          if (parsed?.state?.destinationsList?.length) {
+            activeList = parsed.state.destinationsList;
+          }
+        }
+      } catch (e) {
+        // fallback
+      }
+    }
+    return Reflect.ownKeys(activeList);
+  }
+});
+
 
 export const destinationBySlug = (slug: string) => destinations.find((a) => a.slug === slug);
 export const destinationColor = (slug: string) => destinationBySlug(slug)?.color ?? "#3B82F6";

@@ -41,7 +41,7 @@ const anchors: Array<{ km: number; lat: number; lng: number }> = [
   { km: 206, lat: 31.0860, lng: 28.0100 }, // Playa Seashell interpolated
   { km: 207, lat: 31.0870, lng: 28.0060 }, // Hyde Park North Seashore interpolated
   { km: 208, lat: 31.0880, lng: 28.0020 }, // Hacienda West interpolated
-  { km: 211, lat: 31.0910, lng: 27.9860 }, // Fouka Bay — est. km 211
+  { km: 211, lat: 31.0670, lng: 27.9170 }, // Fouka Bay — est. km 211
   { km: 212, lat: 31.0920, lng: 27.9800 }, // El Masyaf / Naia Bay interpolated
   { km: 214, lat: 31.0992, lng: 27.9225 }, // Azha North Coast — CompoundGate: 31.0992°N, 27.9225°E
   { km: 215, lat: 31.1010, lng: 27.9100 }, // Ramla (Marakez) interpolated

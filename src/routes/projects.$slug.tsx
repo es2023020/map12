@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import {
   Heart, MapPin, Waves, Calendar, Building2, Wallet, Ruler,
   Check, ArrowLeft, Phone, ChevronLeft, ChevronRight, Globe,
-  X, ExternalLink, Star, Calculator
+  X, ExternalLink, Star, Calculator, Map as MapIcon, ZoomIn
 } from "lucide-react";
 function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
   const [logoLoaded, setLogoLoaded] = useState(false);
@@ -141,6 +141,13 @@ function CompoundPage() {
     ? Array.from(new Set(avail.breakdown.map((b) => b.paymentPlan).filter(Boolean)))
     : [];
 
+  // Master plan popup state
+  const [masterPlanOpen, setMasterPlanOpen] = useState(false);
+  // Read live compound data from the store to get admin-updated fields
+  const storeCompounds = useStore((s) => s.compoundsList);
+  const liveProject = storeCompounds?.find((p: any) => p.slug === c.slug);
+  const masterPlanUrl: string | undefined = liveProject?.masterPlanUrl ?? (c as any).masterPlanUrl;
+
   return (
     <Shell>
       {/* Breadcrumb */}
@@ -219,9 +226,86 @@ function CompoundPage() {
             <StatCard icon={Ruler} label="Unit sizes" value={c.unitSizes ?? "—"} />
             <StatCard icon={Building2} label="Project size" value={c.areaSize ?? "—"} />
           </div>
-          <div className="mt-4">
+          <div className="mt-4 flex flex-wrap gap-3">
             <BrochureButton projectSlug={c.slug} projectName={c.name} />
+            <button
+              onClick={() => setMasterPlanOpen(true)}
+              className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-semibold text-primary shadow-soft hover:border-accent/60 hover:bg-accent/5 hover:text-accent transition-all duration-200 group"
+            >
+              <MapIcon className="h-4 w-4 text-accent group-hover:scale-110 transition-transform" />
+              View Master Plan
+              {masterPlanUrl && <span className="ml-1 inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />}
+            </button>
           </div>
+
+          {/* Master Plan Popup — always available, shows image or coming-soon */}
+          {masterPlanOpen && (
+            <div
+              className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-md"
+              onClick={() => setMasterPlanOpen(false)}
+            >
+              <div
+                className="relative w-full max-w-5xl mx-4 rounded-2xl overflow-hidden bg-zinc-950 shadow-2xl border border-white/10"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Header */}
+                <div className="flex items-center justify-between px-5 py-3.5 bg-zinc-900/90 backdrop-blur-sm border-b border-white/10">
+                  <div>
+                    <div className="text-[10px] uppercase tracking-widest font-bold text-accent">Master Plan</div>
+                    <div className="font-display font-bold text-white mt-0.5">{c.name}</div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {masterPlanUrl && (
+                      <a
+                        href={masterPlanUrl}
+                        download={`${c.name}-MasterPlan`}
+                        className="rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white/70 hover:text-white hover:bg-white/10 transition-all flex items-center gap-1.5"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <ZoomIn className="h-3.5 w-3.5" /> Full Size
+                      </a>
+                    )}
+                    <button
+                      onClick={() => setMasterPlanOpen(false)}
+                      className="rounded-xl border border-white/10 bg-white/5 p-1.5 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+                    >
+                      <X className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Content */}
+                {masterPlanUrl ? (
+                  <div className="max-h-[75vh] overflow-auto flex items-center justify-center bg-zinc-900 p-4">
+                    <img
+                      src={masterPlanUrl}
+                      alt={`${c.name} Master Plan`}
+                      className="max-w-full rounded-lg shadow-xl"
+                      style={{ maxHeight: "68vh" }}
+                    />
+                  </div>
+                ) : (
+                  <div className="flex flex-col items-center justify-center p-12 text-center bg-zinc-900 min-h-[300px]">
+                    <div className="mx-auto rounded-full bg-accent/10 p-5 w-fit mb-5">
+                      <MapIcon className="h-10 w-10 text-accent" />
+                    </div>
+                    <h3 className="font-bold text-white text-lg">Master Plan Coming Soon</h3>
+                    <p className="text-sm text-zinc-400 mt-2 max-w-md leading-relaxed">
+                      The official master plan layout for <strong className="text-white">{c.name}</strong> is being prepared by the developer. Request it directly from our team.
+                    </p>
+                    <a
+                      href={`https://wa.me/201029324783?text=Hi!%20I%20am%20requesting%20the%20master%20plan%20for%20${encodeURIComponent(c.name)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 text-white font-bold text-sm hover:bg-green-600 transition-colors py-3 px-6 shadow-md"
+                    >
+                      Request via WhatsApp
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Live Availability from developer sheets */}
           {availabilityBySlug(c.slug) && (
