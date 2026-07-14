@@ -1,22 +1,18 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { compounds } from "@/data/compounds";
+import { useStore } from "@/lib/store";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Calendar, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const newProjectSlugs = [
-  "creekview", "elea-azha-north", "aqua-lagoons-june", "sadaf", 
-  "commonhaus", "the-lynks", "park-sight", "silvertown-lagoon-cabanas", 
-  "marresidence", "chapters-residence", "vea-new-cairo", "vie-collective", 
-  "vie-halo", "coral-coves", "menorca", "the-commons", "covaya", 
-  "olive-oasis", "sealine-seashore",
-  "hacienda-ras-el-hekma", "direction-white", "hap-town", "seazen"
-];
-
 export function NewLaunchesSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", dragFree: true });
-  const sliderCompounds = compounds.filter(c => newProjectSlugs.includes(c.slug));
+
+  // Pull from the Zustand store so admin changes are reflected live
+  const compoundsList = useStore((s) => s.compoundsList) || [];
+  const newLaunchesList = useStore((s) => s.newLaunchesList) || [];
+
+  const sliderCompounds = compoundsList.filter((c) => newLaunchesList.includes(c.slug));
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();

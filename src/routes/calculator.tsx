@@ -78,35 +78,85 @@ function parsePaymentPlan(plan?: string): { dp: number; duration: number } {
 function CalculatorPage() {
   const { project: projectParam } = Route.useSearch();
   const [mode, setMode] = useState<"project" | "budget">(projectParam ? "project" : "budget");
-  const [projectSlug, setProjectSlug] = useState((projectParam || compounds[0]?.slug) ?? "");
+
+  const compoundsList = useStore((s) => s.compoundsList) || [];
+  const availabilityList = useStore((s) => s.availabilityList) || [];
+
+  const [projectSlug, setProjectSlug] = useState((projectParam || compoundsList[0]?.slug) ?? "");
   const [budgetText, setBudgetText] = useState("15,000,000");
   const [dpPct, setDpPct] = useState(10);
   const [duration, setDuration] = useState(8);
   const [maintenance, setMaintenance] = useState(8);
   const [unitType, setUnitType] = useState("");
+  const [selectedUnitId, setSelectedUnitId] = useState("");
   const [tab, setTab] = useState<"monthly" | "quarterly" | "annual">("monthly");
 
   // Advanced filters for "Find by Budget" mode
   const [budgetDestFilter, setBudgetDestFilter] = useState("");
   const [budgetTypeFilter, setBudgetTypeFilter] = useState("");
 
-  const selectedProject = useMemo(() => compounds.find((c) => c.slug === projectSlug), [projectSlug]);
+  const selectedProject = useMemo(() => compoundsList.find((c) => c.slug === projectSlug), [projectSlug, compoundsList]);
 
-  // Dynamically update payment plan values based on selected project
+  const projectAvailability = useMemo(() => {
+    return availabilityList.find((a) => a.slug === projectSlug) || null;
+  }, [projectSlug, availabilityList]);
+
+  const projectUnits = useMemo(() => {
+    if (!projectAvailability) return [];
+    const list: Array<{
+      id: string;
+      unitNo: string;
+      type: string;
+      beds: number;
+      areaSqm: number;
+      view: string;
+      priceEGP: number;
+      status: string;
+      finishing: string;
+      paymentPlan?: string;
+    }> = [];
+    projectAvailability.breakdown.forEach((b: any) => {
+      const units = b.units ?? [];
+      units.forEach((u: any) => {
+        list.push({
+          id: u.id,
+          unitNo: u.unitNo,
+          type: b.type,
+          beds: u.beds || b.beds || 0,
+          areaSqm: u.areaSqm || 0,
+          view: u.view || "Scenic View",
+          priceEGP: u.priceEGP,
+          status: u.status || "Available",
+          finishing: u.finishing || b.finishing || "Finished",
+          paymentPlan: u.paymentPlan || b.paymentPlan,
+        });
+      });
+    });
+    return list;
+  }, [projectAvailability]);
+
+  const selectedUnit = useMemo(() => {
+    return projectUnits.find((u) => u.id === selectedUnitId) || null;
+  }, [selectedUnitId, projectUnits]);
+
+  // Dynamically update payment plan values based on selected project/unit
   useEffect(() => {
-    if (mode === "project" && selectedProject) {
-      const parsed = parsePaymentPlan(selectedProject.paymentPlan);
-      setDpPct(parsed.dp);
-      setDuration(parsed.duration);
+    if (mode === "project") {
+      const plan = selectedUnit?.paymentPlan || selectedProject?.paymentPlan;
+      if (plan) {
+        const parsed = parsePaymentPlan(plan);
+        setDpPct(parsed.dp);
+        setDuration(parsed.duration);
+      }
     }
-  }, [mode, projectSlug, selectedProject]);
+  }, [mode, projectSlug, selectedProject, selectedUnit]);
 
   const parsedPrice = useMemo(() => {
     return parseBudgetInput(budgetText);
   }, [budgetText]);
 
   const basePrice = mode === "project"
-    ? (selectedProject?.priceFrom ?? 5)
+    ? (selectedUnit ? (selectedUnit.priceEGP / 1_000_000) : (selectedProject?.priceFrom ?? 5))
     : (parsedPrice || 5);
 
   const downPayment = basePrice * (dpPct / 100);
@@ -142,19 +192,19 @@ function CalculatorPage() {
       unitId: string;
     }> = [];
 
-    availability.forEach((p) => {
-      const comp = compounds.find((c) => c.slug === p.slug);
+    availabilityList.forEach((p) => {
+      const comp = compoundsList.find((c) => c.slug === p.slug);
       if (!comp) return;
 
       // Filter by destination
       if (budgetDestFilter && comp.destination !== budgetDestFilter) return;
 
-      p.breakdown.forEach((b) => {
+      p.breakdown.forEach((b: any) => {
         // Filter by unit type
         if (budgetTypeFilter && b.type !== budgetTypeFilter) return;
 
         const units = b.units ?? [];
-        units.forEach((u) => {
+        units.forEach((u: any) => {
           const budgetLimit = basePrice * 1_000_000 * 1.1; 
           if (u.priceEGP > 0 && u.priceEGP <= budgetLimit) {
             list.push({
@@ -176,11 +226,11 @@ function CalculatorPage() {
     });
 
     return list.sort((a, b) => b.priceEGP - a.priceEGP).slice(0, 8);
-  }, [basePrice, budgetDestFilter, budgetTypeFilter]);
+  }, [basePrice, budgetDestFilter, budgetTypeFilter, availabilityList, compoundsList]);
 
   const suitableProjects = useMemo(() => {
     const budgetLimit = basePrice;
-    return compounds
+    return compoundsList
       .filter((c) => {
         const matchPrice = c.priceFrom <= budgetLimit;
         const matchDest = !budgetDestFilter || c.destination === budgetDestFilter;
@@ -189,7 +239,7 @@ function CalculatorPage() {
       })
       .sort((a, b) => b.priceFrom - a.priceFrom)
       .slice(0, 6);
-  }, [basePrice, budgetDestFilter, budgetTypeFilter]);
+  }, [basePrice, budgetDestFilter, budgetTypeFilter, compoundsList]);
 
   const projectTypes = selectedProject?.types ?? [];
 
@@ -357,18 +407,76 @@ function CalculatorPage() {
                   <div className="relative">
                     <select
                       value={projectSlug}
-                      onChange={(e) => setProjectSlug(e.target.value)}
-                      className="w-full appearance-none rounded-xl border border-border bg-background px-4 py-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+                      onChange={(e) => {
+                        setProjectSlug(e.target.value);
+                        setSelectedUnitId("");
+                      }}
+                      className="w-full appearance-none rounded-xl border border-border bg-background px-4 py-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-accent font-semibold"
                     >
-                      {compounds.map((c) => (
+                      {compoundsList.map((c) => (
                         <option key={c.slug} value={c.slug}>
-                          {c.name} — EGP {c.priceFrom}M
+                          {c.name} — EGP {c.priceFrom}M+
                         </option>
                       ))}
                     </select>
                     <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                   </div>
-                  {projectTypes.length > 0 && (
+
+                  {projectUnits.length > 0 && (
+                    <div>
+                      <label className="block text-xs font-medium uppercase tracking-wider text-muted-foreground mb-1.5">
+                        Specific Unit (Optional)
+                      </label>
+                      <div className="relative">
+                        <select
+                          value={selectedUnitId}
+                          onChange={(e) => setSelectedUnitId(e.target.value)}
+                          className="w-full appearance-none rounded-xl border border-border bg-background px-4 py-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-accent font-medium text-slate-800"
+                        >
+                          <option value="">-- Select starting price / all units --</option>
+                          {projectUnits.map((u) => (
+                            <option key={u.id} value={u.id}>
+                              Unit {u.unitNo} ({u.type}) · {u.areaSqm} sqm · EGP {(u.priceEGP / 1_000_000).toFixed(2)}M ({u.status})
+                            </option>
+                          ))}
+                        </select>
+                        <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                      </div>
+                    </div>
+                  )}
+
+                  {selectedUnit && (
+                    <div className="rounded-xl border border-accent/30 bg-accent/5 px-4 py-3 text-xs space-y-1">
+                      <div className="flex justify-between font-bold text-accent border-b border-accent/20 pb-1 mb-1">
+                        <span>Selected Unit Info</span>
+                        <span>{selectedUnit.unitNo}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Type</span>
+                        <span className="font-semibold text-primary">{selectedUnit.type} ({selectedUnit.beds} BR)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Area Size</span>
+                        <span className="font-semibold text-primary">{selectedUnit.areaSqm} sqm</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">View</span>
+                        <span className="font-semibold text-primary">{selectedUnit.view}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Status</span>
+                        <span className={`font-bold ${selectedUnit.status === "Available" ? "text-emerald-600" : selectedUnit.status === "Reserved" ? "text-amber-600" : "text-zinc-500"}`}>{selectedUnit.status}</span>
+                      </div>
+                      {selectedUnit.paymentPlan && (
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Unit Payment Plan</span>
+                          <span className="font-semibold text-accent">{selectedUnit.paymentPlan}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {projectTypes.length > 0 && !selectedUnit && (
                     <div className="flex flex-wrap gap-1.5">
                       {projectTypes.map((t) => (
                         <button

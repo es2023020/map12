@@ -4,6 +4,25 @@ import { compounds } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import { destinations } from "@/data/destinations";
 
+export const normalizeDeveloperName = (name: string): string => {
+  if (!name) return "";
+  const lower = name.trim().toLowerCase();
+  if (lower === "mountain view developments" || lower === "mountain view development" || lower === "mountain view") {
+    return "Mountain View";
+  }
+  if (
+    lower === "orascom" ||
+    lower === "orascom development" ||
+    lower === "orascom developments" ||
+    lower === "orascom development egypt" ||
+    lower === "orascom hotels & development"
+  ) {
+    return "Orascom Development";
+  }
+  return name.trim();
+};
+
+
 // Session-scoped login: on every page load we check if a browser session is still active.
 // sessionStorage is cleared when the browser tab/window is fully closed, so this
 // guarantees the user must re-login after closing the app.
@@ -74,6 +93,7 @@ type State = {
   availabilityList: any[];
   destinationsList: any[];
   developersList: any[];
+  newLaunchesList: string[];
   auditLogs: any[];
 
   // Actions
@@ -115,6 +135,8 @@ type State = {
   deleteDeveloper: (slug: string) => void;
   updateAvailability: (slug: string, data: any) => void;
   bulkUpdateAvailability: (data: any[]) => void;
+  addNewLaunchSlug: (slug: string) => void;
+  removeNewLaunchSlug: (slug: string) => void;
   addAuditLog: (log: { actor: string; entity: string; action: string; before?: string; after?: string }) => void;
 };
 
@@ -226,7 +248,7 @@ export const useStore = create<State>()(
       };
 
       // Initial derived developer list from seed compounds
-      const seedDevelopers = Array.from(new Set(compounds.map(c => c.developer))).map((name, i) => ({
+      const seedDevelopers = Array.from(new Set(compounds.map(c => normalizeDeveloperName(c.developer)))).map((name, i) => ({
         slug: name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
         name,
         legalName: `${name} S.A.E.`,
@@ -236,8 +258,17 @@ export const useStore = create<State>()(
         address: "Cairo, Egypt",
         tier: "Tier A",
         status: "Verified",
-        projects: compounds.filter(c => c.developer === name).map(c => c.name)
+        projects: compounds.filter(c => normalizeDeveloperName(c.developer) === name).map(c => c.name)
       }));
+
+      const initialNewLaunches = [
+        "creekview", "elea-azha-north", "aqua-lagoons-june", "sadaf", 
+        "commonhaus", "the-lynks", "park-sight", "silvertown-lagoon-cabanas", 
+        "marresidence", "chapters-residence", "vea-new-cairo", "vie-collective", 
+        "vie-halo", "coral-coves", "menorca", "the-commons", "covaya", 
+        "olive-oasis", "sealine-seashore",
+        "hacienda-ras-el-hekma", "direction-white", "hap-town", "seazen"
+      ];
 
       return {
         user: null,
@@ -261,10 +292,15 @@ export const useStore = create<State>()(
         userData: {},
 
         // Platform Admin Data
-        compoundsList: compounds,
+        compoundsList: compounds.map((c) => ({
+          ...c,
+          developer: normalizeDeveloperName(c.developer),
+          developerSlug: normalizeDeveloperName(c.developer).toLowerCase().replace(/[^a-z0-9]+/g, "-")
+        })),
         availabilityList: availability,
         destinationsList: destinations,
         developersList: seedDevelopers,
+        newLaunchesList: initialNewLaunches,
         auditLogs: [
           { id: "a1", actor: "System", entity: "Database", action: "Initialized PropTrack Command Center databases", timestamp: Date.now() - 3600000 * 2 }
         ],
@@ -641,14 +677,25 @@ export const useStore = create<State>()(
 
         // Platform Super-Admin CRUD Actions
         addProject: (p) => {
+          const devName = normalizeDeveloperName(p.developer);
+          const normalizedProj = {
+            ...p,
+            developer: devName,
+            developerSlug: devName.toLowerCase().replace(/[^a-z0-9]+/g, "-")
+          };
           set((s) => {
-            const compoundsList = [...s.compoundsList, p];
+            const compoundsList = [...s.compoundsList, normalizedProj];
             return { compoundsList };
           });
           get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Project", action: `Added new project: ${p.name}` });
         },
 
         updateProject: (slug, updates) => {
+          if (updates.developer) {
+            const devName = normalizeDeveloperName(updates.developer);
+            updates.developer = devName;
+            updates.developerSlug = devName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+          }
           set((s) => {
             const before = JSON.stringify(s.compoundsList.find(c => c.slug === slug));
             const compoundsList = s.compoundsList.map(c => c.slug === slug ? { ...c, ...updates } : c);
@@ -660,9 +707,9 @@ export const useStore = create<State>()(
 
         deleteProject: (slug) => {
           set((s) => {
-            const target = s.compoundsList.find(c => c.slug === slug);
             const compoundsList = s.compoundsList.filter(c => c.slug !== slug);
-            return { compoundsList };
+            const newLaunchesList = s.newLaunchesList.filter(x => x !== slug);
+            return { compoundsList, newLaunchesList };
           });
           get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Project", action: `Deleted project: ${slug}` });
         },
@@ -694,14 +741,25 @@ export const useStore = create<State>()(
         },
 
         addDeveloper: (dev) => {
+          const devName = normalizeDeveloperName(dev.name);
+          const normalizedDev = {
+            ...dev,
+            name: devName,
+            slug: devName.toLowerCase().replace(/[^a-z0-9]+/g, "-")
+          };
           set((s) => {
-            const developersList = [...s.developersList, dev];
+            const developersList = [...s.developersList, normalizedDev];
             return { developersList };
           });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Developer", action: `Added new developer: ${dev.name}` });
+          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Developer", action: `Added new developer: ${devName}` });
         },
 
         updateDeveloper: (slug, updates) => {
+          if (updates.name) {
+            const devName = normalizeDeveloperName(updates.name);
+            updates.name = devName;
+            updates.slug = devName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+          }
           set((s) => {
             const before = JSON.stringify(s.developersList.find(d => d.slug === slug));
             const developersList = s.developersList.map(d => d.slug === slug ? { ...d, ...updates } : d);
@@ -733,6 +791,22 @@ export const useStore = create<State>()(
         bulkUpdateAvailability: (data) => {
           set({ availabilityList: data });
           get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Availability", action: `Bulk imported global availability database` });
+        },
+
+        addNewLaunchSlug: (slug) => {
+          set((s) => {
+            const newLaunchesList = s.newLaunchesList.includes(slug) ? s.newLaunchesList : [...s.newLaunchesList, slug];
+            return { newLaunchesList };
+          });
+          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Launches", action: `Promoted project to New Launches: ${slug}` });
+        },
+
+        removeNewLaunchSlug: (slug) => {
+          set((s) => {
+            const newLaunchesList = s.newLaunchesList.filter(x => x !== slug);
+            return { newLaunchesList };
+          });
+          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Launches", action: `Removed project from New Launches: ${slug}` });
         },
 
         addAuditLog: (log) => {
