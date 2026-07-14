@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { compounds } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import {
   Calculator, ChevronDown, Phone, Wallet, Calendar,
-  TrendingDown, Building2, CheckCircle2, Info, Search, Sliders
+  TrendingDown, Building2, CheckCircle2, Info, Search, Sliders, MapPin, Tag
 } from "lucide-react";
 
 export const Route = createFileRoute("/calculator")({
@@ -50,19 +50,56 @@ function parseBudgetInput(input: string): number {
   return val;
 }
 
+function parsePaymentPlan(plan?: string): { dp: number; duration: number } {
+  if (!plan) return { dp: 10, duration: 8 };
+  
+  const lower = plan.toLowerCase();
+  
+  // Try matching down payment: e.g. "5% down", "10% down", "5% downpayment"
+  let dp = 10;
+  const dpMatch = lower.match(/(\d+)%\s*(?:down|dp|payment)/);
+  if (dpMatch) {
+    dp = parseInt(dpMatch[1]);
+  }
+
+  // Try matching installment years: e.g. "8 years", "10 years equal installments"
+  let duration = 8;
+  const durMatch = lower.match(/(\d+)\s*years/);
+  if (durMatch) {
+    duration = parseInt(durMatch[1]);
+  } else {
+    const durMatch2 = lower.match(/(\d+)\s*yr/);
+    if (durMatch2) duration = parseInt(durMatch2[1]);
+  }
+
+  return { dp, duration };
+}
+
 function CalculatorPage() {
   const { project: projectParam } = Route.useSearch();
-  const [mode, setMode] = useState<"project" | "budget" | "custom">(projectParam ? "project" : "budget");
+  const [mode, setMode] = useState<"project" | "budget">(projectParam ? "project" : "budget");
   const [projectSlug, setProjectSlug] = useState((projectParam || compounds[0]?.slug) ?? "");
   const [budgetText, setBudgetText] = useState("15,000,000");
-  const [customPrice, setCustomPrice] = useState(5);
   const [dpPct, setDpPct] = useState(10);
   const [duration, setDuration] = useState(8);
   const [maintenance, setMaintenance] = useState(8);
   const [unitType, setUnitType] = useState("");
   const [tab, setTab] = useState<"monthly" | "quarterly" | "annual">("monthly");
 
+  // Advanced filters for "Find by Budget" mode
+  const [budgetDestFilter, setBudgetDestFilter] = useState("");
+  const [budgetTypeFilter, setBudgetTypeFilter] = useState("");
+
   const selectedProject = useMemo(() => compounds.find((c) => c.slug === projectSlug), [projectSlug]);
+
+  // Dynamically update payment plan values based on selected project
+  useEffect(() => {
+    if (mode === "project" && selectedProject) {
+      const parsed = parsePaymentPlan(selectedProject.paymentPlan);
+      setDpPct(parsed.dp);
+      setDuration(parsed.duration);
+    }
+  }, [mode, projectSlug, selectedProject]);
 
   const parsedPrice = useMemo(() => {
     return parseBudgetInput(budgetText);
@@ -70,9 +107,7 @@ function CalculatorPage() {
 
   const basePrice = mode === "project"
     ? (selectedProject?.priceFrom ?? 5)
-    : mode === "budget"
-    ? (parsedPrice || 5)
-    : customPrice;
+    : (parsedPrice || 5);
 
   const downPayment = basePrice * (dpPct / 100);
   const maintenanceFee = basePrice * (maintenance / 100);
@@ -107,15 +142,19 @@ function CalculatorPage() {
       unitId: string;
     }> = [];
 
-    // Loop through availability to collect matching units
     availability.forEach((p) => {
       const comp = compounds.find((c) => c.slug === p.slug);
       if (!comp) return;
 
+      // Filter by destination
+      if (budgetDestFilter && comp.destination !== budgetDestFilter) return;
+
       p.breakdown.forEach((b) => {
+        // Filter by unit type
+        if (budgetTypeFilter && b.type !== budgetTypeFilter) return;
+
         const units = b.units ?? [];
         units.forEach((u) => {
-          // If unit price is within budget (we allow matching up to 10% above budget for flexibility)
           const budgetLimit = basePrice * 1_000_000 * 1.1; 
           if (u.priceEGP > 0 && u.priceEGP <= budgetLimit) {
             list.push({
@@ -136,30 +175,75 @@ function CalculatorPage() {
       });
     });
 
-    // Sort by price descending (highest matching budget first)
-    return list.sort((a, b) => b.priceEGP - a.priceEGP).slice(0, 8); // Top 8 units
-  }, [basePrice]);
+    return list.sort((a, b) => b.priceEGP - a.priceEGP).slice(0, 8);
+  }, [basePrice, budgetDestFilter, budgetTypeFilter]);
 
   const suitableProjects = useMemo(() => {
     const budgetLimit = basePrice;
     return compounds
-      .filter((c) => c.priceFrom <= budgetLimit)
+      .filter((c) => {
+        const matchPrice = c.priceFrom <= budgetLimit;
+        const matchDest = !budgetDestFilter || c.destination === budgetDestFilter;
+        const matchType = !budgetTypeFilter || c.types.includes(budgetTypeFilter);
+        return matchPrice && matchDest && matchType;
+      })
       .sort((a, b) => b.priceFrom - a.priceFrom)
-      .slice(0, 6); // Top 6 projects
-  }, [basePrice]);
+      .slice(0, 6);
+  }, [basePrice, budgetDestFilter, budgetTypeFilter]);
 
   const projectTypes = selectedProject?.types ?? [];
 
   // Render helper for suitable properties
   const renderSuitableProperties = () => (
     <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-6">
-      <div>
-        <h3 className="font-display text-base font-semibold text-primary flex items-center gap-2">
-          <TrendingDown className="h-5 w-5 text-accent" /> Suitable Properties for EGP {basePrice}M Budget
-        </h3>
-        <p className="text-xs text-muted-foreground mt-1">
-          Discover properties and projects matching or starting within your selected budget.
-        </p>
+      <div className="flex justify-between items-start flex-wrap gap-3">
+        <div>
+          <h3 className="font-display text-base font-semibold text-primary flex items-center gap-2">
+            <TrendingDown className="h-5 w-5 text-accent" /> Properties matching EGP {basePrice}M Budget
+          </h3>
+          <p className="text-xs text-muted-foreground mt-1">
+            Discover real-time inventory and starting compounds matching your budget preferences.
+          </p>
+        </div>
+        
+        {/* Dynamic Insight Banner */}
+        <div className="rounded-lg bg-emerald-500/10 px-3 py-1.5 border border-emerald-500/20 text-[11px] font-bold text-emerald-700 dark:text-emerald-400">
+          💡 Found {suitableProjects.length} Projects &amp; {suitableUnits.length} Live Units
+        </div>
+      </div>
+
+      {/* Advanced Budget Filters */}
+      <div className="grid gap-3 sm:grid-cols-2 bg-secondary/20 p-4 rounded-xl border border-border/40">
+        <div>
+          <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1"><MapPin className="h-3 w-3" /> Region Filter</label>
+          <select 
+            value={budgetDestFilter} 
+            onChange={(e) => setBudgetDestFilter(e.target.value)}
+            className="w-full appearance-none rounded-xl border border-border bg-card px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-accent"
+          >
+            <option value="">All Regions</option>
+            <option value="new-cairo">New Cairo</option>
+            <option value="ras-el-hekma">Ras El Hekma (Sahel)</option>
+            <option value="sheikh-zayed">Sheikh Zayed</option>
+            <option value="mostakbal-city">Mostakbal City</option>
+            <option value="new-administrative-capital">New Capital</option>
+          </select>
+        </div>
+        <div>
+          <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1"><Tag className="h-3 w-3" /> Property Type</label>
+          <select 
+            value={budgetTypeFilter} 
+            onChange={(e) => setBudgetTypeFilter(e.target.value)}
+            className="w-full appearance-none rounded-xl border border-border bg-card px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-accent"
+          >
+            <option value="">All Property Types</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Villa">Standalone Villa</option>
+            <option value="Chalet">Chalet</option>
+            <option value="Town House">Town House</option>
+            <option value="Twin House">Twin House</option>
+          </select>
+        </div>
       </div>
 
       {suitableUnits.length > 0 ? (
@@ -195,7 +279,7 @@ function CalculatorPage() {
         </div>
       ) : (
         <div className="rounded-xl border border-dashed border-border p-5 text-center text-xs text-muted-foreground">
-          No live inventory units listed under EGP {basePrice}M yet. See starting projects below or increase budget.
+          No live inventory units listed under EGP {basePrice}M yet matching your filter. See starting projects below or adjust filters.
         </div>
       )}
 
@@ -228,7 +312,7 @@ function CalculatorPage() {
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">PropTrack Tools</div>
               <h1 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-primary flex items-center gap-2">
-                Payment Calculator & Budget Finder
+                Payment Calculator &amp; Budget Finder
               </h1>
             </div>
           </div>
@@ -245,20 +329,22 @@ function CalculatorPage() {
           <div className="space-y-6">
             <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
               <h2 className="mb-4 font-display text-lg font-semibold text-primary flex items-center gap-2">
-                <Building2 className="h-5 w-5 text-accent" /> Mode & Price
+                <Building2 className="h-5 w-5 text-accent" /> Mode &amp; Price
               </h2>
 
               {/* Mode toggle */}
               <div className="mb-5 flex rounded-xl border border-border overflow-hidden">
-                {(["project", "budget", "custom"] as const).map((m) => (
+                {(["project", "budget"] as const).map((m) => (
                   <button
                     key={m}
                     onClick={() => setMode(m)}
-                    className={`flex-1 py-2 text-xs font-semibold transition-colors ${
-                      mode === m ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-secondary"
-                    }`}
+                    className="flex-1 py-2 text-xs font-semibold transition-colors first:rounded-l-lg last:rounded-r-lg"
+                    style={{
+                      background: mode === m ? "var(--accent)" : "transparent",
+                      color: mode === m ? "#fff" : "var(--muted-foreground)"
+                    }}
                   >
-                    {m === "project" ? "By Project" : m === "budget" ? "Find by Budget" : "Custom Price"}
+                    {m === "project" ? "By Project" : "Find by Budget"}
                   </button>
                 ))}
               </div>
@@ -314,8 +400,8 @@ function CalculatorPage() {
                         <span className="font-medium text-primary">{selectedProject.deliveryYear}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Status</span>
-                        <span className="font-medium text-primary">{selectedProject.status}</span>
+                        <span className="text-muted-foreground">Default Plan</span>
+                        <span className="font-medium text-accent">{selectedProject.paymentPlan}</span>
                       </div>
                       <div className="pt-2 border-t border-border/40 mt-2 flex justify-end">
                         <Link
@@ -350,14 +436,29 @@ function CalculatorPage() {
                         {parsedPrice > 0 ? `${fmt(parsedPrice)}` : "—"}
                       </span>
                     </div>
-                    <p className="text-[10px] text-muted-foreground mt-1.5">
-                      Enter budget in EGP. Examples: <span className="font-medium">15M</span>, <span className="font-medium">15,000,000</span>, or <span className="font-medium">15</span>.
-                    </p>
+                  </div>
+
+                  {/* Budget Quick Select Pills */}
+                  <div className="space-y-1.5">
+                    <span className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Quick Select Budgets</span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {[5, 10, 15, 20, 30, 50, 80].map(val => (
+                        <button 
+                          key={val}
+                          onClick={() => setBudgetText((val * 1_000_000).toLocaleString())}
+                          className={`rounded-lg border px-2.5 py-1 text-xs font-semibold transition-all hover:bg-accent/5 hover:border-accent ${
+                            parsedPrice === val ? "bg-accent text-white border-accent hover:bg-accent hover:text-white" : "border-border text-muted-foreground"
+                          }`}
+                        >
+                          {val}M
+                        </button>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="pt-2">
                     <label className="block text-xs font-medium uppercase tracking-wider text-muted-foreground mb-2">
-                      Quick Adjust
+                      Quick Adjust Slider
                     </label>
                     <input
                       type="range" min={1} max={150} step={0.5}
@@ -371,32 +472,6 @@ function CalculatorPage() {
                     <div className="flex justify-between text-xs text-muted-foreground mt-1">
                       <span>EGP 1M</span><span>EGP 150M</span>
                     </div>
-                  </div>
-                </div>
-              )}
-
-              {mode === "custom" && (
-                <div className="space-y-4">
-                  <label className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                    Unit Price (EGP millions)
-                  </label>
-                  <div className="flex items-center gap-3">
-                    <input
-                      type="number"
-                      min={1} max={200} step={0.5}
-                      value={customPrice}
-                      onChange={(e) => setCustomPrice(Number(e.target.value))}
-                      className="w-32 rounded-xl border border-border bg-background px-4 py-3 text-center font-display text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-accent"
-                    />
-                    <span className="text-sm text-muted-foreground">EGP million</span>
-                  </div>
-                  <input
-                    type="range" min={1} max={200} step={0.5} value={customPrice}
-                    onChange={(e) => setCustomPrice(Number(e.target.value))}
-                    className="w-full accent-accent"
-                  />
-                  <div className="flex justify-between text-xs text-muted-foreground">
-                    <span>EGP 1M</span><span>EGP 200M</span>
                   </div>
                 </div>
               )}
@@ -616,7 +691,7 @@ function CalculatorPage() {
               </p>
             </div>
 
-            {/* In Project / Custom modes, display Suitable Properties at the BOTTOM */}
+            {/* In Project mode, display Suitable Properties at the BOTTOM */}
             {mode !== "budget" && renderSuitableProperties()}
 
           </div>

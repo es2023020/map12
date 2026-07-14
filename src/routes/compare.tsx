@@ -161,6 +161,13 @@ function ComparePage() {
         isDifferent: compA.developer !== compB.developer
       },
       { 
+        label: "Developer History & profile", 
+        displayA: `Project by ${compA.developer}. Spanning leading footprints across top Egyptian destinations with proven quality delivery.`,
+        displayB: `Project by ${compB.developer}. Spanning leading footprints across top Egyptian destinations with proven quality delivery.`,
+        icon: Building2,
+        isDifferent: compA.developer !== compB.developer
+      },
+      { 
         label: "Destination", 
         displayA: compA.destination.replace("-", " ").toUpperCase(),
         displayB: compB.destination.replace("-", " ").toUpperCase(),
@@ -168,11 +175,25 @@ function ComparePage() {
         isDifferent: compA.destination !== compB.destination
       },
       { 
+        label: "Exact Location Details", 
+        displayA: availA && availA.city ? availA.city : `${compA.destination.replace("-", " ")} region`,
+        displayB: availB && availB.city ? availB.city : `${compB.destination.replace("-", " ")} region`,
+        icon: MapPin,
+        isDifferent: (availA?.city || "") !== (availB?.city || "")
+      },
+      { 
         label: "Compound Status", 
         displayA: compA.status,
         displayB: compB.status,
         icon: ShieldCheck,
         isDifferent: compA.status !== compB.status
+      },
+      { 
+        label: "Key Amenities", 
+        displayA: compA.amenities ? compA.amenities.slice(0, 6).join(", ") : (availA?.amenities ? availA.amenities.slice(0, 6).join(", ") : "Green Areas, Security"),
+        displayB: compB.amenities ? compB.amenities.slice(0, 6).join(", ") : (availB?.amenities ? availB.amenities.slice(0, 6).join(", ") : "Green Areas, Security"),
+        icon: Waves,
+        isDifferent: true
       },
       { 
         label: "Unit Type / Configuration", 
@@ -231,7 +252,7 @@ function ComparePage() {
         isDifferent: specsA.qty !== specsB.qty
       },
     ];
-  }, [compA, compB, specsA, specsB, cheaperPrice, soonerDeliv, largerQty]);
+  }, [compA, compB, specsA, specsB, cheaperPrice, soonerDeliv, largerQty, availA, availB]);
 
   const visibleRows = useMemo(() => {
     if (showDiffsOnly) {

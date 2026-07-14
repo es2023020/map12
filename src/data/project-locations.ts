@@ -65,7 +65,6 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "hacienda-ras-el-hekma": { name: "Hacienda Ras El Hekma", destination: "ras-el-hekma", location: "Ras El Hekma, North Coast, Matrouh", mapsUrl: "https://maps.google.com/?q=Hacienda+Ras+El+Hekma+Egypt" },
   "hacienda-red": { name: "Hacienda Red", destination: "ain-sokhna", location: "Ain Sokhna, Red Sea Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Hacienda+Red+Ain+Sokhna+Egypt" },
   "hacienda-waters": { name: "Hacienda Waters", destination: "ain-sokhna", location: "Ain Sokhna, Red Sea Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Hacienda+Waters+Ain" },
-  "hacienda-west": { name: "Hacienda West", destination: "ras-el-hekma", location: "North Coast, Matrouh Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Hacienda+West+North" },
   "hacienda-white": { name: "Hacienda White", destination: "sidi-abdelrahman", location: "North Coast (Sidi Abdel Rahman), Matrouh", mapsUrl: "https://maps.google.com/?q=Hacienda+White+North+Coast+Egypt" },
   "heliopark": { name: "Heliopark", destination: "heliopolis", location: "New Heliopolis, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Heliopark+New+Heliopolis+Egypt" },
   "hyde-park-new-cairo": { name: "Hyde Park New Cairo", destination: "new-cairo", location: "New Cairo (Fifth Settlement), Cairo", mapsUrl: "https://maps.google.com/?q=Hyde+Park+New+Cairo+Egypt" },

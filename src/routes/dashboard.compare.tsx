@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
 import { compoundBySlug } from "@/data/compounds";
-import { GitCompareArrows, X } from "lucide-react";
+import { availabilityBySlug } from "@/data/availability";
+import { GitCompareArrows, X, Download } from "lucide-react";
 
 export const Route = createFileRoute("/dashboard/compare")({
   component: ComparePage,
@@ -25,8 +26,26 @@ function ComparePage() {
 
   const rows: Array<{ label: string; get: (c: NonNullable<ReturnType<typeof compoundBySlug>>) => string }> = [
     { label: "Developer", get: (c) => c.developer },
-    { label: "Destination", get: (c) => c.destination },
+    { 
+      label: "Developer History & profile", 
+      get: (c) => `Project by ${c.developer}. Spanning leading footprints across top Egyptian destinations with proven quality delivery.` 
+    },
+    { label: "Destination", get: (c) => c.destination.replace(/-/g, " ").toUpperCase() },
+    { 
+      label: "Exact Location Details", 
+      get: (c) => {
+        const avail = availabilityBySlug(c.slug);
+        return avail && avail.city ? avail.city : `${c.destination.replace(/-/g, " ")} region`;
+      }
+    },
     { label: "Status", get: (c) => c.status },
+    { 
+      label: "Key Amenities", 
+      get: (c) => {
+        const avail = availabilityBySlug(c.slug);
+        return c.amenities ? c.amenities.slice(0, 6).join(", ") : (avail?.amenities ? avail.amenities.slice(0, 6).join(", ") : "Green Areas, Security");
+      }
+    },
     { label: "Delivery", get: (c) => String(c.deliveryYear) },
     { label: "Starting price", get: (c) => `EGP ${c.priceFrom}M` },
     { label: "Beachfront", get: (c) => (c.beachfront ? "Yes" : "No") },
@@ -34,20 +53,64 @@ function ComparePage() {
     { label: "Unit sizes", get: (c) => c.unitSizes ?? "—" },
     { label: "Unit types", get: (c) => c.types.join(", ") },
     { label: "Payment plan", get: (c) => c.paymentPlan },
+    { 
+      label: "Live Connected Inventory", 
+      get: (c) => {
+        const avail = availabilityBySlug(c.slug);
+        return avail && avail.totalAvailable > 0 
+          ? `${avail.totalAvailable} units available` 
+          : "Not updated yet";
+      }
+    },
   ];
 
+  const handleDownloadPDF = () => {
+    const originalTitle = document.title;
+    document.title = `PropTrack Agent Report — ${list.map((c) => c.name).join(" vs ")}`;
+    const style = document.createElement("style");
+    style.id = "print-only-style";
+    style.innerHTML = `
+      @media print {
+        body > * { display: none !important; }
+        #agent-compare-report { display: block !important; }
+        #agent-compare-report * { display: revert !important; }
+        .no-print { display: none !important; }
+      }
+    `;
+    document.head.appendChild(style);
+    window.print();
+    document.title = originalTitle;
+    setTimeout(() => {
+      const s = document.getElementById("print-only-style");
+      if (s) s.remove();
+    }, 1000);
+  };
+
   return (
-    <div>
-      <h2 className="font-display text-2xl font-semibold text-primary">Comparing {list.length} compounds</h2>
-      <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-card">
+    <div id="agent-compare-report" className="space-y-6">
+      <div className="flex items-center justify-between flex-wrap gap-4 border-b border-border pb-4">
+        <div>
+          <h2 className="font-display text-2xl font-semibold text-primary">Comparing {list.length} compounds</h2>
+          <p className="text-xs text-muted-foreground mt-1">Agent side-by-side technical specs &amp; availability feed</p>
+        </div>
+        <button
+          onClick={handleDownloadPDF}
+          className="no-print inline-flex items-center gap-1.5 rounded-xl bg-accent text-accent-foreground px-4 py-2 text-xs font-bold transition-all hover:bg-accent/80 shadow-sm"
+        >
+          <Download className="h-3.5 w-3.5" />
+          Download PDF
+        </button>
+      </div>
+
+      <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-soft">
         <table className="w-full min-w-[640px] border-collapse text-sm">
           <thead>
-            <tr className="border-b border-border">
+            <tr className="border-b border-border bg-secondary/10">
               <th className="w-40 p-4 text-left text-xs uppercase tracking-wider text-muted-foreground">Attribute</th>
               {list.map((c) => (
                 <th key={c.slug} className="p-4 text-left align-top">
                   <div className="relative">
-                    <button onClick={() => remove(c.slug)} className="absolute -top-2 -right-1 rounded-full bg-secondary p-1 text-muted-foreground hover:text-primary"><X className="h-3 w-3" /></button>
+                    <button onClick={() => remove(c.slug)} className="no-print absolute -top-2 -right-1 rounded-full bg-secondary p-1 text-muted-foreground hover:text-primary"><X className="h-3 w-3" /></button>
                     <img src={c.hero} alt={c.name} className="h-24 w-full rounded-lg object-cover" />
                     <Link to="/projects/$slug" params={{ slug: c.slug }} className="mt-2 block font-display text-base font-semibold text-primary hover:text-accent">{c.name}</Link>
                   </div>
@@ -55,12 +118,12 @@ function ComparePage() {
               ))}
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y divide-border/60">
             {rows.map((r) => (
-              <tr key={r.label} className="border-b border-border/60 last:border-b-0">
-                <td className="p-4 text-xs uppercase tracking-wider text-muted-foreground">{r.label}</td>
+              <tr key={r.label} className="hover:bg-secondary/10 transition-colors">
+                <td className="p-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">{r.label}</td>
                 {list.map((c) => (
-                  <td key={c.slug} className="p-4 align-top text-foreground/90">{r.get(c)}</td>
+                  <td key={c.slug} className="p-4 align-top text-foreground/90 font-medium">{r.get(c)}</td>
                 ))}
               </tr>
             ))}
@@ -69,4 +132,4 @@ function ComparePage() {
       </div>
     </div>
   );
-}
+}
