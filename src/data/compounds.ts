@@ -28,6 +28,7 @@ export type Compound = {
   unitSizes?: string;
   city?: string;
   type?: "Residential" | "Mixed-use" | "Resort" | "Coastal";
+  parentSlug?: string;
   flagship?: boolean;
   highlights?: string[];
 };
@@ -3252,6 +3253,7 @@ function applyOfficialData(c: Compound): Compound {
       ...(reg.amenities ? { amenities: reg.amenities } : {}),
       ...(reg.types ? { types: reg.types } : {}),
       ...(reg.highlights ? { highlights: reg.highlights } : {}),
+      ...(reg.parentSlug ? { parentSlug: reg.parentSlug } : {}),
     };
   }
 

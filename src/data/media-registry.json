@@ -1,10 +1,112 @@
 {
   "brochures": [
     {
+      "filename": "Bamboo III Brochure.pdf",
+      "clean_name": "Bamboo Iii Brochure",
+      "path": "/brochures/Bamboo III Brochure.pdf",
+      "size_mb": 54.78
+    },
+    {
+      "filename": "Belee-Vie-Brochure.pdf",
+      "clean_name": "Belee Vie Brochure",
+      "path": "/brochures/Belee-Vie-Brochure.pdf",
+      "size_mb": 17.28
+    },
+    {
       "filename": "cairo-gate-brochure.pdf",
       "clean_name": "Cairo Gate Brochure",
       "path": "/brochures/cairo-gate-brochure.pdf",
       "size_mb": 0.06
+    },
+    {
+      "filename": "Cleo Water Residences - Brochure.pdf",
+      "clean_name": "Cleo Water Residences   Brochure",
+      "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+      "size_mb": 12.92
+    },
+    {
+      "filename": "grand valleys brochure.pdf",
+      "clean_name": "Grand Valleys Brochure",
+      "path": "/brochures/grand valleys brochure.pdf",
+      "size_mb": 8.58
+    },
+    {
+      "filename": "Hacienda Blue Brochure.pdf",
+      "clean_name": "Hacienda Blue Brochure",
+      "path": "/brochures/Hacienda Blue Brochure.pdf",
+      "size_mb": 33.88
+    },
+    {
+      "filename": "Hacienda Heneish brochure.pdf",
+      "clean_name": "Hacienda Heneish Brochure",
+      "path": "/brochures/Hacienda Heneish brochure.pdf",
+      "size_mb": 102.01
+    },
+    {
+      "filename": "Hacienda West Brochure.pdf",
+      "clean_name": "Hacienda West Brochure",
+      "path": "/brochures/Hacienda West Brochure.pdf",
+      "size_mb": 17.29
+    },
+    {
+      "filename": "Kingsway_Mountain_View_Brochure.pdf",
+      "clean_name": "Kingsway Mountain View Brochure",
+      "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+      "size_mb": 7.68
+    },
+    {
+      "filename": "Marassi-Brochure.pdf",
+      "clean_name": "Marassi Brochure",
+      "path": "/brochures/Marassi-Brochure.pdf",
+      "size_mb": 46.9
+    },
+    {
+      "filename": "Marassi-Red-Sea-Brochure.pdf",
+      "clean_name": "Marassi Red Sea Brochure",
+      "path": "/brochures/Marassi-Red-Sea-Brochure.pdf",
+      "size_mb": 25.91
+    },
+    {
+      "filename": "Mivida-Brochure.pdf",
+      "clean_name": "Mivida Brochure",
+      "path": "/brochures/Mivida-Brochure.pdf",
+      "size_mb": 2.94
+    },
+    {
+      "filename": "Mivida-Gardens-Brochure.pdf",
+      "clean_name": "Mivida Gardens Brochure",
+      "path": "/brochures/Mivida-Gardens-Brochure.pdf",
+      "size_mb": 13.71
+    },
+    {
+      "filename": "Mountain-View-Ras-Elhikma.pdf",
+      "clean_name": "Mountain View Ras Elhikma",
+      "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+      "size_mb": 4.91
+    },
+    {
+      "filename": "New Capital Gardens brochure.pdf",
+      "clean_name": "New Capital Gardens Brochure",
+      "path": "/brochures/New Capital Gardens brochure.pdf",
+      "size_mb": 15.82
+    },
+    {
+      "filename": "palm hills New Alamien Brochure.pdf",
+      "clean_name": "Palm Hills New Alamien Brochure",
+      "path": "/brochures/palm hills New Alamien Brochure.pdf",
+      "size_mb": 6.09
+    },
+    {
+      "filename": "Soul-Brochure.pdf",
+      "clean_name": "Soul Brochure",
+      "path": "/brochures/Soul-Brochure.pdf",
+      "size_mb": 16.68
+    },
+    {
+      "filename": "Uptown-Cairo-Brochure.pdf",
+      "clean_name": "Uptown Cairo Brochure",
+      "path": "/brochures/Uptown-Cairo-Brochure.pdf",
+      "size_mb": 5.6
     }
   ],
   "profiles": [
@@ -7271,12 +7373,478 @@
     ]
   },
   "brochures_by_project": {
+    "bamboo-iii": [
+      {
+        "filename": "Bamboo III Brochure.pdf",
+        "clean_name": "Bamboo Iii Brochure",
+        "path": "/brochures/Bamboo III Brochure.pdf",
+        "size_mb": 54.78
+      }
+    ],
     "cairo-gate": [
       {
         "filename": "cairo-gate-brochure.pdf",
         "clean_name": "Cairo Gate Brochure",
         "path": "/brochures/cairo-gate-brochure.pdf",
         "size_mb": 0.06
+      }
+    ],
+    "cleo-mostakbal": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "cleo-water-residence": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "dejoya-residence": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "esse-residence": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "kinda-residence": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "kynd-residence-gaia": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "lake-residence-by-rotana": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "lake-view-residence": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      },
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "nabq-bay-residences": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "sheya-residence": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "stone-residence": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "westown-residences": [
+      {
+        "filename": "Cleo Water Residences - Brochure.pdf",
+        "clean_name": "Cleo Water Residences   Brochure",
+        "path": "/brochures/Cleo Water Residences - Brochure.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "mountain-view-grand-valley": [
+      {
+        "filename": "grand valleys brochure.pdf",
+        "clean_name": "Grand Valleys Brochure",
+        "path": "/brochures/grand valleys brochure.pdf",
+        "size_mb": 8.58
+      },
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "rai-valleys": [
+      {
+        "filename": "grand valleys brochure.pdf",
+        "clean_name": "Grand Valleys Brochure",
+        "path": "/brochures/grand valleys brochure.pdf",
+        "size_mb": 8.58
+      }
+    ],
+    "the-valleys": [
+      {
+        "filename": "grand valleys brochure.pdf",
+        "clean_name": "Grand Valleys Brochure",
+        "path": "/brochures/grand valleys brochure.pdf",
+        "size_mb": 8.58
+      }
+    ],
+    "hacienda-blue": [
+      {
+        "filename": "Hacienda Blue Brochure.pdf",
+        "clean_name": "Hacienda Blue Brochure",
+        "path": "/brochures/Hacienda Blue Brochure.pdf",
+        "size_mb": 33.88
+      }
+    ],
+    "hacienda-heneish": [
+      {
+        "filename": "Hacienda Heneish brochure.pdf",
+        "clean_name": "Hacienda Heneish Brochure",
+        "path": "/brochures/Hacienda Heneish brochure.pdf",
+        "size_mb": 102.01
+      }
+    ],
+    "hacienda-west": [
+      {
+        "filename": "Hacienda West Brochure.pdf",
+        "clean_name": "Hacienda West Brochure",
+        "path": "/brochures/Hacienda West Brochure.pdf",
+        "size_mb": 17.29
+      }
+    ],
+    "mountain-view-aliva": [
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "mountain-view-chillout": [
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "mountain-view-crystal": [
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "mountain-view-icity-new-cairo": [
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "mountain-view-icity-october": [
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "mountain-view-jirian": [
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "mountain-view-kingsway": [
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "mountain-view-mv4": [
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "mountain-view-ras-el-hekma": [
+      {
+        "filename": "Kingsway_Mountain_View_Brochure.pdf",
+        "clean_name": "Kingsway Mountain View Brochure",
+        "path": "/brochures/Kingsway_Mountain_View_Brochure.pdf",
+        "size_mb": 7.68
+      },
+      {
+        "filename": "Mountain-View-Ras-Elhikma.pdf",
+        "clean_name": "Mountain View Ras Elhikma",
+        "path": "/brochures/Mountain-View-Ras-Elhikma.pdf",
+        "size_mb": 4.91
+      }
+    ],
+    "marassi": [
+      {
+        "filename": "Marassi-Brochure.pdf",
+        "clean_name": "Marassi Brochure",
+        "path": "/brochures/Marassi-Brochure.pdf",
+        "size_mb": 46.9
+      },
+      {
+        "filename": "Marassi-Red-Sea-Brochure.pdf",
+        "clean_name": "Marassi Red Sea Brochure",
+        "path": "/brochures/Marassi-Red-Sea-Brochure.pdf",
+        "size_mb": 25.91
+      }
+    ],
+    "mivida": [
+      {
+        "filename": "Mivida-Brochure.pdf",
+        "clean_name": "Mivida Brochure",
+        "path": "/brochures/Mivida-Brochure.pdf",
+        "size_mb": 2.94
+      },
+      {
+        "filename": "Mivida-Gardens-Brochure.pdf",
+        "clean_name": "Mivida Gardens Brochure",
+        "path": "/brochures/Mivida-Gardens-Brochure.pdf",
+        "size_mb": 13.71
+      }
+    ],
+    "capital-heights": [
+      {
+        "filename": "New Capital Gardens brochure.pdf",
+        "clean_name": "New Capital Gardens Brochure",
+        "path": "/brochures/New Capital Gardens brochure.pdf",
+        "size_mb": 15.82
+      }
+    ],
+    "rock-capital-1": [
+      {
+        "filename": "New Capital Gardens brochure.pdf",
+        "clean_name": "New Capital Gardens Brochure",
+        "path": "/brochures/New Capital Gardens brochure.pdf",
+        "size_mb": 15.82
+      }
+    ],
+    "sun-capital": [
+      {
+        "filename": "New Capital Gardens brochure.pdf",
+        "clean_name": "New Capital Gardens Brochure",
+        "path": "/brochures/New Capital Gardens brochure.pdf",
+        "size_mb": 15.82
+      }
+    ],
+    "vinci-capital": [
+      {
+        "filename": "New Capital Gardens brochure.pdf",
+        "clean_name": "New Capital Gardens Brochure",
+        "path": "/brochures/New Capital Gardens brochure.pdf",
+        "size_mb": 15.82
+      }
+    ],
+    "97-hills": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "alam-al-roum": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "beverly-hills": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "club-hill-solare": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "palm-hills-katameya": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "palm-hills-new-alamein": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "palm-hills-new-cairo": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "palm-hills-october": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "palm-hills-one": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "palm-hills-sheikh-zayed": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "patio-hills": [
+      {
+        "filename": "palm hills New Alamien Brochure.pdf",
+        "clean_name": "Palm Hills New Alamien Brochure",
+        "path": "/brochures/palm hills New Alamien Brochure.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "soul": [
+      {
+        "filename": "Soul-Brochure.pdf",
+        "clean_name": "Soul Brochure",
+        "path": "/brochures/Soul-Brochure.pdf",
+        "size_mb": 16.68
+      }
+    ],
+    "uptown-cairo": [
+      {
+        "filename": "Uptown-Cairo-Brochure.pdf",
+        "clean_name": "Uptown Cairo Brochure",
+        "path": "/brochures/Uptown-Cairo-Brochure.pdf",
+        "size_mb": 5.6
       }
     ]
   }

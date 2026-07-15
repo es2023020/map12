@@ -21,6 +21,7 @@ export type CompoundRegistryEntry = {
   amenities?: string[];
   types?: string[];
   highlights?: string[];
+  parentSlug?: string;
 };
 
 export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
@@ -104,10 +105,12 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: ["Terraced sea-view planning", "Sidi Abdel Rahman prime location", "Interconnected lagoons", "Established active resort"]
   },
   "aqua-lagoons-june": {
-    lat: 30.02508,
-    lng: 31.47826,
+    destination: "ras-el-hekma",
+    lat: 31.0828,
+    lng: 28.0116,
     developer: "SODIC",
-    city: "June, new-cairo",
+    city: "June, Ras El Hekma",
+    parentSlug: "june",
   },
   "at-east": {
     destination: "mostakbal-city",
@@ -366,6 +369,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 27.85456,
     developer: "Misr Italia Properties",
     city: "Solare, ras-el-hekma",
+    parentSlug: "solare",
   },
   "club-views": {
     lat: 30.03301,
@@ -1096,6 +1100,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: ["Japanese-inspired minimalist design", "440 acres with km 205 beachfront", "SODIC premium quality delivery", "Wellness-centered resort lifestyle"]
   },
   "olive-oasis": {
+    parentSlug: "solare",
   },
   "one33": {
     destination: "sheikh-zayed",
@@ -1899,6 +1904,4 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     paymentPlan: "10% down, installments up to 8 years",
     amenities: ["Clubhouse", "Swimming pools", "Sports club", "Commercial center", "Restaurants & cafés", "Hotels", "Schools", "Medical center", "Shuttle buses", "Parks", "24/7 security"],
     types: ["Apartment", "Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["3.4 million m² integrated resort town", "15 minutes from Hurghada Airport", "Panoramic Red Sea hillside views"]
-  },
-};
+    highlights: ["3.4 million m² integrated resort town", "15 minutes from Hurghada Airport", "Panoramic Red Sea h
