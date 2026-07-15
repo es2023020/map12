@@ -2187,7 +2187,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                         </h3>
                         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 max-h-[520px] overflow-y-auto pr-1">
                           {compoundsList
-                            .filter((c) => !newLaunchesList.includes(c.slug))
+                            .filter((c) => !newLaunchesList.includes(c.slug) && !(c as any).parentSlug)
                             .map((proj) => (
                             <div key={proj.slug} className="group relative overflow-hidden rounded-xl border border-border/60 bg-secondary/20 hover:border-accent/40 hover:bg-card transition-all">
                               <div className="relative h-24 overflow-hidden">

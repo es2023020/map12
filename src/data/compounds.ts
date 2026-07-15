@@ -3147,6 +3147,28 @@ const additionalLaunches: Compound[] = [
     unitSizes: "85–261 m²",
     type: "Residential",
     highlights: ["Near Sheikh Zayed", "9 Years Payment Plan", "Developed by Arkan Palm", "Villas & Apartments"],
+  },
+  {
+    slug: "vie",
+    name: "Vie",
+    destination: "new-cairo",
+    lat: 30.031, lng: 31.486,
+    developer: "Vie Communities",
+    developerSlug: "vie-communities",
+    priceFrom: 12.0,
+    deliveryYear: 2028,
+    status: "Off-Plan",
+    beachfront: false,
+    types: ["Apartment", "Duplex", "Townhouse", "Villa"],
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "24/7 Security", "Green Spaces", "Commercial Strip"],
+    hero: "/projects/vie/1.jpg",
+    gallery: ["/projects/vie/1.jpg"],
+    blurb: "Vie by Vie Communities is a premium master-planned development in New Cairo, featuring distinct residential phases including Vie Collective and Vie Halo.",
+    paymentPlan: "10% down · 7 years equal installments",
+    areaSize: "85 feddan",
+    unitSizes: "95–350 m²",
+    type: "Residential",
+    highlights: ["Master-planned community", "Lush landscapes", "Premium apartments & villas"],
   }
 ];
 

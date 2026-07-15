@@ -62,7 +62,7 @@ function Gallery({ images, name }: { images: string[]; name: string }) {
   return (
     <>
       {/* Gallery grid */}
-      <div className={`grid gap-1.5 overflow-hidden rounded-2xl md:rounded-3xl ${
+      <div className={`grid gap-2 overflow-hidden rounded-2xl md:rounded-3xl ${
         imgs.length === 1 ? "grid-cols-1" :
         imgs.length === 2 ? "grid-cols-2" :
         imgs.length === 3 ? "grid-cols-3" :
@@ -70,29 +70,38 @@ function Gallery({ images, name }: { images: string[]; name: string }) {
       }`}>
         {/* Main image */}
         <div
-          className={`relative overflow-hidden bg-secondary cursor-pointer ${
+          className={`group relative overflow-hidden bg-secondary cursor-pointer ${
             imgs.length >= 4 ? "md:col-span-2 md:row-span-2" : ""
           }`}
           style={{ aspectRatio: imgs.length === 1 ? "16/7" : "4/3" }}
           onClick={() => setLightbox(0)}
         >
-          <img src={imgs[0]} alt={name} className="h-full w-full object-cover hover:scale-105 transition-transform duration-500" />
+          <img src={imgs[0]} alt={name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-3">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur-md px-3 py-1.5 text-xs font-bold text-white border border-white/20">
+              <ZoomIn className="h-3.5 w-3.5" /> View Gallery
+            </span>
+          </div>
           {imgs.length > 1 && (
-            <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors" />
+            <div className="absolute top-3 right-3 rounded-full bg-black/50 backdrop-blur-md px-2.5 py-1 text-[10px] font-bold text-white border border-white/10">
+              1 / {imgs.length}
+            </div>
           )}
         </div>
         {/* Secondary images */}
         {imgs.slice(1, imgs.length >= 4 ? 4 : imgs.length).map((img, i) => (
           <div
             key={i}
-            className="relative overflow-hidden bg-secondary cursor-pointer"
+            className="group relative overflow-hidden bg-secondary cursor-pointer"
             style={{ aspectRatio: "4/3" }}
             onClick={() => setLightbox(i + 1)}
           >
-            <img src={img} alt="" className="h-full w-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src={img} alt="" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
             {i === 2 && imgs.length > 4 && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                <span className="font-display text-2xl font-bold text-white">+{imgs.length - 4}</span>
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/55 backdrop-blur-sm">
+                <ZoomIn className="h-7 w-7 text-white/80 mb-1" />
+                <span className="font-display text-xl font-bold text-white">+{imgs.length - 4} more</span>
               </div>
             )}
           </div>
@@ -101,23 +110,25 @@ function Gallery({ images, name }: { images: string[]; name: string }) {
 
       {/* Lightbox */}
       {lightbox !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm" onClick={() => setLightbox(null)}>
-          <button className="absolute top-4 right-4 rounded-full bg-white/10 p-2 text-white hover:bg-white/20" onClick={() => setLightbox(null)}>
-            <X className="h-6 w-6" />
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md animate-fade-in" onClick={() => setLightbox(null)}>
+          <button className="absolute top-4 right-4 rounded-full bg-white/10 border border-white/20 p-2.5 text-white hover:bg-white/25 transition-colors" onClick={() => setLightbox(null)}>
+            <X className="h-5 w-5" />
           </button>
-          <button className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20" onClick={(e) => { e.stopPropagation(); prev(); }}>
+          <button className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 border border-white/20 p-3 text-white hover:bg-white/25 transition-colors" onClick={(e) => { e.stopPropagation(); prev(); }}>
             <ChevronLeft className="h-6 w-6" />
           </button>
-          <button className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20" onClick={(e) => { e.stopPropagation(); next(); }}>
+          <button className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 border border-white/20 p-3 text-white hover:bg-white/25 transition-colors" onClick={(e) => { e.stopPropagation(); next(); }}>
             <ChevronRight className="h-6 w-6" />
           </button>
           <img
             src={imgs[lightbox]}
             alt={name}
-            className="max-h-[85vh] max-w-[90vw] rounded-xl object-contain shadow-2xl"
+            className="max-h-[88vh] max-w-[92vw] rounded-2xl object-contain shadow-2xl border border-white/10"
             onClick={(e) => e.stopPropagation()}
           />
-          <div className="absolute bottom-4 text-sm text-white/60">{lightbox + 1} / {imgs.length}</div>
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-black/50 backdrop-blur-md border border-white/10 px-4 py-1.5 text-sm font-semibold text-white/80">
+            {lightbox + 1} / {imgs.length}
+          </div>
         </div>
       )}
     </>
@@ -143,10 +154,10 @@ function CompoundPage() {
 
   // Master plan popup state
   const [masterPlanOpen, setMasterPlanOpen] = useState(false);
-  // Read live compound data from the store to get admin-updated fields
   const storeCompounds = useStore((s) => s.compoundsList);
   const liveProject = storeCompounds?.find((p: any) => p.slug === c.slug);
   const masterPlanUrl: string | undefined = liveProject?.masterPlanUrl ?? (c as any).masterPlanUrl;
+  const phases = storeCompounds?.filter((p: any) => p.parentSlug === c.slug) || [];
 
   return (
     <Shell>
@@ -305,6 +316,42 @@ function CompoundPage() {
                 )}
               </div>
             </div>
+          )}
+
+          {/* Project Phases */}
+          {phases.length > 0 && (
+            <Section title="Project Phases">
+              <p className="text-xs text-muted-foreground mb-4">
+                Explore the residential neighborhoods and exclusive phases within {c.name}.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {phases.map((phase: any) => (
+                  <div key={phase.slug} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-soft hover:shadow-md transition-all flex flex-col justify-between">
+                    <div className="relative aspect-[16/9] w-full overflow-hidden bg-secondary">
+                      <img src={phase.hero} alt={phase.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 animate-fade-in" loading="lazy" />
+                      <div className="absolute top-2 right-2 rounded-full bg-black/60 backdrop-blur-md px-2 py-0.5 text-[9px] font-bold text-white border border-white/10 uppercase tracking-wider">
+                        {phase.status}
+                      </div>
+                    </div>
+                    <div className="p-4 flex-1 flex flex-col justify-between">
+                      <div>
+                        <h4 className="font-display text-base font-bold text-primary">{phase.name}</h4>
+                        <p className="mt-1 line-clamp-2 text-xs text-muted-foreground leading-relaxed">{phase.blurb}</p>
+                      </div>
+                      <div className="mt-4 pt-3 border-t border-border/40 flex items-center justify-between">
+                        <div>
+                          <div className="text-[9px] text-muted-foreground uppercase font-bold tracking-wider">Starts From</div>
+                          <div className="text-accent font-bold text-xs">EGP {phase.priceFrom}M</div>
+                        </div>
+                        <Link to="/projects/$slug" params={{ slug: phase.slug }} className="rounded-lg border border-border px-3 py-1.5 text-[10px] font-bold text-primary bg-secondary/20 hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all">
+                          Explore Phase →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Section>
           )}
 
           {/* Live Availability from developer sheets */}

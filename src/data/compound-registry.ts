@@ -105,11 +105,10 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: ["Terraced sea-view planning", "Sidi Abdel Rahman prime location", "Interconnected lagoons", "Established active resort"]
   },
   "aqua-lagoons-june": {
-    destination: "ras-el-hekma",
-    lat: 31.0828,
-    lng: 28.0116,
+    lat: 30.02508,
+    lng: 31.47826,
     developer: "SODIC",
-    city: "June, Ras El Hekma",
+    city: "June, new-cairo",
     parentSlug: "june",
   },
   "at-east": {
@@ -1327,6 +1326,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Silversands, new-cairo",
   },
   "silvertown-lagoon-cabanas": {
+    parentSlug: "silversands",
   },
   "sky-north": {
     lat: 30.03134,
@@ -1523,8 +1523,22 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "vea-new-cairo": {
   },
   "vie-collective": {
+    parentSlug: "vie",
   },
   "vie-halo": {
+    parentSlug: "vie",
+  },
+  "vie": {
+    name: "Vie",
+    destination: "new-cairo",
+    developer: "Vie Communities",
+    lat: 30.031,
+    lng: 31.486,
+    priceFrom: 12.0,
+    deliveryYear: 2028,
+    type: "Residential",
+    blurb: "Vie by Vie Communities is a premium master-planned development in New Cairo, featuring distinct residential phases including Vie Collective and Vie Halo.",
+    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "24/7 Security", "Green Spaces", "Commercial Strip"],
   },
   "village-de-la-capitale": {
     lat: 30.01326,

@@ -49,15 +49,17 @@ function ComparePage() {
   const availB = useMemo(() => availabilityBySlug(slugB), [slugB]);
 
   const filteredCompoundsA = useMemo(() => {
-    if (!searchA) return compounds.slice(0, 10);
-    return compounds
+    const list = compounds.filter(c => !c.parentSlug);
+    if (!searchA) return list.slice(0, 10);
+    return list
       .filter((c) => c.name.toLowerCase().includes(searchA.toLowerCase()))
       .slice(0, 10);
   }, [searchA]);
 
   const filteredCompoundsB = useMemo(() => {
-    if (!searchB) return compounds.slice(0, 10);
-    return compounds
+    const list = compounds.filter(c => !c.parentSlug);
+    if (!searchB) return list.slice(0, 10);
+    return list
       .filter((c) => c.name.toLowerCase().includes(searchB.toLowerCase()))
       .slice(0, 10);
   }, [searchB]);
@@ -599,16 +601,17 @@ function ComparePage() {
                   {highlightDiffs ? "Highlights On" : "Highlights Off"}
                 </button>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <span className="text-xs text-muted-foreground font-semibold">
                   Showing {visibleRows.length} attributes
                 </span>
                 <button
                   onClick={handleDownloadPDF}
-                  className="no-print inline-flex items-center gap-1.5 rounded-full bg-accent text-accent-foreground px-4 py-1.5 text-xs font-bold transition-all hover:bg-accent/80 shadow-sm"
+                  id="download-pdf-btn"
+                  className="no-print inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-5 py-2.5 text-sm font-bold shadow-lg hover:shadow-emerald-500/40 hover:scale-105 transition-all duration-200 border border-emerald-400/30"
                 >
-                  <Download className="h-3.5 w-3.5" />
-                  Download PDF
+                  <Download className="h-4 w-4" />
+                  Download PDF Report
                 </button>
               </div>
             </div>
@@ -616,11 +619,14 @@ function ComparePage() {
             {/* Project Header Cards */}
             <div className="grid gap-6 md:grid-cols-2">
               {/* Card A */}
-              <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-soft">
-                <div className="absolute top-3 left-3 z-10 rounded-full bg-emerald-500 px-3 py-1 text-[10px] font-bold text-white uppercase shadow-sm">
+              <div className="relative overflow-hidden rounded-2xl border-2 border-emerald-500/40 bg-card shadow-soft group">
+                <div className="absolute top-3 left-3 z-10 rounded-full bg-emerald-500 px-3 py-1 text-[10px] font-bold text-white uppercase shadow-sm tracking-wider">
                   Project A
                 </div>
-                <img src={compA.hero} alt={compA.name} className="h-48 w-full object-cover" />
+                <div className="relative h-52 overflow-hidden">
+                  <img src={compA.hero} alt={compA.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
                 <div className="p-6">
                   <div className="text-xs font-bold text-accent uppercase tracking-wider">{compA.developer}</div>
                   <h2 className="mt-1 font-display text-2xl font-bold text-primary">{compA.name}</h2>
@@ -633,11 +639,14 @@ function ComparePage() {
               </div>
 
               {/* Card B */}
-              <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-soft">
-                <div className="absolute top-3 left-3 z-10 rounded-full bg-accent px-3 py-1 text-[10px] font-bold text-accent-foreground uppercase shadow-sm">
+              <div className="relative overflow-hidden rounded-2xl border-2 border-accent/40 bg-card shadow-soft group">
+                <div className="absolute top-3 left-3 z-10 rounded-full bg-accent px-3 py-1 text-[10px] font-bold text-accent-foreground uppercase shadow-sm tracking-wider">
                   Project B
                 </div>
-                <img src={compB.hero} alt={compB.name} className="h-48 w-full object-cover" />
+                <div className="relative h-52 overflow-hidden">
+                  <img src={compB.hero} alt={compB.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
                 <div className="p-6">
                   <div className="text-xs font-bold text-accent uppercase tracking-wider">{compB.developer}</div>
                   <h2 className="mt-1 font-display text-2xl font-bold text-primary">{compB.name}</h2>
@@ -691,6 +700,17 @@ function ComparePage() {
                   </tbody>
                 </table>
               </div>
+            </div>
+
+            {/* Big Download Button above CTA */}
+            <div className="no-print flex justify-center">
+              <button
+                onClick={handleDownloadPDF}
+                className="inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 text-white px-8 py-4 text-base font-extrabold shadow-2xl hover:shadow-emerald-500/50 hover:scale-105 transition-all duration-200 border border-white/20 tracking-wide"
+              >
+                <Download className="h-5 w-5" />
+                📄 Download Full Comparison Report (PDF)
+              </button>
             </div>
 
             {/* CTA bar */}

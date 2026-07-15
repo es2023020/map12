@@ -12,7 +12,7 @@ export function NewLaunchesSlider() {
   const compoundsList = useStore((s) => s.compoundsList) || [];
   const newLaunchesList = useStore((s) => s.newLaunchesList) || [];
 
-  const sliderCompounds = compoundsList.filter((c) => newLaunchesList.includes(c.slug));
+  const sliderCompounds = compoundsList.filter((c) => newLaunchesList.includes(c.slug) && !c.parentSlug);
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
