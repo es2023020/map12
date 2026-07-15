@@ -9,38 +9,19 @@ export const Route = createFileRoute("/api/upload-asset")({
       POST: async (event: any) => {
         try {
           const request = event.request;
-          const url = new URL(request.url);
-          let fileName = url.searchParams.get("fileName");
-          let type = url.searchParams.get("type");
-          let buffer: Buffer;
-
-          const contentType = request.headers.get("content-type") || "";
-
-          if (contentType.includes("application/json")) {
-            const body = await request.json();
-            fileName = body.fileName;
-            type = body.type;
-            const fileContent = body.fileContent;
-            
-            if (!fileName || !fileContent || !type) {
-              return new Response(JSON.stringify({ error: "Missing fields" }), {
-                status: 400,
-                headers: { "Content-Type": "application/json" }
-              });
-            }
-
-            const base64Data = fileContent.replace(/^data:[^;]+;base64,/, "").replace(/^data:application\/pdf;base64,/, "");
-            buffer = Buffer.from(base64Data, "base64");
-          } else {
-            if (!fileName || !type) {
-              return new Response(JSON.stringify({ error: "Missing query params for binary upload" }), {
-                status: 400,
-                headers: { "Content-Type": "application/json" }
-              });
-            }
-            const arrayBuffer = await request.arrayBuffer();
-            buffer = Buffer.from(arrayBuffer);
+          const body = await request.json();
+          const { fileName, fileContent, type } = body;
+          
+          if (!fileName || !fileContent || !type) {
+            return new Response(JSON.stringify({ error: "Missing fields" }), {
+              status: 400,
+              headers: { "Content-Type": "application/json" }
+            });
           }
+
+          // Decode base64
+          const base64Data = fileContent.replace(/^data:application\/pdf;base64,/, "");
+          const buffer = Buffer.from(base64Data, "base64");
 
           let targetPath = "";
           if (type === "brochure") {

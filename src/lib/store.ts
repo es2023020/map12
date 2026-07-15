@@ -3,40 +3,6 @@ import { persist, createJSONStorage } from "zustand/middleware";
 import { compounds } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import { destinations } from "@/data/destinations";
-import persistedCompounds from "@/data/persisted-compounds.json";
-import persistedAvailability from "@/data/persisted-availability.json";
-import persistedDestinations from "@/data/persisted-destinations.json";
-
-export const normalizeDeveloperName = (name: string): string => {
-  if (!name) return "";
-  const lower = name.trim().toLowerCase();
-  if (lower === "mountain view developments" || lower === "mountain view development" || lower === "mountain view") {
-    return "Mountain View";
-  }
-  if (
-    lower === "orascom" ||
-    lower === "orascom development" ||
-    lower === "orascom developments" ||
-    lower === "orascom development egypt" ||
-    lower === "orascom hotels & development"
-  ) {
-    return "Orascom Development";
-  }
-  return name.trim();
-};
-
-const persistChangesToSource = async (type: "projects" | "availability" | "destinations", data: any) => {
-  try {
-    await fetch("/api/save-data", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ type, data })
-    });
-  } catch (err) {
-    console.error(`Failed to persist ${type} changes to disk:`, err);
-  }
-};
-
 
 // Session-scoped login: on every page load we check if a browser session is still active.
 // sessionStorage is cleared when the browser tab/window is fully closed, so this
@@ -108,7 +74,6 @@ type State = {
   availabilityList: any[];
   destinationsList: any[];
   developersList: any[];
-  newLaunchesList: string[];
   auditLogs: any[];
 
   // Actions
@@ -150,8 +115,6 @@ type State = {
   deleteDeveloper: (slug: string) => void;
   updateAvailability: (slug: string, data: any) => void;
   bulkUpdateAvailability: (data: any[]) => void;
-  addNewLaunchSlug: (slug: string) => void;
-  removeNewLaunchSlug: (slug: string) => void;
   addAuditLog: (log: { actor: string; entity: string; action: string; before?: string; after?: string }) => void;
 };
 
@@ -262,17 +225,8 @@ export const useStore = create<State>()(
         });
       };
 
-      // Base initial compounds array (read persisted if present, otherwise raw compounds)
-      const baseInitialCompounds = persistedCompounds && persistedCompounds.length > 0
-        ? persistedCompounds
-        : compounds.map((c) => ({
-            ...c,
-            developer: normalizeDeveloperName(c.developer),
-            developerSlug: normalizeDeveloperName(c.developer).toLowerCase().replace(/[^a-z0-9]+/g, "-")
-          }));
-
       // Initial derived developer list from seed compounds
-      const seedDevelopers = Array.from(new Set(baseInitialCompounds.map(c => normalizeDeveloperName(c.developer)))).map((name, i) => ({
+      const seedDevelopers = Array.from(new Set(compounds.map(c => c.developer))).map((name, i) => ({
         slug: name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
         name,
         legalName: `${name} S.A.E.`,
@@ -282,17 +236,8 @@ export const useStore = create<State>()(
         address: "Cairo, Egypt",
         tier: "Tier A",
         status: "Verified",
-        projects: baseInitialCompounds.filter(c => normalizeDeveloperName(c.developer) === name).map(c => c.name)
+        projects: compounds.filter(c => c.developer === name).map(c => c.name)
       }));
-
-      const initialNewLaunches = [
-        "creekview", "elea-azha-north", "june", "sadaf", 
-        "commonhaus", "the-lynks", "park-sight", "silversands", 
-        "marresidence", "chapters-residence", "vea-new-cairo", "vie", 
-        "coral-coves", "menorca", "the-commons", "covaya", 
-        "solare", "sealine-seashore",
-        "hacienda-ras-el-hekma", "direction-white", "hap-town", "seazen"
-      ];
 
       return {
         user: null,
@@ -316,11 +261,10 @@ export const useStore = create<State>()(
         userData: {},
 
         // Platform Admin Data
-        compoundsList: baseInitialCompounds,
-        availabilityList: persistedAvailability && persistedAvailability.length > 0 ? persistedAvailability : availability,
-        destinationsList: persistedDestinations && persistedDestinations.length > 0 ? persistedDestinations : destinations,
+        compoundsList: compounds,
+        availabilityList: availability,
+        destinationsList: destinations,
         developersList: seedDevelopers,
-        newLaunchesList: initialNewLaunches,
         auditLogs: [
           { id: "a1", actor: "System", entity: "Database", action: "Initialized PropTrack Command Center databases", timestamp: Date.now() - 3600000 * 2 }
         ],
@@ -697,42 +641,28 @@ export const useStore = create<State>()(
 
         // Platform Super-Admin CRUD Actions
         addProject: (p) => {
-          const devName = normalizeDeveloperName(p.developer);
-          const normalizedProj = {
-            ...p,
-            developer: devName,
-            developerSlug: devName.toLowerCase().replace(/[^a-z0-9]+/g, "-")
-          };
           set((s) => {
-            const compoundsList = [...s.compoundsList, normalizedProj];
-            persistChangesToSource("projects", compoundsList);
+            const compoundsList = [...s.compoundsList, p];
             return { compoundsList };
           });
           get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Project", action: `Added new project: ${p.name}` });
         },
 
         updateProject: (slug, updates) => {
-          if (updates.developer) {
-            const devName = normalizeDeveloperName(updates.developer);
-            updates.developer = devName;
-            updates.developerSlug = devName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-          }
           set((s) => {
             const before = JSON.stringify(s.compoundsList.find(c => c.slug === slug));
             const compoundsList = s.compoundsList.map(c => c.slug === slug ? { ...c, ...updates } : c);
             const after = JSON.stringify(compoundsList.find(c => c.slug === slug));
             get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Project", action: `Updated project: ${slug}`, before, after });
-            persistChangesToSource("projects", compoundsList);
             return { compoundsList };
           });
         },
 
         deleteProject: (slug) => {
           set((s) => {
+            const target = s.compoundsList.find(c => c.slug === slug);
             const compoundsList = s.compoundsList.filter(c => c.slug !== slug);
-            const newLaunchesList = s.newLaunchesList.filter(x => x !== slug);
-            persistChangesToSource("projects", compoundsList);
-            return { compoundsList, newLaunchesList };
+            return { compoundsList };
           });
           get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Project", action: `Deleted project: ${slug}` });
         },
@@ -740,7 +670,6 @@ export const useStore = create<State>()(
         addDestination: (d) => {
           set((s) => {
             const destinationsList = [...s.destinationsList, d];
-            persistChangesToSource("destinations", destinationsList);
             return { destinationsList };
           });
           get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Destination", action: `Added new destination: ${d.name}` });
@@ -752,7 +681,6 @@ export const useStore = create<State>()(
             const destinationsList = s.destinationsList.map(d => d.slug === slug ? { ...d, ...updates } : d);
             const after = JSON.stringify(destinationsList.find(d => d.slug === slug));
             get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Destination", action: `Updated destination: ${slug}`, before, after });
-            persistChangesToSource("destinations", destinationsList);
             return { destinationsList };
           });
         },
@@ -760,32 +688,20 @@ export const useStore = create<State>()(
         deleteDestination: (slug) => {
           set((s) => {
             const destinationsList = s.destinationsList.filter(d => d.slug !== slug);
-            persistChangesToSource("destinations", destinationsList);
             return { destinationsList };
           });
           get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Destination", action: `Deleted destination: ${slug}` });
         },
 
         addDeveloper: (dev) => {
-          const devName = normalizeDeveloperName(dev.name);
-          const normalizedDev = {
-            ...dev,
-            name: devName,
-            slug: devName.toLowerCase().replace(/[^a-z0-9]+/g, "-")
-          };
           set((s) => {
-            const developersList = [...s.developersList, normalizedDev];
+            const developersList = [...s.developersList, dev];
             return { developersList };
           });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Developer", action: `Added new developer: ${devName}` });
+          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Developer", action: `Added new developer: ${dev.name}` });
         },
 
         updateDeveloper: (slug, updates) => {
-          if (updates.name) {
-            const devName = normalizeDeveloperName(updates.name);
-            updates.name = devName;
-            updates.slug = devName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-          }
           set((s) => {
             const before = JSON.stringify(s.developersList.find(d => d.slug === slug));
             const developersList = s.developersList.map(d => d.slug === slug ? { ...d, ...updates } : d);
@@ -809,7 +725,6 @@ export const useStore = create<State>()(
             const availabilityList = exists
               ? s.availabilityList.map(a => a.slug === slug ? data : a)
               : [...s.availabilityList, data];
-            persistChangesToSource("availability", availabilityList);
             return { availabilityList };
           });
           get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Availability", action: `Updated availability inventory for project: ${slug}` });
@@ -817,24 +732,7 @@ export const useStore = create<State>()(
 
         bulkUpdateAvailability: (data) => {
           set({ availabilityList: data });
-          persistChangesToSource("availability", data);
           get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Availability", action: `Bulk imported global availability database` });
-        },
-
-        addNewLaunchSlug: (slug) => {
-          set((s) => {
-            const newLaunchesList = s.newLaunchesList.includes(slug) ? s.newLaunchesList : [...s.newLaunchesList, slug];
-            return { newLaunchesList };
-          });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Launches", action: `Promoted project to New Launches: ${slug}` });
-        },
-
-        removeNewLaunchSlug: (slug) => {
-          set((s) => {
-            const newLaunchesList = s.newLaunchesList.filter(x => x !== slug);
-            return { newLaunchesList };
-          });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Launches", action: `Removed project from New Launches: ${slug}` });
         },
 
         addAuditLog: (log) => {

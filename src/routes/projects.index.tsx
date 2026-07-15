@@ -15,7 +15,7 @@ const compoundPrices = compounds.map((c) => c.priceFrom);
 const allPrices = [...availMaxPrices, ...compoundPrices].filter((p) => p > 0);
 const PRICE_MAX = Math.max(...allPrices);
 const PRICE_MIN = Math.min(...compoundPrices);
-const ALL_TYPES = Array.from(new Set(compounds.filter(c => !c.parentSlug).flatMap((c) => c.types))).sort();
+const ALL_TYPES = Array.from(new Set(compounds.flatMap((c) => c.types))).sort();
 
 export const Route = createFileRoute("/projects/")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -114,7 +114,7 @@ function ProjectsPage() {
   };
 
   const filtered = useMemo(() => {
-    let list = compounds.filter((c) => !c.parentSlug && matchCompound(c, q, destination, dev, status, type, maxPrice));
+    let list = compounds.filter((c) => matchCompound(c, q, destination, dev, status, type, maxPrice));
     return [...list].sort((a, b) => {
       if (sort === "name") return a.name.localeCompare(b.name);
       if (sort === "price-asc") return a.priceFrom - b.priceFrom;
@@ -125,25 +125,25 @@ function ProjectsPage() {
 
   // Dynamic cascading option computations:
   const activeDestinations = useMemo(() => {
-    const list = compounds.filter((c) => !c.parentSlug && matchCompound(c, q, "", dev, status, type, maxPrice));
+    const list = compounds.filter((c) => matchCompound(c, q, "", dev, status, type, maxPrice));
     const slugs = new Set(list.map((c) => c.destination));
     return destinations.filter((a) => slugs.has(a.slug));
   }, [q, dev, status, type, maxPrice, availabilityMap]);
 
   const activeDevelopers = useMemo(() => {
-    const list = compounds.filter((c) => !c.parentSlug && matchCompound(c, q, destination, "", status, type, maxPrice));
+    const list = compounds.filter((c) => matchCompound(c, q, destination, "", status, type, maxPrice));
     const slugs = new Set(list.map((c) => c.developerSlug));
     return developers.filter((d) => slugs.has(d.slug));
   }, [q, destination, status, type, maxPrice, availabilityMap]);
 
   const activeStatuses = useMemo(() => {
-    const list = compounds.filter((c) => !c.parentSlug && matchCompound(c, q, destination, dev, "", type, maxPrice));
+    const list = compounds.filter((c) => matchCompound(c, q, destination, dev, "", type, maxPrice));
     const statuses = new Set(list.map((c) => c.status));
     return ["Delivered", "Under Construction", "Off-Plan"].filter((s) => statuses.has(s as any));
   }, [q, destination, dev, type, maxPrice, availabilityMap]);
 
   const activeTypes = useMemo(() => {
-    const list = compounds.filter((c) => !c.parentSlug && matchCompound(c, q, destination, dev, status, "", maxPrice));
+    const list = compounds.filter((c) => matchCompound(c, q, destination, dev, status, "", maxPrice));
     const types = new Set(list.flatMap((c) => c.types));
     return ALL_TYPES.filter((t) => types.has(t));
   }, [q, destination, dev, status, maxPrice, availabilityMap]);

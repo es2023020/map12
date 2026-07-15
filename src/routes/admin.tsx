@@ -10,7 +10,7 @@ import {
   ShieldCheck, Users, CreditCard, TrendingUp, Check, ExternalLink,
   Building2, MapPin, Layers, LayoutGrid, Calculator, Sliders, ShieldAlert,
   Send, Bot, Settings, Plus, Edit, Trash2, Save, FileText, HelpCircle,
-  Database, Upload, AlertCircle, RefreshCw, Star, ArrowLeftRight, CheckCircle, Info, X, Image as ImageIcon, ArrowLeft, FileSpreadsheet, Sparkles
+  Database, Upload, AlertCircle, RefreshCw, Star, ArrowLeftRight, CheckCircle, Info, X, Image as ImageIcon, ArrowLeft, FileSpreadsheet
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/admin")({
 type TabType = 
   | "overview" | "companies" | "destinations" | "projects" 
   | "availability" | "map" | "tools" | "people" | "crm" 
-  | "ai" | "campaigns" | "audit" | "launches";
+  | "ai" | "campaigns" | "audit";
 
 function AdminPage() {
   const user = useStore((s) => s.user);
@@ -184,9 +184,6 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   
   const updateAvailability = useStore((s) => s.updateAvailability);
   const bulkUpdateAvailability = useStore((s) => s.bulkUpdateAvailability);
-  const addNewLaunchSlug = useStore((s) => s.addNewLaunchSlug);
-  const removeNewLaunchSlug = useStore((s) => s.removeNewLaunchSlug);
-  const newLaunchesList = useStore((s) => s.newLaunchesList) || [];
 
   // Selected Detail workspaces (Dedicated Webpages)
   const [selectedProjectSlug, setSelectedProjectSlug] = useState<string | null>(null);
@@ -893,7 +890,6 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   // Sidebar list of tab links
   const sidebarItems = [
     { id: "overview", label: "Overview", icon: LayoutGrid },
-    { id: "launches", label: "New Launches", icon: Sparkles },
     { id: "companies", label: "Developers CRUD", icon: Building2 },
     { id: "destinations", label: "Destinations CRUD", icon: MapPin },
     { id: "projects", label: "Projects CRUD", icon: Database },
@@ -2111,108 +2107,6 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                           ))}
                         </tbody>
                       </table>
-                    </div>
-                  </div>
-                )}
-
-                {/* ── NEW LAUNCHES ── */}
-                {activeTab === "launches" && (
-                  <div className="space-y-6">
-                    <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-                      <div className="flex items-center justify-between flex-wrap gap-3 mb-6">
-                        <div>
-                          <h2 className="font-display text-xl font-bold text-primary flex items-center gap-2">
-                            <Sparkles className="h-5 w-5 text-accent" /> New Launches Manager
-                          </h2>
-                          <p className="text-xs text-muted-foreground mt-1">
-                            Control which projects appear in the "New Launches" homepage slider. Changes reflect live in the main app.
-                          </p>
-                        </div>
-                        <div className="rounded-xl bg-accent/10 border border-accent/20 px-4 py-2 text-sm font-bold text-accent">
-                          {newLaunchesList.length} active launches
-                        </div>
-                      </div>
-
-                      {/* Currently featured */}
-                      <div className="mb-8">
-                        <h3 className="text-xs font-bold text-primary uppercase tracking-wider mb-3 flex items-center gap-1.5">
-                          <Star className="h-4 w-4 text-amber-500" /> Currently Featured in Homepage Slider
-                        </h3>
-                        {newLaunchesList.length === 0 ? (
-                          <div className="rounded-xl border border-dashed border-border p-10 text-center text-xs text-muted-foreground italic">
-                            No launches featured yet. Add projects from the section below.
-                          </div>
-                        ) : (
-                          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                            {newLaunchesList.map((slug) => {
-                              const proj = compoundsList.find((c) => c.slug === slug);
-                              if (!proj) return null;
-                              return (
-                                <div key={slug} className="group relative overflow-hidden rounded-xl border border-accent/20 bg-card shadow-soft hover:shadow-md transition-all">
-                                  <div className="relative h-32 overflow-hidden">
-                                    <img src={proj.hero} alt={proj.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
-                                    <div className="absolute bottom-2 left-3 right-3">
-                                      <div className="text-white font-bold text-sm truncate">{proj.name}</div>
-                                      <div className="text-white/70 text-[10px] truncate">{proj.developer}</div>
-                                    </div>
-                                    <div className="absolute top-2 right-2">
-                                      <span className="inline-flex items-center rounded-full bg-amber-400/20 border border-amber-400/40 px-2 py-0.5 text-[9px] font-bold text-amber-300">
-                                        <Sparkles className="h-2.5 w-2.5 mr-0.5" /> FEATURED
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="p-3 flex items-center justify-between border-t border-border/40">
-                                    <div className="text-[10px] text-muted-foreground font-medium">
-                                      EGP {proj.priceFrom}M+ · Delivery {proj.deliveryYear}
-                                    </div>
-                                    <button
-                                      onClick={() => removeNewLaunchSlug(slug)}
-                                      className="rounded-lg px-2.5 py-1.5 bg-destructive/10 text-destructive border border-destructive/20 hover:bg-destructive hover:text-white transition-all text-[10px] font-bold flex items-center gap-1"
-                                    >
-                                      <Trash2 className="h-3 w-3" /> Remove
-                                    </button>
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Browse all projects to add */}
-                      <div className="border-t border-border/40 pt-6">
-                        <h3 className="text-xs font-bold text-primary uppercase tracking-wider mb-3 flex items-center gap-1.5">
-                          <Plus className="h-4 w-4 text-accent" /> All Projects — Click to Feature
-                        </h3>
-                        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 max-h-[520px] overflow-y-auto pr-1">
-                          {compoundsList
-                            .filter((c) => !newLaunchesList.includes(c.slug) && !(c as any).parentSlug)
-                            .map((proj) => (
-                            <div key={proj.slug} className="group relative overflow-hidden rounded-xl border border-border/60 bg-secondary/20 hover:border-accent/40 hover:bg-card transition-all">
-                              <div className="relative h-24 overflow-hidden">
-                                <img src={proj.hero} alt={proj.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" loading="lazy" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                                <div className="absolute bottom-2 left-3 right-3">
-                                  <div className="text-white font-bold text-xs truncate">{proj.name}</div>
-                                  <div className="text-white/60 text-[10px] truncate">{proj.developer}</div>
-                                </div>
-                              </div>
-                              <div className="p-3 flex items-center justify-between">
-                                <div className="text-[10px] text-muted-foreground font-medium">
-                                  {proj.destination.replace(/-/g, " ")} · EGP {proj.priceFrom}M
-                                </div>
-                                <button
-                                  onClick={() => addNewLaunchSlug(proj.slug)}
-                                  className="rounded-lg px-2.5 py-1.5 bg-accent/10 text-accent border border-accent/20 hover:bg-accent hover:text-white transition-all text-[10px] font-bold flex items-center gap-1"
-                                >
-                                  <Plus className="h-3 w-3" /> Feature
-                                </button>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
                     </div>
                   </div>
                 )}
