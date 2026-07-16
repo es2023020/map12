@@ -115,34 +115,36 @@ function MapPage() {
     return true;
   };
 
+  const mainCompounds = useMemo(() => compounds.filter((c) => !c.parentSlug), []);
+
   const filtered = useMemo(() => {
-    return compounds.filter((c) => matchMapCompound(c, q, destinationSlug, dev, flagshipOnly));
-  }, [destinationSlug, dev, flagshipOnly, q, availabilityMap]);
+    return mainCompounds.filter((c) => matchMapCompound(c, q, destinationSlug, dev, flagshipOnly));
+  }, [destinationSlug, dev, flagshipOnly, q, availabilityMap, mainCompounds]);
 
   // Dynamic active options for cascading UI
   const activeDevelopers = useMemo(() => {
-    const list = compounds.filter((c) => matchMapCompound(c, q, destinationSlug, "", flagshipOnly));
+    const list = mainCompounds.filter((c) => matchMapCompound(c, q, destinationSlug, "", flagshipOnly));
     const slugs = new Set(list.map((c) => c.developerSlug));
     return developers.filter((d) => slugs.has(d.slug));
-  }, [q, destinationSlug, flagshipOnly, availabilityMap]);
+  }, [q, destinationSlug, flagshipOnly, availabilityMap, mainCompounds]);
 
   const areaCounts = useMemo(() => {
     const m = new Map<string, number>();
     destinations.forEach((a) => {
-      const count = compounds.filter((c) => matchMapCompound(c, q, a.slug, dev, flagshipOnly)).length;
+      const count = mainCompounds.filter((c) => matchMapCompound(c, q, a.slug, dev, flagshipOnly)).length;
       m.set(a.slug, count);
     });
     return m;
-  }, [q, dev, flagshipOnly, availabilityMap]);
+  }, [q, dev, flagshipOnly, availabilityMap, mainCompounds]);
 
   const devCounts = useMemo(() => {
     const m = new Map<string, number>();
     developers.forEach((d) => {
-      const count = compounds.filter((c) => matchMapCompound(c, q, destinationSlug, d.slug, flagshipOnly)).length;
+      const count = mainCompounds.filter((c) => matchMapCompound(c, q, destinationSlug, d.slug, flagshipOnly)).length;
       m.set(d.slug, count);
     });
     return m;
-  }, [q, destinationSlug, flagshipOnly, availabilityMap]);
+  }, [q, destinationSlug, flagshipOnly, availabilityMap, mainCompounds]);
 
   const visibleLandmarks = useMemo(
     () => (destinationSlug ? landmarks.filter((l) => l.destination === destinationSlug) : landmarks),

@@ -271,10 +271,11 @@ function ComparePage() {
     style.id = "print-only-style";
     style.innerHTML = `
       @media print {
-        body > * { display: none !important; }
-        #comparison-report-container { display: block !important; }
-        #comparison-report-container * { display: revert !important; }
-        .no-print { display: none !important; }
+        header, footer, nav, aside, .no-print, button, .quick-comps-header { display: none !important; }
+        body { background: white !important; color: black !important; }
+        #comparison-report-container { display: block !important; width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+        .shadow-soft, .shadow-sm, .shadow-2xl { box-shadow: none !important; border: 1px solid #ddd !important; }
+        tr { page-break-inside: avoid !important; }
       }
     `;
     document.head.appendChild(style);
@@ -301,6 +302,15 @@ function ComparePage() {
               <p className="mt-2 text-sm text-slate-400 max-w-xl">
                 Compare Egyptian properties, listing volumes, starting prices, and delivery terms in real-time.
               </p>
+              {compA && compB && (
+                <button
+                  onClick={handleDownloadPDF}
+                  className="no-print mt-4 inline-flex items-center gap-1.5 rounded-xl bg-accent text-accent-foreground px-4 py-2 text-xs font-bold transition-all hover:bg-accent/80 shadow-md"
+                >
+                  <Download className="h-3.5 w-3.5" />
+                  Export PDF Report
+                </button>
+              )}
             </div>
             
             {/* Quick suggestions */}
@@ -720,6 +730,16 @@ function ComparePage() {
                   </button>
                 </Link>
               </div>
+            </div>
+            {/* Bottom PDF Download Action */}
+            <div className="no-print flex justify-center pt-6">
+              <button
+                onClick={handleDownloadPDF}
+                className="inline-flex items-center gap-2 rounded-xl bg-accent text-accent-foreground px-6 py-3 font-bold text-xs hover:bg-accent/80 transition-all shadow-md"
+              >
+                <Download className="h-4 w-4" />
+                Download Complete Comparison Report (PDF)
+              </button>
             </div>
           </div>
         ) : (

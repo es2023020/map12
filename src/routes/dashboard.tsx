@@ -41,7 +41,6 @@ export const Route = createFileRoute("/dashboard")({
 const tabs = [
   { to: "/dashboard" as const, label: "Workspace Home", icon: LayoutDashboard, exact: true },
   { to: "/dashboard/leads" as const, label: "CRM Lead Pipeline", icon: ListChecks },
-  { to: "/dashboard/ai-assistant" as const, label: "AI Broker Assistant", icon: Sparkles },
   { to: "/dashboard/campaigns" as const, label: "WhatsApp Campaigns", icon: Megaphone },
   { to: "/dashboard/favorites" as const, label: "Favorites Library", icon: Heart },
   { to: "/dashboard/compare" as const, label: "Unit Compare Engine", icon: GitCompareArrows },

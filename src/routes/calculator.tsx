@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo, useEffect } from "react";
 import { Shell } from "@/components/layout/Shell";
-import { compounds } from "@/data/compounds";
-import { availability } from "@/data/availability";
+import { useStore } from "@/lib/store";
 import {
   Calculator, ChevronDown, Phone, Wallet, Calendar,
   TrendingDown, Building2, CheckCircle2, Info, Search, Sliders, MapPin, Tag
@@ -76,37 +75,81 @@ function parsePaymentPlan(plan?: string): { dp: number; duration: number } {
 }
 
 function CalculatorPage() {
+  const compoundsList = useStore((s) => s.compoundsList) || [];
+  const availabilityList = useStore((s) => s.availabilityList) || [];
+
+  const mainCompounds = useMemo(() => compoundsList.filter((c) => !c.parentSlug), [compoundsList]);
+
   const { project: projectParam } = Route.useSearch();
   const [mode, setMode] = useState<"project" | "budget">(projectParam ? "project" : "budget");
-  const [projectSlug, setProjectSlug] = useState((projectParam || compounds[0]?.slug) ?? "");
+  const [projectSlug, setProjectSlug] = useState((projectParam || mainCompounds[0]?.slug) ?? "");
   const [budgetText, setBudgetText] = useState("15,000,000");
   const [dpPct, setDpPct] = useState(10);
   const [duration, setDuration] = useState(8);
   const [maintenance, setMaintenance] = useState(8);
   const [unitType, setUnitType] = useState("");
   const [tab, setTab] = useState<"monthly" | "quarterly" | "annual">("monthly");
+  
+  // New unit selector state
+  const [selectedUnitId, setSelectedUnitId] = useState("");
 
   // Advanced filters for "Find by Budget" mode
   const [budgetDestFilter, setBudgetDestFilter] = useState("");
   const [budgetTypeFilter, setBudgetTypeFilter] = useState("");
 
-  const selectedProject = useMemo(() => compounds.find((c) => c.slug === projectSlug), [projectSlug]);
+  const selectedProject = useMemo(() => compoundsList.find((c) => c.slug === projectSlug), [projectSlug, compoundsList]);
+  const projectAvail = useMemo(() => availabilityList.find((a) => a.slug === projectSlug), [projectSlug, availabilityList]);
 
-  // Dynamically update payment plan values based on selected project
+  // Generate selectable unit types & specific individual units for the project
+  const selectableItems = useMemo(() => {
+    if (!projectAvail) return [];
+    const list: Array<{ id: string; label: string; priceM: number; paymentPlan?: string }> = [];
+    projectAvail.breakdown.forEach((b, bIdx) => {
+      // Add the unit type group
+      list.push({
+        id: `type-${bIdx}`,
+        label: `${b.type}${b.beds ? ` (${b.beds} BR)` : ""} · EGP ${b.minPriceM}M+ (Starting)`,
+        priceM: b.minPriceM,
+        paymentPlan: b.paymentPlan
+      });
+      // Add individual units inside this type group
+      (b.units ?? []).forEach((u: any) => {
+        list.push({
+          id: `unit-${u.id}`,
+          label: `  ↳ Unit ${u.unitNo || "U-Row"} · ${b.type} · ${u.beds} BR · ${u.areaSqm} sqm · EGP ${(u.priceEGP / 1_000_000).toFixed(2)}M (${u.status})`,
+          priceM: u.priceEGP / 1_000_000,
+          paymentPlan: u.paymentPlan || b.paymentPlan
+        });
+      });
+    });
+    return list;
+  }, [projectAvail]);
+
+  const activeUnitItem = useMemo(() => {
+    return selectableItems.find(item => item.id === selectedUnitId);
+  }, [selectedUnitId, selectableItems]);
+
+  // Dynamically update payment plan values based on selected project or selected unit
   useEffect(() => {
     if (mode === "project" && selectedProject) {
-      const parsed = parsePaymentPlan(selectedProject.paymentPlan);
+      const activePlan = activeUnitItem?.paymentPlan || selectedProject.paymentPlan;
+      const parsed = parsePaymentPlan(activePlan);
       setDpPct(parsed.dp);
       setDuration(parsed.duration);
     }
-  }, [mode, projectSlug, selectedProject]);
+  }, [mode, projectSlug, selectedProject, activeUnitItem]);
+
+  // Reset selected unit if project changes
+  useEffect(() => {
+    setSelectedUnitId("");
+  }, [projectSlug]);
 
   const parsedPrice = useMemo(() => {
     return parseBudgetInput(budgetText);
   }, [budgetText]);
 
   const basePrice = mode === "project"
-    ? (selectedProject?.priceFrom ?? 5)
+    ? (activeUnitItem ? activeUnitItem.priceM : (selectedProject?.priceFrom ?? 5))
     : (parsedPrice || 5);
 
   const downPayment = basePrice * (dpPct / 100);
@@ -142,8 +185,8 @@ function CalculatorPage() {
       unitId: string;
     }> = [];
 
-    availability.forEach((p) => {
-      const comp = compounds.find((c) => c.slug === p.slug);
+    availabilityList.forEach((p) => {
+      const comp = compoundsList.find((c) => c.slug === p.slug);
       if (!comp) return;
 
       // Filter by destination
@@ -154,7 +197,7 @@ function CalculatorPage() {
         if (budgetTypeFilter && b.type !== budgetTypeFilter) return;
 
         const units = b.units ?? [];
-        units.forEach((u) => {
+        units.forEach((u: any) => {
           const budgetLimit = basePrice * 1_000_000 * 1.1; 
           if (u.priceEGP > 0 && u.priceEGP <= budgetLimit) {
             list.push({
@@ -176,11 +219,11 @@ function CalculatorPage() {
     });
 
     return list.sort((a, b) => b.priceEGP - a.priceEGP).slice(0, 8);
-  }, [basePrice, budgetDestFilter, budgetTypeFilter]);
+  }, [basePrice, budgetDestFilter, budgetTypeFilter, compoundsList, availabilityList]);
 
   const suitableProjects = useMemo(() => {
     const budgetLimit = basePrice;
-    return compounds
+    return mainCompounds
       .filter((c) => {
         const matchPrice = c.priceFrom <= budgetLimit;
         const matchDest = !budgetDestFilter || c.destination === budgetDestFilter;
@@ -189,7 +232,7 @@ function CalculatorPage() {
       })
       .sort((a, b) => b.priceFrom - a.priceFrom)
       .slice(0, 6);
-  }, [basePrice, budgetDestFilter, budgetTypeFilter]);
+  }, [basePrice, budgetDestFilter, budgetTypeFilter, mainCompounds]);
 
   const projectTypes = selectedProject?.types ?? [];
 
@@ -360,7 +403,7 @@ function CalculatorPage() {
                       onChange={(e) => setProjectSlug(e.target.value)}
                       className="w-full appearance-none rounded-xl border border-border bg-background px-4 py-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
                     >
-                      {compounds.map((c) => (
+                      {mainCompounds.map((c) => (
                         <option key={c.slug} value={c.slug}>
                           {c.name} — EGP {c.priceFrom}M
                         </option>
@@ -368,6 +411,30 @@ function CalculatorPage() {
                     </select>
                     <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                   </div>
+
+                  {/* Unit Selector */}
+                  {selectableItems.length > 0 && (
+                    <div className="space-y-1.5 mt-2">
+                      <label className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                        Specific Unit or Type
+                      </label>
+                      <div className="relative">
+                        <select
+                          value={selectedUnitId}
+                          onChange={(e) => setSelectedUnitId(e.target.value)}
+                          className="w-full appearance-none rounded-xl border border-border bg-background px-3 py-2.5 pr-10 text-xs focus:outline-none focus:ring-2 focus:ring-accent font-mono text-[11px]"
+                        >
+                          <option value="">Default (Minimum EGP {selectedProject?.priceFrom}M starting)</option>
+                          {selectableItems.map((item) => (
+                            <option key={item.id} value={item.id}>
+                              {item.label}
+                            </option>
+                          ))}
+                        </select>
+                        <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                      </div>
+                    </div>
+                  )}
                   {projectTypes.length > 0 && (
                     <div className="flex flex-wrap gap-1.5">
                       {projectTypes.map((t) => (
@@ -387,6 +454,12 @@ function CalculatorPage() {
                   )}
                   {selectedProject && (
                     <div className="rounded-xl border border-border/60 bg-secondary/40 px-4 py-3 text-sm space-y-1">
+                      {activeUnitItem && (
+                        <div className="flex justify-between border-b border-dashed border-border/60 pb-1 mb-1.5 text-xs">
+                          <span className="text-muted-foreground font-semibold">Active Selection</span>
+                          <span className="font-bold text-accent truncate max-w-[200px]" title={activeUnitItem.label}>{activeUnitItem.label.trim()}</span>
+                        </div>
+                      )}
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Developer</span>
                         <span className="font-medium text-primary">{selectedProject.developer}</span>
@@ -400,8 +473,8 @@ function CalculatorPage() {
                         <span className="font-medium text-primary">{selectedProject.deliveryYear}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Default Plan</span>
-                        <span className="font-medium text-accent">{selectedProject.paymentPlan}</span>
+                        <span className="text-muted-foreground">Calculated Plan</span>
+                        <span className="font-medium text-accent">{activeUnitItem?.paymentPlan || selectedProject.paymentPlan}</span>
                       </div>
                       <div className="pt-2 border-t border-border/40 mt-2 flex justify-end">
                         <Link

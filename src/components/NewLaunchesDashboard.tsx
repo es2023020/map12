@@ -1,24 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { compounds } from "@/data/compounds";
+import { useStore } from "@/lib/store";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Sparkles, MapPin, Search } from "lucide-react";
-
-const newProjectSlugs = [
-  "creekview", "elea-azha-north", "aqua-lagoons-june", "sadaf", 
-  "commonhaus", "the-lynks", "park-sight", "silvertown-lagoon-cabanas", 
-  "marresidence", "chapters-residence", "vea-new-cairo", "vie-collective", 
-  "vie-halo", "coral-coves", "menorca", "the-commons", "covaya", 
-  "olive-oasis", "sealine-seashore",
-  "hacienda-ras-el-hekma", "direction-white", "hap-town", "seazen"
-];
 
 export function NewLaunchesDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDest, setSelectedDest] = useState<string>("All");
 
-  const dashboardCompounds = compounds.filter(c => newProjectSlugs.includes(c.slug));
+  const compoundsList = useStore((s) => s.compoundsList) || [];
+  const dashboardCompounds = compoundsList.filter(c => c.isNewLaunch && !c.parentSlug);
 
   const filtered = dashboardCompounds.filter((c) => {
     const matchesSearch = c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 

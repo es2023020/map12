@@ -146,6 +146,8 @@ function CompoundPage() {
   // Read live compound data from the store to get admin-updated fields
   const storeCompounds = useStore((s) => s.compoundsList);
   const liveProject = storeCompounds?.find((p: any) => p.slug === c.slug);
+  const parentSlug = liveProject?.parentSlug ?? (c as any).parentSlug;
+  const parentProject = parentSlug ? storeCompounds?.find((p: any) => p.slug === parentSlug) : null;
   const masterPlanUrl: string | undefined = liveProject?.masterPlanUrl ?? (c as any).masterPlanUrl;
 
   return (
@@ -165,6 +167,17 @@ function CompoundPage() {
               </>
             )}
             <span className="text-primary font-medium truncate">{c.name}</span>
+            {parentProject && (
+              <>
+                <span>/</span>
+                <span className="text-xs bg-accent/10 border border-accent/20 text-accent rounded-full px-2 py-0.5 inline-flex items-center gap-1 font-bold">
+                  Phase of{" "}
+                  <Link to="/projects/$slug" params={{ slug: parentProject.slug }} className="underline hover:underline transition-all">
+                    {parentProject.name}
+                  </Link>
+                </span>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -306,6 +319,40 @@ function CompoundPage() {
               </div>
             </div>
           )}
+
+          {/* Phases & Neighborhoods */}
+          {(() => {
+            const phases = storeCompounds?.filter((p: any) => p.parentSlug === c.slug) || [];
+            if (phases.length === 0) return null;
+            return (
+              <Section title="Phases & Neighborhoods">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {phases.map((phase: any) => (
+                    <Link
+                      key={phase.slug}
+                      to="/projects/$slug"
+                      params={{ slug: phase.slug }}
+                      className="group rounded-2xl border border-border/85 bg-card p-4 hover:border-accent/40 shadow-soft hover:-translate-y-0.5 transition-all flex gap-4"
+                    >
+                      <div className="h-20 w-24 rounded-lg overflow-hidden shrink-0">
+                        <img src={phase.hero} alt={phase.name} className="h-full w-full object-cover transition-transform group-hover:scale-105" />
+                      </div>
+                      <div className="min-w-0 flex-1 flex flex-col justify-between">
+                        <div>
+                          <h4 className="font-semibold text-primary text-sm truncate group-hover:text-accent transition-colors">{phase.name}</h4>
+                          <p className="text-[11px] text-muted-foreground line-clamp-2 mt-1 leading-relaxed">{phase.blurb}</p>
+                        </div>
+                        <div className="flex items-center justify-between mt-2 pt-1.5 border-t border-border/30">
+                          <span className="text-[10px] text-accent font-bold">From EGP {phase.priceFrom}M</span>
+                          <span className="text-[10px] text-muted-foreground">{phase.deliveryYear}</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </Section>
+            );
+          })()}
 
           {/* Live Availability from developer sheets */}
           {availabilityBySlug(c.slug) && (

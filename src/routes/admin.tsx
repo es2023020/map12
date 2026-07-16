@@ -10,7 +10,7 @@ import {
   ShieldCheck, Users, CreditCard, TrendingUp, Check, ExternalLink,
   Building2, MapPin, Layers, LayoutGrid, Calculator, Sliders, ShieldAlert,
   Send, Bot, Settings, Plus, Edit, Trash2, Save, FileText, HelpCircle,
-  Database, Upload, AlertCircle, RefreshCw, Star, ArrowLeftRight, CheckCircle, Info, X, Image as ImageIcon, ArrowLeft, FileSpreadsheet
+  Database, Upload, AlertCircle, RefreshCw, Star, ArrowLeftRight, CheckCircle, Info, X, Image as ImageIcon, ArrowLeft, FileSpreadsheet, Sparkles
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/admin")({
 });
 
 type TabType = 
-  | "overview" | "companies" | "destinations" | "projects" 
+  | "overview" | "companies" | "destinations" | "projects" | "launches"
   | "availability" | "map" | "tools" | "people" | "crm" 
   | "ai" | "campaigns" | "audit";
 
@@ -227,6 +227,8 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   const [pPaymentPlan, setPPaymentPlan] = useState("10% down · 8 years installments");
   const [pBlurb, setPBlurb] = useState("");
   const [pAmenities, setPAmenities] = useState("Clubhouse, Pool, Gym, Security");
+  const [pIsNewLaunch, setPIsNewLaunch] = useState(false);
+  const [pParentSlug, setPParentSlug] = useState("");
 
   // Load project for edit form
   const loadProjectForForm = (proj: any) => {
@@ -245,6 +247,8 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     setPPaymentPlan(proj.paymentPlan);
     setPBlurb(proj.blurb);
     setPAmenities(proj.amenities ? proj.amenities.join(", ") : "");
+    setPIsNewLaunch(!!proj.isNewLaunch);
+    setPParentSlug(proj.parentSlug || "");
     setShowAddProjectModal(true);
   };
 
@@ -272,7 +276,9 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
       amenities: amenitiesArr,
       hero: editingItem?.hero || "/projects/vea-new-cairo/1.jpg",
       gallery: editingItem?.gallery || ["/projects/vea-new-cairo/1.jpg"],
-      types: editingItem?.types || ["Chalet", "Apartment"]
+      types: editingItem?.types || ["Chalet", "Apartment"],
+      isNewLaunch: pIsNewLaunch,
+      parentSlug: pParentSlug || undefined
     };
 
     if (editingItem) {
@@ -300,6 +306,8 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     setPPaymentPlan("10% down · 8 years installments");
     setPBlurb("");
     setPAmenities("Clubhouse, Pool, Gym, Security");
+    setPIsNewLaunch(false);
+    setPParentSlug("");
   };
 
   // Developer form inputs
@@ -695,18 +703,25 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
             updateProject(projSlug, { gallery });
           }
         } else if (field === "brochure") {
-          // Accept any file type for brochures - store as base64 data URL
           const ext = file.name.split(".").pop()?.toLowerCase() || "pdf";
+          const fileName = `${projSlug}.${ext}`;
+          
+          const formData = new FormData();
+          formData.append("file", file);
+          formData.append("type", "brochure");
+          formData.append("fileName", fileName);
+
           const res = await fetch("/api/upload-asset", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              fileName: `${projSlug}-brochure.${ext}`,
-              fileContent: base64Content,
-              type: "brochure"
-            })
+            body: formData
           });
-          // Whether server upload succeeds or fails, always store the data URL so it works immediately
+
+          if (!res.ok) {
+            const errData = await res.json();
+            throw new Error(errData.error || "Upload failed");
+          }
+
+          // Whether server upload succeeds or fails, always store the data URL so it works immediately in UI
           const updates = { brochureUrl: base64Content, brochureFileName: file.name, brochureType: file.type };
           updateProject(projSlug, updates);
         } else if (field === "masterPlan") {
@@ -893,6 +908,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     { id: "companies", label: "Developers CRUD", icon: Building2 },
     { id: "destinations", label: "Destinations CRUD", icon: MapPin },
     { id: "projects", label: "Projects CRUD", icon: Database },
+    { id: "launches", label: "New Launches Manager", icon: Sparkles },
     { id: "availability", label: "Availability Manager", icon: LayoutGrid },
     { id: "map", label: "Map Control", icon: Layers },
     { id: "tools", label: "Engine Tools", icon: Calculator },
@@ -1734,6 +1750,115 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                   </div>
                 )}
 
+                {/* launches */}
+                {activeTab === "launches" && (
+                  <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-6">
+                    <div className="flex justify-between items-center flex-wrap gap-4 border-b border-border/40 pb-4">
+                      <div>
+                        <h2 className="font-display text-lg font-bold text-primary flex items-center gap-2">
+                          <Sparkles className="h-5 w-5 text-accent animate-pulse" /> 2026 New Launches Controller
+                        </h2>
+                        <p className="text-xs text-muted-foreground mt-1">Add, remove, and manage exclusive pre-market and off-plan projects in the New Launches lists.</p>
+                      </div>
+                      <button 
+                        onClick={() => { 
+                          clearProjectForm(); 
+                          setEditingItem(null); 
+                          setPIsNewLaunch(true);
+                          setShowAddProjectModal(true); 
+                        }} 
+                        className="rounded-xl bg-accent text-white px-4 py-2 font-bold text-xs hover:bg-accent/90 transition-colors flex items-center gap-1.5"
+                      >
+                        <Plus className="h-4 w-4" /> Create Brand New Launch
+                      </button>
+                    </div>
+
+                    {/* Promote Existing Project dropdown */}
+                    <div className="bg-secondary/15 p-4 rounded-xl border border-border/60 flex items-center justify-between flex-wrap gap-3">
+                      <div>
+                        <h3 className="text-xs font-bold text-primary uppercase tracking-wider">Promote Existing Project to Launch</h3>
+                        <p className="text-[10px] text-muted-foreground mt-0.5">Select any standard compound in your database and push it into the New Launches list.</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <select
+                          id="promote-project-select"
+                          className="rounded-lg border border-border bg-background px-3 py-1.5 text-xs font-semibold focus:outline-none"
+                          defaultValue=""
+                        >
+                          <option value="" disabled>Choose project...</option>
+                          {compoundsList
+                            .filter(c => !c.isNewLaunch && !c.parentSlug)
+                            .map(c => (
+                              <option key={c.slug} value={c.slug}>{c.name}</option>
+                            ))
+                          }
+                        </select>
+                        <button
+                          onClick={() => {
+                            const sel = document.getElementById("promote-project-select") as HTMLSelectElement;
+                            if (sel && sel.value) {
+                              updateProject(sel.value, { isNewLaunch: true });
+                              sel.value = "";
+                            }
+                          }}
+                          className="rounded-lg bg-accent text-white px-3 py-1.5 font-bold text-xs hover:bg-accent/90 transition-all"
+                        >
+                          Promote to Launch
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* List of New Launches */}
+                    <div className="overflow-x-auto border border-border/80 rounded-xl">
+                      <table className="w-full text-left text-xs">
+                        <thead>
+                          <tr className="border-b border-border bg-secondary/50 font-bold text-[10px] uppercase text-muted-foreground tracking-wider">
+                            <th className="p-3">Compound Name</th>
+                            <th className="p-3">Developer</th>
+                            <th className="p-3">Region</th>
+                            <th className="p-3">Starting Price</th>
+                            <th className="p-3 text-right">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border/60 font-medium">
+                          {compoundsList.filter(c => c.isNewLaunch).length === 0 ? (
+                            <tr>
+                              <td colSpan={5} className="p-8 text-center text-muted-foreground italic">
+                                No active 2026 launches. Select an existing project to promote it or create a new one!
+                              </td>
+                            </tr>
+                          ) : (
+                            compoundsList.filter(c => c.isNewLaunch).map((c) => (
+                              <tr key={c.slug} className="hover:bg-secondary/15 transition-colors">
+                                <td className="p-3 font-semibold text-primary">{c.name}</td>
+                                <td className="p-3 text-muted-foreground">{c.developer}</td>
+                                <td className="p-3 font-semibold text-accent">{c.destination.replace(/-/g, " ")}</td>
+                                <td className="p-3 font-bold text-primary">EGP {c.priceFrom}M</td>
+                                <td className="p-3 text-right flex justify-end gap-1.5">
+                                  <button 
+                                    onClick={() => updateProject(c.slug, { isNewLaunch: false })} 
+                                    className="rounded-lg px-2.5 py-1.5 border border-border hover:bg-secondary text-xs text-primary font-bold transition-all"
+                                    title="Move to standard catalog only"
+                                  >
+                                    Demote to Standard
+                                  </button>
+                                  <button 
+                                    onClick={() => triggerDeleteCheck("project", c.slug)} 
+                                    className="rounded-lg p-1.5 border border-border hover:bg-destructive/10 text-destructive"
+                                    title="Permanently Delete Compound"
+                                  >
+                                    <Trash2 className="h-3.5 w-3.5" />
+                                  </button>
+                                </td>
+                              </tr>
+                            ))
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
+
                 {/* availability (daily availability manager dashboard) */}
                 {activeTab === "availability" && (
                   <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-6">
@@ -2218,6 +2343,35 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
               <div>
                 <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Amenities Checklist (Comma-separated)</label>
                 <input type="text" value={pAmenities} onChange={(e) => setPAmenities(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="flex items-center gap-2 border border-border rounded-lg bg-secondary/10 px-3 py-2.5">
+                  <input 
+                    type="checkbox" 
+                    id="p-is-launch-chk"
+                    checked={pIsNewLaunch} 
+                    onChange={(e) => setPIsNewLaunch(e.target.checked)} 
+                    className="h-4 w-4 rounded border-border text-accent focus:ring-accent" 
+                  />
+                  <label htmlFor="p-is-launch-chk" className="text-[10px] font-bold text-muted-foreground uppercase cursor-pointer select-none">Surfaced New Launch</label>
+                </div>
+                <div>
+                  <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Parent Project (For Phase Only)</label>
+                  <select 
+                    value={pParentSlug} 
+                    onChange={(e) => setPParentSlug(e.target.value)} 
+                    className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-xs"
+                  >
+                    <option value="">None (Standard primary project)</option>
+                    {compoundsList
+                      .filter(x => !x.parentSlug && x.slug !== editingItem?.slug)
+                      .map(x => (
+                        <option key={x.slug} value={x.slug}>{x.name}</option>
+                      ))
+                    }
+                  </select>
+                </div>
               </div>
 
               <button type="submit" className="w-full py-3 bg-accent text-white font-bold text-xs rounded-xl hover:bg-accent/90 transition-colors shadow-soft">

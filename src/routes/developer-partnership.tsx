@@ -3,14 +3,13 @@ import { Shell } from "@/components/layout/Shell";
 import { Building2, TrendingUp, Users, MapPin, Check, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import { notFound } from "@tanstack/react-router";
+
 export const Route = createFileRoute("/developer-partnership")({
-  head: () => ({
-    meta: [
-      { title: "Developer Partnership — PropTrack" },
-      { name: "description", content: "List your Egyptian real estate project on PropTrack and reach 2,400+ active brokers looking to close deals across Cairo, Sahel, and beyond." },
-    ],
-  }),
-  component: DeveloperPartnershipPage,
+  loader: () => {
+    throw notFound();
+  },
+  component: () => null,
 });
 
 const benefits = [

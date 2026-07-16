@@ -41,7 +41,6 @@ import { Route as DashboardCampaignsRouteImport } from './routes/dashboard.campa
 import { Route as DashboardBillingRouteImport } from './routes/dashboard.billing'
 import { Route as DashboardAiAssistantRouteImport } from './routes/dashboard.ai-assistant'
 import { Route as ApiUploadAssetRouteImport } from './routes/api.upload-asset'
-import { Route as ApiSaveDataRouteImport } from './routes/api.save-data'
 import { Route as UnitsProjectSlugTypeSlugRouteImport } from './routes/units.$projectSlug.$typeSlug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -204,11 +203,6 @@ const ApiUploadAssetRoute = ApiUploadAssetRouteImport.update({
   path: '/api/upload-asset',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiSaveDataRoute = ApiSaveDataRouteImport.update({
-  id: '/api/save-data',
-  path: '/api/save-data',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const UnitsProjectSlugTypeSlugRoute =
   UnitsProjectSlugTypeSlugRouteImport.update({
     id: '/units/$projectSlug/$typeSlug',
@@ -233,7 +227,6 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/api/save-data': typeof ApiSaveDataRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
@@ -265,7 +258,6 @@ export interface FileRoutesByTo {
   '/map': typeof MapRoute
   '/pricing': typeof PricingRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/api/save-data': typeof ApiSaveDataRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
@@ -302,7 +294,6 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/api/save-data': typeof ApiSaveDataRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
@@ -340,7 +331,6 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/projects'
     | '/sitemap.xml'
-    | '/api/save-data'
     | '/api/upload-asset'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
@@ -372,7 +362,6 @@ export interface FileRouteTypes {
     | '/map'
     | '/pricing'
     | '/sitemap.xml'
-    | '/api/save-data'
     | '/api/upload-asset'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
@@ -408,7 +397,6 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/projects'
     | '/sitemap.xml'
-    | '/api/save-data'
     | '/api/upload-asset'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
@@ -445,7 +433,6 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  ApiSaveDataRoute: typeof ApiSaveDataRoute
   ApiUploadAssetRoute: typeof ApiUploadAssetRoute
   UnitsProjectSlugTypeSlugRoute: typeof UnitsProjectSlugTypeSlugRoute
 }
@@ -676,13 +663,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiUploadAssetRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/save-data': {
-      id: '/api/save-data'
-      path: '/api/save-data'
-      fullPath: '/api/save-data'
-      preLoaderRoute: typeof ApiSaveDataRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/units/$projectSlug/$typeSlug': {
       id: '/units/$projectSlug/$typeSlug'
       path: '/units/$projectSlug/$typeSlug'
@@ -780,7 +760,6 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  ApiSaveDataRoute: ApiSaveDataRoute,
   ApiUploadAssetRoute: ApiUploadAssetRoute,
   UnitsProjectSlugTypeSlugRoute: UnitsProjectSlugTypeSlugRoute,
 }

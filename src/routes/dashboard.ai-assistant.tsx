@@ -19,8 +19,13 @@ import {
   X
 } from "lucide-react";
 
+import { notFound } from "@tanstack/react-router";
+
 export const Route = createFileRoute("/dashboard/ai-assistant")({
-  component: AIAssistantPage,
+  loader: () => {
+    throw notFound();
+  },
+  component: () => null,
 });
 
 function AIAssistantPage() {

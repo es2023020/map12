@@ -37,12 +37,6 @@
       "size_mb": 33.88
     },
     {
-      "filename": "Hacienda Heneish brochure.pdf",
-      "clean_name": "Hacienda Heneish Brochure",
-      "path": "/brochures/Hacienda Heneish brochure.pdf",
-      "size_mb": 102.01
-    },
-    {
       "filename": "Hacienda West Brochure.pdf",
       "clean_name": "Hacienda West Brochure",
       "path": "/brochures/Hacienda West Brochure.pdf",
@@ -308,6 +302,21 @@
         "filename": "2.jpg",
         "type": "image",
         "path": "/projects/31-west/2.jpg"
+      },
+      {
+        "filename": "images (1).jpg",
+        "type": "image",
+        "path": "/projects/31-west/images (1).jpg"
+      },
+      {
+        "filename": "images (2).jpg",
+        "type": "image",
+        "path": "/projects/31-west/images (2).jpg"
+      },
+      {
+        "filename": "images.jpg",
+        "type": "image",
+        "path": "/projects/31-west/images.jpg"
       }
     ],
     "97-hills": [
@@ -586,11 +595,6 @@
         "filename": "1.jpg",
         "type": "image",
         "path": "/projects/aqua-lagoons-june/1.jpg"
-      },
-      {
-        "filename": "2.jpg",
-        "type": "image",
-        "path": "/projects/aqua-lagoons-june/2.jpg"
       },
       {
         "filename": "3.jpg",
@@ -7539,14 +7543,6 @@
         "clean_name": "Hacienda Blue Brochure",
         "path": "/brochures/Hacienda Blue Brochure.pdf",
         "size_mb": 33.88
-      }
-    ],
-    "hacienda-heneish": [
-      {
-        "filename": "Hacienda Heneish brochure.pdf",
-        "clean_name": "Hacienda Heneish Brochure",
-        "path": "/brochures/Hacienda Heneish brochure.pdf",
-        "size_mb": 102.01
       }
     ],
     "hacienda-west": [

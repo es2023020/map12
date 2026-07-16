@@ -38,8 +38,6 @@ export function Footer() {
           { to: "/pricing", label: "Pricing" },
           { to: "/about", label: "About" },
           { to: "/contact", label: "Contact" },
-          { to: "/developer-partnership", label: "For Developers" },
-          { to: "/agency-partnership", label: "For Agencies" },
         ]} />
       </div>
       <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-primary-foreground/60 lg:px-8">

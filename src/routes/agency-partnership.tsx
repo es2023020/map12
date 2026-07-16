@@ -3,14 +3,13 @@ import { Shell } from "@/components/layout/Shell";
 import { Users, BarChart2, Shield, Zap, Check, ArrowRight, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import { notFound } from "@tanstack/react-router";
+
 export const Route = createFileRoute("/agency-partnership")({
-  head: () => ({
-    meta: [
-      { title: "Agency Partnership — PropTrack" },
-      { name: "description", content: "PropTrack agency plans for real estate brokerages — shared leads, team dashboards, multi-seat licensing, and full analytics." },
-    ],
-  }),
-  component: AgencyPartnershipPage,
+  loader: () => {
+    throw notFound();
+  },
+  component: () => null,
 });
 
 const agencyBenefits = [

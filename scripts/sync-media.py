@@ -42,20 +42,12 @@ if projects_dir.exists():
         if d.is_dir():
             project_slugs.append(d.name)
 
-# 2. Copy and register brochures
-safe_print("Scanning brochures in data/Prochures...")
-if brochures_src.exists():
-    for f in brochures_src.iterdir():
+# 2. Register brochures
+safe_print("Scanning brochures in public/brochures...")
+if brochures_dest.exists():
+    for f in brochures_dest.iterdir():
         try:
             if f.is_file() and f.suffix.lower() == ".pdf":
-                # Copy file to public/brochures for web accessibility
-                dest_file = brochures_dest / f.name
-                try:
-                    shutil.copy2(f, dest_file)
-                    safe_print(f"Copied brochure: {f.name}")
-                except Exception as e:
-                    safe_print(f"Error copying {f.name}: {e}")
-                
                 clean_name = re.sub(r'[\-_]', ' ', f.stem).strip().title()
                 brochure_info = {
                     "filename": f.name,

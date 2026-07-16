@@ -187,16 +187,16 @@ function DashboardOverview() {
     reader.onloadend = async () => {
       const base64 = reader.result as string;
       
-      // Call backend API to write to physical directory D:\map12\data\Prochures
+      // Call backend API to write to physical directory D:\map12\public\brochures
       try {
+        const formData = new FormData();
+        formData.append("file", brochureFile);
+        formData.append("type", "brochure");
+        formData.append("fileName", brochureFile.name);
+
         await fetch("/api/upload-asset", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            fileName: brochureFile.name,
-            fileContent: base64,
-            type: "brochure"
-          })
+          body: formData
         });
       } catch (err) {
         console.error("Backend file write failed:", err);
@@ -228,14 +228,14 @@ function DashboardOverview() {
 
       // Call backend API to write to physical directory D:\map12\public\profiles
       try {
+        const formData = new FormData();
+        formData.append("file", profileFile);
+        formData.append("type", "profile");
+        formData.append("fileName", profileFile.name);
+
         await fetch("/api/upload-asset", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            fileName: profileFile.name,
-            fileContent: base64,
-            type: "profile"
-          })
+          body: formData
         });
       } catch (err) {
         console.error("Backend file write failed:", err);

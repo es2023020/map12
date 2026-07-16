@@ -17,8 +17,6 @@ const moreLinks = [
   { to: "/pricing" as const, label: "Pricing" },
   { to: "/about" as const, label: "About" },
   { to: "/contact" as const, label: "Contact" },
-  { to: "/developer-partnership" as const, label: "For Developers" },
-  { to: "/agency-partnership" as const, label: "For Agencies" },
 ];
 
 const brokerLinks = [

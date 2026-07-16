@@ -71,10 +71,11 @@ function ComparePage() {
     style.id = "print-only-style";
     style.innerHTML = `
       @media print {
-        body > * { display: none !important; }
-        #agent-compare-report { display: block !important; }
-        #agent-compare-report * { display: revert !important; }
-        .no-print { display: none !important; }
+        header, footer, nav, aside, .no-print, button { display: none !important; }
+        body { background: white !important; color: black !important; }
+        #agent-compare-report { display: block !important; width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+        .shadow-soft, .shadow-sm, .shadow-2xl { box-shadow: none !important; border: 1px solid #ddd !important; }
+        tr { page-break-inside: avoid !important; }
       }
     `;
     document.head.appendChild(style);
@@ -129,6 +130,16 @@ function ComparePage() {
             ))}
           </tbody>
         </table>
+      </div>
+      {/* Bottom PDF Download Action */}
+      <div className="no-print flex justify-center pt-6">
+        <button
+          onClick={handleDownloadPDF}
+          className="inline-flex items-center gap-2 rounded-xl bg-accent text-accent-foreground px-6 py-3 font-bold text-xs hover:bg-accent/90 transition-all shadow-md"
+        >
+          <Download className="h-4 w-4" />
+          Download Agent Comparison Report (PDF)
+        </button>
       </div>
     </div>
   );

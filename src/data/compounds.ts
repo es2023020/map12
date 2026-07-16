@@ -3258,17 +3258,71 @@ function applyOfficialData(c: Compound): Compound {
   return next;
 }
 
-const staticCompounds: Compound[] = merged.map((c) => {
+export function normalizeDeveloperName(name: string): string {
+  const trimmed = name.trim();
+  const lower = trimmed.toLowerCase();
+  if (lower === "mountain view developments" || lower === "mountain view") {
+    return "Mountain View";
+  }
+  if (lower === "orascom developments" || lower === "orascom development" || lower === "orascom") {
+    return "Orascom";
+  }
+  return trimmed;
+}
+
+const parentChildMap: Record<string, string> = {
+  "club-hill-solare": "solare",
+  "olive-oasis": "solare",
+  "aqua-lagoons-june": "june",
+  "silvertown-lagoon-cabanas": "silversands",
+  "vie-collective": "vie",
+  "vie-halo": "vie"
+};
+
+const baseStaticCompounds: Compound[] = merged.map((c) => {
   const enriched = applyOfficialData(c);
+  const normalizedDev = normalizeDeveloperName(enriched.developer);
   return {
     ...enriched,
+    developer: normalizedDev,
+    developerSlug: slugify(normalizedDev),
     hero: heroFor(enriched.slug, enriched.hero),
     gallery: galleryFor(enriched.slug, enriched.gallery),
     type: enriched.type ?? (enriched.beachfront ? "Coastal" : "Residential"),
     flagship: enriched.flagship ?? (FLAGSHIPS.has(enriched.slug) || undefined),
     highlights: enriched.highlights ?? enriched.amenities,
+    parentSlug: parentChildMap[enriched.slug] || undefined,
   };
 });
+
+// Append Vie parent compound if not present
+const vieParent: Compound = {
+  slug: "vie",
+  name: "Vie",
+  destination: "new-cairo",
+  lat: 30.031,
+  lng: 31.486,
+  developer: "Vie Communities",
+  developerSlug: "vie-communities",
+  priceFrom: 12,
+  deliveryYear: 2028,
+  status: "Off-Plan",
+  beachfront: false,
+  types: ["Apartment", "Duplex", "Townhouse", "Villa"],
+  amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "24/7 Security", "Green Spaces"],
+  hero: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+  gallery: ["https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"],
+  blurb: "Vie by Vie Communities is a signature master-planned community in New Cairo, featuring luxurious residential phases (Vie Collective and Vie Halo) surrounded by lush landscape.",
+  paymentPlan: "10% down · 7 years equal installments",
+  areaSize: "85 feddan",
+  unitSizes: "95–350 m²",
+  type: "Residential",
+  highlights: ["Premium master community", "Lush landscapes", "Strategic New Cairo location"]
+};
+
+const staticCompounds = baseStaticCompounds.find(c => c.slug === "vie") 
+  ? baseStaticCompounds 
+  : [...baseStaticCompounds, vieParent];
 
 export const compounds: Compound[] = new Proxy(staticCompounds, {
   get(target, prop, receiver) {
