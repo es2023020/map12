@@ -173,10 +173,10 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: ["Family-oriented community", "Modern suburban living", "Low-density setting"]
   },
   "bamboo-iii": {
-    lat: 30.03217,
-    lng: 31.47611,
+    lat: 29.980,
+    lng: 30.920,
     developer: "Palm Hills Developments",
-    city: "Bamboo III, new-cairo",
+    city: "Bamboo III, 6th-of-october-city",
   },
   "beit-al-bahr": {
     destination: "sidi-heneish",
@@ -1143,10 +1143,10 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "palm-hills-new-cairo": {
   },
   "palm-hills-one": {
-    lat: 30.02783,
-    lng: 31.48319,
+    lat: 30.035,
+    lng: 30.985,
     developer: "Palm Hills Developments",
-    city: "Palm Hills One, new-cairo",
+    city: "Palm Hills One, sheikh-zayed",
   },
   "palm-parks": {
     lat: 29.9468,
@@ -1244,10 +1244,10 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "saada-sahel": {
   },
   "sadaf": {
-    lat: 30.02508,
-    lng: 31.47826,
-    developer: "SODIC",
-    city: "June, new-cairo",
+    lat: 30.950,
+    lng: 28.500,
+    developer: "New Plan Developments",
+    city: "Sadaf, sidi-abdelrahman",
   },
   "safia": {
     destination: "ras-el-hekma",

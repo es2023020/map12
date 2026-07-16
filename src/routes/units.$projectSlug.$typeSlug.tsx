@@ -133,7 +133,7 @@ function UnitTypePage() {
       <div className="border-b border-border/60 bg-card">
         <div className="mx-auto max-w-7xl px-4 py-3 lg:px-8">
           <div className="flex items-center gap-1.5 text-sm text-muted-foreground flex-wrap">
-            <Link to="/projects" className="hover:text-primary transition-colors inline-flex items-center gap-1">
+            <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="hover:text-primary transition-colors inline-flex items-center gap-1">
               <ArrowLeft className="h-3.5 w-3.5" /> All projects
             </Link>
             <span>/</span>

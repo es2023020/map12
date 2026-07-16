@@ -3,6 +3,7 @@ import { persist, createJSONStorage } from "zustand/middleware";
 import { compounds, normalizeDeveloperName } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import { destinations } from "@/data/destinations";
+import type { AnalyticsEvent } from "@/lib/analytics";
 
 // Session-scoped login: on every page load we check if a browser session is still active.
 // sessionStorage is cleared when the browser tab/window is fully closed, so this
@@ -11,6 +12,22 @@ const SESSION_KEY = "proptrack-session-active";
 const isSessionActive = () => typeof sessionStorage !== "undefined" && sessionStorage.getItem(SESSION_KEY) === "1";
 const markSessionActive = () => { if (typeof sessionStorage !== "undefined") sessionStorage.setItem(SESSION_KEY, "1"); };
 const clearSession = () => { if (typeof sessionStorage !== "undefined") sessionStorage.removeItem(SESSION_KEY); };
+
+export const launchSlugs = new Set([
+  "creekview", "elea-azha-north", "june", "sadaf", 
+  "commonhaus", "the-lynks", "park-sight", "silversands", 
+  "marresidence", "chapters-residence", "vea-new-cairo", "vie", 
+  "coral-coves", "menorca", "the-commons", "covaya", 
+  "solare", "sealine-seashore",
+  "hacienda-ras-el-hekma", "direction-white", "hap-town", "seazen",
+  "salt", "salt-marina", "perla", "ogami", "bloom-island-ogami",
+  "saada-sahel", "saada-north-coast", "citystars-park-street",
+  "the-med", "the-gray-laguna-the-boulevard", "surf-and-sand-seazen",
+  "central-water-residences", "safa-medi-plex-phase-2",
+  "caesar-sodic", "caesar-extension-2",
+  "katameya-coast", "cala-residences-katameya-coast",
+  "carnelia", "selina-carnelia", "azha-north-coast", "silvertown-lagoon-cabanas"
+]);
 
 export type LeadStage = "new" | "contacted" | "viewing" | "negotiating" | "closed";
 export type ActivityType = "note" | "whatsapp" | "stage" | "meeting" | "system";
@@ -52,6 +69,7 @@ type UserData = {
   customBrochures: Array<{ name: string; type: string; category: string; file: string; path: string; size_mb?: number }>;
   customProfiles: Array<{ clean_name: string; filename: string; path: string; size_mb: number }>;
   salesTarget: number;
+  analyticsEvents: AnalyticsEvent[];
 };
 
 type State = {
@@ -68,7 +86,10 @@ type State = {
   customBrochures: Array<{ name: string; type: string; category: string; file: string; path: string; size_mb?: number }>;
   customProfiles: Array<{ clean_name: string; filename: string; path: string; size_mb: number }>;
   userData?: Record<string, UserData>;
-  
+
+  // Analytics
+  analyticsEvents: AnalyticsEvent[];
+
   // Platform Admin Data
   compoundsList: any[];
   availabilityList: any[];
@@ -116,6 +137,9 @@ type State = {
   updateAvailability: (slug: string, data: any) => void;
   bulkUpdateAvailability: (data: any[]) => void;
   addAuditLog: (log: { actor: string; entity: string; action: string; before?: string; after?: string }) => void;
+
+  // Analytics
+  trackEvent: (ev: Omit<AnalyticsEvent, "timestamp">) => void;
 };
 
 const seedLeads: Lead[] = [
@@ -218,6 +242,7 @@ export const useStore = create<State>()(
                 customBrochures: merged.customBrochures,
                 customProfiles: merged.customProfiles,
                 salesTarget: merged.salesTarget,
+                analyticsEvents: merged.analyticsEvents,
               }
             };
           }
@@ -225,14 +250,6 @@ export const useStore = create<State>()(
         });
       };
 
-      const launchSlugs = new Set([
-        "creekview", "elea-azha-north", "june", "sadaf", 
-        "commonhaus", "the-lynks", "park-sight", "silversands", 
-        "marresidence", "chapters-residence", "vea-new-cairo", "vie", 
-        "coral-coves", "menorca", "the-commons", "covaya", 
-        "solare", "sealine-seashore",
-        "hacienda-ras-el-hekma", "direction-white", "hap-town", "seazen"
-      ]);
 
       const initialCompoundsList = compounds.map(c => ({
         ...c,
@@ -257,15 +274,11 @@ export const useStore = create<State>()(
         user: null,
         favorites: [],
         compareList: [],
-        leads: seedLeads,
+        leads: [],
         recentlyViewed: [],
-        agentNotes: "### Agent Scratchpad\n- Follow up with Ahmed Hassan on Marassi chalets\n- Review new Sodics June brochure\n- Call new leads from Facebook Ads",
-        agentTasks: [
-          { id: "t1", text: "Call back Karim Nabil about Soul villa", completed: false },
-          { id: "t2", text: "Prepare compare sheet for Azha vs Seashore", completed: true },
-          { id: "t3", text: "Open WhatsApp Web and sync leads", completed: false }
-        ],
-        salesTarget: 50,
+        agentNotes: "### Agent Scratchpad\n",
+        agentTasks: [],
+        salesTarget: 0,
         customShortcuts: [
           { id: "s1", label: "Developer Portals", url: "https://www.nawy.com/developers" }
         ],
@@ -273,6 +286,7 @@ export const useStore = create<State>()(
         customBrochures: [],
         customProfiles: [],
         userData: {},
+        analyticsEvents: [],
 
         // Platform Admin Data
         compoundsList: initialCompoundsList,
@@ -304,6 +318,7 @@ export const useStore = create<State>()(
                     customBrochures: state.customBrochures,
                     customProfiles: state.customProfiles,
                     salesTarget: state.salesTarget,
+                    analyticsEvents: state.analyticsEvents,
                   }
                 }
               }));
@@ -336,6 +351,7 @@ export const useStore = create<State>()(
               customBrochures: savedData?.customBrochures || [],
               customProfiles: savedData?.customProfiles || [],
               salesTarget: savedData?.salesTarget ?? (isSeedAdmin && isFirstLogin ? 50 : 0),
+              analyticsEvents: savedData?.analyticsEvents || [],
             });
             markSessionActive();
             return true;
@@ -373,6 +389,7 @@ export const useStore = create<State>()(
                   customBrochures: state.customBrochures,
                   customProfiles: state.customProfiles,
                   salesTarget: state.salesTarget,
+                  analyticsEvents: state.analyticsEvents,
                 }
               }
             }));
@@ -389,6 +406,7 @@ export const useStore = create<State>()(
             customBrochures: [],
             customProfiles: [],
             salesTarget: 0,
+            analyticsEvents: [],
           });
           clearSession();
         },
@@ -782,27 +800,81 @@ export const useStore = create<State>()(
             };
             return { auditLogs: [newItem, ...s.auditLogs].slice(0, 150) };
           });
-        }
+        },
+
+        trackEvent: (ev) => {
+          set((s) => {
+            const event = { ...ev, timestamp: Date.now() };
+            // Keep last 2000 events to stay lean
+            const analyticsEvents = [event, ...s.analyticsEvents].slice(0, 2000);
+            return { analyticsEvents };
+          });
+        },
       };
     },
     {
       name: "proptrack-broker",
       onRehydrateStorage: () => (state) => {
-        // If the browser session was closed (sessionStorage cleared), wipe the user
-        // field from the rehydrated state so the user must log in again.
-        // But keep userData intact so their data is available on next sign-in.
-        if (state && state.user && !isSessionActive()) {
-          state.user = null;
-          state.favorites = [];
-          state.compareList = [];
-          state.leads = [];
-          state.recentlyViewed = [];
-          state.agentNotes = "### Agent Scratchpad\n";
-          state.agentTasks = [];
-          state.customShortcuts = [];
-          state.customBrochures = [];
-          state.customProfiles = [];
-          state.salesTarget = 0;
+        if (state) {
+          // 1. Sync destinationsList with latest static destination data (especially hero images!)
+          if (Array.isArray(state.destinationsList)) {
+            state.destinationsList = state.destinationsList.map((d: any) => {
+              const staticDest = destinations.find((sd) => sd.slug === d.slug);
+              if (staticDest) {
+                return { ...d, ...staticDest };
+              }
+              return d;
+            });
+            // Ensure any new destinations in static file but missing in localstorage are added
+            destinations.forEach((sd) => {
+              if (!state.destinationsList.some((d: any) => d.slug === sd.slug)) {
+                state.destinationsList.push(sd);
+              }
+            });
+          } else {
+            state.destinationsList = destinations;
+          }
+
+          // 2. Sync compoundsList with latest static compounds data (especially developer names, new launches, and parent slug mappings!)
+          if (Array.isArray(state.compoundsList)) {
+            // Re-map with latest static compounds
+            state.compoundsList = state.compoundsList.map((c: any) => {
+              const staticComp = compounds.find((sc) => sc.slug === c.slug);
+              if (staticComp) {
+                const isNewLaunch = launchSlugs.has(c.slug);
+                return { ...c, ...staticComp, isNewLaunch };
+              }
+              return c;
+            });
+            // Ensure any new compounds in static file but missing in localstorage are added
+            compounds.forEach((sc) => {
+              if (!state.compoundsList.some((c: any) => c.slug === sc.slug)) {
+                const isNewLaunch = launchSlugs.has(sc.slug);
+                state.compoundsList.push({ ...sc, isNewLaunch });
+              }
+            });
+          } else {
+            const initialCompoundsList = compounds.map(c => ({
+              ...c,
+              isNewLaunch: launchSlugs.has(c.slug)
+            }));
+            state.compoundsList = initialCompoundsList;
+          }
+
+          // 3. Clear session if inactive
+          if (state.user && !isSessionActive()) {
+            state.user = null;
+            state.favorites = [];
+            state.compareList = [];
+            state.leads = [];
+            state.recentlyViewed = [];
+            state.agentNotes = "### Agent Scratchpad\n";
+            state.agentTasks = [];
+            state.customShortcuts = [];
+            state.customBrochures = [];
+            state.customProfiles = [];
+            state.salesTarget = 0;
+          }
         }
       },
     },

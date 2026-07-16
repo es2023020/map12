@@ -149,13 +149,13 @@ function DashboardLayout() {
                     </a>
                   ))}
                   
-                  <Link to="/map" className="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-all text-muted-foreground hover:text-foreground hover:bg-secondary/50">
+                  <Link to="/map" search={{ destination: "", dev: "", q: "" }} className="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-all text-muted-foreground hover:text-foreground hover:bg-secondary/50">
                     <span className="flex items-center gap-3">
                       <Map className="h-4 w-4 text-violet-500" /> Interactive Map
                     </span>
                     <ExternalLink className="h-3 w-3 opacity-60" />
                   </Link>
-                  <Link to="/calculator" className="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-all text-muted-foreground hover:text-foreground hover:bg-secondary/50">
+                  <Link to="/calculator" search={{ project: "" }} className="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-all text-muted-foreground hover:text-foreground hover:bg-secondary/50">
                     <span className="flex items-center gap-3">
                       <Calculator className="h-4 w-4 text-pink-500" /> Installment Calc
                     </span>

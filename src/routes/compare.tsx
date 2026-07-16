@@ -176,10 +176,10 @@ function ComparePage() {
       },
       { 
         label: "Exact Location Details", 
-        displayA: availA && availA.city ? availA.city : `${compA.destination.replace("-", " ")} region`,
-        displayB: availB && availB.city ? availB.city : `${compB.destination.replace("-", " ")} region`,
+        displayA: availA && (availA as any).city ? (availA as any).city : `${compA.destination.replace("-", " ")} region`,
+        displayB: availB && (availB as any).city ? (availB as any).city : `${compB.destination.replace("-", " ")} region`,
         icon: MapPin,
-        isDifferent: (availA?.city || "") !== (availB?.city || "")
+        isDifferent: ((availA as any)?.city || "") !== ((availB as any)?.city || "")
       },
       { 
         label: "Compound Status", 
@@ -190,8 +190,8 @@ function ComparePage() {
       },
       { 
         label: "Key Amenities", 
-        displayA: compA.amenities ? compA.amenities.slice(0, 6).join(", ") : (availA?.amenities ? availA.amenities.slice(0, 6).join(", ") : "Green Areas, Security"),
-        displayB: compB.amenities ? compB.amenities.slice(0, 6).join(", ") : (availB?.amenities ? availB.amenities.slice(0, 6).join(", ") : "Green Areas, Security"),
+        displayA: compA.amenities ? compA.amenities.slice(0, 6).join(", ") : ((availA as any)?.amenities ? (availA as any).amenities.slice(0, 6).join(", ") : "Green Areas, Security"),
+        displayB: compB.amenities ? compB.amenities.slice(0, 6).join(", ") : ((availB as any)?.amenities ? (availB as any).amenities.slice(0, 6).join(", ") : "Green Areas, Security"),
         icon: Waves,
         isDifferent: true
       },

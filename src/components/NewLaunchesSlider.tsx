@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useStore } from "@/lib/store";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Calendar, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Sparkles, Image as ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function NewLaunchesSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", dragFree: true });
   const compoundsList = useStore((s) => s.compoundsList) || [];
-  const sliderCompounds = compoundsList.filter(c => c.isNewLaunch && !c.parentSlug);
+  const sliderCompounds = compoundsList.filter(c => c.isNewLaunch);
+  const [failedImages, setFailedImages] = useState<Record<string, boolean>>({});
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -29,7 +30,7 @@ export function NewLaunchesSlider() {
         <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
           <div>
             <div className="inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent/10 px-3 py-1 mb-3 text-xs font-medium text-accent">
-              <Sparkles className="h-3.5 w-3.5" /> New Launches 2026
+              <Sparkles className="h-3.5 w-3.5" /> Exclusive Launches 2026
             </div>
             <h2 className="font-display text-4xl font-semibold tracking-tight text-foreground">
               Market <span className="text-accent">First Look</span>
@@ -50,43 +51,74 @@ export function NewLaunchesSlider() {
 
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-4 touch-pan-y">
-            {sliderCompounds.map((c) => (
-              <div key={c.slug} className="min-w-0 shrink-0 grow-0 pl-4 basis-[85%] sm:basis-[45%] md:basis-[35%] lg:basis-[28%]">
-                <Link to="/projects/$slug" params={{ slug: c.slug }} className="group block relative rounded-2xl bg-card border border-border/40 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full flex flex-col">
-                  <div className="relative aspect-[4/3] w-full overflow-hidden">
-                    <img src={c.hero} alt={c.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 transition-opacity group-hover:opacity-100" />
-                    <div className="absolute top-3 right-3 flex gap-2">
-                      <span className="inline-flex items-center rounded-full bg-black/50 backdrop-blur-md px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white border border-white/10">
-                        {c.status}
-                      </span>
-                    </div>
-                    <div className="absolute bottom-3 left-4 right-4">
-                      <div className="text-white font-display text-xl font-bold truncate">{c.name}</div>
-                      <div className="text-white/80 text-xs font-medium truncate flex items-center gap-1.5 mt-1">
-                        <MapPin className="h-3 w-3" /> {c.destination.replace(/-/g, " ")}
+            {sliderCompounds.map((c) => {
+              const parent = c.parentSlug ? compoundsList.find(p => p.slug === c.parentSlug) : null;
+              const hasImgError = failedImages[c.slug];
+              return (
+                <div key={c.slug} className="min-w-0 shrink-0 grow-0 pl-4 basis-[85%] sm:basis-[45%] md:basis-[35%] lg:basis-[28%]">
+                  <Link to="/projects/$slug" params={{ slug: c.slug }} className="group block relative rounded-2xl bg-card border border-border/40 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full flex flex-col">
+                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-secondary">
+                      {hasImgError ? (
+                        <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-secondary/50 to-secondary/80 p-4 text-center select-none">
+                          <ImageIcon className="h-8 w-8 text-muted-foreground/60 mb-2" />
+                          <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">No image uploaded</span>
+                          <span className="text-[9px] text-muted-foreground/80 mt-0.5">Edit in admin dashboard</span>
+                        </div>
+                      ) : (
+                        <img 
+                          src={c.hero} 
+                          alt={c.name} 
+                          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                          loading="lazy" 
+                          onError={() => setFailedImages(prev => ({ ...prev, [c.slug]: true }))}
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 transition-opacity group-hover:opacity-100" />
+                      <div className="absolute top-3 right-3 flex gap-2">
+                        <span className="inline-flex items-center rounded-full bg-black/50 backdrop-blur-md px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white border border-white/10">
+                          {c.status}
+                        </span>
+                      </div>
+                      <div className="absolute bottom-3 left-4 right-4">
+                        <div className="text-white font-display text-lg font-bold truncate">{c.name}</div>
+                        <div className="text-white/80 text-xs font-medium truncate flex items-center gap-1.5 mt-1">
+                          <MapPin className="h-3 w-3" /> {c.destination.replace(/-/g, " ")}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="p-5 flex-1 flex flex-col justify-between">
-                    <div>
-                      <div className="text-xs text-muted-foreground uppercase tracking-wider font-semibold mb-1">Developer</div>
-                      <div className="text-sm font-medium text-foreground">{c.developer}</div>
-                    </div>
-                    <div className="mt-4 pt-4 border-t border-border/40 flex items-center justify-between">
+                    <div className="p-5 flex-1 flex flex-col justify-between">
                       <div>
-                        <div className="text-[10px] text-muted-foreground uppercase tracking-wide font-medium">Starting from</div>
-                        <div className="text-accent font-semibold">{c.priceFrom}M EGP</div>
+                        {parent ? (
+                          <div className="mb-2">
+                            <span className="inline-flex items-center rounded-full bg-accent/10 border border-accent/20 px-2 py-0.5 text-[9px] font-bold text-accent">
+                              Phase of {parent.name}
+                            </span>
+                          </div>
+                        ) : (
+                          <div className="mb-2">
+                            <span className="inline-flex items-center rounded-full bg-primary/10 border border-primary/20 px-2 py-0.5 text-[9px] font-bold text-primary">
+                              Primary Launch
+                            </span>
+                          </div>
+                        )}
+                        <div className="text-xs text-muted-foreground uppercase tracking-wider font-semibold mb-1">Developer</div>
+                        <div className="text-sm font-medium text-foreground">{c.developer}</div>
                       </div>
-                      <div className="text-right">
-                        <div className="text-[10px] text-muted-foreground uppercase tracking-wide font-medium">Delivery</div>
-                        <div className="text-sm font-semibold flex items-center justify-end gap-1"><Calendar className="h-3 w-3 text-muted-foreground" /> {c.deliveryYear}</div>
+                      <div className="mt-4 pt-4 border-t border-border/40 flex items-center justify-between">
+                        <div>
+                          <div className="text-[10px] text-muted-foreground uppercase tracking-wide font-medium">Starting from</div>
+                          <div className="text-accent font-semibold">{c.priceFrom}M EGP</div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-[10px] text-muted-foreground uppercase tracking-wide font-medium">Delivery</div>
+                          <div className="text-sm font-semibold flex items-center justify-end gap-1"><Calendar className="h-3 w-3 text-muted-foreground" /> {c.deliveryYear}</div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

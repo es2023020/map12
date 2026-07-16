@@ -1,6 +1,6 @@
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import { compounds } from "@/data/compounds";
 import mediaRegistry from "@/data/media-registry.json";
 import { 
@@ -26,8 +26,25 @@ import {
   ExternalLink,
   Laptop,
   Share2,
-  Eye
+  Eye,
+  Flame,
+  MapPin,
+  Activity,
+  Trophy,
+  ArrowUpRight,
+  Star,
+  PhoneCall,
+  Heart,
+  BarChart3,
+  Zap
 } from "lucide-react";
+import {
+  computeProjectScores,
+  computeTrendingAreas,
+  computeTopDeals,
+  computeMarketPulse,
+  topProjectsByScore
+} from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/dashboard/")({
@@ -52,6 +69,9 @@ function DashboardOverview() {
   const agentTasks = useStore((s) => s.agentTasks);
   const salesTarget = useStore((s) => s.salesTarget);
   const user = useStore((s) => s.user);
+  const analyticsEvents = useStore((s) => s.analyticsEvents);
+  const compoundsList = useStore((s) => s.compoundsList);
+  const trackEvent = useStore((s) => s.trackEvent);
   
   const updateNotes = useStore((s) => s.updateNotes);
   const setSalesTarget = useStore((s) => s.setSalesTarget);
@@ -162,6 +182,38 @@ function DashboardOverview() {
   const radius = 52;
   const circumference = 2 * Math.PI * radius;
   const strokeOffset = circumference - (progressPercent / 100) * circumference;
+
+  // ── Analytics Intelligence Engine ────────────────────────────────────────
+  const allCompounds = compoundsList.length > 0 ? compoundsList : compounds;
+
+  const projectScores = useMemo(
+    () => computeProjectScores(analyticsEvents, allCompounds, favorites),
+    [analyticsEvents, allCompounds, favorites]
+  );
+
+  const topViewed = useMemo(
+    () => topProjectsByScore(projectScores, allCompounds, 5),
+    [projectScores, allCompounds]
+  );
+
+  const trendingAreas = useMemo(
+    () => computeTrendingAreas(analyticsEvents, allCompounds).slice(0, 6),
+    [analyticsEvents, allCompounds]
+  );
+
+  const topDeals = useMemo(
+    () => computeTopDeals(analyticsEvents, allCompounds, favorites, 3),
+    [analyticsEvents, allCompounds, favorites]
+  );
+
+  const marketPulse = useMemo(
+    () => computeMarketPulse(analyticsEvents, allCompounds).slice(0, 8),
+    [analyticsEvents, allCompounds]
+  );
+
+  const totalEvents = analyticsEvents.length;
+  const recentEvents = analyticsEvents.filter(e => Date.now() - e.timestamp < 72 * 3600000).length;
+
 
   // Compile full document list: default docs + scanned brochures + custom brochures
   const scannedDocs = (mediaRegistry.brochures || []).map(b => ({
@@ -311,7 +363,13 @@ function DashboardOverview() {
           type="text"
           placeholder="Global Search Engine — type any unit type, project, price, or developer (e.g. Marassi chalet, Sodic, 12M)..."
           value={globalSearch}
-          onChange={(e) => setGlobalSearch(e.target.value)}
+          onChange={(e) => {
+            setGlobalSearch(e.target.value);
+            // Track search for analytics (debounce-like: only emit if 3+ chars)
+            if (e.target.value.length >= 3) {
+              trackEvent({ type: "search", query: e.target.value });
+            }
+          }}
           className="w-full rounded-2xl border border-border/80 bg-card pl-12 pr-4 py-3.5 text-sm text-primary placeholder:text-muted-foreground focus:border-accent focus:outline-none shadow-sm transition-all"
         />
         {globalSearch.length > 0 && (
@@ -376,69 +434,318 @@ function DashboardOverview() {
         </div>
       )}
 
-      {/* KPI Stats & Target Progress Ring Grid */}
-      <div className="grid gap-6 md:grid-cols-3">
-        <div className="rounded-2xl border border-border/60 bg-card p-6 shadow-sm flex items-center justify-between">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Active Leads</span>
-            <div className="mt-2 font-display text-4xl font-extrabold text-primary">{openLeads}</div>
-            <p className="mt-1 text-xs text-muted-foreground">{leads.length} total clients registered</p>
-          </div>
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-500">
-            <Users className="h-6 w-6" />
-          </div>
-        </div>
 
-        <div className="rounded-2xl border border-border/60 bg-card p-6 shadow-sm flex items-center justify-between">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Pipeline Value</span>
-            <div className="mt-2 font-display text-4xl font-extrabold text-primary">EGP {totalPipeline}M</div>
-            <p className="mt-1 text-xs text-muted-foreground">Potential sales commission pool</p>
-          </div>
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-500">
-            <TrendingUp className="h-6 w-6" />
-          </div>
-        </div>
-
-        <div className="rounded-2xl border border-border/60 bg-card p-6 shadow-sm flex items-center justify-between">
-          <div className="min-w-0 flex-1">
-            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
-              <Target className="h-3.5 w-3.5 text-accent" /> Closed Targets
-            </span>
-            <div className="mt-2 font-display text-3xl font-extrabold text-primary">EGP {closedSalesVolume}M</div>
-            
-            <div className="mt-2 flex items-center gap-2">
-              <span className="text-xs text-muted-foreground">Target:</span>
-              <input 
-                type="number" 
-                value={salesTarget}
-                onChange={(e) => setSalesTarget(Number(e.target.value))}
-                className="w-16 rounded border border-border/60 bg-transparent px-1.5 py-0.5 text-xs font-semibold text-primary focus:border-accent focus:outline-none"
-              />
-              <span className="text-xs text-muted-foreground">EGP M</span>
+      {/* ═══════════════════════════════════════════════════════
+          INSIGHT INTELLIGENCE DASHBOARD
+      ═══════════════════════════════════════════════════════ */}
+      
+      {/* Intelligence Status Banner */}
+      <div className="relative overflow-hidden rounded-2xl border border-accent/25 bg-gradient-to-r from-accent/10 via-accent/5 to-purple-500/10 px-6 py-4">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-accent/15 via-transparent to-transparent pointer-events-none" />
+        <div className="relative flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent text-accent-foreground shadow-lg shadow-accent/30">
+              <Zap className="h-5 w-5" />
+            </div>
+            <div>
+              <h2 className="font-display text-base font-bold text-primary flex items-center gap-1.5">
+                Intelligence Center <span className="text-[10px] font-bold tracking-widest uppercase text-accent bg-accent/10 border border-accent/20 rounded-full px-2 py-0.5">Live</span>
+              </h2>
+              <p className="text-xs text-muted-foreground">
+                {totalEvents > 0
+                  ? `Analyzing ${totalEvents} tracked interactions · ${recentEvents} in the last 72h`
+                  : "Start browsing projects to unlock real-time market insights"}
+              </p>
             </div>
           </div>
-
-          <div className="relative flex items-center justify-center shrink-0">
-            <svg className="h-28 w-28 transform -rotate-90">
-              <circle cx="56" cy="56" r={radius} fill="transparent" stroke="hsl(var(--border))" strokeWidth="8" />
-              <circle cx="56" cy="56" r={radius} fill="transparent" stroke="hsl(var(--accent))" strokeWidth="8"
-                strokeDasharray={circumference}
-                strokeDashoffset={strokeOffset}
-                strokeLinecap="round"
-                className="transition-all duration-500 ease-out"
-              />
-            </svg>
-            <div className="absolute flex flex-col items-center">
-              <span className="font-display text-lg font-bold text-primary">{progressPercent}%</span>
-              <span className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold">Done</span>
+          <div className="flex items-center gap-3 flex-wrap">
+            <div className="rounded-xl border border-border/60 bg-card/80 px-3 py-1.5 text-center">
+              <div className="text-xs font-extrabold text-primary">{topViewed.filter(p => p.score > 0).length}</div>
+              <div className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold">Active Projects</div>
+            </div>
+            <div className="rounded-xl border border-border/60 bg-card/80 px-3 py-1.5 text-center">
+              <div className="text-xs font-extrabold text-primary">{trendingAreas.filter(a => a.score > 0).length}</div>
+              <div className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold">Trending Areas</div>
+            </div>
+            <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 px-3 py-1.5 text-center">
+              <div className="text-xs font-extrabold text-amber-400">{topDeals.filter(d => d.totalScore > 0).length}</div>
+              <div className="text-[9px] uppercase tracking-wider text-amber-400/70 font-semibold">Top Deals</div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Row 1: Most Viewed + Top 3 Deals */}
+      <div className="grid gap-6 lg:grid-cols-[3fr_2fr]">
+
+        {/* Most Viewed Projects */}
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <div className="flex items-center justify-between border-b border-border/40 pb-4 mb-5">
+            <div className="flex items-center gap-2">
+              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
+                <Eye className="h-4 w-4" />
+              </div>
+              <div>
+                <h2 className="font-display text-base font-bold text-primary">Most Viewed Projects</h2>
+                <p className="text-[10px] text-muted-foreground">Score = Views ×1 + Saves ×3 + Calls ×7 + Business value</p>
+              </div>
+            </div>
+            <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="text-[10px] font-bold text-accent hover:underline flex items-center gap-0.5">
+              All <ArrowUpRight className="h-3 w-3" />
+            </Link>
+          </div>
+
+          {topViewed.length === 0 || topViewed.every(p => p.score === 0) ? (
+            <div className="flex flex-col items-center justify-center py-10 text-center gap-3">
+              <div className="h-12 w-12 rounded-full bg-secondary/50 flex items-center justify-center">
+                <Eye className="h-6 w-6 text-muted-foreground" />
+              </div>
+              <p className="text-sm font-semibold text-primary">No activity yet</p>
+              <p className="text-xs text-muted-foreground max-w-xs">Browse project pages to track views. Every page visit, save, and call gets scored automatically.</p>
+              <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="mt-2 inline-flex items-center gap-1.5 rounded-xl bg-accent text-accent-foreground px-4 py-2 text-xs font-bold hover:bg-accent/90 transition-all">
+                <ArrowUpRight className="h-3.5 w-3.5" /> Explore Projects
+              </Link>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {topViewed.map(({ compound: c, score }, i) => {
+                const maxScore = topViewed[0]?.score || 1;
+                const pct = Math.round((score / maxScore) * 100);
+                const rankColors = ["text-amber-400", "text-slate-400", "text-orange-600", "text-muted-foreground", "text-muted-foreground"];
+                const barColors = ["bg-gradient-to-r from-amber-400/80 to-amber-500", "bg-gradient-to-r from-blue-400/80 to-blue-500", "bg-gradient-to-r from-purple-400/80 to-purple-500", "bg-gradient-to-r from-green-400/80 to-green-500", "bg-gradient-to-r from-rose-400/80 to-rose-500"];
+                
+                return (
+                  <Link key={c.slug} to="/projects/$slug" params={{ slug: c.slug }} className="flex items-center gap-4 rounded-xl border border-border/40 bg-secondary/10 p-3.5 hover:border-accent/40 hover:bg-secondary/30 transition-all group">
+                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-black ${rankColors[i]} ${i === 0 ? "bg-amber-500/10" : "bg-secondary/50"}`}>
+                      {i + 1}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-xs font-bold text-primary truncate">{c.name}</span>
+                        <span className="text-[10px] font-black text-primary shrink-0">{Math.round(score)} pts</span>
+                      </div>
+                      <div className="text-[10px] text-muted-foreground truncate flex items-center gap-1 mt-0.5">
+                        <MapPin className="h-2.5 w-2.5 shrink-0" />{c.destination} · {c.developer}
+                      </div>
+                      <div className="mt-2 h-1.5 w-full rounded-full bg-secondary/50 overflow-hidden">
+                        <div className={`h-full rounded-full transition-all duration-700 ${barColors[i]}`} style={{ width: `${pct}%` }} />
+                      </div>
+                    </div>
+                    <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground group-hover:text-accent shrink-0 transition-colors" />
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+        </div>
+
+        {/* Top 3 Deals */}
+        <div className="rounded-2xl border border-amber-500/25 bg-gradient-to-b from-amber-500/5 to-card p-6 shadow-sm">
+          <div className="flex items-center gap-2 border-b border-amber-500/20 pb-4 mb-5">
+            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-amber-500/15 text-amber-400">
+              <Trophy className="h-4 w-4" />
+            </div>
+            <div>
+              <h2 className="font-display text-base font-bold text-primary">Top 3 Deals</h2>
+              <p className="text-[10px] text-muted-foreground">Engagement + Business value score</p>
+            </div>
+          </div>
+
+          {topDeals.every(d => d.totalScore === 0) ? (
+            <div className="flex flex-col items-center justify-center py-8 text-center gap-2">
+              <Trophy className="h-8 w-8 text-muted-foreground/30" />
+              <p className="text-xs text-muted-foreground">Track interactions to see top deals ranked automatically</p>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {topDeals.map(({ compound: c, engagementScore, businessScore, totalScore, tags }, i) => (
+                <Link key={c.slug} to="/projects/$slug" params={{ slug: c.slug }}
+                  className="block rounded-xl border border-amber-500/20 bg-amber-500/5 p-3.5 hover:border-amber-500/50 hover:bg-amber-500/10 transition-all group">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-1.5">
+                        <span className={`text-sm font-black ${i === 0 ? "text-amber-400" : i === 1 ? "text-slate-400" : "text-orange-600"}`}>
+                          #{i + 1}
+                        </span>
+                        <span className="text-xs font-bold text-primary truncate">{c.name}</span>
+                      </div>
+                      <div className="text-[10px] text-muted-foreground mt-0.5">{c.destination}</div>
+                    </div>
+                    <div className="text-right shrink-0">
+                      <div className="text-sm font-black text-amber-400">{Math.round(totalScore)}</div>
+                      <div className="text-[9px] text-muted-foreground">score</div>
+                    </div>
+                  </div>
+                  
+                  {/* Score breakdown */}
+                  <div className="mt-2 flex items-center gap-2 text-[9px] font-semibold text-muted-foreground">
+                    <span className="flex items-center gap-0.5"><Activity className="h-2.5 w-2.5" />{Math.round(engagementScore)} eng</span>
+                    <span>·</span>
+                    <span className="flex items-center gap-0.5"><Star className="h-2.5 w-2.5" />{Math.round(businessScore)} biz</span>
+                  </div>
+
+                  {/* Tags */}
+                  {tags.length > 0 && (
+                    <div className="mt-2 flex flex-wrap gap-1">
+                      {tags.slice(0, 3).map(tag => (
+                        <span key={tag} className="rounded-full bg-accent/10 border border-accent/20 px-1.5 py-0.5 text-[8px] font-bold text-accent">{tag}</span>
+                      ))}
+                    </div>
+                  )}
+                  
+                  <div className="mt-2 flex items-center justify-between border-t border-amber-500/15 pt-2">
+                    <span className="text-[10px] font-bold text-muted-foreground">EGP {c.priceFrom}M+</span>
+                    <span className="text-[9px] font-bold text-accent group-hover:underline flex items-center gap-0.5">View <ArrowUpRight className="h-2.5 w-2.5" /></span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Row 2: Trending Areas + Market Pulse */}
+      <div className="grid gap-6 lg:grid-cols-2">
+
+        {/* Trending Areas */}
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <div className="flex items-center gap-2 border-b border-border/40 pb-4 mb-5">
+            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-rose-500/10 text-rose-500">
+              <Flame className="h-4 w-4" />
+            </div>
+            <div>
+              <h2 className="font-display text-base font-bold text-primary">Trending Areas</h2>
+              <p className="text-[10px] text-muted-foreground">Searches ×2 + Views ×1 + Saves ×3 (weighted 72h)</p>
+            </div>
+          </div>
+
+          {trendingAreas.every(a => a.score === 0) ? (
+            <div className="flex flex-col items-center justify-center py-8 text-center gap-2">
+              <MapPin className="h-8 w-8 text-muted-foreground/30" />
+              <p className="text-xs text-muted-foreground">Search for areas or view projects to build area trend data</p>
+              <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="mt-1 text-[10px] text-accent hover:underline font-bold">Explore Areas →</Link>
+            </div>
+          ) : (
+            <div className="space-y-2.5">
+              {trendingAreas.map((area, i) => {
+                const maxScore = trendingAreas[0]?.score || 1;
+                const pct = Math.round((area.score / maxScore) * 100);
+                const isHot = area.score > maxScore * 0.7;
+                
+                return (
+                  <div key={area.area} className="flex items-center gap-3 rounded-xl border border-border/30 bg-secondary/10 p-3 hover:bg-secondary/20 transition-all">
+                    <div className="shrink-0">
+                      {isHot ? (
+                        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-rose-500/15 text-rose-500">
+                          <Flame className="h-3.5 w-3.5" />
+                        </div>
+                      ) : (
+                        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-secondary text-muted-foreground text-xs font-bold">
+                          {i + 1}
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-2">
+                        <Link to="/projects" search={{ destination: area.area, dev: "", q: "" }} className="text-xs font-bold text-primary hover:text-accent truncate transition-colors">
+                          {area.area}
+                        </Link>
+                        <div className="flex items-center gap-2 shrink-0 text-[9px] text-muted-foreground font-semibold">
+                          <span className="flex items-center gap-0.5"><Search className="h-2.5 w-2.5" />{Math.round(area.searchCount)}</span>
+                          <span className="flex items-center gap-0.5"><Eye className="h-2.5 w-2.5" />{Math.round(area.viewCount)}</span>
+                          <span className="flex items-center gap-0.5"><Heart className="h-2.5 w-2.5" />{Math.round(area.saveCount)}</span>
+                        </div>
+                      </div>
+                      <div className="mt-1.5 h-1 w-full rounded-full bg-secondary/50 overflow-hidden">
+                        <div
+                          className={`h-full rounded-full transition-all duration-700 ${isHot ? "bg-gradient-to-r from-rose-400 to-rose-600" : "bg-gradient-to-r from-blue-400 to-blue-600"}`}
+                          style={{ width: `${pct}%` }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+
+        {/* Market Pulse */}
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <div className="flex items-center gap-2 border-b border-border/40 pb-4 mb-5">
+            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-purple-500/10 text-purple-500">
+              <BarChart3 className="h-4 w-4" />
+            </div>
+            <div>
+              <h2 className="font-display text-base font-bold text-primary">Market Pulse</h2>
+              <p className="text-[10px] text-muted-foreground">Area performance — Avg price, projects, momentum</p>
+            </div>
+          </div>
+
+          {marketPulse.every(m => m.trendScore === 0) ? (
+            <div className="space-y-2">
+              {/* Static fallback showing all areas by project count */}
+              {(() => {
+                const areaData: Record<string, { prices: number[]; count: number }> = {};
+                for (const c of allCompounds) {
+                  if (!c.destination) continue;
+                  if (!areaData[c.destination]) areaData[c.destination] = { prices: [], count: 0 };
+                  if (c.priceFrom) areaData[c.destination].prices.push(c.priceFrom);
+                  areaData[c.destination].count++;
+                }
+                return Object.entries(areaData)
+                  .sort((a, b) => b[1].count - a[1].count)
+                  .slice(0, 6)
+                  .map(([area, d]) => {
+                    const avg = d.prices.reduce((a, b) => a + b, 0) / (d.prices.length || 1);
+                    return (
+                      <div key={area} className="flex items-center justify-between rounded-xl border border-border/30 bg-secondary/10 p-2.5">
+                        <div className="min-w-0">
+                          <div className="text-xs font-bold text-primary truncate">{area}</div>
+                          <div className="text-[9px] text-muted-foreground">{d.count} projects · avg EGP {avg.toFixed(1)}M</div>
+                        </div>
+                        <span className="shrink-0 rounded-full bg-secondary px-2 py-0.5 text-[9px] font-bold text-muted-foreground">—</span>
+                      </div>
+                    );
+                  });
+              })()}
+            </div>
+          ) : (
+            <div className="space-y-2.5">
+              {marketPulse.map(entry => {
+                const momentumConfig = {
+                  rising: { color: "text-emerald-400", bg: "bg-emerald-500/10 border-emerald-500/20", label: "↑ Rising", dot: "bg-emerald-400" },
+                  stable: { color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/20", label: "→ Stable", dot: "bg-blue-400" },
+                  cooling: { color: "text-slate-400", bg: "bg-secondary/50 border-border/30", label: "↓ Cooling", dot: "bg-slate-400" },
+                }[entry.momentum];
+                
+                return (
+                  <div key={entry.area} className="flex items-center justify-between rounded-xl border border-border/30 bg-secondary/10 p-3 hover:bg-secondary/20 transition-all">
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-2">
+                        <div className={`h-1.5 w-1.5 rounded-full ${momentumConfig.dot} shrink-0`} />
+                        <Link to="/projects" search={{ destination: entry.area, dev: "", q: "" }} className="text-xs font-bold text-primary hover:text-accent truncate transition-colors">
+                          {entry.area}
+                        </Link>
+                      </div>
+                      <div className="text-[9px] text-muted-foreground mt-0.5 pl-3.5">
+                        {entry.projectCount} projects · avg EGP {entry.avgPrice.toFixed(1)}M
+                      </div>
+                    </div>
+                    <div className={`shrink-0 rounded-full border px-2 py-0.5 text-[9px] font-bold ${momentumConfig.color} ${momentumConfig.bg}`}>
+                      {momentumConfig.label}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </div>
+
       {/* Main Workspace Checklist Grid */}
       <div className="grid gap-6 lg:grid-cols-2">
+
         <div className="rounded-2xl border border-border bg-card p-6 shadow-sm flex flex-col h-[380px]">
           <div className="flex items-center gap-2 border-b border-border/40 pb-3">
             <Notebook className="h-5 w-5 text-accent" />

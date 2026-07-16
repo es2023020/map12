@@ -8,12 +8,12 @@ const publicLinks = [
   { to: "/map" as const, label: "Map" },
   { to: "/projects" as const, label: "Projects" },
   { to: "/destinations" as const, label: "Destinations" },
-  { to: "/developers" as const, label: "Developers" },
   { to: "/calculator" as const, label: "Calculator" },
   { to: "/compare" as const, label: "Compare" },
 ];
 
 const moreLinks = [
+  { to: "/developers" as const, label: "Developers" },
   { to: "/pricing" as const, label: "Pricing" },
   { to: "/about" as const, label: "About" },
   { to: "/contact" as const, label: "Contact" },

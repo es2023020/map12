@@ -212,6 +212,27 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   const [dependencyWarning, setDependencyWarning] = useState<string | null>(null);
   const [deleteTarget, setDeleteTarget] = useState<{ type: string; slug: string } | null>(null);
 
+  // Edit Unit Form state
+  const [editingUnit, setEditingUnit] = useState<{ bType: string; unit: any } | null>(null);
+  const [editUnitNo, setEditUnitNo] = useState("");
+  const [editUnitType, setEditUnitType] = useState("");
+  const [editUnitBeds, setEditUnitBeds] = useState(2);
+  const [editUnitArea, setEditUnitArea] = useState(120);
+  const [editUnitView, setEditUnitView] = useState("");
+  const [editUnitPrice, setEditUnitPrice] = useState(4500000);
+  const [editUnitStatus, setEditUnitStatus] = useState("Available");
+
+  const loadUnitForEdit = (bType: string, u: any) => {
+    setEditingUnit({ bType, unit: u });
+    setEditUnitNo(u.unitNo || "");
+    setEditUnitType(bType);
+    setEditUnitBeds(u.beds || 2);
+    setEditUnitArea(u.areaSqm || 120);
+    setEditUnitView(u.view || "");
+    setEditUnitPrice(u.priceEGP || 4500000);
+    setEditUnitStatus(u.status || "Available");
+  };
+
   // Project forms inputs
   const [pName, setPName] = useState("");
   const [pStatus, setPStatus] = useState("Off-Plan");
@@ -825,7 +846,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     const avail = availabilityList.find(a => a.slug === projSlug);
     if (!avail) return;
 
-    const breakdown = avail.breakdown.map(b => {
+    const breakdown = avail.breakdown.map((b: any) => {
       if (b.type === catType) {
         const units = (b.units || []).filter((u: any) => u.id !== unitId);
         return {
@@ -835,9 +856,9 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
         };
       }
       return b;
-    }).filter(b => b.available > 0);
+    }).filter((b: any) => b.available > 0);
 
-    const totalAvailable = breakdown.reduce((acc, curr) => acc + curr.available, 0);
+    const totalAvailable = breakdown.reduce((acc: number, curr: any) => acc + curr.available, 0);
 
     updateAvailability(projSlug, {
       ...avail,
@@ -847,11 +868,70 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     });
   };
 
+  const handleEditUnitSubmit = (projSlug: string) => {
+    if (!editingUnit || !editUnitNo.trim()) return;
+    const { bType, unit } = editingUnit;
+    const avail = availabilityList.find(a => a.slug === projSlug);
+    if (!avail) return;
+
+    let breakdown = avail.breakdown.map((b: any) => {
+      if (b.type === bType) {
+        const units = (b.units || []).map((u: any) => {
+          if (u.id === unit.id) {
+            return {
+              ...u,
+              unitNo: editUnitNo,
+              beds: Number(editUnitBeds),
+              areaSqm: Number(editUnitArea),
+              view: editUnitView,
+              priceEGP: Number(editUnitPrice),
+              status: editUnitStatus,
+            };
+          }
+          return u;
+        });
+        return {
+          ...b,
+          units
+        };
+      }
+      return b;
+    });
+
+    breakdown = breakdown.map((b: any) => {
+      const units = b.units || [];
+      if (units.length === 0) {
+        return { ...b, available: 0 };
+      }
+      const sqms = units.map((u: any) => u.areaSqm);
+      const prices = units.map((u: any) => u.priceEGP / 1_000_000);
+      return {
+        ...b,
+        available: units.filter((u: any) => u.status === "Available").length,
+        minSqm: Math.min(...sqms),
+        maxSqm: Math.max(...sqms),
+        minPriceM: Math.min(...prices),
+        maxPriceM: Math.max(...prices),
+      };
+    }).filter((b: any) => b.units.length > 0);
+
+    const totalAvailable = breakdown.reduce((acc: number, curr: any) => acc + curr.available, 0);
+
+    updateAvailability(projSlug, {
+      ...avail,
+      totalAvailable,
+      breakdown,
+      lastUpdated: new Date().toISOString()
+    });
+    setEditingUnit(null);
+    alert("Unit updated successfully!");
+  };
+
   const handleUpdateUnitStatus = (projSlug: string, catType: string, unitId: string, newStatus: string) => {
     const avail = availabilityList.find(a => a.slug === projSlug);
     if (!avail) return;
 
-    const breakdown = avail.breakdown.map(b => {
+    const breakdown = avail.breakdown.map((b: any) => {
       if (b.type === catType) {
         const units = (b.units || []).map((u: any) => u.id === unitId ? { ...u, status: newStatus } : u);
         return {
@@ -1260,7 +1340,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                             <th className="p-3">View Aspect</th>
                             <th className="p-3">Unit Price</th>
                             <th className="p-3">Status</th>
-                            <th className="p-3 text-right">Delete</th>
+                            <th className="p-3 text-right">Actions</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-border/60">
@@ -1274,7 +1354,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                               );
                             }
 
-                            return avail.breakdown.flatMap(b => {
+                            return avail.breakdown.flatMap((b: any) => {
                               const units = b.units ?? [];
                               return units.map((u: any) => (
                                 <tr key={u.id} className="hover:bg-secondary/15 transition-colors font-medium">
@@ -1299,7 +1379,13 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                                       <option value="Sold">Sold</option>
                                     </select>
                                   </td>
-                                  <td className="p-3 text-right">
+                                  <td className="p-3 text-right space-x-1">
+                                    <button 
+                                      onClick={() => loadUnitForEdit(b.type, u)}
+                                      className="rounded-lg p-1 hover:bg-accent/10 text-accent border border-border"
+                                    >
+                                      <Edit className="h-3 w-3" />
+                                    </button>
                                     <button 
                                       onClick={() => handleRemoveUnit(selectedProject.slug, b.type, u.id)}
                                       className="rounded-lg p-1 hover:bg-destructive/10 text-destructive border border-border"
@@ -2506,6 +2592,62 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
 
               <button type="submit" className="w-full py-3 bg-accent text-white font-bold text-xs rounded-xl hover:bg-accent/90 transition-colors shadow-soft">
                 {editingItem ? "Publish Changes" : "Create Destination"}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* ── Edit Unit Modal ── */}
+      {editingUnit && selectedProject && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/85 backdrop-blur-sm p-4">
+          <div className="w-full max-w-md rounded-2xl border border-border bg-card shadow-2xl p-6 relative animate-in zoom-in-95 duration-200">
+            <button onClick={() => setEditingUnit(null)} className="absolute right-4 top-4 rounded-xl border border-border p-1 hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground">
+              <X className="h-4 w-4" />
+            </button>
+            <h3 className="font-display text-lg font-bold text-primary mb-4 flex items-center gap-1.5">
+              <Edit className="h-5 w-5 text-accent" /> Edit Unit Availability
+            </h3>
+
+            <form onSubmit={(e) => { e.preventDefault(); handleEditUnitSubmit(selectedProject.slug); }} className="space-y-4 text-xs font-medium">
+              <div>
+                <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Unit Number</label>
+                <input type="text" required value={editUnitNo} onChange={(e) => setEditUnitNo(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div>
+                  <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Beds</label>
+                  <input type="number" required value={editUnitBeds} onChange={(e) => setEditUnitBeds(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
+                </div>
+                <div>
+                  <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Area (sqm)</label>
+                  <input type="number" required value={editUnitArea} onChange={(e) => setEditUnitArea(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">View Aspect</label>
+                <input type="text" required value={editUnitView} onChange={(e) => setEditUnitView(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div>
+                  <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Price (EGP)</label>
+                  <input type="number" required value={editUnitPrice} onChange={(e) => setEditUnitPrice(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
+                </div>
+                <div>
+                  <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Status</label>
+                  <select value={editUnitStatus} onChange={(e) => setEditUnitStatus(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 appearance-none text-primary focus:outline-none focus:ring-1 focus:ring-accent bg-card">
+                    <option value="Available">Available</option>
+                    <option value="Reserved">Reserved</option>
+                    <option value="Sold">Sold</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" className="w-full py-3 bg-accent text-white font-bold text-xs rounded-xl hover:bg-accent/90 transition-colors shadow-soft">
+                Save Unit Changes
               </button>
             </form>
           </div>

@@ -212,8 +212,8 @@ function CampaignsPage() {
                 <Users className="h-4 w-4 text-accent" /> 1. Select Client Audience
               </span>
               <div className="flex gap-2">
-                <Button size="xs" variant="outline" onClick={() => selectAllFiltered(filteredList)}>Select All</Button>
-                <Button size="xs" variant="outline" onClick={() => clearAllSelected(filteredList)}>Clear</Button>
+                <Button size="sm" variant="outline" onClick={() => selectAllFiltered(filteredList)}>Select All</Button>
+                <Button size="sm" variant="outline" onClick={() => clearAllSelected(filteredList)}>Clear</Button>
               </div>
             </div>
 

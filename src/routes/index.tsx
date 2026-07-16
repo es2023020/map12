@@ -51,12 +51,12 @@ function Index() {
               PropTrack is the real-estate intelligence platform for the Egyptian market — Sahel, New Cairo, and Sheikh Zayed, mapped in one place.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link to="/map">
+              <Link to="/map" search={{ destination: "", dev: "", q: "" }}>
                 <Button size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90">
                   Explore the Map <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
-              <Link to="/projects">
+              <Link to="/projects" search={{ destination: "", dev: "", q: "" }}>
                 <Button size="lg" variant="outline" className="rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white">
                   Browse {compounds.length} projects
                 </Button>

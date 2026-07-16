@@ -104,7 +104,7 @@ function CalculatorPage() {
   const selectableItems = useMemo(() => {
     if (!projectAvail) return [];
     const list: Array<{ id: string; label: string; priceM: number; paymentPlan?: string }> = [];
-    projectAvail.breakdown.forEach((b, bIdx) => {
+    projectAvail.breakdown.forEach((b: any, bIdx: number) => {
       // Add the unit type group
       list.push({
         id: `type-${bIdx}`,
@@ -192,7 +192,7 @@ function CalculatorPage() {
       // Filter by destination
       if (budgetDestFilter && comp.destination !== budgetDestFilter) return;
 
-      p.breakdown.forEach((b) => {
+      p.breakdown.forEach((b: any) => {
         // Filter by unit type
         if (budgetTypeFilter && b.type !== budgetTypeFilter) return;
 
@@ -437,7 +437,7 @@ function CalculatorPage() {
                   )}
                   {projectTypes.length > 0 && (
                     <div className="flex flex-wrap gap-1.5">
-                      {projectTypes.map((t) => (
+                      {projectTypes.map((t: string) => (
                         <button
                           key={t}
                           onClick={() => setUnitType(unitType === t ? "" : t)}

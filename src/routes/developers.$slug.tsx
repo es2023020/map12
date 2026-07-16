@@ -93,7 +93,7 @@ function DevPage() {
               </a>
               <Link
                 to="/map"
-                search={{ dev: d.slug }}
+                search={{ dev: d.slug, destination: "", q: "" }}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-accent/80 border border-accent px-4 py-2.5 text-sm font-medium text-white hover:bg-accent transition-colors"
               >
                 <MapIcon className="h-4 w-4" /> View on map
@@ -233,7 +233,7 @@ function DevPage() {
           <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">
             All {list.length} projects by {d.name}
           </h2>
-          <Link to="/projects" search={{ dev: d.slug }} className="text-sm text-accent hover:underline">
+          <Link to="/projects" search={{ dev: d.slug, destination: "", q: "" }} className="text-sm text-accent hover:underline">
             Browse all projects →
           </Link>
         </div>

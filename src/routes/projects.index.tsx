@@ -8,6 +8,7 @@ import { developers } from "@/data/developers";
 import { Input } from "@/components/ui/input";
 import { Search, SlidersHorizontal, X, ChevronDown, ChevronUp } from "lucide-react";
 import { availability } from "@/data/availability";
+import { useStore } from "@/lib/store";
 
 // Compute true max price from availability data (highest real price) or fall back to compound list
 const mainCompounds = compounds.filter((c) => !c.parentSlug);
@@ -43,6 +44,7 @@ function ProjectsPage() {
   const [maxPrice, setMaxPrice] = useState(PRICE_MAX);
   const [sort, setSort] = useState<"name" | "price-asc" | "price-desc" | "delivery">("name");
   const [filtersOpen, setFiltersOpen] = useState(!!(destinationParam || devParam || qParam));
+  const trackEvent = useStore((s) => s.trackEvent);
 
   const hasFilters = !!(q || destination || dev || status || type || maxPrice < PRICE_MAX);
 
@@ -96,15 +98,50 @@ function ProjectsPage() {
         availText = Array.from(terms).join(" ");
       }
 
-      const hay = `${c.name} ${c.developer} ${c.destination} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase();
-      
+      // Intelligent Query Processing
       const stopWords = new Set(["in", "for", "with", "a", "an", "the", "at", "by", "of", "and", "on"]);
       const queryWords = qVal
         .toLowerCase()
         .split(/\s+/)
         .filter((w) => w && !stopWords.has(w));
-        
-      if (queryWords.length > 0 && !queryWords.every((word) => hay.includes(word))) return false;
+
+      if (queryWords.length > 0) {
+        const hay = `${c.name} ${c.developer} ${c.destination} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase();
+        const devLower = c.developer.toLowerCase();
+        const destLower = c.destination.toLowerCase();
+
+        for (const word of queryWords) {
+          let wordMatches = false;
+
+          if ((word === "mv" || word === "mountainview") && (devLower.includes("mountain view") || devLower.includes("mv"))) {
+            wordMatches = true;
+          } else if ((word === "ph" || word === "phd" || word === "palm") && devLower.includes("palm hills")) {
+            wordMatches = true;
+          } else if ((word === "tagamo3" || word === "tagamoa" || word === "tagamo'") && destLower.includes("new-cairo")) {
+            wordMatches = true;
+          } else if (word === "zayed" && (destLower.includes("sheikh-zayed") || destLower.includes("new-zayed"))) {
+            wordMatches = true;
+          } else if (word === "hekma" && destLower.includes("ras-el-hekma")) {
+            wordMatches = true;
+          } else if (word === "heneish" && destLower.includes("sidi-heneish")) {
+            wordMatches = true;
+          } else if (/^\d+(\.\d+)?m$/.test(word)) {
+            const priceVal = parseFloat(word.slice(0, -1));
+            if (!isNaN(priceVal) && c.priceFrom <= priceVal * 1.15) {
+              wordMatches = true;
+            }
+          } else if (/^\d{4}$/.test(word)) {
+            const yearVal = parseInt(word);
+            if (c.deliveryYear === yearVal) {
+              wordMatches = true;
+            }
+          } else if (hay.includes(word)) {
+            wordMatches = true;
+          }
+
+          if (!wordMatches) return false;
+        }
+      }
     }
     if (destinationVal && c.destination !== destinationVal) return false;
     if (devVal && c.developerSlug !== devVal) return false;

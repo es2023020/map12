@@ -19,7 +19,7 @@ function ComparePage() {
         <GitCompareArrows className="mx-auto h-10 w-10 text-muted-foreground" />
         <h2 className="mt-4 font-display text-2xl font-semibold text-primary">Nothing to compare</h2>
         <p className="mt-2 text-sm text-muted-foreground">Tap the compare icon on a project card to add it here (max 4).</p>
-        <Link to="/projects" className="mt-5 inline-block rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">Browse projects</Link>
+        <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="mt-5 inline-block rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">Browse projects</Link>
       </div>
     );
   }
@@ -35,7 +35,7 @@ function ComparePage() {
       label: "Exact Location Details", 
       get: (c) => {
         const avail = availabilityBySlug(c.slug);
-        return avail && avail.city ? avail.city : `${c.destination.replace(/-/g, " ")} region`;
+        return avail && (avail as any).city ? (avail as any).city : `${c.destination.replace(/-/g, " ")} region`;
       }
     },
     { label: "Status", get: (c) => c.status },
@@ -43,7 +43,7 @@ function ComparePage() {
       label: "Key Amenities", 
       get: (c) => {
         const avail = availabilityBySlug(c.slug);
-        return c.amenities ? c.amenities.slice(0, 6).join(", ") : (avail?.amenities ? avail.amenities.slice(0, 6).join(", ") : "Green Areas, Security");
+        return c.amenities ? c.amenities.slice(0, 6).join(", ") : ((avail as any)?.amenities ? (avail as any).amenities.slice(0, 6).join(", ") : "Green Areas, Security");
       }
     },
     { label: "Delivery", get: (c) => String(c.deliveryYear) },

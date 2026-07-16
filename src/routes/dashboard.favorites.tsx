@@ -18,7 +18,7 @@ function FavoritesPage() {
         <Heart className="mx-auto h-10 w-10 text-muted-foreground" />
         <h2 className="mt-4 font-display text-2xl font-semibold text-primary">No favorites yet</h2>
         <p className="mt-2 text-sm text-muted-foreground">Tap the heart icon on any compound to save it here.</p>
-        <Link to="/projects" className="mt-5 inline-block rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">Browse projects</Link>
+        <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="mt-5 inline-block rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">Browse projects</Link>
       </div>
     );
   }

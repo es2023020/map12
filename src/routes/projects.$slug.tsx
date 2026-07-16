@@ -52,17 +52,41 @@ export const Route = createFileRoute("/projects/$slug")({
   component: CompoundPage,
 });
 
+import { Image as ImageIcon } from "lucide-react";
+
 function Gallery({ images, name }: { images: string[]; name: string }) {
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const [failedImages, setFailedImages] = useState<Record<number, boolean>>({});
+  
   const imgs = images.length > 0 ? images : ["https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200"];
 
   const prev = () => setLightbox((v) => v !== null ? (v - 1 + imgs.length) % imgs.length : null);
   const next = () => setLightbox((v) => v !== null ? (v + 1) % imgs.length : null);
 
+  const renderImageOrFallback = (src: string, index: number, isMain: boolean = false) => {
+    if (failedImages[index]) {
+      return (
+        <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-secondary/50 to-secondary/80 border border-dashed border-border/80 rounded-xl p-6 text-center select-none">
+          <ImageIcon className={`${isMain ? "h-10 w-10" : "h-6 w-6"} text-muted-foreground/60 mb-2`} />
+          <span className={`${isMain ? "text-xs" : "text-[10px]"} font-bold text-muted-foreground uppercase tracking-wider`}>No image uploaded</span>
+          <span className="text-[9px] text-muted-foreground/80 mt-1 max-w-[150px]">Use the admin center to add pictures for {name}</span>
+        </div>
+      );
+    }
+    return (
+      <img 
+        src={src} 
+        alt={name} 
+        className="h-full w-full object-cover hover:scale-105 transition-transform duration-500" 
+        onError={() => setFailedImages(prev => ({ ...prev, [index]: true }))}
+      />
+    );
+  };
+
   return (
     <>
       {/* Gallery grid */}
-      <div className={`grid gap-1.5 overflow-hidden rounded-2xl md:rounded-3xl ${
+      <div className={`grid gap-2 overflow-hidden rounded-2xl md:rounded-3xl border border-border/40 bg-card p-1.5 shadow-lg ${
         imgs.length === 1 ? "grid-cols-1" :
         imgs.length === 2 ? "grid-cols-2" :
         imgs.length === 3 ? "grid-cols-3" :
@@ -70,54 +94,78 @@ function Gallery({ images, name }: { images: string[]; name: string }) {
       }`}>
         {/* Main image */}
         <div
-          className={`relative overflow-hidden bg-secondary cursor-pointer ${
+          className={`relative overflow-hidden rounded-xl bg-secondary cursor-pointer ${
             imgs.length >= 4 ? "md:col-span-2 md:row-span-2" : ""
           }`}
           style={{ aspectRatio: imgs.length === 1 ? "16/7" : "4/3" }}
           onClick={() => setLightbox(0)}
         >
-          <img src={imgs[0]} alt={name} className="h-full w-full object-cover hover:scale-105 transition-transform duration-500" />
-          {imgs.length > 1 && (
-            <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors" />
-          )}
+          {renderImageOrFallback(imgs[0], 0, true)}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span className="text-white text-xs font-semibold backdrop-blur-md bg-black/40 px-3 py-1.5 rounded-full flex items-center gap-1">
+              <ZoomIn className="h-3 w-3" /> View Photo
+            </span>
+          </div>
         </div>
         {/* Secondary images */}
-        {imgs.slice(1, imgs.length >= 4 ? 4 : imgs.length).map((img, i) => (
-          <div
-            key={i}
-            className="relative overflow-hidden bg-secondary cursor-pointer"
-            style={{ aspectRatio: "4/3" }}
-            onClick={() => setLightbox(i + 1)}
-          >
-            <img src={img} alt="" className="h-full w-full object-cover hover:scale-105 transition-transform duration-500" />
-            {i === 2 && imgs.length > 4 && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                <span className="font-display text-2xl font-bold text-white">+{imgs.length - 4}</span>
-              </div>
-            )}
-          </div>
-        ))}
+        {imgs.slice(1, imgs.length >= 4 ? 4 : imgs.length).map((img, i) => {
+          const index = i + 1;
+          return (
+            <div
+              key={i}
+              className="relative overflow-hidden rounded-xl bg-secondary cursor-pointer"
+              style={{ aspectRatio: "4/3" }}
+              onClick={() => setLightbox(index)}
+            >
+              {renderImageOrFallback(img, index)}
+              {i === 2 && imgs.length > 4 && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-xs text-white">
+                  <span className="font-display text-2xl font-black text-white">+{imgs.length - 4}</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-white/80 mt-1">Photos</span>
+                </div>
+              )}
+              {!(i === 2 && imgs.length > 4) && (
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-2.5">
+                  <span className="text-white text-[10px] font-semibold backdrop-blur-md bg-black/30 px-2 py-1 rounded-full flex items-center gap-0.5">
+                    <ZoomIn className="h-2.5 w-2.5" /> Zoom
+                  </span>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       {/* Lightbox */}
       {lightbox !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm" onClick={() => setLightbox(null)}>
-          <button className="absolute top-4 right-4 rounded-full bg-white/10 p-2 text-white hover:bg-white/20" onClick={() => setLightbox(null)}>
+        <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/95 backdrop-blur-md animate-in fade-in duration-200" onClick={() => setLightbox(null)}>
+          <button className="absolute top-6 right-6 rounded-full bg-white/10 p-2.5 text-white hover:bg-white/20 transition-colors shadow-lg" onClick={() => setLightbox(null)}>
             <X className="h-6 w-6" />
           </button>
-          <button className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20" onClick={(e) => { e.stopPropagation(); prev(); }}>
+          <button className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3.5 text-white hover:bg-white/20 transition-all shadow-lg" onClick={(e) => { e.stopPropagation(); prev(); }}>
             <ChevronLeft className="h-6 w-6" />
           </button>
-          <button className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20" onClick={(e) => { e.stopPropagation(); next(); }}>
+          <button className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3.5 text-white hover:bg-white/20 transition-all shadow-lg" onClick={(e) => { e.stopPropagation(); next(); }}>
             <ChevronRight className="h-6 w-6" />
           </button>
-          <img
-            src={imgs[lightbox]}
-            alt={name}
-            className="max-h-[85vh] max-w-[90vw] rounded-xl object-contain shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          />
-          <div className="absolute bottom-4 text-sm text-white/60">{lightbox + 1} / {imgs.length}</div>
+          <div className="max-h-[80vh] max-w-[85vw] flex items-center justify-center rounded-2xl overflow-hidden bg-zinc-950 border border-white/10 shadow-2xl p-1" onClick={(e) => e.stopPropagation()}>
+            {failedImages[lightbox] ? (
+              <div className="w-[600px] aspect-video flex flex-col items-center justify-center bg-zinc-900 text-center p-8">
+                <ImageIcon className="h-12 w-12 text-zinc-600 mb-4" />
+                <h4 className="text-sm font-bold text-zinc-400">No Image File Found</h4>
+                <p className="text-xs text-zinc-500 mt-2 max-w-xs">Upload files for {name} in the admin panel to show here.</p>
+              </div>
+            ) : (
+              <img
+                src={imgs[lightbox]}
+                alt={name}
+                className="max-h-[78vh] max-w-[82vw] object-contain rounded-xl"
+              />
+            )}
+          </div>
+          <div className="absolute bottom-6 font-semibold text-xs text-white bg-black/55 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-lg">
+            Photo {lightbox + 1} of {imgs.length}
+          </div>
         </div>
       )}
     </>
@@ -131,7 +179,11 @@ function CompoundPage() {
   const isFav = useStore((s) => s.favorites.includes(c.slug));
   const toggleFav = useStore((s) => s.toggleFavorite);
   const addRecent = useStore((s) => s.addRecent);
-  useEffect(() => { addRecent(c.slug); }, [c.slug, addRecent]);
+  const trackEvent = useStore((s) => s.trackEvent);
+  useEffect(() => {
+    addRecent(c.slug);
+    trackEvent({ type: "view", slug: c.slug, area: c.destination });
+  }, [c.slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const related = compoundsByDestination(c.destination).filter((x) => x.slug !== c.slug).slice(0, 4);
   const allImages = c.gallery && c.gallery.length > 0 ? c.gallery : [c.hero];
@@ -156,7 +208,7 @@ function CompoundPage() {
       <div className="border-b border-border/60 bg-card">
         <div className="mx-auto max-w-7xl px-4 py-3 lg:px-8">
           <div className="flex items-center gap-1.5 text-sm text-muted-foreground flex-wrap">
-            <Link to="/projects" className="hover:text-primary transition-colors inline-flex items-center gap-1">
+            <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="hover:text-primary transition-colors inline-flex items-center gap-1">
               <ArrowLeft className="h-3.5 w-3.5" /> All projects
             </Link>
             <span>/</span>
@@ -436,10 +488,10 @@ function CompoundPage() {
             <div className="text-xs uppercase tracking-wider text-muted-foreground">Starting from</div>
             <div className="mt-1 font-display text-3xl font-semibold text-primary">EGP {c.priceFrom}M</div>
             <div className="mt-4 space-y-2.5">
-              <Button className="w-full rounded-full" size="lg">
+              <Button className="w-full rounded-full" size="lg" onClick={() => trackEvent({ type: "call", slug: c.slug, area: c.destination })}>
                 <Phone className="mr-2 h-4 w-4" /> Request a viewing
               </Button>
-              <Button onClick={() => toggleFav(c.slug)} variant="outline" className="w-full rounded-full" size="lg">
+              <Button onClick={() => { toggleFav(c.slug); trackEvent({ type: isFav ? "unsave" : "save", slug: c.slug, area: c.destination }); }} variant="outline" className="w-full rounded-full" size="lg">
                 <Heart className={`mr-2 h-4 w-4 ${isFav ? "fill-sunset text-sunset" : ""}`} />
                 {isFav ? "Saved to favorites" : "Save to favorites"}
               </Button>
