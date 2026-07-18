@@ -269,41 +269,6 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
                       Request via WhatsApp Web
                     </a>
                   </div>
-
-                  {/* Super-Admin Upload Gate */}
-                  {isAdmin && (
-                    <div className="border-t border-border/60 pt-5 mt-3 text-left">
-                      <span className="block text-[10px] font-bold text-accent uppercase tracking-wider mb-2">Administrator Quick Console</span>
-                      <div className="rounded-xl border border-dashed border-border/80 bg-secondary/20 p-4 relative flex flex-col items-center justify-center text-center">
-                        {uploading ? (
-                          <div className="flex flex-col items-center gap-2 py-2">
-                            <span className="text-[10px] font-bold text-primary animate-pulse">Uploading &amp; indexing brochure...</span>
-                          </div>
-                        ) : (
-                          <>
-                            <Upload className="h-6 w-6 text-muted-foreground mb-1.5" />
-                            <span className="text-xs font-semibold text-primary">Upload Brochure</span>
-                            <span className="text-[9px] text-muted-foreground mt-0.5 mb-3">PDF, Word, PowerPoint, or Image</span>
-                            
-                            <label className="cursor-pointer rounded-lg bg-accent text-white font-semibold text-[10px] px-3 py-1.5 hover:bg-accent/90 transition-colors">
-                              Select File
-                              <input
-                                type="file"
-                                accept=".pdf,.doc,.docx,.ppt,.pptx,image/*"
-                                className="hidden"
-                                onChange={handleUpload}
-                              />
-                            </label>
-                          </>
-                        )}
-                        {uploadError && (
-                          <div className="mt-2 flex items-center gap-1 text-[9px] text-destructive font-semibold">
-                            <AlertCircle className="h-3 w-3" /> {uploadError}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  )}
                 </div>
               )}
             </div>

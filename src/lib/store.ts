@@ -383,12 +383,17 @@ export const useStore = create<State>()(
 
       const initialCompoundsList = compounds.map(c => {
         const staticFile = brochureMap[c.slug];
+        // Auto-purge any base64 upload data from project record
+        const hasBase64Url = c.brochureUrl && c.brochureUrl.startsWith("data:");
+        const isDeleted = c.brochureDeleted || hasBase64Url;
+        
         return {
           ...c,
           isNewLaunch: launchSlugs.has(c.slug),
-          brochureUrl: c.brochureUrl || (staticFile ? `/brochures/${staticFile}` : undefined),
-          brochureFileName: c.brochureFileName || staticFile || undefined,
-          brochureType: c.brochureType || (staticFile ? "application/pdf" : undefined)
+          brochureUrl: isDeleted ? undefined : (c.brochureUrl || (staticFile ? `/brochures/${staticFile}` : undefined)),
+          brochureFileName: isDeleted ? undefined : (c.brochureFileName || staticFile || undefined),
+          brochureType: isDeleted ? undefined : (c.brochureType || (staticFile ? "application/pdf" : undefined)),
+          brochureDeleted: isDeleted
         };
       });
 
@@ -1527,13 +1532,17 @@ export const useStore = create<State>()(
               if (staticComp) {
                 const isNewLaunch = launchSlugs.has(c.slug);
                 const staticFile = brochureMap[c.slug];
+                const hasBase64Url = c.brochureUrl && c.brochureUrl.startsWith("data:");
+                const isDeleted = c.brochureDeleted || hasBase64Url;
+
                 return { 
                   ...c, 
                   ...staticComp, 
                   isNewLaunch,
-                  brochureUrl: c.brochureUrl || (staticFile ? `/brochures/${staticFile}` : undefined),
-                  brochureFileName: c.brochureFileName || staticFile || undefined,
-                  brochureType: c.brochureType || (staticFile ? "application/pdf" : undefined)
+                  brochureUrl: isDeleted ? undefined : (c.brochureUrl || (staticFile ? `/brochures/${staticFile}` : undefined)),
+                  brochureFileName: isDeleted ? undefined : (c.brochureFileName || staticFile || undefined),
+                  brochureType: isDeleted ? undefined : (c.brochureType || (staticFile ? "application/pdf" : undefined)),
+                  brochureDeleted: isDeleted
                 };
               }
               return c;
@@ -1548,7 +1557,8 @@ export const useStore = create<State>()(
                   isNewLaunch,
                   brochureUrl: staticFile ? `/brochures/${staticFile}` : undefined,
                   brochureFileName: staticFile || undefined,
-                  brochureType: staticFile ? "application/pdf" : undefined
+                  brochureType: staticFile ? "application/pdf" : undefined,
+                  brochureDeleted: false
                 });
               }
             });
@@ -1560,7 +1570,8 @@ export const useStore = create<State>()(
                 isNewLaunch: launchSlugs.has(c.slug),
                 brochureUrl: staticFile ? `/brochures/${staticFile}` : undefined,
                 brochureFileName: staticFile || undefined,
-                brochureType: staticFile ? "application/pdf" : undefined
+                brochureType: staticFile ? "application/pdf" : undefined,
+                brochureDeleted: false
               };
             });
             state.compoundsList = initialCompoundsList;

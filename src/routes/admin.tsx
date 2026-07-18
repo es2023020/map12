@@ -500,6 +500,8 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
 
   // Availability bulk CSV/Excel Importer logic
   const [selectedAvailSlug, setSelectedAvailSlug] = useState("");
+  const [selectedAvailDevSlug, setSelectedAvailDevSlug] = useState("");
+  const [bypassReviewQueue, setBypassReviewQueue] = useState(false);
   const [pastedCSVData, setPastedCSVData] = useState("");
   const [bulkStatusMsg, setBulkStatusMsg] = useState("");
 
@@ -708,14 +710,231 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
           note: `Imported from Excel sheet: ${file.name}`
         };
 
-        addPendingUpload({
-          fileName: file.name,
-          projectSlug: projSlug,
-          developer: targetProj?.developer || "Unknown Developer",
-          newAvail: newAvail,
-          uploadedBy: user?.email || "elsayedshoeip70@gmail.com"
-        });
-        alert(`Success: Excel availability file "${file.name}" uploaded to the "Pending Review" queue for project "${targetProj?.name || projSlug}". An administrator must approve it before it goes live!`);
+        if (bypassReviewQueue) {
+          updateAvailability(projSlug, newAvail);
+          alert(`Success: Excel availability file "${file.name}" has been directly published and live units database updated for project "${targetProj?.name || projSlug}". Previous units for this project were deleted.`);
+        } else {
+          addPendingUpload({
+            fileName: file.name,
+            projectSlug: projSlug,
+            developer: targetProj?.developer || "Unknown Developer",
+            newAvail: newAvail,
+            uploadedBy: user?.email || "elsayedshoeip70@gmail.com"
+          });
+          alert(`Success: Excel availability file "${file.name}" uploaded to the "Pending Review" queue for project "${targetProj?.name || projSlug}". An administrator must approve it before it goes live!`);
+        }
+      } catch (err: any) {
+        alert(`Error parsing Excel sheet: ${err.message}`);
+      }
+    };
+    reader.readAsBinaryString(file);
+  };
+
+  // Developer-Wide Excel File parser
+  const handleDeveloperExcelImport = (e: React.ChangeEvent<HTMLInputElement>, devSlug: string) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const targetDev = developersList.find(d => d.slug === devSlug);
+    if (!targetDev) {
+      alert("Error: Developer not found.");
+      return;
+    }
+    const developerName = targetDev.name;
+
+    // Filter compounds of this developer
+    const devCompounds = compoundsList.filter(c => c.developer.toLowerCase() === developerName.toLowerCase());
+    if (!devCompounds.length) {
+      alert(`Error: There are no compounds registered for developer "${developerName}". Please link compounds to this developer first.`);
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      try {
+        const data = evt.target?.result;
+        const workbook = XLSX.read(data, { type: "binary" });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const rows = XLSX.utils.sheet_to_json(sheet) as Record<string, any>[];
+
+        if (!rows.length) {
+          alert("Excel sheet is empty.");
+          return;
+        }
+
+        // Smart column header mapping
+        const findHeader = (row: Record<string, any>, options: string[]) => {
+          const keys = Object.keys(row);
+          for (const opt of options) {
+            const match = keys.find(k => k.toLowerCase().replace(/[^a-z0-9]+/g, "") === opt.toLowerCase().replace(/[^a-z0-9]+/g, ""));
+            if (match) return match;
+          }
+          return null;
+        };
+
+        const firstRow = rows[0];
+        const projectKey = findHeader(firstRow, ["project", "compound", "development", "projectname", "compoundname", "property", "projectslug", "slug"]);
+        const typeKey = findHeader(firstRow, ["type", "layout", "layouttype", "unittype"]) || Object.keys(firstRow)[0];
+        const priceKey = findHeader(firstRow, ["price", "priceegp", "unitprice", "egp", "cost", "value"]);
+        const bedsKey = findHeader(firstRow, ["beds", "bedrooms", "bedcount", "roomcount"]);
+        const areaKey = findHeader(firstRow, ["area", "size", "sqm", "areasqm"]);
+        const unitNoKey = findHeader(firstRow, ["unitno", "unitnumber", "unit", "no"]);
+        const viewKey = findHeader(firstRow, ["view", "aspect", "unitview"]);
+        const statusKey = findHeader(firstRow, ["status", "availability"]);
+
+        if (!priceKey) {
+          alert("Error: Excel must contain a 'Price' or 'Cost' column.");
+          return;
+        }
+
+        if (!projectKey) {
+          alert("Error: Excel must contain a 'Project' or 'Compound' column to identify which project each unit belongs to.");
+          return;
+        }
+
+        // Group rows by compound slug
+        const groupedRows: Record<string, Record<string, any>[]> = {};
+        const unmatchedProjects = new Set<string>();
+
+        const matchCompound = (val: string) => {
+          if (!val) return null;
+          const normalizedVal = val.toLowerCase().replace(/[^a-z0-9]+/g, "");
+          // 1. Try exact normalized name
+          let matched = devCompounds.find(c => c.name.toLowerCase().replace(/[^a-z0-9]+/g, "") === normalizedVal);
+          if (matched) return matched;
+          // 2. Try exact normalized slug
+          matched = devCompounds.find(c => c.slug.toLowerCase().replace(/[^a-z0-9]+/g, "") === normalizedVal);
+          if (matched) return matched;
+          // 3. Try contains
+          matched = devCompounds.find(c => {
+            const normName = c.name.toLowerCase().replace(/[^a-z0-9]+/g, "");
+            const normSlug = c.slug.toLowerCase().replace(/[^a-z0-9]+/g, "");
+            return normName.includes(normalizedVal) || normalizedVal.includes(normName) ||
+                   normSlug.includes(normalizedVal) || normalizedVal.includes(normSlug);
+          });
+          return matched || null;
+        };
+
+        for (const row of rows) {
+          const rawProjectVal = String(row[projectKey] || "").trim();
+          if (!rawProjectVal) continue;
+
+          const matchedComp = matchCompound(rawProjectVal);
+          if (!matchedComp) {
+            unmatchedProjects.add(rawProjectVal);
+            continue;
+          }
+
+          if (!groupedRows[matchedComp.slug]) {
+            groupedRows[matchedComp.slug] = [];
+          }
+          groupedRows[matchedComp.slug].push(row);
+        }
+
+        const matchedSlugs = Object.keys(groupedRows);
+        if (matchedSlugs.length === 0) {
+          alert(`Error: No rows in the spreadsheet matched any registered projects for developer "${developerName}". Unmatched projects found: ${Array.from(unmatchedProjects).join(", ") || "None"}`);
+          return;
+        }
+
+        const knownKeys = new Set([typeKey, priceKey, bedsKey, areaKey, unitNoKey, viewKey, statusKey, projectKey].filter(Boolean) as string[]);
+        const allKeys = Object.keys(firstRow);
+        const extraKeys = allKeys.filter(k => !knownKeys.has(k));
+
+        const importResults: string[] = [];
+
+        // For each matched compound, parse and build the availability record
+        for (const compoundSlug of matchedSlugs) {
+          const compRows = groupedRows[compoundSlug];
+          const breakdownMap: Record<string, any> = {};
+
+          for (const row of compRows) {
+            const rawType = String(row[typeKey] || "Chalet").trim();
+            const rawPrice = parseFloat(String(row[priceKey])) || 0;
+            const beds = bedsKey ? parseInt(String(row[bedsKey])) || 2 : 2;
+            const area = areaKey ? parseFloat(String(row[areaKey])) || 120 : 120;
+            const unitNo = unitNoKey ? String(row[unitNoKey]).trim() : `U-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+            const view = viewKey ? String(row[viewKey]).trim() : "Scenic View";
+            const status = statusKey ? String(row[statusKey]).trim() : "Available";
+
+            const extraFields: Record<string, any> = {};
+            for (const k of extraKeys) {
+              if (row[k] !== undefined && row[k] !== null && row[k] !== "") {
+                extraFields[k] = row[k];
+              }
+            }
+
+            const key = `${rawType}-${beds}`;
+            if (!breakdownMap[key]) {
+              breakdownMap[key] = {
+                type: rawType,
+                beds,
+                available: 0,
+                minSqm: area,
+                maxSqm: area,
+                minPriceM: rawPrice / 1_000_000,
+                maxPriceM: rawPrice / 1_000_000,
+                units: []
+              };
+            }
+
+            const resolvedStatus = ["available", "reserved", "sold"].includes(status.toLowerCase())
+              ? (status.charAt(0).toUpperCase() + status.slice(1).toLowerCase())
+              : "Available";
+
+            breakdownMap[key].available += resolvedStatus === "Available" ? 1 : 0;
+            if (area < breakdownMap[key].minSqm) breakdownMap[key].minSqm = area;
+            if (area > breakdownMap[key].maxSqm) breakdownMap[key].maxSqm = area;
+            if (rawPrice / 1_000_000 < breakdownMap[key].minPriceM) breakdownMap[key].minPriceM = rawPrice / 1_000_000;
+            if (rawPrice / 1_000_000 > breakdownMap[key].maxPriceM) breakdownMap[key].maxPriceM = rawPrice / 1_000_000;
+
+            breakdownMap[key].units.push({
+              id: `u_${Math.random().toString(36).slice(2, 9)}`,
+              unitNo,
+              beds,
+              finishing: "Finished",
+              areaSqm: area,
+              view,
+              priceEGP: rawPrice,
+              status: resolvedStatus,
+              ...extraFields
+            });
+          }
+
+          const breakdown = Object.values(breakdownMap);
+          const totalAvailable = breakdown.reduce((acc, curr: any) => acc + curr.available, 0);
+
+          const targetProj = compoundsList.find(c => c.slug === compoundSlug);
+          const newAvail = {
+            slug: compoundSlug,
+            developer: developerName,
+            totalAvailable,
+            breakdown,
+            lastUpdated: new Date().toISOString(),
+            note: `Developer-wide Excel Import (${targetDev.name}): ${file.name}`
+          };
+
+          if (bypassReviewQueue) {
+            updateAvailability(compoundSlug, newAvail);
+            importResults.push(`${targetProj?.name || compoundSlug} (${totalAvailable} units) - Published Directly (Old units deleted)`);
+          } else {
+            addPendingUpload({
+              fileName: `${file.name} - ${targetProj?.name || compoundSlug}`,
+              projectSlug: compoundSlug,
+              developer: developerName,
+              newAvail: newAvail,
+              uploadedBy: user?.email || "elsayedshoeip70@gmail.com"
+            });
+            importResults.push(`${targetProj?.name || compoundSlug} (${totalAvailable} units) - Sent to Review Queue`);
+          }
+        }
+
+        const unmatchedText = unmatchedProjects.size > 0
+          ? `\n\nUnmatched Project columns in sheet (skipped): ${Array.from(unmatchedProjects).join(", ")}`
+          : "";
+
+        alert(`Developer-Wide Import Complete for "${developerName}"!\n\nParsed and processed ${matchedSlugs.length} projects:\n${importResults.map(r => `• ${r}`).join("\n")}${unmatchedText}`);
       } catch (err: any) {
         alert(`Error parsing Excel sheet: ${err.message}`);
       }
@@ -1031,6 +1250,12 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   }, [compoundsList, selectedAvailSlug, pinnedProjectSlug]);
 
   useEffect(() => {
+    if (developersList.length > 0) {
+      if (!selectedAvailDevSlug) setSelectedAvailDevSlug(developersList[0].slug);
+    }
+  }, [developersList, selectedAvailDevSlug]);
+
+  useEffect(() => {
     const target = compoundsList.find(c => c.slug === pinnedProjectSlug);
     if (target) {
       setEditLat(String(target.lat));
@@ -1299,7 +1524,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                         {/* Brochure - any file type */}
                         <div className="border border-border/80 rounded-lg p-3 bg-secondary/15 flex flex-col gap-2">
                           <span className="block text-[9px] font-bold text-muted-foreground uppercase">Sales Brochure (any format)</span>
-                          {selectedProject.brochureUrl ? (
+                          {selectedProject.brochureUrl && !selectedProject.brochureDeleted ? (
                             <div className="flex items-center justify-between gap-1.5 rounded bg-emerald-500/10 border border-emerald-500/20 px-2 py-1.5">
                               <div className="flex items-center gap-1.5 truncate">
                                 <CheckCircle className="h-3 w-3 text-emerald-500 shrink-0" />
@@ -1314,7 +1539,8 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                                   updateProject(selectedProject.slug, {
                                     brochureUrl: undefined,
                                     brochureFileName: undefined,
-                                    brochureType: undefined
+                                    brochureType: undefined,
+                                    brochureDeleted: true
                                   });
                                 }}
                                 className="text-red-500 hover:text-red-700 hover:bg-red-500/10 p-0.5 rounded transition-all shrink-0"
@@ -1324,19 +1550,11 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                               </button>
                             </div>
                           ) : (
-                            <span className="text-[9px] text-muted-foreground italic">No brochure uploaded yet</span>
+                            <span className="text-[9px] text-muted-foreground italic">No brochure available</span>
                           )}
-                          <label className="mt-auto w-full py-2 bg-accent text-white font-bold text-[10px] rounded hover:bg-accent/90 transition-all flex items-center justify-center gap-1 cursor-pointer">
-                            {uploadingField === "brochure" ? <RefreshCw className="h-3.5 w-3.5 animate-spin" /> : <Upload className="h-3.5 w-3.5" />}
-                            {uploadingField === "brochure" ? "Uploading..." : "Upload Brochure"}
-                            <input
-                              type="file"
-                              accept=".pdf,.doc,.docx,.ppt,.pptx,image/*"
-                              className="hidden"
-                              disabled={uploadingField === "brochure"}
-                              onChange={(e) => handleFileUpload(e, "brochure", selectedProject.slug)}
-                            />
-                          </label>
+                          <div className="mt-auto pt-2 border-t border-border/40 text-[9px] text-muted-foreground italic leading-normal">
+                            Brochure uploads are disabled from the admin panel. Map files in the source code folder (<code className="bg-secondary/40 px-1 py-0.5 rounded text-accent font-mono">/public/brochures</code>) and link them in <code className="bg-secondary/40 px-1 py-0.5 rounded text-accent font-mono">brochure-map.ts</code>.
+                          </div>
                         </div>
 
                         {/* Master Plan */}
@@ -1663,6 +1881,43 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                           <button onClick={() => setSelectedProjectSlug(c.slug)} className="rounded-lg border border-border px-3 py-1 text-[10px] font-bold text-accent bg-secondary/30 hover:bg-accent hover:text-white transition-all">Manage →</button>
                         </div>
                       ))}
+                    </div>
+
+                    {/* Developer-wide availability uploader */}
+                    <div className="bg-secondary/15 p-4 rounded-xl border border-border space-y-3 mt-4">
+                      <div>
+                        <h4 className="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1.5">
+                          <FileSpreadsheet className="h-4 w-4 text-accent" /> Developer-Wide Excel Import
+                        </h4>
+                        <p className="text-[11px] text-muted-foreground mt-0.5">
+                          Upload an availability spreadsheet (.xlsx, .csv) with a 'Project' / 'Compound' column. This will parse and update all projects belonging to {selectedDeveloper.name} that are listed in the sheet.
+                        </p>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row items-center gap-4 justify-between bg-card p-3 rounded-lg border border-border/60">
+                        <div className="flex flex-col items-start gap-1">
+                          <label className="flex items-center gap-1.5 cursor-pointer text-[10px] font-semibold text-primary">
+                            <input 
+                              type="checkbox" 
+                              checked={bypassReviewQueue} 
+                              onChange={(e) => setBypassReviewQueue(e.target.checked)}
+                              className="rounded border-zinc-700 bg-card text-accent focus:ring-accent h-3 w-3"
+                            />
+                            <span>Direct Publish (Bypass Review Queue)</span>
+                          </label>
+                          <span className="text-[9px] text-muted-foreground">If unchecked, uploads go to the Admin Review Queue.</span>
+                        </div>
+
+                        <label className="cursor-pointer rounded-lg bg-accent text-white font-semibold text-[10px] px-3.5 py-2 hover:bg-accent/90 transition-colors shadow-soft">
+                          Upload Developer Excel
+                          <input
+                            type="file"
+                            accept=".xlsx, .xls, .csv"
+                            className="hidden"
+                            onChange={(e) => handleDeveloperExcelImport(e, selectedDeveloper.slug)}
+                          />
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2145,45 +2400,115 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                     </div>
 
                     {/* Bulk Excel sheet Uploader */}
-                    <div className="bg-secondary/10 p-5 rounded-xl border border-border/40 space-y-4">
-                      <div>
-                        <h4 className="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1.5"><FileSpreadsheet className="h-4.5 w-4.5 text-accent" /> Upload Excel or CSV Sheet</h4>
-                        <p className="text-[11px] text-muted-foreground mt-0.5">Upload a developer spreadsheet (.xlsx, .xls, .csv) with columns: Type, Price, Beds, Area, Unit Number, View, and Status.</p>
-                      </div>
-
-                      <div className="grid gap-4 sm:grid-cols-[200px_1fr] items-center">
+                    <div className="grid gap-6 md:grid-cols-2">
+                      {/* Left: Single Compound Uploader */}
+                      <div className="bg-secondary/10 p-5 rounded-xl border border-border/40 space-y-4 flex flex-col justify-between">
                         <div>
-                          <label className="block text-[9px] font-bold text-muted-foreground uppercase mb-1">Target Compound</label>
-                          <select 
-                            value={selectedAvailSlug}
-                            onChange={(e) => setSelectedAvailSlug(e.target.value)}
-                            className="w-full rounded-lg border border-border bg-card px-2.5 py-2 text-xs focus:outline-none"
-                          >
-                            {compoundsList.map(c => (
-                              <option key={c.slug} value={c.slug}>{c.name}</option>
-                            ))}
-                          </select>
+                          <h4 className="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1.5"><FileSpreadsheet className="h-4.5 w-4.5 text-accent" /> Single Compound Import</h4>
+                          <p className="text-[11px] text-muted-foreground mt-0.5">Upload a compound availability sheet. Overwrites existing units of that compound.</p>
                         </div>
 
-                        <div className="border-2 border-dashed border-border/80 bg-card rounded-xl p-6 text-center flex flex-col items-center justify-center relative">
-                          <FileSpreadsheet className="h-6 w-6 text-accent mb-1.5" />
-                          <span className="text-xs font-bold text-primary">Import Spreadsheet file</span>
-                          <span className="text-[9px] text-muted-foreground mt-0.5 mb-3">Supports XLSX, XLS and CSV sheets</span>
-                          
-                          <label className="cursor-pointer rounded-lg bg-accent text-white font-semibold text-[10px] px-3.5 py-2 hover:bg-accent/90 transition-colors shadow-soft">
-                            Select File
-                            <input
-                              type="file"
-                              accept=".xlsx, .xls, .csv"
-                              className="hidden"
-                              onChange={(e) => {
-                                if (selectedAvailSlug) {
-                                  handleExcelImport(e, selectedAvailSlug);
-                                } else {
-                                  alert("Please choose a target compound first.");
-                                }
-                              }}
+                        <div className="grid gap-3 sm:grid-cols-[160px_1fr] items-center">
+                          <div>
+                            <label className="block text-[9px] font-bold text-muted-foreground uppercase mb-1">Target Compound</label>
+                            <select 
+                              value={selectedAvailSlug}
+                              onChange={(e) => setSelectedAvailSlug(e.target.value)}
+                              className="w-full rounded-lg border border-border bg-card px-2 py-1.5 text-[11px] focus:outline-none"
+                            >
+                              {compoundsList.map(c => (
+                                <option key={c.slug} value={c.slug}>{c.name}</option>
+                              ))}
+                            </select>
+                          </div>
+
+                          <div className="border border-dashed border-border/80 bg-card rounded-xl p-4 text-center flex flex-col items-center justify-center relative">
+                            <FileSpreadsheet className="h-5 w-5 text-accent mb-1" />
+                            <span className="text-[11px] font-bold text-primary">Import Single Project</span>
+                            
+                            <label className="mt-2 cursor-pointer rounded-lg bg-accent text-white font-semibold text-[9px] px-3 py-1.5 hover:bg-accent/90 transition-colors shadow-soft">
+                              Select File
+                              <input
+                                type="file"
+                                accept=".xlsx, .xls, .csv"
+                                className="hidden"
+                                onChange={(e) => {
+                                  if (selectedAvailSlug) {
+                                    handleExcelImport(e, selectedAvailSlug);
+                                  } else {
+                                    alert("Please choose a target compound first.");
+                                  }
+                                }}
+                              />
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="pt-2 border-t border-border/20 flex items-center justify-between">
+                          <label className="flex items-center gap-2 cursor-pointer text-[10px] font-semibold text-primary">
+                            <input 
+                              type="checkbox" 
+                              checked={bypassReviewQueue} 
+                              onChange={(e) => setBypassReviewQueue(e.target.checked)}
+                              className="rounded border-zinc-700 bg-card text-accent focus:ring-accent h-3 w-3"
                             />
+                            <span>Direct Publish (Bypass Review Queue)</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      {/* Right: Developer-Wide Multi-Project Uploader */}
+                      <div className="bg-secondary/10 p-5 rounded-xl border border-border/40 space-y-4 flex flex-col justify-between">
+                        <div>
+                          <h4 className="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1.5"><Building2 className="h-4.5 w-4.5 text-accent" /> Developer-Wide Import</h4>
+                          <p className="text-[11px] text-muted-foreground mt-0.5">Upload a sheet with a 'Project' column to update multiple compounds of a developer.</p>
+                        </div>
+
+                        <div className="grid gap-3 sm:grid-cols-[160px_1fr] items-center">
+                          <div>
+                            <label className="block text-[9px] font-bold text-muted-foreground uppercase mb-1">Target Developer</label>
+                            <select 
+                              value={selectedAvailDevSlug}
+                              onChange={(e) => setSelectedAvailDevSlug(e.target.value)}
+                              className="w-full rounded-lg border border-border bg-card px-2 py-1.5 text-[11px] focus:outline-none"
+                            >
+                              {developersList.map(d => (
+                                <option key={d.slug} value={d.slug}>{d.name}</option>
+                              ))}
+                            </select>
+                          </div>
+
+                          <div className="border border-dashed border-border/80 bg-card rounded-xl p-4 text-center flex flex-col items-center justify-center relative">
+                            <Building2 className="h-5 w-5 text-accent mb-1" />
+                            <span className="text-[11px] font-bold text-primary">Import Developer Sheet</span>
+                            
+                            <label className="mt-2 cursor-pointer rounded-lg bg-accent text-white font-semibold text-[9px] px-3 py-1.5 hover:bg-accent/90 transition-colors shadow-soft">
+                              Select File
+                              <input
+                                type="file"
+                                accept=".xlsx, .xls, .csv"
+                                className="hidden"
+                                onChange={(e) => {
+                                  if (selectedAvailDevSlug) {
+                                    handleDeveloperExcelImport(e, selectedAvailDevSlug);
+                                  } else {
+                                    alert("Please choose a target developer first.");
+                                  }
+                                }}
+                              />
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="pt-2 border-t border-border/20 flex items-center justify-between">
+                          <label className="flex items-center gap-2 cursor-pointer text-[10px] font-semibold text-primary">
+                            <input 
+                              type="checkbox" 
+                              checked={bypassReviewQueue} 
+                              onChange={(e) => setBypassReviewQueue(e.target.checked)}
+                              className="rounded border-zinc-700 bg-card text-accent focus:ring-accent h-3 w-3"
+                            />
+                            <span>Direct Publish (Bypass Review Queue)</span>
                           </label>
                         </div>
                       </div>

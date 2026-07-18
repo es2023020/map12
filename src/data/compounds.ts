@@ -35,6 +35,7 @@ export type Compound = {
   brochureUrl?: string;
   brochureFileName?: string;
   brochureType?: string;
+  brochureDeleted?: boolean;
 };
 
 const beachImgs = [
