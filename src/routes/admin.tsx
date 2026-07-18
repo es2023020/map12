@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, useMemo, useEffect } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { useStore } from "@/lib/store";
+import { useDebounce } from "@/lib/useDebounce";
+import { BrochuresMatcherTab } from "@/components/admin/BrochuresMatcherTab";
 import { compounds } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import { destinations } from "@/data/destinations";
@@ -10,7 +12,7 @@ import {
   ShieldCheck, Users, CreditCard, TrendingUp, Check, ExternalLink,
   Building2, MapPin, Layers, LayoutGrid, Calculator, Sliders, ShieldAlert,
   Send, Bot, Settings, Plus, Edit, Trash2, Save, FileText, HelpCircle,
-  Database, Upload, AlertCircle, RefreshCw, Star, ArrowLeftRight, CheckCircle, Info, X, Image as ImageIcon, ArrowLeft, FileSpreadsheet, Sparkles
+  Database, Upload, AlertCircle, RefreshCw, Star, ArrowLeftRight, CheckCircle, Info, X, Image as ImageIcon, ArrowLeft, FileSpreadsheet, Sparkles, Download
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -27,7 +29,7 @@ export const Route = createFileRoute("/admin")({
 type TabType = 
   | "overview" | "companies" | "destinations" | "projects" | "launches"
   | "availability" | "map" | "tools" | "people" | "crm" 
-  | "ai" | "campaigns" | "audit";
+  | "ai" | "campaigns" | "audit" | "brochures" | "review";
 
 function AdminPage() {
   const user = useStore((s) => s.user);
@@ -184,11 +186,52 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   
   const updateAvailability = useStore((s) => s.updateAvailability);
   const bulkUpdateAvailability = useStore((s) => s.bulkUpdateAvailability);
+  const removeCustomBrochure = useStore((s) => s.removeCustomBrochure);
+  const exportDatabaseBackup = useStore((s) => s.exportDatabaseBackup);
+  const importDatabaseBackup = useStore((s) => s.importDatabaseBackup);
+  
+  const addPendingUpload = useStore((s) => s.addPendingUpload);
+  const approvePendingUpload = useStore((s) => s.approvePendingUpload);
+  const rejectPendingUpload = useStore((s) => s.rejectPendingUpload);
+  const pendingUploadsList = useStore((s) => s.pendingUploadsList);
 
   // Selected Detail workspaces (Dedicated Webpages)
   const [selectedProjectSlug, setSelectedProjectSlug] = useState<string | null>(null);
   const [selectedDeveloperSlug, setSelectedDeveloperSlug] = useState<string | null>(null);
   const [selectedDestinationSlug, setSelectedDestinationSlug] = useState<string | null>(null);
+
+  const [adminSearch, setAdminSearch] = useState("");
+  const debouncedAdminSearch = useDebounce(adminSearch, 250);
+
+  const adminSearchResults = useMemo(() => {
+    if (!debouncedAdminSearch) return null;
+    const q = debouncedAdminSearch.toLowerCase();
+
+    // Match Projects
+    const matchedProjects = compoundsList.filter(c => 
+      c.name.toLowerCase().includes(q) || 
+      c.developer.toLowerCase().includes(q) || 
+      c.destination.toLowerCase().includes(q)
+    ).slice(0, 5);
+
+    // Match Developers
+    const matchedDevelopers = developersList.filter(d => 
+      d.name.toLowerCase().includes(q) || 
+      (d.blurb && d.blurb.toLowerCase().includes(q))
+    ).slice(0, 5);
+
+    // Match Brochures
+    const matchedBrochures = compoundsList.filter(c => 
+      (c.brochureFileName && c.brochureFileName.toLowerCase().includes(q)) || 
+      (c.brochureUrl && c.name.toLowerCase().includes(q))
+    ).slice(0, 5);
+
+    return {
+      projects: matchedProjects,
+      developers: matchedDevelopers,
+      brochures: matchedBrochures
+    };
+  }, [debouncedAdminSearch, compoundsList, developersList]);
 
   const selectedProject = useMemo(() => {
     return compoundsList.find(c => c.slug === selectedProjectSlug) || null;
@@ -250,6 +293,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   const [pAmenities, setPAmenities] = useState("Clubhouse, Pool, Gym, Security");
   const [pIsNewLaunch, setPIsNewLaunch] = useState(false);
   const [pParentSlug, setPParentSlug] = useState("");
+  const [pKm, setPKm] = useState("");
 
   // Load project for edit form
   const loadProjectForForm = (proj: any) => {
@@ -270,6 +314,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     setPAmenities(proj.amenities ? proj.amenities.join(", ") : "");
     setPIsNewLaunch(!!proj.isNewLaunch);
     setPParentSlug(proj.parentSlug || "");
+    setPKm(proj.km !== undefined && proj.km !== null ? String(proj.km) : "");
     setShowAddProjectModal(true);
   };
 
@@ -277,6 +322,8 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     e.preventDefault();
     const slug = editingItem ? editingItem.slug : pName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
     const amenitiesArr = pAmenities.split(",").map(s => s.trim()).filter(Boolean);
+    const destObj = destinationsList.find(d => d.slug === pDest);
+    const isNorthCoast = destObj?.region === "north-coast";
     
     const projData = {
       slug,
@@ -299,7 +346,8 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
       gallery: editingItem?.gallery || ["/projects/vea-new-cairo/1.jpg"],
       types: editingItem?.types || ["Chalet", "Apartment"],
       isNewLaunch: pIsNewLaunch,
-      parentSlug: pParentSlug || undefined
+      parentSlug: pParentSlug || undefined,
+      km: isNorthCoast && pKm ? Number(pKm) : undefined
     };
 
     if (editingItem) {
@@ -329,6 +377,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     setPAmenities("Clubhouse, Pool, Gym, Security");
     setPIsNewLaunch(false);
     setPParentSlug("");
+    setPKm("");
   };
 
   // Developer form inputs
@@ -658,8 +707,14 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
           note: `Imported from Excel sheet: ${file.name}`
         };
 
-        updateAvailability(projSlug, newAvail);
-        alert(`Success: Imported ${rows.length} units from ${file.name} successfully!`);
+        addPendingUpload({
+          fileName: file.name,
+          projectSlug: projSlug,
+          developer: targetProj?.developer || "Unknown Developer",
+          newAvail: newAvail,
+          uploadedBy: user?.email || "elsayedshoeip70@gmail.com"
+        });
+        alert(`Success: Excel availability file "${file.name}" uploaded to the "Pending Review" queue for project "${targetProj?.name || projSlug}". An administrator must approve it before it goes live!`);
       } catch (err: any) {
         alert(`Error parsing Excel sheet: ${err.message}`);
       }
@@ -990,13 +1045,15 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     { id: "projects", label: "Projects CRUD", icon: Database },
     { id: "launches", label: "New Launches Manager", icon: Sparkles },
     { id: "availability", label: "Availability Manager", icon: LayoutGrid },
+    { id: "review", label: "Pending Reviews", icon: CheckCircle },
     { id: "map", label: "Map Control", icon: Layers },
     { id: "tools", label: "Engine Tools", icon: Calculator },
     { id: "people", label: "Agents & RBAC", icon: Users },
     { id: "crm", label: "CRM Oversight", icon: ShieldAlert },
     { id: "ai", label: "AI Grounding", icon: Bot },
     { id: "campaigns", label: "Broadcast Templates", icon: Send },
-    { id: "audit", label: "System Audit Logs", icon: FileText }
+    { id: "audit", label: "System Audit Logs", icon: FileText },
+    { id: "brochures", label: "Fuzzy brochures Linker", icon: FileText }
   ];
 
   return (
@@ -1012,7 +1069,119 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
               <h1 className="font-display text-2xl font-bold tracking-tight text-white mt-0.5">Real Estate Platform Command Center</h1>
             </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4 flex-wrap sm:flex-nowrap">
+            {/* Admin Global Search Bar */}
+            <div className="relative w-64">
+              <div className="relative">
+                <Search className="pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-zinc-400" />
+                <input
+                  type="text"
+                  value={adminSearch}
+                  onChange={(e) => setAdminSearch(e.target.value)}
+                  placeholder="Fuzzy search admin details..."
+                  className="w-full rounded-xl border border-zinc-800 bg-zinc-900 pl-9 pr-8 py-2 text-xs text-white placeholder:text-zinc-500 focus:border-accent focus:outline-none transition-all shadow-inner"
+                />
+                {adminSearch && (
+                  <button onClick={() => setAdminSearch("")} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-white transition-colors">
+                    <X className="h-3 w-3" />
+                  </button>
+                )}
+              </div>
+
+              {/* Instant Search Results Dropdown Overlay */}
+              {adminSearchResults && (
+                <div className="absolute right-0 top-full z-[9999] mt-2 w-80 rounded-xl border border-zinc-800 bg-zinc-950 p-4 shadow-2xl space-y-3.5 text-xs text-left animate-in fade-in duration-150">
+                  {/* Projects matches */}
+                  {adminSearchResults.projects.length > 0 && (
+                    <div>
+                      <div className="text-[10px] font-bold text-accent uppercase tracking-wider mb-1.5 flex items-center gap-1">
+                        <Database className="h-3 w-3" /> Projects ({adminSearchResults.projects.length})
+                      </div>
+                      <div className="space-y-1">
+                        {adminSearchResults.projects.map(p => (
+                          <button
+                            key={p.slug}
+                            type="button"
+                            onClick={() => {
+                              setSelectedProjectSlug(p.slug);
+                              setSelectedDeveloperSlug(null);
+                              setSelectedDestinationSlug(null);
+                              setAdminSearch("");
+                            }}
+                            className="w-full text-left p-2 rounded-lg bg-zinc-900/60 hover:bg-accent/15 hover:text-accent border border-transparent transition-all block truncate"
+                          >
+                            <span className="font-bold text-white block truncate">{p.name}</span>
+                            <span className="text-[9px] text-muted-foreground block truncate mt-0.5">{p.developer} · {p.destination.replace(/-/g, " ")}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Developers matches */}
+                  {adminSearchResults.developers.length > 0 && (
+                    <div>
+                      <div className="text-[10px] font-bold text-accent uppercase tracking-wider mb-1.5 flex items-center gap-1">
+                        <Building2 className="h-3 w-3" /> Developers ({adminSearchResults.developers.length})
+                      </div>
+                      <div className="space-y-1">
+                        {adminSearchResults.developers.map(d => (
+                          <button
+                            key={d.slug}
+                            type="button"
+                            onClick={() => {
+                              setSelectedDeveloperSlug(d.slug);
+                              setSelectedProjectSlug(null);
+                              setSelectedDestinationSlug(null);
+                              setAdminSearch("");
+                            }}
+                            className="w-full text-left p-2 rounded-lg bg-zinc-900/60 hover:bg-accent/15 hover:text-accent border border-transparent transition-all block truncate"
+                          >
+                            <span className="font-bold text-white block truncate">{d.name}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Brochures matches */}
+                  {adminSearchResults.brochures.length > 0 && (
+                    <div>
+                      <div className="text-[10px] font-bold text-accent uppercase tracking-wider mb-1.5 flex items-center gap-1">
+                        <FileText className="h-3 w-3" /> Brochures ({adminSearchResults.brochures.length})
+                      </div>
+                      <div className="space-y-1">
+                        {adminSearchResults.brochures.map(c => (
+                          <button
+                            key={c.slug}
+                            type="button"
+                            onClick={() => {
+                              setSelectedProjectSlug(c.slug);
+                              setSelectedDeveloperSlug(null);
+                              setSelectedDestinationSlug(null);
+                              setAdminSearch("");
+                            }}
+                            className="w-full text-left p-2 rounded-lg bg-zinc-900/60 hover:bg-accent/15 hover:text-accent border border-transparent transition-all block truncate"
+                          >
+                            <span className="font-bold text-white block truncate">{c.brochureFileName || `${c.name} brochure`}</span>
+                            <span className="text-[9px] text-muted-foreground block truncate mt-0.5">Linked Project: {c.name}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {adminSearchResults.projects.length === 0 &&
+                   adminSearchResults.developers.length === 0 &&
+                   adminSearchResults.brochures.length === 0 && (
+                    <div className="text-center py-4 text-muted-foreground italic text-[11px]">
+                      No fuzzy matches found.
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
             <span className="rounded-full bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 text-xs font-bold text-emerald-400">
               Active Session: Admin
             </span>
@@ -1130,9 +1299,28 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                         <div className="border border-border/80 rounded-lg p-3 bg-secondary/15 flex flex-col gap-2">
                           <span className="block text-[9px] font-bold text-muted-foreground uppercase">Sales Brochure (any format)</span>
                           {selectedProject.brochureUrl ? (
-                            <div className="flex items-center gap-1.5 rounded bg-emerald-500/10 border border-emerald-500/20 px-2 py-1.5">
-                              <CheckCircle className="h-3 w-3 text-emerald-500 shrink-0" />
-                              <span className="text-[9px] text-emerald-700 font-bold truncate">{selectedProject.brochureFileName || "Brochure uploaded"}</span>
+                            <div className="flex items-center justify-between gap-1.5 rounded bg-emerald-500/10 border border-emerald-500/20 px-2 py-1.5">
+                              <div className="flex items-center gap-1.5 truncate">
+                                <CheckCircle className="h-3 w-3 text-emerald-500 shrink-0" />
+                                <span className="text-[9px] text-emerald-700 font-bold truncate">{selectedProject.brochureFileName || "Brochure uploaded"}</span>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  if (selectedProject.brochureFileName) {
+                                    removeCustomBrochure(selectedProject.brochureFileName);
+                                  }
+                                  updateProject(selectedProject.slug, {
+                                    brochureUrl: undefined,
+                                    brochureFileName: undefined,
+                                    brochureType: undefined
+                                  });
+                                }}
+                                className="text-red-500 hover:text-red-700 hover:bg-red-500/10 p-0.5 rounded transition-all shrink-0"
+                                title="Remove Brochure"
+                              >
+                                <Trash2 className="h-3 w-3" />
+                              </button>
                             </div>
                           ) : (
                             <span className="text-[9px] text-muted-foreground italic">No brochure uploaded yet</span>
@@ -2147,6 +2335,68 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                         </button>
                       </div>
                     </div>
+                    <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4 md:col-span-2">
+                      <h3 className="font-display text-sm font-bold text-primary flex items-center gap-1.5">
+                        <Database className="h-4.5 w-4.5 text-accent" /> JSON Database Backup &amp; Sync
+                      </h3>
+                      <p className="text-xs text-muted-foreground">
+                        Export your full database configuration (compounds, developers, maps, custom brochures, leads, etc.) to a backup file, or import a saved backup. This ensures your admin dashboard edits are preserved across redeployments.
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-4 items-center">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            try {
+                              const dataStr = exportDatabaseBackup();
+                              const blob = new Blob([dataStr], { type: "application/json" });
+                              const url = URL.createObjectURL(blob);
+                              const link = document.createElement("a");
+                              link.href = url;
+                              link.download = `proptrack_backup_${new Date().toISOString().split("T")[0]}.json`;
+                              document.body.appendChild(link);
+                              link.click();
+                              document.body.removeChild(link);
+                              URL.revokeObjectURL(url);
+                            } catch (err: any) {
+                              alert(`Export failed: ${err.message}`);
+                            }
+                          }}
+                          className="px-4 py-2 bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-xs font-bold rounded-lg hover:bg-slate-800 transition-colors flex items-center gap-2"
+                        >
+                          <Download className="h-4 w-4" /> Export Backup JSON
+                        </button>
+
+                        <label className="cursor-pointer px-4 py-2 bg-accent text-white text-xs font-bold rounded-lg hover:bg-accent/90 transition-colors flex items-center gap-2">
+                          <Upload className="h-4 w-4" /> Import Backup JSON
+                          <input
+                            type="file"
+                            accept=".json"
+                            className="hidden"
+                            onChange={(e) => {
+                              const file = e.target.files?.[0];
+                              if (!file) return;
+                              const reader = new FileReader();
+                              reader.onload = (evt) => {
+                                try {
+                                  const text = evt.target?.result as string;
+                                  const success = importDatabaseBackup(text);
+                                  if (success) {
+                                    alert("Database successfully restored! The page will now reload.");
+                                    window.location.reload();
+                                  } else {
+                                    alert("Restore failed. Invalid backup JSON structure.");
+                                  }
+                                } catch (err: any) {
+                                  alert(`Import failed: ${err.message}`);
+                                }
+                              };
+                              reader.readAsText(file);
+                            }}
+                          />
+                        </label>
+                      </div>
+                    </div>
                   </div>
                 )}
 
@@ -2322,6 +2572,135 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                   </div>
                 )}
 
+                {activeTab === "brochures" && (
+                  <BrochuresMatcherTab 
+                    compoundsList={compoundsList} 
+                    updateProject={updateProject} 
+                  />
+                )}
+
+                {/* review */}
+                {activeTab === "review" && (
+                  <div className="space-y-6">
+                    <div>
+                      <h2 className="font-display text-lg font-bold text-primary flex items-center gap-2">
+                        <CheckCircle className="h-5 w-5 text-accent" /> Availability Review Queue
+                      </h2>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        Inspect and approve developer unit availability spreadsheets before they are published to public pages.
+                      </p>
+                    </div>
+
+                    {!pendingUploadsList || pendingUploadsList.length === 0 ? (
+                      <div className="rounded-2xl border border-dashed border-border bg-card p-12 text-center max-w-md mx-auto space-y-4">
+                        <div className="mx-auto rounded-full bg-emerald-500/10 p-4 w-fit">
+                          <CheckCircle className="h-8 w-8 text-emerald-500" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-primary text-sm">All Caught Up!</h3>
+                          <p className="text-xs text-muted-foreground mt-1">
+                            No spreadsheet availability updates are currently waiting in the review queue.
+                          </p>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="grid gap-6">
+                        {pendingUploadsList.map((upload: any) => {
+                          const projectObj = compoundsList.find(c => c.slug === upload.projectSlug);
+                          const totalAvailable = upload.newAvail?.totalAvailable ?? 0;
+                          const layouts = upload.newAvail?.breakdown ?? [];
+
+                          return (
+                            <div key={upload.id} className="rounded-2xl border border-border bg-card overflow-hidden shadow-soft flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-border">
+                              {/* Left side: Upload details */}
+                              <div className="p-5 md:w-1/3 flex flex-col justify-between space-y-4">
+                                <div className="space-y-2">
+                                  <span className="inline-flex items-center gap-1 rounded-full bg-accent/10 border border-accent/20 px-2.5 py-0.5 text-[10px] font-bold text-accent">
+                                    <FileText className="h-3 w-3" /> Pending Review
+                                  </span>
+                                  <div>
+                                    <h3 className="font-display font-bold text-primary text-sm truncate" title={upload.fileName}>
+                                      {upload.fileName}
+                                    </h3>
+                                    <p className="text-[11px] text-muted-foreground mt-0.5">
+                                      For Project: <span className="font-semibold text-primary">{projectObj?.name || upload.projectSlug}</span>
+                                    </p>
+                                    <p className="text-[10px] text-muted-foreground mt-1 font-mono">
+                                      Uploaded by: {upload.uploadedBy}
+                                    </p>
+                                    <p className="text-[10px] text-muted-foreground font-mono">
+                                      Uploaded at: {new Date(upload.uploadedAt).toLocaleString()}
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div className="flex gap-2">
+                                  <button
+                                    onClick={() => {
+                                      if (confirm(`Are you sure you want to approve and publish "${upload.fileName}"?`)) {
+                                        approvePendingUpload(upload.id);
+                                      }
+                                    }}
+                                    className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 text-xs font-bold transition-all shadow-sm"
+                                  >
+                                    <Check className="h-3.5 w-3.5" /> Approve &amp; Publish
+                                  </button>
+                                  <button
+                                    onClick={() => {
+                                      if (confirm(`Are you sure you want to reject and delete this upload?`)) {
+                                        rejectPendingUpload(upload.id);
+                                      }
+                                    }}
+                                    className="inline-flex items-center justify-center rounded-xl border border-zinc-700 hover:border-destructive hover:bg-destructive/10 text-muted-foreground hover:text-destructive p-2 transition-all"
+                                    title="Reject &amp; Discard"
+                                  >
+                                    <Trash2 className="h-3.5 w-3.5" />
+                                  </button>
+                                </div>
+                              </div>
+
+                              {/* Right side: Preview of units */}
+                              <div className="p-5 flex-1 bg-secondary/10 space-y-3">
+                                <div className="flex items-center justify-between">
+                                  <span className="text-xs font-bold text-primary">Sheet Contents Summary</span>
+                                  <span className="text-xs font-bold text-accent bg-accent/10 px-2 py-0.5 rounded-lg">
+                                    {totalAvailable} Available Units
+                                  </span>
+                                </div>
+
+                                {layouts.length === 0 ? (
+                                  <p className="text-xs text-muted-foreground italic">No unit layouts detected in this sheet.</p>
+                                ) : (
+                                  <div className="grid gap-2 max-h-[160px] overflow-y-auto pr-1">
+                                    {layouts.map((layout: any, idx: number) => (
+                                      <div key={idx} className="flex items-center justify-between bg-card border border-border/60 rounded-xl p-2.5 text-xs">
+                                        <div className="space-y-0.5">
+                                          <div className="font-semibold text-primary">{layout.type}</div>
+                                          <div className="text-[10px] text-muted-foreground">
+                                            {layout.beds} Bedrooms · {layout.minSqm === layout.maxSqm ? `${layout.minSqm} sqm` : `${layout.minSqm} – ${layout.maxSqm} sqm`}
+                                          </div>
+                                        </div>
+                                        <div className="text-right">
+                                          <div className="font-bold text-accent font-mono">
+                                            {layout.minPriceM === layout.maxPriceM ? `${layout.minPriceM.toFixed(2)}M EGP` : `${layout.minPriceM.toFixed(2)}M – ${layout.maxPriceM.toFixed(2)}M EGP`}
+                                          </div>
+                                          <div className="text-[9px] text-muted-foreground">
+                                            {layout.units?.length ?? 0} total units
+                                          </div>
+                                        </div>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                )}
+
               </>
             )}
 
@@ -2404,6 +2783,21 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                   </select>
                 </div>
               </div>
+
+              {pDest && destinationsList.find(d => d.slug === pDest)?.region === "north-coast" && (
+                <div>
+                  <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">North Coast Highway Marker (Kilo)*</label>
+                  <input
+                    type="number"
+                    step="any"
+                    placeholder="e.g. 130 or 129.5"
+                    value={pKm}
+                    onChange={(e) => setPKm(e.target.value)}
+                    className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2"
+                    required
+                  />
+                </div>
+              )}
 
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>

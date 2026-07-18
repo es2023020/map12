@@ -3,6 +3,7 @@ import { persist, createJSONStorage } from "zustand/middleware";
 import { compounds, normalizeDeveloperName } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import { destinations } from "@/data/destinations";
+import { brochureMap } from "@/data/brochure-map";
 import type { AnalyticsEvent } from "@/lib/analytics";
 
 // Session-scoped login: on every page load we check if a browser session is still active.
@@ -53,10 +54,110 @@ export type Lead = {
   activityLog: ActivityLogItem[];
 };
 
-export type BrokerUser = { email: string; name: string; tier: "Starter" | "Pro" | "Agency"; avatar?: string };
+import { PRICING_CONFIG } from "@/data/pricing-config";
+
+export type SubscriptionTier = "Explorer" | "Starter" | "Pro" | "BrokerageSeat" | "BrokerageAdmin";
+
+export interface TierLimits {
+  crmLimit: number;
+  whatsappLimit: number;
+  favoritesLimit: number;
+  googleCalendar: boolean;
+  agendaWorkspace: boolean;
+  marketInsightsExport: boolean;
+}
+
+export const TIER_LIMITS_MAP: Record<SubscriptionTier, TierLimits> = {
+  Explorer: {
+    crmLimit: 15,
+    whatsappLimit: 10,
+    favoritesLimit: 10,
+    googleCalendar: false,
+    agendaWorkspace: false,
+    marketInsightsExport: false,
+  },
+  Starter: {
+    crmLimit: 150,
+    whatsappLimit: 100,
+    favoritesLimit: 999999, // Unlimited
+    googleCalendar: true,
+    agendaWorkspace: true,
+    marketInsightsExport: false,
+  },
+  Pro: {
+    crmLimit: 999999, // Unlimited
+    whatsappLimit: 999999, // Unlimited
+    favoritesLimit: 999999, // Unlimited
+    googleCalendar: true,
+    agendaWorkspace: true,
+    marketInsightsExport: true,
+  },
+  BrokerageSeat: {
+    crmLimit: 999999, // Unlimited
+    whatsappLimit: 999999, // Unlimited
+    favoritesLimit: 999999, // Unlimited
+    googleCalendar: true,
+    agendaWorkspace: true,
+    marketInsightsExport: true,
+  },
+  BrokerageAdmin: {
+    crmLimit: 999999, // Unlimited
+    whatsappLimit: 999999, // Unlimited
+    favoritesLimit: 999999, // Unlimited
+    googleCalendar: true,
+    agendaWorkspace: true,
+    marketInsightsExport: true,
+  },
+};
+
+export type BrokerUser = { 
+  email: string; 
+  name: string; 
+  tier: SubscriptionTier; 
+  avatar?: string;
+  billingDate: string; // ISO YYYY-MM-DD
+  lastCounterResetDate?: string; // ISO YYYY-MM-DD
+  whatsappSendsCount: number;
+  seatsCount?: number; // for BrokerageAdmin
+  parentBrokerageId?: string; // for BrokerageSeat
+  projectAccessList?: string[]; // for BrokerageSeat (allowed compounds)
+  pendingDowngrade?: SubscriptionTier; // scheduled downgrade
+};
+
 export type AgentTask = { id: string; text: string; completed: boolean };
 export type CustomShortcut = { id: string; label: string; url: string };
-export type RegisteredUser = { email: string; name: string; password?: string; tier: "Starter" | "Pro" | "Agency"; avatar?: string };
+
+export type BillingHistoryItem = {
+  id: string;
+  date: string;
+  amount: number;
+  description: string;
+};
+
+export type BrokerageSeatAgent = {
+  email: string;
+  name: string;
+  active: boolean;
+  whatsappSends: number;
+  crmContacts: number;
+  favoritesCount: number;
+  lastActive: string;
+};
+
+export type RegisteredUser = { 
+  email: string; 
+  name: string; 
+  password?: string; 
+  tier: SubscriptionTier; 
+  avatar?: string;
+  billingDate?: string;
+  lastCounterResetDate?: string;
+  whatsappSendsCount?: number;
+  seatsCount?: number;
+  parentBrokerageId?: string;
+  projectAccessList?: string[];
+  pendingDowngrade?: SubscriptionTier;
+};
 
 type UserData = {
   favorites: string[];
@@ -70,6 +171,9 @@ type UserData = {
   customProfiles: Array<{ clean_name: string; filename: string; path: string; size_mb: number }>;
   salesTarget: number;
   analyticsEvents: AnalyticsEvent[];
+  billingHistory?: BillingHistoryItem[];
+  brokerageSeats?: BrokerageSeatAgent[];
+  projectAccessList?: string[];
 };
 
 type State = {
@@ -87,6 +191,13 @@ type State = {
   customProfiles: Array<{ clean_name: string; filename: string; path: string; size_mb: number }>;
   userData?: Record<string, UserData>;
 
+  // Billing History & Seats for Active User
+  billingHistory: BillingHistoryItem[];
+  brokerageSeats: BrokerageSeatAgent[];
+  projectAccessList: string[];
+  limitHitError: { action: "crm" | "whatsapp" | "favorites"; msg: string } | null;
+  clearLimitHitError: () => void;
+
   // Analytics
   analyticsEvents: AnalyticsEvent[];
 
@@ -96,10 +207,11 @@ type State = {
   destinationsList: any[];
   developersList: any[];
   auditLogs: any[];
+  pendingUploadsList: any[];
 
   // Actions
   signIn: (email: string, password?: string) => boolean;
-  signUp: (email: string, name: string, password?: string, tier?: "Starter" | "Pro" | "Agency") => boolean;
+  signUp: (email: string, name: string, password?: string, tier?: SubscriptionTier) => boolean;
   signOut: () => void;
   toggleFavorite: (slug: string) => void;
   toggleCompare: (slug: string) => void;
@@ -123,6 +235,21 @@ type State = {
   updateLeadDetails: (id: string, updates: Partial<Lead>) => void;
   addCustomBrochure: (brochure: { name: string; type: string; category: string; file: string; path: string; size_mb?: number }) => void;
   addCustomProfile: (profile: { clean_name: string; filename: string; path: string; size_mb: number }) => void;
+  removeCustomBrochure: (filePath: string) => void;
+
+  // Subscription Actions
+  checkLimit: (action: "crm" | "whatsapp" | "favorites") => { allowed: boolean; limit: number; nextTier: string; msg?: string };
+  incrementWhatsAppSends: () => boolean;
+  upgradeTier: (newTier: "Starter" | "Pro" | "BrokerageAdmin", seats?: number) => { success: boolean; cost: number; prorationMsg: string };
+  downgradeTier: (newTier: "Explorer" | "Starter" | "Pro") => { success: boolean; effectiveDate: string };
+  addBrokerageSeatAgent: (email: string, name: string) => boolean;
+  removeBrokerageSeatAgent: (email: string) => void;
+  toggleProjectAccess: (slug: string) => void;
+  resetBillingCycleIfNeeded: () => void;
+
+  // JSON Database Sync
+  exportDatabaseBackup: () => string;
+  importDatabaseBackup: (jsonStr: string) => boolean;
 
   // Admin Actions
   addProject: (p: any) => void;
@@ -136,6 +263,9 @@ type State = {
   deleteDeveloper: (slug: string) => void;
   updateAvailability: (slug: string, data: any) => void;
   bulkUpdateAvailability: (data: any[]) => void;
+  addPendingUpload: (upload: any) => void;
+  approvePendingUpload: (id: string) => void;
+  rejectPendingUpload: (id: string) => void;
   addAuditLog: (log: { actor: string; entity: string; action: string; before?: string; after?: string }) => void;
 
   // Analytics
@@ -251,10 +381,16 @@ export const useStore = create<State>()(
       };
 
 
-      const initialCompoundsList = compounds.map(c => ({
-        ...c,
-        isNewLaunch: launchSlugs.has(c.slug)
-      }));
+      const initialCompoundsList = compounds.map(c => {
+        const staticFile = brochureMap[c.slug];
+        return {
+          ...c,
+          isNewLaunch: launchSlugs.has(c.slug),
+          brochureUrl: c.brochureUrl || (staticFile ? `/brochures/${staticFile}` : undefined),
+          brochureFileName: c.brochureFileName || staticFile || undefined,
+          brochureType: c.brochureType || (staticFile ? "application/pdf" : undefined)
+        };
+      });
 
       // Initial derived developer list from seed compounds
       const seedDevelopers = Array.from(new Set(initialCompoundsList.map(c => c.developer))).map((name, i) => ({
@@ -286,6 +422,11 @@ export const useStore = create<State>()(
         customBrochures: [],
         customProfiles: [],
         userData: {},
+        billingHistory: [],
+        brokerageSeats: [],
+        projectAccessList: [],
+        limitHitError: null,
+        clearLimitHitError: () => set({ limitHitError: null }),
         analyticsEvents: [],
 
         // Platform Admin Data
@@ -293,6 +434,7 @@ export const useStore = create<State>()(
         availabilityList: availability,
         destinationsList: destinations,
         developersList: seedDevelopers,
+        pendingUploadsList: [],
         auditLogs: [
           { id: "a1", actor: "System", entity: "Database", action: "Initialized PropTrack Command Center databases", timestamp: Date.now() - 3600000 * 2 }
         ],
@@ -300,6 +442,12 @@ export const useStore = create<State>()(
         signIn: (email, password) => {
           const user = get().usersDatabase.find(u => u.email.toLowerCase() === email.toLowerCase());
           if (user && (!user.password || user.password === password)) {
+            // Map legacy "Agency" to "BrokerageAdmin"
+            let mappedTier: SubscriptionTier = user.tier;
+            if ((user.tier as string) === "Agency") {
+              mappedTier = "BrokerageAdmin";
+            }
+
             // Sync current session first if there's any active user
             const currentUser = get().user;
             if (currentUser) {
@@ -319,6 +467,9 @@ export const useStore = create<State>()(
                     customProfiles: state.customProfiles,
                     salesTarget: state.salesTarget,
                     analyticsEvents: state.analyticsEvents,
+                    billingHistory: state.billingHistory,
+                    brokerageSeats: state.brokerageSeats,
+                    projectAccessList: state.projectAccessList,
                   }
                 }
               }));
@@ -331,8 +482,25 @@ export const useStore = create<State>()(
             const isSeedAdmin = ["admin@proptrack.com", "elsayedshoeip70@gmail.com"].includes(email.toLowerCase());
             const isFirstLogin = !savedData;
 
+            const todayStr = new Date().toISOString().split("T")[0];
+            const billingDate = user.billingDate || savedData?.billingHistory?.[0]?.date || todayStr;
+            const lastReset = user.lastCounterResetDate || todayStr;
+            const whatsappSends = user.whatsappSendsCount || 0;
+
             originalSet({
-              user: { email: user.email, name: user.name, tier: user.tier, avatar: user.avatar },
+              user: { 
+                email: user.email, 
+                name: user.name, 
+                tier: mappedTier, 
+                avatar: user.avatar,
+                billingDate,
+                lastCounterResetDate: lastReset,
+                whatsappSendsCount: whatsappSends,
+                seatsCount: user.seatsCount || (mappedTier === "BrokerageAdmin" ? 5 : undefined),
+                parentBrokerageId: user.parentBrokerageId,
+                projectAccessList: user.projectAccessList || savedData?.projectAccessList || [],
+                pendingDowngrade: user.pendingDowngrade
+              },
               favorites: savedData?.favorites || [],
               compareList: savedData?.compareList || [],
               recentlyViewed: savedData?.recentlyViewed || [],
@@ -352,7 +520,13 @@ export const useStore = create<State>()(
               customProfiles: savedData?.customProfiles || [],
               salesTarget: savedData?.salesTarget ?? (isSeedAdmin && isFirstLogin ? 50 : 0),
               analyticsEvents: savedData?.analyticsEvents || [],
+              billingHistory: savedData?.billingHistory || [],
+              brokerageSeats: savedData?.brokerageSeats || [],
+              projectAccessList: savedData?.projectAccessList || [],
             });
+
+            // Auto-check for resets or pending downgrades
+            get().resetBillingCycleIfNeeded();
             markSessionActive();
             return true;
           }
@@ -362,11 +536,62 @@ export const useStore = create<State>()(
         signUp: (email, name, password, tier) => {
           const exists = get().usersDatabase.some(u => u.email.toLowerCase() === email.toLowerCase());
           if (exists) return false;
-          const newUser: RegisteredUser = { email, name, password, tier: tier || "Starter" };
+          
+          const todayStr = new Date().toISOString().split("T")[0];
+          const chosenTier = tier || "Explorer";
+          
+          const newUser: RegisteredUser = { 
+            email, 
+            name, 
+            password, 
+            tier: chosenTier,
+            billingDate: todayStr,
+            lastCounterResetDate: todayStr,
+            whatsappSendsCount: 0,
+            seatsCount: chosenTier === "BrokerageAdmin" ? 5 : undefined
+          };
+
           originalSet((s) => ({
             usersDatabase: [...s.usersDatabase, newUser]
           }));
-          // Auto sign-in after signup — the new user gets a clean blank slate
+
+          // Create base billing history if it is a paid tier
+          if (chosenTier !== "Explorer") {
+            const price = chosenTier === "Starter" ? PRICING_CONFIG.starterPrice 
+                        : chosenTier === "Pro" ? PRICING_CONFIG.proPrice 
+                        : PRICING_CONFIG.brokerageSeatPrice * 5;
+            
+            const initialInvoice: BillingHistoryItem = {
+              id: "inv_" + Math.random().toString(36).slice(2, 9),
+              date: todayStr,
+              amount: price,
+              description: `Initial subscription setup for ${chosenTier}`
+            };
+
+            originalSet((s) => ({
+              userData: {
+                ...s.userData,
+                [email.toLowerCase()]: {
+                  favorites: [],
+                  compareList: [],
+                  leads: [],
+                  recentlyViewed: [],
+                  agentNotes: "### Agent Scratchpad\n",
+                  agentTasks: [],
+                  customShortcuts: [],
+                  customBrochures: [],
+                  customProfiles: [],
+                  salesTarget: 0,
+                  analyticsEvents: [],
+                  billingHistory: [initialInvoice],
+                  brokerageSeats: [],
+                  projectAccessList: []
+                }
+              }
+            }));
+          }
+
+          // Auto sign-in after signup
           const success = get().signIn(email, password);
           return success;
         },
@@ -390,6 +615,9 @@ export const useStore = create<State>()(
                   customProfiles: state.customProfiles,
                   salesTarget: state.salesTarget,
                   analyticsEvents: state.analyticsEvents,
+                  billingHistory: state.billingHistory,
+                  brokerageSeats: state.brokerageSeats,
+                  projectAccessList: state.projectAccessList,
                 }
               }
             }));
@@ -406,12 +634,23 @@ export const useStore = create<State>()(
             customBrochures: [],
             customProfiles: [],
             salesTarget: 0,
+            billingHistory: [],
+            brokerageSeats: [],
+            projectAccessList: [],
             analyticsEvents: [],
           });
           clearSession();
         },
 
         toggleFavorite: (slug) => {
+          const isAdding = !get().favorites.includes(slug);
+          if (isAdding) {
+            const check = get().checkLimit("favorites");
+            if (!check.allowed) {
+              set({ limitHitError: { action: "favorites", msg: check.msg || "Favorites limit reached." } });
+              return;
+            }
+          }
           set((s) => {
             const favorites = s.favorites.includes(slug)
               ? s.favorites.filter((x) => x !== slug)
@@ -437,6 +676,11 @@ export const useStore = create<State>()(
         },
 
         addLead: (lead) => {
+          const check = get().checkLimit("crm");
+          if (!check.allowed) {
+            set({ limitHitError: { action: "crm", msg: check.msg || "CRM contact limit reached." } });
+            return;
+          }
           set((s) => {
             const newLead: Lead = {
               ...lead,
@@ -671,6 +915,396 @@ export const useStore = create<State>()(
           }));
         },
 
+        removeCustomBrochure: (filePath) => {
+          set((s) => ({
+            customBrochures: (s.customBrochures || []).filter(b => b.path !== filePath)
+          }));
+        },
+
+        checkLimit: (action) => {
+          const user = get().user;
+          if (!user) return { allowed: true, limit: 999999, nextTier: "" };
+          
+          const limits = TIER_LIMITS_MAP[user.tier] || TIER_LIMITS_MAP.Explorer;
+          
+          if (action === "crm") {
+            const count = get().leads.length;
+            if (count >= limits.crmLimit) {
+              const nextTier = user.tier === "Explorer" ? "Starter" : "Pro";
+              get().trackEvent({
+                type: "limit_hit" as any,
+                meta: { feature: "crm", limit: limits.crmLimit, tier: user.tier }
+              });
+              return {
+                allowed: false,
+                limit: limits.crmLimit,
+                nextTier,
+                msg: `CRM contact limit reached. Your ${user.tier} plan supports up to ${limits.crmLimit} contacts. Upgrade to ${nextTier} for higher limits.`
+              };
+            }
+          }
+          
+          if (action === "whatsapp") {
+            const count = user.whatsappSendsCount || 0;
+            if (count >= limits.whatsappLimit) {
+              const nextTier = user.tier === "Explorer" ? "Starter" : "Pro";
+              get().trackEvent({
+                type: "limit_hit" as any,
+                meta: { feature: "whatsapp", limit: limits.whatsappLimit, tier: user.tier }
+              });
+              return {
+                allowed: false,
+                limit: limits.whatsappLimit,
+                nextTier,
+                msg: `WhatsApp monthly sharing limit reached. Your ${user.tier} plan supports up to ${limits.whatsappLimit} shares per billing cycle. Upgrade to ${nextTier} for higher limits.`
+              };
+            }
+          }
+          
+          if (action === "favorites") {
+            const count = get().favorites.length;
+            if (count >= limits.favoritesLimit) {
+              const nextTier = user.tier === "Explorer" ? "Starter" : "Pro";
+              get().trackEvent({
+                type: "limit_hit" as any,
+                meta: { feature: "favorites", limit: limits.favoritesLimit, tier: user.tier }
+              });
+              return {
+                allowed: false,
+                limit: limits.favoritesLimit,
+                nextTier,
+                msg: `Favorites limit reached. Your ${user.tier} plan supports up to ${limits.favoritesLimit} saved projects. Upgrade to ${nextTier} for unlimited favorites.`
+              };
+            }
+          }
+          
+          return { allowed: true, limit: 999999, nextTier: "" };
+        },
+
+        incrementWhatsAppSends: () => {
+          const check = get().checkLimit("whatsapp");
+          if (!check.allowed) {
+            set({ limitHitError: { action: "whatsapp", msg: check.msg || "WhatsApp limit reached." } });
+            return false;
+          }
+          
+          set((s) => {
+            if (!s.user) return {};
+            const whatsappSendsCount = (s.user.whatsappSendsCount || 0) + 1;
+            
+            // Also if brokerage seat, update their usage stats in the parent database
+            let brokerageSeats = s.brokerageSeats;
+            if (s.user.tier === "BrokerageSeat" && s.user.parentBrokerageId) {
+              const parentId = s.user.parentBrokerageId.toLowerCase();
+              const parentData = s.userData?.[parentId];
+              if (parentData && parentData.brokerageSeats) {
+                const updatedSeats = parentData.brokerageSeats.map(seat => 
+                  seat.email.toLowerCase() === s.user?.email.toLowerCase()
+                    ? { ...seat, whatsappSends: seat.whatsappSends + 1, lastActive: new Date().toISOString().split("T")[0] }
+                    : seat
+                );
+                s.userData[parentId].brokerageSeats = updatedSeats;
+              }
+            }
+            
+            return {
+              user: {
+                ...s.user,
+                whatsappSendsCount
+              }
+            };
+          });
+          return true;
+        },
+
+        upgradeTier: (newTier, seats) => {
+          const user = get().user;
+          if (!user) return { success: false, cost: 0, prorationMsg: "No active user logged in." };
+          
+          const oldTier = user.tier;
+          const todayStr = new Date().toISOString().split("T")[0];
+          
+          // Calculate pricing difference
+          let oldPrice = 0;
+          if (oldTier === "Starter") oldPrice = PRICING_CONFIG.starterPrice;
+          else if (oldTier === "Pro") oldPrice = PRICING_CONFIG.proPrice;
+          else if (oldTier === "BrokerageAdmin") oldPrice = PRICING_CONFIG.brokerageSeatPrice * (user.seatsCount || 5);
+          
+          let newPrice = 0;
+          if (newTier === "Starter") newPrice = PRICING_CONFIG.starterPrice;
+          else if (newTier === "Pro") newPrice = PRICING_CONFIG.proPrice;
+          else if (newTier === "BrokerageAdmin") newPrice = PRICING_CONFIG.brokerageSeatPrice * (seats || 5);
+          
+          // Find days remaining in current month billing cycle (simplified 30 days)
+          const billingDateParts = user.billingDate.split("-");
+          const billingDay = parseInt(billingDateParts[2]) || new Date().getDate();
+          
+          const now = new Date();
+          const currentYear = now.getFullYear();
+          const currentMonth = now.getMonth();
+          
+          let resetDate = new Date(currentYear, currentMonth, billingDay);
+          if (resetDate < now) {
+            resetDate = new Date(currentYear, currentMonth + 1, billingDay);
+          }
+          
+          const msRemaining = resetDate.getTime() - now.getTime();
+          const daysRemaining = Math.max(1, Math.ceil(msRemaining / (1000 * 60 * 60 * 24)));
+          const prorationFraction = Math.min(1, Math.max(0, daysRemaining / 30));
+          
+          const priceDiff = Math.max(0, newPrice - oldPrice);
+          const prorationCharge = Math.round(priceDiff * prorationFraction);
+          
+          const newInvoice: BillingHistoryItem = {
+            id: "inv_" + Math.random().toString(36).slice(2, 9),
+            date: todayStr,
+            amount: prorationCharge,
+            description: `Prorated upgrade from ${oldTier} to ${newTier} (${daysRemaining} days remaining in current cycle).`
+          };
+          
+          const updatedHistory = [newInvoice, ...get().billingHistory];
+          
+          set((s) => {
+            if (!s.user) return {};
+            
+            const usersDatabase = s.usersDatabase.map(u => 
+              u.email.toLowerCase() === s.user?.email.toLowerCase()
+                ? { 
+                    ...u, 
+                    tier: newTier, 
+                    seatsCount: newTier === "BrokerageAdmin" ? (seats || 5) : undefined,
+                    pendingDowngrade: undefined 
+                  }
+                : u
+            );
+            
+            return {
+              user: {
+                ...s.user,
+                tier: newTier,
+                seatsCount: newTier === "BrokerageAdmin" ? (seats || 5) : undefined,
+                pendingDowngrade: undefined
+              },
+              billingHistory: updatedHistory,
+              usersDatabase
+            };
+          });
+          
+          get().trackEvent({
+            type: "conversion" as any,
+            meta: { from: oldTier, to: newTier, prorationCharge }
+          });
+          
+          return {
+            success: true,
+            cost: prorationCharge,
+            prorationMsg: `Successfully upgraded to ${newTier}. A prorated charge of EGP ${prorationCharge} has been processed for the remaining ${daysRemaining} days of your cycle.`
+          };
+        },
+
+        downgradeTier: (newTier) => {
+          const user = get().user;
+          if (!user) return { success: false, effectiveDate: "" };
+          
+          const billingDateParts = user.billingDate.split("-");
+          const billingDay = parseInt(billingDateParts[2]) || new Date().getDate();
+          
+          const now = new Date();
+          let effectiveDate = new Date(now.getFullYear(), now.getMonth(), billingDay);
+          if (effectiveDate < now) {
+            effectiveDate = new Date(now.getFullYear(), now.getMonth() + 1, billingDay);
+          }
+          const effectiveDateStr = effectiveDate.toISOString().split("T")[0];
+          
+          set((s) => {
+            if (!s.user) return {};
+            const usersDatabase = s.usersDatabase.map(u => 
+              u.email.toLowerCase() === s.user?.email.toLowerCase()
+                ? { ...u, pendingDowngrade: newTier }
+                : u
+            );
+            return {
+              user: {
+                ...s.user,
+                pendingDowngrade: newTier
+              },
+              usersDatabase
+            };
+          });
+          
+          return {
+            success: true,
+            effectiveDate: effectiveDateStr
+          };
+        },
+
+        addBrokerageSeatAgent: (email, name) => {
+          const user = get().user;
+          if (!user || user.tier !== "BrokerageAdmin") return false;
+          
+          const seatsCount = user.seatsCount || 5;
+          const currentSeatsCount = get().brokerageSeats.length;
+          
+          if (currentSeatsCount >= seatsCount) return false;
+          
+          set((s) => {
+            const exists = s.usersDatabase.some(u => u.email.toLowerCase() === email.toLowerCase());
+            let usersDatabase = s.usersDatabase;
+            if (!exists) {
+              const newAgent: RegisteredUser = {
+                email,
+                name,
+                password: "Agent" + Math.random().toString(36).slice(2, 6),
+                tier: "BrokerageSeat",
+                parentBrokerageId: user.email,
+                billingDate: user.billingDate,
+                projectAccessList: s.projectAccessList
+              };
+              usersDatabase = [...usersDatabase, newAgent];
+            } else {
+              usersDatabase = s.usersDatabase.map(u => 
+                u.email.toLowerCase() === email.toLowerCase()
+                  ? { ...u, tier: "BrokerageSeat", parentBrokerageId: user.email, projectAccessList: s.projectAccessList }
+                  : u
+              );
+            }
+            
+            const newSeat: BrokerageSeatAgent = {
+              email,
+              name,
+              active: true,
+              whatsappSends: 0,
+              crmContacts: 0,
+              favoritesCount: 0,
+              lastActive: new Date().toISOString().split("T")[0]
+            };
+            
+            const brokerageSeats = [...s.brokerageSeats, newSeat];
+            
+            return {
+              brokerageSeats,
+              usersDatabase
+            };
+          });
+          
+          return true;
+        },
+
+        removeBrokerageSeatAgent: (email) => {
+          set((s) => {
+            const brokerageSeats = s.brokerageSeats.filter(seat => seat.email.toLowerCase() !== email.toLowerCase());
+            const usersDatabase = s.usersDatabase.map(u => 
+              u.email.toLowerCase() === email.toLowerCase()
+                ? { ...u, tier: "Explorer", parentBrokerageId: undefined, projectAccessList: undefined }
+                : u
+            );
+            return {
+              brokerageSeats,
+              usersDatabase
+            };
+          });
+        },
+
+        toggleProjectAccess: (slug) => {
+          set((s) => {
+            const projectAccessList = s.projectAccessList.includes(slug)
+              ? s.projectAccessList.filter(x => x !== slug)
+              : [...s.projectAccessList, slug];
+              
+            const usersDatabase = s.usersDatabase.map(u => 
+              u.parentBrokerageId?.toLowerCase() === s.user?.email.toLowerCase()
+                ? { ...u, projectAccessList }
+                : u
+            );
+            
+            return {
+              projectAccessList,
+              usersDatabase
+            };
+          });
+        },
+
+        resetBillingCycleIfNeeded: () => {
+          const user = get().user;
+          if (!user) return;
+          
+          const today = new Date();
+          const todayStr = today.toISOString().split("T")[0];
+          
+          const billingParts = user.billingDate.split("-");
+          const billingDay = parseInt(billingParts[2]) || today.getDate();
+          
+          const lastResetStr = user.lastCounterResetDate || user.billingDate;
+          const lastResetParts = lastResetStr.split("-");
+          const lastResetMonth = parseInt(lastResetParts[1]) || (today.getMonth() + 1);
+          const lastResetYear = parseInt(lastResetParts[0]) || today.getFullYear();
+          
+          const monthsDiff = (today.getFullYear() - lastResetYear) * 12 + (today.getMonth() + 1 - lastResetMonth);
+          
+          if (monthsDiff >= 1 && today.getDate() >= billingDay) {
+            set((s) => {
+              if (!s.user) return {};
+              
+              let tier = s.user.tier;
+              let pendingDowngrade = s.user.pendingDowngrade;
+              
+              if (pendingDowngrade) {
+                tier = pendingDowngrade;
+                pendingDowngrade = undefined;
+              }
+              
+              const updatedUser = {
+                ...s.user,
+                tier,
+                pendingDowngrade,
+                whatsappSendsCount: 0,
+                lastCounterResetDate: todayStr
+              };
+              
+              const usersDatabase = s.usersDatabase.map(u => 
+                u.email.toLowerCase() === s.user?.email.toLowerCase()
+                  ? { ...u, tier, pendingDowngrade, whatsappSendsCount: 0, lastCounterResetDate: todayStr }
+                  : u
+              );
+              
+              return {
+                user: updatedUser,
+                usersDatabase
+              };
+            });
+          }
+        },
+
+        exportDatabaseBackup: () => {
+          const backup = {
+            compoundsList: get().compoundsList,
+            destinationsList: get().destinationsList,
+            developersList: get().developersList,
+            availabilityList: get().availabilityList,
+            exportedAt: new Date().toISOString()
+          };
+          return JSON.stringify(backup, null, 2);
+        },
+
+        importDatabaseBackup: (jsonStr) => {
+          try {
+            const parsed = JSON.parse(jsonStr);
+            if (parsed.compoundsList && parsed.destinationsList && parsed.developersList && parsed.availabilityList) {
+              set({
+                compoundsList: parsed.compoundsList,
+                destinationsList: parsed.destinationsList,
+                developersList: parsed.developersList,
+                availabilityList: parsed.availabilityList
+              });
+              get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Backup", action: "Imported full database sync backup" });
+              return true;
+            }
+          } catch (e) {
+            console.error("Failed to parse database backup JSON:", e);
+          }
+          return false;
+        },
+
         // Platform Super-Admin CRUD Actions
         addProject: (p) => {
           set((s) => {
@@ -791,6 +1425,54 @@ export const useStore = create<State>()(
           get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Availability", action: `Bulk imported global availability database` });
         },
 
+        addPendingUpload: (upload) => {
+          set((s) => ({
+            pendingUploadsList: [...(s.pendingUploadsList || []), {
+              ...upload,
+              id: "up_" + Math.random().toString(36).slice(2, 9),
+              uploadedAt: Date.now()
+            }]
+          }));
+          get().addAuditLog({ actor: upload.uploadedBy || "elsayedshoeip70@gmail.com", entity: "AvailabilityUpload", action: `Submitted Excel availability update for ${upload.projectSlug} to review queue` });
+        },
+
+        approvePendingUpload: (id) => {
+          const upload = get().pendingUploadsList?.find(u => u.id === id);
+          if (!upload) return;
+
+          // Apply update
+          get().updateAvailability(upload.projectSlug, upload.newAvail);
+
+          // If there are associated compounds for the developer, also update them (like the original code does)
+          const targetProj = get().compoundsList.find(c => c.slug === upload.projectSlug);
+          const developerName = targetProj?.developer;
+          if (developerName) {
+            const associatedCompounds = get().compoundsList.filter(c => c.developer.toLowerCase() === developerName.toLowerCase() && c.slug !== upload.projectSlug);
+            associatedCompounds.forEach(comp => {
+              get().updateAvailability(comp.slug, {
+                ...upload.newAvail,
+                slug: comp.slug
+              });
+            });
+          }
+
+          // Remove from list
+          set((s) => ({
+            pendingUploadsList: (s.pendingUploadsList || []).filter(u => u.id !== id)
+          }));
+          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "AvailabilityUpload", action: `Approved and published Excel availability for ${upload.projectSlug}` });
+        },
+
+        rejectPendingUpload: (id) => {
+          const upload = get().pendingUploadsList?.find(u => u.id === id);
+          if (!upload) return;
+
+          set((s) => ({
+            pendingUploadsList: (s.pendingUploadsList || []).filter(u => u.id !== id)
+          }));
+          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "AvailabilityUpload", action: `Rejected Excel availability upload for ${upload.projectSlug}` });
+        },
+
         addAuditLog: (log) => {
           set((s) => {
             const newItem = {
@@ -836,13 +1518,21 @@ export const useStore = create<State>()(
           }
 
           // 2. Sync compoundsList with latest static compounds data (especially developer names, new launches, and parent slug mappings!)
-          if (Array.isArray(state.compoundsList)) {
+           if (Array.isArray(state.compoundsList)) {
             // Re-map with latest static compounds
             state.compoundsList = state.compoundsList.map((c: any) => {
               const staticComp = compounds.find((sc) => sc.slug === c.slug);
               if (staticComp) {
                 const isNewLaunch = launchSlugs.has(c.slug);
-                return { ...c, ...staticComp, isNewLaunch };
+                const staticFile = brochureMap[c.slug];
+                return { 
+                  ...c, 
+                  ...staticComp, 
+                  isNewLaunch,
+                  brochureUrl: c.brochureUrl || (staticFile ? `/brochures/${staticFile}` : undefined),
+                  brochureFileName: c.brochureFileName || staticFile || undefined,
+                  brochureType: c.brochureType || (staticFile ? "application/pdf" : undefined)
+                };
               }
               return c;
             });
@@ -850,15 +1540,32 @@ export const useStore = create<State>()(
             compounds.forEach((sc) => {
               if (!state.compoundsList.some((c: any) => c.slug === sc.slug)) {
                 const isNewLaunch = launchSlugs.has(sc.slug);
-                state.compoundsList.push({ ...sc, isNewLaunch });
+                const staticFile = brochureMap[sc.slug];
+                state.compoundsList.push({ 
+                  ...sc, 
+                  isNewLaunch,
+                  brochureUrl: staticFile ? `/brochures/${staticFile}` : undefined,
+                  brochureFileName: staticFile || undefined,
+                  brochureType: staticFile ? "application/pdf" : undefined
+                });
               }
             });
           } else {
-            const initialCompoundsList = compounds.map(c => ({
-              ...c,
-              isNewLaunch: launchSlugs.has(c.slug)
-            }));
+            const initialCompoundsList = compounds.map(c => {
+              const staticFile = brochureMap[c.slug];
+              return {
+                ...c,
+                isNewLaunch: launchSlugs.has(c.slug),
+                brochureUrl: staticFile ? `/brochures/${staticFile}` : undefined,
+                brochureFileName: staticFile || undefined,
+                brochureType: staticFile ? "application/pdf" : undefined
+              };
+            });
             state.compoundsList = initialCompoundsList;
+          }
+
+          if (!Array.isArray(state.pendingUploadsList)) {
+            state.pendingUploadsList = [];
           }
 
           // 3. Clear session if inactive

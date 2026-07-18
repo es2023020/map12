@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as NewLaunchesRouteImport } from './routes/new-launches'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as DevelopersRouteImport } from './routes/developers'
 import { Route as DeveloperPartnershipRouteImport } from './routes/developer-partnership'
@@ -32,6 +33,7 @@ import { Route as DashboardIndexRouteImport } from './routes/dashboard.index'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as DevelopersSlugRouteImport } from './routes/developers.$slug'
 import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
+import { Route as DashboardTeamRouteImport } from './routes/dashboard.team'
 import { Route as DashboardProfileRouteImport } from './routes/dashboard.profile'
 import { Route as DashboardMapsRouteImport } from './routes/dashboard.maps'
 import { Route as DashboardLeadsRouteImport } from './routes/dashboard.leads'
@@ -41,6 +43,7 @@ import { Route as DashboardCampaignsRouteImport } from './routes/dashboard.campa
 import { Route as DashboardBillingRouteImport } from './routes/dashboard.billing'
 import { Route as DashboardAiAssistantRouteImport } from './routes/dashboard.ai-assistant'
 import { Route as ApiUploadAssetRouteImport } from './routes/api.upload-asset'
+import { Route as ApiBrochuresMatchRouteImport } from './routes/api.brochures-match'
 import { Route as UnitsProjectSlugTypeSlugRouteImport } from './routes/units.$projectSlug.$typeSlug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -56,6 +59,11 @@ const ProjectsRoute = ProjectsRouteImport.update({
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewLaunchesRoute = NewLaunchesRouteImport.update({
+  id: '/new-launches',
+  path: '/new-launches',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MapRoute = MapRouteImport.update({
@@ -158,6 +166,11 @@ const DestinationsSlugRoute = DestinationsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => DestinationsRoute,
 } as any)
+const DashboardTeamRoute = DashboardTeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardProfileRoute = DashboardProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
@@ -203,6 +216,11 @@ const ApiUploadAssetRoute = ApiUploadAssetRouteImport.update({
   path: '/api/upload-asset',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiBrochuresMatchRoute = ApiBrochuresMatchRouteImport.update({
+  id: '/api/brochures-match',
+  path: '/api/brochures-match',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UnitsProjectSlugTypeSlugRoute =
   UnitsProjectSlugTypeSlugRouteImport.update({
     id: '/units/$projectSlug/$typeSlug',
@@ -224,9 +242,11 @@ export interface FileRoutesByFullPath {
   '/developer-partnership': typeof DeveloperPartnershipRoute
   '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
+  '/new-launches': typeof NewLaunchesRoute
   '/pricing': typeof PricingRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/brochures-match': typeof ApiBrochuresMatchRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
@@ -236,6 +256,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/leads': typeof DashboardLeadsRoute
   '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
@@ -256,8 +277,10 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/developer-partnership': typeof DeveloperPartnershipRoute
   '/map': typeof MapRoute
+  '/new-launches': typeof NewLaunchesRoute
   '/pricing': typeof PricingRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/brochures-match': typeof ApiBrochuresMatchRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
@@ -267,6 +290,7 @@ export interface FileRoutesByTo {
   '/dashboard/leads': typeof DashboardLeadsRoute
   '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
@@ -291,9 +315,11 @@ export interface FileRoutesById {
   '/developer-partnership': typeof DeveloperPartnershipRoute
   '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
+  '/new-launches': typeof NewLaunchesRoute
   '/pricing': typeof PricingRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/brochures-match': typeof ApiBrochuresMatchRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
@@ -303,6 +329,7 @@ export interface FileRoutesById {
   '/dashboard/leads': typeof DashboardLeadsRoute
   '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
@@ -328,9 +355,11 @@ export interface FileRouteTypes {
     | '/developer-partnership'
     | '/developers'
     | '/map'
+    | '/new-launches'
     | '/pricing'
     | '/projects'
     | '/sitemap.xml'
+    | '/api/brochures-match'
     | '/api/upload-asset'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
@@ -340,6 +369,7 @@ export interface FileRouteTypes {
     | '/dashboard/leads'
     | '/dashboard/maps'
     | '/dashboard/profile'
+    | '/dashboard/team'
     | '/destinations/$slug'
     | '/developers/$slug'
     | '/projects/$slug'
@@ -360,8 +390,10 @@ export interface FileRouteTypes {
     | '/contact'
     | '/developer-partnership'
     | '/map'
+    | '/new-launches'
     | '/pricing'
     | '/sitemap.xml'
+    | '/api/brochures-match'
     | '/api/upload-asset'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
@@ -371,6 +403,7 @@ export interface FileRouteTypes {
     | '/dashboard/leads'
     | '/dashboard/maps'
     | '/dashboard/profile'
+    | '/dashboard/team'
     | '/destinations/$slug'
     | '/developers/$slug'
     | '/projects/$slug'
@@ -394,9 +427,11 @@ export interface FileRouteTypes {
     | '/developer-partnership'
     | '/developers'
     | '/map'
+    | '/new-launches'
     | '/pricing'
     | '/projects'
     | '/sitemap.xml'
+    | '/api/brochures-match'
     | '/api/upload-asset'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
@@ -406,6 +441,7 @@ export interface FileRouteTypes {
     | '/dashboard/leads'
     | '/dashboard/maps'
     | '/dashboard/profile'
+    | '/dashboard/team'
     | '/destinations/$slug'
     | '/developers/$slug'
     | '/projects/$slug'
@@ -430,9 +466,11 @@ export interface RootRouteChildren {
   DeveloperPartnershipRoute: typeof DeveloperPartnershipRoute
   DevelopersRoute: typeof DevelopersRouteWithChildren
   MapRoute: typeof MapRoute
+  NewLaunchesRoute: typeof NewLaunchesRoute
   PricingRoute: typeof PricingRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ApiBrochuresMatchRoute: typeof ApiBrochuresMatchRoute
   ApiUploadAssetRoute: typeof ApiUploadAssetRoute
   UnitsProjectSlugTypeSlugRoute: typeof UnitsProjectSlugTypeSlugRoute
 }
@@ -458,6 +496,13 @@ declare module '@tanstack/react-router' {
       path: '/pricing'
       fullPath: '/pricing'
       preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new-launches': {
+      id: '/new-launches'
+      path: '/new-launches'
+      fullPath: '/new-launches'
+      preLoaderRoute: typeof NewLaunchesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/map': {
@@ -600,6 +645,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DestinationsSlugRouteImport
       parentRoute: typeof DestinationsRoute
     }
+    '/dashboard/team': {
+      id: '/dashboard/team'
+      path: '/team'
+      fullPath: '/dashboard/team'
+      preLoaderRoute: typeof DashboardTeamRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/profile': {
       id: '/dashboard/profile'
       path: '/profile'
@@ -663,6 +715,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiUploadAssetRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/brochures-match': {
+      id: '/api/brochures-match'
+      path: '/api/brochures-match'
+      fullPath: '/api/brochures-match'
+      preLoaderRoute: typeof ApiBrochuresMatchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/units/$projectSlug/$typeSlug': {
       id: '/units/$projectSlug/$typeSlug'
       path: '/units/$projectSlug/$typeSlug'
@@ -682,6 +741,7 @@ interface DashboardRouteChildren {
   DashboardLeadsRoute: typeof DashboardLeadsRoute
   DashboardMapsRoute: typeof DashboardMapsRoute
   DashboardProfileRoute: typeof DashboardProfileRoute
+  DashboardTeamRoute: typeof DashboardTeamRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
 }
 
@@ -694,6 +754,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardLeadsRoute: DashboardLeadsRoute,
   DashboardMapsRoute: DashboardMapsRoute,
   DashboardProfileRoute: DashboardProfileRoute,
+  DashboardTeamRoute: DashboardTeamRoute,
   DashboardIndexRoute: DashboardIndexRoute,
 }
 
@@ -757,9 +818,11 @@ const rootRouteChildren: RootRouteChildren = {
   DeveloperPartnershipRoute: DeveloperPartnershipRoute,
   DevelopersRoute: DevelopersRouteWithChildren,
   MapRoute: MapRoute,
+  NewLaunchesRoute: NewLaunchesRoute,
   PricingRoute: PricingRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ApiBrochuresMatchRoute: ApiBrochuresMatchRoute,
   ApiUploadAssetRoute: ApiUploadAssetRoute,
   UnitsProjectSlugTypeSlugRoute: UnitsProjectSlugTypeSlugRoute,
 }

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { useStore, type Lead } from "@/lib/store";
+import { useDebounce } from "@/lib/useDebounce";
 import { Button } from "@/components/ui/button";
 import { compounds } from "@/data/compounds";
 import { 
@@ -43,6 +44,7 @@ const mockCampaignHistory = [
 function CampaignsPage() {
   const leads = useStore((s) => s.leads);
   const user = useStore((s) => s.user);
+  const incrementWhatsAppSends = useStore((s) => s.incrementWhatsAppSends);
 
   const [selectedLeads, setSelectedLeads] = useState<string[]>([]);
   const [templateText, setTemplateText] = useState(defaultCampaignTemplates[0].body);
@@ -56,6 +58,7 @@ function CampaignsPage() {
 
   // Compound share search
   const [compoundSearch, setCompoundSearch] = useState("");
+  const debouncedCompoundSearch = useDebounce(compoundSearch, 250);
   const [activeShareTab, setActiveShareTab] = useState<"contacts" | "compounds">("contacts");
 
   const toggleSelectLead = (id: string) => {
@@ -97,6 +100,9 @@ function CampaignsPage() {
 
   const handleSendCurrent = () => {
     if (currentIndex >= activeQueue.length) return;
+    const success = incrementWhatsAppSends();
+    if (!success) return;
+
     const currentLead = activeQueue[currentIndex];
     const messageText = resolveMessage(currentLead, templateText);
     const cleanedPhone = currentLead.phone.replace(/[^0-9]/g, "");
@@ -107,6 +113,9 @@ function CampaignsPage() {
 
   // Share a compound listing to WhatsApp
   const handleShareCompound = (comp: typeof compounds[0]) => {
+    const success = incrementWhatsAppSends();
+    if (!success) return;
+
     const brokerName = user?.name || "your PropTrack broker";
     const msg = `Hello!\n\nI wanted to share this exciting property listing with you:\n\n*${comp.name}*\nDeveloper: ${comp.developer}\nLocation: ${comp.destination}\nStarting from: EGP ${comp.priceFrom}M\nUnit Types: ${comp.types.join(", ")}\n\nFor full details, unit availability and payment plans:\nhttps://proptrack.eg/projects/${comp.slug}\n\nReach out to me for a private showing!\n${brokerName}`;
     openWhatsAppUrl(`https://web.whatsapp.com/send?text=${encodeURIComponent(msg)}`);
@@ -121,10 +130,10 @@ function CampaignsPage() {
   );
 
   const filteredCompounds = compounds.filter(c =>
-    compoundSearch.length < 2 || 
-    c.name.toLowerCase().includes(compoundSearch.toLowerCase()) ||
-    c.developer.toLowerCase().includes(compoundSearch.toLowerCase()) ||
-    c.destination.toLowerCase().includes(compoundSearch.toLowerCase())
+    debouncedCompoundSearch.length < 2 || 
+    c.name.toLowerCase().includes(debouncedCompoundSearch.toLowerCase()) ||
+    c.developer.toLowerCase().includes(debouncedCompoundSearch.toLowerCase()) ||
+    c.destination.toLowerCase().includes(debouncedCompoundSearch.toLowerCase())
   ).slice(0, 30);
 
   // Dynamic Statistics

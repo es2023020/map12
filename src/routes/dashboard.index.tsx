@@ -1,5 +1,6 @@
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
+import { useDebounce } from "@/lib/useDebounce";
 import { useState, useRef, useMemo } from "react";
 import { compounds } from "@/data/compounds";
 import mediaRegistry from "@/data/media-registry.json";
@@ -88,8 +89,10 @@ function DashboardOverview() {
 
   const [newTaskText, setNewTaskText] = useState("");
   const [docSearch, setDocSearch] = useState("");
+  const debouncedDocSearch = useDebounce(docSearch, 250);
   const [activeTab, setActiveTab] = useState("Documents");
   const [globalSearch, setGlobalSearch] = useState("");
+  const debouncedGlobalSearch = useDebounce(globalSearch, 250);
   
   // Media search state
   const [selectedMediaProject, setSelectedMediaProject] = useState("");
@@ -227,8 +230,8 @@ function DashboardOverview() {
   const allDocs = [...defaultDocuments, ...scannedDocs, ...customBrochures];
 
   const filteredDocs = allDocs.filter(d => 
-    d.name.toLowerCase().includes(docSearch.toLowerCase()) || 
-    d.category.toLowerCase().includes(docSearch.toLowerCase())
+    d.name.toLowerCase().includes(debouncedDocSearch.toLowerCase()) || 
+    d.category.toLowerCase().includes(debouncedDocSearch.toLowerCase())
   );
 
   const handleAddBrochureSubmit = (e: React.FormEvent) => {
@@ -380,7 +383,7 @@ function DashboardOverview() {
       </div>
 
       {/* Global Search Results list */}
-      {globalSearch.length > 0 && (
+      {debouncedGlobalSearch.length > 0 && (
         <div className="rounded-2xl border border-accent/20 bg-accent/5 p-6 space-y-4 animate-in fade-in duration-200">
           <div className="flex items-center justify-between border-b border-accent/15 pb-2">
             <span className="text-xs font-bold uppercase tracking-wider text-accent flex items-center gap-1.5">
@@ -391,7 +394,7 @@ function DashboardOverview() {
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {compounds.filter(c => {
-              const q = globalSearch.toLowerCase();
+              const q = debouncedGlobalSearch.toLowerCase();
               return c.name.toLowerCase().includes(q) ||
                      c.developer.toLowerCase().includes(q) ||
                      c.destination.toLowerCase().includes(q) ||
@@ -421,7 +424,7 @@ function DashboardOverview() {
               </div>
             ))}
             {compounds.filter(c => {
-              const q = globalSearch.toLowerCase();
+              const q = debouncedGlobalSearch.toLowerCase();
               return c.name.toLowerCase().includes(q) ||
                      c.developer.toLowerCase().includes(q) ||
                      c.destination.toLowerCase().includes(q) ||

@@ -13,6 +13,7 @@ import {
   Building2, Waves
 } from "lucide-react";
 import { availability } from "@/data/availability";
+import { useDebounce } from "@/lib/useDebounce";
 function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
   const [loaded, setLoaded] = useState(false);
   const initials = name.split(" ").slice(0, 2).map((w) => w[0] ?? "").join("").toUpperCase();
@@ -46,6 +47,7 @@ export const Route = createFileRoute("/map")({
 function MapPage() {
   const { destination: destinationParam, dev: devParam, q: qParam } = Route.useSearch();
   const [q, setQ] = useState(qParam || "");
+  const debouncedQ = useDebounce(q, 250);
   const [dev, setDev] = useState<string>(devParam || "");
   const [destinationSlug, setAreaSlug] = useState<string | null>(destinationParam || null);
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
@@ -54,6 +56,7 @@ function MapPage() {
   const [devOpen, setDevOpen] = useState(false);
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
   const [filtersOpen, setFiltersOpen] = useState(!!(destinationParam || devParam || qParam));
+  const [kiloFilter, setKiloFilter] = useState<string>("");
 
   const availabilityMap = useMemo(() => {
     return new Map(availability.map((a) => [a.slug, a]));
@@ -64,11 +67,20 @@ function MapPage() {
     qVal: string,
     destinationVal: string | null,
     devVal: string,
-    flagshipVal: boolean
+    flagshipVal: boolean,
+    kiloFilterVal: string
   ) => {
     if (destinationVal && c.destination !== destinationVal) return false;
     if (devVal && c.developerSlug !== devVal) return false;
     if (flagshipVal && !c.flagship) return false;
+    if (kiloFilterVal) {
+      if (c.km === undefined || c.km === null) return false;
+      if (kiloFilterVal === "90-120" && (c.km < 90 || c.km > 120)) return false;
+      if (kiloFilterVal === "120-150" && (c.km < 120 || c.km > 150)) return false;
+      if (kiloFilterVal === "150-180" && (c.km < 150 || c.km > 180)) return false;
+      if (kiloFilterVal === "180-220" && (c.km < 180 || c.km > 220)) return false;
+      if (kiloFilterVal === "220+" && c.km < 220) return false;
+    }
     if (qVal) {
       const avail = availabilityMap.get(c.slug);
       let availText = "";
@@ -118,33 +130,33 @@ function MapPage() {
   const mainCompounds = useMemo(() => compounds.filter((c) => !c.parentSlug), []);
 
   const filtered = useMemo(() => {
-    return mainCompounds.filter((c) => matchMapCompound(c, q, destinationSlug, dev, flagshipOnly));
-  }, [destinationSlug, dev, flagshipOnly, q, availabilityMap, mainCompounds]);
+    return mainCompounds.filter((c) => matchMapCompound(c, debouncedQ, destinationSlug, dev, flagshipOnly, kiloFilter));
+  }, [destinationSlug, dev, flagshipOnly, debouncedQ, kiloFilter, availabilityMap, mainCompounds]);
 
   // Dynamic active options for cascading UI
   const activeDevelopers = useMemo(() => {
-    const list = mainCompounds.filter((c) => matchMapCompound(c, q, destinationSlug, "", flagshipOnly));
+    const list = mainCompounds.filter((c) => matchMapCompound(c, debouncedQ, destinationSlug, "", flagshipOnly, kiloFilter));
     const slugs = new Set(list.map((c) => c.developerSlug));
     return developers.filter((d) => slugs.has(d.slug));
-  }, [q, destinationSlug, flagshipOnly, availabilityMap, mainCompounds]);
+  }, [debouncedQ, destinationSlug, flagshipOnly, kiloFilter, availabilityMap, mainCompounds]);
 
   const areaCounts = useMemo(() => {
     const m = new Map<string, number>();
     destinations.forEach((a) => {
-      const count = mainCompounds.filter((c) => matchMapCompound(c, q, a.slug, dev, flagshipOnly)).length;
+      const count = mainCompounds.filter((c) => matchMapCompound(c, debouncedQ, a.slug, dev, flagshipOnly, kiloFilter)).length;
       m.set(a.slug, count);
     });
     return m;
-  }, [q, dev, flagshipOnly, availabilityMap, mainCompounds]);
+  }, [debouncedQ, dev, flagshipOnly, kiloFilter, availabilityMap, mainCompounds]);
 
   const devCounts = useMemo(() => {
     const m = new Map<string, number>();
     developers.forEach((d) => {
-      const count = mainCompounds.filter((c) => matchMapCompound(c, q, destinationSlug, d.slug, flagshipOnly)).length;
+      const count = mainCompounds.filter((c) => matchMapCompound(c, debouncedQ, destinationSlug, d.slug, flagshipOnly, kiloFilter)).length;
       m.set(d.slug, count);
     });
     return m;
-  }, [q, destinationSlug, flagshipOnly, availabilityMap, mainCompounds]);
+  }, [debouncedQ, destinationSlug, flagshipOnly, kiloFilter, availabilityMap, mainCompounds]);
 
   const visibleLandmarks = useMemo(
     () => (destinationSlug ? landmarks.filter((l) => l.destination === destinationSlug) : landmarks),
@@ -158,10 +170,10 @@ function MapPage() {
 
   const mapCenter: [number, number] = selectedDestination?.center ?? [29.5, 31.0];
   const mapZoom = selectedDestination?.zoom ?? 6;
-  const hasFilters = !!(q || dev || destinationSlug || flagshipOnly);
+  const hasFilters = !!(q || dev || destinationSlug || flagshipOnly || kiloFilter);
 
   function clearAll() {
-    setQ(""); setDev(""); setAreaSlug(null); setFlagshipOnly(false); setActiveSlug(null);
+    setQ(""); setDev(""); setAreaSlug(null); setFlagshipOnly(false); setKiloFilter(""); setActiveSlug(null);
   }
 
   return (
@@ -255,6 +267,24 @@ function MapPage() {
                     </div>
                   )}
                 </div>
+
+                {(!destinationSlug || destinations.find(d => d.slug === destinationSlug)?.region === "north-coast") && (
+                  <div className="space-y-1 mt-1">
+                    <select
+                      value={kiloFilter}
+                      onChange={(e) => setKiloFilter(e.target.value)}
+                      className="flex w-full items-center justify-between rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none"
+                    >
+                      <option value="">Any Kilo Range</option>
+                      <option value="90-120">KM 90 – 120 (Gateway & Alamein)</option>
+                      <option value="120-150">KM 120 – 150 (Sidi Abdelrahman)</option>
+                      <option value="150-180">KM 150 – 180 (Al Dabaa)</option>
+                      <option value="180-220">KM 180 – 220 (Ras El Hekma)</option>
+                      <option value="220+">KM 220+ (Sidi Heneish)</option>
+                    </select>
+                  </div>
+                )}
+
                 <div className="flex items-center gap-4 text-xs">
                   <label className="inline-flex cursor-pointer items-center gap-1.5 text-muted-foreground hover:text-primary">
                     <input type="checkbox" checked={flagshipOnly} onChange={(e) => setFlagshipOnly(e.target.checked)} className="h-3.5 w-3.5 accent-accent" />

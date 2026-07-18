@@ -39,13 +39,18 @@ export function NewLaunchesSlider() {
               Discover the latest exclusive real estate launches across Egypt. Reserve your spot before the general market.
             </p>
           </div>
-          <div className="flex gap-2">
-            <Button variant="outline" size="icon" onClick={scrollPrev} className="rounded-full border-border/60 bg-card hover:bg-accent/10 hover:text-accent">
-              <ArrowRight className="h-4 w-4 rotate-180" />
-            </Button>
-            <Button variant="outline" size="icon" onClick={scrollNext} className="rounded-full border-border/60 bg-card hover:bg-accent/10 hover:text-accent">
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+          <div className="flex items-center gap-3">
+            <Link to="/new-launches" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-semibold text-primary hover:border-accent hover:text-accent hover:bg-accent/5 transition-all">
+              View All Launches <ArrowRight className="h-3.5 w-3.5 text-accent" />
+            </Link>
+            <div className="flex gap-2">
+              <Button variant="outline" size="icon" onClick={scrollPrev} className="rounded-full border-border/60 bg-card hover:bg-accent/10 hover:text-accent">
+                <ArrowRight className="h-4 w-4 rotate-180" />
+              </Button>
+              <Button variant="outline" size="icon" onClick={scrollNext} className="rounded-full border-border/60 bg-card hover:bg-accent/10 hover:text-accent">
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
           </div>
         </div>
 

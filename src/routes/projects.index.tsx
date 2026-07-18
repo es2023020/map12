@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Search, SlidersHorizontal, X, ChevronDown, ChevronUp } from "lucide-react";
 import { availability } from "@/data/availability";
 import { useStore } from "@/lib/store";
+import { useDebounce } from "@/lib/useDebounce";
 
 // Compute true max price from availability data (highest real price) or fall back to compound list
 const mainCompounds = compounds.filter((c) => !c.parentSlug);
@@ -37,19 +38,21 @@ export const Route = createFileRoute("/projects/")({
 function ProjectsPage() {
   const { destination: destinationParam, dev: devParam, q: qParam } = Route.useSearch();
   const [q, setQ] = useState(qParam || "");
+  const debouncedQ = useDebounce(q, 250);
   const [destination, setArea] = useState(destinationParam || "");
   const [dev, setDev] = useState(devParam || "");
   const [status, setStatus] = useState("");
   const [type, setType] = useState("");
+  const [kiloFilter, setKiloFilter] = useState("");
   const [maxPrice, setMaxPrice] = useState(PRICE_MAX);
   const [sort, setSort] = useState<"name" | "price-asc" | "price-desc" | "delivery">("name");
   const [filtersOpen, setFiltersOpen] = useState(!!(destinationParam || devParam || qParam));
   const trackEvent = useStore((s) => s.trackEvent);
 
-  const hasFilters = !!(q || destination || dev || status || type || maxPrice < PRICE_MAX);
+  const hasFilters = !!(q || destination || dev || status || type || kiloFilter || maxPrice < PRICE_MAX);
 
   function clearAll() {
-    setQ(""); setArea(""); setDev(""); setStatus(""); setType(""); setMaxPrice(PRICE_MAX);
+    setQ(""); setArea(""); setDev(""); setStatus(""); setType(""); setKiloFilter(""); setMaxPrice(PRICE_MAX);
   }
 
   const availabilityMap = useMemo(() => {
@@ -63,7 +66,8 @@ function ProjectsPage() {
     devVal: string,
     statusVal: string,
     typeVal: string,
-    maxPriceVal: number
+    maxPriceVal: number,
+    kiloFilterVal: string
   ) => {
     if (qVal) {
       const avail = availabilityMap.get(c.slug);
@@ -148,43 +152,51 @@ function ProjectsPage() {
     if (statusVal && c.status !== statusVal) return false;
     if (typeVal && !c.types.includes(typeVal)) return false;
     if (c.priceFrom > maxPriceVal) return false;
+    if (kiloFilterVal) {
+      if (c.km === undefined || c.km === null) return false;
+      if (kiloFilterVal === "90-120" && (c.km < 90 || c.km > 120)) return false;
+      if (kiloFilterVal === "120-150" && (c.km < 120 || c.km > 150)) return false;
+      if (kiloFilterVal === "150-180" && (c.km < 150 || c.km > 180)) return false;
+      if (kiloFilterVal === "180-220" && (c.km < 180 || c.km > 220)) return false;
+      if (kiloFilterVal === "220+" && c.km < 220) return false;
+    }
     return true;
   };
 
   const filtered = useMemo(() => {
-    let list = mainCompounds.filter((c) => matchCompound(c, q, destination, dev, status, type, maxPrice));
+    let list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, dev, status, type, maxPrice, kiloFilter));
     return [...list].sort((a, b) => {
       if (sort === "name") return a.name.localeCompare(b.name);
       if (sort === "price-asc") return a.priceFrom - b.priceFrom;
       if (sort === "price-desc") return b.priceFrom - a.priceFrom;
       return a.deliveryYear - b.deliveryYear;
     });
-  }, [q, destination, dev, status, type, maxPrice, sort, availabilityMap]);
+  }, [debouncedQ, destination, dev, status, type, maxPrice, kiloFilter, sort, availabilityMap]);
 
   // Dynamic cascading option computations:
   const activeDestinations = useMemo(() => {
-    const list = mainCompounds.filter((c) => matchCompound(c, q, "", dev, status, type, maxPrice));
+    const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, "", dev, status, type, maxPrice, kiloFilter));
     const slugs = new Set(list.map((c) => c.destination));
     return destinations.filter((a) => slugs.has(a.slug));
-  }, [q, dev, status, type, maxPrice, availabilityMap]);
+  }, [debouncedQ, dev, status, type, maxPrice, kiloFilter, availabilityMap]);
 
   const activeDevelopers = useMemo(() => {
-    const list = mainCompounds.filter((c) => matchCompound(c, q, destination, "", status, type, maxPrice));
+    const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, "", status, type, maxPrice, kiloFilter));
     const slugs = new Set(list.map((c) => c.developerSlug));
     return developers.filter((d) => slugs.has(d.slug));
-  }, [q, destination, status, type, maxPrice, availabilityMap]);
+  }, [debouncedQ, destination, status, type, maxPrice, kiloFilter, availabilityMap]);
 
   const activeStatuses = useMemo(() => {
-    const list = mainCompounds.filter((c) => matchCompound(c, q, destination, dev, "", type, maxPrice));
+    const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, dev, "", type, maxPrice, kiloFilter));
     const statuses = new Set(list.map((c) => c.status));
     return ["Delivered", "Under Construction", "Off-Plan"].filter((s) => statuses.has(s as any));
-  }, [q, destination, dev, type, maxPrice, availabilityMap]);
+  }, [debouncedQ, destination, dev, type, maxPrice, kiloFilter, availabilityMap]);
 
   const activeTypes = useMemo(() => {
-    const list = mainCompounds.filter((c) => matchCompound(c, q, destination, dev, status, "", maxPrice));
+    const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, dev, status, "", maxPrice, kiloFilter));
     const types = new Set(list.flatMap((c) => c.types));
     return ALL_TYPES.filter((t) => types.has(t));
-  }, [q, destination, dev, status, maxPrice, availabilityMap]);
+  }, [debouncedQ, destination, dev, status, maxPrice, kiloFilter, availabilityMap]);
 
   const FilterPanel = (
     <div className="space-y-5">
@@ -216,6 +228,17 @@ function ProjectsPage() {
         ]} />
       <FilterSelect label="Unit Type" value={type} onChange={setType}
         options={[{ value: "", label: "Any type" }, ...activeTypes.map((t) => ({ value: t, label: t }))]} />
+      {(!destination || destinations.find(d => d.slug === destination)?.region === "north-coast") && (
+        <FilterSelect label="Sahel Highway Marker (Kilo)" value={kiloFilter} onChange={setKiloFilter}
+          options={[
+            { value: "", label: "Any Kilo range" },
+            { value: "90-120", label: "KM 90 – 120 (Gateway & Alamein)" },
+            { value: "120-150", label: "KM 120 – 150 (Sidi Abdelrahman)" },
+            { value: "150-180", label: "KM 150 – 180 (Al Dabaa)" },
+            { value: "180-220", label: "KM 180 – 220 (Ras El Hekma)" },
+            { value: "220+", label: "KM 220+ (Sidi Heneish)" }
+          ]} />
+      )}
       <div>
         <div className="mb-2 flex items-center justify-between text-xs font-medium uppercase tracking-wider text-muted-foreground">
           <span>Max price</span>

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useStore, type LeadStage, type Lead, type ActivityLogItem } from "@/lib/store";
+import { useDebounce } from "@/lib/useDebounce";
 import { compounds } from "@/data/compounds";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -53,12 +54,14 @@ function LeadsPage() {
   const addLeadActivity = useStore((s) => s.addLeadActivity);
   const updateLeadPriority = useStore((s) => s.updateLeadPriority);
   const updateLeadDetails = useStore((s) => s.updateLeadDetails);
+  const incrementWhatsAppSends = useStore((s) => s.incrementWhatsAppSends);
   
   const user = useStore((s) => s.user);
 
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", budget: 10, interest: "", notes: "" });
   const [searchQuery, setSearchQuery] = useState("");
+  const debouncedSearchQuery = useDebounce(searchQuery, 250);
   
   // Lead Details Modal State (Notion-style detail page)
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
@@ -105,6 +108,9 @@ function LeadsPage() {
   };
 
   const handleLaunchWhatsApp = (lead: Lead) => {
+    const success = incrementWhatsAppSends();
+    if (!success) return;
+
     updateLeadContacted(lead.id);
     const cleanedPhone = lead.phone.replace(/[^0-9]/g, "");
     const phoneWithCode = cleanedPhone.startsWith("0") ? "2" + cleanedPhone : cleanedPhone;
@@ -220,10 +226,10 @@ function LeadsPage() {
 
   // Filter leads based on query
   const filteredLeads = leads.filter(l => 
-    l.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    l.phone.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    (l.interest && l.interest.toLowerCase().includes(searchQuery.toLowerCase())) ||
-    (l.notes && l.notes.toLowerCase().includes(searchQuery.toLowerCase()))
+    l.name.toLowerCase().includes(debouncedSearchQuery.toLowerCase()) ||
+    l.phone.toLowerCase().includes(debouncedSearchQuery.toLowerCase()) ||
+    (l.interest && l.interest.toLowerCase().includes(debouncedSearchQuery.toLowerCase())) ||
+    (l.notes && l.notes.toLowerCase().includes(debouncedSearchQuery.toLowerCase()))
   );
 
   return (

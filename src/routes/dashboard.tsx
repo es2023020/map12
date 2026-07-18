@@ -57,6 +57,8 @@ const connectors = [
 function DashboardLayout() {
   const user = useStore((s) => s.user);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const limitHitError = useStore((s) => s.limitHitError);
+  const clearLimitHitError = useStore((s) => s.clearLimitHitError);
 
   // Custom shortcuts state
   const customShortcuts = useStore((s) => s.customShortcuts) || [];
@@ -133,6 +135,16 @@ function DashboardLayout() {
                       </Link>
                     );
                   })}
+                  {(user?.tier === "BrokerageAdmin" || user?.tier === "BrokerageSeat") && (
+                    <Link to="/dashboard/team"
+                      className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all ${
+                        pathname.startsWith("/dashboard/team")
+                          ? "bg-accent/15 text-accent border-l-2 border-accent" 
+                          : "text-muted-foreground hover:bg-secondary/50 hover:text-foreground"
+                      }`}>
+                      <Users className="h-4 w-4 text-indigo-500" /> Team Workspace
+                    </Link>
+                  )}
                 </nav>
               </div>
 
@@ -267,6 +279,34 @@ function DashboardLayout() {
           WhatsApp Web
         </span>
       </a>
+
+      {limitHitError && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="w-full max-w-md rounded-2xl border border-border bg-card p-6 shadow-xl animate-in zoom-in-95 duration-200 space-y-4">
+            <div className="flex items-center gap-3 text-red-500">
+              <Sparkles className="h-6 w-6 text-indigo-500 animate-pulse shrink-0" />
+              <h3 className="font-display font-bold text-lg text-primary">Workspace Limit Reached</h3>
+            </div>
+            
+            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              {limitHitError.msg}
+            </p>
+
+            <div className="flex justify-end gap-3 pt-2">
+              <Button variant="ghost" className="rounded-xl text-xs" onClick={clearLimitHitError}>
+                Close Alert
+              </Button>
+              <Link
+                to="/dashboard/billing"
+                onClick={clearLimitHitError}
+                className="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs px-4 py-2 transition-all shadow"
+              >
+                Upgrade Plan
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
 
     </Shell>
   );
