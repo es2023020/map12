@@ -121,7 +121,7 @@ export const Route = createFileRoute("/api/brochures-match")({
             });
 
             // Sort candidates by score descending
-            candidates.sort((a, b) => b.score - a.score);
+            candidates.sort((a: any, b: any) => b.score - a.score);
 
             const best = candidates[0];
 
@@ -142,7 +142,7 @@ export const Route = createFileRoute("/api/brochures-match")({
               // Medium confidence match
               flagged.push({
                 filename,
-                topCandidates: candidates.slice(0, 3).map(c => ({
+                topCandidates: candidates.slice(0, 3).map((c: any) => ({
                   slug: c.project.slug,
                   name: c.project.name,
                   developer: c.project.developer,

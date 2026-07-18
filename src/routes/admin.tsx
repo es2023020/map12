@@ -12,7 +12,7 @@ import {
   ShieldCheck, Users, CreditCard, TrendingUp, Check, ExternalLink,
   Building2, MapPin, Layers, LayoutGrid, Calculator, Sliders, ShieldAlert,
   Send, Bot, Settings, Plus, Edit, Trash2, Save, FileText, HelpCircle,
-  Database, Upload, AlertCircle, RefreshCw, Star, ArrowLeftRight, CheckCircle, Info, X, Image as ImageIcon, ArrowLeft, FileSpreadsheet, Sparkles, Download
+  Database, Upload, AlertCircle, RefreshCw, Star, ArrowLeftRight, CheckCircle, Info, X, Image as ImageIcon, ArrowLeft, FileSpreadsheet, Sparkles, Download, Search
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -37,7 +37,7 @@ function AdminPage() {
   const signOut = useStore((s) => s.signOut);
   
   // Admin credentials checking
-  const isAdmin = user?.email.toLowerCase() === "elsayedshoeip70@gmail.com";
+  const isAdmin = user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
   
   // Form states for login
   const [emailInput, setEmailInput] = useState("");
@@ -126,6 +126,7 @@ function AdminPage() {
 // ─── Sub-component: Super-Admin Command Center Panel ────────────────────────
 function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   const [activeTab, setActiveTab] = useState<TabType>("overview");
+  const user = useStore((s) => s.user);
   
   // Read database state collections with fallback to empty arrays
   const rawCompounds = useStore((s) => s.compoundsList);

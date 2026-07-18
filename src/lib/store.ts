@@ -345,8 +345,8 @@ const seedLeads: Lead[] = [
 ];
 
 const seedUsers: RegisteredUser[] = [
-  { email: "admin@proptrack.com", name: "PropTrack Admin", password: "Team1", tier: "Agency" },
-  { email: "elsayedshoeip70@gmail.com", name: "Elsayed Shoeip (Admin)", password: "Sayed@shoeip8", tier: "Agency" }
+  { email: "admin@proptrack.com", name: "PropTrack Admin", password: "Team1", tier: "BrokerageAdmin" },
+  { email: "elsayedshoeip70@gmail.com", name: "Elsayed Shoeip (Admin)", password: "Sayed@shoeip8", tier: "BrokerageAdmin" }
 ];
 
 export const useStore = create<State>()(
@@ -1003,7 +1003,9 @@ export const useStore = create<State>()(
                     ? { ...seat, whatsappSends: seat.whatsappSends + 1, lastActive: new Date().toISOString().split("T")[0] }
                     : seat
                 );
-                s.userData[parentId].brokerageSeats = updatedSeats;
+                if (s.userData && s.userData[parentId]) {
+                  s.userData[parentId].brokerageSeats = updatedSeats;
+                }
               }
             }
             
@@ -1164,7 +1166,7 @@ export const useStore = create<State>()(
             } else {
               usersDatabase = s.usersDatabase.map(u => 
                 u.email.toLowerCase() === email.toLowerCase()
-                  ? { ...u, tier: "BrokerageSeat", parentBrokerageId: user.email, projectAccessList: s.projectAccessList }
+                  ? { ...u, tier: "BrokerageSeat" as SubscriptionTier, parentBrokerageId: user.email, projectAccessList: s.projectAccessList }
                   : u
               );
             }
@@ -1195,7 +1197,7 @@ export const useStore = create<State>()(
             const brokerageSeats = s.brokerageSeats.filter(seat => seat.email.toLowerCase() !== email.toLowerCase());
             const usersDatabase = s.usersDatabase.map(u => 
               u.email.toLowerCase() === email.toLowerCase()
-                ? { ...u, tier: "Explorer", parentBrokerageId: undefined, projectAccessList: undefined }
+                ? { ...u, tier: "Explorer" as SubscriptionTier, parentBrokerageId: undefined, projectAccessList: undefined }
                 : u
             );
             return {

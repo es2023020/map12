@@ -57,9 +57,9 @@ function ProfilePage() {
   };
 
   const invoices = [
-    { id: "INV-2026-004", date: "June 28, 2026", amount: user?.tier === "Agency" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 299" : "EGP 0", status: "Paid via ADIB", method: "Bank Transfer" },
-    { id: "INV-2026-003", date: "May 28, 2026", amount: user?.tier === "Agency" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 299" : "EGP 0", status: "Paid via ADIB", method: "Bank Transfer" },
-    { id: "INV-2026-002", date: "April 28, 2026", amount: user?.tier === "Agency" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 299" : "EGP 0", status: "Paid via ADIB", method: "Bank Transfer" }
+    { id: "INV-2026-004", date: "June 28, 2026", amount: user?.tier === "BrokerageAdmin" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 499" : "EGP 0", status: "Paid via ADIB", method: "Bank Transfer" },
+    { id: "INV-2026-003", date: "May 28, 2026", amount: user?.tier === "BrokerageAdmin" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 499" : "EGP 0", status: "Paid via ADIB", method: "Bank Transfer" },
+    { id: "INV-2026-002", date: "April 28, 2026", amount: user?.tier === "BrokerageAdmin" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 499" : "EGP 0", status: "Paid via ADIB", method: "Bank Transfer" }
   ];
 
   return (

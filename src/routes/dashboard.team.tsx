@@ -29,7 +29,7 @@ function TeamWorkspacePage() {
   const addSeatAgent = useStore((s) => s.addBrokerageSeatAgent);
   const removeSeatAgent = useStore((s) => s.removeBrokerageSeatAgent);
   const toggleProjectAccess = useStore((s) => s.toggleProjectAccess);
-  const compounds = useStore((s) => s.compounds) || [];
+  const compounds = useStore((s) => s.compoundsList) || [];
 
   // Form state
   const [newEmail, setNewEmail] = useState("");
@@ -37,7 +37,7 @@ function TeamWorkspacePage() {
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
-  if (!user || (user.tier !== "BrokerageAdmin" && user.tier !== "Agency")) {
+  if (!user || user.tier !== "BrokerageAdmin") {
     return (
       <div className="flex flex-col items-center justify-center min-h-[400px] text-center p-6 border border-slate-200 dark:border-slate-800 rounded-3xl bg-card">
         <Users className="h-12 w-12 text-slate-400 mb-4" />
@@ -216,7 +216,7 @@ function TeamWorkspacePage() {
             </div>
             
             <div className="max-h-[220px] overflow-y-auto space-y-2 border border-slate-100 dark:border-slate-800 rounded-xl p-2.5">
-              {compounds.map((c) => {
+              {compounds.map((c: any) => {
                 const blocked = projectAccessList.includes(c.slug);
                 return (
                   <div key={c.slug} className="flex items-center justify-between text-xs p-1">

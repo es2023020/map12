@@ -661,11 +661,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     types: ["Apartment", "Duplex", "Penthouse", "Townhouse", "Twin House", "Standalone Villa"],
     highlights: ["243 feddan master-planned community", "Walkable family-friendly neighborhood", "Lush green landscape & cycling trails", "Premium Hassan Allam build quality"]
   },
-  "hyde-park-north-seashore": {
-    destination: "ras-el-hekma",
-    km: 207,
-    city: "Ras El Hekma, North Coast (km 207), Matrouh Governorate, Egypt",
-  },
+
   "il-latini-city-edge": {
     destination: "new-alamein",
     km: 109,
@@ -795,17 +791,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Al Ahly Sabbour",
     city: "Gaia, north-coast-sidi-abdel-rahman",
   },
-  "la-vista-6": {
-  },
-  "la-vista-7": {
-  },
-  "la-vista-bay": {
-    destination: "al-dabaa",
-    km: 169,
-    city: "Al Dabaa, North Coast (km 169), Matrouh Governorate, Egypt",
-    lat: 30.03395,
-    lng: 31.48054,
-  },
+
   "la-vista-bay-east": {
     destination: "al-dabaa",
     km: 169,
@@ -814,17 +800,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.02869,
     lng: 31.48496,
   },
-  "la-vista-gardens": {
-  },
-  "la-vista-ras-el-hekma": {
-    destination: "ras-el-hekma",
-    km: 204,
-    city: "Ras El Hekma, North Coast (km 204), Matrouh Governorate, Egypt",
-    lat: 31.11949,
-    lng: 27.85392,
-  },
-  "la-vista-topaz": {
-  },
+
   "lagoons-al-alamein": {
     destination: "new-alamein",
     km: 109,
@@ -1695,36 +1671,6 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: ["Mountain-meets-Red Sea Portofino concept", "2.2 million m² integrated resort", "110 km from Cairo via Galala Road", "Tatweer Misr flagship quality"]
   },
 
-  "jamila": {
-    destination: "ras-el-hekma",
-    km: 237,
-    city: "Ras El Hekma, North Coast (km 237), Matrouh Governorate, Egypt",
-    lat: 31.0605,
-    lng: 28.0354,
-    developer: "New Jersey Developments",
-    beachfront: true,
-    type: "Resort",
-    blurb: "Jamila is a boutique luxury beachfront community in Ras El Hekma inspired by Mediterranean architecture, offering direct beach access, premium residences, terraced neighborhoods with sea views, and integrated crystal lagoons and recreational facilities.",
-    paymentPlan: "10% down, installments up to 10 years",
-    amenities: ["Private beach", "Beach club", "Swimming pools", "Crystal lagoons", "Clubhouse", "Restaurants & cafés", "Retail area", "Gym", "Sports courts", "Kids' play areas", "24/7 security"],
-    types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["km 237 Ras El Hekma beachfront", "Boutique Mediterranean-inspired resort", "Terraced design with sea views"]
-  },
-
-  "jebal-sokhna": {
-    destination: "ain-sokhna",
-    lat: 29.6108,
-    lng: 32.3437,
-    developer: "PRE Developments",
-    city: "Ain Sokhna, Suez Governorate, Egypt",
-    beachfront: true,
-    type: "Resort",
-    blurb: "Jebal Sokhna is a luxury terraced mountain resort by PRE Developments spread across approximately 71 acres in Ain Sokhna, designed to ensure panoramic Red Sea views from the majority of residences with contemporary architecture and landscaped green terraces.",
-    paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Private beach", "Swimming pools", "Clubhouse", "Gym", "Restaurants & cafés", "Retail area", "Sports courts", "Kids' areas", "Landscaped gardens", "24/7 security"],
-    types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Terraced mountain panoramic views", "km 127 Ain Sokhna location", "71 acres of mountain-sea resort living"]
-  },
 
 
   "la-verde": {

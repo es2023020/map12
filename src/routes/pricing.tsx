@@ -186,7 +186,7 @@ function PricingPage() {
                 Register Account
               </Button>
             </Link>
-            <Link to="/support">
+            <Link to="/contact">
               <Button variant="outline" className="rounded-full border-slate-300 text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300">
                 Contact Sales Support
               </Button>

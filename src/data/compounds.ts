@@ -32,6 +32,9 @@ export type Compound = {
   highlights?: string[];
   parentSlug?: string;
   isNewLaunch?: boolean;
+  brochureUrl?: string;
+  brochureFileName?: string;
+  brochureType?: string;
 };
 
 const beachImgs = [

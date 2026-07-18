@@ -14,12 +14,13 @@
  */
 
 export type AnalyticsEvent = {
-  type: "view" | "save" | "unsave" | "share" | "call" | "search";
+  type: "view" | "save" | "unsave" | "share" | "call" | "search" | "limit_hit" | "conversion";
   slug?: string;        // project slug (for view/save/share/call)
   area?: string;        // destination / area (for search / view)
   query?: string;       // raw search text
   priceRange?: string;  // e.g. "5-10M"
   timestamp: number;
+  meta?: any;
 };
 
 // ────────────────────────────────────────────────────────────────

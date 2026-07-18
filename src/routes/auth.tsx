@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
-import { useStore } from "@/lib/store";
+import { useStore, type SubscriptionTier } from "@/lib/store";
 import { Shell } from "@/components/layout/Shell";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -28,7 +28,7 @@ function AuthPage() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [tier, setTier] = useState<"Starter" | "Pro" | "Agency">("Pro");
+  const [tier, setTier] = useState<SubscriptionTier>("Pro");
   
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
@@ -155,16 +155,16 @@ function AuthPage() {
                   <div>
                     <Label>Brokerage Plan Tier</Label>
                     <div className="grid grid-cols-3 gap-2 mt-1.5">
-                      {(["Starter", "Pro", "Agency"] as const).map((t) => (
+                      {(["Starter", "Pro", "BrokerageAdmin"] as const).map((t) => (
                         <button key={t} type="button" onClick={() => setTier(t)}
                           className={`rounded-xl border p-2.5 text-center transition-all ${
                             tier === t 
                               ? "border-accent bg-accent/10 text-accent font-bold" 
                               : "border-border/80 bg-background text-muted-foreground hover:border-border"
                           }`}>
-                          <div className="text-xs">{t}</div>
+                          <div className="text-xs">{t === "BrokerageAdmin" ? "Agency" : t}</div>
                           <div className="text-[10px] opacity-75 mt-0.5">
-                            {t === "Starter" ? "Free" : t === "Pro" ? "499/mo" : "1,499/mo"}
+                            {t === "Starter" ? "299/mo" : t === "Pro" ? "499/mo" : "1,499/mo"}
                           </div>
                         </button>
                       ))}

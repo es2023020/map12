@@ -15,7 +15,7 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
   const [uploadError, setUploadError] = useState("");
 
   const user = useStore((s) => s.user);
-  const isAdmin = user?.email.toLowerCase() === "elsayedshoeip70@gmail.com";
+  const isAdmin = user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
 
   // Read brochure from the project store (set by admin dashboard)
   const projects = useStore((s) => s.compoundsList);
