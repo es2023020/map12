@@ -321,27 +321,28 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
 
   const handleSaveProject = (e: React.FormEvent) => {
     e.preventDefault();
-    const slug = editingItem ? editingItem.slug : pName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-    const amenitiesArr = pAmenities.split(",").map(s => s.trim()).filter(Boolean);
+    const resolvedName = pName.trim() || "Untitled Project";
+    const slug = editingItem ? editingItem.slug : resolvedName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    const amenitiesArr = pAmenities ? pAmenities.split(",").map(s => s.trim()).filter(Boolean) : [];
     const destObj = destinationsList.find(d => d.slug === pDest);
     const isNorthCoast = destObj?.region === "north-coast";
     
     const projData = {
       slug,
-      name: pName,
-      status: pStatus,
-      deliveryYear: Number(pHandover),
-      permitNumber: pPermit,
-      lat: Number(pLat),
-      lng: Number(pLng),
+      name: resolvedName,
+      status: pStatus || "Off-Plan",
+      deliveryYear: Number(pHandover) || 2028,
+      permitNumber: pPermit || "N/A",
+      lat: Number(pLat) || 30.02,
+      lng: Number(pLng) || 31.45,
       developer: pDev || developersList[0]?.name || "SODIC",
       developerSlug: (pDev || developersList[0]?.name || "SODIC").toLowerCase().replace(/[^a-z0-9]+/g, "-"),
       destination: pDest || destinationsList[0]?.slug || "new-cairo",
-      priceFrom: Number(pPrice),
-      areaSize: pSize,
-      unitSizes: pUnitSizes,
-      paymentPlan: pPaymentPlan,
-      blurb: pBlurb,
+      priceFrom: Number(pPrice) || 0,
+      areaSize: pSize || "50 feddan",
+      unitSizes: pUnitSizes || "120-300 sqm",
+      paymentPlan: pPaymentPlan || "10% down · 8 years installments",
+      blurb: pBlurb || "No description available.",
       amenities: amenitiesArr,
       hero: editingItem?.hero || "/projects/vea-new-cairo/1.jpg",
       gallery: editingItem?.gallery || ["/projects/vea-new-cairo/1.jpg"],
@@ -392,16 +393,17 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
 
   const handleSaveDeveloper = (e: React.FormEvent) => {
     e.preventDefault();
-    const slug = editingItem ? editingItem.slug : dName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    const resolvedName = dName.trim() || "Untitled Developer";
+    const slug = editingItem ? editingItem.slug : resolvedName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
     const devData = {
       slug,
-      name: dName,
-      legalName: dLegal,
-      description: dDesc,
-      phone: dPhone,
-      email: dEmail,
-      address: dAddress,
-      tier: dTier,
+      name: resolvedName,
+      legalName: dLegal || "N/A",
+      description: dDesc || "No summary available.",
+      phone: dPhone || "N/A",
+      email: dEmail || "info@developer.com",
+      address: dAddress || "Cairo, Egypt",
+      tier: dTier || "Tier A",
       status: "Verified",
       projects: editingItem?.projects || []
     };
@@ -450,16 +452,17 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
 
   const handleSaveDestination = (e: React.FormEvent) => {
     e.preventDefault();
-    const slug = editingItem ? editingItem.slug : destName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    const resolvedName = destName.trim() || "Untitled Destination";
+    const slug = editingItem ? editingItem.slug : resolvedName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
     const destData = {
       slug,
-      name: destName,
-      region: destRegion,
-      color: destColor,
-      city: destCity,
+      name: resolvedName,
+      region: destRegion || "greater-cairo",
+      color: destColor || "#8B5CF6",
+      city: destCity || "Cairo",
       kmRange: destKm || undefined,
-      blurb: destBlurb,
-      center: [Number(destLat), Number(destLng)] as [number, number],
+      blurb: destBlurb || "No overview available.",
+      center: [Number(destLat) || 30.03, Number(destLng) || 31.47] as [number, number],
       zoom: 12,
       hero: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
     };
@@ -3050,11 +3053,11 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Project Name</label>
-                  <input type="text" required value={pName} onChange={(e) => setPName(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                  <input type="text" value={pName} onChange={(e) => setPName(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">RERA Permit Number</label>
-                  <input type="text" required value={pPermit} onChange={(e) => setPPermit(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                  <input type="text" value={pPermit} onChange={(e) => setPPermit(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
                 </div>
               </div>
 
@@ -3070,22 +3073,22 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Handover Year</label>
-                  <input type="number" required value={pHandover} onChange={(e) => setPHandover(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                  <input type="number" value={pHandover} onChange={(e) => setPHandover(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Starting Price (EGP M)</label>
-                  <input type="number" step="0.1" required value={pPrice} onChange={(e) => setPPrice(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                  <input type="number" step="0.1" value={pPrice} onChange={(e) => setPPrice(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
                 </div>
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Latitude</label>
-                  <input type="text" required value={pLat} onChange={(e) => setPLat(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
+                  <input type="text" value={pLat} onChange={(e) => setPLat(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Longitude</label>
-                  <input type="text" required value={pLng} onChange={(e) => setPLng(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
+                  <input type="text" value={pLng} onChange={(e) => setPLng(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
                 </div>
               </div>
 
@@ -3120,7 +3123,6 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                     value={pKm}
                     onChange={(e) => setPKm(e.target.value)}
                     className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2"
-                    required
                   />
                 </div>
               )}
@@ -3143,7 +3145,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
 
               <div>
                 <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Compound Description</label>
-                <textarea rows={3} required value={pBlurb} onChange={(e) => setPBlurb(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 p-3" />
+                <textarea rows={3} value={pBlurb} onChange={(e) => setPBlurb(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 p-3" />
               </div>
 
               <div>
@@ -3202,12 +3204,12 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
             <form onSubmit={handleSaveDeveloper} className="space-y-4 text-xs font-medium">
               <div>
                 <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Company name</label>
-                <input type="text" required value={dName} onChange={(e) => setDName(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                <input type="text" value={dName} onChange={(e) => setDName(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
               </div>
 
               <div>
                 <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Legal Registered Entity</label>
-                <input type="text" required value={dLegal} onChange={(e) => setDLegal(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                <input type="text" value={dLegal} onChange={(e) => setDLegal(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
@@ -3221,24 +3223,24 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Contact Hotline</label>
-                  <input type="text" required value={dPhone} onChange={(e) => setDPhone(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                  <input type="text" value={dPhone} onChange={(e) => setDPhone(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
                 </div>
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Email</label>
-                  <input type="email" required value={dEmail} onChange={(e) => setDEmail(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                  <input type="email" value={dEmail} onChange={(e) => setDEmail(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">HQ Address</label>
-                  <input type="text" required value={dAddress} onChange={(e) => setDAddress(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                  <input type="text" value={dAddress} onChange={(e) => setDAddress(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
                 </div>
               </div>
 
               <div>
                 <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Corporate Summary</label>
-                <textarea rows={3} required value={dDesc} onChange={(e) => setDDesc(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 p-3" />
+                <textarea rows={3} value={dDesc} onChange={(e) => setDDesc(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 p-3" />
               </div>
 
               <button type="submit" className="w-full py-3 bg-accent text-white font-bold text-xs rounded-xl hover:bg-accent/90 transition-colors shadow-soft">
@@ -3263,7 +3265,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
             <form onSubmit={handleSaveDestination} className="space-y-4 text-xs font-medium">
               <div>
                 <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Destination Name</label>
-                <input type="text" required value={destName} onChange={(e) => setDestName(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                <input type="text" value={destName} onChange={(e) => setDestName(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
@@ -3286,7 +3288,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Governorate / City</label>
-                  <input type="text" required value={destCity} onChange={(e) => setDestCity(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
+                  <input type="text" value={destCity} onChange={(e) => setDestCity(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2" />
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Road Kilometer Range</label>
@@ -3297,17 +3299,17 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Map Latitude Center</label>
-                  <input type="text" required value={destLat} onChange={(e) => setDestLat(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
+                  <input type="text" value={destLat} onChange={(e) => setDestLat(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Map Longitude Center</label>
-                  <input type="text" required value={destLng} onChange={(e) => setDestLng(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
+                  <input type="text" value={destLng} onChange={(e) => setDestLng(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
                 </div>
               </div>
 
               <div>
                 <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Lifestyle Summary description</label>
-                <textarea rows={3} required value={destBlurb} onChange={(e) => setDestBlurb(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 p-3" />
+                <textarea rows={3} value={destBlurb} onChange={(e) => setDestBlurb(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 p-3" />
               </div>
 
               <button type="submit" className="w-full py-3 bg-accent text-white font-bold text-xs rounded-xl hover:bg-accent/90 transition-colors shadow-soft">
@@ -3332,29 +3334,29 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
             <form onSubmit={(e) => { e.preventDefault(); handleEditUnitSubmit(selectedProject.slug); }} className="space-y-4 text-xs font-medium">
               <div>
                 <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Unit Number</label>
-                <input type="text" required value={editUnitNo} onChange={(e) => setEditUnitNo(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
+                <input type="text" value={editUnitNo} onChange={(e) => setEditUnitNo(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Beds</label>
-                  <input type="number" required value={editUnitBeds} onChange={(e) => setEditUnitBeds(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
+                  <input type="number" value={editUnitBeds} onChange={(e) => setEditUnitBeds(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Area (sqm)</label>
-                  <input type="number" required value={editUnitArea} onChange={(e) => setEditUnitArea(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
+                  <input type="number" value={editUnitArea} onChange={(e) => setEditUnitArea(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
                 </div>
               </div>
 
               <div>
                 <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">View Aspect</label>
-                <input type="text" required value={editUnitView} onChange={(e) => setEditUnitView(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
+                <input type="text" value={editUnitView} onChange={(e) => setEditUnitView(e.target.value)} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Price (EGP)</label>
-                  <input type="number" required value={editUnitPrice} onChange={(e) => setEditUnitPrice(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
+                  <input type="number" value={editUnitPrice} onChange={(e) => setEditUnitPrice(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary focus:outline-none focus:ring-1 focus:ring-accent" />
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Status</label>
