@@ -82,6 +82,14 @@ function UnitTypePage() {
     ? `${bd.type} — ${bd.beds} Bedroom${bd.beds > 1 ? "s" : ""}`
     : bd.type;
 
+  const standardKeys = useMemo(() => ["id", "unitNo", "type", "beds", "areaSqm", "view", "priceEGP", "status", "finishing", "cluster", "areaNote", "deliveryNote", "paymentPlan"], []);
+  const extraKeys = useMemo(() => {
+    const units = bd.units ?? [];
+    return Array.from(
+      new Set<string>(units.flatMap((u) => Object.keys(u)))
+    ).filter((k) => !standardKeys.includes(k));
+  }, [bd.units, standardKeys]);
+
   const clusterLabel = bd.cluster ? ` · ${bd.cluster}` : "";
   const hasUnits = Boolean(bd.units && bd.units.length > 0);
 
@@ -305,6 +313,11 @@ function UnitTypePage() {
                         <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden md:table-cell">View</th>
                         <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden lg:table-cell">Delivery</th>
                         <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Finishing</th>
+                        {extraKeys.map((key) => (
+                          <th key={key} className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground capitalize">
+                            {key.replace(/([A-Z])/g, " $1")}
+                          </th>
+                        ))}
                         <th className="px-4 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Price</th>
                         <th className="px-4 py-3.5 text-center text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Status</th>
                       </tr>
@@ -352,6 +365,13 @@ function UnitTypePage() {
                           <td className="px-4 py-3.5">
                             <FinishingBadge label={unit.finishing} />
                           </td>
+                          {extraKeys.map((key) => (
+                            <td key={key} className="px-4 py-3.5 text-muted-foreground text-xs font-medium">
+                              {unit[key] !== undefined && unit[key] !== null
+                                ? String(unit[key])
+                                : <span className="text-border">—</span>}
+                            </td>
+                          ))}
                           <td className="px-4 py-3.5 text-right">
                             <span className="font-display text-sm font-extrabold text-primary whitespace-nowrap">
                               {fmtShort(unit.priceEGP)}
@@ -571,6 +591,14 @@ function UnitCard({ unit, index }: { unit: UnitListing; index: number }) {
           <span className="text-muted-foreground">Finishing</span>
           <div className="font-medium text-primary">{unit.finishing}</div>
         </div>
+        {Object.keys(unit)
+          .filter((k) => !["id", "unitNo", "type", "beds", "areaSqm", "view", "priceEGP", "status", "finishing", "cluster", "areaNote", "deliveryNote", "paymentPlan"].includes(k))
+          .map((key) => (
+            <div key={key}>
+              <span className="text-muted-foreground capitalize">{key.replace(/([A-Z])/g, " $1")}</span>
+              <div className="font-medium text-primary">{String(unit[key])}</div>
+            </div>
+          ))}
       </div>
       {unit.paymentPlan && (
         <div className="mt-3 rounded-lg bg-secondary/60 px-3 py-2 text-xs text-muted-foreground leading-relaxed">

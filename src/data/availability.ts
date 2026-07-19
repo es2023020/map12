@@ -14,7 +14,8 @@ export interface UnitListing {
   priceEGP: number;
   deliveryNote?: string;  // "Ready to Move" | "1 Year" | "2.5 Years" | "4 Years"
   paymentPlan?: string;
-  status: "Available" | "Last Unit";
+  status: "Available" | "Last Unit" | string;
+  [key: string]: any;
 }
 
 export interface UnitBreakdown {

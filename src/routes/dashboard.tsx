@@ -61,6 +61,9 @@ function DashboardLayout() {
   const limitHitError = useStore((s) => s.limitHitError);
   const clearLimitHitError = useStore((s) => s.clearLimitHitError);
 
+  const isAdmin = user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
+  const visibleTabs = isAdmin ? tabs : tabs.filter((t) => t.to !== "/dashboard/maps");
+
   // Custom shortcuts state
   const customShortcuts = useStore((s) => s.customShortcuts) || [];
   const addShortcut = useStore((s) => s.addCustomShortcut);
@@ -123,7 +126,7 @@ function DashboardLayout() {
               <div>
                 <span className="px-3 text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Navigation</span>
                 <nav className="mt-2 space-y-1">
-                  {tabs.map((t) => {
+                  {visibleTabs.map((t) => {
                     const active = t.exact ? pathname === t.to : pathname === t.to || pathname.startsWith(t.to + "/");
                     return (
                       <Link key={t.to} to={t.to}
@@ -162,12 +165,14 @@ function DashboardLayout() {
                     </a>
                   ))}
                   
-                  <Link to="/map" search={{ destination: "", dev: "", q: "" }} className="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-all text-muted-foreground hover:text-foreground hover:bg-secondary/50">
-                    <span className="flex items-center gap-3">
-                      <Map className="h-4 w-4 text-violet-500" /> Interactive Map
-                    </span>
-                    <ExternalLink className="h-3 w-3 opacity-60" />
-                  </Link>
+                  {isAdmin && (
+                    <Link to="/map" search={{ destination: "", dev: "", q: "" }} className="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-all text-muted-foreground hover:text-foreground hover:bg-secondary/50">
+                      <span className="flex items-center gap-3">
+                        <Map className="h-4 w-4 text-violet-500" /> Interactive Map
+                      </span>
+                      <ExternalLink className="h-3 w-3 opacity-60" />
+                    </Link>
+                  )}
                   <Link to="/calculator" search={{ project: "" }} className="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-all text-muted-foreground hover:text-foreground hover:bg-secondary/50">
                     <span className="flex items-center gap-3">
                       <Calculator className="h-4 w-4 text-pink-500" /> Installment Calc

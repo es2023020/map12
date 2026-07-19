@@ -16,12 +16,18 @@ export function Footer() {
             Real-estate intelligence for Egyptian brokers. Every compound, on one map.
           </p>
         </div>
-        <FooterCol title="Explore" links={[
-          { to: "/map", label: "Interactive Map" },
-          { to: "/projects", label: "All Projects" },
-          { to: "/destinations", label: "Destinations" },
-          { to: "/developers", label: "Developers" },
-        ]} />
+        <FooterCol title="Explore" links={(() => {
+          const isAdmin = user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
+          const list = [
+            { to: "/projects", label: "All Projects" },
+            { to: "/destinations", label: "Destinations" },
+            { to: "/developers", label: "Developers" },
+          ];
+          if (isAdmin) {
+            list.unshift({ to: "/map", label: "Interactive Map" });
+          }
+          return list;
+        })()} />
         {user ? (
           <FooterCol title="For Brokers" links={[
             { to: "/dashboard", label: "Dashboard" },

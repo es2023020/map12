@@ -1739,77 +1739,93 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                     </div>
 
                     {/* Unit inventory table list */}
-                    <div className="border border-border/85 rounded-xl overflow-hidden bg-card max-h-[500px] overflow-y-auto">
-                      <table className="w-full text-left text-xs">
-                        <thead>
-                          <tr className="border-b border-border bg-secondary/40 font-bold text-[10px] uppercase text-muted-foreground tracking-wider">
-                            <th className="p-3">Unit Number</th>
-                            <th className="p-3">Layout Type</th>
-                            <th className="p-3">Beds</th>
-                            <th className="p-3">Area Size</th>
-                            <th className="p-3">View Aspect</th>
-                            <th className="p-3">Unit Price</th>
-                            <th className="p-3">Status</th>
-                            <th className="p-3 text-right">Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-border/60">
-                          {(() => {
-                            const avail = availabilityList.find(a => a.slug === selectedProject.slug);
-                            if (!avail || !avail.breakdown?.length) {
-                              return (
-                                <tr>
-                                  <td colSpan={8} className="p-8 text-center text-xs text-muted-foreground italic">No live inventory units listed. Use sheet uploader or add form.</td>
-                                </tr>
-                              );
-                            }
+                    {(() => {
+                      const avail = availabilityList.find(a => a.slug === selectedProject.slug);
+                      const allUnits = avail?.breakdown?.flatMap((b: any) => b.units || []) || [];
+                      const standardKeys = ["id", "unitNo", "type", "beds", "areaSqm", "view", "priceEGP", "status", "finishing", "cluster", "areaNote", "deliveryNote", "paymentPlan"];
+                      const extraKeys = Array.from(
+                        new Set<string>(allUnits.flatMap((u: any) => Object.keys(u)))
+                      ).filter((k) => !standardKeys.includes(k));
 
-                            return avail.breakdown.flatMap((b: any) => {
-                              const units = b.units ?? [];
-                              return units.map((u: any) => (
-                                <tr key={u.id} className="hover:bg-secondary/15 transition-colors font-medium">
-                                  <td className="p-3 font-semibold text-primary">{u.unitNo || "U-Row"}</td>
-                                  <td className="p-3 text-muted-foreground">{b.type}</td>
-                                  <td className="p-3 text-muted-foreground">{u.beds} Beds</td>
-                                  <td className="p-3 text-muted-foreground">{u.areaSqm} sqm</td>
-                                  <td className="p-3 text-muted-foreground truncate max-w-[120px]">{u.view || "Garden"}</td>
-                                  <td className="p-3 text-primary font-semibold">EGP {(u.priceEGP / 1_000_000).toFixed(2)}M</td>
-                                  <td className="p-3">
-                                    <select
-                                      value={u.status}
-                                      onChange={(e) => handleUpdateUnitStatus(selectedProject.slug, b.type, u.id, e.target.value)}
-                                      className={`rounded px-1.5 py-0.5 text-[10px] font-bold border focus:outline-none ${
-                                        u.status === "Available" ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20" :
-                                        u.status === "Reserved" ? "bg-amber-500/10 text-amber-600 border-amber-500/20" :
-                                        "bg-zinc-500/10 text-zinc-600 border-zinc-500/20"
-                                      }`}
-                                    >
-                                      <option value="Available">Available</option>
-                                      <option value="Reserved">Reserved</option>
-                                      <option value="Sold">Sold</option>
-                                    </select>
-                                  </td>
-                                  <td className="p-3 text-right space-x-1">
-                                    <button 
-                                      onClick={() => loadUnitForEdit(b.type, u)}
-                                      className="rounded-lg p-1 hover:bg-accent/10 text-accent border border-border"
-                                    >
-                                      <Edit className="h-3 w-3" />
-                                    </button>
-                                    <button 
-                                      onClick={() => handleRemoveUnit(selectedProject.slug, b.type, u.id)}
-                                      className="rounded-lg p-1 hover:bg-destructive/10 text-destructive border border-border"
-                                    >
-                                      <Trash2 className="h-3 w-3" />
-                                    </button>
+                      return (
+                        <div className="border border-border/85 rounded-xl overflow-hidden bg-card max-h-[500px] overflow-y-auto">
+                          <table className="w-full text-left text-xs">
+                            <thead>
+                              <tr className="border-b border-border bg-secondary/40 font-bold text-[10px] uppercase text-muted-foreground tracking-wider">
+                                <th className="p-3">Unit Number</th>
+                                <th className="p-3">Layout Type</th>
+                                <th className="p-3">Beds</th>
+                                <th className="p-3">Area Size</th>
+                                <th className="p-3">View Aspect</th>
+                                <th className="p-3">Unit Price</th>
+                                {extraKeys.map((key) => (
+                                  <th key={key} className="p-3 capitalize">{key.replace(/([A-Z])/g, " $1")}</th>
+                                ))}
+                                <th className="p-3">Status</th>
+                                <th className="p-3 text-right">Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-border/60">
+                              {!avail || !avail.breakdown?.length ? (
+                                <tr>
+                                  <td colSpan={8 + extraKeys.length} className="p-8 text-center text-xs text-muted-foreground italic">
+                                    No live inventory units listed. Use sheet uploader or add form.
                                   </td>
                                 </tr>
-                              ));
-                            });
-                          })()}
-                        </tbody>
-                      </table>
-                    </div>
+                              ) : (
+                                avail.breakdown.flatMap((b: any) => {
+                                  const units = b.units ?? [];
+                                  return units.map((u: any) => (
+                                    <tr key={u.id} className="hover:bg-secondary/15 transition-colors font-medium">
+                                      <td className="p-3 font-semibold text-primary">{u.unitNo || "U-Row"}</td>
+                                      <td className="p-3 text-muted-foreground">{b.type}</td>
+                                      <td className="p-3 text-muted-foreground">{u.beds} Beds</td>
+                                      <td className="p-3 text-muted-foreground">{u.areaSqm} sqm</td>
+                                      <td className="p-3 text-muted-foreground truncate max-w-[120px]">{u.view || "Garden"}</td>
+                                      <td className="p-3 text-primary font-semibold">EGP {(u.priceEGP / 1_000_000).toFixed(2)}M</td>
+                                      {extraKeys.map((key) => (
+                                        <td key={key} className="p-3 text-muted-foreground truncate max-w-[120px]" title={String(u[key] || "")}>
+                                          {u[key] !== undefined && u[key] !== null ? String(u[key]) : "—"}
+                                        </td>
+                                      ))}
+                                      <td className="p-3">
+                                        <select
+                                          value={u.status}
+                                          onChange={(e) => handleUpdateUnitStatus(selectedProject.slug, b.type, u.id, e.target.value)}
+                                          className={`rounded px-1.5 py-0.5 text-[10px] font-bold border focus:outline-none ${
+                                            u.status === "Available" ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20" :
+                                            u.status === "Reserved" ? "bg-amber-500/10 text-amber-600 border-amber-500/20" :
+                                            "bg-zinc-500/10 text-zinc-600 border-zinc-500/20"
+                                          }`}
+                                        >
+                                          <option value="Available">Available</option>
+                                          <option value="Reserved">Reserved</option>
+                                          <option value="Sold">Sold</option>
+                                        </select>
+                                      </td>
+                                      <td className="p-3 text-right space-x-1">
+                                        <button 
+                                          onClick={() => loadUnitForEdit(b.type, u)}
+                                          className="rounded-lg p-1 hover:bg-accent/10 text-accent border border-border"
+                                        >
+                                          <Edit className="h-3 w-3" />
+                                        </button>
+                                        <button 
+                                          onClick={() => handleRemoveUnit(selectedProject.slug, b.type, u.id)}
+                                          className="rounded-lg p-1 hover:bg-destructive/10 text-destructive border border-border"
+                                        >
+                                          <Trash2 className="h-3 w-3" />
+                                        </button>
+                                      </td>
+                                    </tr>
+                                  ));
+                                })
+                              )}
+                            </tbody>
+                          </table>
+                        </div>
+                      );
+                    })()}
 
                   </div>
                 </div>

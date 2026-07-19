@@ -35,7 +35,11 @@ export function Navbar() {
   const userMenuRef = useRef<HTMLDivElement>(null);
   const avatarInputRef = useRef<HTMLInputElement>(null);
   
-  const links = user ? [...publicLinks, ...brokerLinks] : publicLinks;
+  const isAdmin = user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
+  const filteredPublicLinks = isAdmin 
+    ? publicLinks 
+    : publicLinks.filter((l) => l.to !== "/map");
+  const links = user ? [...filteredPublicLinks, ...brokerLinks] : filteredPublicLinks;
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
