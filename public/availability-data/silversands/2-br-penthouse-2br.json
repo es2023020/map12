@@ -1,26 +1,13 @@
 [
   {
-    "id": "silversands-2-br-penthouse-1",
+    "id": "silversands-29",
+    "unitNo": "U-29",
     "beds": 2,
     "finishing": "Finished",
     "areaSqm": 96,
+    "view": "Scenic View",
     "priceEGP": 21000000,
-    "status": "Available"
-  },
-  {
-    "id": "silversands-2-br-penthouse-2",
-    "beds": 2,
-    "finishing": "Finished",
-    "areaSqm": 96,
-    "priceEGP": 21000000,
-    "status": "Available"
-  },
-  {
-    "id": "silversands-2-br-penthouse-3",
-    "beds": 2,
-    "finishing": "Finished",
-    "areaSqm": 96,
-    "priceEGP": 21000000,
-    "status": "Last Unit"
+    "status": "Available",
+    "Maintenance": "7.50%"
   }
 ]

@@ -1,0 +1,88 @@
+[
+  {
+    "id": "la-vista-7-3",
+    "unitNo": "U-3",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "view": "Scenic View",
+    "priceEGP": 17250000,
+    "status": "Available",
+    "Garden/Roof": "50m2",
+    "Delivery": "Ready to move",
+    "Payment": "Cash only"
+  },
+  {
+    "id": "la-vista-7-4",
+    "unitNo": "U-4",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "view": "Scenic View",
+    "priceEGP": 20700000,
+    "status": "Available",
+    "Garden/Roof": "80m2",
+    "Delivery": "Ready to move",
+    "Payment": "Cash only"
+  },
+  {
+    "id": "la-vista-7-8",
+    "unitNo": "U-8",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 140,
+    "view": "Scenic View",
+    "priceEGP": 15500000,
+    "status": "Available",
+    "Garden/Roof": "50m (Garden)",
+    "Delivery": "Ready to move"
+  },
+  {
+    "id": "la-vista-7-9",
+    "unitNo": "U-9",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "view": "Scenic View",
+    "priceEGP": 16500000,
+    "status": "Available",
+    "Garden/Roof": "50m (Garden)",
+    "Delivery": "Ready to move"
+  },
+  {
+    "id": "la-vista-7-18",
+    "unitNo": "U-18",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "view": "Scenic View",
+    "priceEGP": 14300000,
+    "status": "Available",
+    "Garden/Roof": "40m2",
+    "Delivery": "1/2028"
+  },
+  {
+    "id": "la-vista-7-26",
+    "unitNo": "U-26",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "view": "Scenic View",
+    "priceEGP": 14300000,
+    "status": "Available",
+    "Garden/Roof": "50m2",
+    "Delivery": "1/2029"
+  },
+  {
+    "id": "la-vista-7-27",
+    "unitNo": "U-27",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "view": "Scenic View",
+    "priceEGP": 16500000,
+    "status": "Available",
+    "Garden/Roof": "50m2",
+    "Delivery": "1/2029"
+  }
+]

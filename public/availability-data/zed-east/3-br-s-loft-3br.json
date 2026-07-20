@@ -1,26 +1,13 @@
 [
   {
-    "id": "zed-east-3-br-s-loft-1",
+    "id": "zed-east-4",
+    "unitNo": "U-4",
     "beds": 3,
     "finishing": "Finished",
     "areaSqm": 300,
+    "view": "Scenic View",
     "priceEGP": 46000000,
-    "status": "Available"
-  },
-  {
-    "id": "zed-east-3-br-s-loft-2",
-    "beds": 3,
-    "finishing": "Finished",
-    "areaSqm": 300,
-    "priceEGP": 46000000,
-    "status": "Available"
-  },
-  {
-    "id": "zed-east-3-br-s-loft-3",
-    "beds": 3,
-    "finishing": "Finished",
-    "areaSqm": 300,
-    "priceEGP": 46000000,
-    "status": "Last Unit"
+    "status": "Available",
+    "Maintenance": "7.50%"
   }
 ]

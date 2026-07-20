@@ -1,0 +1,26 @@
+[
+  {
+    "id": "el-patio-sola-3",
+    "unitNo": "U-3",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 218,
+    "view": "Scenic View",
+    "priceEGP": 29800000,
+    "status": "Available",
+    "Land": "270m – 351m",
+    "Location": "Street View"
+  },
+  {
+    "id": "el-patio-sola-3",
+    "unitNo": "U-3",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 222,
+    "view": "Scenic View",
+    "priceEGP": 30400000,
+    "status": "Available",
+    "Land": "275m",
+    "Location": "Street View"
+  }
+]

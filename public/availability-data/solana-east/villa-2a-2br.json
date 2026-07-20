@@ -1,0 +1,13 @@
+[
+  {
+    "id": "solana-east-10",
+    "unitNo": "U-10",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 380,
+    "view": "Scenic View",
+    "priceEGP": 180000000,
+    "status": "Available",
+    "Maintenance": "7.50%"
+  }
+]

@@ -1,26 +1,68 @@
 [
   {
-    "id": "zed-east-3-br-s-1",
+    "id": "zed-east-3",
+    "unitNo": "U-3",
     "beds": 3,
     "finishing": "Finished",
-    "areaSqm": 219,
-    "priceEGP": 27000000,
-    "status": "Available"
+    "areaSqm": 193,
+    "view": "Scenic View",
+    "priceEGP": 31000000,
+    "status": "Available",
+    "Maintenance": "7.50%"
   },
   {
-    "id": "zed-east-3-br-s-2",
+    "id": "zed-east-12",
+    "unitNo": "U-12",
     "beds": 3,
     "finishing": "Finished",
-    "areaSqm": 219,
-    "priceEGP": 27000000,
-    "status": "Available"
+    "areaSqm": 145,
+    "view": "Scenic View",
+    "priceEGP": 22000000,
+    "status": "Available",
+    "Maintenance": "10%"
   },
   {
-    "id": "zed-east-3-br-s-3",
+    "id": "zed-east-30",
+    "unitNo": "U-30",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 171,
+    "view": "Scenic View",
+    "priceEGP": 24000000,
+    "status": "Available",
+    "Maintenance": "10%"
+  },
+  {
+    "id": "zed-east-37",
+    "unitNo": "U-37",
     "beds": 3,
     "finishing": "Finished",
     "areaSqm": 219,
+    "view": "Scenic View",
     "priceEGP": 27000000,
-    "status": "Last Unit"
+    "status": "Available",
+    "Maintenance": "7.50%"
+  },
+  {
+    "id": "zed-east-16",
+    "unitNo": "U-16",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 156,
+    "view": "Scenic View",
+    "priceEGP": 27000000,
+    "status": "Available",
+    "Maintenance": "7.50%"
+  },
+  {
+    "id": "zed-east-17",
+    "unitNo": "U-17",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 186,
+    "view": "Scenic View",
+    "priceEGP": 35000000,
+    "status": "Available",
+    "Maintenance": "7.50%"
   }
 ]

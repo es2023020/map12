@@ -1,0 +1,111 @@
+[
+  {
+    "id": "patio-vida-11",
+    "unitNo": "U-11",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "patio-vida-13",
+    "unitNo": "U-13",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 158,
+    "view": "Scenic View",
+    "priceEGP": 11560000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  },
+  {
+    "id": "patio-vida-14",
+    "unitNo": "U-14",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 168,
+    "view": "Scenic View",
+    "priceEGP": 12120000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  },
+  {
+    "id": "patio-vida-15",
+    "unitNo": "U-15",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 170,
+    "view": "Scenic View",
+    "priceEGP": 12690000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  },
+  {
+    "id": "patio-vida-16",
+    "unitNo": "U-16",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 182,
+    "view": "Scenic View",
+    "priceEGP": 13130000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  },
+  {
+    "id": "patio-vida-17",
+    "unitNo": "U-17",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 190,
+    "view": "Scenic View",
+    "priceEGP": 14820000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  },
+  {
+    "id": "patio-vida-18",
+    "unitNo": "U-18",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 206,
+    "view": "Scenic View",
+    "priceEGP": 14860000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  },
+  {
+    "id": "patio-vida-19",
+    "unitNo": "U-19",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 208,
+    "view": "Scenic View",
+    "priceEGP": 17140000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  },
+  {
+    "id": "patio-vida-20",
+    "unitNo": "U-20",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 212,
+    "view": "Scenic View",
+    "priceEGP": 16170000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  },
+  {
+    "id": "patio-vida-21",
+    "unitNo": "U-21",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 214,
+    "view": "Scenic View",
+    "priceEGP": 16320000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  }
+]

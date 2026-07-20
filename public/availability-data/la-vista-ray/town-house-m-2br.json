@@ -1,0 +1,26 @@
+[
+  {
+    "id": "la-vista-ray-10",
+    "unitNo": "U-10",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 170,
+    "view": "Scenic View",
+    "priceEGP": 21800000,
+    "status": "Available",
+    "Garden/Roof": "40m2 garden",
+    "Delivery": "Ready to move"
+  },
+  {
+    "id": "la-vista-ray-11",
+    "unitNo": "U-11",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "view": "Scenic View",
+    "priceEGP": 42800000,
+    "status": "Available",
+    "Garden/Roof": "50m2",
+    "Delivery": "Ready to move"
+  }
+]

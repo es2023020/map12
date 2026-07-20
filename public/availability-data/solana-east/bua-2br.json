@@ -1,0 +1,12 @@
+[
+  {
+    "id": "solana-east-26",
+    "unitNo": "Unit Type",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  }
+]

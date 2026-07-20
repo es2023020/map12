@@ -1,26 +1,12 @@
 [
   {
-    "id": "solana-east-4-br-penthouse-1",
+    "id": "solana-east-22",
+    "unitNo": "9",
     "beds": 4,
     "finishing": "Finished",
     "areaSqm": 232,
+    "view": "Scenic View",
     "priceEGP": 28000000,
     "status": "Available"
-  },
-  {
-    "id": "solana-east-4-br-penthouse-2",
-    "beds": 4,
-    "finishing": "Finished",
-    "areaSqm": 232,
-    "priceEGP": 28000000,
-    "status": "Available"
-  },
-  {
-    "id": "solana-east-4-br-penthouse-3",
-    "beds": 4,
-    "finishing": "Finished",
-    "areaSqm": 232,
-    "priceEGP": 28000000,
-    "status": "Last Unit"
   }
 ]

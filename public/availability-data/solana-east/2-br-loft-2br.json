@@ -1,26 +1,12 @@
 [
   {
-    "id": "solana-east-2-br-loft-1",
+    "id": "solana-east-16",
+    "unitNo": "3",
     "beds": 2,
     "finishing": "Finished",
     "areaSqm": 149,
+    "view": "Scenic View",
     "priceEGP": 20700000,
     "status": "Available"
-  },
-  {
-    "id": "solana-east-2-br-loft-2",
-    "beds": 2,
-    "finishing": "Finished",
-    "areaSqm": 149,
-    "priceEGP": 20950000,
-    "status": "Available"
-  },
-  {
-    "id": "solana-east-2-br-loft-3",
-    "beds": 2,
-    "finishing": "Finished",
-    "areaSqm": 149,
-    "priceEGP": 21200000,
-    "status": "Last Unit"
   }
 ]

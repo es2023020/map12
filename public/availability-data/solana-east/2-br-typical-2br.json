@@ -1,26 +1,12 @@
 [
   {
-    "id": "solana-east-2-br-typical-1",
+    "id": "solana-east-14",
+    "unitNo": "1",
     "beds": 2,
     "finishing": "Finished",
     "areaSqm": 126,
+    "view": "Scenic View",
     "priceEGP": 15800000,
     "status": "Available"
-  },
-  {
-    "id": "solana-east-2-br-typical-2",
-    "beds": 2,
-    "finishing": "Finished",
-    "areaSqm": 137,
-    "priceEGP": 17500000,
-    "status": "Available"
-  },
-  {
-    "id": "solana-east-2-br-typical-3",
-    "beds": 2,
-    "finishing": "Finished",
-    "areaSqm": 147,
-    "priceEGP": 19200000,
-    "status": "Last Unit"
   }
 ]

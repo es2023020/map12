@@ -1,29 +1,13 @@
 [
   {
-    "id": "el-patio-sola-3-bdrs-ground-1",
+    "id": "el-patio-sola-2",
+    "unitNo": "U-2",
     "beds": 3,
     "finishing": "Finished",
     "areaSqm": 156,
+    "view": "Scenic View",
     "priceEGP": 10500000,
     "status": "Available",
-    "areaNote": "Garden Area: 30m – 50m"
-  },
-  {
-    "id": "el-patio-sola-3-bdrs-ground-2",
-    "beds": 3,
-    "finishing": "Finished",
-    "areaSqm": 163,
-    "priceEGP": 11650000,
-    "status": "Available",
-    "areaNote": "Garden Area: 30m – 50m"
-  },
-  {
-    "id": "el-patio-sola-3-bdrs-ground-3",
-    "beds": 3,
-    "finishing": "Finished",
-    "areaSqm": 170,
-    "priceEGP": 12800000,
-    "status": "Last Unit",
-    "areaNote": "Garden Area: 30m – 50m"
+    "Garden / Roof Area": "Garden Area: 30m – 50m"
   }
 ]

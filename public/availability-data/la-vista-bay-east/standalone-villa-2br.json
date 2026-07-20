@@ -1,0 +1,24 @@
+[
+  {
+    "id": "la-vista-bay-east-10",
+    "unitNo": "U-10",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 250,
+    "view": "Scenic View",
+    "priceEGP": 42800000,
+    "status": "Available",
+    "Garden/Roof": "80m2"
+  },
+  {
+    "id": "la-vista-bay-east-11",
+    "unitNo": "U-11",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 340,
+    "view": "Scenic View",
+    "priceEGP": 67800000,
+    "status": "Available",
+    "Garden/Roof": "100m2"
+  }
+]

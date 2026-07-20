@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ras-el-hikma-lagoona-4",
+    "unitNo": "U-4",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "Garden/Roof": "Garden/Roof",
+    "Delivery": "Delivery",
+    "Payment": "Payment"
+  },
+  {
+    "id": "ras-el-hikma-lagoona-10",
+    "unitNo": "U-10",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "Garden/Roof": "Garden/Roof",
+    "Delivery": "Delivery",
+    "Payment": "Payment"
+  }
+]

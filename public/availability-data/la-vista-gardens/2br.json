@@ -1,0 +1,102 @@
+[
+  {
+    "id": "la-vista-gardens-31",
+    "unitNo": "U-31",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-gardens-32",
+    "unitNo": "U-32",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-gardens-33",
+    "unitNo": "U-33",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-gardens-34",
+    "unitNo": "U-34",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-gardens-35",
+    "unitNo": "U-35",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-gardens-15",
+    "unitNo": "U-15",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-gardens-16",
+    "unitNo": "U-16",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-gardens-17",
+    "unitNo": "U-17",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-gardens-18",
+    "unitNo": "U-18",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-gardens-19",
+    "unitNo": "U-19",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "la-vista-topaz-16",
+    "unitNo": "U-16",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "view": "Scenic View",
+    "priceEGP": 11700000,
+    "status": "Available",
+    "Garden/Roof": "-",
+    "Delivery": "1/2028"
+  },
+  {
+    "id": "la-vista-topaz-23",
+    "unitNo": "U-23",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "view": "Scenic View",
+    "priceEGP": 11700000,
+    "status": "Available",
+    "Garden/Roof": "-",
+    "Delivery": "1/2029"
+  },
+  {
+    "id": "la-vista-topaz-24",
+    "unitNo": "U-24",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "view": "Scenic View",
+    "priceEGP": 13500000,
+    "status": "Available",
+    "Garden/Roof": "-",
+    "Delivery": "1/2029"
+  },
+  {
+    "id": "la-vista-topaz-7",
+    "unitNo": "U-7",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 125,
+    "view": "Scenic View",
+    "priceEGP": 9375000,
+    "status": "Available",
+    "Garden/Roof": "120m2",
+    "Delivery": "Ready to move"
+  },
+  {
+    "id": "la-vista-topaz-8",
+    "unitNo": "U-8",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "view": "Scenic View",
+    "priceEGP": 11250000,
+    "status": "Available",
+    "Garden/Roof": "145m2",
+    "Delivery": "Ready to move"
+  },
+  {
+    "id": "la-vista-topaz-9",
+    "unitNo": "U-9",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 160,
+    "view": "Scenic View",
+    "priceEGP": 13910000,
+    "status": "Available",
+    "Garden/Roof": "155m2",
+    "Delivery": "Ready to move"
+  },
+  {
+    "id": "la-vista-topaz-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 9600000,
+    "status": "Available",
+    "Garden/Roof": "100m2 (roof)",
+    "Delivery": "Ready to move"
+  }
+]

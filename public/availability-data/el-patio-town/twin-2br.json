@@ -1,0 +1,39 @@
+[
+  {
+    "id": "el-patio-town-6",
+    "unitNo": "U-6",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 274,
+    "view": "Scenic View",
+    "priceEGP": 50000000,
+    "status": "Available",
+    "Land": "316m",
+    "Parcel": "6",
+    "Delivery": "Jan 2028"
+  },
+  {
+    "id": "el-patio-town-7",
+    "unitNo": "U-7",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 274,
+    "view": "Scenic View",
+    "priceEGP": 48000000,
+    "status": "Available",
+    "Land": "302m / 310m",
+    "Parcel": "2",
+    "Delivery": "Sep 2028"
+  },
+  {
+    "id": "el-patio-town-17",
+    "unitNo": "U-17",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 274,
+    "view": "Scenic View",
+    "priceEGP": 55000000,
+    "status": "Available",
+    "Land": "315m / 323m"
+  }
+]

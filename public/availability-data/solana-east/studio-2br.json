@@ -1,0 +1,24 @@
+[
+  {
+    "id": "solana-east-9",
+    "unitNo": "U-9",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 65,
+    "view": "Scenic View",
+    "priceEGP": 8900000,
+    "status": "Available",
+    "Maintenance": "10%"
+  },
+  {
+    "id": "solana-east-27",
+    "unitNo": "U-27",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 60,
+    "view": "Scenic View",
+    "priceEGP": 9000000,
+    "status": "Available",
+    "Maintenance": "10%"
+  }
+]

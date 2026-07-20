@@ -1,0 +1,12 @@
+[
+  {
+    "id": "zed-east-23",
+    "unitNo": "U-23",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "solana-east-8",
+    "unitNo": "U-8",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "Maintenance": "Maintenance"
+  },
+  {
+    "id": "solana-east-16",
+    "unitNo": "U-16",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "Maintenance": "Maintenance"
+  },
+  {
+    "id": "solana-east-26",
+    "unitNo": "U-26",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "Maintenance": "Maintenance"
+  },
+  {
+    "id": "solana-east-34",
+    "unitNo": "U-34",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "Maintenance": "Maintenance"
+  },
+  {
+    "id": "solana-east-14",
+    "unitNo": "U-14",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "Maintenance": "Maintenance"
+  },
+  {
+    "id": "solana-east-28",
+    "unitNo": "U-28",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "Maintenance": "Maintenance"
+  },
+  {
+    "id": "solana-east-34",
+    "unitNo": "U-34",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "Maintenance": "Maintenance"
+  }
+]

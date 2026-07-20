@@ -1,0 +1,35 @@
+[
+  {
+    "id": "patio-vida-7",
+    "unitNo": "U-7",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 158,
+    "view": "Scenic View",
+    "priceEGP": 12380000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  },
+  {
+    "id": "patio-vida-8",
+    "unitNo": "U-8",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 182,
+    "view": "Scenic View",
+    "priceEGP": 13880000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  },
+  {
+    "id": "patio-vida-9",
+    "unitNo": "U-9",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 214,
+    "view": "Scenic View",
+    "priceEGP": 16460000,
+    "status": "Available",
+    "Garden/Roof": "-"
+  }
+]

@@ -1,29 +1,54 @@
 [
   {
-    "id": "patio-oro-3-brs-typical-floor-1",
+    "id": "patio-oro-1",
+    "unitNo": "U-1",
     "beds": 3,
     "finishing": "Finished",
     "areaSqm": 164,
+    "view": "Scenic View",
     "priceEGP": 15500000,
     "status": "Available",
-    "areaNote": "-"
+    "Avg Outdoor Roof Area": "-",
+    "Avg Garden Area": "-",
+    "Finishing": "Semi-Finished"
   },
   {
-    "id": "patio-oro-3-brs-typical-floor-2",
+    "id": "patio-oro-7",
+    "unitNo": "U-7",
     "beds": 3,
     "finishing": "Finished",
-    "areaSqm": 166,
-    "priceEGP": 16550000,
+    "areaSqm": 200,
+    "view": "Scenic View",
+    "priceEGP": 19000000,
     "status": "Available",
-    "areaNote": "-"
+    "Avg Outdoor Roof Area": "-",
+    "Avg Garden Area": "-",
+    "Finishing": "Semi-Finished"
   },
   {
-    "id": "patio-oro-3-brs-typical-floor-3",
+    "id": "patio-oro-12",
+    "unitNo": "U-12",
     "beds": 3,
     "finishing": "Finished",
-    "areaSqm": 168,
-    "priceEGP": 17600000,
-    "status": "Last Unit",
-    "areaNote": "-"
+    "areaSqm": 220,
+    "view": "Scenic View",
+    "priceEGP": 23100000,
+    "status": "Available",
+    "Avg Outdoor Roof Area": "-",
+    "Avg Garden Area": "-",
+    "Finishing": "Fully Finished"
+  },
+  {
+    "id": "patio-oro-19",
+    "unitNo": "U-19",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 164,
+    "view": "Scenic View",
+    "priceEGP": 15500000,
+    "status": "Available",
+    "Avg Outdoor Roof Area": "-",
+    "Avg Garden Area": "-",
+    "Finishing": "Semi-Finished"
   }
 ]

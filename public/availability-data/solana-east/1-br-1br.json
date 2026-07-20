@@ -1,26 +1,46 @@
 [
   {
-    "id": "solana-east-1-br-1",
+    "id": "solana-east-1",
+    "unitNo": "U-1",
     "beds": 1,
     "finishing": "Finished",
-    "areaSqm": 99,
-    "priceEGP": 13900000,
-    "status": "Available"
+    "areaSqm": 86,
+    "view": "Scenic View",
+    "priceEGP": 12800000,
+    "status": "Available",
+    "Maintenance": "7.50%"
   },
   {
-    "id": "solana-east-1-br-2",
+    "id": "solana-east-10",
+    "unitNo": "U-10",
     "beds": 1,
     "finishing": "Finished",
-    "areaSqm": 99,
-    "priceEGP": 13900000,
-    "status": "Available"
+    "areaSqm": 86,
+    "view": "Scenic View",
+    "priceEGP": 11700000,
+    "status": "Available",
+    "Maintenance": "10%"
   },
   {
-    "id": "solana-east-1-br-3",
+    "id": "solana-east-28",
+    "unitNo": "U-28",
     "beds": 1,
     "finishing": "Finished",
-    "areaSqm": 99,
-    "priceEGP": 13900000,
-    "status": "Last Unit"
+    "areaSqm": 74,
+    "view": "Scenic View",
+    "priceEGP": 10000000,
+    "status": "Available",
+    "Maintenance": "10%"
+  },
+  {
+    "id": "solana-east-35",
+    "unitNo": "U-35",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 85,
+    "view": "Scenic View",
+    "priceEGP": 10000000,
+    "status": "Available",
+    "Maintenance": "7.50%"
   }
 ]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "la-vista-ray-31",
+    "unitNo": "U-31",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-ray-32",
+    "unitNo": "U-32",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-ray-33",
+    "unitNo": "U-33",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-ray-34",
+    "unitNo": "U-34",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-ray-35",
+    "unitNo": "U-35",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-ray-15",
+    "unitNo": "U-15",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-ray-16",
+    "unitNo": "U-16",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-ray-17",
+    "unitNo": "U-17",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-ray-18",
+    "unitNo": "U-18",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-ray-19",
+    "unitNo": "U-19",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  }
+]

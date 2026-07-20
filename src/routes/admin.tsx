@@ -595,7 +595,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     }
   };
 
-  // Real Excel File parser (.xlsx, .xls, .csv)
+  // Universal Excel File Parser (.xlsx, .xls, .csv)
   const handleExcelImport = (e: React.ChangeEvent<HTMLInputElement>, projSlug: string) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -605,102 +605,180 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
       try {
         const data = evt.target?.result;
         const workbook = XLSX.read(data, { type: "binary" });
-        const sheetName = workbook.SheetNames[0];
-        const sheet = workbook.Sheets[sheetName];
-        const rows = XLSX.utils.sheet_to_json(sheet) as Record<string, any>[];
 
-        if (!rows.length) {
-          alert("Excel sheet is empty.");
-          return;
+        // Select all non-overview sheets if multiple sheets exist
+        let targetSheets = workbook.SheetNames;
+        if (workbook.SheetNames.length > 1) {
+          const nonOverview = workbook.SheetNames.filter(sn => !["overview", "summary", "index", "instructions"].includes(sn.toLowerCase().trim()));
+          if (nonOverview.length > 0) targetSheets = nonOverview;
         }
-
-        // Smart column header mapping
-        const findHeader = (row: Record<string, any>, options: string[]) => {
-          const keys = Object.keys(row);
-          for (const opt of options) {
-            const match = keys.find(k => k.toLowerCase().replace(/[^a-z0-9]+/g, "") === opt.toLowerCase().replace(/[^a-z0-9]+/g, ""));
-            if (match) return match;
-          }
-          return null;
-        };
-
-        const firstRow = rows[0];
-        const typeKey = findHeader(firstRow, ["type", "layout", "layouttype", "unittype"]) || Object.keys(firstRow)[0];
-        const priceKey = findHeader(firstRow, ["price", "priceegp", "unitprice", "egp", "cost", "value"]);
-        const bedsKey = findHeader(firstRow, ["beds", "bedrooms", "bedcount", "roomcount"]);
-        const areaKey = findHeader(firstRow, ["area", "size", "sqm", "areasqm"]);
-        const unitNoKey = findHeader(firstRow, ["unitno", "unitnumber", "unit", "no"]);
-        const viewKey = findHeader(firstRow, ["view", "aspect", "unitview"]);
-        const statusKey = findHeader(firstRow, ["status", "availability"]);
-
-        if (!priceKey) {
-          alert("Error: Excel must contain a 'Price' or 'Cost' column.");
-          return;
-        }
-
-        // Detect extra/dynamic columns not in the known set
-        const knownKeys = new Set([typeKey, priceKey, bedsKey, areaKey, unitNoKey, viewKey, statusKey].filter(Boolean) as string[]);
-        const allKeys = Object.keys(rows[0]);
-        const extraKeys = allKeys.filter(k => !knownKeys.has(k));
 
         const breakdownMap: Record<string, any> = {};
+        let totalParsedRowsCount = 0;
+        const processedSheetNames: string[] = [];
 
-        for (const row of rows) {
-          const rawType = String(row[typeKey] || "Chalet").trim();
-          const rawPrice = parseFloat(String(row[priceKey])) || 0;
-          const beds = bedsKey ? parseInt(String(row[bedsKey])) || 2 : 2;
-          const area = areaKey ? parseFloat(String(row[areaKey])) || 120 : 120;
-          const unitNo = unitNoKey ? String(row[unitNoKey]).trim() : `U-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
-          const view = viewKey ? String(row[viewKey]).trim() : "Scenic View";
-          const status = statusKey ? String(row[statusKey]).trim() : "Available";
+        for (const sheetName of targetSheets) {
+          const sheet = workbook.Sheets[sheetName];
+          if (!sheet) continue;
+          const rawMatrix = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" }) as any[][];
+          if (!rawMatrix || !rawMatrix.length) continue;
 
-          // Capture any extra dynamic columns
-          const extraFields: Record<string, any> = {};
-          for (const k of extraKeys) {
-            if (row[k] !== undefined && row[k] !== null && row[k] !== "") {
-              extraFields[k] = row[k];
+          // Universal Header Auto-Detection
+          const findHeaderRow = (rows: any[][]) => {
+            const keywords = ["type", "category", "unit", "bua", "area", "sqm", "price", "cost", "value", "egp", "beds", "bedroom", "project", "compound", "cluster", "view", "delivery", "status", "#"];
+            let maxScore = -1;
+            let bestIdx = 0;
+            for (let i = 0; i < Math.min(15, rows.length); i++) {
+              const row = rows[i];
+              if (!Array.isArray(row)) continue;
+              let score = 0;
+              row.forEach(cell => {
+                if (cell === null || cell === undefined || cell === "") return;
+                const str = String(cell).toLowerCase().replace(/[^a-z0-9]+/g, "");
+                if (keywords.some(k => str.includes(k))) score += 2;
+                else if (str.length > 0) score += 0.2;
+              });
+              if (score > maxScore && score >= 2) {
+                maxScore = score;
+                bestIdx = i;
+              }
             }
-          }
+            return bestIdx;
+          };
 
-          const key = `${rawType}-${beds}`;
-          if (!breakdownMap[key]) {
-            breakdownMap[key] = {
-              type: rawType,
+          const headerIdx = findHeaderRow(rawMatrix);
+          const headerRow = rawMatrix[headerIdx] || [];
+          const headers = headerRow.map((c: any, i: number) => String(c).trim() || `Column_${i + 1}`);
+
+          const findHeaderKey = (options: string[]) => {
+            for (const opt of options) {
+              const idx = headers.findIndex(h => h.toLowerCase().replace(/[^a-z0-9]+/g, "") === opt.toLowerCase().replace(/[^a-z0-9]+/g, ""));
+              if (idx >= 0) return headers[idx];
+            }
+            return null;
+          };
+
+          const typeKey = findHeaderKey(["type", "layout", "layouttype", "unittype", "category"]) || headers[0];
+          const priceKey = findHeaderKey(["price", "priceegp", "unitprice", "egp", "cost", "value", "startingpriceegp", "pricefromegp", "pricesegp", "avgprice", "grandtotalpricingstructure", "unittotalwithfinishingprice"]);
+          const bedsKey = findHeaderKey(["beds", "bedrooms", "bedcount", "roomcount"]);
+          const areaKey = findHeaderKey(["area", "size", "sqm", "areasqm", "bua", "unitarea", "aream2", "builtarea"]);
+          const unitNoKey = findHeaderKey(["unitno", "unitnumber", "unit", "no", "unitcode", "#"]);
+          const viewKey = findHeaderKey(["view", "aspect", "unitview"]);
+          const statusKey = findHeaderKey(["status", "availability", "unitstatus"]);
+
+          const knownKeys = new Set([typeKey, priceKey, bedsKey, areaKey, unitNoKey, viewKey, statusKey].filter(Boolean) as string[]);
+
+          const parsePriceRange = (val: any) => {
+            if (val === undefined || val === null || val === "") return { min: 0, max: 0 };
+            if (typeof val === "number") return { min: val, max: val };
+            let str = String(val).replace(/EGP/gi, "").replace(/,/g, "").trim();
+            if (str.toLowerCase().includes("sold")) return { min: 0, max: 0 };
+            let isMillion = false;
+            if (str.toLowerCase().includes("m")) {
+              isMillion = true;
+              str = str.replace(/m/gi, "");
+            }
+            const parts = str.split(/[-–—up to to]/i).map(p => parseFloat(p.trim())).filter(p => !isNaN(p));
+            if (parts.length === 0) return { min: 0, max: 0 };
+            let min = parts[0];
+            let max = parts.length > 1 ? parts[1] : parts[0];
+            if (isMillion || (min < 1000 && min > 0)) {
+              min *= 1000000;
+              max *= 1000000;
+            }
+            return { min, max };
+          };
+
+          const parseAreaRange = (val: any) => {
+            if (val === undefined || val === null || val === "") return { min: 0, max: 0 };
+            if (typeof val === "number") return { min: val, max: val };
+            const str = String(val).replace(/m2|sqm|m/gi, "").trim();
+            const parts = str.split(/[-–—to]/i).map(p => parseFloat(p.trim())).filter(p => !isNaN(p));
+            if (parts.length === 0) return { min: 0, max: 0 };
+            if (parts.length === 1) return { min: parts[0], max: parts[0] };
+            return { min: Math.min(...parts), max: Math.max(...parts) };
+          };
+
+          const dataMatrix = rawMatrix.slice(headerIdx + 1);
+
+          dataMatrix.forEach((rowArray: any[], rIdx: number) => {
+            if (!Array.isArray(rowArray)) return;
+            const nonEmpties = rowArray.filter(c => c !== "");
+            if (nonEmpties.length === 0) return;
+
+            const firstVal = String(rowArray[0] || "").toLowerCase();
+            if (firstVal.startsWith("payment") || firstVal.startsWith("note") || firstVal.startsWith("contact") || firstVal.startsWith("total")) {
+              return;
+            }
+
+            const rowObj: Record<string, any> = {};
+            headers.forEach((h, cIdx) => {
+              const v = rowArray[cIdx];
+              if (v !== undefined && v !== null && v !== "") rowObj[h] = v;
+            });
+
+            const rawType = typeKey && rowObj[typeKey] ? String(rowObj[typeKey]).trim() : (sheetName !== "Availability" ? sheetName : "Chalet");
+            const priceRange = priceKey ? parsePriceRange(rowObj[priceKey]) : { min: 5000000, max: 5000000 };
+            const areaRange = areaKey ? parseAreaRange(rowObj[areaKey]) : { min: 120, max: 120 };
+            const beds = bedsKey && rowObj[bedsKey] ? parseInt(String(rowObj[bedsKey])) || 2 : 2;
+            const unitNo = unitNoKey && rowObj[unitNoKey] ? String(rowObj[unitNoKey]).trim() : `U-${totalParsedRowsCount + 1}`;
+            const view = viewKey && rowObj[viewKey] ? String(rowObj[viewKey]).trim() : "Scenic View";
+            const status = statusKey && rowObj[statusKey] ? String(rowObj[statusKey]).trim() : "Available";
+
+            const extraFields: Record<string, any> = {};
+            Object.keys(rowObj).forEach(k => {
+              if (!knownKeys.has(k) && rowObj[k] !== undefined && rowObj[k] !== "") {
+                extraFields[k] = rowObj[k];
+              }
+            });
+
+            const key = `${rawType}-${beds}`;
+            if (!breakdownMap[key]) {
+              breakdownMap[key] = {
+                type: rawType,
+                beds,
+                available: 0,
+                minSqm: areaRange.min || 120,
+                maxSqm: areaRange.max || 120,
+                minPriceM: (priceRange.min || 5000000) / 1000000,
+                maxPriceM: (priceRange.max || 5000000) / 1000000,
+                units: []
+              };
+            }
+
+            const bd = breakdownMap[key];
+            const isSold = status.toLowerCase().includes("sold");
+            bd.available += isSold ? 0 : 1;
+            if (areaRange.min > 0 && areaRange.min < bd.minSqm) bd.minSqm = areaRange.min;
+            if (areaRange.max > bd.maxSqm) bd.maxSqm = areaRange.max;
+            if (priceRange.min > 0 && (priceRange.min / 1000000) < bd.minPriceM) bd.minPriceM = priceRange.min / 1000000;
+            if (priceRange.max / 1000000 > bd.maxPriceM) bd.maxPriceM = priceRange.max / 1000000;
+
+            bd.units.push({
+              id: `u_${Math.random().toString(36).slice(2, 9)}`,
+              unitNo,
               beds,
-              available: 0,
-              minSqm: area,
-              maxSqm: area,
-              minPriceM: rawPrice / 1_000_000,
-              maxPriceM: rawPrice / 1_000_000,
-              units: []
-            };
-          }
+              finishing: "Finished",
+              areaSqm: areaRange.min || 120,
+              view,
+              priceEGP: priceRange.min || 5000000,
+              status: isSold ? "Sold" : "Available",
+              ...extraFields
+            });
 
-          const resolvedStatus = ["available", "reserved", "sold"].includes(status.toLowerCase())
-            ? (status.charAt(0).toUpperCase() + status.slice(1).toLowerCase())
-            : "Available";
-
-          breakdownMap[key].available += resolvedStatus === "Available" ? 1 : 0;
-          if (area < breakdownMap[key].minSqm) breakdownMap[key].minSqm = area;
-          if (area > breakdownMap[key].maxSqm) breakdownMap[key].maxSqm = area;
-          if (rawPrice / 1_000_000 < breakdownMap[key].minPriceM) breakdownMap[key].minPriceM = rawPrice / 1_000_000;
-          if (rawPrice / 1_000_000 > breakdownMap[key].maxPriceM) breakdownMap[key].maxPriceM = rawPrice / 1_000_000;
-
-          breakdownMap[key].units.push({
-            id: `u_${Math.random().toString(36).slice(2, 9)}`,
-            unitNo,
-            beds,
-            finishing: "Finished",
-            areaSqm: area,
-            view,
-            priceEGP: rawPrice,
-            status: resolvedStatus,
-            ...extraFields
+            totalParsedRowsCount++;
           });
+
+          processedSheetNames.push(sheetName);
         }
 
         const breakdown = Object.values(breakdownMap);
         const totalAvailable = breakdown.reduce((acc, curr: any) => acc + curr.available, 0);
+
+        if (breakdown.length === 0) {
+          alert("Could not parse any layout rows from the uploaded Excel file.");
+          return;
+        }
 
         const targetProj = compoundsList.find(c => c.slug === projSlug);
         
@@ -710,12 +788,12 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
           totalAvailable,
           breakdown,
           lastUpdated: new Date().toISOString(),
-          note: `Imported from Excel sheet: ${file.name}`
+          note: `Imported ${totalParsedRowsCount} units from sheets: ${processedSheetNames.join(", ")} (${file.name})`
         };
 
         if (bypassReviewQueue) {
           updateAvailability(projSlug, newAvail);
-          alert(`Success: Excel availability file "${file.name}" has been directly published and live units database updated for project "${targetProj?.name || projSlug}". Previous units for this project were deleted.`);
+          alert(`Success: Excel file "${file.name}" processed across ${processedSheetNames.length} sheet(s)!\n• Parsed ${totalParsedRowsCount} rows (${totalAvailable} available units)\n• Updated live availability for project "${targetProj?.name || projSlug}". Previous units deleted.`);
         } else {
           addPendingUpload({
             fileName: file.name,
@@ -724,7 +802,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
             newAvail: newAvail,
             uploadedBy: user?.email || "elsayedshoeip70@gmail.com"
           });
-          alert(`Success: Excel availability file "${file.name}" uploaded to the "Pending Review" queue for project "${targetProj?.name || projSlug}". An administrator must approve it before it goes live!`);
+          alert(`Success: Excel file "${file.name}" (${totalParsedRowsCount} rows across ${processedSheetNames.length} sheet(s)) uploaded to "Pending Review" queue for "${targetProj?.name || projSlug}".`);
         }
       } catch (err: any) {
         alert(`Error parsing Excel sheet: ${err.message}`);
@@ -733,7 +811,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     reader.readAsBinaryString(file);
   };
 
-  // Developer-Wide Excel File parser
+  // Universal Developer-Wide Excel File parser
   const handleDeveloperExcelImport = (e: React.ChangeEvent<HTMLInputElement>, devSlug: string) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -757,59 +835,20 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
       try {
         const data = evt.target?.result;
         const workbook = XLSX.read(data, { type: "binary" });
-        const sheetName = workbook.SheetNames[0];
-        const sheet = workbook.Sheets[sheetName];
-        const rows = XLSX.utils.sheet_to_json(sheet) as Record<string, any>[];
 
-        if (!rows.length) {
-          alert("Excel sheet is empty.");
-          return;
+        let targetSheets = workbook.SheetNames;
+        if (workbook.SheetNames.length > 1) {
+          const nonOverview = workbook.SheetNames.filter(sn => !["overview", "summary", "index", "instructions"].includes(sn.toLowerCase().trim()));
+          if (nonOverview.length > 0) targetSheets = nonOverview;
         }
-
-        // Smart column header mapping
-        const findHeader = (row: Record<string, any>, options: string[]) => {
-          const keys = Object.keys(row);
-          for (const opt of options) {
-            const match = keys.find(k => k.toLowerCase().replace(/[^a-z0-9]+/g, "") === opt.toLowerCase().replace(/[^a-z0-9]+/g, ""));
-            if (match) return match;
-          }
-          return null;
-        };
-
-        const firstRow = rows[0];
-        const projectKey = findHeader(firstRow, ["project", "compound", "development", "projectname", "compoundname", "property", "projectslug", "slug"]);
-        const typeKey = findHeader(firstRow, ["type", "layout", "layouttype", "unittype"]) || Object.keys(firstRow)[0];
-        const priceKey = findHeader(firstRow, ["price", "priceegp", "unitprice", "egp", "cost", "value"]);
-        const bedsKey = findHeader(firstRow, ["beds", "bedrooms", "bedcount", "roomcount"]);
-        const areaKey = findHeader(firstRow, ["area", "size", "sqm", "areasqm"]);
-        const unitNoKey = findHeader(firstRow, ["unitno", "unitnumber", "unit", "no"]);
-        const viewKey = findHeader(firstRow, ["view", "aspect", "unitview"]);
-        const statusKey = findHeader(firstRow, ["status", "availability"]);
-
-        if (!priceKey) {
-          alert("Error: Excel must contain a 'Price' or 'Cost' column.");
-          return;
-        }
-
-        if (!projectKey) {
-          alert("Error: Excel must contain a 'Project' or 'Compound' column to identify which project each unit belongs to.");
-          return;
-        }
-
-        // Group rows by compound slug
-        const groupedRows: Record<string, Record<string, any>[]> = {};
-        const unmatchedProjects = new Set<string>();
 
         const matchCompound = (val: string) => {
           if (!val) return null;
           const normalizedVal = val.toLowerCase().replace(/[^a-z0-9]+/g, "");
-          // 1. Try exact normalized name
           let matched = devCompounds.find(c => c.name.toLowerCase().replace(/[^a-z0-9]+/g, "") === normalizedVal);
           if (matched) return matched;
-          // 2. Try exact normalized slug
           matched = devCompounds.find(c => c.slug.toLowerCase().replace(/[^a-z0-9]+/g, "") === normalizedVal);
           if (matched) return matched;
-          // 3. Try contains
           matched = devCompounds.find(c => {
             const normName = c.name.toLowerCase().replace(/[^a-z0-9]+/g, "");
             const normSlug = c.slug.toLowerCase().replace(/[^a-z0-9]+/g, "");
@@ -819,54 +858,143 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
           return matched || null;
         };
 
-        for (const row of rows) {
-          const rawProjectVal = String(row[projectKey] || "").trim();
-          if (!rawProjectVal) continue;
+        const groupedAvailabilities: Record<string, Record<string, any>> = {}; // compoundSlug -> breakdownMap
+        const unmatchedProjects = new Set<string>();
+        let grandTotalRowsCount = 0;
 
-          const matchedComp = matchCompound(rawProjectVal);
-          if (!matchedComp) {
-            unmatchedProjects.add(rawProjectVal);
-            continue;
-          }
+        for (const sheetName of targetSheets) {
+          const sheet = workbook.Sheets[sheetName];
+          if (!sheet) continue;
+          const rawMatrix = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" }) as any[][];
+          if (!rawMatrix || !rawMatrix.length) continue;
 
-          if (!groupedRows[matchedComp.slug]) {
-            groupedRows[matchedComp.slug] = [];
-          }
-          groupedRows[matchedComp.slug].push(row);
-        }
-
-        const matchedSlugs = Object.keys(groupedRows);
-        if (matchedSlugs.length === 0) {
-          alert(`Error: No rows in the spreadsheet matched any registered projects for developer "${developerName}". Unmatched projects found: ${Array.from(unmatchedProjects).join(", ") || "None"}`);
-          return;
-        }
-
-        const knownKeys = new Set([typeKey, priceKey, bedsKey, areaKey, unitNoKey, viewKey, statusKey, projectKey].filter(Boolean) as string[]);
-        const allKeys = Object.keys(firstRow);
-        const extraKeys = allKeys.filter(k => !knownKeys.has(k));
-
-        const importResults: string[] = [];
-
-        // For each matched compound, parse and build the availability record
-        for (const compoundSlug of matchedSlugs) {
-          const compRows = groupedRows[compoundSlug];
-          const breakdownMap: Record<string, any> = {};
-
-          for (const row of compRows) {
-            const rawType = String(row[typeKey] || "Chalet").trim();
-            const rawPrice = parseFloat(String(row[priceKey])) || 0;
-            const beds = bedsKey ? parseInt(String(row[bedsKey])) || 2 : 2;
-            const area = areaKey ? parseFloat(String(row[areaKey])) || 120 : 120;
-            const unitNo = unitNoKey ? String(row[unitNoKey]).trim() : `U-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
-            const view = viewKey ? String(row[viewKey]).trim() : "Scenic View";
-            const status = statusKey ? String(row[statusKey]).trim() : "Available";
-
-            const extraFields: Record<string, any> = {};
-            for (const k of extraKeys) {
-              if (row[k] !== undefined && row[k] !== null && row[k] !== "") {
-                extraFields[k] = row[k];
+          // Universal Header Auto-Detection
+          const findHeaderRow = (rows: any[][]) => {
+            const keywords = ["type", "category", "unit", "bua", "area", "sqm", "price", "cost", "value", "egp", "beds", "bedroom", "project", "compound", "cluster", "view", "delivery", "status", "#"];
+            let maxScore = -1;
+            let bestIdx = 0;
+            for (let i = 0; i < Math.min(15, rows.length); i++) {
+              const row = rows[i];
+              if (!Array.isArray(row)) continue;
+              let score = 0;
+              row.forEach(cell => {
+                if (cell === null || cell === undefined || cell === "") return;
+                const str = String(cell).toLowerCase().replace(/[^a-z0-9]+/g, "");
+                if (keywords.some(k => str.includes(k))) score += 2;
+                else if (str.length > 0) score += 0.2;
+              });
+              if (score > maxScore && score >= 2) {
+                maxScore = score;
+                bestIdx = i;
               }
             }
+            return bestIdx;
+          };
+
+          const headerIdx = findHeaderRow(rawMatrix);
+          const headerRow = rawMatrix[headerIdx] || [];
+          const headers = headerRow.map((c: any, i: number) => String(c).trim() || `Column_${i + 1}`);
+
+          const findHeaderKey = (options: string[]) => {
+            for (const opt of options) {
+              const idx = headers.findIndex(h => h.toLowerCase().replace(/[^a-z0-9]+/g, "") === opt.toLowerCase().replace(/[^a-z0-9]+/g, ""));
+              if (idx >= 0) return headers[idx];
+            }
+            return null;
+          };
+
+          const projectKey = findHeaderKey(["project", "compound", "development", "projectname", "compoundname", "property", "projectslug", "slug"]);
+          const typeKey = findHeaderKey(["type", "layout", "layouttype", "unittype", "category"]) || headers[0];
+          const priceKey = findHeaderKey(["price", "priceegp", "unitprice", "egp", "cost", "value", "startingpriceegp", "pricefromegp", "pricesegp", "avgprice", "grandtotalpricingstructure", "unittotalwithfinishingprice"]);
+          const bedsKey = findHeaderKey(["beds", "bedrooms", "bedcount", "roomcount"]);
+          const areaKey = findHeaderKey(["area", "size", "sqm", "areasqm", "bua", "unitarea", "aream2", "builtarea"]);
+          const unitNoKey = findHeaderKey(["unitno", "unitnumber", "unit", "no", "unitcode", "#"]);
+          const viewKey = findHeaderKey(["view", "aspect", "unitview"]);
+          const statusKey = findHeaderKey(["status", "availability", "unitstatus"]);
+
+          const knownKeys = new Set([typeKey, priceKey, bedsKey, areaKey, unitNoKey, viewKey, statusKey, projectKey].filter(Boolean) as string[]);
+
+          const parsePriceRange = (val: any) => {
+            if (val === undefined || val === null || val === "") return { min: 0, max: 0 };
+            if (typeof val === "number") return { min: val, max: val };
+            let str = String(val).replace(/EGP/gi, "").replace(/,/g, "").trim();
+            if (str.toLowerCase().includes("sold")) return { min: 0, max: 0 };
+            let isMillion = false;
+            if (str.toLowerCase().includes("m")) {
+              isMillion = true;
+              str = str.replace(/m/gi, "");
+            }
+            const parts = str.split(/[-–—up to to]/i).map(p => parseFloat(p.trim())).filter(p => !isNaN(p));
+            if (parts.length === 0) return { min: 0, max: 0 };
+            let min = parts[0];
+            let max = parts.length > 1 ? parts[1] : parts[0];
+            if (isMillion || (min < 1000 && min > 0)) {
+              min *= 1000000;
+              max *= 1000000;
+            }
+            return { min, max };
+          };
+
+          const parseAreaRange = (val: any) => {
+            if (val === undefined || val === null || val === "") return { min: 0, max: 0 };
+            if (typeof val === "number") return { min: val, max: val };
+            const str = String(val).replace(/m2|sqm|m/gi, "").trim();
+            const parts = str.split(/[-–—to]/i).map(p => parseFloat(p.trim())).filter(p => !isNaN(p));
+            if (parts.length === 0) return { min: 0, max: 0 };
+            if (parts.length === 1) return { min: parts[0], max: parts[0] };
+            return { min: Math.min(...parts), max: Math.max(...parts) };
+          };
+
+          const dataMatrix = rawMatrix.slice(headerIdx + 1);
+
+          // Check if sheetName itself matches a compound
+          const sheetMatchedComp = matchCompound(sheetName);
+
+          dataMatrix.forEach((rowArray: any[], rIdx: number) => {
+            if (!Array.isArray(rowArray)) return;
+            const nonEmpties = rowArray.filter(c => c !== "");
+            if (nonEmpties.length === 0) return;
+
+            const firstVal = String(rowArray[0] || "").toLowerCase();
+            if (firstVal.startsWith("payment") || firstVal.startsWith("note") || firstVal.startsWith("contact") || firstVal.startsWith("total")) {
+              return;
+            }
+
+            const rowObj: Record<string, any> = {};
+            headers.forEach((h, cIdx) => {
+              const v = rowArray[cIdx];
+              if (v !== undefined && v !== null && v !== "") rowObj[h] = v;
+            });
+
+            // Match compound from row or sheet
+            const rawProjectVal = projectKey && rowObj[projectKey] ? String(rowObj[projectKey]).trim() : "";
+            const matchedComp = matchCompound(rawProjectVal) || sheetMatchedComp;
+
+            if (!matchedComp) {
+              if (rawProjectVal) unmatchedProjects.add(rawProjectVal);
+              return;
+            }
+
+            const targetSlug = matchedComp.slug;
+            if (!groupedAvailabilities[targetSlug]) {
+              groupedAvailabilities[targetSlug] = {};
+            }
+            const breakdownMap = groupedAvailabilities[targetSlug];
+
+            const rawType = typeKey && rowObj[typeKey] ? String(rowObj[typeKey]).trim() : (sheetName !== "Availability" ? sheetName : "Chalet");
+            const priceRange = priceKey ? parsePriceRange(rowObj[priceKey]) : { min: 5000000, max: 5000000 };
+            const areaRange = areaKey ? parseAreaRange(rowObj[areaKey]) : { min: 120, max: 120 };
+            const beds = bedsKey && rowObj[bedsKey] ? parseInt(String(rowObj[bedsKey])) || 2 : 2;
+            const unitNo = unitNoKey && rowObj[unitNoKey] ? String(rowObj[unitNoKey]).trim() : `U-${grandTotalRowsCount + 1}`;
+            const view = viewKey && rowObj[viewKey] ? String(rowObj[viewKey]).trim() : "Scenic View";
+            const status = statusKey && rowObj[statusKey] ? String(rowObj[statusKey]).trim() : "Available";
+
+            const extraFields: Record<string, any> = {};
+            Object.keys(rowObj).forEach(k => {
+              if (!knownKeys.has(k) && rowObj[k] !== undefined && rowObj[k] !== "") {
+                extraFields[k] = rowObj[k];
+              }
+            });
 
             const key = `${rawType}-${beds}`;
             if (!breakdownMap[key]) {
@@ -874,37 +1002,48 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                 type: rawType,
                 beds,
                 available: 0,
-                minSqm: area,
-                maxSqm: area,
-                minPriceM: rawPrice / 1_000_000,
-                maxPriceM: rawPrice / 1_000_000,
+                minSqm: areaRange.min || 120,
+                maxSqm: areaRange.max || 120,
+                minPriceM: (priceRange.min || 5000000) / 1000000,
+                maxPriceM: (priceRange.max || 5000000) / 1000000,
                 units: []
               };
             }
 
-            const resolvedStatus = ["available", "reserved", "sold"].includes(status.toLowerCase())
-              ? (status.charAt(0).toUpperCase() + status.slice(1).toLowerCase())
-              : "Available";
+            const bd = breakdownMap[key];
+            const isSold = status.toLowerCase().includes("sold");
+            bd.available += isSold ? 0 : 1;
+            if (areaRange.min > 0 && areaRange.min < bd.minSqm) bd.minSqm = areaRange.min;
+            if (areaRange.max > bd.maxSqm) bd.maxSqm = areaRange.max;
+            if (priceRange.min > 0 && (priceRange.min / 1000000) < bd.minPriceM) bd.minPriceM = priceRange.min / 1000000;
+            if (priceRange.max / 1000000 > bd.maxPriceM) bd.maxPriceM = priceRange.max / 1000000;
 
-            breakdownMap[key].available += resolvedStatus === "Available" ? 1 : 0;
-            if (area < breakdownMap[key].minSqm) breakdownMap[key].minSqm = area;
-            if (area > breakdownMap[key].maxSqm) breakdownMap[key].maxSqm = area;
-            if (rawPrice / 1_000_000 < breakdownMap[key].minPriceM) breakdownMap[key].minPriceM = rawPrice / 1_000_000;
-            if (rawPrice / 1_000_000 > breakdownMap[key].maxPriceM) breakdownMap[key].maxPriceM = rawPrice / 1_000_000;
-
-            breakdownMap[key].units.push({
+            bd.units.push({
               id: `u_${Math.random().toString(36).slice(2, 9)}`,
               unitNo,
               beds,
               finishing: "Finished",
-              areaSqm: area,
+              areaSqm: areaRange.min || 120,
               view,
-              priceEGP: rawPrice,
-              status: resolvedStatus,
+              priceEGP: priceRange.min || 5000000,
+              status: isSold ? "Sold" : "Available",
               ...extraFields
             });
-          }
 
+            grandTotalRowsCount++;
+          });
+        }
+
+        const matchedSlugs = Object.keys(groupedAvailabilities);
+        if (matchedSlugs.length === 0) {
+          alert(`Error: No rows in the spreadsheet matched any registered projects for developer "${developerName}". Unmatched projects found: ${Array.from(unmatchedProjects).join(", ") || "None"}`);
+          return;
+        }
+
+        const importResults: string[] = [];
+
+        for (const compoundSlug of matchedSlugs) {
+          const breakdownMap = groupedAvailabilities[compoundSlug];
           const breakdown = Object.values(breakdownMap);
           const totalAvailable = breakdown.reduce((acc, curr: any) => acc + curr.available, 0);
 
@@ -915,12 +1054,12 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
             totalAvailable,
             breakdown,
             lastUpdated: new Date().toISOString(),
-            note: `Developer-wide Excel Import (${targetDev.name}): ${file.name}`
+            note: `Developer-wide Universal Excel Import (${targetDev.name}): ${file.name}`
           };
 
           if (bypassReviewQueue) {
             updateAvailability(compoundSlug, newAvail);
-            importResults.push(`${targetProj?.name || compoundSlug} (${totalAvailable} units) - Published Directly (Old units deleted)`);
+            importResults.push(`${targetProj?.name || compoundSlug} (${totalAvailable} units) - Published Directly (Old units replaced)`);
           } else {
             addPendingUpload({
               fileName: `${file.name} - ${targetProj?.name || compoundSlug}`,
@@ -934,10 +1073,10 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
         }
 
         const unmatchedText = unmatchedProjects.size > 0
-          ? `\n\nUnmatched Project columns in sheet (skipped): ${Array.from(unmatchedProjects).join(", ")}`
+          ? `\n\nUnmatched Project columns/sheets (skipped): ${Array.from(unmatchedProjects).join(", ")}`
           : "";
 
-        alert(`Developer-Wide Import Complete for "${developerName}"!\n\nParsed and processed ${matchedSlugs.length} projects:\n${importResults.map(r => `• ${r}`).join("\n")}${unmatchedText}`);
+        alert(`Developer-Wide Import Complete for "${developerName}"!\n\nParsed ${grandTotalRowsCount} total rows across ${matchedSlugs.length} projects:\n${importResults.map(r => `• ${r}`).join("\n")}${unmatchedText}`);
       } catch (err: any) {
         alert(`Error parsing Excel sheet: ${err.message}`);
       }

@@ -1,32 +1,14 @@
 [
   {
-    "id": "la-vista-topaz-2nd-floor-2-bedrooms-access-to-roof--1",
+    "id": "la-vista-topaz-13",
+    "unitNo": "U-13",
     "beds": 2,
     "finishing": "Finished",
     "areaSqm": 150,
+    "view": "Scenic View",
     "priceEGP": 13500000,
     "status": "Available",
-    "areaNote": "145m2",
-    "deliveryNote": "1/1/2028"
-  },
-  {
-    "id": "la-vista-topaz-2nd-floor-2-bedrooms-access-to-roof--2",
-    "beds": 2,
-    "finishing": "Finished",
-    "areaSqm": 150,
-    "priceEGP": 13800000,
-    "status": "Available",
-    "areaNote": "145m2",
-    "deliveryNote": "1/1/2028"
-  },
-  {
-    "id": "la-vista-topaz-2nd-floor-2-bedrooms-access-to-roof--3",
-    "beds": 2,
-    "finishing": "Finished",
-    "areaSqm": 150,
-    "priceEGP": 14100000,
-    "status": "Last Unit",
-    "areaNote": "145m2",
-    "deliveryNote": "1/1/2028"
+    "Garden/Roof": "145m2",
+    "Delivery": "1/1/2028"
   }
 ]

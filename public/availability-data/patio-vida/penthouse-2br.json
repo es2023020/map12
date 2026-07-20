@@ -1,0 +1,133 @@
+[
+  {
+    "id": "patio-vida-24",
+    "unitNo": "U-24",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available"
+  },
+  {
+    "id": "patio-vida-26",
+    "unitNo": "U-26",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 158,
+    "view": "Scenic View",
+    "priceEGP": 14610000,
+    "status": "Available",
+    "Garden/Roof": "28"
+  },
+  {
+    "id": "patio-vida-27",
+    "unitNo": "U-27",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 168,
+    "view": "Scenic View",
+    "priceEGP": 15200000,
+    "status": "Available",
+    "Garden/Roof": "24"
+  },
+  {
+    "id": "patio-vida-28",
+    "unitNo": "U-28",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 170,
+    "view": "Scenic View",
+    "priceEGP": 16980000,
+    "status": "Available",
+    "Garden/Roof": "32"
+  },
+  {
+    "id": "patio-vida-29",
+    "unitNo": "U-29",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 172,
+    "view": "Scenic View",
+    "priceEGP": 16530000,
+    "status": "Available",
+    "Garden/Roof": "26"
+  },
+  {
+    "id": "patio-vida-30",
+    "unitNo": "U-30",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 176,
+    "view": "Scenic View",
+    "priceEGP": 16040000,
+    "status": "Available",
+    "Garden/Roof": "28"
+  },
+  {
+    "id": "patio-vida-31",
+    "unitNo": "U-31",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 182,
+    "view": "Scenic View",
+    "priceEGP": 16340000,
+    "status": "Available",
+    "Garden/Roof": "24"
+  },
+  {
+    "id": "patio-vida-32",
+    "unitNo": "U-32",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 190,
+    "view": "Scenic View",
+    "priceEGP": 19240000,
+    "status": "Available",
+    "Garden/Roof": "32"
+  },
+  {
+    "id": "patio-vida-33",
+    "unitNo": "U-33",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 206,
+    "view": "Scenic View",
+    "priceEGP": 18740000,
+    "status": "Available",
+    "Garden/Roof": "32"
+  },
+  {
+    "id": "patio-vida-34",
+    "unitNo": "U-34",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 208,
+    "view": "Scenic View",
+    "priceEGP": 21530000,
+    "status": "Available",
+    "Garden/Roof": "38"
+  },
+  {
+    "id": "patio-vida-35",
+    "unitNo": "U-35",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 212,
+    "view": "Scenic View",
+    "priceEGP": 20360000,
+    "status": "Available",
+    "Garden/Roof": "40"
+  },
+  {
+    "id": "patio-vida-36",
+    "unitNo": "U-36",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 214,
+    "view": "Scenic View",
+    "priceEGP": 20510000,
+    "status": "Available",
+    "Garden/Roof": "36"
+  }
+]
