@@ -1,0 +1,52 @@
+[
+  {
+    "id": "CRX-TIN-11A",
+    "beds": 2,
+    "finishing": "TINFF-I",
+    "areaSqm": 225.5,
+    "priceEGP": 36861000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "areaNote": "Land: 281 sqm"
+  },
+  {
+    "id": "CRX-TIN-32B",
+    "beds": 2,
+    "finishing": "TINFF-I",
+    "areaSqm": 225.5,
+    "priceEGP": 36876000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "areaNote": "Land: 281 sqm"
+  },
+  {
+    "id": "CRX-TIN-33A",
+    "beds": 2,
+    "finishing": "TINFF-I",
+    "areaSqm": 225.5,
+    "priceEGP": 36906000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "areaNote": "Land: 281 sqm"
+  },
+  {
+    "id": "CRX-TIN-33B",
+    "beds": 2,
+    "finishing": "TINFF-I",
+    "areaSqm": 225.5,
+    "priceEGP": 36921000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "areaNote": "Land: 281 sqm"
+  },
+  {
+    "id": "CRX-TIN-34A",
+    "beds": 2,
+    "finishing": "TINFF-I",
+    "areaSqm": 225.5,
+    "priceEGP": 36906000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "areaNote": "Land: 281 sqm"
+  }
+]

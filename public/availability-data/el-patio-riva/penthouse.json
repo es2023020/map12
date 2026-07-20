@@ -1,0 +1,32 @@
+[
+  {
+    "id": "el-patio-riva-penthouse-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 206,
+    "priceEGP": 18790000,
+    "status": "Available",
+    "areaNote": "124",
+    "deliveryNote": "1/1/2030"
+  },
+  {
+    "id": "el-patio-riva-penthouse-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 206,
+    "priceEGP": 18790000,
+    "status": "Available",
+    "areaNote": "124",
+    "deliveryNote": "1/1/2030"
+  },
+  {
+    "id": "el-patio-riva-penthouse-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 206,
+    "priceEGP": 18790000,
+    "status": "Last Unit",
+    "areaNote": "124",
+    "deliveryNote": "1/1/2030"
+  }
+]

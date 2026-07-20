@@ -1,0 +1,29 @@
+[
+  {
+    "id": "patio-5-east-quadro-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 202,
+    "priceEGP": 24400000,
+    "status": "Available",
+    "areaNote": "220m"
+  },
+  {
+    "id": "patio-5-east-quadro-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 202,
+    "priceEGP": 24400000,
+    "status": "Available",
+    "areaNote": "220m"
+  },
+  {
+    "id": "patio-5-east-quadro-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 202,
+    "priceEGP": 24400000,
+    "status": "Last Unit",
+    "areaNote": "220m"
+  }
+]

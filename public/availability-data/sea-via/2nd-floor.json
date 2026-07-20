@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sea-via-2nd-floor-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "priceEGP": 17800000,
+    "status": "Available",
+    "areaNote": "145m2 open roof",
+    "deliveryNote": "1/1/2028"
+  },
+  {
+    "id": "sea-via-2nd-floor-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "priceEGP": 18300000,
+    "status": "Available",
+    "areaNote": "145m2 open roof",
+    "deliveryNote": "1/1/2028"
+  },
+  {
+    "id": "sea-via-2nd-floor-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "priceEGP": 18800000,
+    "status": "Last Unit",
+    "areaNote": "145m2 open roof",
+    "deliveryNote": "1/1/2028"
+  }
+]

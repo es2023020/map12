@@ -1,0 +1,29 @@
+[
+  {
+    "id": "patio-oro-3-brs-typical-floor-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 164,
+    "priceEGP": 15500000,
+    "status": "Available",
+    "areaNote": "-"
+  },
+  {
+    "id": "patio-oro-3-brs-typical-floor-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 166,
+    "priceEGP": 16550000,
+    "status": "Available",
+    "areaNote": "-"
+  },
+  {
+    "id": "patio-oro-3-brs-typical-floor-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 168,
+    "priceEGP": 17600000,
+    "status": "Last Unit",
+    "areaNote": "-"
+  }
+]

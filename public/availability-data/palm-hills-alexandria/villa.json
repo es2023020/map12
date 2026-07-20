@@ -1,0 +1,52 @@
+[
+  {
+    "id": "ALX-VL1-279-B",
+    "beds": 2,
+    "finishing": "VCSI-A-AX",
+    "areaSqm": 376.65,
+    "priceEGP": 66174000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "areaNote": "Land: 512 sqm"
+  },
+  {
+    "id": "ALX-VL1-296-B",
+    "beds": 2,
+    "finishing": "VCSI-A-AX",
+    "areaSqm": 376.65,
+    "priceEGP": 66174000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "areaNote": "Land: 512 sqm"
+  },
+  {
+    "id": "ALX-VL1-300-P",
+    "beds": 2,
+    "finishing": "VCSI-A-AX",
+    "areaSqm": 383.83,
+    "priceEGP": 79510000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "areaNote": "Land: 512 sqm"
+  },
+  {
+    "id": "ALX-VL1-305-P",
+    "beds": 2,
+    "finishing": "VCSI-A-AX",
+    "areaSqm": 383.83,
+    "priceEGP": 79510000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "areaNote": "Land: 512 sqm"
+  },
+  {
+    "id": "ALX-VL1-306-P",
+    "beds": 2,
+    "finishing": "VCSI-A-AX",
+    "areaSqm": 383.83,
+    "priceEGP": 79510000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "areaNote": "Land: 512 sqm"
+  }
+]

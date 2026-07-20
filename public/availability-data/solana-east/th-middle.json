@@ -1,0 +1,26 @@
+[
+  {
+    "id": "solana-east-th-middle-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 174,
+    "priceEGP": 21000000,
+    "status": "Available"
+  },
+  {
+    "id": "solana-east-th-middle-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 174,
+    "priceEGP": 21000000,
+    "status": "Available"
+  },
+  {
+    "id": "solana-east-th-middle-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 174,
+    "priceEGP": 21000000,
+    "status": "Last Unit"
+  }
+]

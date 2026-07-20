@@ -1,0 +1,26 @@
+[
+  {
+    "id": "silversands-3-br-s-duplex-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 37000000,
+    "status": "Available"
+  },
+  {
+    "id": "silversands-3-br-s-duplex-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 37000000,
+    "status": "Available"
+  },
+  {
+    "id": "silversands-3-br-s-duplex-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 37000000,
+    "status": "Last Unit"
+  }
+]

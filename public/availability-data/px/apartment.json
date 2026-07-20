@@ -1,0 +1,1919 @@
+[
+  {
+    "id": "PX-1164-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28572000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1164-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29939000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1164-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24326000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1164-21-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 24132000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1165-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28572000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1168-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 25445000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1168-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 24085000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1168-22-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 24085000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1174-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28572000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1175-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28572000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1175-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 24132000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1176-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 22610000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1177-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28572000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1177-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24326000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1177-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 24326000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1178-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 31004000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1178-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 25181000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1178-13-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 28982000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1179-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 29587000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1179-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 25181000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1179-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 16527000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1179-13",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 28982000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1179-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 24980000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1180-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 29587000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1180-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 31004000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1180-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 25181000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1180-13-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 28982000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1181-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1181-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 23919000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1182-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28319000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1182-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1182-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1182-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1182-13-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 27743000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1182-21-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 23919000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1182-22-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1183-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1183-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1183-13",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 27743000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1183-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 23919000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1183-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1184-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1184-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1184-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1184-13-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 27743000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1184-21-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 23919000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1184-22-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1185-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1185-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1185-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1185-13",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 27743000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1185-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 23919000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1185-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1186-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28319000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1186-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1187-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28319000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1187-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1187-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1187-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 23919000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1188-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28319000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1188-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1188-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1188-21-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 23919000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1188-22-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1189-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28319000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1189-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1189-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1189-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1189-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 23919000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1189-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1190-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1190-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1190-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1190-21-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 23919000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1190-22-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 163.05,
+    "priceEGP": 26757000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1191-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28319000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1191-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1192-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1192-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1193-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1193-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1193-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1194-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28319000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1194-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1194-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1194-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15841000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1195-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28319000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1195-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 160.92,
+    "priceEGP": 29672000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1195-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24110000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1195-13",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 27743000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1195-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 23919000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1198-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 21539000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1198-13-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1198-21-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 21539000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1199-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 25276000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1199-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 21539000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1199-13",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1199-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 21539000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1199-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 14201000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1199-23",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 170.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1200-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 25276000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1200-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 21539000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1200-13-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1200-21-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 21539000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1200-23-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 170.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1201-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 25276000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1201-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 21539000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1201-13",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1201-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 21539000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1201-23",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 170.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1202-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 22610000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1202-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 22610000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1202-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 14886000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1204-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 25030000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1204-22-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 25030000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1205-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 22827000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1206-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 22827000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1209-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 22827000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1209-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 22827000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1210-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 22827000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1210-21-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 22827000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1213-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1213-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 22388000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1215-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.9,
+    "priceEGP": 28572000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1215-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 24326000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1215-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 24132000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1215-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15979000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1216-22-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 16253000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1218-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1218-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 23646000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1218-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.8,
+    "priceEGP": 26094000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1218-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 24931000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1218-32",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 119.16,
+    "priceEGP": 22339000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1219-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 152.15,
+    "priceEGP": 25965000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1219-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 144.18,
+    "priceEGP": 24549000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1219-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 156.56,
+    "priceEGP": 26607000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1219-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 27895000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1219-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 156.56,
+    "priceEGP": 26607000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1219-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 27895000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1220-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 156.56,
+    "priceEGP": 26607000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1220-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 27895000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1220-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 156.56,
+    "priceEGP": 26607000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1221-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1221-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 24931000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1221-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 24931000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1222-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1222-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 24931000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1222-22-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 24931000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1223-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 27895000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1224-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 156.56,
+    "priceEGP": 26607000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1224-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 27895000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1224-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 156.56,
+    "priceEGP": 26607000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1224-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 27895000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1225-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 27895000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1227-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 27106000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1227-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 23646000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1228-32-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 119.16,
+    "priceEGP": 22339000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1229-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1229-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 23646000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1229-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 22388000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1230-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1230-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 23646000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1230-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 22388000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1231-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 156.56,
+    "priceEGP": 23884000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1232-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 156.56,
+    "priceEGP": 23884000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1232-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 25030000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1234-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 22388000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1237-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1238-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1239-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15979000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1240-22-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 77.84,
+    "priceEGP": 15979000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1242-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1242-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.8,
+    "priceEGP": 26094000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1242-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 22388000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1242-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 22388000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1243-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 24544000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1246-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 25030000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1246-22",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 164.48,
+    "priceEGP": 25030000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1254-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 21539000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1254-13",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1254-23",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 170.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1258-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 22525000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1259-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 21330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1266-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 22525000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1266-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 21330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1271-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1272-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 25644000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1272-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 25075000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1275-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1275-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 23646000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1282-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 23983000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1283-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 23983000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1284-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1287-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 22610000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1287-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 22610000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1288-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 22610000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1288-21-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 22610000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1290-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 22610000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1292-02",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 23646000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1292-12",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 22388000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1294-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 22933000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1294-21",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 22933000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1295-21-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.48,
+    "priceEGP": 22610000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1296-01",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1297-01-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 129.86,
+    "priceEGP": 24330000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1297-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 23646000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1297-12-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 138.19,
+    "priceEGP": 23657000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1299-11-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 139.65,
+    "priceEGP": 22610000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1301-11",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.8,
+    "priceEGP": 24848000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1302-02-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 130.88,
+    "priceEGP": 22525000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1303-23",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 170.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1306-13-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 171.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  },
+  {
+    "id": "PX-1306-23-M",
+    "beds": 2,
+    "finishing": "FFAI",
+    "areaSqm": 170.17,
+    "priceEGP": 24760000,
+    "status": "Available",
+    "cluster": "PX-Phase 1"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "RL-SA-065-1-GF",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 62108018,
+    "status": "Available",
+    "cluster": "RHODES & TINOS - R&T-Villa-SA Feb 2026",
+    "areaNote": "Garden: 225m, Land: 514.49m",
+    "deliveryNote": "READY TO MOVE - 3"
+  },
+  {
+    "id": "RL-SA-069-C-GF",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 58219581,
+    "status": "Available",
+    "cluster": "RHODES & TINOS - R&T-Villa-SA Feb 2026",
+    "areaNote": "Garden: 225m, Land: 486.19m",
+    "deliveryNote": "READY TO MOVE - 3"
+  },
+  {
+    "id": "RL-SA-070-A-GF",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 58931675,
+    "status": "Available",
+    "cluster": "RHODES & TINOS - R&T-Villa-SA Feb 2026",
+    "areaNote": "Garden: 225m, Land: 505.8m",
+    "deliveryNote": "READY TO MOVE - 3"
+  },
+  {
+    "id": "RL-SA-070-B-GF",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 54567498,
+    "status": "Available",
+    "cluster": "RHODES & TINOS - R&T-Villa-SA Feb 2026",
+    "areaNote": "Garden: 225m, Land: 365.89m",
+    "deliveryNote": "READY TO MOVE - 3"
+  },
+  {
+    "id": "RL-SA-070-C-GF",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 56722932,
+    "status": "Available",
+    "cluster": "RHODES & TINOS - R&T-Villa-SA Feb 2026",
+    "areaNote": "Garden: 225m, Land: 460.78m",
+    "deliveryNote": "READY TO MOVE - 3"
+  }
+]

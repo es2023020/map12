@@ -1,0 +1,32 @@
+[
+  {
+    "id": "el-patio-town-garden-town-house-corner-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 235,
+    "priceEGP": 34000000,
+    "status": "Available",
+    "areaNote": "204m",
+    "deliveryNote": "Jan 2028"
+  },
+  {
+    "id": "el-patio-town-garden-town-house-corner-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 235,
+    "priceEGP": 34500000,
+    "status": "Available",
+    "areaNote": "204m",
+    "deliveryNote": "Jan 2028"
+  },
+  {
+    "id": "el-patio-town-garden-town-house-corner-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 235,
+    "priceEGP": 35000000,
+    "status": "Last Unit",
+    "areaNote": "204m",
+    "deliveryNote": "Jan 2028"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "CP-MNS-37-00-1",
+    "category": "Villa",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 61373225,
+    "status": "Available",
+    "cluster": "Central Park - 46138",
+    "areaNote": "Garden: 350m, Roof: 30.9m, Land: 647.95m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "CP-MNS-69-00-1",
+    "category": "Villa",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 61748676,
+    "status": "Available",
+    "cluster": "Central Park - 46138",
+    "areaNote": "Garden: 350m, Roof: 30.9m, Land: 661.81m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "CP-MNS-70-00-1",
+    "category": "Villa",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 66125397,
+    "status": "Available",
+    "cluster": "Central Park - 46138",
+    "areaNote": "Garden: 350m, Roof: 30.9m, Land: 634.98m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "F-V285-28-00-1",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 57746382,
+    "status": "Available",
+    "cluster": "Fields Park - 46138",
+    "areaNote": "Garden: 285m, Roof: 56.94m, Land: 642.75m",
+    "deliveryNote": "OFF PLAN - 3"
+  },
+  {
+    "id": "R-V255-22-00-1",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 57755654,
+    "status": "Available",
+    "cluster": "Rivers Park - 46138",
+    "areaNote": "Garden: 255m, Roof: 47.23m, Land: 680.42m",
+    "deliveryNote": "OFF PLAN - 3"
+  }
+]

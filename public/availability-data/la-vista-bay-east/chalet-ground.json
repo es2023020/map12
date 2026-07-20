@@ -1,0 +1,32 @@
+[
+  {
+    "id": "la-vista-bay-east-chalet-ground-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 22800000,
+    "status": "Available",
+    "areaNote": "60m2 (garden)",
+    "deliveryNote": "April 2028"
+  },
+  {
+    "id": "la-vista-bay-east-chalet-ground-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 22800000,
+    "status": "Available",
+    "areaNote": "60m2 (garden)",
+    "deliveryNote": "April 2028"
+  },
+  {
+    "id": "la-vista-bay-east-chalet-ground-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 22800000,
+    "status": "Last Unit",
+    "areaNote": "60m2 (garden)",
+    "deliveryNote": "April 2028"
+  }
+]

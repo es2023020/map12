@@ -1,0 +1,26 @@
+[
+  {
+    "id": "zed-east-2-br-s-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 125,
+    "priceEGP": 15000000,
+    "status": "Available"
+  },
+  {
+    "id": "zed-east-2-br-s-2",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 125,
+    "priceEGP": 15000000,
+    "status": "Available"
+  },
+  {
+    "id": "zed-east-2-br-s-3",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 125,
+    "priceEGP": 15000000,
+    "status": "Last Unit"
+  }
+]

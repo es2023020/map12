@@ -1,0 +1,522 @@
+[
+  {
+    "id": "D2V1B-VLW2-021-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 54881000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1B-VLX2-128-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40210000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-055-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-073",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-075",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-076",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-078",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 26387000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-080-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-081-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-083-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-105",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-109",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLZ2-115",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 275.5,
+    "priceEGP": 32349000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 401 sqm"
+  },
+  {
+    "id": "D2V1A-VLZ2-121-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 275.5,
+    "priceEGP": 32349000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 401 sqm"
+  },
+  {
+    "id": "D2V1A-VLZ2-123-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 275.5,
+    "priceEGP": 33209000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 401 sqm"
+  },
+  {
+    "id": "D2V1A-VLZ2-126-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 275.5,
+    "priceEGP": 33623000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 401 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-175",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 53825000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-177",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 58092000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-178",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 57023000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-179",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 54890000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-180",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 54890000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-183",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-184",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-185",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-186",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-187",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-199",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-200",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-201",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-202",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-203-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLZ2-215",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 275.5,
+    "priceEGP": 33623000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 401 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-233",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 58092000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-251",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 58092000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-252",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 57559000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-253",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 59159000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-255",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-256",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-257",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-258",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-259",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 40985000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-272",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 58092000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLW2-273",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 466,
+    "priceEGP": 57559000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 750 sqm"
+  },
+  {
+    "id": "D2V1A-VLX2-274",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 364,
+    "priceEGP": 42606000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 550 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-278-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-279-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-280-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-282-M",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-287",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-289",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-291",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  },
+  {
+    "id": "D2V1A-VLN2-292",
+    "beds": 2,
+    "finishing": "VCSII-AWD-BD",
+    "areaSqm": 180,
+    "priceEGP": 24031000,
+    "status": "Available",
+    "cluster": "Badya-District 2",
+    "areaNote": "Land: 255 sqm"
+  }
+]

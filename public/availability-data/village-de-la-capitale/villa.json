@@ -1,0 +1,482 @@
+[
+  {
+    "id": "VDLC-VLA-2033",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 41948000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2034",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 41948000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2047",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 41948000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2048",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 41948000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2058",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 42282000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2060",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 42450000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2062",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 42450000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2065",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 41948000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2066",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 41948000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2067",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 41948000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2069",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 41948000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLA-2070",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 262,
+    "priceEGP": 41948000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 371.5 sqm"
+  },
+  {
+    "id": "VDLC-VLB-2075-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 229,
+    "priceEGP": 33841000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 300 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2122",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2123",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2124",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2125",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2126",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2127-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30442000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2128-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30442000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2129-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30442000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2130-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30442000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2137",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2138",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2139",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2140",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2148",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2149",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-2150",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1005-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1009",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1010-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1011",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29824000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1012-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1126",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 29704000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1142-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1143-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1144-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1157-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1158-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1159-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1170-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1171-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1172-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1173-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1178-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1180-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  },
+  {
+    "id": "VDLC-VLC-1182-M",
+    "beds": 2,
+    "finishing": "VDLC-VCS-I",
+    "areaSqm": 185,
+    "priceEGP": 30141000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "areaNote": "Land: 282 sqm"
+  }
+]

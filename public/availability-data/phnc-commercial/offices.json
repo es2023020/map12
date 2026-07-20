@@ -1,0 +1,659 @@
+[
+  {
+    "id": "PLNC-AP-B-04-12",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 154,
+    "priceEGP": 25692000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-04-13",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 176,
+    "priceEGP": 31281000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-04-19",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 122,
+    "priceEGP": 21067000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-04-23",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 129.5,
+    "priceEGP": 23172000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-04-24",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 183.5,
+    "priceEGP": 32589000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-04-25",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 158,
+    "priceEGP": 25830000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-04-26",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 117,
+    "priceEGP": 19270000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-04-27",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 117,
+    "priceEGP": 19270000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-05-01",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 95.5,
+    "priceEGP": 19776000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-05-19",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 122,
+    "priceEGP": 21266000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-01-01",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 156,
+    "priceEGP": 26019000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-01-19",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 122,
+    "priceEGP": 20867000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-01-25",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 158,
+    "priceEGP": 25830000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-02-25",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 158,
+    "priceEGP": 25830000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-03-12",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 154,
+    "priceEGP": 25692000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-03-13",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 176,
+    "priceEGP": 31281000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-03-14",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 127,
+    "priceEGP": 22735000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-03-23",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 129.5,
+    "priceEGP": 23172000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-03-24",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 183.5,
+    "priceEGP": 32589000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-03-25",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 158,
+    "priceEGP": 25830000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-B-03-27",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 117,
+    "priceEGP": 19270000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-01",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 163,
+    "priceEGP": 27160000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-03",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 94,
+    "priceEGP": 15745000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-04",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 94,
+    "priceEGP": 15745000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-05",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 94,
+    "priceEGP": 15745000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-06",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 94,
+    "priceEGP": 15745000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-07",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 94,
+    "priceEGP": 15745000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-08",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 163,
+    "priceEGP": 27690000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-09",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 124.5,
+    "priceEGP": 20470000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-10",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 124.5,
+    "priceEGP": 20470000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-11",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 169,
+    "priceEGP": 27590000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-12",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 207.5,
+    "priceEGP": 36774000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-13",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 139,
+    "priceEGP": 24828000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-17",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 122,
+    "priceEGP": 21066000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-21",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 139.5,
+    "priceEGP": 24915000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-22",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 193,
+    "priceEGP": 34246000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-23",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 184,
+    "priceEGP": 29990000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-03-24",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 125,
+    "priceEGP": 20550000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-01",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 163,
+    "priceEGP": 27160000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-02",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 94,
+    "priceEGP": 15745000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-03",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 94,
+    "priceEGP": 15745000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-04",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 94,
+    "priceEGP": 15745000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-05",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 94,
+    "priceEGP": 15745000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-06",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 94,
+    "priceEGP": 15745000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-08",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 163,
+    "priceEGP": 27690000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-09",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 124.5,
+    "priceEGP": 20470000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-10",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 124.5,
+    "priceEGP": 20470000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-11",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 169,
+    "priceEGP": 27590000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-13",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 139,
+    "priceEGP": 24828000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-16",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 84.5,
+    "priceEGP": 14070000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-17",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 122,
+    "priceEGP": 21066000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-18",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 84.5,
+    "priceEGP": 14070000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-21",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 139.5,
+    "priceEGP": 24915000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-22",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 193,
+    "priceEGP": 34246000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-23",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 184,
+    "priceEGP": 29990000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-24",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 125,
+    "priceEGP": 20550000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-04-25",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 102,
+    "priceEGP": 16870000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-01",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 101.5,
+    "priceEGP": 20958000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-06",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 68,
+    "priceEGP": 13030000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-08",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 101.5,
+    "priceEGP": 20958000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-09",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 98,
+    "priceEGP": 17830000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-10",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 98,
+    "priceEGP": 17830000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-11",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 130,
+    "priceEGP": 23750000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-12",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 133,
+    "priceEGP": 27529000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-13",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 107,
+    "priceEGP": 20854000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-14",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 83.5,
+    "priceEGP": 14667000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-16",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 84.5,
+    "priceEGP": 14070000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-17",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 122,
+    "priceEGP": 21266000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-18",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 84.5,
+    "priceEGP": 14070000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-22",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 123,
+    "priceEGP": 25565000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-23",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 140,
+    "priceEGP": 25590000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-24",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 99,
+    "priceEGP": 17990000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  },
+  {
+    "id": "PLNC-AP-D-05-25",
+    "beds": 2,
+    "finishing": "CS-OF",
+    "areaSqm": 76,
+    "priceEGP": 14310000,
+    "status": "Available",
+    "cluster": "Palmet New Cairo"
+  }
+]

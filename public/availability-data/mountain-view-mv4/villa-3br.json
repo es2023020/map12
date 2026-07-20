@@ -1,0 +1,50 @@
+[
+  {
+    "id": "MV4-A-VB-129-0",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 37029638,
+    "status": "Available",
+    "cluster": "AR - Army Share Apr 2026",
+    "areaNote": "Garden: 245m, Roof: 55.54m, Land: 318.36m",
+    "deliveryNote": "READY TO MOVE - 6"
+  },
+  {
+    "id": "MV4-A-VB-130-0",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 36615833,
+    "status": "Available",
+    "cluster": "AR - Army Share Apr 2026",
+    "areaNote": "Garden: 245m, Roof: 55.54m, Land: 302.05m",
+    "deliveryNote": "READY TO MOVE - 6"
+  },
+  {
+    "id": "MV4-A-VB-131-0",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 37165685,
+    "status": "Available",
+    "cluster": "AR - Army Share Apr 2026",
+    "areaNote": "Garden: 245m, Roof: 55.54m, Land: 293.57m",
+    "deliveryNote": "READY TO MOVE - 6"
+  },
+  {
+    "id": "MV4-A-VC-127-0",
+    "category": "Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 34707385,
+    "status": "Available",
+    "cluster": "AR - Army Share Apr 2026",
+    "areaNote": "Garden: 230m, Roof: 41.31m, Land: 300.78m",
+    "deliveryNote": "READY TO MOVE - 6"
+  }
+]

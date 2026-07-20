@@ -1,0 +1,29 @@
+[
+  {
+    "id": "patio-hills-standalone-r2-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 475,
+    "priceEGP": 65200000,
+    "status": "Available",
+    "areaNote": "659m2 to 734m2"
+  },
+  {
+    "id": "patio-hills-standalone-r2-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 475,
+    "priceEGP": 66350000,
+    "status": "Available",
+    "areaNote": "659m2 to 734m2"
+  },
+  {
+    "id": "patio-hills-standalone-r2-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 475,
+    "priceEGP": 67500000,
+    "status": "Last Unit",
+    "areaNote": "659m2 to 734m2"
+  }
+]

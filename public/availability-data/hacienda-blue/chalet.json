@@ -1,0 +1,173 @@
+[
+  {
+    "id": "HBLU-SCH-304BF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28102000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-402AF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28627000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-402BF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28627000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-403AF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28627000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-403BF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28627000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-450BF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28627000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-601AF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28102000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-601AG",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 164,
+    "priceEGP": 30598000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-601BF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28102000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-601BG",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 164,
+    "priceEGP": 30598000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-602AF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28102000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-602BF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28102000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-602BG",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 164,
+    "priceEGP": 30598000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-JCH-604BF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 114.5,
+    "priceEGP": 23701000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-608BF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 154.5,
+    "priceEGP": 28102000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-SCH-608BG",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 164,
+    "priceEGP": 30598000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-JCH-612AG",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 116,
+    "priceEGP": 25693000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-JCH-612BG",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 116,
+    "priceEGP": 25693000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  },
+  {
+    "id": "HBLU-JCH-617AG",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 116,
+    "priceEGP": 25693000,
+    "status": "Available",
+    "cluster": "HBLU-Phase 1"
+  }
+]

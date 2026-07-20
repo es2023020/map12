@@ -1,0 +1,29 @@
+[
+  {
+    "id": "patio-5-east-townhouse-middle-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 214,
+    "priceEGP": 23500000,
+    "status": "Available",
+    "areaNote": "196m – 211m"
+  },
+  {
+    "id": "patio-5-east-townhouse-middle-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 223,
+    "priceEGP": 24100000,
+    "status": "Available",
+    "areaNote": "196m – 211m"
+  },
+  {
+    "id": "patio-5-east-townhouse-middle-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 232,
+    "priceEGP": 24700000,
+    "status": "Last Unit",
+    "areaNote": "196m – 211m"
+  }
+]

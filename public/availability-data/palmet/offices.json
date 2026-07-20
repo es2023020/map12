@@ -1,0 +1,164 @@
+[
+  {
+    "id": "PAL-B1-FF-06",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 168,
+    "priceEGP": 33330000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B1-FF-07",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 126,
+    "priceEGP": 26211000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B1-FF-09",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 155,
+    "priceEGP": 30763000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B1-FF-10",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 185.5,
+    "priceEGP": 36787000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B1-FF-12",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 178.5,
+    "priceEGP": 35404000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B1-FF-13",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 180,
+    "priceEGP": 35700000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B3-FF-01",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 222.5,
+    "priceEGP": 42761000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B3-FF-02",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 123.5,
+    "priceEGP": 25694000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B3-FF-03",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 190,
+    "priceEGP": 37675000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B3-FF-04",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 152,
+    "priceEGP": 30170000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B3-FF-06",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 188.5,
+    "priceEGP": 37379000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B3-FF-12",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 228,
+    "priceEGP": 43815000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B3-FF-13",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 254,
+    "priceEGP": 48794000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B3-FF-14",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 197.5,
+    "priceEGP": 39157000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B4-FF-01",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 131.5,
+    "priceEGP": 28785000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B4-FF-02",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 154,
+    "priceEGP": 32170000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B4-FF-03",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 130.5,
+    "priceEGP": 28567000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  },
+  {
+    "id": "PAL-B4-FF-04",
+    "beds": 2,
+    "finishing": "Palmet-OFII",
+    "areaSqm": 192.5,
+    "priceEGP": 39887000,
+    "status": "Available",
+    "cluster": "Palmet-B"
+  }
+]

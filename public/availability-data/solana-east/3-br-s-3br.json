@@ -1,0 +1,26 @@
+[
+  {
+    "id": "solana-east-3-br-s-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 181,
+    "priceEGP": 27500000,
+    "status": "Available"
+  },
+  {
+    "id": "solana-east-3-br-s-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 181,
+    "priceEGP": 27500000,
+    "status": "Available"
+  },
+  {
+    "id": "solana-east-3-br-s-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 181,
+    "priceEGP": 27500000,
+    "status": "Last Unit"
+  }
+]

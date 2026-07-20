@@ -1,0 +1,26 @@
+[
+  {
+    "id": "silversands-twin-house-l-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 307,
+    "priceEGP": 76000000,
+    "status": "Available"
+  },
+  {
+    "id": "silversands-twin-house-l-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 307,
+    "priceEGP": 76000000,
+    "status": "Available"
+  },
+  {
+    "id": "silversands-twin-house-l-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 307,
+    "priceEGP": 76000000,
+    "status": "Last Unit"
+  }
+]

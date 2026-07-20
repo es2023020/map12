@@ -1,0 +1,35 @@
+[
+  {
+    "id": "la-vista-6-twin-villa-not-sea-view--1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 0,
+    "status": "Available",
+    "areaNote": "50m2",
+    "deliveryNote": "1/1/2029",
+    "paymentPlan": "Over 8 years"
+  },
+  {
+    "id": "la-vista-6-twin-villa-not-sea-view--2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 0,
+    "status": "Available",
+    "areaNote": "50m2",
+    "deliveryNote": "1/1/2029",
+    "paymentPlan": "Over 8 years"
+  },
+  {
+    "id": "la-vista-6-twin-villa-not-sea-view--3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "priceEGP": 0,
+    "status": "Last Unit",
+    "areaNote": "50m2",
+    "deliveryNote": "1/1/2029",
+    "paymentPlan": "Over 8 years"
+  }
+]

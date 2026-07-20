@@ -1,0 +1,50 @@
+[
+  {
+    "id": "NF1-IV4-13-A0-2",
+    "category": "I-Villa Garden",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 40,
+    "priceEGP": 28552653,
+    "status": "Available",
+    "cluster": "NF1 - Phase-1",
+    "areaNote": "Garden: 220m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "NF1-IV4-13-B0-1",
+    "category": "I-Villa Garden",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 40,
+    "priceEGP": 28552653,
+    "status": "Available",
+    "cluster": "NF1 - Phase-1",
+    "areaNote": "Garden: 220m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "NF1-IV4-14-A0-1",
+    "category": "I-Villa Garden",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 85,
+    "priceEGP": 29220153,
+    "status": "Available",
+    "cluster": "NF1 - Phase-1",
+    "areaNote": "Garden: 220m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "NF1-IV4-14-B0-1",
+    "category": "I-Villa Garden",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 40,
+    "priceEGP": 28552653,
+    "status": "Available",
+    "cluster": "NF1 - Phase-1",
+    "areaNote": "Garden: 220m",
+    "deliveryNote": "OFF PLAN - 4"
+  }
+]

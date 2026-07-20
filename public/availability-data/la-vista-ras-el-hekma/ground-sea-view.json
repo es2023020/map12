@@ -1,0 +1,32 @@
+[
+  {
+    "id": "la-vista-ras-el-hekma-ground-sea-view--1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 24800000,
+    "status": "Available",
+    "areaNote": "50m2 (garden)",
+    "deliveryNote": "Ready to move"
+  },
+  {
+    "id": "la-vista-ras-el-hekma-ground-sea-view--2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 24800000,
+    "status": "Available",
+    "areaNote": "50m2 (garden)",
+    "deliveryNote": "Ready to move"
+  },
+  {
+    "id": "la-vista-ras-el-hekma-ground-sea-view--3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "priceEGP": 24800000,
+    "status": "Last Unit",
+    "areaNote": "50m2 (garden)",
+    "deliveryNote": "Ready to move"
+  }
+]

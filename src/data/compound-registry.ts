@@ -1847,4 +1847,166 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     types: ["Apartment", "Chalet", "Townhouse", "Twin House", "Standalone Villa"],
     highlights: ["3.4 million m² integrated resort town", "15 minutes from Hurghada Airport", "Panoramic Red Sea hillside views"]
   },
+
+  "hacienda-west": {
+    name: "Hacienda West",
+    destination: "north-coast",
+    lat: 31.025,
+    lng: 28.185,
+    developer: "Palm Hills Developments",
+    city: "km 208, Ras El Hekma, North Coast, Egypt",
+    beachfront: true,
+    type: "Resort",
+    blurb: "Hacienda West is a boutique luxury beach resort by Palm Hills in Ras El Hekma offering Mediterranean residences, swimmable lagoons, and direct beach access.",
+    paymentPlan: "10% down, installments up to 8 years",
+    amenities: ["Private beach", "Beach club", "Swimming pools", "Clubhouse", "Sports courts", "Restaurants & cafés", "24/7 security"],
+    types: ["Chalet", "Twin House", "Standalone Villa"],
+    highlights: ["Ras El Hekma km 208 prime beach location", "Swimmable crystal lagoons", "Boutique low-density coastal community"]
+  },
+
+  "phnc-commercial": {
+    name: "PHNC Commercial Strip",
+    destination: "new-cairo",
+    lat: 30.015,
+    lng: 31.545,
+    developer: "Palm Hills Developments",
+    city: "Palm Hills New Cairo, 5th Settlement, New Cairo, Egypt",
+    blurb: "PHNC Commercial is Palm Hills' premier retail and office hub serving Palm Hills New Cairo and Golden Square with modern business suites and commercial spaces.",
+    paymentPlan: "10% down, installments up to 7 years",
+    amenities: ["Retail shops", "Office spaces", "Underground parking", "Dining district", "24/7 security"],
+    types: ["Commercial Shop", "Administrative Office", "Medical Clinic"],
+    highlights: ["Serves Palm Hills New Cairo community", "Prime Golden Square location", "Modern glass facades & commercial plaza"]
+  },
+
+  "palm-hills-ritz-carlton": {
+    name: "Palm Hills Ritz Carlton Residences",
+    destination: "october",
+    lat: 29.985,
+    lng: 30.955,
+    developer: "Palm Hills Developments",
+    city: "6th of October City, Giza, Egypt",
+    blurb: "Palm Hills Ritz Carlton Residences offers ultra-luxury hotel-serviced villas and branded residences with 5-star Ritz-Carlton hospitality services.",
+    paymentPlan: "15% down, installments up to 7 years",
+    amenities: ["Ritz-Carlton hotel services", "Concierge", "Fine dining", "Spa & wellness center", "Infinity pool", "Golf views", "Private club"],
+    types: ["Branded Villa", "Palace"],
+    highlights: ["5-star Ritz-Carlton branded luxury", "Overlooking 18-hole golf course", "Exclusive ultra-private enclave"]
+  },
+
+  "palmet": {
+    name: "Palmet",
+    destination: "october",
+    lat: 29.972,
+    lng: 30.932,
+    developer: "Palm Hills Developments",
+    city: "6th of October City, Giza, Egypt",
+    blurb: "Palmet is a dynamic mixed-use commercial and lifestyle boulevard by Palm Hills featuring retail promenades, boutique offices, and dining spaces.",
+    paymentPlan: "10% down, installments up to 6 years",
+    amenities: ["Lifestyle boulevard", "Dining plaza", "Outdoor cafes", "Retail shops", "Boutique offices", "Valet parking"],
+    types: ["Retail Store", "Boutique Office"],
+    highlights: ["Flagship lifestyle boulevard in 6th October", "Direct access from 26th of July Corridor", "Outdoor pedestrian plaza"]
+  },
+
+  "aliva": {
+    name: "Aliva Mostakbal City",
+    destination: "mostakbal-city",
+    lat: 30.048,
+    lng: 31.652,
+    developer: "Mountain View",
+    city: "Mostakbal City, New Cairo, Cairo, Egypt",
+    blurb: "Aliva is Mountain View's flagship 638-acre mega-development in Mostakbal City, designed around 7 unique parks including River Park and Lagoon Park.",
+    paymentPlan: "5% down, installments up to 8 years",
+    amenities: ["River park & water canals", "Crystal lagoons", "Clubhouse", "Sports academy", "Parks & trails", "Commercial hub", "24/7 security"],
+    types: ["Apartment", "iVilla", "Town House", "Twin House", "Standalone Villa"],
+    highlights: ["638 acres in Mostakbal City", "7 themed parks including River Park", "Direct access from Middle Ring Road"]
+  },
+
+  "mountain-view-icity": {
+    name: "Mountain View iCity New Cairo",
+    destination: "new-cairo",
+    lat: 30.052,
+    lng: 31.562,
+    developer: "Mountain View",
+    city: "New Cairo, Cairo, Egypt",
+    blurb: "Mountain View iCity New Cairo is a pioneering 500-acre smart city featuring 4D multi-level urban design, car-free green parks, and innovative iVillas.",
+    paymentPlan: "10% down, installments up to 8 years",
+    amenities: ["Central park", "4D multi-level bridges", "Sports club", "Lagoon beach", "Commercial plaza", "Smart security"],
+    types: ["Apartment", "iVilla", "Town House", "Twin House", "Standalone Villa"],
+    highlights: ["500 acres innovative 4D smart city", "Car-free pedestrian park levels", "Adjacent to AUC & Golden Square"]
+  },
+
+  "sea-via": {
+    name: "La Vista Sea Via",
+    destination: "north-coast",
+    lat: 31.065,
+    lng: 27.952,
+    developer: "La Vista Developments",
+    city: "Ras El Hekma, North Coast, Egypt",
+    beachfront: true,
+    type: "Resort",
+    blurb: "Sea Via is an exclusive G+2 boutique sea & lagoon view chalet community by La Vista Developments in Ras El Hekma.",
+    paymentPlan: "10% down, installments up to 7 years",
+    amenities: ["Pool view chalets", "Swimmable lagoons", "Beach club", "Landscaped gardens", "24/7 security"],
+    types: ["Chalet Ground", "Chalet 1st Floor", "Chalet 2nd Floor Roof"],
+    highlights: ["Ras El Hekma G+2 low-rise design", "Sea & lagoon views", "Fully finished chalets"]
+  },
+
+  "ras-el-hikma-lagoona": {
+    name: "La Vista Ras El Hikma Lagoona",
+    destination: "north-coast",
+    lat: 31.072,
+    lng: 27.925,
+    developer: "La Vista Developments",
+    city: "km 201, Ras El Hekma, North Coast, Egypt",
+    beachfront: true,
+    type: "Resort",
+    blurb: "La Vista Ras El Hikma Lagoona is a private island villa and lagoon chalet development by La Vista spanning 400 feddans in Ras El Hekma.",
+    paymentPlan: "10% down, installments up to 7 years",
+    amenities: ["Gated private islands", "Crystal lagoons", "Beach club", "Pools", "24/7 security"],
+    types: ["Chalet", "Twin House", "Island Villa"],
+    highlights: ["Villas on gated private islands", "400 feddans crystal lagoon resort", "Fully finished residences"]
+  },
+
+  "la-vista-ray": {
+    name: "La Vista Ray",
+    destination: "ain-sokhna",
+    lat: 29.582,
+    lng: 32.415,
+    developer: "La Vista Developments",
+    city: "Ain Sokhna, Suez Governorate, Egypt",
+    beachfront: true,
+    type: "Resort",
+    blurb: "La Vista Ray is a boutique 44-feddan Red Sea resort by La Vista offering contemporary beachfront chalets, pools, and sports facilities.",
+    paymentPlan: "10% down, installments up to 6 years",
+    amenities: ["Private beach", "Beach club", "Swimming pools", "Sports courts", "Commercial strip", "24/7 security"],
+    types: ["Chalet Ground", "Chalet 1st Floor", "Chalet 2nd Floor Roof"],
+    highlights: ["44 feddans boutique beachfront resort", "15 km before Zaafarana", "Fully finished chalets"]
+  },
+
+  "zed-east": {
+    name: "Zed East",
+    destination: "new-cairo",
+    lat: 30.012,
+    lng: 31.528,
+    developer: "ORA Developers",
+    city: "New Cairo, Cairo, Egypt",
+    blurb: "Zed East is Naguib Sawiris' flagship 400-acre master-planned community in New Cairo, featuring iconic towers, expansive central park, and sports club.",
+    paymentPlan: "5% down, installments up to 10 years",
+    amenities: ["Central park", "Zed sports club", "Retail boulevard", "Fine dining", "Swimming pools", "Spa", "24/7 security"],
+    types: ["Studio", "Apartment", "Loft", "Serviced Apartment", "Villa"],
+    highlights: ["400 acres in New Cairo Golden Square", "Zed Sports Club & central park", "Naguib Sawiris signature development"]
+  },
+
+  "grova-east-hills": {
+    name: "Grova East Hills",
+    destination: "new-cairo",
+    lat: 30.008,
+    lng: 31.542,
+    developer: "Hassan Allam Holding",
+    city: "6th Settlement, New Cairo, Cairo, Egypt",
+    blurb: "Grova East Hills is Hassan Allam Holding's newest 305-faddan luxury villa community in New Cairo's 6th Settlement, adjacent to Patio Town.",
+    paymentPlan: "5% down, installments up to 8 years",
+    amenities: ["Clubhouse", "Elevated parks", "Water features", "Sports facilities", "Commercial hub", "24/7 security"],
+    types: ["Town House Middle", "Town House Corner", "Twin House", "Villa V1", "Villa V2", "Villa V3"],
+    highlights: ["305 faddans in 6th Settlement New Cairo", "Hassan Allam signature luxury villas", "Adjacent to Patio Town & major corridors"]
+  }
 };

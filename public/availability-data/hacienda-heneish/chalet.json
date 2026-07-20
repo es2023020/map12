@@ -1,0 +1,38 @@
+[
+  {
+    "id": "HH-JCH-833BG",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 116,
+    "priceEGP": 24388000,
+    "status": "Available",
+    "cluster": "HH-Phase 1"
+  },
+  {
+    "id": "HH-SCH-774BG",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 155.5,
+    "priceEGP": 30325000,
+    "status": "Available",
+    "cluster": "HH-Phase 2"
+  },
+  {
+    "id": "HH-SCH-781BG",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 155.5,
+    "priceEGP": 30655000,
+    "status": "Available",
+    "cluster": "HH-Phase 2"
+  },
+  {
+    "id": "HH-SCH-710AF",
+    "beds": 2,
+    "finishing": "CH-FFI",
+    "areaSqm": 155.5,
+    "priceEGP": 27823000,
+    "status": "Available",
+    "cluster": "HH-Phase 1"
+  }
+]

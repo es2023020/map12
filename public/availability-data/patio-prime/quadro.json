@@ -1,0 +1,29 @@
+[
+  {
+    "id": "patio-prime-quadro-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 205,
+    "priceEGP": 24200000,
+    "status": "Available",
+    "areaNote": "220m – 223m"
+  },
+  {
+    "id": "patio-prime-quadro-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 208,
+    "priceEGP": 24450000,
+    "status": "Available",
+    "areaNote": "220m – 223m"
+  },
+  {
+    "id": "patio-prime-quadro-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 211,
+    "priceEGP": 24700000,
+    "status": "Last Unit",
+    "areaNote": "220m – 223m"
+  }
+]

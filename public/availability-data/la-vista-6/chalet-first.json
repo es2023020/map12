@@ -1,0 +1,35 @@
+[
+  {
+    "id": "la-vista-6-chalet-first-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "priceEGP": 0,
+    "status": "Available",
+    "areaNote": "-",
+    "deliveryNote": "1/1/2029",
+    "paymentPlan": "5% down payment"
+  },
+  {
+    "id": "la-vista-6-chalet-first-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "priceEGP": 0,
+    "status": "Available",
+    "areaNote": "-",
+    "deliveryNote": "1/1/2029",
+    "paymentPlan": "5% down payment"
+  },
+  {
+    "id": "la-vista-6-chalet-first-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "priceEGP": 0,
+    "status": "Last Unit",
+    "areaNote": "-",
+    "deliveryNote": "1/1/2029",
+    "paymentPlan": "5% down payment"
+  }
+]

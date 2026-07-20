@@ -1,0 +1,29 @@
+[
+  {
+    "id": "el-patio-sola-duplex-ground-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 328,
+    "priceEGP": 21200000,
+    "status": "Available",
+    "areaNote": "Garden Area: 40m – 75m"
+  },
+  {
+    "id": "el-patio-sola-duplex-ground-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 344,
+    "priceEGP": 21550000,
+    "status": "Available",
+    "areaNote": "Garden Area: 40m – 75m"
+  },
+  {
+    "id": "el-patio-sola-duplex-ground-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 360,
+    "priceEGP": 21900000,
+    "status": "Last Unit",
+    "areaNote": "Garden Area: 40m – 75m"
+  }
+]

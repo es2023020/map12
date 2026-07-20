@@ -1,0 +1,26 @@
+[
+  {
+    "id": "zed-east-standalone-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 250,
+    "priceEGP": 57000000,
+    "status": "Available"
+  },
+  {
+    "id": "zed-east-standalone-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 270,
+    "priceEGP": 73000000,
+    "status": "Available"
+  },
+  {
+    "id": "zed-east-standalone-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 290,
+    "priceEGP": 89000000,
+    "status": "Last Unit"
+  }
+]

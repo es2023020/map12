@@ -1,0 +1,26 @@
+[
+  {
+    "id": "patio-casa-4-bdrs-ground-1",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 275,
+    "priceEGP": 22800000,
+    "status": "Available"
+  },
+  {
+    "id": "patio-casa-4-bdrs-ground-2",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 275,
+    "priceEGP": 22800000,
+    "status": "Available"
+  },
+  {
+    "id": "patio-casa-4-bdrs-ground-3",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 275,
+    "priceEGP": 22800000,
+    "status": "Last Unit"
+  }
+]

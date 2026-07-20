@@ -1,0 +1,32 @@
+[
+  {
+    "id": "la-vista-ray-2nd-floor-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 160,
+    "priceEGP": 13910000,
+    "status": "Available",
+    "areaNote": "155m2",
+    "deliveryNote": "Ready to move"
+  },
+  {
+    "id": "la-vista-ray-2nd-floor-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 160,
+    "priceEGP": 13910000,
+    "status": "Available",
+    "areaNote": "155m2",
+    "deliveryNote": "Ready to move"
+  },
+  {
+    "id": "la-vista-ray-2nd-floor-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 160,
+    "priceEGP": 13910000,
+    "status": "Last Unit",
+    "areaNote": "155m2",
+    "deliveryNote": "Ready to move"
+  }
+]

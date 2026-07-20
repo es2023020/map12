@@ -1,0 +1,29 @@
+[
+  {
+    "id": "el-patio-sola-3-bdrs-typical-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 155,
+    "priceEGP": 9900000,
+    "status": "Available",
+    "areaNote": "-"
+  },
+  {
+    "id": "el-patio-sola-3-bdrs-typical-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 178,
+    "priceEGP": 11800000,
+    "status": "Available",
+    "areaNote": "-"
+  },
+  {
+    "id": "el-patio-sola-3-bdrs-typical-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 200,
+    "priceEGP": 13700000,
+    "status": "Last Unit",
+    "areaNote": "-"
+  }
+]

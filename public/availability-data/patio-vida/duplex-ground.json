@@ -1,0 +1,29 @@
+[
+  {
+    "id": "patio-vida-duplex-ground-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 336,
+    "priceEGP": 27690000,
+    "status": "Available",
+    "areaNote": "30"
+  },
+  {
+    "id": "patio-vida-duplex-ground-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 336,
+    "priceEGP": 27690000,
+    "status": "Available",
+    "areaNote": "30"
+  },
+  {
+    "id": "patio-vida-duplex-ground-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 336,
+    "priceEGP": 27690000,
+    "status": "Last Unit",
+    "areaNote": "30"
+  }
+]

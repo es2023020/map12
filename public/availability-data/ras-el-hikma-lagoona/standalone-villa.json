@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ras-el-hikma-lagoona-standalone-villa-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 340,
+    "priceEGP": 67800000,
+    "status": "Available",
+    "areaNote": "100m2"
+  },
+  {
+    "id": "ras-el-hikma-lagoona-standalone-villa-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 340,
+    "priceEGP": 67800000,
+    "status": "Available",
+    "areaNote": "100m2"
+  },
+  {
+    "id": "ras-el-hikma-lagoona-standalone-villa-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 340,
+    "priceEGP": 67800000,
+    "status": "Last Unit",
+    "areaNote": "100m2"
+  }
+]

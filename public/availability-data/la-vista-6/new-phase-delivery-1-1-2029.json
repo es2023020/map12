@@ -1,0 +1,26 @@
+[
+  {
+    "id": "la-vista-6-new-phase-delivery-1-1-2029--1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 0,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-6-new-phase-delivery-1-1-2029--2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 0,
+    "status": "Available"
+  },
+  {
+    "id": "la-vista-6-new-phase-delivery-1-1-2029--3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 0,
+    "priceEGP": 0,
+    "status": "Last Unit"
+  }
+]

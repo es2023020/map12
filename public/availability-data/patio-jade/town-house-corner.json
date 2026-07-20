@@ -1,0 +1,29 @@
+[
+  {
+    "id": "patio-jade-town-house-corner-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 200,
+    "priceEGP": 0,
+    "status": "Available",
+    "areaNote": "250m"
+  },
+  {
+    "id": "patio-jade-town-house-corner-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 200,
+    "priceEGP": 0,
+    "status": "Available",
+    "areaNote": "250m"
+  },
+  {
+    "id": "patio-jade-town-house-corner-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 200,
+    "priceEGP": 0,
+    "status": "Last Unit",
+    "areaNote": "250m"
+  }
+]

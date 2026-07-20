@@ -1,0 +1,32 @@
+[
+  {
+    "id": "la-vista-ras-el-hekma-twin-house-not-sea-view--1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 140,
+    "priceEGP": 26800000,
+    "status": "Available",
+    "areaNote": "40m2 (garden)",
+    "deliveryNote": "Ready to move"
+  },
+  {
+    "id": "la-vista-ras-el-hekma-twin-house-not-sea-view--2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 140,
+    "priceEGP": 26800000,
+    "status": "Available",
+    "areaNote": "40m2 (garden)",
+    "deliveryNote": "Ready to move"
+  },
+  {
+    "id": "la-vista-ras-el-hekma-twin-house-not-sea-view--3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 140,
+    "priceEGP": 26800000,
+    "status": "Last Unit",
+    "areaNote": "40m2 (garden)",
+    "deliveryNote": "Ready to move"
+  }
+]

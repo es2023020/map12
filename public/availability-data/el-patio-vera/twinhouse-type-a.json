@@ -1,0 +1,29 @@
+[
+  {
+    "id": "el-patio-vera-twinhouse-type-a-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 241,
+    "priceEGP": 25450000,
+    "status": "Available",
+    "areaNote": "308 - 332"
+  },
+  {
+    "id": "el-patio-vera-twinhouse-type-a-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 243,
+    "priceEGP": 28115000,
+    "status": "Available",
+    "areaNote": "308 - 332"
+  },
+  {
+    "id": "el-patio-vera-twinhouse-type-a-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 245,
+    "priceEGP": 30780000,
+    "status": "Last Unit",
+    "areaNote": "308 - 332"
+  }
+]

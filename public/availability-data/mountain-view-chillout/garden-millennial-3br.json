@@ -1,0 +1,50 @@
+[
+  {
+    "id": "L-DM04-31-B0-2",
+    "category": "Garden Millennial",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 273,
+    "priceEGP": 18050923,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46106",
+    "areaNote": "Garden: 165m",
+    "deliveryNote": "OFF PLAN - 4.5"
+  },
+  {
+    "id": "L-DM04-32-A0-1",
+    "category": "Garden Millennial",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 226,
+    "priceEGP": 17192556,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46106",
+    "areaNote": "Garden: 165m",
+    "deliveryNote": "OFF PLAN - 4.5"
+  },
+  {
+    "id": "L-DM04-33-A0-1",
+    "category": "Garden Millennial",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 226,
+    "priceEGP": 18486064,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46106",
+    "areaNote": "Garden: 165m",
+    "deliveryNote": "OFF PLAN - 4.5"
+  },
+  {
+    "id": "L-DM06-29-A0-1",
+    "category": "Garden Millennial",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 252,
+    "priceEGP": 17213301,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46106",
+    "areaNote": "Garden: 165m",
+    "deliveryNote": "OFF PLAN - 4.5"
+  }
+]

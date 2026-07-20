@@ -1,0 +1,32 @@
+[
+  {
+    "id": "la-vista-cascada-penthouse-pool-view-4bds--1",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 27800000,
+    "status": "Available",
+    "deliveryNote": "Ready to move",
+    "paymentPlan": "35% downpayment, rest over 3 years equal installments. +10% Maintenance"
+  },
+  {
+    "id": "la-vista-cascada-penthouse-pool-view-4bds--2",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 27800000,
+    "status": "Available",
+    "deliveryNote": "Ready to move",
+    "paymentPlan": "35% downpayment, rest over 3 years equal installments. +10% Maintenance"
+  },
+  {
+    "id": "la-vista-cascada-penthouse-pool-view-4bds--3",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 185,
+    "priceEGP": 27800000,
+    "status": "Last Unit",
+    "deliveryNote": "Ready to move",
+    "paymentPlan": "35% downpayment, rest over 3 years equal installments. +10% Maintenance"
+  }
+]

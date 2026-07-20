@@ -1,0 +1,38 @@
+[
+  {
+    "id": "CA-05-23-B0-03",
+    "category": "Park Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 53.55,
+    "priceEGP": 19228349,
+    "status": "Available",
+    "cluster": "Club - Feb 2026 (Value Offer)",
+    "areaNote": "Garden: 240m",
+    "deliveryNote": "OFF PLAN - 3"
+  },
+  {
+    "id": "CA-05-25-B0-01",
+    "category": "Park Villa",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 101.51,
+    "priceEGP": 17522549,
+    "status": "Available",
+    "cluster": "Club - Feb 2026 (Value Offer)",
+    "areaNote": "Garden: 175m",
+    "deliveryNote": "OFF PLAN - 3"
+  },
+  {
+    "id": "CA-09-45-B0-1",
+    "category": "Park Villa",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 145,
+    "priceEGP": 22865210,
+    "status": "Available",
+    "cluster": "Club - Phase 1a-Apr 2026",
+    "areaNote": "Garden: 275m",
+    "deliveryNote": "READY TO DELIVER"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "patio-5-east-townhouse-corner-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 218,
+    "priceEGP": 29800000,
+    "status": "Available",
+    "areaNote": "270m – 351m"
+  },
+  {
+    "id": "patio-5-east-townhouse-corner-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 227,
+    "priceEGP": 34100000,
+    "status": "Available",
+    "areaNote": "270m – 351m"
+  },
+  {
+    "id": "patio-5-east-townhouse-corner-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 235,
+    "priceEGP": 38400000,
+    "status": "Last Unit",
+    "areaNote": "270m – 351m"
+  }
+]

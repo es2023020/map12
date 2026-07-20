@@ -1,0 +1,26 @@
+[
+  {
+    "id": "zed-east-duplex-ground-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 191,
+    "priceEGP": 29000000,
+    "status": "Available"
+  },
+  {
+    "id": "zed-east-duplex-ground-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 191,
+    "priceEGP": 29000000,
+    "status": "Available"
+  },
+  {
+    "id": "zed-east-duplex-ground-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 191,
+    "priceEGP": 29000000,
+    "status": "Last Unit"
+  }
+]

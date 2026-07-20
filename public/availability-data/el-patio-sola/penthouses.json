@@ -1,0 +1,29 @@
+[
+  {
+    "id": "el-patio-sola-penthouses-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 123,
+    "priceEGP": 10400000,
+    "status": "Available",
+    "areaNote": "Penthouse Area: 20m – 30m"
+  },
+  {
+    "id": "el-patio-sola-penthouses-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 146,
+    "priceEGP": 12050000,
+    "status": "Available",
+    "areaNote": "Penthouse Area: 20m – 30m"
+  },
+  {
+    "id": "el-patio-sola-penthouses-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 168,
+    "priceEGP": 13700000,
+    "status": "Last Unit",
+    "areaNote": "Penthouse Area: 20m – 30m"
+  }
+]

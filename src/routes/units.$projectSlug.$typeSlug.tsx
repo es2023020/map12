@@ -5,6 +5,7 @@ import { compoundBySlug } from "@/data/compounds";
 import { breakdownByTypeSlug, unitTypeSlug } from "@/data/availability";
 import type { UnitListing, ProjectAvailability } from "@/data/availability";
 import type { Compound } from "@/data/compounds";
+import { useStore } from "@/lib/store";
 import {
   ArrowLeft, Phone, Ruler, Calendar, MapPin, Wallet,
   CheckCircle2, AlertCircle, Info, Building2, ExternalLink,
@@ -45,7 +46,7 @@ export const Route = createFileRoute("/units/$projectSlug/$typeSlug")({
       project: result.project,
       breakdown: {
         ...result.breakdown,
-        units
+        units: (units && units.length > 0) ? units : (result.breakdown.units || [])
       }
     };
   },
@@ -70,8 +71,24 @@ function fmtShort(egp: number) {
 }
 
 function UnitTypePage() {
-  const { typeSlug: currentTypeSlug } = Route.useParams();
-  const { compound, project: avail, breakdown: bd } = Route.useLoaderData();
+  const { typeSlug: currentTypeSlug, projectSlug } = Route.useParams();
+  const { compound, project: initialAvail, breakdown: initialBd } = Route.useLoaderData();
+
+  // Reactive subscription to live Zustand availability store
+  const availabilityList = useStore((s) => s.availabilityList);
+  
+  const bd = useMemo(() => {
+    if (!availabilityList || !availabilityList.length) return initialBd;
+    const proj = availabilityList.find((a: any) => a.slug === projectSlug);
+    if (!proj || !proj.breakdown) return initialBd;
+    const match = proj.breakdown.find((item: any) => unitTypeSlug(item) === currentTypeSlug);
+    if (!match) return initialBd;
+    return {
+      ...initialBd,
+      ...match,
+      units: (match.units && match.units.length > 0) ? match.units : initialBd.units
+    };
+  }, [availabilityList, projectSlug, currentTypeSlug, initialBd]);
 
   const [sortBy, setSortBy] = useState<"price-asc" | "price-desc" | "size-asc" | "size-desc">("price-asc");
   const [filterView, setFilterView] = useState<string>("");
@@ -86,7 +103,7 @@ function UnitTypePage() {
   const extraKeys = useMemo(() => {
     const units = bd.units ?? [];
     return Array.from(
-      new Set<string>(units.flatMap((u) => Object.keys(u)))
+      new Set<string>(units.flatMap((u: any) => Object.keys(u)))
     ).filter((k) => !standardKeys.includes(k));
   }, [bd.units, standardKeys]);
 
@@ -94,35 +111,35 @@ function UnitTypePage() {
   const hasUnits = Boolean(bd.units && bd.units.length > 0);
 
   const uniqueViews = useMemo(() => {
-    return Array.from(new Set(bd.units?.map((u) => u.view).filter(Boolean) ?? [])) as string[];
+    return Array.from(new Set(bd.units?.map((u: any) => u.view).filter(Boolean) ?? [])) as string[];
   }, [bd.units]);
 
   const uniqueDeliveries = useMemo(() => {
-    return Array.from(new Set(bd.units?.map((u) => u.deliveryNote).filter(Boolean) ?? [])) as string[];
+    return Array.from(new Set(bd.units?.map((u: any) => u.deliveryNote).filter(Boolean) ?? [])) as string[];
   }, [bd.units]);
 
   const uniqueFinishings = useMemo(() => {
-    return Array.from(new Set(bd.units?.map((u) => u.finishing).filter(Boolean) ?? [])) as string[];
+    return Array.from(new Set(bd.units?.map((u: any) => u.finishing).filter(Boolean) ?? [])) as string[];
   }, [bd.units]);
 
   const uniqueStatuses = useMemo(() => {
-    return Array.from(new Set(bd.units?.map((u) => u.status).filter(Boolean) ?? [])) as string[];
+    return Array.from(new Set(bd.units?.map((u: any) => u.status).filter(Boolean) ?? [])) as string[];
   }, [bd.units]);
 
   const filteredUnits = useMemo(() => {
     if (!bd.units) return [];
     let list = [...bd.units];
     if (filterView) {
-      list = list.filter((u) => u.view === filterView);
+      list = list.filter((u: any) => u.view === filterView);
     }
     if (filterFinishing) {
-      list = list.filter((u) => u.finishing === filterFinishing);
+      list = list.filter((u: any) => u.finishing === filterFinishing);
     }
     if (filterStatus) {
-      list = list.filter((u) => u.status === filterStatus);
+      list = list.filter((u: any) => u.status === filterStatus);
     }
 
-    list.sort((a, b) => {
+    list.sort((a: any, b: any) => {
       if (sortBy === "price-asc") return a.priceEGP - b.priceEGP;
       if (sortBy === "price-desc") return b.priceEGP - a.priceEGP;
       if (sortBy === "size-asc") return a.areaSqm - b.areaSqm;
@@ -133,7 +150,7 @@ function UnitTypePage() {
     return list;
   }, [bd.units, sortBy, filterView, filterFinishing, filterStatus]);
 
-  const otherTypes = avail.breakdown.filter((b) => unitTypeSlug(b) !== currentTypeSlug);
+  const otherTypes = (initialAvail?.breakdown || []).filter((b: any) => unitTypeSlug(b) !== currentTypeSlug);
 
   return (
     <Shell>
@@ -189,7 +206,7 @@ function UnitTypePage() {
             <StripStat icon={Wallet} label="Starting from" value={`EGP ${bd.minPriceM.toFixed(2)}M`} accent />
             <StripStat icon={Ruler} label="Size range" value={bd.minSqm === bd.maxSqm ? `${bd.minSqm} m²` : `${bd.minSqm}–${bd.maxSqm} m²`} />
             <StripStat icon={Building2} label="Units available" value={String(bd.available)} className="hidden md:flex" />
-            <StripStat icon={Calendar} label="Data updated" value={avail.lastUpdated} className="hidden md:flex" />
+            <StripStat icon={Calendar} label="Data updated" value={initialAvail?.lastUpdated || "Live"} className="hidden md:flex" />
           </div>
         </div>
       </div>
@@ -223,7 +240,7 @@ function UnitTypePage() {
                 <p className="text-xs text-muted-foreground mt-0.5">Filter and sort current live developer feeds.</p>
               </div>
               <span className="text-xs text-muted-foreground bg-emerald-50 border border-emerald-200 rounded-full px-3 py-1 dark:bg-emerald-950/20 dark:border-emerald-900/40">
-                Verified: {avail.developer} · {avail.lastUpdated}
+                Verified: {initialAvail?.developer || compound.developer} · {initialAvail?.lastUpdated || "Live"}
               </span>
             </div>
 
@@ -305,7 +322,7 @@ function UnitTypePage() {
                     <thead>
                       <tr className="border-b border-border bg-secondary/50">
                         <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground w-10">#</th>
-                        {bd.units!.some((u) => u.cluster) && (
+                        {bd.units!.some((u: any) => u.cluster) && (
                           <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Cluster</th>
                         )}
                         <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground font-semibold">Size</th>
@@ -329,7 +346,7 @@ function UnitTypePage() {
                           className={`hover:bg-secondary/20 transition-colors ${unit.status === "Last Unit" ? "bg-amber-50/20 dark:bg-amber-950/5" : ""}`}
                         >
                           <td className="px-4 py-3.5 text-muted-foreground text-xs font-semibold">{i + 1}</td>
-                          {bd.units!.some((u) => u.cluster) && (
+                          {bd.units!.some((u: any) => u.cluster) && (
                             <td className="px-4 py-3.5">
                               {unit.cluster && (
                                 <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary">{unit.cluster}</span>

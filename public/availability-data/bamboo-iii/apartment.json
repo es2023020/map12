@@ -1,0 +1,191 @@
+[
+  {
+    "id": "Bamboo III-FH-39D03",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 191,
+    "priceEGP": 28311000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-4003",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 191,
+    "priceEGP": 27770000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-4004",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 27883000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-4503",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 191,
+    "priceEGP": 28855000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-46D04",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 28971000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-4803",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 191,
+    "priceEGP": 29719000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-57D04",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 28426000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-5804",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 28426000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-4103",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 191,
+    "priceEGP": 28217000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-4104",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 28331000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-4303",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 191,
+    "priceEGP": 28376000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-4404",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 28223000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-8504",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 28005000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-8604",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 28005000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-9403",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 191,
+    "priceEGP": 27998000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-9404",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 28166000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-9503",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 191,
+    "priceEGP": 28051000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-9504",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 28111000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-9603",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 191,
+    "priceEGP": 27998000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-9703",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 191,
+    "priceEGP": 27998000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  },
+  {
+    "id": "Bamboo III-FH-9704",
+    "beds": 2,
+    "finishing": "FFA I",
+    "areaSqm": 192,
+    "priceEGP": 28111000,
+    "status": "Available",
+    "cluster": "Bamboo III"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "la-vista-6-1st-floor-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 140,
+    "priceEGP": 11200000,
+    "status": "Available",
+    "areaNote": "-",
+    "deliveryNote": "Immediate Delivery",
+    "paymentPlan": "35% down payment, over 3 years. Maintenance 10%. No cash discount"
+  },
+  {
+    "id": "la-vista-6-1st-floor-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 140,
+    "priceEGP": 11200000,
+    "status": "Available",
+    "areaNote": "-",
+    "deliveryNote": "Immediate Delivery",
+    "paymentPlan": "35% down payment, over 3 years. Maintenance 10%. No cash discount"
+  },
+  {
+    "id": "la-vista-6-1st-floor-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 140,
+    "priceEGP": 11200000,
+    "status": "Last Unit",
+    "areaNote": "-",
+    "deliveryNote": "Immediate Delivery",
+    "paymentPlan": "35% down payment, over 3 years. Maintenance 10%. No cash discount"
+  }
+]

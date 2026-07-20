@@ -1,0 +1,26 @@
+[
+  {
+    "id": "IV2-TH-8-10-00-1",
+    "category": "Town House",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 24370463,
+    "status": "Available",
+    "cluster": "IV2 - Phase-1",
+    "areaNote": "Garden: 165m, Roof: 30m, Land: 204.84m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "IV2-TH-8-70-00-8",
+    "category": "Town House",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 24170130,
+    "status": "Available",
+    "cluster": "IV2 - Phase-1",
+    "areaNote": "Garden: 165m, Roof: 30m, Land: 184.54m",
+    "deliveryNote": "OFF PLAN - 4"
+  }
+]

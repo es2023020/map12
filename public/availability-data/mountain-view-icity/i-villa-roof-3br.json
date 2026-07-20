@@ -1,0 +1,26 @@
+[
+  {
+    "id": "NP-IV-04-A5-03",
+    "category": "I-Villa Roof",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 21553551,
+    "status": "Available",
+    "cluster": "The North Park - Feb 2026 (Value Offer)",
+    "areaNote": "Garden: 260m, Roof: 15m",
+    "deliveryNote": "OFF PLAN - 3"
+  },
+  {
+    "id": "NP-IV-05-B5-04",
+    "category": "I-Villa Roof",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 0,
+    "priceEGP": 21740130,
+    "status": "Available",
+    "cluster": "The North Park - Feb 2026 (Value Offer)",
+    "areaNote": "Garden: 260m, Roof: 15m",
+    "deliveryNote": "OFF PLAN - 3"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "LP-LV4P-07-00-01",
+    "category": "Villa",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 262.01,
+    "priceEGP": 54213953,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46113",
+    "areaNote": "Garden: 280m, Land: 503.87m",
+    "deliveryNote": "OFF PLAN - 3.5"
+  },
+  {
+    "id": "LP-LV4P-15-00-01",
+    "category": "Villa",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 208.5,
+    "priceEGP": 49061540,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46113",
+    "areaNote": "Garden: 280m, Land: 400.97m",
+    "deliveryNote": "OFF PLAN - 3.5"
+  },
+  {
+    "id": "LP-LV4P-27-00-01",
+    "category": "Villa",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 261.19,
+    "priceEGP": 49168028,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46113",
+    "areaNote": "Garden: 280m, Land: 502.28m",
+    "deliveryNote": "OFF PLAN - 3.5"
+  },
+  {
+    "id": "LP-LV4P-28-00-01",
+    "category": "Villa",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 261.56,
+    "priceEGP": 50169621,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46113",
+    "areaNote": "Garden: 280m, Land: 503m",
+    "deliveryNote": "OFF PLAN - 3.5"
+  },
+  {
+    "id": "LP-LV4P-29-00-01",
+    "category": "Villa",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 261.19,
+    "priceEGP": 50792522,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46113",
+    "areaNote": "Garden: 280m, Land: 502.28m",
+    "deliveryNote": "OFF PLAN - 3.5"
+  }
+]

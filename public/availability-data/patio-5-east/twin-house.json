@@ -1,0 +1,29 @@
+[
+  {
+    "id": "patio-5-east-twin-house-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "priceEGP": 27400000,
+    "status": "Available",
+    "areaNote": "248m – 341m"
+  },
+  {
+    "id": "patio-5-east-twin-house-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 260,
+    "priceEGP": 31100000,
+    "status": "Available",
+    "areaNote": "248m – 341m"
+  },
+  {
+    "id": "patio-5-east-twin-house-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 299,
+    "priceEGP": 34800000,
+    "status": "Last Unit",
+    "areaNote": "248m – 341m"
+  }
+]

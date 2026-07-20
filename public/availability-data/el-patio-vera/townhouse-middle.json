@@ -1,0 +1,29 @@
+[
+  {
+    "id": "el-patio-vera-townhouse-middle-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 176,
+    "priceEGP": 18300000,
+    "status": "Available",
+    "areaNote": "198"
+  },
+  {
+    "id": "el-patio-vera-townhouse-middle-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 176,
+    "priceEGP": 18300000,
+    "status": "Available",
+    "areaNote": "198"
+  },
+  {
+    "id": "el-patio-vera-townhouse-middle-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 176,
+    "priceEGP": 18300000,
+    "status": "Last Unit",
+    "areaNote": "198"
+  }
+]

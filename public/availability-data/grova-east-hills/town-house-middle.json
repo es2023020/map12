@@ -1,0 +1,29 @@
+[
+  {
+    "id": "grova-east-hills-town-house-middle-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 263,
+    "priceEGP": 31000000,
+    "status": "Available",
+    "areaNote": "310 SQM"
+  },
+  {
+    "id": "grova-east-hills-town-house-middle-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 263,
+    "priceEGP": 32000000,
+    "status": "Available",
+    "areaNote": "310 SQM"
+  },
+  {
+    "id": "grova-east-hills-town-house-middle-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 263,
+    "priceEGP": 33000000,
+    "status": "Last Unit",
+    "areaNote": "310 SQM"
+  }
+]

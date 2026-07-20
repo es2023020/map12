@@ -1,0 +1,26 @@
+[
+  {
+    "id": "silversands-villa-l-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 250,
+    "priceEGP": 75000000,
+    "status": "Available"
+  },
+  {
+    "id": "silversands-villa-l-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 250,
+    "priceEGP": 75000000,
+    "status": "Available"
+  },
+  {
+    "id": "silversands-villa-l-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 250,
+    "priceEGP": 75000000,
+    "status": "Last Unit"
+  }
+]

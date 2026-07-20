@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ras-el-hikma-lagoona-twin-house-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 160,
+    "priceEGP": 27800000,
+    "status": "Available",
+    "areaNote": "40m2"
+  },
+  {
+    "id": "ras-el-hikma-lagoona-twin-house-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 160,
+    "priceEGP": 28800000,
+    "status": "Available",
+    "areaNote": "40m2"
+  },
+  {
+    "id": "ras-el-hikma-lagoona-twin-house-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 160,
+    "priceEGP": 29800000,
+    "status": "Last Unit",
+    "areaNote": "40m2"
+  }
+]

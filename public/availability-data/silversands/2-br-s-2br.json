@@ -1,0 +1,26 @@
+[
+  {
+    "id": "silversands-2-br-s-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 125,
+    "priceEGP": 38000000,
+    "status": "Available"
+  },
+  {
+    "id": "silversands-2-br-s-2",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 125,
+    "priceEGP": 38000000,
+    "status": "Available"
+  },
+  {
+    "id": "silversands-2-br-s-3",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 125,
+    "priceEGP": 38000000,
+    "status": "Last Unit"
+  }
+]

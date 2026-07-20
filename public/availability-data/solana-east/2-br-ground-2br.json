@@ -1,0 +1,26 @@
+[
+  {
+    "id": "solana-east-2-br-ground-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 131,
+    "priceEGP": 17000000,
+    "status": "Available"
+  },
+  {
+    "id": "solana-east-2-br-ground-2",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 131,
+    "priceEGP": 17300000,
+    "status": "Available"
+  },
+  {
+    "id": "solana-east-2-br-ground-3",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 131,
+    "priceEGP": 17600000,
+    "status": "Last Unit"
+  }
+]

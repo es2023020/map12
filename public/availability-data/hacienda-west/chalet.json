@@ -1,0 +1,56 @@
+[
+  {
+    "id": "WST-BLA-4741",
+    "beds": 2,
+    "finishing": "CFFI",
+    "areaSqm": 111.5,
+    "priceEGP": 25253075,
+    "status": "Available",
+    "cluster": "Hacienda West (1)"
+  },
+  {
+    "id": "WST-BLA-4742",
+    "beds": 2,
+    "finishing": "CFFI",
+    "areaSqm": 111,
+    "priceEGP": 25112120,
+    "status": "Available",
+    "cluster": "Hacienda West (1)"
+  },
+  {
+    "id": "WST-BLA-4743",
+    "beds": 2,
+    "finishing": "CFFI",
+    "areaSqm": 111,
+    "priceEGP": 25112120,
+    "status": "Available",
+    "cluster": "Hacienda West (1)"
+  },
+  {
+    "id": "WST-BLA-4744",
+    "beds": 2,
+    "finishing": "CFFI",
+    "areaSqm": 111,
+    "priceEGP": 25112120,
+    "status": "Available",
+    "cluster": "Hacienda West (1)"
+  },
+  {
+    "id": "WST-BLA-4745",
+    "beds": 2,
+    "finishing": "CFFI",
+    "areaSqm": 111,
+    "priceEGP": 25112120,
+    "status": "Available",
+    "cluster": "Hacienda West (1)"
+  },
+  {
+    "id": "WST-SCH-176AG",
+    "beds": 2,
+    "finishing": "CFFI",
+    "areaSqm": 205.02,
+    "priceEGP": 37663011.7,
+    "status": "Available",
+    "cluster": "Hacienda West (1)"
+  }
+]

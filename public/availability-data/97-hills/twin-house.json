@@ -1,0 +1,32 @@
+[
+  {
+    "id": "97H-TIN-035-A",
+    "beds": 2,
+    "finishing": "TINFF-I",
+    "areaSqm": 225.5,
+    "priceEGP": 38786000,
+    "status": "Available",
+    "cluster": "97H-Phase1",
+    "areaNote": "Land: 332 sqm"
+  },
+  {
+    "id": "97H-TIN-243-A",
+    "beds": 2,
+    "finishing": "TINFF-I",
+    "areaSqm": 225.5,
+    "priceEGP": 38627000,
+    "status": "Available",
+    "cluster": "97H-Phase1",
+    "areaNote": "Land: 332 sqm"
+  },
+  {
+    "id": "97H-TIN-243-B",
+    "beds": 2,
+    "finishing": "TINFF-I",
+    "areaSqm": 225.5,
+    "priceEGP": 38627000,
+    "status": "Available",
+    "cluster": "97H-Phase1",
+    "areaNote": "Land: 332 sqm"
+  }
+]

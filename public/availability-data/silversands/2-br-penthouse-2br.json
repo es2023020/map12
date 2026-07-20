@@ -1,0 +1,26 @@
+[
+  {
+    "id": "silversands-2-br-penthouse-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 96,
+    "priceEGP": 21000000,
+    "status": "Available"
+  },
+  {
+    "id": "silversands-2-br-penthouse-2",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 96,
+    "priceEGP": 21000000,
+    "status": "Available"
+  },
+  {
+    "id": "silversands-2-br-penthouse-3",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 96,
+    "priceEGP": 21000000,
+    "status": "Last Unit"
+  }
+]

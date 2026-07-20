@@ -1,0 +1,29 @@
+[
+  {
+    "id": "patio-jade-family-house-type-a-ground-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 165,
+    "priceEGP": 0,
+    "status": "Available",
+    "areaNote": "Garden 100m"
+  },
+  {
+    "id": "patio-jade-family-house-type-a-ground-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 165,
+    "priceEGP": 0,
+    "status": "Available",
+    "areaNote": "Garden 100m"
+  },
+  {
+    "id": "patio-jade-family-house-type-a-ground-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 165,
+    "priceEGP": 0,
+    "status": "Last Unit",
+    "areaNote": "Garden 100m"
+  }
+]

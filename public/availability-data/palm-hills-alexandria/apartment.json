@@ -1,0 +1,317 @@
+[
+  {
+    "id": "ALX-2001-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 89.86,
+    "priceEGP": 10557000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2201-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 89.86,
+    "priceEGP": 11720000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2401-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 89.86,
+    "priceEGP": 12433000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2402-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 169.17,
+    "priceEGP": 19732000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2403-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 179.49,
+    "priceEGP": 17750000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2406-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 134.06,
+    "priceEGP": 16534000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2416-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 161.28,
+    "priceEGP": 20561000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2426-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 161.28,
+    "priceEGP": 20561000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2436-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 161.28,
+    "priceEGP": 20629000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2466-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 161.28,
+    "priceEGP": 20492000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2901-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 89.86,
+    "priceEGP": 12433000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2902-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 169.17,
+    "priceEGP": 19732000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2903-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 179.49,
+    "priceEGP": 17750000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2905-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 161.12,
+    "priceEGP": 16012000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2906-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 134.06,
+    "priceEGP": 16534000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2911-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 119.41,
+    "priceEGP": 15144000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2912-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 167.77,
+    "priceEGP": 20683000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2913-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 179.49,
+    "priceEGP": 17352000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2914-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 119.44,
+    "priceEGP": 11936000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2916-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 161.28,
+    "priceEGP": 20561000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2921-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 119.41,
+    "priceEGP": 15144000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2922-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 167.77,
+    "priceEGP": 20683000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2923-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 179.49,
+    "priceEGP": 17352000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2926-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 161.28,
+    "priceEGP": 20561000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2931-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 119.41,
+    "priceEGP": 15197000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2936-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 161.28,
+    "priceEGP": 20629000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2941-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 119.41,
+    "priceEGP": 15197000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2951-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 119.41,
+    "priceEGP": 15285000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2956-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 161.28,
+    "priceEGP": 20750000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2961-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 119.41,
+    "priceEGP": 15091000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2963-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 179.49,
+    "priceEGP": 17279000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2964-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 119.44,
+    "priceEGP": 11888000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2966-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 161.28,
+    "priceEGP": 20492000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2101-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 89.86,
+    "priceEGP": 11164000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  },
+  {
+    "id": "ALX-2301-D",
+    "beds": 2,
+    "finishing": "ACSI-A-AX",
+    "areaSqm": 89.86,
+    "priceEGP": 12013000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria"
+  }
+]

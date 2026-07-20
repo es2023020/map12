@@ -1052,7 +1052,6 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     updateProject(projSlug, { gallery });
   };
 
-  // Add individual Unit form state
   const [newUnitNum, setNewUnitNum] = useState("");
   const [newUnitType, setNewUnitType] = useState("Apartment");
   const [newUnitBeds, setNewUnitBeds] = useState(2);
@@ -1062,7 +1061,6 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   const [newUnitStatus, setNewUnitStatus] = useState<any>("Available");
 
   const handleAddUnit = (projSlug: string) => {
-    if (!newUnitNum.trim()) return;
     const avail = availabilityList.find(a => a.slug === projSlug) || {
       slug: projSlug,
       developer: selectedProject?.developer || "Unknown Developer",
@@ -1070,30 +1068,31 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
       breakdown: [],
       lastUpdated: new Date().toISOString()
     };
+    const resolvedUnitNum = newUnitNum.trim() || `U-${avail.totalAvailable + 1}`;
 
     const newUnit = {
       id: `u_${Math.random().toString(36).slice(2, 9)}`,
-      unitNo: newUnitNum,
-      type: newUnitType,
-      beds: Number(newUnitBeds),
-      areaSqm: Number(newUnitArea),
-      view: newUnitView,
-      priceEGP: Number(newUnitPrice),
-      status: newUnitStatus,
+      unitNo: resolvedUnitNum,
+      type: newUnitType || "Apartment",
+      beds: Number(newUnitBeds) || 2,
+      areaSqm: Number(newUnitArea) || 120,
+      view: newUnitView || "Garden",
+      priceEGP: Number(newUnitPrice) || 5000000,
+      status: newUnitStatus || "Available",
       finishing: "Finished"
     };
 
     const breakdown = [...avail.breakdown];
-    let cat = breakdown.find(b => b.type === newUnitType);
+    let cat = breakdown.find(b => b.type === (newUnitType || "Apartment"));
     if (!cat) {
       cat = {
-        type: newUnitType,
-        beds: Number(newUnitBeds),
+        type: newUnitType || "Apartment",
+        beds: Number(newUnitBeds) || 2,
         available: 0,
-        minSqm: Number(newUnitArea),
-        maxSqm: Number(newUnitArea),
-        minPriceM: Number(newUnitPrice) / 1_000_000,
-        maxPriceM: Number(newUnitPrice) / 1_000_000,
+        minSqm: Number(newUnitArea) || 120,
+        maxSqm: Number(newUnitArea) || 120,
+        minPriceM: (Number(newUnitPrice) || 5000000) / 1_000_000,
+        maxPriceM: (Number(newUnitPrice) || 5000000) / 1_000_000,
         units: []
       };
       breakdown.push(cat);
@@ -1102,10 +1101,10 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     cat.available += 1;
     cat.units = [...(cat.units || []), newUnit];
     
-    cat.minSqm = Math.min(cat.minSqm, Number(newUnitArea));
-    cat.maxSqm = Math.max(cat.maxSqm, Number(newUnitArea));
-    cat.minPriceM = Math.min(cat.minPriceM, Number(newUnitPrice) / 1_000_000);
-    cat.maxPriceM = Math.max(cat.maxPriceM, Number(newUnitPrice) / 1_000_000);
+    cat.minSqm = Math.min(cat.minSqm, Number(newUnit.areaSqm));
+    cat.maxSqm = Math.max(cat.maxSqm, Number(newUnit.areaSqm));
+    cat.minPriceM = Math.min(cat.minPriceM, Number(newUnit.priceEGP) / 1_000_000);
+    cat.maxPriceM = Math.max(cat.maxPriceM, Number(newUnit.priceEGP) / 1_000_000);
 
     const totalAvailable = breakdown.reduce((acc, curr) => acc + curr.available, 0);
 
@@ -1147,10 +1146,11 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   };
 
   const handleEditUnitSubmit = (projSlug: string) => {
-    if (!editingUnit || !editUnitNo.trim()) return;
+    if (!editingUnit) return;
     const { bType, unit } = editingUnit;
     const avail = availabilityList.find(a => a.slug === projSlug);
     if (!avail) return;
+    const resolvedUnitNo = editUnitNo.trim() || unit.unitNo || "U-Row";
 
     let breakdown = avail.breakdown.map((b: any) => {
       if (b.type === bType) {
@@ -1158,12 +1158,12 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
           if (u.id === unit.id) {
             return {
               ...u,
-              unitNo: editUnitNo,
-              beds: Number(editUnitBeds),
-              areaSqm: Number(editUnitArea),
-              view: editUnitView,
-              priceEGP: Number(editUnitPrice),
-              status: editUnitStatus,
+              unitNo: resolvedUnitNo,
+              beds: Number(editUnitBeds) || 2,
+              areaSqm: Number(editUnitArea) || 120,
+              view: editUnitView || "Garden",
+              priceEGP: Number(editUnitPrice) || 5000000,
+              status: editUnitStatus || "Available",
             };
           }
           return u;
@@ -1233,15 +1233,14 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   const [editLng, setEditLng] = useState("30.015");
 
   const handleUpdatePinCoords = () => {
-    const parsedLat = parseFloat(editLat);
-    const parsedLng = parseFloat(editLng);
-    if (isNaN(parsedLat) || isNaN(parsedLng)) return;
+    const parsedLat = parseFloat(editLat) || 31.025;
+    const parsedLng = parseFloat(editLng) || 30.015;
 
-    updateProject(pinnedProjectSlug, {
+    updateProject(pinnedProjectSlug || compoundsList[0]?.slug, {
       lat: parsedLat,
       lng: parsedLng
     });
-    alert(`Success: Pin coordinates for project ${pinnedProjectSlug} updated live!`);
+    alert(`Success: Pin coordinates for project ${pinnedProjectSlug || compoundsList[0]?.slug} updated live!`);
   };
 
   // Select defaults once list is populated

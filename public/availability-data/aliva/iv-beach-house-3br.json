@@ -1,0 +1,86 @@
+[
+  {
+    "id": "L-iV-32-B0-2",
+    "category": "IV Beach House",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 56.05,
+    "priceEGP": 25146024,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46138",
+    "areaNote": "Garden: 190m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "L-iV-54-A0-3",
+    "category": "IV Beach House",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 38,
+    "priceEGP": 23985114,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46138",
+    "areaNote": "Garden: 190m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "L-iVGR2-38-A0-2",
+    "category": "IV Beach House",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 108.3,
+    "priceEGP": 29963948,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46138",
+    "areaNote": "Garden: 230m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "L-iVGR2-42-A0-2",
+    "category": "IV Beach House",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 108.26,
+    "priceEGP": 31423871,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46138",
+    "areaNote": "Garden: 230m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "L-iVGR2-59-B0-3",
+    "category": "IV Beach House",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 108.29,
+    "priceEGP": 29915401,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46138",
+    "areaNote": "Garden: 230m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "L-iVGR2P-47-B0-2",
+    "category": "IV Beach House",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 71.73,
+    "priceEGP": 29281892,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46138",
+    "areaNote": "Garden: 230m",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "L-iVGR2P-71-A0-3",
+    "category": "IV Beach House",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 113.63,
+    "priceEGP": 31560140,
+    "status": "Available",
+    "cluster": "Lagoon Park - 46138",
+    "areaNote": "Garden: 230m",
+    "deliveryNote": "OFF PLAN - 4"
+  }
+]
