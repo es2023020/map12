@@ -1568,6 +1568,27 @@ export const useStore = create<State>()(
             state.pendingUploadsList = [];
           }
 
+          // 4. Sync availabilityList with latest static generated availability data
+          if (Array.isArray(state.availabilityList)) {
+            state.availabilityList = state.availabilityList.map((a: any) => {
+              const staticAvail = availability.find((sa) => sa.slug === a.slug);
+              if (staticAvail) {
+                if (!a.lastUpdated || (staticAvail.lastUpdated && staticAvail.lastUpdated >= a.lastUpdated)) {
+                  return staticAvail;
+                }
+              }
+              return a;
+            }).filter((a: any) => !a.slug.endsWith("-availability") || availability.some(sa => sa.slug === a.slug));
+
+            availability.forEach((sa) => {
+              if (!state.availabilityList.some((a: any) => a.slug === sa.slug)) {
+                state.availabilityList.push(sa);
+              }
+            });
+          } else {
+            state.availabilityList = availability;
+          }
+
           // 3. Clear session if inactive
           if (state.user && !isSessionActive()) {
             state.user = null;

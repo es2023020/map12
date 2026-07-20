@@ -8,6 +8,7 @@ import { compounds } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import { destinations } from "@/data/destinations";
 import * as XLSX from "xlsx";
+import { projectLocations } from "@/data/project-locations";
 import {
   ShieldCheck, Users, CreditCard, TrendingUp, Check, ExternalLink,
   Building2, MapPin, Layers, LayoutGrid, Calculator, Sliders, ShieldAlert,
@@ -282,8 +283,9 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   const [pStatus, setPStatus] = useState("Off-Plan");
   const [pHandover, setPHandover] = useState(2028);
   const [pPermit, setPPermit] = useState("Permit-98231");
-  const [pLat, setPLat] = useState(30.02);
-  const [pLng, setPLng] = useState(31.45);
+  const [pLat, setPLat] = useState("30.02");
+  const [pLng, setPLng] = useState("31.45");
+  const [pMapsUrl, setPMapsUrl] = useState("");
   const [pDev, setPDev] = useState("");
   const [pDest, setPDest] = useState("");
   const [pPrice, setPPrice] = useState(12);
@@ -303,8 +305,9 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     setPStatus(proj.status);
     setPHandover(proj.deliveryYear);
     setPPermit(proj.permitNumber || "RERA-23849");
-    setPLat(proj.lat);
-    setPLng(proj.lng);
+    setPLat(proj.lat !== undefined && proj.lat !== null ? String(proj.lat) : "30.02");
+    setPLng(proj.lng !== undefined && proj.lng !== null ? String(proj.lng) : "31.45");
+    setPMapsUrl(proj.mapsUrl || projectLocations[proj.slug]?.mapsUrl || "");
     setPDev(proj.developer);
     setPDest(proj.destination);
     setPPrice(proj.priceFrom);
@@ -326,6 +329,8 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     const amenitiesArr = pAmenities ? pAmenities.split(",").map(s => s.trim()).filter(Boolean) : [];
     const destObj = destinationsList.find(d => d.slug === pDest);
     const isNorthCoast = destObj?.region === "north-coast";
+    const parsedLat = parseFloat(pLat) || 30.02;
+    const parsedLng = parseFloat(pLng) || 31.45;
     
     const projData = {
       slug,
@@ -333,8 +338,9 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
       status: pStatus || "Off-Plan",
       deliveryYear: Number(pHandover) || 2028,
       permitNumber: pPermit || "N/A",
-      lat: Number(pLat) || 30.02,
-      lng: Number(pLng) || 31.45,
+      lat: parsedLat,
+      lng: parsedLng,
+      mapsUrl: pMapsUrl.trim() || `https://www.google.com/maps/search/?api=1&query=${parsedLat},${parsedLng}`,
       developer: pDev || developersList[0]?.name || "SODIC",
       developerSlug: (pDev || developersList[0]?.name || "SODIC").toLowerCase().replace(/[^a-z0-9]+/g, "-"),
       destination: pDest || destinationsList[0]?.slug || "new-cairo",
@@ -367,8 +373,9 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     setPStatus("Off-Plan");
     setPHandover(2028);
     setPPermit("Permit-98231");
-    setPLat(30.02);
-    setPLng(31.45);
+    setPLat("30.02");
+    setPLng("31.45");
+    setPMapsUrl("");
     setPDev("");
     setPDest("");
     setPPrice(12);
@@ -1370,16 +1377,22 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   const [pinnedProjectSlug, setPinnedProjectSlug] = useState("");
   const [editLat, setEditLat] = useState("31.025");
   const [editLng, setEditLng] = useState("30.015");
+  const [editMapsUrl, setEditMapsUrl] = useState("");
+  const [editKm, setEditKm] = useState("");
 
   const handleUpdatePinCoords = () => {
+    const targetSlug = pinnedProjectSlug || compoundsList[0]?.slug;
+    if (!targetSlug) return;
     const parsedLat = parseFloat(editLat) || 31.025;
     const parsedLng = parseFloat(editLng) || 30.015;
 
-    updateProject(pinnedProjectSlug || compoundsList[0]?.slug, {
+    updateProject(targetSlug, {
       lat: parsedLat,
-      lng: parsedLng
+      lng: parsedLng,
+      km: editKm ? Number(editKm) : undefined,
+      mapsUrl: editMapsUrl.trim() || `https://www.google.com/maps/search/?api=1&query=${parsedLat},${parsedLng}`
     });
-    alert(`Success: Pin coordinates for project ${pinnedProjectSlug || compoundsList[0]?.slug} updated live!`);
+    alert(`Success: GPS coordinates & Google Maps location for project "${targetSlug}" updated live!`);
   };
 
   // Select defaults once list is populated
@@ -1401,6 +1414,8 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     if (target) {
       setEditLat(String(target.lat));
       setEditLng(String(target.lng));
+      setEditKm(target.km !== undefined && target.km !== null ? String(target.km) : "");
+      setEditMapsUrl((target as any).mapsUrl || projectLocations[target.slug]?.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${target.lat},${target.lng}`);
     }
   }, [pinnedProjectSlug, compoundsList]);
 
@@ -2712,9 +2727,9 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                       <p className="text-xs text-muted-foreground mt-0.5">Edit pin placements, draw communities polygons, and publish changes.</p>
                     </div>
 
-                    <div className="grid gap-4 sm:grid-cols-[250px_1fr] items-start">
+                    <div className="grid gap-4 sm:grid-cols-[300px_1fr] items-start">
                       <div className="rounded-xl border border-border bg-secondary/15 p-4 space-y-4">
-                        <span className="block text-[10px] font-bold text-muted-foreground uppercase tracking-wider">Pin Coordinates Manager</span>
+                        <span className="block text-[10px] font-bold text-muted-foreground uppercase tracking-wider">GPS &amp; Map Location Studio</span>
                         
                         <div className="space-y-3">
                           <div>
@@ -2730,31 +2745,66 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                             </select>
                           </div>
 
+                          <div className="grid grid-cols-2 gap-2">
+                            <div>
+                              <label className="block text-[9px] font-bold text-muted-foreground uppercase mb-1">Latitude</label>
+                              <input
+                                type="text"
+                                value={editLat}
+                                onChange={(e) => setEditLat(e.target.value)}
+                                className="w-full rounded-lg border border-border bg-card px-2.5 py-2 text-xs font-mono focus:outline-none"
+                              />
+                            </div>
+                            <div>
+                              <label className="block text-[9px] font-bold text-muted-foreground uppercase mb-1">Longitude</label>
+                              <input
+                                type="text"
+                                value={editLng}
+                                onChange={(e) => setEditLng(e.target.value)}
+                                className="w-full rounded-lg border border-border bg-card px-2.5 py-2 text-xs font-mono focus:outline-none"
+                              />
+                            </div>
+                          </div>
+
                           <div>
-                            <label className="block text-[9px] font-bold text-muted-foreground uppercase mb-1">Latitude</label>
+                            <label className="block text-[9px] font-bold text-muted-foreground uppercase mb-1">Highway Marker (Km)</label>
                             <input
-                              type="text"
-                              value={editLat}
-                              onChange={(e) => setEditLat(e.target.value)}
+                              type="number"
+                              step="any"
+                              placeholder="e.g. 195"
+                              value={editKm}
+                              onChange={(e) => setEditKm(e.target.value)}
                               className="w-full rounded-lg border border-border bg-card px-2.5 py-2 text-xs font-mono focus:outline-none"
                             />
                           </div>
 
                           <div>
-                            <label className="block text-[9px] font-bold text-muted-foreground uppercase mb-1">Longitude</label>
+                            <label className="block text-[9px] font-bold text-muted-foreground uppercase mb-1">Google Maps Location URL (GPS Link)</label>
                             <input
-                              type="text"
-                              value={editLng}
-                              onChange={(e) => setEditLng(e.target.value)}
-                              className="w-full rounded-lg border border-border bg-card px-2.5 py-2 text-xs font-mono focus:outline-none"
+                              type="url"
+                              value={editMapsUrl}
+                              onChange={(e) => setEditMapsUrl(e.target.value)}
+                              placeholder="https://maps.google.com/?q=..."
+                              className="w-full rounded-lg border border-border bg-card px-2.5 py-2 text-[11px] font-mono focus:outline-none"
                             />
                           </div>
+
+                          {editMapsUrl && (
+                            <a
+                              href={editMapsUrl}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-1 text-[11px] font-bold text-accent hover:underline pt-1"
+                            >
+                              <ExternalLink className="h-3 w-3" /> Test Open Location in Google Maps
+                            </a>
+                          )}
 
                           <button
                             onClick={handleUpdatePinCoords}
-                            className="w-full py-2 bg-accent text-white font-bold text-xs rounded-lg hover:bg-accent/90 transition-colors"
+                            className="w-full py-2.5 bg-accent text-white font-bold text-xs rounded-xl hover:bg-accent/90 transition-colors shadow-sm"
                           >
-                            Publish Pin Coordinate
+                            Publish Pin &amp; GPS Location
                           </button>
                         </div>
                       </div>
@@ -3237,13 +3287,18 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
 
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
-                  <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Latitude</label>
-                  <input type="text" value={pLat} onChange={(e) => setPLat(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
+                  <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">GPS Latitude (e.g. 30.982)</label>
+                  <input type="text" value={pLat} onChange={(e) => setPLat(e.target.value)} placeholder="30.982" className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Longitude</label>
-                  <input type="text" value={pLng} onChange={(e) => setPLng(Number(e.target.value))} className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
+                  <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">GPS Longitude (e.g. 28.914)</label>
+                  <input type="text" value={pLng} onChange={(e) => setPLng(e.target.value)} placeholder="28.914" className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 font-mono" />
                 </div>
+              </div>
+
+              <div>
+                <label className="block text-[10px] font-bold text-muted-foreground uppercase mb-1">Google Maps Location URL (GPS Link)</label>
+                <input type="url" value={pMapsUrl} onChange={(e) => setPMapsUrl(e.target.value)} placeholder="https://maps.google.com/?q=30.982,28.914 or https://maps.app.goo.gl/..." className="w-full border border-border rounded-lg bg-secondary/10 px-3 py-2 text-primary font-mono" />
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
