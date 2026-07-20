@@ -1,12 +1,6 @@
 /**
- * Read data/availability/availability.xlsx and regenerate src/data/availability.generated.ts
- *
- * Sheets:
- *   Projects   — slug, developer, total_available, last_updated, note
- *   Breakdown  — slug, type, beds, available, min_sqm, max_sqm, min_price_m, max_price_m,
- *                finishing, cluster, delivery_note, payment_plan
- *   Units      — slug, type, unit_id, cluster, beds, finishing, area_sqm, area_note, view,
- *                price_egp, delivery_note, payment_plan, status
+ * Read data/availability/ and data/availability/projects/ spreadsheets
+ * and regenerate src/data/availability.generated.ts & public/availability-data/
  */
 import fs from "fs";
 import path from "path";
@@ -15,29 +9,80 @@ import XLSX from "xlsx";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const XLSX_PATH = path.join(ROOT, "data", "availability", "availability.xlsx");
 const OUT = path.join(ROOT, "src", "data", "availability.generated.ts");
 
-function cell(row, key) {
-  const v = row[key];
-  if (v === undefined || v === null || v === "") return undefined;
-  return v;
+function findHeaderRow(rows) {
+  const keywords = ['type', 'category', 'unit', 'bua', 'area', 'sqm', 'price', 'cost', 'value', 'egp', 'beds', 'bedroom', 'project', 'compound', 'cluster', 'view', 'delivery', 'status', '#'];
+  let maxScore = -1;
+  let bestIdx = 0;
+
+  for (let i = 0; i < Math.min(15, rows.length); i++) {
+    const row = rows[i];
+    if (!Array.isArray(row)) continue;
+    let score = 0;
+    row.forEach(cell => {
+      if (cell === null || cell === undefined || cell === '') return;
+      const str = String(cell).toLowerCase().replace(/[^a-z0-9]+/g, '');
+      if (keywords.some(k => str.includes(k))) score += 2;
+      else if (str.length > 0) score += 0.2;
+    });
+    if (score > maxScore && score >= 2) {
+      maxScore = score;
+      bestIdx = i;
+    }
+  }
+  return bestIdx;
 }
 
-function num(v) {
-  if (v === undefined || v === null || v === "") return undefined;
-  const n = Number(v);
-  return Number.isFinite(n) ? n : undefined;
+function parsePriceRange(val) {
+  if (val === undefined || val === null || val === '') return { min: 0, max: 0 };
+  if (typeof val === 'number') return { min: val, max: val };
+  let str = String(val).replace(/EGP/gi, '').replace(/,/g, '').trim();
+  if (str.toLowerCase().includes('sold')) return { min: 0, max: 0 };
+
+  let isMillion = false;
+  if (str.toLowerCase().includes('m')) {
+    isMillion = true;
+    str = str.replace(/m/gi, '');
+  }
+
+  const parts = str.split(/[-–—up to to]/i).map(p => parseFloat(p.trim())).filter(p => !isNaN(p));
+  if (parts.length === 0) return { min: 0, max: 0 };
+  let min = parts[0];
+  let max = parts.length > 1 ? parts[1] : parts[0];
+
+  if (isMillion || (min < 1000 && min > 0)) {
+    min *= 1000000;
+    max *= 1000000;
+  }
+  return { min, max };
 }
 
-function str(v) {
-  if (v === undefined || v === null) return undefined;
-  const s = String(v).trim();
-  return s || undefined;
+function parseAreaRange(val) {
+  if (val === undefined || val === null || val === '') return { min: 0, max: 0 };
+  if (typeof val === 'number') return { min: val, max: val };
+  const str = String(val).replace(/m2|sqm|m/gi, '').trim();
+  const parts = str.split(/[-–—to]/i).map(p => parseFloat(p.trim())).filter(p => !isNaN(p));
+  if (parts.length === 0) return { min: 0, max: 0 };
+  if (parts.length === 1) return { min: parts[0], max: parts[0] };
+  return { min: Math.min(...parts), max: Math.max(...parts) };
+}
+
+function parseBedsFromType(typeStr) {
+  if (!typeStr) return undefined;
+  const match = String(typeStr).match(/(\d+)\s*(br|bed|bds|bdr|bedroom)/i) || String(typeStr).match(/(\d+)/);
+  return match ? parseInt(match[1], 10) : undefined;
+}
+
+function unitTypeSlug(b) {
+  const parts = [b.type.toLowerCase().replace(/[^a-z0-9]+/g, "-")];
+  if (b.beds) parts.push(`${b.beds}br`);
+  if (b.cluster) parts.push(b.cluster.toLowerCase().replace(/[^a-z0-9]+/g, "-"));
+  return parts.join("-").replace(/-+/g, "-").replace(/^-|-$/g, "");
 }
 
 function esc(s) {
-  return s.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+  return String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 }
 
 function fmtVal(v, indent = "      ") {
@@ -55,14 +100,134 @@ function fmtVal(v, indent = "      ") {
 
 function fmtObj(obj, indent = "      ") {
   const lines = Object.entries(obj)
-    .filter(([, v]) => v !== undefined)
+    .filter(([, v]) => v !== undefined && v !== 'units')
     .map(([k, v]) => {
+      const safeKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(k) ? k : JSON.stringify(k);
       if (Array.isArray(v) || (typeof v === "object" && v !== null)) {
-        return `${indent}${k}: ${fmtVal(v, indent + "  ")},`;
+        return `${indent}${safeKey}: ${fmtVal(v, indent + "  ")},`;
       }
-      return `${indent}${k}: ${fmtVal(v, indent)},`;
+      return `${indent}${safeKey}: ${fmtVal(v, indent)},`;
     });
   return `{\n${lines.join("\n")}\n${indent.slice(2)}}`;
+}
+
+function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
+  if (!fs.existsSync(filePath)) return null;
+  const wb = XLSX.readFile(filePath);
+
+  let targetSheets = wb.SheetNames;
+  if (wb.SheetNames.length > 1) {
+    const nonOverview = wb.SheetNames.filter(sn => !['overview', 'summary', 'index', 'instructions'].includes(sn.toLowerCase().trim()));
+    if (nonOverview.length > 0) targetSheets = nonOverview;
+  }
+
+  const breakdownMap = {};
+
+  targetSheets.forEach(sheetName => {
+    const sheet = wb.Sheets[sheetName];
+    if (!sheet) return;
+    const rawMatrix = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: '' });
+    if (!rawMatrix || rawMatrix.length === 0) return;
+
+    const headerIdx = findHeaderRow(rawMatrix);
+    const headerRow = rawMatrix[headerIdx] || [];
+    const headers = headerRow.map((c, i) => String(c).trim() || `Column_${i + 1}`);
+
+    const findHeaderKey = (options) => {
+      for (const opt of options) {
+        const idx = headers.findIndex(h => h.toLowerCase().replace(/[^a-z0-9]+/g, '') === opt.toLowerCase().replace(/[^a-z0-9]+/g, ''));
+        if (idx >= 0) return headers[idx];
+      }
+      return null;
+    };
+
+    const typeKey = findHeaderKey(['type', 'layout', 'layouttype', 'unittype', 'category']) || headers[0];
+    const priceKey = findHeaderKey(['price', 'priceegp', 'unitprice', 'egp', 'cost', 'value', 'startingpriceegp', 'pricefromegp', 'pricesegp', 'avgprice', 'grandtotalpricingstructure', 'unittotalwithfinishingprice']);
+    const bedsKey = findHeaderKey(['beds', 'bedrooms', 'bedcount', 'roomcount']);
+    const areaKey = findHeaderKey(['area', 'size', 'sqm', 'areasqm', 'bua', 'unitarea', 'aream2', 'builtarea']);
+    const unitNoKey = findHeaderKey(['unitno', 'unitnumber', 'unit', 'no', 'unitcode', '#']);
+    const viewKey = findHeaderKey(['view', 'aspect', 'unitview']);
+    const statusKey = findHeaderKey(['status', 'availability', 'unitstatus']);
+
+    const knownKeys = new Set([typeKey, priceKey, bedsKey, areaKey, unitNoKey, viewKey, statusKey].filter(Boolean));
+    const dataMatrix = rawMatrix.slice(headerIdx + 1);
+
+    dataMatrix.forEach((rowArray, rIdx) => {
+      const nonEmpties = rowArray.filter(c => c !== '');
+      if (nonEmpties.length === 0) return;
+
+      const firstVal = String(rowArray[0] || '').toLowerCase();
+      if (firstVal.startsWith('payment') || firstVal.startsWith('note') || firstVal.startsWith('contact') || firstVal.startsWith('total')) {
+        return;
+      }
+
+      const rowObj = {};
+      headers.forEach((h, cIdx) => {
+        const v = rowArray[cIdx];
+        if (v !== undefined && v !== null && v !== '') rowObj[h] = v;
+      });
+
+      const rawType = typeKey && rowObj[typeKey] ? String(rowObj[typeKey]).trim() : (sheetName !== 'Availability' ? sheetName : 'Chalet');
+      const priceRange = priceKey ? parsePriceRange(rowObj[priceKey]) : { min: 5000000, max: 5000000 };
+      const areaRange = areaKey ? parseAreaRange(rowObj[areaKey]) : { min: 120, max: 120 };
+      const beds = bedsKey && rowObj[bedsKey] ? parseInt(String(rowObj[bedsKey])) : (parseBedsFromType(rawType) || 2);
+      const unitNo = unitNoKey && rowObj[unitNoKey] ? String(rowObj[unitNoKey]).trim() : `U-${rIdx + 1}`;
+      const view = viewKey && rowObj[viewKey] ? String(rowObj[viewKey]).trim() : 'Scenic View';
+      const status = statusKey && rowObj[statusKey] ? String(rowObj[statusKey]).trim() : 'Available';
+
+      const extraFields = {};
+      Object.keys(rowObj).forEach(k => {
+        if (!knownKeys.has(k) && rowObj[k] !== undefined && rowObj[k] !== '') {
+          extraFields[k] = rowObj[k];
+        }
+      });
+
+      const key = `${rawType}-${beds}`;
+      if (!breakdownMap[key]) {
+        breakdownMap[key] = {
+          type: rawType,
+          beds,
+          available: 0,
+          minSqm: areaRange.min || 120,
+          maxSqm: areaRange.max || 120,
+          minPriceM: (priceRange.min || 5000000) / 1000000,
+          maxPriceM: (priceRange.max || 5000000) / 1000000,
+          units: []
+        };
+      }
+
+      const bd = breakdownMap[key];
+      const isSold = status.toLowerCase().includes('sold');
+      bd.available += isSold ? 0 : 1;
+      if (areaRange.min > 0 && areaRange.min < bd.minSqm) bd.minSqm = areaRange.min;
+      if (areaRange.max > bd.maxSqm) bd.maxSqm = areaRange.max;
+      if (priceRange.min > 0 && (priceRange.min / 1000000) < bd.minPriceM) bd.minPriceM = priceRange.min / 1000000;
+      if (priceRange.max / 1000000 > bd.maxPriceM) bd.maxPriceM = priceRange.max / 1000000;
+
+      bd.units.push({
+        id: `${defaultSlug}-${rIdx + 1}`,
+        unitNo,
+        beds,
+        finishing: 'Finished',
+        areaSqm: areaRange.min || 120,
+        view,
+        priceEGP: priceRange.min || 5000000,
+        status: isSold ? 'Sold' : 'Available',
+        ...extraFields
+      });
+    });
+  });
+
+  const breakdown = Object.values(breakdownMap);
+  const totalAvailable = breakdown.reduce((acc, curr) => acc + curr.available, 0);
+
+  return {
+    slug: defaultSlug,
+    developer: defaultDev,
+    totalAvailable,
+    breakdown,
+    lastUpdated: new Date().toISOString().slice(0, 10)
+  };
 }
 
 function main() {
@@ -73,188 +238,64 @@ function main() {
     fs.mkdirSync(projectsDir, { recursive: true });
   }
 
-  // Recursively find all .xlsx files (skipping Excel temp files prefixed with ~$)
   const files = [];
-  function scan(dir, isProjectFolder = false) {
+  function scan(dir) {
     if (!fs.existsSync(dir)) return;
     const list = fs.readdirSync(dir);
     for (const f of list) {
       const fullPath = path.join(dir, f);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-        scan(fullPath, isProjectFolder);
-      } else if (f.endsWith(".xlsx") && !f.startsWith("~$")) {
-        // Compute name relative to rootDir
-        const relName = path.relative(rootDir, fullPath).replace(/\\/g, "/");
-        files.push({ path: fullPath, name: relName, isProjectFolder });
+        scan(fullPath);
+      } else if ((f.endsWith(".xlsx") || f.endsWith(".xls") || f.endsWith(".csv")) && !f.startsWith("~$")) {
+        files.push(fullPath);
       }
     }
   }
-  scan(projectsDir, true);
-
-  if (files.length === 0) {
-    console.error(`No spreadsheet files (.xlsx) found in ${projectsDir}`);
-    process.exit(1);
+  scan(rootDir);
+  if (fs.existsSync('D:/new availability')) {
+    scan('D:/new availability');
   }
 
-  console.log(`Found ${files.length} spreadsheet file(s) to process:`);
-  files.forEach((f) => console.log(` - ${f.name}`));
+  console.log(`Found ${files.length} spreadsheet file(s) in data/availability/`);
 
-  const slugToBundleMap = new Map();
-
-  for (const fileObj of files) {
-    const wb = XLSX.readFile(fileObj.path);
-    const projectsSheet = wb.Sheets["Projects"] ?? wb.Sheets[wb.SheetNames[0]];
-    const breakdownSheet = wb.Sheets["Breakdown"];
-    const unitsSheet = wb.Sheets["Units"];
-
-    const fileProjects = projectsSheet ? XLSX.utils.sheet_to_json(projectsSheet, { defval: "" }) : [];
-    const fileBreakdown = breakdownSheet ? XLSX.utils.sheet_to_json(breakdownSheet, { defval: "" }) : [];
-    const fileUnits = unitsSheet ? XLSX.utils.sheet_to_json(unitsSheet, { defval: "" }) : [];
-
-    const sourceName = fileObj.name;
-
-    for (const row of fileProjects) {
-      const slug = str(cell(row, "slug"));
-      if (!slug) continue;
-
-      const breakdownRows = fileBreakdown.filter((b) => str(cell(b, "slug")) === slug);
-      const unitRows = fileUnits.filter((u) => str(cell(u, "slug")) === slug);
-      const lastUpdated = str(cell(row, "last_updated")) ?? new Date().toISOString().slice(0, 10);
-
-      const bundle = {
-        slug,
-        projectRow: row,
-        breakdownRows,
-        unitRows,
-        source: sourceName,
-        lastUpdated,
-      };
-
-      if (slugToBundleMap.has(slug)) {
-        const existing = slugToBundleMap.get(slug);
-        // Overwrite if date is newer, or if it is from the projects/ directory (which overrides root)
-        const isNewer = lastUpdated > existing.lastUpdated;
-        const isEqualDate = lastUpdated === existing.lastUpdated;
-        const overrideFromFolder = isEqualDate && fileObj.isProjectFolder && !existing.source.startsWith("projects/");
-
-        if (isNewer || overrideFromFolder) {
-          console.log(`[Slug: ${slug}] Overriding with data from ${sourceName} (updated: ${lastUpdated})`);
-          slugToBundleMap.set(slug, bundle);
-        } else {
-          console.log(`[Slug: ${slug}] Kept existing data from ${existing.source} (updated: ${existing.lastUpdated})`);
-        }
-      } else {
-        slugToBundleMap.set(slug, bundle);
-      }
-    }
-  }
-
-  const breakdownBySlug = new Map();
-  const unitsByKey = new Map();
-
-  for (const [slug, bundle] of slugToBundleMap) {
-    for (const row of bundle.breakdownRows) {
-      if (!breakdownBySlug.has(slug)) breakdownBySlug.set(slug, []);
-      const entry = {
-        type: str(cell(row, "type")),
-        available: num(cell(row, "available")) ?? 0,
-        minSqm: num(cell(row, "min_sqm")) ?? 0,
-        maxSqm: num(cell(row, "max_sqm")) ?? 0,
-        minPriceM: num(cell(row, "min_price_m")) ?? 0,
-        maxPriceM: num(cell(row, "max_price_m")) ?? 0,
-      };
-      const beds = num(cell(row, "beds"));
-      const finishing = str(cell(row, "finishing"));
-      const cluster = str(cell(row, "cluster"));
-      const deliveryNote = str(cell(row, "delivery_note"));
-      const paymentPlan = str(cell(row, "payment_plan"));
-      if (beds != null) entry.beds = beds;
-      if (finishing) entry.finishing = finishing;
-      if (cluster) entry.cluster = cluster;
-      if (deliveryNote) entry.deliveryNote = deliveryNote;
-      if (paymentPlan) entry.paymentPlan = paymentPlan;
-      breakdownBySlug.get(slug).push(entry);
-    }
-
-    for (const row of bundle.unitRows) {
-      const type = str(cell(row, "type"));
-      if (!type) continue;
-      const key = `${slug}::${type}`;
-      if (!unitsByKey.has(key)) unitsByKey.set(key, []);
-      const unit = {
-        id: str(cell(row, "unit_id")) ?? `${slug}-${unitsByKey.get(key).length + 1}`,
-        beds: num(cell(row, "beds")) ?? 0,
-        finishing: str(cell(row, "finishing")) ?? "Finished",
-        areaSqm: num(cell(row, "area_sqm")) ?? 0,
-        priceEGP: num(cell(row, "price_egp")) ?? 0,
-        status: str(cell(row, "status")) ?? "Available",
-      };
-      const cluster = str(cell(row, "cluster"));
-      const areaNote = str(cell(row, "area_note"));
-      const view = str(cell(row, "view"));
-      const deliveryNote = str(cell(row, "delivery_note"));
-      const paymentPlan = str(cell(row, "payment_plan"));
-      if (cluster) unit.cluster = cluster;
-      if (areaNote) unit.areaNote = areaNote;
-      if (view) unit.view = view;
-      if (deliveryNote) unit.deliveryNote = deliveryNote;
-      if (paymentPlan) unit.paymentPlan = paymentPlan;
-      unitsByKey.get(key).push(unit);
-    }
-  }
-
-  function getUnitTypeSlug(b) {
-    const parts = [b.type.toLowerCase().replace(/[^a-z0-9]+/g, "-")];
-    if (b.beds) parts.push(`${b.beds}br`);
-    if (b.cluster) parts.push(b.cluster.toLowerCase().replace(/[^a-z0-9]+/g, "-"));
-    return parts.join("-").replace(/-+/g, "-").replace(/^-|-$/g, "");
-  }
-
-  // Clear previous availability-data folder if it exists
+  // Clear previous public/availability-data folder to completely delete old units
   const availabilityDataDir = path.join(ROOT, "public", "availability-data");
   if (fs.existsSync(availabilityDataDir)) {
     fs.rmSync(availabilityDataDir, { recursive: true, force: true });
   }
+  fs.mkdirSync(availabilityDataDir, { recursive: true });
 
-  for (const [slug, breakdown] of breakdownBySlug) {
-    for (const b of breakdown) {
-      const key = `${slug}::${b.type}`;
-      const units = unitsByKey.get(key);
-      if (units?.length) {
-        // Do not add units to breakdown object to keep TS file light
-        // b.units = units;
-        
-        // Save units to public/availability-data/[slug]/[typeSlug].json
-        const dir = path.join(availabilityDataDir, slug);
-        if (!fs.existsSync(dir)) {
-          fs.mkdirSync(dir, { recursive: true });
-        }
-        const typeSlug = getUnitTypeSlug(b);
-        const file = path.join(dir, `${typeSlug}.json`);
-        fs.writeFileSync(file, JSON.stringify(units, null, 2), "utf8");
-      }
+  const projectMap = new Map();
+
+  files.forEach(filePath => {
+    const fileName = path.basename(filePath, path.extname(filePath));
+    const slug = fileName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const pObj = parseUniversalWorkbook(filePath, slug, "Developer");
+    if (pObj && pObj.breakdown.length > 0) {
+      projectMap.set(slug, pObj);
     }
-  }
+  });
 
-  const availability = [];
-  for (const [slug, bundle] of slugToBundleMap) {
-    const row = bundle.projectRow;
-    const entry = {
-      slug,
-      developer: str(cell(row, "developer")) ?? "",
-      totalAvailable: num(cell(row, "total_available")) ?? 0,
-      breakdown: breakdownBySlug.get(slug) ?? [],
-      lastUpdated: bundle.lastUpdated,
-    };
-    const note = str(cell(row, "note"));
-    if (note) entry.note = note;
-    availability.push(entry);
-  }
+  const projectsList = Array.from(projectMap.values());
 
-  const blocks = availability.map((p) => fmtObj(p, "    "));
-  const out = [
-    "// Auto-generated from data/availability/ and projects/ — do not edit by hand.",
+  let unitFilesCount = 0;
+  projectsList.forEach(p => {
+    (p.breakdown || []).forEach(b => {
+      if (b.units && b.units.length > 0) {
+        const dir = path.join(availabilityDataDir, p.slug);
+        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+        const tSlug = unitTypeSlug(b);
+        const filePath = path.join(dir, `${tSlug}.json`);
+        fs.writeFileSync(filePath, JSON.stringify(b.units, null, 2), 'utf8');
+        unitFilesCount++;
+      }
+    });
+  });
+
+  const blocks = projectsList.map((p) => fmtObj(p, "    "));
+  const outContent = [
+    "// Auto-generated from data/availability/ — do not edit by hand.",
     "// Run: npm run import-availability",
     'import type { ProjectAvailability } from "./availability";',
     "",
@@ -264,8 +305,8 @@ function main() {
     "",
   ].join("\n");
 
-  fs.writeFileSync(OUT, out, "utf8");
-  console.log(`Wrote ${availability.length} projects to ${OUT}`);
+  fs.writeFileSync(OUT, outContent, 'utf8');
+  console.log(`Wrote ${projectsList.length} projects & ${unitFilesCount} unit JSON files. Wiped old availability data.`);
 }
 
 main();

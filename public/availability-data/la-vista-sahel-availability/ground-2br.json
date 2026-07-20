@@ -1,0 +1,36 @@
+[
+  {
+    "id": "la-vista-sahel-availability-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 160,
+    "view": "Scenic View",
+    "priceEGP": 25800000,
+    "status": "Available",
+    "Garden/Open Roof": "60m2",
+    "Delivery": "1/1/2028"
+  },
+  {
+    "id": "la-vista-sahel-availability-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 155,
+    "view": "Scenic View",
+    "priceEGP": 24800000,
+    "status": "Available",
+    "Garden/Roof": "40m2"
+  },
+  {
+    "id": "la-vista-sahel-availability-2",
+    "unitNo": "U-2",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 165,
+    "view": "Scenic View",
+    "priceEGP": 27800000,
+    "status": "Available",
+    "Garden/Roof": "40m2"
+  }
+]

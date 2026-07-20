@@ -86,7 +86,7 @@ function UnitTypePage() {
     return {
       ...initialBd,
       ...match,
-      units: (match.units && match.units.length > 0) ? match.units : initialBd.units
+      units: match.units !== undefined ? match.units : initialBd.units
     };
   }, [availabilityList, projectSlug, currentTypeSlug, initialBd]);
 

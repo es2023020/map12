@@ -1450,19 +1450,6 @@ export const useStore = create<State>()(
           // Apply update
           get().updateAvailability(upload.projectSlug, upload.newAvail);
 
-          // If there are associated compounds for the developer, also update them (like the original code does)
-          const targetProj = get().compoundsList.find(c => c.slug === upload.projectSlug);
-          const developerName = targetProj?.developer;
-          if (developerName) {
-            const associatedCompounds = get().compoundsList.filter(c => c.developer.toLowerCase() === developerName.toLowerCase() && c.slug !== upload.projectSlug);
-            associatedCompounds.forEach(comp => {
-              get().updateAvailability(comp.slug, {
-                ...upload.newAvail,
-                slug: comp.slug
-              });
-            });
-          }
-
           // Remove from list
           set((s) => ({
             pendingUploadsList: (s.pendingUploadsList || []).filter(u => u.id !== id)
