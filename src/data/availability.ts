@@ -55,23 +55,35 @@ export function unitTypeSlug(b: UnitBreakdown): string {
 import { availability as _availability } from "./availability.generated";
 
 const staticAvailability = _availability;
+export { staticAvailability };
+
+function getActiveAvailability(): ProjectAvailability[] {
+  let activeList = staticAvailability;
+  if (typeof window !== "undefined") {
+    try {
+      const storeStr = localStorage.getItem("proptrack-broker");
+      if (storeStr) {
+        const parsed = JSON.parse(storeStr);
+        if (parsed?.state?.availabilityList?.length) {
+          activeList = parsed.state.availabilityList;
+        }
+      }
+    } catch (e) {
+      // fallback
+    }
+  }
+  const result = [...activeList];
+  for (const sa of staticAvailability) {
+    if (!result.some((a) => a.slug === sa.slug)) {
+      result.push(sa);
+    }
+  }
+  return result;
+}
 
 export const availability: ProjectAvailability[] = new Proxy(staticAvailability, {
   get(target, prop, receiver) {
-    let activeList = staticAvailability;
-    if (typeof window !== "undefined") {
-      try {
-        const storeStr = localStorage.getItem("proptrack-broker");
-        if (storeStr) {
-          const parsed = JSON.parse(storeStr);
-          if (parsed?.state?.availabilityList?.length) {
-            activeList = parsed.state.availabilityList;
-          }
-        }
-      } catch (e) {
-        // fallback
-      }
-    }
+    const activeList = getActiveAvailability();
     const val = Reflect.get(activeList, prop, receiver);
     if (typeof val === "function") {
       return val.bind(activeList);
@@ -79,37 +91,11 @@ export const availability: ProjectAvailability[] = new Proxy(staticAvailability,
     return val;
   },
   getOwnPropertyDescriptor(target, prop) {
-    let activeList = staticAvailability;
-    if (typeof window !== "undefined") {
-      try {
-        const storeStr = localStorage.getItem("proptrack-broker");
-        if (storeStr) {
-          const parsed = JSON.parse(storeStr);
-          if (parsed?.state?.availabilityList?.length) {
-            activeList = parsed.state.availabilityList;
-          }
-        }
-      } catch (e) {
-        // fallback
-      }
-    }
+    const activeList = getActiveAvailability();
     return Reflect.getOwnPropertyDescriptor(activeList, prop);
   },
   ownKeys(target) {
-    let activeList = staticAvailability;
-    if (typeof window !== "undefined") {
-      try {
-        const storeStr = localStorage.getItem("proptrack-broker");
-        if (storeStr) {
-          const parsed = JSON.parse(storeStr);
-          if (parsed?.state?.availabilityList?.length) {
-            activeList = parsed.state.availabilityList;
-          }
-        }
-      } catch (e) {
-        // fallback
-      }
-    }
+    const activeList = getActiveAvailability();
     return Reflect.ownKeys(activeList);
   }
 });
