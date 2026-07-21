@@ -12,6 +12,17 @@ export type Destination = {
 };
 const staticDestinations: Destination[] = [
   {
+    slug: "6th-settlement",
+    name: "6th Settlement",
+    region: "greater-cairo",
+    color: "#D946EF",
+    city: "Cairo",
+    blurb: "New Cairo's newest 6th Settlement expansion zone — Hassan Allam's Grova East Hills & La Vista's El Patio master-plans.",
+    hero: "/destinations/new cairo.jpg",
+    center: [30.008, 31.542],
+    zoom: 13,
+  },
+  {
     slug: "sidi-heneish",
     name: "Sidi Heneish",
     region: "north-coast",
@@ -313,6 +324,7 @@ export const destinationBySlug = (slug: string) => destinations.find((a) => a.sl
 export const destinationColor = (slug: string) => destinationBySlug(slug)?.color ?? "#3B82F6";
 
 const locationStrings: Record<string, string> = {
+  "6th-settlement": "6th Settlement, New Cairo, Cairo Governorate, Egypt",
   "sidi-heneish": "North Coast (Sidi Heneish), Matrouh Governorate, Egypt",
   "ras-el-hekma": "Ras El Hekma, North Coast, Matrouh Governorate, Egypt",
   "al-dabaa": "Al Dabaa, North Coast, Matrouh Governorate, Egypt",

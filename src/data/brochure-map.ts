@@ -10,6 +10,10 @@
  */
 
 export const brochureMap: Record<string, string> = {
+  "solana": "Solana.pdf",
+  "solana-west": "Solana.pdf",
+  "solana-east": "Solana.pdf",
+  "sarai": "Sarai.pdf",
   // ─── Cairo & West Cairo ──────────────────────────────────────────────
   "31-west":                    "31-west.pdf",
   "97-hills":                   "97-hills.pdf",
@@ -18,6 +22,7 @@ export const brochureMap: Record<string, string> = {
   "belle-vie":                  "belle-vie.pdf",
   "botanica":                   "botanica.pdf",
   "cairo-gate":                 "Cairo-Gate.pdf",
+  "o-west":                     "O-west.pdf",
   "cairo-business-park":        "cairo-business-park.pdf",
   "cleo-water-residence":       "cleo Water Residences.pdf",
   "dose":                       "DOSE.pdf",

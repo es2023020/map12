@@ -1733,7 +1733,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   },
 
   "la-vista-east": {
-    destination: "new-cairo",
+    destination: "6th-settlement",
     lat: 29.9788,
     lng: 31.6415,
     developer: "La Vista Developments",
@@ -1998,7 +1998,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
 
   "grova-east-hills": {
     name: "Grova East Hills",
-    destination: "new-cairo",
+    destination: "6th-settlement",
     lat: 30.008,
     lng: 31.542,
     developer: "Hassan Allam Holding",

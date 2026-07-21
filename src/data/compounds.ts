@@ -286,11 +286,40 @@ function gallery(seed: number, beach: boolean) {
   return [0, 1, 2, 3].map((i) => pool[(seed + i) % pool.length]);
 }
 
+export const parentChildMap: Record<string, string> = {
+  "club-hill-solare": "solare",
+  "olive-oasis": "solare",
+  "aqua-lagoons-june": "june",
+  "silvertown-lagoon-cabanas": "silversands",
+  "vie-collective": "vie",
+  "vie-halo": "vie",
+  "salt-marina": "salt",
+  "bloom-island-ogami": "ogami",
+  "saada-north-coast": "saada-sahel",
+  "the-gray-laguna-the-boulevard": "the-med",
+  "surf-and-sand-seazen": "seazen",
+  "central-water-residences": "hyde-park-new-cairo",
+  "safa-medi-plex-phase-2": "hyde-park-new-cairo",
+  "caesar-extension-2": "caesar-sodic",
+  "cala-residences-katameya-coast": "katameya-coast",
+  "selina-carnelia": "carnelia",
+  "elea-azha-north": "azha-north-coast",
+  "kynd-residence-gaia": "gaia",
+  "sealine-seashore": "hyde-park-north-seashore",
+};
+
 function heroFor(slug: string, fallback: string): string {
-  return projectImages[slug]?.[0] ?? fallback;
+  if (projectImages[slug]?.[0]) return projectImages[slug][0];
+  const parent = parentChildMap[slug];
+  if (parent && projectImages[parent]?.[0]) return projectImages[parent][0];
+  return fallback;
 }
+
 function galleryFor(slug: string, fallback: string[]): string[] {
-  return projectImages[slug] ?? fallback;
+  if (projectImages[slug] && projectImages[slug].length > 0) return projectImages[slug];
+  const parent = parentChildMap[slug];
+  if (parent && projectImages[parent] && projectImages[parent].length > 0) return projectImages[parent];
+  return fallback;
 }
 
 function typesFor(price: number, beach: boolean) {
@@ -597,6 +626,9 @@ const newProjects: Compound[] = [
     unitSizes: "80–300 m²",
     type: "Residential",
     highlights: ["O West prime location", "Orascom Development signature design", "Premium amenities & spaces", "Ready by 2028"],
+    brochureUrl: "/brochures/O-west.pdf",
+    brochureFileName: "O-west.pdf",
+    brochureType: "application/pdf",
   },
   {
     slug: "kinda-residence",
@@ -641,6 +673,9 @@ const newProjects: Compound[] = [
     unitSizes: "80–300 m²",
     type: "Residential",
     highlights: ["Sarai prime location", "Madinet Masr signature design", "Premium amenities & spaces", "Ready by 2028"],
+    brochureUrl: "/brochures/Sarai.pdf",
+    brochureFileName: "Sarai.pdf",
+    brochureType: "application/pdf",
   },
   {
     slug: "ogami",
@@ -1496,7 +1531,7 @@ const newProjects: Compound[] = [
   {
     slug: "el-patio-riva",
     name: "El Patio Riva",
-    destination: "new-cairo",
+    destination: "6th-settlement",
     lat: 30.005, lng: 31.512,
     developer: "La Vista Developments",
     developerSlug: "la-vista-developments",
@@ -1540,7 +1575,7 @@ const newProjects: Compound[] = [
   {
     slug: "patio-hills",
     name: "Patio Hills",
-    destination: "new-cairo",
+    destination: "6th-settlement",
     lat: 30.002, lng: 31.515,
     developer: "La Vista Developments",
     developerSlug: "la-vista-developments",
@@ -1606,7 +1641,7 @@ const newProjects: Compound[] = [
   {
     slug: "patio-vida",
     name: "Patio Vida",
-    destination: "new-cairo",
+    destination: "6th-settlement",
     lat: 30.008, lng: 31.516,
     developer: "La Vista Developments",
     developerSlug: "la-vista-developments",
@@ -1672,7 +1707,7 @@ const newProjects: Compound[] = [
   {
     slug: "el-patio-town",
     name: "El Patio Town",
-    destination: "new-cairo",
+    destination: "6th-settlement",
     lat: 30.015, lng: 31.505,
     developer: "La Vista Developments",
     developerSlug: "la-vista-developments",
@@ -1940,6 +1975,9 @@ const newProjects: Compound[] = [
     unitSizes: "180–350 m²",
     type: "Residential",
     highlights: ["New Cairo prime location", "Modern luxury design", "Ready 2028", "Ora signature quality"],
+    brochureUrl: "/brochures/Solana.pdf",
+    brochureFileName: "Solana.pdf",
+    brochureType: "application/pdf",
   },
 
   // ══════════════════════════════════════════
@@ -3535,25 +3573,6 @@ export function normalizeDeveloperName(name: string): string {
   }
   return trimmed;
 }
-
-const parentChildMap: Record<string, string> = {
-  "club-hill-solare": "solare",
-  "olive-oasis": "solare",
-  "aqua-lagoons-june": "june",
-  "silvertown-lagoon-cabanas": "silversands",
-  "vie-collective": "vie",
-  "vie-halo": "vie",
-  "salt-marina": "salt",
-  "bloom-island-ogami": "ogami",
-  "saada-north-coast": "saada-sahel",
-  "the-gray-laguna-the-boulevard": "the-med",
-  "surf-and-sand-seazen": "seazen",
-  "central-water-residences": "hyde-park-new-cairo",
-  "safa-medi-plex-phase-2": "hyde-park-new-cairo",
-  "caesar-extension-2": "caesar-sodic",
-  "cala-residences-katameya-coast": "katameya-coast",
-  "selina-carnelia": "carnelia"
-};
 
 const baseStaticCompounds: Compound[] = merged.map((c) => {
   const enriched = applyOfficialData(c);
