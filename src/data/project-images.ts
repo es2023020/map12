@@ -86,16 +86,16 @@ export const projectImages: Record<string, string[]> = {
     "/projects/at-east/4.jpg"
   ],
   "azha": [
-    "/projects/azha/1.jpg",
-    "/projects/azha/2.jpg",
-    "/projects/azha/3.jpg",
-    "/projects/azha/4.jpg",
-    "/projects/azha/5.jpg",
-    "/projects/azha/6.jpg",
-    "/projects/azha/7.jpg",
-    "/projects/azha/8.jpg",
-    "/projects/azha/9.jpg",
-    "/projects/azha/10.jpg"
+    "/projects/azha-north-coast/1.jpg",
+    "/projects/azha-north-coast/2.jpg",
+    "/projects/azha-north-coast/3.jpg",
+    "/projects/azha-north-coast/4.jpg",
+    "/projects/azha-north-coast/5.jpg",
+    "/projects/azha-north-coast/6.jpg",
+    "/projects/azha-north-coast/7.jpg",
+    "/projects/azha-north-coast/8.jpg",
+    "/projects/azha-north-coast/9.jpg",
+    "/projects/azha-north-coast/10.jpg"
   ],
   "azzar-island": [
     "/projects/azzar-island/1.jpg",
