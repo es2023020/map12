@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { compounds, normalizeDeveloperName } from "@/data/compounds";
 import { availability } from "@/data/availability";
-import { destinations } from "@/data/destinations";
+import { destinations, staticDestinations } from "@/data/destinations";
 import { brochureMap } from "@/data/brochure-map";
 import type { AnalyticsEvent } from "@/lib/analytics";
 
@@ -1492,23 +1492,23 @@ export const useStore = create<State>()(
       name: "proptrack-broker",
       onRehydrateStorage: () => (state) => {
         if (state) {
-          // 1. Sync destinationsList with latest static destination data (especially hero images!)
+          // 1. Sync destinationsList with latest static destination data (especially hero images & new destinations like 6th-settlement!)
           if (Array.isArray(state.destinationsList)) {
             state.destinationsList = state.destinationsList.map((d: any) => {
-              const staticDest = destinations.find((sd) => sd.slug === d.slug);
+              const staticDest = staticDestinations.find((sd) => sd.slug === d.slug);
               if (staticDest) {
                 return { ...d, ...staticDest };
               }
               return d;
             });
             // Ensure any new destinations in static file but missing in localstorage are added
-            destinations.forEach((sd) => {
+            staticDestinations.forEach((sd) => {
               if (!state.destinationsList.some((d: any) => d.slug === sd.slug)) {
                 state.destinationsList.push(sd);
               }
             });
           } else {
-            state.destinationsList = destinations;
+            state.destinationsList = staticDestinations;
           }
 
           // 2. Sync compoundsList with latest static compounds data (especially developer names, new launches, and parent slug mappings!)
@@ -1525,6 +1525,7 @@ export const useStore = create<State>()(
                 return { 
                   ...c, 
                   ...staticComp, 
+                  destination: staticComp.destination,
                   isNewLaunch,
                   brochureUrl: isDeleted ? undefined : (c.brochureUrl || (staticFile ? `/brochures/${staticFile}` : undefined)),
                   brochureFileName: isDeleted ? undefined : (c.brochureFileName || staticFile || undefined),
