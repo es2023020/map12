@@ -35,40 +35,40 @@ function Index() {
         <div className="absolute inset-0 opacity-50 mix-blend-screen" style={{
           backgroundImage: "radial-gradient(ellipse at 20% 0%, oklch(0.72 0.12 195 / .5), transparent 50%), radial-gradient(ellipse at 80% 100%, oklch(0.7 0.18 40 / .4), transparent 60%)",
         }} />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-24">
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:py-16 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-24">
           <div>
             <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="PropTrack" className="h-14 w-14 object-contain drop-shadow-xl" />
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
+              <img src="/logo.png" alt="PropTrack" className="h-11 w-11 sm:h-14 sm:w-14 object-contain drop-shadow-xl shrink-0" />
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
                 <Sparkles className="h-3.5 w-3.5" /> Built for Egyptian brokers
               </span>
             </div>
-            <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
+            <h1 className="mt-5 font-display text-3.5xl sm:text-5xl md:text-6xl font-semibold leading-[1.1] tracking-tight">
               Every compound. <br />
               <span className="text-accent">One map.</span>
             </h1>
-            <p className="mt-5 max-w-lg text-lg text-primary-foreground/80">
+            <p className="mt-4 max-w-lg text-base sm:text-lg text-primary-foreground/80 leading-relaxed">
               PropTrack is the real-estate intelligence platform for the Egyptian market — Sahel, New Cairo, and Sheikh Zayed, mapped in one place.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link to="/map" search={{ destination: "", dev: "", q: "" }}>
-                <Button size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  Explore the Map <ArrowRight className="ml-1 h-4 w-4" />
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+              <Link to="/map" search={{ destination: "", dev: "", q: "" }} className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto rounded-full bg-accent text-accent-foreground hover:bg-accent/90 h-12 px-6 text-sm font-bold">
+                  Explore the Map <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Button>
               </Link>
-              <Link to="/projects" search={{ destination: "", dev: "", q: "" }}>
-                <Button size="lg" variant="outline" className="rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white">
+              <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white h-12 px-6 text-sm font-semibold">
                   Browse {compounds.length} projects
                 </Button>
               </Link>
             </div>
-            <div className="mt-10 grid max-w-md grid-cols-3 gap-6">
+            <div className="mt-8 grid max-w-md grid-cols-3 gap-2.5 sm:gap-6 rounded-2xl bg-white/5 border border-white/10 p-3.5 sm:p-5 backdrop-blur-md">
               <Stat label="Compounds" value={String(compounds.length)} />
               <Stat label="Developers" value={String(developers.length)} />
               <Stat label="Destinations" value={String(destinations.length)} />
             </div>
           </div>
-          <div className="relative h-[420px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl lg:h-[520px]">
+          <div className="relative h-[320px] sm:h-[420px] overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 shadow-2xl lg:h-[520px]">
             <MapClient compounds={sahelCompounds} className="h-full w-full" initialCenter={[31.0, 28.3]} initialZoom={9} />
           </div>
         </div>
@@ -78,19 +78,19 @@ function Index() {
       <NewLaunchesSlider />
 
       {/* Destinations strip */}
-      <section className="mx-auto max-w-7xl px-4 py-14 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:py-14 lg:px-8">
         <SectionHeader title="Destinations we cover" subtitle="From Sidi Heneish to Tagamo3." link={{ to: "/destinations", label: "All destinations" }} />
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {destinations.map((a) => (
             <Link key={a.slug} to="/destinations/$slug" params={{ slug: a.slug }}
               className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card shadow-soft">
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[16/10] sm:aspect-[4/3] overflow-hidden">
                 <img src={a.hero} alt={a.name} loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
               </div>
               <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
-                <div className="font-display text-xl font-semibold">{a.name}</div>
+                <div className="font-display text-lg sm:text-xl font-semibold">{a.name}</div>
                 <div className="mt-0.5 text-xs text-primary-foreground/80">{a.kmRange ?? "Greater Cairo"}</div>
               </div>
             </Link>
@@ -100,27 +100,27 @@ function Index() {
 
       {/* Featured compounds */}
       <section className="bg-gradient-sand">
-        <div className="mx-auto max-w-7xl px-4 py-14 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:py-14 lg:px-8">
           <SectionHeader title="Featured compounds" subtitle="Hand-picked launches and benchmarks." link={{ to: "/projects", label: "All projects" }} />
-          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((c) => <CompoundCard key={c.slug} c={c} />)}
           </div>
         </div>
       </section>
 
       {/* Value props */}
-      <section className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-3">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:py-16 lg:px-8">
+        <div className="grid gap-5 md:grid-cols-3">
           {[
             { icon: MapPin, title: "Map-first intelligence", body: "Every project pinned, filterable by destination, developer, price and delivery year. Smooth as Google Maps, branded for brokers." },
             { icon: Building2, title: "Compound deep-dives", body: "Developer, payment plan, unit mix, amenities and a mini-map — everything your client asks for in one page." },
             { icon: Users, title: "Broker workspace", body: "Lead pipeline, favorites, side-by-side compare, and tier-based subscriptions." },
           ].map((v) => (
-            <div key={v.title} className="rounded-2xl border border-border/60 bg-card p-6 shadow-soft">
+            <div key={v.title} className="rounded-2xl border border-border/60 bg-card p-5 sm:p-6 shadow-soft">
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 text-accent">
                 <v.icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-4 font-display text-xl font-semibold text-primary">{v.title}</h3>
+              <h3 className="mt-4 font-display text-lg sm:text-xl font-semibold text-primary">{v.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.body}</p>
             </div>
           ))}
@@ -128,20 +128,20 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-7xl px-4 pb-16 lg:px-8">
-        <div className="overflow-hidden rounded-3xl bg-primary p-10 text-primary-foreground lg:p-14">
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:pb-16 lg:px-8">
+        <div className="overflow-hidden rounded-2xl sm:rounded-3xl bg-primary p-6 sm:p-10 lg:p-14 text-primary-foreground">
           <div className="grid items-center gap-6 lg:grid-cols-[1.4fr_1fr]">
             <div>
-              <h2 className="font-display text-3xl font-semibold leading-tight md:text-4xl">
-                Stop juggling brochures.<br />Start closing.
+              <h2 className="font-display text-2.5xl sm:text-3xl md:text-4xl font-semibold leading-tight">
+                Stop juggling brochures.<br className="hidden sm:inline" /> Start closing.
               </h2>
-              <p className="mt-3 max-w-lg text-primary-foreground/80">
+              <p className="mt-3 max-w-lg text-sm sm:text-base text-primary-foreground/80">
                 Get the broker dashboard, full project library, and the interactive map — built specifically for Egypt.
               </p>
             </div>
-            <div className="flex flex-wrap justify-end gap-3">
-              <Link to="/auth"><Button size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90">Start free</Button></Link>
-              <Link to="/admin"><Button size="lg" variant="outline" className="rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white">See plans</Button></Link>
+            <div className="flex flex-col sm:flex-row lg:justify-end gap-3">
+              <Link to="/auth" className="w-full sm:w-auto"><Button size="lg" className="w-full sm:w-auto rounded-full bg-accent text-accent-foreground hover:bg-accent/90 h-12 px-6 text-sm font-bold">Start free</Button></Link>
+              <Link to="/admin" className="w-full sm:w-auto"><Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white h-12 px-6 text-sm font-semibold">See plans</Button></Link>
             </div>
           </div>
         </div>

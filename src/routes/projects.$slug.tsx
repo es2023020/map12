@@ -579,6 +579,35 @@ function CompoundPage() {
           </div>
         </section>
       )}
+
+      {/* Mobile Sticky Bottom Action Bar (< lg) */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-border bg-card/95 backdrop-blur-md p-3 lg:hidden shadow-2xl flex items-center gap-2">
+        <div className="flex-1 min-w-0">
+          <div className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider truncate">Starting from</div>
+          <div className="font-display text-base font-extrabold text-primary leading-tight truncate">EGP {c.priceFrom}M</div>
+        </div>
+
+        <a href="tel:201029324783" className="flex-1">
+          <Button size="sm" className="w-full rounded-xl bg-accent text-accent-foreground font-bold text-xs py-2.5 h-10 shadow-sm" onClick={() => trackEvent({ type: "call", slug: c.slug, area: c.destination })}>
+            <Phone className="mr-1.5 h-3.5 w-3.5 shrink-0" /> Request Viewing
+          </Button>
+        </a>
+
+        <Button
+          size="sm"
+          variant="outline"
+          onClick={() => { toggleFav(c.slug); trackEvent({ type: isFav ? "unsave" : "save", slug: c.slug, area: c.destination }); }}
+          className="rounded-xl border-border px-3 h-10 shrink-0"
+        >
+          <Heart className={`h-4 w-4 ${isFav ? "fill-sunset text-sunset" : "text-muted-foreground"}`} />
+        </Button>
+
+        <Link to="/calculator" search={{ project: c.slug }} className="shrink-0">
+          <Button size="sm" variant="outline" className="rounded-xl border-accent text-accent px-3 h-10">
+            <Calculator className="h-4 w-4" />
+          </Button>
+        </Link>
+      </div>
     </Shell>
   );
 }

@@ -106,26 +106,11 @@ function MapPage() {
     return new Map(availability.map((a) => [a.slug, a]));
   }, []);
 
-  const matchMapCompound = (
-    c: any,
-    qVal: string,
-    destinationVal: string | null,
-    devVal: string,
-    flagshipVal: boolean,
-    kiloFilterVal: string
-  ) => {
-    if (destinationVal && c.destination !== destinationVal) return false;
-    if (devVal && c.developerSlug !== devVal) return false;
-    if (flagshipVal && !c.flagship) return false;
-    if (kiloFilterVal) {
-      if (c.km === undefined || c.km === null) return false;
-      if (kiloFilterVal === "90-120" && (c.km < 90 || c.km > 120)) return false;
-      if (kiloFilterVal === "120-150" && (c.km < 120 || c.km > 150)) return false;
-      if (kiloFilterVal === "150-180" && (c.km < 150 || c.km > 180)) return false;
-      if (kiloFilterVal === "180-220" && (c.km < 180 || c.km > 220)) return false;
-      if (kiloFilterVal === "220+" && c.km < 220) return false;
-    }
-    if (qVal) {
+  const mainCompounds = useMemo(() => compounds.filter((c) => !c.parentSlug), []);
+
+  const searchableTextMap = useMemo(() => {
+    const map = new Map<string, string>();
+    mainCompounds.forEach((c) => {
       const avail = availabilityMap.get(c.slug);
       let availText = "";
       if (avail) {
@@ -157,9 +142,32 @@ function MapPage() {
         }
         availText = Array.from(terms).join(" ");
       }
+      map.set(c.slug, `${c.name} ${c.developer} ${c.destination} ${c.city ?? ""} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase());
+    });
+    return map;
+  }, [availabilityMap, mainCompounds]);
 
-      const hay = `${c.name} ${c.developer} ${c.destination} ${c.city ?? ""} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase();
-      
+  const matchMapCompound = (
+    c: any,
+    qVal: string,
+    destinationVal: string | null,
+    devVal: string,
+    flagshipVal: boolean,
+    kiloFilterVal: string
+  ) => {
+    if (destinationVal && c.destination !== destinationVal) return false;
+    if (devVal && c.developerSlug !== devVal) return false;
+    if (flagshipVal && !c.flagship) return false;
+    if (kiloFilterVal) {
+      if (c.km === undefined || c.km === null) return false;
+      if (kiloFilterVal === "90-120" && (c.km < 90 || c.km > 120)) return false;
+      if (kiloFilterVal === "120-150" && (c.km < 120 || c.km > 150)) return false;
+      if (kiloFilterVal === "150-180" && (c.km < 150 || c.km > 180)) return false;
+      if (kiloFilterVal === "180-220" && (c.km < 180 || c.km > 220)) return false;
+      if (kiloFilterVal === "220+" && c.km < 220) return false;
+    }
+    if (qVal) {
+      const hay = searchableTextMap.get(c.slug) || "";
       const stopWords = new Set(["in", "for", "with", "a", "an", "the", "at", "by", "of", "and", "on"]);
       const queryWords = qVal
         .toLowerCase()
@@ -171,18 +179,16 @@ function MapPage() {
     return true;
   };
 
-  const mainCompounds = useMemo(() => compounds.filter((c) => !c.parentSlug), []);
-
   const filtered = useMemo(() => {
     return mainCompounds.filter((c) => matchMapCompound(c, debouncedQ, destinationSlug, dev, flagshipOnly, kiloFilter));
-  }, [destinationSlug, dev, flagshipOnly, debouncedQ, kiloFilter, availabilityMap, mainCompounds]);
+  }, [destinationSlug, dev, flagshipOnly, debouncedQ, kiloFilter, searchableTextMap, mainCompounds]);
 
   // Dynamic active options for cascading UI
   const activeDevelopers = useMemo(() => {
     const list = mainCompounds.filter((c) => matchMapCompound(c, debouncedQ, destinationSlug, "", flagshipOnly, kiloFilter));
     const slugs = new Set(list.map((c) => c.developerSlug));
     return developers.filter((d) => slugs.has(d.slug));
-  }, [debouncedQ, destinationSlug, flagshipOnly, kiloFilter, availabilityMap, mainCompounds]);
+  }, [debouncedQ, destinationSlug, flagshipOnly, kiloFilter, searchableTextMap, mainCompounds]);
 
   const areaCounts = useMemo(() => {
     const m = new Map<string, number>();
@@ -191,7 +197,7 @@ function MapPage() {
       m.set(a.slug, count);
     });
     return m;
-  }, [debouncedQ, dev, flagshipOnly, kiloFilter, availabilityMap, mainCompounds]);
+  }, [debouncedQ, dev, flagshipOnly, kiloFilter, searchableTextMap, mainCompounds]);
 
   const devCounts = useMemo(() => {
     const m = new Map<string, number>();
@@ -200,7 +206,7 @@ function MapPage() {
       m.set(d.slug, count);
     });
     return m;
-  }, [debouncedQ, destinationSlug, flagshipOnly, kiloFilter, availabilityMap, mainCompounds]);
+  }, [debouncedQ, destinationSlug, flagshipOnly, kiloFilter, searchableTextMap, mainCompounds]);
 
   const visibleLandmarks = useMemo(
     () => (destinationSlug ? landmarks.filter((l) => l.destination === destinationSlug) : landmarks),

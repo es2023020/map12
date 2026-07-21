@@ -153,16 +153,16 @@ export function Navbar() {
             <div className="relative" ref={userMenuRef}>
               <button 
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
-                className="hidden items-center gap-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors px-3 py-1.5 text-sm md:flex focus:outline-none"
+                className="flex items-center gap-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm focus:outline-none"
               >
                 {user.avatar ? (
-                  <img src={user.avatar} alt={user.name} className="h-6 w-6 rounded-full object-cover border border-border" />
+                  <img src={user.avatar} alt={user.name} className="h-6 w-6 rounded-full object-cover border border-border shrink-0" />
                 ) : (
-                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground shrink-0">
                     {user.name[0]?.toUpperCase()}
                   </span>
                 )}
-                <span className="font-medium">{user.name}</span>
+                <span className="font-medium hidden sm:inline">{user.name}</span>
                 <ChevronDown className="h-3 w-3 text-muted-foreground" />
               </button>
               
@@ -232,7 +232,7 @@ export function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="border-t border-border/60 bg-background/98 backdrop-blur-xl md:hidden">
-          <nav className="flex flex-col divide-y divide-border/40 px-2 py-1">
+          <nav className="flex flex-col divide-y divide-border/40 px-3 py-2 space-y-1">
             {[...links, ...moreLinks].map((l) => {
               const active = pathname === l.to || pathname.startsWith(l.to + "/");
               return (
@@ -240,18 +240,40 @@ export function Navbar() {
                   key={l.to}
                   to={l.to}
                   onClick={() => setOpen(false)}
-                  className={`flex items-center gap-3 px-3 py-3 text-sm font-medium transition-colors rounded-lg my-0.5 ${
-                    active ? "bg-secondary text-primary" : "text-muted-foreground hover:bg-secondary/60 hover:text-primary"
+                  className={`flex items-center gap-3 px-3 py-3 text-sm font-medium transition-colors rounded-xl ${
+                    active ? "bg-secondary text-primary font-semibold" : "text-muted-foreground hover:bg-secondary/60 hover:text-primary"
                   }`}
                 >
                   {l.label}
                 </Link>
               );
             })}
-            {!user && (
+            
+            {user ? (
+              <div className="pt-3 pb-2 space-y-2">
+                <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-secondary/50">
+                  <div className="flex items-center gap-2.5">
+                    {user.avatar ? (
+                      <img src={user.avatar} alt={user.name} className="h-8 w-8 rounded-full object-cover border border-border" />
+                    ) : (
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                        {user.name[0]?.toUpperCase()}
+                      </div>
+                    )}
+                    <div>
+                      <div className="text-xs font-bold text-primary">{user.name}</div>
+                      <div className="text-[10px] text-muted-foreground">{user.tier} Partner</div>
+                    </div>
+                  </div>
+                  <button onClick={handleSignOut} className="text-xs font-bold text-destructive hover:underline px-2 py-1">
+                    Sign Out
+                  </button>
+                </div>
+              </div>
+            ) : (
               <div className="px-3 py-3">
                 <Link to="/auth" onClick={() => setOpen(false)}>
-                  <Button size="sm" className="w-full rounded-full">Sign in</Button>
+                  <Button size="sm" className="w-full rounded-full h-11 font-bold text-sm">Sign in</Button>
                 </Link>
               </div>
             )}

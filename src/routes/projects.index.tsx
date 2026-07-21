@@ -59,17 +59,9 @@ function ProjectsPage() {
     return new Map(availability.map((a) => [a.slug, a]));
   }, []);
 
-  const matchCompound = (
-    c: any,
-    qVal: string,
-    destinationVal: string,
-    devVal: string,
-    statusVal: string,
-    typeVal: string,
-    maxPriceVal: number,
-    kiloFilterVal: string
-  ) => {
-    if (qVal) {
+  const searchableTextMap = useMemo(() => {
+    const map = new Map<string, string>();
+    mainCompounds.forEach((c) => {
       const avail = availabilityMap.get(c.slug);
       let availText = "";
       if (avail) {
@@ -101,7 +93,22 @@ function ProjectsPage() {
         }
         availText = Array.from(terms).join(" ");
       }
+      map.set(c.slug, `${c.name} ${c.developer} ${c.destination} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase());
+    });
+    return map;
+  }, [availabilityMap]);
 
+  const matchCompound = (
+    c: any,
+    qVal: string,
+    destinationVal: string,
+    devVal: string,
+    statusVal: string,
+    typeVal: string,
+    maxPriceVal: number,
+    kiloFilterVal: string
+  ) => {
+    if (qVal) {
       // Intelligent Query Processing
       const stopWords = new Set(["in", "for", "with", "a", "an", "the", "at", "by", "of", "and", "on"]);
       const queryWords = qVal
@@ -110,7 +117,7 @@ function ProjectsPage() {
         .filter((w) => w && !stopWords.has(w));
 
       if (queryWords.length > 0) {
-        const hay = `${c.name} ${c.developer} ${c.destination} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase();
+        const hay = searchableTextMap.get(c.slug) || "";
         const devLower = c.developer.toLowerCase();
         const destLower = c.destination.toLowerCase();
 
@@ -171,32 +178,32 @@ function ProjectsPage() {
       if (sort === "price-desc") return b.priceFrom - a.priceFrom;
       return a.deliveryYear - b.deliveryYear;
     });
-  }, [debouncedQ, destination, dev, status, type, maxPrice, kiloFilter, sort, availabilityMap]);
+  }, [debouncedQ, destination, dev, status, type, maxPrice, kiloFilter, sort, searchableTextMap]);
 
   // Dynamic cascading option computations:
   const activeDestinations = useMemo(() => {
     const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, "", dev, status, type, maxPrice, kiloFilter));
     const slugs = new Set(list.map((c) => c.destination));
     return destinations.filter((a) => slugs.has(a.slug));
-  }, [debouncedQ, dev, status, type, maxPrice, kiloFilter, availabilityMap]);
+  }, [debouncedQ, dev, status, type, maxPrice, kiloFilter, searchableTextMap]);
 
   const activeDevelopers = useMemo(() => {
     const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, "", status, type, maxPrice, kiloFilter));
     const slugs = new Set(list.map((c) => c.developerSlug));
     return developers.filter((d) => slugs.has(d.slug));
-  }, [debouncedQ, destination, status, type, maxPrice, kiloFilter, availabilityMap]);
+  }, [debouncedQ, destination, status, type, maxPrice, kiloFilter, searchableTextMap]);
 
   const activeStatuses = useMemo(() => {
     const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, dev, "", type, maxPrice, kiloFilter));
     const statuses = new Set(list.map((c) => c.status));
     return ["Delivered", "Under Construction", "Off-Plan"].filter((s) => statuses.has(s as any));
-  }, [debouncedQ, destination, dev, type, maxPrice, kiloFilter, availabilityMap]);
+  }, [debouncedQ, destination, dev, type, maxPrice, kiloFilter, searchableTextMap]);
 
   const activeTypes = useMemo(() => {
     const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, dev, status, "", maxPrice, kiloFilter));
     const types = new Set(list.flatMap((c) => c.types));
     return ALL_TYPES.filter((t) => types.has(t));
-  }, [debouncedQ, destination, dev, status, maxPrice, kiloFilter, availabilityMap]);
+  }, [debouncedQ, destination, dev, status, maxPrice, kiloFilter, searchableTextMap]);
 
   const FilterPanel = (
     <div className="space-y-5">

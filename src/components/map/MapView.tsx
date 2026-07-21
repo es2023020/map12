@@ -71,10 +71,15 @@ export function MapView({
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   const activeId = activeSlug ?? focus?.slug ?? null;
-  const icons = useMemo(
-    () => new Map(compounds.map((c) => [c.slug, projectIcon(c, c.slug === activeId)])),
-    [compounds, activeId],
+  const baseIcons = useMemo(
+    () => new Map(compounds.map((c) => [c.slug, projectIcon(c, false)])),
+    [compounds]
   );
+  const activeIcon = useMemo(() => {
+    if (!activeId) return null;
+    const activeComp = compounds.find((c) => c.slug === activeId);
+    return activeComp ? projectIcon(activeComp, true) : null;
+  }, [activeId, compounds]);
   const lmList = lmProp ?? allLandmarks;
   const lmIcons = useMemo(() => new Map(lmList.map((l) => [l.id, landmarkIcon(l)])), [lmList]);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -229,7 +234,7 @@ export function MapView({
             <Marker
               key={c.slug}
               position={[c.lat, c.lng]}
-              icon={icons.get(c.slug)!}
+              icon={(c.slug === activeId && activeIcon) ? activeIcon : (baseIcons.get(c.slug) || projectIcon(c, false))}
               eventHandlers={onSelect ? { click: () => onSelect(c.slug) } : undefined}
             >
               <Popup closeButton={true} maxWidth={220} minWidth={220}>
