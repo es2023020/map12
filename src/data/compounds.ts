@@ -83,11 +83,11 @@ const sahelRaw: SahelInput[] = [
   ["Fouka Bay", 211, "ras-el-hekma", "Tatweer Misr", 10, 2026, true],
   ["Hyde Park North - Seashore", 207, "ras-el-hekma", "Hyde Park", 13, 2027, true],
   ["Playa Seashell", 206, "ras-el-hekma", "G Developments", 14, 2027, true],
-  ["Ogami", 205, "ras-el-hekma", "SODIC", 22, 2029, true],
+  ["Ogami", 205, "ras-el-hekma", "SODIC", 28, 2029, true],
   ["La Vista Ras El Hekma", 204, "ras-el-hekma", "La Vista Developments", 11, 2027, true],
   ["Caesar Sodic", 202, "ras-el-hekma", "SODIC", 14, 2027, true],
   ["Koun", 202, "ras-el-hekma", "Mabany Edris", 6, 2027, true],
-  ["Caesar Bay", 201, "ras-el-hekma", "SODIC", 9, 2026, true],
+  ["Caesar Bay", 201, "ras-el-hekma", "SODIC", 37, 2026, true],
   ["Lyv", 200, "ras-el-hekma", "Cred", 13, 2027, true],
   ["Mountain View Ras El Hekma", 200, "ras-el-hekma", "Mountain View", 16, 2028, true],
   ["Solare", 199, "ras-el-hekma", "Misr Italia", 10, 2027, true],
@@ -684,18 +684,18 @@ const newProjects: Compound[] = [
     lat: 31.13, lng: 27.85,
     developer: "Sodic",
     developerSlug: "sodic",
-    priceFrom: 228.02,
+    priceFrom: 28.0,
     deliveryYear: 2028,
     status: "Off-Plan",
     beachfront: true,
-    types: ["Standalone Villa"],
+    types: ["Townhouse", "Twin House", "Villa"],
     amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "24/7 Security", "Green Spaces", "Commercial Strip"],
     hero: "/projects/ogami/1.jpg",
     gallery: ["/projects/ogami/1.jpg", "/projects/ogami/2.jpg"],
     blurb: "Ogami is a premium development by Sodic in Ras El Hekma, presenting high-end unit designs and world-class compound amenities.",
-    paymentPlan: "10% down · 7 years equal installments",
+    paymentPlan: "5% down · 7 or 8 years equal installments",
     areaSize: "100 feddan",
-    unitSizes: "80–300 m²",
+    unitSizes: "150–215 m²",
     type: "Resort",
     highlights: ["Ogami prime location", "Sodic signature design", "Premium amenities & spaces", "Ready by 2028"],
   },
@@ -904,18 +904,18 @@ const newProjects: Compound[] = [
     lat: 31.13, lng: 27.85,
     developer: "Horizon Egypt Developments",
     developerSlug: "horizon-egypt-developments",
-    priceFrom: 71.52,
-    deliveryYear: 2028,
+    priceFrom: 21.5,
+    deliveryYear: 2029,
     status: "Off-Plan",
     beachfront: true,
-    types: ["Standalone Villa", "Apartment"],
+    types: ["Chalet", "Townhouse", "Villa"],
     amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "24/7 Security", "Green Spaces", "Commercial Strip"],
     hero: "/projects/saada-sahel/1.jpg",
     gallery: ["/projects/saada-sahel/1.jpg", "/projects/saada-sahel/2.jpg"],
     blurb: "Saada Sahel is a premium development by Horizon Egypt Developments in Ras El Hekma, presenting high-end unit designs and world-class compound amenities.",
-    paymentPlan: "10% down · 7 years equal installments",
-    areaSize: "100 feddan",
-    unitSizes: "80–300 m²",
+    paymentPlan: "5% down · 5% after 3 mos · 9 years equal installments",
+    areaSize: "125 feddan",
+    unitSizes: "149–500 m²",
     type: "Resort",
     highlights: ["Saada Sahel prime location", "Horizon Egypt Developments signature design", "Premium amenities & spaces", "Ready by 2028"],
   },
@@ -3655,9 +3655,9 @@ const vieParent: Compound = {
   highlights: ["Premium master community", "Lush landscapes", "Strategic New Cairo location"]
 };
 
-const staticCompounds = baseStaticCompounds.find(c => c.slug === "vie") 
-  ? baseStaticCompounds 
-  : [...baseStaticCompounds, vieParent];
+import { compoundsGenerated } from "./compounds.generated";
+
+export const staticCompounds: Compound[] = compoundsGenerated;
 
 export const compounds: Compound[] = new Proxy(staticCompounds, {
   get(target, prop, receiver) {

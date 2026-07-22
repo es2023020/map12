@@ -2928,6 +2928,31 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                             }}
                           />
                         </label>
+
+                        <button
+                          type="button"
+                          onClick={async () => {
+                            try {
+                              const backupStr = exportDatabaseBackup();
+                              const res = await fetch("/api/save-database", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: backupStr
+                              });
+                              const resData = await res.json();
+                              if (resData.success) {
+                                alert("Success! Database has been persistently saved to the source code files for all types of users.");
+                              } else {
+                                alert(`Failed to save: ${resData.error}`);
+                              }
+                            } catch (err: any) {
+                              alert(`Failed to save globally: ${err.message}`);
+                            }
+                          }}
+                          className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-2"
+                        >
+                          <CheckCircle className="h-4 w-4" /> Save database to source files (Global Sync)
+                        </button>
                       </div>
                     </div>
                   </div>

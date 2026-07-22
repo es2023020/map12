@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { compounds, normalizeDeveloperName } from "@/data/compounds";
+import { compounds, staticCompounds, normalizeDeveloperName } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import { destinations, staticDestinations } from "@/data/destinations";
 import { brochureMap } from "@/data/brochure-map";
@@ -1492,99 +1492,103 @@ export const useStore = create<State>()(
       name: "proptrack-broker",
       onRehydrateStorage: () => (state) => {
         if (state) {
-          // 1. Sync destinationsList with latest static destination data (especially hero images & new destinations like 6th-settlement!)
+          // 1. Sync destinationsList with latest static destination data (cleaning up old/defunct data)
           if (Array.isArray(state.destinationsList)) {
-            state.destinationsList = state.destinationsList.map((d: any) => {
-              const staticDest = staticDestinations.find((sd) => sd.slug === d.slug);
-              if (staticDest) {
-                return { ...d, ...staticDest };
+            state.destinationsList = staticDestinations.map((sd) => {
+              const localDest = state.destinationsList.find((d: any) => d.slug === sd.slug);
+              if (localDest) {
+                return { ...sd, ...localDest };
               }
-              return d;
-            });
-            // Ensure any new destinations in static file but missing in localstorage are added
-            staticDestinations.forEach((sd) => {
-              if (!state.destinationsList.some((d: any) => d.slug === sd.slug)) {
-                state.destinationsList.push(sd);
-              }
+              return sd;
             });
           } else {
             state.destinationsList = staticDestinations;
           }
 
-          // 2. Sync compoundsList with latest static compounds data (especially developer names, new launches, and parent slug mappings!)
-           if (Array.isArray(state.compoundsList)) {
-            // Re-map with latest static compounds
-            state.compoundsList = state.compoundsList.map((c: any) => {
-              const staticComp = compounds.find((sc) => sc.slug === c.slug);
-              if (staticComp) {
-                const isNewLaunch = launchSlugs.has(c.slug);
-                const staticFile = brochureMap[c.slug];
-                const hasBase64Url = c.brochureUrl && c.brochureUrl.startsWith("data:");
-                const isDeleted = c.brochureDeleted || hasBase64Url;
+          // 2. Sync compoundsList with latest static compounds data (ensuring no defunct projects are kept)
+          if (Array.isArray(state.compoundsList)) {
+            state.compoundsList = staticCompounds.map((sc) => {
+              const localComp = state.compoundsList.find((c: any) => c.slug === sc.slug);
+              const isNewLaunch = launchSlugs.has(sc.slug);
+              const staticFile = brochureMap[sc.slug];
+              const defaultFileUrl = staticFile ? `/brochures/${staticFile}` : undefined;
+              const defaultFileName = staticFile || undefined;
+              const defaultFileType = staticFile ? "application/pdf" : undefined;
 
-                return { 
-                  ...c, 
-                  ...staticComp, 
-                  destination: staticComp.destination,
+              if (localComp) {
+                const hasBase64Url = localComp.brochureUrl && localComp.brochureUrl.startsWith("data:");
+                const isDeleted = localComp.brochureDeleted || hasBase64Url;
+                return {
+                  ...sc,
+                  ...localComp,
+                  // Keep static info updated as source of truth
+                  name: sc.name,
+                  destination: sc.destination,
+                  km: sc.km,
+                  lat: sc.lat,
+                  lng: sc.lng,
+                  developer: sc.developer,
+                  developerSlug: sc.developerSlug,
+                  priceFrom: sc.priceFrom,
+                  deliveryYear: sc.deliveryYear,
+                  status: sc.status,
+                  beachfront: sc.beachfront,
+                  types: sc.types,
+                  amenities: sc.amenities,
+                  hero: sc.hero || localComp.hero,
+                  gallery: sc.gallery || localComp.gallery,
+                  blurb: sc.blurb || localComp.blurb,
+                  paymentPlan: sc.paymentPlan || localComp.paymentPlan,
+                  areaSize: sc.areaSize || localComp.areaSize,
+                  unitSizes: sc.unitSizes || localComp.unitSizes,
+                  highlights: sc.highlights || localComp.highlights,
+                  parentSlug: sc.parentSlug || localComp.parentSlug,
                   isNewLaunch,
-                  brochureUrl: isDeleted ? undefined : (c.brochureUrl || (staticFile ? `/brochures/${staticFile}` : undefined)),
-                  brochureFileName: isDeleted ? undefined : (c.brochureFileName || staticFile || undefined),
-                  brochureType: isDeleted ? undefined : (c.brochureType || (staticFile ? "application/pdf" : undefined)),
+                  brochureUrl: isDeleted ? undefined : (localComp.brochureUrl || defaultFileUrl),
+                  brochureFileName: isDeleted ? undefined : (localComp.brochureFileName || defaultFileName),
+                  brochureType: isDeleted ? undefined : (localComp.brochureType || defaultFileType),
                   brochureDeleted: isDeleted
                 };
               }
-              return c;
-            });
-            // Ensure any new compounds in static file but missing in localstorage are added
-            compounds.forEach((sc) => {
-              if (!state.compoundsList.some((c: any) => c.slug === sc.slug)) {
-                const isNewLaunch = launchSlugs.has(sc.slug);
-                const staticFile = brochureMap[sc.slug];
-                state.compoundsList.push({ 
-                  ...sc, 
-                  isNewLaunch,
-                  brochureUrl: staticFile ? `/brochures/${staticFile}` : undefined,
-                  brochureFileName: staticFile || undefined,
-                  brochureType: staticFile ? "application/pdf" : undefined,
-                  brochureDeleted: false
-                });
-              }
+              return {
+                ...sc,
+                isNewLaunch,
+                brochureUrl: defaultFileUrl,
+                brochureFileName: defaultFileName,
+                brochureType: defaultFileType,
+                brochureDeleted: false
+              };
             });
           } else {
-            const initialCompoundsList = compounds.map(c => {
-              const staticFile = brochureMap[c.slug];
+            state.compoundsList = staticCompounds.map((sc) => {
+              const isNewLaunch = launchSlugs.has(sc.slug);
+              const staticFile = brochureMap[sc.slug];
               return {
-                ...c,
-                isNewLaunch: launchSlugs.has(c.slug),
+                ...sc,
+                isNewLaunch,
                 brochureUrl: staticFile ? `/brochures/${staticFile}` : undefined,
                 brochureFileName: staticFile || undefined,
                 brochureType: staticFile ? "application/pdf" : undefined,
                 brochureDeleted: false
               };
             });
-            state.compoundsList = initialCompoundsList;
           }
 
           if (!Array.isArray(state.pendingUploadsList)) {
             state.pendingUploadsList = [];
           }
 
-          // 4. Sync availabilityList with latest static generated availability data
+          // 4. Sync availabilityList with latest static availability data
           if (Array.isArray(state.availabilityList)) {
-            state.availabilityList = state.availabilityList.map((a: any) => {
-              const staticAvail = availability.find((sa) => sa.slug === a.slug);
-              if (staticAvail) {
-                if (!a.lastUpdated || (staticAvail.lastUpdated && staticAvail.lastUpdated >= a.lastUpdated)) {
-                  return staticAvail;
+            state.availabilityList = availability.map((sa) => {
+              const localAvail = state.availabilityList.find((a: any) => a.slug === sa.slug);
+              if (localAvail) {
+                if (!localAvail.lastUpdated || (sa.lastUpdated && sa.lastUpdated >= localAvail.lastUpdated)) {
+                  return sa;
                 }
+                return { ...sa, ...localAvail };
               }
-              return a;
-            }).filter((a: any) => !a.slug.endsWith("-availability") || availability.some(sa => sa.slug === a.slug));
-
-            availability.forEach((sa) => {
-              if (!state.availabilityList.some((a: any) => a.slug === sa.slug)) {
-                state.availabilityList.push(sa);
-              }
+              return sa;
             });
           } else {
             state.availabilityList = availability;

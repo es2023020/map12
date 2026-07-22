@@ -51375,4 +51375,318 @@ export const availability: ProjectAvailability[] = [
       ],
     lastUpdated: "2026-07-20",
   },
+  {
+  "slug": "saada-sahel",
+  "developer": "Horizon Egypt Developments",
+  "totalAvailable": 7,
+  "lastUpdated": "2026-07-22",
+  "breakdown": [
+    {
+      "type": "Chalet",
+      "beds": 2,
+      "available": 1,
+      "minSqm": 149,
+      "maxSqm": 149,
+      "minPriceM": 21.5,
+      "maxPriceM": 21.5,
+      "finishing": "Fully Finished",
+      "deliveryNote": "3 Years",
+      "paymentPlan": "5% down · 5% after 3 mos · 9 years",
+      "units": [
+        {
+          "id": "saada-sahel-chalet-2br",
+          "unitNo": "Chalet 2BR",
+          "beds": 2,
+          "finishing": "Fully Finished",
+          "areaSqm": 149,
+          "view": "Garden & Lagoon",
+          "priceEGP": 21500000,
+          "status": "Available",
+          "areaNote": "+ Roof"
+        }
+      ]
+    },
+    {
+      "type": "Chalet",
+      "beds": 3,
+      "available": 1,
+      "minSqm": 168,
+      "maxSqm": 168,
+      "minPriceM": 25.8,
+      "maxPriceM": 25.8,
+      "finishing": "Fully Finished",
+      "deliveryNote": "3 Years",
+      "paymentPlan": "5% down · 5% after 3 mos · 9 years",
+      "units": [
+        {
+          "id": "saada-sahel-chalet-3br",
+          "unitNo": "Chalet 3BR",
+          "beds": 3,
+          "finishing": "Fully Finished",
+          "areaSqm": 168,
+          "view": "Garden & Lagoon",
+          "priceEGP": 25800000,
+          "status": "Available",
+          "areaNote": "+ Garden"
+        }
+      ]
+    },
+    {
+      "type": "Townhouse",
+      "available": 1,
+      "minSqm": 278,
+      "maxSqm": 278,
+      "minPriceM": 34.5,
+      "maxPriceM": 34.5,
+      "finishing": "Fully Finished",
+      "deliveryNote": "3 Years",
+      "paymentPlan": "5% down · 5% after 3 mos · 9 years",
+      "units": [
+        {
+          "id": "saada-sahel-townhouse",
+          "unitNo": "Town 278m",
+          "beds": 4,
+          "finishing": "Fully Finished",
+          "areaSqm": 278,
+          "view": "Sea & Lagoon",
+          "priceEGP": 34500000,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "type": "Standalone Villa",
+      "available": 4,
+      "minSqm": 394,
+      "maxSqm": 500,
+      "minPriceM": 78.5,
+      "maxPriceM": 320,
+      "finishing": "Fully Finished",
+      "deliveryNote": "3 Years",
+      "paymentPlan": "5% down · 5% after 3 mos · 9 years",
+      "units": [
+        {
+          "id": "saada-sahel-large-villa",
+          "unitNo": "Large Villa 394m",
+          "beds": 5,
+          "finishing": "Fully Finished",
+          "areaSqm": 394,
+          "view": "Sea View",
+          "priceEGP": 78500000,
+          "status": "Available"
+        },
+        {
+          "id": "saada-sahel-orizo",
+          "unitNo": "Orizo G+1 (3rd row)",
+          "beds": 6,
+          "finishing": "Fully Finished",
+          "areaSqm": 450,
+          "view": "3rd row Sea View",
+          "priceEGP": 216000000,
+          "status": "Available"
+        },
+        {
+          "id": "saada-sahel-nisi",
+          "unitNo": "Nisi one story (2nd row)",
+          "beds": 5,
+          "finishing": "Fully Finished",
+          "areaSqm": 480,
+          "view": "2nd row Sea View",
+          "priceEGP": 244000000,
+          "status": "Available"
+        },
+        {
+          "id": "saada-sahel-miraki",
+          "unitNo": "Miraki one story (1st row)",
+          "beds": 6,
+          "finishing": "Fully Finished",
+          "areaSqm": 500,
+          "view": "1st row beachfront",
+          "priceEGP": 320000000,
+          "status": "Available"
+        }
+      ]
+    }
+  ]
+},
+  {
+  "slug": "ogami",
+  "developer": "SODIC",
+  "totalAvailable": 4,
+  "lastUpdated": "2026-07-22",
+  "note": "EOI: EGP 250,000",
+  "breakdown": [
+    {
+      "type": "Courtyard Town Villa",
+      "available": 1,
+      "minSqm": 150,
+      "maxSqm": 150,
+      "minPriceM": 28,
+      "maxPriceM": 32,
+      "finishing": "Core & Shell",
+      "deliveryNote": "3 Years",
+      "paymentPlan": "5% down · 7 or 8 years equal installments",
+      "units": [
+        {
+          "id": "ogami-courtyard-town",
+          "unitNo": "Courtyard Town Villa",
+          "beds": 3,
+          "finishing": "Core & Shell",
+          "areaSqm": 150,
+          "view": "Garden View",
+          "priceEGP": 28000000,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "type": "Oasis Twin Villa",
+      "available": 1,
+      "minSqm": 170,
+      "maxSqm": 170,
+      "minPriceM": 36,
+      "maxPriceM": 36,
+      "finishing": "Core & Shell",
+      "deliveryNote": "3 Years",
+      "paymentPlan": "5% down · 7 or 8 years equal installments",
+      "units": [
+        {
+          "id": "ogami-oasis-twin",
+          "unitNo": "Oasis Twin Villa",
+          "beds": 3,
+          "finishing": "Core & Shell",
+          "areaSqm": 170,
+          "view": "Lagoon View",
+          "priceEGP": 36000000,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "type": "The Houses",
+      "available": 1,
+      "minSqm": 180,
+      "maxSqm": 180,
+      "minPriceM": 45,
+      "maxPriceM": 45,
+      "finishing": "Core & Shell",
+      "deliveryNote": "3 Years",
+      "paymentPlan": "5% down · 7 or 8 years equal installments",
+      "units": [
+        {
+          "id": "ogami-the-houses",
+          "unitNo": "The Houses G+1",
+          "beds": 3,
+          "finishing": "Core & Shell",
+          "areaSqm": 180,
+          "view": "Pool View",
+          "priceEGP": 45000000,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "type": "Sea Breeze Villa",
+      "available": 1,
+      "minSqm": 215,
+      "maxSqm": 215,
+      "minPriceM": 50,
+      "maxPriceM": 50,
+      "finishing": "Core & Shell",
+      "deliveryNote": "3 Years",
+      "paymentPlan": "5% down · 7 or 8 years equal installments",
+      "units": [
+        {
+          "id": "ogami-sea-breeze",
+          "unitNo": "Sea Breeze Villa Oasis",
+          "beds": 3,
+          "finishing": "Core & Shell",
+          "areaSqm": 215,
+          "view": "Sea View",
+          "priceEGP": 50000000,
+          "status": "Available",
+          "areaNote": "+ Guest Bedroom"
+        }
+      ]
+    }
+  ]
+},
+  {
+  "slug": "caesar-bay",
+  "developer": "SODIC",
+  "totalAvailable": 3,
+  "lastUpdated": "2026-07-22",
+  "note": "EOI: EGP 250,000",
+  "breakdown": [
+    {
+      "type": "Shell Townhouse",
+      "available": 1,
+      "minSqm": 180,
+      "maxSqm": 180,
+      "minPriceM": 37,
+      "maxPriceM": 37,
+      "finishing": "Core & Shell",
+      "deliveryNote": "Ready",
+      "paymentPlan": "5% down · 8 years equal installments",
+      "units": [
+        {
+          "id": "caesar-bay-townhouse",
+          "unitNo": "Shell Townhouse",
+          "beds": 3,
+          "finishing": "Core & Shell",
+          "areaSqm": 180,
+          "view": "Lagoon View",
+          "priceEGP": 37000000,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "type": "Bliss Twin Villa",
+      "available": 1,
+      "minSqm": 210,
+      "maxSqm": 210,
+      "minPriceM": 43,
+      "maxPriceM": 43,
+      "finishing": "Core & Shell",
+      "deliveryNote": "Ready",
+      "paymentPlan": "5% down · 8 years equal installments",
+      "units": [
+        {
+          "id": "caesar-bay-twin",
+          "unitNo": "Bliss Twin Villa",
+          "beds": 3,
+          "finishing": "Core & Shell",
+          "areaSqm": 210,
+          "view": "Sea & Lagoon View",
+          "priceEGP": 43000000,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "type": "Crystal Villa",
+      "available": 1,
+      "minSqm": 200,
+      "maxSqm": 200,
+      "minPriceM": 46,
+      "maxPriceM": 46,
+      "finishing": "Core & Shell",
+      "deliveryNote": "Ready",
+      "paymentPlan": "5% down · 8 years equal installments",
+      "units": [
+        {
+          "id": "caesar-bay-crystal-villa",
+          "unitNo": "Crystal Villa",
+          "beds": 4,
+          "finishing": "Core & Shell",
+          "areaSqm": 200,
+          "view": "Sea View",
+          "priceEGP": 46000000,
+          "status": "Available"
+        }
+      ]
+    }
+  ]
+},
 ];

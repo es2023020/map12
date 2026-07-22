@@ -50,6 +50,7 @@ export const brochureMap: Record<string, string> = {
   "amwaj":                      "Amwaj.pdf",
   "azha-north-coast":           "Azha-North-ras-al-hekma-Madaar-Developments-Brochure.pdf",
   "caesar-bay":                 "Caesar-Bay-Residences-Brochure.pdf",
+  "caesar-sodic":               "Caesar-Bay-Residences-Brochure.pdf",
   "cali-coast-ras-el-hekma":    "cali coast.pdf",
   "fouka-bay":                  "fouka-bay.pdf",
   "gaia":                       "gaia.pdf",

@@ -43,6 +43,7 @@ import { Route as DashboardCampaignsRouteImport } from './routes/dashboard.campa
 import { Route as DashboardBillingRouteImport } from './routes/dashboard.billing'
 import { Route as DashboardAiAssistantRouteImport } from './routes/dashboard.ai-assistant'
 import { Route as ApiUploadAssetRouteImport } from './routes/api.upload-asset'
+import { Route as ApiSaveDatabaseRouteImport } from './routes/api.save-database'
 import { Route as ApiBrochuresMatchRouteImport } from './routes/api.brochures-match'
 import { Route as UnitsProjectSlugTypeSlugRouteImport } from './routes/units.$projectSlug.$typeSlug'
 
@@ -216,6 +217,11 @@ const ApiUploadAssetRoute = ApiUploadAssetRouteImport.update({
   path: '/api/upload-asset',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiSaveDatabaseRoute = ApiSaveDatabaseRouteImport.update({
+  id: '/api/save-database',
+  path: '/api/save-database',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiBrochuresMatchRoute = ApiBrochuresMatchRouteImport.update({
   id: '/api/brochures-match',
   path: '/api/brochures-match',
@@ -247,6 +253,7 @@ export interface FileRoutesByFullPath {
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/brochures-match': typeof ApiBrochuresMatchRoute
+  '/api/save-database': typeof ApiSaveDatabaseRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
@@ -281,6 +288,7 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/brochures-match': typeof ApiBrochuresMatchRoute
+  '/api/save-database': typeof ApiSaveDatabaseRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
@@ -320,6 +328,7 @@ export interface FileRoutesById {
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/brochures-match': typeof ApiBrochuresMatchRoute
+  '/api/save-database': typeof ApiSaveDatabaseRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
@@ -360,6 +369,7 @@ export interface FileRouteTypes {
     | '/projects'
     | '/sitemap.xml'
     | '/api/brochures-match'
+    | '/api/save-database'
     | '/api/upload-asset'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
@@ -394,6 +404,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/sitemap.xml'
     | '/api/brochures-match'
+    | '/api/save-database'
     | '/api/upload-asset'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
@@ -432,6 +443,7 @@ export interface FileRouteTypes {
     | '/projects'
     | '/sitemap.xml'
     | '/api/brochures-match'
+    | '/api/save-database'
     | '/api/upload-asset'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
@@ -471,6 +483,7 @@ export interface RootRouteChildren {
   ProjectsRoute: typeof ProjectsRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiBrochuresMatchRoute: typeof ApiBrochuresMatchRoute
+  ApiSaveDatabaseRoute: typeof ApiSaveDatabaseRoute
   ApiUploadAssetRoute: typeof ApiUploadAssetRoute
   UnitsProjectSlugTypeSlugRoute: typeof UnitsProjectSlugTypeSlugRoute
 }
@@ -715,6 +728,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiUploadAssetRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/save-database': {
+      id: '/api/save-database'
+      path: '/api/save-database'
+      fullPath: '/api/save-database'
+      preLoaderRoute: typeof ApiSaveDatabaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/brochures-match': {
       id: '/api/brochures-match'
       path: '/api/brochures-match'
@@ -823,6 +843,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjectsRoute: ProjectsRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiBrochuresMatchRoute: ApiBrochuresMatchRoute,
+  ApiSaveDatabaseRoute: ApiSaveDatabaseRoute,
   ApiUploadAssetRoute: ApiUploadAssetRoute,
   UnitsProjectSlugTypeSlugRoute: UnitsProjectSlugTypeSlugRoute,
 }
