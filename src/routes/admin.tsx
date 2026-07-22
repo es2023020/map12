@@ -1129,7 +1129,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
 
   // File upload simulator inside details pages
   const [uploadingField, setUploadingField] = useState<string | null>(null);
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>, field: "brochure" | "masterPlan" | "gallery", projSlug: string) => {
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>, field: "brochure" | "masterPlan" | "gallery" | "hero", projSlug: string) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
@@ -1172,6 +1172,9 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
         } else if (field === "masterPlan") {
           // Store master plan as base64 data URL for instant viewing
           updateProject(projSlug, { masterPlanUrl: base64Content });
+        } else if (field === "hero") {
+          // Store hero cover image as base64 data URL for instant viewing
+          updateProject(projSlug, { hero: base64Content });
         }
 
         setUploadingField(null);
@@ -1676,7 +1679,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                     <div className="rounded-xl border border-border bg-card p-4 space-y-4">
                       <h4 className="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1.5"><FileText className="h-4.5 w-4.5 text-accent" /> Blueprints &amp; brochures</h4>
                       
-                      <div className="grid gap-3 sm:grid-cols-2">
+                      <div className="grid gap-3 sm:grid-cols-3">
                         {/* Brochure - any file type */}
                         <div className="border border-border/80 rounded-lg p-3 bg-secondary/15 flex flex-col gap-2">
                           <span className="block text-[9px] font-bold text-muted-foreground uppercase">Sales Brochure (any format)</span>
@@ -1711,6 +1714,35 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                           <div className="mt-auto pt-2 border-t border-border/40 text-[9px] text-muted-foreground italic leading-normal">
                             Brochure uploads are disabled from the admin panel. Map files in the source code folder (<code className="bg-secondary/40 px-1 py-0.5 rounded text-accent font-mono">/public/brochures</code>) and link them in <code className="bg-secondary/40 px-1 py-0.5 rounded text-accent font-mono">brochure-map.ts</code>.
                           </div>
+                        </div>
+
+                        {/* Cover Page (Hero Image) */}
+                        <div className="border border-border/80 rounded-lg p-3 bg-secondary/15 flex flex-col gap-2">
+                          <span className="block text-[9px] font-bold text-muted-foreground uppercase">Cover Page (Hero Image)</span>
+                          {selectedProject.hero ? (
+                            <div className="relative rounded overflow-hidden" style={{ height: 60 }}>
+                              <img src={selectedProject.hero} alt="Cover Page" className="w-full h-full object-cover" />
+                              <button
+                                onClick={() => updateProject(selectedProject.slug, { hero: undefined })}
+                                className="absolute top-1 right-1 rounded bg-black/50 text-white p-0.5 hover:bg-destructive transition-colors"
+                              >
+                                <X className="h-3 w-3" />
+                              </button>
+                            </div>
+                          ) : (
+                            <span className="text-[9px] text-muted-foreground italic">No cover page uploaded yet</span>
+                          )}
+                          <label className="mt-auto w-full py-2 bg-accent text-white font-bold text-[10px] rounded hover:bg-accent/90 transition-all flex items-center justify-center gap-1 cursor-pointer">
+                            {uploadingField === "hero" ? <RefreshCw className="h-3.5 w-3.5 animate-spin" /> : <Upload className="h-3.5 w-3.5" />}
+                            {uploadingField === "hero" ? "Uploading..." : "Upload Cover Page"}
+                            <input
+                              type="file"
+                              accept="image/*"
+                              className="hidden"
+                              disabled={uploadingField === "hero"}
+                              onChange={(e) => handleFileUpload(e, "hero", selectedProject.slug)}
+                            />
+                          </label>
                         </div>
 
                         {/* Master Plan */}
