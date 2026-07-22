@@ -94,7 +94,7 @@ export function NewLaunchesDashboard() {
                       <div className="flex items-start justify-between">
                         <h3 className="font-semibold text-foreground leading-tight truncate pr-2">{c.name}</h3>
                         <span className="text-[10px] uppercase font-bold text-accent bg-accent/10 px-2 py-0.5 rounded-full shrink-0">
-                          {c.priceFrom}M
+                          {c.priceFrom > 0 ? `${c.priceFrom}M` : "Request"}
                         </span>
                       </div>
                       <div className="text-xs text-muted-foreground flex items-center gap-1 mt-1">

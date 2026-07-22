@@ -112,7 +112,7 @@ export function NewLaunchesSlider() {
                       <div className="mt-4 pt-4 border-t border-border/40 flex items-center justify-between">
                         <div>
                           <div className="text-[10px] text-muted-foreground uppercase tracking-wide font-medium">Starting from</div>
-                          <div className="text-accent font-semibold">{c.priceFrom}M EGP</div>
+                          <div className="text-accent font-semibold">{c.priceFrom > 0 ? `${c.priceFrom}M EGP` : "Price on Request"}</div>
                         </div>
                         <div className="text-right">
                           <div className="text-[10px] text-muted-foreground uppercase tracking-wide font-medium">Delivery</div>

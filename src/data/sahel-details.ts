@@ -14,16 +14,20 @@ export type SahelDetail = {
 
 export const sahelDetails: Record<string, SahelDetail> = {
   "alam-al-roum": {
-    developer: "Qatari Diar / Alam Al Roum Developments",
-    areaSize: "~4,900 acres",
-    blurb:
-      "Alam Al Roum at km 275 � Egypt's furthest-north coastal city by Qatari Diar and NUCA. ~7.2 km beachfront, marina, golf and a self-contained masterplan with ~60% residential and ~25% green space.",
-    status: "Off-Plan",
-    deliveryYear: 2031,
-    priceFrom: 18,
-    paymentPlan: "Pre-launch � contact developer for current plan",
-    highlights: ["275 km from Alexandria", "~7.2 km beach", "Qatari Diar partnership", "Mega coastal city"],
-  },
+  "developer": "Qatari Diar",
+  "areaSize": "5000 feddan",
+  "unitSizes": "Chalet, Twin House, Villa",
+  "priceFrom": 0,
+  "deliveryYear": 2026,
+  "status": "Off-Plan",
+  "paymentPlan": "Price on request",
+  "blurb": "Alam Al Roum by Qatari Diar is a mega-scale coastal resort destination of 5,000 faddans east of Marsa Matrouh, featuring a yacht marina, hotels, and 7.2 km of private beachfront.",
+  "highlights": [
+    "by Qatari Diar",
+    "7.2 km private beach",
+    "International Yacht Marina"
+  ]
+},
   jamila: {
     developer: "New Jersey Developments",
     areaSize: "130 acres",
@@ -46,66 +50,65 @@ export const sahelDetails: Record<string, SahelDetail> = {
     highlights: ["Mature resort", "5.5 km beach", "Hotel-integrated", "8 phases"],
   },
   "hacienda-heneish": {
-    developer: "Palm Hills Developments",
-    areaSize: "~420 acres",
-    blurb:
-      "Hacienda Heneish at km 248 � Palm Hills' western Sahel launch with Crystal Bay phase targeting ~2028 delivery.",
-    priceFrom: 16,
-    deliveryYear: 2028,
-    highlights: ["Palm Hills quality", "Crystal Bay phase", "Low built footprint"],
-  },
+  "developer": "Palm Hills Developments",
+  "areaSize": "420 feddan",
+  "unitSizes": "80–350 m²",
+  "priceFrom": 12,
+  "deliveryYear": 2028,
+  "status": "Off-Plan",
+  "paymentPlan": "5% down payment · installments up to 8 years",
+  "blurb": "Hacienda Heneish by Palm Hills Developments is a massive 420-feddan coastal retreat in Sidi Heneish, offering premium hospitality, crystal lagoons, and direct beach access to signature turquoise waters.",
+  "highlights": [
+    "Palm Hills premium quality",
+    "420 acres masterplan",
+    "Turquoise water beachfront"
+  ]
+},
   silversands: {
-    developer: "Ora Developers",
-    areaSize: "~724 acres",
-    unitSizes: "417+ m� villas",
-    blurb:
-      "Silversands at km 247 � Ora's WATG-masterplanned resort with 88,000 sqm lagoon, 4 clubhouses, 2 hotels and the Acclaro phase.",
-    priceFrom: 22,
-    deliveryYear: 2028,
-    paymentPlan: "5�10% down � up to 9 years",
-    highlights: ["WATG masterplan", "88,000 sqm lagoon", "Apartments from EGP 23.7M"],
-  },
-  "sky-north": {
-    developer: "Sky Abu Dhabi Developments",
-    areaSize: "~430 acres",
-    blurb:
-      "Sky North at km 246 � Diamond Group's Sidi Heneish resort with ~80% greenery, hotel component and lagoon network. Completion targeted ~2029.",
-    priceFrom: 11,
-    deliveryYear: 2029,
-    highlights: ["80% landscape", "Hotel & lagoons", "From 82 m�"],
-  },
-  summer: {
-    developer: "Al Ahly Sabbour Developments",
-    areaSize: "864 acres",
-    blurb:
-      "Summer at km 246 � Al Ahly Sabbour's WATG-designed double-beachfront resort with private islands and the Serpentine concept.",
-    priceFrom: 8,
-    deliveryYear: 2027,
-    paymentPlan: "5% down � 10�12 years",
-    highlights: ["~1 km beachfront", "WATG masterplan", "Chalets from EGP 8M"],
-  },
+  "developer": "Ora Developers",
+  "areaSize": "506 feddan",
+  "unitSizes": "95–450 m²",
+  "priceFrom": 9.7,
+  "deliveryYear": 2028,
+  "status": "Off-Plan",
+  "paymentPlan": "5% down payment · installments up to 10 years",
+  "blurb": "Silversands Sidi Heneish is Ora Developers' flagship WATG-masterplanned resort spanning 506 feddans, featuring 1.2 km of private beachfront and an 88,000 sqm swimmable lagoon.",
+  "highlights": [
+    "1.2 km beachfront",
+    "88,000 sqm Crystal Lagoon",
+    "Ora premium masterplan"
+  ]
+},
   "marsa-baghush": {
-    developer: "Shehab A. Mazhar Architects (SQM Developments)",
-    areaSize: "~338 acres",
-    unitSizes: "113�375 m�",
-    blurb:
-      "Marsa Baghush at km 240 � botanical resort with 5 themed clusters, Aqua Heneish Hotel and Leeloo Beach Club on ~550 m beach.",
-    priceFrom: 13,
-    deliveryYear: 2026,
-    paymentPlan: "5% down � up to 8 years",
-    highlights: ["5 botanical clusters", "Fully finished options", "Chalets from EGP 13M"],
-  },
+  "developer": "Shehab Mazhar / SQM Developments",
+  "areaSize": "130 feddan",
+  "unitSizes": "80–300 m²",
+  "priceFrom": 6,
+  "deliveryYear": 2027,
+  "status": "Under Construction",
+  "paymentPlan": "5% down payment · installments up to 8 years",
+  "blurb": "Marsa Baghush by Shehab Mazhar (SQM Developments) is a boutique 130-feddan community in Sidi Heneish, designed with tiered elevations to ensure panoramic sea views from every residence.",
+  "highlights": [
+    "Designed by Shehab Mazhar",
+    "Tiered sea views",
+    "Sidi Heneish beachfront"
+  ]
+},
   "beit-al-bahr": {
-    developer: "Beit Al Bahr Developments",
-    areaSize: "~450 acres",
-    unitSizes: "125�350+ m�",
-    blurb:
-      "Beit Al Bahr at km 241 � BAM alliance resort (El Abd, Guira, J Developments) within El Abd Resort Sidi Heneish with ~3.5 km private beachfront.",
-    priceFrom: 15,
-    deliveryYear: 2027,
-    paymentPlan: "5% down � up to 8 years",
-    highlights: ["3.5 km beach", "BAM alliance", "Sidi Heneish", "Chalets & villas"],
-  },
+  "developer": "Beit Al Bahr Developments",
+  "areaSize": "450 feddan",
+  "unitSizes": "95–400 m²",
+  "priceFrom": 14.9,
+  "deliveryYear": 2027,
+  "status": "Under Construction",
+  "paymentPlan": "10% down payment · installments up to 8 years",
+  "blurb": "Beit El Bahr inside El Abd Resort Sidi Heneish is a tiered 450-feddan beachfront project offering 3.5 km of private white sand beach and swimmable lagoons.",
+  "highlights": [
+    "3.5 km private beachfront",
+    "Tiered beachfront phases",
+    "Inside El Abd Resort"
+  ]
+},
   koun: {
     developer: "Mabany Edris",
     areaSize: "~106 acres",

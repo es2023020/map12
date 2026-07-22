@@ -15,7 +15,12 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "marbay-ras-el-hekma": { name: "MarBay Ras El Hekma", destination: "ras-el-hekma", location: "km 200, Ras El Hekma, North Coast", mapsUrl: "https://maps.google.com/?q=MarBay+Ras+El+Hekma+Al+Marasem" },
   "aeon": { name: "Aeon", destination: "new-cairo", location: "New Cairo, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Aeon+New+Cairo+Egypt" },
   "al-rehab": { name: "Al Rehab", destination: "new-cairo", location: "New Cairo, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Al+Rehab+New+Cairo" },
-  "alam-al-roum": { name: "Alam Al Roum", destination: "sidi-heneish", location: "North Coast (Sidi Abdel Rahman), Matrouh", mapsUrl: "https://maps.google.com/?q=Alam+Al+Roum+North" },
+  "alam-al-roum": {
+  "name": "Alam Al Roum",
+  "destination": "sidi-heneish",
+  "location": "East of Marsa Matrouh, North Coast, Egypt",
+  "mapsUrl": "https://www.google.com/maps/place/Alam+el+Rum+resort/@31.3552324,27.3489873"
+},
   "allegria": { name: "Allegria", destination: "sheikh-zayed", location: "Sheikh Zayed, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Allegria+Sheikh+Zayed" },
   "almaza-bay": { name: "Almaza Bay", destination: "sidi-heneish", location: "Ras El Hekma, North Coast, Matrouh", mapsUrl: "https://maps.google.com/?q=Almaza+Bay+North+Coast+Egypt" },
   "amwaj": { name: "Amwaj", destination: "sidi-abdelrahman", location: "North Coast (Sidi Abdel Rahman), Matrouh", mapsUrl: "https://maps.google.com/?q=Amwaj+North+Coast+Egypt" },
@@ -25,7 +30,12 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "azzar-island": { name: "Azzar Island", destination: "ain-sokhna", location: "Ain Sokhna, Red Sea Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Azzar+Island+Ain+Sokhna+Egypt" },
   "badya": { name: "Badya", destination: "6th-october", location: "6th of October City, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Badya+October+City+Egypt" },
   "bamboo-iii": { name: "Bamboo III", destination: "ras-el-hekma", location: "North Coast, Matrouh Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Bamboo+III+North+Coast+Egypt" },
-  "beit-al-bahr": { name: "Beit Al Bahr", destination: "sidi-heneish", location: "Sidi Heneish, North Coast (km 241), Matrouh Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Beit+Al+Bahr+Sidi+Heneish+North+Coast+Egypt" },
+  "beit-al-bahr": {
+  "name": "Beit Al Bahr",
+  "destination": "sidi-heneish",
+  "location": "Sidi Heneish, North Coast, Egypt",
+  "mapsUrl": "https://maps.google.com/?q=Beit+El+Bahr+Sidi+Heneish"
+},
   "belle-vie": { name: "Belle Vie", destination: "6th-october", location: "6th of October City, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Belle+Vie+October+City+Egypt" },
   "belle-vie-new-zayed": { name: "Belle Vie New Zayed", destination: "new-zayed", location: "New Zayed, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Belle+Vie+New+Zayed" },
   "beverly-hills": { name: "Beverly Hills", destination: "sheikh-zayed", location: "Sheikh Zayed, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Beverly+Hills+Sheikh+Zayed+Egypt" },
@@ -60,8 +70,18 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "gaia": { name: "Gaia", destination: "sidi-abdelrahman", location: "North Coast (Sidi Abdel Rahman), Matrouh", mapsUrl: "https://maps.google.com/?q=Gaia+North+Coast+Egypt" },
   "ghazala-bay": { name: "Ghazala Bay", destination: "sidi-abdelrahman", location: "North Coast (Sidi Abdel Rahman), Matrouh", mapsUrl: "https://maps.google.com/?q=Ghazala+Bay+North+Coast+Egypt" },
   "hacienda-bay": { name: "Hacienda Bay", destination: "sidi-abdelrahman", location: "North Coast (Sidi Abdel Rahman), Matrouh", mapsUrl: "https://maps.google.com/?q=Hacienda+Bay+North+Coast+Egypt" },
-  "hacienda-blue": { name: "Hacienda Blue", destination: "ras-el-hekma", location: "North Coast, Matrouh Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Hacienda+Blue+North" },
-  "hacienda-heneish": { name: "Hacienda Heneish", destination: "sidi-heneish", location: "Heneish, North Coast, Matrouh Governorate,", mapsUrl: "https://maps.google.com/?q=Hacienda+Heneish+North+Coast+Egypt" },
+  "hacienda-blue": {
+  "name": "Hacienda Blue",
+  "destination": "ras-el-hekma",
+  "location": "Ras El Hekma, North Coast, Egypt",
+  "mapsUrl": "https://maps.google.com/?q=Hacienda+Blue+North"
+},
+  "hacienda-heneish": {
+  "name": "Hacienda Heneish",
+  "destination": "sidi-heneish",
+  "location": "Sidi Heneish, North Coast, Egypt",
+  "mapsUrl": "https://maps.google.com/?q=Hacienda+Heneish+Palm+Hills"
+},
   "hacienda-ras-el-hekma": { name: "Hacienda Ras El Hekma", destination: "ras-el-hekma", location: "Ras El Hekma, North Coast, Matrouh", mapsUrl: "https://maps.google.com/?q=Hacienda+Ras+El+Hekma+Egypt" },
   "hacienda-red": { name: "Hacienda Red", destination: "ain-sokhna", location: "Ain Sokhna, Red Sea Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Hacienda+Red+Ain+Sokhna+Egypt" },
   "hacienda-waters": { name: "Hacienda Waters", destination: "ain-sokhna", location: "Ain Sokhna, Red Sea Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Hacienda+Waters+Ain" },
@@ -75,7 +95,12 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "il-latini-city-edge": { name: "Il Latini City Edge", destination: "new-cairo", location: "New Cairo, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Il+Latini+City+Edge+New+Cairo+Egypt" },
   "il-latini-sed": { name: "Il Latini SED", destination: "new-administrative-capital", location: "New Administrative Capital, Cairo", mapsUrl: "https://maps.google.com/?q=Il+Latini+SED+New+Capital+Egypt" },
   "il-monte-galala": { name: "IL Monte Galala", destination: "ain-sokhna", location: "Ain Sokhna, Red Sea Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=IL+Monte+Galala+Ain+Sokhna+Egypt" },
-  "jamila": { name: "Jamila", destination: "sidi-heneish", location: "North Coast (Sidi Abdel Rahman), Matrouh", mapsUrl: "https://maps.google.com/?q=Jamila+North+Coast+Egypt" },
+  "jamila": {
+  "name": "Jamila",
+  "destination": "sidi-heneish",
+  "location": "Sidi Heneish, North Coast, Egypt",
+  "mapsUrl": "https://maps.google.com/?q=Jamila+North+Coast+Sidi+Heneish"
+},
   "jefaira": { name: "Jefaira", destination: "ras-el-hekma", location: "North Coast (Ras El Hekma), Matrouh", mapsUrl: "https://maps.google.com/?q=Jefaira+North+Coast+Egypt" },
   "june": { name: "June", destination: "ras-el-hekma", location: "North Coast, Matrouh Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=June+North+Coast+Egypt" },
   "june-sheikh-zayed": { name: "June Sheikh Zayed", destination: "sheikh-zayed", location: "Sheikh Zayed, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=June+Sheikh+Zayed+Egypt" },
@@ -102,7 +127,12 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "marassi": { name: "Marassi", destination: "sidi-abdelrahman", location: "North Coast (Sidi Abdel Rahman), Matrouh", mapsUrl: "https://maps.google.com/?q=Marassi+North+Coast+Egypt" },
   "marbay": { name: "Marbay", destination: "ain-sokhna", location: "Ain Sokhna, Red Sea Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Marbay+Ain+Sokhna+Egypt" },
   "marina": { name: "Marina", destination: "ras-el-hekma", location: "Marina, North Coast, Matrouh Governorate,", mapsUrl: "https://maps.google.com/?q=Marina+North+Coast+Alexandria+Egypt" },
-  "marsa-baghush": { name: "Marsa Baghush", destination: "sidi-heneish", location: "Marsa Matrouh, Matrouh Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Marsa+Baghush+Matrouh+Egypt" },
+  "marsa-baghush": {
+  "name": "Marsa Baghush",
+  "destination": "sidi-heneish",
+  "location": "Sidi Heneish, North Coast, Egypt",
+  "mapsUrl": "https://maps.google.com/?q=Marsa+Baghush+Sidi+Heneish"
+},
   "masaya": { name: "Masaya", destination: "new-administrative-capital", location: "New Administrative Capital, Cairo", mapsUrl: "https://maps.google.com/?q=Masaya+New+Capital+Egypt" },
   "mazarine": { name: "Mazarine", destination: "new-alamein", location: "New Alamein City, Matrouh Governorate,", mapsUrl: "https://maps.google.com/?q=Mazarine+New+Alamein+Egypt" },
   "mivida": { name: "Mivida", destination: "new-cairo", location: "New Cairo (Fifth Settlement), Cairo", mapsUrl: "https://maps.google.com/?q=Mivida+New+Cairo+Egypt" },
@@ -149,9 +179,13 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "shamasi": { name: "Shamasi", destination: "new-administrative-capital", location: "New Administrative Capital, Cairo", mapsUrl: "https://maps.google.com/?q=Shamasi+New+Capital" },
   "sheraton-residences": { name: "Sheraton Residences", destination: "heliopolis", location: "Heliopolis, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Sheraton+Residences" },
   "sheya-residence": { name: "Sheya Residence", destination: "new-alamein", location: "New Alamein City, Matrouh Governorate,", mapsUrl: "https://maps.google.com/?q=Sheya+Residence+New+Alamein+Egypt" },
-  "silversands": { name: "Silversands", destination: "sidi-heneish", location: "North Coast (Sidi Abdel Rahman), Matrouh", mapsUrl: "https://maps.google.com/?q=Silversands+North+Coast+Egypt" },
+  "silversands": {
+  "name": "Silversands",
+  "destination": "sidi-heneish",
+  "location": "Sidi Heneish, North Coast, Egypt",
+  "mapsUrl": "https://maps.google.com/?q=Silver+Sands+Ora+Sidi+Heneish"
+},
   "sky-condos": { name: "Sky Condos", destination: "new-cairo", location: "Fifth Settlement, New Cairo, Cairo", mapsUrl: "https://maps.google.com/?q=Sky+Condos+Villette+New+Cairo" },
-  "sky-north": { name: "Sky North", destination: "sidi-heneish", location: "North Coast, Matrouh Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Sky+North+North+Coast+Egypt" },
   "sodic-east": { name: "Sodic East", destination: "mostakbal-city", location: "Mostakbal City, New Cairo, Cairo", mapsUrl: "https://maps.google.com/?q=Sodic+East+Mostakbal" },
   "sodic-the-estates": { name: "SODIC The Estates", destination: "sheikh-zayed", location: "Sheikh Zayed, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=SODIC+Estates+Sheikh+Zayed+Egypt" },
   "sodic-west": { name: "SODIC West", destination: "sheikh-zayed", location: "Sheikh Zayed, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=SODIC+West+Sheikh+Zayed+Egypt" },
@@ -165,7 +199,6 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "stella-heights": { name: "Stella Heights", destination: "new-alamein", location: "New Alamein City, Matrouh Governorate,", mapsUrl: "https://maps.google.com/?q=Stella+Heights+New+Alamein+Egypt" },
   "stella-sidi-abdel-rahman": { name: "Stella Sidi Abdel Rahman", destination: "sidi-abdelrahman", location: "Sidi Abdel Rahman, North Coast, Matrouh", mapsUrl: "https://maps.google.com/?q=Stella+Sidi+Abdel+Rahman+North+Coast+Egypt" },
   "stone-residence": { name: "Stone Residence", destination: "new-cairo", location: "New Cairo, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Stone+Residence+New+Cairo+Egypt" },
-  "summer": { name: "Summer", destination: "sidi-heneish", location: "North Coast, Matrouh Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Summer+North+Coast" },
   "sun-capital": { name: "Sun Capital", destination: "6th-october", location: "6th of October City, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Sun+Capital+October+City+Egypt" },
   "swan-lake": { name: "Swan Lake", destination: "sheikh-zayed", location: "Sheikh Zayed, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Swan+Lake+Sheikh+Zayed+Egypt" },
   "taj-city": { name: "Taj City", destination: "new-cairo", location: "Nasr City, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Taj+City+Nasr+City+Cairo+Egypt" },

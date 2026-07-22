@@ -53,7 +53,7 @@ export function CompoundCard({ c }: { c: Compound }) {
         </div>
         <div className="mt-3 flex items-baseline gap-1.5">
           <span className="text-[11px] uppercase tracking-wide text-muted-foreground">From</span>
-          <span className="font-display text-lg font-semibold text-primary">EGP {c.priceFrom}M</span>
+          <span className="font-display text-lg font-semibold text-primary">{c.priceFrom > 0 ? `EGP ${c.priceFrom}M` : "Price on Request"}</span>
         </div>
       </div>
     </div>

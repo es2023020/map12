@@ -213,7 +213,7 @@ export function MapView({
               <div class="pt-popup-stats">
                 <div class="pt-popup-stat">
                   <div class="pt-popup-stat-label">From</div>
-                  <div class="pt-popup-stat-value">EGP ${c.priceFrom}M</div>
+                  <div class="pt-popup-stat-value">${c.priceFrom > 0 ? `EGP ${c.priceFrom}M` : 'Price on Request'}</div>
                 </div>
                 <div class="pt-popup-stat">
                   <div class="pt-popup-stat-label">Delivery</div>
@@ -249,7 +249,7 @@ export function MapView({
                 <div style={{ fontSize: 11, fontWeight: 700, marginBottom: 1 }}>
                   {c.name} {c.km ? `(km ${c.km})` : ""}
                 </div>
-                <div style={{ fontSize: 10, color: "#64748b" }}>EGP {c.priceFrom}M+{avail > 0 ? ` · ${avail} units avail.` : ""}</div>
+                <div style={{ fontSize: 10, color: "#64748b" }}>{c.priceFrom > 0 ? `EGP ${c.priceFrom}M+` : 'Price on Request'}{avail > 0 ? ` · ${avail} units avail.` : ""}</div>
               </Tooltip>
             </Marker>
           );

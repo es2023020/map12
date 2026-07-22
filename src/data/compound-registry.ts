@@ -21,6 +21,8 @@ export type CompoundRegistryEntry = {
   amenities?: string[];
   types?: string[];
   highlights?: string[];
+  areaSize?: string;
+  unitSizes?: string;
 };
 
 export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
@@ -61,19 +63,36 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: ["High-rise contemporary residences", "Direct pedestrian access to Mall of Arabia", "Walkable luxury lifestyle", "Resort-inspired environment"]
   },
   "alam-al-roum": {
-    destination: "marsa-matrouh",
-    city: "Alam El Roum Bay, Marsa Matrouh, North Coast, Egypt",
-    lat: 31.0410,
-    lng: 27.9800,
-    developer: "Qatari Diar Real Estate",
-    beachfront: true,
-    type: "Resort",
-    blurb: "Alam El Roum is a mega mixed-use coastal city developed by Qatari Diar in partnership with NUCA. Spanning approximately 4,900 feddans, it combines luxury residential neighborhoods, international hotels, commercial districts, and tourism facilities into a fully integrated smart coastal city.",
-    paymentPlan: "Flexible payment plans with low down payments, long-term installments",
-    amenities: ["Private beaches", "Beach clubs", "International hotels", "Marina", "Commercial districts", "Shopping malls", "Restaurants & cafés", "Entertainment venues", "Sports facilities", "Parks & landscaped areas", "Smart infrastructure", "24/7 security"],
-    types: ["Chalet", "Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa", "Branded Residences"],
-    highlights: ["Mega waterfront coastal city", "Alam El Roum Bay location", "Smart city infrastructure", "Year-round coastal living"]
-  },
+  "destination": "sidi-heneish",
+  "city": "East of Marsa Matrouh, North Coast, Egypt",
+  "lat": 31.352,
+  "lng": 27.351,
+  "developer": "Qatari Diar",
+  "beachfront": true,
+  "type": "Resort",
+  "blurb": "Alam Al Roum by Qatari Diar is a mega-scale coastal resort destination of 5,000 faddans east of Marsa Matrouh, featuring a yacht marina, hotels, and 7.2 km of private beachfront.",
+  "paymentPlan": "Price on request / Competitive pre-launch valuations",
+  "amenities": [
+    "Yacht Marina",
+    "7.2 km Private Beach",
+    "Luxury Hotels",
+    "Commercial Hubs",
+    "Water Sports",
+    "Smart Infrastructure",
+    "Parks & Public Areas"
+  ],
+  "types": [
+    "Chalet",
+    "Twin House",
+    "Villa"
+  ],
+  "highlights": [
+    "by Qatari Diar",
+    "7.2 km private beach",
+    "International Yacht Marina"
+  ],
+  "areaSize": "5000 feddan"
+},
   "almaza-bay": {
     destination: "marsa-matrouh",
     lat: 31.1386,
@@ -179,20 +198,38 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Bamboo III, 6th-of-october-city",
   },
   "beit-al-bahr": {
-    destination: "sidi-heneish",
-    km: 247,
-    developer: "IWAN Developments",
-    city: "Sidi Heneish, North Coast (km 247), Matrouh Governorate, Egypt",
-    lat: 31.1076,
-    lng: 27.7535,
-    beachfront: true,
-    type: "Resort",
-    blurb: "Beit Al Bahr is a luxury beachfront destination spread across approximately 450 acres, designed as a low-density Mediterranean resort with 3.5 km of pristine beachfront, premium hospitality, and residential luxury.",
-    paymentPlan: "5% down, installments up to 8 years",
-    amenities: ["3.5 km private sandy beach", "Beach club", "Clubhouse", "Swimming pools", "Crystal lagoons", "Boutique hotel", "Marina promenade", "Restaurants & cafés", "Retail village", "Sports facilities", "Gym & wellness center", "24/7 security"],
-    types: ["Chalet", "Apartment", "Townhouse", "Twin House", "Standalone Villa", "Beach Houses"],
-    highlights: ["3.5 km pristine beach", "450 feddan Mediterranean resort", "Low-density master plan", "Year-round luxury lifestyle"]
-  },
+  "destination": "sidi-heneish",
+  "city": "Sidi Heneish, North Coast, Egypt",
+  "lat": 31.2,
+  "lng": 27.63,
+  "developer": "Beit Al Bahr Developments",
+  "beachfront": true,
+  "type": "Resort",
+  "blurb": "Beit El Bahr inside El Abd Resort Sidi Heneish is a tiered 450-feddan beachfront project offering 3.5 km of private white sand beach and swimmable lagoons.",
+  "paymentPlan": "10% down payment · installments up to 8 years",
+  "amenities": [
+    "3.5 km Private Beachfront",
+    "Swimmable Lagoons",
+    "Exclusive Clubhouses",
+    "Seaside Cinema",
+    "Commercial Strip",
+    "Wellness Center",
+    "24/7 Security"
+  ],
+  "types": [
+    "Chalet",
+    "Townhouse",
+    "Twin House",
+    "Standalone Villa"
+  ],
+  "highlights": [
+    "3.5 km private beachfront",
+    "Tiered beachfront phases",
+    "Inside El Abd Resort"
+  ],
+  "areaSize": "450 feddan",
+  "unitSizes": "95–400 m²"
+},
   "belle-vie": {
     destination: "new-zayed",
     lat: 30.0879,
@@ -563,33 +600,76 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: ["18-hole championship golf course", "593-acre massive luxury resort", "Vibrant beach club community", "Upscale Mediterranean design"]
   },
   "hacienda-blue": {
-    destination: "sidi-heneish",
-    city: "Sidi Heneish, North Coast, Egypt",
-    lat: 31.1098,
-    lng: 27.7715,
-    developer: "Palm Hills Developments",
-    beachfront: true,
-    type: "Resort",
-    blurb: "Hacienda Blue is a boutique luxury beachfront development by Palm Hills offering contemporary residences, private beaches, and panoramic Mediterranean views in Sidi Heneish.",
-    paymentPlan: "5% down, installments up to 10 years",
-    amenities: ["Private beach", "Beach club", "Swimming pools", "Clubhouse", "Restaurants & cafés", "Retail area", "Gym", "Kids' play areas", "Landscaped gardens", "24/7 security"],
-    types: ["Chalet", "Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Boutique luxury beach retreat", "Low-density planning", "Pristine Sidi Heneish location", "Tranquil coastal destination"]
-  },
+  "destination": "ras-el-hekma",
+  "city": "Ras El Hekma, North Coast, Egypt",
+  "lat": 31.1098,
+  "lng": 27.7715,
+  "developer": "Palm Hills Developments",
+  "beachfront": true,
+  "type": "Resort",
+  "blurb": "Hacienda Blue is a boutique luxury beachfront development by Palm Hills offering contemporary residences, private beaches, and panoramic Mediterranean views in Ras El Hekma.",
+  "paymentPlan": "5% down, installments up to 10 years",
+  "amenities": [
+    "Private beach",
+    "Beach club",
+    "Swimming pools",
+    "Clubhouse",
+    "Restaurants & cafés",
+    "Retail area",
+    "Gym",
+    "Kids' play areas",
+    "Landscaped gardens",
+    "24/7 security"
+  ],
+  "types": [
+    "Chalet",
+    "Apartment",
+    "Townhouse",
+    "Twin House",
+    "Standalone Villa"
+  ],
+  "highlights": [
+    "Boutique luxury beach retreat",
+    "Low-density planning",
+    "Pristine Ras El Hekma location",
+    "Tranquil coastal destination"
+  ]
+},
   "hacienda-heneish": {
-    destination: "sidi-heneish",
-    city: "Sidi Heneish, North Coast, Egypt",
-    lat: 31.1119,
-    lng: 27.7424,
-    developer: "Palm Hills Developments",
-    beachfront: true,
-    type: "Resort",
-    blurb: "Hacienda Heneish is Palm Hills' newest luxury coastal destination, developed around one of Egypt's most pristine Mediterranean beaches with contemporary architecture and expansive green landscapes.",
-    paymentPlan: "5% down, installments up to 10 years",
-    amenities: ["Private beach", "Beach club", "Crystal lagoons", "Swimming pools", "Clubhouse", "Restaurants & cafés", "Retail village", "Sports facilities", "Gym & spa", "Kids' areas", "24/7 security"],
-    types: ["Chalet", "Apartment", "Townhouse", "Twin House", "Standalone Villa", "Beach Villa"],
-    highlights: ["Pristine Sidi Heneish beach", "Vibrant retail village", "Crystal swimming lagoons", "Premium resort community"]
-  },
+  "destination": "sidi-heneish",
+  "city": "Sidi Heneish, North Coast, Egypt",
+  "lat": 31.1927,
+  "lng": 27.5827,
+  "developer": "Palm Hills Developments",
+  "beachfront": true,
+  "type": "Resort",
+  "blurb": "Hacienda Heneish by Palm Hills Developments is a massive 420-feddan coastal retreat in Sidi Heneish, offering premium hospitality, crystal lagoons, and direct beach access to signature turquoise waters.",
+  "paymentPlan": "5% down payment · installments up to 8 years",
+  "amenities": [
+    "5-star Hotel",
+    "Serviced Apartments",
+    "Beach Club",
+    "Crystal Lagoons",
+    "Commercial Strip",
+    "Sports Courts",
+    "Kids Areas",
+    "24/7 Security"
+  ],
+  "types": [
+    "Chalet",
+    "Apartment",
+    "Townhouse",
+    "Twin House",
+    "Standalone Villa"
+  ],
+  "highlights": [
+    "Palm Hills premium quality",
+    "420 acres masterplan",
+    "Turquoise water beachfront"
+  ],
+  "areaSize": "420 feddan",
+  "unitSizes": "80–350 m²"
+},
   "hacienda-ras-el-hekma": {
     destination: "ras-el-hekma",
     city: "Ras El Hekma, North Coast, Egypt",
@@ -675,20 +755,39 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     mapsUrl: "https://maps.google.com/?q=Il+Latini+SED+New+Alamein",
   },
   "jamila": {
-    destination: "ras-el-hekma",
-    km: 237,
-    city: "Ras El Hekma, North Coast (km 237), Matrouh Governorate, Egypt",
-    lat: 31.0605,
-    lng: 28.0354,
-    developer: "New Jersey Developments",
-    beachfront: true,
-    type: "Resort",
-    blurb: "Jamila is a boutique luxury beachfront community in Ras El Hekma inspired by Mediterranean architecture, offering direct beach access, premium residences, terraced neighborhoods with sea views, and integrated crystal lagoons.",
-    paymentPlan: "10% down, installments up to 10 years",
-    amenities: ["Private beach", "Beach club", "Swimming pools", "Crystal lagoons", "Clubhouse", "Restaurants & cafés", "Retail area", "Gym", "Sports courts", "Kids' play areas", "24/7 security"],
-    types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["km 237 Ras El Hekma beachfront", "Boutique Mediterranean-inspired resort", "Terraced design with sea views"]
-  },
+  "destination": "sidi-heneish",
+  "city": "Sidi Heneish, North Coast, Egypt",
+  "lat": 31.22,
+  "lng": 27.48,
+  "developer": "New Jersey Developments",
+  "beachfront": true,
+  "type": "Resort",
+  "blurb": "Jamila Sidi Heneish by New Jersey Developments is a 130-feddan premium beachfront community with a low 9% building footprint, featuring a 5-star Marriott hotel and a 700m private beach.",
+  "paymentPlan": "5% down payment · installments up to 10 years",
+  "amenities": [
+    "Marriott Hotel",
+    "700m Beachfront",
+    "16,000 sqm Pools",
+    "Crystal Lagoons",
+    "Commercial Strip",
+    "Clubhouse",
+    "Gym & Spa",
+    "24/7 Security"
+  ],
+  "types": [
+    "Chalet",
+    "Townhouse",
+    "Twin House",
+    "Villa"
+  ],
+  "highlights": [
+    "9% building footprint",
+    "Marriott 5-star hotel",
+    "700m private beach"
+  ],
+  "areaSize": "130 feddan",
+  "unitSizes": "80–220 m²"
+},
   "jebal-sokhna": {
     destination: "ain-sokhna",
     lat: 29.6108,
@@ -884,20 +983,38 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "marresidence": {
   },
   "marsa-baghush": {
-    destination: "sidi-heneish",
-    km: 290,
-    city: "Baghush Bay, North Coast (km 290), Matrouh Governorate, Egypt",
-    lat: 31.1264,
-    lng: 27.3635,
-    developer: "Shehab Mazhar Development (SBH)",
-    beachfront: true,
-    type: "Resort",
-    blurb: "Marsa Baghush is a luxury coastal destination in Baghush Bay designed to preserve the natural beauty of the bay while offering premium beachfront residences and hospitality experiences, blending modern Mediterranean architecture with extensive green spaces.",
-    paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Private beach", "Beach club", "Swimming pools", "Clubhouse", "Restaurants & cafés", "Retail village", "Gym", "Sports facilities", "Kids' play areas", "Landscaped gardens", "24/7 security"],
-    types: ["Chalet", "Beach House", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Pristine Baghush Bay shoreline", "Boutique low-density resort", "Close to Marsa Matrouh Airport", "Nature-integrated master plan"]
-  },
+  "destination": "sidi-heneish",
+  "city": "Sidi Heneish, North Coast, Egypt",
+  "lat": 31.218,
+  "lng": 27.425,
+  "developer": "Shehab Mazhar / SQM Developments",
+  "beachfront": true,
+  "type": "Resort",
+  "blurb": "Marsa Baghush by Shehab Mazhar (SQM Developments) is a boutique 130-feddan community in Sidi Heneish, designed with tiered elevations to ensure panoramic sea views from every residence.",
+  "paymentPlan": "5% down payment · installments up to 8 years",
+  "amenities": [
+    "Private Beachfront",
+    "Boutique Hotel",
+    "Cascading Pools",
+    "Clubhouse & Spa",
+    "Fine Dining",
+    "Green Parks",
+    "24/7 Security"
+  ],
+  "types": [
+    "Chalet",
+    "Townhouse",
+    "Twin House",
+    "Standalone Villa"
+  ],
+  "highlights": [
+    "Designed by Shehab Mazhar",
+    "Tiered sea views",
+    "Sidi Heneish beachfront"
+  ],
+  "areaSize": "130 feddan",
+  "unitSizes": "80–300 m²"
+},
   "masaya": {
     destination: "sidi-abdelrahman",
     km: 134,
@@ -1292,18 +1409,41 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Sheya Residence, new-alamein-city",
   },
   "silversands": {
-    lat: 30.03244,
-    lng: 31.48256,
-    developer: "Ora Developers",
-    city: "Silversands, new-cairo",
-  },
+  "destination": "sidi-heneish",
+  "city": "Sidi Heneish / Ras El Hekma corridor, North Coast, Egypt",
+  "lat": 31.193,
+  "lng": 27.595,
+  "developer": "Ora Developers",
+  "beachfront": true,
+  "type": "Resort",
+  "blurb": "Silversands Sidi Heneish is Ora Developers' flagship WATG-masterplanned resort spanning 506 feddans, featuring 1.2 km of private beachfront and an 88,000 sqm swimmable lagoon.",
+  "paymentPlan": "5% down payment · installments up to 10 years",
+  "amenities": [
+    "1.2 km Beachfront",
+    "88,000 sqm Lagoons",
+    "Multiple Clubhouses",
+    "Boutique Hotels",
+    "Commercial Hub",
+    "Health & Wellness Club",
+    "Sports Courts",
+    "Open-air Cinema"
+  ],
+  "types": [
+    "Chalet",
+    "Apartment",
+    "Townhouse",
+    "Twin House",
+    "Standalone Villa"
+  ],
+  "highlights": [
+    "1.2 km beachfront",
+    "88,000 sqm Crystal Lagoon",
+    "Ora premium masterplan"
+  ],
+  "areaSize": "506 feddan",
+  "unitSizes": "95–450 m²"
+},
   "silvertown-lagoon-cabanas": {
-  },
-  "sky-north": {
-    lat: 30.03134,
-    lng: 31.48095,
-    developer: "Sky Abu Dhabi Developments",
-    city: "Sky North, new-cairo",
   },
   "solana-east": {
     lat: 30.02,
@@ -1356,13 +1496,6 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Sidi Abdel Rahman, North Coast (km 125), Matrouh Governorate, Egypt",
     lat: 30.92975,
     lng: 28.72572,
-  },
-  "summer": {
-    destination: "sidi-heneish",
-    km: 246,
-    city: "Sidi Heneish, North Coast (km 246), Matrouh Governorate, Egypt",
-    lat: 31.12398,
-    lng: 27.85045,
   },
   "swan-lake": {
     destination: "ras-el-hekma",
