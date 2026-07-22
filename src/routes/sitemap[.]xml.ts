@@ -4,7 +4,7 @@ import { compounds } from "@/data/compounds";
 import { destinations } from "@/data/destinations";
 import { developers } from "@/data/developers";
 
-const BASE_URL = "";
+const BASE_URL = "https://proptrack1.vercel.app";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
