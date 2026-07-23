@@ -985,8 +985,9 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "marsa-baghush": {
   "destination": "sidi-heneish",
   "city": "Sidi Heneish, North Coast, Egypt",
-  "lat": 31.218,
-  "lng": 27.425,
+  "lat": 31.130,
+  "lng": 27.620,
+  "km": 238,
   "developer": "Shehab Mazhar / SQM Developments",
   "beachfront": true,
   "type": "Resort",
@@ -1279,6 +1280,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     lat: 29.60253,
     lng: 32.32882,
+    priceFrom: 24,
   },
   "playa-seashell": {
     destination: "ras-el-hekma",
@@ -1664,6 +1666,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Ghazala Bay, North Coast (km 145), Matrouh Governorate, Egypt",
     lat: 31.11957,
     lng: 27.85089,
+    priceFrom: 11,
   },
   "fifth-square": {
     destination: "new-cairo",

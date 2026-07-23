@@ -136,6 +136,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   const rawAvailability = useStore((s) => s.availabilityList);
   const rawAuditLogs = useStore((s) => s.auditLogs);
   const rawLeads = useStore((s) => s.leads);
+  const usersDatabase = useStore((s) => s.usersDatabase) || [];
 
   const compoundsList = useMemo(() => rawCompounds || [], [rawCompounds]);
   const destinationsList = useMemo(() => rawDestinations || [], [rawDestinations]);
@@ -2993,9 +2994,11 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                 {/* people */}
                 {activeTab === "people" && (
                   <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
-                    <div>
-                      <h2 className="font-display text-lg font-bold text-primary">Broker agent credentials &amp; RBAC</h2>
-                      <p className="text-xs text-muted-foreground mt-0.5">Control registered agent access accounts and permissions.</p>
+                    <div className="flex flex-wrap items-center justify-between gap-4">
+                      <div>
+                        <h2 className="font-display text-lg font-bold text-primary">Registered Users &amp; Session Analytics</h2>
+                        <p className="text-xs text-muted-foreground mt-0.5">Control registered accounts and track user sessions activity live.</p>
+                      </div>
                     </div>
 
                     <div className="overflow-x-auto border border-border/80 rounded-xl">
@@ -3005,27 +3008,37 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                             <th className="p-3">Name</th>
                             <th className="p-3">Email Address</th>
                             <th className="p-3">Subscription Tier</th>
-                            <th className="p-3">Actions Permission</th>
+                            <th className="p-3">Last Login Time</th>
+                            <th className="p-3">Time Spent</th>
                             <th className="p-3 text-right">Status</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-border/60 font-medium">
-                          {[
-                            { name: "Ahmed Khaled", email: "ahmed@nawy-broker.com", tier: "Pro", role: "Agent (Full Write)" },
-                            { name: "Salma Adel", email: "salma@coldwell-eg.com", tier: "Agency", role: "Manager (Full Edit)" },
-                            { name: "Yara Mostafa", email: "yara@vintage-eg.com", tier: "Starter", role: "Agent (Read Only)" },
-                            { name: "Elsayed Shoeip (Admin)", email: "elsayedshoeip70@gmail.com", tier: "Agency", role: "Super-Admin" }
-                          ].map((a, i) => (
-                            <tr key={i} className="hover:bg-secondary/15 transition-colors">
-                              <td className="p-3 font-semibold text-primary">{a.name}</td>
-                              <td className="p-3 text-muted-foreground font-mono">{a.email}</td>
-                              <td className="p-3 text-primary font-bold">{a.tier}</td>
-                              <td className="p-3 text-accent font-mono">{a.role}</td>
-                              <td className="p-3 text-right">
-                                <span className="inline-flex rounded-full bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 text-[10px] font-bold text-emerald-600">Active</span>
-                              </td>
-                            </tr>
-                          ))}
+                          {usersDatabase.map((u, i) => {
+                            const formatTime = (seconds?: number) => {
+                              if (!seconds) return "0s";
+                              const h = Math.floor(seconds / 3600);
+                              const m = Math.floor((seconds % 3600) / 60);
+                              const s = seconds % 60;
+                              if (h > 0) return `${h}h ${m}m ${s}s`;
+                              if (m > 0) return `${m}m ${s}s`;
+                              return `${s}s`;
+                            };
+                            return (
+                              <tr key={i} className="hover:bg-secondary/15 transition-colors">
+                                <td className="p-3 font-semibold text-primary">{u.name}</td>
+                                <td className="p-3 text-muted-foreground font-mono">{u.email}</td>
+                                <td className="p-3 text-primary font-bold">{u.tier}</td>
+                                <td className="p-3 text-accent font-mono text-[10px]">
+                                  {u.lastLoginAt ? new Date(u.lastLoginAt).toLocaleString("en-US", { hour12: true }) : "Never logged in"}
+                                </td>
+                                <td className="p-3 text-slate-600 font-mono font-bold">{formatTime(u.timeSpent)}</td>
+                                <td className="p-3 text-right">
+                                  <span className="inline-flex rounded-full bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 text-[10px] font-bold text-emerald-600">Active</span>
+                                </td>
+                              </tr>
+                            );
+                          })}
                         </tbody>
                       </table>
                     </div>

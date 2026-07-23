@@ -130,8 +130,26 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+import { useEffect } from "react";
+import { useStore } from "@/lib/store";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const user = useStore((s) => s.user);
+  const incrementUserTimeSpent = useStore((s) => s.incrementUserTimeSpent);
+
+  useEffect(() => {
+    if (!user) return;
+
+    // Track time spent: check every 15 seconds, increment if browser window is focused
+    const interval = setInterval(() => {
+      if (typeof document !== "undefined" && document.hasFocus()) {
+        incrementUserTimeSpent(user.email, 15);
+      }
+    }, 15000);
+
+    return () => clearInterval(interval);
+  }, [user, incrementUserTimeSpent]);
 
   return (
     <QueryClientProvider client={queryClient}>

@@ -157,6 +157,8 @@ export type RegisteredUser = {
   parentBrokerageId?: string;
   projectAccessList?: string[];
   pendingDowngrade?: SubscriptionTier;
+  lastLoginAt?: number;
+  timeSpent?: number;
 };
 
 type UserData = {
@@ -236,6 +238,7 @@ type State = {
   addCustomBrochure: (brochure: { name: string; type: string; category: string; file: string; path: string; size_mb?: number }) => void;
   addCustomProfile: (profile: { clean_name: string; filename: string; path: string; size_mb: number }) => void;
   removeCustomBrochure: (filePath: string) => void;
+  incrementUserTimeSpent: (email: string, seconds: number) => void;
 
   // Subscription Actions
   checkLimit: (action: "crm" | "whatsapp" | "favorites") => { allowed: boolean; limit: number; nextTier: string; msg?: string };
@@ -344,10 +347,20 @@ const seedLeads: Lead[] = [
   },
 ];
 
-const seedUsers: RegisteredUser[] = [
-  { email: "admin@proptrack.com", name: "PropTrack Admin", password: "Team1", tier: "BrokerageAdmin" },
-  { email: "elsayedshoeip70@gmail.com", name: "Elsayed Shoeip (Admin)", password: "Sayed@shoeip8", tier: "BrokerageAdmin" }
-];
+import { usersGenerated } from "@/data/users.generated";
+const seedUsers: RegisteredUser[] = usersGenerated;
+
+const syncUsersToServer = async (usersList: RegisteredUser[]) => {
+  try {
+    await fetch("/api/save-users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ usersList })
+    });
+  } catch (e) {
+    console.error("Failed to sync users to server:", e);
+  }
+};
 
 export const useStore = create<State>()(
   persist(
@@ -447,6 +460,11 @@ export const useStore = create<State>()(
         signIn: (email, password) => {
           const user = get().usersDatabase.find(u => u.email.toLowerCase() === email.toLowerCase());
           if (user && (!user.password || user.password === password)) {
+            const updatedUsersDatabase = get().usersDatabase.map(u => 
+              u.email.toLowerCase() === email.toLowerCase() ? { ...u, lastLoginAt: Date.now() } : u
+            );
+            originalSet({ usersDatabase: updatedUsersDatabase });
+            syncUsersToServer(updatedUsersDatabase);
             // Map legacy "Agency" to "BrokerageAdmin"
             let mappedTier: SubscriptionTier = user.tier;
             if ((user.tier as string) === "Agency") {
@@ -553,12 +571,16 @@ export const useStore = create<State>()(
             billingDate: todayStr,
             lastCounterResetDate: todayStr,
             whatsappSendsCount: 0,
-            seatsCount: chosenTier === "BrokerageAdmin" ? 5 : undefined
+            seatsCount: chosenTier === "BrokerageAdmin" ? 5 : undefined,
+            lastLoginAt: Date.now(),
+            timeSpent: 0
           };
 
-          originalSet((s) => ({
-            usersDatabase: [...s.usersDatabase, newUser]
+          const newUsersDatabase = [...get().usersDatabase, newUser];
+          originalSet(() => ({
+            usersDatabase: newUsersDatabase
           }));
+          syncUsersToServer(newUsersDatabase);
 
           // Create base billing history if it is a paid tier
           if (chosenTier !== "Explorer") {
@@ -1229,6 +1251,19 @@ export const useStore = create<State>()(
               usersDatabase
             };
           });
+        },
+
+        incrementUserTimeSpent: (email: string, seconds: number) => {
+          const updatedUsersDatabase = get().usersDatabase.map(u => {
+            if (u.email.toLowerCase() === email.toLowerCase()) {
+              return { ...u, timeSpent: (u.timeSpent || 0) + seconds };
+            }
+            return u;
+          });
+          originalSet(() => ({
+            usersDatabase: updatedUsersDatabase
+          }));
+          syncUsersToServer(updatedUsersDatabase);
         },
 
         resetBillingCycleIfNeeded: () => {

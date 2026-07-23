@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as fs from "fs";
 import * as path from "path";
+import { exec } from "child_process";
 
 export const Route = createFileRoute("/api/save-database")({
   server: {
@@ -46,6 +47,17 @@ export const compoundsGenerated: Compound[] = ${JSON.stringify(compoundsList, nu
           fs.writeFileSync(compGenPath, compContent, "utf-8");
 
           console.log("Successfully wrote save-database payload to generated data files");
+
+          // Auto-commit and push if in development local environment
+          if (process.env.NODE_ENV !== "production" && fs.existsSync(path.join(process.cwd(), ".git"))) {
+            exec('git add src/data/compounds.generated.ts src/data/destinations.generated.ts src/data/availability.generated.ts && git commit -m "Auto-sync database from Admin Dashboard" && git push origin main', (err, stdout, stderr) => {
+              if (err) {
+                console.error("Git auto-push error for database:", err);
+              } else {
+                console.log("Git auto-push success for database:", stdout);
+              }
+            });
+          }
 
           return new Response(JSON.stringify({ success: true }), {
             status: 200,

@@ -68,7 +68,7 @@ const sahelRaw: SahelInput[] = [
   ["Hacienda Heneish", 247, "sidi-heneish", "Palm Hills Developments", 12.0, 2028, true],
   ["Silversands", 222, "sidi-heneish", "Ora Developers", 9.7, 2028, true],
 
-  ["Marsa Baghush", 248, "sidi-heneish", "SQM Developments", 6.0, 2027, true],
+  ["Marsa Baghush", 238, "sidi-heneish", "SQM Developments", 6.0, 2027, true],
   ["Beit Al Bahr", 245, "sidi-heneish", "Beit Al Bahr Developments", 14.9, 2027, true],
   // RAS EL HEKMA
   ["MarBay Ras El Hekma", 200, "ras-el-hekma", "Al Marasem Developments", 12.0, 2027, true],
@@ -117,9 +117,9 @@ const sahelRaw: SahelInput[] = [
   ["Lasirena Sahel", 167, "al-dabaa", "Lasirena Group", 6, 2025, true],
   ["South Med", 165, "al-dabaa", "Talaat Moustafa Group", 10, 2027, true],
   // GHAZALA BAY
-  ["Playa", 146, "ghazala-bay", "G Developments", 7, 2026, true],
+  ["Playa", 146, "ghazala-bay", "G Developments", 24, 2026, true],
   ["Ghazala Bay", 145, "ghazala-bay", "RMC Developments", 6, 2024, true],
-  ["Zoya", 145, "ghazala-bay", "LMD", 8, 2026, true],
+  ["Zoya", 145, "ghazala-bay", "LMD", 11, 2026, true],
   // SIDI ABDELRAHMAN
   ["Telal", 142, "sidi-abdelrahman", "Roya Developments", 9, 2025, true],
   ["Hacienda White", 138, "sidi-abdelrahman", "Palm Hills Developments", 13, 2024, true],

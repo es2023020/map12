@@ -1,4 +1,4 @@
-// Auto-generated initial seed.
+// Auto-generated from Command Center save action — do not edit by hand.
 import type { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = [
@@ -36,7 +36,7 @@ export const compoundsGenerated: Compound[] = [
       "Medical center",
       "24/7 security"
     ],
-    "hero": "/projects/belle-vie/0.jpg",
+    "hero": "/projects/belle-vie/1.jpg",
     "gallery": [
       "/projects/belle-vie/0.jpg",
       "/projects/belle-vie/1.jpg",
@@ -968,7 +968,7 @@ export const compoundsGenerated: Compound[] = [
       "Green Spaces",
       "Commercial Strip"
     ],
-    "hero": "/projects/gaia/1.jpg",
+    "hero": "/projects/kynd-residence-gaia/1.jpg",
     "gallery": [
       "/projects/gaia/1.jpg",
       "/projects/gaia/2.jpg",
@@ -1206,7 +1206,7 @@ export const compoundsGenerated: Compound[] = [
       "Clubhouse",
       "Swimming Pools"
     ],
-    "hero": "/projects/azha-north-coast/1.jpg",
+    "hero": "/projects/elea-azha-north/1.jpg",
     "gallery": [
       "/projects/azha-north-coast/1.jpg",
       "/projects/azha-north-coast/2.jpg",
@@ -1551,7 +1551,7 @@ export const compoundsGenerated: Compound[] = [
       "Green Spaces",
       "Commercial Strip"
     ],
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/chapters-residence/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
@@ -1634,7 +1634,7 @@ export const compoundsGenerated: Compound[] = [
       "Green Spaces",
       "Commercial Strip"
     ],
-    "hero": "/projects/vie/1.jpg",
+    "hero": "/projects/vie-collective/1.jpg",
     "gallery": [
       "/projects/vie/1.jpg"
     ],
@@ -1675,7 +1675,7 @@ export const compoundsGenerated: Compound[] = [
       "Green Spaces",
       "Commercial Strip"
     ],
-    "hero": "/projects/vie/1.jpg",
+    "hero": "/projects/vie-halo/1.jpg",
     "gallery": [
       "/projects/vie/1.jpg"
     ],
@@ -1716,7 +1716,7 @@ export const compoundsGenerated: Compound[] = [
       "Swimming Pools",
       "18-Hole Golf"
     ],
-    "hero": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
+    "hero": "/projects/coral-coves/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80"
     ],
@@ -2110,7 +2110,7 @@ export const compoundsGenerated: Compound[] = [
       "Parking",
       "Security"
     ],
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/business-district/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
     ],
@@ -2855,7 +2855,7 @@ export const compoundsGenerated: Compound[] = [
       "Retail area",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
+    "hero": "/projects/la-vista-topaz/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
     ],
@@ -2900,7 +2900,7 @@ export const compoundsGenerated: Compound[] = [
       "Retail area",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80",
+    "hero": "/projects/la-vista-gardens/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80"
     ],
@@ -2992,7 +2992,7 @@ export const compoundsGenerated: Compound[] = [
       "Green Spaces",
       "Commercial Strip"
     ],
-    "hero": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80",
+    "hero": "/projects/swanlake-west/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80"
     ],
@@ -3032,7 +3032,7 @@ export const compoundsGenerated: Compound[] = [
       "Clubhouse",
       "Swimming Pools"
     ],
-    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
+    "hero": "/projects/swanlake-el-gouna/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
     ],
@@ -3166,7 +3166,7 @@ export const compoundsGenerated: Compound[] = [
       "Landscaped gardens",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
+    "hero": "/projects/jebal-sokhna/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
     ],
@@ -3252,7 +3252,7 @@ export const compoundsGenerated: Compound[] = [
       "Green Spaces",
       "Commercial Strip"
     ],
-    "hero": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80",
+    "hero": "/projects/rivers/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80"
     ],
@@ -3298,7 +3298,7 @@ export const compoundsGenerated: Compound[] = [
       "Kids' play areas",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80",
+    "hero": "/projects/kai-sokhna/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80"
     ],
@@ -3341,7 +3341,7 @@ export const compoundsGenerated: Compound[] = [
       "24/7 security",
       "Parking"
     ],
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/cairo-business-park/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
     ],
@@ -3580,7 +3580,7 @@ export const compoundsGenerated: Compound[] = [
       "Landscape Parks",
       "Smart Home"
     ],
-    "hero": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80",
+    "hero": "/projects/palm-parks/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80"
     ],
@@ -3681,7 +3681,7 @@ export const compoundsGenerated: Compound[] = [
       "Landscape Parks",
       "Mosque"
     ],
-    "hero": "https://images.unsplash.com/photo-1448630360428-65456885c650?w=1600&q=80",
+    "hero": "/projects/palm-hills-alexandria/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1448630360428-65456885c650?w=1600&q=80"
     ],
@@ -3772,7 +3772,7 @@ export const compoundsGenerated: Compound[] = [
       "Co-working",
       "Smart Home"
     ],
-    "hero": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
+    "hero": "/projects/the-crown-extension/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
     ],
@@ -3819,7 +3819,7 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Co-working"
     ],
-    "hero": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80",
+    "hero": "/projects/palm-hills-jirian/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80"
     ],
@@ -3916,7 +3916,7 @@ export const compoundsGenerated: Compound[] = [
       "Smart Home",
       "Co-working"
     ],
-    "hero": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=80",
+    "hero": "/projects/px/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=80"
     ],
@@ -3960,7 +3960,7 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Schools Nearby"
     ],
-    "hero": "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=1600&q=80",
+    "hero": "/projects/village-de-la-capitale/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=1600&q=80"
     ],
@@ -4751,7 +4751,7 @@ export const compoundsGenerated: Compound[] = [
       "Co-working Hub",
       "Cycling Track"
     ],
-    "hero": "/projects/vie/1.jpg",
+    "hero": "/projects/vye-sodic/1.jpg",
     "gallery": [
       "/projects/vie/1.jpg"
     ],
@@ -5594,9 +5594,9 @@ export const compoundsGenerated: Compound[] = [
     "slug": "marsa-baghush",
     "name": "Marsa Baghush",
     "destination": "sidi-heneish",
-    "km": 290,
-    "lat": 31.218,
-    "lng": 27.425,
+    "km": 238,
+    "lat": 31.13,
+    "lng": 27.62,
     "developer": "Shehab Mazhar / SQM Developments",
     "developerSlug": "shehab-mazhar-sqm-developments",
     "priceFrom": 6,
@@ -5723,7 +5723,7 @@ export const compoundsGenerated: Compound[] = [
       "Kids' areas",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
+    "hero": "/projects/marbay-ras-el-hekma/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
@@ -6161,7 +6161,7 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Gym & Spa"
     ],
-    "hero": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
+    "hero": "/projects/playa-seashell/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
       "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
@@ -6894,7 +6894,7 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Marina"
     ],
-    "hero": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
+    "hero": "/projects/the-c/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
       "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
@@ -7111,7 +7111,7 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Mosque"
     ],
-    "hero": "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=1600&q=80",
+    "hero": "/projects/sa-ada-sahel/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=1600&q=80",
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
@@ -7166,7 +7166,7 @@ export const compoundsGenerated: Compound[] = [
       "Kids' areas",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
+    "hero": "/projects/azzar-islands/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
       "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
@@ -7680,7 +7680,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.32882,
     "developer": "Maven Developments",
     "developerSlug": "maven-developments",
-    "priceFrom": 7,
+    "priceFrom": 24,
     "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": true,
@@ -7782,7 +7782,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.85089,
     "developer": "LMD",
     "developerSlug": "lmd",
-    "priceFrom": 8,
+    "priceFrom": 11,
     "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": true,
@@ -8377,7 +8377,7 @@ export const compoundsGenerated: Compound[] = [
       "Children's play areas",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
+    "hero": "/projects/diplo-3/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
       "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
@@ -9084,7 +9084,7 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Kids Destination"
     ],
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/the-waterway-new-cairo/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
@@ -9137,7 +9137,7 @@ export const compoundsGenerated: Compound[] = [
       "Kids' areas",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "hero": "/projects/fifth-square/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
@@ -9496,7 +9496,7 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Private Beach"
     ],
-    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "hero": "/projects/sky-condos/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
@@ -9544,7 +9544,7 @@ export const compoundsGenerated: Compound[] = [
       "Private Beach",
       "Gym & Spa"
     ],
-    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+    "hero": "/projects/katameya-heights/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
       "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
@@ -9593,7 +9593,7 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Marina"
     ],
-    "hero": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
+    "hero": "/projects/katameya-dunes/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
@@ -10709,7 +10709,7 @@ export const compoundsGenerated: Compound[] = [
       "Kids Destination",
       "Private Beach"
     ],
-    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+    "hero": "/projects/zayed-2000/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
       "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
@@ -10807,7 +10807,7 @@ export const compoundsGenerated: Compound[] = [
       "Restaurants & cafés",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "hero": "/projects/bamboo-extension/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
@@ -11157,7 +11157,7 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Private Beach"
     ],
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/esse-residence-nac/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
@@ -11206,7 +11206,7 @@ export const compoundsGenerated: Compound[] = [
       "24/7 security",
       "Parking"
     ],
-    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "hero": "/projects/business-district-nac/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
@@ -11555,7 +11555,7 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Co-working"
     ],
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/sheraton-residences/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
@@ -11972,7 +11972,7 @@ export const compoundsGenerated: Compound[] = [
       "Sports courts",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
+    "hero": "/projects/azha-sokhna/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
@@ -12020,7 +12020,7 @@ export const compoundsGenerated: Compound[] = [
       "Supermarket",
       "24/7 security"
     ],
-    "hero": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
+    "hero": "/projects/blumar-sokhna/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
       "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
@@ -12288,7 +12288,7 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Co-working"
     ],
-    "hero": "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=1600&q=80",
+    "hero": "/projects/soma-sharm/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=1600&q=80",
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
@@ -12533,7 +12533,7 @@ export const compoundsGenerated: Compound[] = [
       "Private Beach",
       "Gym & Spa"
     ],
-    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "hero": "/projects/sodic-the-estates/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
@@ -12582,7 +12582,7 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Marina"
     ],
-    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+    "hero": "/projects/zed-west/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
       "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
@@ -12734,7 +12734,7 @@ export const compoundsGenerated: Compound[] = [
       "Kids Destination",
       "Private Beach"
     ],
-    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "hero": "/projects/elm-tree-new-zayed/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
@@ -12782,7 +12782,7 @@ export const compoundsGenerated: Compound[] = [
       "Commercial hub",
       "24/7 security"
     ],
-    "hero": "/projects/grova-east-hills/hero.jpg",
+    "hero": "/projects/grova-east-hills/1.jpg",
     "gallery": [],
     "blurb": "Grova East Hills is Hassan Allam Holding's newest 305-faddan luxury villa community in New Cairo's 6th Settlement, adjacent to Patio Town.",
     "paymentPlan": "5% down, installments up to 8 years",
@@ -12824,7 +12824,7 @@ export const compoundsGenerated: Compound[] = [
       "Kids' areas",
       "24/7 security"
     ],
-    "hero": "/projects/la-vista-east/hero.jpg",
+    "hero": "/projects/la-vista-east/1.jpg",
     "gallery": [],
     "blurb": "La Vista East is a luxury residential compound by La Vista spanning approximately 310 acres in the Sixth Settlement, designed around large green landscapes and contemporary architecture with integrated leisure, commercial, and educational facilities.",
     "paymentPlan": "10% down, installments up to 8 years",
@@ -13072,7 +13072,7 @@ export const compoundsGenerated: Compound[] = [
       "Beach Club",
       "Clubhouse"
     ],
-    "hero": "/projects/ogami/1.jpg",
+    "hero": "/projects/bloom-island-ogami/1.jpg",
     "gallery": [
       "/projects/ogami/1.jpg",
       "/projects/ogami/2.jpg",
@@ -13115,7 +13115,7 @@ export const compoundsGenerated: Compound[] = [
       "Clubhouse",
       "Sports Courts"
     ],
-    "hero": "/projects/saada-sahel/1.jpg",
+    "hero": "/projects/saada-north-coast/1.jpg",
     "gallery": [
       "/projects/saada-sahel/1.jpg",
       "/projects/saada-sahel/2.jpg",
@@ -13159,7 +13159,7 @@ export const compoundsGenerated: Compound[] = [
       "Green spaces",
       "High-speed elevators"
     ],
-    "hero": "/projects/citystars-park-street/hero.jpg",
+    "hero": "/projects/citystars-park-street/1.jpg",
     "gallery": [],
     "blurb": "Citystars Park Street is a premium mixed-use commercial and residential landmark in New Cairo by Sky Innovo Developments.",
     "paymentPlan": "5% down payment · 8 years equal installments",
@@ -13192,7 +13192,7 @@ export const compoundsGenerated: Compound[] = [
       "Commercial strip",
       "Parks"
     ],
-    "hero": "/projects/the-med/1.jpg",
+    "hero": "/projects/the-gray-laguna-the-boulevard/1.jpg",
     "gallery": [
       "/projects/the-med/1.jpg",
       "/projects/the-med/2.jpg",
@@ -13231,7 +13231,7 @@ export const compoundsGenerated: Compound[] = [
       "Clubhouses",
       "Sports courts"
     ],
-    "hero": "/projects/seazen/1.jpg",
+    "hero": "/projects/surf-and-sand-seazen/1.jpg",
     "gallery": [
       "/projects/seazen/1.jpg",
       "/projects/seazen/2.jpg",
@@ -13272,7 +13272,7 @@ export const compoundsGenerated: Compound[] = [
       "Sports park",
       "Gym"
     ],
-    "hero": "/projects/hyde-park-new-cairo/1.jpg",
+    "hero": "/projects/central-water-residences/1.jpg",
     "gallery": [
       "/projects/hyde-park-new-cairo/1.jpg",
       "/projects/hyde-park-new-cairo/2.jpg",
@@ -13314,7 +13314,7 @@ export const compoundsGenerated: Compound[] = [
       "Parking",
       "24/7 Security"
     ],
-    "hero": "/projects/hyde-park-new-cairo/1.jpg",
+    "hero": "/projects/safa-medi-plex-phase-2/1.jpg",
     "gallery": [
       "/projects/hyde-park-new-cairo/1.jpg",
       "/projects/hyde-park-new-cairo/2.jpg",
@@ -13355,7 +13355,7 @@ export const compoundsGenerated: Compound[] = [
       "Swimming Pools",
       "Gym"
     ],
-    "hero": "/projects/caesar-sodic/1.jpg",
+    "hero": "/projects/caesar-extension-2/1.jpg",
     "gallery": [
       "/projects/caesar-sodic/1.jpg",
       "/projects/caesar-sodic/2.jpg",
@@ -13397,7 +13397,7 @@ export const compoundsGenerated: Compound[] = [
       "Clubhouse",
       "Gym"
     ],
-    "hero": "/projects/katameya-coast/1.jpg",
+    "hero": "/projects/cala-residences-katameya-coast/1.jpg",
     "gallery": [
       "/projects/katameya-coast/1.jpg",
       "/projects/katameya-coast/2.jpg",
@@ -13438,7 +13438,7 @@ export const compoundsGenerated: Compound[] = [
       "Boutique Hotel",
       "Infinity Pools"
     ],
-    "hero": "/projects/carnelia/hero.jpg",
+    "hero": "/projects/carnelia/1.jpg",
     "gallery": [],
     "blurb": "Carnelia Ain Sokhna is a luxury mountain-resort by Ajna Developments overlooking the Galala Marina.",
     "paymentPlan": "5% down payment · 8 years equal installments",
@@ -13470,7 +13470,7 @@ export const compoundsGenerated: Compound[] = [
       "Infinity Pools",
       "Green areas"
     ],
-    "hero": "/projects/selina-carnelia/hero.jpg",
+    "hero": "/projects/selina-carnelia/1.jpg",
     "gallery": [],
     "blurb": "Selina is the latest premium launching neighborhood inside Carnelia Ain Sokhna by Ajna Developments.",
     "paymentPlan": "5% down payment · 8 years equal installments",
@@ -13506,7 +13506,7 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Green Spaces"
     ],
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/vie/1.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
     ],
