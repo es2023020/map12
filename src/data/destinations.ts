@@ -86,6 +86,8 @@ const locationStrings: Record<string, string> = {
   "alexandria": "Alexandria Governorate, Egypt",
   "shorouk": "El Shorouk City, Cairo Governorate, Egypt",
   "obour": "El Obour City, Qalyubia Governorate, Egypt",
+  "eastern-expansion": "Eastern Expansion, East Cairo, Egypt",
+  "northern-expansion": "Northern Expansion, West Cairo, Egypt",
 };
 
 export const destinationLocationString = (slug: string): string =>

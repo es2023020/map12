@@ -1192,7 +1192,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "olive-oasis": {
   },
   "one33": {
-    destination: "sheikh-zayed",
+    destination: "northern-expansion",
     lat: 30.0498,
     lng: 31.0148,
     developer: "Samco Holding",
@@ -1281,14 +1281,6 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 29.60253,
     lng: 32.32882,
     priceFrom: 24,
-  },
-  "playa-seashell": {
-    destination: "ras-el-hekma",
-    km: 206,
-    developer: "G Developments",
-    city: "Ras El Hekma, North Coast (km 206), Matrouh Governorate, Egypt",
-    beachfront: true,
-    type: "Resort",
   },
   "px": {
     lat: 30.03306,

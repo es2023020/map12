@@ -1989,12 +1989,12 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "keeva",
     "name": "Keeva",
-    "destination": "new-zayed",
-    "lat": 30.0794,
-    "lng": 30.8698,
-    "developer": "Al Ahly Sabbour Developments",
+    "destination": "6th-october",
+    "lat": 30.015,
+    "lng": 31.005,
+    "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour-developments",
-    "priceFrom": 13,
+    "priceFrom": 5.7,
     "deliveryYear": 2027,
     "status": "Under Construction",
     "beachfront": false,
@@ -2006,17 +2006,11 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa"
     ],
     "amenities": [
-      "Clubhouse",
+      "Central clubhouse",
+      "Commercial retail",
       "Swimming pools",
-      "Gym",
-      "Parks",
-      "Jogging tracks",
-      "Sports courts",
-      "Commercial area",
-      "Restaurants & cafés",
-      "Medical center",
-      "Kids' areas",
-      "24/7 security"
+      "Health club",
+      "Walking tracks"
     ],
     "hero": "/projects/keeva/1.jpg",
     "gallery": [
@@ -2254,13 +2248,13 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "el-patio-vera",
     "name": "El Patio Vera",
-    "destination": "new-zayed",
-    "lat": 30.128,
-    "lng": 30.868,
+    "destination": "sheikh-zayed",
+    "lat": 30.065,
+    "lng": 30.985,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 18,
-    "deliveryYear": 2028,
+    "priceFrom": 15,
+    "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -2269,12 +2263,11 @@ export const compoundsGenerated: Compound[] = [
       "Villa"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Gym & Spa",
-      "24/7 Security",
-      "Green Spaces",
-      "Commercial Strip"
+      "Green lawns",
+      "Artificial lakes",
+      "Clubhouses",
+      "Fitness gym",
+      "Commercial strip"
     ],
     "hero": "/projects/el-patio-vera/1.jpg",
     "gallery": [
@@ -2285,7 +2278,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "El Patio Vera by La Vista Developments is an exclusive villa-only compound in New Sheikh Zayed. Spanning low-density luxury, it features modern standalones, twinhouses, and middle/corner townhouses.",
     "paymentPlan": "5% down · 7 years equal installments",
-    "areaSize": "60 feddan",
+    "areaSize": "40 feddan",
     "unitSizes": "176–324 m²",
     "type": "Residential",
     "highlights": [
@@ -3792,7 +3785,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "palm-hills-jirian",
     "name": "Palm Hills Jirian",
-    "destination": "6th-october",
+    "destination": "new-zayed",
     "lat": 29.95333,
     "lng": 30.9215,
     "developer": "Palm Hills Developments",
@@ -3835,7 +3828,7 @@ export const compoundsGenerated: Compound[] = [
       "465 available units",
       "Entry from EGP 7.9M"
     ],
-    "city": "Palm Hills Jirian, 6th-of-october-city"
+    "city": "New Zayed City, West Cairo, Egypt"
   },
   {
     "slug": "palm-hills-one",
@@ -4188,12 +4181,12 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "mountain-view-crystal",
     "name": "Mountain View Crystal",
-    "destination": "ain-sokhna",
-    "lat": 31.0268,
-    "lng": 28.6027,
+    "destination": "sidi-abdelrahman",
+    "lat": 31.045,
+    "lng": 28.875,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 10,
+    "priceFrom": 9.4,
     "deliveryYear": 2027,
     "status": "Under Construction",
     "beachfront": true,
@@ -4204,16 +4197,12 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa"
     ],
     "amenities": [
+      "Private beachfront",
       "Crystal lagoons",
-      "Beach club",
-      "Swimming pools",
-      "Clubhouse",
-      "Restaurants & cafés",
-      "Gym",
-      "Sports facilities",
-      "Kids' areas",
-      "Retail",
-      "24/7 security"
+      "Boutique hotels",
+      "Commercial hubs",
+      "Clubhouses",
+      "Jogging tracks"
     ],
     "hero": "/projects/mountain-view-crystal/1.jpg",
     "gallery": [
@@ -4230,7 +4219,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "Crysta is Mountain View's newest luxury beachfront community centered around crystal lagoons and premium Mediterranean-inspired residences, featuring modern coastal architecture, lush landscaping, and waterfront promenades.",
     "paymentPlan": "5% down, installments up to 8 years",
-    "areaSize": "150 feddan",
+    "areaSize": "470 feddan",
     "unitSizes": "50–285 m²",
     "type": "Resort",
     "flagship": true,
@@ -4239,7 +4228,8 @@ export const compoundsGenerated: Compound[] = [
       "Sidi Abdel Rahman prime location",
       "Mountain View signature quality"
     ],
-    "city": "Sidi Abdel Rahman, North Coast, Matrouh Governorate, Egypt"
+    "city": "Sidi Abdel Rahman, North Coast, Matrouh Governorate, Egypt",
+    "km": 120
   },
   {
     "slug": "mountain-view-mv4",
@@ -4579,12 +4569,12 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "elm-tree-park",
     "name": "ELM TREE PARK",
-    "destination": "new-zayed",
-    "lat": 30.0824,
-    "lng": 30.8819,
-    "developer": "Westway Developments",
+    "destination": "new-cairo",
+    "lat": 30.12,
+    "lng": 31.61,
+    "developer": "Madinet Masr",
     "developerSlug": "westway-developments",
-    "priceFrom": 4,
+    "priceFrom": 3.3,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
@@ -4596,15 +4586,10 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming pools",
-      "Landscaped parks",
-      "Gym",
-      "Jogging tracks",
-      "Kids' play areas",
-      "Commercial area",
-      "Restaurants & cafés",
-      "24/7 security"
+      "Crystal lagoons",
+      "Green parks",
+      "Sports club",
+      "Commercial area"
     ],
     "hero": "/projects/elm-tree-park/1.jpg",
     "gallery": [
@@ -4617,7 +4602,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "Elm Tree is a boutique residential compound by Westway Developments in New Zayed, offering low-density living with contemporary architecture, landscaped open spaces, and a family-oriented environment near Al Dabaa Axis.",
     "paymentPlan": "5% down, installments up to 10 years",
-    "areaSize": "120 feddan",
+    "areaSize": "113 feddan",
     "unitSizes": "50–239 m²",
     "type": "Residential",
     "highlights": [
@@ -4726,7 +4711,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "vye-sodic",
     "name": "VYE SODIC",
-    "destination": "sheikh-zayed",
+    "destination": "new-zayed",
     "lat": 30.01895,
     "lng": 30.9752,
     "developer": "SODIC",
@@ -4766,7 +4751,7 @@ export const compoundsGenerated: Compound[] = [
       "Crystal lagoon centrepiece",
       "SODIC signature design"
     ],
-    "city": "VYE SODIC, sheikh-zayed"
+    "city": "New Zayed City, West Cairo, Egypt"
   },
   {
     "slug": "botanica",
@@ -4932,12 +4917,12 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "district-5",
     "name": "District 5",
-    "destination": "mostakbal-city",
-    "lat": 30.0575,
-    "lng": 31.62255,
+    "destination": "new-cairo",
+    "lat": 29.985,
+    "lng": 31.425,
     "developer": "Marakez",
     "developerSlug": "marakez",
-    "priceFrom": 11,
+    "priceFrom": 9.5,
     "deliveryYear": 2027,
     "status": "Under Construction",
     "beachfront": false,
@@ -4948,15 +4933,11 @@ export const compoundsGenerated: Compound[] = [
       "Loft"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Gym & Spa",
-      "Kids Destination",
-      "24/7 Security",
-      "Retail Strips",
-      "Parks",
-      "Smart Home",
-      "Co-working"
+      "Commercial D5M",
+      "Central parks",
+      "Sports club",
+      "Co-working spaces",
+      "Walking tracks"
     ],
     "hero": "/projects/district-5/1.jpg",
     "gallery": [
@@ -4966,7 +4947,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "District 5 by Marakez Properties — a premium residential masterplan in New Cairo's 5th Settlement. NHF and NHN clusters with semi-finished and fully-finished apartments from 1BR to 3BR, plus garden apartments, duplexes and lofts. 46 units across both clusters, priced EGP 11.3M–26.1M.",
     "paymentPlan": "NHF: 10% DP over 7 years · NHN: 5%+5% over 8 years",
-    "areaSize": "65 feddan",
+    "areaSize": "200 feddan",
     "unitSizes": "95–210 m²",
     "type": "Residential",
     "highlights": [
@@ -4980,13 +4961,13 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "crescent-walk",
     "name": "Crescent Walk",
-    "destination": "new-administrative-capital",
-    "lat": 30.00702,
-    "lng": 31.74511,
-    "developer": "Crescent Walk",
+    "destination": "6th-settlement",
+    "lat": 30.01,
+    "lng": 31.52,
+    "developer": "Marakez",
     "developerSlug": "crescent-walk",
-    "priceFrom": 8,
-    "deliveryYear": 2027,
+    "priceFrom": 8.1,
+    "deliveryYear": 2029,
     "status": "Under Construction",
     "beachfront": false,
     "types": [
@@ -4997,14 +4978,11 @@ export const compoundsGenerated: Compound[] = [
       "Villa"
     ],
     "amenities": [
+      "Central crystal lagoon",
       "Clubhouse",
-      "Swimming Pools",
-      "Gym & Spa",
-      "Kids Destination",
-      "24/7 Security",
-      "Landscaped Parks",
-      "Retail Strip",
-      "Smart Home"
+      "Sports club",
+      "Commercial retail strip",
+      "Pedestrian lanes"
     ],
     "hero": "/projects/crescent-walk/1.jpg",
     "gallery": [
@@ -5019,7 +4997,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "Crescent Walk by Marakez Properties — New Cairo's most complete Marakez community spanning apartments to standalone villas across three parcels: PS (South), PC (Central) and PE (East). 74 units from fully-finished 1BR apartments at EGP 8.46M to semi-finished 7BR villas at EGP 72M.",
     "paymentPlan": "8% DP + 4% first installment + rest over 8 years",
-    "areaSize": "95 feddan",
+    "areaSize": "118 feddan",
     "unitSizes": "75–500 m²",
     "type": "Residential",
     "highlights": [
@@ -5189,13 +5167,13 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "the-mornings",
     "name": "The Mornings",
-    "destination": "sheikh-zayed",
-    "lat": 30.02424,
-    "lng": 30.98037,
-    "developer": "The Mornings",
+    "destination": "new-cairo",
+    "lat": 30.035,
+    "lng": 31.435,
+    "developer": "Al Ahly Sabbour",
     "developerSlug": "the-mornings",
-    "priceFrom": 4,
-    "deliveryYear": 2029,
+    "priceFrom": 5.3,
+    "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -5204,14 +5182,11 @@ export const compoundsGenerated: Compound[] = [
       "Medical Clinic"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Gym & Spa",
-      "Kids Destination",
-      "24/7 Security",
-      "Retail Strip",
-      "Medical Centre",
-      "Landscape Parks"
+      "Green spaces",
+      "Swimming pools",
+      "Health club",
+      "Commercial zone",
+      "Jogging tracks"
     ],
     "hero": "/projects/the-mornings/1.jpg",
     "gallery": [
@@ -5219,7 +5194,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "The Mornings by Al Ahly Sabbour in New Cairo — 68 available units including 1–3 bedroom apartments (50–160 m², EGP 4.3M–13.4M), admin offices and medical clinics. Core & shell delivered with an optional fully-finished upgrade. 25% cash discount available. Mixed-use community designed for modern urban living.",
     "paymentPlan": "5%+5% over 8 years · 25% cash discount available",
-    "areaSize": "40 feddan",
+    "areaSize": "15 feddan",
     "unitSizes": "43–160 m²",
     "type": "Mixed-use",
     "highlights": [
@@ -6132,57 +6107,6 @@ export const compoundsGenerated: Compound[] = [
       "Hyde Park quality delivery"
     ],
     "type": "Resort"
-  },
-  {
-    "slug": "playa-seashell",
-    "name": "Playa Seashell",
-    "destination": "ras-el-hekma",
-    "km": 206,
-    "lat": 31.086,
-    "lng": 28.01,
-    "developer": "G Developments",
-    "developerSlug": "g-developments",
-    "priceFrom": 14,
-    "deliveryYear": 2027,
-    "status": "Off-Plan",
-    "beachfront": true,
-    "types": [
-      "Chalet",
-      "Twin House",
-      "Villa",
-      "Standalone Villa"
-    ],
-    "amenities": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Mosque",
-      "18-Hole Golf",
-      "24/7 Security",
-      "Gym & Spa"
-    ],
-    "hero": "/projects/playa-seashell/1.jpg",
-    "gallery": [
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1600&q=80"
-    ],
-    "blurb": "Playa Seashell sits at km 206 on the North Coast in ras el hekma, developed by G Developments. A beachfront community designed for premium summer living.",
-    "paymentPlan": "10% down payment over 8 years equal installments",
-    "areaSize": "396 feddan",
-    "unitSizes": "127–348 m²",
-    "city": "Ras El Hekma, North Coast (km 206), Matrouh Governorate, Egypt",
-    "type": "Resort",
-    "highlights": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Mosque",
-      "18-Hole Golf",
-      "24/7 Security",
-      "Gym & Spa"
-    ]
   },
   {
     "slug": "la-vista-ras-el-hekma",
@@ -7139,11 +7063,11 @@ export const compoundsGenerated: Compound[] = [
     "name": "AZZAR Islands",
     "destination": "ras-el-hekma",
     "km": 182,
-    "lat": 31.0848,
-    "lng": 27.932,
+    "lat": 31.11,
+    "lng": 27.91,
     "developer": "Reedy Group",
     "developerSlug": "reedy-group",
-    "priceFrom": 10,
+    "priceFrom": 12.9,
     "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": true,
@@ -7155,15 +7079,13 @@ export const compoundsGenerated: Compound[] = [
     ],
     "amenities": [
       "Private beach",
+      "Crystal lagoons",
       "Beach club",
-      "Clubhouse",
-      "Swimming pools",
-      "Restaurants & cafés",
-      "Retail area",
-      "Gym",
-      "Landscaped gardens",
-      "Water features",
-      "Kids' areas",
+      "Aqua park",
+      "Commercial mall",
+      "Health club",
+      "Open-air theatre",
+      "Equestrian paths",
       "24/7 security"
     ],
     "hero": "/projects/azzar-islands/1.jpg",
@@ -7175,7 +7097,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "AZZAR Islands is a boutique luxury beachfront community by Reedy Group in Ras El Hekma designed around exclusive island-inspired neighborhoods, offering privacy and direct sea access with low-density planning.",
     "paymentPlan": "5% down, installments up to 8 years",
-    "areaSize": "160 feddan",
+    "areaSize": "400 feddan",
     "unitSizes": "85–310 m²",
     "city": "Ras El Hekma, North Coast (km 182), Matrouh Governorate, Egypt",
     "type": "Resort",
@@ -7189,13 +7111,13 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "lvls",
     "name": "LVLS",
-    "destination": "new-zayed",
+    "destination": "ras-el-hekma",
     "km": 179,
-    "lat": 30.0854,
-    "lng": 30.8807,
+    "lat": 31.115,
+    "lng": 28.085,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 11,
+    "priceFrom": 8.2,
     "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": true,
@@ -7206,16 +7128,11 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming pools",
-      "Parks",
-      "Sports club",
-      "Gym",
-      "Cycling tracks",
-      "Commercial area",
-      "Restaurants & cafés",
-      "Kids' areas",
-      "24/7 security"
+      "Private beach",
+      "Crystal lagoons",
+      "Horizon pools",
+      "Promenades",
+      "Restaurants"
     ],
     "hero": "/projects/lvls/1.jpg",
     "gallery": [
@@ -7228,7 +7145,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "LVLS is Mountain View's luxury residential community in New Zayed, designed around elevated neighborhoods, green landscapes, and modern architecture near Al Dabaa Axis and Sphinx International Airport.",
     "paymentPlan": "5% down, installments up to 9 years",
-    "areaSize": "234 feddan",
+    "areaSize": "201 feddan",
     "unitSizes": "103–352 m²",
     "city": "New Zayed, West Cairo, Egypt",
     "highlights": [
@@ -8147,12 +8064,12 @@ export const compoundsGenerated: Compound[] = [
     "name": "Shamasi",
     "destination": "sidi-abdelrahman",
     "km": 134,
-    "lat": 30.92776,
-    "lng": 28.72827,
-    "developer": "MQR Developments",
+    "lat": 31.05,
+    "lng": 28.95,
+    "developer": "Serac Developments",
     "developerSlug": "mqr-developments",
-    "priceFrom": 7,
-    "deliveryYear": 2026,
+    "priceFrom": 7.5,
+    "deliveryYear": 2029,
     "status": "Under Construction",
     "beachfront": true,
     "types": [
@@ -8162,14 +8079,11 @@ export const compoundsGenerated: Compound[] = [
       "Studio"
     ],
     "amenities": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Smart Home",
-      "Marina",
-      "Gym & Spa",
-      "Cycling Track",
-      "Pet Park"
+      "Private beachfront",
+      "Crystal lagoons",
+      "Boutique hotel",
+      "Commercial strip",
+      "Clubhouse"
     ],
     "hero": "/projects/shamasi/1.jpg",
     "gallery": [
@@ -8179,7 +8093,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "Shamasi sits at km 134 on the North Coast in sidi abdelrahman, developed by MQR Developments. A beachfront community designed for premium summer living.",
     "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "237 feddan",
+    "areaSize": "70 feddan",
     "unitSizes": "94–251 m²",
     "city": "Sidi Abdel Rahman, North Coast (km 134), Matrouh Governorate, Egypt",
     "type": "Coastal",
@@ -10074,12 +9988,12 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "sodic-east",
     "name": "Sodic East",
-    "destination": "mostakbal-city",
-    "lat": 30.0414,
-    "lng": 31.6187,
+    "destination": "eastern-expansion",
+    "lat": 30.125,
+    "lng": 31.625,
     "developer": "SODIC",
     "developerSlug": "sodic",
-    "priceFrom": 10,
+    "priceFrom": 13.528,
     "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": false,
@@ -10089,12 +10003,11 @@ export const compoundsGenerated: Compound[] = [
       "Villa"
     ],
     "amenities": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Pet Park",
-      "18-Hole Golf",
-      "Kids Destination",
-      "Beach Bar"
+      "SODIC Sports Club",
+      "Green Spine",
+      "Ravine park",
+      "International school",
+      "Commercial district"
     ],
     "hero": "/projects/sodic-east/1.jpg",
     "gallery": [
@@ -10111,7 +10024,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "Sodic East is a flagship development in New Cairo (Tagamo3) by SODIC, offering modern residences with full amenities for year-round living.",
     "paymentPlan": "10% down payment over 7 years equal installments",
-    "areaSize": "111 feddan",
+    "areaSize": "655 feddan",
     "unitSizes": "171–429 m²",
     "city": "Mostakbal City, New Cairo, Cairo",
     "type": "Residential",
@@ -10330,55 +10243,6 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Private Beach",
       "Gym & Spa"
-    ]
-  },
-  {
-    "slug": "palm-hills-sheikh-zayed",
-    "name": "Palm Hills Sheikh Zayed",
-    "destination": "sheikh-zayed",
-    "lat": 30.031000000000002,
-    "lng": 30.983400000000003,
-    "developer": "Palm Hills Developments",
-    "developerSlug": "palm-hills-developments",
-    "priceFrom": 11,
-    "deliveryYear": 2024,
-    "status": "Delivered",
-    "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa"
-    ],
-    "amenities": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Restaurants Strip",
-      "18-Hole Golf",
-      "Cycling Track",
-      "Marina"
-    ],
-    "hero": "/projects/palm-hills-sheikh-zayed/1.jpg",
-    "gallery": [
-      "/projects/palm-hills-sheikh-zayed/1.jpg",
-      "/projects/palm-hills-sheikh-zayed/2.jpg",
-      "/projects/palm-hills-sheikh-zayed/3.jpg",
-      "/projects/palm-hills-sheikh-zayed/4.jpg",
-      "/projects/palm-hills-sheikh-zayed/5.jpg",
-      "/projects/palm-hills-sheikh-zayed/6.jpg"
-    ],
-    "blurb": "Palm Hills Sheikh Zayed is a flagship development in Sheikh Zayed by Palm Hills Developments, offering modern residences with full amenities for year-round living.",
-    "paymentPlan": "10% down payment over 8 years equal installments",
-    "areaSize": "316 feddan",
-    "unitSizes": "146–524 m²",
-    "city": "Sheikh Zayed, Giza Governorate, Egypt",
-    "type": "Residential",
-    "highlights": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Restaurants Strip",
-      "18-Hole Golf",
-      "Cycling Track",
-      "Marina"
     ]
   },
   {
@@ -12509,7 +12373,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "sodic-the-estates",
     "name": "SODIC The Estates",
-    "destination": "sheikh-zayed",
+    "destination": "new-zayed",
     "lat": 30.031000000000002,
     "lng": 30.975,
     "developer": "SODIC",
@@ -12544,7 +12408,7 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "10% down payment over 9 years equal installments",
     "areaSize": "60 feddan",
     "unitSizes": "120–320 m²",
-    "city": "Sheikh Zayed, Giza Governorate, Egypt",
+    "city": "New Zayed City, West Cairo, Egypt",
     "type": "Residential",
     "highlights": [
       "Crystal Lagoon",
@@ -12607,7 +12471,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "solana",
     "name": "Solana",
-    "destination": "sheikh-zayed",
+    "destination": "new-zayed",
     "lat": 30.0212,
     "lng": 30.9449,
     "developer": "Ora Developers",
@@ -12646,7 +12510,7 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "10% down payment over 8 years equal installments",
     "areaSize": "142 feddan",
     "unitSizes": "146–358 m²",
-    "city": "Sheikh Zayed, Giza Governorate, Egypt",
+    "city": "New Zayed City, West Cairo, Egypt",
     "type": "Residential",
     "highlights": [
       "Crystal Lagoon",
@@ -12839,7 +12703,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "dejoya-residence",
     "name": "Dejoya Residence",
-    "destination": "sheikh-zayed",
+    "destination": "new-zayed",
     "lat": 30.046,
     "lng": 30.972,
     "developer": "Taj Misr Developments",
@@ -12878,12 +12742,13 @@ export const compoundsGenerated: Compound[] = [
       "Apartments from EGP 7.5M",
       "Up to 15 Years Installments",
       "Developed by Taj Misr"
-    ]
+    ],
+    "city": "New Zayed City, West Cairo, Egypt"
   },
   {
     "slug": "v-levels",
     "name": "V-Levels",
-    "destination": "sheikh-zayed",
+    "destination": "6th-october",
     "lat": 30.048,
     "lng": 30.97,
     "developer": "Dunes Development",
@@ -12925,12 +12790,13 @@ export const compoundsGenerated: Compound[] = [
       "15% Footprint",
       "Apartments from EGP 14M",
       "Dec-2027 Delivery"
-    ]
+    ],
+    "city": "6th of October City, Giza, Egypt"
   },
   {
     "slug": "one33",
     "name": "ONE33",
-    "destination": "sheikh-zayed",
+    "destination": "northern-expansion",
     "lat": 30.0498,
     "lng": 31.0148,
     "developer": "Samco Holding",
@@ -12975,7 +12841,7 @@ export const compoundsGenerated: Compound[] = [
       "Close to Arkan Plaza & Mall of Arabia",
       "Luxury mixed-use Sheikh Zayed community"
     ],
-    "city": "Sheikh Zayed City, Giza, Egypt"
+    "city": "Northern Expansion, West Cairo, Egypt"
   },
   {
     "slug": "salt-marina",
