@@ -36,7 +36,7 @@ export const compoundsGenerated: Compound[] = [
       "Medical center",
       "24/7 security"
     ],
-    "hero": "/projects/belle-vie/1.jpg",
+    "hero": "/projects/belle-vie/3.jpg",
     "gallery": [
       "/projects/belle-vie/0.jpg",
       "/projects/belle-vie/1.jpg",
@@ -5258,31 +5258,25 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "cleo-water-residence",
     "name": "Cleo Water Residence",
-    "destination": "sidi-abdelrahman",
-    "km": 135,
-    "lat": 30.994,
-    "lng": 28.677333333333333,
+    "destination": "new-cairo",
+    "lat": 30.015,
+    "lng": 31.545,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
     "priceFrom": 10,
     "deliveryYear": 2027,
     "status": "Under Construction",
-    "beachfront": true,
+    "beachfront": false,
     "types": [
-      "Chalet",
-      "Cabin",
-      "Twin House"
+      "Apartment"
     ],
     "amenities": [
-      "Private Beach",
-      "Lagoon Pools",
-      "Clubhouse",
-      "Gym & Spa",
-      "Kids Destination",
-      "24/7 Security",
-      "Beach Bar",
-      "Restaurants",
-      "Cycling Track"
+      "Swimming pools",
+      "Sports areas",
+      "Tennis courts",
+      "Yoga areas",
+      "Underground parking",
+      "Dedicated medical services"
     ],
     "hero": "/projects/cleo-water-residence/1.jpg",
     "gallery": [
@@ -5294,17 +5288,18 @@ export const compoundsGenerated: Compound[] = [
       "/projects/cleo-water-residence/6.jpg",
       "/projects/cleo-water-residence/7.jpg"
     ],
-    "blurb": "Cleo Water Residence by Palm Hills Developments — a boutique North Coast resort community at Sidi Abdelrahman featuring chalets, cabins and twin houses steps from a private beach. Palm Hills' water-themed Sahel offering with signature resort amenities and the developer's trusted delivery record.",
+    "blurb": "Cleo Water Residences is a luxury residential phase located within the Palm Hills New Cairo compound in Egypt, featuring fully finished apartments, scenic lagoons, and vast open green spaces.",
     "paymentPlan": "10% down · 8 years equal installments",
-    "areaSize": "40 feddan",
-    "unitSizes": "80–220 m²",
-    "type": "Resort",
+    "areaSize": "82% green & water space",
+    "unitSizes": "70–170 m²",
+    "type": "Residential",
     "highlights": [
-      "Palm Hills quality",
-      "Private beachfront",
-      "Water-themed resort",
-      "Sidi Abdelrahman location"
-    ]
+      "Palm Hills Developments",
+      "Located in Palm Hills New Cairo",
+      "82% open green spaces",
+      "5,000 m² lake & lagoons"
+    ],
+    "city": "Palm Hills New Cairo, New Cairo, Egypt"
   },
   {
     "slug": "diplo-village",
@@ -10449,58 +10444,6 @@ export const compoundsGenerated: Compound[] = [
     ]
   },
   {
-    "slug": "palm-hills-october",
-    "name": "Palm Hills October",
-    "destination": "6th-october",
-    "lat": 29.9819,
-    "lng": 30.943649999999998,
-    "developer": "Palm Hills Developments",
-    "developerSlug": "palm-hills-developments",
-    "priceFrom": 9,
-    "deliveryYear": 2024,
-    "status": "Delivered",
-    "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa"
-    ],
-    "amenities": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Restaurants Strip",
-      "Mosque",
-      "Kids Destination",
-      "Smart Home"
-    ],
-    "hero": "/projects/palm-hills-october/1.jpg",
-    "gallery": [
-      "/projects/palm-hills-october/1.jpg",
-      "/projects/palm-hills-october/2.jpg",
-      "/projects/palm-hills-october/3.jpg",
-      "/projects/palm-hills-october/4.jpg",
-      "/projects/palm-hills-october/5.jpg",
-      "/projects/palm-hills-october/6.jpg",
-      "/projects/palm-hills-october/7.jpg",
-      "/projects/palm-hills-october/8.jpg",
-      "/projects/palm-hills-october/9.jpg"
-    ],
-    "blurb": "Palm Hills October by Palm Hills Developments — a Residential community offering refined living with full amenities and strong location advantages.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "60 feddan",
-    "unitSizes": "95–250 m²",
-    "type": "Residential",
-    "city": "6th of October City, Giza Governorate, Egypt",
-    "highlights": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Restaurants Strip",
-      "Mosque",
-      "Kids Destination",
-      "Smart Home"
-    ]
-  },
-  {
     "slug": "mountain-view-icity-october",
     "name": "Mountain View iCity October",
     "destination": "6th-october",
@@ -11192,55 +11135,6 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Kids Destination",
       "Smart Home"
-    ]
-  },
-  {
-    "slug": "cleo-mostakbal",
-    "name": "Cleo Mostakbal",
-    "destination": "mostakbal-city",
-    "lat": 30.0631,
-    "lng": 31.66245,
-    "developer": "Hyde Park",
-    "developerSlug": "hyde-park",
-    "priceFrom": 9,
-    "deliveryYear": 2027,
-    "status": "Off-Plan",
-    "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa"
-    ],
-    "amenities": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "18-Hole Golf",
-      "Mosque",
-      "Gym & Spa",
-      "Private Beach",
-      "24/7 Security"
-    ],
-    "hero": "/projects/cleo-mostakbal/1.jpg",
-    "gallery": [
-      "/projects/cleo-mostakbal/1.jpg",
-      "/projects/cleo-mostakbal/2.jpg",
-      "/projects/cleo-mostakbal/3.jpg",
-      "/projects/cleo-mostakbal/4.jpg"
-    ],
-    "blurb": "Cleo Mostakbal by Hyde Park — a Residential community offering refined living with full amenities and strong location advantages.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "144 feddan",
-    "unitSizes": "163–378 m²",
-    "type": "Residential",
-    "city": "Mostakbal City, New Cairo, Cairo",
-    "highlights": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "18-Hole Golf",
-      "Mosque",
-      "Gym & Spa",
-      "Private Beach",
-      "24/7 Security"
     ]
   },
   {

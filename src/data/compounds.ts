@@ -226,7 +226,6 @@ const extraRaw: Array<{
   // MOSTAKBAL CITY
   { name: "Bloomfields", destination: "mostakbal-city", lat: 30.078, lng: 31.665, developer: "Tatweer Misr", price: 9, year: 2027 },
   { name: "Mountain View Aliva", destination: "mostakbal-city", lat: 30.072, lng: 31.650, developer: "Mountain View", price: 10, year: 2027 },
-  { name: "Cleo Mostakbal", destination: "mostakbal-city", lat: 30.080, lng: 31.672, developer: "Hyde Park", price: 9, year: 2027 },
   { name: "La Vista City", destination: "mostakbal-city", lat: 30.085, lng: 31.658, developer: "La Vista Developments", price: 8, year: 2026 },
   // HELIOPOLIS
   { name: "Heliopark", destination: "heliopolis", lat: 30.103, lng: 31.355, developer: "Heliopolis Company", price: 7, year: 2025 },
@@ -3066,28 +3065,27 @@ const newProjects: Compound[] = [
   // ══════════════════════════════════════════
   // PALM HILLS — CLEO WATER RESIDENCE
   // ══════════════════════════════════════════
-  {
+    {
     slug: "cleo-water-residence",
     name: "Cleo Water Residence",
-    destination: "sidi-abdelrahman",
-    km: 135,
-    lat: 30.942, lng: 28.455,
+    destination: "new-cairo",
+    lat: 30.015, lng: 31.545,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
     priceFrom: 10,
     deliveryYear: 2027,
     status: "Under Construction",
-    beachfront: true,
-    types: ["Chalet", "Cabin", "Twin House"],
-    amenities: ["Private Beach", "Lagoon Pools", "Clubhouse", "Gym & Spa", "Kids Destination", "24/7 Security", "Beach Bar", "Restaurants", "Cycling Track"],
+    beachfront: false,
+    types: ["Apartment"],
+    amenities: ["Swimming pools", "Sports areas", "Tennis courts", "Yoga areas", "Underground parking", "Dedicated medical services"],
     hero: "/projects/cleo-water-residence/1.jpg",
     gallery: ["/projects/cleo-water-residence/1.jpg","/projects/cleo-water-residence/2.jpg","/projects/cleo-water-residence/3.jpg","/projects/cleo-water-residence/4.jpg"],
-    blurb: "Cleo Water Residence by Palm Hills Developments — a boutique North Coast resort community at Sidi Abdelrahman featuring chalets, cabins and twin houses steps from a private beach. Palm Hills' water-themed Sahel offering with signature resort amenities and the developer's trusted delivery record.",
+    blurb: "Cleo Water Residences is a luxury residential phase located within the Palm Hills New Cairo compound in Egypt, featuring fully finished apartments, scenic lagoons, and vast open green spaces.",
     paymentPlan: "10% down · 8 years equal installments",
-    areaSize: "40 feddan",
-    unitSizes: "80–220 m²",
-    type: "Resort",
-    highlights: ["Palm Hills quality", "Private beachfront", "Water-themed resort", "Sidi Abdelrahman location"],
+    areaSize: "82% green & water space",
+    unitSizes: "70–170 m²",
+    type: "Residential",
+    highlights: ["Palm Hills Developments", "Located in Palm Hills New Cairo", "82% open green spaces", "5,000 m² lake & lagoons"],
   },
 
   // ══════════════════════════════════════════

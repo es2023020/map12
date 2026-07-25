@@ -281,12 +281,6 @@ export const projectImages: Record<string, string[]> = {
     "/projects/city-oval/7.jpg",
     "/projects/city-oval/8.jpg"
   ],
-  "cleo-mostakbal": [
-    "/projects/cleo-mostakbal/1.jpg",
-    "/projects/cleo-mostakbal/2.jpg",
-    "/projects/cleo-mostakbal/3.jpg",
-    "/projects/cleo-mostakbal/4.jpg"
-  ],
   "cleo-water-residence": [
     "/projects/cleo-water-residence/1.jpg",
     "/projects/cleo-water-residence/2.jpg",
@@ -1146,17 +1140,6 @@ export const projectImages: Record<string, string[]> = {
     "/projects/palm-hills-new-cairo/4.jpg",
     "/projects/palm-hills-new-cairo/5.jpg"
   ],
-  "palm-hills-october": [
-    "/projects/palm-hills-october/1.jpg",
-    "/projects/palm-hills-october/2.jpg",
-    "/projects/palm-hills-october/3.jpg",
-    "/projects/palm-hills-october/4.jpg",
-    "/projects/palm-hills-october/5.jpg",
-    "/projects/palm-hills-october/6.jpg",
-    "/projects/palm-hills-october/7.jpg",
-    "/projects/palm-hills-october/8.jpg",
-    "/projects/palm-hills-october/9.jpg"
-  ],
   "palm-hills-one": [
     "/projects/palm-hills-one/1.jpg",
     "/projects/palm-hills-one/2.jpg",
@@ -1165,14 +1148,6 @@ export const projectImages: Record<string, string[]> = {
     "/projects/palm-hills-one/5.jpg",
     "/projects/palm-hills-one/6.jpg",
     "/projects/palm-hills-one/7.jpg"
-  ],
-  "palm-hills-sheikh-zayed": [
-    "/projects/palm-hills-sheikh-zayed/1.jpg",
-    "/projects/palm-hills-sheikh-zayed/2.jpg",
-    "/projects/palm-hills-sheikh-zayed/3.jpg",
-    "/projects/palm-hills-sheikh-zayed/4.jpg",
-    "/projects/palm-hills-sheikh-zayed/5.jpg",
-    "/projects/palm-hills-sheikh-zayed/6.jpg"
   ],
   "park-sight": [
     "/projects/park-sight/1.jpg",
@@ -1392,15 +1367,6 @@ export const projectImages: Record<string, string[]> = {
     "/projects/silvertown-lagoon-cabanas/1.jpg",
     "/projects/silvertown-lagoon-cabanas/2.jpg"
   ],
-  "sky-north": [
-    "/projects/sky-north/1.jpg",
-    "/projects/sky-north/2.jpg",
-    "/projects/sky-north/3.jpg",
-    "/projects/sky-north/4.jpg",
-    "/projects/sky-north/5.jpg",
-    "/projects/sky-north/6.jpg",
-    "/projects/sky-north/7.jpg"
-  ],
   "sodic-east": [
     "/projects/sodic-east/1.jpg",
     "/projects/sodic-east/2.jpg",
@@ -1505,13 +1471,6 @@ export const projectImages: Record<string, string[]> = {
     "/projects/stone-residence/1.jpg",
     "/projects/stone-residence/2.jpg",
     "/projects/stone-residence/3.jpg"
-  ],
-  "summer": [
-    "/projects/summer/1.jpg",
-    "/projects/summer/2.jpg",
-    "/projects/summer/3.jpg",
-    "/projects/summer/4.jpg",
-    "/projects/summer/5.jpg"
   ],
   "sun-capital": [
     "/projects/sun-capital/1.jpg",

@@ -7,6 +7,7 @@ export type ProjectLocation = {
 };
 
 export const projectLocations: Record<string, ProjectLocation> = {
+  "cleo-water-residence": { name: "Cleo Water Residence", destination: "new-cairo", location: "Palm Hills New Cairo, New Cairo, Egypt", mapsUrl: "https://maps.google.com/?q=Palm+Hills+New+Cairo+Egypt" },
   "azzar-islands": { name: "Azzar Islands", destination: "ras-el-hekma", location: "Ras El Hekma, North Coast, Egypt", mapsUrl: "https://maps.google.com/?q=Azzar+Islands+Ras+El+Hekma+Egypt" },
   "el-patio-vera": { name: "El Patio Vera", destination: "sheikh-zayed", location: "Sheikh Zayed City, Giza, Egypt", mapsUrl: "https://maps.google.com/?q=El+Patio+Vera+Zayed+Egypt" },
   "keeva": { name: "Keeva", destination: "6th-october", location: "Waslet Dahshour Road, 6th of October City, Giza, Egypt", mapsUrl: "https://maps.google.com/?q=Keeva+Sabbour+October+Egypt" },
@@ -58,7 +59,6 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "cali-coast-ras-el-hekma": { name: "Cali Coast Ras El Hekma", destination: "ras-el-hekma", location: "Ras El Hekma, North Coast, Matrouh", mapsUrl: "https://maps.google.com/?q=Cali+Coast+Ras+El+Hekma+Egypt" },
   "capital-heights": { name: "Capital Heights", destination: "new-administrative-capital", location: "New Administrative Capital, Cairo", mapsUrl: "https://maps.google.com/?q=Capital+Heights+New+Capital+Egypt" },
   "city-oval": { name: "City Oval", destination: "new-administrative-capital", location: "New Administrative Capital, Cairo", mapsUrl: "https://maps.google.com/?q=City+Oval+New+Capital+Egypt" },
-  "cleo-mostakbal": { name: "Cleo Mostakbal", destination: "mostakbal-city", location: "Mostakbal City, New Cairo, Cairo", mapsUrl: "https://maps.google.com/?q=Cleo+Mostakbal+City+Egypt" },
   "club-views": { name: "Club Views", destination: "new-cairo", location: "New Cairo, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Club+Views+New+Cairo+Egypt" },
   "crescent-walk": { name: "Crescent Walk", destination: "6th-settlement", location: "Sixth Settlement, New Cairo, Egypt", mapsUrl: "https://maps.google.com/?q=Crescent+Walk+New+Cairo+Egypt" },
   "d-bay": { name: "D-Bay", destination: "al-dabaa", location: "km 165, Al Dabaa, North Coast, Matrouh", mapsUrl: "https://maps.google.com/?q=D-Bay+Sahel+Egypt" },
@@ -167,7 +167,6 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "palm-hills-jirian": { name: "Palm Hills Jirian", destination: "new-zayed", location: "6th of October City, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Palm+Hills+Jirian+October+Egypt" },
   "palm-hills-katameya": { name: "Palm Hills Katameya", destination: "new-cairo", location: "New Cairo (Katameya), Cairo Governorate,", mapsUrl: "https://maps.google.com/?q=Palm+Hills+Katameya" },
   "palm-hills-new-alamein": { name: "Palm Hills New Alamein", destination: "new-alamein", location: "New Alamein City, Matrouh Governorate,", mapsUrl: "https://maps.google.com/?q=Palm+Hills+New+Alamein+Egypt" },
-  "palm-hills-october": { name: "Palm Hills October", destination: "6th-october", location: "6th of October City, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Palm+Hills+October+City+Egypt" },
   "palm-hills-one": { name: "Palm Hills One", destination: "new-cairo", location: "New Cairo, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Palm+Hills+One+New" },
   "palm-parks": { name: "Palm Parks", destination: "6th-october", location: "6th of October City, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Palm+Parks+October+City+Egypt" },
   "playa": { name: "Playa", destination: "ghazala-bay", location: "km 146, Ghazala Bay, North Coast", mapsUrl: "https://maps.google.com/?q=Playa+Sahel+Ghazala" },
