@@ -4966,33 +4966,32 @@ export const compoundsGenerated: Compound[] = [
   },
   {
     "slug": "ramla",
-    "name": "Ramla",
+    "name": "Ramla North Coast",
     "destination": "ras-el-hekma",
     "km": 215,
-    "lat": 31.101,
-    "lng": 27.91,
-    "developer": "Marakez Developments",
-    "developerSlug": "marakez-developments",
-    "priceFrom": 10,
-    "deliveryYear": 2027,
+    "lat": 31.118,
+    "lng": 27.702,
+    "developer": "Marakez",
+    "developerSlug": "marakez-properties",
+    "priceFrom": 17,
+    "deliveryYear": 2028,
     "status": "Under Construction",
     "beachfront": true,
     "types": [
       "Chalet",
-      "Twinhome",
-      "Townhome",
-      "Villa"
+      "Penthouse",
+      "Duplex",
+      "Twin House",
+      "Standalone Villa"
     ],
     "amenities": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Marina",
-      "Clubhouse",
-      "Beach Bar",
-      "Gym & Spa",
-      "Kids Destination",
-      "24/7 Security",
-      "Restaurants Strip"
+      "1.4 km Beachfront",
+      "25-acre Swimmable Crystal Lagoon",
+      "The Farm",
+      "Sports Campus",
+      "Boutique Hotel",
+      "Village Street Commercial Strip",
+      "Azza Fahmy Beach Clubhouse"
     ],
     "hero": "/projects/ramla/1.jpg",
     "gallery": [
@@ -5006,17 +5005,18 @@ export const compoundsGenerated: Compound[] = [
       "/projects/ramla/8.jpg",
       "/projects/ramla/9.jpg"
     ],
-    "blurb": "Ramla at km 215 � Marakez beachfront resort with tiered terraces, 20-acre crystal lagoon and Oasis & Grove phases.",
-    "paymentPlan": "10% down � up to 6 years",
-    "areaSize": "~406 acres",
+    "blurb": "Ramla North Coast by Marakez — a 402-feddan resort at Km 215 Ras El Hekma, boasting a 1.4 km beachfront, a 25-acre swimmable crystal lagoon, Sports Campus, Village Street, and Azza Fahmy Beach Clubhouse.",
+    "paymentPlan": "5% over 7 years or 10% over 8 years equal installments",
+    "areaSize": "402 feddan",
     "unitSizes": "100�500 m�",
-    "type": "Resort",
+    "type": "Coastal",
     "highlights": [
-      "1.4 km beach",
-      "Crystal lagoon",
-      "Fully finished clusters"
+      "1.4 km beachfront",
+      "25-acre crystal lagoon",
+      "Azza Fahmy Beach Clubhouse",
+      "402 feddan masterplan"
     ],
-    "city": "Ras El Hekma, North Coast (km 215), Matrouh Governorate, Egypt"
+    "city": "Km 215, Ras El Hekma, North Coast, Egypt"
   },
   {
     "slug": "aeon",
@@ -5673,13 +5673,13 @@ export const compoundsGenerated: Compound[] = [
     "name": "Hacienda Ras El Hekma",
     "destination": "ras-el-hekma",
     "km": 238,
-    "lat": 31.0588,
-    "lng": 28.0345,
+    "lat": 31.144,
+    "lng": 27.815,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 11,
-    "deliveryYear": 2029,
-    "status": "Off-Plan",
+    "priceFrom": 23,
+    "deliveryYear": 2028,
+    "status": "Under Construction",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5689,17 +5689,13 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa"
     ],
     "amenities": [
-      "Private beach",
-      "Beach club",
-      "Swimming pools",
-      "Crystal lagoons",
-      "Clubhouse",
-      "Restaurants & cafés",
-      "Retail area",
-      "Gym",
-      "Sports facilities",
-      "Kids' play areas",
-      "24/7 security"
+      "4.8 km Beachfront",
+      "Crystal Lagoons",
+      "5-Star Hotels",
+      "Sports Club",
+      "Commercial Retail Strip",
+      "Luxury Clubhouses",
+      "24/7 Security"
     ],
     "hero": "/projects/hacienda-ras-el-hekma/1.jpg",
     "gallery": [
@@ -5708,51 +5704,47 @@ export const compoundsGenerated: Compound[] = [
       "/projects/hacienda-ras-el-hekma/3.jpg",
       "/projects/hacienda-ras-el-hekma/4.jpg"
     ],
-    "blurb": "Hacienda Ras El Hekma is a luxury beachfront community designed to capitalize on Ras El Hekma's internationally recognized coastline, offering premium residences, private beaches, and resort-style amenities.",
-    "paymentPlan": "5% down, installments up to 10 years",
-    "areaSize": "~1,400 acres",
+    "blurb": "Hacienda Ras El Hekma by Palm Hills Developments — a massive 1,400-feddan flagship Mediterranean resort at Km 238, featuring a 4.8 km beachfront, crystal lagoons, 5-star international hotels, and luxury private residences.",
+    "paymentPlan": "5% down payment · up to 8–10 years equal installments",
+    "areaSize": "1400 feddan",
     "unitSizes": "115–430 m²",
-    "city": "Ras El Hekma, North Coast, Egypt",
+    "city": "Km 238, Ras El Hekma, North Coast, Egypt",
     "highlights": [
-      "Internationally recognized coastline",
-      "Low-density environment",
-      "Mediterranean architecture",
-      "Crystal clear beachfront"
+      "4.8 km beachfront",
+      "1,400 feddan masterplan",
+      "5-star international hotels",
+      "Palm Hills flagship"
     ],
-    "type": "Resort"
+    "type": "Coastal"
   },
   {
     "slug": "modon-ras-el-hekma",
     "name": "Modon Ras El Hekma",
     "destination": "ras-el-hekma",
     "km": 170,
-    "lat": 31.0848,
-    "lng": 27.9005,
-    "developer": "Modon Holding (Abu Dhabi)",
-    "developerSlug": "modon-holding-abu-dhabi",
-    "priceFrom": 16,
+    "lat": 31.135,
+    "lng": 27.765,
+    "developer": "Modon Holding",
+    "developerSlug": "modon-holding",
+    "priceFrom": 15.9,
     "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "status": "Under Construction",
     "beachfront": true,
     "types": [
+      "Chalet",
       "Apartment",
       "Townhouse",
       "Twin House",
-      "Standalone Villa",
-      "Branded Residences"
+      "Standalone Villa"
     ],
     "amenities": [
-      "International marina",
-      "Championship golf courses",
-      "Hotels & branded residences",
-      "Beach clubs",
-      "Crystal lagoons",
-      "Retail districts",
-      "Business district",
-      "Sports facilities",
-      "Wellness centers",
-      "Parks",
-      "24/7 security"
+      "44 km Mediterranean Coastline",
+      "Internal International Airport",
+      "Super-yacht Marina",
+      "18-Hole Golf Courses",
+      "Equestrian Center",
+      "5G Smart Infrastructure",
+      "Business District"
     ],
     "hero": "/projects/modon-ras-el-hekma/1.jpg",
     "gallery": [
@@ -5766,45 +5758,49 @@ export const compoundsGenerated: Compound[] = [
       "/projects/modon-ras-el-hekma/9.jpg",
       "/projects/modon-ras-el-hekma/10.jpg"
     ],
-    "blurb": "Modon Ras El Hekma is the first phase of Egypt's landmark Ras El Hekma megaproject. The masterplan covers approximately 170.8 million m², planned as a fully integrated smart city with residential communities, marinas, hotels, business districts, international schools, and green corridors.",
-    "paymentPlan": "5% down + 5% after 3 months, installments up to 8 years",
-    "areaSize": "Phase 1: Wadi Yamm",
+    "blurb": "Modon Ras El Hekma by Modon Holding (Abu Dhabi ADQ) — a landmark 40,000-feddan coastal mega-city featuring 44 km of Mediterranean shoreline, internal international airport, super-yacht marina, golf courses, and Phase 1 Wadi Yemm.",
+    "paymentPlan": "5% DP + 5% after 3 months · 8 years equal installments",
+    "areaSize": "40,000 feddan (Wadi Yemm 2,000 acres)",
     "unitSizes": "124–451 m²",
-    "city": "Ras El Hekma Peninsula, North Coast, Matrouh Governorate, Egypt",
+    "city": "Km 170-220, Ras El Hekma, North Coast, Egypt",
     "highlights": [
-      "170.8 million m² mega coastal city",
-      "UAE-Egypt mega investment project",
-      "Future international airport planned",
-      "First phase: Wadi Yemm residential precinct"
+      "44 km coastline",
+      "40,000 feddan mega-city",
+      "Internal international airport",
+      "Phase 1 Wadi Yemm"
     ],
-    "type": "Mixed-use"
+    "type": "Coastal"
   },
   {
     "slug": "azha-north-coast",
     "name": "Azha North Coast",
     "destination": "ras-el-hekma",
     "km": 214,
-    "lat": 31.0992,
-    "lng": 27.9225,
-    "developer": "Madaar",
-    "developerSlug": "madaar",
-    "priceFrom": 9,
-    "deliveryYear": 2026,
+    "lat": 31.134,
+    "lng": 27.731,
+    "developer": "Madaar Developments",
+    "developerSlug": "madaar-developments",
+    "priceFrom": 11,
+    "deliveryYear": 2027,
     "status": "Under Construction",
     "beachfront": true,
     "types": [
       "Chalet",
+      "Apartment",
+      "Penthouse",
+      "Duplex",
+      "Townhouse",
       "Twin House",
-      "Villa"
+      "Standalone Villa"
     ],
     "amenities": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Co-working",
-      "24/7 Security",
-      "Cycling Track",
-      "Restaurants Strip"
+      "800 m Beachfront",
+      "45-acre Swimmable Crystal Lagoon",
+      "5-Star Boutique Hotel",
+      "Sports Club",
+      "Commercial Retail Strip",
+      "Upscale Dining",
+      "24/7 Security"
     ],
     "hero": "/projects/azha-north-coast/1.jpg",
     "gallery": [
@@ -5819,47 +5815,49 @@ export const compoundsGenerated: Compound[] = [
       "/projects/azha-north-coast/9.jpg",
       "/projects/azha-north-coast/10.jpg"
     ],
-    "blurb": "Azha North Coast sits at km 214 on the North Coast in ras el hekma, developed by Madaar. A beachfront community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "211 feddan",
+    "blurb": "Azha North Coast by Madaar Developments — a 250-feddan luxury coastal destination at Km 214 Ras El Hekma, featuring an 800m private beach, a 45-acre crystal lagoon, 5-star hotel, and fine dining.",
+    "paymentPlan": "5% down payment · 8 years equal installments",
+    "areaSize": "250 feddan",
     "unitSizes": "142–243 m²",
     "type": "Coastal",
     "highlights": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Co-working",
-      "24/7 Security",
-      "Cycling Track",
-      "Restaurants Strip"
-    ]
+      "800m private beach",
+      "45-acre swimmable lagoon",
+      "5-star boutique hotel",
+      "250 feddan masterplan"
+    ],
+    "city": "Km 214, Ras El Hekma, North Coast, Egypt"
   },
   {
     "slug": "el-masyaf",
-    "name": "El Masyaf",
+    "name": "El Masyaf North Coast",
     "destination": "ras-el-hekma",
     "km": 212,
-    "lat": 31.092,
-    "lng": 27.98,
+    "lat": 31.129,
+    "lng": 27.712,
     "developer": "M Squared",
-    "developerSlug": "m-squared",
-    "priceFrom": 15,
-    "deliveryYear": 2029,
-    "status": "Off-Plan",
+    "developerSlug": "m-squared-developments",
+    "priceFrom": 8.9,
+    "deliveryYear": 2028,
+    "status": "Under Construction",
     "beachfront": true,
     "types": [
+      "Cabana",
       "Chalet",
+      "Apartment",
+      "Penthouse",
+      "Duplex",
+      "Townhouse",
       "Twin House",
-      "Villa",
       "Standalone Villa"
     ],
     "amenities": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Pet Park",
-      "18-Hole Golf",
-      "Kids Destination"
+      "750 m Private Sandy Beach",
+      "Crystal Lagoons",
+      "Barbarossa Beach Club",
+      "Sports Facilities",
+      "Boutique Commercial Strip",
+      "Hospitality Services"
     ],
     "hero": "/projects/el-masyaf/1.jpg",
     "gallery": [
@@ -5870,48 +5868,48 @@ export const compoundsGenerated: Compound[] = [
       "/projects/el-masyaf/6.jpg",
       "/projects/el-masyaf/7.jpg"
     ],
-    "blurb": "El Masyaf sits at km 212 on the North Coast in ras el hekma, developed by M Squared. A beachfront community designed for premium summer living.",
-    "paymentPlan": "10% down payment over 8 years equal installments",
-    "areaSize": "248 feddan",
+    "blurb": "El Masyaf by M Squared — a 103-feddan coastal retreat at Km 212 Ras El Hekma with a 750m beachfront, Barbarossa Beach Club, crystal lagoons, and 80% dedicated landscaping.",
+    "paymentPlan": "5%–10% down payment · 8–10 years equal installments",
+    "areaSize": "103 feddan",
     "unitSizes": "91–264 m²",
-    "city": "Ras El Hekma, North Coast (km 212), Matrouh Governorate, Egypt",
-    "type": "Resort",
+    "city": "Km 212, Ras El Hekma, North Coast, Egypt",
+    "type": "Coastal",
     "highlights": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Pet Park",
-      "18-Hole Golf",
-      "Kids Destination"
+      "750m beachfront",
+      "Barbarossa Beach Club",
+      "80% landscape footprint",
+      "103 feddan masterplan"
     ]
   },
   {
     "slug": "naia-bay",
-    "name": "Naia Bay",
+    "name": "Naia Bay North Coast",
     "destination": "ras-el-hekma",
     "km": 212,
-    "lat": 31.12463,
-    "lng": 27.85279,
-    "developer": "Jumeirah Egypt",
-    "developerSlug": "jumeirah-egypt",
-    "priceFrom": 8,
+    "lat": 31.131,
+    "lng": 27.718,
+    "developer": "Naia Developments",
+    "developerSlug": "naia-developments",
+    "priceFrom": 9,
     "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": true,
     "types": [
       "Chalet",
+      "Penthouse",
+      "Townhouse",
       "Twin House",
-      "Villa",
-      "Studio"
+      "Standalone Villa"
     ],
     "amenities": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Gym & Spa",
-      "24/7 Security",
-      "Mosque",
-      "18-Hole Golf"
+      "Greek/Santorini Architecture",
+      "Private Sandy Beach",
+      "60,000 sqm Swimmable Crystal Lagoon",
+      "5-Star Hotel",
+      "Infinity Horizon Pools",
+      "Beach Gym",
+      "Padel Courts",
+      "Commercial Hub"
     ],
     "hero": "/projects/naia-bay/1.jpg",
     "gallery": [
@@ -5925,57 +5923,48 @@ export const compoundsGenerated: Compound[] = [
       "/projects/naia-bay/8.jpg",
       "/projects/naia-bay/9.jpg"
     ],
-    "blurb": "Naia Bay sits at km 212 on the North Coast in ras el hekma, developed by Jumeirah Egypt. A beachfront community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "285 feddan",
+    "blurb": "Naia Bay by Naia Developments — a Greek Santorini-inspired 112-feddan beach community at Km 212 Ras El Hekma, featuring a 60,000 sqm crystal lagoon, 5-star hotel, and 15% construction footprint.",
+    "paymentPlan": "7%–10% down payment · 7–9 years equal installments",
+    "areaSize": "112 feddan",
     "unitSizes": "100–285 m²",
-    "city": "Ras El Hekma, North Coast (km 212), Matrouh Governorate, Egypt",
+    "city": "Km 212, Ras El Hekma, North Coast, Egypt",
     "type": "Coastal",
     "highlights": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Gym & Spa",
-      "24/7 Security",
-      "Mosque",
-      "18-Hole Golf"
+      "Greek Santorini architecture",
+      "60,000 sqm crystal lagoon",
+      "15% low building footprint",
+      "112 feddan masterplan"
     ]
   },
   {
     "slug": "fouka-bay",
-    "name": "Fouka Bay",
+    "name": "Fouka Bay North Coast",
     "destination": "ras-el-hekma",
     "km": 211,
-    "lat": 31.067,
-    "lng": 27.917,
+    "lat": 31.127,
+    "lng": 27.705,
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
     "priceFrom": 10,
-    "deliveryYear": 2026,
+    "deliveryYear": 2025,
     "status": "Under Construction",
     "beachfront": true,
     "types": [
       "Chalet",
       "Apartment",
+      "Penthouse",
+      "Duplex",
       "Townhouse",
       "Twin House",
-      "Standalone Villa",
-      "Beach Houses"
+      "Standalone Villa"
     ],
     "amenities": [
-      "Private beach",
-      "Crystal lagoon",
-      "Beach club",
-      "Clubhouse",
-      "Swimming pools",
-      "Marina",
-      "Restaurants & cafés",
-      "Retail village",
-      "Gym & spa",
-      "Sports facilities",
-      "Kids' play areas",
-      "Water sports",
-      "24/7 security"
+      "800 m Sandy Beachfront",
+      "Crystal Lagoons by Crystal Lagoons",
+      "House of Development Commercial Strip",
+      "Casa Cook 5-Star Hotel",
+      "Beach Clubhouses",
+      "Water Sports"
     ],
     "hero": "/projects/fouka-bay/1.jpg",
     "gallery": [
@@ -5987,53 +5976,49 @@ export const compoundsGenerated: Compound[] = [
       "/projects/fouka-bay/6.jpg",
       "/projects/fouka-bay/7.jpg"
     ],
-    "blurb": "Fouka Bay is one of Egypt's most iconic luxury coastal destinations by Tatweer Misr, spread across approximately 194 acres with Greek island-inspired architecture, large swimmable lagoons, and a vibrant beachfront promenade.",
-    "paymentPlan": "5% down, installments up to 8 years",
-    "areaSize": "~220 acres",
+    "blurb": "Fouka Bay by Tatweer Misr — a 220-feddan terraced Mediterranean resort at Km 211 Ras El Hekma with an 800m sandy beach, swimmable crystal lagoons, and Casa Cook 5-star hotel.",
+    "paymentPlan": "10% down payment · 7 years equal installments",
+    "areaSize": "220 feddan",
     "unitSizes": "109–306 m²",
-    "city": "Ras El Hekma, North Coast (km 211), Matrouh Governorate, Egypt",
+    "city": "Km 211, Ras El Hekma, North Coast, Egypt",
     "highlights": [
-      "Greek island-inspired architecture",
-      "Largest crystal lagoon in Sahel",
-      "km 211 Ras El Hekma prime location",
-      "Resort-quality year-round lifestyle"
+      "800m sandy beach",
+      "Casa Cook 5-star hotel",
+      "Terraced sea view levels",
+      "220 feddan masterplan"
     ],
-    "type": "Resort"
+    "type": "Coastal"
   },
   {
     "slug": "hyde-park-north-seashore",
-    "name": "Hyde Park North - Seashore",
+    "name": "Seashore Hyde Park North",
     "destination": "ras-el-hekma",
-    "km": 210,
-    "lat": 31.1092,
-    "lng": 27.7815,
-    "developer": "Hyde Park Developments",
-    "developerSlug": "hyde-park-developments",
-    "priceFrom": 9,
+    "km": 207,
+    "lat": 31.121,
+    "lng": 27.685,
+    "developer": "Hyde Park",
+    "developerSlug": "hyde-park",
+    "priceFrom": 8.1,
     "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "status": "Under Construction",
     "beachfront": true,
     "types": [
+      "Studio",
+      "Apartment",
+      "Duplex",
+      "Penthouse",
       "Chalet",
-      "Hotel Apartment",
       "Townhouse",
       "Twin House",
       "Standalone Villa"
     ],
     "amenities": [
-      "Private beach",
-      "Crystal lagoons",
-      "Beach club",
-      "Swimming pools",
-      "Clubhouse",
-      "Gym & spa",
-      "Restaurants & cafés",
-      "Retail promenade",
-      "Sports courts",
-      "Kids' play areas",
-      "Walking trails",
-      "Boutique hotel",
-      "24/7 security"
+      "550 m Sandy Beachfront",
+      "25+ Beach-Entry Pools",
+      "Signature Beach Clubhouses",
+      "Commercial Strip",
+      "Boutique Hotel",
+      "Sports Courts"
     ],
     "hero": "/projects/hyde-park-north-seashore/1.jpg",
     "gallery": [
@@ -6047,17 +6032,18 @@ export const compoundsGenerated: Compound[] = [
       "/projects/hyde-park-north-seashore/8.jpg",
       "/projects/hyde-park-north-seashore/9.jpg"
     ],
-    "blurb": "Hyde Park North Coast (Seashore) is a premium beachfront destination designed around natural lagoons, luxury residences, and a pristine Mediterranean shoreline, offering a resort-style environment suitable for both vacations and year-round living.",
-    "paymentPlan": "5% down, installments up to 8 years",
-    "areaSize": "~240 acres",
+    "blurb": "Seashore (Hyde Park North) by Hyde Park — a 240-feddan terraced resort at Km 207 Ras El Hekma featuring 32m elevations, a 550m beach, 25+ pools, and fully finished residences.",
+    "paymentPlan": "5% down payment · 8 years equal installments",
+    "areaSize": "240 feddan",
     "unitSizes": "118–327 m²",
-    "city": "Ras El Hekma, North Coast (km 210), Matrouh Governorate, Egypt",
+    "city": "Km 207, Ras El Hekma, North Coast, Egypt",
     "highlights": [
-      "km 210 prime Ras El Hekma location",
-      "Pristine Mediterranean beachfront",
-      "Hyde Park quality delivery"
+      "550m sandy beach",
+      "32m terraced elevation",
+      "25+ beach-entry pools",
+      "240 feddan masterplan"
     ],
-    "type": "Resort"
+    "type": "Coastal"
   },
   {
     "slug": "la-vista-ras-el-hekma",
@@ -6261,36 +6247,34 @@ export const compoundsGenerated: Compound[] = [
   },
   {
     "slug": "lyv",
-    "name": "Lyv",
+    "name": "LYV Caesar Ras El Hekma",
     "destination": "ras-el-hekma",
     "km": 200,
-    "lat": 31.0801,
-    "lng": 27.9898,
+    "lat": 31.108,
+    "lng": 27.558,
     "developer": "Gates Developments",
     "developerSlug": "gates-developments",
-    "priceFrom": 13,
-    "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "priceFrom": 7.5,
+    "deliveryYear": 2028,
+    "status": "Under Construction",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Chalet",
-      "Beach House",
+      "Duplex",
+      "Penthouse",
       "Townhouse",
       "Twin House",
       "Standalone Villa"
     ],
     "amenities": [
-      "Private beach",
-      "Beach club",
-      "Swimming pools",
-      "Crystal lagoons",
-      "Clubhouse",
-      "Restaurants & cafés",
-      "Retail area",
-      "Gym",
-      "Sports courts",
-      "Kids' areas",
-      "24/7 security"
+      "400 m Sandy Beach",
+      "55,000 sqm Swimmable Crystal Lagoon",
+      "21,000 sqm Swimming Pools",
+      "Boutique Hotel",
+      "Elite Clubhouses",
+      "Retail District",
+      "Sports Arena"
     ],
     "hero": "/projects/lyv/1.jpg",
     "gallery": [
@@ -6301,16 +6285,17 @@ export const compoundsGenerated: Compound[] = [
       "/projects/lyv/5.jpg",
       "/projects/lyv/6.jpg"
     ],
-    "blurb": "LYV Caesar is a luxury beachfront development by Gates Developments in Ras El Hekma, inspired by Mediterranean coastal living with contemporary residences, direct beach access, crystal lagoons, and panoramic sea views adjacent to Caesar by SODIC.",
-    "paymentPlan": "5% down, installments up to 8 years",
-    "areaSize": "268 feddan",
+    "blurb": "LYV Caesar by Gates Developments — a 206-feddan Mediterranean resort at Km 200 Ras El Hekma with 38m sea elevations, a 55,000 sqm crystal lagoon, and 21,000 sqm pool expanses.",
+    "paymentPlan": "0%–5% down payment · 8–10 years equal installments",
+    "areaSize": "206 feddan",
     "unitSizes": "121–224 m²",
-    "city": "Ras El Hekma, North Coast (km 200), Matrouh Governorate, Egypt",
-    "type": "Resort",
+    "city": "Km 200, Ras El Hekma, North Coast, Egypt",
+    "type": "Coastal",
     "highlights": [
-      "km 200 adjacent to Caesar SODIC",
-      "Mediterranean coastal architecture",
-      "Crystal lagoons & private beach"
+      "55,000 sqm crystal lagoon",
+      "38m sea view elevation",
+      "Adjacent to Caesar SODIC",
+      "206 feddan masterplan"
     ]
   },
   {
@@ -13138,6 +13123,50 @@ export const compoundsGenerated: Compound[] = [
       "Premium master community",
       "Lush landscapes",
       "Strategic New Cairo location"
+    ]
+  },
+  {
+    "slug": "hacienda-west",
+    "name": "Hacienda West",
+    "destination": "ras-el-hekma",
+    "city": "Km 200, Ras El Hekma, North Coast, Egypt",
+    "lat": 31.109,
+    "lng": 27.562,
+    "km": 200,
+    "developer": "Palm Hills Developments",
+    "developerSlug": "palm-hills-developments",
+    "priceFrom": 15,
+    "paymentPlan": "5%–10% down payment · 7–8 years equal installments",
+    "areaSize": "137 feddan",
+    "deliveryYear": 2025,
+    "status": "Delivered",
+    "beachfront": true,
+    "types": [
+      "Chalet",
+      "Apartment",
+      "Penthouse",
+      "Duplex",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Exclusive Beachfront",
+      "Signature Beach Clubs & Dining",
+      "Swimming Pools",
+      "Sports Facilities",
+      "Boutique Commercial Area",
+      "24/7 Security"
+    ],
+    "hero": "/projects/hacienda-west/1.jpg",
+    "blurb": "Hacienda West by Palm Hills Developments — an exclusive 137-feddan coastal enclave at Km 200 Ras El Hekma with terraced sea views, signature beach clubs, and luxury summer residences.",
+    "highlights": [
+      "Km 200 prime location",
+      "Terraced sea view layout",
+      "Signature Palm Hills beach club",
+      "137 feddan masterplan"
+    ],
+    "type": "Coastal",
+    "gallery": [
+      "/projects/hacienda-west/1.jpg"
     ]
   }
 ];
