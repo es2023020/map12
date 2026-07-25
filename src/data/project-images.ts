@@ -1264,15 +1264,25 @@ export const projectImages: Record<string, string[]> = {
     "/projects/rock-ville/1.jpg",
     "/projects/rock-ville/2.jpg"
   ],
+  "sa-ada-sahel": [
+    "/projects/sa-ada-sahel/1.jpg",
+    "/projects/sa-ada-sahel/2.jpg",
+    "/projects/sa-ada-sahel/3.jpg",
+    "/projects/sa-ada-sahel/4.jpg",
+    "/projects/sa-ada-sahel/5.jpg",
+    "/projects/sa-ada-sahel/6.jpg",
+    "/projects/sa-ada-sahel/7.jpg",
+    "/projects/sa-ada-sahel/8.jpg"
+  ],
   "saada-sahel": [
-    "/projects/saada-sahel/1.jpg",
-    "/projects/saada-sahel/2.jpg",
-    "/projects/saada-sahel/3.jpg",
-    "/projects/saada-sahel/4.jpg",
-    "/projects/saada-sahel/5.jpg",
-    "/projects/saada-sahel/6.jpg",
-    "/projects/saada-sahel/7.jpg",
-    "/projects/saada-sahel/8.jpg"
+    "/projects/sa-ada-sahel/1.jpg",
+    "/projects/sa-ada-sahel/2.jpg",
+    "/projects/sa-ada-sahel/3.jpg",
+    "/projects/sa-ada-sahel/4.jpg",
+    "/projects/sa-ada-sahel/5.jpg",
+    "/projects/sa-ada-sahel/6.jpg",
+    "/projects/sa-ada-sahel/7.jpg",
+    "/projects/sa-ada-sahel/8.jpg"
   ],
   "sadaf": [
     "/projects/sadaf/1.jpg",
@@ -1722,24 +1732,24 @@ export const projectImages: Record<string, string[]> = {
     "/projects/ogami/8.jpg"
   ],
   "saada-north-coast": [
-    "/projects/saada-sahel/1.jpg",
-    "/projects/saada-sahel/2.jpg",
-    "/projects/saada-sahel/3.jpg",
-    "/projects/saada-sahel/4.jpg",
-    "/projects/saada-sahel/5.jpg",
-    "/projects/saada-sahel/6.jpg",
-    "/projects/saada-sahel/7.jpg",
-    "/projects/saada-sahel/8.jpg"
+    "/projects/sa-ada-sahel/1.jpg",
+    "/projects/sa-ada-sahel/2.jpg",
+    "/projects/sa-ada-sahel/3.jpg",
+    "/projects/sa-ada-sahel/4.jpg",
+    "/projects/sa-ada-sahel/5.jpg",
+    "/projects/sa-ada-sahel/6.jpg",
+    "/projects/sa-ada-sahel/7.jpg",
+    "/projects/sa-ada-sahel/8.jpg"
   ],
   "saada": [
-    "/projects/saada-sahel/1.jpg",
-    "/projects/saada-sahel/2.jpg",
-    "/projects/saada-sahel/3.jpg",
-    "/projects/saada-sahel/4.jpg",
-    "/projects/saada-sahel/5.jpg",
-    "/projects/saada-sahel/6.jpg",
-    "/projects/saada-sahel/7.jpg",
-    "/projects/saada-sahel/8.jpg"
+    "/projects/sa-ada-sahel/1.jpg",
+    "/projects/sa-ada-sahel/2.jpg",
+    "/projects/sa-ada-sahel/3.jpg",
+    "/projects/sa-ada-sahel/4.jpg",
+    "/projects/sa-ada-sahel/5.jpg",
+    "/projects/sa-ada-sahel/6.jpg",
+    "/projects/sa-ada-sahel/7.jpg",
+    "/projects/sa-ada-sahel/8.jpg"
   ],
   "vie": [
     "/projects/vie/1.jpg"

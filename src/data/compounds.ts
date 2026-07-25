@@ -230,7 +230,6 @@ const extraRaw: Array<{
   // HELIOPOLIS
   { name: "Heliopark", destination: "heliopolis", lat: 30.103, lng: 31.355, developer: "Heliopolis Company", price: 7, year: 2025 },
   { name: "New Heliopolis", destination: "heliopolis", lat: 30.140, lng: 31.420, developer: "Heliopolis Company for Housing and Development", price: 6, year: 2024, hero: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80", gallery: ["https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80"] },
-  { name: "Sheraton Residences", destination: "heliopolis", lat: 30.095, lng: 31.345, developer: "Tabarak Holding", price: 8, year: 2025 },
   // AIN SOKHNA
   { name: "Telal Sokhna", destination: "ain-sokhna", lat: 29.605, lng: 32.335, developer: "Roya Developments", price: 7, year: 2025, beach: true, type: "Resort" },
   { name: "IL Monte Galala", destination: "ain-sokhna", lat: 29.580, lng: 32.350, developer: "Tatweer Misr", price: 9, year: 2026, beach: true, type: "Resort" },
@@ -248,7 +247,6 @@ const extraRaw: Array<{
   { name: "Soma Bay", destination: "red-sea", lat: 26.840, lng: 33.985, developer: "Abu Soma Development", price: 14, year: 2026, beach: true, type: "Resort" },
   { name: "Sahl Hasheesh", destination: "red-sea", lat: 27.080, lng: 33.890, developer: "ERC Egypt", price: 12, year: 2025, beach: true, type: "Resort" },
   // SOUTH SINAI
-  { name: "Soma Sharm", destination: "south-sinai", lat: 27.870, lng: 34.300, developer: "Travco", price: 11, year: 2025, beach: true, type: "Resort" },
   { name: "Nabq Bay Residences", destination: "south-sinai", lat: 28.060, lng: 34.420, developer: "Pickalbatros", price: 7, year: 2024, beach: true, type: "Resort" },
   { name: "Ras Sudr Riviera", destination: "south-sinai", lat: 29.580, lng: 32.700, developer: "Al Attal Holding", price: 5, year: 2026, beach: true, type: "Resort" },
   // FAYOUM
@@ -2285,28 +2283,7 @@ const newProjects: Compound[] = [
     flagship: true,
     highlights: ["97 feddan masterplan", "Golf course views", "Mixed-use village center", "53 available units"],
   },
-  {
-    slug: "palm-hills-alexandria",
-    name: "Palm Hills Alexandria",
-    destination: "alexandria",
-    lat: 31.185, lng: 29.945,
-    developer: "Palm Hills Developments",
-    developerSlug: "palm-hills-developments",
-    priceFrom: 10,
-    deliveryYear: 2026,
-    status: "Under Construction",
-    beachfront: false,
-    types: ["Apartment", "Town House", "Villa"],
-    amenities: ["Clubhouse", "Swimming Pools", "Gym & Spa", "Kids Destination", "24/7 Security", "Cycling Track", "Landscape Parks", "Mosque"],
-    hero: modernApartImgs[6],
-    gallery: [modernApartImgs[6]],
-    blurb: "Palm Hills Alexandria brings the brand's legendary quality to Egypt's second city. Located in the heart of Alexandria's premium suburbs, the compound offers apartments, townhouses and standalone villas with full amenities for year-round Mediterranean living.",
-    paymentPlan: "10% down · 8 years equal installments",
-    areaSize: "62 feddan",
-    unitSizes: "90–384 m²",
-    type: "Residential",
-    highlights: ["Mediterranean city location", "Apartments from EGP 10M", "Villas up to EGP 78M", "40 units available"],
-  },
+  
   {
     slug: "bamboo-iii",
     name: "Bamboo III",

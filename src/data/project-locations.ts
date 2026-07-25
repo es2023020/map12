@@ -163,7 +163,6 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "ogami": { name: "Ogami", destination: "ras-el-hekma", location: "Ras El Hekma, North Coast, Matrouh", mapsUrl: "https://maps.google.com/?q=Ogami+Ras+El+Hekma+Egypt" },
   "origami": { name: "ORIGAMI", destination: "new-cairo", location: "New Cairo, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Origami+New+Cairo+Egypt" },
   "origami-golf": { name: "Origami Golf", destination: "new-cairo", location: "New Cairo, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Origami+Golf+New+Cairo+Egypt" },
-  "palm-hills-alexandria": { name: "Palm Hills Alexandria", destination: "alexandria", location: "Alexandria-Cairo Desert Road, Alexandria", mapsUrl: "https://maps.google.com/?q=Palm+Hills+Alexandria" },
   "palm-hills-jirian": { name: "Palm Hills Jirian", destination: "new-zayed", location: "6th of October City, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Palm+Hills+Jirian+October+Egypt" },
   "palm-hills-katameya": { name: "Palm Hills Katameya", destination: "new-cairo", location: "New Cairo (Katameya), Cairo Governorate,", mapsUrl: "https://maps.google.com/?q=Palm+Hills+Katameya" },
   "palm-hills-new-alamein": { name: "Palm Hills New Alamein", destination: "new-alamein", location: "New Alamein City, Matrouh Governorate,", mapsUrl: "https://maps.google.com/?q=Palm+Hills+New+Alamein+Egypt" },
@@ -181,7 +180,6 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "seashell-ras-el-hekma": { name: "Seashell Ras El Hekma", destination: "ras-el-hekma", location: "Ras El Hekma, North Coast, Matrouh", mapsUrl: "https://maps.google.com/?q=Seashell+Ras+El+Hekma+Egypt" },
   "seazen": { name: "Seazen", destination: "ras-el-hekma", location: "North Coast, Matrouh Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Seazen+North+Coast+Egypt" },
   "shamasi": { name: "Shamasi", destination: "sidi-abdelrahman", location: "Sidi Abdel Rahman, North Coast, Egypt", mapsUrl: "https://maps.google.com/?q=Shamasi+North+Coast+Egypt" },
-  "sheraton-residences": { name: "Sheraton Residences", destination: "heliopolis", location: "Heliopolis, Cairo Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Sheraton+Residences" },
   "sheya-residence": { name: "Sheya Residence", destination: "new-alamein", location: "New Alamein City, Matrouh Governorate,", mapsUrl: "https://maps.google.com/?q=Sheya+Residence+New+Alamein+Egypt" },
   "silversands": {
   "name": "Silversands",
@@ -196,7 +194,6 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "solana": { name: "Solana", destination: "new-zayed", location: "Sheikh Zayed, Giza Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Solana+Sheikh+Zayed" },
   "solare": { name: "Solare", destination: "sidi-abdelrahman", location: "North Coast (Sidi Abdel Rahman), Matrouh", mapsUrl: "https://maps.google.com/?q=Solare+North+Coast+Egypt" },
   "soma-bay": { name: "Soma Bay", destination: "red-sea", location: "Soma Bay, Hurghada, Red Sea Governorate,", mapsUrl: "https://maps.google.com/?q=Soma+Bay+Hurghada" },
-  "soma-sharm": { name: "Soma Sharm", destination: "south-sinai", location: "Sharm El Sheikh, South Sinai Governorate,", mapsUrl: "https://maps.google.com/?q=Soma+Sharm+Sharm+El+Sheikh+Egypt" },
   "soul": { name: "Soul", destination: "new-administrative-capital", location: "New Administrative Capital, Cairo", mapsUrl: "https://maps.google.com/?q=Soul+New+Capital+Egypt" },
   "south-med": { name: "South Med", destination: "ras-el-hekma", location: "North Coast, Matrouh Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=South+Med+North+Coast+Egypt" },
   "stella-di-mare": { name: "Stella di Mare", destination: "ain-sokhna", location: "Ain Sokhna, Red Sea Governorate, Egypt", mapsUrl: "https://maps.google.com/?q=Stella+di+Mare+Ain+Sokhna+Egypt" },

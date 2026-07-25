@@ -98,6 +98,7 @@ export const brochureMap: Record<string, string> = {
   "saada":                      "saada sa7el.pdf",
   "saada-sahel":                "saada sa7el.pdf",
   "saada-north-coast":          "saada sa7el.pdf",
+  "sa-ada-sahel":               "saada sa7el.pdf",
 
   // ─── D-Bay ───────────────────────────────────────────────────────────
   "d-bay":                      "Tatweer-Misr-D-bay.pdf",

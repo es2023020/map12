@@ -3648,50 +3648,6 @@ export const compoundsGenerated: Compound[] = [
     "city": "New Cairo – Fifth Settlement, Cairo Governorate, Egypt"
   },
   {
-    "slug": "palm-hills-alexandria",
-    "name": "Palm Hills Alexandria",
-    "destination": "alexandria",
-    "lat": 31.20006,
-    "lng": 29.92217,
-    "developer": "Palm Hills Developments",
-    "developerSlug": "palm-hills-developments",
-    "priceFrom": 10,
-    "deliveryYear": 2026,
-    "status": "Under Construction",
-    "beachfront": false,
-    "types": [
-      "Apartment",
-      "Town House",
-      "Villa"
-    ],
-    "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Gym & Spa",
-      "Kids Destination",
-      "24/7 Security",
-      "Cycling Track",
-      "Landscape Parks",
-      "Mosque"
-    ],
-    "hero": "/projects/palm-hills-alexandria/1.jpg",
-    "gallery": [
-      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=1600&q=80"
-    ],
-    "blurb": "Palm Hills Alexandria brings the brand's legendary quality to Egypt's second city. Located in the heart of Alexandria's premium suburbs, the compound offers apartments, townhouses and standalone villas with full amenities for year-round Mediterranean living.",
-    "paymentPlan": "10% down · 8 years equal installments",
-    "areaSize": "62 feddan",
-    "unitSizes": "90–384 m²",
-    "type": "Residential",
-    "highlights": [
-      "Mediterranean city location",
-      "Apartments from EGP 10M",
-      "Villas up to EGP 78M",
-      "40 units available"
-    ],
-    "city": "Palm Hills Alexandria, alexandria"
-  },
-  {
     "slug": "bamboo-iii",
     "name": "Bamboo III",
     "destination": "6th-october",
@@ -11288,54 +11244,6 @@ export const compoundsGenerated: Compound[] = [
     ]
   },
   {
-    "slug": "sheraton-residences",
-    "name": "Sheraton Residences",
-    "destination": "heliopolis",
-    "lat": 30.0881,
-    "lng": 31.345450000000003,
-    "developer": "Tabarak Holding",
-    "developerSlug": "tabarak-holding",
-    "priceFrom": 8,
-    "deliveryYear": 2025,
-    "status": "Under Construction",
-    "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa",
-      "Studio"
-    ],
-    "amenities": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Pet Park",
-      "Mosque",
-      "Cycling Track",
-      "Co-working"
-    ],
-    "hero": "/projects/sheraton-residences/1.jpg",
-    "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
-    ],
-    "blurb": "Sheraton Residences by Tabarak Holding — a Residential community offering refined living with full amenities and strong location advantages.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "260 feddan",
-    "unitSizes": "145–470 m²",
-    "type": "Residential",
-    "city": "Heliopolis, Cairo Governorate, Egypt",
-    "highlights": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Pet Park",
-      "Mosque",
-      "Cycling Track",
-      "Co-working"
-    ]
-  },
-  {
     "slug": "telal-sokhna",
     "name": "Telal Sokhna",
     "destination": "ain-sokhna",
@@ -12018,55 +11926,6 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "18-Hole Golf",
       "Mosque"
-    ]
-  },
-  {
-    "slug": "soma-sharm",
-    "name": "Soma Sharm",
-    "destination": "south-sinai",
-    "lat": 29.4615,
-    "lng": 34.4818,
-    "developer": "Travco",
-    "developerSlug": "travco",
-    "priceFrom": 11,
-    "deliveryYear": 2025,
-    "status": "Under Construction",
-    "beachfront": true,
-    "types": [
-      "Chalet",
-      "Twin House",
-      "Villa"
-    ],
-    "amenities": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Pet Park",
-      "Mosque",
-      "Cycling Track",
-      "Co-working"
-    ],
-    "hero": "/projects/soma-sharm/1.jpg",
-    "gallery": [
-      "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=1600&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80"
-    ],
-    "blurb": "Soma Sharm by Travco — a Resort community offering refined living with full amenities and strong location advantages.",
-    "paymentPlan": "10% down payment over 8 years equal installments",
-    "areaSize": "315 feddan",
-    "unitSizes": "130–335 m²",
-    "type": "Resort",
-    "city": "Sharm El Sheikh, South Sinai Governorate,",
-    "highlights": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Pet Park",
-      "Mosque",
-      "Cycling Track",
-      "Co-working"
     ]
   },
   {
