@@ -2562,7 +2562,7 @@ const newProjects: Compound[] = [
   {
     slug: "esse-residence",
     name: "Esse Residence",
-    destination: "sarai",
+    destination: "new-cairo",
     lat: 30.097, lng: 31.628,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",

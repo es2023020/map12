@@ -4242,7 +4242,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "esse-residence",
     "name": "Esse Residence",
-    "destination": "new-administrative-capital",
+    "destination": "new-cairo",
     "lat": 30.0067,
     "lng": 31.7543,
     "developer": "Cred Developments",
@@ -4286,7 +4286,7 @@ export const compoundsGenerated: Compound[] = [
       "Elegant contemporary architecture",
       "Smart community planning"
     ],
-    "city": "R8 District, New Administrative Capital, Egypt"
+    "city": "Cairo-Suez Road, New Cairo, Egypt (within Sarai Compound)"
   },
   {
     "slug": "rai-valleys",
