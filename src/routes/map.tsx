@@ -46,48 +46,6 @@ export const Route = createFileRoute("/map")({
 });
 
 function MapPage() {
-  const user = useStore((s) => s.user);
-  const isAdmin = user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
-
-  if (!isAdmin) {
-    return (
-      <Shell>
-        <div className="min-h-[70vh] flex flex-col items-center justify-center p-6 text-center select-none bg-background relative overflow-hidden my-12">
-          {/* Ambient glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-violet-600/5 blur-[100px] pointer-events-none" />
-          
-          <div className="max-w-md w-full space-y-6 relative z-10">
-            <div className="mx-auto h-16 w-16 rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-600 p-0.5 shadow-xl shadow-violet-500/10 animate-pulse flex items-center justify-center">
-              <div className="h-full w-full rounded-[14px] bg-slate-900 flex items-center justify-center">
-                <Lock className="h-6 w-6 text-violet-400" />
-              </div>
-            </div>
-            
-            <div className="space-y-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider text-violet-500 bg-violet-500/10 uppercase">
-                <Sparkles className="h-3 w-3 animate-spin" /> Launching Soon
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary tracking-tight">
-                Property Atlas Launching Soon
-              </h2>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-sm mx-auto">
-                The interactive map library and property coordinates atlas are currently undergoing structural layout updates. They will launch soon.
-              </p>
-            </div>
-
-            <div className="pt-4 flex justify-center">
-              <Link
-                to="/"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card text-primary font-semibold text-xs px-5 py-3 hover:bg-secondary transition-all shadow-sm"
-              >
-                <ArrowLeft className="h-4 w-4" /> Return Home
-              </Link>
-            </div>
-          </div>
-        </div>
-      </Shell>
-    );
-  }
 
   const { destination: destinationParam, dev: devParam, q: qParam } = Route.useSearch();
   const [q, setQ] = useState(qParam || "");
