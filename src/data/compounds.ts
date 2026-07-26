@@ -161,7 +161,7 @@ const cairoRaw: Array<{
   { name: "Marville", destination: "new-zayed", lat: 30.0625, lng: 31.0385, developer: "Al Marasem Developments", price: 11.0, year: 2027, hero: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80", gallery: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80"] },
 
   // NEW CAIRO / TAGAMO3
-  { name: "Mountain View iCity New Cairo", destination: "new-cairo", lat: 30.0120, lng: 31.4980, developer: "Mountain View", price: 12, year: 2026, hero: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80", gallery: ["https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80", "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80"] },
+  { name: "Mountain View iCity New Cairo", destination: "northern-expansion", lat: 30.0120, lng: 31.4980, developer: "Mountain View", price: 12, year: 2026, hero: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80", gallery: ["https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80", "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80"] },
   { name: "Mivida", destination: "new-cairo", lat: 30.0120, lng: 31.5150, developer: "Emaar Misr", price: 18, year: 2024 },
   { name: "Hyde Park New Cairo", destination: "new-cairo", lat: 30.0035, lng: 31.5085, developer: "Hyde Park", price: 14, year: 2026 },
   { name: "Eastown", destination: "new-cairo", lat: 30.0125, lng: 31.4990, developer: "SODIC", price: 9, year: 2024 },
@@ -210,7 +210,7 @@ const extraRaw: Array<{
 }> = [
   // 6TH OCTOBER
   { name: "Palm Hills October", destination: "6th-october", lat: 29.965, lng: 30.940, developer: "Palm Hills Developments", price: 9, year: 2024 },
-  { name: "Mountain View iCity October", destination: "6th-october", lat: 29.985, lng: 30.910, developer: "Mountain View", price: 11, year: 2026, hero: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80", gallery: ["https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80", "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80"] },
+  { name: "Mountain View iCity October", destination: "northern-expansion", lat: 29.985, lng: 30.910, developer: "Mountain View", price: 11, year: 2026, hero: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80", gallery: ["https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80", "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80"] },
   { name: "Zayed 2000", destination: "6th-october", lat: 29.978, lng: 30.955, developer: "Wadi Degla", price: 7, year: 2023 },
   { name: "Sun Capital", destination: "6th-october", lat: 29.940, lng: 30.890, developer: "Arabia Holding", price: 6, year: 2025, hero: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80", gallery: ["https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80"] },
   { name: "Badya", destination: "6th-october", lat: 29.910, lng: 30.880, developer: "Palm Hills Developments", price: 8, year: 2027, type: "Mixed-use" },
@@ -473,7 +473,7 @@ const newProjects: Compound[] = [
   {
     slug: "belle-vie",
     name: "Belle Vie",
-    destination: "6th-october",
+    destination: "new-zayed",
     lat: 29.97, lng: 30.93,
     developer: "Emaar Misr",
     developerSlug: "emaar-misr",
@@ -827,7 +827,7 @@ const newProjects: Compound[] = [
   {
     slug: "nmq",
     name: "NMQ",
-    destination: "sheikh-zayed",
+    destination: "eastern-expansion",
     lat: 30.045, lng: 30.975,
     developer: "Arkan Palm",
     developerSlug: "arkan-palm",
@@ -1406,7 +1406,7 @@ const newProjects: Compound[] = [
   {
     slug: "keeva",
     name: "Keeva",
-    destination: "6th-october",
+    destination: "eastern-expansion",
     lat: 30.015, lng: 31.005,
     developer: "Al Ahly Sabbour",
     developerSlug: "al-ahly-sabbour",
@@ -1432,7 +1432,7 @@ const newProjects: Compound[] = [
   {
     slug: "31-west",
     name: "31 West",
-    destination: "6th-october",
+    destination: "eastern-expansion",
     lat: 29.965, lng: 30.925,
     developer: "M Squared",
     developerSlug: "m-squared",
@@ -1902,7 +1902,7 @@ const newProjects: Compound[] = [
   {
     slug: "swanlake-west",
     name: "Swanlake West",
-    destination: "6th-october",
+    destination: "eastern-expansion",
     lat: 29.968, lng: 30.912,
     developer: "Hassan Allam Properties",
     developerSlug: "hassan-allam-properties",
@@ -2242,7 +2242,7 @@ const newProjects: Compound[] = [
   {
     slug: "palm-parks",
     name: "Palm Parks",
-    destination: "6th-october",
+    destination: "eastern-expansion",
     lat: 29.962, lng: 30.932,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -2310,7 +2310,7 @@ const newProjects: Compound[] = [
   {
     slug: "the-crown-extension",
     name: "The Crown Extension",
-    destination: "new-cairo",
+    destination: "eastern-expansion",
     lat: 30.018, lng: 31.483,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -2332,7 +2332,7 @@ const newProjects: Compound[] = [
   {
     slug: "palm-hills-jirian",
     name: "Palm Hills Jirian",
-    destination: "mostakbal-city",
+    destination: "new-zayed",
     lat: 30.075, lng: 31.658,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -2378,7 +2378,7 @@ const newProjects: Compound[] = [
   {
     slug: "px",
     name: "PX",
-    destination: "sheikh-zayed",
+    destination: "eastern-expansion",
     lat: 30.042, lng: 30.928,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -2696,7 +2696,7 @@ const newProjects: Compound[] = [
   {
     slug: "elm-tree-park",
     name: "ELM TREE PARK",
-    destination: "new-cairo",
+    destination: "northern-expansion",
     lat: 30.12, lng: 31.61,
     developer: "Madinet Masr",
     developerSlug: "madinet-masr",
@@ -3183,7 +3183,7 @@ const additionalLaunches: Compound[] = [
   {
     slug: "one33",
     name: "ONE33",
-    destination: "sheikh-zayed",
+    destination: "northern-expansion",
     lat: 30.044, lng: 30.965,
     developer: "Arkan Palm",
     developerSlug: "arkan-palm",

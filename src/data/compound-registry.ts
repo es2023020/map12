@@ -31,7 +31,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.027925,
     developer: "M Squared Developments",
     city: "6th of October City, Giza, Egypt",
-    destination: "6th-october",
+    destination: "eastern-expansion",
     blurb: "31 West is a modern gated residential community spanning approximately 31 acres in 6th of October City, designed around open green landscapes, water features, and pedestrian-friendly spaces. The project combines contemporary architecture with low-density planning to provide a balanced lifestyle for families and professionals.",
     paymentPlan: "5% down, installments up to 10 years",
     amenities: ["Clubhouse", "Swimming pools", "Landscaped gardens", "Water features", "Jogging & cycling tracks", "Kids' play areas", "Commercial area", "Restaurants & cafés", "Medical facilities", "24/7 security & CCTV", "Underground parking"],
@@ -516,7 +516,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Azha, ain-sokhna",
   },
   "elm-tree-park": {
-    destination: "new-zayed",
+    destination: "northern-expansion",
     lat: 30.0824,
     lng: 30.8819,
     developer: "Westway Developments",
@@ -862,7 +862,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: ["7 terraced levels with sea views", "715-meter Mediterranean beachfront", "km 184 Ras El Hekma location"]
   },
   "keeva": {
-    destination: "new-zayed",
+    destination: "eastern-expansion",
     lat: 30.0794,
     lng: 30.8698,
     developer: "Al Ahly Sabbour Developments",
@@ -1222,10 +1222,11 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Palm Hills Alexandria, alexandria",
   },
   "palm-hills-jirian": {
+    destination: "new-zayed",
     lat: 29.95333,
     lng: 30.9215,
     developer: "Palm Hills Developments",
-    city: "Palm Hills Jirian, 6th-of-october-city",
+    city: "New Zayed, Giza Governorate, Egypt",
   },
   "palm-hills-new-alamein": {
     destination: "new-alamein",
@@ -2050,7 +2051,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
 
   "mountain-view-icity": {
     name: "Mountain View iCity New Cairo",
-    destination: "new-cairo",
+    destination: "northern-expansion",
     lat: 30.052,
     lng: 31.562,
     developer: "Mountain View",

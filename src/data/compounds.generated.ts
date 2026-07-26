@@ -876,7 +876,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "nmq",
     "name": "NMQ",
-    "destination": "sheikh-zayed",
+    "destination": "eastern-expansion",
     "lat": 30.045,
     "lng": 30.975,
     "developer": "Arkan Palm",
@@ -2008,7 +2008,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "keeva",
     "name": "Keeva",
-    "destination": "6th-october",
+    "destination": "eastern-expansion",
     "lat": 30.015,
     "lng": 31.005,
     "developer": "Al Ahly Sabbour",
@@ -2054,7 +2054,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "31-west",
     "name": "31 West",
-    "destination": "6th-october",
+    "destination": "eastern-expansion",
     "lat": 30.018031,
     "lng": 31.027925,
     "developer": "M Squared Developments",
@@ -2984,7 +2984,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "swanlake-west",
     "name": "Swanlake West",
-    "destination": "6th-october",
+    "destination": "eastern-expansion",
     "lat": 29.968,
     "lng": 30.912,
     "developer": "Hassan Allam Properties",
@@ -3574,7 +3574,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "palm-parks",
     "name": "Palm Parks",
-    "destination": "6th-october",
+    "destination": "eastern-expansion",
     "lat": 29.9468,
     "lng": 30.92008,
     "developer": "Palm Hills Developments",
@@ -3722,7 +3722,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "the-crown-extension",
     "name": "The Crown Extension",
-    "destination": "6th-october",
+    "destination": "eastern-expansion",
     "lat": 29.95441,
     "lng": 30.91992,
     "developer": "Palm Hills Developments",
@@ -3866,7 +3866,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "px",
     "name": "PX",
-    "destination": "new-cairo",
+    "destination": "eastern-expansion",
     "lat": 30.03306,
     "lng": 31.47773,
     "developer": "Palm Hills Developments",
@@ -4555,7 +4555,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "elm-tree-park",
     "name": "ELM TREE PARK",
-    "destination": "new-cairo",
+    "destination": "northern-expansion",
     "lat": 30.12,
     "lng": 31.61,
     "developer": "Madinet Masr",
@@ -9133,7 +9133,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "marville",
     "name": "Marville",
-    "destination": "new-cairo",
+    "destination": "new-zayed",
     "lat": 30.0286,
     "lng": 31.4756,
     "developer": "Al Marasem Developments",
@@ -9180,7 +9180,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "mountain-view-icity-new-cairo",
     "name": "Mountain View iCity New Cairo",
-    "destination": "new-cairo",
+    "destination": "northern-expansion",
     "lat": 30.012,
     "lng": 31.498,
     "developer": "Mountain View",
@@ -10472,7 +10472,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "mountain-view-icity-october",
     "name": "Mountain View iCity October",
-    "destination": "6th-october",
+    "destination": "northern-expansion",
     "lat": 29.985,
     "lng": 30.91,
     "developer": "Mountain View",
@@ -12409,7 +12409,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "elm-tree-new-zayed",
     "name": "Elm Tree New Zayed",
-    "destination": "new-zayed",
+    "destination": "northern-expansion",
     "lat": 30.0824,
     "lng": 30.8819,
     "developer": "Westway Developments",
