@@ -1057,7 +1057,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "the-hillage",
     "name": "The Hillage",
-    "destination": "ras-el-hekma",
+    "destination": "sheikh-zayed",
     "lat": 31.1,
     "lng": 27.95,
     "developer": "Madaar",
@@ -2055,8 +2055,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "31-west",
     "name": "31 West",
     "destination": "eastern-expansion",
-    "lat": 30.018031,
-    "lng": 31.027925,
+    "lat": 30.0037794,
+    "lng": 31.0212979,
     "developer": "M Squared Developments",
     "developerSlug": "m-squared-developments",
     "priceFrom": 15,
@@ -2573,7 +2573,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "el-patio-town",
     "name": "El Patio Town",
-    "destination": "6th-settlement",
+    "destination": "new-cairo",
     "lat": 30.015,
     "lng": 31.505,
     "developer": "La Vista Developments",
@@ -3617,8 +3617,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "97-hills",
     "name": "97 Hills",
     "destination": "new-cairo",
-    "lat": 30.0464,
-    "lng": 31.6037,
+    "lat": 30.0459489,
+    "lng": 31.6061923,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
     "priceFrom": 27,
@@ -4461,7 +4461,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "talala",
     "name": "TALALA",
-    "destination": "ras-el-hekma",
+    "destination": "heliopolis",
     "lat": 30.02664,
     "lng": 31.47967,
     "developer": "Talala",
@@ -9908,7 +9908,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "zed-east",
     "name": "Zed East",
-    "destination": "new-cairo",
+    "destination": "6th-settlement",
     "lat": 30.012,
     "lng": 31.528,
     "developer": "ORA Developers",
@@ -10008,7 +10008,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "sodic-east",
     "name": "Sodic East",
-    "destination": "eastern-expansion",
+    "destination": "heliopolis",
     "lat": 30.125,
     "lng": 31.625,
     "developer": "SODIC",
@@ -10663,7 +10663,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "il-bosco-city",
     "name": "Il Bosco City",
-    "destination": "mostakbal-city",
+    "destination": "new-administrative-capital",
     "lat": 30.0106,
     "lng": 31.7096,
     "developer": "Misr Italia Properties",
@@ -11532,7 +11532,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "azzar-island",
     "name": "Azzar Island",
-    "destination": "ain-sokhna",
+    "destination": "ras-el-hekma",
     "lat": 29.569200000000002,
     "lng": 32.2992,
     "developer": "Reedy Group",
@@ -12453,7 +12453,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "grova-east-hills",
     "name": "Grova East Hills",
-    "destination": "6th-settlement",
+    "destination": "new-cairo",
     "lat": 30.008,
     "lng": 31.542,
     "developer": "Hassan Allam Holding",

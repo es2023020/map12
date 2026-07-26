@@ -27,8 +27,8 @@ export type CompoundRegistryEntry = {
 
 export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "31-west": {
-    lat: 30.018031,
-    lng: 31.027925,
+    lat: 30.0037794,
+    lng: 31.0212979,
     developer: "M Squared Developments",
     city: "6th of October City, Giza, Egypt",
     destination: "eastern-expansion",
@@ -39,8 +39,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: ["Contemporary luxury living", "Low-density 31-acre compound", "Large landscaped parks", "Outdoor fitness and cycling lifestyle"]
   },
   "97-hills": {
-    lat: 30.0464,
-    lng: 31.6037,
+    lat: 30.0459489,
+    lng: 31.6061923,
     developer: "Palm Hills Developments",
     city: "New Cairo – Fifth Settlement, Cairo Governorate, Egypt",
     destination: "new-cairo",
@@ -498,6 +498,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "el-patio-sola": {
   },
   "el-patio-town": {
+    destination: "new-cairo",
   },
   "el-patio-vera": {
   },
@@ -1571,6 +1572,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 28.95228,
   },
   "the-hillage": {
+    destination: "sheikh-zayed",
   },
   "the-islands": {
     destination: "new-alamein",
@@ -1758,7 +1760,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   },
 
   "il-bosco-city": {
-    destination: "mostakbal-city",
+    destination: "new-administrative-capital",
     lat: 30.0106,
     lng: 31.7096,
     developer: "Misr Italia Properties",
@@ -2113,7 +2115,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
 
   "zed-east": {
     name: "Zed East",
-    destination: "new-cairo",
+    destination: "6th-settlement",
     lat: 30.012,
     lng: 31.528,
     developer: "ORA Developers",
@@ -2127,7 +2129,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
 
   "grova-east-hills": {
     name: "Grova East Hills",
-    destination: "6th-settlement",
+    destination: "new-cairo",
     lat: 30.008,
     lng: 31.542,
     developer: "Hassan Allam Holding",
