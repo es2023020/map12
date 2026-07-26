@@ -36,6 +36,7 @@ export type Compound = {
   brochureFileName?: string;
   brochureType?: string;
   brochureDeleted?: boolean;
+  masterPlanUrl?: string;
 };
 
 const beachImgs = [
@@ -95,7 +96,7 @@ const sahelRaw: SahelInput[] = [
   ["June", 194, "ras-el-hekma", "SODIC", 14, 2027, true],
   ["Direction White", 193, "ras-el-hekma", "Arabella Developments", 8, 2026, true],
   ["Cali Coast Ras El Hekma", 193, "ras-el-hekma", "Maven Developments", 10, 2027, true],
-  ["The Med", 192, "ras-el-hekma", "PRE Developments", 11, 2027, true],
+  ["The Med", 192, "ras-el-hekma", "People and Places", 11, 2027, true],
   ["Jefaira", 190, "ras-el-hekma", "Inertia", 12, 2026, true],
   ["The C", 188, "ras-el-hekma", "Ilcazar", 9, 2026, true],
   ["Youd", 187, "ras-el-hekma", "Al Ahly Sabbour", 8, 2028, true],

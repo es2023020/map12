@@ -66,7 +66,8 @@ export const compoundsGenerated: Compound[] = [
       "Self-contained master plan"
     ],
     "city": "New Zayed City, West Cairo, Egypt",
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/belle vie.png"
   },
   {
     "slug": "cairo-gate",
@@ -118,7 +119,8 @@ export const compoundsGenerated: Compound[] = [
       "Located on Cairo-Alex Desert Road",
       "Boutique retail & residential blend"
     ],
-    "city": "Sheikh Zayed City, Giza, Egypt"
+    "city": "Sheikh Zayed City, Giza, Egypt",
+    "masterPlanUrl": "/Masterplans/cairo gate.jpg"
   },
   {
     "slug": "marassi",
@@ -180,7 +182,8 @@ export const compoundsGenerated: Compound[] = [
     ],
     "city": "Sidi Abdel Rahman, North Coast (km 126), Matrouh Governorate, Egypt",
     "km": 126,
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/marrassi.jpg"
   },
   {
     "slug": "mivida",
@@ -233,7 +236,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready by 2028"
     ],
     "city": "Mivida, new-cairo",
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/mivida.jpg"
   },
   {
     "slug": "soul",
@@ -284,7 +288,8 @@ export const compoundsGenerated: Compound[] = [
     ],
     "city": "Ras El Hekma, North Coast (km 180), Matrouh Governorate, Egypt",
     "km": 180,
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/soul.png"
   },
   {
     "slug": "uptown-cairo",
@@ -343,7 +348,8 @@ export const compoundsGenerated: Compound[] = [
       "1,200-acre integrated masterplan",
       "Emaar international quality"
     ],
-    "city": "Mokattam, Cairo, Egypt"
+    "city": "Mokattam, Cairo, Egypt",
+    "masterPlanUrl": "/Masterplans/uptown cairo.jpg"
   },
   {
     "slug": "o-west",
@@ -402,7 +408,8 @@ export const compoundsGenerated: Compound[] = [
     "brochureFileName": "O-west.pdf",
     "brochureType": "application/pdf",
     "city": "6th of October City, Giza, Egypt",
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/o west.jpg"
   },
   {
     "slug": "kinda-residence",
@@ -442,7 +449,8 @@ export const compoundsGenerated: Compound[] = [
       "Madinet Masr signature design",
       "Premium amenities & spaces",
       "Ready by 2028"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/kinda.jpg"
   },
   {
     "slug": "sarai",
@@ -489,7 +497,8 @@ export const compoundsGenerated: Compound[] = [
     ],
     "brochureUrl": "/brochures/Sarai.pdf",
     "brochureFileName": "Sarai.pdf",
-    "brochureType": "application/pdf"
+    "brochureType": "application/pdf",
+    "masterPlanUrl": "/Masterplans/sarai.jpg"
   },
   {
     "slug": "ogami",
@@ -547,7 +556,8 @@ export const compoundsGenerated: Compound[] = [
       "Wellness-centered resort lifestyle"
     ],
     "city": "Ras El Hekma, North Coast (km 205), Matrouh Governorate, Egypt",
-    "km": 205
+    "km": 205,
+    "masterPlanUrl": "/Masterplans/ogami.jpg"
   },
   {
     "slug": "badya",
@@ -606,7 +616,8 @@ export const compoundsGenerated: Compound[] = [
       "Integrated university & schools",
       "Green mobility & walkability"
     ],
-    "city": "6th of October City, Giza, Egypt"
+    "city": "6th of October City, Giza, Egypt",
+    "masterPlanUrl": "/Masterplans/badya.jpg"
   },
   {
     "slug": "hacienda-blue",
@@ -658,7 +669,8 @@ export const compoundsGenerated: Compound[] = [
       "Pristine Sidi Heneish location",
       "Tranquil coastal destination"
     ],
-    "city": "Ras El Hekma, North Coast, Egypt"
+    "city": "Ras El Hekma, North Coast, Egypt",
+    "masterPlanUrl": "/Masterplans/hacienda blue.jpg"
   },
   {
     "slug": "hacienda-waters",
@@ -710,7 +722,8 @@ export const compoundsGenerated: Compound[] = [
       "Adjacent to Hacienda communities",
       "Vibrant outdoor lifestyle"
     ],
-    "city": "Ras El Hekma, North Coast, Egypt"
+    "city": "Ras El Hekma, North Coast, Egypt",
+    "masterPlanUrl": "/Masterplans/hacienda waters.jpg"
   },
   {
     "slug": "palm-hills-new-cairo",
@@ -753,7 +766,8 @@ export const compoundsGenerated: Compound[] = [
       "Palm Hills Developments signature design",
       "Premium amenities & spaces",
       "Ready by 2028"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/palm hills new cairo.jpg"
   },
   {
     "slug": "hacienda-bay",
@@ -807,7 +821,8 @@ export const compoundsGenerated: Compound[] = [
     ],
     "city": "Sidi Abdel Rahman, North Coast (km 200), Matrouh Governorate, Egypt",
     "km": 200,
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/hacienda bay.jpg"
   },
   {
     "slug": "hacienda-heneish",
@@ -855,7 +870,8 @@ export const compoundsGenerated: Compound[] = [
       "420 acres masterplan",
       "Turquoise water beachfront"
     ],
-    "city": "Sidi Heneish, North Coast, Egypt"
+    "city": "Sidi Heneish, North Coast, Egypt",
+    "masterPlanUrl": "/Masterplans/hacienda heniesh.jpg"
   },
   {
     "slug": "nmq",
@@ -1138,7 +1154,8 @@ export const compoundsGenerated: Compound[] = [
       "Al Ahly Sabbour premium build"
     ],
     "city": "Ras El Hekma, North Coast (km 194), Matrouh Governorate, Egypt",
-    "km": 194
+    "km": 194,
+    "masterPlanUrl": "/Masterplans/gaia.jpg"
   },
   {
     "slug": "creekview",
@@ -1568,7 +1585,8 @@ export const compoundsGenerated: Compound[] = [
       "Smart community design",
       "Lush public spaces",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/chapters residence.jpg"
   },
   {
     "slug": "vea-new-cairo",
@@ -1608,7 +1626,8 @@ export const compoundsGenerated: Compound[] = [
       "Serene natural integration",
       "Luxury lifestyle amenities",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/VEA.jpg"
   },
   {
     "slug": "vie-collective",
@@ -2029,7 +2048,8 @@ export const compoundsGenerated: Compound[] = [
       "Al Ahly Sabbour quality delivery",
       "Near Sphinx Airport & Sheikh Zayed"
     ],
-    "city": "New Zayed City, West Cairo, Egypt"
+    "city": "New Zayed City, West Cairo, Egypt",
+    "masterPlanUrl": "/Masterplans/keeva.jpg"
   },
   {
     "slug": "31-west",
@@ -2079,7 +2099,8 @@ export const compoundsGenerated: Compound[] = [
       "Large landscaped parks",
       "Outdoor fitness and cycling lifestyle"
     ],
-    "city": "6th of October City, Giza, Egypt"
+    "city": "6th of October City, Giza, Egypt",
+    "masterPlanUrl": "/Masterplans/31 west.jpg"
   },
   {
     "slug": "business-district",
@@ -2591,7 +2612,8 @@ export const compoundsGenerated: Compound[] = [
       "Massive 330-acre masterplan",
       "Villas and townhouses only",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/patio town.jpg"
   },
   {
     "slug": "patio-casa",
@@ -3218,7 +3240,8 @@ export const compoundsGenerated: Compound[] = [
       "Villas only community",
       "Ready 2028"
     ],
-    "city": "Telal, north-coast-sidi-abdel-rahman"
+    "city": "Telal, north-coast-sidi-abdel-rahman",
+    "masterPlanUrl": "/Masterplans/telal.jpg"
   },
   {
     "slug": "rivers",
@@ -3645,7 +3668,8 @@ export const compoundsGenerated: Compound[] = [
       "Resort-style living",
       "Privacy-focused neighborhoods"
     ],
-    "city": "New Cairo – Fifth Settlement, Cairo Governorate, Egypt"
+    "city": "New Cairo – Fifth Settlement, Cairo Governorate, Egypt",
+    "masterPlanUrl": "/Masterplans/97 hills.jpg"
   },
   {
     "slug": "bamboo-iii",
@@ -3784,7 +3808,8 @@ export const compoundsGenerated: Compound[] = [
       "465 available units",
       "Entry from EGP 7.9M"
     ],
-    "city": "New Zayed City, West Cairo, Egypt"
+    "city": "New Zayed City, West Cairo, Egypt",
+    "masterPlanUrl": "/Masterplans/jirian.jpg"
   },
   {
     "slug": "palm-hills-one",
@@ -4075,7 +4100,8 @@ export const compoundsGenerated: Compound[] = [
       "Near Green River & Diplomatic District",
       "New Capital premium location"
     ],
-    "city": "New Administrative Capital, Egypt"
+    "city": "New Administrative Capital, Egypt",
+    "masterPlanUrl": "/Masterplans/grand valley.jpg"
   },
   {
     "slug": "mountain-view-chillout",
@@ -4132,7 +4158,8 @@ export const compoundsGenerated: Compound[] = [
       "October City prime location",
       "Near Juhayna Square & Mall of Arabia"
     ],
-    "city": "6th of October City, Giza, Egypt"
+    "city": "6th of October City, Giza, Egypt",
+    "masterPlanUrl": "/Masterplans/chillout.jpg"
   },
   {
     "slug": "mountain-view-crystal",
@@ -4185,7 +4212,8 @@ export const compoundsGenerated: Compound[] = [
       "Mountain View signature quality"
     ],
     "city": "Sidi Abdel Rahman, North Coast, Matrouh Governorate, Egypt",
-    "km": 120
+    "km": 120,
+    "masterPlanUrl": "/Masterplans/crysta.jpg"
   },
   {
     "slug": "mountain-view-mv4",
@@ -4237,7 +4265,8 @@ export const compoundsGenerated: Compound[] = [
       "Close to Ring Road & Cairo Festival City",
       "Mountain View design quality"
     ],
-    "city": "New Cairo, Cairo, Egypt"
+    "city": "New Cairo, Cairo, Egypt",
+    "masterPlanUrl": "/Masterplans/m4.jpg"
   },
   {
     "slug": "esse-residence",
@@ -4477,7 +4506,8 @@ export const compoundsGenerated: Compound[] = [
       "Entry from EGP 4M",
       "10-year payment plan"
     ],
-    "city": "TALALA, new-cairo"
+    "city": "TALALA, new-cairo",
+    "masterPlanUrl": "/Masterplans/Talala.jpg"
   },
   {
     "slug": "sheya-residence",
@@ -4707,7 +4737,8 @@ export const compoundsGenerated: Compound[] = [
       "Crystal lagoon centrepiece",
       "SODIC signature design"
     ],
-    "city": "New Zayed City, West Cairo, Egypt"
+    "city": "New Zayed City, West Cairo, Egypt",
+    "masterPlanUrl": "/Masterplans/VYE.jpg"
   },
   {
     "slug": "botanica",
@@ -4868,7 +4899,8 @@ export const compoundsGenerated: Compound[] = [
       "Fully finished",
       "Cash discount up to 50%"
     ],
-    "city": "Ras El Hekma, North Coast (km 186), Matrouh Governorate, Egypt"
+    "city": "Ras El Hekma, North Coast (km 186), Matrouh Governorate, Egypt",
+    "masterPlanUrl": "/Masterplans/youd.jpg"
   },
   {
     "slug": "district-5",
@@ -4962,7 +4994,8 @@ export const compoundsGenerated: Compound[] = [
       "1BR from EGP 8.46M",
       "Villa up to EGP 72M"
     ],
-    "city": "Crescent Walk, new-administrative-capital"
+    "city": "Crescent Walk, new-administrative-capital",
+    "masterPlanUrl": "/Masterplans/cresent walk.jpg"
   },
   {
     "slug": "ramla",
@@ -5016,7 +5049,8 @@ export const compoundsGenerated: Compound[] = [
       "Azza Fahmy Beach Clubhouse",
       "402 feddan masterplan"
     ],
-    "city": "Km 215, Ras El Hekma, North Coast, Egypt"
+    "city": "Km 215, Ras El Hekma, North Coast, Egypt",
+    "masterPlanUrl": "/Masterplans/Ramla.jpg"
   },
   {
     "slug": "aeon",
@@ -5070,7 +5104,8 @@ export const compoundsGenerated: Compound[] = [
       "Walkable luxury lifestyle",
       "Resort-inspired environment"
     ],
-    "city": "6th of October City, Giza, Egypt"
+    "city": "6th of October City, Giza, Egypt",
+    "masterPlanUrl": "/Masterplans/aeon.jpg"
   },
   {
     "slug": "at-east",
@@ -5118,7 +5153,8 @@ export const compoundsGenerated: Compound[] = [
       "Modern suburban living",
       "Green community on Middle Ring Road"
     ],
-    "city": "Mostakbal City, New Cairo, Egypt"
+    "city": "Mostakbal City, New Cairo, Egypt",
+    "masterPlanUrl": "/Masterplans/at east.jpg"
   },
   {
     "slug": "the-mornings",
@@ -5349,7 +5385,8 @@ export const compoundsGenerated: Compound[] = [
       "International Yacht Marina"
     ],
     "type": "Resort",
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/alam el roum.jpg"
   },
   {
     "slug": "jamila",
@@ -5400,7 +5437,8 @@ export const compoundsGenerated: Compound[] = [
       "Marriott 5-star hotel",
       "700m private beach"
     ],
-    "type": "Resort"
+    "type": "Resort",
+    "masterPlanUrl": "/Masterplans/jamila.jpg"
   },
   {
     "slug": "almaza-bay",
@@ -5459,7 +5497,8 @@ export const compoundsGenerated: Compound[] = [
       "Vibrant coastal lifestyle"
     ],
     "type": "Resort",
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/almaza bay.jpg"
   },
   {
     "slug": "silversands",
@@ -5563,7 +5602,8 @@ export const compoundsGenerated: Compound[] = [
       "Tiered sea views",
       "Sidi Heneish beachfront"
     ],
-    "type": "Resort"
+    "type": "Resort",
+    "masterPlanUrl": "/Masterplans/marsa boughash.jpg"
   },
   {
     "slug": "beit-al-bahr",
@@ -5615,7 +5655,8 @@ export const compoundsGenerated: Compound[] = [
       "Tiered beachfront phases",
       "Inside El Abd Resort"
     ],
-    "type": "Resort"
+    "type": "Resort",
+    "masterPlanUrl": "/Masterplans/beit el bahr.jpg"
   },
   {
     "slug": "marbay-ras-el-hekma",
@@ -5666,7 +5707,8 @@ export const compoundsGenerated: Compound[] = [
       "km 191 prime Ras El Hekma location",
       "Al Marasem premium build quality",
       "Crystal lagoons and private beach"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/marbay.jpg"
   },
   {
     "slug": "hacienda-ras-el-hekma",
@@ -5715,7 +5757,8 @@ export const compoundsGenerated: Compound[] = [
       "5-star international hotels",
       "Palm Hills flagship"
     ],
-    "type": "Coastal"
+    "type": "Coastal",
+    "masterPlanUrl": "/Masterplans/Hacienda ras El Hdekma .avif"
   },
   {
     "slug": "modon-ras-el-hekma",
@@ -5826,7 +5869,8 @@ export const compoundsGenerated: Compound[] = [
       "5-star boutique hotel",
       "250 feddan masterplan"
     ],
-    "city": "Km 214, Ras El Hekma, North Coast, Egypt"
+    "city": "Km 214, Ras El Hekma, North Coast, Egypt",
+    "masterPlanUrl": "/Masterplans/azha north coast.jpg"
   },
   {
     "slug": "el-masyaf",
@@ -5934,7 +5978,8 @@ export const compoundsGenerated: Compound[] = [
       "60,000 sqm crystal lagoon",
       "15% low building footprint",
       "112 feddan masterplan"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/naia bay.jpg"
   },
   {
     "slug": "fouka-bay",
@@ -6043,7 +6088,8 @@ export const compoundsGenerated: Compound[] = [
       "25+ beach-entry pools",
       "240 feddan masterplan"
     ],
-    "type": "Coastal"
+    "type": "Coastal",
+    "masterPlanUrl": "/Masterplans/seashore.jpg"
   },
   {
     "slug": "la-vista-ras-el-hekma",
@@ -6095,7 +6141,8 @@ export const compoundsGenerated: Compound[] = [
       "km 204 close to Caesar & June",
       "Private beach and crystal views",
       "La Vista flagship North Coast resort"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/la vista ras elhikma.jpg"
   },
   {
     "slug": "caesar-sodic",
@@ -6139,7 +6186,8 @@ export const compoundsGenerated: Compound[] = [
     "highlights": [
       "Exclusive Caesar neighborhood",
       "SODIC premium master plan"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/caesar.jpg"
   },
   {
     "slug": "koun",
@@ -6187,7 +6235,8 @@ export const compoundsGenerated: Compound[] = [
       "Waterfront units",
       "Mabany Edris"
     ],
-    "type": "Resort"
+    "type": "Resort",
+    "masterPlanUrl": "/Masterplans/koun.jpg"
   },
   {
     "slug": "caesar-bay",
@@ -6296,7 +6345,8 @@ export const compoundsGenerated: Compound[] = [
       "38m sea view elevation",
       "Adjacent to Caesar SODIC",
       "206 feddan masterplan"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/lyv.jpg"
   },
   {
     "slug": "mountain-view-ras-el-hekma",
@@ -6353,7 +6403,8 @@ export const compoundsGenerated: Compound[] = [
       "500 acres at km 200 Ras El Hekma",
       "Swimmable crystal lagoons & private beach"
     ],
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/mv ras elhikma.jpg"
   },
   {
     "slug": "solare",
@@ -6409,7 +6460,8 @@ export const compoundsGenerated: Compound[] = [
       "386 acres at km 199 Ras El Hekma",
       "Terraced design with panoramic sea views",
       "Misr Italia premium quality delivery"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/SOLARE.jpg"
   },
   {
     "slug": "swan-lake",
@@ -6505,7 +6557,8 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Cycling Track",
       "Restaurants Strip"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/seashell.jpg"
   },
   {
     "slug": "june",
@@ -6620,7 +6673,8 @@ export const compoundsGenerated: Compound[] = [
       "Terraced panoramic sea views",
       "Ras El Hekma premium location",
       "Swimmable crystal lagoons"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/direction white.jpg"
   },
   {
     "slug": "the-med",
@@ -6629,8 +6683,8 @@ export const compoundsGenerated: Compound[] = [
     "km": 192,
     "lat": 31.12156,
     "lng": 27.85458,
-    "developer": "PRE Developments",
-    "developerSlug": "pre-developments",
+    "developer": "People and Places",
+    "developerSlug": "people-and-places",
     "priceFrom": 11,
     "deliveryYear": 2027,
     "status": "Off-Plan",
@@ -6654,7 +6708,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/the-med/3.jpg",
       "/projects/the-med/4.jpg"
     ],
-    "blurb": "The Med sits at km 192 on the North Coast in ras el hekma, developed by PRE Developments. A beachfront community designed for premium summer living.",
+    "blurb": "The Med sits at km 192 on the North Coast in ras el hekma, developed by People and Places. A beachfront community designed for premium summer living.",
     "paymentPlan": "10% down payment over 8 years equal installments",
     "areaSize": "214 feddan",
     "unitSizes": "133–392 m²",
@@ -6666,7 +6720,8 @@ export const compoundsGenerated: Compound[] = [
       "Beach Bar",
       "Kids Destination",
       "Cycling Track"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/the med.jpg"
   },
   {
     "slug": "jefaira",
@@ -6724,7 +6779,8 @@ export const compoundsGenerated: Compound[] = [
       "Inertia premium build quality"
     ],
     "type": "Resort",
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/jefaira.jpg"
   },
   {
     "slug": "the-c",
@@ -6776,7 +6832,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Cycling Track",
       "Marina"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/the c.jpg"
   },
   {
     "slug": "salt",
@@ -6887,7 +6944,8 @@ export const compoundsGenerated: Compound[] = [
       "7 terraced levels with sea views",
       "715-meter Mediterranean beachfront",
       "km 184 Ras El Hekma location"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/katameya coast.png"
   },
   {
     "slug": "safia",
@@ -6942,7 +7000,8 @@ export const compoundsGenerated: Compound[] = [
       "Smart Home",
       "24/7 Security",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/safia.jpg"
   },
   {
     "slug": "sa-ada-sahel",
@@ -6992,7 +7051,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "18-Hole Golf",
       "Mosque"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/saada.jpg"
   },
   {
     "slug": "azzar-islands",
@@ -7042,7 +7102,8 @@ export const compoundsGenerated: Compound[] = [
       "Low-density private living",
       "Panoramic sea views",
       "km 182 Ras El Hekma"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/azzar island.jpg"
   },
   {
     "slug": "lvls",
@@ -7089,7 +7150,8 @@ export const compoundsGenerated: Compound[] = [
       "Near Al Dabaa Axis & Sphinx Airport",
       "Mountain View signature design quality"
     ],
-    "type": "Coastal"
+    "type": "Coastal",
+    "masterPlanUrl": "/Masterplans/lvls.jpg"
   },
   {
     "slug": "d-bay",
@@ -7147,7 +7209,8 @@ export const compoundsGenerated: Compound[] = [
       "Direct access from Dabaa Axis",
       "Crystal clear swimming lagoons"
     ],
-    "type": "Resort"
+    "type": "Resort",
+    "masterPlanUrl": "/Masterplans/d bay.jpg"
   },
   {
     "slug": "d-o-s-e",
@@ -7196,7 +7259,8 @@ export const compoundsGenerated: Compound[] = [
       "Pet Park",
       "18-Hole Golf",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/dose.jpg"
   },
   {
     "slug": "the-waterway",
@@ -7254,7 +7318,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Private Beach",
       "18-Hole Golf"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/the waterway northcoast.jpg"
   },
   {
     "slug": "seazen",
@@ -7309,7 +7374,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Cycling Track",
       "Pet Park"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/seazen.jpg"
   },
   {
     "slug": "la-vista-bay",
@@ -7360,7 +7426,8 @@ export const compoundsGenerated: Compound[] = [
       "km 180 North Coast beachfront",
       "Mediterranean architectural style",
       "La Vista premium built quality"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/lavista bay.jpg"
   },
   {
     "slug": "la-vista-bay-east",
@@ -7522,7 +7589,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Gym & Spa",
       "24/7 Security"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/south med.jpg"
   },
   {
     "slug": "playa",
@@ -7675,7 +7743,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "18-Hole Golf",
       "Mosque"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/Zoya.jpg"
   },
   {
     "slug": "telal",
@@ -7884,7 +7953,8 @@ export const compoundsGenerated: Compound[] = [
       "Interconnected lagoons",
       "Established active resort"
     ],
-    "type": "Resort"
+    "type": "Resort",
+    "masterPlanUrl": "/Masterplans/amwaj.jpg"
   },
   {
     "slug": "seashell",
@@ -7993,7 +8063,8 @@ export const compoundsGenerated: Compound[] = [
       "104 feddans of crystal lagoons",
       "Located in prime Sidi Abdel Rahman",
       "Active beach & aqua park"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/bianchii illios.jpg"
   },
   {
     "slug": "shamasi",
@@ -8042,7 +8113,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Cycling Track",
       "Pet Park"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/shamassi.jpg"
   },
   {
     "slug": "masaya",
@@ -8091,7 +8163,8 @@ export const compoundsGenerated: Compound[] = [
       "Beach Bar",
       "Kids Destination",
       "Cycling Track"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/masaya.jpg"
   },
   {
     "slug": "stella-heights",
@@ -8143,7 +8216,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "24/7 Security",
       "Gym & Spa"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/stella heights.jpg"
   },
   {
     "slug": "stella-sidi-abdel-rahman",
@@ -8245,7 +8319,8 @@ export const compoundsGenerated: Compound[] = [
       "Prime Sidi Abdel Rahman beach",
       "Mature landscape & spacious plots",
       "Classic Sahel family destination"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/diplo 3.jpg"
   },
   {
     "slug": "zahra",
@@ -8299,7 +8374,8 @@ export const compoundsGenerated: Compound[] = [
       "Smart Home",
       "24/7 Security",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/Zahra.jpg"
   },
   {
     "slug": "il-latini-city-edge",
@@ -8350,7 +8426,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Private Beach",
       "Mosque"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/illatini city edge.jpg"
   },
   {
     "slug": "il-latini-sed",
@@ -8594,7 +8671,8 @@ export const compoundsGenerated: Compound[] = [
       "Pet Park",
       "18-Hole Golf",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/mazarine.jpg"
   },
   {
     "slug": "the-gate-new-alamein",
@@ -9146,7 +9224,8 @@ export const compoundsGenerated: Compound[] = [
       "Crystal Lagoon",
       "Clubhouse",
       "Private Beach"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/icity cairo.jpg"
   },
   {
     "slug": "hyde-park-new-cairo",
@@ -9415,7 +9494,8 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Private Beach",
       "Gym & Spa"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/katameya heights.jpg"
   },
   {
     "slug": "katameya-dunes",
@@ -9463,7 +9543,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Cycling Track",
       "Marina"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/katameya dunes.jpg"
   },
   {
     "slug": "al-rehab",
@@ -9568,7 +9649,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Private Beach",
       "24/7 Security"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/madinaty.jpg"
   },
   {
     "slug": "cairo-festival-city",
@@ -9671,7 +9753,8 @@ export const compoundsGenerated: Compound[] = [
       "Smart Home",
       "24/7 Security",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/Palm hills katameya jpg"
   },
   {
     "slug": "stone-residence",
@@ -9868,7 +9951,8 @@ export const compoundsGenerated: Compound[] = [
       "Zed Sports Club & central park",
       "Naguib Sawiris signature development"
     ],
-    "type": "Residential"
+    "type": "Residential",
+    "masterPlanUrl": "/Masterplans/ZED east.jpg"
   },
   {
     "slug": "taj-city",
@@ -10080,7 +10164,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Cycling Track",
       "Pet Park"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/allegria.jpg"
   },
   {
     "slug": "westown-residences",
@@ -10572,7 +10657,8 @@ export const compoundsGenerated: Compound[] = [
       "Family-oriented community",
       "Modern suburban living",
       "Low-density setting"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/bombooo.jpg"
   },
   {
     "slug": "il-bosco-city",
@@ -10731,7 +10817,8 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Cycling Track",
       "Restaurants Strip"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/anakaji.jpg"
   },
   {
     "slug": "capital-heights",
@@ -10830,7 +10917,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Private Beach",
       "18-Hole Golf"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/city oval.jpg"
   },
   {
     "slug": "iconic-tower-district",
@@ -11076,7 +11164,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Kids Destination",
       "Smart Home"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/aliva.jpg"
   },
   {
     "slug": "la-vista-city",
@@ -11437,7 +11526,8 @@ export const compoundsGenerated: Compound[] = [
       "Pet Park",
       "18-Hole Golf",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/murano.jpg"
   },
   {
     "slug": "azzar-island",
@@ -11589,7 +11679,8 @@ export const compoundsGenerated: Compound[] = [
       "Cascading terraces with panoramic sea views",
       "km 204 Ras El Hekma prime location",
       "Hotel & spa integrated resort"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/lavista casada.jpg"
   },
   {
     "slug": "azha-sokhna",
@@ -11640,7 +11731,8 @@ export const compoundsGenerated: Compound[] = [
       "Luxury Red Sea coastal resort",
       "380 acres of master-planned beauty",
       "Vibrant marina and crystal lagoons"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/Azha.jpg"
   },
   {
     "slug": "blumar-sokhna",
@@ -11688,7 +11780,8 @@ export const compoundsGenerated: Compound[] = [
       "Beachfront terraced resort",
       "Panoramic Red Sea views",
       "Established summer & weekend getaway"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/blumar.jpg"
   },
   {
     "slug": "el-gouna",
@@ -11805,7 +11898,8 @@ export const compoundsGenerated: Compound[] = [
       "3.4 million m² integrated resort town",
       "15 minutes from Hurghada Airport",
       "Panoramic Red Sea hillside views"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/makadi.jpg"
   },
   {
     "slug": "soma-bay",
