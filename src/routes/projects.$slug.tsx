@@ -32,23 +32,68 @@ function LogoBadge({ src, name, className = "" }: { src: string; name: string; c
   );
 }
 
+import { buildProjectSchema, buildBreadcrumbSchema } from "@/lib/seo";
+import { getProjectSEO } from "@/lib/seo-templates";
+
 export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
     const c = compoundBySlug(params.slug);
     if (!c) throw notFound();
     return c;
   },
-  head: ({ loaderData }) => ({
-    meta: loaderData
-      ? [
-          { title: `${loaderData.name} — ${loaderData.developer} | PropTrack` },
-          { name: "description", content: loaderData.blurb },
-          { property: "og:title", content: `${loaderData.name} | PropTrack` },
-          { property: "og:description", content: loaderData.blurb },
-          { property: "og:image", content: loaderData.hero },
-        ]
-      : [],
-  }),
+  head: ({ loaderData }) => {
+    if (!loaderData) return { meta: [] };
+    const seo = getProjectSEO(loaderData, "en");
+
+    const projectSchema = buildProjectSchema({
+      name: loaderData.name,
+      slug: loaderData.slug,
+      developer: loaderData.developer,
+      developerSlug: loaderData.developerSlug,
+      destination: loaderData.destination,
+      priceFrom: loaderData.priceFrom,
+      deliveryYear: loaderData.deliveryYear,
+      hero: loaderData.hero,
+      blurb: loaderData.blurb,
+      status: loaderData.status,
+    });
+
+    const breadcrumbSchema = buildBreadcrumbSchema([
+      { name: "Home", item: "/" },
+      { name: "Destinations", item: "/destinations" },
+      { name: loaderData.destination, item: `/destinations/${loaderData.destination}` },
+      { name: loaderData.name, item: `/projects/${loaderData.slug}` },
+    ]);
+
+    return {
+      meta: [
+        { title: seo.title },
+        { name: "description", content: seo.metaDesc },
+        { name: "robots", content: "index, follow" },
+        { property: "og:title", content: seo.title },
+        { property: "og:description", content: seo.metaDesc },
+        { property: "og:image", content: loaderData.hero },
+        { property: "og:url", content: seo.canonical },
+        { property: "og:type", content: "website" },
+      ],
+      links: [
+        { rel: "canonical", href: seo.canonical },
+        { rel: "alternate", hrefLang: "en", href: seo.alternateEn },
+        { rel: "alternate", hrefLang: "ar", href: seo.alternateAr },
+        { rel: "alternate", hrefLang: "x-default", href: seo.alternateEn },
+      ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(projectSchema),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(breadcrumbSchema),
+        },
+      ],
+    };
+  },
   component: CompoundPage,
 });
 

@@ -222,24 +222,23 @@ function MapPage() {
             </div>
 
             {/* Search */}
-            <div className="space-y-1">
-              <div className="relative">
-                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                <Input
-                  value={q}
-                  onChange={(e) => setQ(e.target.value)}
-                  placeholder="Search project, developer, keywords…"
-                  className="pl-9 text-sm"
-                />
-                {q && (
-                  <button onClick={() => setQ("")} className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-0.5 text-muted-foreground hover:text-primary">
-                    <X className="h-3.5 w-3.5" />
-                  </button>
-                )}
-              </div>
-              <p className="text-[10px] text-muted-foreground leading-normal px-1">
-                Try searching <span className="italic font-medium text-primary">"3 beds sea view"</span> or <span className="italic font-medium text-primary">"chalet ready"</span>.
-              </p>
+            <div className="relative">
+              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+                placeholder="Search projects, developers, locations..."
+                className="pl-9 pr-8 text-sm h-10 rounded-xl"
+              />
+              {q && (
+                <button
+                  type="button"
+                  onClick={() => setQ("")}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+                >
+                  <X className="h-3.5 w-3.5" />
+                </button>
+              )}
             </div>
 
             {/* Expandable filters */}

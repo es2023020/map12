@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /auth
+Disallow: /auth/
+Disallow: /dashboard
+Disallow: /dashboard/
 
 Sitemap: https://proptrack1.vercel.app/sitemap.xml

@@ -10,6 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SitemapProjectsDotxmlRouteImport } from './routes/sitemap-projects[.]xml'
+import { Route as SitemapDevelopersDotxmlRouteImport } from './routes/sitemap-developers[.]xml'
+import { Route as SitemapDestinationsDotxmlRouteImport } from './routes/sitemap-destinations[.]xml'
+import { Route as SitemapBlogDotxmlRouteImport } from './routes/sitemap-blog[.]xml'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as NewLaunchesRouteImport } from './routes/new-launches'
@@ -30,6 +34,8 @@ import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
 import { Route as DevelopersIndexRouteImport } from './routes/developers.index'
 import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as ArIndexRouteImport } from './routes/ar.index'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as DevelopersSlugRouteImport } from './routes/developers.$slug'
 import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
@@ -42,15 +48,44 @@ import { Route as DashboardCompareRouteImport } from './routes/dashboard.compare
 import { Route as DashboardCampaignsRouteImport } from './routes/dashboard.campaigns'
 import { Route as DashboardBillingRouteImport } from './routes/dashboard.billing'
 import { Route as DashboardAiAssistantRouteImport } from './routes/dashboard.ai-assistant'
+import { Route as ComparePairRouteImport } from './routes/compare.$pair'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiUploadAssetRouteImport } from './routes/api.upload-asset'
 import { Route as ApiSaveUsersRouteImport } from './routes/api.save-users'
 import { Route as ApiSaveDatabaseRouteImport } from './routes/api.save-database'
 import { Route as ApiBrochuresMatchRouteImport } from './routes/api.brochures-match'
 import { Route as UnitsProjectSlugTypeSlugRouteImport } from './routes/units.$projectSlug.$typeSlug'
+import { Route as DestinationsSlugFilterRouteImport } from './routes/destinations.$slug.$filter'
+import { Route as ArProjectsSlugRouteImport } from './routes/ar.projects.$slug'
+import { Route as ArDevelopersSlugRouteImport } from './routes/ar.developers.$slug'
+import { Route as ArDestinationsSlugRouteImport } from './routes/ar.destinations.$slug'
+import { Route as ArComparePairRouteImport } from './routes/ar.compare.$pair'
+import { Route as ArDestinationsSlugFilterRouteImport } from './routes/ar.destinations.$slug.$filter'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapProjectsDotxmlRoute = SitemapProjectsDotxmlRouteImport.update({
+  id: '/sitemap-projects.xml',
+  path: '/sitemap-projects.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDevelopersDotxmlRoute = SitemapDevelopersDotxmlRouteImport.update({
+  id: '/sitemap-developers.xml',
+  path: '/sitemap-developers.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDestinationsDotxmlRoute =
+  SitemapDestinationsDotxmlRouteImport.update({
+    id: '/sitemap-destinations.xml',
+    path: '/sitemap-destinations.xml',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SitemapBlogDotxmlRoute = SitemapBlogDotxmlRouteImport.update({
+  id: '/sitemap-blog.xml',
+  path: '/sitemap-blog.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsRoute = ProjectsRouteImport.update({
@@ -153,6 +188,16 @@ const DashboardIndexRoute = DashboardIndexRouteImport.update({
   path: '/',
   getParentRoute: () => DashboardRoute,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArIndexRoute = ArIndexRouteImport.update({
+  id: '/ar/',
+  path: '/ar/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -213,6 +258,16 @@ const DashboardAiAssistantRoute = DashboardAiAssistantRouteImport.update({
   path: '/ai-assistant',
   getParentRoute: () => DashboardRoute,
 } as any)
+const ComparePairRoute = ComparePairRouteImport.update({
+  id: '/$pair',
+  path: '/$pair',
+  getParentRoute: () => CompareRoute,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiUploadAssetRoute = ApiUploadAssetRouteImport.update({
   id: '/api/upload-asset',
   path: '/api/upload-asset',
@@ -239,6 +294,37 @@ const UnitsProjectSlugTypeSlugRoute =
     path: '/units/$projectSlug/$typeSlug',
     getParentRoute: () => rootRouteImport,
   } as any)
+const DestinationsSlugFilterRoute = DestinationsSlugFilterRouteImport.update({
+  id: '/$filter',
+  path: '/$filter',
+  getParentRoute: () => DestinationsSlugRoute,
+} as any)
+const ArProjectsSlugRoute = ArProjectsSlugRouteImport.update({
+  id: '/ar/projects/$slug',
+  path: '/ar/projects/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArDevelopersSlugRoute = ArDevelopersSlugRouteImport.update({
+  id: '/ar/developers/$slug',
+  path: '/ar/developers/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArDestinationsSlugRoute = ArDestinationsSlugRouteImport.update({
+  id: '/ar/destinations/$slug',
+  path: '/ar/destinations/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArComparePairRoute = ArComparePairRouteImport.update({
+  id: '/ar/compare/$pair',
+  path: '/ar/compare/$pair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArDestinationsSlugFilterRoute =
+  ArDestinationsSlugFilterRouteImport.update({
+    id: '/$filter',
+    path: '/$filter',
+    getParentRoute: () => ArDestinationsSlugRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -247,7 +333,7 @@ export interface FileRoutesByFullPath {
   '/agency-partnership': typeof AgencyPartnershipRoute
   '/auth': typeof AuthRoute
   '/calculator': typeof CalculatorRoute
-  '/compare': typeof CompareRoute
+  '/compare': typeof CompareRouteWithChildren
   '/contact': typeof ContactRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/destinations': typeof DestinationsRouteWithChildren
@@ -257,11 +343,17 @@ export interface FileRoutesByFullPath {
   '/new-launches': typeof NewLaunchesRoute
   '/pricing': typeof PricingRoute
   '/projects': typeof ProjectsRouteWithChildren
+  '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
+  '/sitemap-destinations.xml': typeof SitemapDestinationsDotxmlRoute
+  '/sitemap-developers.xml': typeof SitemapDevelopersDotxmlRoute
+  '/sitemap-projects.xml': typeof SitemapProjectsDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/brochures-match': typeof ApiBrochuresMatchRoute
   '/api/save-database': typeof ApiSaveDatabaseRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
@@ -271,14 +363,22 @@ export interface FileRoutesByFullPath {
   '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/team': typeof DashboardTeamRoute
-  '/destinations/$slug': typeof DestinationsSlugRoute
+  '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/ar/': typeof ArIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/destinations/': typeof DestinationsIndexRoute
   '/developers/': typeof DevelopersIndexRoute
   '/projects/': typeof ProjectsIndexRoute
+  '/ar/compare/$pair': typeof ArComparePairRoute
+  '/ar/destinations/$slug': typeof ArDestinationsSlugRouteWithChildren
+  '/ar/developers/$slug': typeof ArDevelopersSlugRoute
+  '/ar/projects/$slug': typeof ArProjectsSlugRoute
+  '/destinations/$slug/$filter': typeof DestinationsSlugFilterRoute
   '/units/$projectSlug/$typeSlug': typeof UnitsProjectSlugTypeSlugRoute
+  '/ar/destinations/$slug/$filter': typeof ArDestinationsSlugFilterRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -287,17 +387,23 @@ export interface FileRoutesByTo {
   '/agency-partnership': typeof AgencyPartnershipRoute
   '/auth': typeof AuthRoute
   '/calculator': typeof CalculatorRoute
-  '/compare': typeof CompareRoute
+  '/compare': typeof CompareRouteWithChildren
   '/contact': typeof ContactRoute
   '/developer-partnership': typeof DeveloperPartnershipRoute
   '/map': typeof MapRoute
   '/new-launches': typeof NewLaunchesRoute
   '/pricing': typeof PricingRoute
+  '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
+  '/sitemap-destinations.xml': typeof SitemapDestinationsDotxmlRoute
+  '/sitemap-developers.xml': typeof SitemapDevelopersDotxmlRoute
+  '/sitemap-projects.xml': typeof SitemapProjectsDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/brochures-match': typeof ApiBrochuresMatchRoute
   '/api/save-database': typeof ApiSaveDatabaseRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
@@ -307,14 +413,22 @@ export interface FileRoutesByTo {
   '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/team': typeof DashboardTeamRoute
-  '/destinations/$slug': typeof DestinationsSlugRoute
+  '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/ar': typeof ArIndexRoute
+  '/blog': typeof BlogIndexRoute
   '/dashboard': typeof DashboardIndexRoute
   '/destinations': typeof DestinationsIndexRoute
   '/developers': typeof DevelopersIndexRoute
   '/projects': typeof ProjectsIndexRoute
+  '/ar/compare/$pair': typeof ArComparePairRoute
+  '/ar/destinations/$slug': typeof ArDestinationsSlugRouteWithChildren
+  '/ar/developers/$slug': typeof ArDevelopersSlugRoute
+  '/ar/projects/$slug': typeof ArProjectsSlugRoute
+  '/destinations/$slug/$filter': typeof DestinationsSlugFilterRoute
   '/units/$projectSlug/$typeSlug': typeof UnitsProjectSlugTypeSlugRoute
+  '/ar/destinations/$slug/$filter': typeof ArDestinationsSlugFilterRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -324,7 +438,7 @@ export interface FileRoutesById {
   '/agency-partnership': typeof AgencyPartnershipRoute
   '/auth': typeof AuthRoute
   '/calculator': typeof CalculatorRoute
-  '/compare': typeof CompareRoute
+  '/compare': typeof CompareRouteWithChildren
   '/contact': typeof ContactRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/destinations': typeof DestinationsRouteWithChildren
@@ -334,11 +448,17 @@ export interface FileRoutesById {
   '/new-launches': typeof NewLaunchesRoute
   '/pricing': typeof PricingRoute
   '/projects': typeof ProjectsRouteWithChildren
+  '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
+  '/sitemap-destinations.xml': typeof SitemapDestinationsDotxmlRoute
+  '/sitemap-developers.xml': typeof SitemapDevelopersDotxmlRoute
+  '/sitemap-projects.xml': typeof SitemapProjectsDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/brochures-match': typeof ApiBrochuresMatchRoute
   '/api/save-database': typeof ApiSaveDatabaseRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
@@ -348,14 +468,22 @@ export interface FileRoutesById {
   '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/team': typeof DashboardTeamRoute
-  '/destinations/$slug': typeof DestinationsSlugRoute
+  '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
   '/developers/$slug': typeof DevelopersSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/ar/': typeof ArIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/destinations/': typeof DestinationsIndexRoute
   '/developers/': typeof DevelopersIndexRoute
   '/projects/': typeof ProjectsIndexRoute
+  '/ar/compare/$pair': typeof ArComparePairRoute
+  '/ar/destinations/$slug': typeof ArDestinationsSlugRouteWithChildren
+  '/ar/developers/$slug': typeof ArDevelopersSlugRoute
+  '/ar/projects/$slug': typeof ArProjectsSlugRoute
+  '/destinations/$slug/$filter': typeof DestinationsSlugFilterRoute
   '/units/$projectSlug/$typeSlug': typeof UnitsProjectSlugTypeSlugRoute
+  '/ar/destinations/$slug/$filter': typeof ArDestinationsSlugFilterRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -376,11 +504,17 @@ export interface FileRouteTypes {
     | '/new-launches'
     | '/pricing'
     | '/projects'
+    | '/sitemap-blog.xml'
+    | '/sitemap-destinations.xml'
+    | '/sitemap-developers.xml'
+    | '/sitemap-projects.xml'
     | '/sitemap.xml'
     | '/api/brochures-match'
     | '/api/save-database'
     | '/api/save-users'
     | '/api/upload-asset'
+    | '/blog/$slug'
+    | '/compare/$pair'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
     | '/dashboard/campaigns'
@@ -393,11 +527,19 @@ export interface FileRouteTypes {
     | '/destinations/$slug'
     | '/developers/$slug'
     | '/projects/$slug'
+    | '/ar/'
+    | '/blog/'
     | '/dashboard/'
     | '/destinations/'
     | '/developers/'
     | '/projects/'
+    | '/ar/compare/$pair'
+    | '/ar/destinations/$slug'
+    | '/ar/developers/$slug'
+    | '/ar/projects/$slug'
+    | '/destinations/$slug/$filter'
     | '/units/$projectSlug/$typeSlug'
+    | '/ar/destinations/$slug/$filter'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -412,11 +554,17 @@ export interface FileRouteTypes {
     | '/map'
     | '/new-launches'
     | '/pricing'
+    | '/sitemap-blog.xml'
+    | '/sitemap-destinations.xml'
+    | '/sitemap-developers.xml'
+    | '/sitemap-projects.xml'
     | '/sitemap.xml'
     | '/api/brochures-match'
     | '/api/save-database'
     | '/api/save-users'
     | '/api/upload-asset'
+    | '/blog/$slug'
+    | '/compare/$pair'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
     | '/dashboard/campaigns'
@@ -429,11 +577,19 @@ export interface FileRouteTypes {
     | '/destinations/$slug'
     | '/developers/$slug'
     | '/projects/$slug'
+    | '/ar'
+    | '/blog'
     | '/dashboard'
     | '/destinations'
     | '/developers'
     | '/projects'
+    | '/ar/compare/$pair'
+    | '/ar/destinations/$slug'
+    | '/ar/developers/$slug'
+    | '/ar/projects/$slug'
+    | '/destinations/$slug/$filter'
     | '/units/$projectSlug/$typeSlug'
+    | '/ar/destinations/$slug/$filter'
   id:
     | '__root__'
     | '/'
@@ -452,11 +608,17 @@ export interface FileRouteTypes {
     | '/new-launches'
     | '/pricing'
     | '/projects'
+    | '/sitemap-blog.xml'
+    | '/sitemap-destinations.xml'
+    | '/sitemap-developers.xml'
+    | '/sitemap-projects.xml'
     | '/sitemap.xml'
     | '/api/brochures-match'
     | '/api/save-database'
     | '/api/save-users'
     | '/api/upload-asset'
+    | '/blog/$slug'
+    | '/compare/$pair'
     | '/dashboard/ai-assistant'
     | '/dashboard/billing'
     | '/dashboard/campaigns'
@@ -469,11 +631,19 @@ export interface FileRouteTypes {
     | '/destinations/$slug'
     | '/developers/$slug'
     | '/projects/$slug'
+    | '/ar/'
+    | '/blog/'
     | '/dashboard/'
     | '/destinations/'
     | '/developers/'
     | '/projects/'
+    | '/ar/compare/$pair'
+    | '/ar/destinations/$slug'
+    | '/ar/developers/$slug'
+    | '/ar/projects/$slug'
+    | '/destinations/$slug/$filter'
     | '/units/$projectSlug/$typeSlug'
+    | '/ar/destinations/$slug/$filter'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -483,7 +653,7 @@ export interface RootRouteChildren {
   AgencyPartnershipRoute: typeof AgencyPartnershipRoute
   AuthRoute: typeof AuthRoute
   CalculatorRoute: typeof CalculatorRoute
-  CompareRoute: typeof CompareRoute
+  CompareRoute: typeof CompareRouteWithChildren
   ContactRoute: typeof ContactRoute
   DashboardRoute: typeof DashboardRouteWithChildren
   DestinationsRoute: typeof DestinationsRouteWithChildren
@@ -493,11 +663,22 @@ export interface RootRouteChildren {
   NewLaunchesRoute: typeof NewLaunchesRoute
   PricingRoute: typeof PricingRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
+  SitemapBlogDotxmlRoute: typeof SitemapBlogDotxmlRoute
+  SitemapDestinationsDotxmlRoute: typeof SitemapDestinationsDotxmlRoute
+  SitemapDevelopersDotxmlRoute: typeof SitemapDevelopersDotxmlRoute
+  SitemapProjectsDotxmlRoute: typeof SitemapProjectsDotxmlRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiBrochuresMatchRoute: typeof ApiBrochuresMatchRoute
   ApiSaveDatabaseRoute: typeof ApiSaveDatabaseRoute
   ApiSaveUsersRoute: typeof ApiSaveUsersRoute
   ApiUploadAssetRoute: typeof ApiUploadAssetRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  ArIndexRoute: typeof ArIndexRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  ArComparePairRoute: typeof ArComparePairRoute
+  ArDestinationsSlugRoute: typeof ArDestinationsSlugRouteWithChildren
+  ArDevelopersSlugRoute: typeof ArDevelopersSlugRoute
+  ArProjectsSlugRoute: typeof ArProjectsSlugRoute
   UnitsProjectSlugTypeSlugRoute: typeof UnitsProjectSlugTypeSlugRoute
 }
 
@@ -508,6 +689,34 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-projects.xml': {
+      id: '/sitemap-projects.xml'
+      path: '/sitemap-projects.xml'
+      fullPath: '/sitemap-projects.xml'
+      preLoaderRoute: typeof SitemapProjectsDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-developers.xml': {
+      id: '/sitemap-developers.xml'
+      path: '/sitemap-developers.xml'
+      fullPath: '/sitemap-developers.xml'
+      preLoaderRoute: typeof SitemapDevelopersDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-destinations.xml': {
+      id: '/sitemap-destinations.xml'
+      path: '/sitemap-destinations.xml'
+      fullPath: '/sitemap-destinations.xml'
+      preLoaderRoute: typeof SitemapDestinationsDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-blog.xml': {
+      id: '/sitemap-blog.xml'
+      path: '/sitemap-blog.xml'
+      fullPath: '/sitemap-blog.xml'
+      preLoaderRoute: typeof SitemapBlogDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects': {
@@ -650,6 +859,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardIndexRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/': {
+      id: '/ar/'
+      path: '/ar'
+      fullPath: '/ar/'
+      preLoaderRoute: typeof ArIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/$slug': {
       id: '/projects/$slug'
       path: '/$slug'
@@ -734,6 +957,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAiAssistantRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/compare/$pair': {
+      id: '/compare/$pair'
+      path: '/$pair'
+      fullPath: '/compare/$pair'
+      preLoaderRoute: typeof ComparePairRouteImport
+      parentRoute: typeof CompareRoute
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/upload-asset': {
       id: '/api/upload-asset'
       path: '/api/upload-asset'
@@ -769,8 +1006,61 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UnitsProjectSlugTypeSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/destinations/$slug/$filter': {
+      id: '/destinations/$slug/$filter'
+      path: '/$filter'
+      fullPath: '/destinations/$slug/$filter'
+      preLoaderRoute: typeof DestinationsSlugFilterRouteImport
+      parentRoute: typeof DestinationsSlugRoute
+    }
+    '/ar/projects/$slug': {
+      id: '/ar/projects/$slug'
+      path: '/ar/projects/$slug'
+      fullPath: '/ar/projects/$slug'
+      preLoaderRoute: typeof ArProjectsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/developers/$slug': {
+      id: '/ar/developers/$slug'
+      path: '/ar/developers/$slug'
+      fullPath: '/ar/developers/$slug'
+      preLoaderRoute: typeof ArDevelopersSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/destinations/$slug': {
+      id: '/ar/destinations/$slug'
+      path: '/ar/destinations/$slug'
+      fullPath: '/ar/destinations/$slug'
+      preLoaderRoute: typeof ArDestinationsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/compare/$pair': {
+      id: '/ar/compare/$pair'
+      path: '/ar/compare/$pair'
+      fullPath: '/ar/compare/$pair'
+      preLoaderRoute: typeof ArComparePairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/destinations/$slug/$filter': {
+      id: '/ar/destinations/$slug/$filter'
+      path: '/$filter'
+      fullPath: '/ar/destinations/$slug/$filter'
+      preLoaderRoute: typeof ArDestinationsSlugFilterRouteImport
+      parentRoute: typeof ArDestinationsSlugRoute
+    }
   }
 }
+
+interface CompareRouteChildren {
+  ComparePairRoute: typeof ComparePairRoute
+}
+
+const CompareRouteChildren: CompareRouteChildren = {
+  ComparePairRoute: ComparePairRoute,
+}
+
+const CompareRouteWithChildren =
+  CompareRoute._addFileChildren(CompareRouteChildren)
 
 interface DashboardRouteChildren {
   DashboardAiAssistantRoute: typeof DashboardAiAssistantRoute
@@ -802,13 +1092,24 @@ const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
   DashboardRouteChildren,
 )
 
+interface DestinationsSlugRouteChildren {
+  DestinationsSlugFilterRoute: typeof DestinationsSlugFilterRoute
+}
+
+const DestinationsSlugRouteChildren: DestinationsSlugRouteChildren = {
+  DestinationsSlugFilterRoute: DestinationsSlugFilterRoute,
+}
+
+const DestinationsSlugRouteWithChildren =
+  DestinationsSlugRoute._addFileChildren(DestinationsSlugRouteChildren)
+
 interface DestinationsRouteChildren {
-  DestinationsSlugRoute: typeof DestinationsSlugRoute
+  DestinationsSlugRoute: typeof DestinationsSlugRouteWithChildren
   DestinationsIndexRoute: typeof DestinationsIndexRoute
 }
 
 const DestinationsRouteChildren: DestinationsRouteChildren = {
-  DestinationsSlugRoute: DestinationsSlugRoute,
+  DestinationsSlugRoute: DestinationsSlugRouteWithChildren,
   DestinationsIndexRoute: DestinationsIndexRoute,
 }
 
@@ -844,6 +1145,17 @@ const ProjectsRouteWithChildren = ProjectsRoute._addFileChildren(
   ProjectsRouteChildren,
 )
 
+interface ArDestinationsSlugRouteChildren {
+  ArDestinationsSlugFilterRoute: typeof ArDestinationsSlugFilterRoute
+}
+
+const ArDestinationsSlugRouteChildren: ArDestinationsSlugRouteChildren = {
+  ArDestinationsSlugFilterRoute: ArDestinationsSlugFilterRoute,
+}
+
+const ArDestinationsSlugRouteWithChildren =
+  ArDestinationsSlugRoute._addFileChildren(ArDestinationsSlugRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
@@ -851,7 +1163,7 @@ const rootRouteChildren: RootRouteChildren = {
   AgencyPartnershipRoute: AgencyPartnershipRoute,
   AuthRoute: AuthRoute,
   CalculatorRoute: CalculatorRoute,
-  CompareRoute: CompareRoute,
+  CompareRoute: CompareRouteWithChildren,
   ContactRoute: ContactRoute,
   DashboardRoute: DashboardRouteWithChildren,
   DestinationsRoute: DestinationsRouteWithChildren,
@@ -861,11 +1173,22 @@ const rootRouteChildren: RootRouteChildren = {
   NewLaunchesRoute: NewLaunchesRoute,
   PricingRoute: PricingRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
+  SitemapBlogDotxmlRoute: SitemapBlogDotxmlRoute,
+  SitemapDestinationsDotxmlRoute: SitemapDestinationsDotxmlRoute,
+  SitemapDevelopersDotxmlRoute: SitemapDevelopersDotxmlRoute,
+  SitemapProjectsDotxmlRoute: SitemapProjectsDotxmlRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiBrochuresMatchRoute: ApiBrochuresMatchRoute,
   ApiSaveDatabaseRoute: ApiSaveDatabaseRoute,
   ApiSaveUsersRoute: ApiSaveUsersRoute,
   ApiUploadAssetRoute: ApiUploadAssetRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  ArIndexRoute: ArIndexRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  ArComparePairRoute: ArComparePairRoute,
+  ArDestinationsSlugRoute: ArDestinationsSlugRouteWithChildren,
+  ArDevelopersSlugRoute: ArDevelopersSlugRoute,
+  ArProjectsSlugRoute: ArProjectsSlugRoute,
   UnitsProjectSlugTypeSlugRoute: UnitsProjectSlugTypeSlugRoute,
 }
 export const routeTree = rootRouteImport

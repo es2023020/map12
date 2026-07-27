@@ -1,0 +1,721 @@
+{
+  "fullyMissingImages": [
+    {
+      "slug": "the-waterway-new-cairo",
+      "name": "The Waterway New Cairo",
+      "heroPath": "None"
+    },
+    {
+      "slug": "azha",
+      "name": "Azha",
+      "heroPath": "None"
+    },
+    {
+      "slug": "mountain-view-grand",
+      "name": "Mountain View Grand",
+      "heroPath": "None"
+    },
+    {
+      "slug": "mountain-view-icity",
+      "name": "Mountain View iCity",
+      "heroPath": "None"
+    },
+    {
+      "slug": "mountain-view-icity-new",
+      "name": "Mountain View iCity New",
+      "heroPath": "None"
+    },
+    {
+      "slug": "mountain-view-ras-el",
+      "name": "Mountain View Ras El Hekma",
+      "heroPath": "None"
+    },
+    {
+      "slug": "creek-view",
+      "name": "Creek View",
+      "heroPath": "None"
+    },
+    {
+      "slug": "vea",
+      "name": "Vea",
+      "heroPath": "None"
+    },
+    {
+      "slug": "zed-west",
+      "name": "ZED West",
+      "heroPath": "None"
+    }
+  ],
+  "missingFolderOrFiles": [],
+  "placeholderImages": [
+    {
+      "slug": "hacienda-west",
+      "name": "Hacienda West"
+    },
+    {
+      "slug": "azha-north-coast",
+      "name": "Azha North Coast"
+    },
+    {
+      "slug": "ramla",
+      "name": "Ramla North Coast",
+      "heroPath": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1600&q=80"
+    },
+    {
+      "slug": "azzar-islands",
+      "name": "Azzar Islands"
+    },
+    {
+      "slug": "el-patio-vera",
+      "name": "El Patio Vera"
+    },
+    {
+      "slug": "keeva",
+      "name": "Keeva",
+      "heroPath": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
+    },
+    {
+      "slug": "fifth-square",
+      "name": "Fifth Square"
+    },
+    {
+      "slug": "lake-residence-by-rotana",
+      "name": "Lake Residence by Rotana"
+    },
+    {
+      "slug": "marville",
+      "name": "Marville"
+    },
+    {
+      "slug": "marbay-ras-el-hekma",
+      "name": "MarBay Ras El Hekma"
+    },
+    {
+      "slug": "al-rehab",
+      "name": "Al Rehab"
+    },
+    {
+      "slug": "alam-al-roum",
+      "name": "Alam Al Roum"
+    },
+    {
+      "slug": "allegria",
+      "name": "Allegria"
+    },
+    {
+      "slug": "almaza-bay",
+      "name": "Almaza Bay"
+    },
+    {
+      "slug": "amwaj",
+      "name": "Amwaj"
+    },
+    {
+      "slug": "anakaji",
+      "name": "Anakaji"
+    },
+    {
+      "slug": "azzar-island",
+      "name": "Azzar Island"
+    },
+    {
+      "slug": "beverly-hills",
+      "name": "Beverly Hills"
+    },
+    {
+      "slug": "bianchi-ilios",
+      "name": "Bianchi ILios"
+    },
+    {
+      "slug": "bloomfields",
+      "name": "Bloomfields"
+    },
+    {
+      "slug": "blumar",
+      "name": "Blumar"
+    },
+    {
+      "slug": "byoum-lakeside",
+      "name": "Byoum Lakeside"
+    },
+    {
+      "slug": "caesar-bay",
+      "name": "Caesar Bay"
+    },
+    {
+      "slug": "caesar-sodic",
+      "name": "Caesar Sodic"
+    },
+    {
+      "slug": "cairo-festival-city",
+      "name": "Cairo Festival City"
+    },
+    {
+      "slug": "capital-heights",
+      "name": "Capital Heights"
+    },
+    {
+      "slug": "city-oval",
+      "name": "City Oval"
+    },
+    {
+      "slug": "d-bay",
+      "name": "D-Bay"
+    },
+    {
+      "slug": "d-o-s-e",
+      "name": "D.O.S.E"
+    },
+    {
+      "slug": "dayz",
+      "name": "Dayz"
+    },
+    {
+      "slug": "diplo-3",
+      "name": "Diplo 3"
+    },
+    {
+      "slug": "direction-white",
+      "name": "Direction White"
+    },
+    {
+      "slug": "downtown-new-alamein",
+      "name": "Downtown New Alamein"
+    },
+    {
+      "slug": "eastown",
+      "name": "Eastown"
+    },
+    {
+      "slug": "el-gouna",
+      "name": "El Gouna"
+    },
+    {
+      "slug": "el-masyaf",
+      "name": "El Masyaf North Coast"
+    },
+    {
+      "slug": "esse-residence",
+      "name": "Esse Residence"
+    },
+    {
+      "slug": "fouka-bay",
+      "name": "Fouka Bay North Coast"
+    },
+    {
+      "slug": "ghazala-bay",
+      "name": "Ghazala Bay"
+    },
+    {
+      "slug": "hacienda-ras-el-hekma",
+      "name": "Hacienda Ras El Hekma"
+    },
+    {
+      "slug": "hacienda-red",
+      "name": "Hacienda Red"
+    },
+    {
+      "slug": "hacienda-white",
+      "name": "Hacienda White"
+    },
+    {
+      "slug": "heliopark",
+      "name": "Heliopark"
+    },
+    {
+      "slug": "hyde-park-new-cairo",
+      "name": "Hyde Park New Cairo"
+    },
+    {
+      "slug": "hyde-park-north-seashore",
+      "name": "Seashore Hyde Park North"
+    },
+    {
+      "slug": "hyde-park-west",
+      "name": "Hyde Park West"
+    },
+    {
+      "slug": "iconic-tower-district",
+      "name": "Iconic Tower District"
+    },
+    {
+      "slug": "il-bosco-city",
+      "name": "Il Bosco City"
+    },
+    {
+      "slug": "il-latini-city-edge",
+      "name": "Il Latini City Edge"
+    },
+    {
+      "slug": "il-latini-sed",
+      "name": "Il Latini SED"
+    },
+    {
+      "slug": "il-monte-galala",
+      "name": "IL Monte Galala"
+    },
+    {
+      "slug": "jamila",
+      "name": "Jamila"
+    },
+    {
+      "slug": "jefaira",
+      "name": "Jefaira"
+    },
+    {
+      "slug": "june",
+      "name": "June"
+    },
+    {
+      "slug": "karmell",
+      "name": "Karmell"
+    },
+    {
+      "slug": "katameya-coast",
+      "name": "Katameya Coast"
+    },
+    {
+      "slug": "katameya-dunes",
+      "name": "Katameya Dunes"
+    },
+    {
+      "slug": "katameya-heights",
+      "name": "Katameya Heights"
+    },
+    {
+      "slug": "koun",
+      "name": "Koun"
+    },
+    {
+      "slug": "la-verde",
+      "name": "La Verde"
+    },
+    {
+      "slug": "la-vista-bay",
+      "name": "La Vista Bay"
+    },
+    {
+      "slug": "la-vista-bay-east",
+      "name": "La Vista Bay East"
+    },
+    {
+      "slug": "la-vista-cascada",
+      "name": "La Vista Cascada"
+    },
+    {
+      "slug": "la-vista-city",
+      "name": "La Vista City"
+    },
+    {
+      "slug": "la-vista-ras-el-hekma",
+      "name": "La Vista Ras El Hekma"
+    },
+    {
+      "slug": "lagoons-al-alamein",
+      "name": "Lagoons Al Alamein"
+    },
+    {
+      "slug": "lake-view-residence",
+      "name": "Lake View Residence"
+    },
+    {
+      "slug": "lasirena-sahel",
+      "name": "Lasirena Sahel"
+    },
+    {
+      "slug": "lazib-inn-tunis",
+      "name": "Lazib Inn Tunis"
+    },
+    {
+      "slug": "lvls",
+      "name": "LVLS"
+    },
+    {
+      "slug": "lyv",
+      "name": "LYV Caesar Ras El Hekma"
+    },
+    {
+      "slug": "madinaty",
+      "name": "Madinaty"
+    },
+    {
+      "slug": "makadi-heights",
+      "name": "Makadi Heights"
+    },
+    {
+      "slug": "marbay",
+      "name": "Marbay"
+    },
+    {
+      "slug": "marina",
+      "name": "Marina"
+    },
+    {
+      "slug": "marsa-baghush",
+      "name": "Marsa Baghush"
+    },
+    {
+      "slug": "masaya",
+      "name": "Masaya"
+    },
+    {
+      "slug": "mazarine",
+      "name": "Mazarine"
+    },
+    {
+      "slug": "modon-ras-el-hekma",
+      "name": "Modon Ras El Hekma"
+    },
+    {
+      "slug": "mountain-view-aliva",
+      "name": "Mountain View Aliva"
+    },
+    {
+      "slug": "mountain-view-chillout",
+      "name": "Mountain View Chillout"
+    },
+    {
+      "slug": "mountain-view-crystal",
+      "name": "Mountain View Crystal"
+    },
+    {
+      "slug": "mountain-view-jirian",
+      "name": "Mountain View Jirian"
+    },
+    {
+      "slug": "mountain-view-kingsway",
+      "name": "Mountain View Kingsway"
+    },
+    {
+      "slug": "mountain-view-mv4",
+      "name": "Mountain View MV4"
+    },
+    {
+      "slug": "murano",
+      "name": "Murano"
+    },
+    {
+      "slug": "nabq-bay-residences",
+      "name": "Nabq Bay Residences"
+    },
+    {
+      "slug": "naia-bay",
+      "name": "Naia Bay North Coast"
+    },
+    {
+      "slug": "new-heliopolis",
+      "name": "New Heliopolis"
+    },
+    {
+      "slug": "north-edge-towers",
+      "name": "North Edge Towers"
+    },
+    {
+      "slug": "31-west",
+      "name": "31 West",
+      "heroPath": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+    },
+    {
+      "slug": "palm-parks",
+      "name": "Palm Parks"
+    },
+    {
+      "slug": "px",
+      "name": "PX"
+    },
+    {
+      "slug": "swanlake-west",
+      "name": "Swanlake West"
+    },
+    {
+      "slug": "seashell",
+      "name": "Seashell"
+    },
+    {
+      "slug": "seashell-ras-el-hekma",
+      "name": "Seashell Ras El Hekma"
+    },
+    {
+      "slug": "seazen",
+      "name": "Seazen"
+    },
+    {
+      "slug": "shamasi",
+      "name": "Shamasi"
+    },
+    {
+      "slug": "sheya-residence",
+      "name": "Sheya Residence"
+    },
+    {
+      "slug": "silversands",
+      "name": "Silversands"
+    },
+    {
+      "slug": "sky-condos",
+      "name": "Sky Condos"
+    },
+    {
+      "slug": "sodic-east",
+      "name": "Sodic East"
+    },
+    {
+      "slug": "sodic-the-estates",
+      "name": "SODIC The Estates"
+    },
+    {
+      "slug": "sodic-west",
+      "name": "SODIC West"
+    },
+    {
+      "slug": "solana",
+      "name": "Solana"
+    },
+    {
+      "slug": "solare",
+      "name": "Solare"
+    },
+    {
+      "slug": "soma-bay",
+      "name": "Soma Bay"
+    },
+    {
+      "slug": "south-med",
+      "name": "South Med"
+    },
+    {
+      "slug": "stella-di-mare",
+      "name": "Stella di Mare"
+    },
+    {
+      "slug": "stella-heights",
+      "name": "Stella Heights"
+    },
+    {
+      "slug": "stella-sidi-abdel-rahman",
+      "name": "Stella Sidi Abdel Rahman"
+    },
+    {
+      "slug": "stone-residence",
+      "name": "Stone Residence"
+    },
+    {
+      "slug": "sun-capital",
+      "name": "Sun Capital"
+    },
+    {
+      "slug": "swan-lake",
+      "name": "Swan Lake"
+    },
+    {
+      "slug": "taj-city",
+      "name": "Taj City"
+    },
+    {
+      "slug": "talala",
+      "name": "TALALA"
+    },
+    {
+      "slug": "telal",
+      "name": "Telal"
+    },
+    {
+      "slug": "telal-sokhna",
+      "name": "Telal Sokhna"
+    },
+    {
+      "slug": "the-butterfly",
+      "name": "The Butterfly"
+    },
+    {
+      "slug": "the-c",
+      "name": "The C"
+    },
+    {
+      "slug": "the-crown-extension",
+      "name": "The Crown Extension"
+    },
+    {
+      "slug": "the-gate-new-alamein",
+      "name": "The Gate New Alamein"
+    },
+    {
+      "slug": "the-islands",
+      "name": "The Islands"
+    },
+    {
+      "slug": "the-med",
+      "name": "The Med"
+    },
+    {
+      "slug": "the-square-sabbour",
+      "name": "The Square Sabbour"
+    },
+    {
+      "slug": "the-waterway",
+      "name": "The Waterway"
+    },
+    {
+      "slug": "salt",
+      "name": "Salt"
+    },
+    {
+      "slug": "safia",
+      "name": "Safia"
+    },
+    {
+      "slug": "el-patio-town",
+      "name": "El Patio Town"
+    },
+    {
+      "slug": "patio-hills",
+      "name": "Patio Hills"
+    },
+    {
+      "slug": "palm-hills-new-alamein",
+      "name": "Palm Hills New Alamein"
+    },
+    {
+      "slug": "mist",
+      "name": "Mist",
+      "heroPath": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=80"
+    },
+    {
+      "slug": "patio-casa",
+      "name": "Patio Casa"
+    },
+    {
+      "slug": "patio-5-east",
+      "name": "Patio 5 East"
+    },
+    {
+      "slug": "patio-prime",
+      "name": "Patio Prime"
+    },
+    {
+      "slug": "solana-east",
+      "name": "Solana East"
+    },
+    {
+      "slug": "telal-east",
+      "name": "Telal East"
+    },
+    {
+      "slug": "cairo-business-park",
+      "name": "Cairo Business Park"
+    },
+    {
+      "slug": "rock-vera",
+      "name": "Rock Vera"
+    },
+    {
+      "slug": "rock-gold",
+      "name": "Rock Gold"
+    },
+    {
+      "slug": "village-de-la-capitale",
+      "name": "Village de la Capitale"
+    },
+    {
+      "slug": "villette",
+      "name": "Villette"
+    },
+    {
+      "slug": "vinci",
+      "name": "Vinci"
+    },
+    {
+      "slug": "vinci-capital",
+      "name": "Vinci Capital"
+    },
+    {
+      "slug": "vye-sodic",
+      "name": "VYE SODIC"
+    },
+    {
+      "slug": "westown-residences",
+      "name": "Westown Residences"
+    },
+    {
+      "slug": "youd",
+      "name": "Youd",
+      "heroPath": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&q=80"
+    },
+    {
+      "slug": "zahra",
+      "name": "Zahra"
+    },
+    {
+      "slug": "zayed-2000",
+      "name": "Zayed 2000"
+    },
+    {
+      "slug": "zed-east",
+      "name": "Zed East"
+    },
+    {
+      "slug": "zed-towers",
+      "name": "ZED Towers"
+    },
+    {
+      "slug": "zoya",
+      "name": "Zoya"
+    },
+    {
+      "slug": "palm-hills-katameya",
+      "name": "Palm Hills Katameya"
+    },
+    {
+      "slug": "vie",
+      "name": "Vie",
+      "heroPath": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+    }
+  ],
+  "totalMissing": [
+    {
+      "slug": "the-waterway-new-cairo",
+      "name": "The Waterway New Cairo",
+      "heroPath": "None"
+    },
+    {
+      "slug": "azha",
+      "name": "Azha",
+      "heroPath": "None"
+    },
+    {
+      "slug": "mountain-view-grand",
+      "name": "Mountain View Grand",
+      "heroPath": "None"
+    },
+    {
+      "slug": "mountain-view-icity",
+      "name": "Mountain View iCity",
+      "heroPath": "None"
+    },
+    {
+      "slug": "mountain-view-icity-new",
+      "name": "Mountain View iCity New",
+      "heroPath": "None"
+    },
+    {
+      "slug": "mountain-view-ras-el",
+      "name": "Mountain View Ras El Hekma",
+      "heroPath": "None"
+    },
+    {
+      "slug": "creek-view",
+      "name": "Creek View",
+      "heroPath": "None"
+    },
+    {
+      "slug": "vea",
+      "name": "Vea",
+      "heroPath": "None"
+    },
+    {
+      "slug": "zed-west",
+      "name": "ZED West",
+      "heroPath": "None"
+    }
+  ]
+}

@@ -6,21 +6,76 @@ import { destinationBySlug, destinations } from "@/data/destinations";
 import { compoundsByDestination, compounds } from "@/data/compounds";
 import { ArrowLeft, MapPin, Building2, Wallet, Calendar, Waves, TrendingUp, Map as MapIcon } from "lucide-react";
 
+import { buildDestinationSchema, buildBreadcrumbSchema, getCanonicalUrl } from "@/lib/seo";
+
+import { getDestinationSEO } from "@/lib/seo-templates";
+
 export const Route = createFileRoute("/destinations/$slug")({
   loader: ({ params }) => {
     const a = destinationBySlug(params.slug);
     if (!a) throw notFound();
     return a;
   },
-  head: ({ loaderData }) => ({
-    meta: loaderData ? [
-      { title: `${loaderData.name} — Compounds & Map | PropTrack` },
-      { name: "description", content: `${loaderData.blurb} Browse every compound in ${loaderData.name} on PropTrack.` },
-      { property: "og:title", content: `${loaderData.name} | PropTrack` },
-      { property: "og:description", content: loaderData.blurb },
-      { property: "og:image", content: loaderData.hero },
-    ] : [],
-  }),
+  head: ({ loaderData }) => {
+    if (!loaderData) return { meta: [] };
+    const list = compoundsByDestination(loaderData.slug);
+    const minPrice = list.length > 0 ? Math.min(...list.map((c) => c.priceFrom)) : 0;
+
+    const seo = getDestinationSEO(
+      {
+        name: loaderData.name,
+        slug: loaderData.slug,
+        blurb: loaderData.blurb,
+        region: loaderData.region,
+        projectCount: list.length,
+        minPrice,
+      },
+      "en"
+    );
+
+    const placeSchema = buildDestinationSchema({
+      name: loaderData.name,
+      slug: loaderData.slug,
+      blurb: loaderData.blurb,
+      hero: loaderData.hero,
+      center: loaderData.center,
+      region: loaderData.region,
+    });
+
+    const breadcrumbSchema = buildBreadcrumbSchema([
+      { name: "Home", item: "/" },
+      { name: "Destinations", item: "/destinations" },
+      { name: loaderData.name, item: `/destinations/${loaderData.slug}` },
+    ]);
+
+    return {
+      meta: [
+        { title: seo.title },
+        { name: "description", content: seo.metaDesc },
+        { name: "robots", content: "index, follow" },
+        { property: "og:title", content: seo.title },
+        { property: "og:description", content: seo.metaDesc },
+        { property: "og:image", content: loaderData.hero },
+        { property: "og:url", content: seo.canonical },
+      ],
+      links: [
+        { rel: "canonical", href: seo.canonical },
+        { rel: "alternate", hrefLang: "en", href: seo.alternateEn },
+        { rel: "alternate", hrefLang: "ar", href: seo.alternateAr },
+        { rel: "alternate", hrefLang: "x-default", href: seo.alternateEn },
+      ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(placeSchema),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(breadcrumbSchema),
+        },
+      ],
+    };
+  },
   component: AreaPage,
 });
 
@@ -78,9 +133,61 @@ function AreaPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
-        {/* Description */}
-        <div className="mb-10 max-w-3xl">
-          <p className="text-lg leading-relaxed text-foreground/80">{a.blurb}</p>
+        {/* Description & Comprehensive Destination Guide */}
+        <div className="mb-10 max-w-4xl space-y-6">
+          <p className="text-lg leading-relaxed text-foreground/80 font-medium">{a.blurb}</p>
+          
+          {/* Detailed Guide Content */}
+          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 space-y-6 shadow-sm">
+            <h3 className="font-display text-2xl font-bold text-primary border-b border-border/60 pb-3">
+              Comprehensive Destination Guide: {a.name}
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+              <div className="space-y-2">
+                <h4 className="font-bold text-foreground text-base flex items-center gap-2">
+                  <MapPin className="h-4 w-4 text-accent" /> Location & Accessibility from Cairo
+                </h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  {a.region === "north-coast"
+                    ? `${a.name} is situated along the Mediterranean coastline (${a.kmRange || "North Coast"}). Conveniently accessible via the Fouka Highway and Dabaa Corridor, driving time from Central Cairo averages 2.5 to 3.5 hours.`
+                    : `${a.name} offers direct arterial access via major ring roads and corridors, placing it within 20-30 minutes of major financial districts, international schools, and commercial hubs.`}
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="font-bold text-foreground text-base flex items-center gap-2">
+                  <TrendingUp className="h-4 w-4 text-accent" /> Price Range & Investment Dynamics
+                </h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Entry-level pricing in {a.name} starts around EGP {minPrice}M, with premium beachfront or standalone villa compounds reaching EGP {maxPrice}M+. Average pricing across the {list.length} tracked projects stands at EGP {avgPrice}M.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              <h4 className="font-bold text-foreground text-base">Why Buy & Invest in {a.name}?</h4>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2 bg-secondary/40 p-3 rounded-xl border border-border/50">
+                  <span className="h-2 w-2 rounded-full bg-accent mt-1.5 shrink-0" />
+                  <span><strong>High Liquidity & Resale Value:</strong> Strong end-user and investor demand drives consistent capital appreciation.</span>
+                </li>
+                <li className="flex items-start gap-2 bg-secondary/40 p-3 rounded-xl border border-border/50">
+                  <span className="h-2 w-2 rounded-full bg-accent mt-1.5 shrink-0" />
+                  <span><strong>Top-Tier Developers:</strong> Home to master plans by Palm Hills, Ora, Sodic, Misr Italia, and Arabella.</span>
+                </li>
+                <li className="flex items-start gap-2 bg-secondary/40 p-3 rounded-xl border border-border/50">
+                  <span className="h-2 w-2 rounded-full bg-accent mt-1.5 shrink-0" />
+                  <span><strong>Flexible Payment Terms:</strong> Extended off-plan payment schedules up to 8 years with 5–10% down payments.</span>
+                </li>
+                <li className="flex items-start gap-2 bg-secondary/40 p-3 rounded-xl border border-border/50">
+                  <span className="h-2 w-2 rounded-full bg-accent mt-1.5 shrink-0" />
+                  <span><strong>Integrated Lifestyle:</strong> Gated security, swimmable lagoons, beach clubs, and commercial strips.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <div className="mt-4 flex flex-wrap gap-2">
             <Link
               to="/map"

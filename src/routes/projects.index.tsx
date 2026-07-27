@@ -215,14 +215,23 @@ function ProjectsPage() {
           <button onClick={clearAll} className="text-xs text-accent hover:underline">Clear all</button>
         )}
       </div>
-      <div className="space-y-1">
-        <div className="relative">
-          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-          <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search projects, developer, keywords..." className="pl-9 text-sm" />
-        </div>
-        <p className="text-[10px] text-muted-foreground leading-normal px-1">
-          Try searching like <span className="italic font-medium text-primary">"3 beds chalet sea view"</span> or <span className="italic font-medium text-primary">"ready to move marassi"</span>.
-        </p>
+      <div className="relative">
+        <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+        <Input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="Search projects, developers, keywords..."
+          className="pl-9 pr-8 text-sm h-10 rounded-xl"
+        />
+        {q && (
+          <button
+            type="button"
+            onClick={() => setQ("")}
+            className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+          >
+            <X className="h-3.5 w-3.5" />
+          </button>
+        )}
       </div>
       <FilterSelect label="Destination" value={destination} onChange={setArea}
         options={[{ value: "", label: "All destinations" }, ...activeDestinations.map((a) => ({ value: a.slug, label: a.name }))]} />

@@ -1,8 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type {} from "@tanstack/react-start";
-import { compounds } from "@/data/compounds";
-import { destinations } from "@/data/destinations";
-import { developers } from "@/data/developers";
 
 const BASE_URL = "https://proptrack1.vercel.app";
 
@@ -10,15 +6,24 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const paths: string[] = [
-          "/", "/map", "/projects", "/destinations", "/developers", "/dashboard", "/admin", "/auth",
-          ...compounds.map((c) => `/projects/${c.slug}`),
-          ...destinations.map((a) => `/destinations/${a.slug}`),
-          ...developers.map((d) => `/developers/${d.slug}`),
+        const sitemaps = [
+          `${BASE_URL}/sitemap-projects.xml`,
+          `${BASE_URL}/sitemap-destinations.xml`,
+          `${BASE_URL}/sitemap-developers.xml`,
+          `${BASE_URL}/sitemap-blog.xml`,
         ];
-        const urls = paths.map((p) => `  <url><loc>${BASE_URL}${p}</loc><changefreq>weekly</changefreq></url>`).join("\n");
-        const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>`;
-        return new Response(xml, { headers: { "Content-Type": "application/xml", "Cache-Control": "public, max-age=3600" } });
+        
+        const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemaps.map((loc) => `  <sitemap>\n    <loc>${loc}</loc>\n  </sitemap>`).join("\n")}
+</sitemapindex>`;
+
+        return new Response(xml, {
+          headers: {
+            "Content-Type": "application/xml",
+            "Cache-Control": "public, max-age=3600, s-maxage=86400",
+          },
+        });
       },
     },
   },

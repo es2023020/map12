@@ -10,14 +10,31 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Building2, Users, Sparkles } from "lucide-react";
 import { NewLaunchesSlider } from "@/components/NewLaunchesSlider";
 import { NewLaunchesDashboard } from "@/components/NewLaunchesDashboard";
+import { buildWebsiteSchema, buildOrganizationSchema, BASE_SITE_URL } from "@/lib/seo";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "PropTrack — Egypt's property intelligence platform for brokers" },
-      { name: "description", content: "Every Sahel compound on one map, plus New Cairo and Sheikh Zayed. Built for Egyptian real-estate brokers." },
-      { property: "og:title", content: "PropTrack — Real-estate intelligence for Egyptian brokers" },
-      { property: "og:description", content: "Interactive map of every Sahel, New Cairo and Sheikh Zayed compound. Project library, broker dashboard, lead pipeline." },
-      { property: "og:image", content: "/logo.png" },
+      { title: "PropTrack — Egypt's Property Intelligence Platform & Compound Atlas" },
+      { name: "description", content: "Explore 155+ compounds in Sahel, New Cairo, and Sheikh Zayed. Built for Egyptian buyers, investors, and real estate brokers." },
+      { name: "robots", content: "index, follow" },
+      { property: "og:title", content: "PropTrack — Real-Estate Intelligence for Egyptian Brokers" },
+      { property: "og:description", content: "Interactive map of every Sahel, New Cairo, and Sheikh Zayed compound. Compare prices, delivery years, and availability." },
+      { property: "og:image", content: `${BASE_SITE_URL}/logo.png` },
+      { property: "og:url", content: BASE_SITE_URL },
+    ],
+    links: [
+      { rel: "canonical", href: BASE_SITE_URL },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildWebsiteSchema()),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildOrganizationSchema()),
+      },
     ],
   }),
   component: Index,

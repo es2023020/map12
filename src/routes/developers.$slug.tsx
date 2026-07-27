@@ -27,20 +27,70 @@ function LogoBadge({ src, name, className = "" }: { src: string; name: string; c
   );
 }
 
+import { buildDeveloperSchema, buildBreadcrumbSchema, getCanonicalUrl } from "@/lib/seo";
+
+import { getDeveloperSEO } from "@/lib/seo-templates";
+
 export const Route = createFileRoute("/developers/$slug")({
   loader: ({ params }) => {
     const d = developerBySlug(params.slug);
     if (!d) throw notFound();
     return d;
   },
-  head: ({ loaderData }) => ({
-    meta: loaderData ? [
-      { title: `${loaderData.name} — Projects | PropTrack` },
-      { name: "description", content: `${loaderData.blurb} Browse ${loaderData.count} projects by ${loaderData.name}.` },
-      { property: "og:title", content: `${loaderData.name} | PropTrack` },
-      { property: "og:description", content: loaderData.blurb },
-    ] : [],
-  }),
+  head: ({ loaderData }) => {
+    if (!loaderData) return { meta: [] };
+    const list = compoundsByDeveloper(loaderData.slug);
+
+    const seo = getDeveloperSEO(
+      {
+        name: loaderData.name,
+        slug: loaderData.slug,
+        blurb: loaderData.blurb,
+        projectCount: list.length,
+      },
+      "en"
+    );
+
+    const devSchema = buildDeveloperSchema({
+      name: loaderData.name,
+      slug: loaderData.slug,
+      blurb: loaderData.blurb,
+      logo: loaderData.logo,
+    });
+
+    const breadcrumbSchema = buildBreadcrumbSchema([
+      { name: "Home", item: "/" },
+      { name: "Developers", item: "/developers" },
+      { name: loaderData.name, item: `/developers/${loaderData.slug}` },
+    ]);
+
+    return {
+      meta: [
+        { title: seo.title },
+        { name: "description", content: seo.metaDesc },
+        { name: "robots", content: "index, follow" },
+        { property: "og:title", content: seo.title },
+        { property: "og:description", content: seo.metaDesc },
+        { property: "og:url", content: seo.canonical },
+      ],
+      links: [
+        { rel: "canonical", href: seo.canonical },
+        { rel: "alternate", hrefLang: "en", href: seo.alternateEn },
+        { rel: "alternate", hrefLang: "ar", href: seo.alternateAr },
+        { rel: "alternate", hrefLang: "x-default", href: seo.alternateEn },
+      ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(devSchema),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(breadcrumbSchema),
+        },
+      ],
+    };
+  },
   component: DevPage,
 });
 
