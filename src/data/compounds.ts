@@ -897,7 +897,7 @@ const newProjects: Compound[] = [
     lat: 31.13, lng: 27.85,
     developer: "Horizon Egypt Developments",
     developerSlug: "horizon-egypt-developments",
-    priceFrom: 21.5,
+    priceFrom: 19.4,
     deliveryYear: 2029,
     status: "Off-Plan",
     beachfront: true,
