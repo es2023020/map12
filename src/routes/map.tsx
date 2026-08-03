@@ -15,6 +15,7 @@ import {
 import { availability } from "@/data/availability";
 import { useStore } from "@/lib/store";
 import { useDebounce } from "@/lib/useDebounce";
+import { SmartSearchBar } from "@/components/ui/SmartSearchBar";
 function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
   const [loaded, setLoaded] = useState(false);
   const initials = name.split(" ").slice(0, 2).map((w) => w[0] ?? "").join("").toUpperCase();
@@ -222,24 +223,24 @@ function MapPage() {
             </div>
 
             {/* Search */}
-            <div className="relative">
-              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Input
-                value={q}
-                onChange={(e) => setQ(e.target.value)}
-                placeholder="Search projects, developers, locations..."
-                className="pl-9 pr-8 text-sm h-10 rounded-xl"
-              />
-              {q && (
-                <button
-                  type="button"
-                  onClick={() => setQ("")}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
-                >
-                  <X className="h-3.5 w-3.5" />
-                </button>
-              )}
-            </div>
+            <SmartSearchBar
+              value={q}
+              onChange={setQ}
+              onSelectProject={(slug) => {
+                setActiveSlug(slug);
+                setMobileView("map");
+              }}
+              onSelectDeveloper={setDev}
+              onSelectDestination={setAreaSlug}
+              onSelectPreset={(type, val) => {
+                if (type === "destination") setAreaSlug(val);
+                else if (type === "dev") setDev(val);
+                else setQ(val);
+              }}
+              variant="compact"
+              showPresets={false}
+              placeholder="Search projects, developers, areas..."
+            />
 
             {/* Expandable filters */}
             {filtersOpen && (

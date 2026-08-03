@@ -10,9 +10,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.8786,
     "developer": "Emaar Misr",
     "developerSlug": "emaar-misr",
-    "priceFrom": 12.22,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "priceFrom": 11,
+    "deliveryYear": 2025,
+    "status": "Under Construction",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -55,8 +55,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/belle-vie/14.jpg"
     ],
     "blurb": "Belle Vie is Emaar Misr's flagship residential community in New Zayed, spanning approximately 500 acres. Inspired by the French phrase for 'Beautiful Life', it is designed around French-inspired architecture, expansive green landscapes, and a vibrant town center.",
-    "paymentPlan": "5% down, installments up to 8 years",
-    "areaSize": "100 feddan",
+    "paymentPlan": "0%–5% down payment, remaining balance spread over 8 years in equal installments",
+    "areaSize": "500 feddan",
     "unitSizes": "80–300 m²",
     "type": "Residential",
     "highlights": [
@@ -77,9 +77,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9237,
     "developer": "Emaar Misr",
     "developerSlug": "emaar-misr",
-    "priceFrom": 0,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "priceFrom": 5.4,
+    "deliveryYear": 2026,
+    "status": "Under Construction",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -109,9 +109,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/cairo-gate/5.jpg",
       "/projects/cairo-gate/6.jpg"
     ],
-    "blurb": "Cairo Gate is a luxury gated community by Emaar Misr spanning approximately 133 acres in Sheikh Zayed, offering premium residential units surrounded by landscaped open spaces and high-end retail.",
-    "paymentPlan": "5% down, installments up to 8 years",
-    "areaSize": "100 feddan",
+    "blurb": "Cairo Gate is a luxury gated community by Emaar Misr spanning 133 acres in Sheikh Zayed on Cairo-Alex Desert Road, featuring Elie Saab signature villas and Locanda serviced residences.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 6 to 8 years in equal, interest-free installments",
+    "areaSize": "133 feddan",
     "unitSizes": "80–300 m²",
     "type": "Residential",
     "highlights": [
@@ -130,9 +130,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.7423,
     "developer": "Emaar Misr",
     "developerSlug": "emaar-misr",
-    "priceFrom": 18,
-    "deliveryYear": 2025,
-    "status": "Under Construction",
+    "priceFrom": 16,
+    "deliveryYear": 2015,
+    "status": "Delivered",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -193,9 +193,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.47867,
     "developer": "Emaar Misr",
     "developerSlug": "emaar-misr",
-    "priceFrom": 0,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "priceFrom": 12,
+    "deliveryYear": 2015,
+    "status": "Delivered",
     "beachfront": false,
     "types": [
       "Clinic",
@@ -247,10 +247,10 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.48046,
     "developer": "Emaar Misr",
     "developerSlug": "emaar-misr",
-    "priceFrom": 13,
-    "deliveryYear": 2027,
+    "priceFrom": 25,
+    "deliveryYear": 2028,
     "status": "Off-Plan",
-    "beachfront": false,
+    "beachfront": true,
     "types": [
       "Standalone Villa",
       "Townhouse"
@@ -419,9 +419,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.47,
     "developer": "Madinet Masr",
     "developerSlug": "madinet-masr",
-    "priceFrom": 53.03,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "priceFrom": 8,
+    "deliveryYear": 2026,
+    "status": "Under Construction",
     "beachfront": false,
     "types": [
       "Standalone Villa"
@@ -567,7 +567,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9132,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 0,
+    "priceFrom": 3.8,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
@@ -606,8 +606,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/badya/10.jpg"
     ],
     "blurb": "Badya is Palm Hills' flagship smart city spanning approximately 3,000 acres, designed as one of Egypt's first sustainable smart cities with integrated residential, educational, commercial, and healthcare districts.",
-    "paymentPlan": "5% down, installments up to 10 years",
-    "areaSize": "100 feddan",
+    "paymentPlan": "0%–5% down payment, remaining balance spread over 8–10 years in equal installments",
+    "areaSize": "3,000 feddan",
     "unitSizes": "80–300 m²",
     "type": "Residential",
     "highlights": [
@@ -1166,12 +1166,15 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 5.4,
-    "deliveryYear": 2028,
+    "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
-      "iVilla"
+      "iVilla",
+      "Duplex",
+      "Penthouse",
+      "Sky Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -1187,8 +1190,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/creekview/2.jpg",
       "/projects/creekview/3.jpg"
     ],
-    "blurb": "Creekview by Mountain View is a low-rise, G+5 waterfront creekside community in the heart of New Cairo. It features the Islands and Valleys neighborhoods, central Lighthouse hub, and early 2.5-year delivery with pay-over-6-years plans.",
-    "paymentPlan": "5% down · 6 years equal installments",
+    "blurb": "Creek View by Mountain View is a 119-feddan European waterfront-inspired low-rise community in Golden Square New Cairo facing Hyde Park.",
+    "paymentPlan": "5% down payment, remaining balance spread across flexible equal installments over up to 10 to 14 years",
     "areaSize": "119 feddan",
     "unitSizes": "65–205 m²",
     "type": "Residential",
@@ -1344,13 +1347,15 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.98,
     "developer": "Upwyde Developments",
     "developerSlug": "upwyde-developments",
-    "priceFrom": 12,
+    "priceFrom": 5.5,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
-      "Duplex"
+      "Duplex",
+      "Serviced Apartment",
+      "Studio"
     ],
     "amenities": [
       "Clubhouse",
@@ -1365,8 +1370,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/commonhaus/1.jpg",
       "/projects/commonhaus/2.jpg"
     ],
-    "blurb": "Commonhaus Sheikh Zayed is a premium branded residence phase within the Sky Ramp Compound. It is developed by the well-known real estate guru, Upwyde Developments.",
-    "paymentPlan": "10% down · 7 years equal installments",
+    "blurb": "Commonhaus is a branded serviced apartments hub by Upwyde Developments in partnership with Bird Nest Hotels & Residences inside Sky Ramp compound in Sheikh Zayed.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 7 to 8 years in equal, interest-free installments",
     "areaSize": "40 feddan",
     "unitSizes": "100–220 m²",
     "type": "Residential",
@@ -1719,11 +1724,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 33.98,
     "developer": "Somabay Developments",
     "developerSlug": "somabay-developments",
-    "priceFrom": 14,
-    "deliveryYear": 2028,
+    "priceFrom": 18.5,
+    "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Chalet",
       "Villa"
     ],
@@ -1739,8 +1745,8 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80"
     ],
-    "blurb": "Coral Coves by Somabay Developments offers unparalleled luxury on the Red Sea coast, featuring exquisite seafront villas and chalets with world-class resort amenities.",
-    "paymentPlan": "10% down · 7 years equal installments",
+    "blurb": "Coral Coves by Somabay Developments is an elevated cliffside coastal neighborhood on the Red Sea coast offering Mediterranean-inspired architecture, golf access, and sea views.",
+    "paymentPlan": "5% down payment, remaining balance spread over up to 8 years in equal installments",
     "areaSize": "120 feddan",
     "unitSizes": "110–380 m²",
     "type": "Resort",
@@ -1841,11 +1847,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.342,
     "developer": "Roya Developments",
     "developerSlug": "roya-developments",
-    "priceFrom": 11,
+    "priceFrom": 5,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Studio",
       "Chalet",
       "Villa"
     ],
@@ -1865,8 +1872,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/covaya/5.jpg",
       "/projects/covaya/6.jpg"
     ],
-    "blurb": "Covaya Ain Sokhna, located within the prestigious Telal Sokhna Resort, is one of the most charming and serene coastal destinations on the Red Sea.Covaya Telal Hotel combines elegance, comfort, and breathtaking sea views, offering guests a luxurious escape just a short drive from Cairo. The hotel features modern rooms, a relaxing beachfront atmosphere, and a range of world-class amenities designed for families, couples, and weekend travelers.",
-    "paymentPlan": "5% down · 8 years equal installments",
+    "blurb": "Covaya is an upscale luxury hotel-serviced phase integrated inside Telal Ain Sokhna by Roya Developments with 4-star hospitality management and panoramic Red Sea views.",
+    "paymentPlan": "5% down payment, remaining balance spread over up to 10 to 12 years in equal, interest-free installments",
     "areaSize": "90 feddan",
     "unitSizes": "105–300 m²",
     "type": "Resort",
@@ -2059,7 +2066,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.0212979,
     "developer": "M Squared Developments",
     "developerSlug": "m-squared-developments",
-    "priceFrom": 15,
+    "priceFrom": 7.9,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
@@ -2089,7 +2096,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/31-west/2.jpg"
     ],
     "blurb": "31 West is a modern gated residential community spanning approximately 31 acres in 6th of October City, designed around open green landscapes, water features, and pedestrian-friendly spaces. The project combines contemporary architecture with low-density planning to provide a balanced lifestyle for families and professionals.",
-    "paymentPlan": "5% down, installments up to 10 years",
+    "paymentPlan": "Apartments: 5% down + 5% after 3 mos, remaining over 8 yrs | Villas: 5% down + 5% after 3 mos, remaining over 9 yrs",
     "areaSize": "31 feddan",
     "unitSizes": "130–280 m²",
     "type": "Residential",
@@ -3338,9 +3345,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.4998,
     "developer": "Misr Italia Properties",
     "developerSlug": "misr-italia-properties",
-    "priceFrom": 11,
-    "deliveryYear": 2027,
-    "status": "Under Construction",
+    "priceFrom": 7.8,
+    "deliveryYear": 2023,
+    "status": "Delivered",
     "beachfront": false,
     "types": [
       "Offices",
@@ -3361,8 +3368,8 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
     ],
-    "blurb": "Cairo Business Park is a premium mixed-use business park by Misr Italia in New Cairo, combining Grade-A corporate office buildings, retail, clinics, and hospitality services within landscaped surroundings.",
-    "paymentPlan": "Flexible plans with installments up to 7 years",
+    "blurb": "Cairo Business Park is a fully delivered 18-acre business hub by Misr Italia in New Cairo, combining Grade-A corporate office buildings, retail, and the Hilton Garden Inn.",
+    "paymentPlan": "Resale / 20% down payment over 6–8 years",
     "areaSize": "18 feddan",
     "unitSizes": "55–264 m²",
     "type": "Mixed-use",
@@ -3621,7 +3628,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.6061923,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 27,
+    "priceFrom": 23.4,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
@@ -3657,7 +3664,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/97-hills/6.jpg"
     ],
     "blurb": "97 Hills is Palm Hills Developments' newest premium villa community in New Cairo. Spanning approximately 97 feddans (about 407,000 m²), the project is designed as a low-density residential compound featuring contemporary architecture, expansive green landscapes, and integrated lifestyle amenities.",
-    "paymentPlan": "5% down + 5% after 3 months, installments up to 10 years",
+    "paymentPlan": "3%–5% down payment, remaining balance spread over 8–10 years in equal installments",
     "areaSize": "97 feddan",
     "unitSizes": "183–417 m²",
     "type": "Mixed-use",
@@ -3679,13 +3686,13 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.92,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 27,
-    "deliveryYear": 2026,
-    "status": "Under Construction",
+    "priceFrom": 21,
+    "deliveryYear": 2029,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Town House"
+      "Family House",
+      "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -3706,8 +3713,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/bamboo-iii/5.jpg",
       "/projects/bamboo-iii/6.jpg"
     ],
-    "blurb": "Bamboo III is the third and final phase of Palm Hills' celebrated Bamboo community in New Cairo. Offering oversized apartments (191–192 m²) and premium townhouses, this phase is ideal for families seeking space and quality in Cairo's best suburb.",
-    "paymentPlan": "10% down · 8 years equal installments",
+    "blurb": "Bamboo III is a low-density residential neighborhood within Palm Hills October offering fully finished family homes and townhouses.",
+    "paymentPlan": "5% down payment, remaining balance spread over 10 years in equal installments",
     "areaSize": "35 feddan",
     "unitSizes": "191–222 m²",
     "type": "Residential",
@@ -4748,9 +4755,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.7568,
     "developer": "New Generation Development",
     "developerSlug": "new-generation-development",
-    "priceFrom": 17,
-    "deliveryYear": 2027,
-    "status": "Under Construction",
+    "priceFrom": 5.2,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4779,9 +4786,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/botanica/6.jpg",
       "/projects/botanica/7.jpg"
     ],
-    "blurb": "Botanica is a modern nature-inspired residential compound by New Generation Development in the R7 District of the New Capital, boasting extensive landscaping and low-density planning.",
-    "paymentPlan": "10% down, installments up to 10 years",
-    "areaSize": "38 feddan",
+    "blurb": "Botanica is a modern nature-inspired residential compound by New Generation Developments in the R7 District of the New Capital, spanning 23 feddans with an Italian-influenced design (19% footprint).",
+    "paymentPlan": "10% down payment, remaining balance spread over 8–10 years in equal installments",
+    "areaSize": "23 feddan",
     "unitSizes": "123–144 m²",
     "type": "Residential",
     "highlights": [
@@ -4801,9 +4808,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.9865,
     "developer": "Maven Developments",
     "developerSlug": "maven-developments",
-    "priceFrom": 6,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "priceFrom": 8.1,
+    "deliveryYear": 2026,
+    "status": "Under Construction",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -4837,9 +4844,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/cali-coast-ras-el-hekma/10.jpg",
       "/projects/cali-coast-ras-el-hekma/11.jpg"
     ],
-    "blurb": "Cali Coast is a California-inspired coastal destination by Maven Developments in Ras El Hekma, blending relaxed beach living with luxury amenities, swimmable lagoons, and modern architecture.",
-    "paymentPlan": "5% down, installments up to 9 years",
-    "areaSize": "75 feddan",
+    "blurb": "Cali Coast is a California-inspired 230–245 feddan beach resort by Maven Developments in Ras El Hekma with a 600m beachfront and swimmable lagoons.",
+    "paymentPlan": "0%–10% down payment, remaining balance spread over 8–10 years (up to 31% cash discount)",
+    "areaSize": "230–245 feddan",
     "unitSizes": "45–242 m²",
     "type": "Resort",
     "highlights": [
@@ -4910,15 +4917,16 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.425,
     "developer": "Marakez",
     "developerSlug": "marakez",
-    "priceFrom": 9.5,
-    "deliveryYear": 2027,
+    "priceFrom": 11.2,
+    "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": false,
     "types": [
       "Apartment",
-      "Garden Apartment",
       "Duplex",
-      "Loft"
+      "Penthouse",
+      "Townhouse",
+      "Court Home"
     ],
     "amenities": [
       "Commercial D5M",
@@ -4933,9 +4941,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/district-5/2.jpg",
       "/projects/district-5/3.jpg"
     ],
-    "blurb": "District 5 by Marakez Properties — a premium residential masterplan in New Cairo's 5th Settlement. NHF and NHN clusters with semi-finished and fully-finished apartments from 1BR to 3BR, plus garden apartments, duplexes and lofts. 46 units across both clusters, priced EGP 11.3M–26.1M.",
-    "paymentPlan": "NHF: 10% DP over 7 years · NHN: 5%+5% over 8 years",
-    "areaSize": "200 feddan",
+    "blurb": "District 5 by Marakez is a 200–268 feddan master-planned community in New Cairo with an 18% building footprint, Mindhaus business park, and District 5 Mall.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 5 to 8 years",
+    "areaSize": "200–268 feddan",
     "unitSizes": "95–210 m²",
     "type": "Residential",
     "highlights": [
@@ -5060,9 +5068,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9751,
     "developer": "Marakez Developments",
     "developerSlug": "marakez-developments",
-    "priceFrom": 36,
-    "deliveryYear": 2027,
-    "status": "Under Construction",
+    "priceFrom": 17,
+    "deliveryYear": 2024,
+    "status": "Delivered",
     "beachfront": false,
     "types": [
       "Studio",
@@ -5093,9 +5101,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/aeon/5.jpg",
       "/projects/aeon/6.jpg"
     ],
-    "blurb": "AEON is a premium residential development by Marakez spread across approximately 21 acres in 6th of October City. The project consists of four architecturally distinctive interconnected towers surrounded by landscaped courtyards, creating a luxury urban lifestyle with direct pedestrian access to Mall of Arabia.",
-    "paymentPlan": "10% down, installments up to 7 years",
-    "areaSize": "12 feddan",
+    "blurb": "AEON is a premium residential development by Marakez spread across approximately 21–25 acres in 6th of October City. The project consists of four architecturally distinctive interconnected towers surrounded by landscaped courtyards, creating a luxury urban lifestyle with direct pedestrian access to Mall of Arabia.",
+    "paymentPlan": "Resale: Full cash / secondary market terms (Historical developer plan: 10% down, 7 years)",
+    "areaSize": "21–25 feddan",
     "unitSizes": "220–240 m²",
     "type": "Residential",
     "highlights": [
@@ -5116,13 +5124,15 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Al Ahly Sabbour Developments",
     "developerSlug": "al-ahly-sabbour-developments",
     "priceFrom": 5,
-    "deliveryYear": 2030,
+    "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
       "Duplex",
-      "Penthouse"
+      "Penthouse",
+      "Townhouse",
+      "Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -5143,9 +5153,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/at-east/3.jpg",
       "/projects/at-east/4.jpg"
     ],
-    "blurb": "At East is a contemporary gated community designed for modern family living, offering residential neighborhoods surrounded by green spaces and integrated services in Mostakbal City.",
-    "paymentPlan": "5% down, installments up to 9 years",
-    "areaSize": "155 feddan",
+    "blurb": "At East is a contemporary gated community by Al Ahly Sabbour designed for modern family living, offering residential neighborhoods surrounded by green spaces and integrated services in Mostakbal City.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 8 years in equal installments",
+    "areaSize": "181 feddan",
     "unitSizes": "65–370 m²",
     "type": "Residential",
     "highlights": [
@@ -5255,11 +5265,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.545,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 10,
-    "deliveryYear": 2027,
+    "priceFrom": 4.2,
+    "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": false,
     "types": [
+      "Studio",
       "Apartment"
     ],
     "amenities": [
@@ -5280,9 +5291,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/cleo-water-residence/6.jpg",
       "/projects/cleo-water-residence/7.jpg"
     ],
-    "blurb": "Cleo Water Residences is a luxury residential phase located within the Palm Hills New Cairo compound in Egypt, featuring fully finished apartments, scenic lagoons, and vast open green spaces.",
-    "paymentPlan": "10% down · 8 years equal installments",
-    "areaSize": "82% green & water space",
+    "blurb": "Cleo Water Residences is a luxury lagoon-facing residential phase within the 500-acre Palm Hills New Cairo master development.",
+    "paymentPlan": "3% down payment, remaining balance spread over up to 10 years in equal installments",
+    "areaSize": "500 feddan",
     "unitSizes": "70–170 m²",
     "type": "Residential",
     "highlights": [
@@ -5349,8 +5360,8 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.351,
     "developer": "Qatari Diar",
     "developerSlug": "qatari-diar",
-    "priceFrom": 0,
-    "deliveryYear": 2026,
+    "priceFrom": 9,
+    "deliveryYear": 2030,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -5374,13 +5385,13 @@ export const compoundsGenerated: Compound[] = [
       "/projects/alam-al-roum/3.jpg",
       "/projects/alam-al-roum/4.jpg"
     ],
-    "blurb": "Alam Al Roum by Qatari Diar is a mega-scale coastal resort destination of 5,000 faddans east of Marsa Matrouh, featuring a yacht marina, hotels, and 7.2 km of private beachfront.",
-    "paymentPlan": "Price on request / Competitive pre-launch valuations",
+    "blurb": "Alam El Roum by Qatari Diar in partnership with NUCA is a mega-scale coastal resort destination of 5,000 faddans east of Marsa Matrouh, featuring a yacht marina, hotels, and 7.2 km of private beachfront.",
+    "paymentPlan": "5% down payment, remaining balance spread over 8–10 years in equal installments",
     "areaSize": "5000 feddan",
     "unitSizes": "Chalet, Twin House, Villa",
     "city": "East of Marsa Matrouh, North Coast, Egypt",
     "highlights": [
-      "by Qatari Diar",
+      "by Qatari Diar & NUCA",
       "7.2 km private beach",
       "International Yacht Marina"
     ],
@@ -5449,9 +5460,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.3098,
     "developer": "Travco Properties",
     "developerSlug": "travco-properties",
-    "priceFrom": 12,
+    "priceFrom": 10.7,
     "deliveryYear": 2026,
-    "status": "Delivered",
+    "status": "Under Construction",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5486,8 +5497,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/almaza-bay/7.jpg"
     ],
     "blurb": "Almaza Bay is Travco Properties' flagship luxury beach destination on Egypt's North Coast. Developed over multiple phases, it combines upscale residences, boutique hotels, retail areas, and one of the Mediterranean's most renowned white-sand beaches.",
-    "paymentPlan": "20% down, installments during construction",
-    "areaSize": "~1,550 acres",
+    "paymentPlan": "6% down + 6% upon contract, remaining balance over 7 yrs | 10% down over 6 yrs",
+    "areaSize": "1,550 feddan",
     "unitSizes": "103–262 m²",
     "city": "Almaza Bay, Marsa Matrouh, North Coast (km 37 Alexandria–Matrouh Road), Egypt",
     "highlights": [
@@ -5615,8 +5626,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Beit Al Bahr Developments",
     "developerSlug": "beit-al-bahr-developments",
     "priceFrom": 14.9,
-    "deliveryYear": 2027,
-    "status": "Under Construction",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5823,8 +5834,8 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.731,
     "developer": "Madaar Developments",
     "developerSlug": "madaar-developments",
-    "priceFrom": 11,
-    "deliveryYear": 2027,
+    "priceFrom": 11.1,
+    "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": true,
     "types": [
@@ -5859,7 +5870,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/azha-north-coast/10.jpg"
     ],
     "blurb": "Azha North Coast by Madaar Developments — a 250-feddan luxury coastal destination at Km 214 Ras El Hekma, featuring an 800m private beach, a 45-acre crystal lagoon, 5-star hotel, and fine dining.",
-    "paymentPlan": "5% down payment · 8 years equal installments",
+    "paymentPlan": "5% down payment, remaining balance spread over 8–10 years in equal installments",
     "areaSize": "250 feddan",
     "unitSizes": "142–243 m²",
     "type": "Coastal",
@@ -6153,9 +6164,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.9312,
     "developer": "SODIC",
     "developerSlug": "sodic",
-    "priceFrom": 14,
-    "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "priceFrom": 8.6,
+    "deliveryYear": 2026,
+    "status": "Under Construction",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6177,9 +6188,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/caesar-sodic/5.jpg",
       "/projects/caesar-sodic/6.jpg"
     ],
-    "blurb": "Caesar Sodic is a premium coastal neighborhood inside the master-planned Caesar Ras El Hekma community.",
-    "paymentPlan": "5% down, installments up to 8 years",
-    "areaSize": "157 feddan",
+    "blurb": "Caesar Sodic is a premium coastal neighborhood inside the master-planned 192-feddan Caesar Ras El Hekma community.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 6 to 8 years in equal, interest-free installments",
+    "areaSize": "192 feddan",
     "unitSizes": "94–411 m²",
     "city": "Ras El Hekma, North Coast (km 202), Matrouh Governorate, Egypt",
     "type": "Resort",
@@ -6247,7 +6258,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.9331,
     "developer": "SODIC",
     "developerSlug": "sodic",
-    "priceFrom": 9,
+    "priceFrom": 8.6,
     "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": true,
@@ -6629,7 +6640,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.9935,
     "developer": "Arabella Group",
     "developerSlug": "arabella-group",
-    "priceFrom": 8,
+    "priceFrom": 8.1,
     "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": true,
@@ -6662,9 +6673,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/direction-white/5.jpg",
       "/projects/direction-white/6.jpg"
     ],
-    "blurb": "Direction White is a luxury coastal development by Arabella Group spanning approximately 290 acres in Ras El Hekma, featuring terraced elevations for panoramic sea views, crystal lagoons, and Mediterranean-inspired architecture.",
-    "paymentPlan": "5% down, installments up to 8 years",
-    "areaSize": "140 feddan",
+    "blurb": "Direction White by Arabella Developments is a 290-acre all-white Mediterranean coastal resort in Ras El Hekma elevated up to 50m above sea level with a 600m beach.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 7 to 8 years (up to 22% cash discount)",
+    "areaSize": "290 feddan",
     "unitSizes": "115–350 m²",
     "city": "Ras El Hekma, North Coast (km 192), Matrouh Governorate, Egypt",
     "type": "Resort",
@@ -7063,9 +7074,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.91,
     "developer": "Reedy Group",
     "developerSlug": "reedy-group",
-    "priceFrom": 12.9,
-    "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "priceFrom": 16.5,
+    "deliveryYear": 2026,
+    "status": "Under Construction",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7091,8 +7102,8 @@ export const compoundsGenerated: Compound[] = [
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
       "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80"
     ],
-    "blurb": "AZZAR Islands is a boutique luxury beachfront community by Reedy Group in Ras El Hekma designed around exclusive island-inspired neighborhoods, offering privacy and direct sea access with low-density planning.",
-    "paymentPlan": "5% down, installments up to 8 years",
+    "blurb": "AZZAR Islands is a boutique luxury beachfront community by Reedy Group in Ras El Hekma designed around exclusive island-inspired neighborhoods, offering privacy and direct sea access with low-density 400-acre master plan (20% footprint).",
+    "paymentPlan": "5% down payment, remaining balance over 8 yrs equal interest-free installments | 5% + 5% in 3 mos, 6–7 yrs",
     "areaSize": "400 feddan",
     "unitSizes": "85–310 m²",
     "city": "Ras El Hekma, North Coast (km 182), Matrouh Governorate, Egypt",
@@ -7162,7 +7173,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.2846,
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
-    "priceFrom": 7,
+    "priceFrom": 14,
     "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": true,
@@ -7198,9 +7209,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/d-bay/5.jpg",
       "/projects/d-bay/6.jpg"
     ],
-    "blurb": "D Bay is Tatweer Misr's luxury coastal destination spanning approximately 200 acres in Dabaa, designed on elevated terraces to maximize panoramic Mediterranean Sea views. The resort features an 800-meter beachfront, crystal lagoons, and a resort-inspired master plan.",
-    "paymentPlan": "5% down, installments up to 8 years",
-    "areaSize": "271 feddan",
+    "blurb": "D-Bay is Tatweer Misr's luxury coastal destination spanning 200 acres in Dabaa with an 800-meter beachfront and 25 feddans of swimmable crystal lagoons.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 8 to 10 years in equal, interest-free installments",
+    "areaSize": "200 feddan",
     "unitSizes": "112–373 m²",
     "city": "Dabaa, North Coast (km 165), Matrouh Governorate, Egypt",
     "highlights": [
@@ -7221,14 +7232,16 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.27,
     "developer": "Akam Al Rajhi Developments",
     "developerSlug": "akam-al-rajhi-developments",
-    "priceFrom": 9,
+    "priceFrom": 9.5,
     "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": true,
     "types": [
       "Chalet",
+      "Hotel Apartment",
+      "Townhouse",
       "Twin House",
-      "Villa"
+      "Standalone Villa"
     ],
     "amenities": [
       "Private Beach",
@@ -7246,9 +7259,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/d-o-s-e/4.jpg",
       "/projects/d-o-s-e/5.jpg"
     ],
-    "blurb": "D.O.S.E sits at km 174 on the North Coast in al dabaa, developed by Akam Al Rajhi Developments. A beachfront community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "308 feddan",
+    "blurb": "Dose by Akam Al Rajhi is a 125-feddan coastal destination at Km 174 Ras El Hekma / Dabaa with 450m beachfront and crystal lagoons.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 6 to 10 years in equal, interest-free installments (up to 40% cash discount)",
+    "areaSize": "125 feddan",
     "unitSizes": "121–394 m²",
     "city": "Al Dabaa, North Coast (km 174), Matrouh Governorate, Egypt",
     "type": "Coastal",
@@ -7544,7 +7557,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.47984,
     "developer": "Talaat Moustafa Group",
     "developerSlug": "talaat-moustafa-group",
-    "priceFrom": 10,
+    "priceFrom": 14.5,
     "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": true,
@@ -7858,13 +7871,14 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.72565,
     "developer": "Wadi Degla Developments",
     "developerSlug": "wadi-degla-developments",
-    "priceFrom": 6,
-    "deliveryYear": 2024,
+    "priceFrom": 6.8,
+    "deliveryYear": 2022,
     "status": "Delivered",
     "beachfront": true,
     "types": [
       "Chalet",
-      "Twin House"
+      "Twin House",
+      "Standalone Villa"
     ],
     "amenities": [
       "Private beach",
@@ -7882,9 +7896,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/blumar/4.jpg",
       "/projects/blumar/5.jpg"
     ],
-    "blurb": "Blumar Sidi Abdel Rahman is an established cozy beachfront community offering direct Mediterranean access and beach facilities in Sidi Abdel Rahman.",
-    "paymentPlan": "Contact PropTrack advisor for payment details",
-    "areaSize": "89 feddan",
+    "blurb": "Blumar Sidi Abdel Rahman by Wadi Degla is an established beachfront resort across 65–70 feddans offering direct Mediterranean access, swimming pools, and beach facilities.",
+    "paymentPlan": "Resale: Cash / secondary market terms",
+    "areaSize": "65–70 feddan",
     "unitSizes": "118–417 m²",
     "city": "Sidi Abdel Rahman, North Coast (km 137), Matrouh Governorate, Egypt",
     "type": "Resort",
@@ -7903,8 +7917,8 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.6775,
     "developer": "Al Ahly Sabbour Developments",
     "developerSlug": "al-ahly-sabbour-developments",
-    "priceFrom": 8,
-    "deliveryYear": 2025,
+    "priceFrom": 7.2,
+    "deliveryYear": 2026,
     "status": "Delivered",
     "beachfront": true,
     "types": [
@@ -7943,8 +7957,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/amwaj/10.jpg"
     ],
     "blurb": "Amwaj is one of the North Coast's most established luxury resorts, featuring terraced master planning that gives a large percentage of homes sea views. The resort is designed around interconnected lagoons, landscaped gardens, and a private sandy beach.",
-    "paymentPlan": "10% down, flexible installment plans",
-    "areaSize": "126 feddan",
+    "paymentPlan": "10% down payment, remaining balance spread over 6–8 years in equal installments",
+    "areaSize": "360 feddan",
     "unitSizes": "127–438 m²",
     "city": "Sidi Abdel Rahman, North Coast (km 136), Matrouh Governorate, Egypt",
     "highlights": [
@@ -8281,13 +8295,13 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.4748,
     "developer": "Ahmed Yehia Real Estate Development",
     "developerSlug": "ahmed-yehia-real-estate-development",
-    "priceFrom": 6,
-    "deliveryYear": 2025,
+    "priceFrom": 35,
+    "deliveryYear": 2024,
     "status": "Delivered",
     "beachfront": true,
     "types": [
       "Chalet",
-      "Twin House",
+      "Townhouse",
       "Standalone Villa"
     ],
     "amenities": [
@@ -8308,9 +8322,9 @@ export const compoundsGenerated: Compound[] = [
       "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80",
       "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1600&q=80"
     ],
-    "blurb": "Diplo 3 (Diplomats Village 3) is a prestigious established resort village in Sidi Abdel Rahman, offering a relaxed beachfront environment with mature landscaping, wide green areas, and a family-friendly atmosphere.",
-    "paymentPlan": "Resale options only, varying by seller",
-    "areaSize": "422 feddan",
+    "blurb": "Diplo 3 (Diplomats Village 3) is a classic established Mediterranean summer resort in Sidi Abdel Rahman (km 126) next to Marassi and Amwaj.",
+    "paymentPlan": "Resale: Cash / secondary market terms",
+    "areaSize": "60 feddan",
     "unitSizes": "139–356 m²",
     "city": "Sidi Abdel Rahman, North Coast (km 102), Matrouh Governorate, Egypt",
     "type": "Resort",
@@ -8539,14 +8553,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.94508,
     "developer": "City Edge",
     "developerSlug": "city-edge",
-    "priceFrom": 12,
-    "deliveryYear": 2025,
+    "priceFrom": 4.9,
+    "deliveryYear": 2024,
     "status": "Delivered",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa"
+      "Apartment"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -8560,9 +8572,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/downtown-new-alamein/3.jpg",
       "/projects/downtown-new-alamein/4.jpg"
     ],
-    "blurb": "Downtown New Alamein sits at km 108 on the North Coast in new alamein, developed by City Edge. A lagoon-front community designed for premium summer living.",
-    "paymentPlan": "10% down payment over 8 years equal installments",
-    "areaSize": "294 feddan",
+    "blurb": "Downtown New Alamein by City Edge is a 31-feddan mixed-use community with 40 G+5 buildings surrounding a 5-acre crystal lagoon and central public piazza.",
+    "paymentPlan": "5% down payment, remaining balance spread over 7 to 10 years (up to 12 yrs promo)",
+    "areaSize": "31 feddan",
     "unitSizes": "133–232 m²",
     "city": "New Alamein, North Coast (km 108), Matrouh Governorate, Egypt",
     "type": "Residential",
@@ -8832,14 +8844,13 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.48048,
     "developer": "Mercon",
     "developerSlug": "mercon",
-    "priceFrom": 9,
-    "deliveryYear": 2026,
-    "status": "Under Construction",
+    "priceFrom": 10,
+    "deliveryYear": 2024,
+    "status": "Delivered",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Twin House",
-      "Villa"
+      "Studio",
+      "Chalet"
     ],
     "amenities": [
       "Private Beach",
@@ -8856,9 +8867,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/dayz/2.jpg",
       "/projects/dayz/3.jpg"
     ],
-    "blurb": "Dayz sits at km 100 on the North Coast in new alamein, developed by Mercon. A beachfront community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "166 feddan",
+    "blurb": "Dayz by Mercon Developments in Marina 6 (Km 98) is a boutique ready-to-move 200-unit sea-front resort delivered fully finished and designer-furnished.",
+    "paymentPlan": "10%–30% down payment, remaining balance spread over 2 to 5 years",
+    "areaSize": "5 feddan",
     "unitSizes": "127–358 m²",
     "city": "New Alamein, North Coast (km 100), Matrouh Governorate, Egypt",
     "type": "Coastal",
@@ -9555,7 +9566,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Talaat Moustafa Group",
     "developerSlug": "talaat-moustafa-group",
     "priceFrom": 4,
-    "deliveryYear": 2010,
+    "deliveryYear": 2005,
     "status": "Delivered",
     "beachfront": false,
     "types": [
@@ -9580,9 +9591,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/al-rehab/4.jpg",
       "/projects/al-rehab/5.jpg"
     ],
-    "blurb": "Al Rehab is a flagship development in New Cairo (Tagamo3) by Talaat Moustafa Group, offering modern residences with full amenities for year-round living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "142 feddan",
+    "blurb": "Al Rehab City by Talaat Moustafa Group is a mature, fully integrated city in New Cairo developed across 10 distinct phases over 2,380 acres, featuring complete services, schools, and commercial centers.",
+    "paymentPlan": "Resale: Cash / secondary market terms",
+    "areaSize": "2,380 feddan",
     "unitSizes": "152–508 m²",
     "city": "New Cairo, Cairo Governorate, Egypt",
     "type": "Residential",
@@ -9603,8 +9614,8 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.4434,
     "developer": "Talaat Moustafa Group",
     "developerSlug": "talaat-moustafa-group",
-    "priceFrom": 6,
-    "deliveryYear": 2024,
+    "priceFrom": 5,
+    "deliveryYear": 2010,
     "status": "Delivered",
     "beachfront": false,
     "types": [
@@ -10065,14 +10076,14 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9435,
     "developer": "SODIC",
     "developerSlug": "sodic",
-    "priceFrom": 14,
-    "deliveryYear": 2010,
+    "priceFrom": 5,
+    "deliveryYear": 2005,
     "status": "Delivered",
     "beachfront": false,
     "types": [
       "Apartment",
-      "Penthouse",
-      "Villa",
+      "Duplex",
+      "Townhouse",
       "Standalone Villa"
     ],
     "amenities": [
@@ -10095,9 +10106,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/beverly-hills/7.jpg",
       "/projects/beverly-hills/8.jpg"
     ],
-    "blurb": "Beverly Hills is a flagship development in Sheikh Zayed by SODIC, offering modern residences with full amenities for year-round living.",
-    "paymentPlan": "10% down payment over 8 years equal installments",
-    "areaSize": "152 feddan",
+    "blurb": "Beverly Hills by SODIC is one of West Cairo's most mature and established master-planned communities, spanning roughly 350–400 acres.",
+    "paymentPlan": "Resale: Cash / secondary market terms",
+    "areaSize": "350–400 feddan",
     "unitSizes": "102–448 m²",
     "city": "Sheikh Zayed, Giza Governorate, Egypt",
     "type": "Residential",
@@ -10119,7 +10130,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.968,
     "developer": "SODIC",
     "developerSlug": "sodic",
-    "priceFrom": 22,
+    "priceFrom": 17,
     "deliveryYear": 2014,
     "status": "Delivered",
     "beachfront": false,
@@ -10150,9 +10161,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/allegria/8.jpg",
       "/projects/allegria/9.jpg"
     ],
-    "blurb": "Allegria is a flagship development in Sheikh Zayed by SODIC, offering modern residences with full amenities for year-round living.",
-    "paymentPlan": "10% down payment over 9 years equal installments",
-    "areaSize": "193 feddan",
+    "blurb": "Allegria by SODIC is an exclusive completed luxury compound in Sheikh Zayed centered around a signature 18-hole Greg Norman golf course spanning 200–250 acres.",
+    "paymentPlan": "Resale: Cash / secondary market terms",
+    "areaSize": "200–250 feddan",
     "unitSizes": "113–467 m²",
     "city": "Sheikh Zayed, Giza Governorate, Egypt",
     "type": "Residential",
@@ -10775,11 +10786,11 @@ export const compoundsGenerated: Compound[] = [
     "destination": "new-administrative-capital",
     "lat": 30.00555,
     "lng": 31.718999999999998,
-    "developer": "Memaar El Morshedy",
-    "developerSlug": "memaar-el-morshedy",
-    "priceFrom": 10,
-    "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "developer": "Aqar Misr Developments",
+    "developerSlug": "aqar-misr-developments",
+    "priceFrom": 3.2,
+    "deliveryYear": 2024,
+    "status": "Delivered",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10803,9 +10814,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/anakaji/4.jpg",
       "/projects/anakaji/5.jpg"
     ],
-    "blurb": "Anakaji by Memaar El Morshedy — a Residential community offering refined living with full amenities and strong location advantages.",
-    "paymentPlan": "10% down payment over 7 years equal installments",
-    "areaSize": "292 feddan",
+    "blurb": "Anakaji by Aqar Misr Developments is a boutique Nubian-inspired residential compound in the New Administrative Capital (R8 district), spanning 20 feddans with green vistas and cultural architecture.",
+    "paymentPlan": "0%–10% down payment, up to 10 years installments / Secondary market terms",
+    "areaSize": "20 feddan",
     "unitSizes": "129–434 m²",
     "type": "Residential",
     "city": "New Administrative Capital, Cairo",
@@ -10828,7 +10839,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.7433,
     "developer": "Safwa Urban Development",
     "developerSlug": "safwa-urban-development",
-    "priceFrom": 7,
+    "priceFrom": 5.8,
     "deliveryYear": 2026,
     "status": "Under Construction",
     "beachfront": false,
@@ -10855,9 +10866,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/capital-heights/3.jpg",
       "/projects/capital-heights/4.jpg"
     ],
-    "blurb": "Capital Heights is a residential compound by Safwa Urban Development designed with landscaped green spaces, water features, and contemporary architecture in the heart of the New Capital's R7 District.",
-    "paymentPlan": "10% down, installments up to 10 years",
-    "areaSize": "321 feddan",
+    "blurb": "Capital Heights is a residential compound by Safwa Urban Development (SUD) spanning 50 feddans with a 5% building footprint in R7 District.",
+    "paymentPlan": "10%–15% down payment, remaining balance spread over 6 to 10 years in equal, interest-free installments",
+    "areaSize": "50 feddan",
     "unitSizes": "142–457 m²",
     "type": "Residential",
     "city": "R7 District, New Administrative Capital, Egypt",
@@ -10875,14 +10886,14 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.71445,
     "developer": "Master Group Developments",
     "developerSlug": "master-group-developments",
-    "priceFrom": 9,
-    "deliveryYear": 2027,
+    "priceFrom": 4.9,
+    "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
-      "Penthouse",
-      "Villa"
+      "Duplex",
+      "I-Villa"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -10903,9 +10914,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/city-oval/7.jpg",
       "/projects/city-oval/8.jpg"
     ],
-    "blurb": "City Oval by Master Group Developments — a Residential community offering refined living with full amenities and strong location advantages.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "350 feddan",
+    "blurb": "City Oval by Master Group is a 30–37 feddan English-themed residential compound in the New Administrative Capital R7 district.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 6 to 10 years in equal installments",
+    "areaSize": "30–37 feddan",
     "unitSizes": "155–480 m²",
     "type": "Residential",
     "city": "New Administrative Capital, Cairo",
@@ -11021,8 +11032,8 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.7584,
     "developer": "ACUD",
     "developerSlug": "acud",
-    "priceFrom": 14,
-    "deliveryYear": 2026,
+    "priceFrom": 5,
+    "deliveryYear": 2025,
     "status": "Under Construction",
     "beachfront": false,
     "types": [
@@ -11049,9 +11060,9 @@ export const compoundsGenerated: Compound[] = [
       "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
     ],
-    "blurb": "The Business District is the commercial heart of Egypt's New Administrative Capital, featuring office towers, luxury hotels, retail districts, and mixed-use developments adjacent to the Government District.",
-    "paymentPlan": "Flexible payment plans varying by individual project",
-    "areaSize": "437 feddan",
+    "blurb": "The Central Business District (CBD) is the premier commercial landmark of the New Administrative Capital, featuring 20 skyscrapers including the Iconic Tower.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 7 to 10 years in equal installments",
+    "areaSize": "464 feddan",
     "unitSizes": "124–309 m²",
     "type": "Mixed-use",
     "city": "New Administrative Capital, Egypt",
@@ -11070,14 +11081,16 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.642500000000002,
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
-    "priceFrom": 9,
-    "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "priceFrom": 5.8,
+    "deliveryYear": 2026,
+    "status": "Under Construction",
     "beachfront": false,
     "types": [
       "Apartment",
-      "Penthouse",
-      "Villa"
+      "Duplex",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -11096,9 +11109,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/bloomfields/5.jpg",
       "/projects/bloomfields/6.jpg"
     ],
-    "blurb": "Bloomfields by Tatweer Misr — a Residential community offering refined living with full amenities and strong location advantages.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "86 feddan",
+    "blurb": "Bloomfields by Tatweer Misr is a 415-acre master-planned town in Mostakbal City, featuring innovative college-town concepts and green spaces.",
+    "paymentPlan": "0%–5% down payment, remaining balance spread over 8 to 10 years in equal installments",
+    "areaSize": "415 feddan",
     "unitSizes": "137–332 m²",
     "type": "Residential",
     "city": "Mostakbal City, New Cairo, Cairo",
@@ -11690,8 +11703,8 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.3553,
     "developer": "Madaar Developments",
     "developerSlug": "madaar-developments",
-    "priceFrom": 15,
-    "deliveryYear": 2025,
+    "priceFrom": 9,
+    "deliveryYear": 2024,
     "status": "Under Construction",
     "beachfront": true,
     "types": [
@@ -11721,15 +11734,15 @@ export const compoundsGenerated: Compound[] = [
       "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
       "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80"
     ],
-    "blurb": "Azha Ain Sokhna is a luxury coastal destination spread across approximately 380 acres, combining beachfront residences, lagoons, hospitality, and leisure facilities directly on the Red Sea coastline.",
-    "paymentPlan": "10% down, installments up to 8 years",
-    "areaSize": "141 feddan",
+    "blurb": "Azha Ain Sokhna is a luxury coastal destination spread across approximately 380–400 acres, combining beachfront residences, lagoons, hospitality, and leisure facilities directly on the Red Sea coastline.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 8–10 years in equal installments",
+    "areaSize": "380–400 feddan",
     "unitSizes": "122–437 m²",
     "type": "Resort",
     "city": "Ain Sokhna, Egypt",
     "highlights": [
       "Luxury Red Sea coastal resort",
-      "380 acres of master-planned beauty",
+      "380–400 acres of master-planned beauty",
       "Vibrant marina and crystal lagoons"
     ],
     "masterPlanUrl": "/Masterplans/Azha.jpg"
@@ -11742,9 +11755,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.3537,
     "developer": "Wadi Degla Developments",
     "developerSlug": "wadi-degla-developments",
-    "priceFrom": 8,
-    "deliveryYear": 2026,
-    "status": "Under Construction",
+    "priceFrom": 3.5,
+    "deliveryYear": 2020,
+    "status": "Delivered",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11765,14 +11778,13 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/blumar-sokhna/1.jpg",
     "gallery": [
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
       "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1600&q=80"
+      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80"
     ],
-    "blurb": "Blumar El Sokhna is a luxury beachfront resort by Wadi Degla Developments featuring terraced residences with panoramic Red Sea views, private beaches, and beautiful landscaped gardens.",
-    "paymentPlan": "10% down, installments up to 8 years",
-    "areaSize": "170 feddan",
+    "blurb": "Blumar El Sokhna is a luxury beachfront resort by Wadi Degla Developments featuring terraced residences across 110–260 acres with panoramic Red Sea views.",
+    "paymentPlan": "Resale: Cash / secondary market terms",
+    "areaSize": "110–260 feddan",
     "unitSizes": "135–460 m²",
     "type": "Resort",
     "city": "Ain Sokhna, Egypt",
@@ -12540,13 +12552,16 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.972,
     "developer": "Taj Misr Developments",
     "developerSlug": "taj-misr-developments",
-    "priceFrom": 7.5,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "priceFrom": 5.5,
+    "deliveryYear": 2026,
+    "status": "Under Construction",
     "beachfront": false,
     "types": [
+      "Studio",
       "Apartment",
-      "Duplex"
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
     ],
     "amenities": [
       "Swimming Pools",
@@ -12564,9 +12579,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/dejoya-residence/2.jpg",
       "/projects/dejoya-residence/dejoya_residence_2.png"
     ],
-    "blurb": "Dejoya Residence New Zayed is a premium residential community developed by Taj Misr Developments in New Zayed. Features a 15% footprint and 85% landscapes/lagoons, offering core & shell typical and ground apartments, plus garden duplexes with payment plans up to 15 years.",
-    "paymentPlan": "5% down payment · 5% after 3 months · up to 15 years equal installments",
-    "areaSize": "105 feddan",
+    "blurb": "De Joya Residence by Taj Misr is a 132-feddan master-planned compound in New Zayed featuring minimalist architecture, central lakes, and De Joya Plaza.",
+    "paymentPlan": "5%–10% down payment, remaining balance spread over 7 to 10 years in equal, interest-free installments",
+    "areaSize": "132 feddan",
     "unitSizes": "74–290 m²",
     "type": "Residential",
     "highlights": [
@@ -13121,14 +13136,15 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.35,
     "developer": "Ajna Developments",
     "developerSlug": "ajna-developments",
-    "priceFrom": 4.455,
-    "deliveryYear": 2028,
+    "priceFrom": 4.9,
+    "deliveryYear": 2025,
     "status": "Under Construction",
     "beachfront": true,
     "types": [
+      "Studio",
       "Chalet",
       "Townhouse",
-      "Villa"
+      "Standalone Villa"
     ],
     "amenities": [
       "Crystal Lagoons",
@@ -13138,8 +13154,9 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/carnelia/1.jpg",
     "gallery": [],
-    "blurb": "Carnelia Ain Sokhna is a luxury mountain-resort by Ajna Developments overlooking the Galala Marina.",
-    "paymentPlan": "5% down payment · 8 years equal installments",
+    "blurb": "Carnelia Ain Sokhna by Ajna Developments is a 100-acre coastal resort built on tiered elevations up to 160 meters above sea level near El Galala Plateau.",
+    "paymentPlan": "5% down + 5% after 3 mos, remaining balance spread over up to 10 years in equal, interest-free installments",
+    "areaSize": "100 feddan",
     "type": "Coastal",
     "highlights": [
       "Overlooking Galala Marina",

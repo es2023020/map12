@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { CompoundCard } from "@/components/CompoundCard";
@@ -10,6 +10,7 @@ import { Search, SlidersHorizontal, X, ChevronDown, ChevronUp } from "lucide-rea
 import { availability } from "@/data/availability";
 import { useStore } from "@/lib/store";
 import { useDebounce } from "@/lib/useDebounce";
+import { SmartSearchBar } from "@/components/ui/SmartSearchBar";
 
 // Compute true max price from availability data (highest real price) or fall back to compound list
 const mainCompounds = compounds.filter((c) => !c.parentSlug);
@@ -36,6 +37,7 @@ export const Route = createFileRoute("/projects/")({
 });
 
 function ProjectsPage() {
+  const navigate = useNavigate();
   const { destination: destinationParam, dev: devParam, q: qParam } = Route.useSearch();
   const [q, setQ] = useState(qParam || "");
   const debouncedQ = useDebounce(q, 250);
@@ -54,6 +56,12 @@ function ProjectsPage() {
   function clearAll() {
     setQ(""); setArea(""); setDev(""); setStatus(""); setType(""); setKiloFilter(""); setMaxPrice(PRICE_MAX);
   }
+
+  const handleSelectPreset = (presetType: "destination" | "dev" | "q", val: string) => {
+    if (presetType === "destination") setArea(val);
+    else if (presetType === "dev") setDev(val);
+    else setQ(val);
+  };
 
   const availabilityMap = useMemo(() => {
     return new Map(availability.map((a) => [a.slug, a]));
@@ -215,24 +223,18 @@ function ProjectsPage() {
           <button onClick={clearAll} className="text-xs text-accent hover:underline">Clear all</button>
         )}
       </div>
-      <div className="relative">
-        <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-        <Input
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="Search projects, developers, keywords..."
-          className="pl-9 pr-8 text-sm h-10 rounded-xl"
-        />
-        {q && (
-          <button
-            type="button"
-            onClick={() => setQ("")}
-            className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
-          >
-            <X className="h-3.5 w-3.5" />
-          </button>
-        )}
-      </div>
+      <SmartSearchBar
+        value={q}
+        onChange={setQ}
+        onSelectProject={(slug) => navigate({ to: "/projects/$slug", params: { slug } })}
+        onSelectDeveloper={setDev}
+        onSelectDestination={setArea}
+        onSelectPreset={handleSelectPreset}
+        variant="compact"
+        showPresets={false}
+        placeholder="Filter projects..."
+      />
+
       <FilterSelect label="Destination" value={destination} onChange={setArea}
         options={[{ value: "", label: "All destinations" }, ...activeDestinations.map((a) => ({ value: a.slug, label: a.name }))]} />
       <FilterSelect label="Developer" value={dev} onChange={setDev}
@@ -274,16 +276,16 @@ function ProjectsPage() {
       {/* Header */}
       <div className="border-b border-border/60 bg-gradient-sand">
         <div className="mx-auto max-w-7xl px-4 py-8 lg:py-10 lg:px-8">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div className="max-w-xl">
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Property Atlas</div>
               <h1 className="mt-1 font-display text-3xl md:text-4xl font-semibold tracking-tight text-primary">All projects</h1>
-              <p className="mt-2 text-muted-foreground">{compounds.length} compounds across Sahel, Cairo, Red Sea & beyond.</p>
+              <p className="mt-1.5 text-muted-foreground">{compounds.length} compounds across Sahel, Cairo, Red Sea & beyond.</p>
             </div>
             {/* Mobile: Filters toggle button */}
             <button
               onClick={() => setFiltersOpen((v) => !v)}
-              className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors lg:hidden ${
+              className={`flex items-center justify-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors lg:hidden self-start md:self-auto ${
                 hasFilters ? "border-accent bg-accent/10 text-accent" : "border-border bg-card text-muted-foreground"
               }`}
             >
@@ -292,6 +294,21 @@ function ProjectsPage() {
               {hasFilters && <span className="h-2 w-2 rounded-full bg-accent" />}
               {filtersOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
             </button>
+          </div>
+
+          {/* Hero Smart Search Bar */}
+          <div className="mt-6">
+            <SmartSearchBar
+              value={q}
+              onChange={setQ}
+              onSelectProject={(slug) => navigate({ to: "/projects/$slug", params: { slug } })}
+              onSelectDeveloper={setDev}
+              onSelectDestination={setArea}
+              onSelectPreset={handleSelectPreset}
+              variant="hero"
+              showPresets={true}
+              placeholder="Search by project name, developer (e.g. Ora, Mountain View), destination..."
+            />
           </div>
         </div>
       </div>
