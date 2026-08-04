@@ -88,7 +88,7 @@ function AreaPage() {
     ? Math.round(list.reduce((s, c) => s + c.priceFrom, 0) / list.length)
     : 0;
   const beachfrontCount = list.filter((c) => c.beachfront).length;
-  const deliveredCount = list.filter((c) => c.status === "Delivered").length;
+  const rtmCount = list.filter((c) => c.status === "RTM").length;
   const minPrice = list.length > 0 ? Math.min(...list.map((c) => c.priceFrom)) : 0;
   const maxPrice = list.length > 0 ? Math.max(...list.map((c) => c.priceFrom)) : 0;
 
@@ -152,7 +152,7 @@ function AreaPage() {
             <StatBar icon={Building2} label="Total projects" value={String(list.length)} color={a.color} />
             <StatBar icon={Wallet} label="Price range" value={`EGP ${minPrice}–${maxPrice}M`} color={a.color} />
             <StatBar icon={TrendingUp} label="Avg. price" value={`EGP ${avgPrice}M`} color={a.color} className="hidden md:flex" />
-            <StatBar icon={Calendar} label="Delivered" value={`${deliveredCount} projects`} color={a.color} className="hidden md:flex" />
+            <StatBar icon={Calendar} label="RTM / Handover" value={`${rtmCount} projects`} color={a.color} className="hidden md:flex" />
             {beachfrontCount > 0 && (
               <StatBar icon={Waves} label="Beachfront" value={`${beachfrontCount} projects`} color={a.color} className="hidden lg:flex" />
             )}
@@ -303,7 +303,7 @@ function AreaPage() {
               </div>
 
               <div className="hidden sm:flex flex-wrap gap-2 text-xs">
-                {["Delivered", "Under Construction", "Off-Plan"].map((s) => {
+                {["RTM", "Off-Plan"].map((s) => {
                   const count = list.filter((c) => c.status === s).length;
                   if (!count) return null;
                   return (

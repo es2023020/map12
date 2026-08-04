@@ -59,8 +59,7 @@ function DestinationFilterPage() {
     .filter((c) => {
       const f = filter.toLowerCase();
       if (f === "off-plan") return c.status === "Off-Plan";
-      if (f === "delivered" || f === "ready-to-move") return c.status === "Delivered";
-      if (f === "under-construction") return c.status === "Under Construction";
+      if (f === "rtm" || f === "delivered" || f === "ready-to-move" || f === "under-construction") return c.status === "RTM";
       if (f === "beachfront") return c.beachfront;
       if (f.startsWith("under-")) {
         const match = f.match(/under-(\d+)m/);

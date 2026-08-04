@@ -12,7 +12,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "emaar-misr",
     "priceFrom": 11,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -79,7 +79,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "emaar-misr",
     "priceFrom": 5.4,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -132,7 +132,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "emaar-misr",
     "priceFrom": 16,
     "deliveryYear": 2015,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -195,7 +195,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "emaar-misr",
     "priceFrom": 12,
     "deliveryYear": 2015,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Clinic",
@@ -421,7 +421,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "madinet-masr",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Standalone Villa"
@@ -510,7 +510,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 12,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -779,7 +779,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 16,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -1767,7 +1767,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mardev-developments",
     "priceFrom": 9,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -2022,7 +2022,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-ahly-sabbour-developments",
     "priceFrom": 5.7,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -2198,7 +2198,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "m-squared",
     "priceFrom": 11,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -2283,7 +2283,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 15,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Townhouse",
@@ -2411,7 +2411,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 15,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -2498,7 +2498,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "memaar-al-morshedy",
     "priceFrom": 27,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Townhouse",
@@ -2632,7 +2632,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 22,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -2675,7 +2675,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 23,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Townhouse",
@@ -2719,7 +2719,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 24,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Townhouse",
@@ -2811,7 +2811,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 9,
     "deliveryYear": 2025,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -2903,7 +2903,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 14,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -2948,7 +2948,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "hassan-allam-properties",
     "priceFrom": 11,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -3301,7 +3301,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "misr-italia-properties",
     "priceFrom": 6,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -3347,7 +3347,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "misr-italia-properties",
     "priceFrom": 7.8,
     "deliveryYear": 2023,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Offices",
@@ -3390,7 +3390,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "el-batal-developments",
     "priceFrom": 15,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Villa"
@@ -3429,7 +3429,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "el-batal-developments",
     "priceFrom": 15,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -3470,7 +3470,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "el-batal-developments",
     "priceFrom": 15,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Office",
@@ -3548,7 +3548,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "el-batal-developments",
     "priceFrom": 10,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Office",
@@ -3588,7 +3588,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 17,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -3736,7 +3736,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 29,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -3880,7 +3880,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 14,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -3924,7 +3924,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "village-de-la-capitale",
     "priceFrom": 14,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4022,7 +4022,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mountain-view",
     "priceFrom": 17,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Townhouse",
@@ -4068,7 +4068,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mountain-view",
     "priceFrom": 30,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Twin House",
@@ -4120,7 +4120,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mountain-view",
     "priceFrom": 22,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4178,7 +4178,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mountain-view",
     "priceFrom": 9.4,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -4232,7 +4232,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mountain-view",
     "priceFrom": 23,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4285,7 +4285,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "cred-developments",
     "priceFrom": 4,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4334,7 +4334,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "madinet-masr",
     "priceFrom": 17,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Villa"
@@ -4382,7 +4382,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "madinet-masr",
     "priceFrom": 6,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4428,7 +4428,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "club-views",
     "priceFrom": 5,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4526,7 +4526,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge-developments",
     "priceFrom": 6,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -4615,7 +4615,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "origami",
     "priceFrom": 10,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -4663,7 +4663,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 7,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -4711,7 +4711,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 16,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4810,7 +4810,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "maven-developments",
     "priceFrom": 8.1,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -4919,7 +4919,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "marakez",
     "priceFrom": 11.2,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4964,7 +4964,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "crescent-walk",
     "priceFrom": 8.1,
     "deliveryYear": 2029,
-    "status": "Under Construction",
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -5016,7 +5016,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "marakez-properties",
     "priceFrom": 17,
     "deliveryYear": 2028,
-    "status": "Under Construction",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5070,7 +5070,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "marakez-developments",
     "priceFrom": 17,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Studio",
@@ -5267,7 +5267,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 4.2,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Studio",
@@ -5315,7 +5315,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "ncb",
     "priceFrom": 5,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Chalet",
@@ -5462,7 +5462,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "travco-properties",
     "priceFrom": 10.7,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5577,7 +5577,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "shehab-mazhar-sqm-developments",
     "priceFrom": 6,
     "deliveryYear": 2027,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5680,7 +5680,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-marasem-development",
     "priceFrom": 12,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5732,7 +5732,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 23,
     "deliveryYear": 2028,
-    "status": "Under Construction",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5782,7 +5782,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "modon-holding",
     "priceFrom": 15.9,
     "deliveryYear": 2028,
-    "status": "Under Construction",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5836,7 +5836,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "madaar-developments",
     "priceFrom": 11.1,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5894,7 +5894,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "m-squared-developments",
     "priceFrom": 8.9,
     "deliveryYear": 2028,
-    "status": "Under Construction",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Cabana",
@@ -5947,7 +5947,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "naia-developments",
     "priceFrom": 9,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6003,7 +6003,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "tatweer-misr",
     "priceFrom": 10,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6056,7 +6056,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "hyde-park",
     "priceFrom": 8.1,
     "deliveryYear": 2028,
-    "status": "Under Construction",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Studio",
@@ -6113,7 +6113,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 11,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6166,7 +6166,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 8.6,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6211,7 +6211,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mabany-edris",
     "priceFrom": 10,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6260,7 +6260,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mediterranean-tourism-investment-company",
     "priceFrom": 8.6,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6316,7 +6316,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "gates-developments",
     "priceFrom": 7.5,
     "deliveryYear": 2028,
-    "status": "Under Construction",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -6428,7 +6428,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "misr-italia-properties",
     "priceFrom": 10,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6485,7 +6485,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "hassan-allam-properties",
     "priceFrom": 11,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6530,7 +6530,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "new-giza-developments",
     "priceFrom": 9,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6582,7 +6582,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 14,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -6642,7 +6642,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "arabella-group",
     "priceFrom": 8.1,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6698,7 +6698,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "people-and-places",
     "priceFrom": 11,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6745,7 +6745,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "inertia-egypt",
     "priceFrom": 12,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -6804,7 +6804,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "ilcazar",
     "priceFrom": 9,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6857,7 +6857,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "tatweer-misr",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6915,7 +6915,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "starlight-developments",
     "priceFrom": 9,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Condo",
@@ -6969,7 +6969,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "maxim-developments",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7025,7 +7025,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "horizon-egypt-developments",
     "priceFrom": 9,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7076,7 +7076,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "reedy-group",
     "priceFrom": 16.5,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7127,7 +7127,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mountain-view",
     "priceFrom": 8.2,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -7175,7 +7175,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "tatweer-misr",
     "priceFrom": 14,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -7234,7 +7234,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "akam-al-rajhi-developments",
     "priceFrom": 9.5,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7286,7 +7286,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "equity",
     "priceFrom": 8,
     "deliveryYear": 2025,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -7345,7 +7345,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-qamzi-developments",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7401,7 +7401,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 9,
     "deliveryYear": 2025,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7453,7 +7453,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 9,
     "deliveryYear": 2025,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7504,7 +7504,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "lasirena-group",
     "priceFrom": 6,
     "deliveryYear": 2025,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7559,7 +7559,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "talaat-moustafa-group",
     "priceFrom": 14.5,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7616,7 +7616,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "maven-developments",
     "priceFrom": 24,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7664,7 +7664,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "inertia-egypt",
     "priceFrom": 6,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7718,7 +7718,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "lmd",
     "priceFrom": 11,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7770,7 +7770,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "roya-developments",
     "priceFrom": 9,
     "deliveryYear": 2025,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7819,7 +7819,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 13,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -7873,7 +7873,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "wadi-degla-developments",
     "priceFrom": 6.8,
     "deliveryYear": 2022,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7919,7 +7919,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-ahly-sabbour-developments",
     "priceFrom": 7.2,
     "deliveryYear": 2026,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7981,7 +7981,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "new-giza-developments",
     "priceFrom": 8,
     "deliveryYear": 2025,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8033,7 +8033,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-borouj-misr-developments",
     "priceFrom": 9,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8091,7 +8091,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mqr-developments",
     "priceFrom": 7.5,
     "deliveryYear": 2029,
-    "status": "Under Construction",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8141,7 +8141,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "m-squared",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8191,7 +8191,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "stella-di-mare",
     "priceFrom": 9,
     "deliveryYear": 2025,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8244,7 +8244,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "stella-di-mare",
     "priceFrom": 7,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8297,7 +8297,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "ahmed-yehia-real-estate-development",
     "priceFrom": 35,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8347,7 +8347,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "morshedy-group",
     "priceFrom": 7,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8402,7 +8402,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge",
     "priceFrom": 9,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -8454,7 +8454,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sed-developments",
     "priceFrom": 9,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -8503,7 +8503,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8555,7 +8555,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge",
     "priceFrom": 4.9,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -8595,7 +8595,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 14,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8647,7 +8647,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge",
     "priceFrom": 11,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8697,7 +8697,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -8749,7 +8749,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge",
     "priceFrom": 13,
     "deliveryYear": 2025,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8802,7 +8802,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge",
     "priceFrom": 10,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8846,7 +8846,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mercon",
     "priceFrom": 10,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Studio",
@@ -8894,7 +8894,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "etamda",
     "priceFrom": 6,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8951,7 +8951,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -9007,7 +9007,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "the-waterway-developments",
     "priceFrom": 15,
     "deliveryYear": 2023,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9055,7 +9055,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-marasem-development",
     "priceFrom": 13.4,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9106,7 +9106,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-marasem-developments",
     "priceFrom": 10,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9151,7 +9151,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-marasem-developments",
     "priceFrom": 11,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9198,7 +9198,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mountain-view",
     "priceFrom": 12,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9248,7 +9248,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "hyde-park-developments",
     "priceFrom": 14,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9308,7 +9308,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 9,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9367,7 +9367,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 11,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9421,7 +9421,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 13,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9467,7 +9467,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "tameer",
     "priceFrom": 25,
     "deliveryYear": 2020,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9518,7 +9518,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "starlight-developments",
     "priceFrom": 30,
     "deliveryYear": 2018,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9567,7 +9567,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "talaat-moustafa-group",
     "priceFrom": 4,
     "deliveryYear": 2005,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9616,7 +9616,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "talaat-moustafa-group",
     "priceFrom": 5,
     "deliveryYear": 2010,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9673,7 +9673,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-futtaim",
     "priceFrom": 11,
     "deliveryYear": 2022,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9723,7 +9723,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 16,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9777,7 +9777,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "pre-developments",
     "priceFrom": 10,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9825,7 +9825,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 9,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9872,7 +9872,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "el-hazek-construction-group",
     "priceFrom": 12,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -9926,7 +9926,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "ora-developers",
     "priceFrom": 13,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Studio",
@@ -9975,7 +9975,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "madinet-masr",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10026,7 +10026,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 13.528,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10078,7 +10078,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 5,
     "deliveryYear": 2005,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10132,7 +10132,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 17,
     "deliveryYear": 2014,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10188,7 +10188,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 13,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10235,7 +10235,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 12,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10287,7 +10287,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "hyde-park-developments",
     "priceFrom": 12,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10339,7 +10339,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "ora-developers",
     "priceFrom": 11,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10387,7 +10387,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "misr-italia",
     "priceFrom": 10,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10442,7 +10442,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 12,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10490,7 +10490,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mountain-view",
     "priceFrom": 11,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10538,7 +10538,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "wadi-degla",
     "priceFrom": 7,
     "deliveryYear": 2023,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10584,7 +10584,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "arabia-holding",
     "priceFrom": 6,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10632,7 +10632,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "m-squared-developments",
     "priceFrom": 8,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10681,7 +10681,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "misr-italia-properties",
     "priceFrom": 9,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10739,7 +10739,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-verde-developments",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10790,7 +10790,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "aqar-misr-developments",
     "priceFrom": 3.2,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10841,7 +10841,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "safwa-urban-development",
     "priceFrom": 5.8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10941,7 +10941,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "acud",
     "priceFrom": 14,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10990,7 +10990,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "cred-developments",
     "priceFrom": 9,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -11034,7 +11034,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "acud",
     "priceFrom": 5,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Offices",
@@ -11083,7 +11083,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "tatweer-misr",
     "priceFrom": 5.8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -11135,7 +11135,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mountain-view",
     "priceFrom": 10,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -11190,7 +11190,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -11237,7 +11237,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "heliopolis-housing-development",
     "priceFrom": 7,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -11290,7 +11290,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "heliopolis-company-for-housing-and-development",
     "priceFrom": 6,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -11340,7 +11340,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "roya-developments",
     "priceFrom": 7,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11390,7 +11390,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "tatweer-misr",
     "priceFrom": 9,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11448,7 +11448,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "stella-di-mare",
     "priceFrom": 8,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11499,7 +11499,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "wadi-degla",
     "priceFrom": 6,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11552,7 +11552,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "reedy-group",
     "priceFrom": 10,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11603,7 +11603,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 14,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11651,7 +11651,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "la-vista-developments",
     "priceFrom": 8,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -11705,7 +11705,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "madaar-developments",
     "priceFrom": 9,
     "deliveryYear": 2024,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11757,7 +11757,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "wadi-degla-developments",
     "priceFrom": 3.5,
     "deliveryYear": 2020,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11805,7 +11805,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "orascom",
     "priceFrom": 18,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11866,7 +11866,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "orascom",
     "priceFrom": 9,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -11923,7 +11923,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "abu-soma-development",
     "priceFrom": 14,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11977,7 +11977,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "erc-egypt",
     "priceFrom": 12,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -12029,7 +12029,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "pickalbatros",
     "priceFrom": 7,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -12080,7 +12080,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-attal-holding",
     "priceFrom": 5,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -12121,7 +12121,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "orascom",
     "priceFrom": 5,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -12175,7 +12175,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "lazib",
     "priceFrom": 4,
     "deliveryYear": 2024,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -12224,7 +12224,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 18,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -12274,7 +12274,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "ora-developers",
     "priceFrom": 16,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -12322,7 +12322,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "ora-developers",
     "priceFrom": 14,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -12375,7 +12375,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "emaar-misr",
     "priceFrom": 16,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -12428,7 +12428,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "westway-developments",
     "priceFrom": 10,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -12560,7 +12560,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "taj-misr-developments",
     "priceFrom": 5.5,
     "deliveryYear": 2026,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Studio",
@@ -12608,7 +12608,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "dunes-development",
     "priceFrom": 14,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -13144,7 +13144,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "ajna-developments",
     "priceFrom": 4.9,
     "deliveryYear": 2025,
-    "status": "Under Construction",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Studio",
@@ -13256,7 +13256,7 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "5%–10% down payment · 7–8 years equal installments",
     "areaSize": "137 feddan",
     "deliveryYear": 2025,
-    "status": "Delivered",
+    "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",

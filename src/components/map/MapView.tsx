@@ -221,7 +221,7 @@ export function MapView({
                 </div>
                 <div class="pt-popup-stat">
                   <div class="pt-popup-stat-label">Status</div>
-                  <div class="pt-popup-stat-value" style="color:${c.status === 'Delivered' ? '#16a34a' : c.status === 'Under Construction' ? '#d97706' : '#2563eb'};font-size:10px;">${c.status}</div>
+                  <div class="pt-popup-stat-value" style="color:${c.status === 'RTM' ? '#16a34a' : '#2563eb'};font-size:10px;">${c.status}</div>
                 </div>
               </div>
               ${availStr}

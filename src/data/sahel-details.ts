@@ -6,7 +6,7 @@ export type SahelDetail = {
   unitSizes?: string;
   priceFrom?: number;
   deliveryYear?: number;
-  status?: "Delivered" | "Under Construction" | "Off-Plan";
+  status?: "RTM" | "Off-Plan";
   paymentPlan?: string;
   highlights?: string[];
   mapsUrl?: string;
@@ -47,7 +47,7 @@ export const sahelDetails: Record<string, SahelDetail> = {
       "Almaza Bay at km 250 – mature Travco resort with multiple phases, chalets, townhouses and villas along white-sand beach.",
     priceFrom: 10.7,
     deliveryYear: 2026,
-    status: "Under Construction",
+    status: "RTM",
     paymentPlan: "6% down + 6% contract over 7 yrs | 10% down over 6 yrs",
     highlights: ["Mature resort", "White sand beach", "Hotel-integrated", "Multiple phases"],
   },
@@ -87,7 +87,7 @@ export const sahelDetails: Record<string, SahelDetail> = {
     unitSizes: "115–400+ m²",
     priceFrom: 13.5,
     deliveryYear: 2027,
-    status: "Under Construction",
+    status: "RTM",
     paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 9 years interest-free",
     blurb: "Marsa Baghush by Shehab Mazhar (SQM Developments) is a boutique 338-feddan community in Sidi Heneish, designed with tiered elevations to ensure panoramic sea views from every residence.",
     highlights: [
@@ -119,7 +119,7 @@ export const sahelDetails: Record<string, SahelDetail> = {
       "Koun by Mabany Edris is a 106-acre coastal resort in Ras El Hekma (km 201) with 15% footprint, 100% lagoon/sea-facing units, boutique hotel, and full finishing.",
     priceFrom: 5,
     deliveryYear: 2027,
-    status: "Under Construction",
+    status: "RTM",
     paymentPlan: "0%–5% down payment (or 10%), remaining balance spread over 8 to 12 years interest-free",
     highlights: ["Km 201 Ras El Hekma", "100% waterfront view layout", "15% building footprint", "Mabany Edris"],
   },
@@ -130,7 +130,7 @@ export const sahelDetails: Record<string, SahelDetail> = {
       "Hacienda Ras El Hekma is a 137–140 acre beachfront community by Palm Hills featuring tiered sea-view architecture, crystal lagoons, and boutique beach clubs.",
     priceFrom: 13.5,
     deliveryYear: 2024,
-    status: "Delivered",
+    status: "RTM",
     paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 8 years",
     highlights: ["Tiered sea view layout", "Palm Hills quality", "Swimmable crystal lagoons"],
   },

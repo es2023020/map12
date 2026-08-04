@@ -101,9 +101,8 @@ function DevPage() {
   const avgPrice = list.length > 0
     ? Math.round(list.reduce((s, c) => s + c.priceFrom, 0) / list.length)
     : 0;
-  const deliveredCount = list.filter((c) => c.status === "Delivered").length;
+  const rtmCount = list.filter((c) => c.status === "RTM").length;
   const offPlanCount = list.filter((c) => c.status === "Off-Plan").length;
-  const underConstructionCount = list.filter((c) => c.status === "Under Construction").length;
   const uniqueDestinations = Array.from(new Set(list.map((c) => c.destination)));
   const beachfrontCount = list.filter((c) => c.beachfront).length;
 
@@ -179,7 +178,7 @@ function DevPage() {
           <div className="grid grid-cols-2 divide-x divide-border sm:grid-cols-4">
             <StatBar icon={Building2} label="Total projects" value={String(list.length)} />
             <StatBar icon={Wallet} label="Avg. starting price" value={`EGP ${avgPrice}M`} />
-            <StatBar icon={Calendar} label="Delivered" value={`${deliveredCount} projects`} className="hidden sm:flex" />
+            <StatBar icon={Calendar} label="RTM / Handover" value={`${rtmCount} projects`} className="hidden sm:flex" />
             <StatBar icon={MapPin} label="Markets" value={`${uniqueDestinations.length} ${uniqueDestinations.length === 1 ? "destination" : "destinations"}`} className="hidden sm:flex" />
           </div>
         </div>
@@ -223,8 +222,7 @@ function DevPage() {
         {/* Status pills + beachfront */}
         <div className="mb-8 flex flex-wrap gap-2">
           {[
-            { label: "Delivered", count: deliveredCount, cls: "text-emerald-700 bg-emerald-50 border-emerald-200" },
-            { label: "Under Construction", count: underConstructionCount, cls: "text-amber-700 bg-amber-50 border-amber-200" },
+            { label: "RTM", count: rtmCount, cls: "text-emerald-700 bg-emerald-50 border-emerald-200" },
             { label: "Off-Plan", count: offPlanCount, cls: "text-blue-700 bg-blue-50 border-blue-200" },
             ...(beachfrontCount > 0 ? [{ label: "Beachfront", count: beachfrontCount, cls: "text-cyan-700 bg-cyan-50 border-cyan-200" }] : []),
           ].filter((x) => x.count > 0).map(({ label, count, cls }) => (
