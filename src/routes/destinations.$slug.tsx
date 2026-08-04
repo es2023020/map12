@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Shell } from "@/components/layout/Shell";
 import { MapClient } from "@/components/map/MapClient";
 import { CompoundCard } from "@/components/CompoundCard";
 import { destinationBySlug, destinations } from "@/data/destinations";
 import { compoundsByDestination, compounds } from "@/data/compounds";
-import { ArrowLeft, MapPin, Building2, Wallet, Calendar, Waves, TrendingUp, Map as MapIcon } from "lucide-react";
+import { ArrowLeft, MapPin, Building2, Wallet, Calendar, Waves, TrendingUp, Map as MapIcon, ArrowUpDown, SlidersHorizontal } from "lucide-react";
 
 import { buildDestinationSchema, buildBreadcrumbSchema, getCanonicalUrl } from "@/lib/seo";
 
@@ -90,6 +91,33 @@ function AreaPage() {
   const deliveredCount = list.filter((c) => c.status === "Delivered").length;
   const minPrice = list.length > 0 ? Math.min(...list.map((c) => c.priceFrom)) : 0;
   const maxPrice = list.length > 0 ? Math.max(...list.map((c) => c.priceFrom)) : 0;
+
+  // Kilometer stats & sorting
+  const kmCompounds = list.filter((c) => c.km !== undefined);
+  const hasKmData = kmCompounds.length > 0;
+  const minKm = hasKmData ? Math.min(...kmCompounds.map((c) => c.km!)) : null;
+  const maxKm = hasKmData ? Math.max(...kmCompounds.map((c) => c.km!)) : null;
+
+  const [sortBy, setSortBy] = useState<string>(hasKmData ? "km-asc" : "price-asc");
+
+  const sortedList = [...list].sort((a, b) => {
+    if (sortBy === "km-asc") {
+      if (a.km !== undefined && b.km !== undefined) return a.km - b.km;
+      if (a.km !== undefined) return -1;
+      if (b.km !== undefined) return 1;
+      return a.priceFrom - b.priceFrom;
+    }
+    if (sortBy === "km-desc") {
+      if (a.km !== undefined && b.km !== undefined) return b.km - a.km;
+      if (a.km !== undefined) return -1;
+      if (b.km !== undefined) return 1;
+      return a.priceFrom - b.priceFrom;
+    }
+    if (sortBy === "price-asc") return (a.priceFrom || Infinity) - (b.priceFrom || Infinity);
+    if (sortBy === "price-desc") return (b.priceFrom || 0) - (a.priceFrom || 0);
+    if (sortBy === "name") return a.name.localeCompare(b.name);
+    return 0;
+  });
 
   // Get related destinations in the same region
   const relatedAreas = destinations.filter((x) => x.region === a.region && x.slug !== a.slug).slice(0, 4);
@@ -226,24 +254,70 @@ function AreaPage() {
 
         {/* Projects grid */}
         <div>
-          <div className="mb-5 flex items-center justify-between">
-            <h2 className="font-display text-2xl font-semibold text-primary">
-              All {list.length} projects in {a.name}
-            </h2>
-            <div className="flex flex-wrap gap-2 text-xs">
-              {["Delivered", "Under Construction", "Off-Plan"].map((s) => {
-                const count = list.filter((c) => c.status === s).length;
-                if (!count) return null;
-                return (
-                  <span key={s} className="rounded-full border border-border bg-card px-3 py-1 text-muted-foreground">
-                    {s}: <strong className="text-primary">{count}</strong>
-                  </span>
-                );
-              })}
+          {hasKmData && (
+            <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-accent/30 bg-accent/5 p-4 sm:px-6 shadow-sm">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground font-bold text-sm shadow-sm">
+                  Km
+                </span>
+                <div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-accent flex items-center gap-1.5">
+                    <MapPin className="h-3.5 w-3.5" /> Ranked Kilo to Kilo
+                  </div>
+                  <div className="text-base font-bold text-primary">
+                    Coastal Stretch: Kilo {minKm} → Kilo {maxKm}
+                  </div>
+                </div>
+              </div>
+              <div className="text-xs text-muted-foreground bg-card/80 backdrop-blur border border-border/60 px-3 py-1.5 rounded-full font-medium">
+                {kmCompounds.length} projects ordered sequentially by coastal kilometer marker
+              </div>
+            </div>
+          )}
+
+          <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <h2 className="font-display text-2xl font-semibold text-primary">
+                All {list.length} projects in {a.name}
+              </h2>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                {hasKmData ? "Ranked sequentially by coastal kilometer position" : "Comprehensive project directory"}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 text-xs">
+              <div className="flex items-center gap-2 border border-border bg-card rounded-xl px-3 py-1.5 shadow-xs">
+                <ArrowUpDown className="h-3.5 w-3.5 text-accent" />
+                <span className="font-medium text-muted-foreground">Sort:</span>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="bg-transparent font-semibold text-primary focus:outline-hidden cursor-pointer"
+                >
+                  {hasKmData && <option value="km-asc">Km: Low to High (Kilo to Kilo)</option>}
+                  {hasKmData && <option value="km-desc">Km: High to Low (Kilo to Kilo)</option>}
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="name">Name (A–Z)</option>
+                </select>
+              </div>
+
+              <div className="hidden sm:flex flex-wrap gap-2 text-xs">
+                {["Delivered", "Under Construction", "Off-Plan"].map((s) => {
+                  const count = list.filter((c) => c.status === s).length;
+                  if (!count) return null;
+                  return (
+                    <span key={s} className="rounded-xl border border-border bg-card px-3 py-1.5 text-muted-foreground">
+                      {s}: <strong className="text-primary">{count}</strong>
+                    </span>
+                  );
+                })}
+              </div>
             </div>
           </div>
+
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {list.map((c) => <CompoundCard key={c.slug} c={c} />)}
+            {sortedList.map((c) => <CompoundCard key={c.slug} c={c} />)}
           </div>
           {list.length === 0 && (
             <div className="rounded-2xl border border-dashed border-border p-16 text-center text-muted-foreground">

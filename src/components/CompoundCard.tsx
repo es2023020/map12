@@ -27,6 +27,13 @@ export function CompoundCard({ c }: { c: Compound }) {
             {c.status}
           </span>
         </div>
+        {c.km !== undefined && (
+          <div className="absolute right-3 top-3">
+            <span className="inline-flex items-center gap-1 rounded-full bg-primary/90 backdrop-blur px-2.5 py-0.5 text-[10px] font-bold text-white shadow-sm border border-white/20">
+              <MapPin className="h-2.5 w-2.5 text-accent" /> Km {c.km}
+            </span>
+          </div>
+        )}
       </Link>
       <div className="p-4">
         <div className="flex items-start justify-between gap-2">

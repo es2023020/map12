@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Shell } from "@/components/layout/Shell";
 import { CompoundCard } from "@/components/CompoundCard";
@@ -5,7 +6,7 @@ import { destinationBySlug } from "@/data/destinations";
 import { compoundsByDestination } from "@/data/compounds";
 import { getDestinationSEO } from "@/lib/seo-templates";
 import { buildDestinationSchema, buildBreadcrumbSchema, formatEGP } from "@/lib/seo";
-import { ArrowLeft, MapPin, Building2, Wallet, TrendingUp, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, MapPin, Building2, Wallet, TrendingUp, CheckCircle2, ArrowUpDown } from "lucide-react";
 
 export const Route = createFileRoute("/ar/destinations/$slug")({
   loader: ({ params }) => {
@@ -82,6 +83,32 @@ function ArabicDestinationPage() {
   const minPrice = list.length > 0 ? Math.min(...list.map((c) => c.priceFrom)) : 0;
   const minPriceStr = minPrice ? formatEGP(minPrice) : "حسب الطلب";
 
+  const kmCompounds = list.filter((c) => c.km !== undefined);
+  const hasKmData = kmCompounds.length > 0;
+  const minKm = hasKmData ? Math.min(...kmCompounds.map((c) => c.km!)) : null;
+  const maxKm = hasKmData ? Math.max(...kmCompounds.map((c) => c.km!)) : null;
+
+  const [sortBy, setSortBy] = useState<string>(hasKmData ? "km-asc" : "price-asc");
+
+  const sortedList = [...list].sort((a, b) => {
+    if (sortBy === "km-asc") {
+      if (a.km !== undefined && b.km !== undefined) return a.km - b.km;
+      if (a.km !== undefined) return -1;
+      if (b.km !== undefined) return 1;
+      return a.priceFrom - b.priceFrom;
+    }
+    if (sortBy === "km-desc") {
+      if (a.km !== undefined && b.km !== undefined) return b.km - a.km;
+      if (a.km !== undefined) return -1;
+      if (b.km !== undefined) return 1;
+      return a.priceFrom - b.priceFrom;
+    }
+    if (sortBy === "price-asc") return (a.priceFrom || Infinity) - (b.priceFrom || Infinity);
+    if (sortBy === "price-desc") return (b.priceFrom || 0) - (a.priceFrom || 0);
+    if (sortBy === "name") return a.name.localeCompare(b.name);
+    return 0;
+  });
+
   return (
     <Shell>
       <div dir="rtl" className="font-sans text-right">
@@ -154,9 +181,51 @@ function ArabicDestinationPage() {
 
           {/* Compound Grid */}
           <div>
-            <h2 className="font-display text-2xl font-bold text-foreground mb-6">قائمة كمبوندات {dest.name} ({list.length})</h2>
+            {hasKmData && (
+              <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-accent/30 bg-accent/5 p-4 sm:px-6 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground font-bold text-sm shadow-sm">
+                    كيلو
+                  </span>
+                  <div>
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-accent flex items-center gap-1.5">
+                      <MapPin className="h-3.5 w-3.5" /> ترتيب المشاريع بالكيلو
+                    </div>
+                    <div className="text-base font-bold text-primary">
+                      الشريط الساحلي: من كيلو {minKm} إلى كيلو {maxKm}
+                    </div>
+                  </div>
+                </div>
+                <div className="text-xs text-muted-foreground bg-card/80 backdrop-blur border border-border/60 px-3 py-1.5 rounded-full font-medium">
+                  تم ترتيب {kmCompounds.length} مشروعاً تنازلياً وتصاعدياً حسب رقم الكيلو الساحلي
+                </div>
+              </div>
+            )}
+
+            <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+              <h2 className="font-display text-2xl font-bold text-foreground">
+                قائمة كمبوندات {dest.name} ({list.length})
+              </h2>
+
+              <div className="flex items-center gap-2 border border-border bg-card rounded-xl px-3 py-1.5 text-xs shadow-xs">
+                <ArrowUpDown className="h-3.5 w-3.5 text-accent" />
+                <span className="font-medium text-muted-foreground">ترتيب حسب:</span>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="bg-transparent font-semibold text-primary focus:outline-hidden cursor-pointer"
+                >
+                  {hasKmData && <option value="km-asc">الكيلو: من الأقل للأعلى (من كيلو لكيلو)</option>}
+                  {hasKmData && <option value="km-desc">الكيلو: من الأعلى للأقل</option>}
+                  <option value="price-asc">السعر: من الأقل للأعلى</option>
+                  <option value="price-desc">السعر: من الأعلى للأقل</option>
+                  <option value="name">الاسم (أبجدياً)</option>
+                </select>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {list.map((c) => (
+              {sortedList.map((c) => (
                 <CompoundCard key={c.slug} c={c} />
               ))}
             </div>

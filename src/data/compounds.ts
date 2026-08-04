@@ -87,7 +87,7 @@ const sahelRaw: SahelInput[] = [
   ["La Vista Ras El Hekma", 204, "ras-el-hekma", "La Vista Developments", 11, 2027, true],
   ["Caesar Sodic", 202, "ras-el-hekma", "SODIC", 14, 2027, true],
   ["Koun", 202, "ras-el-hekma", "Mabany Edris", 6, 2027, true],
-  ["Caesar Bay", 201, "ras-el-hekma", "SODIC", 37, 2026, true],
+  ["Caesar Bay", 201, "ras-el-hekma", "Mediterranean Tourism Investment Company", 37, 2026, true],
   ["Lyv", 200, "ras-el-hekma", "Cred", 13, 2027, true],
   ["Mountain View Ras El Hekma", 200, "ras-el-hekma", "Mountain View", 16, 2028, true],
   ["Solare", 199, "ras-el-hekma", "Misr Italia", 10, 2027, true],
@@ -114,7 +114,7 @@ const sahelRaw: SahelInput[] = [
   ["Seazen", 172, "al-dabaa", "Al Qamzi Developments", 8, 2026, true],
   ["La Vista Bay", 169, "al-dabaa", "La Vista Developments", 9, 2025, true],
   ["La Vista Bay East", 169, "al-dabaa", "La Vista Developments", 9, 2025, true],
-  ["Hacienda Blue", 168, "ras-el-hekma", "Palm Hills Developments", 12, 2026, true],
+  ["Hacienda Blue", 168, "al-dabaa", "Palm Hills Developments", 12, 2026, true],
   ["Lasirena Sahel", 167, "al-dabaa", "Lasirena Group", 6, 2025, true],
   ["South Med", 165, "al-dabaa", "Talaat Moustafa Group", 10, 2027, true],
   // GHAZALA BAY
@@ -721,7 +721,7 @@ const newProjects: Compound[] = [
   {
     slug: "hacienda-blue",
     name: "Hacienda Blue",
-    destination: "ras-el-hekma",
+    destination: "al-dabaa",
     lat: 31.1098, lng: 27.7715,
     developer: "Palm Hills Developments",
     developerSlug: "palm-hills-developments",
@@ -735,7 +735,7 @@ const newProjects: Compound[] = [
     gallery: ["/projects/hacienda-blue/1.jpg", "/projects/hacienda-blue/2.jpg"],
     blurb: "Hacienda Blue is a premium development by Palm Hills Developments in Sidi Abdelrahman, presenting high-end unit designs and world-class compound amenities.",
     paymentPlan: "5% down payment · installments up to 10 years",
-    highlights: ["Boutique luxury beach retreat", "Low-density planning", "Pristine Ras El Hekma location", "Tranquil coastal destination"],
+    highlights: ["Boutique luxury beach retreat", "Low-density planning", "Pristine Al Dabaa location", "Tranquil coastal destination"],
   },
   {
     slug: "hacienda-waters",
@@ -3692,6 +3692,14 @@ export const compounds: Compound[] = new Proxy(staticCompounds, {
   }
 });
 export const compoundBySlug = (slug: string) => compounds.find((c) => c.slug === slug);
-export const compoundsByDestination = (destination: string) => compounds.filter((c) => c.destination === destination && !c.parentSlug);
+export const compoundsByDestination = (destination: string) =>
+  compounds
+    .filter((c) => c.destination === destination && !c.parentSlug)
+    .sort((a, b) => {
+      if (a.km !== undefined && b.km !== undefined) return a.km - b.km;
+      if (a.km !== undefined) return -1;
+      if (b.km !== undefined) return 1;
+      return a.priceFrom - b.priceFrom;
+    });
 export const compoundsByDeveloper = (devSlug: string) =>
   compounds.filter((c) => c.developerSlug === devSlug && !c.parentSlug);

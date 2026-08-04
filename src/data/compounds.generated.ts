@@ -622,7 +622,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "hacienda-blue",
     "name": "Hacienda Blue",
-    "destination": "ras-el-hekma",
+    "destination": "al-dabaa",
     "lat": 31.1098,
     "lng": 27.7715,
     "developer": "Palm Hills Developments",
@@ -658,7 +658,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/hacienda-blue/4.jpg",
       "/projects/hacienda-blue/5.jpg"
     ],
-    "blurb": "Hacienda Blue is a boutique luxury beachfront development by Palm Hills offering contemporary residences, private beaches, and panoramic Mediterranean views in Sidi Heneish.",
+    "blurb": "Hacienda Blue is a boutique luxury beachfront development by Palm Hills offering contemporary residences, private beaches, and panoramic Mediterranean views in Al Dabaa.",
     "paymentPlan": "5% down, installments up to 10 years",
     "areaSize": "100 feddan",
     "unitSizes": "80–300 m²",
@@ -666,10 +666,10 @@ export const compoundsGenerated: Compound[] = [
     "highlights": [
       "Boutique luxury beach retreat",
       "Low-density planning",
-      "Pristine Sidi Heneish location",
+      "Pristine Al Dabaa location",
       "Tranquil coastal destination"
     ],
-    "city": "Ras El Hekma, North Coast, Egypt",
+    "city": "Al Dabaa, North Coast, Egypt",
     "masterPlanUrl": "/Masterplans/hacienda blue.jpg"
   },
   {
@@ -6256,8 +6256,8 @@ export const compoundsGenerated: Compound[] = [
     "km": 201,
     "lat": 31.0846,
     "lng": 27.9331,
-    "developer": "SODIC",
-    "developerSlug": "sodic",
+    "developer": "Mediterranean Tourism Investment Company",
+    "developerSlug": "mediterranean-tourism-investment-company",
     "priceFrom": 8.6,
     "deliveryYear": 2026,
     "status": "Under Construction",
@@ -6292,7 +6292,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/caesar-bay/8.jpg",
       "/projects/caesar-bay/9.jpg"
     ],
-    "blurb": "Caesar is a luxury beachfront resort by SODIC in Ras El Hekma, featuring over 1.2 km of private white sandy beach, crystal lagoons, and terraced neighborhoods with uninterrupted sea views.",
+    "blurb": "Caesar Bay is a luxury beachfront resort by Mediterranean Tourism Investment Company in Ras El Hekma, featuring over 1.2 km of private white sandy beach, crystal lagoons, and terraced neighborhoods with uninterrupted sea views.",
     "paymentPlan": "5% down, installments up to 8 years",
     "areaSize": "231 feddan",
     "unitSizes": "112–453 m²",
@@ -6302,7 +6302,7 @@ export const compoundsGenerated: Compound[] = [
       "Over 1.2 km of private beachfront",
       "Terraced sea-view master plan",
       "Exclusive Ras El Hekma resort",
-      "SODIC luxury delivery"
+      "Mediterranean Tourism Investment Company luxury delivery"
     ]
   },
   {

@@ -55,24 +55,31 @@ function DestinationFilterPage() {
   const allCompounds = compoundsByDestination(dest.slug);
 
   // Filter logic based on filter string
-  const filteredCompounds = allCompounds.filter((c) => {
-    const f = filter.toLowerCase();
-    if (f === "off-plan") return c.status === "Off-Plan";
-    if (f === "delivered" || f === "ready-to-move") return c.status === "Delivered";
-    if (f === "under-construction") return c.status === "Under Construction";
-    if (f === "beachfront") return c.beachfront;
-    if (f.startsWith("under-")) {
-      const match = f.match(/under-(\d+)m/);
-      if (match) {
-        const maxM = parseInt(match[1], 10);
-        return c.priceFrom > 0 && c.priceFrom <= maxM * 1_000_000;
+  const filteredCompounds = allCompounds
+    .filter((c) => {
+      const f = filter.toLowerCase();
+      if (f === "off-plan") return c.status === "Off-Plan";
+      if (f === "delivered" || f === "ready-to-move") return c.status === "Delivered";
+      if (f === "under-construction") return c.status === "Under Construction";
+      if (f === "beachfront") return c.beachfront;
+      if (f.startsWith("under-")) {
+        const match = f.match(/under-(\d+)m/);
+        if (match) {
+          const maxM = parseInt(match[1], 10);
+          return c.priceFrom > 0 && c.priceFrom <= maxM * 1_000_000;
+        }
       }
-    }
-    if (f === "villas") return c.types.some((t) => /villa|townhouse|twin/i.test(t));
-    if (f === "chalets") return c.types.some((t) => /chalet/i.test(t));
-    if (f === "apartments") return c.types.some((t) => /apartment|duplex|penthouse/i.test(t));
-    return true;
-  });
+      if (f === "villas") return c.types.some((t) => /villa|townhouse|twin/i.test(t));
+      if (f === "chalets") return c.types.some((t) => /chalet/i.test(t));
+      if (f === "apartments") return c.types.some((t) => /apartment|duplex|penthouse/i.test(t));
+      return true;
+    })
+    .sort((a, b) => {
+      if (a.km !== undefined && b.km !== undefined) return a.km - b.km;
+      if (a.km !== undefined) return -1;
+      if (b.km !== undefined) return 1;
+      return a.priceFrom - b.priceFrom;
+    });
 
   const filterName = filter.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
 

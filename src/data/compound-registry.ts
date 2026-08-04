@@ -412,7 +412,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "caesar-bay": {
     destination: "ras-el-hekma",
     km: 201,
-    developer: "SODIC",
+    developer: "Mediterranean Tourism Investment Company",
     city: "Ras El Hekma, North Coast (km 201), Matrouh Governorate, Egypt",
     lat: 31.0846,
     lng: 27.9331,
@@ -420,12 +420,12 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 8.6,
     deliveryYear: 2026,
-    blurb: "Caesar is a luxury beachfront resort by SODIC in Ras El Hekma, featuring over 1.2 km of private white sandy beach across 192 feddans.",
+    blurb: "Caesar Bay is a luxury beachfront resort by Mediterranean Tourism Investment Company in Ras El Hekma, featuring over 1.2 km of private white sandy beach across 192 feddans.",
     paymentPlan: "5%–10% down payment, remaining balance over 6–8 years equal interest-free installments",
     areaSize: "192 feddan",
     amenities: ["Private beach", "Crystal lagoons", "Clubhouse", "Retail village", "Restaurants & cafés", "Gym & spa", "Sports courts", "Kids' areas", "Promenade", "24/7 security"],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Over 1.2 km of private beachfront", "Terraced sea-view master plan", "Exclusive Ras El Hekma resort", "SODIC luxury delivery"]
+    highlights: ["Over 1.2 km of private beachfront", "Terraced sea-view master plan", "Exclusive Ras El Hekma resort", "Mediterranean Tourism Investment Company luxury delivery"]
   },
   "caesar-sodic": {
     destination: "ras-el-hekma",
@@ -867,8 +867,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: ["18-hole championship golf course", "593-acre luxury resort", "Lake Yard retail & dining hub"]
   },
   "hacienda-blue": {
-    destination: "ras-el-hekma",
-    city: "Ras El Hekma, North Coast, Egypt",
+    destination: "al-dabaa",
+    city: "Al Dabaa, North Coast, Egypt",
     lat: 31.1098,
     lng: 27.7715,
     developer: "Palm Hills Developments",
@@ -877,7 +877,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 19.5,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Hacienda Blue is a 115–118 acre luxury coastal release by Palm Hills in Ras El Hekma featuring 24 acres of crystal lagoons, water park, and 1 km project depth.",
+    blurb: "Hacienda Blue is a 115–118 acre luxury coastal release by Palm Hills in Al Dabaa featuring 24 acres of crystal lagoons, water park, and 1 km project depth.",
     paymentPlan: "5% down payment + 5% after 3 months, remaining balance spread over up to 10 years interest-free",
     areaSize: "115–118 feddan",
     unitSizes: "114–209 m²",

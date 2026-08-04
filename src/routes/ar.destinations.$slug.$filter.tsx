@@ -67,21 +67,28 @@ function ArabicDestinationFilterPage() {
   const { dest, filter } = Route.useLoaderData();
   const allCompounds = compoundsByDestination(dest.slug);
 
-  const filteredCompounds = allCompounds.filter((c) => {
-    const f = filter.toLowerCase();
-    if (f === "off-plan") return c.status === "Off-Plan";
-    if (f === "delivered" || f === "ready-to-move") return c.status === "Delivered";
-    if (f === "villas") return c.types.some((t) => /villa|townhouse|twin/i.test(t));
-    if (f === "apartments") return c.types.some((t) => /apartment|duplex|penthouse/i.test(t));
-    if (f.startsWith("under-")) {
-      const match = f.match(/under-(\d+)m/);
-      if (match) {
-        const maxM = parseInt(match[1], 10);
-        return c.priceFrom > 0 && c.priceFrom <= maxM * 1_000_000;
+  const filteredCompounds = allCompounds
+    .filter((c) => {
+      const f = filter.toLowerCase();
+      if (f === "off-plan") return c.status === "Off-Plan";
+      if (f === "delivered" || f === "ready-to-move") return c.status === "Delivered";
+      if (f === "villas") return c.types.some((t) => /villa|townhouse|twin/i.test(t));
+      if (f === "apartments") return c.types.some((t) => /apartment|duplex|penthouse/i.test(t));
+      if (f.startsWith("under-")) {
+        const match = f.match(/under-(\d+)m/);
+        if (match) {
+          const maxM = parseInt(match[1], 10);
+          return c.priceFrom > 0 && c.priceFrom <= maxM * 1_000_000;
+        }
       }
-    }
-    return true;
-  });
+      return true;
+    })
+    .sort((a, b) => {
+      if (a.km !== undefined && b.km !== undefined) return a.km - b.km;
+      if (a.km !== undefined) return -1;
+      if (b.km !== undefined) return 1;
+      return a.priceFrom - b.priceFrom;
+    });
 
   const seo = getDestinationSEO({ name: dest.name, slug: dest.slug, blurb: dest.blurb, projectCount: allCompounds.length, filter }, "ar");
 
