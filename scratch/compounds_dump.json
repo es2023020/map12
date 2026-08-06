@@ -1,0 +1,2178 @@
+[
+  {
+    "slug": "horizon-by-saada",
+    "name": "Horizon by Saada",
+    "destination": "new-cairo",
+    "developer": "Horizon Egypt Developments",
+    "priceFrom": 33,
+    "status": "RTM"
+  },
+  {
+    "slug": "belle-vie",
+    "name": "Belle Vie",
+    "destination": "new-zayed",
+    "developer": "Emaar Misr",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "cairo-gate",
+    "name": "Cairo Gate",
+    "destination": "sheikh-zayed",
+    "developer": "Emaar Misr",
+    "priceFrom": 5.4,
+    "status": "RTM"
+  },
+  {
+    "slug": "marassi",
+    "name": "Marassi",
+    "destination": "sidi-abdelrahman",
+    "developer": "Emaar Misr",
+    "priceFrom": 16,
+    "status": "RTM"
+  },
+  {
+    "slug": "mivida",
+    "name": "Mivida",
+    "destination": "new-cairo",
+    "developer": "Emaar Misr",
+    "priceFrom": 12,
+    "status": "RTM"
+  },
+  {
+    "slug": "soul",
+    "name": "Soul",
+    "destination": "ras-el-hekma",
+    "developer": "Emaar Misr",
+    "priceFrom": 25,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "uptown-cairo",
+    "name": "Uptown Cairo",
+    "destination": "mokattam",
+    "developer": "Emaar Misr",
+    "priceFrom": 64.57,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "o-west",
+    "name": "O West",
+    "destination": "6th-of-october-city",
+    "developer": "Orascom",
+    "priceFrom": 7.3,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "kinda-residence",
+    "name": "Kinda Residence",
+    "destination": "new-cairo",
+    "developer": "Madinet Masr",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "sarai",
+    "name": "Sarai",
+    "destination": "sarai",
+    "developer": "Madinet Masr",
+    "priceFrom": 30.26,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "ogami",
+    "name": "Ogami",
+    "destination": "ras-el-hekma",
+    "developer": "SODIC",
+    "priceFrom": 12,
+    "status": "RTM"
+  },
+  {
+    "slug": "badya",
+    "name": "Badya",
+    "destination": "6th-october",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 3.8,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "hacienda-blue",
+    "name": "Hacienda Blue",
+    "destination": "al-dabaa",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 0,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "hacienda-waters",
+    "name": "Hacienda Waters",
+    "destination": "ras-el-hekma",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 0,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "palm-hills-new-cairo",
+    "name": "Palm Hills New Cairo",
+    "destination": "new-cairo",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 0,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "hacienda-bay",
+    "name": "Hacienda Bay",
+    "destination": "sidi-abdelrahman",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 16,
+    "status": "RTM"
+  },
+  {
+    "slug": "hacienda-heneish",
+    "name": "Hacienda Heneish",
+    "destination": "sidi-heneish",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 12,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "nmq",
+    "name": "NMQ",
+    "destination": "eastern-expansion",
+    "developer": "Arkan Palm",
+    "priceFrom": 3.47,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "riv-amwaj",
+    "name": "Rivette Amwaj",
+    "destination": "sidi-abdelrahman",
+    "developer": "Al Ahly Sabbour",
+    "priceFrom": 13.4,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "kynd-residence-gaia",
+    "name": "Kynd Residence Gaia",
+    "destination": "ras-el-hekma",
+    "developer": "Al Ahly Sabbour",
+    "priceFrom": 12.45,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "saada-sahel",
+    "name": "Saada Sahel",
+    "destination": "ras-el-hekma",
+    "developer": "Horizon Egypt Developments",
+    "priceFrom": 19.4,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "the-hillage",
+    "name": "The Hillage",
+    "destination": "sheikh-zayed",
+    "developer": "Madaar",
+    "priceFrom": 17.07,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "gaia",
+    "name": "Gaia",
+    "destination": "ras-el-hekma",
+    "developer": "Al Ahly Sabbour Developments",
+    "priceFrom": 13.9,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "creekview",
+    "name": "Creekview",
+    "destination": "new-cairo",
+    "developer": "Mountain View",
+    "priceFrom": 5.4,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "elea-azha-north",
+    "name": "Elea - Azha North",
+    "destination": "ras-el-hekma",
+    "developer": "Madaar Development",
+    "priceFrom": 14,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "aqua-lagoons-june",
+    "name": "Aqua Lagoons - June",
+    "destination": "ras-el-hekma",
+    "developer": "SODIC",
+    "priceFrom": 15.5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "sadaf",
+    "name": "Sadaf",
+    "destination": "sidi-abdelrahman",
+    "developer": "New Plan Developments",
+    "priceFrom": 10,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "commonhaus",
+    "name": "Commonhaus",
+    "destination": "sheikh-zayed",
+    "developer": "Upwyde Developments",
+    "priceFrom": 5.5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "the-lynks",
+    "name": "The Lynks",
+    "destination": "new-cairo",
+    "developer": "Living Yards Developments",
+    "priceFrom": 5.8,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "park-sight",
+    "name": "Park Sight",
+    "destination": "new-administrative-capital",
+    "developer": "IL Cazar Developments",
+    "priceFrom": 4.9,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "silvertown-lagoon-cabanas",
+    "name": "Silvertown - Lagoon Cabanas",
+    "destination": "sidi-heneish",
+    "developer": "Ora Developers",
+    "priceFrom": 20,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "marresidence",
+    "name": "Marresidence",
+    "destination": "new-zayed",
+    "developer": "Al Marasem Developments",
+    "priceFrom": 16,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "chapters-residence",
+    "name": "Chapters Residence",
+    "destination": "new-administrative-capital",
+    "developer": "Jadeer Developments",
+    "priceFrom": 13,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "vea-new-cairo",
+    "name": "Vea New Cairo",
+    "destination": "new-cairo",
+    "developer": "IL Cazar Developments",
+    "priceFrom": 14,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "vie-collective",
+    "name": "Vie Collective",
+    "destination": "new-cairo",
+    "developer": "Vie Communities",
+    "priceFrom": 12,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "vie-halo",
+    "name": "Vie Halo",
+    "destination": "new-cairo",
+    "developer": "Vie Communities",
+    "priceFrom": 13,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "coral-coves",
+    "name": "Coral Coves",
+    "destination": "red-sea",
+    "developer": "Somabay Developments",
+    "priceFrom": 18.5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "menorca",
+    "name": "Menorca",
+    "destination": "new-administrative-capital",
+    "developer": "Mardev Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "the-commons",
+    "name": "The Commons",
+    "destination": "sheikh-zayed",
+    "developer": "The C",
+    "priceFrom": 10,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "covaya",
+    "name": "Covaya",
+    "destination": "ain-sokhna",
+    "developer": "Roya Developments",
+    "priceFrom": 5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "olive-oasis",
+    "name": "Olive Oasis",
+    "destination": "ras-el-hekma",
+    "developer": "Misr Italia",
+    "priceFrom": 12.6,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "club-hill-solare",
+    "name": "Club Hill - Solare",
+    "destination": "ras-el-hekma",
+    "developer": "Misr Italia Properties",
+    "priceFrom": 6,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "sealine-seashore",
+    "name": "Sealine - Seashore",
+    "destination": "ras-el-hekma",
+    "developer": "Hyde Park",
+    "priceFrom": 44.4,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "keeva",
+    "name": "Keeva",
+    "destination": "eastern-expansion",
+    "developer": "Al Ahly Sabbour",
+    "priceFrom": 5.7,
+    "status": "RTM"
+  },
+  {
+    "slug": "31-west",
+    "name": "31 West",
+    "destination": "eastern-expansion",
+    "developer": "M Squared Developments",
+    "priceFrom": 7.9,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "business-district",
+    "name": "Business District",
+    "destination": "new-cairo",
+    "developer": "M Squared Developments",
+    "priceFrom": 15,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "mist",
+    "name": "Mist",
+    "destination": "new-cairo",
+    "developer": "M Squared",
+    "priceFrom": 8,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "trio",
+    "name": "Trio",
+    "destination": "new-cairo",
+    "developer": "M Squared",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "el-patio-riva",
+    "name": "El Patio Riva",
+    "destination": "6th-settlement",
+    "developer": "La Vista Developments",
+    "priceFrom": 5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "el-patio-vera",
+    "name": "El Patio Vera",
+    "destination": "sheikh-zayed",
+    "developer": "La Vista Developments",
+    "priceFrom": 15,
+    "status": "RTM"
+  },
+  {
+    "slug": "patio-hills",
+    "name": "Patio Hills",
+    "destination": "6th-settlement",
+    "developer": "La Vista Developments",
+    "priceFrom": 21,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "patio-jade",
+    "name": "Patio Jade",
+    "destination": "new-administrative-capital",
+    "developer": "La Vista Developments",
+    "priceFrom": 19,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "patio-oro",
+    "name": "Patio Oro",
+    "destination": "new-cairo",
+    "developer": "La Vista Developments",
+    "priceFrom": 15,
+    "status": "RTM"
+  },
+  {
+    "slug": "patio-vida",
+    "name": "Patio Vida",
+    "destination": "6th-settlement",
+    "developer": "La Vista Developments",
+    "priceFrom": 11,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "patio-zahraa",
+    "name": "Patio Zahraa",
+    "destination": "sheikh-zayed",
+    "developer": "Memaar Al Morshedy",
+    "priceFrom": 27,
+    "status": "RTM"
+  },
+  {
+    "slug": "el-patio-sola",
+    "name": "El Patio Sola",
+    "destination": "shorouk",
+    "developer": "La Vista Developments",
+    "priceFrom": 5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "el-patio-town",
+    "name": "El Patio Town",
+    "destination": "new-cairo",
+    "developer": "La Vista Developments",
+    "priceFrom": 30,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "patio-casa",
+    "name": "Patio Casa",
+    "destination": "new-cairo",
+    "developer": "La Vista Developments",
+    "priceFrom": 22,
+    "status": "RTM"
+  },
+  {
+    "slug": "patio-5-east",
+    "name": "Patio 5 East",
+    "destination": "new-cairo",
+    "developer": "La Vista Developments",
+    "priceFrom": 23,
+    "status": "RTM"
+  },
+  {
+    "slug": "patio-prime",
+    "name": "Patio Prime",
+    "destination": "new-cairo",
+    "developer": "La Vista Developments",
+    "priceFrom": 24,
+    "status": "RTM"
+  },
+  {
+    "slug": "la-vista-6",
+    "name": "La Vista 6",
+    "destination": "ain-sokhna",
+    "developer": "La Vista Developments",
+    "priceFrom": 9,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "la-vista-7",
+    "name": "La Vista 7",
+    "destination": "ain-sokhna",
+    "developer": "La Vista Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "la-vista-topaz",
+    "name": "La Vista Topaz",
+    "destination": "ain-sokhna",
+    "developer": "La Vista Developments",
+    "priceFrom": 13,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "la-vista-gardens",
+    "name": "La Vista Gardens",
+    "destination": "ain-sokhna",
+    "developer": "La Vista Developments",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "haptown",
+    "name": "Haptown",
+    "destination": "mostakbal-city",
+    "developer": "Hassan Allam Properties",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "swanlake-west",
+    "name": "Swanlake West",
+    "destination": "eastern-expansion",
+    "developer": "Hassan Allam Properties",
+    "priceFrom": 22,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "swanlake-el-gouna",
+    "name": "Swanlake El Gouna",
+    "destination": "red-sea",
+    "developer": "Orascom",
+    "priceFrom": 25,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "solana-east",
+    "name": "Solana East",
+    "destination": "new-cairo",
+    "developer": "Ora Developers",
+    "priceFrom": 20,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "the-brooks",
+    "name": "The Brooks",
+    "destination": "new-cairo",
+    "developer": "PRE Developments",
+    "priceFrom": 12,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "jebal-sokhna",
+    "name": "Jebal Sokhna",
+    "destination": "ain-sokhna",
+    "developer": "PRE Developments",
+    "priceFrom": 6,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "telal-east",
+    "name": "Telal East",
+    "destination": "new-cairo",
+    "developer": "Roya Developments",
+    "priceFrom": 23,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "rivers",
+    "name": "Rivers",
+    "destination": "new-zayed",
+    "developer": "Tatweer Misr",
+    "priceFrom": 12,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "kai-sokhna",
+    "name": "Kai Sokhna",
+    "destination": "ain-sokhna",
+    "developer": "Misr Italia Properties",
+    "priceFrom": 6,
+    "status": "RTM"
+  },
+  {
+    "slug": "cairo-business-park",
+    "name": "Cairo Business Park",
+    "destination": "new-cairo",
+    "developer": "Misr Italia Properties",
+    "priceFrom": 7.8,
+    "status": "RTM"
+  },
+  {
+    "slug": "rock-ville",
+    "name": "Rock Ville",
+    "destination": "mostakbal-city",
+    "developer": "El Batal Developments",
+    "priceFrom": 15,
+    "status": "RTM"
+  },
+  {
+    "slug": "rock-vera",
+    "name": "Rock Vera",
+    "destination": "new-cairo",
+    "developer": "El Batal Developments",
+    "priceFrom": 15,
+    "status": "RTM"
+  },
+  {
+    "slug": "rock-gold",
+    "name": "Rock Gold",
+    "destination": "new-cairo",
+    "developer": "El Batal Developments",
+    "priceFrom": 15,
+    "status": "RTM"
+  },
+  {
+    "slug": "rock-capital-1",
+    "name": "Rock Capital 1",
+    "destination": "new-administrative-capital",
+    "developer": "El Batal Developments",
+    "priceFrom": 19,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "rock-sheraton",
+    "name": "Rock Sheraton",
+    "destination": "heliopolis",
+    "developer": "El Batal Developments",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "palm-parks",
+    "name": "Palm Parks",
+    "destination": "eastern-expansion",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 17,
+    "status": "RTM"
+  },
+  {
+    "slug": "97-hills",
+    "name": "97 Hills",
+    "destination": "new-cairo",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 23.4,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "bamboo-iii",
+    "name": "Bamboo III",
+    "destination": "6th-october",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 21,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "the-crown-extension",
+    "name": "The Crown Extension",
+    "destination": "eastern-expansion",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 29,
+    "status": "RTM"
+  },
+  {
+    "slug": "palm-hills-jirian",
+    "name": "Palm Hills Jirian",
+    "destination": "new-zayed",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 8,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "palm-hills-one",
+    "name": "Palm Hills One",
+    "destination": "new-cairo",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 48,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "px",
+    "name": "PX",
+    "destination": "eastern-expansion",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "village-de-la-capitale",
+    "name": "Village de la Capitale",
+    "destination": "new-administrative-capital",
+    "developer": "Village de la Capitale",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "mountain-view-jirian",
+    "name": "Mountain View Jirian",
+    "destination": "new-zayed",
+    "developer": "Mountain View",
+    "priceFrom": 8,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "mountain-view-kingsway",
+    "name": "Mountain View Kingsway",
+    "destination": "new-zayed",
+    "developer": "Mountain View",
+    "priceFrom": 17,
+    "status": "RTM"
+  },
+  {
+    "slug": "mountain-view-grand-valley",
+    "name": "Mountain View Grand Valley",
+    "destination": "new-administrative-capital",
+    "developer": "Mountain View",
+    "priceFrom": 30,
+    "status": "RTM"
+  },
+  {
+    "slug": "mountain-view-chillout",
+    "name": "Mountain View Chillout",
+    "destination": "6th-of-october-city",
+    "developer": "Mountain View",
+    "priceFrom": 22,
+    "status": "RTM"
+  },
+  {
+    "slug": "mountain-view-crystal",
+    "name": "Mountain View Crystal",
+    "destination": "sidi-abdelrahman",
+    "developer": "Mountain View",
+    "priceFrom": 9.4,
+    "status": "RTM"
+  },
+  {
+    "slug": "mountain-view-mv4",
+    "name": "Mountain View MV4",
+    "destination": "new-cairo",
+    "developer": "Mountain View",
+    "priceFrom": 23,
+    "status": "RTM"
+  },
+  {
+    "slug": "esse-residence",
+    "name": "Esse Residence",
+    "destination": "new-cairo",
+    "developer": "Cred Developments",
+    "priceFrom": 4,
+    "status": "RTM"
+  },
+  {
+    "slug": "rai-valleys",
+    "name": "Rai Valleys",
+    "destination": "sarai",
+    "developer": "Madinet Masr",
+    "priceFrom": 17,
+    "status": "RTM"
+  },
+  {
+    "slug": "the-butterfly",
+    "name": "The Butterfly",
+    "destination": "new-cairo",
+    "developer": "Madinet Masr",
+    "priceFrom": 6,
+    "status": "RTM"
+  },
+  {
+    "slug": "club-views",
+    "name": "Club Views",
+    "destination": "new-cairo",
+    "developer": "Club Views",
+    "priceFrom": 5,
+    "status": "RTM"
+  },
+  {
+    "slug": "talala",
+    "name": "TALALA",
+    "destination": "heliopolis",
+    "developer": "Talala",
+    "priceFrom": 4,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "sheya-residence",
+    "name": "Sheya Residence",
+    "destination": "new-alamein",
+    "developer": "City Edge Developments",
+    "priceFrom": 6,
+    "status": "RTM"
+  },
+  {
+    "slug": "elm-tree-park",
+    "name": "ELM TREE PARK",
+    "destination": "northern-expansion",
+    "developer": "Madinet Masr",
+    "priceFrom": 3.3,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "origami",
+    "name": "ORIGAMI",
+    "destination": "new-cairo",
+    "developer": "Origami",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "origami-golf",
+    "name": "Origami Golf",
+    "destination": "new-cairo",
+    "developer": "Al Ahly Sabbour",
+    "priceFrom": 7,
+    "status": "RTM"
+  },
+  {
+    "slug": "vye-sodic",
+    "name": "VYE SODIC",
+    "destination": "new-zayed",
+    "developer": "SODIC",
+    "priceFrom": 16,
+    "status": "RTM"
+  },
+  {
+    "slug": "botanica",
+    "name": "Botanica",
+    "destination": "new-administrative-capital",
+    "developer": "New Generation Development",
+    "priceFrom": 5.2,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "cali-coast-ras-el-hekma",
+    "name": "Cali Coast Ras El Hekma",
+    "destination": "ras-el-hekma",
+    "developer": "Maven Developments",
+    "priceFrom": 8.1,
+    "status": "RTM"
+  },
+  {
+    "slug": "youd",
+    "name": "Youd",
+    "destination": "ras-el-hekma",
+    "developer": "Al Ahly Sabbour",
+    "priceFrom": 8,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "district-5",
+    "name": "District 5",
+    "destination": "new-cairo",
+    "developer": "Marakez",
+    "priceFrom": 11.2,
+    "status": "RTM"
+  },
+  {
+    "slug": "crescent-walk",
+    "name": "Crescent Walk",
+    "destination": "6th-settlement",
+    "developer": "Marakez",
+    "priceFrom": 8.1,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "ramla",
+    "name": "Ramla North Coast",
+    "destination": "ras-el-hekma",
+    "developer": "Marakez",
+    "priceFrom": 17,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "aeon",
+    "name": "Aeon",
+    "destination": "6th-october",
+    "developer": "Marakez Developments",
+    "priceFrom": 17,
+    "status": "RTM"
+  },
+  {
+    "slug": "at-east",
+    "name": "At East",
+    "destination": "mostakbal-city",
+    "developer": "Al Ahly Sabbour Developments",
+    "priceFrom": 5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "the-mornings",
+    "name": "The Mornings",
+    "destination": "new-cairo",
+    "developer": "Al Ahly Sabbour",
+    "priceFrom": 5.3,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "telal-soul",
+    "name": "Telal Soul",
+    "destination": "sidi-abdelrahman",
+    "developer": "Roya Developments",
+    "priceFrom": 12,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "cleo-water-residence",
+    "name": "Cleo Water Residence",
+    "destination": "new-cairo",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 4.2,
+    "status": "RTM"
+  },
+  {
+    "slug": "diplo-village",
+    "name": "Diplo Village",
+    "destination": "sidi-abdelrahman",
+    "developer": "NCB",
+    "priceFrom": 5,
+    "status": "RTM"
+  },
+  {
+    "slug": "alam-al-roum",
+    "name": "Alam Al Roum",
+    "destination": "sidi-heneish",
+    "developer": "Qatari Diar",
+    "priceFrom": 9,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "jamila",
+    "name": "Jamila",
+    "destination": "sidi-heneish",
+    "developer": "New Jersey Developments",
+    "priceFrom": 4.5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "almaza-bay",
+    "name": "Almaza Bay",
+    "destination": "marsa-matrouh",
+    "developer": "Travco Properties",
+    "priceFrom": 10.7,
+    "status": "RTM"
+  },
+  {
+    "slug": "silversands",
+    "name": "Silversands",
+    "destination": "sidi-heneish",
+    "developer": "Ora Developers",
+    "priceFrom": 9.7,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "marsa-baghush",
+    "name": "Marsa Baghush",
+    "destination": "sidi-heneish",
+    "developer": "Shehab Mazhar / SQM Developments",
+    "priceFrom": 6,
+    "status": "RTM"
+  },
+  {
+    "slug": "beit-al-bahr",
+    "name": "Beit Al Bahr",
+    "destination": "sidi-heneish",
+    "developer": "Beit Al Bahr Developments",
+    "priceFrom": 14.9,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "marbay-ras-el-hekma",
+    "name": "MarBay Ras El Hekma",
+    "destination": "ras-el-hekma",
+    "developer": "Al Marasem Development",
+    "priceFrom": 12,
+    "status": "RTM"
+  },
+  {
+    "slug": "hacienda-ras-el-hekma",
+    "name": "Hacienda Ras El Hekma",
+    "destination": "ras-el-hekma",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 23,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "modon-ras-el-hekma",
+    "name": "Modon Ras El Hekma",
+    "destination": "ras-el-hekma",
+    "developer": "Modon Holding",
+    "priceFrom": 15.9,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "azha-north-coast",
+    "name": "Azha North Coast",
+    "destination": "ras-el-hekma",
+    "developer": "Madaar Developments",
+    "priceFrom": 11.1,
+    "status": "RTM"
+  },
+  {
+    "slug": "el-masyaf",
+    "name": "El Masyaf North Coast",
+    "destination": "ras-el-hekma",
+    "developer": "M Squared",
+    "priceFrom": 8.9,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "naia-bay",
+    "name": "Naia Bay North Coast",
+    "destination": "ras-el-hekma",
+    "developer": "Naia Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "fouka-bay",
+    "name": "Fouka Bay North Coast",
+    "destination": "ras-el-hekma",
+    "developer": "Tatweer Misr",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "hyde-park-north-seashore",
+    "name": "Seashore Hyde Park North",
+    "destination": "ras-el-hekma",
+    "developer": "Hyde Park",
+    "priceFrom": 8.1,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "la-vista-ras-el-hekma",
+    "name": "La Vista Ras El Hekma",
+    "destination": "ras-el-hekma",
+    "developer": "La Vista Developments",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "caesar-sodic",
+    "name": "Caesar Sodic",
+    "destination": "ras-el-hekma",
+    "developer": "SODIC",
+    "priceFrom": 8.6,
+    "status": "RTM"
+  },
+  {
+    "slug": "koun",
+    "name": "Koun",
+    "destination": "ras-el-hekma",
+    "developer": "Mabany Edris",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "caesar-bay",
+    "name": "Caesar Bay",
+    "destination": "ras-el-hekma",
+    "developer": "Mediterranean Tourism Investment Company",
+    "priceFrom": 8.6,
+    "status": "RTM"
+  },
+  {
+    "slug": "lyv",
+    "name": "LYV Caesar Ras El Hekma",
+    "destination": "ras-el-hekma",
+    "developer": "Gates Developments",
+    "priceFrom": 7.5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "mountain-view-ras-el-hekma",
+    "name": "Mountain View Ras El Hekma",
+    "destination": "ras-el-hekma",
+    "developer": "Mountain View",
+    "priceFrom": 16,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "solare",
+    "name": "Solare",
+    "destination": "ras-el-hekma",
+    "developer": "Misr Italia Properties",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "swan-lake",
+    "name": "Swan Lake",
+    "destination": "ras-el-hekma",
+    "developer": "Hassan Allam Properties",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "seashell-ras-el-hekma",
+    "name": "Seashell Ras El Hekma",
+    "destination": "ras-el-hekma",
+    "developer": "New Giza Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "june",
+    "name": "June",
+    "destination": "ras-el-hekma",
+    "developer": "SODIC",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "direction-white",
+    "name": "Direction White",
+    "destination": "ras-el-hekma",
+    "developer": "Arabella Group",
+    "priceFrom": 8.1,
+    "status": "RTM"
+  },
+  {
+    "slug": "the-med",
+    "name": "The Med",
+    "destination": "ras-el-hekma",
+    "developer": "People and Places",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "jefaira",
+    "name": "Jefaira",
+    "destination": "ras-el-hekma",
+    "developer": "Inertia Egypt",
+    "priceFrom": 12,
+    "status": "RTM"
+  },
+  {
+    "slug": "the-c",
+    "name": "The C",
+    "destination": "ras-el-hekma",
+    "developer": "Ilcazar",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "salt",
+    "name": "Salt",
+    "destination": "ras-el-hekma",
+    "developer": "Tatweer Misr",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "katameya-coast",
+    "name": "Katameya Coast",
+    "destination": "ras-el-hekma",
+    "developer": "Starlight Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "safia",
+    "name": "Safia",
+    "destination": "ras-el-hekma",
+    "developer": "Maxim Developments",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "sa-ada-sahel",
+    "name": "Sa'ada Sahel",
+    "destination": "ras-el-hekma",
+    "developer": "Horizon Egypt Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "azzar-islands",
+    "name": "AZZAR Islands",
+    "destination": "ras-el-hekma",
+    "developer": "Reedy Group",
+    "priceFrom": 16.5,
+    "status": "RTM"
+  },
+  {
+    "slug": "lvls",
+    "name": "LVLS",
+    "destination": "ras-el-hekma",
+    "developer": "Mountain View",
+    "priceFrom": 8.2,
+    "status": "RTM"
+  },
+  {
+    "slug": "d-bay",
+    "name": "D-Bay",
+    "destination": "al-dabaa",
+    "developer": "Tatweer Misr",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "d-o-s-e",
+    "name": "D.O.S.E",
+    "destination": "al-dabaa",
+    "developer": "Akam Al Rajhi Developments",
+    "priceFrom": 9.5,
+    "status": "RTM"
+  },
+  {
+    "slug": "the-waterway",
+    "name": "The Waterway",
+    "destination": "al-dabaa",
+    "developer": "Equity",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "seazen",
+    "name": "Seazen",
+    "destination": "al-dabaa",
+    "developer": "Al Qamzi Developments",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "la-vista-bay",
+    "name": "La Vista Bay",
+    "destination": "sidi-abdelrahman",
+    "developer": "La Vista Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "la-vista-bay-east",
+    "name": "La Vista Bay East",
+    "destination": "al-dabaa",
+    "developer": "La Vista Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "lasirena-sahel",
+    "name": "Lasirena Sahel",
+    "destination": "al-dabaa",
+    "developer": "Lasirena Group",
+    "priceFrom": 6,
+    "status": "RTM"
+  },
+  {
+    "slug": "south-med",
+    "name": "South Med",
+    "destination": "al-dabaa",
+    "developer": "Talaat Moustafa Group",
+    "priceFrom": 14.5,
+    "status": "RTM"
+  },
+  {
+    "slug": "playa",
+    "name": "Playa",
+    "destination": "ghazala-bay",
+    "developer": "Maven Developments",
+    "priceFrom": 24,
+    "status": "RTM"
+  },
+  {
+    "slug": "ghazala-bay",
+    "name": "Ghazala Bay",
+    "destination": "sidi-abdelrahman",
+    "developer": "Inertia Egypt",
+    "priceFrom": 6,
+    "status": "RTM"
+  },
+  {
+    "slug": "zoya",
+    "name": "Zoya",
+    "destination": "ghazala-bay",
+    "developer": "LMD",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "telal",
+    "name": "Telal",
+    "destination": "sidi-abdelrahman",
+    "developer": "Roya Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "hacienda-white",
+    "name": "Hacienda White",
+    "destination": "sidi-abdelrahman",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 13,
+    "status": "RTM"
+  },
+  {
+    "slug": "blumar",
+    "name": "Blumar",
+    "destination": "sidi-abdelrahman",
+    "developer": "Wadi Degla Developments",
+    "priceFrom": 6.8,
+    "status": "RTM"
+  },
+  {
+    "slug": "amwaj",
+    "name": "Amwaj",
+    "destination": "sidi-abdelrahman",
+    "developer": "Al Ahly Sabbour Developments",
+    "priceFrom": 7.2,
+    "status": "RTM"
+  },
+  {
+    "slug": "seashell",
+    "name": "Seashell",
+    "destination": "sidi-abdelrahman",
+    "developer": "New Giza Developments",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "bianchi-ilios",
+    "name": "Bianchi ILios",
+    "destination": "sidi-abdelrahman",
+    "developer": "Al Borouj Misr Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "shamasi",
+    "name": "Shamasi",
+    "destination": "sidi-abdelrahman",
+    "developer": "Serac Developments",
+    "priceFrom": 7.5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "masaya",
+    "name": "Masaya",
+    "destination": "sidi-abdelrahman",
+    "developer": "M Squared",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "stella-heights",
+    "name": "Stella Heights",
+    "destination": "sidi-abdelrahman",
+    "developer": "Stella Di Mare",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "stella-sidi-abdel-rahman",
+    "name": "Stella Sidi Abdel Rahman",
+    "destination": "sidi-abdelrahman",
+    "developer": "Stella Di Mare",
+    "priceFrom": 7,
+    "status": "RTM"
+  },
+  {
+    "slug": "diplo-3",
+    "name": "Diplo 3",
+    "destination": "sidi-abdelrahman",
+    "developer": "Ahmed Yehia Real Estate Development",
+    "priceFrom": 35,
+    "status": "RTM"
+  },
+  {
+    "slug": "zahra",
+    "name": "Zahra",
+    "destination": "new-alamein",
+    "developer": "Morshedy Group",
+    "priceFrom": 7,
+    "status": "RTM"
+  },
+  {
+    "slug": "il-latini-city-edge",
+    "name": "Il Latini City Edge",
+    "destination": "new-alamein",
+    "developer": "City Edge",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "il-latini-sed",
+    "name": "Il Latini SED",
+    "destination": "new-alamein",
+    "developer": "SED Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "lagoons-al-alamein",
+    "name": "Lagoons Al Alamein",
+    "destination": "new-alamein",
+    "developer": "City Edge",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "downtown-new-alamein",
+    "name": "Downtown New Alamein",
+    "destination": "new-alamein",
+    "developer": "City Edge",
+    "priceFrom": 4.9,
+    "status": "RTM"
+  },
+  {
+    "slug": "palm-hills-new-alamein",
+    "name": "Palm Hills New Alamein",
+    "destination": "new-alamein",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "mazarine",
+    "name": "Mazarine",
+    "destination": "new-alamein",
+    "developer": "City Edge",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "the-gate-new-alamein",
+    "name": "The Gate New Alamein",
+    "destination": "new-alamein",
+    "developer": "City Edge",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "north-edge-towers",
+    "name": "North Edge Towers",
+    "destination": "new-alamein",
+    "developer": "City Edge",
+    "priceFrom": 13,
+    "status": "RTM"
+  },
+  {
+    "slug": "the-islands",
+    "name": "The Islands",
+    "destination": "new-alamein",
+    "developer": "City Edge",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "dayz",
+    "name": "Dayz",
+    "destination": "new-alamein",
+    "developer": "Mercon",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "marina",
+    "name": "Marina",
+    "destination": "new-alamein",
+    "developer": "ETAMDA",
+    "priceFrom": 6,
+    "status": "RTM"
+  },
+  {
+    "slug": "q-bay",
+    "name": "Q Bay",
+    "destination": "new-alamein",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "the-waterway-new-cairo",
+    "name": "The Waterway New Cairo",
+    "destination": "new-cairo",
+    "developer": "The Waterway Developments",
+    "priceFrom": 15,
+    "status": "RTM"
+  },
+  {
+    "slug": "fifth-square",
+    "name": "Fifth Square",
+    "destination": "new-cairo",
+    "developer": "Al Marasem Development",
+    "priceFrom": 13.4,
+    "status": "RTM"
+  },
+  {
+    "slug": "lake-residence-by-rotana",
+    "name": "Lake Residence by Rotana",
+    "destination": "new-cairo",
+    "developer": "Al Marasem Developments",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "marville",
+    "name": "Marville",
+    "destination": "new-zayed",
+    "developer": "Al Marasem Developments",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "mountain-view-icity-new-cairo",
+    "name": "Mountain View iCity New Cairo",
+    "destination": "northern-expansion",
+    "developer": "Mountain View",
+    "priceFrom": 12,
+    "status": "RTM"
+  },
+  {
+    "slug": "hyde-park-new-cairo",
+    "name": "Hyde Park New Cairo",
+    "destination": "new-cairo",
+    "developer": "Hyde Park Developments",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "eastown",
+    "name": "Eastown",
+    "destination": "new-cairo",
+    "developer": "SODIC",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "villette",
+    "name": "Villette",
+    "destination": "new-cairo",
+    "developer": "SODIC",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "sky-condos",
+    "name": "Sky Condos",
+    "destination": "new-cairo",
+    "developer": "SODIC",
+    "priceFrom": 13,
+    "status": "RTM"
+  },
+  {
+    "slug": "katameya-heights",
+    "name": "Katameya Heights",
+    "destination": "new-cairo",
+    "developer": "Tameer",
+    "priceFrom": 25,
+    "status": "RTM"
+  },
+  {
+    "slug": "katameya-dunes",
+    "name": "Katameya Dunes",
+    "destination": "new-cairo",
+    "developer": "Starlight Developments",
+    "priceFrom": 30,
+    "status": "RTM"
+  },
+  {
+    "slug": "al-rehab",
+    "name": "Al Rehab",
+    "destination": "new-cairo",
+    "developer": "Talaat Moustafa Group",
+    "priceFrom": 4,
+    "status": "RTM"
+  },
+  {
+    "slug": "madinaty",
+    "name": "Madinaty",
+    "destination": "new-cairo",
+    "developer": "Talaat Moustafa Group",
+    "priceFrom": 5,
+    "status": "RTM"
+  },
+  {
+    "slug": "cairo-festival-city",
+    "name": "Cairo Festival City",
+    "destination": "new-cairo",
+    "developer": "Al-Futtaim",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "palm-hills-katameya",
+    "name": "Palm Hills Katameya",
+    "destination": "new-cairo",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 16,
+    "status": "RTM"
+  },
+  {
+    "slug": "stone-residence",
+    "name": "Stone Residence",
+    "destination": "new-cairo",
+    "developer": "PRE Developments",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "the-square-sabbour",
+    "name": "The Square Sabbour",
+    "destination": "new-cairo",
+    "developer": "Al Ahly Sabbour",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "lake-view-residence",
+    "name": "Lake View Residence",
+    "destination": "new-cairo",
+    "developer": "El Hazek Construction Group",
+    "priceFrom": 12,
+    "status": "RTM"
+  },
+  {
+    "slug": "zed-east",
+    "name": "Zed East",
+    "destination": "6th-settlement",
+    "developer": "ORA Developers",
+    "priceFrom": 13,
+    "status": "RTM"
+  },
+  {
+    "slug": "taj-city",
+    "name": "Taj City",
+    "destination": "new-cairo",
+    "developer": "Madinet Masr",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "sodic-east",
+    "name": "Sodic East",
+    "destination": "heliopolis",
+    "developer": "SODIC",
+    "priceFrom": 13.528,
+    "status": "RTM"
+  },
+  {
+    "slug": "beverly-hills",
+    "name": "Beverly Hills",
+    "destination": "sheikh-zayed",
+    "developer": "SODIC",
+    "priceFrom": 5,
+    "status": "RTM"
+  },
+  {
+    "slug": "allegria",
+    "name": "Allegria",
+    "destination": "sheikh-zayed",
+    "developer": "SODIC",
+    "priceFrom": 17,
+    "status": "RTM"
+  },
+  {
+    "slug": "westown-residences",
+    "name": "Westown Residences",
+    "destination": "sheikh-zayed",
+    "developer": "SODIC",
+    "priceFrom": 13,
+    "status": "RTM"
+  },
+  {
+    "slug": "sodic-west",
+    "name": "SODIC West",
+    "destination": "sheikh-zayed",
+    "developer": "SODIC",
+    "priceFrom": 12,
+    "status": "RTM"
+  },
+  {
+    "slug": "hyde-park-west",
+    "name": "Hyde Park West",
+    "destination": "6th-of-october-city",
+    "developer": "Hyde Park Developments",
+    "priceFrom": 12,
+    "status": "RTM"
+  },
+  {
+    "slug": "zed-towers",
+    "name": "ZED Towers",
+    "destination": "sheikh-zayed",
+    "developer": "Ora Developers",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "vinci",
+    "name": "Vinci",
+    "destination": "new-administrative-capital",
+    "developer": "Misr Italia",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "karmell",
+    "name": "Karmell",
+    "destination": "new-zayed",
+    "developer": "SODIC",
+    "priceFrom": 12,
+    "status": "RTM"
+  },
+  {
+    "slug": "mountain-view-icity-october",
+    "name": "Mountain View iCity October",
+    "destination": "northern-expansion",
+    "developer": "Mountain View",
+    "priceFrom": 11,
+    "status": "RTM"
+  },
+  {
+    "slug": "zayed-2000",
+    "name": "Zayed 2000",
+    "destination": "sheikh-zayed",
+    "developer": "Wadi Degla",
+    "priceFrom": 7,
+    "status": "RTM"
+  },
+  {
+    "slug": "sun-capital",
+    "name": "Sun Capital",
+    "destination": "6th-october",
+    "developer": "Arabia Holding",
+    "priceFrom": 6,
+    "status": "RTM"
+  },
+  {
+    "slug": "bamboo-extension",
+    "name": "Bamboo Extension",
+    "destination": "6th-october",
+    "developer": "M Squared Developments",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "il-bosco-city",
+    "name": "Il Bosco City",
+    "destination": "new-administrative-capital",
+    "developer": "Misr Italia Properties",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "la-verde",
+    "name": "La Verde",
+    "destination": "new-administrative-capital",
+    "developer": "La Verde Developments",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "anakaji",
+    "name": "Anakaji",
+    "destination": "new-administrative-capital",
+    "developer": "Aqar Misr Developments",
+    "priceFrom": 3.2,
+    "status": "RTM"
+  },
+  {
+    "slug": "capital-heights",
+    "name": "Capital Heights",
+    "destination": "new-administrative-capital",
+    "developer": "Safwa Urban Development",
+    "priceFrom": 5.8,
+    "status": "RTM"
+  },
+  {
+    "slug": "city-oval",
+    "name": "City Oval",
+    "destination": "new-administrative-capital",
+    "developer": "Master Group Developments",
+    "priceFrom": 4.9,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "iconic-tower-district",
+    "name": "Iconic Tower District",
+    "destination": "new-administrative-capital",
+    "developer": "ACUD",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "esse-residence-nac",
+    "name": "Esse Residence NAC",
+    "destination": "new-administrative-capital",
+    "developer": "Cred Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "business-district-nac",
+    "name": "Business District NAC",
+    "destination": "new-administrative-capital",
+    "developer": "ACUD",
+    "priceFrom": 5,
+    "status": "RTM"
+  },
+  {
+    "slug": "bloomfields",
+    "name": "Bloomfields",
+    "destination": "mostakbal-city",
+    "developer": "Tatweer Misr",
+    "priceFrom": 5.8,
+    "status": "RTM"
+  },
+  {
+    "slug": "mountain-view-aliva",
+    "name": "Mountain View Aliva",
+    "destination": "mostakbal-city",
+    "developer": "Mountain View",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "la-vista-city",
+    "name": "La Vista City",
+    "destination": "new-cairo",
+    "developer": "La Vista Developments",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "heliopark",
+    "name": "Heliopark",
+    "destination": "heliopolis",
+    "developer": "Heliopolis Housing & Development",
+    "priceFrom": 7,
+    "status": "RTM"
+  },
+  {
+    "slug": "new-heliopolis",
+    "name": "New Heliopolis",
+    "destination": "heliopolis",
+    "developer": "Heliopolis Company for Housing and Development",
+    "priceFrom": 6,
+    "status": "RTM"
+  },
+  {
+    "slug": "telal-sokhna",
+    "name": "Telal Sokhna",
+    "destination": "ain-sokhna",
+    "developer": "Roya Developments",
+    "priceFrom": 7,
+    "status": "RTM"
+  },
+  {
+    "slug": "il-monte-galala",
+    "name": "IL Monte Galala",
+    "destination": "ain-sokhna",
+    "developer": "Tatweer Misr",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "stella-di-mare",
+    "name": "Stella di Mare",
+    "destination": "ain-sokhna",
+    "developer": "Stella Di Mare",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "murano",
+    "name": "Murano",
+    "destination": "ain-sokhna",
+    "developer": "Wadi Degla",
+    "priceFrom": 6,
+    "status": "RTM"
+  },
+  {
+    "slug": "azzar-island",
+    "name": "Azzar Island",
+    "destination": "ras-el-hekma",
+    "developer": "Reedy Group",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "hacienda-red",
+    "name": "Hacienda Red",
+    "destination": "ras-el-hekma",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "la-vista-cascada",
+    "name": "La Vista Cascada",
+    "destination": "ras-el-hekma",
+    "developer": "La Vista Developments",
+    "priceFrom": 8,
+    "status": "RTM"
+  },
+  {
+    "slug": "azha-sokhna",
+    "name": "Azha Sokhna",
+    "destination": "ain-sokhna",
+    "developer": "Madaar Developments",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "blumar-sokhna",
+    "name": "Blumar Sokhna",
+    "destination": "ain-sokhna",
+    "developer": "Wadi Degla Developments",
+    "priceFrom": 3.5,
+    "status": "RTM"
+  },
+  {
+    "slug": "el-gouna",
+    "name": "El Gouna",
+    "destination": "red-sea",
+    "developer": "Orascom",
+    "priceFrom": 18,
+    "status": "RTM"
+  },
+  {
+    "slug": "makadi-heights",
+    "name": "Makadi Heights",
+    "destination": "ain-sokhna",
+    "developer": "Orascom",
+    "priceFrom": 9,
+    "status": "RTM"
+  },
+  {
+    "slug": "soma-bay",
+    "name": "Soma Bay",
+    "destination": "red-sea",
+    "developer": "Abu Soma Development",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "sahl-hasheesh",
+    "name": "Sahl Hasheesh",
+    "destination": "red-sea",
+    "developer": "ERC Egypt",
+    "priceFrom": 12,
+    "status": "RTM"
+  },
+  {
+    "slug": "nabq-bay-residences",
+    "name": "Nabq Bay Residences",
+    "destination": "south-sinai",
+    "developer": "Pickalbatros",
+    "priceFrom": 7,
+    "status": "RTM"
+  },
+  {
+    "slug": "ras-sudr-riviera",
+    "name": "Ras Sudr Riviera",
+    "destination": "south-sinai",
+    "developer": "Al Attal Holding",
+    "priceFrom": 5,
+    "status": "RTM"
+  },
+  {
+    "slug": "byoum-lakeside",
+    "name": "Byoum Lakeside",
+    "destination": "fayoum",
+    "developer": "Orascom",
+    "priceFrom": 5,
+    "status": "RTM"
+  },
+  {
+    "slug": "lazib-inn-tunis",
+    "name": "Lazib Inn Tunis",
+    "destination": "fayoum",
+    "developer": "Lazib",
+    "priceFrom": 4,
+    "status": "RTM"
+  },
+  {
+    "slug": "sodic-the-estates",
+    "name": "SODIC The Estates",
+    "destination": "new-zayed",
+    "developer": "SODIC",
+    "priceFrom": 18,
+    "status": "RTM"
+  },
+  {
+    "slug": "zed-west",
+    "name": "ZED West",
+    "destination": "sheikh-zayed",
+    "developer": "Ora Developers",
+    "priceFrom": 16,
+    "status": "RTM"
+  },
+  {
+    "slug": "solana",
+    "name": "Solana",
+    "destination": "new-zayed",
+    "developer": "Ora Developers",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "belle-vie-new-zayed",
+    "name": "Belle Vie New Zayed",
+    "destination": "new-zayed",
+    "developer": "Emaar Misr",
+    "priceFrom": 16,
+    "status": "RTM"
+  },
+  {
+    "slug": "elm-tree-new-zayed",
+    "name": "Elm Tree New Zayed",
+    "destination": "northern-expansion",
+    "developer": "Westway Developments",
+    "priceFrom": 10,
+    "status": "RTM"
+  },
+  {
+    "slug": "grova-east-hills",
+    "name": "Grova East Hills",
+    "destination": "new-cairo",
+    "developer": "Hassan Allam Holding",
+    "priceFrom": 34,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "la-vista-east",
+    "name": "La Vista East",
+    "destination": "6th-settlement",
+    "developer": "La Vista Developments",
+    "priceFrom": 16,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "dejoya-residence",
+    "name": "Dejoya Residence",
+    "destination": "new-zayed",
+    "developer": "Taj Misr Developments",
+    "priceFrom": 5.5,
+    "status": "RTM"
+  },
+  {
+    "slug": "v-levels",
+    "name": "V-Levels",
+    "destination": "6th-october",
+    "developer": "Dunes Development",
+    "priceFrom": 14,
+    "status": "RTM"
+  },
+  {
+    "slug": "one33",
+    "name": "ONE33",
+    "destination": "northern-expansion",
+    "developer": "Samco Holding",
+    "priceFrom": 5.5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "salt-marina",
+    "name": "Salt Marina",
+    "destination": "ras-el-hekma",
+    "developer": "Tatweer Misr",
+    "priceFrom": 7.916,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "perla",
+    "name": "Perla",
+    "destination": "al-dabaa",
+    "developer": "Nations Of Sky",
+    "priceFrom": 12.2,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "bloom-island-ogami",
+    "name": "Bloom Island - Ogami",
+    "destination": "ras-el-hekma",
+    "developer": "SODIC",
+    "priceFrom": 28,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "saada-north-coast",
+    "name": "Saada North Coast",
+    "destination": "ras-el-hekma",
+    "developer": "Horizon Egypt Developments",
+    "priceFrom": 19.4,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "citystars-park-street",
+    "name": "Citystars Park Street",
+    "destination": "new-cairo",
+    "developer": "Sky Innovo Developments",
+    "priceFrom": 17.55,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "the-gray-laguna-the-boulevard",
+    "name": "The Gray Laguna - The Boulevard",
+    "destination": "ras-el-hekma",
+    "developer": "People & Places",
+    "priceFrom": 8.775,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "surf-and-sand-seazen",
+    "name": "Surf and Sand - Seazen",
+    "destination": "al-dabaa",
+    "developer": "Al Qamzi Developments",
+    "priceFrom": 6.3,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "central-water-residences",
+    "name": "Central Water Residences",
+    "destination": "new-cairo",
+    "developer": "Hyde Park",
+    "priceFrom": 6.43,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "safa-medi-plex-phase-2",
+    "name": "Safa Medi Plex Phase 2",
+    "destination": "new-cairo",
+    "developer": "Hyde Park",
+    "priceFrom": 8.5,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "caesar-extension-2",
+    "name": "Caesar Extension 2",
+    "destination": "ras-el-hekma",
+    "developer": "SODIC",
+    "priceFrom": 37,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "cala-residences-katameya-coast",
+    "name": "Cala Residences - Katameya Coast",
+    "destination": "ras-el-hekma",
+    "developer": "Starlight Developments",
+    "priceFrom": 12.1,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "carnelia",
+    "name": "Carnelia",
+    "destination": "ain-sokhna",
+    "developer": "Ajna Developments",
+    "priceFrom": 4.9,
+    "status": "RTM"
+  },
+  {
+    "slug": "selina-carnelia",
+    "name": "Selina Carnelia",
+    "destination": "ain-sokhna",
+    "developer": "Ajna Developments",
+    "priceFrom": 4.455,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "vie",
+    "name": "Vie",
+    "destination": "new-cairo",
+    "developer": "Vie Communities",
+    "priceFrom": 12,
+    "status": "Off-Plan"
+  },
+  {
+    "slug": "hacienda-west",
+    "name": "Hacienda West",
+    "destination": "ras-el-hekma",
+    "developer": "Palm Hills Developments",
+    "priceFrom": 15,
+    "status": "RTM"
+  }
+]

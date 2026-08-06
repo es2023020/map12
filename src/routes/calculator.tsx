@@ -96,6 +96,7 @@ function CalculatorPage() {
   // Advanced filters for "Find by Budget" mode
   const [budgetDestFilter, setBudgetDestFilter] = useState("");
   const [budgetTypeFilter, setBudgetTypeFilter] = useState("");
+  const [budgetStatusFilter, setBudgetStatusFilter] = useState<"all" | "RTM" | "Off-Plan">("all");
 
   const selectedProject = useMemo(() => compoundsList.find((c) => c.slug === projectSlug), [projectSlug, compoundsList]);
   const projectAvail = useMemo(() => availabilityList.find((a) => a.slug === projectSlug), [projectSlug, availabilityList]);
@@ -192,6 +193,9 @@ function CalculatorPage() {
       // Filter by destination
       if (budgetDestFilter && comp.destination !== budgetDestFilter) return;
 
+      // Filter by status (RTM vs Off-Plan)
+      if (budgetStatusFilter !== "all" && comp.status !== budgetStatusFilter) return;
+
       p.breakdown.forEach((b: any) => {
         // Filter by unit type
         if (budgetTypeFilter && b.type !== budgetTypeFilter) return;
@@ -219,7 +223,7 @@ function CalculatorPage() {
     });
 
     return list.sort((a, b) => b.priceEGP - a.priceEGP).slice(0, 8);
-  }, [basePrice, budgetDestFilter, budgetTypeFilter, compoundsList, availabilityList]);
+  }, [basePrice, budgetDestFilter, budgetTypeFilter, budgetStatusFilter, compoundsList, availabilityList]);
 
   const suitableProjects = useMemo(() => {
     const budgetLimit = basePrice;
@@ -228,11 +232,12 @@ function CalculatorPage() {
         const matchPrice = c.priceFrom <= budgetLimit;
         const matchDest = !budgetDestFilter || c.destination === budgetDestFilter;
         const matchType = !budgetTypeFilter || c.types.includes(budgetTypeFilter);
-        return matchPrice && matchDest && matchType;
+        const matchStatus = budgetStatusFilter === "all" || c.status === budgetStatusFilter;
+        return matchPrice && matchDest && matchType && matchStatus;
       })
       .sort((a, b) => b.priceFrom - a.priceFrom)
       .slice(0, 6);
-  }, [basePrice, budgetDestFilter, budgetTypeFilter, mainCompounds]);
+  }, [basePrice, budgetDestFilter, budgetTypeFilter, budgetStatusFilter, mainCompounds]);
 
   const projectTypes = selectedProject?.types ?? [];
 
@@ -256,7 +261,7 @@ function CalculatorPage() {
       </div>
 
       {/* Advanced Budget Filters */}
-      <div className="grid gap-3 sm:grid-cols-2 bg-secondary/20 p-4 rounded-xl border border-border/40">
+      <div className="grid gap-3 sm:grid-cols-3 bg-secondary/20 p-4 rounded-xl border border-border/40">
         <div>
           <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1"><MapPin className="h-3 w-3" /> Region Filter</label>
           <select 
@@ -285,6 +290,18 @@ function CalculatorPage() {
             <option value="Chalet">Chalet</option>
             <option value="Town House">Town House</option>
             <option value="Twin House">Twin House</option>
+          </select>
+        </div>
+        <div>
+          <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1"><Calendar className="h-3 w-3" /> Delivery Status</label>
+          <select 
+            value={budgetStatusFilter} 
+            onChange={(e) => setBudgetStatusFilter(e.target.value as any)}
+            className="w-full appearance-none rounded-xl border border-border bg-card px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-accent"
+          >
+            <option value="all">All (RTM &amp; Off-Plan)</option>
+            <option value="RTM">RTM (Ready to Move)</option>
+            <option value="Off-Plan">Off-Plan</option>
           </select>
         </div>
       </div>

@@ -4,6 +4,92 @@ import type { ProjectAvailability } from "./availability";
 
 export const availability: ProjectAvailability[] = [
   {
+    slug: "horizon-by-saada",
+    developer: "Horizon Egypt Developments",
+    totalAvailable: 3,
+    lastUpdated: "2026-08-05",
+    breakdown: [
+      {
+        type: "Townhouse",
+        beds: 3,
+        available: 1,
+        minSqm: 240,
+        maxSqm: 240,
+        minPriceM: 33.0,
+        maxPriceM: 33.0,
+        finishing: "Finished",
+        deliveryNote: "6 Months",
+        paymentPlan: "20% down, 5 years installments",
+        units: [
+          {
+            id: "saada-th-1",
+            unitNo: "TH-01",
+            beds: 3,
+            finishing: "Finished",
+            areaSqm: 240,
+            view: "Landscape & Pools",
+            priceEGP: 33000000,
+            deliveryNote: "6 Months",
+            paymentPlan: "20% down, 5 years installments",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Twin House",
+        beds: 4,
+        available: 1,
+        minSqm: 280,
+        maxSqm: 280,
+        minPriceM: 56.0,
+        maxPriceM: 56.0,
+        finishing: "Finished",
+        deliveryNote: "6 Months",
+        paymentPlan: "20% down, 5 years installments",
+        units: [
+          {
+            id: "saada-twh-1",
+            unitNo: "TWH-01",
+            beds: 4,
+            finishing: "Finished",
+            areaSqm: 280,
+            view: "Main Lagoon",
+            priceEGP: 56000000,
+            deliveryNote: "6 Months",
+            paymentPlan: "20% down, 5 years installments",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Standalone Villa",
+        beds: 5,
+        available: 1,
+        minSqm: 350,
+        maxSqm: 350,
+        minPriceM: 55.0,
+        maxPriceM: 55.0,
+        finishing: "Finished",
+        deliveryNote: "6 Months",
+        paymentPlan: "20% down, 5 years installments",
+        units: [
+          {
+            id: "saada-std-1",
+            unitNo: "STD-01",
+            beds: 5,
+            finishing: "Finished",
+            areaSqm: 350,
+            view: "Saada Park",
+            priceEGP: 55000000,
+            deliveryNote: "6 Months",
+            paymentPlan: "20% down, 5 years installments",
+            status: "Available"
+          }
+        ]
+      }
+    ]
+  },
+  {
     slug: "el-patio-vera",
     developer: "La Vista",
     totalAvailable: 5,

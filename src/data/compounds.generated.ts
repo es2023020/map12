@@ -3,6 +3,47 @@ import type { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = [
   {
+    "slug": "horizon-by-saada",
+    "name": "Horizon by Saada",
+    "destination": "new-cairo",
+    "lat": 30.015,
+    "lng": 31.485,
+    "developer": "Horizon Egypt Developments",
+    "developerSlug": "horizon-egypt-developments",
+    "priceFrom": 33.0,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Saada Clubhouse",
+      "Horizon Pools",
+      "Commercial Mall",
+      "Water Streams",
+      "Lush Landscaping",
+      "24/7 Security"
+    ],
+    "hero": "/projects/saada-sahel/1.jpg",
+    "gallery": [
+      "/projects/saada-sahel/1.jpg",
+      "/projects/saada-sahel/2.jpg",
+      "/projects/saada-sahel/3.jpg",
+      "/projects/saada-sahel/4.jpg",
+      "/projects/saada-sahel/5.jpg"
+    ],
+    "blurb": "Horizon by Saada is a premium residential boutique compound in New Cairo, developed by Horizon Egypt Developments. Featuring top-tier townhouses, twin houses, and standalone villas with ready-to-move convenience.",
+    "highlights": [
+      "Boutique New Cairo Location",
+      "Premium Townhouse & Twin House layouts",
+      "Ready to Move - 6 Months Delivery"
+    ],
+    "paymentPlan": "20% downpayment, 5 years installments"
+  },
+  {
     "slug": "belle-vie",
     "name": "Belle Vie",
     "destination": "new-zayed",
