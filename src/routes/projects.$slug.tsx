@@ -326,7 +326,57 @@ function CompoundPage() {
             )}
           </p>
 
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/80">{c.blurb}</p>
+          {c.slug === "alam-al-roum" ? (
+            <div className="mt-6 space-y-6">
+              <p className="text-base leading-relaxed text-foreground/90 font-medium">
+                Alam El Roum is a massive <span className="font-extrabold text-accent">$29.7 billion</span> mega-development on Egypt's Mediterranean coast west of Marsa Matrouh. Developed by{" "}
+                <a href="https://www.qataridiar.com/project/alam-al-roum" target="_blank" rel="noopener noreferrer" className="underline hover:text-accent font-semibold inline-flex items-center gap-0.5">Qatari Diar <ExternalLink className="h-3 w-3 inline" /></a>, the 4,900-acre project features a 7.2-kilometer shoreline, an international marina, luxury hotels, and year-round residential districts.
+              </p>
+
+              <Section title="Project Overview & Masterplan">
+                <div className="grid gap-6 sm:grid-cols-2 bg-secondary/15 p-5 rounded-2xl border border-border/60">
+                  <div>
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Developer Partnership</div>
+                    <div className="mt-1 font-semibold text-primary text-sm">Qatari Diar in partnership with Egypt's Ministry of Housing</div>
+                  </div>
+                  <div>
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Master Planner</div>
+                    <div className="mt-1 font-semibold text-primary text-sm font-display text-accent">Skidmore, Owings &amp; Merrill (SOM)</div>
+                  </div>
+                  <div>
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Total Land Size</div>
+                    <div className="mt-1 font-semibold text-primary text-sm">20.5 million sqm (approx. 4,900 feddans)</div>
+                  </div>
+                  <div>
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Pristine Beachfront</div>
+                    <div className="mt-1 font-semibold text-primary text-sm font-display text-accent">7.2 Kilometers shoreline</div>
+                  </div>
+                </div>
+                <div className="mt-4 p-4 rounded-xl border border-border/40 bg-card text-xs text-muted-foreground leading-relaxed">
+                  <strong>Key Features:</strong> Features a state-of-the-art 370-berth international yacht marina, championship golf course, polo club, and luxury hospitality districts.
+                </div>
+              </Section>
+
+              <Section title="Location & Accessibility">
+                <ul className="space-y-3 text-xs text-foreground/80">
+                  <li className="flex items-start gap-2.5">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                    <span><strong>Position:</strong> Situated East of Marsa Matrouh city center.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                    <span><strong>Airport Proximity:</strong> Roughly 6 kilometers from Marsa Matrouh International Airport.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                    <span><strong>Surrounds:</strong> Easy connectivity to Ras El Hikma and wider regions via the International Coastal Road.</span>
+                  </li>
+                </ul>
+              </Section>
+            </div>
+          ) : (
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/80">{c.blurb}</p>
+          )}
 
           {/* Key stats + Brochure */}
           <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -451,10 +501,168 @@ function CompoundPage() {
           })()}
 
           {/* Live Availability from developer sheets */}
-          {availabilityBySlug(c.slug) && (
-            <Section title="Live Availability">
-              <AvailabilitySection data={availabilityBySlug(c.slug)!} projectSlug={c.slug} />
+          {c.slug === "alam-al-roum" ? (
+            <Section title="Live Connected Inventory">
+              <div className="space-y-8">
+                
+                {/* Sealine Estates */}
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
+                  <div className="border-b border-border pb-3 flex justify-between items-center flex-wrap gap-2">
+                    <div>
+                      <h3 className="font-display font-bold text-base text-primary">Sealine Estates — "Limitless Waterfront"</h3>
+                      <p className="text-[11px] text-muted-foreground mt-0.5">Standalone sea-view villas ordered by row (1st Row = closest to sea)</p>
+                    </div>
+                    <span className="rounded-full bg-accent/15 px-2.5 py-0.5 text-[10px] font-bold text-accent uppercase">Villas Only</span>
+                  </div>
+
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-xs text-left border-collapse min-w-[600px]">
+                      <thead>
+                        <tr className="border-b border-border bg-secondary/40 text-[10px] font-bold text-muted-foreground uppercase">
+                          <th className="p-3 text-left">Row &amp; Type</th>
+                          <th className="p-3 text-center">BUA (m²)</th>
+                          <th className="p-3 text-center">Avg. Plot (m²)</th>
+                          <th className="p-3 text-left">Features &amp; Views</th>
+                          <th className="p-3 text-right">Starting Price (EGP)</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-border/60">
+                        {[
+                          { row: "1st Row", type: "1 Story Villa", bua: "601", plot: "1,500", feat: "6 Ensuites · Full Sea View", price: "227,000,000", isRange: false },
+                          { row: "2nd Row", type: "1 Story Villa", bua: "453", plot: "1,300", feat: "5 Ensuites · Full Sea View", price: "154,000,000", isRange: false },
+                          { row: "3rd Row", type: "1 Story Villa", bua: "326 – 391", plot: "1,100", feat: "5 Ensuites · Full Sea View", price: "96,000,000 – 112,000,000", isRange: true },
+                          { row: "4th Row", type: "G+1 Villa", bua: "331", plot: "550", feat: "5 Ensuites · Partial Sea View", price: "73,000,000", isRange: false },
+                          { row: "5th Row", type: "G+1+Penthouse Villa", bua: "307", plot: "500", feat: "5 Ensuites · Partial Sea View", price: "64,000,000", isRange: false },
+                          { row: "6th–9th Row", type: "Villa", bua: "307", plot: "500", feat: "5 Ensuites · Riviera Park & Spine View", price: "48,000,000 – 59,000,000", isRange: true }
+                        ].map((v, i) => (
+                          <tr key={i} className="hover:bg-secondary/20 transition-colors">
+                            <td className="p-3">
+                              <span className="font-semibold text-primary block">{v.row}</span>
+                              <span className="text-[10px] text-muted-foreground">{v.type}</span>
+                            </td>
+                            <td className="p-3 text-center text-muted-foreground">{v.bua} m²</td>
+                            <td className="p-3 text-center text-muted-foreground">{v.plot} m²</td>
+                            <td className="p-3 text-foreground font-medium">{v.feat}</td>
+                            <td className="p-3 text-right">
+                              <span className="font-bold text-accent">EGP {v.price}</span>
+                              <span className="block text-[9px] text-muted-foreground">starting rate</span>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Sandside Lagoons Section */}
+                <div className="space-y-6">
+                  <div className="border-b border-border pb-2">
+                    <h3 className="font-display font-bold text-base text-primary">Sandside Lagoons — "A Waterfront for Every Home"</h3>
+                    <p className="text-[11px] text-muted-foreground">Sandy beach lagoons and chalets</p>
+                  </div>
+
+                  {/* 2a. Lagoon Villas & Townhouses */}
+                  <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
+                    <div className="border-b border-border pb-3 flex justify-between items-center flex-wrap gap-2">
+                      <h4 className="font-semibold text-sm text-primary">Lagoon Villas &amp; Townhouses</h4>
+                      <span className="text-[9px] font-bold text-muted-foreground bg-secondary px-2 py-0.5 rounded">Crystal Sandy Beach Lagoon</span>
+                    </div>
+
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-xs text-left border-collapse min-w-[600px]">
+                        <thead>
+                          <tr className="border-b border-border bg-secondary/40 text-[10px] font-bold text-muted-foreground uppercase">
+                            <th className="p-3 text-left">Type / Row</th>
+                            <th className="p-3 text-center">BUA (m²)</th>
+                            <th className="p-3 text-center">Avg. Plot (m²)</th>
+                            <th className="p-3 text-left">Features</th>
+                            <th className="p-3 text-right">Starting Price (EGP)</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border/60">
+                          {[
+                            { type: "1st Row – Open to Sea Lagoon Villa", bua: "331", plot: "500", feat: "5 Ensuite · Full Lagoon View", price: "78,400,000" },
+                            { type: "2nd Row – Open to Sea Lagoon Villa", bua: "307", plot: "500", feat: "5 Ensuite · Partial Lagoon View", price: "49,700,000" },
+                            { type: "1st Row – Crystal Lagoon Villa", bua: "272", plot: "550", feat: "5 Ensuite", price: "55,000,000" },
+                            { type: "1st Row – Crystal Lagoon Villa", bua: "230", plot: "450", feat: "4 Ensuite", price: "35,900,000" },
+                            { type: "1st Row – Crystal Lagoon Twin House", bua: "204", plot: "400", feat: "4 Ensuite", price: "35,500,000" },
+                            { type: "Townhouse", bua: "180", plot: "275/200", feat: "4 Ensuite", price: "30,800,000" },
+                            { type: "Townhouse", bua: "144", plot: "275/200", feat: "3 Ensuite", price: "24,300,000" }
+                          ].map((l, i) => (
+                            <tr key={i} className="hover:bg-secondary/20 transition-colors">
+                              <td className="p-3 font-semibold text-primary">{l.type}</td>
+                              <td className="p-3 text-center text-muted-foreground">{l.bua} m²</td>
+                              <td className="p-3 text-center text-muted-foreground">{l.plot} m²</td>
+                              <td className="p-3 text-foreground font-medium">{l.feat}</td>
+                              <td className="p-3 text-right">
+                                <span className="font-bold text-accent">EGP {l.price.toLocaleString()}</span>
+                                <span className="block text-[9px] text-muted-foreground">starting rate</span>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  {/* 2b. Beach Chalets */}
+                  <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
+                    <div className="border-b border-border pb-3 flex justify-between items-center flex-wrap gap-2">
+                      <h4 className="font-semibold text-sm text-primary">Beach Chalets</h4>
+                      <span className="text-[9px] font-bold text-muted-foreground bg-secondary px-2 py-0.5 rounded">Crystal Sandy Beach Chalets</span>
+                    </div>
+
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-xs text-left border-collapse min-w-[600px]">
+                        <thead>
+                          <tr className="border-b border-border bg-secondary/40 text-[10px] font-bold text-muted-foreground uppercase">
+                            <th className="p-3 text-left">Type &amp; Floor</th>
+                            <th className="p-3 text-center">BUA (m²)</th>
+                            <th className="p-3 text-center">Terrace / Garden</th>
+                            <th className="p-3 text-left">Features</th>
+                            <th className="p-3 text-right">Starting Price (EGP)</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border/60">
+                          {[
+                            { type: "Twin Chalet", floor: "Ground", bua: "161", ext: "Terrace 20m² · Garden 200m²", feat: "4 Beds + Nanny's Room", price: "24,150,000" },
+                            { type: "Twin Chalet", floor: "Upper", bua: "161", ext: "Terrace 20m²", feat: "4 Beds + Nanny's Room", price: "20,150,000" },
+                            { type: "Twin Chalet", floor: "Ground", bua: "141", ext: "Terrace 25m² · Garden 200m²", feat: "3 Beds + Nanny's Room", price: "20,700,000" },
+                            { type: "Twin Chalet", floor: "Upper", bua: "141", ext: "Terrace 25m²", feat: "3 Beds + Nanny's Room", price: "17,150,000" },
+                            { type: "Quad Chalet", floor: "Ground", bua: "153", ext: "Terrace 40m² · Garden 200m²", feat: "3 Beds + Nanny's Room", price: "21,700,000" },
+                            { type: "Quad Chalet", floor: "Upper", bua: "153", ext: "Terrace 40m²", feat: "3 Beds + Nanny's Room", price: "18,800,000" },
+                            { type: "Quad Chalet", floor: "Ground", bua: "125", ext: "Terrace 25m² · Garden 75m²", feat: "2 Beds + Nanny's Room", price: "18,800,000" },
+                            { type: "Quad Chalet", floor: "Upper", bua: "125", ext: "Terrace 25m²", feat: "2 Beds + Nanny's Room", price: "15,600,000" }
+                          ].map((c, i) => (
+                            <tr key={i} className="hover:bg-secondary/20 transition-colors">
+                              <td className="p-3">
+                                <span className="font-semibold text-primary block">{c.type}</span>
+                                <span className="text-[10px] text-muted-foreground">{c.floor} Floor</span>
+                              </td>
+                              <td className="p-3 text-center text-muted-foreground">{c.bua} m²</td>
+                              <td className="p-3 text-center text-muted-foreground">{c.ext}</td>
+                              <td className="p-3 text-foreground font-medium">{c.feat}</td>
+                              <td className="p-3 text-right">
+                                <span className="font-bold text-accent">EGP {c.price.toLocaleString()}</span>
+                                <span className="block text-[9px] text-muted-foreground">starting rate</span>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
             </Section>
+          ) : (
+            availabilityBySlug(c.slug) && (
+              <Section title="Live Availability">
+                <AvailabilitySection data={availabilityBySlug(c.slug)!} projectSlug={c.slug} />
+              </Section>
+            )
           )}
 
           {/* Unit types */}

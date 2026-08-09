@@ -4,13 +4,13 @@ import type { Compound } from "./compounds";
 export const compoundsGenerated: Compound[] = [
   {
     "slug": "horizon-by-saada",
-    "name": "Horizon by Saada",
+    "name": "Saada",
     "destination": "new-cairo",
     "lat": 30.015,
     "lng": 31.485,
     "developer": "Horizon Egypt Developments",
     "developerSlug": "horizon-egypt-developments",
-    "priceFrom": 33.0,
+    "priceFrom": 33,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
@@ -41,7 +41,7 @@ export const compoundsGenerated: Compound[] = [
       "Premium Townhouse & Twin House layouts",
       "Ready to Move - 6 Months Delivery"
     ],
-    "paymentPlan": "20% downpayment, 5 years installments"
+    "paymentPlan": "20% / 5 yrs"
   },
   {
     "slug": "belle-vie",
@@ -496,17 +496,19 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "sarai",
     "name": "Sarai",
-    "destination": "sarai",
+    "destination": "new-cairo",
     "lat": 30.097,
     "lng": 31.628,
     "developer": "Madinet Masr",
     "developerSlug": "madinet-masr",
-    "priceFrom": 30.26,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "priceFrom": 8.945,
+    "deliveryYear": 2026,
+    "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Duplex",
+      "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -526,7 +528,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/sarai/6.jpg"
     ],
     "blurb": "Sarai is a premium development by Madinet Masr in Sarai, presenting high-end unit designs and world-class compound amenities.",
-    "paymentPlan": "10% down · 7 years equal installments",
+    "paymentPlan": "10% / 8 yrs",
     "areaSize": "100 feddan",
     "unitSizes": "80–300 m²",
     "type": "Residential",
@@ -2444,13 +2446,13 @@ export const compoundsGenerated: Compound[] = [
   },
   {
     "slug": "patio-oro",
-    "name": "Patio Oro",
+    "name": "El Patio Oro",
     "destination": "new-cairo",
     "lat": 30.025,
     "lng": 31.488,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 15,
+    "priceFrom": 14.7,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
@@ -2474,7 +2476,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/patio-oro/4.jpg"
     ],
     "blurb": "Patio Oro by La Vista Developments is a signature residential compound in the Golden Square, New Cairo. Offering fully finished and semi-finished apartments and penthouses, it features lush classical parks.",
-    "paymentPlan": "10% down · 6 years equal installments",
+    "paymentPlan": "20%/4 yrs, 0%/6 yrs, or 10%/7 yrs",
     "areaSize": "174 feddan",
     "unitSizes": "164–230 m²",
     "type": "Residential",
@@ -2987,7 +2989,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.7047,
     "developer": "Hassan Allam Properties",
     "developerSlug": "hassan-allam-properties",
-    "priceFrom": 11,
+    "priceFrom": 15.5,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
@@ -3017,7 +3019,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/haptown/1.jpg"
     ],
     "blurb": "Haptown is a premium mixed-use residential community spanning approximately 243 acres, offering contemporary homes surrounded by expansive green spaces, recreational facilities, and integrated services in Mostakbal City.",
-    "paymentPlan": "5% down, installments up to 10 years",
+    "paymentPlan": "15% / 8 yrs",
     "areaSize": "125 feddan",
     "unitSizes": "130–240 m²",
     "type": "Residential",
@@ -3468,8 +3470,8 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.488,
     "developer": "El Batal Developments",
     "developerSlug": "el-batal-developments",
-    "priceFrom": 15,
-    "deliveryYear": 2027,
+    "priceFrom": 8.5,
+    "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -3490,7 +3492,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/rock-vera/1.jpg"
     ],
     "blurb": "Rock Vera by El Batal Developments (Rock Developments) is an Italian-inspired residential compound in New Cairo. Spanning a boutique layout with classical streets and plazas, it offers premium homes.",
-    "paymentPlan": "10% down · 8 years equal installments",
+    "paymentPlan": "15% / 6 yrs",
     "areaSize": "35 feddan",
     "unitSizes": "120–314 m²",
     "type": "Residential",
@@ -5401,13 +5403,14 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.351,
     "developer": "Qatari Diar",
     "developerSlug": "qatari-diar",
-    "priceFrom": 9,
+    "priceFrom": 15.6,
     "deliveryYear": 2030,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
       "Twin House",
+      "Townhouse",
       "Villa"
     ],
     "amenities": [
@@ -5426,10 +5429,10 @@ export const compoundsGenerated: Compound[] = [
       "/projects/alam-al-roum/3.jpg",
       "/projects/alam-al-roum/4.jpg"
     ],
-    "blurb": "Alam El Roum by Qatari Diar in partnership with NUCA is a mega-scale coastal resort destination of 5,000 faddans east of Marsa Matrouh, featuring a yacht marina, hotels, and 7.2 km of private beachfront.",
+    "blurb": "Alam El Roum is a massive $29.7 billion mega-development on Egypt's Mediterranean coast west of Marsa Matrouh. Developed by Qatari Diar, the 4,900-acre project features a 7.2-kilometer shoreline, an international marina, luxury hotels, and year-round residential districts.",
     "paymentPlan": "5% down payment, remaining balance spread over 8–10 years in equal installments",
-    "areaSize": "5000 feddan",
-    "unitSizes": "Chalet, Twin House, Villa",
+    "areaSize": "4,900 feddan",
+    "unitSizes": "125 – 601 m²",
     "city": "East of Marsa Matrouh, North Coast, Egypt",
     "highlights": [
       "by Qatari Diar & NUCA",
@@ -9092,10 +9095,10 @@ export const compoundsGenerated: Compound[] = [
     "destination": "new-cairo",
     "lat": 30.0245,
     "lng": 31.5379,
-    "developer": "Al Marasem Development",
-    "developerSlug": "al-marasem-development",
-    "priceFrom": 13.4,
-    "deliveryYear": 2024,
+    "developer": "Al Marasem Developments",
+    "developerSlug": "al-marasem-developments",
+    "priceFrom": 15,
+    "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -9125,7 +9128,7 @@ export const compoundsGenerated: Compound[] = [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
     ],
     "blurb": "Fifth Square is a premium residential community by Al Marasem spanning approximately 158 acres in New Cairo's Fifth Settlement, featuring contemporary homes surrounded by landscaped gardens, retail, and leisure facilities.",
-    "paymentPlan": "5% down, installments up to 8 years",
+    "paymentPlan": "25% / 6 yrs",
     "areaSize": "91 feddan",
     "unitSizes": "111–299 m²",
     "city": "Fifth Settlement, New Cairo, Egypt",
@@ -9231,20 +9234,21 @@ export const compoundsGenerated: Compound[] = [
   },
   {
     "slug": "mountain-view-icity-new-cairo",
-    "name": "Mountain View iCity New Cairo",
-    "destination": "northern-expansion",
+    "name": "I City New Cairo",
+    "destination": "new-cairo",
     "lat": 30.012,
     "lng": 31.498,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 12,
+    "priceFrom": 15.133,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
       "Penthouse",
-      "Villa"
+      "Villa",
+      "Standalone Villa"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -9267,7 +9271,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-icity-new-cairo/13.jpg"
     ],
     "blurb": "Mountain View iCity New Cairo is a flagship development in New Cairo (Tagamo3) by Mountain View, offering modern residences with full amenities for year-round living.",
-    "paymentPlan": "10% down payment over 8 years equal installments",
+    "paymentPlan": "5% / 8 yrs",
     "areaSize": "214 feddan",
     "unitSizes": "144–356 m²",
     "type": "Residential",
@@ -9285,9 +9289,9 @@ export const compoundsGenerated: Compound[] = [
     "destination": "new-cairo",
     "lat": 29.9863,
     "lng": 31.5542,
-    "developer": "Hyde Park Developments",
-    "developerSlug": "hyde-park-developments",
-    "priceFrom": 14,
+    "developer": "Hyde Park",
+    "developerSlug": "hyde-park",
+    "priceFrom": 13.94,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
@@ -9326,7 +9330,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/hyde-park-new-cairo/6.jpg"
     ],
     "blurb": "Hyde Park New Cairo is one of Egypt's largest mixed-use residential communities, spanning approximately 6 million m² (1,429 feddans), centered around Egypt's largest landscaped park and combining luxury residences with retail, hospitality, education, and business facilities.",
-    "paymentPlan": "10% down, installments up to 10 years",
+    "paymentPlan": "10% / 6 yrs",
     "areaSize": "296 feddan",
     "unitSizes": "166–394 m²",
     "city": "Fifth Settlement, New Cairo, Cairo, Egypt",
@@ -9406,7 +9410,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.46895,
     "developer": "SODIC",
     "developerSlug": "sodic",
-    "priceFrom": 11,
+    "priceFrom": 26.271,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
@@ -9437,7 +9441,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/villette/9.jpg"
     ],
     "blurb": "Villette is a flagship development in New Cairo (Tagamo3) by SODIC, offering modern residences with full amenities for year-round living.",
-    "paymentPlan": "10% down payment over 8 years equal installments",
+    "paymentPlan": "10% / 10 yrs",
     "areaSize": "378 feddan",
     "unitSizes": "108–432 m²",
     "city": "New Cairo (Fifth Settlement), Cairo",
@@ -9816,8 +9820,8 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.448649999999997,
     "developer": "PRE Developments",
     "developerSlug": "pre-developments",
-    "priceFrom": 10,
-    "deliveryYear": 2025,
+    "priceFrom": 9.38,
+    "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -9841,7 +9845,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/stone-residence/3.jpg"
     ],
     "blurb": "Stone Residence is a flagship development in New Cairo (Tagamo3) by PRE Developments, offering modern residences with full amenities for year-round living.",
-    "paymentPlan": "10% down payment over 7 years equal installments",
+    "paymentPlan": "20% / 5 yrs",
     "areaSize": "306 feddan",
     "unitSizes": "116–334 m²",
     "city": "New Cairo, Cairo Governorate, Egypt",
@@ -12536,9 +12540,9 @@ export const compoundsGenerated: Compound[] = [
     "hero": "/projects/grova-east-hills/1.jpg",
     "gallery": [],
     "blurb": "Grova East Hills is Hassan Allam Holding's newest 300-feddan luxury villa community in New Cairo, adjacent to Patio Town. Starting from EGP 34M, the compound features townhouses, twin houses and standalone villas with a 7% annual maintenance fee.",
-    "paymentPlan": "5% down payment \u00b7 5% after 3 months \u00b7 90% over 8 years equal installments \u00b7 7% annual maintenance",
+    "paymentPlan": "5% down payment · 5% after 3 months · 90% over 8 years equal installments · 7% annual maintenance",
     "areaSize": "300 feddan",
-    "unitSizes": "Townhouse Middle 263 m\u00b2 \u00b7 Townhouse Corner 263 m\u00b2 \u00b7 Twin House A 276 m\u00b2 \u00b7 Twin House B 287 m\u00b2 \u00b7 Villa A1 332 m\u00b2 \u00b7 Villa 2A 396 m\u00b2 \u00b7 Villa 2B 397 m\u00b2 \u00b7 Villa V3 465 m\u00b2",
+    "unitSizes": "Townhouse Middle 263 m² · Townhouse Corner 263 m² · Twin House A 276 m² · Twin House B 287 m² · Villa A1 332 m² · Villa 2A 396 m² · Villa 2B 397 m² · Villa V3 465 m²",
     "masterPlanUrl": "/Masterplans/grova east hills.jpg",
     "type": "Residential",
     "highlights": [
@@ -13326,5 +13330,927 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "/projects/hacienda-west/1.jpg"
     ]
+  },
+  {
+    "slug": "green-square",
+    "name": "Green Square",
+    "destination": "mostakbal-city",
+    "lat": 30.048,
+    "lng": 31.621,
+    "developer": "Al Ahly Sabbour",
+    "developerSlug": "al-ahly-sabbour",
+    "priceFrom": 21,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/green-square/1.jpg",
+    "gallery": [
+      "/projects/green-square/1.jpg",
+      "/projects/green-square/2.jpg"
+    ],
+    "blurb": "Green Square is a premium completed development by Al Ahly Sabbour in Mostakbal City.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "30% / 5 yrs or 40% / 6 yrs"
+  },
+  {
+    "slug": "monte-napoleone",
+    "name": "Monte Napoleone",
+    "destination": "mostakbal-city",
+    "lat": 30.051,
+    "lng": 31.632,
+    "developer": "Reportage Properties",
+    "developerSlug": "reportage-properties",
+    "priceFrom": 7.5,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex",
+      "Townhouse"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/monte-napoleone/1.jpg",
+    "gallery": [
+      "/projects/monte-napoleone/1.jpg",
+      "/projects/monte-napoleone/2.jpg"
+    ],
+    "blurb": "Monte Napoleone is a premium completed development by Reportage Properties in Mostakbal City.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "10% / 8 yrs"
+  },
+  {
+    "slug": "zizinia",
+    "name": "Zizinia",
+    "destination": "mostakbal-city",
+    "lat": 30.042,
+    "lng": 31.615,
+    "developer": "Ardic Developments",
+    "developerSlug": "ardic-developments",
+    "priceFrom": 6.2,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/zizinia/1.jpg",
+    "gallery": [
+      "/projects/zizinia/1.jpg",
+      "/projects/zizinia/2.jpg"
+    ],
+    "blurb": "Zizinia is a premium completed development by Ardic Developments in Mostakbal City.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "10% / 8 yrs"
+  },
+  {
+    "slug": "lavenir",
+    "name": "L'AVENIR",
+    "destination": "mostakbal-city",
+    "lat": 30.046,
+    "lng": 31.625,
+    "developer": "Al Ahly Sabbour",
+    "developerSlug": "al-ahly-sabbour",
+    "priceFrom": 17,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/lavenir/1.jpg",
+    "gallery": [
+      "/projects/lavenir/1.jpg",
+      "/projects/lavenir/2.jpg"
+    ],
+    "blurb": "L'AVENIR is a premium completed development by Al Ahly Sabbour in Mostakbal City.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "30% / 5 yrs or 40% / 6 yrs"
+  },
+  {
+    "slug": "neopolis",
+    "name": "Neopolis",
+    "destination": "mostakbal-city",
+    "lat": 30.038,
+    "lng": 31.605,
+    "developer": "Wadi Degla",
+    "developerSlug": "wadi-degla",
+    "priceFrom": 7.2,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/neopolis/1.jpg",
+    "gallery": [
+      "/projects/neopolis/1.jpg",
+      "/projects/neopolis/2.jpg"
+    ],
+    "blurb": "Neopolis is a premium completed development by Wadi Degla in Mostakbal City.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "40% / 4 yrs"
+  },
+  {
+    "slug": "beta-greens",
+    "name": "Beta Greens",
+    "destination": "mostakbal-city",
+    "lat": 30.045,
+    "lng": 31.612,
+    "developer": "Beta Egypt Developments",
+    "developerSlug": "beta-egypt-developments",
+    "priceFrom": 5.5,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/beta-greens/1.jpg",
+    "gallery": [
+      "/projects/beta-greens/1.jpg",
+      "/projects/beta-greens/2.jpg"
+    ],
+    "blurb": "Beta Greens is a premium completed development by Beta Egypt Developments in Mostakbal City.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "50% / 2 yrs"
+  },
+  {
+    "slug": "la-mirada",
+    "name": "La Mirada",
+    "destination": "mostakbal-city",
+    "lat": 30.055,
+    "lng": 31.628,
+    "developer": "La Mirada Developments",
+    "developerSlug": "la-mirada-developments",
+    "priceFrom": 7.89,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/la-mirada/1.jpg",
+    "gallery": [
+      "/projects/la-mirada/1.jpg",
+      "/projects/la-mirada/2.jpg"
+    ],
+    "blurb": "La Mirada is a premium completed development by La Mirada Developments in Mostakbal City.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "20% / 8 yrs"
+  },
+  {
+    "slug": "creek-town",
+    "name": "Creek Town",
+    "destination": "new-cairo",
+    "lat": 30.078,
+    "lng": 31.488,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 9.6,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/creek-town/1.jpg",
+    "gallery": [
+      "/projects/creek-town/1.jpg",
+      "/projects/creek-town/2.jpg"
+    ],
+    "blurb": "Creek Town is a premium completed development by IL Cazar Developments in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "10% / 10 yrs"
+  },
+  {
+    "slug": "address-east",
+    "name": "Address East",
+    "destination": "new-cairo",
+    "lat": 30.038,
+    "lng": 31.492,
+    "developer": "Torec Developments",
+    "developerSlug": "torec-developments",
+    "priceFrom": 9.5,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/address-east/1.jpg",
+    "gallery": [
+      "/projects/address-east/1.jpg",
+      "/projects/address-east/2.jpg"
+    ],
+    "blurb": "Address East is a premium completed development by Torec Developments in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "15% / 4 yrs or 15% / 5 yrs"
+  },
+  {
+    "slug": "m-squared",
+    "name": "M Squared",
+    "destination": "new-cairo",
+    "lat": 29.988,
+    "lng": 31.542,
+    "developer": "M Squared",
+    "developerSlug": "m-squared",
+    "priceFrom": 14.283,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/m-squared/1.jpg",
+    "gallery": [
+      "/projects/m-squared/1.jpg",
+      "/projects/m-squared/2.jpg"
+    ],
+    "blurb": "M Squared is a premium completed development by M Squared in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "30% / 7 yrs"
+  },
+  {
+    "slug": "mountain-view-hyde-park",
+    "name": "Mountain View Hyde Park",
+    "destination": "new-cairo",
+    "lat": 29.988,
+    "lng": 31.475,
+    "developer": "Mountain View",
+    "developerSlug": "mountain-view",
+    "priceFrom": 20.341,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/mountain-view-hyde-park/1.jpg",
+    "gallery": [
+      "/projects/mountain-view-hyde-park/1.jpg",
+      "/projects/mountain-view-hyde-park/2.jpg"
+    ],
+    "blurb": "Hyde Park is a premium completed development by Mountain View in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "20% / 7 yrs"
+  },
+  {
+    "slug": "amorada",
+    "name": "Amorada",
+    "destination": "new-cairo",
+    "lat": 29.965,
+    "lng": 31.512,
+    "developer": "Afaq Developments",
+    "developerSlug": "afaq-developments",
+    "priceFrom": 12,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/amorada/1.jpg",
+    "gallery": [
+      "/projects/amorada/1.jpg",
+      "/projects/amorada/2.jpg"
+    ],
+    "blurb": "Amorada is a premium completed development by Afaq Developments in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "Cash"
+  },
+  {
+    "slug": "promenade",
+    "name": "Promenade",
+    "destination": "new-cairo",
+    "lat": 30.005,
+    "lng": 31.522,
+    "developer": "Wadi Degla",
+    "developerSlug": "wadi-degla",
+    "priceFrom": 10.7,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/promenade/1.jpg",
+    "gallery": [
+      "/projects/promenade/1.jpg",
+      "/projects/promenade/2.jpg"
+    ],
+    "blurb": "Promenade is a premium completed development by Wadi Degla in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "10% / 6 yrs"
+  },
+  {
+    "slug": "katameya-gardens",
+    "name": "Katameya Gardens",
+    "destination": "new-cairo",
+    "lat": 29.976,
+    "lng": 31.495,
+    "developer": "North Africa Developments",
+    "developerSlug": "north-africa-developments",
+    "priceFrom": 7.255,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/katameya-gardens/1.jpg",
+    "gallery": [
+      "/projects/katameya-gardens/1.jpg",
+      "/projects/katameya-gardens/2.jpg"
+    ],
+    "blurb": "Katameya Gardens is a premium completed development by North Africa Developments in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "30% / 4 yrs"
+  },
+  {
+    "slug": "sephora-heights",
+    "name": "Sephora Heights",
+    "destination": "new-cairo",
+    "lat": 29.985,
+    "lng": 31.445,
+    "developer": "Sephora Developments",
+    "developerSlug": "sephora-developments",
+    "priceFrom": 9,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/sephora-heights/1.jpg",
+    "gallery": [
+      "/projects/sephora-heights/1.jpg",
+      "/projects/sephora-heights/2.jpg"
+    ],
+    "blurb": "Sephora Heights is a premium completed development by Sephora Developments in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "10%/7 yrs or 15%/8 yrs"
+  },
+  {
+    "slug": "riviera",
+    "name": "Riviera",
+    "destination": "new-cairo",
+    "lat": 30.025,
+    "lng": 31.495,
+    "developer": "Novus Stanza",
+    "developerSlug": "novus-stanza",
+    "priceFrom": 48.665,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/riviera/1.jpg",
+    "gallery": [
+      "/projects/riviera/1.jpg",
+      "/projects/riviera/2.jpg"
+    ],
+    "blurb": "Riviera is a premium completed development by Novus Stanza in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "25% / 5 yrs"
+  },
+  {
+    "slug": "midtown-new-cairo",
+    "name": "Midtown New Cairo",
+    "destination": "new-cairo",
+    "lat": 30.015,
+    "lng": 31.468,
+    "developer": "Better Home",
+    "developerSlug": "better-home",
+    "priceFrom": 17.6,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Townhouse"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/midtown-new-cairo/1.jpg",
+    "gallery": [
+      "/projects/midtown-new-cairo/1.jpg",
+      "/projects/midtown-new-cairo/2.jpg"
+    ],
+    "blurb": "Midtown New Cairo is a premium completed development by Better Home in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "50% / 2 yrs"
+  },
+  {
+    "slug": "azad",
+    "name": "Azad",
+    "destination": "new-cairo",
+    "lat": 30.019,
+    "lng": 31.442,
+    "developer": "Tameer Developments",
+    "developerSlug": "tameer-developments",
+    "priceFrom": 18.35,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/azad/1.jpg",
+    "gallery": [
+      "/projects/azad/1.jpg",
+      "/projects/azad/2.jpg"
+    ],
+    "blurb": "Azad is a premium completed development by Tameer Developments in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "30% / 5 yrs"
+  },
+  {
+    "slug": "galleria-moon-valley",
+    "name": "Galleria Moon Valley",
+    "destination": "new-cairo",
+    "lat": 30.021,
+    "lng": 31.472,
+    "developer": "Arabia Holding",
+    "developerSlug": "arabia-holding",
+    "priceFrom": 12.5,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/galleria-moon-valley/1.jpg",
+    "gallery": [
+      "/projects/galleria-moon-valley/1.jpg",
+      "/projects/galleria-moon-valley/2.jpg"
+    ],
+    "blurb": "Galleria Moon Valley is a premium completed development by Arabia Holding in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "10% / 5 yrs"
+  },
+  {
+    "slug": "golden-heights-1",
+    "name": "Golden Heights 1",
+    "destination": "new-cairo",
+    "lat": 30.048,
+    "lng": 31.455,
+    "developer": "Novus Stanza",
+    "developerSlug": "novus-stanza",
+    "priceFrom": 57.641,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/golden-heights-1/1.jpg",
+    "gallery": [
+      "/projects/golden-heights-1/1.jpg",
+      "/projects/golden-heights-1/2.jpg"
+    ],
+    "blurb": "Golden Heights 1 is a premium completed development by Novus Stanza in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "25% / 4 yrs"
+  },
+  {
+    "slug": "golden-heights-2",
+    "name": "Golden Heights 2",
+    "destination": "new-cairo",
+    "lat": 30.052,
+    "lng": 31.462,
+    "developer": "Novus Stanza",
+    "developerSlug": "novus-stanza",
+    "priceFrom": 60.731,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/golden-heights-2/1.jpg",
+    "gallery": [
+      "/projects/golden-heights-2/1.jpg",
+      "/projects/golden-heights-2/2.jpg"
+    ],
+    "blurb": "Golden Heights 2 is a premium completed development by Novus Stanza in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "25% / 5 yrs"
+  },
+  {
+    "slug": "waterway-1",
+    "name": "Waterway 1",
+    "destination": "new-cairo",
+    "lat": 30.032,
+    "lng": 31.428,
+    "developer": "The Waterway Developments",
+    "developerSlug": "the-waterway-developments",
+    "priceFrom": 35,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/waterway-1/1.jpg",
+    "gallery": [
+      "/projects/waterway-1/1.jpg",
+      "/projects/waterway-1/2.jpg"
+    ],
+    "blurb": "Waterway 1 is a premium completed development by The Waterway Developments in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "20% / 4 yrs"
+  },
+  {
+    "slug": "ashrafieh",
+    "name": "Ashrafieh",
+    "destination": "new-cairo",
+    "lat": 30.015,
+    "lng": 31.495,
+    "developer": "Arabia Holding",
+    "developerSlug": "arabia-holding",
+    "priceFrom": 5.3,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/ashrafieh/1.jpg",
+    "gallery": [
+      "/projects/ashrafieh/1.jpg",
+      "/projects/ashrafieh/2.jpg"
+    ],
+    "blurb": "Ashrafieh is a premium completed development by Arabia Holding in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "25% / 3 yrs"
+  },
+  {
+    "slug": "90-avenue",
+    "name": "90 Avenue",
+    "destination": "new-cairo",
+    "lat": 30.018,
+    "lng": 31.425,
+    "developer": "Tabarak Developments",
+    "developerSlug": "tabarak-developments",
+    "priceFrom": 16.3,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/90-avenue/1.jpg",
+    "gallery": [
+      "/projects/90-avenue/1.jpg",
+      "/projects/90-avenue/2.jpg"
+    ],
+    "blurb": "90 Avenue is a premium completed development by Tabarak Developments in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "50% / 2 yrs"
+  },
+  {
+    "slug": "w-signature",
+    "name": "W Signature",
+    "destination": "new-cairo",
+    "lat": 30.031,
+    "lng": 31.432,
+    "developer": "The Waterway Developments",
+    "developerSlug": "the-waterway-developments",
+    "priceFrom": 22,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/w-signature/1.jpg",
+    "gallery": [
+      "/projects/w-signature/1.jpg",
+      "/projects/w-signature/2.jpg"
+    ],
+    "blurb": "W Signature is a premium completed development by The Waterway Developments in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "10% / 7 yrs"
+  },
+  {
+    "slug": "katameya-creeks",
+    "name": "Katameya Creeks",
+    "destination": "new-cairo",
+    "lat": 30.012,
+    "lng": 31.438,
+    "developer": "Starlight Developments",
+    "developerSlug": "starlight-developments",
+    "priceFrom": 30,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming Pools",
+      "Green Areas",
+      "24/7 Security",
+      "Kids Play Area"
+    ],
+    "hero": "/projects/katameya-creeks/1.jpg",
+    "gallery": [
+      "/projects/katameya-creeks/1.jpg",
+      "/projects/katameya-creeks/2.jpg"
+    ],
+    "blurb": "Katameya Creeks is a premium completed development by Starlight Developments in New Cairo.",
+    "highlights": [
+      "Immediate handover options",
+      "Premium construction quality",
+      "Highly accessible location"
+    ],
+    "paymentPlan": "25% / 3 yrs"
   }
 ];
