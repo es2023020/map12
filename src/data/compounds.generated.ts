@@ -13335,8 +13335,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "green-square",
     "name": "Green Square",
     "destination": "mostakbal-city",
-    "lat": 30.048,
-    "lng": 31.621,
+    "lat": 30.052,
+    "lng": 31.547,
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 21,
@@ -13347,31 +13347,45 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated entry with 24/7 advanced security and electronic gates",
+      "Tuscan-inspired clubhouse featuring a shared gym, lounge areas, and pools",
+      "Heated outdoor swimming pools and dedicated kids' splash zones",
+      "Dedicated cycling lanes and jogging/walking trails",
+      "Commercial strip, retail outlets, and a curated food hub/court",
+      "Fully integrated medical center and resident health clinic",
+      "Safe children’s play areas and a community nursery",
+      "Community mosque",
+      "Cutting-edge administrative office spaces within the mixed-use zones"
     ],
-    "hero": "/projects/green-square/1.jpg",
+    "hero": "https://alahlysabbour.com/uploads/1030/01JNGMQV7TRM6G098VDDJ332BG.jpg",
     "gallery": [
-      "/projects/green-square/1.jpg",
-      "/projects/green-square/2.jpg"
+      "https://alahlysabbour.com/uploads/1030/01JNGMQV7TRM6G098VDDJ332BG.jpg",
+      "https://alahlysabbour.com/uploads/1029/01JNGMQNRD4F45W6RTDVSKY290.jpg",
+      "https://alahlysabbour.com/uploads/1032/01JNGMRP1N8PHXWE05ZGTCGZ6Z.jpg",
+      "https://alahlysabbour.com/uploads/1033/01JNGMVCJX88QJ4D1KTVGSZWVW.jpg",
+      "https://alahlysabbour.com/uploads/1034/01JNGMW9VRRTR9EE6BVC1876MS.jpg",
+      "https://alahlysabbour.com/uploads/1035/01JNGMXQJDJ689HVRCMTTC9T3N.jpg"
     ],
-    "blurb": "Green Square is a premium completed development by Al Ahly Sabbour in Mostakbal City.",
+    "blurb": "Spread across 80 acres in the heart of Mostakbal City, Green Square is a mixed-use boutique community inspired by the timeless architectural charm and slow-paced rhythm of Tuscany, Italy. Designed by global masterplanners Chapman Taylor, the community pairs Mediterranean serenity with modern convenience, featuring distinct pyramid-shaped architecture, vast lush landscapes, sparkling water features, and an intimate neighborhood feel.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "80-Acre Boutique Community: Low-density layout emphasizing open green spaces, water bodies, and landscaped plazas.",
+      "Prime Accessibility: Directly overlooks the Mohammed Bin Zayed Axis, providing a direct gateway to the New Administrative Capital.",
+      "Strategic Proximity: Just 10 minutes from the Ring Road and roughly 15 minutes away from the American University in Cairo (AUC) and Cairo International Airport.",
+      "Renowned Masterplan: Conceptualized by international design firm Chapman Taylor.",
+      "Diverse Offerings: Features a mix of apartments with panoramic views, duplexes, townhouses, twin houses, and integrated office spaces."
     ],
-    "paymentPlan": "30% / 5 yrs or 40% / 6 yrs"
+    "paymentPlan": "30% / 5 yrs or 40% / 6 yrs",
+    "masterPlanUrl": "/Masterplans/green square.jpg",
+    "brochureUrl": "/brochures/green-square.pdf",
+    "brochureFileName": "green-square.pdf",
+    "brochureType": "application/pdf"
   },
   {
     "slug": "monte-napoleone",
     "name": "Monte Napoleone",
     "destination": "mostakbal-city",
-    "lat": 30.051,
-    "lng": 31.632,
+    "lat": 30.0615,
+    "lng": 31.554,
     "developer": "Reportage Properties",
     "developerSlug": "reportage-properties",
     "priceFrom": 7.5,
@@ -13384,31 +13398,44 @@ export const compoundsGenerated: Compound[] = [
       "Townhouse"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter with 24/7 advanced security and surveillance systems",
+      "Central clubhouse acting as a social hub for residents",
+      "Multiple outdoor swimming pools and rooftop pools/gym options distributed across buildings",
+      "Fully-equipped indoor and outdoor gyms, football fields, and tennis courts",
+      "Commercial strip mall featuring retail outlets, international brands, cafes, and fine dining",
+      "On-site hypermarket and pharmacy",
+      "Dedicated kids' play areas, splash zones, and nurseries",
+      "Community mosque",
+      "Underground parking garages and ample visitor spaces"
     ],
-    "hero": "/projects/monte-napoleone/1.jpg",
+    "hero": "https://reportagegroup.com/wp-content/uploads/Montenapoleone_banner_resize-1-1.jpg",
     "gallery": [
-      "/projects/monte-napoleone/1.jpg",
-      "/projects/monte-napoleone/2.jpg"
+      "https://reportagegroup.com/wp-content/uploads/Montenapoleone_banner_resize-1-1.jpg",
+      "https://reportagegroup.com/wp-content/uploads/Montenapoleone_intro_resize-1-1.webp",
+      "https://reportagegroup.com/wp-content/uploads/Montenapoleone_Gallery_resize_01.webp",
+      "https://reportagegroup.com/wp-content/uploads/2-4.webp",
+      "https://reportagegroup.com/wp-content/uploads/3-4.webp",
+      "https://reportagegroup.com/wp-content/uploads/4-2.webp"
     ],
-    "blurb": "Monte Napoleone is a premium completed development by Reportage Properties in Mostakbal City.",
+    "blurb": "Sprawling across approximately 465,000 square meters (115 acres) in the heart of Mostakbal City, Montenapoleone is a high-end residential sanctuary inspired by the elegance and architectural sophistication of Milan’s famous fashion district, Via Montenapoleone. Developed by UAE-based Reportage Properties, the project blends modern Italian aesthetics with extensive natural open spaces, offering a vibrant community style featuring sleek apartments, duplexes, and townhouses.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Italian Fashion District Inspiration: Styled after Milan’s renowned Via Montenapoleone, bringing chic European design to New Cairo's corridor.",
+      "Vast Open Spaces: Roughly 62% to 74% of the land area is dedicated to lush greenery, open landscapes, and recreational facilities.",
+      "Strategic Connectivity: Positioned tightly between New Cairo and the New Administrative Capital, minutes away from major hubs like Madinaty and the Future University.",
+      "Proximity Landmarks: Roughly 10 minutes from the New Administrative Capital, 20 minutes from the American University in Cairo (AUC) / North 90th Street, and 15 minutes from Cairo International Airport.",
+      "Diverse Housing Options: A mix of ultra-modern smart apartments (from 1 to 4 bedrooms), duplexes, and spacious townhouses/sky villas."
     ],
-    "paymentPlan": "10% / 8 yrs"
+    "paymentPlan": "10% / 8 yrs",
+    "brochureUrl": "/brochures/Full-Brochure-Montenapoleone-1.pdf",
+    "brochureFileName": "Full-Brochure-Montenapoleone-1.pdf",
+    "brochureType": "application/pdf"
   },
   {
     "slug": "zizinia",
     "name": "Zizinia",
     "destination": "mostakbal-city",
-    "lat": 30.042,
-    "lng": 31.615,
+    "lat": 30.063,
+    "lng": 31.541,
     "developer": "Ardic Developments",
     "developerSlug": "ardic-developments",
     "priceFrom": 6.2,
@@ -13420,31 +13447,43 @@ export const compoundsGenerated: Compound[] = [
       "Duplex"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated perimeter with advanced 24/7 security and smart surveillance systems",
+      "Central community mall featuring a food court, retail stores, and commercial strips",
+      "Fully-equipped indoor gym and dedicated health club facilities",
+      "Multiple outdoor swimming pools and water features distributed throughout the grounds",
+      "Dedicated tracks for walking, jogging, and cycling safely separated from car traffic",
+      "Integrated medical center and on-site pharmacy",
+      "Community nursery and children’s dedicated play zones",
+      "Large community mosque",
+      "Eco-friendly integrations including solar-assisted water heating systems and garbage chute systems",
+      "Ample resident and visitor parking facilities"
     ],
-    "hero": "/projects/zizinia/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
     "gallery": [
-      "/projects/zizinia/1.jpg",
-      "/projects/zizinia/2.jpg"
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80"
     ],
-    "blurb": "Zizinia is a premium completed development by Ardic Developments in Mostakbal City.",
+    "blurb": "Spanning 70 acres right at the gateway of Mostakbal City, Zizinia El Mostakbal is a low-density, master-planned residential community where nature and modern architecture intersect. Designed with an emphasis on open space and wellbeing, only 20% of the land is dedicated to built structures, leaving 80% devoted to expansive green landscapes, crystal-clear water features, and community facilities. The project comprises 1,807 units, offering a serene environment combined with immediate connectivity to New Cairo and the New Administrative Capital.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "80% Open & Green Ratio: Exceptional master planning featuring vast landscapes, artificial lakes, and a low building footprint (only 20%).",
+      "Prime Gateway Location: Situated just 1 minute from Mostakbal City’s main gate, directly overlooking the main Boulevard and the extension of El Teseein (90) Street.",
+      "Strategic Accessibility: Roughly 12 km from the American University in Cairo (AUC), 5 minutes from the Cairo-Suez Road, and easily connected to the Middle Ring Road.",
+      "Low-Density Architecture: Residential buildings strictly designed as Ground + 5 floors, ensuring privacy and open views for residents.",
+      "Diverse Housing Inventory: Features contemporary apartments, spacious duplexes, sky-roof residences, townhouses, and standalone/i-villas."
     ],
-    "paymentPlan": "10% / 8 yrs"
+    "paymentPlan": "10% / 8 yrs",
+    "brochureUrl": "/brochures/zizinia.pdf",
+    "brochureFileName": "zizinia.pdf",
+    "brochureType": "application/pdf"
   },
   {
     "slug": "lavenir",
     "name": "L'AVENIR",
     "destination": "mostakbal-city",
-    "lat": 30.046,
-    "lng": 31.625,
+    "lat": 30.045,
+    "lng": 31.558,
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 17,
@@ -13455,31 +13494,41 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community with 24/7 advanced electronic security gates and patrol surveillance",
+      "French-styled central clubhouse featuring a lounge, social areas, and a fully equipped gym",
+      "Multiple swimming pools distributed throughout the residential phases, including kids' splash pools",
+      "Dedicated tracks for walking, jogging, and cycling winding through green parks",
+      "Commercial strip housing local retail shops, convenience markets, and cafes",
+      "Safe children’s outdoor play zones and a community nursery",
+      "Dedicated sports fields and multi-purpose courts",
+      "Community mosque",
+      "Ample resident parking and visitor spaces"
     ],
-    "hero": "/projects/lavenir/1.jpg",
+    "hero": "https://alahlysabbour.com/uploads/1067/01JNJQ12T10H86ZCS64F0FYKZ2.jpg",
     "gallery": [
-      "/projects/lavenir/1.jpg",
-      "/projects/lavenir/2.jpg"
+      "https://alahlysabbour.com/uploads/1067/01JNJQ12T10H86ZCS64F0FYKZ2.jpg",
+      "https://alahlysabbour.com/uploads/1066/01JNJQ04KYAX78FDV09NDZH1KF.jpg",
+      "https://alahlysabbour.com/uploads/1068/01JNJQ2M8M1YC7RAEVH3EK2FWR.jpg",
+      "https://alahlysabbour.com/uploads/1069/01JNJQZVCETTFR9F04K3SHSA9V.jpg",
+      "https://alahlysabbour.com/uploads/1070/01JNJR0MX67NAA4JC3VG83G5VX.jpg"
     ],
-    "blurb": "L'AVENIR is a premium completed development by Al Ahly Sabbour in Mostakbal City.",
+    "blurb": "Spread across nearly 100 acres in the thriving landscape of Mostakbal City, L'Avenir is a French-inspired residential community designed to offer a tranquil suburban lifestyle without compromising on urban connectivity. Conceptualized with classical French architectural touches, the project balances green expanses, vibrant gardens, and open plazas with modern residential clusters, creating a warm and self-sufficient neighborhood atmosphere.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "French-Inspired Masterplan: Classic architectural details combined with meticulously landscaped gardens and open neighborhood layouts.",
+      "Spacious Community Footprint: Built across approximately 100 acres with an emphasis on low density, wide streets, and open green views.",
+      "Strategic Accessibility: Located minutes away from the Middle Ring Road, Cairo-Suez Road, and the extension of North 90th Street.",
+      "Proximity Landmarks: Approximately 15 minutes from the American University in Cairo (AUC) and major shopping hubs in New Cairo, with easy access to the New Administrative Capital.",
+      "Diverse Property Mix: Features a balanced collection of standalone villas, twin houses, townhouses, and contemporary apartments."
     ],
-    "paymentPlan": "30% / 5 yrs or 40% / 6 yrs"
+    "paymentPlan": "30% / 5 yrs or 40% / 6 yrs",
+    "masterPlanUrl": "/Masterplans/lavenir.jpg"
   },
   {
     "slug": "neopolis",
     "name": "Neopolis",
     "destination": "mostakbal-city",
-    "lat": 30.038,
-    "lng": 31.605,
+    "lat": 30.071,
+    "lng": 31.536,
     "developer": "Wadi Degla",
     "developerSlug": "wadi-degla",
     "priceFrom": 7.2,
@@ -13490,22 +13539,31 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "On-site Wadi Degla Sports Club with professional athletic facilities, courts, and training fields",
+      "Multiple outdoor swimming pools, including specialized ladies' covered pools",
+      "Expansive community parks, 'Neo Gardens,' and artificial water features",
+      "Dedicated commercial strips, retail hubs, and proximity to major shopping options like The District Mall",
+      "International schools and children’s nurseries located within the master plan",
+      "Fully-equipped fitness center, spa, and health club",
+      "Integrated medical clinics and pharmacy services",
+      "Gated perimeter with advanced 24/7 security and smart surveillance systems",
+      "Community mosque",
+      "Secure underground and surface parking structures"
     ],
-    "hero": "/projects/neopolis/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
     "gallery": [
-      "/projects/neopolis/1.jpg",
-      "/projects/neopolis/2.jpg"
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80"
     ],
-    "blurb": "Neopolis is a premium completed development by Wadi Degla in Mostakbal City.",
+    "blurb": "Spanning a massive 545 acres in the heart of Mostakbal City, Neopolis is designed as a fully integrated, smart 'city-within-a-city' concept by Wadi Degla Developments. The master plan dedicates nearly 78% to 80% of its land area to open green landscapes, parks, and crystal-clear artificial lakes, ensuring an eco-friendly environment. Blending modern architecture with expansive recreational infrastructure, Neopolis offers a self-sustaining suburban lifestyle just minutes away from New Cairo's primary hubs.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Massive 545-Acre Smart City Concept: One of the largest master-planned communities in Mostakbal City, structured into distinct residential zones like New Park, New Lux, and Villa New.",
+      "Low-Density Planning: Only about 20% to 22% of the vast land area is allocated to residential and commercial buildings.",
+      "Prime Location Context: Positioned strategically between Madinaty and New Katameya, just 5 minutes from the Fifth Settlement and roughly 10-15 minutes from the New Administrative Capital.",
+      "Integrated Sports Anchor: Features a massive on-site Wadi Degla Club branch, providing high-tier athletic and social amenities directly inside the master plan.",
+      "Diverse Housing Range: Includes well-spaced apartments, duplexes, penthouses, townhouses, and independent luxury villas."
     ],
     "paymentPlan": "40% / 4 yrs"
   },
@@ -13513,8 +13571,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "beta-greens",
     "name": "Beta Greens",
     "destination": "mostakbal-city",
-    "lat": 30.045,
-    "lng": 31.612,
+    "lat": 30.059,
+    "lng": 31.545,
     "developer": "Beta Egypt Developments",
     "developerSlug": "beta-egypt-developments",
     "priceFrom": 5.5,
@@ -13525,31 +13583,42 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter with 24/7 advanced security personnel and CCTV surveillance",
+      "Exclusive resident clubhouse featuring social spaces and recreational amenities",
+      "Multiple outdoor swimming pools and dedicated children's splash zones",
+      "Central park areas, artificial lakes, and landscaped courtyards",
+      "Dedicated cycling lanes and running tracks separated from traffic",
+      "Integrated commercial strip with retail stores, convenience markets, cafes, and fine dining",
+      "On-site medical clinic services and pharmacy",
+      "Community mosque",
+      "Solar-powered outdoor street lighting and eco-friendly utility integrations",
+      "Underground and surface resident parking facilities"
     ],
-    "hero": "/projects/beta-greens/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1600&q=80",
     "gallery": [
-      "/projects/beta-greens/1.jpg",
-      "/projects/beta-greens/2.jpg"
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80"
     ],
-    "blurb": "Beta Greens is a premium completed development by Beta Egypt Developments in Mostakbal City.",
+    "blurb": "Spread across 25 acres in a prime, highly accessible corner of Mostakbal City, Beta Greens is a carefully master-planned, family-centric residential community. Designed around the concept of sustainable green living, the project allocates 80% of its total area to open landscapes, artificial lakes, and gardens, leaving only 20% for residential structures. It combines modern architectural creativity with an intimate neighborhood layout comprising both low-rise apartment clusters and private family villas.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "80% Open & Green Ratio: Maximizes natural views, water features, and public parks, ensuring low building density and high privacy.",
+      "Strategic Location: Situated directly near the gateway of Mostakbal City, just 4 minutes from Al-Fattah Al-Aleem Mosque and 5 minutes from Madinaty's South Park.",
+      "Proximity Landmarks: Roughly 15 minutes from Carrefour Madinaty, 25 minutes from Cairo International Airport, and 35 minutes from Heliopolis.",
+      "Low-Rise Architecture: Residential apartment buildings consist of a ground floor plus five upper floors, complemented by a dedicated collection of exclusive villas.",
+      "Diverse Housing Inventory: Features a balanced mix of 1 to 3-bedroom apartments, spacious duplexes, penthouses, townhouses, and twin houses."
     ],
-    "paymentPlan": "50% / 2 yrs"
+    "paymentPlan": "50% / 2 yrs",
+    "brochureUrl": "/brochures/Beta Greens MC E-Brochure.pdf",
+    "brochureFileName": "Beta Greens MC E-Brochure.pdf",
+    "brochureType": "application/pdf"
   },
   {
     "slug": "la-mirada",
     "name": "La Mirada",
     "destination": "mostakbal-city",
-    "lat": 30.055,
-    "lng": 31.628,
+    "lat": 30.0545,
+    "lng": 31.549,
     "developer": "La Mirada Developments",
     "developerSlug": "la-mirada-developments",
     "priceFrom": 7.89,
@@ -13560,22 +13629,29 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter with 24/7 advanced security personnel and surveillance cameras",
+      "Exclusive social and health club featuring a gym, sauna, jacuzzi, and spa",
+      "Multiple outdoor swimming pools distributed across the residential zones",
+      "Dedicated tracks for walking, jogging, and cycling separated from vehicular traffic",
+      "Commercial and retail strip housing international brands, convenience stores, cafes, and fine dining",
+      "Integrated medical complex including clinics, laboratories, and a pharmacy",
+      "On-site children’s nursery and secure outdoor playgrounds",
+      "Community mosque",
+      "Underground parking garages and surface visitor bays"
     ],
-    "hero": "/projects/la-mirada/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
     "gallery": [
-      "/projects/la-mirada/1.jpg",
-      "/projects/la-mirada/2.jpg"
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80"
     ],
-    "blurb": "La Mirada is a premium completed development by La Mirada Developments in Mostakbal City.",
+    "blurb": "Spanning approximately 77 acres in the prime heart of Mostakbal City, La Mirada is an upscale, low-density residential community designed to offer a peaceful and integrated lifestyle. Developed by Grand Plaza, the master plan allocates only about 40% of the land to residential buildings, dedicating the majority of the space to lush green landscapes, water features, and recreational amenities to ensure panoramic garden views for every home.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Low-Density Master Plan: Comprises 25 residential apartment buildings structured as a ground floor plus five upper floors, alongside exclusive townhouses and duplex clusters.",
+      "Extensive Green Space: Around 60% of the compound's total area is devoted to gardens, parks, and water bodies.",
+      "Strategic Location: Situated directly in Mostakbal City near the extension of North 90th Street and minutes away from Madinaty.",
+      "Proximity Landmarks: Roughly 5 minutes from the American University in Cairo (AUC), 10 minutes from the New Administrative Capital, and close to major transit axes like the Ring Road and Suez Road.",
+      "Diverse Housing Inventory: Features chic studios, expansive luxury apartments, duplexes, penthouses, and spacious townhouses."
     ],
     "paymentPlan": "20% / 8 yrs"
   },
