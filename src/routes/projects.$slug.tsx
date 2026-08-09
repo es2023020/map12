@@ -37,8 +37,6 @@ import { getProjectSEO } from "@/lib/seo-templates";
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: async ({ params }) => {
-    const { loadAvailabilityAsync } = await import("@/data/availability");
-    await loadAvailabilityAsync();
     const c = compoundBySlug(params.slug);
     if (!c) throw notFound();
     return c;
@@ -222,14 +220,30 @@ function Gallery({ images, name }: { images: string[]; name: string }) {
 function CompoundPage() {
   const c = Route.useLoaderData();
   const destination = destinationBySlug(c.destination);
-  const dev = developerBySlug(c.developerSlug);
+  const dev = developerBySlug(c.developerSlug) || {
+    slug: c.developerSlug || "unknown",
+    name: c.developer || "Unknown Developer",
+    logo: `https://ui-avatars.com/api/?background=1f3a5f&color=fff&bold=true&size=128&name=${encodeURIComponent(c.developer || "D")}`,
+    count: 1,
+    blurb: `${c.developer} is an active real estate developer with projects tracked on PropTrack.`,
+    website: ""
+  };
   const isFav = useStore((s) => s.favorites.includes(c.slug));
   const toggleFav = useStore((s) => s.toggleFavorite);
   const addRecent = useStore((s) => s.addRecent);
   const trackEvent = useStore((s) => s.trackEvent);
+  const [availabilityLoaded, setAvailabilityLoaded] = useState(false);
+
   useEffect(() => {
     addRecent(c.slug);
     trackEvent({ type: "view", slug: c.slug, area: c.destination });
+    
+    // Load heavy availability data asynchronously in background
+    import("@/data/availability").then((mod) => {
+      mod.loadAvailabilityAsync().then(() => {
+        setAvailabilityLoaded(true);
+      });
+    });
   }, [c.slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const related = compoundsByDestination(c.destination).filter((x) => x.slug !== c.slug).slice(0, 4);

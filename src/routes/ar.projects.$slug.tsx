@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { MapClient } from "@/components/map/MapClient";
 import { compoundBySlug, compoundsByDestination } from "@/data/compounds";
@@ -82,13 +82,31 @@ export const Route = createFileRoute("/ar/projects/$slug")({
 function ArabicCompoundPage() {
   const c = Route.useLoaderData();
   const destination = destinationBySlug(c.destination);
-  const dev = developerBySlug(c.developerSlug || "");
+  const dev = developerBySlug(c.developerSlug || "") || {
+    slug: c.developerSlug || "unknown",
+    name: c.developer || "Unknown Developer",
+    logo: `https://ui-avatars.com/api/?background=1f3a5f&color=fff&bold=true&size=128&name=${encodeURIComponent(c.developer || "D")}`,
+    count: 1,
+    blurb: `${c.developer} is an active real estate developer with projects tracked on PropTrack.`,
+    website: ""
+  };
   const related = compoundsByDestination(c.destination).filter((x) => x.slug !== c.slug).slice(0, 4);
 
   const priceStr = formatEGP(c.priceFrom);
   const favorites = useStore((s) => s.favorites);
   const toggleFav = useStore((s) => s.toggleFavorite);
   const isFav = favorites.includes(c.slug);
+  
+  const [availabilityLoaded, setAvailabilityLoaded] = useState(false);
+
+  useEffect(() => {
+    // Load heavy availability data asynchronously in background
+    import("@/data/availability").then((mod) => {
+      mod.loadAvailabilityAsync().then(() => {
+        setAvailabilityLoaded(true);
+      });
+    });
+  }, [c.slug]);
 
   return (
     <Shell>

@@ -2235,8 +2235,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "trio",
     "name": "Trio",
     "destination": "new-cairo",
-    "lat": 30.038,
-    "lng": 31.498,
+    "lat": 30.015,
+    "lng": 31.452,
     "developer": "M Squared",
     "developerSlug": "m-squared",
     "priceFrom": 11,
@@ -2249,27 +2249,33 @@ export const compoundsGenerated: Compound[] = [
       "Penthouse"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Gym & Spa",
-      "24/7 Security",
-      "Green Spaces",
-      "Commercial Strip"
+      "Gated perimeter with 24/7 advanced security personnel and comprehensive CCTV surveillance",
+      "Multi-level clubhouse featuring social lounges, restaurants, and family spaces",
+      "Indoor and outdoor swimming pools, including private/flying plunge pools",
+      "Fully equipped fitness center, wellness spa, sauna, and dedicated yoga/meditation gardens",
+      "Multi-purpose sports facilities (tennis, basketball, squash, and football fields)",
+      "Dedicated tracks for running, jogging, and automated bike rental/cycling trails",
+      "Commercial arcade housing retail shops, cafes, convenience stores, and administrative office spaces",
+      "Children’s playgrounds, theme parks, and on-site community nursery",
+      "Secure underground and surface resident parking with full mobility accessibility (wheelchair friendly)"
     ],
-    "hero": "/projects/trio/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=80",
     "gallery": [
-      "/projects/trio/1.jpg"
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80"
     ],
-    "blurb": "Trio by M Squared (Trio Gardens) is a flagship residential compound in New Cairo. It features the innovative 'trio villas' concept — three luxury duplexes stacked together, each with a private entrance and garden or roof pool.",
+    "blurb": "Spanning 35.5 acres in the heart of New Cairo's Fifth Settlement, Trio Gardens is an innovative, boutique residential community structured around an exclusive 'three-in-one' architectural concept. Developed by M Squared (part of the INTRO Group) and designed alongside international architectural houses like TDF, the compound features overlapping villa complexes equipped with signature hanging gardens and flying plunge pools. With 75% of the land dedicated to verdant landscapes, open parks, and water features, Trio balances eco-friendly sustainable living with sleek, ultra-modern urban design.",
     "paymentPlan": "10% down · 8 years equal installments",
     "areaSize": "35 feddan",
     "unitSizes": "130–165 m²",
     "type": "Residential",
     "highlights": [
-      "Innovative stacked villa concept",
-      "Private entrance and gardens",
-      "Premium New Cairo location",
-      "Ready 2027"
+      "Signature 'Trio Villa' Concept: Unique architectural blocks housing three overlapping units, ensuring that every home features private gardens, terraces, or flying pools.",
+      "75% Green & Open Space Ratio: Low-density master plan heavily focused on sustainability, walking trails, and water elements.",
+      "Smart Home Integration: All residential units are equipped with state-of-the-art smart automation systems (controlling lighting, climate, curtains, and security).",
+      "Strategic Accessibility: Positioned conveniently close to the Regional Ring Road, Sokhna Road, the American University in Cairo (AUC), and major commercial destinations in New Cairo.",
+      "Diverse Real Estate Inventory: Features a mix of custom apartments, lofts, duplexes, townhouses, and standalone villas."
     ]
   },
   {
@@ -13659,8 +13665,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "creek-town",
     "name": "Creek Town",
     "destination": "new-cairo",
-    "lat": 30.078,
-    "lng": 31.488,
+    "lat": 30.0735,
+    "lng": 31.472,
     "developer": "IL Cazar Developments",
     "developerSlug": "il-cazar-developments",
     "priceFrom": 9.6,
@@ -13674,31 +13680,44 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter with smart electronic gates, 24/7 advanced security, and CCTV surveillance",
+      "Two exclusive clubhouses featuring lounges, social zones, and family spaces",
+      "Multiple swimming pools distributed throughout the residential clusters",
+      "Fully-equipped fitness center, indoor/outdoor gyms, and dedicated sports fields",
+      "Dedicated bicycle lanes and jogging/walking paths separated from vehicular traffic",
+      "On-site concierge services and internal club cart transit",
+      "Creek District commercial strip housing fine-dining restaurants, cafes, and retail options",
+      "Integrated medical park, specialized clinics, and pharmacies",
+      "Safe children’s outdoor playgrounds and nursery areas",
+      "Ample resident parking and visitor spaces"
     ],
-    "hero": "/projects/creek-town/1.jpg",
+    "hero": "https://ilcazar.com/wp-content/uploads/2023/06/creek-town.jpg",
     "gallery": [
-      "/projects/creek-town/1.jpg",
-      "/projects/creek-town/2.jpg"
+      "https://ilcazar.com/wp-content/uploads/2023/06/creek-town.jpg",
+      "https://ilcazar.com/wp-content/uploads/2023/04/1-scaled.jpg",
+      "https://ilcazar.com/wp-content/uploads/2023/04/2-scaled.jpg",
+      "https://ilcazar.com/wp-content/uploads/2023/04/3-1-scaled.jpg",
+      "https://ilcazar.com/wp-content/uploads/2023/04/4-scaled.jpg"
     ],
-    "blurb": "Creek Town is a premium completed development by IL Cazar Developments in New Cairo.",
+    "blurb": "Spanning 100 acres directly on the Suez Road in the First Settlement of New Cairo, Creek Town is an upscale, master-planned residential community designed to maximize space, natural light, and open air. Created with an emphasis on low density, 80% of the compound's layout is dedicated to sprawling green landscapes, parks, and shimmering water streams. Featuring modern architectural designs by renowned firms like Hany Saad Innovations and YBA, the project pairs tranquil suburban living with immediate proximity to Cairo's most vibrant commercial and transit hubs.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Suez Road Location: Situated directly between the Suez Road and New Suez Road in the heart of New Cairo's First Settlement.",
+      "80% Open & Green Ratio: Low-density master plan ensuring that all residential units overlook either expansive green landscapes or water features.",
+      "Exceptional Accessibility: Just 2 minutes from Al Rehab City, 5 minutes from North 90th Street and Cairo International Airport, and 12 minutes from the New Administrative Capital.",
+      "Integrated Business Hub: Features the Creek District on its outer skirts, offering high-end administrative offices, medical clinics, and a commercial strip.",
+      "Diverse Real Estate Mix: Comprises a wide range of property types including luxurious standalone villas, twin houses, townhouses, duplexes, penthouses, and contemporary apartments."
     ],
-    "paymentPlan": "10% / 10 yrs"
+    "paymentPlan": "10% / 10 yrs",
+    "brochureUrl": "/brochures/Creek-Town-E-brochure.pdf",
+    "brochureFileName": "Creek-Town-E-brochure.pdf",
+    "brochureType": "application/pdf"
   },
   {
     "slug": "address-east",
     "name": "Address East",
     "destination": "new-cairo",
-    "lat": 30.038,
-    "lng": 31.492,
+    "lat": 30.048,
+    "lng": 31.489,
     "developer": "Torec Developments",
     "developerSlug": "torec-developments",
     "priceFrom": 9.5,
@@ -13709,22 +13728,29 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter with smart electronic gates, 24/7 advanced security, and surveillance systems",
+      "East Clubhouse: An award-winning interior-designed social hub featuring lounges, family spaces, and fine dining",
+      "East Spa & UFC Gym: A state-of-the-art 3,000 sqm multi-level fitness complex equipped with MMA areas and a luxury relaxation spa",
+      "Multiple outdoor swimming pools and water features distributed across residential zones",
+      "Dedicated tracks for running, jogging, and cycling safely separated from car traffic",
+      "East Strip: A curated commercial and retail zone featuring popular cafes, restaurants, boutiques, and convenience stores",
+      "Integrated medical services and resident health clinics",
+      "Secure children’s play areas and outdoor activity zones",
+      "Underground parking structures and surface visitor bays"
     ],
-    "hero": "/projects/address-east/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
     "gallery": [
-      "/projects/address-east/1.jpg",
-      "/projects/address-east/2.jpg"
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
     ],
-    "blurb": "Address East is a premium completed development by Torec Developments in New Cairo.",
+    "blurb": "Spanning 60 acres in the heart of East Cairo's Golden Square region, Address East is a prestigious, master-planned residential community designed to blend contemporary architecture with serene, resort-style living. The master plan prioritizes openness and low-density living, dedicating 80% of the land to lush green landscapes, meditation-focused Zen gardens, and water features, while allocating only 20% to built structures. The development houses 1,748 meticulously engineered units, offering a sophisticated and tranquil sanctuary for modern families.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime East Cairo Location: Positioned strategically in the Golden Square area of New Cairo, offering exceptional transit connectivity.",
+      "80% Open & Green Ratio: Low-density master plan ensuring that all residential blocks enjoy open views of gardens, parks, or water bodies.",
+      "Strategic Proximity: Just 5 minutes from the main Suez Road and the New Administrative Capital, 10 minutes from the American University in Cairo (AUC), and 15 minutes from Cairo International Airport.",
+      "Feng Shui-Inspired Zen Gardens: Specially landscaped meditation spaces built to create positive energy and sensory relaxation.",
+      "Diverse Housing Inventory: Features a curated selection of fully finished contemporary apartments, spacious duplexes, twin houses, and standalone villas."
     ],
     "paymentPlan": "15% / 4 yrs or 15% / 5 yrs"
   },
@@ -13767,8 +13793,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "mountain-view-hyde-park",
     "name": "Mountain View Hyde Park",
     "destination": "new-cairo",
-    "lat": 29.988,
-    "lng": 31.475,
+    "lat": 30.019,
+    "lng": 31.478,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 20.341,
@@ -13780,22 +13806,29 @@ export const compoundsGenerated: Compound[] = [
       "Duplex"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter with advanced 24/7 security systems, electronic gates, and comprehensive CCTV coverage",
+      "Pedestrian-only zones, scenic crossover bridges, and specialized walking/cycling tracks",
+      "Majestic central lakes, open lawns, and the iconic Diana Fountain",
+      "Multi-tier community clubhouses featuring social lounges, fitness centers, and spas",
+      "Dedicated padel tennis courts, basketball courts, and multi-use sports fields",
+      "Commercial strips, retail outlets, gourmet dining options, and on-site cafes",
+      "Integrated medical clinics, specialized health care centers, and 24/7 pharmacies",
+      "Safe children’s play areas and family gathering parks",
+      "Secure underground and surface resident parking facilities"
     ],
-    "hero": "/projects/mountain-view-hyde-park/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
     "gallery": [
-      "/projects/mountain-view-hyde-park/1.jpg",
-      "/projects/mountain-view-hyde-park/2.jpg"
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80"
     ],
-    "blurb": "Hyde Park is a premium completed development by Mountain View in New Cairo.",
+    "blurb": "Spanning over 200 acres in the heart of New Cairo's Fifth Settlement, Mountain View Hyde Park is an iconic, American-inspired master-planned residential community designed around grand open spaces and nature-infused living. The development integrates royal-styled architecture with vast green parks, signature water features, and creative pedestrian-only zones. By incorporating pedestrian crossover bridges and intelligent neighborhood layouts, it offers a secure, resort-like atmosphere just minutes away from New Cairo's primary educational, commercial, and financial hubs.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Golden Square Location: Positioned centrally in New Cairo, offering direct connectivity to the main and regional ring roads.",
+      "Exceptional Proximity: Just 5 minutes away from the American University in Cairo (AUC) and close to the New Administrative Capital.",
+      "Extensive Green & Park Ratio: Roughly 78% of the land area is dedicated to lush landscaping, lakes, walking trails, and recreational facilities.",
+      "Signature Architecture: Features Mountain View's patented concepts, including the innovative iVilla (combining the privacy of villas with the efficiency of apartments).",
+      "Diverse Housing Inventory: Comprises luxury apartments, signature iVillas, penthouses, townhouses, and grand twin/standalone villas."
     ],
     "paymentPlan": "20% / 7 yrs"
   },
@@ -13803,8 +13836,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "amorada",
     "name": "Amorada",
     "destination": "new-cairo",
-    "lat": 29.965,
-    "lng": 31.512,
+    "lat": 30.0125,
+    "lng": 31.481,
     "developer": "Afaq Developments",
     "developerSlug": "afaq-developments",
     "priceFrom": 12,
@@ -13816,22 +13849,30 @@ export const compoundsGenerated: Compound[] = [
       "Duplex"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter with advanced electronic security gates and 24/7 CCTV surveillance",
+      "Multiple outdoor swimming pools for all ages, alongside a specialized women-only indoor pool",
+      "Fully equipped fitness center, health club, and spa",
+      "Dedicated tracks for walking, jogging, and cycling",
+      "Integrated commercial and retail strip, plus hypermarket options",
+      "Comprehensive medical center, multi-specialty clinics, and 24/7 pharmacies",
+      "Safe children’s outdoor play zones and nurseries",
+      "Private cinema/screening room within the development",
+      "Community mosque",
+      "Underground and surface resident parking facilities with car care services"
     ],
-    "hero": "/projects/amorada/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1600&q=80",
     "gallery": [
-      "/projects/amorada/1.jpg",
-      "/projects/amorada/2.jpg"
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1600&q=80",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80"
     ],
-    "blurb": "Amorada is a premium completed development by Afaq Developments in New Cairo.",
+    "blurb": "Spanning approximately 7 acres in the heart of New Cairo's Fifth Settlement, Amorada is an exclusive, low-density boutique residential and commercial compound. Designed to offer privacy and high-end community living, the project features 13 residential buildings housing 272 units. Only 22% of the land is allocated to built structures, while the remaining 78% is dedicated to lush green landscapes, water features, walking paths, and recreational facilities.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Golden Square Proximity: Located directly on the extension of North 90th Street, situated right opposite Hyde Park.",
+      "Low-Density Master Plan: Comprises just 13 residential buildings, ensuring wide separation distances (30 to 50 meters) between blocks for maximum privacy.",
+      "Strategic Accessibility: Just 3 minutes from the Middle Ring Road, 10 minutes from the American University in Cairo (AUC), and roughly 15 minutes from the New Administrative Capital.",
+      "Extensive Open Spaces: Roughly 78% of the total land area is devoted to gardens, water fountains, and open recreational amenities.",
+      "Diverse Housing Inventory: Features luxury apartments, spacious duplexes with private gardens, and expansive penthouses."
     ],
     "paymentPlan": "Cash"
   },
@@ -13874,8 +13915,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "katameya-gardens",
     "name": "Katameya Gardens",
     "destination": "new-cairo",
-    "lat": 29.976,
-    "lng": 31.495,
+    "lat": 30.021,
+    "lng": 31.488,
     "developer": "North Africa Developments",
     "developerSlug": "north-africa-developments",
     "priceFrom": 7.255,
@@ -13888,22 +13929,28 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter with advanced 24/7 security systems and smart electronic access control",
+      "Exclusive signature clubhouse featuring social lounges and family recreational zones",
+      "Multiple swimming pools and a luxury health club/spa offering specialized treatments",
+      "Dedicated tracks for walking, jogging, and cycling separated from vehicle paths",
+      "Fine-dining restaurants, cafes, and boutique retail shopping strips",
+      "On-site international educational facilities (Gateway International School) and medical centers",
+      "Community mosque",
+      "Secure private parking and visitor bays"
     ],
-    "hero": "/projects/katameya-gardens/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
     "gallery": [
-      "/projects/katameya-gardens/1.jpg",
-      "/projects/katameya-gardens/2.jpg"
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80"
     ],
-    "blurb": "Katameya Gardens is a premium completed development by North Africa Developments in New Cairo.",
+    "blurb": "Spanning 100 acres in the elite Golden Square district of New Cairo, Katameya Gardens is an ultra-low-density residential sanctuary designed for ultimate privacy and distinction. Located directly behind the American University in Cairo (AUC), the project features a master-planned community limited to just 342 primary villa and high-end residential estates. The compound blends contemporary architecture with German-designed natural landscapes, wide landscaped corridors, and artificial water features.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Golden Square Position: Located directly off a grand 75-meter-wide boulevard in New Cairo's Southern Extensions, surrounded by elite neighbors like Mivida and Hyde Park.",
+      "Ultra-Low Density: Features an exclusive concentration of only 342 private residential structures to guarantee wide separation distances and high privacy.",
+      "Strategic Accessibility: Positioned right behind the American University in Cairo (AUC) and minutes away from the Future University in Egypt (FUE) and the Middle Ring Road.",
+      "Tiered Elevation Planning: Designed with varied terrain levels to ensure unobstructed views of green open spaces from all homes.",
+      "Diverse Luxury Inventory: Comprises spacious standalone villas, twin houses, townhouses, and high-end low-rise apartments."
     ],
     "paymentPlan": "30% / 4 yrs"
   },
@@ -13911,8 +13958,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "sephora-heights",
     "name": "Sephora Heights",
     "destination": "new-cairo",
-    "lat": 29.985,
-    "lng": 31.445,
+    "lat": 30.0165,
+    "lng": 31.4725,
     "developer": "Sephora Developments",
     "developerSlug": "sephora-developments",
     "priceFrom": 9,
@@ -13923,22 +13970,30 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter featuring 24/7 advanced security personnel and comprehensive CCTV surveillance",
+      "Exclusive health club, wellness spa, sauna, and jacuzzi facilities",
+      "Fully equipped fitness gym with professional trainers",
+      "Multiple outdoor swimming pools, including a specialized covered ladies' pool",
+      "Dedicated tracks for walking, jogging, and cycling winding through open green spaces",
+      "On-site commercial strip mall housing retail shops, daily conveniences, and cafes",
+      "Integrated medical clinic services and a 24/7 operating pharmacy",
+      "Safe children’s outdoor play zones and recreation areas",
+      "Community mosque built in an elegant Islamic architectural style",
+      "Secure resident parking structures and modern elevators in every building"
     ],
-    "hero": "/projects/sephora-heights/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
     "gallery": [
-      "/projects/sephora-heights/1.jpg",
-      "/projects/sephora-heights/2.jpg"
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
     ],
-    "blurb": "Sephora Heights is a premium completed development by Sephora Developments in New Cairo.",
+    "blurb": "Spanning approximately 21 acres (84,500 square meters) in the heart of New Cairo's Al Andalus and Southern Investors district, Sephora Heights is an exclusive, ultra-low-density residential sanctuary. Designed with clean European architectural lines, the master plan allocates only 22% of its footprint to residential buildings, dedicating the remaining 78% to sprawling green landscapes, shimmering water features, and quiet pedestrian plazas. Comprising 52 low-rise buildings, the community offers a peaceful, private lifestyle just minutes away from the vibrant core of the Fifth Settlement.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "78% Green & Open Ratio: One of the lowest-density footprints in New Cairo, ensuring uncompromised garden or water views for every home.",
+      "Prime Strategic Location: Situated in the thriving Al Andalus / Southern Investors zone, directly adjacent to Gateway International School and close to the Golden Square.",
+      "Proximity Landmarks: Just 4 minutes from the American University in Cairo (AUC), minutes from North 90th Street, and roughly 25 minutes from the Maadi Ring Road.",
+      "Low-Rise Architecture: Buildings are strictly limited to a ground floor plus five upper typical floors (no high-rise towers), preserving an intimate neighborhood feel.",
+      "Diverse Real Estate Mix: Features carefully configured typical apartments, ground-floor units with private gardens, and spacious duplexes."
     ],
     "paymentPlan": "10%/7 yrs or 15%/8 yrs"
   },
@@ -13947,7 +14002,7 @@ export const compoundsGenerated: Compound[] = [
     "name": "Riviera",
     "destination": "new-cairo",
     "lat": 30.025,
-    "lng": 31.495,
+    "lng": 31.492,
     "developer": "Novus Stanza",
     "developerSlug": "novus-stanza",
     "priceFrom": 48.665,
@@ -13958,22 +14013,30 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated perimeter with advanced 24/7 security personnel, guarded access points, and comprehensive CCTV surveillance",
+      "Lively community clubhouse featuring social spaces and family activity areas",
+      "Multiple outdoor swimming pools and water features distributed across the compound",
+      "Fully equipped state-of-the-art gym, luxury spa, and wellness facilities",
+      "Multi-purpose sports courts (including football, basketball, and tennis)",
+      "Dedicated tracks for walking, jogging, and cycling safely winding through the greenery",
+      "Integrated commercial and retail strip housing popular restaurants, cafes, and a supermarket",
+      "Secure outdoor children’s play zones and recreation areas",
+      "On-site medical clinic, pharmacy services, and a community mosque",
+      "Underground and surface resident parking facilities"
     ],
-    "hero": "/projects/riviera/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
     "gallery": [
-      "/projects/riviera/1.jpg",
-      "/projects/riviera/2.jpg"
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
     ],
-    "blurb": "Riviera is a premium completed development by Novus Stanza in New Cairo.",
+    "blurb": "Spanning 42 acres in the heart of New Cairo's Fifth Settlement, Riviera Heights is a low-density, European-inspired residential and lifestyle community. The master plan is thoughtfully structured so that only 20% of the land is dedicated to built structures, leaving the remaining 80% to sprawling green landscapes, pristine gardens, and artificial lakes. Blending classic and contemporary architectural designs, the compound offers an elite, tranquil living environment while remaining directly connected to New Cairo’s main urban arteries.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "80% Open & Green Ratio: Exceptional low-density master planning focusing on natural scenery, open gardens, and water elements.",
+      "Prime Fifth Settlement Location: Situated just minutes away from the American University in Cairo (AUC) and Point 90 Mall, with easy access via North and South Teseen Streets.",
+      "Strategic Proximity: Roughly 10 minutes from Cairo Festival City, 15 minutes from Cairo International Airport, and well-connected to the Ring Road.",
+      "Low-Rise & Private Layout: Comprises an exclusive collection of low-rise residential blocks and private standalone villas to preserve individual privacy and scenic views.",
+      "Diverse Real Estate Inventory: Features spacious typical apartments, grand multi-level duplexes, connected twin houses, and luxury standalone villas."
     ],
     "paymentPlan": "25% / 5 yrs"
   },
@@ -13981,8 +14044,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "midtown-new-cairo",
     "name": "Midtown New Cairo",
     "destination": "new-cairo",
-    "lat": 30.015,
-    "lng": 31.468,
+    "lat": 30.008,
+    "lng": 31.485,
     "developer": "Better Home",
     "developerSlug": "better-home",
     "priceFrom": 17.6,
@@ -13993,22 +14056,31 @@ export const compoundsGenerated: Compound[] = [
       "Townhouse"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated perimeter with smart electronic access gates, 24/7 advanced security guards, and comprehensive CCTV surveillance",
+      "Dedicated community clubhouse featuring social lounges and family gathering spaces",
+      "Multiple outdoor swimming pools, children's splash pads, and private ladies' pool options",
+      "Fully equipped indoor gym, wellness spa, sauna, and jacuzzi facilities",
+      "Multi-purpose sports fields, padel tennis courts, and fitness zones",
+      "Dedicated tracks for walking, jogging, and cycling safely separated from vehicle lanes",
+      "Commercial and retail shopping strip housing prominent brands, cafes, and fine-dining restaurants",
+      "Integrated medical center, specialized clinics, and a 24/7 operating pharmacy",
+      "Safe children’s outdoor playgrounds and on-site nursery options",
+      "Community mosque and private event/barbecue gardens",
+      "Underground parking structures and dedicated visitor parking bays"
     ],
-    "hero": "/projects/midtown-new-cairo/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
     "gallery": [
-      "/projects/midtown-new-cairo/1.jpg",
-      "/projects/midtown-new-cairo/2.jpg"
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
     ],
-    "blurb": "Midtown New Cairo is a premium completed development by Better Home in New Cairo.",
+    "blurb": "Spanning 58 acres in the expanding and prestigious Sixth Settlement sector of New Cairo, Midtown New Cairo (often marketed as Midtown East) is an upscale, master-planned residential community designed to deliver modern luxury and absolute privacy. The project emphasizes low-density living, with only 20% of its land area allocated to built structures and the remaining 80% dedicated to expansive green landscapes, shimmering water features, and recreational amenities. Offering a peaceful sanctuary just minutes away from New Cairo's primary urban hubs, it combines high-end contemporary architecture with a comprehensive, self-sustained neighborhood infrastructure.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Sixth Settlement Location: Situated strategically in New Cairo's emerging luxury corridor, close to major lifestyle destinations like Mivida, Villette, and Zed East.",
+      "80% Open & Green Ratio: Low-density master plan ensuring that all residential homes enjoy direct views of landscaped parks, gardens, or water bodies.",
+      "Exceptional Accessibility: Positioned near key transit lines including the Mohamed Naguib Axis, South 90th Street, the Middle Ring Road, and the Cairo-Sokhna Highway.",
+      "Strategic Proximity: Just a short drive from the American University in Cairo (AUC), Al Rehab City, and the New Administrative Capital.",
+      "Exclusive Villa & Upscale Inventory: Features a curated collection of spacious townhouses, twin houses, and grand standalone luxury villas."
     ],
     "paymentPlan": "50% / 2 yrs"
   },
@@ -14016,8 +14088,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "azad",
     "name": "Azad",
     "destination": "new-cairo",
-    "lat": 30.019,
-    "lng": 31.442,
+    "lat": 30.011,
+    "lng": 31.474,
     "developer": "Tameer Developments",
     "developerSlug": "tameer-developments",
     "priceFrom": 18.35,
@@ -14028,22 +14100,29 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter with advanced electronic security gates, 24/7 security personnel, and CCTV surveillance",
+      "The Clubhouse: An exclusive social hub featuring lounges, workspaces, a fully equipped fitness gym, a yoga studio, and a swimming pool",
+      "Multiple outdoor swimming pools and water features distributed across the residential zones",
+      "Dedicated pedestrian walkways, jogging trails, and cycling paths separated from vehicular traffic",
+      "Azad View / Community Strip: Retail spaces, boutique cafes, gourmet restaurants, and convenience markets",
+      "Integrated medical clinic services and pharmacy",
+      "Secure children’s outdoor play areas, parks, and on-site nursery options",
+      "Community mosque",
+      "Underground resident parking garages and convenient visitor surface bays"
     ],
-    "hero": "/projects/azad/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1600&q=80",
     "gallery": [
-      "/projects/azad/1.jpg",
-      "/projects/azad/2.jpg"
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1600&q=80",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
     ],
-    "blurb": "Azad is a premium completed development by Tameer Developments in New Cairo.",
+    "blurb": "Spanning approximately 19 acres in the heart of New Cairo's Fifth Settlement, Azad is an exclusive, contemporary boutique residential community designed to celebrate authentic community living and open-air interaction. Developed by Tameer—one of Egypt's oldest and most trusted real estate developers—the master plan prioritizes low-density architecture, dedicating nearly 80% of its land to expansive parks, green plazas, walking promenades, and artistic landscape features. Located directly behind the American University in Cairo (AUC), Azad blends modern aesthetic lines with an intimate, neighborhood-centric atmosphere.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Golden Square Proximity: Positioned strategically right behind the American University in Cairo (AUC) in New Cairo's Fifth Settlement.",
+      "80% Open & Green Ratio: Exceptional low-density master plan featuring central parks, cascading water elements, and vehicle-free green plazas.",
+      "Strategic Accessibility: Just minutes away from North 90th Street, the Ring Road, and the Middle Ring Road, offering swift connectivity to Cairo International Airport and the New Administrative Capital.",
+      "Art & Culture Integration: Incorporates unique outdoor community spaces, public art installations, reading nooks, and social gathering squares.",
+      "Diverse Real Estate Inventory: Comprises 53 low-rise residential buildings featuring meticulously designed typical apartments, garden apartments, spacious duplexes, and fully finished penthouses."
     ],
     "paymentPlan": "30% / 5 yrs"
   },
@@ -14051,8 +14130,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "galleria-moon-valley",
     "name": "Galleria Moon Valley",
     "destination": "new-cairo",
-    "lat": 30.021,
-    "lng": 31.472,
+    "lat": 30.0055,
+    "lng": 31.4785,
     "developer": "Arabia Holding",
     "developerSlug": "arabia-holding",
     "priceFrom": 12.5,
@@ -14063,22 +14142,30 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated community perimeter featuring 24/7 advanced security personnel, smart access control, and comprehensive CCTV surveillance",
+      "Multiple social clubhouses offering indoor lounges, family spaces, and co-working areas",
+      "Seven swimming pools distributed throughout the compound, including infinity pools and kids' splash pads",
+      "Fully equipped fitness gyms, wellness spas, saunas, and yoga/aerobics studios",
+      "Dedicated tracks for running, jogging, and cycling safely separated from car traffic",
+      "Commercial and retail strip hosting gourmet restaurants, chic cafes, and convenience stores",
+      "On-site art gallery, community cinema/screening rooms, and music rooms",
+      "Integrated medical clinics and 24/7 pharmacy services",
+      "Safe children’s outdoor play zones and parks",
+      "Underground and surface resident parking facilities"
     ],
-    "hero": "/projects/galleria-moon-valley/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
     "gallery": [
-      "/projects/galleria-moon-valley/1.jpg",
-      "/projects/galleria-moon-valley/2.jpg"
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
     ],
-    "blurb": "Galleria Moon Valley is a premium completed development by Arabia Holding in New Cairo.",
+    "blurb": "Spanning 71 acres in the prestigious Golden Square district of New Cairo's Fifth Settlement, Galleria Moon Valley is an upscale, contemporary residential community designed with a heavy emphasis on art, nature, and modern architecture. Developed by Arabia Holding, the compound features sleek, low-rise buildings characterized by expansive glass facades, rooftop terraces, and natural stone finishes. The master plan allocates nearly 80% of the land to lush green landscapes, cascading water features, sculpture gardens, and open recreational spaces.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Golden Square Location: Positioned strategically in New Cairo's Golden Square, surrounded by elite neighboring communities and close to the Southern Investors zone.",
+      "80% Open & Green Ratio: Low-density master plan ensuring that all residential blocks enjoy unobstructed views of parks, water bodies, or green courtyards.",
+      "Strategic Proximity: Just 10 minutes from the American University in Cairo (AUC), 15 minutes from Cairo International Airport, and minutes away from the Mohamed Naguib and South 90th Street axes.",
+      "Art-Inspired Design: Integrates open-air art galleries, sculpture installations, and dedicated creative zones throughout the landscape.",
+      "Diverse Real Estate Inventory: Comprises luxury apartments, spacious penthouses with private roof terraces, and ground-floor units with private gardens."
     ],
     "paymentPlan": "10% / 5 yrs"
   },
@@ -14121,8 +14208,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "golden-heights-2",
     "name": "Golden Heights 2",
     "destination": "new-cairo",
-    "lat": 30.052,
-    "lng": 31.462,
+    "lat": 30.0496,
+    "lng": 31.4839,
     "developer": "Novus Stanza",
     "developerSlug": "novus-stanza",
     "priceFrom": 60.731,
@@ -14133,22 +14220,28 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated perimeter with 24/7 advanced security personnel, access control gates, and comprehensive CCTV surveillance",
+      "Exclusive resident health club and fitness center",
+      "Multiple outdoor swimming pools and family recreation spots",
+      "Dedicated tracks for walking, jogging, and cycling winding through the green areas",
+      "Multi-purpose sports courts (including tennis and football fields)",
+      "On-site commercial strip featuring retail stores, convenience markets, a pharmacy, and casual dining options",
+      "Safe children’s outdoor play zones and landscaped parks",
+      "Private internal parking bays and wide, vehicle-friendly avenues"
     ],
-    "hero": "/projects/golden-heights-2/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
     "gallery": [
-      "/projects/golden-heights-2/1.jpg",
-      "/projects/golden-heights-2/2.jpg"
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80"
     ],
-    "blurb": "Golden Heights 2 is a premium completed development by Novus Stanza in New Cairo.",
+    "blurb": "Expanding on the success of its predecessor, Golden Heights 2 is an upscale, low-density gated community situated right in the heart of New Cairo's Northern Investors district (directly opposite Al Rehab Gate 9). Developed by Novus Stanza, the compound is tailored exclusively for luxury villa living. The master plan prioritizes open space and privacy, dedicating roughly 78% to 80% of its land area to sprawling green landscapes, manicured gardens, and water features, while keeping the built-up footprint minimal.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime First Settlement Location: Situated directly opposite Gate 9 of Al Rehab City, ensuring immediate convenience to established commercial markets, banks, and retail centers.",
+      "Villas-Only Community: Exclusively dedicated to high-end standalone villas and spacious multi-floor family homes rather than high-density apartment blocks.",
+      "Low-Density Master Plan: Only about 20% to 22% of the land is used for construction, leaving the vast majority for lush parks, wide avenues, and natural separation between homes.",
+      "Strategic Proximity: Just 8 minutes from the American University in Cairo (AUC), 10 minutes from Cairo Festival City and the New Administrative Capital, and 15 minutes from Cairo International Airport.",
+      "Spansive Real Estate Inventory: Features generous architectural layouts (such as Types A through H variants) with grand land plots, private gardens, and multi-bedroom configurations ranging from 300 to over 750 square meters."
     ],
     "paymentPlan": "25% / 5 yrs"
   },
@@ -14156,8 +14249,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "waterway-1",
     "name": "Waterway 1",
     "destination": "new-cairo",
-    "lat": 30.032,
-    "lng": 31.428,
+    "lat": 30.0425,
+    "lng": 31.458,
     "developer": "The Waterway Developments",
     "developerSlug": "the-waterway-developments",
     "priceFrom": 35,
@@ -14168,22 +14261,31 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated perimeter with smart electronic access control gates and 24/7 advanced security surveillance",
+      "Modern community clubhouse for leisure and social gatherings",
+      "Rejuvenating health resort, professional spa, sauna, and jacuzzi facilities",
+      "Multiple outdoor swimming pools and water features distributed throughout the grounds",
+      "Fully equipped fitness gym and wellness zones",
+      "Dedicated walking, jogging, and cycling paths",
+      "High-end retail strip featuring fine-dining restaurants, specialized cafes, and convenience stores",
+      "Well-stocked pharmacies and on-site primary medical services",
+      "Safe children’s outdoor play areas",
+      "Community mosque",
+      "Underground resident parking garages and secure surface visitor spaces"
     ],
-    "hero": "/projects/waterway-1/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
     "gallery": [
-      "/projects/waterway-1/1.jpg",
-      "/projects/waterway-1/2.jpg"
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80"
     ],
-    "blurb": "Waterway 1 is a premium completed development by The Waterway Developments in New Cairo.",
+    "blurb": "Spanning a prime tract of land in the heart of New Cairo's Fifth Settlement along the Northern Investors / Mohamed Naguib axis, The Waterway 1 is a boutique, ultra-luxury mixed-use residential and commercial community. Inspired by modern European architecture and sophisticated aesthetic lines, the project is defined by its signature cascading water features, serene artificial lakes, and lush landscaped walkways. It blends absolute residential privacy with an energetic, high-end commercial and retail strip right outside residents' doors.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Fifth Settlement Location: Situated directly on the vital Mohamed Naguib Axis, close to Maxim Mall, the American University in Cairo (AUC), and major lifestyle hubs.",
+      "Boutique Low-Density Living: Carefully engineered to prioritize privacy, exclusivity, and quiet surroundings while maintaining immediate access to bustling retail destinations.",
+      "Integrated Lifestyle Strip: Complemented by The Waterway Commercial Hub, featuring high-end restaurants, cafes, administrative offices, and boutique shopping.",
+      "Strategic Accessibility: Easy connectivity to North 90th Street, the Ring Road, and Cairo International Airport.",
+      "Diverse Real Estate Inventory: Comprises luxury ready-to-move apartments, spacious duplexes, signature penthouses, and select standalone/townhouse options with sweeping water or garden views."
     ],
     "paymentPlan": "20% / 4 yrs"
   },
@@ -14191,8 +14293,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "ashrafieh",
     "name": "Ashrafieh",
     "destination": "new-cairo",
-    "lat": 30.015,
-    "lng": 31.495,
+    "lat": 30.045,
+    "lng": 31.461,
     "developer": "Arabia Holding",
     "developerSlug": "arabia-holding",
     "priceFrom": 5.3,
@@ -14204,22 +14306,28 @@ export const compoundsGenerated: Compound[] = [
       "Duplex"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated perimeter with 24/7 security personnel, access control gates, and comprehensive surveillance systems",
+      "Sprawling central green landscapes, open gardens, and artificial water features",
+      "Exclusive resident social areas and recreational zones",
+      "Dedicated walking and jogging tracks",
+      "On-site commercial and retail convenience points",
+      "Integrated medical services and pharmacy options",
+      "Safe children’s outdoor play spaces",
+      "Secure resident parking facilities and modern building elevators"
     ],
-    "hero": "/projects/ashrafieh/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
     "gallery": [
-      "/projects/ashrafieh/1.jpg",
-      "/projects/ashrafieh/2.jpg"
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
     ],
-    "blurb": "Ashrafieh is a premium completed development by Arabia Holding in New Cairo.",
+    "blurb": "Situated directly on the vital Mohamed Naguib Axis in the heart of the Northern Investors Area of New Cairo's Fifth Settlement, Ashrafieh is an upscale residential and investment community. Developed by Arabia Holding, the project stands out as an established, low-density development offering immediate-delivery homes set amidst landscaped green spaces and decorative water features. Designed to blend structural privacy with complete municipal and lifestyle integration, it provides residents with a quiet, refined atmosphere while remaining right next to Cairo's major thoroughfares.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Northern Investors Location: Overlooks the Mohamed Naguib Axis directly in New Cairo's Fifth Settlement, placing it close to major commercial centers, schools, and universities.",
+      "Immediate Delivery Status: Unlike many projects requiring long off-plan waiting periods, Ashrafieh features units ready for immediate handover.",
+      "Phased Master Plan: Designed across a sprawling land bank framework where initial phases focus on low-rise architecture and expansive open green ratios.",
+      "Strategic Accessibility: Swift connectivity to North 90th Street, the Ring Road, and Cairo International Airport.",
+      "Real Estate Inventory: Comprises a curated selection of refined apartments and spacious duplexes starting from roughly 115 square meters."
     ],
     "paymentPlan": "25% / 3 yrs"
   },
@@ -14227,8 +14335,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "90-avenue",
     "name": "90 Avenue",
     "destination": "new-cairo",
-    "lat": 30.018,
-    "lng": 31.425,
+    "lat": 30.024,
+    "lng": 31.494,
     "developer": "Tabarak Developments",
     "developerSlug": "tabarak-developments",
     "priceFrom": 16.3,
@@ -14239,31 +14347,40 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated perimeter with smart ID access control, emergency lighting systems, and 24/7 advanced security surveillance",
+      "Multi-zone clubhouses featuring business lounges, fitness gyms, and multi-purpose celebration/meeting rooms per cluster",
+      "Multiple outdoor swimming pools and custom water features distributed across neighborhoods",
+      "Cracknell-designed landscaping divided into social, family, and meditation spaces",
+      "Dedicated tracks for walking, jogging, and cycling separated from vehicle paths",
+      "Integrated commercial and administrative plaza housing retail, cafes, and gourmet dining options",
+      "Central hot water network infrastructure feeding all residential units",
+      "Underground resident parking garages and elevator access ratios (one elevator for every two apartments)"
     ],
-    "hero": "/projects/90-avenue/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
     "gallery": [
-      "/projects/90-avenue/1.jpg",
-      "/projects/90-avenue/2.jpg"
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80"
     ],
-    "blurb": "90 Avenue is a premium completed development by Tabarak Developments in New Cairo.",
+    "blurb": "Spanning 50 acres directly on South 90th Street in the heart of New Cairo's Fifth Settlement (directly opposite the American University in Cairo), 90 Avenue is an upscale, mixed-use residential and lifestyle destination. Inspired by modern California architecture and master-planned by international design house WATG with landscaping by Cracknell, the project prioritizes low-density integration. Only 18% of the land is allocated to residential structures, leaving the remaining 82% to sprawling open green spaces, pedestrian pathways, and water features.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Golden Square Position: Situated directly on South 90th Street, facing the American University in Cairo (AUC) and Future University.",
+      "Low-Density Footprint: A strict 18% building-to-land ratio, ensuring wide building separations (ranging from 30 to 115 meters) for uncompromised privacy and views.",
+      "California-Inspired Neighborhood Master Plan: Divided into specialized zones—including Vibe, Family/Pavilion, and Serenity—tailored to distinct lifestyle preferences.",
+      "Strategic Accessibility: Swiftly connected to major thoroughfares, the Ring Road, the New Administrative Capital, and Cairo International Airport.",
+      "Residential Inventory: Consists entirely of high-end apartment buildings (ground plus 5 typical floors), luxury duplexes, and penthouses."
     ],
-    "paymentPlan": "50% / 2 yrs"
+    "paymentPlan": "50% / 2 yrs",
+    "brochureUrl": "https://tbkdevelopments.com/wp-content/uploads/2025/04/90-Avenue-Brochure.pdf",
+    "brochureFileName": "90-Avenue-Brochure.pdf",
+    "brochureType": "application/pdf"
   },
   {
     "slug": "w-signature",
     "name": "W Signature",
     "destination": "new-cairo",
-    "lat": 30.031,
-    "lng": 31.432,
+    "lat": 30.032,
+    "lng": 31.465,
     "developer": "The Waterway Developments",
     "developerSlug": "the-waterway-developments",
     "priceFrom": 22,
@@ -14274,22 +14391,28 @@ export const compoundsGenerated: Compound[] = [
       "Apartment"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated perimeter with smart electronic access control gates, 24/7 advanced security personnel, and comprehensive CCTV monitoring",
+      "Exclusive resident clubhouse featuring social lounges, co-working areas, and family spaces",
+      "Fully equipped fitness centers, indoor/outdoor gyms, a wellness spa, sauna, and jacuzzi facilities",
+      "Multiple outdoor swimming pools and custom water features distributed throughout the grounds",
+      "Dedicated tracks for running, jogging, and cycling safely separated from car traffic",
+      "High-end commercial and administrative strip hosting fine-dining restaurants, chic cafes, and convenience retail",
+      "Safe children’s outdoor play parks and dedicated green recreation areas",
+      "Secure underground multi-level parking garages and service elevators"
     ],
-    "hero": "/projects/w-signature/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
     "gallery": [
-      "/projects/w-signature/1.jpg",
-      "/projects/w-signature/2.jpg"
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
     ],
-    "blurb": "W Signature is a premium completed development by The Waterway Developments in New Cairo.",
+    "blurb": "Spanning 27 acres in the heart of New Cairo's Fifth Settlement (along the South Investors / Mohamed Naguib axis), W Signature is an ultra-luxurious, boutique residential and mixed-use community. Designed to deliver high-end hospitality standards and elite architectural elegance, the master plan maintains a low-density footprint—dedicating roughly 80% of the land to expansive open green spaces, manicured landscaping, and signature cascading water features. The project merges secluded residential privacy with full integration into world-class hotel services and vibrant commercial strips.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Fifth Settlement Location: Situated strategically in the South Investors area, with direct access via the Mohamed Naguib Axis, Al Amal Axis, and South 90th Street.",
+      "Low-Density Master Plan: Spanning 27 acres with a minimal 20% building footprint, ensuring uncompromised privacy and serene views for all units.",
+      "Hotel-Branded Services: Features five-star hospitality standards backed by around-the-clock concierge support, grand reception lobbies, and optional property management services.",
+      "Strategic Proximity: Minutes away from the American University in Cairo (AUC), Al Rehab City, Cairo International Airport, and luxury lifestyle hubs like 5A Waterway.",
+      "Diverse Real Estate Inventory: Comprises highly curated luxury apartments (ranging from 1 to 3 bedrooms) and expansive 4-bedroom multi-level duplexes, alongside dedicated boutique office and administrative spaces."
     ],
     "paymentPlan": "10% / 7 yrs"
   },
@@ -14297,8 +14420,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "katameya-creeks",
     "name": "Katameya Creeks",
     "destination": "new-cairo",
-    "lat": 30.012,
-    "lng": 31.438,
+    "lat": 30.019,
+    "lng": 31.4815,
     "developer": "Starlight Developments",
     "developerSlug": "starlight-developments",
     "priceFrom": 30,
@@ -14310,22 +14433,27 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa"
     ],
     "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
+      "Gated perimeter with advanced electronic security gates, 24/7 security personnel, and comprehensive surveillance systems",
+      "Exclusive resident clubhouse featuring social lounges, fine dining, and family gathering spaces",
+      "Fully equipped fitness center, indoor/outdoor gym facilities, and a luxury wellness spa",
+      "Multiple outdoor swimming pools and custom cascading water features distributed across the grounds",
+      "Dedicated tracks for walking, jogging, and cycling safely winding through the greenery",
+      "High-end commercial and retail plaza hosting gourmet restaurants, chic cafes, and convenience options",
+      "Safe children’s outdoor play parks and green recreation zones",
+      "Underground resident parking garages and secure surface visitor bays"
     ],
-    "hero": "/projects/katameya-creeks/1.jpg",
+    "hero": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
     "gallery": [
-      "/projects/katameya-creeks/1.jpg",
-      "/projects/katameya-creeks/2.jpg"
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80"
     ],
-    "blurb": "Katameya Creeks is a premium completed development by Starlight Developments in New Cairo.",
+    "blurb": "Spanning approximately 43 acres in the heart of New Cairo's prestigious Golden Square district, Katameya Creeks is an ultra-luxury, low-density residential community. Developed by Starlight Developments, the project is meticulously designed to offer a refined, serene living environment inspired by classic European architectural elegance. The master plan prioritizes absolute privacy and open space, dedicating the vast majority of its area to lush green landscaping, water features, and manicured walking avenues while keeping the built-up density remarkably low.",
     "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
+      "Prime Golden Square Location: Situated in New Cairo's most sought-after corridor, surrounded by elite neighboring communities and high-end lifestyle destinations.",
+      "Low-Density Master Plan: Designed with an emphasis on low building percentages, wide street separations, and unobstructed views of gardens or water bodies.",
+      "Strategic Accessibility: Positioned within close proximity to the American University in Cairo (AUC), North 90th Street, the Ring Road, and the Middle Ring Road.",
+      "Exclusive Architectural Style: Features a harmonious blend of low-rise apartment buildings, high-end penthouses, and luxury standalone villas/townhouses with timeless stone facades."
     ],
     "paymentPlan": "25% / 3 yrs"
   }

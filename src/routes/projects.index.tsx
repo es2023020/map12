@@ -12,15 +12,6 @@ import { useStore } from "@/lib/store";
 import { useDebounce } from "@/lib/useDebounce";
 import { SmartSearchBar } from "@/components/ui/SmartSearchBar";
 
-// Compute true max price from availability data (highest real price) or fall back to compound list
-const mainCompounds = compounds.filter((c) => !c.parentSlug);
-const availMaxPrices = availability.flatMap((a) => a.breakdown.map((b) => b.maxPriceM));
-const compoundPrices = mainCompounds.map((c) => c.priceFrom);
-const allPrices = [...availMaxPrices, ...compoundPrices].filter((p) => p > 0);
-const PRICE_MAX = Math.max(...allPrices);
-const PRICE_MIN = Math.min(...compoundPrices);
-const ALL_TYPES = Array.from(new Set(mainCompounds.flatMap((c) => c.types))).sort();
-
 export const Route = createFileRoute("/projects/")({
   validateSearch: (search: Record<string, unknown>) => ({
     destination: typeof search.destination === "string" ? search.destination : "",
@@ -46,15 +37,25 @@ function ProjectsPage() {
   const [status, setStatus] = useState("");
   const [type, setType] = useState("");
   const [kiloFilter, setKiloFilter] = useState("");
-  const [maxPrice, setMaxPrice] = useState(PRICE_MAX);
+
+  const mainCompounds = useMemo(() => compounds.filter((c) => !c.parentSlug), [compounds]);
+  const availMaxPrices = useMemo(() => availability.flatMap((a) => a.breakdown.map((b) => b.maxPriceM)), [availability]);
+  const compoundPrices = useMemo(() => mainCompounds.map((c) => c.priceFrom), [mainCompounds]);
+  const allPrices = useMemo(() => [...availMaxPrices, ...compoundPrices].filter((p) => p > 0), [availMaxPrices, compoundPrices]);
+  const PRICE_MAX = useMemo(() => (allPrices.length > 0 ? Math.max(...allPrices) : 100), [allPrices]);
+  const PRICE_MIN = useMemo(() => (compoundPrices.length > 0 ? Math.min(...compoundPrices) : 0), [compoundPrices]);
+  const ALL_TYPES = useMemo(() => Array.from(new Set(mainCompounds.flatMap((c) => c.types))).sort(), [mainCompounds]);
+
+  const [maxPrice, setMaxPrice] = useState<number | null>(null);
+  const currentMaxPrice = maxPrice ?? PRICE_MAX;
   const [sort, setSort] = useState<"name" | "price-asc" | "price-desc" | "delivery">("name");
   const [filtersOpen, setFiltersOpen] = useState(!!(destinationParam || devParam || qParam));
   const trackEvent = useStore((s) => s.trackEvent);
 
-  const hasFilters = !!(q || destination || dev || status || type || kiloFilter || maxPrice < PRICE_MAX);
+  const hasFilters = !!(q || destination || dev || status || type || kiloFilter || currentMaxPrice < PRICE_MAX);
 
   function clearAll() {
-    setQ(""); setArea(""); setDev(""); setStatus(""); setType(""); setKiloFilter(""); setMaxPrice(PRICE_MAX);
+    setQ(""); setArea(""); setDev(""); setStatus(""); setType(""); setKiloFilter(""); setMaxPrice(null);
   }
 
   const handleSelectPreset = (presetType: "destination" | "dev" | "q", val: string) => {
@@ -179,14 +180,14 @@ function ProjectsPage() {
   };
 
   const filtered = useMemo(() => {
-    let list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, dev, status, type, maxPrice, kiloFilter));
+    let list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, dev, status, type, currentMaxPrice, kiloFilter));
     return [...list].sort((a, b) => {
       if (sort === "name") return a.name.localeCompare(b.name);
       if (sort === "price-asc") return a.priceFrom - b.priceFrom;
       if (sort === "price-desc") return b.priceFrom - a.priceFrom;
       return a.deliveryYear - b.deliveryYear;
     });
-  }, [debouncedQ, destination, dev, status, type, maxPrice, kiloFilter, sort, searchableTextMap]);
+  }, [debouncedQ, destination, dev, status, type, currentMaxPrice, kiloFilter, sort, searchableTextMap, mainCompounds]);
 
   // Dynamic cascading option computations:
   const activeFilters = useMemo(() => {
@@ -197,19 +198,19 @@ function ProjectsPage() {
 
     mainCompounds.forEach((c) => {
       // For activeDestinations (match everything except destination filter)
-      if (matchCompound(c, debouncedQ, "", dev, status, type, maxPrice, kiloFilter)) {
+      if (matchCompound(c, debouncedQ, "", dev, status, type, currentMaxPrice, kiloFilter)) {
         activeDests.add(c.destination);
       }
       // For activeDevelopers (match everything except developer filter)
-      if (matchCompound(c, debouncedQ, destination, "", status, type, maxPrice, kiloFilter)) {
+      if (matchCompound(c, debouncedQ, destination, "", status, type, currentMaxPrice, kiloFilter)) {
         activeDevs.add(c.developerSlug);
       }
       // For activeStatuses (match everything except status filter)
-      if (matchCompound(c, debouncedQ, destination, dev, "", type, maxPrice, kiloFilter)) {
+      if (matchCompound(c, debouncedQ, destination, dev, "", type, currentMaxPrice, kiloFilter)) {
         activeStats.add(c.status);
       }
       // For activeTypes (match everything except type filter)
-      if (matchCompound(c, debouncedQ, destination, dev, status, "", maxPrice, kiloFilter)) {
+      if (matchCompound(c, debouncedQ, destination, dev, status, "", currentMaxPrice, kiloFilter)) {
         c.types.forEach((t) => activeTyps.add(t));
       }
     });
@@ -269,9 +270,9 @@ function ProjectsPage() {
       <div>
         <div className="mb-2 flex items-center justify-between text-xs font-medium uppercase tracking-wider text-muted-foreground">
           <span>Max price</span>
-          <span className="font-semibold text-primary">EGP {maxPrice}M</span>
+          <span className="font-semibold text-primary">EGP {currentMaxPrice}M</span>
         </div>
-        <input type="range" min={PRICE_MIN} max={PRICE_MAX} value={maxPrice}
+        <input type="range" min={PRICE_MIN} max={PRICE_MAX} value={currentMaxPrice}
           onChange={(e) => setMaxPrice(Number(e.target.value))} className="w-full accent-accent" />
         <div className="mt-1 flex justify-between text-[10px] text-muted-foreground">
           <span>EGP {PRICE_MIN}M</span><span>EGP {PRICE_MAX}M</span>

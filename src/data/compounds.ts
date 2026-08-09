@@ -3656,9 +3656,15 @@ function getActiveCompounds(): Compound[] {
       // fallback
     }
   }
-  cachedCompounds = activeList;
+  const result = [...activeList];
+  for (const sc of staticCompounds) {
+    if (!result.some((c) => c.slug === sc.slug)) {
+      result.push(sc);
+    }
+  }
+  cachedCompounds = result;
   lastCompoundsRead = now;
-  return activeList;
+  return result;
 }
 
 export const compounds: Compound[] = new Proxy(staticCompounds, {
