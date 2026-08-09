@@ -17,7 +17,14 @@ const staticDestinations: Destination[] = destinationsGenerated;
 
 export { staticDestinations };
 
+let cachedDestinations: Destination[] | null = null;
+let lastDestinationsRead = 0;
+
 function getActiveDestinations(): Destination[] {
+  const now = Date.now();
+  if (cachedDestinations && now - lastDestinationsRead < 500) {
+    return cachedDestinations;
+  }
   let activeList = staticDestinations;
   if (typeof window !== "undefined") {
     try {
@@ -38,6 +45,8 @@ function getActiveDestinations(): Destination[] {
       result.push(sd);
     }
   }
+  cachedDestinations = result;
+  lastDestinationsRead = now;
   return result;
 }
 

@@ -65,7 +65,7 @@ function ProjectsPage() {
 
   const availabilityMap = useMemo(() => {
     return new Map(availability.map((a) => [a.slug, a]));
-  }, []);
+  }, [availability]);
 
   const searchableTextMap = useMemo(() => {
     const map = new Map<string, string>();
@@ -189,29 +189,38 @@ function ProjectsPage() {
   }, [debouncedQ, destination, dev, status, type, maxPrice, kiloFilter, sort, searchableTextMap]);
 
   // Dynamic cascading option computations:
-  const activeDestinations = useMemo(() => {
-    const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, "", dev, status, type, maxPrice, kiloFilter));
-    const slugs = new Set(list.map((c) => c.destination));
-    return destinations.filter((a) => slugs.has(a.slug));
-  }, [debouncedQ, dev, status, type, maxPrice, kiloFilter, searchableTextMap]);
+  const activeFilters = useMemo(() => {
+    const activeDests = new Set<string>();
+    const activeDevs = new Set<string>();
+    const activeStats = new Set<string>();
+    const activeTyps = new Set<string>();
 
-  const activeDevelopers = useMemo(() => {
-    const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, "", status, type, maxPrice, kiloFilter));
-    const slugs = new Set(list.map((c) => c.developerSlug));
-    return developers.filter((d) => slugs.has(d.slug));
-  }, [debouncedQ, destination, status, type, maxPrice, kiloFilter, searchableTextMap]);
+    mainCompounds.forEach((c) => {
+      // For activeDestinations (match everything except destination filter)
+      if (matchCompound(c, debouncedQ, "", dev, status, type, maxPrice, kiloFilter)) {
+        activeDests.add(c.destination);
+      }
+      // For activeDevelopers (match everything except developer filter)
+      if (matchCompound(c, debouncedQ, destination, "", status, type, maxPrice, kiloFilter)) {
+        activeDevs.add(c.developerSlug);
+      }
+      // For activeStatuses (match everything except status filter)
+      if (matchCompound(c, debouncedQ, destination, dev, "", type, maxPrice, kiloFilter)) {
+        activeStats.add(c.status);
+      }
+      // For activeTypes (match everything except type filter)
+      if (matchCompound(c, debouncedQ, destination, dev, status, "", maxPrice, kiloFilter)) {
+        c.types.forEach((t) => activeTyps.add(t));
+      }
+    });
 
-  const activeStatuses = useMemo(() => {
-    const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, dev, "", type, maxPrice, kiloFilter));
-    const statuses = new Set(list.map((c) => c.status));
-    return ["RTM", "Off-Plan"].filter((s) => statuses.has(s as any));
-  }, [debouncedQ, destination, dev, type, maxPrice, kiloFilter, searchableTextMap]);
-
-  const activeTypes = useMemo(() => {
-    const list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, dev, status, "", maxPrice, kiloFilter));
-    const types = new Set(list.flatMap((c) => c.types));
-    return ALL_TYPES.filter((t) => types.has(t));
-  }, [debouncedQ, destination, dev, status, maxPrice, kiloFilter, searchableTextMap]);
+    return {
+      destinations: destinations.filter((a) => activeDests.has(a.slug)),
+      developers: developers.filter((d) => activeDevs.has(d.slug)),
+      statuses: ["RTM", "Off-Plan"].filter((s) => activeStats.has(s as any)),
+      types: ALL_TYPES.filter((t) => activeTyps.has(t))
+    };
+  }, [debouncedQ, destination, dev, status, type, maxPrice, kiloFilter, searchableTextMap, mainCompounds]);
 
   const FilterPanel = (
     <div className="space-y-5">
@@ -236,16 +245,16 @@ function ProjectsPage() {
       />
 
       <FilterSelect label="Destination" value={destination} onChange={setArea}
-        options={[{ value: "", label: "All destinations" }, ...activeDestinations.map((a) => ({ value: a.slug, label: a.name }))]} />
+        options={[{ value: "", label: "All destinations" }, ...activeFilters.destinations.map((a) => ({ value: a.slug, label: a.name }))]} />
       <FilterSelect label="Developer" value={dev} onChange={setDev}
-        options={[{ value: "", label: "All developers" }, ...activeDevelopers.map((d) => ({ value: d.slug, label: d.name }))]} />
+        options={[{ value: "", label: "All developers" }, ...activeFilters.developers.map((d) => ({ value: d.slug, label: d.name }))]} />
       <FilterSelect label="Status" value={status} onChange={setStatus}
         options={[
           { value: "", label: "Any status" },
-          ...activeStatuses.map((s) => ({ value: s, label: s }))
+          ...activeFilters.statuses.map((s) => ({ value: s, label: s }))
         ]} />
       <FilterSelect label="Unit Type" value={type} onChange={setType}
-        options={[{ value: "", label: "Any type" }, ...activeTypes.map((t) => ({ value: t, label: t }))]} />
+        options={[{ value: "", label: "Any type" }, ...activeFilters.types.map((t) => ({ value: t, label: t }))]} />
       {(!destination || destinations.find(d => d.slug === destination)?.region === "north-coast") && (
         <FilterSelect label="Sahel Highway Marker (Kilo)" value={kiloFilter} onChange={setKiloFilter}
           options={[

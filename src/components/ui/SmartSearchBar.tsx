@@ -79,7 +79,7 @@ export function SmartSearchBar({
   }, []);
 
   // Filter main compounds (exclude sub-clusters)
-  const mainCompounds = useMemo(() => compounds.filter((c) => !c.parentSlug), []);
+  const mainCompounds = useMemo(() => compounds.filter((c) => !c.parentSlug), [compounds]);
 
   // Compute live search suggestions
   const suggestions = useMemo(() => {

@@ -50,14 +50,41 @@ export function unitTypeSlug(b: UnitBreakdown): string {
   return parts.join("-").replace(/-+/g, "-").replace(/^-|-$/g, "");
 }
 
+// ─── Asynchronous Lazy Loading ────────────────────────────────────────────────
+
+let loadedAvailability: ProjectAvailability[] | null = null;
+let loadingPromise: Promise<ProjectAvailability[]> | null = null;
+
+export function loadAvailabilityAsync(): Promise<ProjectAvailability[]> {
+  if (loadedAvailability) return Promise.resolve(loadedAvailability);
+  if (loadingPromise) return loadingPromise;
+  
+  loadingPromise = import("./availability.generated").then((mod) => {
+    loadedAvailability = mod.availability;
+    cachedAvailability = null; // Invalidate cache
+    return mod.availability;
+  });
+  return loadingPromise;
+}
+
+// Pre-load in background on idle time to keep navigation snappy
+if (typeof window !== "undefined") {
+  setTimeout(() => {
+    loadAvailabilityAsync().catch(() => {});
+  }, 1000);
+}
+
 // ─── Data (from spreadsheet) ──────────────────────────────────────────────────
 
-import { availability as _availability } from "./availability.generated";
-
-const staticAvailability = _availability;
-export { staticAvailability };
+let cachedAvailability: ProjectAvailability[] | null = null;
+let lastAvailabilityRead = 0;
 
 function getActiveAvailability(): ProjectAvailability[] {
+  const now = Date.now();
+  if (cachedAvailability && now - lastAvailabilityRead < 500) {
+    return cachedAvailability;
+  }
+  const staticAvailability = loadedAvailability || [];
   let activeList = staticAvailability;
   if (typeof window !== "undefined") {
     try {
@@ -78,10 +105,12 @@ function getActiveAvailability(): ProjectAvailability[] {
       result.push(sa);
     }
   }
+  cachedAvailability = result;
+  lastAvailabilityRead = now;
   return result;
 }
 
-export const availability: ProjectAvailability[] = new Proxy(staticAvailability, {
+export const availability: ProjectAvailability[] = new Proxy([], {
   get(target, prop, receiver) {
     const activeList = getActiveAvailability();
     const val = Reflect.get(activeList, prop, receiver);

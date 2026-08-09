@@ -11,6 +11,10 @@ export const Route = createFileRoute("/calculator")({
   validateSearch: (search: Record<string, unknown>) => ({
     project: typeof search.project === "string" ? search.project : "",
   }),
+  loader: async () => {
+    const { loadAvailabilityAsync } = await import("@/data/availability");
+    await loadAvailabilityAsync();
+  },
   head: () => ({
     meta: [
       { title: "Payment Calculator — PropTrack" },

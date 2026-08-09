@@ -18,6 +18,10 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/admin")({
+  loader: async () => {
+    const { loadAvailabilityAsync } = await import("@/data/availability");
+    await loadAvailabilityAsync();
+  },
   head: () => ({
     meta: [
       { title: "Super-Admin Command Center — PropTrack" },

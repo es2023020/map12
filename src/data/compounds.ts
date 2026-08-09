@@ -3634,22 +3634,36 @@ import { compoundsGenerated } from "./compounds.generated";
 
 export const staticCompounds: Compound[] = compoundsGenerated;
 
+let cachedCompounds: Compound[] | null = null;
+let lastCompoundsRead = 0;
+
+function getActiveCompounds(): Compound[] {
+  const now = Date.now();
+  if (cachedCompounds && now - lastCompoundsRead < 500) {
+    return cachedCompounds;
+  }
+  let activeList = staticCompounds;
+  if (typeof window !== "undefined") {
+    try {
+      const storeStr = localStorage.getItem("proptrack-broker");
+      if (storeStr) {
+        const parsed = JSON.parse(storeStr);
+        if (parsed?.state?.compoundsList?.length) {
+          activeList = parsed.state.compoundsList;
+        }
+      }
+    } catch (e) {
+      // fallback
+    }
+  }
+  cachedCompounds = activeList;
+  lastCompoundsRead = now;
+  return activeList;
+}
+
 export const compounds: Compound[] = new Proxy(staticCompounds, {
   get(target, prop, receiver) {
-    let activeList = staticCompounds;
-    if (typeof window !== "undefined") {
-      try {
-        const storeStr = localStorage.getItem("proptrack-broker");
-        if (storeStr) {
-          const parsed = JSON.parse(storeStr);
-          if (parsed?.state?.compoundsList?.length) {
-            activeList = parsed.state.compoundsList;
-          }
-        }
-      } catch (e) {
-        // fallback
-      }
-    }
+    const activeList = getActiveCompounds();
     const val = Reflect.get(activeList, prop, receiver);
     if (typeof val === "function") {
       return val.bind(activeList);
@@ -3657,37 +3671,11 @@ export const compounds: Compound[] = new Proxy(staticCompounds, {
     return val;
   },
   getOwnPropertyDescriptor(target, prop) {
-    let activeList = staticCompounds;
-    if (typeof window !== "undefined") {
-      try {
-        const storeStr = localStorage.getItem("proptrack-broker");
-        if (storeStr) {
-          const parsed = JSON.parse(storeStr);
-          if (parsed?.state?.compoundsList?.length) {
-            activeList = parsed.state.compoundsList;
-          }
-        }
-      } catch (e) {
-        // fallback
-      }
-    }
+    const activeList = getActiveCompounds();
     return Reflect.getOwnPropertyDescriptor(activeList, prop);
   },
   ownKeys(target) {
-    let activeList = staticCompounds;
-    if (typeof window !== "undefined") {
-      try {
-        const storeStr = localStorage.getItem("proptrack-broker");
-        if (storeStr) {
-          const parsed = JSON.parse(storeStr);
-          if (parsed?.state?.compoundsList?.length) {
-            activeList = parsed.state.compoundsList;
-          }
-        }
-      } catch (e) {
-        // fallback
-      }
-    }
+    const activeList = getActiveCompounds();
     return Reflect.ownKeys(activeList);
   }
 });

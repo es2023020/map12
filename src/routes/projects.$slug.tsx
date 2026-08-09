@@ -36,7 +36,9 @@ import { buildProjectSchema, buildBreadcrumbSchema } from "@/lib/seo";
 import { getProjectSEO } from "@/lib/seo-templates";
 
 export const Route = createFileRoute("/projects/$slug")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
+    const { loadAvailabilityAsync } = await import("@/data/availability");
+    await loadAvailabilityAsync();
     const c = compoundBySlug(params.slug);
     if (!c) throw notFound();
     return c;

@@ -33,6 +33,8 @@ export const getUnitsList = createServerFn({ method: "GET" })
 
 export const Route = createFileRoute("/units/$projectSlug/$typeSlug")({
   loader: async ({ params }) => {
+    const { loadAvailabilityAsync } = await import("@/data/availability");
+    await loadAvailabilityAsync();
     const compound = compoundBySlug(params.projectSlug);
     if (!compound) throw notFound();
     const result = breakdownByTypeSlug(params.projectSlug, params.typeSlug);

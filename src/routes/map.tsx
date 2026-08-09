@@ -63,9 +63,9 @@ function MapPage() {
 
   const availabilityMap = useMemo(() => {
     return new Map(availability.map((a) => [a.slug, a]));
-  }, []);
+  }, [availability]);
 
-  const mainCompounds = useMemo(() => compounds.filter((c) => !c.parentSlug), []);
+  const mainCompounds = useMemo(() => compounds.filter((c) => !c.parentSlug), [compounds]);
 
   const searchableTextMap = useMemo(() => {
     const map = new Map<string, string>();
@@ -151,18 +151,22 @@ function MapPage() {
 
   const areaCounts = useMemo(() => {
     const m = new Map<string, number>();
-    destinations.forEach((a) => {
-      const count = mainCompounds.filter((c) => matchMapCompound(c, debouncedQ, a.slug, dev, flagshipOnly, kiloFilter)).length;
-      m.set(a.slug, count);
+    destinations.forEach((a) => m.set(a.slug, 0));
+    mainCompounds.forEach((c) => {
+      if (matchMapCompound(c, debouncedQ, null, dev, flagshipOnly, kiloFilter)) {
+        m.set(c.destination, (m.get(c.destination) || 0) + 1);
+      }
     });
     return m;
   }, [debouncedQ, dev, flagshipOnly, kiloFilter, searchableTextMap, mainCompounds]);
 
   const devCounts = useMemo(() => {
     const m = new Map<string, number>();
-    developers.forEach((d) => {
-      const count = mainCompounds.filter((c) => matchMapCompound(c, debouncedQ, destinationSlug, d.slug, flagshipOnly, kiloFilter)).length;
-      m.set(d.slug, count);
+    developers.forEach((d) => m.set(d.slug, 0));
+    mainCompounds.forEach((c) => {
+      if (matchMapCompound(c, debouncedQ, destinationSlug, "", flagshipOnly, kiloFilter)) {
+        m.set(c.developerSlug, (m.get(c.developerSlug) || 0) + 1);
+      }
     });
     return m;
   }, [debouncedQ, destinationSlug, flagshipOnly, kiloFilter, searchableTextMap, mainCompounds]);
