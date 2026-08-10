@@ -17,6 +17,7 @@ import {
   MapPin,
   Tag,
 } from "lucide-react";
+import { destinations } from "@/data/destinations";
 
 export const Route = createFileRoute("/calculator")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -91,6 +92,49 @@ function parsePaymentPlan(plan?: string): { dp: number; duration: number } {
   }
 
   return { dp, duration };
+}
+
+function matchDestination(compDest: string, filterVal: string): boolean {
+  if (!filterVal) return true;
+  
+  if (filterVal === "macro-new-cairo") {
+    const eastCairoSlugs = [
+      "new-cairo",
+      "mostakbal-city",
+      "shorouk",
+      "heliopolis",
+      "obour",
+      "sarai",
+      "6th-settlement",
+      "eastern-expansion",
+      "new-administrative-capital"
+    ];
+    return eastCairoSlugs.includes(compDest);
+  }
+  
+  if (filterVal === "macro-west-cairo") {
+    const westCairoSlugs = [
+      "sheikh-zayed",
+      "new-zayed",
+      "6th-october",
+      "northern-expansion"
+    ];
+    return westCairoSlugs.includes(compDest);
+  }
+  
+  if (filterVal === "macro-north-coast") {
+    const sahelSlugs = [
+      "sidi-heneish",
+      "ras-el-hekma",
+      "al-dabaa",
+      "ghazala-bay",
+      "sidi-abdelrahman",
+      "new-alamein"
+    ];
+    return sahelSlugs.includes(compDest);
+  }
+  
+  return compDest === filterVal;
 }
 
 function CalculatorPage() {
@@ -219,7 +263,7 @@ function CalculatorPage() {
       if (!comp) return;
 
       // Filter by destination
-      if (budgetDestFilter && comp.destination !== budgetDestFilter) return;
+      if (!matchDestination(comp.destination, budgetDestFilter)) return;
 
       // Filter by status (RTM vs Off-Plan)
       if (budgetStatusFilter !== "all" && comp.status !== budgetStatusFilter) return;
@@ -265,7 +309,7 @@ function CalculatorPage() {
     return mainCompounds
       .filter((c) => {
         const matchPrice = c.priceFrom <= budgetLimit;
-        const matchDest = !budgetDestFilter || c.destination === budgetDestFilter;
+        const matchDest = matchDestination(c.destination, budgetDestFilter);
         const matchType = !budgetTypeFilter || c.types.includes(budgetTypeFilter);
         const matchStatus = budgetStatusFilter === "all" || c.status === budgetStatusFilter;
         return matchPrice && matchDest && matchType && matchStatus;
@@ -305,14 +349,21 @@ function CalculatorPage() {
           <select
             value={budgetDestFilter}
             onChange={(e) => setBudgetDestFilter(e.target.value)}
-            className="w-full appearance-none rounded-xl border border-border bg-card px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-accent"
+            className="w-full appearance-none rounded-xl border border-border bg-card px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-accent cursor-pointer"
           >
-            <option value="">All Regions</option>
-            <option value="new-cairo">New Cairo</option>
-            <option value="ras-el-hekma">Ras El Hekma (Sahel)</option>
-            <option value="sheikh-zayed">Sheikh Zayed</option>
-            <option value="mostakbal-city">Mostakbal City</option>
-            <option value="new-administrative-capital">New Capital</option>
+            <option value="">All Regions & Destinations</option>
+            <optgroup label="Macro Regions">
+              <option value="macro-new-cairo">New Cairo (All East)</option>
+              <option value="macro-west-cairo">West Cairo (Zayed & October)</option>
+              <option value="macro-north-coast">North Coast (All Sahel)</option>
+            </optgroup>
+            <optgroup label="Specific Destinations">
+              {destinations.map((d) => (
+                <option key={d.slug} value={d.slug}>
+                  {d.name}
+                </option>
+              ))}
+            </optgroup>
           </select>
         </div>
         <div>

@@ -53808,4 +53808,490 @@ export const availability: ProjectAvailability[] = [
     ],
     lastUpdated: "2026-08-09",
   },
+  {
+    slug: "naia-bay",
+    developer: "Naia Developments",
+    totalAvailable: 8,
+    breakdown: [
+      {
+        type: "Villa",
+        beds: 5,
+        available: 1,
+        minSqm: 520,
+        maxSqm: 520,
+        minPriceM: 82.0,
+        maxPriceM: 82.0,
+        finishing: "Fully Finished",
+        deliveryNote: "Immediate",
+        paymentPlan: "10% down / 8-10 yrs",
+        units: [
+          {
+            id: "nb-villa-a",
+            unitNo: "A-01",
+            beds: 5,
+            finishing: "Fully Finished",
+            areaSqm: 520,
+            view: "1st Row Sea View",
+            priceEGP: 82000000,
+            paymentPlan: "10% down, 5% on delivery, over 8 years equal installments",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Twin House",
+        beds: 4,
+        available: 2,
+        minSqm: 300,
+        maxSqm: 370,
+        minPriceM: 43.0,
+        maxPriceM: 54.0,
+        finishing: "Fully Finished",
+        deliveryNote: "1 Year",
+        paymentPlan: "10% down / 10 yrs",
+        units: [
+          {
+            id: "nb-twin-b",
+            unitNo: "B-12",
+            beds: 4,
+            finishing: "Fully Finished",
+            areaSqm: 370,
+            view: "Sea View 3rd-6th Row",
+            priceEGP: 54000000,
+            paymentPlan: "15% down, over 9 years equal installments",
+            status: "Available"
+          },
+          {
+            id: "nb-twin-c",
+            unitNo: "C-05",
+            beds: 4,
+            finishing: "Fully Finished",
+            areaSqm: 300,
+            view: "1st Row Lagoon",
+            priceEGP: 43000000,
+            paymentPlan: "10% down, over 10 years equal installments",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Townhouse",
+        beds: 3,
+        available: 2,
+        minSqm: 180,
+        maxSqm: 225,
+        minPriceM: 26.0,
+        maxPriceM: 31.5,
+        finishing: "Fully Finished",
+        deliveryNote: "Lagoon Front",
+        paymentPlan: "10% down / 8-10 yrs",
+        units: [
+          {
+            id: "nb-town-d",
+            unitNo: "D-03",
+            beds: 3,
+            finishing: "Fully Finished",
+            areaSqm: 225,
+            view: "1st Row Lagoon",
+            priceEGP: 31500000,
+            paymentPlan: "10% down, 5% on delivery, over 8 years equal installments",
+            status: "Available"
+          },
+          {
+            id: "nb-town-e",
+            unitNo: "E-08",
+            beds: 3,
+            finishing: "Fully Finished",
+            areaSqm: 180,
+            view: "1st Row Lagoon (Floating)",
+            priceEGP: 26000000,
+            paymentPlan: "10% down, over 10 years equal installments",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Chalet",
+        beds: 2,
+        available: 3,
+        minSqm: 65,
+        maxSqm: 125,
+        minPriceM: 8.6,
+        maxPriceM: 17.8,
+        finishing: "Fully Finished",
+        deliveryNote: "Phase 1 - Immediate",
+        paymentPlan: "10% down / 8-10 yrs",
+        units: [
+          {
+            id: "nb-chalet-1b",
+            unitNo: "CH-102",
+            beds: 1,
+            finishing: "Fully Finished",
+            areaSqm: 65,
+            view: "Typical View",
+            priceEGP: 8600000,
+            paymentPlan: "10% down, 5% on delivery, over 8 years equal installments",
+            status: "Available"
+          },
+          {
+            id: "nb-chalet-2b",
+            unitNo: "CH-205",
+            beds: 2,
+            finishing: "Fully Finished",
+            areaSqm: 115,
+            view: "Penthouse View",
+            priceEGP: 15000000,
+            paymentPlan: "15% down, over 9 years equal installments",
+            status: "Available"
+          },
+          {
+            id: "nb-chalet-3b",
+            unitNo: "CH-004",
+            beds: 3,
+            finishing: "Fully Finished",
+            areaSqm: 125,
+            view: "Garden View",
+            priceEGP: 17800000,
+            paymentPlan: "20% down, over 10 years equal installments",
+            status: "Available"
+          }
+        ]
+      }
+    ],
+    lastUpdated: "2026-08-10"
+  },
+  {
+    slug: "il-latini-city-edge",
+    developer: "City Edge",
+    totalAvailable: 6,
+    breakdown: [
+      {
+        type: "Apartment",
+        beds: 2,
+        available: 2,
+        minSqm: 120,
+        maxSqm: 180,
+        minPriceM: 4.3,
+        maxPriceM: 6.7,
+        finishing: "Fully Finished",
+        deliveryNote: "RTM & RTD",
+        paymentPlan: "5%+5% down / 3-9 yrs",
+        units: [
+          {
+            id: "latini-2b-1",
+            unitNo: "B-201",
+            beds: 2,
+            finishing: "Fully Finished",
+            areaSqm: 120,
+            view: "Beach Side View",
+            priceEGP: 4300000,
+            paymentPlan: "5%+5% down, installments over 3 years",
+            status: "Available"
+          },
+          {
+            id: "latini-2b-2",
+            unitNo: "R-102",
+            beds: 2,
+            finishing: "Fully Finished",
+            areaSqm: 133,
+            view: "Road Side View",
+            priceEGP: 4500000,
+            paymentPlan: "5%+5% down, installments over 5 years",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Apartment",
+        beds: 3,
+        available: 2,
+        minSqm: 143,
+        maxSqm: 231,
+        minPriceM: 5.1,
+        maxPriceM: 7.4,
+        finishing: "Fully Finished",
+        deliveryNote: "RTM & RTD",
+        paymentPlan: "1.2% down / 12 yrs",
+        units: [
+          {
+            id: "latini-3b-1",
+            unitNo: "B-303",
+            beds: 3,
+            finishing: "Fully Finished",
+            areaSqm: 143,
+            view: "Beach Side View",
+            priceEGP: 5100000,
+            paymentPlan: "12 years offer",
+            status: "Available"
+          },
+          {
+            id: "latini-3b-2",
+            unitNo: "R-305",
+            beds: 3,
+            finishing: "Fully Finished",
+            areaSqm: 174,
+            view: "Road Side View",
+            priceEGP: 5500000,
+            paymentPlan: "5%+5% down, installments over 9 years",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Apartment",
+        beds: 4,
+        available: 2,
+        minSqm: 197,
+        maxSqm: 255,
+        minPriceM: 6.3,
+        maxPriceM: 8.9,
+        finishing: "Fully Finished",
+        deliveryNote: "RTM & RTD",
+        paymentPlan: "5%+5% down / 3-9 yrs",
+        units: [
+          {
+            id: "latini-4b-1",
+            unitNo: "B-501",
+            beds: 4,
+            finishing: "Fully Finished",
+            areaSqm: 197,
+            view: "Beach Side View",
+            priceEGP: 6700000,
+            paymentPlan: "5%+5% down, over 7 years",
+            status: "Available"
+          },
+          {
+            id: "latini-4b-2",
+            unitNo: "R-504",
+            beds: 4,
+            finishing: "Fully Finished",
+            areaSqm: 211,
+            view: "Road Side View",
+            priceEGP: 6300000,
+            paymentPlan: "5%+5% down, over 9 years",
+            status: "Available"
+          }
+        ]
+      }
+    ],
+    lastUpdated: "2026-08-10"
+  },
+  {
+    slug: "mazarine",
+    developer: "City Edge",
+    totalAvailable: 4,
+    breakdown: [
+      {
+        type: "Apartment",
+        beds: 2,
+        available: 2,
+        minSqm: 140,
+        maxSqm: 207,
+        minPriceM: 7.3,
+        maxPriceM: 10.7,
+        finishing: "Fully Finished",
+        deliveryNote: "Immediate Delivery",
+        paymentPlan: "5%+5% down / 12 yrs",
+        units: [
+          {
+            id: "maz-tiffany-2b",
+            unitNo: "TF-101",
+            beds: 2,
+            finishing: "Fully Finished",
+            areaSqm: 140,
+            view: "Tiffany View",
+            priceEGP: 7300000,
+            paymentPlan: "12 years installments",
+            status: "Available"
+          },
+          {
+            id: "maz-blvd-2b",
+            unitNo: "BL-102",
+            beds: 2,
+            finishing: "Fully Finished",
+            areaSqm: 207,
+            view: "Boulevard View",
+            priceEGP: 10700000,
+            paymentPlan: "12 years installments",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Apartment",
+        beds: 3,
+        available: 1,
+        minSqm: 231,
+        maxSqm: 231,
+        minPriceM: 9.9,
+        maxPriceM: 9.9,
+        finishing: "Fully Finished",
+        deliveryNote: "Tiffany Apt",
+        paymentPlan: "5%+5% down / 12 yrs",
+        units: [
+          {
+            id: "maz-tiffany-3b",
+            unitNo: "TF-302",
+            beds: 3,
+            finishing: "Fully Finished",
+            areaSqm: 231,
+            view: "Tiffany View",
+            priceEGP: 9900000,
+            paymentPlan: "12 years installments",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Duplex",
+        beds: 4,
+        available: 1,
+        minSqm: 451,
+        maxSqm: 451,
+        minPriceM: 23.3,
+        maxPriceM: 23.3,
+        finishing: "Fully Finished",
+        deliveryNote: "Boulevard Apt",
+        paymentPlan: "12 years installments",
+        units: [
+          {
+            id: "maz-blvd-duplex",
+            unitNo: "BL-G01",
+            beds: 4,
+            finishing: "Fully Finished",
+            areaSqm: 451,
+            view: "Lagoon View Duplex",
+            priceEGP: 23300000,
+            paymentPlan: "12 years installments",
+            status: "Available"
+          }
+        ]
+      }
+    ],
+    lastUpdated: "2026-08-10"
+  },
+  {
+    slug: "downtown-new-alamein",
+    developer: "City Edge",
+    totalAvailable: 2,
+    breakdown: [
+      {
+        type: "Retail",
+        beds: 0,
+        available: 2,
+        minSqm: 121,
+        maxSqm: 450,
+        minPriceM: 9.4,
+        maxPriceM: 34.1,
+        finishing: "Finished",
+        deliveryNote: "Delivery from 8/2025",
+        paymentPlan: "1.2% down / 12 yrs",
+        units: [
+          {
+            id: "dt-retail-121",
+            unitNo: "COM-G12",
+            beds: 0,
+            finishing: "Finished",
+            areaSqm: 121,
+            view: "Commercial Piazza View",
+            priceEGP: 9400000,
+            paymentPlan: "12 years offer",
+            status: "Available"
+          },
+          {
+            id: "dt-retail-450",
+            unitNo: "COM-G15",
+            beds: 0,
+            finishing: "Finished",
+            areaSqm: 450,
+            view: "Main Road Front View",
+            priceEGP: 34100000,
+            paymentPlan: "5%+5% down, over 10 years",
+            status: "Available"
+          }
+        ]
+      }
+    ],
+    lastUpdated: "2026-08-10"
+  },
+  {
+    slug: "beachfront-towers",
+    developer: "City Edge",
+    totalAvailable: 4,
+    breakdown: [
+      {
+        type: "Apartment",
+        beds: 2,
+        available: 2,
+        minSqm: 217,
+        maxSqm: 232,
+        minPriceM: 17.1,
+        maxPriceM: 18.1,
+        finishing: "Fully Finished",
+        deliveryNote: "Delivery from 7/2026",
+        paymentPlan: "5%+5% down / 12 yrs",
+        units: [
+          {
+            id: "bf-2b-1",
+            unitNo: "B1-1201",
+            beds: 2,
+            finishing: "Fully Finished",
+            areaSqm: 217,
+            view: "Full Sea View",
+            priceEGP: 17100000,
+            paymentPlan: "12 years installments",
+            status: "Available"
+          },
+          {
+            id: "bf-2b-2",
+            unitNo: "B1-1801",
+            beds: 2,
+            finishing: "Fully Finished",
+            areaSqm: 232,
+            view: "Full Sea View High Floor",
+            priceEGP: 18100000,
+            paymentPlan: "12 years installments",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Apartment",
+        beds: 3,
+        available: 2,
+        minSqm: 310,
+        maxSqm: 398,
+        minPriceM: 24.9,
+        maxPriceM: 35.6,
+        finishing: "Fully Finished",
+        deliveryNote: "Beachfront Tower B1",
+        paymentPlan: "1.2% down / 12 yrs",
+        units: [
+          {
+            id: "bf-3b-1",
+            unitNo: "B1-2503",
+            beds: 3,
+            finishing: "Fully Finished",
+            areaSqm: 310,
+            view: "Full Sea & Lagoon View",
+            priceEGP: 24900000,
+            paymentPlan: "12 years installments",
+            status: "Available"
+          },
+          {
+            id: "bf-3b-2",
+            unitNo: "B1-3003",
+            beds: 3,
+            finishing: "Fully Finished",
+            areaSqm: 398,
+            view: "Panoramic Corner Sea View",
+            priceEGP: 35600000,
+            paymentPlan: "12 years installments",
+            status: "Available"
+          }
+        ]
+      }
+    ],
+    lastUpdated: "2026-08-10"
+  },
 ];

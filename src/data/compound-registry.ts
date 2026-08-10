@@ -2477,6 +2477,13 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.82915,
     lng: 28.9469,
   },
+  "beachfront-towers": {
+    destination: "new-alamein",
+    km: 106,
+    city: "New Alamein, North Coast (km 106), Matrouh Governorate, Egypt",
+    lat: 30.829,
+    lng: 28.947,
+  },
   "o-west": {
     destination: "6th-of-october-city",
     lat: 29.9694,
@@ -3149,7 +3156,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "village-de-la-capitale": {
     lat: 30.01326,
     lng: 31.75194,
-    developer: "Village de la Capitale",
+    developer: "Palm Hills Developments",
     city: "Village de la Capitale, new-administrative-capital",
   },
   "vye-sodic": {
