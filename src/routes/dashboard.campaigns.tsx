@@ -6,12 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { compounds } from "@/data/compounds";
 import * as XLSX from "xlsx";
-import { 
-  Megaphone, 
-  Users, 
-  Send, 
-  Check, 
-  Play, 
+import {
+  Megaphone,
+  Users,
+  Send,
+  Check,
+  Play,
   FileText,
   X,
   Smartphone,
@@ -37,7 +37,7 @@ import {
   Smile,
   Briefcase,
   FileUp,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 
 export const Route = createFileRoute("/dashboard/campaigns")({
@@ -45,24 +45,24 @@ export const Route = createFileRoute("/dashboard/campaigns")({
 });
 
 const defaultCampaignTemplates = [
-  { 
-    id: "c1", 
-    title: "🏖️ Sahel Summer Launch", 
+  {
+    id: "c1",
+    title: "🏖️ Sahel Summer Launch",
     mediaUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-    body: "Hello {name},\n\nHope you are well! Tatweer Misr just released exclusive new beachfront units in Solare Sahel with flexible 8-year plans starting at EGP {budget}M.\n\nLet me know if you would like me to send the master plan factsheet!\n\nBest regards,\n{broker_name}" 
+    body: "Hello {name},\n\nHope you are well! Tatweer Misr just released exclusive new beachfront units in Solare Sahel with flexible 8-year plans starting at EGP {budget}M.\n\nLet me know if you would like me to send the master plan factsheet!\n\nBest regards,\n{broker_name}",
   },
-  { 
-    id: "c2", 
-    title: "🏡 New Zayed VIP Villa", 
+  {
+    id: "c2",
+    title: "🏡 New Zayed VIP Villa",
     mediaUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
-    body: "Dear {name},\n\nWe just received the launch factsheet for Elm Tree & Solana in New Zayed. Premium villa plots with 5% down payment and 8-year installments.\n\nSince you expressed interest in {interest}, let me know if we can schedule a walkthrough!\n\nBest,\n{broker_name}" 
+    body: "Dear {name},\n\nWe just received the launch factsheet for Elm Tree & Solana in New Zayed. Premium villa plots with 5% down payment and 8-year installments.\n\nSince you expressed interest in {interest}, let me know if we can schedule a walkthrough!\n\nBest,\n{broker_name}",
   },
-  { 
-    id: "c3", 
-    title: "🔑 RTM Ready-to-Move", 
+  {
+    id: "c3",
+    title: "🔑 RTM Ready-to-Move",
     mediaUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
-    body: "Hi {name},\n\nI compiled a list of immediate delivery (RTM) properties matching your budget around EGP {budget}M. Skip construction wait times!\n\nShould I send over unit photos & floor plans?\n\nBest,\n{broker_name}" 
-  }
+    body: "Hi {name},\n\nI compiled a list of immediate delivery (RTM) properties matching your budget around EGP {budget}M. Skip construction wait times!\n\nShould I send over unit photos & floor plans?\n\nBest,\n{broker_name}",
+  },
 ];
 
 function CampaignsPage() {
@@ -73,8 +73,10 @@ function CampaignsPage() {
 
   const [selectedLeads, setSelectedLeads] = useState<string[]>([]);
   const [templateText, setTemplateText] = useState(defaultCampaignTemplates[0].body);
-  const [selectedMediaUrl, setSelectedMediaUrl] = useState<string>(defaultCampaignTemplates[0].mediaUrl);
-  
+  const [selectedMediaUrl, setSelectedMediaUrl] = useState<string>(
+    defaultCampaignTemplates[0].mediaUrl,
+  );
+
   const [filterInterest, setFilterInterest] = useState("");
   const [activeQueue, setActiveQueue] = useState<Lead[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -118,7 +120,7 @@ function CampaignsPage() {
   }, [importStatusMsg]);
 
   const toggleSelectLead = (id: string) => {
-    setSelectedLeads(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
+    setSelectedLeads((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
   };
 
   const handleSingleClientSubmit = (e: React.FormEvent) => {
@@ -131,14 +133,14 @@ function CampaignsPage() {
       budget: parseFloat(newClientBudget) || 10,
       interest: newClientInterest,
       notes: newClientNotes,
-      stage: "new"
+      stage: "new",
     });
 
     setTimeout(() => {
       const updatedLeads = useStore.getState().leads;
       const newestLead = updatedLeads[0];
       if (newestLead) {
-        setSelectedLeads(prev => {
+        setSelectedLeads((prev) => {
           if (!prev.includes(newestLead.id)) {
             return [newestLead.id, ...prev];
           }
@@ -147,7 +149,7 @@ function CampaignsPage() {
       }
       setImportStatusMsg(`Added and selected client "${newClientName}".`);
       setImportStatusType("success");
-      
+
       setNewClientName("");
       setNewClientPhone("");
       setNewClientBudget("10");
@@ -185,17 +187,33 @@ function CampaignsPage() {
         }
 
         const findHeaderRow = (rows: any[][]) => {
-          const keywords = ["name", "client", "phone", "mobile", "number", "tel", "contact", "budget", "price", "interest", "compound", "notes", "details"];
+          const keywords = [
+            "name",
+            "client",
+            "phone",
+            "mobile",
+            "number",
+            "tel",
+            "contact",
+            "budget",
+            "price",
+            "interest",
+            "compound",
+            "notes",
+            "details",
+          ];
           let maxScore = -1;
           let bestIdx = 0;
           for (let i = 0; i < Math.min(10, rows.length); i++) {
             const row = rows[i];
             if (!Array.isArray(row)) continue;
             let score = 0;
-            row.forEach(cell => {
+            row.forEach((cell) => {
               if (cell === null || cell === undefined || cell === "") return;
-              const str = String(cell).toLowerCase().replace(/[^a-z0-9]+/g, "");
-              if (keywords.some(k => str.includes(k))) score += 2;
+              const str = String(cell)
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, "");
+              if (keywords.some((k) => str.includes(k))) score += 2;
             });
             if (score > maxScore && score >= 2) {
               maxScore = score;
@@ -207,10 +225,14 @@ function CampaignsPage() {
 
         const headerIdx = findHeaderRow(rawMatrix);
         const headerRow = rawMatrix[headerIdx] || [];
-        const headers = headerRow.map((c, i) => String(c).trim().toLowerCase() || `column_${i + 1}`);
+        const headers = headerRow.map(
+          (c, i) => String(c).trim().toLowerCase() || `column_${i + 1}`,
+        );
 
         const findIndex = (opts: string[]) => {
-          return headers.findIndex(h => opts.some(opt => h.replace(/[^a-z0-9]+/g, "").includes(opt)));
+          return headers.findIndex((h) =>
+            opts.some((opt) => h.replace(/[^a-z0-9]+/g, "").includes(opt)),
+          );
         };
 
         const nameIdx = findIndex(["name", "client", "fullname", "username", "customer"]);
@@ -245,7 +267,7 @@ function CampaignsPage() {
             budget,
             interest,
             notes,
-            stage: "new"
+            stage: "new",
           });
           count++;
         }
@@ -253,8 +275,8 @@ function CampaignsPage() {
         if (count > 0) {
           setTimeout(() => {
             const updatedLeads = useStore.getState().leads;
-            const newlyAddedIds = updatedLeads.slice(0, count).map(l => l.id);
-            setSelectedLeads(prev => {
+            const newlyAddedIds = updatedLeads.slice(0, count).map((l) => l.id);
+            setSelectedLeads((prev) => {
               const unique = new Set([...prev, ...newlyAddedIds]);
               return Array.from(unique);
             });
@@ -276,11 +298,14 @@ function CampaignsPage() {
 
   const adjustTextTone = (tone: "professional" | "friendly" | "urgent" | "emojis") => {
     let text = templateText;
-    
+
     if (tone === "professional") {
       text = text
         .replace(/^(hello|hi|dear|greetings|good day)[^\n]*/gi, "Dear {name},")
-        .replace(/(best regards|warmly|best|sincerely|cheers)[^\n]*$/gi, "Kind regards,\n{broker_name}");
+        .replace(
+          /(best regards|warmly|best|sincerely|cheers)[^\n]*$/gi,
+          "Kind regards,\n{broker_name}",
+        );
       if (!text.includes("Kind regards")) {
         text += "\n\nKind regards,\n{broker_name}";
       }
@@ -302,8 +327,11 @@ function CampaignsPage() {
         text = "🚨 LIMITED TIME OPPORTUNITY:\n\n" + text;
       }
       const lines = text.split("\n");
-      const signoffIdx = lines.findIndex(l => /best regards|warmly|best|sincerely|cheers|kind regards/i.test(l));
-      const urgentCall = "Note: Premium units are in extremely high demand and sell fast. Let me know ASAP if you'd like me to hold or book a unit.";
+      const signoffIdx = lines.findIndex((l) =>
+        /best regards|warmly|best|sincerely|cheers|kind regards/i.test(l),
+      );
+      const urgentCall =
+        "Note: Premium units are in extremely high demand and sell fast. Let me know ASAP if you'd like me to hold or book a unit.";
       if (signoffIdx !== -1) {
         lines.splice(signoffIdx, 0, urgentCall, "");
         text = lines.join("\n");
@@ -319,7 +347,7 @@ function CampaignsPage() {
         [/exclusive|vip/gi, "✨ exclusive"],
         [/budget/gi, "📈 budget"],
         [/broker|me/gi, "📞 me"],
-        [/sahel|zayed/gi, "📍 sahel/zayed"]
+        [/sahel|zayed/gi, "📍 sahel/zayed"],
       ];
       replacements.forEach(([regex, emojiText]) => {
         text = text.replace(regex, emojiText);
@@ -330,23 +358,23 @@ function CampaignsPage() {
   };
 
   const selectAllFiltered = (filtered: Lead[]) => {
-    const filteredIds = filtered.map(l => l.id);
-    setSelectedLeads(prev => {
-      const otherIds = prev.filter(id => !filteredIds.includes(id));
+    const filteredIds = filtered.map((l) => l.id);
+    setSelectedLeads((prev) => {
+      const otherIds = prev.filter((id) => !filteredIds.includes(id));
       return [...otherIds, ...filteredIds];
     });
   };
 
   const clearAllSelected = (filtered: Lead[]) => {
-    const filteredIds = new Set(filtered.map(l => l.id));
-    setSelectedLeads(prev => prev.filter(id => !filteredIds.has(id)));
+    const filteredIds = new Set(filtered.map((l) => l.id));
+    setSelectedLeads((prev) => prev.filter((id) => !filteredIds.has(id)));
   };
 
   // Safe Spintax Resolver (runs automatically for anti-ban protection)
   const resolveMessage = (lead: Lead, body: string, idx: number = 0) => {
     const greetings = ["Hello", "Hi", "Dear", "Greetings", "Good day"];
     const signoffs = ["Best regards", "Warmly", "Best", "Sincerely", "Cheers"];
-    
+
     const greeting = greetings[idx % greetings.length];
     const signoff = signoffs[idx % signoffs.length];
 
@@ -368,7 +396,7 @@ function CampaignsPage() {
   };
 
   const handleStartCampaign = () => {
-    const queue = leads.filter(l => selectedLeads.includes(l.id));
+    const queue = leads.filter((l) => selectedLeads.includes(l.id));
     setActiveQueue(queue);
     setCurrentIndex(0);
   };
@@ -382,14 +410,16 @@ function CampaignsPage() {
     const messageText = resolveMessage(currentLead, templateText, currentIndex);
     const cleanedPhone = currentLead.phone.replace(/[^0-9]/g, "");
     const phoneWithCode = cleanedPhone.startsWith("0") ? "2" + cleanedPhone : cleanedPhone;
-    
+
     let fullMsg = messageText;
     if (selectedMediaUrl && !selectedMediaUrl.startsWith("data:")) {
       fullMsg += `\n\n📌 Attached Photo:\n${selectedMediaUrl}`;
     }
 
-    openWhatsAppUrl(`https://web.whatsapp.com/send?phone=${phoneWithCode}&text=${encodeURIComponent(fullMsg)}`);
-    setCurrentIndex(prev => prev + 1);
+    openWhatsAppUrl(
+      `https://web.whatsapp.com/send?phone=${phoneWithCode}&text=${encodeURIComponent(fullMsg)}`,
+    );
+    setCurrentIndex((prev) => prev + 1);
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -404,7 +434,7 @@ function CampaignsPage() {
     reader.readAsDataURL(file);
   };
 
-  const handleShareCompound = (comp: typeof compounds[0]) => {
+  const handleShareCompound = (comp: (typeof compounds)[0]) => {
     const success = incrementWhatsAppSends();
     if (!success) return;
 
@@ -414,7 +444,7 @@ function CampaignsPage() {
   };
 
   const insertPlaceholder = (ph: string) => {
-    setTemplateText(prev => prev + ph);
+    setTemplateText((prev) => prev + ph);
   };
 
   const handleCopyMessage = (text: string) => {
@@ -424,34 +454,46 @@ function CampaignsPage() {
   };
 
   // Filtered Leads
-  const filteredList = leads.filter(l => {
-    return !filterInterest || 
-      (l.interest && l.interest.toLowerCase().includes(filterInterest.toLowerCase())) || 
-      l.name.toLowerCase().includes(filterInterest.toLowerCase());
+  const filteredList = leads.filter((l) => {
+    return (
+      !filterInterest ||
+      (l.interest && l.interest.toLowerCase().includes(filterInterest.toLowerCase())) ||
+      l.name.toLowerCase().includes(filterInterest.toLowerCase())
+    );
   });
 
   // Filtered Compounds
-  const filteredCompounds = compounds.filter(c =>
-    debouncedCompoundSearch.length < 2 || 
-    c.name.toLowerCase().includes(debouncedCompoundSearch.toLowerCase()) ||
-    c.developer.toLowerCase().includes(debouncedCompoundSearch.toLowerCase()) ||
-    c.destination.toLowerCase().includes(debouncedCompoundSearch.toLowerCase())
-  ).slice(0, 36);
+  const filteredCompounds = compounds
+    .filter(
+      (c) =>
+        debouncedCompoundSearch.length < 2 ||
+        c.name.toLowerCase().includes(debouncedCompoundSearch.toLowerCase()) ||
+        c.developer.toLowerCase().includes(debouncedCompoundSearch.toLowerCase()) ||
+        c.destination.toLowerCase().includes(debouncedCompoundSearch.toLowerCase()),
+    )
+    .slice(0, 36);
 
   // Preview lead
   const previewLead: Lead = useMemo(() => {
     if (selectedLeads.length > 0) {
-      const found = leads.find(l => l.id === selectedLeads[0]);
+      const found = leads.find((l) => l.id === selectedLeads[0]);
       if (found) return found;
     }
-    return leads[0] || { id: "p1", name: "Mohamed Aly", phone: "01001234567", budget: 15, interest: "Ras El Hekma" };
+    return (
+      leads[0] || {
+        id: "p1",
+        name: "Mohamed Aly",
+        phone: "01001234567",
+        budget: 15,
+        interest: "Ras El Hekma",
+      }
+    );
   }, [selectedLeads, leads]);
 
   const renderedPreviewText = resolveMessage(previewLead, templateText, 0);
 
   return (
     <div className="space-y-6 max-w-7xl mx-auto pb-12">
-      
       {/* Simple Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border pb-4">
         <div>
@@ -481,8 +523,8 @@ function CampaignsPage() {
         <button
           onClick={() => setActiveTab("builder")}
           className={`rounded-xl px-4 py-2 text-xs font-bold transition-all ${
-            activeTab === "builder" 
-              ? "bg-primary text-primary-foreground shadow-sm" 
+            activeTab === "builder"
+              ? "bg-primary text-primary-foreground shadow-sm"
               : "text-muted-foreground hover:bg-secondary"
           }`}
         >
@@ -491,8 +533,8 @@ function CampaignsPage() {
         <button
           onClick={() => setActiveTab("compounds")}
           className={`rounded-xl px-4 py-2 text-xs font-bold transition-all ${
-            activeTab === "compounds" 
-              ? "bg-primary text-primary-foreground shadow-sm" 
+            activeTab === "compounds"
+              ? "bg-primary text-primary-foreground shadow-sm"
               : "text-muted-foreground hover:bg-secondary"
           }`}
         >
@@ -503,23 +545,29 @@ function CampaignsPage() {
       {/* BUILDER MODE */}
       {activeTab === "builder" && (
         <div className="space-y-6">
-          
           {/* 3 Simple Columns */}
           <div className="grid gap-6 xl:grid-cols-12 items-start">
-            
             {/* STEP 1: SELECT CLIENTS (4 Cols) */}
             <div className="xl:col-span-4 rounded-2xl border border-border bg-card p-5 shadow-soft space-y-4">
               <div className="flex items-center justify-between border-b border-border pb-3">
                 <h3 className="font-bold text-sm text-primary flex items-center gap-2">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white text-[10px]">1</span>
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white text-[10px]">
+                    1
+                  </span>
                   Select Clients ({selectedLeads.length})
                 </h3>
                 <div className="flex gap-1.5">
-                  <button onClick={() => selectAllFiltered(filteredList)} className="text-[10px] font-bold text-accent hover:underline">
+                  <button
+                    onClick={() => selectAllFiltered(filteredList)}
+                    className="text-[10px] font-bold text-accent hover:underline"
+                  >
                     Select All ({filteredList.length})
                   </button>
                   <span className="text-[10px] text-muted-foreground">&bull;</span>
-                  <button onClick={() => clearAllSelected(filteredList)} className="text-[10px] font-bold text-muted-foreground hover:underline">
+                  <button
+                    onClick={() => clearAllSelected(filteredList)}
+                    className="text-[10px] font-bold text-muted-foreground hover:underline"
+                  >
                     Clear
                   </button>
                 </div>
@@ -529,12 +577,12 @@ function CampaignsPage() {
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => {
-                    setShowAddClientForm(prev => !prev);
+                    setShowAddClientForm((prev) => !prev);
                     setShowImportForm(false);
                   }}
                   className={`flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl border text-xs font-bold transition-all shadow-2xs ${
-                    showAddClientForm 
-                      ? "bg-emerald-500 text-white border-emerald-500" 
+                    showAddClientForm
+                      ? "bg-emerald-500 text-white border-emerald-500"
                       : "bg-secondary text-primary hover:bg-secondary/80 border-border/40"
                   }`}
                 >
@@ -543,12 +591,12 @@ function CampaignsPage() {
                 </button>
                 <button
                   onClick={() => {
-                    setShowImportForm(prev => !prev);
+                    setShowImportForm((prev) => !prev);
                     setShowAddClientForm(false);
                   }}
                   className={`flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl border text-xs font-bold transition-all shadow-2xs ${
-                    showImportForm 
-                      ? "bg-emerald-500 text-white border-emerald-500" 
+                    showImportForm
+                      ? "bg-emerald-500 text-white border-emerald-500"
                       : "bg-secondary text-primary hover:bg-secondary/80 border-border/40"
                   }`}
                 >
@@ -559,13 +607,15 @@ function CampaignsPage() {
 
               {/* Import status message */}
               {importStatusMsg && (
-                <div className={`p-3 rounded-xl border text-xs font-medium flex items-start gap-2 animate-in fade-in duration-200 ${
-                  importStatusType === "success" 
-                    ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20" 
-                    : importStatusType === "error"
-                      ? "bg-red-500/10 text-red-600 border-red-500/20"
-                      : "bg-blue-500/10 text-blue-600 border-blue-500/20"
-                }`}>
+                <div
+                  className={`p-3 rounded-xl border text-xs font-medium flex items-start gap-2 animate-in fade-in duration-200 ${
+                    importStatusType === "success"
+                      ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
+                      : importStatusType === "error"
+                        ? "bg-red-500/10 text-red-600 border-red-500/20"
+                        : "bg-blue-500/10 text-blue-600 border-blue-500/20"
+                  }`}
+                >
                   {importStatusType === "success" ? (
                     <CheckCircle className="h-4 w-4 shrink-0 text-emerald-600 mt-0.5" />
                   ) : importStatusType === "error" ? (
@@ -579,7 +629,10 @@ function CampaignsPage() {
 
               {/* Add Client Collapsible Form */}
               {showAddClientForm && (
-                <form onSubmit={handleSingleClientSubmit} className="space-y-3 bg-secondary/30 border border-border/60 p-4 rounded-2xl animate-in slide-in-from-top-4 duration-200">
+                <form
+                  onSubmit={handleSingleClientSubmit}
+                  className="space-y-3 bg-secondary/30 border border-border/60 p-4 rounded-2xl animate-in slide-in-from-top-4 duration-200"
+                >
                   <h4 className="text-xs font-bold text-primary flex items-center gap-1.5 border-b border-border/40 pb-1.5">
                     <Plus className="h-3.5 w-3.5 text-emerald-500" /> Add Client Profile
                   </h4>
@@ -644,19 +697,36 @@ function CampaignsPage() {
                   <h4 className="text-xs font-bold text-primary flex items-center gap-1.5 border-b border-border/40 pb-1.5">
                     <FileSpreadsheet className="h-3.5 w-3.5 text-emerald-500" /> Import Client List
                   </h4>
-                  
+
                   <label className="flex flex-col items-center justify-center gap-2 rounded-xl bg-background border border-dashed border-emerald-500/40 hover:border-emerald-500 p-4 text-center cursor-pointer transition-all shadow-2xs">
                     <Upload className="h-6 w-6 text-emerald-500" />
                     <span className="font-bold text-xs text-primary">Upload Spreadsheet</span>
-                    <span className="text-[9px] text-muted-foreground leading-tight">Supports Excel (.xlsx, .xls) and CSV. Columns must include: Name, Phone</span>
-                    <input type="file" accept=".xlsx, .xls, .csv" className="hidden" onChange={handleSheetImport} />
+                    <span className="text-[9px] text-muted-foreground leading-tight">
+                      Supports Excel (.xlsx, .xls) and CSV. Columns must include: Name, Phone
+                    </span>
+                    <input
+                      type="file"
+                      accept=".xlsx, .xls, .csv"
+                      className="hidden"
+                      onChange={handleSheetImport}
+                    />
                   </label>
-                  
+
                   <div className="bg-background/60 p-2.5 rounded-xl border border-border/40 text-[9px] text-muted-foreground space-y-1">
-                    <span className="font-bold text-primary block uppercase">Auto-detected Columns</span>
-                    <div>• Name column: <span className="font-semibold">name, client, fullname</span></div>
-                    <div>• Phone column: <span className="font-semibold">phone, mobile, tel, contact</span></div>
-                    <div>• Extra columns: <span className="font-semibold">budget, interest, notes</span></div>
+                    <span className="font-bold text-primary block uppercase">
+                      Auto-detected Columns
+                    </span>
+                    <div>
+                      • Name column: <span className="font-semibold">name, client, fullname</span>
+                    </div>
+                    <div>
+                      • Phone column:{" "}
+                      <span className="font-semibold">phone, mobile, tel, contact</span>
+                    </div>
+                    <div>
+                      • Extra columns:{" "}
+                      <span className="font-semibold">budget, interest, notes</span>
+                    </div>
                   </div>
                 </div>
               )}
@@ -682,18 +752,26 @@ function CampaignsPage() {
                       key={lead.id}
                       onClick={() => toggleSelectLead(lead.id)}
                       className={`flex items-center justify-between p-3 rounded-xl border transition-all cursor-pointer ${
-                        isSelected ? "border-emerald-500 bg-emerald-500/5" : "border-border/60 hover:bg-secondary/40"
+                        isSelected
+                          ? "border-emerald-500 bg-emerald-500/5"
+                          : "border-border/60 hover:bg-secondary/40"
                       }`}
                     >
                       <div className="flex items-center gap-3 min-w-0">
-                        <div className={`flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded border transition-all ${
-                          isSelected ? "border-emerald-500 bg-emerald-500 text-white" : "border-muted-foreground/30"
-                        }`}>
+                        <div
+                          className={`flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded border transition-all ${
+                            isSelected
+                              ? "border-emerald-500 bg-emerald-500 text-white"
+                              : "border-muted-foreground/30"
+                          }`}
+                        >
                           {isSelected && <Check className="h-3 w-3 stroke-[3]" />}
                         </div>
                         <div className="min-w-0">
                           <div className="text-xs font-bold text-primary truncate">{lead.name}</div>
-                          <div className="text-[10px] text-muted-foreground mt-0.5">{lead.phone} &bull; EGP {lead.budget}M</div>
+                          <div className="text-[10px] text-muted-foreground mt-0.5">
+                            {lead.phone} &bull; EGP {lead.budget}M
+                          </div>
                         </div>
                       </div>
 
@@ -707,7 +785,9 @@ function CampaignsPage() {
                 })}
 
                 {filteredList.length === 0 && (
-                  <div className="text-center py-8 text-xs text-muted-foreground italic">No clients found matching filter.</div>
+                  <div className="text-center py-8 text-xs text-muted-foreground italic">
+                    No clients found matching filter.
+                  </div>
                 )}
               </div>
             </div>
@@ -716,7 +796,9 @@ function CampaignsPage() {
             <div className="xl:col-span-5 rounded-2xl border border-border bg-card p-5 shadow-soft space-y-4">
               <div className="border-b border-border pb-3 flex items-center justify-between">
                 <h3 className="font-bold text-sm text-primary flex items-center gap-2">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white text-[10px]">2</span>
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white text-[10px]">
+                    2
+                  </span>
                   Compose Message & Media
                 </h3>
                 <span className="text-[10px] text-muted-foreground font-semibold flex items-center gap-1">
@@ -726,7 +808,9 @@ function CampaignsPage() {
 
               {/* Quick Template Chips */}
               <div className="space-y-1.5">
-                <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider block">Campaign Templates</span>
+                <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider block">
+                  Campaign Templates
+                </span>
                 <div className="flex flex-wrap gap-1.5">
                   {defaultCampaignTemplates.map((t) => (
                     <button
@@ -747,10 +831,14 @@ function CampaignsPage() {
               <div className="rounded-xl border border-dashed border-emerald-500/30 bg-emerald-500/5 p-3.5 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-primary flex items-center gap-1.5">
-                    <ImageIcon className="h-4 w-4 text-emerald-600" /> Attached Photo / brochure link
+                    <ImageIcon className="h-4 w-4 text-emerald-600" /> Attached Photo / brochure
+                    link
                   </span>
                   {selectedMediaUrl && (
-                    <button onClick={() => setSelectedMediaUrl("")} className="text-[10px] font-bold text-red-500 hover:underline">
+                    <button
+                      onClick={() => setSelectedMediaUrl("")}
+                      className="text-[10px] font-bold text-red-500 hover:underline"
+                    >
                       Remove media
                     </button>
                   )}
@@ -760,9 +848,14 @@ function CampaignsPage() {
                   <label className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-card border border-border hover:border-emerald-500 px-3 py-2 text-xs font-bold text-primary cursor-pointer transition-all shadow-2xs">
                     <Upload className="h-4 w-4 text-emerald-600" />
                     <span>Upload image from device</span>
-                    <input type="file" accept="image/*,.pdf" className="hidden" onChange={handleFileUpload} />
+                    <input
+                      type="file"
+                      accept="image/*,.pdf"
+                      className="hidden"
+                      onChange={handleFileUpload}
+                    />
                   </label>
-                  
+
                   <Input
                     placeholder="Or paste media URL..."
                     value={selectedMediaUrl.startsWith("data:") ? "" : selectedMediaUrl}
@@ -777,13 +870,15 @@ function CampaignsPage() {
                 {/* Formatting & variable bar */}
                 <div className="flex items-center justify-between border border-border/60 bg-secondary/25 p-2 rounded-t-xl -mb-2 border-b-0">
                   <div className="flex items-center gap-1">
-                    <span className="text-[9px] font-bold text-muted-foreground uppercase mr-1.5">Tags:</span>
+                    <span className="text-[9px] font-bold text-muted-foreground uppercase mr-1.5">
+                      Tags:
+                    </span>
                     {[
                       { label: "Name", ph: "{name}" },
                       { label: "Interest", ph: "{interest}" },
                       { label: "Budget", ph: "{budget}" },
                       { label: "Broker", ph: "{broker_name}" },
-                    ].map(ph => (
+                    ].map((ph) => (
                       <button
                         key={ph.ph}
                         onClick={() => insertPlaceholder(ph.ph)}
@@ -833,7 +928,9 @@ function CampaignsPage() {
 
                     {/* Syntax checker badge */}
                     {templateText.includes("{") && !templateText.includes("}") ? (
-                      <span className="text-amber-500 flex items-center gap-0.5">⚠️ Unclosed tag</span>
+                      <span className="text-amber-500 flex items-center gap-0.5">
+                        ⚠️ Unclosed tag
+                      </span>
                     ) : (
                       <span className="text-emerald-500 font-bold flex items-center gap-0.5">
                         <Check className="h-3 w-3 stroke-[3]" /> Tags validated
@@ -846,9 +943,10 @@ function CampaignsPage() {
               {/* Tone Optimizer Bar (Sparkles!) */}
               <div className="bg-gradient-to-r from-emerald-500/5 to-accent/5 border border-emerald-500/20 p-3 rounded-xl space-y-2">
                 <span className="text-[10px] font-bold text-emerald-700 flex items-center gap-1 uppercase tracking-wider">
-                  <Sparkles className="h-3.5 w-3.5 text-emerald-500 animate-pulse" /> Message Enhancer Tone Presets
+                  <Sparkles className="h-3.5 w-3.5 text-emerald-500 animate-pulse" /> Message
+                  Enhancer Tone Presets
                 </span>
-                
+
                 <div className="grid grid-cols-4 gap-1.5">
                   <button
                     onClick={() => adjustTextTone("professional")}
@@ -890,7 +988,9 @@ function CampaignsPage() {
             <div className="xl:col-span-3 rounded-2xl border border-border bg-card p-5 shadow-soft space-y-4">
               <div className="border-b border-border pb-3">
                 <h3 className="font-bold text-sm text-primary flex items-center gap-2">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white text-[10px]">3</span>
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white text-[10px]">
+                    3
+                  </span>
                   WhatsApp Preview
                 </h3>
               </div>
@@ -898,21 +998,25 @@ function CampaignsPage() {
               {/* Simple Phone Screen */}
               <div className="mx-auto w-full max-w-[240px] rounded-[28px] border-[5px] border-slate-800 bg-slate-900 p-1.5 shadow-xl overflow-hidden">
                 <div className="rounded-[22px] bg-[#ece5dd] overflow-hidden min-h-[380px] flex flex-col justify-between pt-4">
-                  
                   {/* Top Bar */}
                   <div className="bg-[#075e54] text-white px-3 py-2 flex items-center justify-between">
-                    <div className="text-[10px] font-bold truncate max-w-[120px]">{previewLead.name}</div>
+                    <div className="text-[10px] font-bold truncate max-w-[120px]">
+                      {previewLead.name}
+                    </div>
                     <Smartphone className="h-3 w-3 text-white/80" />
                   </div>
 
                   {/* Chat Content */}
                   <div className="p-2 space-y-2 flex-1 flex flex-col justify-end">
-                    
                     {/* Picture Card if selected */}
                     {selectedMediaUrl && (
                       <div className="self-end max-w-[95%] rounded-xl bg-[#dcf8c6] overflow-hidden p-1 shadow-2xs border border-green-200">
                         <div className="aspect-[16/9] overflow-hidden rounded-lg bg-slate-200">
-                          <img src={selectedMediaUrl} alt="Attached" className="h-full w-full object-cover" />
+                          <img
+                            src={selectedMediaUrl}
+                            alt="Attached"
+                            className="h-full w-full object-cover"
+                          />
                         </div>
                         <div className="p-1.5 text-[9.5px] text-slate-800 leading-tight whitespace-pre-wrap">
                           {renderedPreviewText.substring(0, 90)}...
@@ -936,12 +1040,14 @@ function CampaignsPage() {
               </div>
 
               <div className="text-center">
-                <button onClick={() => handleCopyMessage(renderedPreviewText)} className="text-xs text-muted-foreground hover:text-primary font-semibold">
+                <button
+                  onClick={() => handleCopyMessage(renderedPreviewText)}
+                  className="text-xs text-muted-foreground hover:text-primary font-semibold"
+                >
                   {copiedText ? "✓ Copied!" : "Copy Text"}
                 </button>
               </div>
             </div>
-
           </div>
 
           {/* ACTIVE DISPATCH QUEUE BAR */}
@@ -949,18 +1055,26 @@ function CampaignsPage() {
             <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-5 shadow-lg space-y-3">
               <div className="flex items-center justify-between border-b border-emerald-500/20 pb-3">
                 <h3 className="font-bold text-primary text-base flex items-center gap-2">
-                  <Send className="h-4 w-4 text-emerald-600 animate-bounce" /> Sending Queue ({currentIndex + 1} of {activeQueue.length})
+                  <Send className="h-4 w-4 text-emerald-600 animate-bounce" /> Sending Queue (
+                  {currentIndex + 1} of {activeQueue.length})
                 </h3>
                 <div className="w-36 bg-border h-2 rounded-full overflow-hidden">
-                  <div className="bg-emerald-500 h-full transition-all duration-300" style={{ width: `${(currentIndex / activeQueue.length) * 100}%` }} />
+                  <div
+                    className="bg-emerald-500 h-full transition-all duration-300"
+                    style={{ width: `${(currentIndex / activeQueue.length) * 100}%` }}
+                  />
                 </div>
               </div>
 
               {currentIndex < activeQueue.length ? (
                 <div className="flex flex-wrap items-center justify-between gap-3 bg-card border border-border p-4 rounded-xl">
                   <div>
-                    <div className="text-xs font-bold text-primary">{activeQueue[currentIndex].name}</div>
-                    <div className="text-[10px] text-muted-foreground">{activeQueue[currentIndex].phone}</div>
+                    <div className="text-xs font-bold text-primary">
+                      {activeQueue[currentIndex].name}
+                    </div>
+                    <div className="text-[10px] text-muted-foreground">
+                      {activeQueue[currentIndex].phone}
+                    </div>
                   </div>
 
                   <button
@@ -977,7 +1091,6 @@ function CampaignsPage() {
               )}
             </div>
           )}
-
         </div>
       )}
 
@@ -1002,12 +1115,19 @@ function CampaignsPage() {
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 max-h-[500px] overflow-y-auto">
-            {filteredCompounds.map(comp => (
-              <div key={comp.slug} className="rounded-xl border border-border bg-secondary/10 p-4 flex flex-col justify-between">
+            {filteredCompounds.map((comp) => (
+              <div
+                key={comp.slug}
+                className="rounded-xl border border-border bg-secondary/10 p-4 flex flex-col justify-between"
+              >
                 <div>
                   <div className="text-xs font-bold text-primary truncate">{comp.name}</div>
-                  <div className="text-[10px] text-muted-foreground mt-0.5 truncate">{comp.developer} &bull; {comp.destination.replace(/-/g, " ").toUpperCase()}</div>
-                  <div className="text-xs font-bold text-emerald-600 mt-1">Starting EGP {comp.priceFrom}M</div>
+                  <div className="text-[10px] text-muted-foreground mt-0.5 truncate">
+                    {comp.developer} &bull; {comp.destination.replace(/-/g, " ").toUpperCase()}
+                  </div>
+                  <div className="text-xs font-bold text-emerald-600 mt-1">
+                    Starting EGP {comp.priceFrom}M
+                  </div>
                 </div>
 
                 <button
@@ -1030,11 +1150,16 @@ function CampaignsPage() {
               <span className="flex items-center gap-1.5 text-emerald-600">
                 <MessageSquare className="h-4 w-4" /> Send Message
               </span>
-              <button onClick={() => setShowWaPanel(false)} className="text-muted-foreground hover:text-foreground">
+              <button
+                onClick={() => setShowWaPanel(false)}
+                className="text-muted-foreground hover:text-foreground"
+              >
                 <X className="h-4 w-4" />
               </button>
             </div>
-            <p className="text-xs text-muted-foreground">Your message copy and client phone number have been prepared.</p>
+            <p className="text-xs text-muted-foreground">
+              Your message copy and client phone number have been prepared.
+            </p>
             <a
               href={waPanelUrl}
               target="_blank"
@@ -1046,7 +1171,6 @@ function CampaignsPage() {
           </div>
         </div>
       )}
-
     </div>
   );
 }

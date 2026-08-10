@@ -15,21 +15,56 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import {
-  Heart, MapPin, Waves, Calendar, Building2, Wallet, Ruler,
-  Check, ArrowLeft, Phone, ChevronLeft, ChevronRight, Globe,
-  X, ExternalLink, Star, Calculator, Map as MapIcon, ZoomIn, ChevronDown, Sparkles
+  Heart,
+  MapPin,
+  Waves,
+  Calendar,
+  Building2,
+  Wallet,
+  Ruler,
+  Check,
+  ArrowLeft,
+  Phone,
+  ChevronLeft,
+  ChevronRight,
+  Globe,
+  X,
+  ExternalLink,
+  Star,
+  Calculator,
+  Map as MapIcon,
+  ZoomIn,
+  ChevronDown,
+  Sparkles,
 } from "lucide-react";
-function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
+function LogoBadge({
+  src,
+  name,
+  className = "",
+}: {
+  src: string;
+  name: string;
+  className?: string;
+}) {
   const [logoLoaded, setLogoLoaded] = useState(false);
-  const initials = name.split(" ").slice(0, 2).map((w) => w[0] ?? "").join("").toUpperCase();
+  const initials = name
+    .split(" ")
+    .slice(0, 2)
+    .map((w) => w[0] ?? "")
+    .join("")
+    .toUpperCase();
   return (
     <div className={`relative overflow-hidden shrink-0 ${className}`}>
       <div className="absolute inset-0 flex items-center justify-center bg-primary">
         <span className="text-primary-foreground font-bold text-sm select-none">{initials}</span>
       </div>
-      <img src={src} alt={name}
+      <img
+        src={src}
+        alt={name}
         className={`absolute inset-0 h-full w-full object-contain bg-white transition-opacity duration-300 ${logoLoaded ? "opacity-100" : "opacity-0"}`}
-        onLoad={() => setLogoLoaded(true)} onError={() => {}} />
+        onLoad={() => setLogoLoaded(true)}
+        onError={() => {}}
+      />
     </div>
   );
 }
@@ -104,28 +139,39 @@ import { Image as ImageIcon } from "lucide-react";
 function Gallery({ images, name }: { images: string[]; name: string }) {
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [failedImages, setFailedImages] = useState<Record<number, boolean>>({});
-  
-  const imgs = images.length > 0 ? images : ["https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200"];
 
-  const prev = () => setLightbox((v) => v !== null ? (v - 1 + imgs.length) % imgs.length : null);
-  const next = () => setLightbox((v) => v !== null ? (v + 1) % imgs.length : null);
+  const imgs =
+    images.length > 0
+      ? images
+      : ["https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200"];
+
+  const prev = () => setLightbox((v) => (v !== null ? (v - 1 + imgs.length) % imgs.length : null));
+  const next = () => setLightbox((v) => (v !== null ? (v + 1) % imgs.length : null));
 
   const renderImageOrFallback = (src: string, index: number, isMain: boolean = false) => {
     if (failedImages[index]) {
       return (
         <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-secondary/50 to-secondary/80 border border-dashed border-border/80 rounded-xl p-6 text-center select-none">
-          <ImageIcon className={`${isMain ? "h-10 w-10" : "h-6 w-6"} text-muted-foreground/60 mb-2`} />
-          <span className={`${isMain ? "text-xs" : "text-[10px]"} font-bold text-muted-foreground uppercase tracking-wider`}>No image uploaded</span>
-          <span className="text-[9px] text-muted-foreground/80 mt-1 max-w-[150px]">Use the admin center to add pictures for {name}</span>
+          <ImageIcon
+            className={`${isMain ? "h-10 w-10" : "h-6 w-6"} text-muted-foreground/60 mb-2`}
+          />
+          <span
+            className={`${isMain ? "text-xs" : "text-[10px]"} font-bold text-muted-foreground uppercase tracking-wider`}
+          >
+            No image uploaded
+          </span>
+          <span className="text-[9px] text-muted-foreground/80 mt-1 max-w-[150px]">
+            Use the admin center to add pictures for {name}
+          </span>
         </div>
       );
     }
     return (
-      <img 
-        src={src} 
-        alt={name} 
-        className="h-full w-full object-cover hover:scale-105 transition-transform duration-500" 
-        onError={() => setFailedImages(prev => ({ ...prev, [index]: true }))}
+      <img
+        src={src}
+        alt={name}
+        className="h-full w-full object-cover hover:scale-105 transition-transform duration-500"
+        onError={() => setFailedImages((prev) => ({ ...prev, [index]: true }))}
       />
     );
   };
@@ -133,12 +179,17 @@ function Gallery({ images, name }: { images: string[]; name: string }) {
   return (
     <>
       {/* Gallery grid */}
-      <div className={`grid gap-2 overflow-hidden rounded-2xl md:rounded-3xl border border-border/40 bg-card p-1.5 shadow-lg ${
-        imgs.length === 1 ? "grid-cols-1" :
-        imgs.length === 2 ? "grid-cols-2" :
-        imgs.length === 3 ? "grid-cols-3" :
-        "grid-cols-2 md:grid-cols-4"
-      }`}>
+      <div
+        className={`grid gap-2 overflow-hidden rounded-2xl md:rounded-3xl border border-border/40 bg-card p-1.5 shadow-lg ${
+          imgs.length === 1
+            ? "grid-cols-1"
+            : imgs.length === 2
+              ? "grid-cols-2"
+              : imgs.length === 3
+                ? "grid-cols-3"
+                : "grid-cols-2 md:grid-cols-4"
+        }`}
+      >
         {/* Main image */}
         <div
           className={`relative overflow-hidden rounded-xl bg-secondary cursor-pointer ${
@@ -167,8 +218,12 @@ function Gallery({ images, name }: { images: string[]; name: string }) {
               {renderImageOrFallback(img, index)}
               {i === 2 && imgs.length > 4 && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-xs text-white">
-                  <span className="font-display text-2xl font-black text-white">+{imgs.length - 4}</span>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-white/80 mt-1">Photos</span>
+                  <span className="font-display text-2xl font-black text-white">
+                    +{imgs.length - 4}
+                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-white/80 mt-1">
+                    Photos
+                  </span>
                 </div>
               )}
               {!(i === 2 && imgs.length > 4) && (
@@ -185,22 +240,45 @@ function Gallery({ images, name }: { images: string[]; name: string }) {
 
       {/* Lightbox */}
       {lightbox !== null && (
-        <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/95 backdrop-blur-md animate-in fade-in duration-200" onClick={() => setLightbox(null)}>
-          <button className="absolute top-6 right-6 rounded-full bg-white/10 p-2.5 text-white hover:bg-white/20 transition-colors shadow-lg" onClick={() => setLightbox(null)}>
+        <div
+          className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/95 backdrop-blur-md animate-in fade-in duration-200"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            className="absolute top-6 right-6 rounded-full bg-white/10 p-2.5 text-white hover:bg-white/20 transition-colors shadow-lg"
+            onClick={() => setLightbox(null)}
+          >
             <X className="h-6 w-6" />
           </button>
-          <button className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3.5 text-white hover:bg-white/20 transition-all shadow-lg" onClick={(e) => { e.stopPropagation(); prev(); }}>
+          <button
+            className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3.5 text-white hover:bg-white/20 transition-all shadow-lg"
+            onClick={(e) => {
+              e.stopPropagation();
+              prev();
+            }}
+          >
             <ChevronLeft className="h-6 w-6" />
           </button>
-          <button className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3.5 text-white hover:bg-white/20 transition-all shadow-lg" onClick={(e) => { e.stopPropagation(); next(); }}>
+          <button
+            className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3.5 text-white hover:bg-white/20 transition-all shadow-lg"
+            onClick={(e) => {
+              e.stopPropagation();
+              next();
+            }}
+          >
             <ChevronRight className="h-6 w-6" />
           </button>
-          <div className="max-h-[80vh] max-w-[85vw] flex items-center justify-center rounded-2xl overflow-hidden bg-zinc-950 border border-white/10 shadow-2xl p-1" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="max-h-[80vh] max-w-[85vw] flex items-center justify-center rounded-2xl overflow-hidden bg-zinc-950 border border-white/10 shadow-2xl p-1"
+            onClick={(e) => e.stopPropagation()}
+          >
             {failedImages[lightbox] ? (
               <div className="w-[600px] aspect-video flex flex-col items-center justify-center bg-zinc-900 text-center p-8">
                 <ImageIcon className="h-12 w-12 text-zinc-600 mb-4" />
                 <h4 className="text-sm font-bold text-zinc-400">No Image File Found</h4>
-                <p className="text-xs text-zinc-500 mt-2 max-w-xs">Upload files for {name} in the admin panel to show here.</p>
+                <p className="text-xs text-zinc-500 mt-2 max-w-xs">
+                  Upload files for {name} in the admin panel to show here.
+                </p>
               </div>
             ) : (
               <img
@@ -228,7 +306,7 @@ function CompoundPage() {
     logo: `https://ui-avatars.com/api/?background=1f3a5f&color=fff&bold=true&size=128&name=${encodeURIComponent(c.developer || "D")}`,
     count: 1,
     blurb: `${c.developer} is an active real estate developer with projects tracked on PropTrack.`,
-    website: ""
+    website: "",
   };
   const isFav = useStore((s) => s.favorites.includes(c.slug));
   const toggleFav = useStore((s) => s.toggleFavorite);
@@ -271,7 +349,7 @@ function CompoundPage() {
         budget: c.priceFrom || 0,
         interest: c.slug,
         stage: "new",
-        notes: `Preferred Unit: ${leadUnit}\nInterest Type: ${leadInterestType}\nBest Time to Call: ${leadTime}`
+        notes: `Preferred Unit: ${leadUnit}\nInterest Type: ${leadInterestType}\nBest Time to Call: ${leadTime}`,
       });
       toast.success("Interest registered successfully! Our agent will call you shortly.");
       setInterestModalOpen(false);
@@ -285,7 +363,7 @@ function CompoundPage() {
   useEffect(() => {
     addRecent(c.slug);
     trackEvent({ type: "view", slug: c.slug, area: c.destination });
-    
+
     // Load heavy availability data asynchronously in background
     import("@/data/availability").then((mod) => {
       mod.loadAvailabilityAsync().then(() => {
@@ -294,7 +372,9 @@ function CompoundPage() {
     });
   }, [c.slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const related = compoundsByDestination(c.destination).filter((x) => x.slug !== c.slug).slice(0, 4);
+  const related = compoundsByDestination(c.destination)
+    .filter((x) => x.slug !== c.slug)
+    .slice(0, 4);
   const allImages = c.gallery && c.gallery.length > 0 ? c.gallery : [c.hero];
 
   const avail = availabilityBySlug(c.slug);
@@ -317,13 +397,23 @@ function CompoundPage() {
       <div className="border-b border-border/60 bg-card">
         <div className="mx-auto max-w-7xl px-4 py-3 lg:px-8">
           <div className="flex items-center gap-1.5 text-sm text-muted-foreground flex-wrap">
-            <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="hover:text-primary transition-colors inline-flex items-center gap-1">
+            <Link
+              to="/projects"
+              search={{ destination: "", dev: "", q: "" }}
+              className="hover:text-primary transition-colors inline-flex items-center gap-1"
+            >
               <ArrowLeft className="h-3.5 w-3.5" /> All projects
             </Link>
             <span>/</span>
             {destination && (
               <>
-                <Link to="/destinations/$slug" params={{ slug: destination.slug }} className="hover:text-primary transition-colors">{destination.name}</Link>
+                <Link
+                  to="/destinations/$slug"
+                  params={{ slug: destination.slug }}
+                  className="hover:text-primary transition-colors"
+                >
+                  {destination.name}
+                </Link>
                 <span>/</span>
               </>
             )}
@@ -333,7 +423,11 @@ function CompoundPage() {
                 <span>/</span>
                 <span className="text-xs bg-accent/10 border border-accent/20 text-accent rounded-full px-2 py-0.5 inline-flex items-center gap-1 font-bold">
                   Phase of{" "}
-                  <Link to="/projects/$slug" params={{ slug: parentProject.slug }} className="underline hover:underline transition-all">
+                  <Link
+                    to="/projects/$slug"
+                    params={{ slug: parentProject.slug }}
+                    className="underline hover:underline transition-all"
+                  >
                     {parentProject.name}
                   </Link>
                 </span>
@@ -359,30 +453,43 @@ function CompoundPage() {
                 <Waves className="h-3 w-3" /> Beachfront
               </span>
             )}
-            <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
-              c.status === "RTM" ? "bg-emerald-100 text-emerald-700" :
-              "bg-blue-100 text-blue-700"
-            }`}>{c.status}</span>
+            <span
+              className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
+                c.status === "RTM" ? "bg-emerald-100 text-emerald-700" : "bg-blue-100 text-blue-700"
+              }`}
+            >
+              {c.status}
+            </span>
             {c.flagship && (
               <span className="inline-flex items-center gap-1 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700 ring-1 ring-amber-200">
                 <Star className="h-3 w-3 fill-amber-500 text-amber-500" /> Flagship
               </span>
             )}
             {destination && (
-              <Link to="/destinations/$slug" params={{ slug: destination.slug }}
-                className="inline-flex items-center gap-1 rounded-full border border-border bg-card px-2.5 py-1 text-xs text-muted-foreground hover:text-accent hover:border-accent transition-colors">
+              <Link
+                to="/destinations/$slug"
+                params={{ slug: destination.slug }}
+                className="inline-flex items-center gap-1 rounded-full border border-border bg-card px-2.5 py-1 text-xs text-muted-foreground hover:text-accent hover:border-accent transition-colors"
+              >
                 <MapPin className="h-3 w-3" />
-                {destination.name}{c.km ? ` · km ${c.km}` : ""}
+                {destination.name}
+                {c.km ? ` · km ${c.km}` : ""}
               </Link>
             )}
           </div>
 
           {/* Title */}
-          <h1 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-primary">{c.name}</h1>
+          <h1 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-primary">
+            {c.name}
+          </h1>
           <p className="mt-2 text-sm text-muted-foreground">
             by{" "}
             {dev ? (
-              <Link to="/developers/$slug" params={{ slug: dev.slug }} className="font-medium text-primary hover:text-accent transition-colors">
+              <Link
+                to="/developers/$slug"
+                params={{ slug: dev.slug }}
+                className="font-medium text-primary hover:text-accent transition-colors"
+              >
                 {c.developer}
               </Link>
             ) : (
@@ -393,31 +500,60 @@ function CompoundPage() {
           {c.slug === "alam-al-roum" ? (
             <div className="mt-6 space-y-6">
               <p className="text-base leading-relaxed text-foreground/90 font-medium">
-                Alam El Roum is a massive <span className="font-extrabold text-accent">$29.7 billion</span> mega-development on Egypt's Mediterranean coast west of Marsa Matrouh. Developed by{" "}
-                <a href="https://www.qataridiar.com/project/alam-al-roum" target="_blank" rel="noopener noreferrer" className="underline hover:text-accent font-semibold inline-flex items-center gap-0.5">Qatari Diar <ExternalLink className="h-3 w-3 inline" /></a>, the 4,900-acre project features a 7.2-kilometer shoreline, an international marina, luxury hotels, and year-round residential districts.
+                Alam El Roum is a massive{" "}
+                <span className="font-extrabold text-accent">$29.7 billion</span> mega-development
+                on Egypt's Mediterranean coast west of Marsa Matrouh. Developed by{" "}
+                <a
+                  href="https://www.qataridiar.com/project/alam-al-roum"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-accent font-semibold inline-flex items-center gap-0.5"
+                >
+                  Qatari Diar <ExternalLink className="h-3 w-3 inline" />
+                </a>
+                , the 4,900-acre project features a 7.2-kilometer shoreline, an international
+                marina, luxury hotels, and year-round residential districts.
               </p>
 
               <Section title="Project Overview & Masterplan">
                 <div className="grid gap-6 sm:grid-cols-2 bg-secondary/15 p-5 rounded-2xl border border-border/60">
                   <div>
-                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Developer Partnership</div>
-                    <div className="mt-1 font-semibold text-primary text-sm">Qatari Diar in partnership with Egypt's Ministry of Housing</div>
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">
+                      Developer Partnership
+                    </div>
+                    <div className="mt-1 font-semibold text-primary text-sm">
+                      Qatari Diar in partnership with Egypt's Ministry of Housing
+                    </div>
                   </div>
                   <div>
-                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Master Planner</div>
-                    <div className="mt-1 font-semibold text-primary text-sm font-display text-accent">Skidmore, Owings &amp; Merrill (SOM)</div>
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">
+                      Master Planner
+                    </div>
+                    <div className="mt-1 font-semibold text-primary text-sm font-display text-accent">
+                      Skidmore, Owings &amp; Merrill (SOM)
+                    </div>
                   </div>
                   <div>
-                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Total Land Size</div>
-                    <div className="mt-1 font-semibold text-primary text-sm">20.5 million sqm (approx. 4,900 feddans)</div>
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">
+                      Total Land Size
+                    </div>
+                    <div className="mt-1 font-semibold text-primary text-sm">
+                      20.5 million sqm (approx. 4,900 feddans)
+                    </div>
                   </div>
                   <div>
-                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Pristine Beachfront</div>
-                    <div className="mt-1 font-semibold text-primary text-sm font-display text-accent">7.2 Kilometers shoreline</div>
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">
+                      Pristine Beachfront
+                    </div>
+                    <div className="mt-1 font-semibold text-primary text-sm font-display text-accent">
+                      7.2 Kilometers shoreline
+                    </div>
                   </div>
                 </div>
                 <div className="mt-4 p-4 rounded-xl border border-border/40 bg-card text-xs text-muted-foreground leading-relaxed">
-                  <strong>Key Features:</strong> Features a state-of-the-art 370-berth international yacht marina, championship golf course, polo club, and luxury hospitality districts.
+                  <strong>Key Features:</strong> Features a state-of-the-art 370-berth international
+                  yacht marina, championship golf course, polo club, and luxury hospitality
+                  districts.
                 </div>
               </Section>
 
@@ -425,15 +561,23 @@ function CompoundPage() {
                 <ul className="space-y-3 text-xs text-foreground/80">
                   <li className="flex items-start gap-2.5">
                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
-                    <span><strong>Position:</strong> Situated East of Marsa Matrouh city center.</span>
+                    <span>
+                      <strong>Position:</strong> Situated East of Marsa Matrouh city center.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
-                    <span><strong>Airport Proximity:</strong> Roughly 6 kilometers from Marsa Matrouh International Airport.</span>
+                    <span>
+                      <strong>Airport Proximity:</strong> Roughly 6 kilometers from Marsa Matrouh
+                      International Airport.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
-                    <span><strong>Surrounds:</strong> Easy connectivity to Ras El Hikma and wider regions via the International Coastal Road.</span>
+                    <span>
+                      <strong>Surrounds:</strong> Easy connectivity to Ras El Hikma and wider
+                      regions via the International Coastal Road.
+                    </span>
                   </li>
                 </ul>
               </Section>
@@ -457,7 +601,9 @@ function CompoundPage() {
             >
               <MapIcon className="h-4 w-4 text-accent group-hover:scale-110 transition-transform" />
               View Master Plan
-              {masterPlanUrl && <span className="ml-1 inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />}
+              {masterPlanUrl && (
+                <span className="ml-1 inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              )}
             </button>
           </div>
 
@@ -474,7 +620,9 @@ function CompoundPage() {
                 {/* Header */}
                 <div className="flex items-center justify-between px-5 py-3.5 bg-zinc-900/90 backdrop-blur-sm border-b border-white/10">
                   <div>
-                    <div className="text-[10px] uppercase tracking-widest font-bold text-accent">Master Plan</div>
+                    <div className="text-[10px] uppercase tracking-widest font-bold text-accent">
+                      Master Plan
+                    </div>
                     <div className="font-display font-bold text-white mt-0.5">{c.name}</div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -514,7 +662,9 @@ function CompoundPage() {
                     </div>
                     <h3 className="font-bold text-white text-lg">Master Plan Coming Soon</h3>
                     <p className="text-sm text-zinc-400 mt-2 max-w-md leading-relaxed">
-                      The official master plan layout for <strong className="text-white">{c.name}</strong> is being prepared by the developer. Request it directly from our team.
+                      The official master plan layout for{" "}
+                      <strong className="text-white">{c.name}</strong> is being prepared by the
+                      developer. Request it directly from our team.
                     </p>
                     <a
                       href={`https://wa.me/201029324783?text=Hi!%20I%20am%20requesting%20the%20master%20plan%20for%20${encodeURIComponent(c.name)}`}
@@ -545,16 +695,28 @@ function CompoundPage() {
                       className="group rounded-2xl border border-border/85 bg-card p-4 hover:border-accent/40 shadow-soft hover:-translate-y-0.5 transition-all flex gap-4"
                     >
                       <div className="h-20 w-24 rounded-lg overflow-hidden shrink-0">
-                        <img src={phase.hero} alt={phase.name} className="h-full w-full object-cover transition-transform group-hover:scale-105" />
+                        <img
+                          src={phase.hero}
+                          alt={phase.name}
+                          className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                        />
                       </div>
                       <div className="min-w-0 flex-1 flex flex-col justify-between">
                         <div>
-                          <h4 className="font-semibold text-primary text-sm truncate group-hover:text-accent transition-colors">{phase.name}</h4>
-                          <p className="text-[11px] text-muted-foreground line-clamp-2 mt-1 leading-relaxed">{phase.blurb}</p>
+                          <h4 className="font-semibold text-primary text-sm truncate group-hover:text-accent transition-colors">
+                            {phase.name}
+                          </h4>
+                          <p className="text-[11px] text-muted-foreground line-clamp-2 mt-1 leading-relaxed">
+                            {phase.blurb}
+                          </p>
                         </div>
                         <div className="flex items-center justify-between mt-2 pt-1.5 border-t border-border/30">
-                          <span className="text-[10px] text-accent font-bold">From EGP {phase.priceFrom}M</span>
-                          <span className="text-[10px] text-muted-foreground">{phase.deliveryYear}</span>
+                          <span className="text-[10px] text-accent font-bold">
+                            From EGP {phase.priceFrom}M
+                          </span>
+                          <span className="text-[10px] text-muted-foreground">
+                            {phase.deliveryYear}
+                          </span>
                         </div>
                       </div>
                     </Link>
@@ -568,15 +730,20 @@ function CompoundPage() {
           {c.slug === "alam-al-roum" ? (
             <Section title="Live Connected Inventory">
               <div className="space-y-8">
-                
                 {/* Sealine Estates */}
                 <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
                   <div className="border-b border-border pb-3 flex justify-between items-center flex-wrap gap-2">
                     <div>
-                      <h3 className="font-display font-bold text-base text-primary">Sealine Estates — "Limitless Waterfront"</h3>
-                      <p className="text-[11px] text-muted-foreground mt-0.5">Standalone sea-view villas ordered by row (1st Row = closest to sea)</p>
+                      <h3 className="font-display font-bold text-base text-primary">
+                        Sealine Estates — "Limitless Waterfront"
+                      </h3>
+                      <p className="text-[11px] text-muted-foreground mt-0.5">
+                        Standalone sea-view villas ordered by row (1st Row = closest to sea)
+                      </p>
                     </div>
-                    <span className="rounded-full bg-accent/15 px-2.5 py-0.5 text-[10px] font-bold text-accent uppercase">Villas Only</span>
+                    <span className="rounded-full bg-accent/15 px-2.5 py-0.5 text-[10px] font-bold text-accent uppercase">
+                      Villas Only
+                    </span>
                   </div>
 
                   <div className="overflow-x-auto">
@@ -592,12 +759,60 @@ function CompoundPage() {
                       </thead>
                       <tbody className="divide-y divide-border/60">
                         {[
-                          { row: "1st Row", type: "1 Story Villa", bua: "601", plot: "1,500", feat: "6 Ensuites · Full Sea View", price: "227,000,000", isRange: false },
-                          { row: "2nd Row", type: "1 Story Villa", bua: "453", plot: "1,300", feat: "5 Ensuites · Full Sea View", price: "154,000,000", isRange: false },
-                          { row: "3rd Row", type: "1 Story Villa", bua: "326 – 391", plot: "1,100", feat: "5 Ensuites · Full Sea View", price: "96,000,000 – 112,000,000", isRange: true },
-                          { row: "4th Row", type: "G+1 Villa", bua: "331", plot: "550", feat: "5 Ensuites · Partial Sea View", price: "73,000,000", isRange: false },
-                          { row: "5th Row", type: "G+1+Penthouse Villa", bua: "307", plot: "500", feat: "5 Ensuites · Partial Sea View", price: "64,000,000", isRange: false },
-                          { row: "6th–9th Row", type: "Villa", bua: "307", plot: "500", feat: "5 Ensuites · Riviera Park & Spine View", price: "48,000,000 – 59,000,000", isRange: true }
+                          {
+                            row: "1st Row",
+                            type: "1 Story Villa",
+                            bua: "601",
+                            plot: "1,500",
+                            feat: "6 Ensuites · Full Sea View",
+                            price: "227,000,000",
+                            isRange: false,
+                          },
+                          {
+                            row: "2nd Row",
+                            type: "1 Story Villa",
+                            bua: "453",
+                            plot: "1,300",
+                            feat: "5 Ensuites · Full Sea View",
+                            price: "154,000,000",
+                            isRange: false,
+                          },
+                          {
+                            row: "3rd Row",
+                            type: "1 Story Villa",
+                            bua: "326 – 391",
+                            plot: "1,100",
+                            feat: "5 Ensuites · Full Sea View",
+                            price: "96,000,000 – 112,000,000",
+                            isRange: true,
+                          },
+                          {
+                            row: "4th Row",
+                            type: "G+1 Villa",
+                            bua: "331",
+                            plot: "550",
+                            feat: "5 Ensuites · Partial Sea View",
+                            price: "73,000,000",
+                            isRange: false,
+                          },
+                          {
+                            row: "5th Row",
+                            type: "G+1+Penthouse Villa",
+                            bua: "307",
+                            plot: "500",
+                            feat: "5 Ensuites · Partial Sea View",
+                            price: "64,000,000",
+                            isRange: false,
+                          },
+                          {
+                            row: "6th–9th Row",
+                            type: "Villa",
+                            bua: "307",
+                            plot: "500",
+                            feat: "5 Ensuites · Riviera Park & Spine View",
+                            price: "48,000,000 – 59,000,000",
+                            isRange: true,
+                          },
                         ].map((v, i) => (
                           <tr key={i} className="hover:bg-secondary/20 transition-colors">
                             <td className="p-3">
@@ -609,7 +824,9 @@ function CompoundPage() {
                             <td className="p-3 text-foreground font-medium">{v.feat}</td>
                             <td className="p-3 text-right">
                               <span className="font-bold text-accent">EGP {v.price}</span>
-                              <span className="block text-[9px] text-muted-foreground">starting rate</span>
+                              <span className="block text-[9px] text-muted-foreground">
+                                starting rate
+                              </span>
                             </td>
                           </tr>
                         ))}
@@ -621,15 +838,23 @@ function CompoundPage() {
                 {/* Sandside Lagoons Section */}
                 <div className="space-y-6">
                   <div className="border-b border-border pb-2">
-                    <h3 className="font-display font-bold text-base text-primary">Sandside Lagoons — "A Waterfront for Every Home"</h3>
-                    <p className="text-[11px] text-muted-foreground">Sandy beach lagoons and chalets</p>
+                    <h3 className="font-display font-bold text-base text-primary">
+                      Sandside Lagoons — "A Waterfront for Every Home"
+                    </h3>
+                    <p className="text-[11px] text-muted-foreground">
+                      Sandy beach lagoons and chalets
+                    </p>
                   </div>
 
                   {/* 2a. Lagoon Villas & Townhouses */}
                   <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
                     <div className="border-b border-border pb-3 flex justify-between items-center flex-wrap gap-2">
-                      <h4 className="font-semibold text-sm text-primary">Lagoon Villas &amp; Townhouses</h4>
-                      <span className="text-[9px] font-bold text-muted-foreground bg-secondary px-2 py-0.5 rounded">Crystal Sandy Beach Lagoon</span>
+                      <h4 className="font-semibold text-sm text-primary">
+                        Lagoon Villas &amp; Townhouses
+                      </h4>
+                      <span className="text-[9px] font-bold text-muted-foreground bg-secondary px-2 py-0.5 rounded">
+                        Crystal Sandy Beach Lagoon
+                      </span>
                     </div>
 
                     <div className="overflow-x-auto">
@@ -645,13 +870,55 @@ function CompoundPage() {
                         </thead>
                         <tbody className="divide-y divide-border/60">
                           {[
-                            { type: "1st Row – Open to Sea Lagoon Villa", bua: "331", plot: "500", feat: "5 Ensuite · Full Lagoon View", price: "78,400,000" },
-                            { type: "2nd Row – Open to Sea Lagoon Villa", bua: "307", plot: "500", feat: "5 Ensuite · Partial Lagoon View", price: "49,700,000" },
-                            { type: "1st Row – Crystal Lagoon Villa", bua: "272", plot: "550", feat: "5 Ensuite", price: "55,000,000" },
-                            { type: "1st Row – Crystal Lagoon Villa", bua: "230", plot: "450", feat: "4 Ensuite", price: "35,900,000" },
-                            { type: "1st Row – Crystal Lagoon Twin House", bua: "204", plot: "400", feat: "4 Ensuite", price: "35,500,000" },
-                            { type: "Townhouse", bua: "180", plot: "275/200", feat: "4 Ensuite", price: "30,800,000" },
-                            { type: "Townhouse", bua: "144", plot: "275/200", feat: "3 Ensuite", price: "24,300,000" }
+                            {
+                              type: "1st Row – Open to Sea Lagoon Villa",
+                              bua: "331",
+                              plot: "500",
+                              feat: "5 Ensuite · Full Lagoon View",
+                              price: "78,400,000",
+                            },
+                            {
+                              type: "2nd Row – Open to Sea Lagoon Villa",
+                              bua: "307",
+                              plot: "500",
+                              feat: "5 Ensuite · Partial Lagoon View",
+                              price: "49,700,000",
+                            },
+                            {
+                              type: "1st Row – Crystal Lagoon Villa",
+                              bua: "272",
+                              plot: "550",
+                              feat: "5 Ensuite",
+                              price: "55,000,000",
+                            },
+                            {
+                              type: "1st Row – Crystal Lagoon Villa",
+                              bua: "230",
+                              plot: "450",
+                              feat: "4 Ensuite",
+                              price: "35,900,000",
+                            },
+                            {
+                              type: "1st Row – Crystal Lagoon Twin House",
+                              bua: "204",
+                              plot: "400",
+                              feat: "4 Ensuite",
+                              price: "35,500,000",
+                            },
+                            {
+                              type: "Townhouse",
+                              bua: "180",
+                              plot: "275/200",
+                              feat: "4 Ensuite",
+                              price: "30,800,000",
+                            },
+                            {
+                              type: "Townhouse",
+                              bua: "144",
+                              plot: "275/200",
+                              feat: "3 Ensuite",
+                              price: "24,300,000",
+                            },
                           ].map((l, i) => (
                             <tr key={i} className="hover:bg-secondary/20 transition-colors">
                               <td className="p-3 font-semibold text-primary">{l.type}</td>
@@ -659,8 +926,12 @@ function CompoundPage() {
                               <td className="p-3 text-center text-muted-foreground">{l.plot} m²</td>
                               <td className="p-3 text-foreground font-medium">{l.feat}</td>
                               <td className="p-3 text-right">
-                                <span className="font-bold text-accent">EGP {l.price.toLocaleString()}</span>
-                                <span className="block text-[9px] text-muted-foreground">starting rate</span>
+                                <span className="font-bold text-accent">
+                                  EGP {l.price.toLocaleString()}
+                                </span>
+                                <span className="block text-[9px] text-muted-foreground">
+                                  starting rate
+                                </span>
                               </td>
                             </tr>
                           ))}
@@ -673,7 +944,9 @@ function CompoundPage() {
                   <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
                     <div className="border-b border-border pb-3 flex justify-between items-center flex-wrap gap-2">
                       <h4 className="font-semibold text-sm text-primary">Beach Chalets</h4>
-                      <span className="text-[9px] font-bold text-muted-foreground bg-secondary px-2 py-0.5 rounded">Crystal Sandy Beach Chalets</span>
+                      <span className="text-[9px] font-bold text-muted-foreground bg-secondary px-2 py-0.5 rounded">
+                        Crystal Sandy Beach Chalets
+                      </span>
                     </div>
 
                     <div className="overflow-x-auto">
@@ -689,26 +962,88 @@ function CompoundPage() {
                         </thead>
                         <tbody className="divide-y divide-border/60">
                           {[
-                            { type: "Twin Chalet", floor: "Ground", bua: "161", ext: "Terrace 20m² · Garden 200m²", feat: "4 Beds + Nanny's Room", price: "24,150,000" },
-                            { type: "Twin Chalet", floor: "Upper", bua: "161", ext: "Terrace 20m²", feat: "4 Beds + Nanny's Room", price: "20,150,000" },
-                            { type: "Twin Chalet", floor: "Ground", bua: "141", ext: "Terrace 25m² · Garden 200m²", feat: "3 Beds + Nanny's Room", price: "20,700,000" },
-                            { type: "Twin Chalet", floor: "Upper", bua: "141", ext: "Terrace 25m²", feat: "3 Beds + Nanny's Room", price: "17,150,000" },
-                            { type: "Quad Chalet", floor: "Ground", bua: "153", ext: "Terrace 40m² · Garden 200m²", feat: "3 Beds + Nanny's Room", price: "21,700,000" },
-                            { type: "Quad Chalet", floor: "Upper", bua: "153", ext: "Terrace 40m²", feat: "3 Beds + Nanny's Room", price: "18,800,000" },
-                            { type: "Quad Chalet", floor: "Ground", bua: "125", ext: "Terrace 25m² · Garden 75m²", feat: "2 Beds + Nanny's Room", price: "18,800,000" },
-                            { type: "Quad Chalet", floor: "Upper", bua: "125", ext: "Terrace 25m²", feat: "2 Beds + Nanny's Room", price: "15,600,000" }
+                            {
+                              type: "Twin Chalet",
+                              floor: "Ground",
+                              bua: "161",
+                              ext: "Terrace 20m² · Garden 200m²",
+                              feat: "4 Beds + Nanny's Room",
+                              price: "24,150,000",
+                            },
+                            {
+                              type: "Twin Chalet",
+                              floor: "Upper",
+                              bua: "161",
+                              ext: "Terrace 20m²",
+                              feat: "4 Beds + Nanny's Room",
+                              price: "20,150,000",
+                            },
+                            {
+                              type: "Twin Chalet",
+                              floor: "Ground",
+                              bua: "141",
+                              ext: "Terrace 25m² · Garden 200m²",
+                              feat: "3 Beds + Nanny's Room",
+                              price: "20,700,000",
+                            },
+                            {
+                              type: "Twin Chalet",
+                              floor: "Upper",
+                              bua: "141",
+                              ext: "Terrace 25m²",
+                              feat: "3 Beds + Nanny's Room",
+                              price: "17,150,000",
+                            },
+                            {
+                              type: "Quad Chalet",
+                              floor: "Ground",
+                              bua: "153",
+                              ext: "Terrace 40m² · Garden 200m²",
+                              feat: "3 Beds + Nanny's Room",
+                              price: "21,700,000",
+                            },
+                            {
+                              type: "Quad Chalet",
+                              floor: "Upper",
+                              bua: "153",
+                              ext: "Terrace 40m²",
+                              feat: "3 Beds + Nanny's Room",
+                              price: "18,800,000",
+                            },
+                            {
+                              type: "Quad Chalet",
+                              floor: "Ground",
+                              bua: "125",
+                              ext: "Terrace 25m² · Garden 75m²",
+                              feat: "2 Beds + Nanny's Room",
+                              price: "18,800,000",
+                            },
+                            {
+                              type: "Quad Chalet",
+                              floor: "Upper",
+                              bua: "125",
+                              ext: "Terrace 25m²",
+                              feat: "2 Beds + Nanny's Room",
+                              price: "15,600,000",
+                            },
                           ].map((c, i) => (
                             <tr key={i} className="hover:bg-secondary/20 transition-colors">
                               <td className="p-3">
                                 <span className="font-semibold text-primary block">{c.type}</span>
-                                <span className="text-[10px] text-muted-foreground">{c.floor} Floor</span>
+                                <span className="text-[10px] text-muted-foreground">
+                                  {c.floor} Floor
+                                </span>
                               </td>
                               <td className="p-3 text-center text-muted-foreground">{c.bua} m²</td>
                               <td className="p-3 text-center text-muted-foreground">{c.ext}</td>
                               <td className="p-3 text-foreground font-medium">{c.feat}</td>
                               <td className="p-3 text-right">
-                                <span className="font-bold text-accent">EGP {c.price.toLocaleString()}</span>
-                                <span className="block text-[9px] text-muted-foreground">starting rate</span>
+                                <span className="font-bold text-accent">
+                                  EGP {c.price.toLocaleString()}
+                                </span>
+                                <span className="block text-[9px] text-muted-foreground">
+                                  starting rate
+                                </span>
                               </td>
                             </tr>
                           ))}
@@ -716,9 +1051,7 @@ function CompoundPage() {
                       </table>
                     </div>
                   </div>
-
                 </div>
-
               </div>
             </Section>
           ) : (
@@ -733,7 +1066,12 @@ function CompoundPage() {
           <Section title="Unit types">
             <div className="flex flex-wrap gap-2">
               {c.types.map((t: string) => (
-                <span key={t} className="rounded-full border border-border bg-card px-3 py-1.5 text-sm font-medium text-primary">{t}</span>
+                <span
+                  key={t}
+                  className="rounded-full border border-border bg-card px-3 py-1.5 text-sm font-medium text-primary"
+                >
+                  {t}
+                </span>
               ))}
             </div>
           </Section>
@@ -762,15 +1100,21 @@ function CompoundPage() {
                 {livePaymentPlans.length > 0 ? livePaymentPlans.join(" / ") : c.paymentPlan}
               </div>
               <p className="mt-3 text-sm text-muted-foreground">
-                Bespoke plans available — contact your PropTrack advisor for current launch offers and exclusive discounts.
+                Bespoke plans available — contact your PropTrack advisor for current launch offers
+                and exclusive discounts.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
-                <a href="tel:201029324783"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
+                <a
+                  href="tel:201029324783"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                >
                   <Phone className="h-4 w-4" /> Speak to an advisor
                 </a>
-                <Link to="/calculator" search={{ project: c.slug }}
-                  className="inline-flex items-center gap-2 rounded-full border border-accent bg-card px-5 py-2.5 text-sm font-semibold text-accent hover:bg-accent/5 transition-colors">
+                <Link
+                  to="/calculator"
+                  search={{ project: c.slug }}
+                  className="inline-flex items-center gap-2 rounded-full border border-accent bg-card px-5 py-2.5 text-sm font-semibold text-accent hover:bg-accent/5 transition-colors"
+                >
                   <Calculator className="h-4 w-4" /> Calculate installments
                 </Link>
               </div>
@@ -780,16 +1124,26 @@ function CompoundPage() {
           {/* Location map */}
           <Section title="Location">
             <div className="h-[300px] md:h-[360px] overflow-hidden rounded-2xl border border-border shadow-soft">
-              <MapClient compounds={[c]} focus={c} showLandmarks={false} className="h-full w-full" />
+              <MapClient
+                compounds={[c]}
+                focus={c}
+                showLandmarks={false}
+                className="h-full w-full"
+              />
             </div>
             <div className="mt-3 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-accent" />
-                {c.city ?? destinationLocationString(c.destination)}{c.km ? ` · km ${c.km}` : ""}
+                {c.city ?? destinationLocationString(c.destination)}
+                {c.km ? ` · km ${c.km}` : ""}
               </span>
               <a
-                href={projectLocations[c.slug]?.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`}
-                target="_blank" rel="noreferrer"
+                href={
+                  projectLocations[c.slug]?.mapsUrl ||
+                  `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`
+                }
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-1 text-sm text-accent hover:underline"
               >
                 <ExternalLink className="h-3.5 w-3.5" /> Open in Google Maps
@@ -801,18 +1155,42 @@ function CompoundPage() {
         {/* Right: Sticky CTA card */}
         <aside className="hidden lg:block lg:sticky lg:top-20 lg:self-start">
           <div className="rounded-2xl border border-border bg-card p-5 shadow-soft">
-            <div className="text-xs uppercase tracking-wider text-muted-foreground">Starting from</div>
-            <div className="mt-1 font-display text-3xl font-semibold text-primary">EGP {c.priceFrom}M</div>
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">
+              Starting from
+            </div>
+            <div className="mt-1 font-display text-3xl font-semibold text-primary">
+              EGP {c.priceFrom}M
+            </div>
             <div className="mt-4 space-y-2.5">
-              <Button className="w-full rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground font-bold" size="lg" onClick={() => setInterestModalOpen(true)}>
+              <Button
+                className="w-full rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground font-bold"
+                size="lg"
+                onClick={() => setInterestModalOpen(true)}
+              >
                 <Sparkles className="mr-2 h-4 w-4" /> Register Interest
               </Button>
-              <Button onClick={() => { toggleFav(c.slug); trackEvent({ type: isFav ? "unsave" : "save", slug: c.slug, area: c.destination }); }} variant="outline" className="w-full rounded-full" size="lg">
+              <Button
+                onClick={() => {
+                  toggleFav(c.slug);
+                  trackEvent({
+                    type: isFav ? "unsave" : "save",
+                    slug: c.slug,
+                    area: c.destination,
+                  });
+                }}
+                variant="outline"
+                className="w-full rounded-full"
+                size="lg"
+              >
                 <Heart className={`mr-2 h-4 w-4 ${isFav ? "fill-sunset text-sunset" : ""}`} />
                 {isFav ? "Saved to favorites" : "Save to favorites"}
               </Button>
               <Link to="/calculator" search={{ project: c.slug }} className="block w-full">
-                <Button variant="outline" className="w-full rounded-full border-accent text-accent hover:bg-accent/5" size="lg">
+                <Button
+                  variant="outline"
+                  className="w-full rounded-full border-accent text-accent hover:bg-accent/5"
+                  size="lg"
+                >
                   <Calculator className="mr-2 h-4 w-4" />
                   Installment Calculator
                 </Button>
@@ -821,8 +1199,11 @@ function CompoundPage() {
 
             {/* Developer card */}
             {dev && (
-              <Link to="/developers/$slug" params={{ slug: dev.slug }}
-                className="mt-5 flex items-center gap-3 rounded-xl border border-border bg-secondary/50 p-3 hover:bg-secondary transition-colors">
+              <Link
+                to="/developers/$slug"
+                params={{ slug: dev.slug }}
+                className="mt-5 flex items-center gap-3 rounded-xl border border-border bg-secondary/50 p-3 hover:bg-secondary transition-colors"
+              >
                 <LogoBadge src={dev.logo} name={dev.name} className="h-11 w-11 rounded-lg" />
                 <div className="min-w-0">
                   <div className="text-xs text-muted-foreground">Developer</div>
@@ -834,9 +1215,15 @@ function CompoundPage() {
 
             {/* Destination card */}
             {destination && (
-              <Link to="/destinations/$slug" params={{ slug: destination.slug }}
-                className="mt-3 flex items-center gap-3 rounded-xl border border-border bg-secondary/50 p-3 hover:bg-secondary transition-colors">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg" style={{ background: destination.color + "22" }}>
+              <Link
+                to="/destinations/$slug"
+                params={{ slug: destination.slug }}
+                className="mt-3 flex items-center gap-3 rounded-xl border border-border bg-secondary/50 p-3 hover:bg-secondary transition-colors"
+              >
+                <span
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg"
+                  style={{ background: destination.color + "22" }}
+                >
                   <MapPin className="h-5 w-5" style={{ color: destination.color }} />
                 </span>
                 <div className="min-w-0">
@@ -848,8 +1235,12 @@ function CompoundPage() {
             )}
 
             {dev?.website && (
-              <a href={dev.website} target="_blank" rel="noreferrer"
-                className="mt-3 flex items-center gap-2 text-xs text-accent hover:underline">
+              <a
+                href={dev.website}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 flex items-center gap-2 text-xs text-accent hover:underline"
+              >
                 <Globe className="h-3.5 w-3.5" /> Visit developer website
               </a>
             )}
@@ -862,17 +1253,28 @@ function CompoundPage() {
         <div className="flex items-center gap-3">
           <div className="flex-1">
             <div className="text-[10px] uppercase tracking-wider text-muted-foreground">From</div>
-            <div className="font-display text-lg font-semibold text-primary">EGP {c.priceFrom}M</div>
+            <div className="font-display text-lg font-semibold text-primary">
+              EGP {c.priceFrom}M
+            </div>
           </div>
           <Link to="/calculator" search={{ project: c.slug }} className="shrink-0">
             <Button variant="outline" size="sm" className="rounded-full border-accent text-accent">
               <Calculator className="h-4 w-4" />
             </Button>
           </Link>
-          <Button onClick={() => toggleFav(c.slug)} variant="outline" size="sm" className="rounded-full shrink-0">
+          <Button
+            onClick={() => toggleFav(c.slug)}
+            variant="outline"
+            size="sm"
+            className="rounded-full shrink-0"
+          >
             <Heart className={`h-4 w-4 ${isFav ? "fill-sunset text-sunset" : ""}`} />
           </Button>
-          <Button onClick={() => setInterestModalOpen(true)} size="sm" className="rounded-full bg-accent text-accent-foreground font-semibold px-4 cursor-pointer">
+          <Button
+            onClick={() => setInterestModalOpen(true)}
+            size="sm"
+            className="rounded-full bg-accent text-accent-foreground font-semibold px-4 cursor-pointer"
+          >
             Register Interest
           </Button>
         </div>
@@ -883,14 +1285,23 @@ function CompoundPage() {
         <section className="bg-gradient-sand">
           <div className="mx-auto max-w-7xl px-4 py-10 lg:py-14 lg:px-8">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="font-display text-2xl font-semibold text-primary">More in {destination?.name}</h2>
+              <h2 className="font-display text-2xl font-semibold text-primary">
+                More in {destination?.name}
+              </h2>
               {destination && (
-                <Link to="/destinations/$slug" params={{ slug: destination.slug }}
-                  className="text-sm text-accent hover:underline">View all in {destination.name} →</Link>
+                <Link
+                  to="/destinations/$slug"
+                  params={{ slug: destination.slug }}
+                  className="text-sm text-accent hover:underline"
+                >
+                  View all in {destination.name} →
+                </Link>
               )}
             </div>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {related.map((r) => <CompoundCard key={r.slug} c={r} />)}
+              {related.map((r) => (
+                <CompoundCard key={r.slug} c={r} />
+              ))}
             </div>
           </div>
         </section>
@@ -899,45 +1310,68 @@ function CompoundPage() {
       {/* Mobile Sticky Bottom Action Bar (< lg) */}
       <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-border bg-card/95 backdrop-blur-md p-3 lg:hidden shadow-2xl flex items-center gap-2">
         <div className="flex-1 min-w-0">
-          <div className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider truncate">Starting from</div>
-          <div className="font-display text-base font-extrabold text-primary leading-tight truncate">EGP {c.priceFrom}M</div>
+          <div className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider truncate">
+            Starting from
+          </div>
+          <div className="font-display text-base font-extrabold text-primary leading-tight truncate">
+            EGP {c.priceFrom}M
+          </div>
         </div>
 
-        <Button size="sm" className="flex-1 rounded-xl bg-accent text-accent-foreground font-bold text-xs py-2.5 h-10 shadow-sm cursor-pointer" onClick={() => setInterestModalOpen(true)}>
+        <Button
+          size="sm"
+          className="flex-1 rounded-xl bg-accent text-accent-foreground font-bold text-xs py-2.5 h-10 shadow-sm cursor-pointer"
+          onClick={() => setInterestModalOpen(true)}
+        >
           <Sparkles className="mr-1.5 h-3.5 w-3.5 shrink-0" /> Register Interest
         </Button>
 
         <Button
           size="sm"
           variant="outline"
-          onClick={() => { toggleFav(c.slug); trackEvent({ type: isFav ? "unsave" : "save", slug: c.slug, area: c.destination }); }}
+          onClick={() => {
+            toggleFav(c.slug);
+            trackEvent({ type: isFav ? "unsave" : "save", slug: c.slug, area: c.destination });
+          }}
           className="rounded-xl border-border px-3 h-10 shrink-0"
         >
-          <Heart className={`h-4 w-4 ${isFav ? "fill-sunset text-sunset" : "text-muted-foreground"}`} />
+          <Heart
+            className={`h-4 w-4 ${isFav ? "fill-sunset text-sunset" : "text-muted-foreground"}`}
+          />
         </Button>
 
         <Link to="/calculator" search={{ project: c.slug }} className="shrink-0">
-          <Button size="sm" variant="outline" className="rounded-xl border-accent text-accent px-3 h-10">
+          <Button
+            size="sm"
+            variant="outline"
+            className="rounded-xl border-accent text-accent px-3 h-10"
+          >
             <Calculator className="h-4 w-4" />
           </Button>
         </Link>
       </div>
 
       {/* Register Interest Modal */}
-      <Dialog open={isInterestModalOpen} onOpenChange={setInterestModalOpen}>
+      <Dialog open={interestModalOpen} onOpenChange={setInterestModalOpen}>
         <DialogContent className="max-w-md rounded-3xl border border-border/80 bg-card p-6 shadow-2xl backdrop-blur-xl animate-fade-in z-50">
           <DialogHeader className="text-left sm:text-left">
             <DialogTitle className="font-display text-2xl font-bold text-primary">
               Register Interest
             </DialogTitle>
             <p className="text-xs text-muted-foreground mt-1">
-              Interested in <strong className="text-primary font-semibold">{c.name}</strong>? Fill out your details below and an agent will call you.
+              Interested in <strong className="text-primary font-semibold">{c.name}</strong>? Fill
+              out your details below and an agent will call you.
             </p>
           </DialogHeader>
 
           <form onSubmit={handleRegisterInterest} className="space-y-4 mt-3">
             <div className="space-y-1.5">
-              <label htmlFor="lead-name" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Full Name</label>
+              <label
+                htmlFor="lead-name"
+                className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80"
+              >
+                Full Name
+              </label>
               <input
                 id="lead-name"
                 type="text"
@@ -950,7 +1384,12 @@ function CompoundPage() {
             </div>
 
             <div className="space-y-1.5">
-              <label htmlFor="lead-phone" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Phone Number</label>
+              <label
+                htmlFor="lead-phone"
+                className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80"
+              >
+                Phone Number
+              </label>
               <input
                 id="lead-phone"
                 type="tel"
@@ -964,7 +1403,12 @@ function CompoundPage() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <label htmlFor="lead-unit" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Preferred Unit</label>
+                <label
+                  htmlFor="lead-unit"
+                  className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80"
+                >
+                  Preferred Unit
+                </label>
                 <div className="relative">
                   <select
                     id="lead-unit"
@@ -972,8 +1416,13 @@ function CompoundPage() {
                     onChange={(e) => setLeadUnit(e.target.value)}
                     className="w-full appearance-none rounded-xl border border-border/80 bg-background/50 pl-3.5 pr-8 py-2.5 text-xs font-medium text-foreground transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15 cursor-pointer"
                   >
-                    {(c.types && c.types.length > 0 ? c.types : ["Apartment", "Chalet", "Villa", "Townhouse", "Twin House"]).map((type) => (
-                      <option key={type} value={type}>{type}</option>
+                    {(c.types && c.types.length > 0
+                      ? c.types
+                      : ["Apartment", "Chalet", "Villa", "Townhouse", "Twin House"]
+                    ).map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
                     ))}
                   </select>
                   <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground/60">
@@ -983,7 +1432,12 @@ function CompoundPage() {
               </div>
 
               <div className="space-y-1.5">
-                <label htmlFor="lead-interest" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Type of Interest</label>
+                <label
+                  htmlFor="lead-interest"
+                  className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80"
+                >
+                  Type of Interest
+                </label>
                 <div className="relative">
                   <select
                     id="lead-interest"
@@ -1004,7 +1458,12 @@ function CompoundPage() {
             </div>
 
             <div className="space-y-1.5">
-              <label htmlFor="lead-time" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Best Time to Call</label>
+              <label
+                htmlFor="lead-time"
+                className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80"
+              >
+                Best Time to Call
+              </label>
               <div className="relative">
                 <select
                   id="lead-time"
@@ -1047,14 +1506,30 @@ function CompoundPage() {
   );
 }
 
-function StatCard({ icon: Icon, label, value, accent }: { icon: any; label: string; value: string; accent?: boolean }) {
+function StatCard({
+  icon: Icon,
+  label,
+  value,
+  accent,
+}: {
+  icon: any;
+  label: string;
+  value: string;
+  accent?: boolean;
+}) {
   return (
-    <div className={`rounded-xl border p-4 ${accent ? "border-accent/30 bg-accent/5" : "border-border bg-card"}`}>
-      <div className={`inline-flex h-8 w-8 items-center justify-center rounded-lg ${accent ? "bg-accent/20 text-accent" : "bg-accent/10 text-accent"}`}>
+    <div
+      className={`rounded-xl border p-4 ${accent ? "border-accent/30 bg-accent/5" : "border-border bg-card"}`}
+    >
+      <div
+        className={`inline-flex h-8 w-8 items-center justify-center rounded-lg ${accent ? "bg-accent/20 text-accent" : "bg-accent/10 text-accent"}`}
+      >
         <Icon className="h-4 w-4" />
       </div>
       <div className="mt-3 text-[10px] uppercase tracking-wider text-muted-foreground">{label}</div>
-      <div className="mt-0.5 font-display text-base font-semibold text-primary leading-tight">{value}</div>
+      <div className="mt-0.5 font-display text-base font-semibold text-primary leading-tight">
+        {value}
+      </div>
     </div>
   );
 }

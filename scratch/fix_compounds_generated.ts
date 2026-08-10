@@ -7,5 +7,9 @@ import type { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = ${JSON.stringify(compounds, null, 2)};
 `;
-fs.writeFileSync(path.join(process.cwd(), "src", "data", "compounds.generated.ts"), content, "utf-8");
+fs.writeFileSync(
+  path.join(process.cwd(), "src", "data", "compounds.generated.ts"),
+  content,
+  "utf-8",
+);
 console.log("Wrote compounds.generated.ts successfully");

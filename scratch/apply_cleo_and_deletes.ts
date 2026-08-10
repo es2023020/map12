@@ -14,7 +14,7 @@ let compoundsText = fs.readFileSync(compoundsPath, "utf-8");
 // Remove Cleo Mostakbal raw line
 compoundsText = compoundsText.replace(
   /\s*\{\s*name:\s*"Cleo Mostakbal",\s*destination:\s*"mostakbal-city",[^}]*\},/g,
-  ""
+  "",
 );
 
 // Replace cleo-water-residence static details
@@ -43,13 +43,13 @@ const newCleoWaterResidenceBlock = `  {
 
 compoundsText = compoundsText.replace(
   /\{\s*slug:\s*"cleo-water-residence"[\s\S]*?highlighted[\s\S]*?\n\s*\}/g,
-  newCleoWaterResidenceBlock
+  newCleoWaterResidenceBlock,
 );
 
 // We should also replace the standard regex if it matches slightly differently
 compoundsText = compoundsText.replace(
   /\{\s*slug:\s*"cleo-water-residence"[\s\S]*?Sidi Abdelrahman location"[\s\S]*?\n\s*\}/g,
-  newCleoWaterResidenceBlock
+  newCleoWaterResidenceBlock,
 );
 
 fs.writeFileSync(compoundsPath, compoundsText, "utf-8");
@@ -64,12 +64,12 @@ locationsText = locationsText.replace(/\s*"palm-hills-october":\s*\{[^}]*\},/g, 
 if (locationsText.includes('"cleo-water-residence"')) {
   locationsText = locationsText.replace(
     /"cleo-water-residence":\s*\{[^}]*\}/g,
-    '"cleo-water-residence": { name: "Cleo Water Residence", destination: "new-cairo", location: "Palm Hills New Cairo, New Cairo, Egypt", mapsUrl: "https://maps.google.com/?q=Palm+Hills+New+Cairo+Egypt" }'
+    '"cleo-water-residence": { name: "Cleo Water Residence", destination: "new-cairo", location: "Palm Hills New Cairo, New Cairo, Egypt", mapsUrl: "https://maps.google.com/?q=Palm+Hills+New+Cairo+Egypt" }',
   );
 } else {
   locationsText = locationsText.replace(
     "export const projectLocations: Record<string, ProjectLocation> = {",
-    `export const projectLocations: Record<string, ProjectLocation> = {\n  "cleo-water-residence": { name: "Cleo Water Residence", destination: "new-cairo", location: "Palm Hills New Cairo, New Cairo, Egypt", mapsUrl: "https://maps.google.com/?q=Palm+Hills+New+Cairo+Egypt" },`
+    `export const projectLocations: Record<string, ProjectLocation> = {\n  "cleo-water-residence": { name: "Cleo Water Residence", destination: "new-cairo", location: "Palm Hills New Cairo, New Cairo, Egypt", mapsUrl: "https://maps.google.com/?q=Palm+Hills+New+Cairo+Egypt" },`,
   );
 }
 
@@ -79,10 +79,10 @@ console.log("Updated project-locations.ts");
 // 3. Update compoundsGenerated in compounds.generated.ts
 const deleteSlugs = new Set(["cleo-mostakbal", "palm-hills-october"]);
 const updatedList = compoundsGenerated
-  .filter(c => !deleteSlugs.has(c.slug))
-  .map(c => {
+  .filter((c) => !deleteSlugs.has(c.slug))
+  .map((c) => {
     const newC = { ...c };
-    
+
     // Set Belle Vie cover to 3.jpg
     if (newC.slug === "belle-vie") {
       newC.hero = "/projects/belle-vie/3.jpg";
@@ -97,25 +97,26 @@ const updatedList = compoundsGenerated
       newC.beachfront = false;
       newC.types = ["Apartment"];
       newC.amenities = [
-        "Swimming pools", 
-        "Sports areas", 
-        "Tennis courts", 
-        "Yoga areas", 
-        "Underground parking", 
-        "Dedicated medical services"
+        "Swimming pools",
+        "Sports areas",
+        "Tennis courts",
+        "Yoga areas",
+        "Underground parking",
+        "Dedicated medical services",
       ];
-      newC.blurb = "Cleo Water Residences is a luxury residential phase located within the Palm Hills New Cairo compound in Egypt, featuring fully finished apartments, scenic lagoons, and vast open green spaces.";
+      newC.blurb =
+        "Cleo Water Residences is a luxury residential phase located within the Palm Hills New Cairo compound in Egypt, featuring fully finished apartments, scenic lagoons, and vast open green spaces.";
       newC.areaSize = "82% green & water space";
       newC.unitSizes = "70–170 m²";
       newC.type = "Residential";
       newC.highlights = [
-        "Palm Hills Developments", 
-        "Located in Palm Hills New Cairo", 
-        "82% open green spaces", 
-        "5,000 m² lake & lagoons"
+        "Palm Hills Developments",
+        "Located in Palm Hills New Cairo",
+        "82% open green spaces",
+        "5,000 m² lake & lagoons",
       ];
     }
-    
+
     return newC;
   });
 

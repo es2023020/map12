@@ -7,7 +7,11 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About PropTrack — Egypt Real Estate Intelligence" },
-      { name: "description", content: "PropTrack is Egypt's premier real estate intelligence platform, built for professional brokers across Cairo, New Administrative Capital, Sahel, and beyond." },
+      {
+        name: "description",
+        content:
+          "PropTrack is Egypt's premier real estate intelligence platform, built for professional brokers across Cairo, New Administrative Capital, Sahel, and beyond.",
+      },
     ],
   }),
   component: AboutPage,
@@ -44,9 +48,21 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2024", title: "PropTrack Founded", desc: "Launched with 50+ North Coast projects and a basic map." },
-  { year: "2025", title: "Cairo & Capital Expansion", desc: "Added New Cairo, Sheikh Zayed, and New Administrative Capital coverage." },
-  { year: "2026", title: "AI & CRM Launch", desc: "Launched the AI broker assistant, full CRM pipeline, WhatsApp campaigns, and 190+ verified projects." },
+  {
+    year: "2024",
+    title: "PropTrack Founded",
+    desc: "Launched with 50+ North Coast projects and a basic map.",
+  },
+  {
+    year: "2025",
+    title: "Cairo & Capital Expansion",
+    desc: "Added New Cairo, Sheikh Zayed, and New Administrative Capital coverage.",
+  },
+  {
+    year: "2026",
+    title: "AI & CRM Launch",
+    desc: "Launched the AI broker assistant, full CRM pipeline, WhatsApp campaigns, and 190+ verified projects.",
+  },
 ];
 
 function AboutPage() {
@@ -59,25 +75,36 @@ function AboutPage() {
             Built for Egypt's Best Brokers
           </h1>
           <p className="mt-5 text-lg text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            PropTrack is the intelligence platform that gives Egyptian real estate professionals every tool they need — from verified project data to AI-powered client matching, all in one place.
+            PropTrack is the intelligence platform that gives Egyptian real estate professionals
+            every tool they need — from verified project data to AI-powered client matching, all in
+            one place.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link to="/auth">
-              <Button className="rounded-full bg-white text-primary hover:bg-white/90">Get started free</Button>
+              <Button className="rounded-full bg-white text-primary hover:bg-white/90">
+                Get started free
+              </Button>
             </Link>
             <Link to="/pricing">
-              <Button variant="outline" className="rounded-full border-white/30 text-white hover:bg-white/10">View pricing</Button>
+              <Button
+                variant="outline"
+                className="rounded-full border-white/30 text-white hover:bg-white/10"
+              >
+                View pricing
+              </Button>
             </Link>
           </div>
         </div>
       </div>
 
       <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 space-y-20">
-
         {/* Stats */}
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
           {stats.map((s) => (
-            <div key={s.label} className="rounded-2xl border border-border bg-card p-6 text-center shadow-sm">
+            <div
+              key={s.label}
+              className="rounded-2xl border border-border bg-card p-6 text-center shadow-sm"
+            >
               <s.icon className="mx-auto h-6 w-6 text-accent mb-3" />
               <div className="font-display text-3xl font-extrabold text-primary">{s.value}</div>
               <div className="mt-1 text-xs text-muted-foreground font-medium">{s.label}</div>
@@ -89,13 +116,19 @@ function AboutPage() {
         <section className="text-center max-w-3xl mx-auto">
           <h2 className="font-display text-3xl font-bold text-primary mb-4">Our Mission</h2>
           <p className="text-foreground/70 leading-relaxed text-base">
-            Egypt's real estate market is one of the fastest-growing in the MENA region — but data has always been scattered, outdated, and hard to access. PropTrack was born to change that. We aggregate verified project data from 190+ developments, combine it with powerful broker tools, and deliver it through a single platform that real estate professionals can rely on every day.
+            Egypt's real estate market is one of the fastest-growing in the MENA region — but data
+            has always been scattered, outdated, and hard to access. PropTrack was born to change
+            that. We aggregate verified project data from 190+ developments, combine it with
+            powerful broker tools, and deliver it through a single platform that real estate
+            professionals can rely on every day.
           </p>
         </section>
 
         {/* Values */}
         <section>
-          <h2 className="font-display text-2xl font-bold text-primary text-center mb-10">What We Stand For</h2>
+          <h2 className="font-display text-2xl font-bold text-primary text-center mb-10">
+            What We Stand For
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {values.map((v) => (
               <div key={v.title} className="rounded-2xl border border-border bg-card p-7 shadow-sm">
@@ -109,7 +142,9 @@ function AboutPage() {
 
         {/* Timeline */}
         <section>
-          <h2 className="font-display text-2xl font-bold text-primary text-center mb-10">Our Journey</h2>
+          <h2 className="font-display text-2xl font-bold text-primary text-center mb-10">
+            Our Journey
+          </h2>
           <div className="relative border-l-2 border-accent/30 pl-8 space-y-8 max-w-xl mx-auto">
             {timeline.map((t, i) => (
               <div key={i} className="relative">
@@ -127,16 +162,23 @@ function AboutPage() {
         {/* CTA */}
         <section className="rounded-3xl border border-border bg-gradient-to-br from-accent/10 to-primary/5 p-10 text-center">
           <Star className="mx-auto h-8 w-8 text-accent mb-4" />
-          <h2 className="font-display text-2xl font-bold text-primary mb-2">Ready to transform your brokerage?</h2>
+          <h2 className="font-display text-2xl font-bold text-primary mb-2">
+            Ready to transform your brokerage?
+          </h2>
           <p className="text-sm text-muted-foreground mb-6 max-w-md mx-auto">
-            Join 2,400+ Egyptian brokers already using PropTrack to close faster, manage clients better, and stay ahead of the market.
+            Join 2,400+ Egyptian brokers already using PropTrack to close faster, manage clients
+            better, and stay ahead of the market.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to="/auth">
-              <Button className="rounded-full">Start for free <ArrowRight className="ml-1 h-4 w-4" /></Button>
+              <Button className="rounded-full">
+                Start for free <ArrowRight className="ml-1 h-4 w-4" />
+              </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" className="rounded-full">Contact us</Button>
+              <Button variant="outline" className="rounded-full">
+                Contact us
+              </Button>
             </Link>
           </div>
         </section>

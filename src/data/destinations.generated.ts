@@ -8,7 +8,8 @@ export const destinationsGenerated: Destination[] = [
     region: "greater-cairo",
     color: "#D946EF",
     city: "Cairo",
-    blurb: "New Cairo's newest 6th Settlement expansion zone — Hassan Allam's Grova East Hills & La Vista's El Patio master-plans.",
+    blurb:
+      "New Cairo's newest 6th Settlement expansion zone — Hassan Allam's Grova East Hills & La Vista's El Patio master-plans.",
     hero: "/destinations/new cairo.jpg",
     center: [30.008, 31.542],
     zoom: 13,
@@ -93,7 +94,7 @@ export const destinationsGenerated: Destination[] = [
     city: "Cairo",
     blurb: "Tagamo3 El-Khames — Cairo's biggest premium suburb. Mature schools, malls, compounds.",
     hero: "/destinations/new cairo.jpg",
-    center: [30.030, 31.470],
+    center: [30.03, 31.47],
     zoom: 12,
   },
   {
@@ -115,7 +116,7 @@ export const destinationsGenerated: Destination[] = [
     city: "Giza",
     blurb: "The newest western extension — large-plot villas, lower density, premium master-plans.",
     hero: "/destinations/new zayed.jpg",
-    center: [30.080, 30.880],
+    center: [30.08, 30.88],
     zoom: 12,
   },
   {
@@ -126,7 +127,7 @@ export const destinationsGenerated: Destination[] = [
     city: "Giza",
     blurb: "Mature west-Cairo city with Mall of Arabia, Smart Village and a deep developer mix.",
     hero: "/destinations/october.jpg",
-    center: [29.970, 30.930],
+    center: [29.97, 30.93],
     zoom: 12,
   },
   {
@@ -137,7 +138,7 @@ export const destinationsGenerated: Destination[] = [
     city: "NAC",
     blurb: "Egypt's new capital — government district, Iconic Tower, Green River park spine.",
     hero: "/destinations/new-administrative-capital/hero-1.jpg",
-    center: [30.022, 31.740],
+    center: [30.022, 31.74],
     zoom: 12,
   },
   {
@@ -148,7 +149,7 @@ export const destinationsGenerated: Destination[] = [
     city: "Cairo",
     blurb: "Master-planned green corridor east of New Cairo — Bloomfields, Hyde Park, La Vista.",
     hero: "/destinations/al-mostakbal-city.jpeg",
-    center: [30.075, 31.660],
+    center: [30.075, 31.66],
     zoom: 13,
   },
   {
@@ -159,7 +160,7 @@ export const destinationsGenerated: Destination[] = [
     city: "Cairo",
     blurb: "Classic Heliopolis charm with new gated extensions north-east of Cairo Airport.",
     hero: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
-    center: [30.100, 31.350],
+    center: [30.1, 31.35],
     zoom: 13,
   },
   {
@@ -170,7 +171,7 @@ export const destinationsGenerated: Destination[] = [
     city: "Red Sea",
     blurb: "Cairo's closest beach — weekend chalets, mountains-meet-sea topography.",
     hero: "/destinations/ain-sokhna/hero-1.jpg",
-    center: [29.600, 32.330],
+    center: [29.6, 32.33],
     zoom: 11,
   },
   {
@@ -181,7 +182,7 @@ export const destinationsGenerated: Destination[] = [
     city: "Red Sea",
     blurb: "El Gouna, Soma Bay, Sahl Hasheesh — year-round resort homes on the Red Sea.",
     hero: "/destinations/red-sea/hero-1.jpg",
-    center: [27.300, 33.700],
+    center: [27.3, 33.7],
     zoom: 9,
   },
   {
@@ -192,7 +193,7 @@ export const destinationsGenerated: Destination[] = [
     city: "South Sinai",
     blurb: "Sharm El Sheikh, Nabq, Ras Sudr — diving-grade water, mountain backdrops.",
     hero: "/destinations/south-sinai/hero-1.jpg",
-    center: [29.500, 34.500],
+    center: [29.5, 34.5],
     zoom: 9,
   },
   {
@@ -203,7 +204,7 @@ export const destinationsGenerated: Destination[] = [
     city: "Fayoum",
     blurb: "Lake Qarun and Tunis village — eco-lodges, weekend escapes, low-density retreats.",
     hero: "/destinations/fayoum/hero-1.jpg",
-    center: [29.480, 30.630],
+    center: [29.48, 30.63],
     zoom: 11,
   },
   {
@@ -212,7 +213,8 @@ export const destinationsGenerated: Destination[] = [
     region: "greater-cairo",
     color: "#10B981",
     city: "Cairo",
-    blurb: "Madinet Masr's flagship integrated community — parks, schools, malls and thousands of homes east of New Cairo.",
+    blurb:
+      "Madinet Masr's flagship integrated community — parks, schools, malls and thousands of homes east of New Cairo.",
     hero: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
     center: [30.097, 31.628],
     zoom: 13,
@@ -223,9 +225,10 @@ export const destinationsGenerated: Destination[] = [
     region: "other",
     color: "#0284C7",
     city: "Alexandria",
-    blurb: "Egypt's second city on the Mediterranean — established compounds, summer retreats and urban apartments.",
+    blurb:
+      "Egypt's second city on the Mediterranean — established compounds, summer retreats and urban apartments.",
     hero: "/destinations/alexandria/hero-1.jpg",
-    center: [31.190, 29.940],
+    center: [31.19, 29.94],
     zoom: 12,
   },
   {
@@ -234,7 +237,8 @@ export const destinationsGenerated: Destination[] = [
     region: "greater-cairo",
     color: "#10B981",
     city: "Cairo",
-    blurb: "Premium eastern extension next to Madinaty and Mostakbal City — El Patio series, mature villas and green suburbs.",
+    blurb:
+      "Premium eastern extension next to Madinaty and Mostakbal City — El Patio series, mature villas and green suburbs.",
     hero: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&q=80",
     center: [30.125, 31.635],
     zoom: 12,
@@ -245,9 +249,10 @@ export const destinationsGenerated: Destination[] = [
     region: "greater-cairo",
     color: "#F59E0B",
     city: "Cairo",
-    blurb: "Established villa and residential city north-east of Cairo — Rock Ville and quiet private estates.",
+    blurb:
+      "Established villa and residential city north-east of Cairo — Rock Ville and quiet private estates.",
     hero: "/destinations/obour/hero-1.jpg",
-    center: [30.220, 31.540],
+    center: [30.22, 31.54],
     zoom: 12,
   },
   {
@@ -256,7 +261,8 @@ export const destinationsGenerated: Destination[] = [
     region: "greater-cairo",
     color: "#EC4899",
     city: "Cairo",
-    blurb: "East Cairo's new expansion corridors — New Heliopolis, Shorouk, and East Cairo developments.",
+    blurb:
+      "East Cairo's new expansion corridors — New Heliopolis, Shorouk, and East Cairo developments.",
     hero: "/destinations/new cairo.jpg",
     center: [30.125, 31.625],
     zoom: 12,
@@ -267,9 +273,10 @@ export const destinationsGenerated: Destination[] = [
     region: "greater-cairo",
     color: "#3B82F6",
     city: "Giza",
-    blurb: "West Cairo's Northern Expansion zone — newest phases of premium master-plans near Zayed.",
+    blurb:
+      "West Cairo's Northern Expansion zone — newest phases of premium master-plans near Zayed.",
     hero: "/destinations/new zayed.jpg",
-    center: [30.070, 31.000],
+    center: [30.07, 31.0],
     zoom: 12,
   },
 ];

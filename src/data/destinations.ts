@@ -66,7 +66,7 @@ export const destinations: Destination[] = new Proxy(staticDestinations, {
   ownKeys(target) {
     const activeList = getActiveDestinations();
     return Reflect.ownKeys(activeList);
-  }
+  },
 });
 
 export const destinationBySlug = (slug: string) => destinations.find((a) => a.slug === slug);
@@ -86,15 +86,15 @@ const locationStrings: Record<string, string> = {
   "6th-october": "6th of October City, Giza Governorate, Egypt",
   "new-administrative-capital": "New Administrative Capital, Cairo Governorate, Egypt",
   "mostakbal-city": "Mostakbal City, New Cairo, Cairo Governorate, Egypt",
-  "heliopolis": "New Heliopolis, Cairo Governorate, Egypt",
+  heliopolis: "New Heliopolis, Cairo Governorate, Egypt",
   "ain-sokhna": "Ain Sokhna, Red Sea Governorate, Egypt",
   "red-sea": "Hurghada, Red Sea Governorate, Egypt",
   "south-sinai": "South Sinai Governorate, Egypt",
-  "fayoum": "Fayoum, Fayoum Governorate, Egypt",
-  "sarai": "Sarai, New Cairo East, Cairo Governorate, Egypt",
-  "alexandria": "Alexandria Governorate, Egypt",
-  "shorouk": "El Shorouk City, Cairo Governorate, Egypt",
-  "obour": "El Obour City, Qalyubia Governorate, Egypt",
+  fayoum: "Fayoum, Fayoum Governorate, Egypt",
+  sarai: "Sarai, New Cairo East, Cairo Governorate, Egypt",
+  alexandria: "Alexandria Governorate, Egypt",
+  shorouk: "El Shorouk City, Cairo Governorate, Egypt",
+  obour: "El Obour City, Qalyubia Governorate, Egypt",
   "eastern-expansion": "Eastern Expansion, East Cairo, Egypt",
   "northern-expansion": "Northern Expansion, West Cairo, Egypt",
 };

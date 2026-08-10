@@ -101,7 +101,11 @@ export function buildDeveloperSchema(developer: {
     name: developer.name,
     description: developer.blurb || `${developer.name} real estate developments in Egypt`,
     url: `${BASE_SITE_URL}/developers/${developer.slug}`,
-    logo: developer.logo ? (developer.logo.startsWith("http") ? developer.logo : `${BASE_SITE_URL}${developer.logo}`) : undefined,
+    logo: developer.logo
+      ? developer.logo.startsWith("http")
+        ? developer.logo
+        : `${BASE_SITE_URL}${developer.logo}`
+      : undefined,
   };
 }
 
@@ -143,7 +147,8 @@ export function buildOrganizationSchema() {
     name: "PropTrack Egypt",
     url: BASE_SITE_URL,
     logo: `${BASE_SITE_URL}/logo.png`,
-    description: "Real-estate intelligence and compound search platform for Egyptian property buyers and brokers.",
+    description:
+      "Real-estate intelligence and compound search platform for Egyptian property buyers and brokers.",
     sameAs: [],
   };
 }

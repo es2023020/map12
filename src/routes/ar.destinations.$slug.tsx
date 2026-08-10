@@ -6,7 +6,15 @@ import { destinationBySlug } from "@/data/destinations";
 import { compoundsByDestination } from "@/data/compounds";
 import { getDestinationSEO } from "@/lib/seo-templates";
 import { buildDestinationSchema, buildBreadcrumbSchema, formatEGP } from "@/lib/seo";
-import { ArrowLeft, MapPin, Building2, Wallet, TrendingUp, CheckCircle2, ArrowUpDown } from "lucide-react";
+import {
+  ArrowLeft,
+  MapPin,
+  Building2,
+  Wallet,
+  TrendingUp,
+  CheckCircle2,
+  ArrowUpDown,
+} from "lucide-react";
 
 export const Route = createFileRoute("/ar/destinations/$slug")({
   loader: ({ params }) => {
@@ -17,7 +25,8 @@ export const Route = createFileRoute("/ar/destinations/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [] };
     const compoundsList = compoundsByDestination(loaderData.slug);
-    const minPrice = compoundsList.length > 0 ? Math.min(...compoundsList.map((c) => c.priceFrom)) : 0;
+    const minPrice =
+      compoundsList.length > 0 ? Math.min(...compoundsList.map((c) => c.priceFrom)) : 0;
 
     const seo = getDestinationSEO(
       {
@@ -28,7 +37,7 @@ export const Route = createFileRoute("/ar/destinations/$slug")({
         projectCount: compoundsList.length,
         minPrice,
       },
-      "ar"
+      "ar",
     );
 
     const placeSchema = buildDestinationSchema({
@@ -116,9 +125,16 @@ function ArabicDestinationPage() {
         <div className="bg-amber-500/10 border-b border-amber-500/20 px-4 py-2 text-xs text-amber-800 dark:text-amber-300 flex items-center justify-between">
           <span className="flex items-center gap-1.5 font-medium">
             <CheckCircle2 className="h-4 w-4 text-amber-600" />
-            مراجعة لهجة مصرية: تم صياغة دليل الاستثمار العقاري باللهجة المصرية واستهداف الكلمات الأكثر بحثاً.
+            مراجعة لهجة مصرية: تم صياغة دليل الاستثمار العقاري باللهجة المصرية واستهداف الكلمات
+            الأكثر بحثاً.
           </span>
-          <Link to="/destinations/$slug" params={{ slug: dest.slug }} className="underline text-[11px] font-bold">English Page</Link>
+          <Link
+            to="/destinations/$slug"
+            params={{ slug: dest.slug }}
+            className="underline text-[11px] font-bold"
+          >
+            English Page
+          </Link>
         </div>
 
         {/* Hero Section */}
@@ -126,7 +142,9 @@ function ArabicDestinationPage() {
           <img src={dest.hero} alt={dest.name} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
           <div className="absolute bottom-6 inset-x-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <span className="text-xs uppercase font-bold text-accent tracking-wider">دليل كمبوندات {dest.name}</span>
+            <span className="text-xs uppercase font-bold text-accent tracking-wider">
+              دليل كمبوندات {dest.name}
+            </span>
             <h1 className="font-display text-3xl sm:text-5xl font-bold tracking-tight mt-1">
               كمبوندات {dest.name} — الأسعار والمشاريع الجديدة
             </h1>
@@ -139,19 +157,39 @@ function ArabicDestinationPage() {
         {/* Priority Filter Navigation Pills */}
         <div className="bg-card border-b border-border py-4 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto flex flex-wrap gap-2 text-xs">
-            <Link to="/ar/destinations/$slug" params={{ slug: dest.slug }} className="px-3.5 py-1.5 rounded-full bg-accent text-accent-foreground font-bold">
+            <Link
+              to="/ar/destinations/$slug"
+              params={{ slug: dest.slug }}
+              className="px-3.5 py-1.5 rounded-full bg-accent text-accent-foreground font-bold"
+            >
               جميع كمبوندات {dest.name} ({list.length})
             </Link>
-            <Link to="/ar/destinations/$slug/$filter" params={{ slug: dest.slug, filter: "off-plan" }} className="px-3.5 py-1.5 rounded-full bg-secondary text-foreground hover:bg-accent/10 border border-border font-medium">
+            <Link
+              to="/ar/destinations/$slug/$filter"
+              params={{ slug: dest.slug, filter: "off-plan" }}
+              className="px-3.5 py-1.5 rounded-full bg-secondary text-foreground hover:bg-accent/10 border border-border font-medium"
+            >
               شقق وفيلات تحت الإنشاء (Off-Plan)
             </Link>
-            <Link to="/ar/destinations/$slug/$filter" params={{ slug: dest.slug, filter: "apartments" }} className="px-3.5 py-1.5 rounded-full bg-secondary text-foreground hover:bg-accent/10 border border-border font-medium">
+            <Link
+              to="/ar/destinations/$slug/$filter"
+              params={{ slug: dest.slug, filter: "apartments" }}
+              className="px-3.5 py-1.5 rounded-full bg-secondary text-foreground hover:bg-accent/10 border border-border font-medium"
+            >
               شقق للبيع بمقدم 10%
             </Link>
-            <Link to="/ar/destinations/$slug/$filter" params={{ slug: dest.slug, filter: "villas" }} className="px-3.5 py-1.5 rounded-full bg-secondary text-foreground hover:bg-accent/10 border border-border font-medium">
+            <Link
+              to="/ar/destinations/$slug/$filter"
+              params={{ slug: dest.slug, filter: "villas" }}
+              className="px-3.5 py-1.5 rounded-full bg-secondary text-foreground hover:bg-accent/10 border border-border font-medium"
+            >
               فيلات بالتقسيط
             </Link>
-            <Link to="/ar/destinations/$slug/$filter" params={{ slug: dest.slug, filter: "under-10m" }} className="px-3.5 py-1.5 rounded-full bg-secondary text-foreground hover:bg-accent/10 border border-border font-medium">
+            <Link
+              to="/ar/destinations/$slug/$filter"
+              params={{ slug: dest.slug, filter: "under-10m" }}
+              className="px-3.5 py-1.5 rounded-full bg-secondary text-foreground hover:bg-accent/10 border border-border font-medium"
+            >
               شقق بأقل من 10 مليون
             </Link>
           </div>
@@ -165,15 +203,23 @@ function ArabicDestinationPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-muted-foreground leading-relaxed">
               <div>
-                <h3 className="font-bold text-foreground text-base mb-2">الموقع والوصول من القاهرة:</h3>
+                <h3 className="font-bold text-foreground text-base mb-2">
+                  الموقع والوصول من القاهرة:
+                </h3>
                 <p>
-                  تتميز منطقة <strong>{dest.name}</strong> بموقع استراتيجي يسهل الوصول إليه عبر الطرق الرئيسية المحورية، مما يضمن أعلى عائد استثماري وسهولة في التنقل على مدار العام.
+                  تتميز منطقة <strong>{dest.name}</strong> بموقع استراتيجي يسهل الوصول إليه عبر
+                  الطرق الرئيسية المحورية، مما يضمن أعلى عائد استثماري وسهولة في التنقل على مدار
+                  العام.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-foreground text-base mb-2">مؤشرات الأسعار والتقسيط:</h3>
+                <h3 className="font-bold text-foreground text-base mb-2">
+                  مؤشرات الأسعار والتقسيط:
+                </h3>
                 <p>
-                  تبدأ أسعار الوحدات في كمبوندات <strong>{dest.name}</strong> من حوالي <strong>{minPriceStr}</strong> مع خطط سداد مريحة تعتمد على <strong>مقدم 5% أو 10%</strong> وتقسيط يصل حتى 8 سنوات.
+                  تبدأ أسعار الوحدات في كمبوندات <strong>{dest.name}</strong> من حوالي{" "}
+                  <strong>{minPriceStr}</strong> مع خطط سداد مريحة تعتمد على{" "}
+                  <strong>مقدم 5% أو 10%</strong> وتقسيط يصل حتى 8 سنوات.
                 </p>
               </div>
             </div>
@@ -215,7 +261,9 @@ function ArabicDestinationPage() {
                   onChange={(e) => setSortBy(e.target.value)}
                   className="bg-transparent font-semibold text-primary focus:outline-hidden cursor-pointer"
                 >
-                  {hasKmData && <option value="km-asc">الكيلو: من الأقل للأعلى (من كيلو لكيلو)</option>}
+                  {hasKmData && (
+                    <option value="km-asc">الكيلو: من الأقل للأعلى (من كيلو لكيلو)</option>
+                  )}
                   {hasKmData && <option value="km-desc">الكيلو: من الأعلى للأقل</option>}
                   <option value="price-asc">السعر: من الأقل للأعلى</option>
                   <option value="price-desc">السعر: من الأعلى للأقل</option>

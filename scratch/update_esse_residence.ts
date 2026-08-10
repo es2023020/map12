@@ -9,12 +9,12 @@ const locationsPath = path.join(process.cwd(), "src", "data", "project-locations
 const compoundsPath = path.join(process.cwd(), "src", "data", "compounds.ts");
 
 // 1. Update compounds.generated.ts
-const updated = compoundsGenerated.map(c => {
+const updated = compoundsGenerated.map((c) => {
   if (c.slug === "esse-residence") {
     return {
       ...c,
       destination: "new-cairo",
-      city: "Cairo-Suez Road, New Cairo, Egypt (within Sarai Compound)"
+      city: "Cairo-Suez Road, New Cairo, Egypt (within Sarai Compound)",
     };
   }
   return c;
@@ -33,7 +33,7 @@ if (fs.existsSync(locationsPath)) {
   let text = fs.readFileSync(locationsPath, "utf-8");
   text = text.replace(
     /"esse-residence":\s*\{[^}]+\},/,
-    `"esse-residence": { name: "Esse Residence", destination: "new-cairo", location: "Cairo-Suez Road, New Cairo (Sarai Compound)", mapsUrl: "https://maps.google.com/?q=Esse+Residence+Sarai+New+Cairo" },`
+    `"esse-residence": { name: "Esse Residence", destination: "new-cairo", location: "Cairo-Suez Road, New Cairo (Sarai Compound)", mapsUrl: "https://maps.google.com/?q=Esse+Residence+Sarai+New+Cairo" },`,
   );
   fs.writeFileSync(locationsPath, text, "utf-8");
   console.log("Updated project-locations.ts");
@@ -44,7 +44,7 @@ if (fs.existsSync(compoundsPath)) {
   let text = fs.readFileSync(compoundsPath, "utf-8");
   text = text.replace(
     /slug:\s*"esse-residence"[\s\S]*?destination:\s*"new-administrative-capital"/,
-    `slug: "esse-residence",\n    destination: "new-cairo"`
+    `slug: "esse-residence",\n    destination: "new-cairo"`,
   );
   fs.writeFileSync(compoundsPath, text, "utf-8");
   console.log("Updated compounds.ts");

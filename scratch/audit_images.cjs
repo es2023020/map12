@@ -20,7 +20,7 @@ if (fs.existsSync("src/data/compounds.generated.ts")) {
       const slug = slugMatch[1];
       if (heroMatch && heroMatch[1]) compoundHeroMap[slug] = heroMatch[1];
       if (galleryMatch && galleryMatch[1]) {
-        const paths = Array.from(galleryMatch[1].matchAll(/"([^"]+)"/g)).map(m => m[1]);
+        const paths = Array.from(galleryMatch[1].matchAll(/"([^"]+)"/g)).map((m) => m[1]);
         compoundGalleryMap[slug] = paths;
       }
     }
@@ -67,7 +67,9 @@ for (const m of slugMatches) {
       // Check if project folder in public/projects/ exists and has any image
       const folderPath = path.join("public", "projects", slug);
       if (fs.existsSync(folderPath)) {
-        const files = fs.readdirSync(folderPath).filter(f => /\.(jpg|jpeg|png|webp|svg)$/i.test(f));
+        const files = fs
+          .readdirSync(folderPath)
+          .filter((f) => /\.(jpg|jpeg|png|webp|svg)$/i.test(f));
         if (files.length > 0) {
           hasValidImage = true;
         }
@@ -77,7 +79,7 @@ for (const m of slugMatches) {
     // Check if project folder in public/projects/ exists and has any image
     const folderPath = path.join("public", "projects", slug);
     if (fs.existsSync(folderPath)) {
-      const files = fs.readdirSync(folderPath).filter(f => /\.(jpg|jpeg|png|webp|svg)$/i.test(f));
+      const files = fs.readdirSync(folderPath).filter((f) => /\.(jpg|jpeg|png|webp|svg)$/i.test(f));
       if (files.length > 0) {
         hasValidImage = true;
       }
@@ -85,7 +87,8 @@ for (const m of slugMatches) {
   }
 
   // Check if hero image is Unsplash / generic placeholder
-  const isPlaceholder = !heroPath || heroPath.includes("unsplash.com") || heroPath.includes("placeholder");
+  const isPlaceholder =
+    !heroPath || heroPath.includes("unsplash.com") || heroPath.includes("placeholder");
 
   if (!hasValidImage && isPlaceholder) {
     fullyMissingImages.push({ slug, name, heroPath: heroPath || "None" });
@@ -105,4 +108,11 @@ const totalMissing = [...fullyMissingImages, ...missingFolderOrFiles];
 console.log(`TOTAL PROJECTS NEEDING IMAGES: ${totalMissing.length}`);
 
 fs.mkdirSync("scratch", { recursive: true });
-fs.writeFileSync("scratch/image_audit_results.json", JSON.stringify({ fullyMissingImages, missingFolderOrFiles, placeholderImages, totalMissing }, null, 2));
+fs.writeFileSync(
+  "scratch/image_audit_results.json",
+  JSON.stringify(
+    { fullyMissingImages, missingFolderOrFiles, placeholderImages, totalMissing },
+    null,
+    2,
+  ),
+);

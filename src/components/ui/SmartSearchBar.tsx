@@ -1,5 +1,14 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import { Search, X, Building2, MapPin, Sparkles, ChevronRight, SlidersHorizontal, ArrowUpRight } from "lucide-react";
+import {
+  Search,
+  X,
+  Building2,
+  MapPin,
+  Sparkles,
+  ChevronRight,
+  SlidersHorizontal,
+  ArrowUpRight,
+} from "lucide-react";
 import { compounds } from "@/data/compounds";
 import { developers } from "@/data/developers";
 import { destinations } from "@/data/destinations";
@@ -67,7 +76,10 @@ export function SmartSearchBar({
       } else if (
         e.key === "/" &&
         document.activeElement !== inputRef.current &&
-        !(document.activeElement instanceof HTMLInputElement || document.activeElement instanceof HTMLTextAreaElement)
+        !(
+          document.activeElement instanceof HTMLInputElement ||
+          document.activeElement instanceof HTMLTextAreaElement
+        )
       ) {
         e.preventDefault();
         inputRef.current?.focus();
@@ -98,7 +110,7 @@ export function SmartSearchBar({
           c.name.toLowerCase().includes(q) ||
           c.developer.toLowerCase().includes(q) ||
           c.destination.toLowerCase().includes(q) ||
-          (c.types && c.types.some((t) => t.toLowerCase().includes(q)))
+          (c.types && c.types.some((t) => t.toLowerCase().includes(q))),
       )
       .slice(0, 5);
 
@@ -118,9 +130,7 @@ export function SmartSearchBar({
   }, [value, mainCompounds]);
 
   const totalItems =
-    suggestions.compounds.length +
-    suggestions.developers.length +
-    suggestions.destinations.length;
+    suggestions.compounds.length + suggestions.developers.length + suggestions.destinations.length;
 
   // Keyboard navigation inside dropdown
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -171,11 +181,13 @@ export function SmartSearchBar({
           isHero
             ? "rounded-2xl border-2 border-primary/20 bg-card shadow-lg hover:border-primary/40 focus-within:border-accent focus-within:ring-4 focus-within:ring-accent/15"
             : isCompact
-            ? "rounded-xl border border-border/80 bg-background shadow-xs hover:border-accent/50 focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/10"
-            : "rounded-xl border border-border bg-card shadow-xs focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20"
+              ? "rounded-xl border border-border/80 bg-background shadow-xs hover:border-accent/50 focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/10"
+              : "rounded-xl border border-border bg-card shadow-xs focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20"
         }`}
       >
-        <div className={`pointer-events-none flex items-center justify-center text-muted-foreground ${isHero ? "pl-5 text-accent" : "pl-3.5 text-muted-foreground"}`}>
+        <div
+          className={`pointer-events-none flex items-center justify-center text-muted-foreground ${isHero ? "pl-5 text-accent" : "pl-3.5 text-muted-foreground"}`}
+        >
           {isHero ? <Sparkles className="h-5 w-5 animate-pulse" /> : <Search className="h-4 w-4" />}
         </div>
 
@@ -193,7 +205,11 @@ export function SmartSearchBar({
           placeholder={placeholder}
           autoFocus={autoFocus}
           className={`w-full bg-transparent font-medium text-foreground placeholder:text-muted-foreground/70 focus:outline-none ${
-            isHero ? "py-3.5 pl-3 pr-20 text-base md:text-lg" : isCompact ? "py-2.5 pl-2.5 pr-14 text-xs md:text-sm" : "py-2.5 pl-3 pr-16 text-sm"
+            isHero
+              ? "py-3.5 pl-3 pr-20 text-base md:text-lg"
+              : isCompact
+                ? "py-2.5 pl-2.5 pr-14 text-xs md:text-sm"
+                : "py-2.5 pl-3 pr-16 text-sm"
           }`}
         />
 
@@ -256,8 +272,14 @@ export function SmartSearchBar({
           {totalItems === 0 ? (
             <div className="p-6 text-center text-sm text-muted-foreground">
               <Search className="mx-auto h-8 w-8 text-muted-foreground/40 mb-2" />
-              <p>No results found for &ldquo;<strong className="text-foreground">{value}</strong>&rdquo;</p>
-              <p className="mt-1 text-xs text-muted-foreground/70">Try searching for developer names like &ldquo;Ora&rdquo; or regions like &ldquo;Sahel&rdquo;</p>
+              <p>
+                No results found for &ldquo;<strong className="text-foreground">{value}</strong>
+                &rdquo;
+              </p>
+              <p className="mt-1 text-xs text-muted-foreground/70">
+                Try searching for developer names like &ldquo;Ora&rdquo; or regions like
+                &ldquo;Sahel&rdquo;
+              </p>
             </div>
           ) : (
             <div className="space-y-3">
@@ -267,7 +289,9 @@ export function SmartSearchBar({
                   <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-accent flex items-center gap-1.5">
                     <Building2 className="h-3.5 w-3.5" />
                     <span>Projects & Compounds</span>
-                    <span className="ml-auto text-[9px] font-normal text-muted-foreground">({suggestions.compounds.length})</span>
+                    <span className="ml-auto text-[9px] font-normal text-muted-foreground">
+                      ({suggestions.compounds.length})
+                    </span>
                   </div>
                   <div className="mt-1 space-y-0.5">
                     {suggestions.compounds.map((c, i) => {
@@ -283,24 +307,36 @@ export function SmartSearchBar({
                             setIsOpen(false);
                           }}
                           className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left transition-colors ${
-                            isSelected ? "bg-accent/15 text-accent font-medium" : "hover:bg-secondary/70 text-foreground"
+                            isSelected
+                              ? "bg-accent/15 text-accent font-medium"
+                              : "hover:bg-secondary/70 text-foreground"
                           }`}
                         >
                           <div className="flex items-center gap-2.5 min-w-0">
                             {c.hero ? (
-                              <img src={c.hero} alt={c.name} className="h-8 w-8 shrink-0 rounded-lg object-cover border border-border/50" />
+                              <img
+                                src={c.hero}
+                                alt={c.name}
+                                className="h-8 w-8 shrink-0 rounded-lg object-cover border border-border/50"
+                              />
                             ) : (
                               <div className="h-8 w-8 shrink-0 rounded-lg bg-secondary flex items-center justify-center">
                                 <Building2 className="h-4 w-4 text-muted-foreground" />
                               </div>
                             )}
                             <div className="min-w-0">
-                              <div className="text-xs md:text-sm font-semibold truncate leading-tight">{c.name}</div>
-                              <div className="text-[11px] text-muted-foreground truncate">{c.developer} · {c.destination}</div>
+                              <div className="text-xs md:text-sm font-semibold truncate leading-tight">
+                                {c.name}
+                              </div>
+                              <div className="text-[11px] text-muted-foreground truncate">
+                                {c.developer} · {c.destination}
+                              </div>
                             </div>
                           </div>
                           <div className="flex items-center gap-1 shrink-0 text-right">
-                            <span className="text-xs font-bold text-primary">EGP {c.priceFrom}M</span>
+                            <span className="text-xs font-bold text-primary">
+                              EGP {c.priceFrom}M
+                            </span>
                             <ChevronRight className="h-3.5 w-3.5 text-muted-foreground/60" />
                           </div>
                         </button>
@@ -331,16 +367,24 @@ export function SmartSearchBar({
                             setIsOpen(false);
                           }}
                           className={`flex w-full items-center justify-between rounded-xl px-3 py-1.5 text-left transition-colors ${
-                            isSelected ? "bg-accent/15 text-accent font-medium" : "hover:bg-secondary/70 text-foreground"
+                            isSelected
+                              ? "bg-accent/15 text-accent font-medium"
+                              : "hover:bg-secondary/70 text-foreground"
                           }`}
                         >
                           <div className="flex items-center gap-2 min-w-0">
                             {d.logo ? (
-                              <img src={d.logo} alt={d.name} className="h-6 w-6 shrink-0 rounded-md object-contain bg-white border border-border/40 p-0.5" />
+                              <img
+                                src={d.logo}
+                                alt={d.name}
+                                className="h-6 w-6 shrink-0 rounded-md object-contain bg-white border border-border/40 p-0.5"
+                              />
                             ) : (
                               <Building2 className="h-4 w-4 shrink-0 text-muted-foreground" />
                             )}
-                            <span className="text-xs md:text-sm font-medium truncate">{d.name}</span>
+                            <span className="text-xs md:text-sm font-medium truncate">
+                              {d.name}
+                            </span>
                           </div>
                           <div className="flex items-center gap-1 text-[11px] text-muted-foreground">
                             <span>{d.count} projects</span>
@@ -362,7 +406,8 @@ export function SmartSearchBar({
                   </div>
                   <div className="mt-1 space-y-0.5">
                     {suggestions.destinations.map((a, i) => {
-                      const globalIdx = suggestions.compounds.length + suggestions.developers.length + i;
+                      const globalIdx =
+                        suggestions.compounds.length + suggestions.developers.length + i;
                       const isSelected = selectedIndex === globalIdx;
                       return (
                         <button
@@ -374,12 +419,19 @@ export function SmartSearchBar({
                             setIsOpen(false);
                           }}
                           className={`flex w-full items-center justify-between rounded-xl px-3 py-1.5 text-left transition-colors ${
-                            isSelected ? "bg-accent/15 text-accent font-medium" : "hover:bg-secondary/70 text-foreground"
+                            isSelected
+                              ? "bg-accent/15 text-accent font-medium"
+                              : "hover:bg-secondary/70 text-foreground"
                           }`}
                         >
                           <div className="flex items-center gap-2 min-w-0">
-                            <span className="h-2.5 w-2.5 rounded-full shrink-0" style={{ background: a.color }} />
-                            <span className="text-xs md:text-sm font-medium truncate">{a.name}</span>
+                            <span
+                              className="h-2.5 w-2.5 rounded-full shrink-0"
+                              style={{ background: a.color }}
+                            />
+                            <span className="text-xs md:text-sm font-medium truncate">
+                              {a.name}
+                            </span>
                           </div>
                           <div className="flex items-center gap-1 text-[11px] text-muted-foreground">
                             <span>{a.region}</span>

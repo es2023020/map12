@@ -16,7 +16,7 @@ function getLevenshteinDistance(a: string, b: string): number {
       tmp[i][j] = Math.min(
         tmp[i - 1][j] + 1, // deletion
         tmp[i][j - 1] + 1, // insertion
-        tmp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1) // substitution
+        tmp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1), // substitution
       );
     }
   }
@@ -53,11 +53,11 @@ export const Route = createFileRoute("/api/brochures-match")({
           if (!fs.existsSync(brochuresDir)) {
             return new Response(JSON.stringify({ error: "Brochures directory not found" }), {
               status: 404,
-              headers: { "Content-Type": "application/json" }
+              headers: { "Content-Type": "application/json" },
             });
           }
 
-          const files = fs.readdirSync(brochuresDir).filter(f => {
+          const files = fs.readdirSync(brochuresDir).filter((f) => {
             const stat = fs.statSync(path.join(brochuresDir, f));
             return stat.isFile() && f.toLowerCase().endsWith(".pdf");
           });
@@ -68,7 +68,7 @@ export const Route = createFileRoute("/api/brochures-match")({
             name: c.name,
             developer: c.developer,
             destination: c.destination,
-            brochureUrl: c.brochureUrl
+            brochureUrl: c.brochureUrl,
           }));
 
           const autoLinked: any[] = [];
@@ -80,26 +80,35 @@ export const Route = createFileRoute("/api/brochures-match")({
           // Keep track of files that have been assigned
           const fileToProjectMap = new Map<string, string[]>();
 
-          files.forEach(filename => {
+          files.forEach((filename) => {
             const normFile = normalizeName(filename);
-            const fileTokens = normFile.split(" ").filter(t => t.length > 0);
+            const fileTokens = normFile.split(" ").filter((t) => t.length > 0);
 
             // Find match candidates
             const candidates = dbProjects.map((p: any) => {
               const normProj = normalizeName(p.name);
-              const projTokens = normProj.split(" ").filter(t => t.length > 0);
+              const projTokens = normProj.split(" ").filter((t) => t.length > 0);
 
               // Check token intersections
-              const commonTokens = fileTokens.filter(t => projTokens.includes(t));
-              const tokenCoverage = projTokens.length > 0 ? commonTokens.length / projTokens.length : 0;
+              const commonTokens = fileTokens.filter((t) => projTokens.includes(t));
+              const tokenCoverage =
+                projTokens.length > 0 ? commonTokens.length / projTokens.length : 0;
 
               // Check if project has specific details that the file must contain
               // e.g. "Red Sea" vs "North Coast"
               let locationConstraintMet = true;
-              if (projTokens.includes("red") && projTokens.includes("sea") && !(fileTokens.includes("red") && fileTokens.includes("sea"))) {
+              if (
+                projTokens.includes("red") &&
+                projTokens.includes("sea") &&
+                !(fileTokens.includes("red") && fileTokens.includes("sea"))
+              ) {
                 locationConstraintMet = false;
               }
-              if (projTokens.includes("north") && projTokens.includes("coast") && !(fileTokens.includes("north") && fileTokens.includes("coast"))) {
+              if (
+                projTokens.includes("north") &&
+                projTokens.includes("coast") &&
+                !(fileTokens.includes("north") && fileTokens.includes("coast"))
+              ) {
                 locationConstraintMet = false;
               }
 
@@ -116,7 +125,7 @@ export const Route = createFileRoute("/api/brochures-match")({
                 project: p,
                 score,
                 tokenCoverage,
-                similarity
+                similarity,
               };
             });
 
@@ -136,7 +145,7 @@ export const Route = createFileRoute("/api/brochures-match")({
                 projectSlug: best.project.slug,
                 projectName: best.project.name,
                 score: best.score,
-                alreadySet: !!best.project.brochureUrl
+                alreadySet: !!best.project.brochureUrl,
               });
             } else if (best && best.score >= 0.4) {
               // Medium confidence match
@@ -146,8 +155,8 @@ export const Route = createFileRoute("/api/brochures-match")({
                   slug: c.project.slug,
                   name: c.project.name,
                   developer: c.project.developer,
-                  score: c.score
-                }))
+                  score: c.score,
+                })),
               });
             } else {
               // No match
@@ -161,8 +170,8 @@ export const Route = createFileRoute("/api/brochures-match")({
               const project = dbProjects.find((p: any) => p.slug === slug);
               duplicates.push(project.name);
               // Move these autoLinked items to conflicts
-              matchedFiles.forEach(f => {
-                const idx = autoLinked.findIndex(item => item.filename === f);
+              matchedFiles.forEach((f) => {
+                const idx = autoLinked.findIndex((item) => item.filename === f);
                 if (idx !== -1) {
                   const item = autoLinked.splice(idx, 1)[0];
                   conflicts.push({
@@ -170,7 +179,7 @@ export const Route = createFileRoute("/api/brochures-match")({
                     projectSlug: item.projectSlug,
                     projectName: item.projectName,
                     conflictType: "multiple_files_matching_one_project",
-                    files: matchedFiles
+                    files: matchedFiles,
                   });
                 }
               });
@@ -182,13 +191,13 @@ export const Route = createFileRoute("/api/brochures-match")({
             if (item.alreadySet) {
               conflicts.push({
                 ...item,
-                conflictType: "project_already_has_brochure"
+                conflictType: "project_already_has_brochure",
               });
             }
           });
 
           // Filter out alreadySet from active autoLinked list
-          const activeAutoLinked = autoLinked.filter(item => !item.alreadySet);
+          const activeAutoLinked = autoLinked.filter((item) => !item.alreadySet);
 
           return new Response(
             JSON.stringify({
@@ -197,26 +206,26 @@ export const Route = createFileRoute("/api/brochures-match")({
                 autoLinkedCount: activeAutoLinked.length,
                 flaggedCount: flagged.length,
                 unmatchedCount: unmatched.length,
-                duplicateCount: conflicts.length
+                duplicateCount: conflicts.length,
               },
               autoLinked: activeAutoLinked,
               flagged,
               unmatched,
-              conflicts
+              conflicts,
             }),
             {
               status: 200,
-              headers: { "Content-Type": "application/json" }
-            }
+              headers: { "Content-Type": "application/json" },
+            },
           );
         } catch (error: any) {
           console.error("Fuzzy brochures match error:", error);
           return new Response(JSON.stringify({ error: error.message }), {
             status: 500,
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" },
           });
         }
-      }
-    }
-  }
+      },
+    },
+  },
 });

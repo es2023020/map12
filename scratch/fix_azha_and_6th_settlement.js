@@ -1,20 +1,20 @@
-import fs from 'node:fs';
-import path from 'node:path';
+import fs from "node:fs";
+import path from "node:path";
 
 const root = process.cwd();
 
 // 1. Fix azha in project-images.ts
-const imgPath = path.join(root, 'src', 'data', 'project-images.ts');
-let imgCode = fs.readFileSync(imgPath, 'utf-8');
+const imgPath = path.join(root, "src", "data", "project-images.ts");
+let imgCode = fs.readFileSync(imgPath, "utf-8");
 
 // Replace "/projects/azha/1.jpg" references with "/projects/azha-north-coast/1.jpg"
-imgCode = imgCode.replace(/\/projects\/azha\//g, '/projects/azha-north-coast/');
-fs.writeFileSync(imgPath, imgCode, 'utf-8');
-console.log('Updated src/data/project-images.ts for azha to use /projects/azha-north-coast/');
+imgCode = imgCode.replace(/\/projects\/azha\//g, "/projects/azha-north-coast/");
+fs.writeFileSync(imgPath, imgCode, "utf-8");
+console.log("Updated src/data/project-images.ts for azha to use /projects/azha-north-coast/");
 
 // 2. Add grova-east-hills and la-vista-east to compounds.ts additionalLaunches
-const compPath = path.join(root, 'src', 'data', 'compounds.ts');
-let compCode = fs.readFileSync(compPath, 'utf-8');
+const compPath = path.join(root, "src", "data", "compounds.ts");
+let compCode = fs.readFileSync(compPath, "utf-8");
 
 const grovaObj = `  {
     slug: "grova-east-hills",
@@ -59,9 +59,9 @@ const grovaObj = `  {
 
 if (!compCode.includes('"grova-east-hills"')) {
   compCode = compCode.replace(
-    'const additionalLaunches: Compound[] = [',
-    `const additionalLaunches: Compound[] = [\n${grovaObj}`
+    "const additionalLaunches: Compound[] = [",
+    `const additionalLaunches: Compound[] = [\n${grovaObj}`,
   );
-  fs.writeFileSync(compPath, compCode, 'utf-8');
-  console.log('Added grova-east-hills and la-vista-east to compounds.ts additionalLaunches');
+  fs.writeFileSync(compPath, compCode, "utf-8");
+  console.log("Added grova-east-hills and la-vista-east to compounds.ts additionalLaunches");
 }

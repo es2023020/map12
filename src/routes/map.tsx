@@ -8,25 +8,56 @@ import { developers } from "@/data/developers";
 import { landmarks } from "@/data/landmarks";
 import { Input } from "@/components/ui/input";
 import {
-  Search, MapPin, Star, X, ExternalLink, ChevronDown, ChevronUp,
-  Layers, Map as MapIcon, List, SlidersHorizontal, ArrowLeft, Phone,
-  Building2, Waves, Lock, Sparkles
+  Search,
+  MapPin,
+  Star,
+  X,
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
+  Layers,
+  Map as MapIcon,
+  List,
+  SlidersHorizontal,
+  ArrowLeft,
+  Phone,
+  Building2,
+  Waves,
+  Lock,
+  Sparkles,
 } from "lucide-react";
 import { availability } from "@/data/availability";
 import { useStore } from "@/lib/store";
 import { useDebounce } from "@/lib/useDebounce";
 import { SmartSearchBar } from "@/components/ui/SmartSearchBar";
-function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
+function LogoBadge({
+  src,
+  name,
+  className = "",
+}: {
+  src: string;
+  name: string;
+  className?: string;
+}) {
   const [loaded, setLoaded] = useState(false);
-  const initials = name.split(" ").slice(0, 2).map((w) => w[0] ?? "").join("").toUpperCase();
+  const initials = name
+    .split(" ")
+    .slice(0, 2)
+    .map((w) => w[0] ?? "")
+    .join("")
+    .toUpperCase();
   return (
     <div className={`relative overflow-hidden shrink-0 ${className}`}>
       <div className="absolute inset-0 flex items-center justify-center bg-primary">
         <span className="text-primary-foreground font-bold text-xs select-none">{initials}</span>
       </div>
-      <img src={src} alt={name}
+      <img
+        src={src}
+        alt={name}
         className={`absolute inset-0 h-full w-full object-contain bg-white transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"}`}
-        onLoad={() => setLoaded(true)} onError={() => {}} />
+        onLoad={() => setLoaded(true)}
+        onError={() => {}}
+      />
     </div>
   );
 }
@@ -40,14 +71,17 @@ export const Route = createFileRoute("/map")({
   head: () => ({
     meta: [
       { title: "Property Atlas — Interactive Map | PropTrack" },
-      { name: "description", content: "155+ projects across Egyptian markets — pinned on a private map briefing for advisors." },
+      {
+        name: "description",
+        content:
+          "155+ projects across Egyptian markets — pinned on a private map briefing for advisors.",
+      },
     ],
   }),
   component: MapPage,
 });
 
 function MapPage() {
-
   const { destination: destinationParam, dev: devParam, q: qParam } = Route.useSearch();
   const [q, setQ] = useState(qParam || "");
   const debouncedQ = useDebounce(q, 250);
@@ -88,7 +122,7 @@ function MapPage() {
           if (b.cluster) terms.add(b.cluster);
           if (b.deliveryNote) terms.add(b.deliveryNote);
           if (b.paymentPlan) terms.add(b.paymentPlan);
-          
+
           for (const u of b.units ?? []) {
             if (u.cluster) terms.add(u.cluster);
             if (u.finishing) terms.add(u.finishing);
@@ -101,7 +135,10 @@ function MapPage() {
         }
         availText = Array.from(terms).join(" ");
       }
-      map.set(c.slug, `${c.name} ${c.developer} ${c.destination} ${c.city ?? ""} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase());
+      map.set(
+        c.slug,
+        `${c.name} ${c.developer} ${c.destination} ${c.city ?? ""} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase(),
+      );
     });
     return map;
   }, [availabilityMap, mainCompounds]);
@@ -112,7 +149,7 @@ function MapPage() {
     destinationVal: string | null,
     devVal: string,
     flagshipVal: boolean,
-    kiloFilterVal: string
+    kiloFilterVal: string,
   ) => {
     if (destinationVal && c.destination !== destinationVal) return false;
     if (devVal && c.developerSlug !== devVal) return false;
@@ -127,24 +164,48 @@ function MapPage() {
     }
     if (qVal) {
       const hay = searchableTextMap.get(c.slug) || "";
-      const stopWords = new Set(["in", "for", "with", "a", "an", "the", "at", "by", "of", "and", "on"]);
+      const stopWords = new Set([
+        "in",
+        "for",
+        "with",
+        "a",
+        "an",
+        "the",
+        "at",
+        "by",
+        "of",
+        "and",
+        "on",
+      ]);
       const queryWords = qVal
         .toLowerCase()
         .split(/\s+/)
         .filter((w) => w && !stopWords.has(w));
-        
+
       if (queryWords.length > 0 && !queryWords.every((word) => hay.includes(word))) return false;
     }
     return true;
   };
 
   const filtered = useMemo(() => {
-    return mainCompounds.filter((c) => matchMapCompound(c, debouncedQ, destinationSlug, dev, flagshipOnly, kiloFilter));
-  }, [destinationSlug, dev, flagshipOnly, debouncedQ, kiloFilter, searchableTextMap, mainCompounds]);
+    return mainCompounds.filter((c) =>
+      matchMapCompound(c, debouncedQ, destinationSlug, dev, flagshipOnly, kiloFilter),
+    );
+  }, [
+    destinationSlug,
+    dev,
+    flagshipOnly,
+    debouncedQ,
+    kiloFilter,
+    searchableTextMap,
+    mainCompounds,
+  ]);
 
   // Dynamic active options for cascading UI
   const activeDevelopers = useMemo(() => {
-    const list = mainCompounds.filter((c) => matchMapCompound(c, debouncedQ, destinationSlug, "", flagshipOnly, kiloFilter));
+    const list = mainCompounds.filter((c) =>
+      matchMapCompound(c, debouncedQ, destinationSlug, "", flagshipOnly, kiloFilter),
+    );
     const slugs = new Set(list.map((c) => c.developerSlug));
     return developers.filter((d) => slugs.has(d.slug));
   }, [debouncedQ, destinationSlug, flagshipOnly, kiloFilter, searchableTextMap, mainCompounds]);
@@ -172,27 +233,34 @@ function MapPage() {
   }, [debouncedQ, destinationSlug, flagshipOnly, kiloFilter, searchableTextMap, mainCompounds]);
 
   const visibleLandmarks = useMemo(
-    () => (destinationSlug ? landmarks.filter((l) => l.destination === destinationSlug) : landmarks),
+    () =>
+      destinationSlug ? landmarks.filter((l) => l.destination === destinationSlug) : landmarks,
     [destinationSlug],
   );
 
-  const active = activeSlug ? compounds.find((c) => c.slug === activeSlug) ?? null : null;
+  const active = activeSlug ? (compounds.find((c) => c.slug === activeSlug) ?? null) : null;
   const activeDestination = active ? destinations.find((a) => a.slug === active.destination) : null;
   const activeDev = active ? developers.find((d) => d.slug === active.developerSlug) : null;
-  const selectedDestination = destinationSlug ? destinations.find((a) => a.slug === destinationSlug) : null;
+  const selectedDestination = destinationSlug
+    ? destinations.find((a) => a.slug === destinationSlug)
+    : null;
 
   const mapCenter: [number, number] = selectedDestination?.center ?? [29.5, 31.0];
   const mapZoom = selectedDestination?.zoom ?? 6;
   const hasFilters = !!(q || dev || destinationSlug || flagshipOnly || kiloFilter);
 
   function clearAll() {
-    setQ(""); setDev(""); setAreaSlug(null); setFlagshipOnly(false); setKiloFilter(""); setActiveSlug(null);
+    setQ("");
+    setDev("");
+    setAreaSlug(null);
+    setFlagshipOnly(false);
+    setKiloFilter("");
+    setActiveSlug(null);
   }
 
   return (
     <Shell noFooter>
       <div className="flex h-[calc(100vh-4rem)] overflow-hidden">
-
         {/* ══════════════════════════════════
             LEFT PANEL — Search + Project List
             Always visible on md+
@@ -209,8 +277,12 @@ function MapPage() {
           <div className="border-b border-border/60 px-4 pt-4 pb-3 space-y-3 shrink-0">
             <div className="flex items-center justify-between">
               <div>
-                <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">The Address</div>
-                <h2 className="font-display text-lg font-semibold text-primary leading-tight">Property Atlas</h2>
+                <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">
+                  The Address
+                </div>
+                <h2 className="font-display text-lg font-semibold text-primary leading-tight">
+                  Property Atlas
+                </h2>
               </div>
               <div className="flex items-center gap-1.5">
                 <button
@@ -221,7 +293,9 @@ function MapPage() {
                   {hasFilters && <span className="h-1.5 w-1.5 rounded-full bg-accent" />}
                 </button>
                 {hasFilters && (
-                  <button onClick={clearAll} className="text-[10px] text-accent hover:underline">Clear</button>
+                  <button onClick={clearAll} className="text-[10px] text-accent hover:underline">
+                    Clear
+                  </button>
                 )}
               </div>
             </div>
@@ -257,30 +331,59 @@ function MapPage() {
                     <span className="truncate text-foreground/80">
                       {dev ? developers.find((d) => d.slug === dev)?.name : "All developers"}
                     </span>
-                    {devOpen ? <ChevronUp className="h-4 w-4 shrink-0 text-muted-foreground" /> : <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />}
+                    {devOpen ? (
+                      <ChevronUp className="h-4 w-4 shrink-0 text-muted-foreground" />
+                    ) : (
+                      <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
+                    )}
                   </button>
                   {devOpen && (
                     <div className="absolute z-30 mt-1 max-h-64 w-full overflow-y-auto rounded-md border border-border bg-card shadow-lg">
-                      <button onClick={() => { setDev(""); setDevOpen(false); }}
-                        className="block w-full px-3 py-2 text-left text-sm hover:bg-secondary">All developers</button>
-                      {[...activeDevelopers].sort((a, b) => a.name.localeCompare(b.name)).map((d) => (
-                        <div key={d.slug} className="flex items-center border-b border-border/30 last:border-b-0">
-                          <button onClick={() => { setDev(d.slug); setDevOpen(false); }}
-                            className="flex flex-1 items-center justify-between gap-2 px-3 py-1.5 text-left text-sm hover:bg-secondary">
-                            <span className="truncate">{d.name}</span>
-                            <span className="text-[10px] text-muted-foreground">{devCounts.get(d.slug) ?? 0}</span>
-                          </button>
-                          <Link to="/developers/$slug" params={{ slug: d.slug }} onClick={() => setDevOpen(false)}
-                            className="px-2 py-1.5 text-accent hover:bg-secondary">
-                            <ExternalLink className="h-3 w-3" />
-                          </Link>
-                        </div>
-                      ))}
+                      <button
+                        onClick={() => {
+                          setDev("");
+                          setDevOpen(false);
+                        }}
+                        className="block w-full px-3 py-2 text-left text-sm hover:bg-secondary"
+                      >
+                        All developers
+                      </button>
+                      {[...activeDevelopers]
+                        .sort((a, b) => a.name.localeCompare(b.name))
+                        .map((d) => (
+                          <div
+                            key={d.slug}
+                            className="flex items-center border-b border-border/30 last:border-b-0"
+                          >
+                            <button
+                              onClick={() => {
+                                setDev(d.slug);
+                                setDevOpen(false);
+                              }}
+                              className="flex flex-1 items-center justify-between gap-2 px-3 py-1.5 text-left text-sm hover:bg-secondary"
+                            >
+                              <span className="truncate">{d.name}</span>
+                              <span className="text-[10px] text-muted-foreground">
+                                {devCounts.get(d.slug) ?? 0}
+                              </span>
+                            </button>
+                            <Link
+                              to="/developers/$slug"
+                              params={{ slug: d.slug }}
+                              onClick={() => setDevOpen(false)}
+                              className="px-2 py-1.5 text-accent hover:bg-secondary"
+                            >
+                              <ExternalLink className="h-3 w-3" />
+                            </Link>
+                          </div>
+                        ))}
                     </div>
                   )}
                 </div>
 
-                {(!destinationSlug || destinations.find(d => d.slug === destinationSlug)?.region === "north-coast") && (
+                {(!destinationSlug ||
+                  destinations.find((d) => d.slug === destinationSlug)?.region ===
+                    "north-coast") && (
                   <div className="space-y-1 mt-1">
                     <select
                       value={kiloFilter}
@@ -299,11 +402,21 @@ function MapPage() {
 
                 <div className="flex items-center gap-4 text-xs">
                   <label className="inline-flex cursor-pointer items-center gap-1.5 text-muted-foreground hover:text-primary">
-                    <input type="checkbox" checked={flagshipOnly} onChange={(e) => setFlagshipOnly(e.target.checked)} className="h-3.5 w-3.5 accent-accent" />
+                    <input
+                      type="checkbox"
+                      checked={flagshipOnly}
+                      onChange={(e) => setFlagshipOnly(e.target.checked)}
+                      className="h-3.5 w-3.5 accent-accent"
+                    />
                     <Star className="h-3 w-3 text-amber-500" /> Flagship only
                   </label>
                   <label className="inline-flex cursor-pointer items-center gap-1.5 text-muted-foreground hover:text-primary">
-                    <input type="checkbox" checked={showLandmarks} onChange={(e) => setShowLandmarks(e.target.checked)} className="h-3.5 w-3.5 accent-accent" />
+                    <input
+                      type="checkbox"
+                      checked={showLandmarks}
+                      onChange={(e) => setShowLandmarks(e.target.checked)}
+                      className="h-3.5 w-3.5 accent-accent"
+                    />
                     <Layers className="h-3 w-3" /> Landmarks
                   </label>
                 </div>
@@ -314,25 +427,45 @@ function MapPage() {
           {/* Destination chips */}
           <div className="border-b border-border/60 px-3 py-2.5 shrink-0">
             <div className="mb-1.5 flex items-center justify-between">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">Destinations</span>
-              <Link to="/destinations" className="text-[10px] font-medium text-accent hover:underline">Browse all →</Link>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                Destinations
+              </span>
+              <Link
+                to="/destinations"
+                className="text-[10px] font-medium text-accent hover:underline"
+              >
+                Browse all →
+              </Link>
             </div>
             <div className="flex flex-wrap gap-1">
-              <button onClick={() => setAreaSlug(null)}
-                className={`rounded-full border px-2 py-0.5 text-[11px] font-medium transition-colors ${destinationSlug === null ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:text-primary"}`}>
+              <button
+                onClick={() => setAreaSlug(null)}
+                className={`rounded-full border px-2 py-0.5 text-[11px] font-medium transition-colors ${destinationSlug === null ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:text-primary"}`}
+              >
                 All · {compounds.length}
               </button>
               {destinations.map((a) => {
                 const isActive = destinationSlug === a.slug;
                 return (
-                  <span key={a.slug} className={`inline-flex items-center overflow-hidden rounded-full border text-[11px] ${isActive ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground"}`}>
-                    <button onClick={() => setAreaSlug(isActive ? null : a.slug)}
-                      className="inline-flex items-center gap-1 px-2 py-0.5 hover:opacity-80">
-                      <span className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: a.color }} />
+                  <span
+                    key={a.slug}
+                    className={`inline-flex items-center overflow-hidden rounded-full border text-[11px] ${isActive ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground"}`}
+                  >
+                    <button
+                      onClick={() => setAreaSlug(isActive ? null : a.slug)}
+                      className="inline-flex items-center gap-1 px-2 py-0.5 hover:opacity-80"
+                    >
+                      <span
+                        className="h-1.5 w-1.5 rounded-full shrink-0"
+                        style={{ background: a.color }}
+                      />
                       {a.name.split(" ")[0]} · {areaCounts.get(a.slug) ?? 0}
                     </button>
-                    <Link to="/destinations/$slug" params={{ slug: a.slug }}
-                      className={`border-l px-1 py-0.5 ${isActive ? "border-primary-foreground/30" : "border-border"} hover:opacity-80`}>
+                    <Link
+                      to="/destinations/$slug"
+                      params={{ slug: a.slug }}
+                      className={`border-l px-1 py-0.5 ${isActive ? "border-primary-foreground/30" : "border-border"} hover:opacity-80`}
+                    >
                       <ExternalLink className="h-2.5 w-2.5" />
                     </Link>
                   </span>
@@ -343,7 +476,10 @@ function MapPage() {
 
           {/* Result count */}
           <div className="flex items-center justify-between border-b border-border/60 px-4 py-1.5 text-xs text-muted-foreground shrink-0">
-            <span><strong className="text-primary">{filtered.length}</strong> of {compounds.length} projects</span>
+            <span>
+              <strong className="text-primary">{filtered.length}</strong> of {compounds.length}{" "}
+              projects
+            </span>
           </div>
 
           {/* Project list */}
@@ -351,17 +487,29 @@ function MapPage() {
             {filtered.map((c) => (
               <button
                 key={c.slug}
-                onClick={() => { setActiveSlug(c.slug === activeSlug ? null : c.slug); setMobileView("map"); }}
+                onClick={() => {
+                  setActiveSlug(c.slug === activeSlug ? null : c.slug);
+                  setMobileView("map");
+                }}
                 className={`flex w-full items-start gap-2 border-b border-border/60 px-3 py-2.5 text-left transition-colors ${activeSlug === c.slug ? "bg-accent/8 border-l-2 border-l-accent" : "hover:bg-secondary/50"}`}
               >
-                <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full ring-1 ring-white/30" style={{ background: destinationColor(c.destination) }} />
+                <span
+                  className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full ring-1 ring-white/30"
+                  style={{ background: destinationColor(c.destination) }}
+                />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex min-w-0 items-center gap-1">
-                      <span className="truncate font-display text-sm font-semibold text-primary">{c.name}</span>
-                      {c.flagship && <Star className="h-3 w-3 shrink-0 fill-amber-400 text-amber-500" />}
+                      <span className="truncate font-display text-sm font-semibold text-primary">
+                        {c.name}
+                      </span>
+                      {c.flagship && (
+                        <Star className="h-3 w-3 shrink-0 fill-amber-400 text-amber-500" />
+                      )}
                     </div>
-                    <span className="shrink-0 text-[11px] font-semibold text-primary">EGP {c.priceFrom}M</span>
+                    <span className="shrink-0 text-[11px] font-semibold text-primary">
+                      EGP {c.priceFrom}M
+                    </span>
                   </div>
                   <div className="truncate text-[11px] text-muted-foreground">{c.developer}</div>
                   <div className="mt-0.5 inline-flex items-center gap-1 text-[10px] uppercase tracking-wider text-muted-foreground">
@@ -370,8 +518,13 @@ function MapPage() {
                     {c.km ? ` · km ${c.km}` : ""}
                   </div>
                 </div>
-                <Link to="/projects/$slug" params={{ slug: c.slug }} onClick={(e) => e.stopPropagation()}
-                  className="shrink-0 self-center rounded-full p-1 text-accent hover:bg-accent/10" title="Open full page">
+                <Link
+                  to="/projects/$slug"
+                  params={{ slug: c.slug }}
+                  onClick={(e) => e.stopPropagation()}
+                  className="shrink-0 self-center rounded-full p-1 text-accent hover:bg-accent/10"
+                  title="Open full page"
+                >
                   <ExternalLink className="h-3.5 w-3.5" />
                 </Link>
               </button>
@@ -379,8 +532,12 @@ function MapPage() {
             {filtered.length === 0 && (
               <div className="p-8 text-center">
                 <Search className="mx-auto h-8 w-8 text-muted-foreground/40" />
-                <p className="mt-3 text-sm text-muted-foreground">No projects match. Try widening your filters.</p>
-                <button onClick={clearAll} className="mt-2 text-sm text-accent hover:underline">Clear all filters</button>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  No projects match. Try widening your filters.
+                </p>
+                <button onClick={clearAll} className="mt-2 text-sm text-accent hover:underline">
+                  Clear all filters
+                </button>
               </div>
             )}
           </div>
@@ -389,7 +546,9 @@ function MapPage() {
         {/* ══════════════════════════════════
             CENTER — MAP (always fills remaining space)
         ══════════════════════════════════ */}
-        <div className={`relative flex-1 ${mobileView === "map" ? "flex" : "hidden md:flex"} flex-col min-w-0`}>
+        <div
+          className={`relative flex-1 ${mobileView === "map" ? "flex" : "hidden md:flex"} flex-col min-w-0`}
+        >
           <MapClient
             compounds={filtered}
             landmarks={visibleLandmarks}
@@ -406,7 +565,9 @@ function MapPage() {
 
           {/* Map legend (desktop) */}
           <div className="pointer-events-none absolute bottom-8 right-3 z-10 hidden rounded-2xl border border-border/60 bg-card/95 p-3 text-[10px] shadow backdrop-blur lg:block">
-            <div className="font-semibold uppercase tracking-[0.16em] text-muted-foreground mb-2">Map key</div>
+            <div className="font-semibold uppercase tracking-[0.16em] text-muted-foreground mb-2">
+              Map key
+            </div>
             <div className="flex flex-col gap-1.5">
               <KeyRow color="#3B82F6" label="Project" />
               <KeyRow color="#CA8A04" label="★ Flagship" />
@@ -421,18 +582,32 @@ function MapPage() {
             <div className="absolute bottom-16 left-3 right-3 z-20 md:hidden">
               <div className="rounded-2xl border border-border bg-card/98 p-3 shadow-xl backdrop-blur">
                 <div className="flex items-start gap-3">
-                  <img src={active.hero} alt={active.name} className="h-14 w-14 shrink-0 rounded-xl object-cover" />
+                  <img
+                    src={active.hero}
+                    alt={active.name}
+                    className="h-14 w-14 shrink-0 rounded-xl object-cover"
+                  />
                   <div className="min-w-0 flex-1">
-                    <div className="font-display text-sm font-semibold text-primary leading-tight">{active.name}</div>
+                    <div className="font-display text-sm font-semibold text-primary leading-tight">
+                      {active.name}
+                    </div>
                     <div className="text-xs text-muted-foreground">{active.developer}</div>
-                    <div className="mt-1 text-xs font-semibold text-primary">EGP {active.priceFrom}M</div>
+                    <div className="mt-1 text-xs font-semibold text-primary">
+                      EGP {active.priceFrom}M
+                    </div>
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <Link to="/projects/$slug" params={{ slug: active.slug }}
-                      className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-medium text-primary-foreground whitespace-nowrap">
+                    <Link
+                      to="/projects/$slug"
+                      params={{ slug: active.slug }}
+                      className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-medium text-primary-foreground whitespace-nowrap"
+                    >
                       Full page
                     </Link>
-                    <button onClick={() => setActiveSlug(null)} className="rounded-full border border-border p-1 text-muted-foreground self-center">
+                    <button
+                      onClick={() => setActiveSlug(null)}
+                      className="rounded-full border border-border p-1 text-muted-foreground self-center"
+                    >
                       <X className="h-3 w-3" />
                     </button>
                   </div>
@@ -456,19 +631,25 @@ function MapPage() {
             />
           </aside>
         )}
-
       </div>
 
       {/* Mobile bottom tab bar */}
       <div className="fixed bottom-0 inset-x-0 z-30 flex border-t border-border/60 bg-card md:hidden">
-        <button onClick={() => setMobileView("list")}
-          className={`flex flex-1 items-center justify-center gap-1.5 py-3 text-sm font-medium transition-colors ${mobileView === "list" ? "text-primary" : "text-muted-foreground"}`}>
+        <button
+          onClick={() => setMobileView("list")}
+          className={`flex flex-1 items-center justify-center gap-1.5 py-3 text-sm font-medium transition-colors ${mobileView === "list" ? "text-primary" : "text-muted-foreground"}`}
+        >
           <List className="h-4 w-4" />
-          Projects <span className="rounded-full bg-secondary px-1.5 py-0.5 text-[10px]">{filtered.length}</span>
+          Projects{" "}
+          <span className="rounded-full bg-secondary px-1.5 py-0.5 text-[10px]">
+            {filtered.length}
+          </span>
         </button>
         <div className="w-px bg-border/60" />
-        <button onClick={() => setMobileView("map")}
-          className={`flex flex-1 items-center justify-center gap-1.5 py-3 text-sm font-medium transition-colors ${mobileView === "map" ? "text-primary" : "text-muted-foreground"}`}>
+        <button
+          onClick={() => setMobileView("map")}
+          className={`flex flex-1 items-center justify-center gap-1.5 py-3 text-sm font-medium transition-colors ${mobileView === "map" ? "text-primary" : "text-muted-foreground"}`}
+        >
           <MapIcon className="h-4 w-4" />
           Map
         </button>
@@ -515,7 +696,10 @@ function DetailPanel({
         </Link>
         <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
           <div className="inline-flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-primary-foreground/80">
-            <span className="h-2 w-2 rounded-full" style={{ background: activeDestination?.color }} />
+            <span
+              className="h-2 w-2 rounded-full"
+              style={{ background: activeDestination?.color }}
+            />
             {activeDestination?.name} {active.km ? `· km ${active.km}` : ""}
           </div>
           <h2 className="mt-0.5 font-display text-xl font-semibold leading-tight">{active.name}</h2>
@@ -530,7 +714,11 @@ function DetailPanel({
           <div className="flex flex-wrap items-center gap-1.5">
             <Pill>{active.type ?? "Residential"}</Pill>
             <Pill>{active.status}</Pill>
-            {active.beachfront && <Pill variant="beach"><Waves className="h-2.5 w-2.5" /> Beachfront</Pill>}
+            {active.beachfront && (
+              <Pill variant="beach">
+                <Waves className="h-2.5 w-2.5" /> Beachfront
+              </Pill>
+            )}
             {active.flagship && (
               <span className="inline-flex items-center gap-1 rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-700 ring-1 ring-amber-200">
                 <Star className="h-3 w-3 fill-amber-500 text-amber-500" /> Flagship
@@ -553,26 +741,41 @@ function DetailPanel({
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5">
                     <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">Live Availability</span>
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
+                      Live Availability
+                    </span>
                   </div>
-                  <span className="text-[9px] text-emerald-600 dark:text-emerald-400">Updated {avail.lastUpdated}</span>
+                  <span className="text-[9px] text-emerald-600 dark:text-emerald-400">
+                    Updated {avail.lastUpdated}
+                  </span>
                 </div>
                 {avail.totalAvailable > 0 ? (
                   <div className="mt-1.5 flex items-baseline gap-1">
-                    <span className="text-lg font-bold text-emerald-900 dark:text-emerald-100">{avail.totalAvailable}</span>
-                    <span className="text-xs text-emerald-700 dark:text-emerald-400">units available</span>
+                    <span className="text-lg font-bold text-emerald-900 dark:text-emerald-100">
+                      {avail.totalAvailable}
+                    </span>
+                    <span className="text-xs text-emerald-700 dark:text-emerald-400">
+                      units available
+                    </span>
                   </div>
                 ) : (
                   <div className="mt-1.5">
-                    <span className="text-sm font-bold text-amber-600 dark:text-amber-400">Not updated yet</span>
+                    <span className="text-sm font-bold text-amber-600 dark:text-amber-400">
+                      Not updated yet
+                    </span>
                   </div>
                 )}
                 {avail.totalAvailable > 0 && avail.breakdown.length > 0 && (
                   <div className="mt-2 border-t border-emerald-100/50 pt-2 dark:border-emerald-900/20">
-                    <div className="text-[9px] font-semibold uppercase tracking-wider text-emerald-700/80 dark:text-emerald-400/80 mb-1">Available Types</div>
+                    <div className="text-[9px] font-semibold uppercase tracking-wider text-emerald-700/80 dark:text-emerald-400/80 mb-1">
+                      Available Types
+                    </div>
                     <div className="flex flex-wrap gap-1">
                       {avail.breakdown.slice(0, 4).map((b) => (
-                        <span key={b.type} className="rounded bg-emerald-100/70 dark:bg-emerald-950/50 px-1.5 py-0.5 text-[9px] font-medium text-emerald-800 dark:text-emerald-300">
+                        <span
+                          key={b.type}
+                          className="rounded bg-emerald-100/70 dark:bg-emerald-950/50 px-1.5 py-0.5 text-[9px] font-medium text-emerald-800 dark:text-emerald-300"
+                        >
                           {b.type} ({b.available})
                         </span>
                       ))}
@@ -592,7 +795,10 @@ function DetailPanel({
           <p className="text-sm leading-relaxed text-foreground/80">
             {descOpen || !isLong ? active.blurb : active.blurb.slice(0, 180).trimEnd() + "…"}
             {isLong && (
-              <button onClick={() => setDescOpen((v) => !v)} className="ml-1 text-accent hover:underline text-xs">
+              <button
+                onClick={() => setDescOpen((v) => !v)}
+                className="ml-1 text-accent hover:underline text-xs"
+              >
                 {descOpen ? "Less" : "More"}
               </button>
             )}
@@ -603,7 +809,12 @@ function DetailPanel({
             <SectionLabel>Highlights</SectionLabel>
             <div className="flex flex-wrap gap-1">
               {(active.highlights ?? active.amenities ?? []).slice(0, 8).map((h: string) => (
-                <span key={h} className="rounded-full border border-border bg-card px-2 py-0.5 text-[11px] text-foreground/80">{h}</span>
+                <span
+                  key={h}
+                  className="rounded-full border border-border bg-card px-2 py-0.5 text-[11px] text-foreground/80"
+                >
+                  {h}
+                </span>
               ))}
             </div>
           </div>
@@ -613,7 +824,12 @@ function DetailPanel({
             <SectionLabel>Unit Types</SectionLabel>
             <div className="flex flex-wrap gap-1">
               {(active.types ?? []).map((t: string) => (
-                <span key={t} className="rounded-full bg-secondary px-2.5 py-0.5 text-[11px] font-medium text-primary">{t}</span>
+                <span
+                  key={t}
+                  className="rounded-full bg-secondary px-2.5 py-0.5 text-[11px] font-medium text-primary"
+                >
+                  {t}
+                </span>
               ))}
             </div>
           </div>
@@ -621,9 +837,12 @@ function DetailPanel({
           {/* Location */}
           <div>
             <SectionLabel>Location</SectionLabel>
-            <a href={`https://www.google.com/maps/search/?api=1&query=${active.lat},${active.lng}`}
-              target="_blank" rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-accent hover:underline">
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${active.lat},${active.lng}`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs text-accent hover:underline"
+            >
               <MapPin className="h-3 w-3" />
               {active.lat.toFixed(4)}, {active.lng.toFixed(4)} — Open in Maps
             </a>
@@ -633,11 +852,20 @@ function DetailPanel({
           {activeDev && (
             <div>
               <SectionLabel>Developer</SectionLabel>
-              <Link to="/developers/$slug" params={{ slug: activeDev.slug }}
-                className="flex items-center gap-3 rounded-xl border border-border bg-secondary/40 p-3 hover:bg-secondary transition-colors">
-                <LogoBadge src={activeDev.logo} name={activeDev.name} className="h-10 w-10 rounded-lg" />
+              <Link
+                to="/developers/$slug"
+                params={{ slug: activeDev.slug }}
+                className="flex items-center gap-3 rounded-xl border border-border bg-secondary/40 p-3 hover:bg-secondary transition-colors"
+              >
+                <LogoBadge
+                  src={activeDev.logo}
+                  name={activeDev.name}
+                  className="h-10 w-10 rounded-lg"
+                />
                 <div className="min-w-0">
-                  <div className="font-medium text-sm text-primary leading-tight truncate">{activeDev.name}</div>
+                  <div className="font-medium text-sm text-primary leading-tight truncate">
+                    {activeDev.name}
+                  </div>
                   <div className="text-xs text-muted-foreground">{activeDev.count} projects</div>
                 </div>
                 <ExternalLink className="h-3.5 w-3.5 text-muted-foreground ml-auto shrink-0" />
@@ -647,12 +875,17 @@ function DetailPanel({
 
           {/* CTAs */}
           <div className="space-y-2 pt-1 pb-4">
-            <Link to="/projects/$slug" params={{ slug: active.slug }}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
+            <Link
+              to="/projects/$slug"
+              params={{ slug: active.slug }}
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
               <Building2 className="h-4 w-4" /> View full project page
             </Link>
-            <a href="tel:201029324783"
-              className="flex w-full items-center justify-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm font-medium text-primary hover:bg-secondary transition-colors">
+            <a
+              href="tel:201029324783"
+              className="flex w-full items-center justify-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm font-medium text-primary hover:bg-secondary transition-colors"
+            >
               <Phone className="h-4 w-4" /> Contact advisor
             </a>
           </div>
@@ -688,15 +921,20 @@ function Pill({ children, variant }: { children: React.ReactNode; variant?: "bea
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
-  return <div className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">{children}</div>;
+  return (
+    <div className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+      {children}
+    </div>
+  );
 }
 
 function MiniStat({ label, value }: { label: string; value: string }) {
   return (
     <div>
       <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{label}</div>
-      <div className="mt-0.5 font-display text-xs font-semibold text-primary leading-tight">{value}</div>
+      <div className="mt-0.5 font-display text-xs font-semibold text-primary leading-tight">
+        {value}
+      </div>
     </div>
   );
 }
-

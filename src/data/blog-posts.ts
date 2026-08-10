@@ -21,7 +21,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "top-off-plan-projects-north-coast-2026",
     title: "Top Off-Plan Projects in North Coast 2026: Prices, Developers & Payment Plans",
-    excerpt: "Comprehensive advisor breakdown of Ras El Hekma, Sidi Heneish, and Sidi Abd El Rahman off-plan luxury compound launches, expected ROI, and payment terms.",
+    excerpt:
+      "Comprehensive advisor breakdown of Ras El Hekma, Sidi Heneish, and Sidi Abd El Rahman off-plan luxury compound launches, expected ROI, and payment terms.",
     category: "Market Guide",
     author: {
       name: "PropTrack Advisory Team",
@@ -66,7 +67,8 @@ Most tier-1 developers on the North Coast now offer:
   {
     slug: "new-cairo-vs-sheikh-zayed-investment-guide",
     title: "New Cairo vs Sheikh Zayed: Where to Invest in Egyptian Real Estate?",
-    excerpt: "Detailed comparative analysis of price per sqm trends, infrastructure developments, compound densities, and rental yields between Fifth Settlement and West Cairo.",
+    excerpt:
+      "Detailed comparative analysis of price per sqm trends, infrastructure developments, compound densities, and rental yields between Fifth Settlement and West Cairo.",
     category: "Comparison Analysis",
     author: {
       name: "PropTrack Advisory Team",
@@ -117,7 +119,8 @@ Sheikh Zayed offers an elevated, boutique residential experience with lower dens
   {
     slug: "guide-to-real-estate-payment-plans-egypt",
     title: "Guide to Real Estate Payment Plans & Installments in Egypt",
-    excerpt: "Everything you need to know about down payments, delivery payments, maintenance deposits, interest-free installments, and cash discount calculation.",
+    excerpt:
+      "Everything you need to know about down payments, delivery payments, maintenance deposits, interest-free installments, and cash discount calculation.",
     category: "Financial Guide",
     author: {
       name: "PropTrack Advisory Team",

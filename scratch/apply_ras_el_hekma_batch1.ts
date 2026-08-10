@@ -26,11 +26,25 @@ const rasElHekmaBatch1 = [
     status: "Under Construction",
     beachfront: true,
     types: ["Chalet", "Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    amenities: ["4.8 km Beachfront", "Crystal Lagoons", "5-Star Hotels", "Sports Club", "Commercial Retail Strip", "Luxury Clubhouses", "24/7 Security"],
+    amenities: [
+      "4.8 km Beachfront",
+      "Crystal Lagoons",
+      "5-Star Hotels",
+      "Sports Club",
+      "Commercial Retail Strip",
+      "Luxury Clubhouses",
+      "24/7 Security",
+    ],
     hero: "/projects/hacienda-ras-el-hekma/1.jpg",
-    blurb: "Hacienda Ras El Hekma by Palm Hills Developments — a massive 1,400-feddan flagship Mediterranean resort at Km 238, featuring a 4.8 km beachfront, crystal lagoons, 5-star international hotels, and luxury private residences.",
-    highlights: ["4.8 km beachfront", "1,400 feddan masterplan", "5-star international hotels", "Palm Hills flagship"],
-    type: "Coastal"
+    blurb:
+      "Hacienda Ras El Hekma by Palm Hills Developments — a massive 1,400-feddan flagship Mediterranean resort at Km 238, featuring a 4.8 km beachfront, crystal lagoons, 5-star international hotels, and luxury private residences.",
+    highlights: [
+      "4.8 km beachfront",
+      "1,400 feddan masterplan",
+      "5-star international hotels",
+      "Palm Hills flagship",
+    ],
+    type: "Coastal",
   },
   {
     slug: "modon-ras-el-hekma",
@@ -49,11 +63,25 @@ const rasElHekmaBatch1 = [
     status: "Under Construction",
     beachfront: true,
     types: ["Chalet", "Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    amenities: ["44 km Mediterranean Coastline", "Internal International Airport", "Super-yacht Marina", "18-Hole Golf Courses", "Equestrian Center", "5G Smart Infrastructure", "Business District"],
+    amenities: [
+      "44 km Mediterranean Coastline",
+      "Internal International Airport",
+      "Super-yacht Marina",
+      "18-Hole Golf Courses",
+      "Equestrian Center",
+      "5G Smart Infrastructure",
+      "Business District",
+    ],
     hero: "/projects/modon-ras-el-hekma/1.jpg",
-    blurb: "Modon Ras El Hekma by Modon Holding (Abu Dhabi ADQ) — a landmark 40,000-feddan coastal mega-city featuring 44 km of Mediterranean shoreline, internal international airport, super-yacht marina, golf courses, and Phase 1 Wadi Yemm.",
-    highlights: ["44 km coastline", "40,000 feddan mega-city", "Internal international airport", "Phase 1 Wadi Yemm"],
-    type: "Coastal"
+    blurb:
+      "Modon Ras El Hekma by Modon Holding (Abu Dhabi ADQ) — a landmark 40,000-feddan coastal mega-city featuring 44 km of Mediterranean shoreline, internal international airport, super-yacht marina, golf courses, and Phase 1 Wadi Yemm.",
+    highlights: [
+      "44 km coastline",
+      "40,000 feddan mega-city",
+      "Internal international airport",
+      "Phase 1 Wadi Yemm",
+    ],
+    type: "Coastal",
   },
   {
     slug: "ramla",
@@ -72,11 +100,25 @@ const rasElHekmaBatch1 = [
     status: "Under Construction",
     beachfront: true,
     types: ["Chalet", "Penthouse", "Duplex", "Twin House", "Standalone Villa"],
-    amenities: ["1.4 km Beachfront", "25-acre Swimmable Crystal Lagoon", "The Farm", "Sports Campus", "Boutique Hotel", "Village Street Commercial Strip", "Azza Fahmy Beach Clubhouse"],
+    amenities: [
+      "1.4 km Beachfront",
+      "25-acre Swimmable Crystal Lagoon",
+      "The Farm",
+      "Sports Campus",
+      "Boutique Hotel",
+      "Village Street Commercial Strip",
+      "Azza Fahmy Beach Clubhouse",
+    ],
     hero: "/projects/ramla/1.jpg",
-    blurb: "Ramla North Coast by Marakez — a 402-feddan resort at Km 215 Ras El Hekma, boasting a 1.4 km beachfront, a 25-acre swimmable crystal lagoon, Sports Campus, Village Street, and Azza Fahmy Beach Clubhouse.",
-    highlights: ["1.4 km beachfront", "25-acre crystal lagoon", "Azza Fahmy Beach Clubhouse", "402 feddan masterplan"],
-    type: "Coastal"
+    blurb:
+      "Ramla North Coast by Marakez — a 402-feddan resort at Km 215 Ras El Hekma, boasting a 1.4 km beachfront, a 25-acre swimmable crystal lagoon, Sports Campus, Village Street, and Azza Fahmy Beach Clubhouse.",
+    highlights: [
+      "1.4 km beachfront",
+      "25-acre crystal lagoon",
+      "Azza Fahmy Beach Clubhouse",
+      "402 feddan masterplan",
+    ],
+    type: "Coastal",
   },
   {
     slug: "azha-north-coast",
@@ -94,12 +136,34 @@ const rasElHekmaBatch1 = [
     deliveryYear: 2027,
     status: "Under Construction",
     beachfront: true,
-    types: ["Chalet", "Apartment", "Penthouse", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    amenities: ["800 m Beachfront", "45-acre Swimmable Crystal Lagoon", "5-Star Boutique Hotel", "Sports Club", "Commercial Retail Strip", "Upscale Dining", "24/7 Security"],
+    types: [
+      "Chalet",
+      "Apartment",
+      "Penthouse",
+      "Duplex",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+    ],
+    amenities: [
+      "800 m Beachfront",
+      "45-acre Swimmable Crystal Lagoon",
+      "5-Star Boutique Hotel",
+      "Sports Club",
+      "Commercial Retail Strip",
+      "Upscale Dining",
+      "24/7 Security",
+    ],
     hero: "/projects/azha-north-coast/1.jpg",
-    blurb: "Azha North Coast by Madaar Developments — a 250-feddan luxury coastal destination at Km 214 Ras El Hekma, featuring an 800m private beach, a 45-acre crystal lagoon, 5-star hotel, and fine dining.",
-    highlights: ["800m private beach", "45-acre swimmable lagoon", "5-star boutique hotel", "250 feddan masterplan"],
-    type: "Coastal"
+    blurb:
+      "Azha North Coast by Madaar Developments — a 250-feddan luxury coastal destination at Km 214 Ras El Hekma, featuring an 800m private beach, a 45-acre crystal lagoon, 5-star hotel, and fine dining.",
+    highlights: [
+      "800m private beach",
+      "45-acre swimmable lagoon",
+      "5-star boutique hotel",
+      "250 feddan masterplan",
+    ],
+    type: "Coastal",
   },
   {
     slug: "naia-bay",
@@ -118,11 +182,26 @@ const rasElHekmaBatch1 = [
     status: "Under Construction",
     beachfront: true,
     types: ["Chalet", "Penthouse", "Townhouse", "Twin House", "Standalone Villa"],
-    amenities: ["Greek/Santorini Architecture", "Private Sandy Beach", "60,000 sqm Swimmable Crystal Lagoon", "5-Star Hotel", "Infinity Horizon Pools", "Beach Gym", "Padel Courts", "Commercial Hub"],
+    amenities: [
+      "Greek/Santorini Architecture",
+      "Private Sandy Beach",
+      "60,000 sqm Swimmable Crystal Lagoon",
+      "5-Star Hotel",
+      "Infinity Horizon Pools",
+      "Beach Gym",
+      "Padel Courts",
+      "Commercial Hub",
+    ],
     hero: "/projects/naia-bay/1.jpg",
-    blurb: "Naia Bay by Naia Developments — a Greek Santorini-inspired 112-feddan beach community at Km 212 Ras El Hekma, featuring a 60,000 sqm crystal lagoon, 5-star hotel, and 15% construction footprint.",
-    highlights: ["Greek Santorini architecture", "60,000 sqm crystal lagoon", "15% low building footprint", "112 feddan masterplan"],
-    type: "Coastal"
+    blurb:
+      "Naia Bay by Naia Developments — a Greek Santorini-inspired 112-feddan beach community at Km 212 Ras El Hekma, featuring a 60,000 sqm crystal lagoon, 5-star hotel, and 15% construction footprint.",
+    highlights: [
+      "Greek Santorini architecture",
+      "60,000 sqm crystal lagoon",
+      "15% low building footprint",
+      "112 feddan masterplan",
+    ],
+    type: "Coastal",
   },
   {
     slug: "el-masyaf",
@@ -140,12 +219,34 @@ const rasElHekmaBatch1 = [
     deliveryYear: 2028,
     status: "Under Construction",
     beachfront: true,
-    types: ["Cabana", "Chalet", "Apartment", "Penthouse", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    amenities: ["750 m Private Sandy Beach", "Crystal Lagoons", "Barbarossa Beach Club", "Sports Facilities", "Boutique Commercial Strip", "Hospitality Services"],
+    types: [
+      "Cabana",
+      "Chalet",
+      "Apartment",
+      "Penthouse",
+      "Duplex",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+    ],
+    amenities: [
+      "750 m Private Sandy Beach",
+      "Crystal Lagoons",
+      "Barbarossa Beach Club",
+      "Sports Facilities",
+      "Boutique Commercial Strip",
+      "Hospitality Services",
+    ],
     hero: "/projects/el-masyaf/1.jpg",
-    blurb: "El Masyaf by M Squared — a 103-feddan coastal retreat at Km 212 Ras El Hekma with a 750m beachfront, Barbarossa Beach Club, crystal lagoons, and 80% dedicated landscaping.",
-    highlights: ["750m beachfront", "Barbarossa Beach Club", "80% landscape footprint", "103 feddan masterplan"],
-    type: "Coastal"
+    blurb:
+      "El Masyaf by M Squared — a 103-feddan coastal retreat at Km 212 Ras El Hekma with a 750m beachfront, Barbarossa Beach Club, crystal lagoons, and 80% dedicated landscaping.",
+    highlights: [
+      "750m beachfront",
+      "Barbarossa Beach Club",
+      "80% landscape footprint",
+      "103 feddan masterplan",
+    ],
+    type: "Coastal",
   },
   {
     slug: "fouka-bay",
@@ -163,12 +264,33 @@ const rasElHekmaBatch1 = [
     deliveryYear: 2025,
     status: "Under Construction",
     beachfront: true,
-    types: ["Chalet", "Apartment", "Penthouse", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    amenities: ["800 m Sandy Beachfront", "Crystal Lagoons by Crystal Lagoons", "House of Development Commercial Strip", "Casa Cook 5-Star Hotel", "Beach Clubhouses", "Water Sports"],
+    types: [
+      "Chalet",
+      "Apartment",
+      "Penthouse",
+      "Duplex",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+    ],
+    amenities: [
+      "800 m Sandy Beachfront",
+      "Crystal Lagoons by Crystal Lagoons",
+      "House of Development Commercial Strip",
+      "Casa Cook 5-Star Hotel",
+      "Beach Clubhouses",
+      "Water Sports",
+    ],
     hero: "/projects/fouka-bay/1.jpg",
-    blurb: "Fouka Bay by Tatweer Misr — a 220-feddan terraced Mediterranean resort at Km 211 Ras El Hekma with an 800m sandy beach, swimmable crystal lagoons, and Casa Cook 5-star hotel.",
-    highlights: ["800m sandy beach", "Casa Cook 5-star hotel", "Terraced sea view levels", "220 feddan masterplan"],
-    type: "Coastal"
+    blurb:
+      "Fouka Bay by Tatweer Misr — a 220-feddan terraced Mediterranean resort at Km 211 Ras El Hekma with an 800m sandy beach, swimmable crystal lagoons, and Casa Cook 5-star hotel.",
+    highlights: [
+      "800m sandy beach",
+      "Casa Cook 5-star hotel",
+      "Terraced sea view levels",
+      "220 feddan masterplan",
+    ],
+    type: "Coastal",
   },
   {
     slug: "hacienda-west",
@@ -187,12 +309,25 @@ const rasElHekmaBatch1 = [
     status: "Delivered",
     beachfront: true,
     types: ["Chalet", "Apartment", "Penthouse", "Duplex", "Standalone Villa"],
-    amenities: ["Exclusive Beachfront", "Signature Beach Clubs & Dining", "Swimming Pools", "Sports Facilities", "Boutique Commercial Area", "24/7 Security"],
+    amenities: [
+      "Exclusive Beachfront",
+      "Signature Beach Clubs & Dining",
+      "Swimming Pools",
+      "Sports Facilities",
+      "Boutique Commercial Area",
+      "24/7 Security",
+    ],
     hero: "/projects/hacienda-west/1.jpg",
     gallery: ["/projects/hacienda-west/1.jpg"],
-    blurb: "Hacienda West by Palm Hills Developments — an exclusive 137-feddan coastal enclave at Km 200 Ras El Hekma with terraced sea views, signature beach clubs, and luxury summer residences.",
-    highlights: ["Km 200 prime location", "Terraced sea view layout", "Signature Palm Hills beach club", "137 feddan masterplan"],
-    type: "Coastal"
+    blurb:
+      "Hacienda West by Palm Hills Developments — an exclusive 137-feddan coastal enclave at Km 200 Ras El Hekma with terraced sea views, signature beach clubs, and luxury summer residences.",
+    highlights: [
+      "Km 200 prime location",
+      "Terraced sea view layout",
+      "Signature Palm Hills beach club",
+      "137 feddan masterplan",
+    ],
+    type: "Coastal",
   },
   {
     slug: "hyde-park-north-seashore",
@@ -210,12 +345,34 @@ const rasElHekmaBatch1 = [
     deliveryYear: 2028,
     status: "Under Construction",
     beachfront: true,
-    types: ["Studio", "Apartment", "Duplex", "Penthouse", "Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    amenities: ["550 m Sandy Beachfront", "25+ Beach-Entry Pools", "Signature Beach Clubhouses", "Commercial Strip", "Boutique Hotel", "Sports Courts"],
+    types: [
+      "Studio",
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Chalet",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+    ],
+    amenities: [
+      "550 m Sandy Beachfront",
+      "25+ Beach-Entry Pools",
+      "Signature Beach Clubhouses",
+      "Commercial Strip",
+      "Boutique Hotel",
+      "Sports Courts",
+    ],
     hero: "/projects/hyde-park-north-seashore/1.jpg",
-    blurb: "Seashore (Hyde Park North) by Hyde Park — a 240-feddan terraced resort at Km 207 Ras El Hekma featuring 32m elevations, a 550m beach, 25+ pools, and fully finished residences.",
-    highlights: ["550m sandy beach", "32m terraced elevation", "25+ beach-entry pools", "240 feddan masterplan"],
-    type: "Coastal"
+    blurb:
+      "Seashore (Hyde Park North) by Hyde Park — a 240-feddan terraced resort at Km 207 Ras El Hekma featuring 32m elevations, a 550m beach, 25+ pools, and fully finished residences.",
+    highlights: [
+      "550m sandy beach",
+      "32m terraced elevation",
+      "25+ beach-entry pools",
+      "240 feddan masterplan",
+    ],
+    type: "Coastal",
   },
   {
     slug: "lyv",
@@ -233,20 +390,42 @@ const rasElHekmaBatch1 = [
     deliveryYear: 2028,
     status: "Under Construction",
     beachfront: true,
-    types: ["Apartment", "Chalet", "Duplex", "Penthouse", "Townhouse", "Twin House", "Standalone Villa"],
-    amenities: ["400 m Sandy Beach", "55,000 sqm Swimmable Crystal Lagoon", "21,000 sqm Swimming Pools", "Boutique Hotel", "Elite Clubhouses", "Retail District", "Sports Arena"],
+    types: [
+      "Apartment",
+      "Chalet",
+      "Duplex",
+      "Penthouse",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+    ],
+    amenities: [
+      "400 m Sandy Beach",
+      "55,000 sqm Swimmable Crystal Lagoon",
+      "21,000 sqm Swimming Pools",
+      "Boutique Hotel",
+      "Elite Clubhouses",
+      "Retail District",
+      "Sports Arena",
+    ],
     hero: "/projects/lyv/1.jpg",
-    blurb: "LYV Caesar by Gates Developments — a 206-feddan Mediterranean resort at Km 200 Ras El Hekma with 38m sea elevations, a 55,000 sqm crystal lagoon, and 21,000 sqm pool expanses.",
-    highlights: ["55,000 sqm crystal lagoon", "38m sea view elevation", "Adjacent to Caesar SODIC", "206 feddan masterplan"],
-    type: "Coastal"
-  }
+    blurb:
+      "LYV Caesar by Gates Developments — a 206-feddan Mediterranean resort at Km 200 Ras El Hekma with 38m sea elevations, a 55,000 sqm crystal lagoon, and 21,000 sqm pool expanses.",
+    highlights: [
+      "55,000 sqm crystal lagoon",
+      "38m sea view elevation",
+      "Adjacent to Caesar SODIC",
+      "206 feddan masterplan",
+    ],
+    type: "Coastal",
+  },
 ];
 
 // Map into compoundsGenerated
 let currentList = [...compoundsGenerated];
 
 for (const item of rasElHekmaBatch1) {
-  const idx = currentList.findIndex(c => c.slug === item.slug);
+  const idx = currentList.findIndex((c) => c.slug === item.slug);
   if (idx !== -1) {
     currentList[idx] = { ...currentList[idx], ...item };
     console.log(`Updated existing project: ${item.slug}`);
@@ -275,7 +454,7 @@ for (const item of rasElHekmaBatch1) {
   } else {
     locText = locText.replace(
       "export const projectLocations: Record<string, ProjectLocation> = {",
-      "export const projectLocations: Record<string, ProjectLocation> = {\n" + entry
+      "export const projectLocations: Record<string, ProjectLocation> = {\n" + entry,
     );
   }
 }

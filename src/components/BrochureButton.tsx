@@ -1,5 +1,17 @@
 import { useState, useEffect } from "react";
-import { FileText, X, Download, ExternalLink, Maximize2, Minimize2, BookOpen, Upload, AlertCircle, FileCheck, Loader2 } from "lucide-react";
+import {
+  FileText,
+  X,
+  Download,
+  ExternalLink,
+  Maximize2,
+  Minimize2,
+  BookOpen,
+  Upload,
+  AlertCircle,
+  FileCheck,
+  Loader2,
+} from "lucide-react";
 import { useStore } from "@/lib/store";
 import { brochureMap } from "@/data/brochure-map";
 
@@ -53,7 +65,7 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
         const parts = brochureUrl.split(",");
         const contentType = parts[0].split(";")[0].split(":")[1] || "application/pdf";
         const base64Data = parts[1];
-        
+
         const byteCharacters = atob(base64Data);
         const byteNumbers = new Array(byteCharacters.length);
         for (let i = 0; i < byteCharacters.length; i++) {
@@ -62,7 +74,7 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
         const byteArray = new Uint8Array(byteNumbers);
         const blob = new Blob([byteArray], { type: contentType });
         const blobUrl = URL.createObjectURL(blob);
-        
+
         setResolvedUrl(blobUrl);
       } catch (e) {
         console.error("Failed to parse data URL to blob", e);
@@ -85,8 +97,16 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
   }, [brochureUrl]);
 
   // Determine content type for viewer
-  const isImage = brochureType?.startsWith("image/") || (brochureUrl && !brochureUrl.includes("application/pdf") && (brochureUrl.startsWith("data:image") || /\.(jpg|jpeg|png|gif|webp|svg)(\?|$)/i.test(brochureUrl)));
-  const isPdf = brochureType === "application/pdf" || brochureUrl?.includes("application/pdf") || /\.pdf(\?|$)/i.test(brochureUrl ?? "");
+  const isImage =
+    brochureType?.startsWith("image/") ||
+    (brochureUrl &&
+      !brochureUrl.includes("application/pdf") &&
+      (brochureUrl.startsWith("data:image") ||
+        /\.(jpg|jpeg|png|gif|webp|svg)(\?|$)/i.test(brochureUrl)));
+  const isPdf =
+    brochureType === "application/pdf" ||
+    brochureUrl?.includes("application/pdf") ||
+    /\.pdf(\?|$)/i.test(brochureUrl ?? "");
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -126,7 +146,9 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
       >
         <BookOpen className="h-4 w-4 text-accent group-hover:scale-110 transition-transform" />
         View Brochure
-        {hasBrochure && <span className="ml-1 inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />}
+        {hasBrochure && (
+          <span className="ml-1 inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+        )}
       </button>
 
       {/* Modal overlay */}
@@ -134,7 +156,9 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
         <div
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/85 backdrop-blur-md"
           style={{ animation: "fadeIn 0.2s ease" }}
-          onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setOpen(false);
+          }}
         >
           <div
             className={`flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-2xl transition-all duration-300 ${
@@ -149,7 +173,9 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
                   <FileText className="h-5 w-5 text-white" />
                 </div>
                 <div className="min-w-0">
-                  <div className="font-display font-bold text-sm text-primary truncate">{projectName}</div>
+                  <div className="font-display font-bold text-sm text-primary truncate">
+                    {projectName}
+                  </div>
                   <div className="text-[11px] text-muted-foreground">
                     {brochureName ? brochureName : "Project Brochure"}
                   </div>
@@ -163,7 +189,8 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
                       download={brochureName || `${projectName}-Brochure`}
                       className="flex items-center gap-1.5 rounded-xl border border-border bg-secondary/40 px-3 py-1.5 text-xs font-semibold text-muted-foreground hover:text-primary hover:bg-secondary/70 transition-all"
                     >
-                      <Download className="h-3.5 w-3.5" /> <span className="hidden xs:inline">Download</span>
+                      <Download className="h-3.5 w-3.5" />{" "}
+                      <span className="hidden xs:inline">Download</span>
                     </a>
                     <a
                       href={resolvedUrl || brochureUrl}
@@ -171,7 +198,8 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
                       rel="noopener noreferrer"
                       className="flex items-center gap-1.5 rounded-xl border border-border bg-secondary/40 px-3 py-1.5 text-xs font-semibold text-muted-foreground hover:text-primary hover:bg-secondary/70 transition-all"
                     >
-                      <ExternalLink className="h-3.5 w-3.5" /> <span className="hidden xs:inline">Open Tab</span>
+                      <ExternalLink className="h-3.5 w-3.5" />{" "}
+                      <span className="hidden xs:inline">Open Tab</span>
                     </a>
                   </>
                 )}
@@ -180,10 +208,17 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
                   className="rounded-xl border border-border bg-secondary/40 p-1.5 text-muted-foreground hover:text-primary transition-all"
                   title={fullscreen ? "Exit fullscreen" : "Fullscreen"}
                 >
-                  {fullscreen ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
+                  {fullscreen ? (
+                    <Minimize2 className="h-4 w-4" />
+                  ) : (
+                    <Maximize2 className="h-4 w-4" />
+                  )}
                 </button>
                 <button
-                  onClick={() => { setOpen(false); setFullscreen(false); }}
+                  onClick={() => {
+                    setOpen(false);
+                    setFullscreen(false);
+                  }}
                   className="rounded-xl border border-border bg-secondary/40 p-1.5 text-muted-foreground hover:text-destructive transition-all"
                   title="Close"
                 >
@@ -197,13 +232,17 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
               {loadingPdf ? (
                 <div className="flex flex-col items-center gap-3">
                   <Loader2 className="h-8 w-8 text-accent animate-spin" />
-                  <span className="text-xs font-semibold text-primary">Loading brochure preview...</span>
+                  <span className="text-xs font-semibold text-primary">
+                    Loading brochure preview...
+                  </span>
                 </div>
               ) : hasBrochure ? (
                 isPdf ? (
                   <div className="h-full w-full flex flex-col gap-2">
                     <div className="sm:hidden flex items-center justify-between gap-2 bg-accent/10 border border-accent/20 rounded-xl p-3 text-xs text-primary shrink-0">
-                      <span className="font-medium text-accent">PDF Viewer is limited on mobile</span>
+                      <span className="font-medium text-accent">
+                        PDF Viewer is limited on mobile
+                      </span>
                       <a
                         href={resolvedUrl || brochureUrl}
                         target="_blank"
@@ -214,7 +253,11 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
                       </a>
                     </div>
                     <iframe
-                      src={resolvedUrl ? `${resolvedUrl}#toolbar=1&navpanes=1&scrollbar=1&view=FitH` : ""}
+                      src={
+                        resolvedUrl
+                          ? `${resolvedUrl}#toolbar=1&navpanes=1&scrollbar=1&view=FitH`
+                          : ""
+                      }
                       className="flex-1 w-full border-0 bg-white dark:bg-zinc-950 rounded-lg shadow-sm"
                       title={`${projectName} Brochure`}
                     />
@@ -234,8 +277,8 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
                     <div>
                       <h3 className="font-bold text-primary text-base">Brochure Ready</h3>
                       <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                        <strong>{brochureName}</strong> is available for download.
-                        This file type cannot be previewed in-browser.
+                        <strong>{brochureName}</strong> is available for download. This file type
+                        cannot be previewed in-browser.
                       </p>
                     </div>
                     <a
@@ -255,7 +298,8 @@ export function BrochureButton({ projectSlug, projectName }: BrochureButtonProps
                   <div>
                     <h3 className="font-bold text-primary text-base">Brochure Coming Soon</h3>
                     <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                      The official sales brochure and master plan documents for <strong>{projectName}</strong> are currently under compilation. 
+                      The official sales brochure and master plan documents for{" "}
+                      <strong>{projectName}</strong> are currently under compilation.
                     </p>
                   </div>
 

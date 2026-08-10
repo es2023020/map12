@@ -21,7 +21,11 @@ export const Route = createFileRoute("/projects/")({
   head: () => ({
     meta: [
       { title: "All Projects — PropTrack" },
-      { name: "description", content: "Browse every compound in the PropTrack database. Filter by destination, developer, price and delivery year." },
+      {
+        name: "description",
+        content:
+          "Browse every compound in the PropTrack database. Filter by destination, developer, price and delivery year.",
+      },
     ],
   }),
   component: ProjectsPage,
@@ -39,12 +43,27 @@ function ProjectsPage() {
   const [kiloFilter, setKiloFilter] = useState("");
 
   const mainCompounds = useMemo(() => compounds.filter((c) => !c.parentSlug), [compounds]);
-  const availMaxPrices = useMemo(() => availability.flatMap((a) => a.breakdown.map((b) => b.maxPriceM)), [availability]);
+  const availMaxPrices = useMemo(
+    () => availability.flatMap((a) => a.breakdown.map((b) => b.maxPriceM)),
+    [availability],
+  );
   const compoundPrices = useMemo(() => mainCompounds.map((c) => c.priceFrom), [mainCompounds]);
-  const allPrices = useMemo(() => [...availMaxPrices, ...compoundPrices].filter((p) => p > 0), [availMaxPrices, compoundPrices]);
-  const PRICE_MAX = useMemo(() => (allPrices.length > 0 ? Math.max(...allPrices) : 100), [allPrices]);
-  const PRICE_MIN = useMemo(() => (compoundPrices.length > 0 ? Math.min(...compoundPrices) : 0), [compoundPrices]);
-  const ALL_TYPES = useMemo(() => Array.from(new Set(mainCompounds.flatMap((c) => c.types))).sort(), [mainCompounds]);
+  const allPrices = useMemo(
+    () => [...availMaxPrices, ...compoundPrices].filter((p) => p > 0),
+    [availMaxPrices, compoundPrices],
+  );
+  const PRICE_MAX = useMemo(
+    () => (allPrices.length > 0 ? Math.max(...allPrices) : 100),
+    [allPrices],
+  );
+  const PRICE_MIN = useMemo(
+    () => (compoundPrices.length > 0 ? Math.min(...compoundPrices) : 0),
+    [compoundPrices],
+  );
+  const ALL_TYPES = useMemo(
+    () => Array.from(new Set(mainCompounds.flatMap((c) => c.types))).sort(),
+    [mainCompounds],
+  );
 
   const [maxPrice, setMaxPrice] = useState<number | null>(null);
   const currentMaxPrice = maxPrice ?? PRICE_MAX;
@@ -52,10 +71,24 @@ function ProjectsPage() {
   const [filtersOpen, setFiltersOpen] = useState(!!(destinationParam || devParam || qParam));
   const trackEvent = useStore((s) => s.trackEvent);
 
-  const hasFilters = !!(q || destination || dev || status || type || kiloFilter || currentMaxPrice < PRICE_MAX);
+  const hasFilters = !!(
+    q ||
+    destination ||
+    dev ||
+    status ||
+    type ||
+    kiloFilter ||
+    currentMaxPrice < PRICE_MAX
+  );
 
   function clearAll() {
-    setQ(""); setArea(""); setDev(""); setStatus(""); setType(""); setKiloFilter(""); setMaxPrice(null);
+    setQ("");
+    setArea("");
+    setDev("");
+    setStatus("");
+    setType("");
+    setKiloFilter("");
+    setMaxPrice(null);
   }
 
   const handleSelectPreset = (presetType: "destination" | "dev" | "q", val: string) => {
@@ -89,7 +122,7 @@ function ProjectsPage() {
           if (b.cluster) terms.add(b.cluster);
           if (b.deliveryNote) terms.add(b.deliveryNote);
           if (b.paymentPlan) terms.add(b.paymentPlan);
-          
+
           for (const u of b.units ?? []) {
             if (u.cluster) terms.add(u.cluster);
             if (u.finishing) terms.add(u.finishing);
@@ -102,7 +135,10 @@ function ProjectsPage() {
         }
         availText = Array.from(terms).join(" ");
       }
-      map.set(c.slug, `${c.name} ${c.developer} ${c.destination} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase());
+      map.set(
+        c.slug,
+        `${c.name} ${c.developer} ${c.destination} ${c.blurb} ${c.types.join(" ")} ${c.amenities.join(" ")} ${availText}`.toLowerCase(),
+      );
     });
     return map;
   }, [availabilityMap]);
@@ -115,11 +151,23 @@ function ProjectsPage() {
     statusVal: string,
     typeVal: string,
     maxPriceVal: number,
-    kiloFilterVal: string
+    kiloFilterVal: string,
   ) => {
     if (qVal) {
       // Intelligent Query Processing
-      const stopWords = new Set(["in", "for", "with", "a", "an", "the", "at", "by", "of", "and", "on"]);
+      const stopWords = new Set([
+        "in",
+        "for",
+        "with",
+        "a",
+        "an",
+        "the",
+        "at",
+        "by",
+        "of",
+        "and",
+        "on",
+      ]);
       const queryWords = qVal
         .toLowerCase()
         .split(/\s+/)
@@ -133,13 +181,25 @@ function ProjectsPage() {
         for (const word of queryWords) {
           let wordMatches = false;
 
-          if ((word === "mv" || word === "mountainview") && (devLower.includes("mountain view") || devLower.includes("mv"))) {
+          if (
+            (word === "mv" || word === "mountainview") &&
+            (devLower.includes("mountain view") || devLower.includes("mv"))
+          ) {
             wordMatches = true;
-          } else if ((word === "ph" || word === "phd" || word === "palm") && devLower.includes("palm hills")) {
+          } else if (
+            (word === "ph" || word === "phd" || word === "palm") &&
+            devLower.includes("palm hills")
+          ) {
             wordMatches = true;
-          } else if ((word === "tagamo3" || word === "tagamoa" || word === "tagamo'") && destLower.includes("new-cairo")) {
+          } else if (
+            (word === "tagamo3" || word === "tagamoa" || word === "tagamo'") &&
+            destLower.includes("new-cairo")
+          ) {
             wordMatches = true;
-          } else if (word === "zayed" && (destLower.includes("sheikh-zayed") || destLower.includes("new-zayed"))) {
+          } else if (
+            word === "zayed" &&
+            (destLower.includes("sheikh-zayed") || destLower.includes("new-zayed"))
+          ) {
             wordMatches = true;
           } else if (word === "hekma" && destLower.includes("ras-el-hekma")) {
             wordMatches = true;
@@ -180,14 +240,27 @@ function ProjectsPage() {
   };
 
   const filtered = useMemo(() => {
-    let list = mainCompounds.filter((c) => matchCompound(c, debouncedQ, destination, dev, status, type, currentMaxPrice, kiloFilter));
+    let list = mainCompounds.filter((c) =>
+      matchCompound(c, debouncedQ, destination, dev, status, type, currentMaxPrice, kiloFilter),
+    );
     return [...list].sort((a, b) => {
       if (sort === "name") return a.name.localeCompare(b.name);
       if (sort === "price-asc") return a.priceFrom - b.priceFrom;
       if (sort === "price-desc") return b.priceFrom - a.priceFrom;
       return a.deliveryYear - b.deliveryYear;
     });
-  }, [debouncedQ, destination, dev, status, type, currentMaxPrice, kiloFilter, sort, searchableTextMap, mainCompounds]);
+  }, [
+    debouncedQ,
+    destination,
+    dev,
+    status,
+    type,
+    currentMaxPrice,
+    kiloFilter,
+    sort,
+    searchableTextMap,
+    mainCompounds,
+  ]);
 
   // Dynamic cascading option computations:
   const activeFilters = useMemo(() => {
@@ -202,7 +275,9 @@ function ProjectsPage() {
         activeDests.add(c.destination);
       }
       // For activeDevelopers (match everything except developer filter)
-      if (matchCompound(c, debouncedQ, destination, "", status, type, currentMaxPrice, kiloFilter)) {
+      if (
+        matchCompound(c, debouncedQ, destination, "", status, type, currentMaxPrice, kiloFilter)
+      ) {
         activeDevs.add(c.developerSlug);
       }
       // For activeStatuses (match everything except status filter)
@@ -219,9 +294,19 @@ function ProjectsPage() {
       destinations: destinations.filter((a) => activeDests.has(a.slug)),
       developers: developers.filter((d) => activeDevs.has(d.slug)),
       statuses: ["RTM", "Off-Plan"].filter((s) => activeStats.has(s as any)),
-      types: ALL_TYPES.filter((t) => activeTyps.has(t))
+      types: ALL_TYPES.filter((t) => activeTyps.has(t)),
     };
-  }, [debouncedQ, destination, dev, status, type, maxPrice, kiloFilter, searchableTextMap, mainCompounds]);
+  }, [
+    debouncedQ,
+    destination,
+    dev,
+    status,
+    type,
+    maxPrice,
+    kiloFilter,
+    searchableTextMap,
+    mainCompounds,
+  ]);
 
   const FilterPanel = (
     <div className="space-y-6">
@@ -230,7 +315,10 @@ function ProjectsPage() {
           <SlidersHorizontal className="h-3.5 w-3.5 text-accent" /> Filters
         </div>
         {hasFilters && (
-          <button onClick={clearAll} className="text-[10px] font-bold uppercase tracking-wider text-accent hover:text-accent/80 transition-colors">
+          <button
+            onClick={clearAll}
+            className="text-[10px] font-bold uppercase tracking-wider text-accent hover:text-accent/80 transition-colors"
+          >
             Clear all
           </button>
         )}
@@ -251,13 +339,19 @@ function ProjectsPage() {
         label="Destination"
         value={destination}
         onChange={setArea}
-        options={[{ value: "", label: "All destinations" }, ...activeFilters.destinations.map((a) => ({ value: a.slug, label: a.name }))]}
+        options={[
+          { value: "", label: "All destinations" },
+          ...activeFilters.destinations.map((a) => ({ value: a.slug, label: a.name })),
+        ]}
       />
       <FilterSelect
         label="Developer"
         value={dev}
         onChange={setDev}
-        options={[{ value: "", label: "All developers" }, ...activeFilters.developers.map((d) => ({ value: d.slug, label: d.name }))]}
+        options={[
+          { value: "", label: "All developers" },
+          ...activeFilters.developers.map((d) => ({ value: d.slug, label: d.name })),
+        ]}
       />
       <FilterSelect
         label="Status"
@@ -265,16 +359,20 @@ function ProjectsPage() {
         onChange={setStatus}
         options={[
           { value: "", label: "Any status" },
-          ...activeFilters.statuses.map((s) => ({ value: s, label: s }))
+          ...activeFilters.statuses.map((s) => ({ value: s, label: s })),
         ]}
       />
       <FilterSelect
         label="Unit Type"
         value={type}
         onChange={setType}
-        options={[{ value: "", label: "Any type" }, ...activeFilters.types.map((t) => ({ value: t, label: t }))]}
+        options={[
+          { value: "", label: "Any type" },
+          ...activeFilters.types.map((t) => ({ value: t, label: t })),
+        ]}
       />
-      {(!destination || destinations.find((d) => d.slug === destination)?.region === "north-coast") && (
+      {(!destination ||
+        destinations.find((d) => d.slug === destination)?.region === "north-coast") && (
         <FilterSelect
           label="Sahel Highway Marker (Kilo)"
           value={kiloFilter}
@@ -285,7 +383,7 @@ function ProjectsPage() {
             { value: "120-150", label: "KM 120 – 150 (Sidi Abdelrahman)" },
             { value: "150-180", label: "KM 150 – 180 (Al Dabaa)" },
             { value: "180-220", label: "KM 180 – 220 (Ras El Hekma)" },
-            { value: "220+", label: "KM 220+ (Sidi Heneish)" }
+            { value: "220+", label: "KM 220+ (Sidi Heneish)" },
           ]}
         />
       )}
@@ -317,21 +415,33 @@ function ProjectsPage() {
         <div className="mx-auto max-w-7xl px-4 py-10 lg:py-12 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="max-w-xl">
-              <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent">Property Atlas</div>
-              <h1 className="mt-1 font-display text-3xl md:text-4xl font-semibold tracking-tight text-primary">All projects</h1>
-              <p className="mt-2 text-sm text-muted-foreground">{mainCompounds.length} compounds across Sahel, Cairo, Red Sea & beyond.</p>
+              <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent">
+                Property Atlas
+              </div>
+              <h1 className="mt-1 font-display text-3xl md:text-4xl font-semibold tracking-tight text-primary">
+                All projects
+              </h1>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {mainCompounds.length} compounds across Sahel, Cairo, Red Sea & beyond.
+              </p>
             </div>
             {/* Mobile: Filters toggle button */}
             <button
               onClick={() => setFiltersOpen((v) => !v)}
               className={`flex items-center justify-center gap-2 rounded-full border px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all lg:hidden self-start md:self-auto shadow-2xs ${
-                hasFilters ? "border-accent bg-accent/15 text-accent" : "border-border bg-card text-muted-foreground hover:bg-secondary/50"
+                hasFilters
+                  ? "border-accent bg-accent/15 text-accent"
+                  : "border-border bg-card text-muted-foreground hover:bg-secondary/50"
               }`}
             >
               <SlidersHorizontal className="h-3.5 w-3.5" />
               Filters
               {hasFilters && <span className="h-2 w-2 rounded-full bg-accent animate-ping" />}
-              {filtersOpen ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
+              {filtersOpen ? (
+                <ChevronUp className="h-3.5 w-3.5" />
+              ) : (
+                <ChevronDown className="h-3.5 w-3.5" />
+              )}
             </button>
           </div>
 
@@ -370,9 +480,15 @@ function ProjectsPage() {
           <div>
             <div className="mb-6 flex items-center justify-between gap-3 border-b border-border/40 pb-4">
               <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                Showing <strong className="text-primary">{filtered.length}</strong> of {mainCompounds.length} projects
+                Showing <strong className="text-primary">{filtered.length}</strong> of{" "}
+                {mainCompounds.length} projects
                 {hasFilters && (
-                  <button onClick={clearAll} className="ml-3 text-[10px] font-bold text-accent hover:text-accent/80 transition-colors uppercase tracking-wider hover:underline">clear filters</button>
+                  <button
+                    onClick={clearAll}
+                    className="ml-3 text-[10px] font-bold text-accent hover:text-accent/80 transition-colors uppercase tracking-wider hover:underline"
+                  >
+                    clear filters
+                  </button>
                 )}
               </div>
               <div className="relative">
@@ -399,9 +515,16 @@ function ProjectsPage() {
             {filtered.length === 0 && (
               <div className="rounded-3xl border border-dashed border-border p-16 text-center shadow-2xs bg-card/10">
                 <Search className="mx-auto h-12 w-12 text-muted-foreground/25 mb-4" />
-                <h3 className="font-display text-lg font-semibold text-primary">No matching projects</h3>
-                <p className="mt-1 text-sm text-muted-foreground/80">Try adjusting your filters or search keywords.</p>
-                <button onClick={clearAll} className="mt-4 rounded-full bg-accent/10 px-5 py-2 text-xs font-semibold text-accent hover:bg-accent/15 transition-all">
+                <h3 className="font-display text-lg font-semibold text-primary">
+                  No matching projects
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground/80">
+                  Try adjusting your filters or search keywords.
+                </p>
+                <button
+                  onClick={clearAll}
+                  className="mt-4 rounded-full bg-accent/10 px-5 py-2 text-xs font-semibold text-accent hover:bg-accent/15 transition-all"
+                >
                   Clear all filters
                 </button>
               </div>
@@ -417,7 +540,7 @@ function FilterSelect({
   label,
   value,
   onChange,
-  options
+  options,
 }: {
   label: string;
   value: string;
@@ -426,7 +549,9 @@ function FilterSelect({
 }) {
   return (
     <div className="space-y-1.5">
-      <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">{label}</label>
+      <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">
+        {label}
+      </label>
       <div className="relative">
         <select
           value={value}
@@ -446,4 +571,3 @@ function FilterSelect({
     </div>
   );
 }
-

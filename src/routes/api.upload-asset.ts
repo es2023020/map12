@@ -37,13 +37,13 @@ export const Route = createFileRoute("/api/upload-asset")({
 
           return new Response(JSON.stringify({ success: true, created }), {
             status: 200,
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" },
           });
         } catch (error: any) {
           console.error("GET brochures scan error:", error);
           return new Response(JSON.stringify({ error: error.message }), {
             status: 500,
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" },
           });
         }
       },
@@ -54,11 +54,11 @@ export const Route = createFileRoute("/api/upload-asset")({
           const file = formData.get("file");
           const type = formData.get("type");
           const fileName = formData.get("fileName");
-          
+
           if (!file || !type || !fileName) {
             return new Response(JSON.stringify({ error: "Missing fields" }), {
               status: 400,
-              headers: { "Content-Type": "application/json" }
+              headers: { "Content-Type": "application/json" },
             });
           }
 
@@ -73,7 +73,7 @@ export const Route = createFileRoute("/api/upload-asset")({
           } else {
             return new Response(JSON.stringify({ error: "Invalid type" }), {
               status: 400,
-              headers: { "Content-Type": "application/json" }
+              headers: { "Content-Type": "application/json" },
             });
           }
 
@@ -85,7 +85,10 @@ export const Route = createFileRoute("/api/upload-asset")({
 
           // If it was in the waiting folder, let's delete it there to clean up
           const brochureName = String(fileName);
-          const waitingFile = path.join("D:\\map12\\public\\brochures\\_waiting_to_be_uploaded", brochureName);
+          const waitingFile = path.join(
+            "D:\\map12\\public\\brochures\\_waiting_to_be_uploaded",
+            brochureName,
+          );
           if (fs.existsSync(waitingFile)) {
             try {
               fs.unlinkSync(waitingFile);
@@ -110,16 +113,16 @@ export const Route = createFileRoute("/api/upload-asset")({
 
           return new Response(JSON.stringify({ success: true, path: targetPath }), {
             status: 200,
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" },
           });
         } catch (error: any) {
           console.error("Upload error:", error);
           return new Response(JSON.stringify({ error: error.message }), {
             status: 500,
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" },
           });
         }
-      }
-    }
-  }
+      },
+    },
+  },
 });

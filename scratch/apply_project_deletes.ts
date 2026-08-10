@@ -12,34 +12,28 @@ const deleteSlugs = new Set([
   "palm-hills-alexandria",
   "sheraton-residences",
   "soma-sharm",
-  "palm-hills-october" // double check it's gone
+  "palm-hills-october", // double check it's gone
 ]);
 
 // 1. Update src/data/compounds.ts
 if (fs.existsSync(compoundsPath)) {
   let text = fs.readFileSync(compoundsPath, "utf-8");
-  
+
   // Remove Sheraton Residences raw line
-  text = text.replace(
-    /\s*\{\s*name:\s*"Sheraton Residences",[^}]+?\},/g,
-    ""
-  );
-  
+  text = text.replace(/\s*\{\s*name:\s*"Sheraton Residences",[^}]+?\},/g, "");
+
   // Remove Soma Sharm raw line
-  text = text.replace(
-    /\s*\{\s*name:\s*"Soma Sharm",[^}]+?\},/g,
-    ""
-  );
-  
+  text = text.replace(/\s*\{\s*name:\s*"Soma Sharm",[^}]+?\},/g, "");
+
   // Remove Palm Hills Alexandria static block
   text = text.replace(
     /\{\s*slug:\s*"palm-hills-alexandria"[\s\S]*?year-round Mediterranean living\.",[\s\S]*?\},/g,
-    ""
+    "",
   );
   // Also alternate patterns
   text = text.replace(
     /\{\s*slug:\s*"palm-hills-alexandria"[\s\S]*?highlights:\s*\[[^\]]+?\]\s*\},/g,
-    ""
+    "",
   );
 
   fs.writeFileSync(compoundsPath, text, "utf-8");
@@ -49,18 +43,18 @@ if (fs.existsSync(compoundsPath)) {
 // 2. Update src/data/project-locations.ts
 if (fs.existsSync(locationsPath)) {
   let text = fs.readFileSync(locationsPath, "utf-8");
-  
+
   for (const slug of deleteSlugs) {
     const regex = new RegExp(`\\s*"${slug}":\\s*\\{[^}]*\\},`, "g");
     text = text.replace(regex, "");
   }
-  
+
   fs.writeFileSync(locationsPath, text, "utf-8");
   console.log("Updated project-locations.ts");
 }
 
 // 3. Update compounds.generated.ts
-const updatedList = compoundsGenerated.filter(c => !deleteSlugs.has(c.slug));
+const updatedList = compoundsGenerated.filter((c) => !deleteSlugs.has(c.slug));
 
 console.log(`Original count: ${compoundsGenerated.length}, New count: ${updatedList.length}`);
 

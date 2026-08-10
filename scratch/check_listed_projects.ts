@@ -31,14 +31,18 @@ const list = [
   "business-district",
   "azzar-islands",
   "bamboo-extension",
-  "azha-sokhna"
+  "azha-sokhna",
 ];
 
 console.log("=== CHECKING SLUGS IN DATABASE ===");
 for (const term of list) {
-  const item = compoundsGenerated.find(c => c.slug === term || c.name.toLowerCase().includes(term.toLowerCase()));
+  const item = compoundsGenerated.find(
+    (c) => c.slug === term || c.name.toLowerCase().includes(term.toLowerCase()),
+  );
   if (item) {
-    console.log(`Found: [${term}] -> slug: "${item.slug}", name: "${item.name}", dest: "${item.destination}", hero: "${item.hero}"`);
+    console.log(
+      `Found: [${term}] -> slug: "${item.slug}", name: "${item.name}", dest: "${item.destination}", hero: "${item.hero}"`,
+    );
   } else {
     console.log(`Not found exact: [${term}]`);
   }

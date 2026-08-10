@@ -22,7 +22,9 @@ export function OptimizedImage({
 
   if (failed || !src) {
     return (
-      <div className={`flex flex-col items-center justify-center bg-secondary/60 text-muted-foreground p-4 text-center select-none ${className}`}>
+      <div
+        className={`flex flex-col items-center justify-center bg-secondary/60 text-muted-foreground p-4 text-center select-none ${className}`}
+      >
         <ImageIcon className="h-6 w-6 text-muted-foreground/50 mb-1" />
         <span className="text-[10px] font-medium">{fallbackText}</span>
       </div>
@@ -31,9 +33,7 @@ export function OptimizedImage({
 
   return (
     <div className={`relative overflow-hidden bg-secondary/40 ${className}`}>
-      {!loaded && (
-        <div className="absolute inset-0 bg-secondary/60 animate-pulse" />
-      )}
+      {!loaded && <div className="absolute inset-0 bg-secondary/60 animate-pulse" />}
       <img
         src={src}
         alt={alt}

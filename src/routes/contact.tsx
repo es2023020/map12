@@ -9,7 +9,11 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact PropTrack — Get in Touch" },
-      { name: "description", content: "Reach out to PropTrack for sales inquiries, broker support, developer partnerships, or agency pricing." },
+      {
+        name: "description",
+        content:
+          "Reach out to PropTrack for sales inquiries, broker support, developer partnerships, or agency pricing.",
+      },
     ],
   }),
   component: ContactPage,
@@ -66,7 +70,13 @@ const subjects = [
 
 function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", phone: "", subject: subjects[0], message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: subjects[0],
+    message: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,20 +97,29 @@ function ContactPage() {
 
       <div className="mx-auto max-w-6xl px-4 py-14 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2">
-
           {/* Contact Methods */}
           <div className="space-y-5">
             <h2 className="font-display text-2xl font-bold text-primary">Contact options</h2>
             {contactMethods.map((m) => (
-              <div key={m.title} className="flex gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm">
-                <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${m.bg}`}>
+              <div
+                key={m.title}
+                className="flex gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm"
+              >
+                <div
+                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${m.bg}`}
+                >
                   <m.icon className={`h-5 w-5 ${m.color}`} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-primary">{m.title}</h3>
                   <p className="text-sm text-muted-foreground mt-0.5">{m.desc}</p>
                   {m.href && m.action && (
-                    <a href={m.href} target="_blank" rel="noopener noreferrer" className={`mt-1 text-sm font-semibold ${m.color} hover:underline`}>
+                    <a
+                      href={m.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`mt-1 text-sm font-semibold ${m.color} hover:underline`}
+                    >
                       {m.action}
                     </a>
                   )}
@@ -115,7 +134,10 @@ function ContactPage() {
             <div className="rounded-2xl border border-border bg-secondary/30 p-5">
               <h3 className="font-semibold text-primary text-sm mb-2">💳 Subscription Payments</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                All PropTrack subscriptions are paid via <strong className="text-primary">ADIB bank transfer</strong>. After registering and selecting your plan, you'll receive full payment instructions in your dashboard's Billing section.
+                All PropTrack subscriptions are paid via{" "}
+                <strong className="text-primary">ADIB bank transfer</strong>. After registering and
+                selecting your plan, you'll receive full payment instructions in your dashboard's
+                Billing section.
               </p>
             </div>
           </div>
@@ -129,17 +151,28 @@ function ContactPage() {
                 <p className="text-sm text-muted-foreground max-w-xs">
                   We'll get back to you within 24 hours. For urgent matters, reach us on WhatsApp.
                 </p>
-                <Button variant="outline" className="rounded-full mt-2" onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", subject: subjects[0], message: "" }); }}>
+                <Button
+                  variant="outline"
+                  className="rounded-full mt-2"
+                  onClick={() => {
+                    setSubmitted(false);
+                    setForm({ name: "", email: "", phone: "", subject: subjects[0], message: "" });
+                  }}
+                >
                   Send another message
                 </Button>
               </div>
             ) : (
               <>
-                <h2 className="font-display text-xl font-bold text-primary mb-6">Send us a message</h2>
+                <h2 className="font-display text-xl font-bold text-primary mb-6">
+                  Send us a message
+                </h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div>
-                      <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Full Name</label>
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                        Full Name
+                      </label>
                       <Input
                         placeholder="Ahmed Hassan"
                         value={form.name}
@@ -149,7 +182,9 @@ function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Email</label>
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                        Email
+                      </label>
                       <Input
                         type="email"
                         placeholder="ahmed@agency.com"
@@ -161,7 +196,9 @@ function ContactPage() {
                     </div>
                   </div>
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Phone / WhatsApp</label>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                      Phone / WhatsApp
+                    </label>
                     <Input
                       placeholder="+20 1XX XXX XXXX"
                       value={form.phone}
@@ -170,17 +207,25 @@ function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Subject</label>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                      Subject
+                    </label>
                     <select
                       value={form.subject}
                       onChange={(e) => setForm({ ...form, subject: e.target.value })}
                       className="mt-1.5 w-full rounded-xl border border-border bg-transparent px-3 py-2 text-sm text-primary focus:border-accent focus:outline-none"
                     >
-                      {subjects.map((s) => <option key={s} value={s}>{s}</option>)}
+                      {subjects.map((s) => (
+                        <option key={s} value={s}>
+                          {s}
+                        </option>
+                      ))}
                     </select>
                   </div>
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Message</label>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                      Message
+                    </label>
                     <textarea
                       placeholder="Tell us how we can help you..."
                       value={form.message}

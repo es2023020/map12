@@ -5,7 +5,18 @@ import { MapClient } from "@/components/map/MapClient";
 import { CompoundCard } from "@/components/CompoundCard";
 import { destinationBySlug, destinations } from "@/data/destinations";
 import { compoundsByDestination, compounds } from "@/data/compounds";
-import { ArrowLeft, MapPin, Building2, Wallet, Calendar, Waves, TrendingUp, Map as MapIcon, ArrowUpDown, SlidersHorizontal } from "lucide-react";
+import {
+  ArrowLeft,
+  MapPin,
+  Building2,
+  Wallet,
+  Calendar,
+  Waves,
+  TrendingUp,
+  Map as MapIcon,
+  ArrowUpDown,
+  SlidersHorizontal,
+} from "lucide-react";
 
 import { buildDestinationSchema, buildBreadcrumbSchema, getCanonicalUrl } from "@/lib/seo";
 
@@ -31,7 +42,7 @@ export const Route = createFileRoute("/destinations/$slug")({
         projectCount: list.length,
         minPrice,
       },
-      "en"
+      "en",
     );
 
     const placeSchema = buildDestinationSchema({
@@ -84,9 +95,8 @@ function AreaPage() {
   const a = Route.useLoaderData();
   const list = compoundsByDestination(a.slug);
 
-  const avgPrice = list.length > 0
-    ? Math.round(list.reduce((s, c) => s + c.priceFrom, 0) / list.length)
-    : 0;
+  const avgPrice =
+    list.length > 0 ? Math.round(list.reduce((s, c) => s + c.priceFrom, 0) / list.length) : 0;
   const beachfrontCount = list.filter((c) => c.beachfront).length;
   const rtmCount = list.filter((c) => c.status === "RTM").length;
   const minPrice = list.length > 0 ? Math.min(...list.map((c) => c.priceFrom)) : 0;
@@ -120,7 +130,9 @@ function AreaPage() {
   });
 
   // Get related destinations in the same region
-  const relatedAreas = destinations.filter((x) => x.region === a.region && x.slug !== a.slug).slice(0, 4);
+  const relatedAreas = destinations
+    .filter((x) => x.region === a.region && x.slug !== a.slug)
+    .slice(0, 4);
 
   return (
     <Shell>
@@ -129,16 +141,24 @@ function AreaPage() {
         <img src={a.hero} alt={a.name} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 mx-auto max-w-7xl px-4 pb-8 text-primary-foreground lg:px-8">
-          <Link to="/destinations" className="inline-flex items-center gap-1 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+          <Link
+            to="/destinations"
+            className="inline-flex items-center gap-1 text-sm text-primary-foreground/70 hover:text-accent transition-colors"
+          >
             <ArrowLeft className="h-3.5 w-3.5" /> All destinations
           </Link>
           <div className="mt-2 flex items-center gap-2">
-            <span className="h-4 w-4 rounded-full ring-2 ring-white/40" style={{ background: a.color }} />
+            <span
+              className="h-4 w-4 rounded-full ring-2 ring-white/40"
+              style={{ background: a.color }}
+            />
             <span className="text-xs font-semibold uppercase tracking-wider text-primary-foreground/70">
               {a.city ?? "Egypt"} · {a.region.replace(/-/g, " ")}
             </span>
           </div>
-          <h1 className="mt-1 font-display text-4xl md:text-5xl font-semibold tracking-tight">{a.name}</h1>
+          <h1 className="mt-1 font-display text-4xl md:text-5xl font-semibold tracking-tight">
+            {a.name}
+          </h1>
           {a.kmRange && (
             <p className="mt-1 text-primary-foreground/70">{a.kmRange} · Mediterranean coast</p>
           )}
@@ -149,12 +169,40 @@ function AreaPage() {
       <div className="border-b border-border/60 bg-card">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid grid-cols-2 divide-x divide-border md:grid-cols-4 lg:grid-cols-5">
-            <StatBar icon={Building2} label="Total projects" value={String(list.length)} color={a.color} />
-            <StatBar icon={Wallet} label="Price range" value={`EGP ${minPrice}–${maxPrice}M`} color={a.color} />
-            <StatBar icon={TrendingUp} label="Avg. price" value={`EGP ${avgPrice}M`} color={a.color} className="hidden md:flex" />
-            <StatBar icon={Calendar} label="RTM / Handover" value={`${rtmCount} projects`} color={a.color} className="hidden md:flex" />
+            <StatBar
+              icon={Building2}
+              label="Total projects"
+              value={String(list.length)}
+              color={a.color}
+            />
+            <StatBar
+              icon={Wallet}
+              label="Price range"
+              value={`EGP ${minPrice}–${maxPrice}M`}
+              color={a.color}
+            />
+            <StatBar
+              icon={TrendingUp}
+              label="Avg. price"
+              value={`EGP ${avgPrice}M`}
+              color={a.color}
+              className="hidden md:flex"
+            />
+            <StatBar
+              icon={Calendar}
+              label="RTM / Handover"
+              value={`${rtmCount} projects`}
+              color={a.color}
+              className="hidden md:flex"
+            />
             {beachfrontCount > 0 && (
-              <StatBar icon={Waves} label="Beachfront" value={`${beachfrontCount} projects`} color={a.color} className="hidden lg:flex" />
+              <StatBar
+                icon={Waves}
+                label="Beachfront"
+                value={`${beachfrontCount} projects`}
+                color={a.color}
+                className="hidden lg:flex"
+              />
             )}
           </div>
         </div>
@@ -164,7 +212,7 @@ function AreaPage() {
         {/* Description & Comprehensive Destination Guide */}
         <div className="mb-10 max-w-4xl space-y-6">
           <p className="text-lg leading-relaxed text-foreground/80 font-medium">{a.blurb}</p>
-          
+
           {/* Detailed Guide Content */}
           <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 space-y-6 shadow-sm">
             <h3 className="font-display text-2xl font-bold text-primary border-b border-border/60 pb-3">
@@ -188,7 +236,9 @@ function AreaPage() {
                   <TrendingUp className="h-4 w-4 text-accent" /> Price Range & Investment Dynamics
                 </h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  Entry-level pricing in {a.name} starts around EGP {minPrice}M, with premium beachfront or standalone villa compounds reaching EGP {maxPrice}M+. Average pricing across the {list.length} tracked projects stands at EGP {avgPrice}M.
+                  Entry-level pricing in {a.name} starts around EGP {minPrice}M, with premium
+                  beachfront or standalone villa compounds reaching EGP {maxPrice}M+. Average
+                  pricing across the {list.length} tracked projects stands at EGP {avgPrice}M.
                 </p>
               </div>
             </div>
@@ -198,19 +248,31 @@ function AreaPage() {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2 bg-secondary/40 p-3 rounded-xl border border-border/50">
                   <span className="h-2 w-2 rounded-full bg-accent mt-1.5 shrink-0" />
-                  <span><strong>High Liquidity & Resale Value:</strong> Strong end-user and investor demand drives consistent capital appreciation.</span>
+                  <span>
+                    <strong>High Liquidity & Resale Value:</strong> Strong end-user and investor
+                    demand drives consistent capital appreciation.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2 bg-secondary/40 p-3 rounded-xl border border-border/50">
                   <span className="h-2 w-2 rounded-full bg-accent mt-1.5 shrink-0" />
-                  <span><strong>Top-Tier Developers:</strong> Home to master plans by Palm Hills, Ora, Sodic, Misr Italia, and Arabella.</span>
+                  <span>
+                    <strong>Top-Tier Developers:</strong> Home to master plans by Palm Hills, Ora,
+                    Sodic, Misr Italia, and Arabella.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2 bg-secondary/40 p-3 rounded-xl border border-border/50">
                   <span className="h-2 w-2 rounded-full bg-accent mt-1.5 shrink-0" />
-                  <span><strong>Flexible Payment Terms:</strong> Extended off-plan payment schedules up to 8 years with 5–10% down payments.</span>
+                  <span>
+                    <strong>Flexible Payment Terms:</strong> Extended off-plan payment schedules up
+                    to 8 years with 5–10% down payments.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2 bg-secondary/40 p-3 rounded-xl border border-border/50">
                   <span className="h-2 w-2 rounded-full bg-accent mt-1.5 shrink-0" />
-                  <span><strong>Integrated Lifestyle:</strong> Gated security, swimmable lagoons, beach clubs, and commercial strips.</span>
+                  <span>
+                    <strong>Integrated Lifestyle:</strong> Gated security, swimmable lagoons, beach
+                    clubs, and commercial strips.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -281,7 +343,9 @@ function AreaPage() {
                 All {list.length} projects in {a.name}
               </h2>
               <p className="text-xs text-muted-foreground mt-0.5">
-                {hasKmData ? "Ranked sequentially by coastal kilometer position" : "Comprehensive project directory"}
+                {hasKmData
+                  ? "Ranked sequentially by coastal kilometer position"
+                  : "Comprehensive project directory"}
               </p>
             </div>
 
@@ -307,7 +371,10 @@ function AreaPage() {
                   const count = list.filter((c) => c.status === s).length;
                   if (!count) return null;
                   return (
-                    <span key={s} className="rounded-xl border border-border bg-card px-3 py-1.5 text-muted-foreground">
+                    <span
+                      key={s}
+                      className="rounded-xl border border-border bg-card px-3 py-1.5 text-muted-foreground"
+                    >
                       {s}: <strong className="text-primary">{count}</strong>
                     </span>
                   );
@@ -317,7 +384,9 @@ function AreaPage() {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {sortedList.map((c) => <CompoundCard key={c.slug} c={c} />)}
+            {sortedList.map((c) => (
+              <CompoundCard key={c.slug} c={c} />
+            ))}
           </div>
           {list.length === 0 && (
             <div className="rounded-2xl border border-dashed border-border p-16 text-center text-muted-foreground">
@@ -329,7 +398,9 @@ function AreaPage() {
         {/* Related destinations */}
         {relatedAreas.length > 0 && (
           <div className="mt-16">
-            <h2 className="mb-5 font-display text-xl font-semibold text-primary">Other destinations in the same region</h2>
+            <h2 className="mb-5 font-display text-xl font-semibold text-primary">
+              Other destinations in the same region
+            </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {relatedAreas.map((ra) => {
                 const raCount = compounds.filter((c) => c.destination === ra.slug).length;
@@ -341,10 +412,16 @@ function AreaPage() {
                     className="group overflow-hidden rounded-xl border border-border/60 bg-card transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-accent/40"
                   >
                     <div className="relative aspect-[16/9] overflow-hidden">
-                      <img src={ra.hero} alt={ra.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <img
+                        src={ra.hero}
+                        alt={ra.name}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
                       <div className="absolute inset-x-0 bottom-0 p-3">
-                        <div className="font-display text-sm font-semibold text-white">{ra.name}</div>
+                        <div className="font-display text-sm font-semibold text-white">
+                          {ra.name}
+                        </div>
                       </div>
                     </div>
                     <div className="px-3 py-2 text-xs text-muted-foreground">
@@ -376,11 +453,16 @@ function StatBar({
 }) {
   return (
     <div className={`flex items-center gap-3 px-5 py-4 ${className}`}>
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl" style={{ background: color + "22" }}>
+      <span
+        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl"
+        style={{ background: color + "22" }}
+      >
         <Icon className="h-4 w-4" style={{ color }} />
       </span>
       <div>
-        <div className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">{label}</div>
+        <div className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+          {label}
+        </div>
         <div className="mt-0.5 font-display text-sm font-semibold text-primary">{value}</div>
       </div>
     </div>

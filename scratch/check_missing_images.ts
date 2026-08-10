@@ -29,7 +29,7 @@ const list = [
   "business-district",
   "azzar-islands",
   "bamboo-extension",
-  "azha-sokhna"
+  "azha-sokhna",
 ];
 
 console.log("=== CHECKING IMAGE FILE EXISTENCE ===");
@@ -42,7 +42,9 @@ for (const slug of list) {
     missing.push(slug);
     console.log(`❌ MISSING/INVALID IMAGE: public/projects/${slug}/1.jpg`);
   } else {
-    console.log(`✅ HAS IMAGE (${fs.statSync(filePath).size} bytes): public/projects/${slug}/1.jpg`);
+    console.log(
+      `✅ HAS IMAGE (${fs.statSync(filePath).size} bytes): public/projects/${slug}/1.jpg`,
+    );
   }
 }
 

@@ -11,40 +11,62 @@ export const Route = createFileRoute("/dashboard/compare")({
 function ComparePage() {
   const items = useStore((s) => s.compareList);
   const remove = useStore((s) => s.toggleCompare);
-  const list = items.map(compoundBySlug).filter(Boolean) as NonNullable<ReturnType<typeof compoundBySlug>>[];
+  const list = items.map(compoundBySlug).filter(Boolean) as NonNullable<
+    ReturnType<typeof compoundBySlug>
+  >[];
 
   if (list.length === 0) {
     return (
       <div className="rounded-2xl border border-dashed border-border bg-card p-12 text-center">
         <GitCompareArrows className="mx-auto h-10 w-10 text-muted-foreground" />
-        <h2 className="mt-4 font-display text-2xl font-semibold text-primary">Nothing to compare</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Tap the compare icon on a project card to add it here (max 4).</p>
-        <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="mt-5 inline-block rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">Browse projects</Link>
+        <h2 className="mt-4 font-display text-2xl font-semibold text-primary">
+          Nothing to compare
+        </h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Tap the compare icon on a project card to add it here (max 4).
+        </p>
+        <Link
+          to="/projects"
+          search={{ destination: "", dev: "", q: "" }}
+          className="mt-5 inline-block rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+        >
+          Browse projects
+        </Link>
       </div>
     );
   }
 
-  const rows: Array<{ label: string; get: (c: NonNullable<ReturnType<typeof compoundBySlug>>) => string }> = [
+  const rows: Array<{
+    label: string;
+    get: (c: NonNullable<ReturnType<typeof compoundBySlug>>) => string;
+  }> = [
     { label: "Developer", get: (c) => c.developer },
-    { 
-      label: "Developer History & profile", 
-      get: (c) => `Project by ${c.developer}. Spanning leading footprints across top Egyptian destinations with proven quality delivery.` 
+    {
+      label: "Developer History & profile",
+      get: (c) =>
+        `Project by ${c.developer}. Spanning leading footprints across top Egyptian destinations with proven quality delivery.`,
     },
     { label: "Destination", get: (c) => c.destination.replace(/-/g, " ").toUpperCase() },
-    { 
-      label: "Exact Location Details", 
+    {
+      label: "Exact Location Details",
       get: (c) => {
         const avail = availabilityBySlug(c.slug);
-        return avail && (avail as any).city ? (avail as any).city : `${c.destination.replace(/-/g, " ")} region`;
-      }
+        return avail && (avail as any).city
+          ? (avail as any).city
+          : `${c.destination.replace(/-/g, " ")} region`;
+      },
     },
     { label: "Status", get: (c) => c.status },
-    { 
-      label: "Key Amenities", 
+    {
+      label: "Key Amenities",
       get: (c) => {
         const avail = availabilityBySlug(c.slug);
-        return c.amenities ? c.amenities.slice(0, 6).join(", ") : ((avail as any)?.amenities ? (avail as any).amenities.slice(0, 6).join(", ") : "Green Areas, Security");
-      }
+        return c.amenities
+          ? c.amenities.slice(0, 6).join(", ")
+          : (avail as any)?.amenities
+            ? (avail as any).amenities.slice(0, 6).join(", ")
+            : "Green Areas, Security";
+      },
     },
     { label: "Delivery", get: (c) => String(c.deliveryYear) },
     { label: "Starting price", get: (c) => `EGP ${c.priceFrom}M` },
@@ -53,14 +75,14 @@ function ComparePage() {
     { label: "Unit sizes", get: (c) => c.unitSizes ?? "—" },
     { label: "Unit types", get: (c) => c.types.join(", ") },
     { label: "Payment plan", get: (c) => c.paymentPlan },
-    { 
-      label: "Live Connected Inventory", 
+    {
+      label: "Live Connected Inventory",
       get: (c) => {
         const avail = availabilityBySlug(c.slug);
-        return avail && avail.totalAvailable > 0 
-          ? `${avail.totalAvailable} units available` 
+        return avail && avail.totalAvailable > 0
+          ? `${avail.totalAvailable} units available`
           : "Not updated yet";
-      }
+      },
     },
   ];
 
@@ -91,8 +113,12 @@ function ComparePage() {
     <div id="agent-compare-report" className="space-y-6">
       <div className="flex items-center justify-between flex-wrap gap-4 border-b border-border pb-4">
         <div>
-          <h2 className="font-display text-2xl font-semibold text-primary">Comparing {list.length} compounds</h2>
-          <p className="text-xs text-muted-foreground mt-1">Agent side-by-side technical specs &amp; availability feed</p>
+          <h2 className="font-display text-2xl font-semibold text-primary">
+            Comparing {list.length} compounds
+          </h2>
+          <p className="text-xs text-muted-foreground mt-1">
+            Agent side-by-side technical specs &amp; availability feed
+          </p>
         </div>
         <button
           onClick={handleDownloadPDF}
@@ -107,13 +133,30 @@ function ComparePage() {
         <table className="w-full min-w-[640px] border-collapse text-sm">
           <thead>
             <tr className="border-b border-border bg-secondary/10">
-              <th className="w-40 p-4 text-left text-xs uppercase tracking-wider text-muted-foreground">Attribute</th>
+              <th className="w-40 p-4 text-left text-xs uppercase tracking-wider text-muted-foreground">
+                Attribute
+              </th>
               {list.map((c) => (
                 <th key={c.slug} className="p-4 text-left align-top">
                   <div className="relative">
-                    <button onClick={() => remove(c.slug)} className="no-print absolute -top-2 -right-1 rounded-full bg-secondary p-1 text-muted-foreground hover:text-primary"><X className="h-3 w-3" /></button>
-                    <img src={c.hero} alt={c.name} className="h-24 w-full rounded-lg object-cover" />
-                    <Link to="/projects/$slug" params={{ slug: c.slug }} className="mt-2 block font-display text-base font-semibold text-primary hover:text-accent">{c.name}</Link>
+                    <button
+                      onClick={() => remove(c.slug)}
+                      className="no-print absolute -top-2 -right-1 rounded-full bg-secondary p-1 text-muted-foreground hover:text-primary"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                    <img
+                      src={c.hero}
+                      alt={c.name}
+                      className="h-24 w-full rounded-lg object-cover"
+                    />
+                    <Link
+                      to="/projects/$slug"
+                      params={{ slug: c.slug }}
+                      className="mt-2 block font-display text-base font-semibold text-primary hover:text-accent"
+                    >
+                      {c.name}
+                    </Link>
                   </div>
                 </th>
               ))}
@@ -122,9 +165,13 @@ function ComparePage() {
           <tbody className="divide-y divide-border/60">
             {rows.map((r) => (
               <tr key={r.label} className="hover:bg-secondary/10 transition-colors">
-                <td className="p-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">{r.label}</td>
+                <td className="p-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  {r.label}
+                </td>
                 {list.map((c) => (
-                  <td key={c.slug} className="p-4 align-top text-foreground/90 font-medium">{r.get(c)}</td>
+                  <td key={c.slug} className="p-4 align-top text-foreground/90 font-medium">
+                    {r.get(c)}
+                  </td>
                 ))}
               </tr>
             ))}
@@ -143,4 +190,4 @@ function ComparePage() {
       </div>
     </div>
   );
-}
+}

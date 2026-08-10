@@ -3,7 +3,17 @@ import { Shell } from "@/components/layout/Shell";
 import { compoundBySlug, compounds } from "@/data/compounds";
 import { availabilityBySlug } from "@/data/availability";
 import { formatEGP, buildBreadcrumbSchema, getCanonicalUrl } from "@/lib/seo";
-import { ArrowLeft, Check, GitCompareArrows, MapPin, Building2, Calendar, Waves, Star, ChevronRight } from "lucide-react";
+import {
+  ArrowLeft,
+  Check,
+  GitCompareArrows,
+  MapPin,
+  Building2,
+  Calendar,
+  Waves,
+  Star,
+  ChevronRight,
+} from "lucide-react";
 
 import { getCompareSEO } from "@/lib/seo-templates";
 
@@ -26,7 +36,7 @@ export const Route = createFileRoute("/compare/$pair")({
         projectB: compB,
         pairSlug,
       },
-      "en"
+      "en",
     );
 
     const breadcrumbSchema = buildBreadcrumbSchema([
@@ -75,7 +85,10 @@ function ComparePairPage() {
       {/* Header */}
       <div className="bg-primary text-primary-foreground py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <Link to="/compare" className="inline-flex items-center gap-1.5 text-xs text-primary-foreground/70 hover:text-accent mb-4 transition-colors">
+          <Link
+            to="/compare"
+            className="inline-flex items-center gap-1.5 text-xs text-primary-foreground/70 hover:text-accent mb-4 transition-colors"
+          >
             <ArrowLeft className="h-3.5 w-3.5" /> Back to Custom Comparison Tool
           </Link>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent mb-1">
@@ -85,7 +98,8 @@ function ComparePairPage() {
             {compA.name} <span className="text-accent font-normal italic">vs</span> {compB.name}
           </h1>
           <p className="mt-2 text-sm sm:text-base text-primary-foreground/80 max-w-3xl">
-            Side-by-side analysis of starting prices, developer track records, master plan layouts, delivery timelines, and unit availability.
+            Side-by-side analysis of starting prices, developer track records, master plan layouts,
+            delivery timelines, and unit availability.
           </p>
         </div>
       </div>
@@ -99,14 +113,18 @@ function ComparePairPage() {
               <img src={compA.hero} alt={compA.name} className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="text-xs uppercase font-semibold text-accent">{compA.developer}</span>
+                <span className="text-xs uppercase font-semibold text-accent">
+                  {compA.developer}
+                </span>
                 <h2 className="text-2xl font-bold font-display">{compA.name}</h2>
               </div>
             </div>
             <div className="p-6 space-y-4 text-sm">
               <div className="flex justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Destination</span>
-                <span className="font-semibold text-foreground capitalize">{compA.destination.replace(/-/g, " ")}</span>
+                <span className="font-semibold text-foreground capitalize">
+                  {compA.destination.replace(/-/g, " ")}
+                </span>
               </div>
               <div className="flex justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Starting Price</span>
@@ -114,17 +132,24 @@ function ComparePairPage() {
               </div>
               <div className="flex justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Delivery Year</span>
-                <span className="font-semibold text-foreground">{compA.deliveryYear} ({compA.status})</span>
+                <span className="font-semibold text-foreground">
+                  {compA.deliveryYear} ({compA.status})
+                </span>
               </div>
               <div className="flex justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Beachfront Access</span>
-                <span className="font-semibold text-foreground">{compA.beachfront ? "Direct Mediterranean Beach" : "Lagoon / Inland"}</span>
+                <span className="font-semibold text-foreground">
+                  {compA.beachfront ? "Direct Mediterranean Beach" : "Lagoon / Inland"}
+                </span>
               </div>
               <div className="pt-2">
                 <span className="text-muted-foreground block mb-2 font-medium">Unit Types</span>
                 <div className="flex flex-wrap gap-1.5">
                   {compA.types.map((t) => (
-                    <span key={t} className="px-2.5 py-1 rounded-md bg-secondary text-xs font-medium text-foreground">
+                    <span
+                      key={t}
+                      className="px-2.5 py-1 rounded-md bg-secondary text-xs font-medium text-foreground"
+                    >
                       {t}
                     </span>
                   ))}
@@ -148,14 +173,18 @@ function ComparePairPage() {
               <img src={compB.hero} alt={compB.name} className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="text-xs uppercase font-semibold text-accent">{compB.developer}</span>
+                <span className="text-xs uppercase font-semibold text-accent">
+                  {compB.developer}
+                </span>
                 <h2 className="text-2xl font-bold font-display">{compB.name}</h2>
               </div>
             </div>
             <div className="p-6 space-y-4 text-sm">
               <div className="flex justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Destination</span>
-                <span className="font-semibold text-foreground capitalize">{compB.destination.replace(/-/g, " ")}</span>
+                <span className="font-semibold text-foreground capitalize">
+                  {compB.destination.replace(/-/g, " ")}
+                </span>
               </div>
               <div className="flex justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Starting Price</span>
@@ -163,17 +192,24 @@ function ComparePairPage() {
               </div>
               <div className="flex justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Delivery Year</span>
-                <span className="font-semibold text-foreground">{compB.deliveryYear} ({compB.status})</span>
+                <span className="font-semibold text-foreground">
+                  {compB.deliveryYear} ({compB.status})
+                </span>
               </div>
               <div className="flex justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Beachfront Access</span>
-                <span className="font-semibold text-foreground">{compB.beachfront ? "Direct Mediterranean Beach" : "Lagoon / Inland"}</span>
+                <span className="font-semibold text-foreground">
+                  {compB.beachfront ? "Direct Mediterranean Beach" : "Lagoon / Inland"}
+                </span>
               </div>
               <div className="pt-2">
                 <span className="text-muted-foreground block mb-2 font-medium">Unit Types</span>
                 <div className="flex flex-wrap gap-1.5">
                   {compB.types.map((t) => (
-                    <span key={t} className="px-2.5 py-1 rounded-md bg-secondary text-xs font-medium text-foreground">
+                    <span
+                      key={t}
+                      className="px-2.5 py-1 rounded-md bg-secondary text-xs font-medium text-foreground"
+                    >
                       {t}
                     </span>
                   ))}
@@ -194,16 +230,24 @@ function ComparePairPage() {
 
         {/* Detailed Advisory Analysis */}
         <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 space-y-4">
-          <h3 className="font-display text-xl font-bold text-foreground">Advisory Takeaways: {compA.name} vs {compB.name}</h3>
+          <h3 className="font-display text-xl font-bold text-foreground">
+            Advisory Takeaways: {compA.name} vs {compB.name}
+          </h3>
           <div className="prose prose-sm max-w-none text-muted-foreground leading-relaxed space-y-3">
             <p>
-              When evaluating <strong>{compA.name}</strong> by {compA.developer} against <strong>{compB.name}</strong> by {compB.developer}, buyers should prioritize location connectivity, beach frontage type, and initial capital outlay.
+              When evaluating <strong>{compA.name}</strong> by {compA.developer} against{" "}
+              <strong>{compB.name}</strong> by {compB.developer}, buyers should prioritize location
+              connectivity, beach frontage type, and initial capital outlay.
             </p>
             <p>
-              <strong>{compA.name}</strong> starts at {priceAStr} with expected delivery in {compA.deliveryYear}. It is particularly well-suited for buyers prioritizing {compA.types.join(", ")}.
+              <strong>{compA.name}</strong> starts at {priceAStr} with expected delivery in{" "}
+              {compA.deliveryYear}. It is particularly well-suited for buyers prioritizing{" "}
+              {compA.types.join(", ")}.
             </p>
             <p>
-              <strong>{compB.name}</strong> offers entry points starting at {priceBStr} and estimated delivery in {compB.deliveryYear}. It features unit configurations including {compB.types.join(", ")}.
+              <strong>{compB.name}</strong> offers entry points starting at {priceBStr} and
+              estimated delivery in {compB.deliveryYear}. It features unit configurations including{" "}
+              {compB.types.join(", ")}.
             </p>
           </div>
         </div>

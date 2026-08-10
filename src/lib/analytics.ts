@@ -15,10 +15,10 @@
 
 export type AnalyticsEvent = {
   type: "view" | "save" | "unsave" | "share" | "call" | "search" | "limit_hit" | "conversion";
-  slug?: string;        // project slug (for view/save/share/call)
-  area?: string;        // destination / area (for search / view)
-  query?: string;       // raw search text
-  priceRange?: string;  // e.g. "5-10M"
+  slug?: string; // project slug (for view/save/share/call)
+  area?: string; // destination / area (for search / view)
+  query?: string; // raw search text
+  priceRange?: string; // e.g. "5-10M"
   timestamp: number;
   meta?: any;
 };
@@ -47,7 +47,7 @@ function recencyMultiplier(timestamp: number): number {
 export function computeProjectScores(
   events: AnalyticsEvent[],
   compounds: any[],
-  favorites: string[]
+  favorites: string[],
 ): Record<string, number> {
   const scores: Record<string, number> = {};
 
@@ -88,7 +88,7 @@ export function computeProjectScores(
 export function topProjectsByScore(
   scores: Record<string, number>,
   compounds: any[],
-  n = 5
+  n = 5,
 ): Array<{ compound: any; score: number }> {
   return compounds
     .map((c) => ({ compound: c, score: scores[c.slug] ?? 0 }))
@@ -108,10 +108,7 @@ export type AreaInsight = {
   score: number;
 };
 
-export function computeTrendingAreas(
-  events: AnalyticsEvent[],
-  compounds: any[]
-): AreaInsight[] {
+export function computeTrendingAreas(events: AnalyticsEvent[], compounds: any[]): AreaInsight[] {
   const areaMap: Record<string, AreaInsight> = {};
 
   // Build area lookup from compounds
@@ -156,7 +153,7 @@ export function computeTopDeals(
   events: AnalyticsEvent[],
   compounds: any[],
   favorites: string[],
-  n = 3
+  n = 3,
 ): DealScore[] {
   const engScores = computeProjectScores(events, compounds, favorites);
 
@@ -218,10 +215,7 @@ export type MarketPulseEntry = {
   momentum: "rising" | "stable" | "cooling";
 };
 
-export function computeMarketPulse(
-  events: AnalyticsEvent[],
-  compounds: any[]
-): MarketPulseEntry[] {
+export function computeMarketPulse(events: AnalyticsEvent[], compounds: any[]): MarketPulseEntry[] {
   const areaData: Record<string, { prices: number[]; projects: number; trendScore: number }> = {};
 
   for (const c of compounds) {

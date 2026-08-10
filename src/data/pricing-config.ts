@@ -7,7 +7,7 @@ export const PRICING_CONFIG = {
   starterPrice: 299,
   proPrice: 499,
   brokerageSeatPrice: 199,
-  
+
   // Constraints
   minBrokerageSeats: 5,
 };

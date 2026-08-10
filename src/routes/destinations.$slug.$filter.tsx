@@ -59,7 +59,8 @@ function DestinationFilterPage() {
     .filter((c) => {
       const f = filter.toLowerCase();
       if (f === "off-plan") return c.status === "Off-Plan";
-      if (f === "rtm" || f === "delivered" || f === "ready-to-move" || f === "under-construction") return c.status === "RTM";
+      if (f === "rtm" || f === "delivered" || f === "ready-to-move" || f === "under-construction")
+        return c.status === "RTM";
       if (f === "beachfront") return c.beachfront;
       if (f.startsWith("under-")) {
         const match = f.match(/under-(\d+)m/);
@@ -176,8 +177,12 @@ function DestinationFilterPage() {
         ) : (
           <div className="text-center py-16 bg-card rounded-2xl border border-border">
             <Building2 className="h-10 w-10 mx-auto text-muted-foreground/60 mb-3" />
-            <h3 className="text-lg font-semibold text-foreground">No compounds match this specific filter</h3>
-            <p className="text-sm text-muted-foreground mt-1">Try exploring all compounds in {dest.name}.</p>
+            <h3 className="text-lg font-semibold text-foreground">
+              No compounds match this specific filter
+            </h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              Try exploring all compounds in {dest.name}.
+            </p>
             <Link
               to="/destinations/$slug"
               params={{ slug: dest.slug }}

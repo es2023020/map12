@@ -9,12 +9,16 @@ export function MapClient(props: ComponentProps<typeof MapView>) {
   if (!mounted) {
     return (
       <div className={props.className} style={{ background: "oklch(0.92 0.03 220)" }}>
-        <div className="flex h-full items-center justify-center text-sm text-muted-foreground">Loading map…</div>
+        <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
+          Loading map…
+        </div>
       </div>
     );
   }
   return (
-    <Suspense fallback={<div className={props.className} style={{ background: "oklch(0.92 0.03 220)" }} />}>
+    <Suspense
+      fallback={<div className={props.className} style={{ background: "oklch(0.92 0.03 220)" }} />}
+    >
       <MapView {...props} />
     </Suspense>
   );

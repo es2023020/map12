@@ -5,14 +5,14 @@
 
 export interface UnitListing {
   id: string;
-  cluster?: string;       // e.g. "NHF", "R1", "PS", "Boardwalk"
+  cluster?: string; // e.g. "NHF", "R1", "PS", "Boardwalk"
   beds: number;
-  finishing: string;      // Finished | Semi Finished | Core & Shell
+  finishing: string; // Finished | Semi Finished | Core & Shell
   areaSqm: number;
-  areaNote?: string;      // e.g. "+ Roof Area 17m"
-  view?: string;          // Sea & Lagoon | Lagoon | Sea | Garden
+  areaNote?: string; // e.g. "+ Roof Area 17m"
+  view?: string; // Sea & Lagoon | Lagoon | Sea | Garden
   priceEGP: number;
-  deliveryNote?: string;  // "Ready to Move" | "1 Year" | "2.5 Years" | "4 Years"
+  deliveryNote?: string; // "Ready to Move" | "1 Year" | "2.5 Years" | "4 Years"
   paymentPlan?: string;
   status: "Available" | "Last Unit" | string;
   [key: string]: any;
@@ -58,7 +58,7 @@ let loadingPromise: Promise<ProjectAvailability[]> | null = null;
 export function loadAvailabilityAsync(): Promise<ProjectAvailability[]> {
   if (loadedAvailability) return Promise.resolve(loadedAvailability);
   if (loadingPromise) return loadingPromise;
-  
+
   loadingPromise = import("./availability.generated").then((mod) => {
     loadedAvailability = mod.availability;
     cachedAvailability = null; // Invalidate cache
@@ -126,9 +126,8 @@ export const availability: ProjectAvailability[] = new Proxy([], {
   ownKeys(target) {
     const activeList = getActiveAvailability();
     return Reflect.ownKeys(activeList);
-  }
+  },
 });
-
 
 export function availabilityBySlug(slug: string): ProjectAvailability | undefined {
   return availability.find((a) => a.slug === slug);
@@ -141,7 +140,7 @@ export function totalAvailableBySlug(slug: string): number {
 /** Find a project + breakdown by project slug + type slug */
 export function breakdownByTypeSlug(
   projectSlug: string,
-  typeSlug: string
+  typeSlug: string,
 ): { project: ProjectAvailability; breakdown: UnitBreakdown } | undefined {
   const project = availabilityBySlug(projectSlug);
   if (!project) return undefined;

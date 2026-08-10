@@ -32,4 +32,7 @@ console.log(`ALREADY HAD FOLDERS: ${existingCount}`);
 console.log(`NEW FOLDERS CREATED: ${createdCount}`);
 
 fs.mkdirSync("scratch", { recursive: true });
-fs.writeFileSync("scratch/created_folders.json", JSON.stringify({ createdCount, existingCount, createdFolders }, null, 2));
+fs.writeFileSync(
+  "scratch/created_folders.json",
+  JSON.stringify({ createdCount, existingCount, createdFolders }, null, 2),
+);

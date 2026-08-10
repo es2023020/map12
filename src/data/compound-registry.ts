@@ -35,12 +35,31 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     destination: "eastern-expansion",
     priceFrom: 7.9,
     deliveryYear: 2028,
-    blurb: "31 West is a modern gated residential community spanning approximately 31 acres in 6th of October City, designed around open green landscapes, water features, and pedestrian-friendly spaces. The project combines contemporary architecture with low-density planning to provide a balanced lifestyle for families and professionals.",
-    paymentPlan: "Apartments: 5% down + 5% after 3 mos, remaining over 8 yrs | Villas: 5% down + 5% after 3 mos, remaining over 9 yrs",
+    blurb:
+      "31 West is a modern gated residential community spanning approximately 31 acres in 6th of October City, designed around open green landscapes, water features, and pedestrian-friendly spaces. The project combines contemporary architecture with low-density planning to provide a balanced lifestyle for families and professionals.",
+    paymentPlan:
+      "Apartments: 5% down + 5% after 3 mos, remaining over 8 yrs | Villas: 5% down + 5% after 3 mos, remaining over 9 yrs",
     areaSize: "31 feddan",
-    amenities: ["Clubhouse", "Swimming pools", "Landscaped gardens", "Water features", "Jogging & cycling tracks", "Kids' play areas", "Commercial area", "Restaurants & cafés", "Medical facilities", "24/7 security & CCTV", "Underground parking"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Landscaped gardens",
+      "Water features",
+      "Jogging & cycling tracks",
+      "Kids' play areas",
+      "Commercial area",
+      "Restaurants & cafés",
+      "Medical facilities",
+      "24/7 security & CCTV",
+      "Underground parking",
+    ],
     types: ["Studio", "Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Contemporary luxury living", "Low-density 31-acre compound", "Large landscaped parks", "Outdoor fitness and cycling lifestyle"]
+    highlights: [
+      "Contemporary luxury living",
+      "Low-density 31-acre compound",
+      "Large landscaped parks",
+      "Outdoor fitness and cycling lifestyle",
+    ],
   },
   "97-hills": {
     lat: 30.0459489,
@@ -50,14 +69,35 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     destination: "new-cairo",
     priceFrom: 23.4,
     deliveryYear: 2028,
-    blurb: "97 Hills is Palm Hills Developments' newest premium villa community in New Cairo. Spanning approximately 97 feddans (about 407,000 m²), the project is designed as a low-density residential compound featuring contemporary architecture, expansive green landscapes, and integrated lifestyle amenities.",
-    paymentPlan: "3%–5% down payment, remaining balance spread over 8–10 years in equal installments",
+    blurb:
+      "97 Hills is Palm Hills Developments' newest premium villa community in New Cairo. Spanning approximately 97 feddans (about 407,000 m²), the project is designed as a low-density residential compound featuring contemporary architecture, expansive green landscapes, and integrated lifestyle amenities.",
+    paymentPlan:
+      "3%–5% down payment, remaining balance spread over 8–10 years in equal installments",
     areaSize: "97 feddan",
-    amenities: ["Clubhouse", "Swimming pools", "Fully equipped gym", "Jogging & cycling tracks", "Sports courts", "Kids' play areas", "Commercial strip", "Restaurants & cafés", "Landscaped parks", "Water features", "Outdoor yoga & wellness areas", "EV charging stations", "24/7 security & CCTV"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Fully equipped gym",
+      "Jogging & cycling tracks",
+      "Sports courts",
+      "Kids' play areas",
+      "Commercial strip",
+      "Restaurants & cafés",
+      "Landscaped parks",
+      "Water features",
+      "Outdoor yoga & wellness areas",
+      "EV charging stations",
+      "24/7 security & CCTV",
+    ],
     types: ["Family House", "Townhouse", "Twin House", "Standalone Villa", "Luxury Mansion"],
-    highlights: ["Luxury gated community", "Low-density master plan", "Resort-style living", "Privacy-focused neighborhoods"]
+    highlights: [
+      "Luxury gated community",
+      "Low-density master plan",
+      "Resort-style living",
+      "Privacy-focused neighborhoods",
+    ],
   },
-  "aeon": {
+  aeon: {
     lat: 30.0061,
     lng: 30.9751,
     developer: "Marakez Developments",
@@ -65,12 +105,33 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     destination: "6th-october",
     priceFrom: 17,
     deliveryYear: 2024,
-    blurb: "AEON is a premium residential development by Marakez spread across approximately 21–25 acres in 6th of October City. The project consists of four architecturally distinctive interconnected towers surrounded by landscaped courtyards, creating a luxury urban lifestyle with direct pedestrian access to Mall of Arabia.",
-    paymentPlan: "Resale: Full cash / secondary market terms (Historical developer plan: 10% down, 7 years)",
+    blurb:
+      "AEON is a premium residential development by Marakez spread across approximately 21–25 acres in 6th of October City. The project consists of four architecturally distinctive interconnected towers surrounded by landscaped courtyards, creating a luxury urban lifestyle with direct pedestrian access to Mall of Arabia.",
+    paymentPlan:
+      "Resale: Full cash / secondary market terms (Historical developer plan: 10% down, 7 years)",
     areaSize: "21–25 feddan",
-    amenities: ["Clubhouse", "Indoor & outdoor swimming pools", "Fully equipped gym", "Sky lounge", "Residence lounge", "Community park", "Jogging track", "Tennis courts", "Multi-purpose sports court", "Kids' play area", "Daycare", "24/7 security & CCTV", "Underground parking"],
+    amenities: [
+      "Clubhouse",
+      "Indoor & outdoor swimming pools",
+      "Fully equipped gym",
+      "Sky lounge",
+      "Residence lounge",
+      "Community park",
+      "Jogging track",
+      "Tennis courts",
+      "Multi-purpose sports court",
+      "Kids' play area",
+      "Daycare",
+      "24/7 security & CCTV",
+      "Underground parking",
+    ],
     types: ["Studio", "Apartment", "Penthouse"],
-    highlights: ["High-rise contemporary residences", "Direct pedestrian access to Mall of Arabia", "Walkable luxury lifestyle", "Resort-inspired environment"]
+    highlights: [
+      "High-rise contemporary residences",
+      "Direct pedestrian access to Mall of Arabia",
+      "Walkable luxury lifestyle",
+      "Resort-inspired environment",
+    ],
   },
   "alam-al-roum": {
     destination: "sidi-heneish",
@@ -82,7 +143,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 9,
     deliveryYear: 2030,
-    blurb: "Alam El Roum by Qatari Diar in partnership with NUCA is a mega-scale coastal resort destination of 5,000 faddans east of Marsa Matrouh, featuring a yacht marina, hotels, and 7.2 km of private beachfront.",
+    blurb:
+      "Alam El Roum by Qatari Diar in partnership with NUCA is a mega-scale coastal resort destination of 5,000 faddans east of Marsa Matrouh, featuring a yacht marina, hotels, and 7.2 km of private beachfront.",
     paymentPlan: "5% down payment, remaining balance spread over 8–10 years in equal installments",
     areaSize: "5000 feddan",
     amenities: [
@@ -92,18 +154,10 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
       "Commercial Hubs",
       "Water Sports",
       "Smart Infrastructure",
-      "Parks & Public Areas"
+      "Parks & Public Areas",
     ],
-    types: [
-      "Chalet",
-      "Twin House",
-      "Villa"
-    ],
-    highlights: [
-      "by Qatari Diar & NUCA",
-      "7.2 km private beach",
-      "International Yacht Marina"
-    ]
+    types: ["Chalet", "Twin House", "Villa"],
+    highlights: ["by Qatari Diar & NUCA", "7.2 km private beach", "International Yacht Marina"],
   },
   "almaza-bay": {
     destination: "marsa-matrouh",
@@ -115,14 +169,40 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 10.7,
     deliveryYear: 2026,
-    blurb: "Almaza Bay is Travco Properties' flagship luxury beach destination on Egypt's North Coast. Developed over multiple phases, it combines upscale residences, boutique hotels, retail areas, and one of the Mediterranean's most renowned white-sand beaches.",
+    blurb:
+      "Almaza Bay is Travco Properties' flagship luxury beach destination on Egypt's North Coast. Developed over multiple phases, it combines upscale residences, boutique hotels, retail areas, and one of the Mediterranean's most renowned white-sand beaches.",
     paymentPlan: "6% down + 6% upon contract, remaining balance over 7 yrs | 10% down over 6 yrs",
     areaSize: "1550 feddan",
-    amenities: ["Private beach", "Beach club", "Luxury hotels", "Swimming pools", "Spa & wellness center", "Gym", "Sports courts", "Aqua park", "Restaurants & cafés", "Shopping area", "Kids' play areas", "24/7 security"],
-    types: ["Chalet", "Apartment", "Townhouse", "Twin House", "Standalone Villa", "Beachfront Villa"],
-    highlights: ["Flagship luxury beach destination", "Mediterranean-inspired architecture", "Pristine white-sand beach", "Vibrant coastal lifestyle"]
+    amenities: [
+      "Private beach",
+      "Beach club",
+      "Luxury hotels",
+      "Swimming pools",
+      "Spa & wellness center",
+      "Gym",
+      "Sports courts",
+      "Aqua park",
+      "Restaurants & cafés",
+      "Shopping area",
+      "Kids' play areas",
+      "24/7 security",
+    ],
+    types: [
+      "Chalet",
+      "Apartment",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+      "Beachfront Villa",
+    ],
+    highlights: [
+      "Flagship luxury beach destination",
+      "Mediterranean-inspired architecture",
+      "Pristine white-sand beach",
+      "Vibrant coastal lifestyle",
+    ],
   },
-  "amwaj": {
+  amwaj: {
     destination: "sidi-abdelrahman",
     km: 136,
     city: "Sidi Abdel Rahman, North Coast (km 136), Matrouh Governorate, Egypt",
@@ -133,12 +213,38 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 7.2,
     deliveryYear: 2026,
-    blurb: "Amwaj is one of the North Coast's most established luxury resorts, featuring terraced master planning that gives a large percentage of homes sea views. The resort is designed around interconnected lagoons, landscaped gardens, and a private sandy beach.",
+    blurb:
+      "Amwaj is one of the North Coast's most established luxury resorts, featuring terraced master planning that gives a large percentage of homes sea views. The resort is designed around interconnected lagoons, landscaped gardens, and a private sandy beach.",
     paymentPlan: "10% down payment, remaining balance spread over 6–8 years in equal installments",
     areaSize: "360 feddan",
-    amenities: ["Private beach", "Beach club", "Swimming pools", "Clubhouse", "Golf clubhouse", "Gym", "Sports courts", "Jogging & cycling tracks", "Kids' areas", "Restaurants & cafés", "24/7 security"],
-    types: ["Chalet", "Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa", "Beachfront Villa"],
-    highlights: ["Terraced sea-view planning", "Sidi Abdel Rahman prime location", "Interconnected lagoons", "Established active resort"]
+    amenities: [
+      "Private beach",
+      "Beach club",
+      "Swimming pools",
+      "Clubhouse",
+      "Golf clubhouse",
+      "Gym",
+      "Sports courts",
+      "Jogging & cycling tracks",
+      "Kids' areas",
+      "Restaurants & cafés",
+      "24/7 security",
+    ],
+    types: [
+      "Chalet",
+      "Apartment",
+      "Duplex",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+      "Beachfront Villa",
+    ],
+    highlights: [
+      "Terraced sea-view planning",
+      "Sidi Abdel Rahman prime location",
+      "Interconnected lagoons",
+      "Established active resort",
+    ],
   },
   "aqua-lagoons-june": {
     lat: 30.02508,
@@ -154,14 +260,30 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Mostakbal City, New Cairo, Egypt",
     priceFrom: 5,
     deliveryYear: 2028,
-    blurb: "At East is a contemporary gated community by Al Ahly Sabbour designed for modern family living, offering residential neighborhoods surrounded by green spaces and integrated services in Mostakbal City.",
+    blurb:
+      "At East is a contemporary gated community by Al Ahly Sabbour designed for modern family living, offering residential neighborhoods surrounded by green spaces and integrated services in Mostakbal City.",
     paymentPlan: "5%–10% down payment, remaining balance spread over 8 years in equal installments",
     areaSize: "181 feddan",
-    amenities: ["Clubhouse", "Swimming pools", "Gym", "Jogging & cycling tracks", "Kids' areas", "Commercial area", "Restaurants & cafés", "Medical center", "Landscaped parks", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Gym",
+      "Jogging & cycling tracks",
+      "Kids' areas",
+      "Commercial area",
+      "Restaurants & cafés",
+      "Medical center",
+      "Landscaped parks",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Penthouse", "Townhouse", "Villa"],
-    highlights: ["Family-oriented community", "Modern suburban living", "Green community on Middle Ring Road"]
+    highlights: [
+      "Family-oriented community",
+      "Modern suburban living",
+      "Green community on Middle Ring Road",
+    ],
   },
-  "azha": {
+  azha: {
     destination: "ras-el-hekma",
     km: 214,
     developer: "Madaar Developments",
@@ -170,12 +292,22 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 11.1,
     deliveryYear: 2026,
-    blurb: "Azha North Coast is Madaar's flagship luxury beach resort in Ras El Hekma at km 214, featuring crystal lagoons and premium properties.",
+    blurb:
+      "Azha North Coast is Madaar's flagship luxury beach resort in Ras El Hekma at km 214, featuring crystal lagoons and premium properties.",
     paymentPlan: "5% down payment, remaining balance spread over 8–10 years in equal installments",
     areaSize: "250 feddan",
-    amenities: ["Private beach", "Crystal lagoons", "Clubhouse", "Swimming pools", "Gym & spa", "Restaurants & cafés", "Retail promenade", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Clubhouse",
+      "Swimming pools",
+      "Gym & spa",
+      "Restaurants & cafés",
+      "Retail promenade",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Premium Ras El Hekma beach", "Lagoon-view residences", "Madaar quality delivery"]
+    highlights: ["Premium Ras El Hekma beach", "Lagoon-view residences", "Madaar quality delivery"],
   },
   "azha-sokhna": {
     destination: "ain-sokhna",
@@ -187,14 +319,32 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 9,
     deliveryYear: 2024,
-    blurb: "Azha Ain Sokhna is a luxury coastal destination spread across approximately 380–400 acres, combining beachfront residences, lagoons, hospitality, and leisure facilities directly on the Red Sea coastline.",
-    paymentPlan: "5%–10% down payment, remaining balance spread over 8–10 years in equal installments",
+    blurb:
+      "Azha Ain Sokhna is a luxury coastal destination spread across approximately 380–400 acres, combining beachfront residences, lagoons, hospitality, and leisure facilities directly on the Red Sea coastline.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance spread over 8–10 years in equal installments",
     areaSize: "380–400 feddan",
-    amenities: ["Private beach", "Crystal lagoons", "Clubhouse", "Marina", "Swimming pools", "Hotel", "Gym & spa", "Restaurants & cafés", "Retail area", "Sports courts", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Clubhouse",
+      "Marina",
+      "Swimming pools",
+      "Hotel",
+      "Gym & spa",
+      "Restaurants & cafés",
+      "Retail area",
+      "Sports courts",
+      "24/7 security",
+    ],
     types: ["Chalet", "Apartment", "Twin House", "Townhouse", "Standalone Villa"],
-    highlights: ["Luxury Red Sea coastal resort", "380–400 acres of master-planned beauty", "Vibrant marina and crystal lagoons"]
+    highlights: [
+      "Luxury Red Sea coastal resort",
+      "380–400 acres of master-planned beauty",
+      "Vibrant marina and crystal lagoons",
+    ],
   },
-  "badya": {
+  badya: {
     destination: "6th-october",
     lat: 29.9325,
     lng: 30.9132,
@@ -202,12 +352,31 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "6th of October City, Giza, Egypt",
     priceFrom: 3.8,
     deliveryYear: 2028,
-    blurb: "Badya is Palm Hills' flagship smart city spanning approximately 3,000 acres, designed as one of Egypt's first sustainable smart cities with integrated residential, educational, commercial, and healthcare districts.",
-    paymentPlan: "0%–5% down payment, remaining balance spread over 8–10 years in equal installments",
+    blurb:
+      "Badya is Palm Hills' flagship smart city spanning approximately 3,000 acres, designed as one of Egypt's first sustainable smart cities with integrated residential, educational, commercial, and healthcare districts.",
+    paymentPlan:
+      "0%–5% down payment, remaining balance spread over 8–10 years in equal installments",
     areaSize: "3000 feddan",
-    amenities: ["Sports club", "Clubhouse", "Schools", "Universities", "Medical city", "Commercial districts", "Office spaces", "Swimming pools", "Cycling & jogging tracks", "Parks", "24/7 security"],
+    amenities: [
+      "Sports club",
+      "Clubhouse",
+      "Schools",
+      "Universities",
+      "Medical city",
+      "Commercial districts",
+      "Office spaces",
+      "Swimming pools",
+      "Cycling & jogging tracks",
+      "Parks",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Penthouse", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Sustainable smart city", "3,000 feddan master plan", "Integrated university & schools", "Green mobility & walkability"]
+    highlights: [
+      "Sustainable smart city",
+      "3,000 feddan master plan",
+      "Integrated university & schools",
+      "Green mobility & walkability",
+    ],
   },
   "bamboo-extension": {
     destination: "6th-october",
@@ -215,24 +384,36 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.0293,
     developer: "M Squared Developments",
     city: "6th of October City, Giza, Egypt",
-    blurb: "Bamboo Extension is an extension of the successful Bamboo residential community, offering modern low-density living with landscaped surroundings and premium residential planning.",
+    blurb:
+      "Bamboo Extension is an extension of the successful Bamboo residential community, offering modern low-density living with landscaped surroundings and premium residential planning.",
     paymentPlan: "5% down, installments up to 10 years",
-    amenities: ["Clubhouse", "Swimming pools", "Gym", "Landscaped parks", "Jogging tracks", "Kids' play areas", "Commercial area", "Restaurants & cafés", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Gym",
+      "Landscaped parks",
+      "Jogging tracks",
+      "Kids' play areas",
+      "Commercial area",
+      "Restaurants & cafés",
+      "24/7 security",
+    ],
     types: ["Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Family-oriented community", "Modern suburban living", "Low-density setting"]
+    highlights: ["Family-oriented community", "Modern suburban living", "Low-density setting"],
   },
   "bamboo-iii": {
-    lat: 29.980,
-    lng: 30.920,
+    lat: 29.98,
+    lng: 30.92,
     developer: "Palm Hills Developments",
     city: "6th of October City, Giza, Egypt",
     destination: "6th-october",
     priceFrom: 21,
     deliveryYear: 2029,
-    blurb: "Bamboo III is a low-density residential neighborhood within Palm Hills October offering fully finished family homes and townhouses.",
+    blurb:
+      "Bamboo III is a low-density residential neighborhood within Palm Hills October offering fully finished family homes and townhouses.",
     paymentPlan: "5% down payment, remaining balance over 10 years in equal installments",
     areaSize: "35 feddan",
-    types: ["Family House", "Townhouse"]
+    types: ["Family House", "Townhouse"],
   },
   "beit-al-bahr": {
     destination: "sidi-heneish",
@@ -244,8 +425,10 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 14.9,
     deliveryYear: 2028,
-    blurb: "Beit El Bahr inside El Abd Resort Sidi Heneish is a tiered 450-feddan beachfront project offering 3.5 km of private white sand beach and swimmable lagoons.",
-    paymentPlan: "5%–10% down payment, remaining balance over 7–8 years equal interest-free installments",
+    blurb:
+      "Beit El Bahr inside El Abd Resort Sidi Heneish is a tiered 450-feddan beachfront project offering 3.5 km of private white sand beach and swimmable lagoons.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance over 7–8 years equal interest-free installments",
     amenities: [
       "3.5 km Private Beachfront",
       "Swimmable Lagoons",
@@ -253,21 +436,12 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
       "Seaside Cinema",
       "Commercial Strip",
       "Wellness Center",
-      "24/7 Security"
+      "24/7 Security",
     ],
-    types: [
-      "Chalet",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
-    ],
-    highlights: [
-      "3.5 km private beachfront",
-      "Tiered beachfront phases",
-      "Inside El Abd Resort"
-    ],
+    types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
+    highlights: ["3.5 km private beachfront", "Tiered beachfront phases", "Inside El Abd Resort"],
     areaSize: "450 feddan",
-    unitSizes: "95–400 m²"
+    unitSizes: "95–400 m²",
   },
   "belle-vie": {
     destination: "new-zayed",
@@ -277,12 +451,38 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "New Zayed City, West Cairo, Egypt",
     priceFrom: 11,
     deliveryYear: 2025,
-    blurb: "Belle Vie is Emaar Misr's flagship residential community in New Zayed, spanning approximately 500 acres. Inspired by the French phrase for 'Beautiful Life', it is designed around French-inspired architecture, expansive green landscapes, and a vibrant town center.",
+    blurb:
+      "Belle Vie is Emaar Misr's flagship residential community in New Zayed, spanning approximately 500 acres. Inspired by the French phrase for 'Beautiful Life', it is designed around French-inspired architecture, expansive green landscapes, and a vibrant town center.",
     paymentPlan: "0%–5% down payment, remaining balance over 8 years in equal installments",
     areaSize: "500 feddan",
-    amenities: ["BV Clubhouse", "Sports club", "Swimming pools", "The Valley green park", "Waterfront and lake areas", "Beach-themed neighborhood", "Town Center", "Business hub", "Commercial boulevard", "International school", "Medical center", "24/7 security"],
-    types: ["Apartment", "Duplex", "Town Villa", "Townhouse", "Standalone Villa", "Waterfront Residences"],
-    highlights: ["Flagship Emaar New Zayed project", "French-inspired lifestyle and parks", "Vibrant Town Center and lake", "Self-contained master plan"]
+    amenities: [
+      "BV Clubhouse",
+      "Sports club",
+      "Swimming pools",
+      "The Valley green park",
+      "Waterfront and lake areas",
+      "Beach-themed neighborhood",
+      "Town Center",
+      "Business hub",
+      "Commercial boulevard",
+      "International school",
+      "Medical center",
+      "24/7 security",
+    ],
+    types: [
+      "Apartment",
+      "Duplex",
+      "Town Villa",
+      "Townhouse",
+      "Standalone Villa",
+      "Waterfront Residences",
+    ],
+    highlights: [
+      "Flagship Emaar New Zayed project",
+      "French-inspired lifestyle and parks",
+      "Vibrant Town Center and lake",
+      "Self-contained master plan",
+    ],
   },
   "beverly-hills": {
     destination: "sheikh-zayed",
@@ -292,31 +492,54 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Sheikh Zayed, Giza Governorate, Egypt",
     priceFrom: 5,
     deliveryYear: 2005,
-    blurb: "Beverly Hills by SODIC is one of West Cairo's most mature and established master-planned communities, spanning roughly 350–400 acres with complete infrastructure, schools, and sporting clubs.",
+    blurb:
+      "Beverly Hills by SODIC is one of West Cairo's most mature and established master-planned communities, spanning roughly 350–400 acres with complete infrastructure, schools, and sporting clubs.",
     paymentPlan: "Resale: Cash / secondary market terms",
     areaSize: "350–400 feddan",
     types: ["Apartment", "Duplex", "Townhouse", "Standalone Villa"],
-    highlights: ["Mature established community", "Prime Sheikh Zayed location", "Complete lifestyle infrastructure"]
+    highlights: [
+      "Mature established community",
+      "Prime Sheikh Zayed location",
+      "Complete lifestyle infrastructure",
+    ],
   },
   "bianchi-ilios": {
     destination: "sidi-abdelrahman",
     km: 134,
     city: "Sidi Abdel Rahman, North Coast (km 134), Matrouh Governorate, Egypt",
-    lat: 31.0330,
+    lat: 31.033,
     lng: 28.5305,
     developer: "Developer X / Al Borouj Misr",
     beachfront: true,
     type: "Resort",
     priceFrom: 6.8,
     deliveryYear: 2025,
-    blurb: "Bianchi Ilios is a luxury coastal community developed by Developer X (Al Borouj Misr) in Sidi Abdel Rahman. Spanning approximately 104 acres, it is designed around crystal lagoons, landscaped greenery, and a private beachfront with Mediterranean-inspired architecture.",
+    blurb:
+      "Bianchi Ilios is a luxury coastal community developed by Developer X (Al Borouj Misr) in Sidi Abdel Rahman. Spanning approximately 104 acres, it is designed around crystal lagoons, landscaped greenery, and a private beachfront with Mediterranean-inspired architecture.",
     paymentPlan: "5%–10% down payment, remaining balance over 7–9 years in equal installments",
     areaSize: "104 feddan",
-    amenities: ["Private beach", "Crystal lagoons", "Clubhouse", "Swimming pools", "Aqua park", "Gym & spa", "Sports courts", "Restaurants & cafés", "Commercial area", "Mosque", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Clubhouse",
+      "Swimming pools",
+      "Aqua park",
+      "Gym & spa",
+      "Sports courts",
+      "Restaurants & cafés",
+      "Commercial area",
+      "Mosque",
+      "24/7 security",
+    ],
     types: ["Chalet", "Apartment", "Townhouse", "Twin House", "Standalone Villa", "Beach Cabanas"],
-    highlights: ["Mediterranean-inspired beachfront resort", "104 feddans of crystal lagoons", "Located in prime Sidi Abdel Rahman", "Active beach & aqua park"]
+    highlights: [
+      "Mediterranean-inspired beachfront resort",
+      "104 feddans of crystal lagoons",
+      "Located in prime Sidi Abdel Rahman",
+      "Active beach & aqua park",
+    ],
   },
-  "bloomfields": {
+  bloomfields: {
     destination: "mostakbal-city",
     lat: 30.0381,
     lng: 31.6895,
@@ -324,13 +547,18 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Mostakbal City, New Cairo, Egypt",
     priceFrom: 5.8,
     deliveryYear: 2026,
-    blurb: "Bloomfields by Tatweer Misr is a 415-acre master-planned town in Mostakbal City, featuring innovative college-town concepts, sprawling green spaces, and residential clusters.",
+    blurb:
+      "Bloomfields by Tatweer Misr is a 415-acre master-planned town in Mostakbal City, featuring innovative college-town concepts, sprawling green spaces, and residential clusters.",
     paymentPlan: "0%–5% down payment, remaining balance over 8–10 years in equal installments",
     areaSize: "415 feddan",
     types: ["Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["415-feddan college town concept", "Mostakbal City prime location", "Tatweer Misr signature masterplan"]
+    highlights: [
+      "415-feddan college town concept",
+      "Mostakbal City prime location",
+      "Tatweer Misr signature masterplan",
+    ],
   },
-  "blumar": {
+  blumar: {
     destination: "sidi-abdelrahman",
     km: 137,
     city: "Sidi Abdel Rahman, North Coast (km 137), Matrouh Governorate, Egypt",
@@ -341,12 +569,20 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 6.8,
     deliveryYear: 2022,
-    blurb: "Blumar Sidi Abdel Rahman by Wadi Degla is an established beachfront resort across 65–70 feddans offering direct Mediterranean access, swimming pools, and beach facilities.",
+    blurb:
+      "Blumar Sidi Abdel Rahman by Wadi Degla is an established beachfront resort across 65–70 feddans offering direct Mediterranean access, swimming pools, and beach facilities.",
     paymentPlan: "Resale: Cash / secondary market terms",
     areaSize: "65–70 feddan",
-    amenities: ["Private beach", "Swimming pools", "Clubhouse", "Restaurants", "Kids play areas", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Swimming pools",
+      "Clubhouse",
+      "Restaurants",
+      "Kids play areas",
+      "24/7 security",
+    ],
     types: ["Chalet", "Twin House", "Standalone Villa"],
-    highlights: ["Cozy beach resort", "Established community", "Direct sea access"]
+    highlights: ["Cozy beach resort", "Established community", "Direct sea access"],
   },
   "blumar-sokhna": {
     destination: "ain-sokhna",
@@ -358,14 +594,30 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 3.5,
     deliveryYear: 2020,
-    blurb: "Blumar El Sokhna is a luxury beachfront resort by Wadi Degla Developments featuring terraced residences across 110–260 acres with panoramic Red Sea views and private beaches.",
+    blurb:
+      "Blumar El Sokhna is a luxury beachfront resort by Wadi Degla Developments featuring terraced residences across 110–260 acres with panoramic Red Sea views and private beaches.",
     paymentPlan: "Resale: Cash / secondary market terms",
     areaSize: "110–260 feddan",
-    amenities: ["Private beach", "Swimming pools", "Clubhouse", "Restaurants & cafés", "Beach activities", "Kids' area", "Sports courts", "Gym", "Supermarket", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Swimming pools",
+      "Clubhouse",
+      "Restaurants & cafés",
+      "Beach activities",
+      "Kids' area",
+      "Sports courts",
+      "Gym",
+      "Supermarket",
+      "24/7 security",
+    ],
     types: ["Chalet", "Twin House", "Standalone Villa"],
-    highlights: ["Beachfront terraced resort", "Panoramic Red Sea views", "Established summer & weekend getaway"]
+    highlights: [
+      "Beachfront terraced resort",
+      "Panoramic Red Sea views",
+      "Established summer & weekend getaway",
+    ],
   },
-  "botanica": {
+  botanica: {
     destination: "new-administrative-capital",
     lat: 30.0064,
     lng: 31.7568,
@@ -373,12 +625,29 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "R7 District, New Administrative Capital, Egypt",
     priceFrom: 5.2,
     deliveryYear: 2028,
-    blurb: "Botanica is a modern nature-inspired residential compound by New Generation Developments in the R7 District of the New Capital, spanning 23 feddans with an Italian-influenced design (19% footprint).",
+    blurb:
+      "Botanica is a modern nature-inspired residential compound by New Generation Developments in the R7 District of the New Capital, spanning 23 feddans with an Italian-influenced design (19% footprint).",
     paymentPlan: "10% down payment, remaining balance over 8–10 years equal installments",
     areaSize: "23 feddan",
-    amenities: ["Clubhouse", "Swimming pools", "Gym", "Green parks", "Jogging tracks", "Retail area", "Restaurants & cafés", "Medical center", "Kids' area", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Gym",
+      "Green parks",
+      "Jogging tracks",
+      "Retail area",
+      "Restaurants & cafés",
+      "Medical center",
+      "Kids' area",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Penthouse"],
-    highlights: ["Nature-inspired modern residential", "Prime R7 District location", "Lush botanical gardens", "Low-density planning"]
+    highlights: [
+      "Nature-inspired modern residential",
+      "Prime R7 District location",
+      "Lush botanical gardens",
+      "Low-density planning",
+    ],
   },
   "business-district": {
     destination: "new-cairo",
@@ -387,11 +656,12 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.045,
     lng: 31.475,
     type: "Mixed-use",
-    blurb: "Business District is a commercial and retail development by M Squared Developments in New Cairo offering premium office and retail spaces.",
+    blurb:
+      "Business District is a commercial and retail development by M Squared Developments in New Cairo offering premium office and retail spaces.",
     paymentPlan: "Contact PropTrack advisor for details",
     amenities: ["Office spaces", "Retail spaces", "Restaurants", "Parking", "Security"],
     types: ["Office", "Retail"],
-    highlights: ["Prime New Cairo commercial", "Modern workspaces"]
+    highlights: ["Prime New Cairo commercial", "Modern workspaces"],
   },
   "business-district-nac": {
     destination: "new-administrative-capital",
@@ -402,12 +672,28 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Mixed-use",
     priceFrom: 5,
     deliveryYear: 2025,
-    blurb: "The Central Business District (CBD) is the premier commercial landmark of the New Administrative Capital, featuring 20 skyscrapers including the Iconic Tower.",
+    blurb:
+      "The Central Business District (CBD) is the premier commercial landmark of the New Administrative Capital, featuring 20 skyscrapers including the Iconic Tower.",
     paymentPlan: "5%–10% down payment, remaining balance over 7–10 years",
     areaSize: "464 feddan",
-    amenities: ["Iconic Tower", "Office towers", "Hotels", "Retail area", "Restaurants", "Conference centers", "Banks", "Smart infrastructure", "24/7 security", "Parking"],
+    amenities: [
+      "Iconic Tower",
+      "Office towers",
+      "Hotels",
+      "Retail area",
+      "Restaurants",
+      "Conference centers",
+      "Banks",
+      "Smart infrastructure",
+      "24/7 security",
+      "Parking",
+    ],
     types: ["Offices", "Retail Units", "Clinics", "Hotel Apartments"],
-    highlights: ["Egypt's premier financial hub", "Iconic Tower landmark", "World-class commercial infrastructure"]
+    highlights: [
+      "Egypt's premier financial hub",
+      "Iconic Tower landmark",
+      "World-class commercial infrastructure",
+    ],
   },
   "caesar-bay": {
     destination: "ras-el-hekma",
@@ -420,12 +706,30 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 8.6,
     deliveryYear: 2026,
-    blurb: "Caesar Bay is a luxury beachfront resort by Mediterranean Tourism Investment Company in Ras El Hekma, featuring over 1.2 km of private white sandy beach across 192 feddans.",
-    paymentPlan: "5%–10% down payment, remaining balance over 6–8 years equal interest-free installments",
+    blurb:
+      "Caesar Bay is a luxury beachfront resort by Mediterranean Tourism Investment Company in Ras El Hekma, featuring over 1.2 km of private white sandy beach across 192 feddans.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance over 6–8 years equal interest-free installments",
     areaSize: "192 feddan",
-    amenities: ["Private beach", "Crystal lagoons", "Clubhouse", "Retail village", "Restaurants & cafés", "Gym & spa", "Sports courts", "Kids' areas", "Promenade", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Clubhouse",
+      "Retail village",
+      "Restaurants & cafés",
+      "Gym & spa",
+      "Sports courts",
+      "Kids' areas",
+      "Promenade",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Over 1.2 km of private beachfront", "Terraced sea-view master plan", "Exclusive Ras El Hekma resort", "Mediterranean Tourism Investment Company luxury delivery"]
+    highlights: [
+      "Over 1.2 km of private beachfront",
+      "Terraced sea-view master plan",
+      "Exclusive Ras El Hekma resort",
+      "Mediterranean Tourism Investment Company luxury delivery",
+    ],
   },
   "caesar-sodic": {
     destination: "ras-el-hekma",
@@ -438,12 +742,14 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 8.6,
     deliveryYear: 2026,
-    blurb: "Caesar Sodic is a premium coastal neighborhood inside the master-planned 192-feddan Caesar Ras El Hekma community.",
-    paymentPlan: "5%–10% down payment, remaining balance over 6–8 years equal interest-free installments",
+    blurb:
+      "Caesar Sodic is a premium coastal neighborhood inside the master-planned 192-feddan Caesar Ras El Hekma community.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance over 6–8 years equal interest-free installments",
     areaSize: "192 feddan",
     amenities: ["Private beach access", "Swimming pools", "Landscape areas", "24/7 security"],
     types: ["Chalet", "Twin House", "Villa"],
-    highlights: ["Exclusive Caesar neighborhood", "SODIC premium master plan"]
+    highlights: ["Exclusive Caesar neighborhood", "SODIC premium master plan"],
   },
   "cairo-business-park": {
     destination: "new-cairo",
@@ -454,12 +760,27 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Mixed-use",
     priceFrom: 7.8,
     deliveryYear: 2023,
-    blurb: "Cairo Business Park is a fully delivered 18-acre business hub by Misr Italia in New Cairo, combining Grade-A corporate office buildings, retail, and the Hilton Garden Inn.",
+    blurb:
+      "Cairo Business Park is a fully delivered 18-acre business hub by Misr Italia in New Cairo, combining Grade-A corporate office buildings, retail, and the Hilton Garden Inn.",
     paymentPlan: "Resale / 20% down payment over 6–8 years",
     areaSize: "18 feddan",
-    amenities: ["Office buildings", "Retail area", "Hilton Garden Inn", "Restaurants", "Banks", "Meeting spaces", "Landscaped gardens", "24/7 security", "Parking"],
+    amenities: [
+      "Office buildings",
+      "Retail area",
+      "Hilton Garden Inn",
+      "Restaurants",
+      "Banks",
+      "Meeting spaces",
+      "Landscaped gardens",
+      "24/7 security",
+      "Parking",
+    ],
     types: ["Offices", "Retail Units", "Clinics"],
-    highlights: ["Fully delivered corporate business park", "Grade-A office and retail spaces", "Hilton Garden Inn on-site"]
+    highlights: [
+      "Fully delivered corporate business park",
+      "Grade-A office and retail spaces",
+      "Hilton Garden Inn on-site",
+    ],
   },
   "cairo-gate": {
     destination: "sheikh-zayed",
@@ -469,12 +790,29 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Sheikh Zayed City, Giza, Egypt",
     priceFrom: 5.4,
     deliveryYear: 2026,
-    blurb: "Cairo Gate is a luxury gated community by Emaar Misr spanning 133 acres in Sheikh Zayed on Cairo-Alex Desert Road, featuring Elie Saab signature villas and Locanda serviced residences.",
-    paymentPlan: "5%–10% down payment, remaining balance over 6–8 years equal interest-free installments",
+    blurb:
+      "Cairo Gate is a luxury gated community by Emaar Misr spanning 133 acres in Sheikh Zayed on Cairo-Alex Desert Road, featuring Elie Saab signature villas and Locanda serviced residences.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance over 6–8 years equal interest-free installments",
     areaSize: "133 feddan",
-    amenities: ["Clubhouse", "Swimming pools", "Parks", "Sports club", "Gym", "Retail area", "Restaurants", "Medical center", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Parks",
+      "Sports club",
+      "Gym",
+      "Retail area",
+      "Restaurants",
+      "Medical center",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Luxury Emaar gated community", "Located on Cairo-Alex Desert Road", "Elie Saab signature villas"]
+    highlights: [
+      "Luxury Emaar gated community",
+      "Located on Cairo-Alex Desert Road",
+      "Elie Saab signature villas",
+    ],
   },
   "cali-coast-ras-el-hekma": {
     destination: "ras-el-hekma",
@@ -487,14 +825,30 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 8.1,
     deliveryYear: 2026,
-    blurb: "Cali Coast is a California-inspired 230–245 feddan beach resort by Maven Developments in Ras El Hekma with a 600m beachfront and swimmable lagoons.",
+    blurb:
+      "Cali Coast is a California-inspired 230–245 feddan beach resort by Maven Developments in Ras El Hekma with a 600m beachfront and swimmable lagoons.",
     paymentPlan: "0%–10% down payment, remaining balance over 8–10 years (up to 31% cash discount)",
     areaSize: "230–245 feddan",
-    amenities: ["Beach club", "Swimming pools", "Crystal lagoons", "Clubhouse", "Restaurants", "Retail area", "Sports courts", "Gym", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Beach club",
+      "Swimming pools",
+      "Crystal lagoons",
+      "Clubhouse",
+      "Restaurants",
+      "Retail area",
+      "Sports courts",
+      "Gym",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["California-inspired beach resort", "Swimmable lagoons and beachfront", "Ras El Hekma coastal strip"]
+    highlights: [
+      "California-inspired beach resort",
+      "Swimmable lagoons and beachfront",
+      "Ras El Hekma coastal strip",
+    ],
   },
-  "carnelia": {
+  carnelia: {
     destination: "ain-sokhna",
     lat: 29.585,
     lng: 32.345,
@@ -502,10 +856,12 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Ain Sokhna, Red Sea Governorate, Egypt",
     priceFrom: 4.9,
     deliveryYear: 2025,
-    blurb: "Carnelia Ain Sokhna by Ajna Developments is a 100-acre coastal resort built on tiered elevations up to 160 meters above sea level near El Galala Plateau.",
-    paymentPlan: "5% down + 5% after 3 mos, remaining over 10 years equal interest-free installments",
+    blurb:
+      "Carnelia Ain Sokhna by Ajna Developments is a 100-acre coastal resort built on tiered elevations up to 160 meters above sea level near El Galala Plateau.",
+    paymentPlan:
+      "5% down + 5% after 3 mos, remaining over 10 years equal interest-free installments",
     areaSize: "100 feddan",
-    types: ["Studio", "Chalet", "Townhouse", "Standalone Villa"]
+    types: ["Studio", "Chalet", "Townhouse", "Standalone Villa"],
   },
   "city-oval": {
     destination: "new-administrative-capital",
@@ -515,10 +871,11 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "New Administrative Capital, Egypt",
     priceFrom: 4.9,
     deliveryYear: 2028,
-    blurb: "City Oval by Master Group is a 30–37 feddan English-themed residential compound in the New Administrative Capital R7 district.",
+    blurb:
+      "City Oval by Master Group is a 30–37 feddan English-themed residential compound in the New Administrative Capital R7 district.",
     paymentPlan: "5%–10% down payment, remaining balance over 6–10 years equal installments",
     areaSize: "30–37 feddan",
-    types: ["Apartment", "Duplex", "I-Villa"]
+    types: ["Apartment", "Duplex", "I-Villa"],
   },
   "cleo-water-residence": {
     destination: "new-cairo",
@@ -528,12 +885,13 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "New Cairo, Egypt",
     priceFrom: 4.2,
     deliveryYear: 2026,
-    blurb: "Cleo Water Residences is a luxury lagoon-facing residential phase within the 500-acre Palm Hills New Cairo master development.",
+    blurb:
+      "Cleo Water Residences is a luxury lagoon-facing residential phase within the 500-acre Palm Hills New Cairo master development.",
     paymentPlan: "3% down payment, remaining balance over up to 10 years in equal installments",
     areaSize: "500 feddan",
-    types: ["Studio", "Apartment"]
+    types: ["Studio", "Apartment"],
   },
-  "commonhaus": {
+  commonhaus: {
     destination: "sheikh-zayed",
     lat: 30.075,
     lng: 30.935,
@@ -541,9 +899,11 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Sheikh Zayed, Giza Governorate, Egypt",
     priceFrom: 5.5,
     deliveryYear: 2028,
-    blurb: "Commonhaus by Upwyde Developments in partnership with Bird Nest Hotels is a branded serviced-apartment hub inside Sky Ramp compound in Sheikh Zayed.",
-    paymentPlan: "5%–10% down payment, remaining balance over 7–8 years equal interest-free installments",
-    types: ["Serviced Apartment", "Studio"]
+    blurb:
+      "Commonhaus by Upwyde Developments in partnership with Bird Nest Hotels is a branded serviced-apartment hub inside Sky Ramp compound in Sheikh Zayed.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance over 7–8 years equal interest-free installments",
+    types: ["Serviced Apartment", "Studio"],
   },
   "coral-coves": {
     destination: "red-sea",
@@ -553,11 +913,12 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Somabay, Red Sea Governorate, Egypt",
     priceFrom: 18.5,
     deliveryYear: 2029,
-    blurb: "Coral Coves is an elevated cliffside coastal neighborhood in Somabay offering Mediterranean architecture, golf access, and Red Sea panoramas.",
+    blurb:
+      "Coral Coves is an elevated cliffside coastal neighborhood in Somabay offering Mediterranean architecture, golf access, and Red Sea panoramas.",
     paymentPlan: "5% down payment, remaining balance over up to 8 years in equal installments",
-    types: ["Apartment", "Chalet", "Standalone Villa"]
+    types: ["Apartment", "Chalet", "Standalone Villa"],
   },
-  "covaya": {
+  covaya: {
     destination: "ain-sokhna",
     lat: 29.625,
     lng: 32.325,
@@ -565,11 +926,13 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Telal Ain Sokhna, Egypt",
     priceFrom: 5,
     deliveryYear: 2028,
-    blurb: "Covaya is a luxury hotel-serviced phase integrated inside Telal Ain Sokhna by Roya Developments with 4-star hospitality management.",
-    paymentPlan: "5% down payment, remaining balance over 10–12 years equal interest-free installments",
-    types: ["Studio", "Chalet", "Villa"]
+    blurb:
+      "Covaya is a luxury hotel-serviced phase integrated inside Telal Ain Sokhna by Roya Developments with 4-star hospitality management.",
+    paymentPlan:
+      "5% down payment, remaining balance over 10–12 years equal interest-free installments",
+    types: ["Studio", "Chalet", "Villa"],
   },
-  "creekview": {
+  creekview: {
     destination: "new-cairo",
     lat: 30.038,
     lng: 31.492,
@@ -577,10 +940,11 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Golden Square, New Cairo, Egypt",
     priceFrom: 5.4,
     deliveryYear: 2029,
-    blurb: "Creek View by Mountain View is a 119-feddan European waterfront-inspired compound in Golden Square New Cairo facing Hyde Park.",
+    blurb:
+      "Creek View by Mountain View is a 119-feddan European waterfront-inspired compound in Golden Square New Cairo facing Hyde Park.",
     paymentPlan: "5% down payment, remaining balance over 10–14 years in equal installments",
     areaSize: "119 feddan",
-    types: ["Apartment", "Duplex", "Penthouse", "Sky Villa"]
+    types: ["Apartment", "Duplex", "Penthouse", "Sky Villa"],
   },
   "crescent-walk": {
     destination: "new-cairo",
@@ -590,10 +954,11 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "6th Settlement, New Cairo, Egypt",
     priceFrom: 20.7,
     deliveryYear: 2028,
-    blurb: "Crescent Walk by Marakez is a 118-feddan master-planned community in the 6th Settlement New Cairo with a 15% building footprint.",
+    blurb:
+      "Crescent Walk by Marakez is a 118-feddan master-planned community in the 6th Settlement New Cairo with a 15% building footprint.",
     paymentPlan: "8% down (+ 4% after 3 mos), remaining balance over 8 years in equal installments",
     areaSize: "118 feddan",
-    types: ["Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa"]
+    types: ["Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
   },
   "d-bay": {
     destination: "al-dabaa",
@@ -606,12 +971,40 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 14,
     deliveryYear: 2026,
-    blurb: "D-Bay is Tatweer Misr's luxury coastal destination spanning 200 acres in Dabaa with an 800-meter beachfront and 25 feddans of swimmable crystal lagoons.",
-    paymentPlan: "5%–10% down payment, remaining balance over 8–10 years equal interest-free installments",
+    blurb:
+      "D-Bay is Tatweer Misr's luxury coastal destination spanning 200 acres in Dabaa with an 800-meter beachfront and 25 feddans of swimmable crystal lagoons.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance over 8–10 years equal interest-free installments",
     areaSize: "200 feddan",
-    amenities: ["800 m private beach", "Crystal lagoons", "Beach club", "Clubhouse", "Swimming pools", "Boutique hotel", "Gym & spa", "Sports facilities", "Restaurants & cafés", "Commercial area", "Kids' play areas", "24/7 security"],
-    types: ["Apartment", "Loft", "Beach Cabins", "Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["800 m private sandy beach", "Terraced sea-view planning", "Direct access from Dabaa Axis", "Crystal clear swimming lagoons"]
+    amenities: [
+      "800 m private beach",
+      "Crystal lagoons",
+      "Beach club",
+      "Clubhouse",
+      "Swimming pools",
+      "Boutique hotel",
+      "Gym & spa",
+      "Sports facilities",
+      "Restaurants & cafés",
+      "Commercial area",
+      "Kids' play areas",
+      "24/7 security",
+    ],
+    types: [
+      "Apartment",
+      "Loft",
+      "Beach Cabins",
+      "Chalet",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+    ],
+    highlights: [
+      "800 m private sandy beach",
+      "Terraced sea-view planning",
+      "Direct access from Dabaa Axis",
+      "Crystal clear swimming lagoons",
+    ],
   },
   "d-o-s-e": {
     destination: "al-dabaa",
@@ -624,12 +1017,14 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 9.5,
     deliveryYear: 2026,
-    blurb: "Dose by Akam Al Rajhi is a 125-feddan coastal destination at Km 174 Ras El Hekma / Dabaa with 450m beachfront and crystal lagoons.",
-    paymentPlan: "5%–10% down payment, remaining balance over 6–10 years equal interest-free installments (up to 40% cash discount)",
+    blurb:
+      "Dose by Akam Al Rajhi is a 125-feddan coastal destination at Km 174 Ras El Hekma / Dabaa with 450m beachfront and crystal lagoons.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance over 6–10 years equal interest-free installments (up to 40% cash discount)",
     areaSize: "125 feddan",
-    types: ["Chalet", "Hotel Apartment", "Townhouse", "Twin House", "Standalone Villa"]
+    types: ["Chalet", "Hotel Apartment", "Townhouse", "Twin House", "Standalone Villa"],
   },
-  "dayz": {
+  dayz: {
     destination: "new-alamein",
     km: 100,
     city: "Marina 6, North Coast (km 98), Matrouh Governorate, Egypt",
@@ -639,9 +1034,10 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Mercon Developments",
     priceFrom: 10,
     deliveryYear: 2024,
-    blurb: "Dayz by Mercon Developments in Marina 6 (Km 98) is a boutique ready-to-move 200-unit sea-front resort delivered fully finished and designer-furnished.",
+    blurb:
+      "Dayz by Mercon Developments in Marina 6 (Km 98) is a boutique ready-to-move 200-unit sea-front resort delivered fully finished and designer-furnished.",
     paymentPlan: "10%–30% down payment, remaining balance over 2–5 years",
-    types: ["Studio", "Chalet"]
+    types: ["Studio", "Chalet"],
   },
   "dejoya-residence": {
     destination: "new-zayed",
@@ -651,10 +1047,12 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "New Zayed, West Cairo, Egypt",
     priceFrom: 5.5,
     deliveryYear: 2026,
-    blurb: "De Joya Residence by Taj Misr is a 132-feddan master-planned compound in New Zayed featuring minimalist architecture, central lakes, and De Joya Plaza.",
-    paymentPlan: "5%–10% down payment, remaining balance over 7–10 years equal interest-free installments",
+    blurb:
+      "De Joya Residence by Taj Misr is a 132-feddan master-planned compound in New Zayed featuring minimalist architecture, central lakes, and De Joya Plaza.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance over 7–10 years equal interest-free installments",
     areaSize: "132 feddan",
-    types: ["Studio", "Apartment", "Townhouse", "Twin House", "Standalone Villa"]
+    types: ["Studio", "Apartment", "Townhouse", "Twin House", "Standalone Villa"],
   },
   "diplo-3": {
     destination: "sidi-abdelrahman",
@@ -667,12 +1065,28 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 35,
     deliveryYear: 2024,
-    blurb: "Diplo 3 (Diplomats Village 3) is a classic established Mediterranean summer resort in Sidi Abdel Rahman (km 126) next to Marassi and Amwaj.",
+    blurb:
+      "Diplo 3 (Diplomats Village 3) is a classic established Mediterranean summer resort in Sidi Abdel Rahman (km 126) next to Marassi and Amwaj.",
     paymentPlan: "Resale: Cash / secondary market terms",
     areaSize: "60 feddan",
-    amenities: ["Private beach", "Swimming pools", "Sports courts", "Clubhouse", "Restaurants & cafés", "Commercial area", "Supermarket", "Children's play areas", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Swimming pools",
+      "Sports courts",
+      "Clubhouse",
+      "Restaurants & cafés",
+      "Commercial area",
+      "Supermarket",
+      "Children's play areas",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Standalone Villa"],
-    highlights: ["Established high-demand beach village", "Prime Sidi Abdel Rahman beach", "Mature landscape & spacious plots", "Classic Sahel family destination"]
+    highlights: [
+      "Established high-demand beach village",
+      "Prime Sidi Abdel Rahman beach",
+      "Mature landscape & spacious plots",
+      "Classic Sahel family destination",
+    ],
   },
   "direction-white": {
     destination: "ras-el-hekma",
@@ -685,12 +1099,30 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 8.1,
     deliveryYear: 2026,
-    blurb: "Direction White by Arabella Developments is a 290-acre all-white Mediterranean coastal resort in Ras El Hekma elevated up to 50m above sea level with a 600m beach.",
+    blurb:
+      "Direction White by Arabella Developments is a 290-acre all-white Mediterranean coastal resort in Ras El Hekma elevated up to 50m above sea level with a 600m beach.",
     paymentPlan: "5%–10% down payment, remaining balance over 7–8 years (up to 22% cash discount)",
     areaSize: "290 feddan",
-    amenities: ["Private beach", "Crystal lagoons", "Beach club", "Clubhouse", "Swimming pools", "Gym", "Sports courts", "Restaurants & cafés", "Retail promenade", "Kids' area", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Beach club",
+      "Clubhouse",
+      "Swimming pools",
+      "Gym",
+      "Sports courts",
+      "Restaurants & cafés",
+      "Retail promenade",
+      "Kids' area",
+      "24/7 security",
+    ],
     types: ["Chalet", "Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["All-white Mediterranean theme", "Terraced panoramic sea views", "Ras El Hekma premium location", "Swimmable crystal lagoons"]
+    highlights: [
+      "All-white Mediterranean theme",
+      "Terraced panoramic sea views",
+      "Ras El Hekma premium location",
+      "Swimmable crystal lagoons",
+    ],
   },
   "district-5": {
     destination: "new-cairo",
@@ -700,10 +1132,11 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "New Cairo, Egypt",
     priceFrom: 11.2,
     deliveryYear: 2026,
-    blurb: "District 5 by Marakez is a 200–268 feddan master-planned community in New Cairo with an 18% building footprint, Mindhaus business park, and District 5 Mall.",
+    blurb:
+      "District 5 by Marakez is a 200–268 feddan master-planned community in New Cairo with an 18% building footprint, Mindhaus business park, and District 5 Mall.",
     paymentPlan: "5%–10% down payment, remaining balance over 5–8 years",
     areaSize: "200–268 feddan",
-    types: ["Apartment", "Duplex", "Penthouse", "Townhouse", "Court Home"]
+    types: ["Apartment", "Duplex", "Penthouse", "Townhouse", "Court Home"],
   },
   "downtown-new-alamein": {
     destination: "new-alamein",
@@ -714,35 +1147,46 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "City Edge Developments",
     priceFrom: 4.9,
     deliveryYear: 2024,
-    blurb: "Downtown New Alamein by City Edge is a 31-feddan mixed-use community with 40 G+5 buildings surrounding a 5-acre crystal lagoon and central public piazza.",
+    blurb:
+      "Downtown New Alamein by City Edge is a 31-feddan mixed-use community with 40 G+5 buildings surrounding a 5-acre crystal lagoon and central public piazza.",
     paymentPlan: "5% down payment, remaining balance over 7–10 years (up to 12 yrs promo)",
     areaSize: "31 feddan",
-    types: ["Apartment"]
+    types: ["Apartment"],
   },
   "el-patio-riva": {
     destination: "6th-settlement",
     lat: 29.978,
-    lng: 31.640,
+    lng: 31.64,
     developer: "La Vista Developments",
     city: "Sixth Settlement, New Cairo, Cairo, Egypt",
     priceFrom: 5.6,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "El Patio Riva by La Vista Developments is a 75-acre low-density (16% footprint) compound in the Sixth Settlement, New Cairo, featuring G+7 residential blocks surrounded by green parks and lagoons.",
-    paymentPlan: "5% down payment (+ 5% after 3 months), remaining balance spread over up to 10 years in equal installments",
+    blurb:
+      "El Patio Riva by La Vista Developments is a 75-acre low-density (16% footprint) compound in the Sixth Settlement, New Cairo, featuring G+7 residential blocks surrounded by green parks and lagoons.",
+    paymentPlan:
+      "5% down payment (+ 5% after 3 months), remaining balance spread over up to 10 years in equal installments",
     areaSize: "75 feddan",
     unitSizes: "85–210 m²",
-    amenities: ["Clubhouse", "Swimming pools", "Lagoons", "Walking & cycling trails", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Lagoons",
+      "Walking & cycling trails",
+      "24/7 security",
+    ],
     types: ["Apartment"],
-    highlights: ["16% low building footprint", "Sixth Settlement prime location", "84% greenery and lagoons"]
+    highlights: [
+      "16% low building footprint",
+      "Sixth Settlement prime location",
+      "84% greenery and lagoons",
+    ],
   },
-  "el-patio-sola": {
-  },
+  "el-patio-sola": {},
   "el-patio-town": {
     destination: "new-cairo",
   },
-  "el-patio-vera": {
-  },
+  "el-patio-vera": {},
   "el-masyaf": {
     destination: "ras-el-hekma",
     km: 212,
@@ -753,12 +1197,26 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 11.5,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "El Masyaf by M2 Developments is a 112-acre coastal resort in Ras El Hekma designed in a natural horseshoe bay layout ensuring sea views, with crystal lagoons and sandy beach.",
-    paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 8 years in equal installments",
+    blurb:
+      "El Masyaf by M2 Developments is a 112-acre coastal resort in Ras El Hekma designed in a natural horseshoe bay layout ensuring sea views, with crystal lagoons and sandy beach.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance spread over 7 to 8 years in equal installments",
     areaSize: "112 feddan",
-    amenities: ["Private beach", "Crystal lagoons", "Boutique hotel", "Clubhouse", "Commercial promenade", "Swimming pools", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Boutique hotel",
+      "Clubhouse",
+      "Commercial promenade",
+      "Swimming pools",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Natural horseshoe bay design", "km 212 Ras El Hekma location", "Boutique coastal resort"]
+    highlights: [
+      "Natural horseshoe bay design",
+      "km 212 Ras El Hekma location",
+      "Boutique coastal resort",
+    ],
   },
   "elea-azha-north": {
     lat: 29.59864,
@@ -772,11 +1230,26 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 30.8819,
     developer: "Westway Developments",
     city: "New Zayed City, West Cairo, Egypt",
-    blurb: "Elm Tree is a boutique residential compound by Westway Developments in New Zayed, offering low-density living with contemporary architecture, landscaped open spaces, and a family-oriented environment near Al Dabaa Axis.",
+    blurb:
+      "Elm Tree is a boutique residential compound by Westway Developments in New Zayed, offering low-density living with contemporary architecture, landscaped open spaces, and a family-oriented environment near Al Dabaa Axis.",
     paymentPlan: "5% down, installments up to 10 years",
-    amenities: ["Clubhouse", "Swimming pools", "Landscaped parks", "Gym", "Jogging tracks", "Kids' play areas", "Commercial area", "Restaurants & cafés", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Landscaped parks",
+      "Gym",
+      "Jogging tracks",
+      "Kids' play areas",
+      "Commercial area",
+      "Restaurants & cafés",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Boutique low-density community", "New Zayed prime location", "Close to Sphinx Airport & Belle Vie"]
+    highlights: [
+      "Boutique low-density community",
+      "New Zayed prime location",
+      "Close to Sphinx Airport & Belle Vie",
+    ],
   },
   "esse-residence": {
     destination: "new-administrative-capital",
@@ -784,11 +1257,27 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.7543,
     developer: "Cred Developments",
     city: "R8 District, New Administrative Capital, Egypt",
-    blurb: "Esse Residence is a modern luxury residential compound by Cred Developments in the R8 District of the New Capital, focused on elegant architecture, smart planning, and extensive landscaping for families and professionals.",
+    blurb:
+      "Esse Residence is a modern luxury residential compound by Cred Developments in the R8 District of the New Capital, focused on elegant architecture, smart planning, and extensive landscaping for families and professionals.",
     paymentPlan: "10% down, installments up to 10 years",
-    amenities: ["Clubhouse", "Swimming pools", "Gym", "Green parks", "Walking tracks", "Commercial area", "Restaurants & cafés", "Medical facilities", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Gym",
+      "Green parks",
+      "Walking tracks",
+      "Commercial area",
+      "Restaurants & cafés",
+      "Medical facilities",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Penthouse"],
-    highlights: ["Luxury living in the New Capital R8", "Elegant contemporary architecture", "Smart community planning"]
+    highlights: [
+      "Luxury living in the New Capital R8",
+      "Elegant contemporary architecture",
+      "Smart community planning",
+    ],
   },
   "fouka-bay": {
     destination: "ras-el-hekma",
@@ -802,14 +1291,31 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 13,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "Fouka Bay is Tatweer Misr's flagship 220-acre coastal resort in Ras El Hekma, featuring an 800m private sandy beach, crystal lagoons, and terraced levels for sea views.",
-    paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 8 years in equal installments",
+    blurb:
+      "Fouka Bay is Tatweer Misr's flagship 220-acre coastal resort in Ras El Hekma, featuring an 800m private sandy beach, crystal lagoons, and terraced levels for sea views.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance spread over 7 to 8 years in equal installments",
     areaSize: "220 feddan",
-    amenities: ["Private beach", "Crystal lagoon", "Beach club", "Clubhouse", "Swimming pools", "Boutique hotel", "Restaurants & cafés", "Retail village", "Water sports", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoon",
+      "Beach club",
+      "Clubhouse",
+      "Swimming pools",
+      "Boutique hotel",
+      "Restaurants & cafés",
+      "Retail village",
+      "Water sports",
+      "24/7 security",
+    ],
     types: ["Chalet", "Apartment", "Townhouse", "Twin House", "Standalone Villa", "Beach Houses"],
-    highlights: ["Greek island-inspired architecture", "800m sandy beachfront", "km 211 Ras El Hekma prime location"]
+    highlights: [
+      "Greek island-inspired architecture",
+      "800m sandy beachfront",
+      "km 211 Ras El Hekma prime location",
+    ],
   },
-  "gaia": {
+  gaia: {
     destination: "ras-el-hekma",
     km: 194,
     city: "Ras El Hekma, North Coast (km 194), Matrouh Governorate, Egypt",
@@ -821,12 +1327,29 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 11.5,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "Gaia is a 280–300 acre Greek-inspired coastal resort by Al Ahly Sabbour in Ras El Hekma with swimmable crystal lagoons and Mediterranean beachfront.",
-    paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 9 years in equal installments",
+    blurb:
+      "Gaia is a 280–300 acre Greek-inspired coastal resort by Al Ahly Sabbour in Ras El Hekma with swimmable crystal lagoons and Mediterranean beachfront.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance spread over 7 to 9 years in equal installments",
     areaSize: "280–300 feddan",
-    amenities: ["Private beach", "Crystal lagoons", "Beach club", "Clubhouse", "Swimming pools", "Gym & spa", "Sports courts", "Retail strip", "Kids' area", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Beach club",
+      "Clubhouse",
+      "Swimming pools",
+      "Gym & spa",
+      "Sports courts",
+      "Retail strip",
+      "Kids' area",
+      "24/7 security",
+    ],
     types: ["Chalet", "Duplex", "Townhouse", "Twin House", "Standalone Villa", "Cabana"],
-    highlights: ["Greek-inspired architecture", "280–300 acres coastal masterplan", "Swimmable crystal lagoons"]
+    highlights: [
+      "Greek-inspired architecture",
+      "280–300 acres coastal masterplan",
+      "Swimmable crystal lagoons",
+    ],
   },
   "ghazala-bay": {
     destination: "sidi-abdelrahman",
@@ -840,12 +1363,27 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 11.5,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "Ghazala Bay (featuring Zoya Ghazala Bay by LMD) is a 148-acre luxury coastal resort in Sidi Abdel Rahman with terraced sea views, crystal lagoons, and boutique beach clubhouses.",
+    blurb:
+      "Ghazala Bay (featuring Zoya Ghazala Bay by LMD) is a 148-acre luxury coastal resort in Sidi Abdel Rahman with terraced sea views, crystal lagoons, and boutique beach clubhouses.",
     paymentPlan: "5%–10% down payment, remaining balance spread over 7 years in equal installments",
     areaSize: "148 feddan",
-    amenities: ["Private beach", "Crystal lagoon", "Beach club", "Boutique hotel", "Swimming pools", "Clubhouse", "Restaurants", "Spa", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoon",
+      "Beach club",
+      "Boutique hotel",
+      "Swimming pools",
+      "Clubhouse",
+      "Restaurants",
+      "Spa",
+      "24/7 security",
+    ],
     types: ["Chalet", "Serviced Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Zoya Ghazala Bay flagship", "148 acres in Sidi Abdel Rahman", "Low density terraced sea views"]
+    highlights: [
+      "Zoya Ghazala Bay flagship",
+      "148 acres in Sidi Abdel Rahman",
+      "Low density terraced sea views",
+    ],
   },
   "hacienda-bay": {
     destination: "sidi-abdelrahman",
@@ -859,12 +1397,27 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 14.5,
     deliveryYear: 2015,
     status: "RTM",
-    blurb: "Hacienda Bay is Palm Hills' 593-acre flagship luxury resort in Sidi Abdel Rahman, featuring a 25% footprint, 18-hole golf course, Lake Yard retail promenade, and beach club.",
-    paymentPlan: "5%–10% down payment, remaining balance spread over 5 to 8 years / Secondary resale cash",
+    blurb:
+      "Hacienda Bay is Palm Hills' 593-acre flagship luxury resort in Sidi Abdel Rahman, featuring a 25% footprint, 18-hole golf course, Lake Yard retail promenade, and beach club.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance spread over 5 to 8 years / Secondary resale cash",
     areaSize: "593 feddan",
-    amenities: ["Private beach", "18-hole championship golf course", "Lake Yard retail strip", "Beach club", "Clubhouse", "Swimming pools", "Gym & spa", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "18-hole championship golf course",
+      "Lake Yard retail strip",
+      "Beach club",
+      "Clubhouse",
+      "Swimming pools",
+      "Gym & spa",
+      "24/7 security",
+    ],
     types: ["Chalet", "Penthouse", "Townhouse", "Twin House", "Standalone Villa", "Water Villa"],
-    highlights: ["18-hole championship golf course", "593-acre luxury resort", "Lake Yard retail & dining hub"]
+    highlights: [
+      "18-hole championship golf course",
+      "593-acre luxury resort",
+      "Lake Yard retail & dining hub",
+    ],
   },
   "hacienda-blue": {
     destination: "al-dabaa",
@@ -877,13 +1430,35 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 19.5,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Hacienda Blue is a 115–118 acre luxury coastal release by Palm Hills in Al Dabaa featuring 24 acres of crystal lagoons, water park, and 1 km project depth.",
-    paymentPlan: "5% down payment + 5% after 3 months, remaining balance spread over up to 10 years interest-free",
+    blurb:
+      "Hacienda Blue is a 115–118 acre luxury coastal release by Palm Hills in Al Dabaa featuring 24 acres of crystal lagoons, water park, and 1 km project depth.",
+    paymentPlan:
+      "5% down payment + 5% after 3 months, remaining balance spread over up to 10 years interest-free",
     areaSize: "115–118 feddan",
     unitSizes: "114–209 m²",
-    amenities: ["Private beach", "24 acres crystal lagoons", "Water park", "Beach club", "Clubhouse", "Restaurants & cafés", "Retail strip", "24/7 security"],
-    types: ["Lagoon Cabin", "Junior Chalet", "Senior Chalet", "Townhouse", "Water Villa", "Standalone Villa"],
-    highlights: ["24 acres of crystal lagoons", "Water park & 1km project depth", "Palm Hills luxury build"]
+    amenities: [
+      "Private beach",
+      "24 acres crystal lagoons",
+      "Water park",
+      "Beach club",
+      "Clubhouse",
+      "Restaurants & cafés",
+      "Retail strip",
+      "24/7 security",
+    ],
+    types: [
+      "Lagoon Cabin",
+      "Junior Chalet",
+      "Senior Chalet",
+      "Townhouse",
+      "Water Villa",
+      "Standalone Villa",
+    ],
+    highlights: [
+      "24 acres of crystal lagoons",
+      "Water park & 1km project depth",
+      "Palm Hills luxury build",
+    ],
   },
   "hacienda-heneish": {
     destination: "sidi-heneish",
@@ -896,13 +1471,26 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 17.8,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Hacienda Heneish by Palm Hills is a 420-acre coastal retreat in Sidi Heneish with a 20% footprint, Mazeej hotel, branded beach clubhouses, and crystal lagoons.",
+    blurb:
+      "Hacienda Heneish by Palm Hills is a 420-acre coastal retreat in Sidi Heneish with a 20% footprint, Mazeej hotel, branded beach clubhouses, and crystal lagoons.",
     paymentPlan: "5% down payment, remaining balance spread over 7.5 to 8 years interest-free",
     areaSize: "420 feddan",
     unitSizes: "80–350 m²",
-    amenities: ["Mazeej Hotel", "Branded Beach Clubhouses", "Crystal Lagoons", "Commercial Strip", "Sports Courts", "Kids' Areas", "24/7 Security"],
+    amenities: [
+      "Mazeej Hotel",
+      "Branded Beach Clubhouses",
+      "Crystal Lagoons",
+      "Commercial Strip",
+      "Sports Courts",
+      "Kids' Areas",
+      "24/7 Security",
+    ],
     types: ["Shore Condo", "Chalet", "Townhouse", "Crystal Bay Villa", "Standalone Villa"],
-    highlights: ["420 acres in Sidi Heneish", "Mazeej Hotel & beach club", "Fully finished interior specs"]
+    highlights: [
+      "420 acres in Sidi Heneish",
+      "Mazeej Hotel & beach club",
+      "Fully finished interior specs",
+    ],
   },
   "hacienda-ras-el-hekma": {
     destination: "ras-el-hekma",
@@ -916,12 +1504,25 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 13.5,
     deliveryYear: 2024,
     status: "RTM",
-    blurb: "Hacienda Ras El Hekma is a 137–140 acre beachfront community by Palm Hills featuring tiered sea-view architecture, crystal lagoons, and boutique beach clubs.",
+    blurb:
+      "Hacienda Ras El Hekma is a 137–140 acre beachfront community by Palm Hills featuring tiered sea-view architecture, crystal lagoons, and boutique beach clubs.",
     paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 8 years",
     areaSize: "137–140 feddan",
-    amenities: ["Private beach", "Swimmable crystal lagoons", "Boutique clubhouses", "Swimming pools", "Sports courts", "Dining strip", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Swimmable crystal lagoons",
+      "Boutique clubhouses",
+      "Swimming pools",
+      "Sports courts",
+      "Dining strip",
+      "24/7 security",
+    ],
     types: ["Cabana", "Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Tiered sea view layout", "137–140 acres boutique beach atmosphere", "Swimmable crystal lagoons"]
+    highlights: [
+      "Tiered sea view layout",
+      "137–140 acres boutique beach atmosphere",
+      "Swimmable crystal lagoons",
+    ],
   },
   "hacienda-red": {
     destination: "sidi-abdelrahman",
@@ -935,12 +1536,25 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 13,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Hacienda Red is a luxury boutique extension by Palm Hills in Sidi Abdel Rahman adjacent to Hacienda White, offering high-end chalets and villas.",
+    blurb:
+      "Hacienda Red is a luxury boutique extension by Palm Hills in Sidi Abdel Rahman adjacent to Hacienda White, offering high-end chalets and villas.",
     paymentPlan: "5% down payment, remaining balance spread over up to 8 years interest-free",
     areaSize: "116 feddan",
-    amenities: ["Private beach", "World-class clubhouse", "Boutique spa", "Swimming pools", "Retail & fine dining", "Gym", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "World-class clubhouse",
+      "Boutique spa",
+      "Swimming pools",
+      "Retail & fine dining",
+      "Gym",
+      "24/7 security",
+    ],
     types: ["Luxury Chalet", "Hotel Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Adjacent to Hacienda White", "Boutique luxury extension", "Sidi Abdel Rahman prime location"]
+    highlights: [
+      "Adjacent to Hacienda White",
+      "Boutique luxury extension",
+      "Sidi Abdel Rahman prime location",
+    ],
   },
   "hacienda-waters": {
     destination: "ras-el-hekma",
@@ -954,18 +1568,32 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 11.5,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Hacienda Waters is a 161–164 acre coastal resort by Palm Hills in Ras El Hekma with over 600m beach depth, water parks, and crystal lagoons.",
-    paymentPlan: "5% down payment + 5% after 3 months, remaining balance spread over 8 to 10 years interest-free",
+    blurb:
+      "Hacienda Waters is a 161–164 acre coastal resort by Palm Hills in Ras El Hekma with over 600m beach depth, water parks, and crystal lagoons.",
+    paymentPlan:
+      "5% down payment + 5% after 3 months, remaining balance spread over 8 to 10 years interest-free",
     areaSize: "161–164 feddan",
-    amenities: ["Water parks", "Crystal lagoons", "600m private beach", "Clubhouse", "Sports facilities", "Commercial boardwalk", "24/7 security"],
+    amenities: [
+      "Water parks",
+      "Crystal lagoons",
+      "600m private beach",
+      "Clubhouse",
+      "Sports facilities",
+      "Commercial boardwalk",
+      "24/7 security",
+    ],
     types: ["Condo", "Chalet", "Duplex", "Townhouse", "Lagoon Villa", "Standalone Villa"],
-    highlights: ["600m deep beachfront", "Integrated water parks & lagoons", "Fully finished delivery"]
+    highlights: [
+      "600m deep beachfront",
+      "Integrated water parks & lagoons",
+      "Fully finished delivery",
+    ],
   },
   "hacienda-white": {
     destination: "sidi-abdelrahman",
     km: 138,
     city: "Sidi Abdel Rahman, North Coast (km 138), Matrouh Governorate, Egypt",
-    lat: 31.0030,
+    lat: 31.003,
     lng: 28.6619,
     developer: "Palm Hills Developments",
     beachfront: true,
@@ -973,14 +1601,27 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 18,
     deliveryYear: 2015,
     status: "RTM",
-    blurb: "Hacienda White is Palm Hills' iconic 116-acre luxury beach resort in Sidi Abdel Rahman with a 20% footprint, bridge chalets, private cabanas, and turquoise waters.",
+    blurb:
+      "Hacienda White is Palm Hills' iconic 116-acre luxury beach resort in Sidi Abdel Rahman with a 20% footprint, bridge chalets, private cabanas, and turquoise waters.",
     paymentPlan: "5%–10% down payment over 7 years / Secondary market cash terms",
     areaSize: "116 feddan",
-    amenities: ["Pristine private beach", "Bridge chalets", "Private cabanas", "Clubhouse", "Boutique spa", "Fine dining", "24/7 security"],
+    amenities: [
+      "Pristine private beach",
+      "Bridge chalets",
+      "Private cabanas",
+      "Clubhouse",
+      "Boutique spa",
+      "Fine dining",
+      "24/7 security",
+    ],
     types: ["Luxury Chalet", "Cabin", "Townhouse", "Twin House", "Frontline Beach Villa"],
-    highlights: ["Iconic Sidi Abdel Rahman beach", "20% low footprint masterplan", "Signature bridge chalets"]
+    highlights: [
+      "Iconic Sidi Abdel Rahman beach",
+      "20% low footprint masterplan",
+      "Signature bridge chalets",
+    ],
   },
-  "haptown": {
+  haptown: {
     destination: "mostakbal-city",
     city: "Mostakbal City, New Cairo, Egypt",
     lat: 30.0139,
@@ -991,13 +1632,28 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 11.2,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "Haptown by Hassan Allam Properties is a flagship multi-hundred-acre master-planned town in Mostakbal City on MBZ Corridor with a 7-acre sports club.",
-    paymentPlan: "5% down payment (+ 5% upon delivery), remaining balance spread over 7 to 8 years equal installments",
+    blurb:
+      "Haptown by Hassan Allam Properties is a flagship multi-hundred-acre master-planned town in Mostakbal City on MBZ Corridor with a 7-acre sports club.",
+    paymentPlan:
+      "5% down payment (+ 5% upon delivery), remaining balance spread over 7 to 8 years equal installments",
     areaSize: "243 feddan",
     unitSizes: "130–198+ m²",
-    amenities: ["7-acre sports club", "Pedestrian tunnels", "Crystal lagoons", "Commercial hub", "Parks", "24/7 security"],
-    types: ["Apartment", "Ground Apartment with Garden", "Penthouse", "Townhouse", "Standalone Villa"],
-    highlights: ["MBZ corridor connection", "7-acre sports club", "Hassan Allam signature design"]
+    amenities: [
+      "7-acre sports club",
+      "Pedestrian tunnels",
+      "Crystal lagoons",
+      "Commercial hub",
+      "Parks",
+      "24/7 security",
+    ],
+    types: [
+      "Apartment",
+      "Ground Apartment with Garden",
+      "Penthouse",
+      "Townhouse",
+      "Standalone Villa",
+    ],
+    highlights: ["MBZ corridor connection", "7-acre sports club", "Hassan Allam signature design"],
   },
 
   "il-latini-city-edge": {
@@ -1012,7 +1668,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "New Alamein, North Coast (km 109), Matrouh Governorate, Egypt",
     mapsUrl: "https://maps.google.com/?q=Il+Latini+SED+New+Alamein",
   },
-  "jamila": {
+  jamila: {
     destination: "sidi-heneish",
     city: "Sidi Heneish, North Coast (km 273), Matrouh Governorate, Egypt",
     lat: 31.22,
@@ -1023,13 +1679,27 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 5.8,
     deliveryYear: 2029,
     status: "Off-Plan",
-    blurb: "Jamila Sidi Heneish by New Jersey Developments is a 130-acre coastal resort with a 9% footprint, 700m beach, 16,000 sqm pool complex, and Marriott 5-star hotel.",
-    paymentPlan: "5% down payment (or 10%), remaining balance spread over 7 to 8 years interest-free",
+    blurb:
+      "Jamila Sidi Heneish by New Jersey Developments is a 130-acre coastal resort with a 9% footprint, 700m beach, 16,000 sqm pool complex, and Marriott 5-star hotel.",
+    paymentPlan:
+      "5% down payment (or 10%), remaining balance spread over 7 to 8 years interest-free",
     areaSize: "130 feddan",
     unitSizes: "79–209 m²",
-    amenities: ["5-star Marriott Hotel", "700m sandy beach", "16,000 sqm pools", "Crystal lagoons", "Commercial strip", "Clubhouse", "24/7 security"],
+    amenities: [
+      "5-star Marriott Hotel",
+      "700m sandy beach",
+      "16,000 sqm pools",
+      "Crystal lagoons",
+      "Commercial strip",
+      "Clubhouse",
+      "24/7 security",
+    ],
     types: ["Studio", "Chalet", "Duplex", "D-Villa"],
-    highlights: ["9% low building footprint", "Marriott 5-star hotel component", "700m private beach in Sidi Heneish"]
+    highlights: [
+      "9% low building footprint",
+      "Marriott 5-star hotel component",
+      "700m private beach in Sidi Heneish",
+    ],
   },
   "jebal-sokhna": {
     destination: "ain-sokhna",
@@ -1042,15 +1712,27 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 5.2,
     deliveryYear: 2027,
     status: "RTM",
-    blurb: "Jebal El Sokhna by PRE Developments is a 71-acre (300,000 sqm) terraced mountain resort rising 125m above sea level with 22 swimming pools and suspended pool.",
+    blurb:
+      "Jebal El Sokhna by PRE Developments is a 71-acre (300,000 sqm) terraced mountain resort rising 125m above sea level with 22 swimming pools and suspended pool.",
     paymentPlan: "5%–10% down payment, remaining balance spread over 8 to 10 years interest-free",
     areaSize: "71 feddan",
     unitSizes: "72–135+ m²",
-    amenities: ["Private 300m beach", "22 swimming pools", "First suspended pool in Sokhna", "Clubhouse", "Commercial strip", "24/7 security"],
+    amenities: [
+      "Private 300m beach",
+      "22 swimming pools",
+      "First suspended pool in Sokhna",
+      "Clubhouse",
+      "Commercial strip",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["71 acres terraced 125m above sea level", "First suspended pool in Ain Sokhna", "22 swimming pools"]
+    highlights: [
+      "71 acres terraced 125m above sea level",
+      "First suspended pool in Ain Sokhna",
+      "22 swimming pools",
+    ],
   },
-  "jefaira": {
+  jefaira: {
     destination: "ras-el-hekma",
     km: 200,
     city: "Ras El Hekma, North Coast (km 200), Matrouh Governorate, Egypt",
@@ -1062,14 +1744,24 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 6.5,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Jefaira by Inertia is a 1,300-acre year-round coastal city in Ras El Hekma with a 3.6 km Mediterranean shoreline, crystal lagoons, marina, and international school.",
-    paymentPlan: "5%–10% down payment (+ 5% after 3 mos), remaining balance spread over 6 to 9 years interest-free",
+    blurb:
+      "Jefaira by Inertia is a 1,300-acre year-round coastal city in Ras El Hekma with a 3.6 km Mediterranean shoreline, crystal lagoons, marina, and international school.",
+    paymentPlan:
+      "5%–10% down payment (+ 5% after 3 mos), remaining balance spread over 6 to 9 years interest-free",
     areaSize: "1300 feddan",
-    amenities: ["3.6 km Mediterranean beach", "Crystal lagoons", "Marina", "International school", "Hospitality & hotels", "Sports arena", "24/7 security"],
+    amenities: [
+      "3.6 km Mediterranean beach",
+      "Crystal lagoons",
+      "Marina",
+      "International school",
+      "Hospitality & hotels",
+      "Sports arena",
+      "24/7 security",
+    ],
     types: ["Studio", "Chalet", "Penthouse", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["1,300 acres year-round coastal city", "3.6 km beachfront", "Km 200 Ras El Hekma"]
+    highlights: ["1,300 acres year-round coastal city", "3.6 km beachfront", "Km 200 Ras El Hekma"],
   },
-  "june": {
+  june: {
     destination: "ras-el-hekma",
     km: 193,
     city: "Ras El Hekma, North Coast (km 193), Matrouh Governorate, Egypt",
@@ -1081,12 +1773,26 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 17.5,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "June by SODIC is a 280–300 acre Miami 1960s art-deco inspired beach resort in Ras El Hekma with a 13% footprint, crystal lagoons, and luxury hotel.",
-    paymentPlan: "5% down + 5% after 3 mos + 5% after 6 mos, remaining balance over 6 years interest-free",
+    blurb:
+      "June by SODIC is a 280–300 acre Miami 1960s art-deco inspired beach resort in Ras El Hekma with a 13% footprint, crystal lagoons, and luxury hotel.",
+    paymentPlan:
+      "5% down + 5% after 3 mos + 5% after 6 mos, remaining balance over 6 years interest-free",
     areaSize: "280–300 feddan",
-    amenities: ["Private beach", "Crystal lagoons", "Miami art-deco design", "Boutique hotel", "Sports tracks", "Dining promenade", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Miami art-deco design",
+      "Boutique hotel",
+      "Sports tracks",
+      "Dining promenade",
+      "24/7 security",
+    ],
     types: ["Apartment", "Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Miami art-deco architecture", "13% low building footprint", "SODIC premium fully-finished delivery"]
+    highlights: [
+      "Miami art-deco architecture",
+      "13% low building footprint",
+      "SODIC premium fully-finished delivery",
+    ],
   },
   "kai-sokhna": {
     destination: "ain-sokhna",
@@ -1099,34 +1805,60 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 5.5,
     deliveryYear: 2024,
     status: "RTM",
-    blurb: "Kai Sokhna by Misr Italia is a 30–35 acre terraced Red Sea resort rising 55m above sea level with private sandy beach, infinity pools, and boutique hotel.",
-    paymentPlan: "10% down payment, remaining balance spread over 6 to 7 years / Resale market terms",
+    blurb:
+      "Kai Sokhna by Misr Italia is a 30–35 acre terraced Red Sea resort rising 55m above sea level with private sandy beach, infinity pools, and boutique hotel.",
+    paymentPlan:
+      "10% down payment, remaining balance spread over 6 to 7 years / Resale market terms",
     areaSize: "30–35 feddan",
     unitSizes: "70–145+ m²",
-    amenities: ["Private sandy beach", "Infinity pools", "Terraced sea view layout", "Boutique hotel", "Clubhouse", "24/7 security"],
+    amenities: [
+      "Private sandy beach",
+      "Infinity pools",
+      "Terraced sea view layout",
+      "Boutique hotel",
+      "Clubhouse",
+      "24/7 security",
+    ],
     types: ["Chalet", "Beach House", "Twin House", "Standalone Villa"],
-    highlights: ["Terraced sea views up to 55m elevation", "Km 100 Zaafarana Road", "Delivered active community"]
+    highlights: [
+      "Terraced sea views up to 55m elevation",
+      "Km 100 Zaafarana Road",
+      "Delivered active community",
+    ],
   },
   "katameya-coast": {
     destination: "ras-el-hekma",
     km: 180,
     city: "Ras El Hekma, North Coast (km 180), Matrouh Governorate, Egypt",
     lat: 31.0779,
-    lng: 28.1880,
+    lng: 28.188,
     developer: "Starlight Developments",
     beachfront: true,
     type: "Resort",
     priceFrom: 6.5,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "Katameya Coast by Starlight is a 200-acre beachfront community in Ras El Hekma built across 7 elevated terraces with a 750m beach and 100% sea views.",
-    paymentPlan: "5%–10% down payment (+ 5% after 3 months), remaining balance spread over 5 to 8 years interest-free",
+    blurb:
+      "Katameya Coast by Starlight is a 200-acre beachfront community in Ras El Hekma built across 7 elevated terraces with a 750m beach and 100% sea views.",
+    paymentPlan:
+      "5%–10% down payment (+ 5% after 3 months), remaining balance spread over 5 to 8 years interest-free",
     areaSize: "200 feddan",
-    amenities: ["750m Mediterranean beach", "7 elevated sea view platforms", "Crystal lagoons", "Beachfront clubhouses", "Boutique hotel", "24/7 security"],
+    amenities: [
+      "750m Mediterranean beach",
+      "7 elevated sea view platforms",
+      "Crystal lagoons",
+      "Beachfront clubhouses",
+      "Boutique hotel",
+      "24/7 security",
+    ],
     types: ["Penthouse", "Chalet", "Luxury Apartment", "Twin House", "Standalone Villa"],
-    highlights: ["7 elevated terrace platforms", "750m Mediterranean beachfront", "Starlight luxury delivery"]
+    highlights: [
+      "7 elevated terrace platforms",
+      "750m Mediterranean beachfront",
+      "Starlight luxury delivery",
+    ],
   },
-  "keeva": {
+  keeva: {
     destination: "6th-of-october-city",
     lat: 30.0794,
     lng: 30.8698,
@@ -1135,30 +1867,55 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 13.8,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Keeva by Al Ahly Sabbour is a 144-acre compound on Waslet Dahshur Road in 6th of October City designed by YBA with 18% footprint and 600m clubhouse.",
+    blurb:
+      "Keeva by Al Ahly Sabbour is a 144-acre compound on Waslet Dahshur Road in 6th of October City designed by YBA with 18% footprint and 600m clubhouse.",
     paymentPlan: "5%–10% down payment, remaining balance spread over 8 to 10 years interest-free",
     areaSize: "144 feddan",
-    amenities: ["600m luxury clubhouse", "Wellness spa", "Natural water bodies", "Cycling & jogging tracks", "Commercial retail strip", "24/7 security"],
+    amenities: [
+      "600m luxury clubhouse",
+      "Wellness spa",
+      "Natural water bodies",
+      "Cycling & jogging tracks",
+      "Commercial retail strip",
+      "24/7 security",
+    ],
     types: ["Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Waslet Dahshur Road between Mall of Arabia & Mall of Egypt", "18% low building footprint", "600m luxury clubhouse"]
+    highlights: [
+      "Waslet Dahshur Road between Mall of Arabia & Mall of Egypt",
+      "18% low building footprint",
+      "600m luxury clubhouse",
+    ],
   },
   "kinda-residence": {
     destination: "new-cairo",
-    lat: 30.0450,
-    lng: 31.4250,
+    lat: 30.045,
+    lng: 31.425,
     developer: "Minka Developments / Madinet Masr",
     city: "Taj City, East New Cairo, Cairo, Egypt",
     priceFrom: 8,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "Kinda by Minka / Madinet Masr is a 28–30 acre Canadian-Egyptian eco-friendly compound in Taj City, delivering fully finished homes with 3.25m ceilings, appliances & ACs.",
-    paymentPlan: "15% down payment (5%–10% select), remaining balance spread over 7 to 9 years interest-free",
+    blurb:
+      "Kinda by Minka / Madinet Masr is a 28–30 acre Canadian-Egyptian eco-friendly compound in Taj City, delivering fully finished homes with 3.25m ceilings, appliances & ACs.",
+    paymentPlan:
+      "15% down payment (5%–10% select), remaining balance spread over 7 to 9 years interest-free",
     areaSize: "28–30 feddan",
-    amenities: ["Klub Kayan sports complex", "Asten College school", "Solar energy grids", "Grey-water recycling", "Electric transit network", "24/7 security"],
+    amenities: [
+      "Klub Kayan sports complex",
+      "Asten College school",
+      "Solar energy grids",
+      "Grey-water recycling",
+      "Electric transit network",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Townhouse", "Standalone Villa"],
-    highlights: ["Canadian-Egyptian eco-friendly urban design", "Delivered fully finished with ACs & appliances", "3.25m high ceiling design"]
+    highlights: [
+      "Canadian-Egyptian eco-friendly urban design",
+      "Delivered fully finished with ACs & appliances",
+      "3.25m high ceiling design",
+    ],
   },
-  "koun": {
+  koun: {
     destination: "ras-el-hekma",
     km: 201,
     city: "Ras El Hekma, North Coast (km 201), Matrouh Governorate, Egypt",
@@ -1170,12 +1927,25 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 5,
     deliveryYear: 2027,
     status: "RTM",
-    blurb: "Koun by Mabany Edris is a 106-acre coastal resort in Ras El Hekma (km 201) with 15% footprint, 100% lagoon/sea-facing units, boutique hotel, and full finishing.",
-    paymentPlan: "0%–5% down payment (or 10%), remaining balance spread over 8 to 12 years interest-free",
+    blurb:
+      "Koun by Mabany Edris is a 106-acre coastal resort in Ras El Hekma (km 201) with 15% footprint, 100% lagoon/sea-facing units, boutique hotel, and full finishing.",
+    paymentPlan:
+      "0%–5% down payment (or 10%), remaining balance spread over 8 to 12 years interest-free",
     areaSize: "106 feddan",
-    amenities: ["Swimmable crystal lagoons", "100% waterfront view layout", "Boutique hotel", "Commercial hub", "Kids' play area", "24/7 security"],
+    amenities: [
+      "Swimmable crystal lagoons",
+      "100% waterfront view layout",
+      "Boutique hotel",
+      "Commercial hub",
+      "Kids' play area",
+      "24/7 security",
+    ],
     types: ["Studio", "Chalet", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["100% waterfront property views", "15% low building footprint", "Up to 12 years payment plan"]
+    highlights: [
+      "100% waterfront property views",
+      "15% low building footprint",
+      "Up to 12 years payment plan",
+    ],
   },
   "kynd-residence-gaia": {
     lat: 30.92912,
@@ -1205,26 +1975,39 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     km: 165,
     city: "Al Dabaa / Sidi Abdel Rahman (km 165), Matrouh Governorate, Egypt",
     lat: 30.985,
-    lng: 28.520,
+    lng: 28.52,
     developer: "Lasirena Group",
     beachfront: true,
     type: "Resort",
     priceFrom: 3.8,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "Lasirena North Coast by Lasirena Group is a 55-acre terraced coastal resort at KM 165 Sidi Abdel Rahman corridor with aqua park, swimmable crystal lagoons, and Mediterranean views.",
-    paymentPlan: "10%–15% down payment, remaining balance spread over 6 to 10 years equal interest-free",
+    blurb:
+      "Lasirena North Coast by Lasirena Group is a 55-acre terraced coastal resort at KM 165 Sidi Abdel Rahman corridor with aqua park, swimmable crystal lagoons, and Mediterranean views.",
+    paymentPlan:
+      "10%–15% down payment, remaining balance spread over 6 to 10 years equal interest-free",
     areaSize: "55 feddan",
     unitSizes: "45–300+ m²",
-    amenities: ["Aqua park", "Private beach", "Crystal lagoons", "Swimming pools", "Commercial strip", "24/7 security"],
+    amenities: [
+      "Aqua park",
+      "Private beach",
+      "Crystal lagoons",
+      "Swimming pools",
+      "Commercial strip",
+      "24/7 security",
+    ],
     types: ["Studio", "Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Elevated terraced sea views", "55-acre coastal resort", "Aqua park & crystal lagoons"]
+    highlights: [
+      "Elevated terraced sea views",
+      "55-acre coastal resort",
+      "Aqua park & crystal lagoons",
+    ],
   },
-  "lvls": {
+  lvls: {
     destination: "ras-el-hekma",
     km: 179,
-    lat: 31.050,
-    lng: 28.080,
+    lat: 31.05,
+    lng: 28.08,
     developer: "Mountain View",
     city: "Ras El Hekma (km 179), Matrouh Governorate, Egypt",
     beachfront: true,
@@ -1232,15 +2015,27 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 11,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "LVLS by Mountain View is a premier coastal resort at KM 179 Ras El Hekma designed across 5–6 terraced levels (up to 40m high) ensuring 100% panoramic sea views and 600m sandy beach.",
+    blurb:
+      "LVLS by Mountain View is a premier coastal resort at KM 179 Ras El Hekma designed across 5–6 terraced levels (up to 40m high) ensuring 100% panoramic sea views and 600m sandy beach.",
     paymentPlan: "10% down payment, remaining balance spread over 7 to 8 years equal interest-free",
     areaSize: "200 feddan",
     unitSizes: "145–300+ m²",
-    amenities: ["600m sandy beach", "Crystal lagoons", "Beach clubhouses", "Swimming pools", "Commercial promenade", "24/7 security"],
+    amenities: [
+      "600m sandy beach",
+      "Crystal lagoons",
+      "Beach clubhouses",
+      "Swimming pools",
+      "Commercial promenade",
+      "24/7 security",
+    ],
     types: ["Beach House", "Townhouse", "Standalone Villa"],
-    highlights: ["100% panoramic sea view terraces", "600m private sandy beach", "KM 179 Ras El Hekma location"]
+    highlights: [
+      "100% panoramic sea view terraces",
+      "600m private sandy beach",
+      "KM 179 Ras El Hekma location",
+    ],
   },
-  "lyv": {
+  lyv: {
     destination: "ras-el-hekma",
     km: 200,
     city: "Ras El Hekma, North Coast (km 200), Matrouh Governorate, Egypt",
@@ -1252,15 +2047,28 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 7.2,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "LYV Caesar by Gates Developments is a 206-acre coastal resort in Ras El Hekma (KM 200) with 20–25% footprint, 55,000 sqm crystal lagoons, and boutique hotel.",
-    paymentPlan: "0%–2.5% down payment (+ 2.5% after 1 mo), remaining balance spread over 10 to 12 years interest-free",
+    blurb:
+      "LYV Caesar by Gates Developments is a 206-acre coastal resort in Ras El Hekma (KM 200) with 20–25% footprint, 55,000 sqm crystal lagoons, and boutique hotel.",
+    paymentPlan:
+      "0%–2.5% down payment (+ 2.5% after 1 mo), remaining balance spread over 10 to 12 years interest-free",
     areaSize: "206 feddan",
     unitSizes: "85–350+ m²",
-    amenities: ["55,000 sqm crystal lagoons", "Private beach", "Beach club", "Boutique hotel", "Commercial strip", "24/7 security"],
+    amenities: [
+      "55,000 sqm crystal lagoons",
+      "Private beach",
+      "Beach club",
+      "Boutique hotel",
+      "Commercial strip",
+      "24/7 security",
+    ],
     types: ["Chalet", "Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["206 acres with 20–25% footprint", "55,000 sqm crystal lagoons", "Up to 12 years payment plan"]
+    highlights: [
+      "206 acres with 20–25% footprint",
+      "55,000 sqm crystal lagoons",
+      "Up to 12 years payment plan",
+    ],
   },
-  "marassi": {
+  marassi: {
     destination: "sidi-abdelrahman",
     km: 126,
     city: "Sidi Abdel Rahman, North Coast (km 126), Matrouh Governorate, Egypt",
@@ -1269,11 +2077,39 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Emaar Misr",
     beachfront: true,
     type: "Resort",
-    blurb: "Marassi is Emaar Misr's flagship coastal destination spanning approximately 6.5 million m², featuring international marinas, championship golf, luxury hotels, crystal lagoons, private beaches, and vibrant residential neighborhoods designed around world-class hospitality.",
+    blurb:
+      "Marassi is Emaar Misr's flagship coastal destination spanning approximately 6.5 million m², featuring international marinas, championship golf, luxury hotels, crystal lagoons, private beaches, and vibrant residential neighborhoods designed around world-class hospitality.",
     paymentPlan: "5% down, installments up to 8 years",
-    amenities: ["International Marina", "Private beaches", "Golf course", "Beach clubs", "Hotels", "Clubhouse", "Swimming pools", "Restaurants & cafés", "Retail district", "Sports club", "Medical center", "International school", "24/7 security"],
-    types: ["Apartment", "Chalet", "Duplex", "Townhouse", "Twin House", "Standalone Villa", "Marina Residences"],
-    highlights: ["6.5 million m² mega coastal city", "International Marina & Yacht Club", "Championship golf course", "Emaar international delivery quality"]
+    amenities: [
+      "International Marina",
+      "Private beaches",
+      "Golf course",
+      "Beach clubs",
+      "Hotels",
+      "Clubhouse",
+      "Swimming pools",
+      "Restaurants & cafés",
+      "Retail district",
+      "Sports club",
+      "Medical center",
+      "International school",
+      "24/7 security",
+    ],
+    types: [
+      "Apartment",
+      "Chalet",
+      "Duplex",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+      "Marina Residences",
+    ],
+    highlights: [
+      "6.5 million m² mega coastal city",
+      "International Marina & Yacht Club",
+      "Championship golf course",
+      "Emaar international delivery quality",
+    ],
   },
   "marbay-ras-el-hekma": {
     destination: "ras-el-hekma",
@@ -1284,13 +2120,30 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Al Marasem Development",
     beachfront: true,
     type: "Resort",
-    blurb: "Mar Bay is Al Marasem's luxury beachfront destination in Ras El Hekma, designed with contemporary Mediterranean architecture and premium hospitality services, featuring low-density beachfront neighborhoods, crystal lagoons, and integrated leisure facilities.",
+    blurb:
+      "Mar Bay is Al Marasem's luxury beachfront destination in Ras El Hekma, designed with contemporary Mediterranean architecture and premium hospitality services, featuring low-density beachfront neighborhoods, crystal lagoons, and integrated leisure facilities.",
     paymentPlan: "5% down, installments up to 8 years",
-    amenities: ["Private beach", "Beach club", "Crystal lagoons", "Swimming pools", "Clubhouse", "Restaurants & cafés", "Gym", "Sports courts", "Retail area", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Beach club",
+      "Crystal lagoons",
+      "Swimming pools",
+      "Clubhouse",
+      "Restaurants & cafés",
+      "Gym",
+      "Sports courts",
+      "Retail area",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["km 191 prime Ras El Hekma location", "Al Marasem premium build quality", "Crystal lagoons and private beach"]
+    highlights: [
+      "km 191 prime Ras El Hekma location",
+      "Al Marasem premium build quality",
+      "Crystal lagoons and private beach",
+    ],
   },
-  "marina": {
+  marina: {
     destination: "new-alamein",
     km: 100,
     city: "New Alamein, North Coast (km 100), Matrouh Governorate, Egypt",
@@ -1298,43 +2151,34 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.03416,
     lng: 31.48135,
   },
-  "marresidence": {
-  },
+  marresidence: {},
   "marsa-baghush": {
-  "destination": "sidi-heneish",
-  "city": "Sidi Heneish, North Coast, Egypt",
-  "lat": 31.130,
-  "lng": 27.620,
-  "km": 238,
-  "developer": "Shehab Mazhar / SQM Developments",
-  "beachfront": true,
-  "type": "Resort",
-  "blurb": "Marsa Baghush by Shehab Mazhar (SQM Developments) is a boutique 130-feddan community in Sidi Heneish, designed with tiered elevations to ensure panoramic sea views from every residence.",
-  "paymentPlan": "5% down payment · installments up to 8 years",
-  "amenities": [
-    "Private Beachfront",
-    "Boutique Hotel",
-    "Cascading Pools",
-    "Clubhouse & Spa",
-    "Fine Dining",
-    "Green Parks",
-    "24/7 Security"
-  ],
-  "types": [
-    "Chalet",
-    "Townhouse",
-    "Twin House",
-    "Standalone Villa"
-  ],
-  "highlights": [
-    "Designed by Shehab Mazhar",
-    "Tiered sea views",
-    "Sidi Heneish beachfront"
-  ],
-  "areaSize": "130 feddan",
-  "unitSizes": "80–300 m²"
-},
-  "masaya": {
+    destination: "sidi-heneish",
+    city: "Sidi Heneish, North Coast, Egypt",
+    lat: 31.13,
+    lng: 27.62,
+    km: 238,
+    developer: "Shehab Mazhar / SQM Developments",
+    beachfront: true,
+    type: "Resort",
+    blurb:
+      "Marsa Baghush by Shehab Mazhar (SQM Developments) is a boutique 130-feddan community in Sidi Heneish, designed with tiered elevations to ensure panoramic sea views from every residence.",
+    paymentPlan: "5% down payment · installments up to 8 years",
+    amenities: [
+      "Private Beachfront",
+      "Boutique Hotel",
+      "Cascading Pools",
+      "Clubhouse & Spa",
+      "Fine Dining",
+      "Green Parks",
+      "24/7 Security",
+    ],
+    types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
+    highlights: ["Designed by Shehab Mazhar", "Tiered sea views", "Sidi Heneish beachfront"],
+    areaSize: "130 feddan",
+    unitSizes: "80–300 m²",
+  },
+  masaya: {
     destination: "sidi-abdelrahman",
     km: 134,
     city: "Sidi Abdel Rahman, North Coast (km 134), Matrouh Governorate, Egypt",
@@ -1342,18 +2186,16 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.93339,
     lng: 28.73337,
   },
-  "mazarine": {
+  mazarine: {
     destination: "new-alamein",
     km: 107,
     city: "New Alamein, North Coast (km 107), Matrouh Governorate, Egypt",
     lat: 30.82813,
     lng: 28.949,
   },
-  "menorca": {
-  },
-  "mist": {
-  },
-  "mivida": {
+  menorca: {},
+  mist: {},
+  mivida: {
     lat: 30.03274,
     lng: 31.47867,
     developer: "Emaar Misr",
@@ -1368,11 +2210,29 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Modon Holding (Abu Dhabi)",
     beachfront: true,
     type: "Mixed-use",
-    blurb: "Modon Ras El Hekma is the first phase of Egypt's landmark Ras El Hekma megaproject. The masterplan covers approximately 170.8 million m², planned as a fully integrated smart city with residential communities, marinas, hotels, business districts, international schools, and green corridors.",
+    blurb:
+      "Modon Ras El Hekma is the first phase of Egypt's landmark Ras El Hekma megaproject. The masterplan covers approximately 170.8 million m², planned as a fully integrated smart city with residential communities, marinas, hotels, business districts, international schools, and green corridors.",
     paymentPlan: "5% down + 5% after 3 months, installments up to 8 years",
-    amenities: ["International marina", "Championship golf courses", "Hotels & branded residences", "Beach clubs", "Crystal lagoons", "Retail districts", "Business district", "Sports facilities", "Wellness centers", "Parks", "24/7 security"],
+    amenities: [
+      "International marina",
+      "Championship golf courses",
+      "Hotels & branded residences",
+      "Beach clubs",
+      "Crystal lagoons",
+      "Retail districts",
+      "Business district",
+      "Sports facilities",
+      "Wellness centers",
+      "Parks",
+      "24/7 security",
+    ],
     types: ["Apartment", "Townhouse", "Twin House", "Standalone Villa", "Branded Residences"],
-    highlights: ["170.8 million m² mega coastal city", "UAE-Egypt mega investment project", "Future international airport planned", "First phase: Wadi Yemm residential precinct"]
+    highlights: [
+      "170.8 million m² mega coastal city",
+      "UAE-Egypt mega investment project",
+      "Future international airport planned",
+      "First phase: Wadi Yemm residential precinct",
+    ],
   },
   "mountain-view-chillout": {
     destination: "6th-of-october-city",
@@ -1380,11 +2240,27 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 30.9707,
     developer: "Mountain View",
     city: "6th of October City, Giza, Egypt",
-    blurb: "Chillout Park is a premium residential compound by Mountain View centered around landscaped parks and modern family living in 6th of October City, near Juhayna Square, Mall of Arabia, and Sheikh Zayed.",
+    blurb:
+      "Chillout Park is a premium residential compound by Mountain View centered around landscaped parks and modern family living in 6th of October City, near Juhayna Square, Mall of Arabia, and Sheikh Zayed.",
     paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Clubhouse", "Swimming pools", "Parks", "Gym", "Sports courts", "Jogging tracks", "Commercial area", "Kids' areas", "Restaurants & cafés", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Parks",
+      "Gym",
+      "Sports courts",
+      "Jogging tracks",
+      "Commercial area",
+      "Kids' areas",
+      "Restaurants & cafés",
+      "24/7 security",
+    ],
     types: ["Apartment", "iVilla", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Park-centric master plan", "October City prime location", "Near Juhayna Square & Mall of Arabia"]
+    highlights: [
+      "Park-centric master plan",
+      "October City prime location",
+      "Near Juhayna Square & Mall of Arabia",
+    ],
   },
   "mountain-view-crystal": {
     destination: "ain-sokhna",
@@ -1394,11 +2270,27 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Sidi Abdel Rahman, North Coast, Matrouh Governorate, Egypt",
     beachfront: true,
     type: "Resort",
-    blurb: "Crysta is Mountain View's newest luxury beachfront community centered around crystal lagoons and premium Mediterranean-inspired residences, featuring modern coastal architecture, lush landscaping, and waterfront promenades.",
+    blurb:
+      "Crysta is Mountain View's newest luxury beachfront community centered around crystal lagoons and premium Mediterranean-inspired residences, featuring modern coastal architecture, lush landscaping, and waterfront promenades.",
     paymentPlan: "5% down, installments up to 8 years",
-    amenities: ["Crystal lagoons", "Beach club", "Swimming pools", "Clubhouse", "Restaurants & cafés", "Gym", "Sports facilities", "Kids' areas", "Retail", "24/7 security"],
+    amenities: [
+      "Crystal lagoons",
+      "Beach club",
+      "Swimming pools",
+      "Clubhouse",
+      "Restaurants & cafés",
+      "Gym",
+      "Sports facilities",
+      "Kids' areas",
+      "Retail",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Waterfront crystal lagoon living", "Sidi Abdel Rahman prime location", "Mountain View signature quality"]
+    highlights: [
+      "Waterfront crystal lagoon living",
+      "Sidi Abdel Rahman prime location",
+      "Mountain View signature quality",
+    ],
   },
   "mountain-view-grand-valley": {
     destination: "new-administrative-capital",
@@ -1406,11 +2298,26 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.7587,
     developer: "Mountain View",
     city: "New Administrative Capital, Egypt",
-    blurb: "Grand Valleys is Mountain View's luxury villa-only community in the New Capital, inspired by expansive valley landscapes and low-density planning near the Green River and Diplomatic District.",
+    blurb:
+      "Grand Valleys is Mountain View's luxury villa-only community in the New Capital, inspired by expansive valley landscapes and low-density planning near the Green River and Diplomatic District.",
     paymentPlan: "5% down, installments up to 9 years",
-    amenities: ["Clubhouse", "Parks", "Swimming pools", "Sports club", "Jogging tracks", "Commercial center", "Restaurants & cafés", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Parks",
+      "Swimming pools",
+      "Sports club",
+      "Jogging tracks",
+      "Commercial center",
+      "Restaurants & cafés",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Twin House", "Standalone Villa", "Mansion"],
-    highlights: ["Villa-only exclusive community", "Near Green River & Diplomatic District", "New Capital premium location"]
+    highlights: [
+      "Villa-only exclusive community",
+      "Near Green River & Diplomatic District",
+      "New Capital premium location",
+    ],
   },
   "mountain-view-jirian": {
     destination: "new-zayed",
@@ -1418,13 +2325,28 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 30.8708,
     developer: "Mountain View",
     city: "Sheikh Zayed Extension, West Cairo, Egypt",
-    blurb: "Jirian is Mountain View's newest luxury mixed-use development in Sheikh Zayed Extension, centered around a flowing waterway and modern urban living, combining waterfront residences, green spaces, business districts, and entertainment facilities.",
+    blurb:
+      "Jirian is Mountain View's newest luxury mixed-use development in Sheikh Zayed Extension, centered around a flowing waterway and modern urban living, combining waterfront residences, green spaces, business districts, and entertainment facilities.",
     paymentPlan: "5% down, installments up to 8 years",
-    amenities: ["Water promenade", "Clubhouse", "Swimming pools", "Commercial district", "Restaurants & cafés", "Parks", "Sports club", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Water promenade",
+      "Clubhouse",
+      "Swimming pools",
+      "Commercial district",
+      "Restaurants & cafés",
+      "Parks",
+      "Sports club",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Waterfront flowing promenade", "Jirian Corridor prime location", "Near Sphinx Airport & Al Dabaa Axis"]
+    highlights: [
+      "Waterfront flowing promenade",
+      "Jirian Corridor prime location",
+      "Near Sphinx Airport & Al Dabaa Axis",
+    ],
   },
-  "jirian": {
+  jirian: {
     destination: "6th-of-october-city",
     lat: 30.075,
     lng: 30.865,
@@ -1433,13 +2355,25 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 7.4,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Jirian is a 1,400-acre city-scale masterplan in New Zayed along Sheikh Zayed Axis inspired by water flow design with central waterways and lagoons.",
-    paymentPlan: "5% down payment (+ 5% after 2-3 months), remaining balance spread over 8 years interest-free",
+    blurb:
+      "Jirian is a 1,400-acre city-scale masterplan in New Zayed along Sheikh Zayed Axis inspired by water flow design with central waterways and lagoons.",
+    paymentPlan:
+      "5% down payment (+ 5% after 2-3 months), remaining balance spread over 8 years interest-free",
     areaSize: "1400 feddan",
     unitSizes: "60–450+ m²",
-    amenities: ["Central waterways & lagoons", "Central clubhouse", "Sports hub", "Commercial promenade", "24/7 security"],
+    amenities: [
+      "Central waterways & lagoons",
+      "Central clubhouse",
+      "Sports hub",
+      "Commercial promenade",
+      "24/7 security",
+    ],
     types: ["Apartment", "Penthouse", "iVilla", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["1,400-acre city-scale masterplan", "Water flow inspired architecture", "Strategic New Zayed location"]
+    highlights: [
+      "1,400-acre city-scale masterplan",
+      "Water flow inspired architecture",
+      "Strategic New Zayed location",
+    ],
   },
   "mountain-view-kingsway": {
     destination: "6th-of-october-city",
@@ -1450,13 +2384,24 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 7.9,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Mountain View Kingsway is a 715–720 acre villa-focused compound on Oasis Road 6th of October with 82% greenery, Polo Country Club, and crystal lakes.",
-    paymentPlan: "5% down payment (+ 5% after 3 months), remaining balance spread over 8 to 9 years interest-free",
+    blurb:
+      "Mountain View Kingsway is a 715–720 acre villa-focused compound on Oasis Road 6th of October with 82% greenery, Polo Country Club, and crystal lakes.",
+    paymentPlan:
+      "5% down payment (+ 5% after 3 months), remaining balance spread over 8 to 9 years interest-free",
     areaSize: "715–720 feddan",
     unitSizes: "140–400+ m²",
-    amenities: ["Polo Country Club", "82% green landscape & lakes", "Penthouses & Lake Houses", "24/7 security"],
+    amenities: [
+      "Polo Country Club",
+      "82% green landscape & lakes",
+      "Penthouses & Lake Houses",
+      "24/7 security",
+    ],
     types: ["Penthouse", "Townhouse", "Lake House", "Standalone Villa"],
-    highlights: ["82% greenery & water features", "Polo Country Club centerpiece", "Low-density villa sanctuary"]
+    highlights: [
+      "82% greenery & water features",
+      "Polo Country Club centerpiece",
+      "Low-density villa sanctuary",
+    ],
   },
   "mountain-view-mv4": {
     destination: "6th-of-october-city",
@@ -1467,12 +2412,23 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 21,
     deliveryYear: 2024,
     status: "RTM",
-    blurb: "Mountain View 4 (MV4) October Park is a 46-acre ultra-exclusive villa compound in 6th of October City housing only 184 villas.",
+    blurb:
+      "Mountain View 4 (MV4) October Park is a 46-acre ultra-exclusive villa compound in 6th of October City housing only 184 villas.",
     paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 9 years interest-free",
     areaSize: "46–47 feddan",
-    amenities: ["184 total luxury villas", "Exclusive clubhouse", "Swimming pools", "Parks", "24/7 security"],
+    amenities: [
+      "184 total luxury villas",
+      "Exclusive clubhouse",
+      "Swimming pools",
+      "Parks",
+      "24/7 security",
+    ],
     types: ["Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Ultra-exclusive 184 villa sanctuary", "46–47 acres in 6th October", "Mountain View blue-and-white design"]
+    highlights: [
+      "Ultra-exclusive 184 villa sanctuary",
+      "46–47 acres in 6th October",
+      "Mountain View blue-and-white design",
+    ],
   },
   "mountain-view-ras-el-hekma": {
     destination: "ras-el-hekma",
@@ -1486,12 +2442,24 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 10.5,
     deliveryYear: 2024,
     status: "RTM",
-    blurb: "Mountain View Ras El Hekma is a 450–470 acre Greek island-themed resort at KM 200 with 800m beach frontage, Evia & Skala islands, and Greek town promenade.",
-    paymentPlan: "5% down payment (+ 5% after 3 months), remaining balance spread over 8 years interest-free",
+    blurb:
+      "Mountain View Ras El Hekma is a 450–470 acre Greek island-themed resort at KM 200 with 800m beach frontage, Evia & Skala islands, and Greek town promenade.",
+    paymentPlan:
+      "5% down payment (+ 5% after 3 months), remaining balance spread over 8 years interest-free",
     areaSize: "450–470 feddan",
-    amenities: ["800m private sandy beach", "Evia & Skala islands", "Greek town promenade", "Lighthouse", "24/7 security"],
+    amenities: [
+      "800m private sandy beach",
+      "Evia & Skala islands",
+      "Greek town promenade",
+      "Lighthouse",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Greek island-inspired architecture", "800m private sandy beach", "Evia & Skala island neighborhoods"]
+    highlights: [
+      "Greek island-inspired architecture",
+      "800m private sandy beach",
+      "Evia & Skala island neighborhoods",
+    ],
   },
   "naia-bay": {
     destination: "ras-el-hekma",
@@ -1501,8 +2469,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 31.12463,
     lng: 27.85279,
   },
-  "nmq": {
-  },
+  nmq: {},
   "north-edge-towers": {
     destination: "new-alamein",
     km: 106,
@@ -1516,13 +2483,32 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 30.9157,
     developer: "Orascom Development",
     city: "6th of October City, Giza, Egypt",
-    blurb: "O West is Orascom Development's flagship integrated city in West Cairo spanning approximately 1,000 acres, designed as a fully self-sustained community with residential neighborhoods, schools, sports facilities, retail, and business districts on Al Wahat Road.",
+    blurb:
+      "O West is Orascom Development's flagship integrated city in West Cairo spanning approximately 1,000 acres, designed as a fully self-sustained community with residential neighborhoods, schools, sports facilities, retail, and business districts on Al Wahat Road.",
     paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["O West Club", "Sports facilities", "Swimming pools", "International schools", "Hospital", "Commercial district", "Restaurants & cafés", "Business hub", "Parks", "Jogging & cycling tracks", "Kids' areas", "24/7 security"],
+    amenities: [
+      "O West Club",
+      "Sports facilities",
+      "Swimming pools",
+      "International schools",
+      "Hospital",
+      "Commercial district",
+      "Restaurants & cafés",
+      "Business hub",
+      "Parks",
+      "Jogging & cycling tracks",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Penthouse", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["1,000-acre integrated city", "Directly on Al Wahat Road", "Close to Mall of Egypt & Grand Egyptian Museum", "Orascom premium community standards"]
+    highlights: [
+      "1,000-acre integrated city",
+      "Directly on Al Wahat Road",
+      "Close to Mall of Egypt & Grand Egyptian Museum",
+      "Orascom premium community standards",
+    ],
   },
-  "ogami": {
+  ogami: {
     destination: "ras-el-hekma",
     km: 205,
     developer: "SODIC",
@@ -1531,27 +2517,60 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 27.9602,
     beachfront: true,
     type: "Resort",
-    blurb: "Ogami is SODIC's Japanese-inspired beachfront destination spanning approximately 440 acres in Ras El Hekma, designed around islands, lagoons, and pristine Mediterranean beaches, combining minimalist architecture with wellness-centered coastal living.",
+    blurb:
+      "Ogami is SODIC's Japanese-inspired beachfront destination spanning approximately 440 acres in Ras El Hekma, designed around islands, lagoons, and pristine Mediterranean beaches, combining minimalist architecture with wellness-centered coastal living.",
     paymentPlan: "5% down, installments up to 8 years",
-    amenities: ["Private beach", "Crystal lagoons", "Beach club", "Clubhouse", "Swimming pools", "Restaurants & cafés", "Retail village", "Gym & wellness center", "Water sports", "Kids' areas", "Walking promenades", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Beach club",
+      "Clubhouse",
+      "Swimming pools",
+      "Restaurants & cafés",
+      "Retail village",
+      "Gym & wellness center",
+      "Water sports",
+      "Kids' areas",
+      "Walking promenades",
+      "24/7 security",
+    ],
     types: ["Chalet", "Beach House", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Japanese-inspired minimalist design", "440 acres with km 205 beachfront", "SODIC premium quality delivery", "Wellness-centered resort lifestyle"]
+    highlights: [
+      "Japanese-inspired minimalist design",
+      "440 acres with km 205 beachfront",
+      "SODIC premium quality delivery",
+      "Wellness-centered resort lifestyle",
+    ],
   },
-  "olive-oasis": {
-  },
-  "one33": {
+  "olive-oasis": {},
+  one33: {
     destination: "northern-expansion",
     lat: 30.0498,
     lng: 31.0148,
     developer: "Samco Holding",
     city: "Sheikh Zayed City, Giza, Egypt",
-    blurb: "One33 is a luxury mixed-use residential community by Samco Holding spread across approximately 133 acres in Sheikh Zayed, directly on the 26th of July Corridor, combining premium homes with retail and lifestyle destinations.",
+    blurb:
+      "One33 is a luxury mixed-use residential community by Samco Holding spread across approximately 133 acres in Sheikh Zayed, directly on the 26th of July Corridor, combining premium homes with retail and lifestyle destinations.",
     paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Clubhouse", "Swimming pools", "Sports club", "Parks", "Commercial boulevard", "Restaurants & cafés", "Gym", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Sports club",
+      "Parks",
+      "Commercial boulevard",
+      "Restaurants & cafés",
+      "Gym",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["133 acres on 26th of July Corridor", "Close to Arkan Plaza & Mall of Arabia", "Luxury mixed-use Sheikh Zayed community"]
+    highlights: [
+      "133 acres on 26th of July Corridor",
+      "Close to Arkan Plaza & Mall of Arabia",
+      "Luxury mixed-use Sheikh Zayed community",
+    ],
   },
-  "origami": {
+  origami: {
     lat: 30.02875,
     lng: 31.47736,
     developer: "Origami",
@@ -1583,8 +2602,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.82712,
     lng: 28.9497,
   },
-  "palm-hills-new-cairo": {
-  },
+  "palm-hills-new-cairo": {},
   "palm-hills-one": {
     lat: 30.035,
     lng: 30.985,
@@ -1597,29 +2615,21 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Palm Hills Developments",
     city: "Palm Parks, 6th-of-october-city",
   },
-  "park-sight": {
-  },
-  "patio-5-east": {
-  },
-  "patio-casa": {
-  },
-  "patio-hills": {
-  },
-  "patio-jade": {
-  },
-  "patio-oro": {
-  },
-  "patio-prime": {
-  },
-  "patio-vida": {
-  },
+  "park-sight": {},
+  "patio-5-east": {},
+  "patio-casa": {},
+  "patio-hills": {},
+  "patio-jade": {},
+  "patio-oro": {},
+  "patio-prime": {},
+  "patio-vida": {},
   "patio-zahraa": {
     lat: 30.02593,
     lng: 31.47704,
     developer: "Memaar Al Morshedy",
     city: "Zahra, new-cairo",
   },
-  "playa": {
+  playa: {
     destination: "ghazala-bay",
     km: 146,
     developer: "Maven Developments",
@@ -1631,7 +2641,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 32.32882,
     priceFrom: 24,
   },
-  "px": {
+  px: {
     lat: 30.03306,
     lng: 31.47773,
     developer: "Palm Hills Developments",
@@ -1645,9 +2655,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 31.12309,
     lng: 27.84878,
   },
-  "rai-valleys": {
-  },
-  "ramla": {
+  "rai-valleys": {},
+  ramla: {
     destination: "ras-el-hekma",
     km: 215,
     city: "Ras El Hekma, North Coast (km 215), Matrouh Governorate, Egypt",
@@ -1658,18 +2667,12 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Al Ahly Sabbour",
     city: "Amwaj, north-coast-sidi-abdel-rahman",
   },
-  "rivers": {
-  },
-  "rock-capital-1": {
-  },
-  "rock-gold": {
-  },
-  "rock-sheraton": {
-  },
-  "rock-vera": {
-  },
-  "rock-ville": {
-  },
+  rivers: {},
+  "rock-capital-1": {},
+  "rock-gold": {},
+  "rock-sheraton": {},
+  "rock-vera": {},
+  "rock-ville": {},
   "sa-ada-sahel": {
     destination: "ras-el-hekma",
     km: 183,
@@ -1677,15 +2680,14 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.02591,
     lng: 31.47501,
   },
-  "saada-sahel": {
-  },
-  "sadaf": {
-    lat: 30.950,
-    lng: 28.500,
+  "saada-sahel": {},
+  sadaf: {
+    lat: 30.95,
+    lng: 28.5,
     developer: "New Plan Developments",
     city: "Sadaf, sidi-abdelrahman",
   },
-  "safia": {
+  safia: {
     destination: "ras-el-hekma",
     km: 183,
     city: "Ras El Hekma, North Coast (km 183), Matrouh Governorate, Egypt",
@@ -1693,26 +2695,44 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 31.12283,
     lng: 27.85375,
   },
-  "salt": {
+  salt: {
     destination: "ras-el-hekma",
     km: 185,
     city: "Ras El Hekma, North Coast (km 185), Matrouh Governorate, Egypt",
-    lat: 31.1000,
-    lng: 28.0060,
+    lat: 31.1,
+    lng: 28.006,
     developer: "Tatweer Misr",
     beachfront: true,
     type: "Resort",
-    blurb: "SALT is a nature-forward beachfront resort by Tatweer Misr in Ras El Hekma, designed as an eco-conscious community that integrates with the surrounding natural landscape — featuring raw architectural beauty, expansive white sandy beaches, and tranquil crystal lagoons.",
+    blurb:
+      "SALT is a nature-forward beachfront resort by Tatweer Misr in Ras El Hekma, designed as an eco-conscious community that integrates with the surrounding natural landscape — featuring raw architectural beauty, expansive white sandy beaches, and tranquil crystal lagoons.",
     paymentPlan: "5% down, installments up to 8 years",
-    amenities: ["Private beach", "Crystal lagoons", "Beach club", "Clubhouse", "Swimming pools", "Eco-lounge", "Restaurants & cafés", "Retail village", "Gym", "Sports courts", "Walking & cycling tracks", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Beach club",
+      "Clubhouse",
+      "Swimming pools",
+      "Eco-lounge",
+      "Restaurants & cafés",
+      "Retail village",
+      "Gym",
+      "Sports courts",
+      "Walking & cycling tracks",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Chalet", "Apartment", "Cabin", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Nature-inspired eco-forward resort", "White sandy beach at km 185", "Tatweer Misr signature quality", "Raw architectural minimalist design"]
+    highlights: [
+      "Nature-inspired eco-forward resort",
+      "White sandy beach at km 185",
+      "Tatweer Misr signature quality",
+      "Raw architectural minimalist design",
+    ],
   },
-  "sarai": {
-  },
-  "sealine-seashore": {
-  },
-  "seashell": {
+  sarai: {},
+  "sealine-seashore": {},
+  seashell: {
     destination: "sidi-abdelrahman",
     km: 135,
     developer: "New Giza Developments",
@@ -1727,9 +2747,9 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "New Giza Developments",
     city: "Ras El Hekma, North Coast (km 195), Matrouh Governorate, Egypt",
     lat: 31.1038,
-    lng: 27.9730,
+    lng: 27.973,
   },
-  "seazen": {
+  seazen: {
     destination: "al-dabaa",
     km: 172,
     city: "Al Dabaa, North Coast (km 172), Matrouh Governorate, Egypt",
@@ -1737,7 +2757,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.02947,
     lng: 31.47542,
   },
-  "shamasi": {
+  shamasi: {
     destination: "sidi-abdelrahman",
     km: 134,
     city: "Sidi Abdel Rahman, North Coast (km 134), Matrouh Governorate, Egypt",
@@ -1751,7 +2771,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "City Edge Developments",
     city: "Sheya Residence, new-alamein-city",
   },
-  "silversands": {
+  silversands: {
     destination: "sidi-heneish",
     km: 222,
     city: "Sidi Heneish / Almaza Bay (KM 222), Matrouh Governorate, Egypt",
@@ -1763,13 +2783,25 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 18,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "SilverSands by Ora Developers (Naguib Sawiris) is a 485–503 acre luxury resort in Sidi Heneish (KM 222) with 1.2 km beach, 88,000 sqm lagoon, and Armani branded villas.",
-    paymentPlan: "5% down payment (+ 5% after 3 months), remaining balance spread over 6 to 10 years interest-free",
+    blurb:
+      "SilverSands by Ora Developers (Naguib Sawiris) is a 485–503 acre luxury resort in Sidi Heneish (KM 222) with 1.2 km beach, 88,000 sqm lagoon, and Armani branded villas.",
+    paymentPlan:
+      "5% down payment (+ 5% after 3 months), remaining balance spread over 6 to 10 years interest-free",
     areaSize: "485–503 feddan",
     unitSizes: "95–450+ m²",
-    amenities: ["1.2 km beachfront", "88,000 sqm crystal lagoon", "4 clubhouses", "Armani branded villas", "24/7 security"],
+    amenities: [
+      "1.2 km beachfront",
+      "88,000 sqm crystal lagoon",
+      "4 clubhouses",
+      "Armani branded villas",
+      "24/7 security",
+    ],
     types: ["Chalet", "Condo", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["1.2 km private sandy beach", "88,000 sqm swimmable crystal lagoon", "Armani-partnered luxury villas"]
+    highlights: [
+      "1.2 km private sandy beach",
+      "88,000 sqm swimmable crystal lagoon",
+      "Armani-partnered luxury villas",
+    ],
   },
   "sodic-east": {
     destination: "heliopolis",
@@ -1780,13 +2812,24 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 13.5,
     deliveryYear: 2027,
     status: "RTM",
-    blurb: "SODIC East by SODIC (Sasaki masterplan) is a 655-acre smart city in New Heliopolis with 84% greenery, 40-acre SODIC Sports Club, and 2 km Green Spine.",
+    blurb:
+      "SODIC East by SODIC (Sasaki masterplan) is a 655-acre smart city in New Heliopolis with 84% greenery, 40-acre SODIC Sports Club, and 2 km Green Spine.",
     paymentPlan: "0%–5% down payment, remaining balance spread over 7 to 10 years interest-free",
     areaSize: "655 feddan",
     unitSizes: "125–392+ m²",
-    amenities: ["40-acre SODIC Sports Club", "2 km Green Spine", "15-acre The Ravine", "27-acre business district", "24/7 security"],
+    amenities: [
+      "40-acre SODIC Sports Club",
+      "2 km Green Spine",
+      "15-acre The Ravine",
+      "27-acre business district",
+      "24/7 security",
+    ],
     types: ["Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["655-acre smart city masterplanned by Sasaki", "84% greenery & open parks", "40-acre SODIC Sports Club"]
+    highlights: [
+      "655-acre smart city masterplanned by Sasaki",
+      "84% greenery & open parks",
+      "40-acre SODIC Sports Club",
+    ],
   },
   "sodic-the-estates": {
     destination: "sheikh-zayed",
@@ -1797,13 +2840,25 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 32,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "SODIC The Estates is a 150-acre ultra-luxury villa sanctuary in New Zayed on Cairo-Alex Desert Road near Sphinx Airport.",
-    paymentPlan: "5% down payment (+ 5% after 3 months), remaining balance spread over 7 to 8 years interest-free",
+    blurb:
+      "SODIC The Estates is a 150-acre ultra-luxury villa sanctuary in New Zayed on Cairo-Alex Desert Road near Sphinx Airport.",
+    paymentPlan:
+      "5% down payment (+ 5% after 3 months), remaining balance spread over 7 to 8 years interest-free",
     areaSize: "150 feddan",
     unitSizes: "267–600+ m²",
-    amenities: ["Signature Clubhouse", "Golf views", "Wellness pavilions", "Cycling tracks", "24/7 security"],
+    amenities: [
+      "Signature Clubhouse",
+      "Golf views",
+      "Wellness pavilions",
+      "Cycling tracks",
+      "24/7 security",
+    ],
     types: ["Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["150-acre low-density villa sanctuary", "5 minutes from Sphinx International Airport", "Direct Cairo-Alex Desert Road access"]
+    highlights: [
+      "150-acre low-density villa sanctuary",
+      "5 minutes from Sphinx International Airport",
+      "Direct Cairo-Alex Desert Road access",
+    ],
   },
   "sodic-west": {
     destination: "sheikh-zayed",
@@ -1814,13 +2869,25 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 11,
     deliveryYear: 2012,
     status: "RTM",
-    blurb: "SODIC West is SODIC's flagship 1,500+ acre master-planned city in Sheikh Zayed incorporating Westown, Allegria, Forty West, and EdNC.",
-    paymentPlan: "10% down payment, remaining balance spread over 7 to 8 years / Secondary resale cash",
+    blurb:
+      "SODIC West is SODIC's flagship 1,500+ acre master-planned city in Sheikh Zayed incorporating Westown, Allegria, Forty West, and EdNC.",
+    paymentPlan:
+      "10% down payment, remaining balance spread over 7 to 8 years / Secondary resale cash",
     areaSize: "1500+ feddan",
     unitSizes: "120–600+ m²",
-    amenities: ["SODIC Sports Club", "The Strip retail hub", "Allegria Golf Course", "EDNC commercial hub", "24/7 security"],
+    amenities: [
+      "SODIC Sports Club",
+      "The Strip retail hub",
+      "Allegria Golf Course",
+      "EDNC commercial hub",
+      "24/7 security",
+    ],
     types: ["Apartment", "Penthouse", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["1,500+ acre self-sustaining smart city", "Pioneering West Cairo masterplan", "Integrates Allegria Greg Norman golf"]
+    highlights: [
+      "1,500+ acre self-sustaining smart city",
+      "Pioneering West Cairo masterplan",
+      "Integrates Allegria Greg Norman golf",
+    ],
   },
   "solana-west": {
     destination: "sheikh-zayed",
@@ -1831,15 +2898,26 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 9.8,
     deliveryYear: 2027,
     status: "RTM",
-    blurb: "Solana West by ORA Developers (Naguib Sawiris) is a 316-acre low-density luxury compound in New Zayed along Dabaa Corridor.",
+    blurb:
+      "Solana West by ORA Developers (Naguib Sawiris) is a 316-acre low-density luxury compound in New Zayed along Dabaa Corridor.",
     paymentPlan: "0%–5% down payment, remaining balance spread over 8 to 10 years interest-free",
     areaSize: "316 feddan",
     unitSizes: "88–388+ m²",
-    amenities: ["Central Clubhouse", "Public parks", "Wellness spa", "Commercial plazas", "24/7 security"],
+    amenities: [
+      "Central Clubhouse",
+      "Public parks",
+      "Wellness spa",
+      "Commercial plazas",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["316 acres low-density masterplan", "Direct access via Dabaa Corridor", "ORA Developers flagship design"]
+    highlights: [
+      "316 acres low-density masterplan",
+      "Direct access via Dabaa Corridor",
+      "ORA Developers flagship design",
+    ],
   },
-  "soul": {
+  soul: {
     destination: "ras-el-hekma",
     km: 180,
     city: "Ras El Hekma (KM 180), Matrouh Governorate, Egypt",
@@ -1851,13 +2929,25 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 25,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Soul by Emaar Misr is a 580-acre ultra-luxury resort at KM 180 Ras El Hekma with 1.5km private sandy beach, cascading sea view terraces, and 5-star hotel.",
-    paymentPlan: "5% down payment (+ 5% after 3 months), remaining balance spread over 7 to 8 years interest-free",
+    blurb:
+      "Soul by Emaar Misr is a 580-acre ultra-luxury resort at KM 180 Ras El Hekma with 1.5km private sandy beach, cascading sea view terraces, and 5-star hotel.",
+    paymentPlan:
+      "5% down payment (+ 5% after 3 months), remaining balance spread over 7 to 8 years interest-free",
     areaSize: "580 feddan",
     unitSizes: "193–500+ m²",
-    amenities: ["1.5km private beach", "5-star luxury hotel", "Cascading sea view terraces", "Beach clubs", "24/7 security"],
+    amenities: [
+      "1.5km private beach",
+      "5-star luxury hotel",
+      "Cascading sea view terraces",
+      "Beach clubs",
+      "24/7 security",
+    ],
     types: ["Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["580-acre ultra-luxury beach retreat", "1.5km private Mediterranean beachfront", "Emaar Misr flagship North Coast resort"]
+    highlights: [
+      "580-acre ultra-luxury beach retreat",
+      "1.5km private Mediterranean beachfront",
+      "Emaar Misr flagship North Coast resort",
+    ],
   },
   "south-med": {
     destination: "al-dabaa",
@@ -1871,13 +2961,26 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 14.5,
     deliveryYear: 2027,
     status: "RTM",
-    blurb: "SouthMed (South Med) by TMG is a 5,500-acre (23M sqm) smart coastal metropolis at KM 165 Al-Dabaa / Ras El Hekma with 4–5.5km beach, 18-hole golf, and yacht marina.",
-    paymentPlan: "3%–4% down payment (+ 3%–4% after 3 months), remaining balance spread over up to 12 years interest-free",
+    blurb:
+      "SouthMed (South Med) by TMG is a 5,500-acre (23M sqm) smart coastal metropolis at KM 165 Al-Dabaa / Ras El Hekma with 4–5.5km beach, 18-hole golf, and yacht marina.",
+    paymentPlan:
+      "3%–4% down payment (+ 3%–4% after 3 months), remaining balance spread over up to 12 years interest-free",
     areaSize: "5500 feddan",
     unitSizes: "112–731+ m²",
-    amenities: ["4–5.5km beachfront", "International Yacht Marina", "18-hole golf course", "5-star hotels", "Theme park", "24/7 security"],
+    amenities: [
+      "4–5.5km beachfront",
+      "International Yacht Marina",
+      "18-hole golf course",
+      "5-star hotels",
+      "Theme park",
+      "24/7 security",
+    ],
     types: ["Chalet", "Apartment", "Twin House", "Standalone Villa"],
-    highlights: ["5,500-acre (23M sqm) coastal metropolis", "4–5.5km private sandy beach", "TMG flagship up to 12 years payment plan"]
+    highlights: [
+      "5,500-acre (23M sqm) coastal metropolis",
+      "4–5.5km private sandy beach",
+      "TMG flagship up to 12 years payment plan",
+    ],
   },
   "stella-heights": {
     destination: "sidi-abdelrahman",
@@ -1908,15 +3011,14 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Orascom Development",
     city: "El Gouna, hurghada",
   },
-  "swanlake-west": {
-  },
-  "talala": {
+  "swanlake-west": {},
+  talala: {
     lat: 30.02664,
     lng: 31.47967,
     developer: "Talala",
     city: "TALALA, new-cairo",
   },
-  "telal": {
+  telal: {
     destination: "sidi-abdelrahman",
     km: 142,
     city: "Sidi Abdel Rahman, North Coast (km 142), Matrouh Governorate, Egypt",
@@ -1937,8 +3039,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.02884,
     lng: 31.47663,
   },
-  "the-brooks": {
-  },
+  "the-brooks": {},
   "the-butterfly": {
     lat: 30.02514,
     lng: 31.48294,
@@ -1983,8 +3084,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.01043,
     lng: 31.74972,
   },
-  "the-lynks": {
-  },
+  "the-lynks": {},
   "the-med": {
     destination: "ras-el-hekma",
     km: 192,
@@ -2006,28 +3106,46 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.03057,
     lng: 31.48451,
   },
-  "trio": {
-  },
+  trio: {},
   "uptown-cairo": {
     destination: "mokattam",
     lat: 30.0055,
     lng: 31.2999,
     developer: "Emaar Misr",
     city: "Mokattam, Cairo, Egypt",
-    blurb: "Uptown Cairo is Emaar Misr's flagship mixed-use community in Cairo spanning approximately 1,200 acres, combining luxury residences, an 18-hole championship golf course, commercial districts, hospitality, and leisure facilities on Cairo's highest elevation.",
+    blurb:
+      "Uptown Cairo is Emaar Misr's flagship mixed-use community in Cairo spanning approximately 1,200 acres, combining luxury residences, an 18-hole championship golf course, commercial districts, hospitality, and leisure facilities on Cairo's highest elevation.",
     paymentPlan: "5% down, installments up to 8 years",
-    amenities: ["18-hole Championship Golf Course", "Golf Club", "Clubhouse", "Swimming pools", "Fitness center", "Spa", "Sports courts", "Landscaped parks", "Walking & cycling trails", "Restaurants & cafés", "Retail boulevard", "Business district", "International school", "Medical facilities", "Hotels", "24/7 security"],
+    amenities: [
+      "18-hole Championship Golf Course",
+      "Golf Club",
+      "Clubhouse",
+      "Swimming pools",
+      "Fitness center",
+      "Spa",
+      "Sports courts",
+      "Landscaped parks",
+      "Walking & cycling trails",
+      "Restaurants & cafés",
+      "Retail boulevard",
+      "Business district",
+      "International school",
+      "Medical facilities",
+      "Hotels",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Penthouse", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Championship golf course at Mokattam heights", "Panoramic Cairo city views", "1,200-acre integrated masterplan", "Emaar international quality"]
+    highlights: [
+      "Championship golf course at Mokattam heights",
+      "Panoramic Cairo city views",
+      "1,200-acre integrated masterplan",
+      "Emaar international quality",
+    ],
   },
-  "v-levels": {
-  },
-  "vea-new-cairo": {
-  },
-  "vie-collective": {
-  },
-  "vie-halo": {
-  },
+  "v-levels": {},
+  "vea-new-cairo": {},
+  "vie-collective": {},
+  "vie-halo": {},
   "village-de-la-capitale": {
     lat: 30.01326,
     lng: 31.75194,
@@ -2040,7 +3158,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "SODIC",
     city: "VYE SODIC, sheikh-zayed",
   },
-  "youd": {
+  youd: {
     destination: "ras-el-hekma",
     km: 186,
     city: "Ras El Hekma, North Coast (km 186), Matrouh Governorate, Egypt",
@@ -2048,7 +3166,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.0346,
     lng: 31.47868,
   },
-  "zahra": {
+  zahra: {
     destination: "new-alamein",
     km: 123,
     city: "New Alamein, North Coast (km 123), Matrouh Governorate, Egypt",
@@ -2056,7 +3174,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.02593,
     lng: 31.47704,
   },
-  "zoya": {
+  zoya: {
     destination: "ghazala-bay",
     km: 145,
     city: "Ghazala Bay, North Coast (km 145), Matrouh Governorate, Egypt",
@@ -2070,11 +3188,29 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.5379,
     developer: "Al Marasem Development",
     city: "Fifth Settlement, New Cairo, Egypt",
-    blurb: "Fifth Square is a premium residential community by Al Marasem spanning approximately 158 acres in New Cairo's Fifth Settlement, featuring contemporary homes surrounded by landscaped gardens, retail, and leisure facilities.",
+    blurb:
+      "Fifth Square is a premium residential community by Al Marasem spanning approximately 158 acres in New Cairo's Fifth Settlement, featuring contemporary homes surrounded by landscaped gardens, retail, and leisure facilities.",
     paymentPlan: "5% down, installments up to 8 years",
-    amenities: ["Clubhouse", "Swimming pools", "Gym", "Sports courts", "Landscaped parks", "Jogging tracks", "Retail center", "Restaurants & cafés", "Medical center", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Gym",
+      "Sports courts",
+      "Landscaped parks",
+      "Jogging tracks",
+      "Retail center",
+      "Restaurants & cafés",
+      "Medical center",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Penthouse", "Townhouse"],
-    highlights: ["Prime Fifth Settlement location", "158 acres of green living", "Directly on North 90 Street", "Minutes from AUC and Cairo Festival City"]
+    highlights: [
+      "Prime Fifth Settlement location",
+      "158 acres of green living",
+      "Directly on North 90 Street",
+      "Minutes from AUC and Cairo Festival City",
+    ],
   },
   "capital-heights": {
     destination: "new-administrative-capital",
@@ -2082,73 +3218,148 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.7433,
     developer: "Safwa Urban Development",
     city: "R7 District, New Administrative Capital, Egypt",
-    blurb: "Capital Heights is a residential compound by Safwa Urban Development designed with landscaped green spaces, water features, and contemporary architecture in the heart of the New Capital's R7 District.",
+    blurb:
+      "Capital Heights is a residential compound by Safwa Urban Development designed with landscaped green spaces, water features, and contemporary architecture in the heart of the New Capital's R7 District.",
     paymentPlan: "10% down, installments up to 10 years",
-    amenities: ["Clubhouse", "Swimming pools", "Gym", "Parks", "Retail area", "Restaurants & cafés", "Medical center", "Kids' area", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Gym",
+      "Parks",
+      "Retail area",
+      "Restaurants & cafés",
+      "Medical center",
+      "Kids' area",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Penthouse"],
-    highlights: ["Green-first R7 District compound", "Contemporary family-oriented design", "Investment-friendly in the New Capital"]
+    highlights: [
+      "Green-first R7 District compound",
+      "Contemporary family-oriented design",
+      "Investment-friendly in the New Capital",
+    ],
   },
-  "heliopark": {
+  heliopark: {
     destination: "heliopolis",
     lat: 30.1706,
     lng: 31.6395,
     developer: "Heliopolis Housing & Development",
     city: "New Heliopolis City, East Cairo, Egypt",
-    blurb: "Heliopark is a landmark residential community in New Heliopolis by HHD, developed over a large master-planned area with green spaces, integrated services, and modern residential neighborhoods on the Cairo–Ismailia Desert Road.",
+    blurb:
+      "Heliopark is a landmark residential community in New Heliopolis by HHD, developed over a large master-planned area with green spaces, integrated services, and modern residential neighborhoods on the Cairo–Ismailia Desert Road.",
     paymentPlan: "10% down, installments up to 10 years",
-    amenities: ["Clubhouse", "Swimming pools", "Sports facilities", "Landscaped parks", "Walking & cycling paths", "Commercial center", "Restaurants & cafés", "Schools", "Medical facilities", "Kids' play areas", "Mosques", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Sports facilities",
+      "Landscaped parks",
+      "Walking & cycling paths",
+      "Commercial center",
+      "Restaurants & cafés",
+      "Schools",
+      "Medical facilities",
+      "Kids' play areas",
+      "Mosques",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Self-sustained urban community", "Proximity to New Capital & Madinaty", "Heliopolis Company quality build"]
+    highlights: [
+      "Self-sustained urban community",
+      "Proximity to New Capital & Madinaty",
+      "Heliopolis Company quality build",
+    ],
   },
   "azzar-islands": {
     destination: "ras-el-hekma",
     km: 182,
     city: "Ras El Hekma, North Coast (km 182), Matrouh Governorate, Egypt",
     lat: 31.0848,
-    lng: 27.9320,
+    lng: 27.932,
     developer: "Reedy Group",
     beachfront: true,
     type: "Resort",
     priceFrom: 16.5,
     deliveryYear: 2026,
-    blurb: "AZZAR Islands is a boutique luxury beachfront community by Reedy Group in Ras El Hekma designed around exclusive island-inspired neighborhoods, offering privacy and direct sea access with low-density 400-acre master plan (20% footprint).",
-    paymentPlan: "5% down payment, remaining balance over 8 yrs equal interest-free installments | 5% + 5% in 3 mos, 6–7 yrs",
+    blurb:
+      "AZZAR Islands is a boutique luxury beachfront community by Reedy Group in Ras El Hekma designed around exclusive island-inspired neighborhoods, offering privacy and direct sea access with low-density 400-acre master plan (20% footprint).",
+    paymentPlan:
+      "5% down payment, remaining balance over 8 yrs equal interest-free installments | 5% + 5% in 3 mos, 6–7 yrs",
     areaSize: "400 feddan",
-    amenities: ["Private beach", "Beach club", "Clubhouse", "Swimming pools", "Restaurants & cafés", "Retail area", "Gym", "Landscaped gardens", "Water features", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Beach club",
+      "Clubhouse",
+      "Swimming pools",
+      "Restaurants & cafés",
+      "Retail area",
+      "Gym",
+      "Landscaped gardens",
+      "Water features",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Exclusive island-inspired resort", "Low-density private living", "Panoramic sea views", "km 182 Ras El Hekma"]
+    highlights: [
+      "Exclusive island-inspired resort",
+      "Low-density private living",
+      "Panoramic sea views",
+      "km 182 Ras El Hekma",
+    ],
   },
   "al-rehab": {
     destination: "new-cairo",
-    lat: 30.0620,
-    lng: 31.4890,
+    lat: 30.062,
+    lng: 31.489,
     developer: "Talaat Moustafa Group",
     city: "Al Rehab, New Cairo, Cairo Governorate, Egypt",
     priceFrom: 4,
     deliveryYear: 2005,
-    blurb: "Al Rehab City by Talaat Moustafa Group is a mature, fully integrated city in New Cairo developed across 10 distinct phases over 2,380 acres, featuring complete services, schools, and commercial centers.",
+    blurb:
+      "Al Rehab City by Talaat Moustafa Group is a mature, fully integrated city in New Cairo developed across 10 distinct phases over 2,380 acres, featuring complete services, schools, and commercial centers.",
     paymentPlan: "Resale: Cash / secondary market terms",
     areaSize: "2380 feddan",
-    amenities: ["Sports Club", "Commercial Malls", "Medical Centers", "International Schools", "Mosques", "Food Court", "Parks", "24/7 Security"],
+    amenities: [
+      "Sports Club",
+      "Commercial Malls",
+      "Medical Centers",
+      "International Schools",
+      "Mosques",
+      "Food Court",
+      "Parks",
+      "24/7 Security",
+    ],
     types: ["Apartment", "Studio", "Penthouse", "Villa"],
-    highlights: ["Mature 2,380-acre city", "Fully self-sustained", "10 distinct completed phases"]
+    highlights: ["Mature 2,380-acre city", "Fully self-sustained", "10 distinct completed phases"],
   },
-  "allegria": {
+  allegria: {
     destination: "sheikh-zayed",
-    lat: 30.0780,
-    lng: 30.9720,
+    lat: 30.078,
+    lng: 30.972,
     developer: "SODIC",
     city: "Sheikh Zayed, Giza Governorate, Egypt",
     priceFrom: 17,
     deliveryYear: 2014,
-    blurb: "Allegria by SODIC is an exclusive completed luxury compound in Sheikh Zayed centered around a signature 18-hole Greg Norman golf course spanning 200–250 acres.",
+    blurb:
+      "Allegria by SODIC is an exclusive completed luxury compound in Sheikh Zayed centered around a signature 18-hole Greg Norman golf course spanning 200–250 acres.",
     paymentPlan: "Resale: Cash / secondary market terms",
     areaSize: "200–250 feddan",
-    amenities: ["18-Hole Greg Norman Golf Course", "Golf Clubhouse", "Swimming Pools", "Gym & Spa", "Sports Courts", "Parks & Trails", "24/7 Security"],
+    amenities: [
+      "18-Hole Greg Norman Golf Course",
+      "Golf Clubhouse",
+      "Swimming Pools",
+      "Gym & Spa",
+      "Sports Courts",
+      "Parks & Trails",
+      "24/7 Security",
+    ],
     types: ["Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Greg Norman signature golf course", "Exclusive SODIC masterplan", "Prime Sheikh Zayed location"]
+    highlights: [
+      "Greg Norman signature golf course",
+      "Exclusive SODIC masterplan",
+      "Prime Sheikh Zayed location",
+    ],
   },
-  "anakaji": {
+  anakaji: {
     destination: "new-administrative-capital",
     lat: 30.00555,
     lng: 31.71899,
@@ -2156,12 +3367,24 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "R8 District, New Administrative Capital, Egypt",
     priceFrom: 3.2,
     deliveryYear: 2024,
-    blurb: "Anakaji by Aqar Misr Developments is a boutique Nubian-inspired residential compound in the New Administrative Capital (R8 district), spanning 20 feddans with green vistas and cultural architecture.",
+    blurb:
+      "Anakaji by Aqar Misr Developments is a boutique Nubian-inspired residential compound in the New Administrative Capital (R8 district), spanning 20 feddans with green vistas and cultural architecture.",
     paymentPlan: "0%–10% down payment, up to 10 years installments / Secondary market terms",
     areaSize: "20 feddan",
-    amenities: ["Clubhouse", "Cultural Hub", "Swimming Pools", "Commercial Strip", "Kids Play Area", "24/7 Security"],
+    amenities: [
+      "Clubhouse",
+      "Cultural Hub",
+      "Swimming Pools",
+      "Commercial Strip",
+      "Kids Play Area",
+      "24/7 Security",
+    ],
     types: ["Studio", "Apartment", "Duplex", "Penthouse"],
-    highlights: ["Nubian-inspired architecture", "Prime R8 location in New Capital", "Delivered / Handovers underway"]
+    highlights: [
+      "Nubian-inspired architecture",
+      "Prime R8 location in New Capital",
+      "Delivered / Handovers underway",
+    ],
   },
 
   /* ─── NEW PROJECTS FROM USER DATA ─────────────────────────────────────── */
@@ -2172,11 +3395,33 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.5542,
     developer: "Hyde Park Developments",
     city: "Fifth Settlement, New Cairo, Cairo, Egypt",
-    blurb: "Hyde Park New Cairo is one of Egypt's largest mixed-use residential communities, spanning approximately 6 million m² (1,429 feddans), centered around Egypt's largest landscaped park and combining luxury residences with retail, hospitality, education, and business facilities.",
+    blurb:
+      "Hyde Park New Cairo is one of Egypt's largest mixed-use residential communities, spanning approximately 6 million m² (1,429 feddans), centered around Egypt's largest landscaped park and combining luxury residences with retail, hospitality, education, and business facilities.",
     paymentPlan: "10% down, installments up to 10 years",
-    amenities: ["Egypt's largest landscaped park", "Clubhouse", "RYZE Sports Club", "Swimming pools", "Artificial lakes", "Jogging & cycling tracks", "Retail district", "Restaurants & cafés", "Business district", "International schools", "Medical center", "Hotels", "Kids' play areas", "Mosque", "24/7 security"],
+    amenities: [
+      "Egypt's largest landscaped park",
+      "Clubhouse",
+      "RYZE Sports Club",
+      "Swimming pools",
+      "Artificial lakes",
+      "Jogging & cycling tracks",
+      "Retail district",
+      "Restaurants & cafés",
+      "Business district",
+      "International schools",
+      "Medical center",
+      "Hotels",
+      "Kids' play areas",
+      "Mosque",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Penthouse", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Egypt's largest landscaped park", "6 million m² mega community", "Directly on South 90 Street", "Minutes from AUC New Cairo"]
+    highlights: [
+      "Egypt's largest landscaped park",
+      "6 million m² mega community",
+      "Directly on South 90 Street",
+      "Minutes from AUC New Cairo",
+    ],
   },
 
   "hyde-park-north-seashore": {
@@ -2188,11 +3433,30 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Hyde Park Developments",
     beachfront: true,
     type: "Resort",
-    blurb: "Hyde Park North Coast (Seashore) is a premium beachfront destination designed around natural lagoons, luxury residences, and a pristine Mediterranean shoreline, offering a resort-style environment suitable for both vacations and year-round living.",
+    blurb:
+      "Hyde Park North Coast (Seashore) is a premium beachfront destination designed around natural lagoons, luxury residences, and a pristine Mediterranean shoreline, offering a resort-style environment suitable for both vacations and year-round living.",
     paymentPlan: "5% down, installments up to 8 years",
-    amenities: ["Private beach", "Crystal lagoons", "Beach club", "Swimming pools", "Clubhouse", "Gym & spa", "Restaurants & cafés", "Retail promenade", "Sports courts", "Kids' play areas", "Walking trails", "Boutique hotel", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Crystal lagoons",
+      "Beach club",
+      "Swimming pools",
+      "Clubhouse",
+      "Gym & spa",
+      "Restaurants & cafés",
+      "Retail promenade",
+      "Sports courts",
+      "Kids' play areas",
+      "Walking trails",
+      "Boutique hotel",
+      "24/7 security",
+    ],
     types: ["Chalet", "Hotel Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["km 210 prime Ras El Hekma location", "Pristine Mediterranean beachfront", "Hyde Park quality delivery"]
+    highlights: [
+      "km 210 prime Ras El Hekma location",
+      "Pristine Mediterranean beachfront",
+      "Hyde Park quality delivery",
+    ],
   },
 
   "hyde-park-west": {
@@ -2201,11 +3465,28 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 30.9728,
     developer: "Hyde Park Developments",
     city: "6th of October City, Giza, Egypt",
-    blurb: "Hyde Park West is Hyde Park Developments' flagship West Cairo community in 6th of October City, offering contemporary residences within landscaped neighborhoods designed around lakes and open green spaces, close to Mall of Egypt.",
+    blurb:
+      "Hyde Park West is Hyde Park Developments' flagship West Cairo community in 6th of October City, offering contemporary residences within landscaped neighborhoods designed around lakes and open green spaces, close to Mall of Egypt.",
     paymentPlan: "5% down + 5% after 3 months, installments up to 10 years",
-    amenities: ["Clubhouse", "Swimming pools", "Landscaped lakes", "Gym", "Walking & cycling paths", "Parks", "Commercial area", "Restaurants & cafés", "Kids' play areas", "Sports facilities", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Landscaped lakes",
+      "Gym",
+      "Walking & cycling paths",
+      "Parks",
+      "Commercial area",
+      "Restaurants & cafés",
+      "Kids' play areas",
+      "Sports facilities",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Townhouse", "Twin House"],
-    highlights: ["Close to Mall of Egypt", "Lakeside living in October City", "Hyde Park modern design philosophy"]
+    highlights: [
+      "Close to Mall of Egypt",
+      "Lakeside living in October City",
+      "Hyde Park modern design philosophy",
+    ],
   },
 
   "il-bosco-city": {
@@ -2214,10 +3495,25 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.7096,
     developer: "Misr Italia Properties",
     city: "Mostakbal City, New Cairo, Cairo, Egypt",
-    blurb: "IL Bosco City is Misr Italia's flagship smart residential community in Mostakbal City spanning approximately 268 acres, inspired by the concept of a 'vertical forest' — integrating lush greenery with modern urban living, green corridors, and smart infrastructure.",
-    amenities: ["Central park", "Clubhouse", "Swimming pools", "Sports club", "Gym & wellness center", "Running & cycling tracks", "Commercial district", "Restaurants & cafés", "International school", "Medical facilities", "Kids' play areas", "Smart infrastructure", "24/7 security"],
+    blurb:
+      "IL Bosco City is Misr Italia's flagship smart residential community in Mostakbal City spanning approximately 268 acres, inspired by the concept of a 'vertical forest' — integrating lush greenery with modern urban living, green corridors, and smart infrastructure.",
+    amenities: [
+      "Central park",
+      "Clubhouse",
+      "Swimming pools",
+      "Sports club",
+      "Gym & wellness center",
+      "Running & cycling tracks",
+      "Commercial district",
+      "Restaurants & cafés",
+      "International school",
+      "Medical facilities",
+      "Kids' play areas",
+      "Smart infrastructure",
+      "24/7 security",
+    ],
   },
-  "eastown": {
+  eastown: {
     destination: "new-cairo",
     lat: 30.0195,
     lng: 31.4985,
@@ -2226,13 +3522,25 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 12,
     deliveryYear: 2020,
     status: "RTM",
-    blurb: "Eastown by SODIC is a mature, fully operational 200-acre residential and commercial community adjacent to AUC in New Cairo's Golden Square, featuring low-rise apartments and the EDNC commercial hub.",
-    paymentPlan: "10%–20% down payment, remaining balance spread over 5 to 6 years in equal installments",
+    blurb:
+      "Eastown by SODIC is a mature, fully operational 200-acre residential and commercial community adjacent to AUC in New Cairo's Golden Square, featuring low-rise apartments and the EDNC commercial hub.",
+    paymentPlan:
+      "10%–20% down payment, remaining balance spread over 5 to 6 years in equal installments",
     areaSize: "200–204 feddan",
     unitSizes: "130–316 m²",
-    amenities: ["Club S", "EDNC Commercial Hub", "Walking promenades", "Sports facilities", "24/7 security"],
+    amenities: [
+      "Club S",
+      "EDNC Commercial Hub",
+      "Walking promenades",
+      "Sports facilities",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex"],
-    highlights: ["Adjacent to AUC New Cairo", "Fully delivered & operational", "EDNC commercial & office hub"]
+    highlights: [
+      "Adjacent to AUC New Cairo",
+      "Fully delivered & operational",
+      "EDNC commercial & office hub",
+    ],
   },
   "el-gouna": {
     destination: "hurghada",
@@ -2245,46 +3553,84 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     priceFrom: 18.9,
     deliveryYear: 2024,
     status: "RTM",
-    blurb: "El Gouna by Orascom Development is Egypt's flagship fully integrated resort town along 10 km of Red Sea coast, featuring championship golf courses, international marinas, lagoons, and diverse neighborhoods.",
-    paymentPlan: "10%–15% down payment, remaining balance spread over 5 years in equal installments",
+    blurb:
+      "El Gouna by Orascom Development is Egypt's flagship fully integrated resort town along 10 km of Red Sea coast, featuring championship golf courses, international marinas, lagoons, and diverse neighborhoods.",
+    paymentPlan:
+      "10%–15% down payment, remaining balance spread over 5 years in equal installments",
     areaSize: "10 km shoreline",
-    amenities: ["Abu Tig Marina", "Championship Golf Courses", "El Gouna Hospital", "International Schools", "5-Star Hotels", "Kitesurfing centers", "24/7 security"],
+    amenities: [
+      "Abu Tig Marina",
+      "Championship Golf Courses",
+      "El Gouna Hospital",
+      "International Schools",
+      "5-Star Hotels",
+      "Kitesurfing centers",
+      "24/7 security",
+    ],
     types: ["Studio", "Apartment", "Chalet", "Townhouse", "Standalone Villa"],
-    highlights: ["Flagship self-sustained Red Sea town", "Abu Tig Marina & 10km coast", "Championship golf & international schools"]
+    highlights: [
+      "Flagship self-sustained Red Sea town",
+      "Abu Tig Marina & 10km coast",
+      "Championship golf & international schools",
+    ],
   },
   "katameya-dunes": {
     destination: "new-cairo",
-    lat: 30.0210,
-    lng: 31.4720,
+    lat: 30.021,
+    lng: 31.472,
     developer: "Katameya Group / CIRED",
     city: "Gamal Abdel Nasser Axis, Fifth Settlement, New Cairo, Egypt",
     priceFrom: 18,
     deliveryYear: 2015,
     status: "RTM",
-    blurb: "Katameya Dunes is a 170-acre ultra-luxury golf community in New Cairo's 5th Settlement with a 14–20% footprint, 27-hole Nick Faldo golf course, and Westin Hotel & Spa.",
+    blurb:
+      "Katameya Dunes is a 170-acre ultra-luxury golf community in New Cairo's 5th Settlement with a 14–20% footprint, 27-hole Nick Faldo golf course, and Westin Hotel & Spa.",
     paymentPlan: "Resale cash terms / 10% down over 7 years for select developer-backed units",
     areaSize: "170 feddan",
     unitSizes: "Twin House to 2,500+ sqm Villa plots",
-    amenities: ["27-hole Sir Nick Faldo golf course", "The Westin Cairo Golf Resort & Spa", "PGA Golf Academy", "Clubhouse", "Wellness Spa", "24/7 security"],
+    amenities: [
+      "27-hole Sir Nick Faldo golf course",
+      "The Westin Cairo Golf Resort & Spa",
+      "PGA Golf Academy",
+      "Clubhouse",
+      "Wellness Spa",
+      "24/7 security",
+    ],
     types: ["Twin House", "Standalone Golf Villa", "Luxury Estate"],
-    highlights: ["27-hole Nick Faldo championship golf", "The Westin Cairo Resort & Spa", "14–20% ultra-low building density"]
+    highlights: [
+      "27-hole Nick Faldo championship golf",
+      "The Westin Cairo Resort & Spa",
+      "14–20% ultra-low building density",
+    ],
   },
   "katameya-heights": {
     destination: "new-cairo",
-    lat: 30.0090,
-    lng: 31.4280,
+    lat: 30.009,
+    lng: 31.428,
     developer: "Katameya Group / Starlight",
     city: "Fifth Settlement, New Cairo, Cairo, Egypt",
     priceFrom: 110,
     deliveryYear: 2000,
     status: "RTM",
-    blurb: "Katameya Heights is Egypt's pioneer 350–370 acre (1.5 million sqm) ultra-exclusive golf community in New Cairo centered on a 27-hole golf course and Calcutta Bar.",
-paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
+    blurb:
+      "Katameya Heights is Egypt's pioneer 350–370 acre (1.5 million sqm) ultra-exclusive golf community in New Cairo centered on a 27-hole golf course and Calcutta Bar.",
+    paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     areaSize: "350–370 feddan",
     unitSizes: "1,000 to 4,000+ sqm plot estates",
-    amenities: ["27-hole golf course", "Katameya Clubhouse", "Calcutta Bar", "Health club & spa", "Tennis courts", "24/7 security"],
+    amenities: [
+      "27-hole golf course",
+      "Katameya Clubhouse",
+      "Calcutta Bar",
+      "Health club & spa",
+      "Tennis courts",
+      "24/7 security",
+    ],
     types: ["Twin House", "Townhouse", "Standalone Golf Villa", "Grand Estate"],
-    highlights: ["Egypt's pioneer luxury golf community", "27-hole world-class golf course", "1,000–4,000+ sqm plot estates"]
+    highlights: [
+      "Egypt's pioneer luxury golf community",
+      "27-hole world-class golf course",
+      "1,000–4,000+ sqm plot estates",
+    ],
   },
   "la-verde": {
     destination: "new-administrative-capital",
@@ -2295,13 +3641,33 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     priceFrom: 6.1,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "La Verde is a 35–60 acre Andalusian-inspired residential compound by La Verde Developments in R8 New Capital with 15–20% footprint, green lakes, and La Verde Casette villas.",
+    blurb:
+      "La Verde is a 35–60 acre Andalusian-inspired residential compound by La Verde Developments in R8 New Capital with 15–20% footprint, green lakes, and La Verde Casette villas.",
     paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 10 years interest-free",
     areaSize: "35–60 feddan",
     unitSizes: "75–346 m²",
-    amenities: ["Clubhouse", "Commercial retail mall", "Health & wellness spa", "Squash courts", "Green lakes", "24/7 security"],
-    types: ["Studio", "Apartment", "Duplex", "Penthouse", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Classical Andalusian architecture", "15–20% low footprint in R8 District", "Overlooking Green River"]
+    amenities: [
+      "Clubhouse",
+      "Commercial retail mall",
+      "Health & wellness spa",
+      "Squash courts",
+      "Green lakes",
+      "24/7 security",
+    ],
+    types: [
+      "Studio",
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+    ],
+    highlights: [
+      "Classical Andalusian architecture",
+      "15–20% low footprint in R8 District",
+      "Overlooking Green River",
+    ],
   },
   "la-vista-6": {
     destination: "ain-sokhna",
@@ -2311,11 +3677,27 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     city: "Ain Sokhna, Suez Governorate, Egypt",
     beachfront: true,
     type: "Resort",
-    blurb: "La Vista 6 is a terraced luxury Red Sea resort by La Vista Developments in Ain Sokhna, built on elevated levels to maximize panoramic sea views, with landscaped gardens and direct beach access.",
+    blurb:
+      "La Vista 6 is a terraced luxury Red Sea resort by La Vista Developments in Ain Sokhna, built on elevated levels to maximize panoramic sea views, with landscaped gardens and direct beach access.",
     paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Private beach", "Swimming pools", "Beach club", "Clubhouse", "Restaurants & cafés", "Sports courts", "Gym", "Kids' areas", "Retail area", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Swimming pools",
+      "Beach club",
+      "Clubhouse",
+      "Restaurants & cafés",
+      "Sports courts",
+      "Gym",
+      "Kids' areas",
+      "Retail area",
+      "24/7 security",
+    ],
     types: ["Chalet", "Twin House", "Standalone Villa"],
-    highlights: ["Terraced panoramic Red Sea views", "Direct beach access", "La Vista established quality"]
+    highlights: [
+      "Terraced panoramic Red Sea views",
+      "Direct beach access",
+      "La Vista established quality",
+    ],
   },
 
   "la-vista-7": {
@@ -2326,11 +3708,26 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     city: "Ain Sokhna, Suez Governorate, Egypt",
     beachfront: true,
     type: "Resort",
-    blurb: "La Vista 7 is a premium beachfront resort by La Vista Developments in Ain Sokhna featuring cascading terraces, landscaped green areas, and direct Red Sea frontage in a secure gated environment.",
+    blurb:
+      "La Vista 7 is a premium beachfront resort by La Vista Developments in Ain Sokhna featuring cascading terraces, landscaped green areas, and direct Red Sea frontage in a secure gated environment.",
     paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Private beach", "Clubhouse", "Swimming pools", "Restaurants & cafés", "Gym", "Sports facilities", "Kids' play areas", "Commercial area", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Clubhouse",
+      "Swimming pools",
+      "Restaurants & cafés",
+      "Gym",
+      "Sports facilities",
+      "Kids' play areas",
+      "Commercial area",
+      "24/7 security",
+    ],
     types: ["Chalet", "Twin House", "Standalone Villa"],
-    highlights: ["Adjacent to La Vista 6", "Cascading terrace design", "Direct Red Sea beachfront access"]
+    highlights: [
+      "Adjacent to La Vista 6",
+      "Cascading terrace design",
+      "Direct Red Sea beachfront access",
+    ],
   },
 
   "la-vista-bay": {
@@ -2342,11 +3739,26 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     developer: "La Vista Developments",
     beachfront: true,
     type: "Resort",
-    blurb: "La Vista Bay is one of La Vista's flagship North Coast resorts in Sidi Abdel Rahman, offering a wide sandy beach, Mediterranean architecture, terraced neighborhoods with sea views, and an emphasis on privacy and extensive landscaping.",
+    blurb:
+      "La Vista Bay is one of La Vista's flagship North Coast resorts in Sidi Abdel Rahman, offering a wide sandy beach, Mediterranean architecture, terraced neighborhoods with sea views, and an emphasis on privacy and extensive landscaping.",
     paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Private beach", "Beach club", "Swimming pools", "Clubhouse", "Restaurants & cafés", "Sports facilities", "Kids' areas", "Retail services", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Beach club",
+      "Swimming pools",
+      "Clubhouse",
+      "Restaurants & cafés",
+      "Sports facilities",
+      "Kids' areas",
+      "Retail services",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["km 180 North Coast beachfront", "Mediterranean architectural style", "La Vista premium built quality"]
+    highlights: [
+      "km 180 North Coast beachfront",
+      "Mediterranean architectural style",
+      "La Vista premium built quality",
+    ],
   },
 
   "la-vista-east": {
@@ -2355,11 +3767,27 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     lng: 31.6415,
     developer: "La Vista Developments",
     city: "Sixth Settlement, New Cairo, Cairo, Egypt",
-    blurb: "La Vista East is a luxury residential compound by La Vista spanning approximately 310 acres in the Sixth Settlement, designed around large green landscapes and contemporary architecture with integrated leisure, commercial, and educational facilities.",
+    blurb:
+      "La Vista East is a luxury residential compound by La Vista spanning approximately 310 acres in the Sixth Settlement, designed around large green landscapes and contemporary architecture with integrated leisure, commercial, and educational facilities.",
     paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Clubhouse", "Swimming pools", "Sports club", "Parks", "Walking & cycling trails", "Restaurants & cafés", "Retail area", "Medical center", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Clubhouse",
+      "Swimming pools",
+      "Sports club",
+      "Parks",
+      "Walking & cycling trails",
+      "Restaurants & cafés",
+      "Retail area",
+      "Medical center",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["310 acres of green luxury living", "Sixth Settlement prime location", "Close to New Administrative Capital"]
+    highlights: [
+      "310 acres of green luxury living",
+      "Sixth Settlement prime location",
+      "Close to New Administrative Capital",
+    ],
   },
 
   "la-vista-cascada": {
@@ -2371,11 +3799,27 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     developer: "La Vista Developments",
     beachfront: true,
     type: "Resort",
-    blurb: "La Vista Cascada is a premium luxury beachfront community in Ras El Hekma offering modern residences with panoramic sea views, cascading terraces, landscaped gardens, and resort-style amenities designed to maximize Mediterranean views.",
+    blurb:
+      "La Vista Cascada is a premium luxury beachfront community in Ras El Hekma offering modern residences with panoramic sea views, cascading terraces, landscaped gardens, and resort-style amenities designed to maximize Mediterranean views.",
     paymentPlan: "35% down, installments as per launched phase",
-    amenities: ["Private beach", "Swimming pools", "Clubhouse", "Fitness center", "Commercial strip", "Hotel & spa", "Restaurants & cafés", "Running track", "Kids' areas", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Swimming pools",
+      "Clubhouse",
+      "Fitness center",
+      "Commercial strip",
+      "Hotel & spa",
+      "Restaurants & cafés",
+      "Running track",
+      "Kids' areas",
+      "24/7 security",
+    ],
     types: ["Apartment", "Chalet", "Penthouse"],
-    highlights: ["Cascading terraces with panoramic sea views", "km 204 Ras El Hekma prime location", "Hotel & spa integrated resort"]
+    highlights: [
+      "Cascading terraces with panoramic sea views",
+      "km 204 Ras El Hekma prime location",
+      "Hotel & spa integrated resort",
+    ],
   },
 
   "la-vista-gardens": {
@@ -2386,11 +3830,26 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     city: "Ain Sokhna, Suez Governorate, Egypt",
     beachfront: true,
     type: "Resort",
-    blurb: "La Vista Gardens is a luxury Red Sea resort by La Vista in Ain Sokhna designed around landscaped gardens, private beaches, and contemporary coastal residences combining lush greenery with beachfront living.",
+    blurb:
+      "La Vista Gardens is a luxury Red Sea resort by La Vista in Ain Sokhna designed around landscaped gardens, private beaches, and contemporary coastal residences combining lush greenery with beachfront living.",
     paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Private beach", "Swimming pools", "Clubhouse", "Restaurants & cafés", "Gym", "Kids' play areas", "Sports facilities", "Retail area", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Swimming pools",
+      "Clubhouse",
+      "Restaurants & cafés",
+      "Gym",
+      "Kids' play areas",
+      "Sports facilities",
+      "Retail area",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["Garden-inspired beachfront resort", "Adjacent to La Vista Topaz & La Vista 6", "Ain Sokhna Zaafarana Road location"]
+    highlights: [
+      "Garden-inspired beachfront resort",
+      "Adjacent to La Vista Topaz & La Vista 6",
+      "Ain Sokhna Zaafarana Road location",
+    ],
   },
 
   "la-vista-ras-el-hekma": {
@@ -2405,12 +3864,24 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     priceFrom: 12.5,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "La Vista Ras El Hekma is a massive 1,200-acre coastal resort by La Vista with tiered natural elevations stepping down to the Mediterranean, wide sandy beach, and crystal lagoons.",
+    blurb:
+      "La Vista Ras El Hekma is a massive 1,200-acre coastal resort by La Vista with tiered natural elevations stepping down to the Mediterranean, wide sandy beach, and crystal lagoons.",
     paymentPlan: "10%–15% down payment, remaining balance spread over 5 to 7 years interest-free",
     areaSize: "1200 feddan",
-    amenities: ["1,200 acres tiered sea-view masterplan", "Wide sandy beach", "Swimmable lagoons", "Beach clubhouses", "Commercial arcades", "24/7 security"],
+    amenities: [
+      "1,200 acres tiered sea-view masterplan",
+      "Wide sandy beach",
+      "Swimmable lagoons",
+      "Beach clubhouses",
+      "Commercial arcades",
+      "24/7 security",
+    ],
     types: ["Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["1,200 acres massive coastal resort", "Tiered elevations for panoramic sea views", "La Vista signature full-finishing quality"]
+    highlights: [
+      "1,200 acres massive coastal resort",
+      "Tiered elevations for panoramic sea views",
+      "La Vista signature full-finishing quality",
+    ],
   },
 
   "la-vista-topaz": {
@@ -2421,11 +3892,27 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     city: "Ain Sokhna, Suez Governorate, Egypt",
     beachfront: true,
     type: "Resort",
-    blurb: "La Vista Topaz is a premium terraced Red Sea resort by La Vista in Ain Sokhna offering uninterrupted sea views through elevated terrace design, luxury residences, and direct beach access with integrated leisure facilities.",
+    blurb:
+      "La Vista Topaz is a premium terraced Red Sea resort by La Vista in Ain Sokhna offering uninterrupted sea views through elevated terrace design, luxury residences, and direct beach access with integrated leisure facilities.",
     paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Private beach", "Beach club", "Swimming pools", "Clubhouse", "Restaurants & cafés", "Gym", "Sports courts", "Kids' areas", "Retail area", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Beach club",
+      "Swimming pools",
+      "Clubhouse",
+      "Restaurants & cafés",
+      "Gym",
+      "Sports courts",
+      "Kids' areas",
+      "Retail area",
+      "24/7 security",
+    ],
     types: ["Chalet", "Twin House", "Standalone Villa"],
-    highlights: ["Terraced design for sea views", "Adjacent to La Vista 6 & Gardens", "Ain Sokhna Zaafarana Road location"]
+    highlights: [
+      "Terraced design for sea views",
+      "Adjacent to La Vista 6 & Gardens",
+      "Ain Sokhna Zaafarana Road location",
+    ],
   },
 
   "lake-residence": {
@@ -2437,13 +3924,26 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     priceFrom: 9.5,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Lake Residence (Rotana Branded Residences) is a luxury hotel-serviced apartment community integrated within Hassan Allam / East Cairo footprint featuring Rotana 24/7 concierge and resort amenities.",
-    paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 8 years equal installments",
+    blurb:
+      "Lake Residence (Rotana Branded Residences) is a luxury hotel-serviced apartment community integrated within Hassan Allam / East Cairo footprint featuring Rotana 24/7 concierge and resort amenities.",
+    paymentPlan:
+      "5%–10% down payment, remaining balance spread over 7 to 8 years equal installments",
     areaSize: "5 feddan",
     unitSizes: "Studio to 380+ m² Penthouse",
-    amenities: ["Rotana 24/7 Concierge", "Housekeeping & Valet", "Wellness spa", "Fine dining", "Swimming pools", "24/7 security"],
+    amenities: [
+      "Rotana 24/7 Concierge",
+      "Housekeeping & Valet",
+      "Wellness spa",
+      "Fine dining",
+      "Swimming pools",
+      "24/7 security",
+    ],
     types: ["Studio", "Serviced Apartment", "Suite", "Penthouse", "Duplex"],
-    highlights: ["Rotana hotel management & 24/7 service", "Fully finished with ultra-luxury specs", "Hassan Allam masterplan integration"]
+    highlights: [
+      "Rotana hotel management & 24/7 service",
+      "Fully finished with ultra-luxury specs",
+      "Hassan Allam masterplan integration",
+    ],
   },
   "lake-view-residence": {
     destination: "new-cairo",
@@ -2454,13 +3954,26 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     priceFrom: 11.5,
     deliveryYear: 2020,
     status: "RTM",
-    blurb: "Lake View Residence by El Hazek Construction Group is a 77-acre completed luxury compound in Golden Square New Cairo, built around central lakes and manicured green ribbons.",
-    paymentPlan: "Ready-to-move secondary market cash or transfer structures | Original 10% down over 5–7 years",
+    blurb:
+      "Lake View Residence by El Hazek Construction Group is a 77-acre completed luxury compound in Golden Square New Cairo, built around central lakes and manicured green ribbons.",
+    paymentPlan:
+      "Ready-to-move secondary market cash or transfer structures | Original 10% down over 5–7 years",
     areaSize: "77 feddan",
     unitSizes: "119–305+ m²",
-    amenities: ["Artificial lakes", "Clubhouse", "Swimming pools", "Business strip", "Sports club", "24/7 security"],
+    amenities: [
+      "Artificial lakes",
+      "Clubhouse",
+      "Swimming pools",
+      "Business strip",
+      "Sports club",
+      "24/7 security",
+    ],
     types: ["Apartment", "Duplex", "Penthouse"],
-    highlights: ["Fully completed & operational", "77 acres Golden Square New Cairo", "Framed by expansive central lakes"]
+    highlights: [
+      "Fully completed & operational",
+      "77 acres Golden Square New Cairo",
+      "Framed by expansive central lakes",
+    ],
   },
   "makadi-heights": {
     destination: "ain-sokhna",
@@ -2473,13 +3986,24 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     priceFrom: 5.5,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "Makadi Heights by Orascom Development is a 930-acre (3.4M sqm) hillside Red Sea town rising 78m above sea level in Makadi Bay, with 33,000 sqm sports club and beach club.",
+    blurb:
+      "Makadi Heights by Orascom Development is a 930-acre (3.4M sqm) hillside Red Sea town rising 78m above sea level in Makadi Bay, with 33,000 sqm sports club and beach club.",
     paymentPlan: "10% down payment, remaining balance spread over 7 years interest-free",
     areaSize: "930 feddan",
     unitSizes: "55–130+ m²",
-    amenities: ["33,000 sqm sports club", "Hillside panoramic views", "Commercial center", "Private beach club", "24/7 security"],
+    amenities: [
+      "33,000 sqm sports club",
+      "Hillside panoramic views",
+      "Commercial center",
+      "Private beach club",
+      "24/7 security",
+    ],
     types: ["Apartment", "Chalet", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["930-acre (3.4M sqm) hillside town", "Panoramic Red Sea views 78m above sea", "15 minutes from Hurghada Airport"]
+    highlights: [
+      "930-acre (3.4M sqm) hillside town",
+      "Panoramic Red Sea views 78m above sea",
+      "15 minutes from Hurghada Airport",
+    ],
   },
 
   "hacienda-west": {
@@ -2491,11 +4015,24 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     city: "km 208, Ras El Hekma, North Coast, Egypt",
     beachfront: true,
     type: "Resort",
-    blurb: "Hacienda West is a boutique luxury beach resort by Palm Hills in Ras El Hekma offering Mediterranean residences, swimmable lagoons, and direct beach access.",
+    blurb:
+      "Hacienda West is a boutique luxury beach resort by Palm Hills in Ras El Hekma offering Mediterranean residences, swimmable lagoons, and direct beach access.",
     paymentPlan: "10% down, installments up to 8 years",
-    amenities: ["Private beach", "Beach club", "Swimming pools", "Clubhouse", "Sports courts", "Restaurants & cafés", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Beach club",
+      "Swimming pools",
+      "Clubhouse",
+      "Sports courts",
+      "Restaurants & cafés",
+      "24/7 security",
+    ],
     types: ["Chalet", "Twin House", "Standalone Villa"],
-    highlights: ["Ras El Hekma km 208 prime beach location", "Swimmable crystal lagoons", "Boutique low-density coastal community"]
+    highlights: [
+      "Ras El Hekma km 208 prime beach location",
+      "Swimmable crystal lagoons",
+      "Boutique low-density coastal community",
+    ],
   },
 
   "phnc-commercial": {
@@ -2505,11 +4042,22 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     lng: 31.545,
     developer: "Palm Hills Developments",
     city: "Palm Hills New Cairo, 5th Settlement, New Cairo, Egypt",
-    blurb: "PHNC Commercial is Palm Hills' premier retail and office hub serving Palm Hills New Cairo and Golden Square with modern business suites and commercial spaces.",
+    blurb:
+      "PHNC Commercial is Palm Hills' premier retail and office hub serving Palm Hills New Cairo and Golden Square with modern business suites and commercial spaces.",
     paymentPlan: "10% down, installments up to 7 years",
-    amenities: ["Retail shops", "Office spaces", "Underground parking", "Dining district", "24/7 security"],
+    amenities: [
+      "Retail shops",
+      "Office spaces",
+      "Underground parking",
+      "Dining district",
+      "24/7 security",
+    ],
     types: ["Commercial Shop", "Administrative Office", "Medical Clinic"],
-    highlights: ["Serves Palm Hills New Cairo community", "Prime Golden Square location", "Modern glass facades & commercial plaza"]
+    highlights: [
+      "Serves Palm Hills New Cairo community",
+      "Prime Golden Square location",
+      "Modern glass facades & commercial plaza",
+    ],
   },
 
   "palm-hills-ritz-carlton": {
@@ -2519,28 +4067,53 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     lng: 30.955,
     developer: "Palm Hills Developments",
     city: "6th of October City, Giza, Egypt",
-    blurb: "Palm Hills Ritz Carlton Residences offers ultra-luxury hotel-serviced villas and branded residences with 5-star Ritz-Carlton hospitality services.",
+    blurb:
+      "Palm Hills Ritz Carlton Residences offers ultra-luxury hotel-serviced villas and branded residences with 5-star Ritz-Carlton hospitality services.",
     paymentPlan: "15% down, installments up to 7 years",
-    amenities: ["Ritz-Carlton hotel services", "Concierge", "Fine dining", "Spa & wellness center", "Infinity pool", "Golf views", "Private club"],
+    amenities: [
+      "Ritz-Carlton hotel services",
+      "Concierge",
+      "Fine dining",
+      "Spa & wellness center",
+      "Infinity pool",
+      "Golf views",
+      "Private club",
+    ],
     types: ["Branded Villa", "Palace"],
-    highlights: ["5-star Ritz-Carlton branded luxury", "Overlooking 18-hole golf course", "Exclusive ultra-private enclave"]
+    highlights: [
+      "5-star Ritz-Carlton branded luxury",
+      "Overlooking 18-hole golf course",
+      "Exclusive ultra-private enclave",
+    ],
   },
 
-  "palmet": {
+  palmet: {
     name: "Palmet",
     destination: "october",
     lat: 29.972,
     lng: 30.932,
     developer: "Palm Hills Developments",
     city: "6th of October City, Giza, Egypt",
-    blurb: "Palmet is a dynamic mixed-use commercial and lifestyle boulevard by Palm Hills featuring retail promenades, boutique offices, and dining spaces.",
+    blurb:
+      "Palmet is a dynamic mixed-use commercial and lifestyle boulevard by Palm Hills featuring retail promenades, boutique offices, and dining spaces.",
     paymentPlan: "10% down, installments up to 6 years",
-    amenities: ["Lifestyle boulevard", "Dining plaza", "Outdoor cafes", "Retail shops", "Boutique offices", "Valet parking"],
+    amenities: [
+      "Lifestyle boulevard",
+      "Dining plaza",
+      "Outdoor cafes",
+      "Retail shops",
+      "Boutique offices",
+      "Valet parking",
+    ],
     types: ["Retail Store", "Boutique Office"],
-    highlights: ["Flagship lifestyle boulevard in 6th October", "Direct access from 26th of July Corridor", "Outdoor pedestrian plaza"]
+    highlights: [
+      "Flagship lifestyle boulevard in 6th October",
+      "Direct access from 26th of July Corridor",
+      "Outdoor pedestrian plaza",
+    ],
   },
 
-  "aliva": {
+  aliva: {
     name: "Aliva Mostakbal City",
     destination: "mostakbal-city",
     lat: 30.048,
@@ -2550,13 +4123,24 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     priceFrom: 8.5,
     deliveryYear: 2027,
     status: "RTM",
-    blurb: "Aliva Mostakbal City by Mountain View is a 638-acre mega-city built around 6 interactive park experiences, navigable water streams, and River Park.",
+    blurb:
+      "Aliva Mostakbal City by Mountain View is a 638-acre mega-city built around 6 interactive park experiences, navigable water streams, and River Park.",
     paymentPlan: "5% down payment, remaining balance spread over 7 to 8 years interest-free",
     areaSize: "638–640 feddan",
     unitSizes: "100–160+ m²",
-    amenities: ["River Park & navigable streams", "Fields Park & farmer's market", "Clubhouse", "Sports academy", "24/7 security"],
+    amenities: [
+      "River Park & navigable streams",
+      "Fields Park & farmer's market",
+      "Clubhouse",
+      "Sports academy",
+      "24/7 security",
+    ],
     types: ["Apartment", "iVilla", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["638 acres in Mostakbal City", "6 interactive park experiences", "Navigable water streams with boats"]
+    highlights: [
+      "638 acres in Mostakbal City",
+      "6 interactive park experiences",
+      "Navigable water streams with boats",
+    ],
   },
 
   "mountain-view-icity": {
@@ -2569,13 +4153,24 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     priceFrom: 7.4,
     deliveryYear: 2026,
     status: "RTM",
-    blurb: "Mountain View iCity October is a 500-acre smart city in 6th of October City featuring 4D multi-level urban design, 60-acre sports club, and car-free park levels.",
+    blurb:
+      "Mountain View iCity October is a 500-acre smart city in 6th of October City featuring 4D multi-level urban design, 60-acre sports club, and car-free park levels.",
     paymentPlan: "5%–10% down payment, remaining balance spread over 8 to 10 years interest-free",
     areaSize: "500 feddan",
     unitSizes: "115–230+ m²",
-    amenities: ["60-acre sports club", "4D multi-level road network", "Lagoon beach", "10 km promenade", "24/7 security"],
+    amenities: [
+      "60-acre sports club",
+      "4D multi-level road network",
+      "Lagoon beach",
+      "10 km promenade",
+      "24/7 security",
+    ],
     types: ["Apartment", "iVilla", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["500 acres 4D multi-level smart city", "60-acre central sports club", "Car-free pedestrian park levels"]
+    highlights: [
+      "500 acres 4D multi-level smart city",
+      "60-acre central sports club",
+      "Car-free pedestrian park levels",
+    ],
   },
 
   "sea-via": {
@@ -2587,11 +4182,22 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     city: "Ras El Hekma, North Coast, Egypt",
     beachfront: true,
     type: "Resort",
-    blurb: "Sea Via is an exclusive G+2 boutique sea & lagoon view chalet community by La Vista Developments in Ras El Hekma.",
+    blurb:
+      "Sea Via is an exclusive G+2 boutique sea & lagoon view chalet community by La Vista Developments in Ras El Hekma.",
     paymentPlan: "10% down, installments up to 7 years",
-    amenities: ["Pool view chalets", "Swimmable lagoons", "Beach club", "Landscaped gardens", "24/7 security"],
+    amenities: [
+      "Pool view chalets",
+      "Swimmable lagoons",
+      "Beach club",
+      "Landscaped gardens",
+      "24/7 security",
+    ],
     types: ["Chalet Ground", "Chalet 1st Floor", "Chalet 2nd Floor Roof"],
-    highlights: ["Ras El Hekma G+2 low-rise design", "Sea & lagoon views", "Fully finished chalets"]
+    highlights: [
+      "Ras El Hekma G+2 low-rise design",
+      "Sea & lagoon views",
+      "Fully finished chalets",
+    ],
   },
 
   "ras-el-hikma-lagoona": {
@@ -2603,11 +4209,16 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     city: "km 201, Ras El Hekma, North Coast, Egypt",
     beachfront: true,
     type: "Resort",
-    blurb: "La Vista Ras El Hikma Lagoona is a private island villa and lagoon chalet development by La Vista spanning 400 feddans in Ras El Hekma.",
+    blurb:
+      "La Vista Ras El Hikma Lagoona is a private island villa and lagoon chalet development by La Vista spanning 400 feddans in Ras El Hekma.",
     paymentPlan: "10% down, installments up to 7 years",
     amenities: ["Gated private islands", "Crystal lagoons", "Beach club", "Pools", "24/7 security"],
     types: ["Chalet", "Twin House", "Island Villa"],
-    highlights: ["Villas on gated private islands", "400 feddans crystal lagoon resort", "Fully finished residences"]
+    highlights: [
+      "Villas on gated private islands",
+      "400 feddans crystal lagoon resort",
+      "Fully finished residences",
+    ],
   },
 
   "la-vista-ray": {
@@ -2619,11 +4230,23 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     city: "Ain Sokhna, Suez Governorate, Egypt",
     beachfront: true,
     type: "Resort",
-    blurb: "La Vista Ray is a boutique 44-feddan Red Sea resort by La Vista offering contemporary beachfront chalets, pools, and sports facilities.",
+    blurb:
+      "La Vista Ray is a boutique 44-feddan Red Sea resort by La Vista offering contemporary beachfront chalets, pools, and sports facilities.",
     paymentPlan: "10% down, installments up to 6 years",
-    amenities: ["Private beach", "Beach club", "Swimming pools", "Sports courts", "Commercial strip", "24/7 security"],
+    amenities: [
+      "Private beach",
+      "Beach club",
+      "Swimming pools",
+      "Sports courts",
+      "Commercial strip",
+      "24/7 security",
+    ],
     types: ["Chalet Ground", "Chalet 1st Floor", "Chalet 2nd Floor Roof"],
-    highlights: ["44 feddans boutique beachfront resort", "15 km before Zaafarana", "Fully finished chalets"]
+    highlights: [
+      "44 feddans boutique beachfront resort",
+      "15 km before Zaafarana",
+      "Fully finished chalets",
+    ],
   },
 
   "zed-east": {
@@ -2633,11 +4256,24 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     lng: 31.528,
     developer: "ORA Developers",
     city: "New Cairo, Cairo, Egypt",
-    blurb: "Zed East is Naguib Sawiris' flagship 400-acre master-planned community in New Cairo, featuring iconic towers, expansive central park, and sports club.",
+    blurb:
+      "Zed East is Naguib Sawiris' flagship 400-acre master-planned community in New Cairo, featuring iconic towers, expansive central park, and sports club.",
     paymentPlan: "5% down, installments up to 10 years",
-    amenities: ["Central park", "Zed sports club", "Retail boulevard", "Fine dining", "Swimming pools", "Spa", "24/7 security"],
+    amenities: [
+      "Central park",
+      "Zed sports club",
+      "Retail boulevard",
+      "Fine dining",
+      "Swimming pools",
+      "Spa",
+      "24/7 security",
+    ],
     types: ["Studio", "Apartment", "Loft", "Serviced Apartment", "Villa"],
-    highlights: ["400 acres in New Cairo Golden Square", "Zed Sports Club & central park", "Naguib Sawiris signature development"]
+    highlights: [
+      "400 acres in New Cairo Golden Square",
+      "Zed Sports Club & central park",
+      "Naguib Sawiris signature development",
+    ],
   },
 
   "grova-east-hills": {
@@ -2650,50 +4286,98 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     priceFrom: 34,
     deliveryYear: 2028,
     status: "Off-Plan",
-    blurb: "Grova East Hills is Hassan Allam Holding's newest 300-feddan luxury villa community in New Cairo, adjacent to Patio Town. Starting from EGP 34M, the compound features townhouses, twin houses and standalone villas with a 7% annual maintenance fee.",
-    paymentPlan: "5% down payment · 5% after 3 months · 90% over 8 years equal installments · 7% annual maintenance",
+    blurb:
+      "Grova East Hills is Hassan Allam Holding's newest 300-feddan luxury villa community in New Cairo, adjacent to Patio Town. Starting from EGP 34M, the compound features townhouses, twin houses and standalone villas with a 7% annual maintenance fee.",
+    paymentPlan:
+      "5% down payment · 5% after 3 months · 90% over 8 years equal installments · 7% annual maintenance",
     areaSize: "300 feddan",
-    unitSizes: "Townhouse Middle 263 m² · Townhouse Corner 263 m² · Twin House A 276 m² · Twin House B 287 m² · Villa A1 332 m² · Villa 2A 396 m² · Villa 2B 397 m² · Villa V3 465 m²",
-    amenities: ["Clubhouse", "Elevated parks", "Water features", "Sports facilities", "Commercial hub", "24/7 security"],
-    types: ["Town House Middle", "Town House Corner", "Twin House A", "Twin House B", "Villa A1", "Villa 2A", "Villa 2B", "Villa V3"],
-    highlights: ["300 feddans in New Cairo", "Starting from EGP 34M", "Hassan Allam signature luxury villas", "Adjacent to Patio Town & major corridors"]
+    unitSizes:
+      "Townhouse Middle 263 m² · Townhouse Corner 263 m² · Twin House A 276 m² · Twin House B 287 m² · Villa A1 332 m² · Villa 2A 396 m² · Villa 2B 397 m² · Villa V3 465 m²",
+    amenities: [
+      "Clubhouse",
+      "Elevated parks",
+      "Water features",
+      "Sports facilities",
+      "Commercial hub",
+      "24/7 security",
+    ],
+    types: [
+      "Town House Middle",
+      "Town House Corner",
+      "Twin House A",
+      "Twin House B",
+      "Villa A1",
+      "Villa 2A",
+      "Villa 2B",
+      "Villa V3",
+    ],
+    highlights: [
+      "300 feddans in New Cairo",
+      "Starting from EGP 34M",
+      "Hassan Allam signature luxury villas",
+      "Adjacent to Patio Town & major corridors",
+    ],
   },
-  "madinaty": {
+  madinaty: {
     destination: "new-cairo",
-    lat: 30.100,
-    lng: 31.620,
+    lat: 30.1,
+    lng: 31.62,
     developer: "Talaat Moustafa Group (TMG)",
     city: "East New Cairo (KM 33 Cairo-Suez Road), Cairo, Egypt",
     priceFrom: 5,
     deliveryYear: 2010,
     status: "RTM",
-    blurb: "Madinaty by TMG is Egypt's flagship 8,000-acre smart city in East New Cairo (KM 33 Cairo-Suez Road) featuring 200-acre Sporting Club, Open Air Mall, and international schools.",
+    blurb:
+      "Madinaty by TMG is Egypt's flagship 8,000-acre smart city in East New Cairo (KM 33 Cairo-Suez Road) featuring 200-acre Sporting Club, Open Air Mall, and international schools.",
     paymentPlan: "5%–20% down payment, remaining balance spread over 6 to 12 years interest-free",
     areaSize: "8000 feddan",
     unitSizes: "50–160+ m²",
-    amenities: ["200-acre Sporting Club", "Open Air Mall", "Craft Zone", "The Spine business district", "International schools", "24/7 security"],
+    amenities: [
+      "200-acre Sporting Club",
+      "Open Air Mall",
+      "Craft Zone",
+      "The Spine business district",
+      "International schools",
+      "24/7 security",
+    ],
     types: ["Studio", "Apartment", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["8,000-acre all-inclusive smart city", "200-acre Madinaty Sporting Club", "Open Air Mall & craft zones"]
+    highlights: [
+      "8,000-acre all-inclusive smart city",
+      "200-acre Madinaty Sporting Club",
+      "Open Air Mall & craft zones",
+    ],
   },
   "mountain-view-crysta": {
     destination: "sidi-abdelrahman",
     km: 120,
     city: "Sidi Abdel Rahman (KM 120), Matrouh Governorate, Egypt",
     lat: 30.985,
-    lng: 28.710,
+    lng: 28.71,
     developer: "Mountain View",
     beachfront: true,
     type: "Resort",
     priceFrom: 6.9,
     deliveryYear: 2027,
     status: "RTM",
-    blurb: "Mountain View Crysta (Bahamas vibe) in Sidi Abdel Rahman (KM 120) spans 470 acres with 1km private beach, 90% sea/lagoon views, and Lighthouse Hub.",
-    paymentPlan: "5% down payment (+ 5% after 3 months), remaining balance spread over 6 to 9 years interest-free",
+    blurb:
+      "Mountain View Crysta (Bahamas vibe) in Sidi Abdel Rahman (KM 120) spans 470 acres with 1km private beach, 90% sea/lagoon views, and Lighthouse Hub.",
+    paymentPlan:
+      "5% down payment (+ 5% after 3 months), remaining balance spread over 6 to 9 years interest-free",
     areaSize: "470 feddan",
     unitSizes: "45–365+ m²",
-    amenities: ["1km private beach", "Lighthouse Hub", "3 boutique hotels", "Crystal lagoons", "24/7 security"],
+    amenities: [
+      "1km private beach",
+      "Lighthouse Hub",
+      "3 boutique hotels",
+      "Crystal lagoons",
+      "24/7 security",
+    ],
     types: ["Cabana", "Beach House", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["470 acres with Bahamas beach-town vibe", "1km private beach frontage", "90% sea or crystal lagoon views"]
+    highlights: [
+      "470 acres with Bahamas beach-town vibe",
+      "1km private beach frontage",
+      "90% sea or crystal lagoon views",
+    ],
   },
   "mountain-view-chillout-park": {
     destination: "6th-of-october-city",
@@ -2704,12 +4388,23 @@ paymentPlan: "Resale cash terms / high-liquidity secondary market agreements",
     priceFrom: 15,
     deliveryYear: 2022,
     status: "RTM",
-    blurb: "Mountain View Chillout Park is a 216-acre wellness-inspired compound in 6th of October City with Green Forest, Meditation Lake, and 24-acre trekking track.",
+    blurb:
+      "Mountain View Chillout Park is a 216-acre wellness-inspired compound in 6th of October City with Green Forest, Meditation Lake, and 24-acre trekking track.",
     paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 9 years interest-free",
     areaSize: "216 feddan",
     unitSizes: "165–627+ m²",
-    amenities: ["Green Forest", "Meditation Lake", "24-acre trekking track", "Jacuzzi Jungles", "24/7 security"],
+    amenities: [
+      "Green Forest",
+      "Meditation Lake",
+      "24-acre trekking track",
+      "Jacuzzi Jungles",
+      "24/7 security",
+    ],
     types: ["iVilla", "Townhouse", "Twin House", "Standalone Villa"],
-    highlights: ["216-acre wellness & nature sanctuary", "24-acre specialized trekking track", "Meditation Lake & Jacuzzi Jungles"]
-  }
+    highlights: [
+      "216-acre wellness & nature sanctuary",
+      "24-acre specialized trekking track",
+      "Meditation Lake & Jacuzzi Jungles",
+    ],
+  },
 };

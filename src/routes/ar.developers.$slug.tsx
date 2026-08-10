@@ -24,7 +24,7 @@ export const Route = createFileRoute("/ar/developers/$slug")({
         blurb: loaderData.blurb,
         projectCount: compoundsList.length,
       },
-      "ar"
+      "ar",
     );
 
     const devSchema = buildDeveloperSchema({
@@ -73,7 +73,10 @@ export const Route = createFileRoute("/ar/developers/$slug")({
 function ArabicDeveloperPage() {
   const dev = Route.useLoaderData();
   const list = compoundsByDeveloper(dev.slug);
-  const seo = getDeveloperSEO({ name: dev.name, slug: dev.slug, blurb: dev.blurb, projectCount: list.length }, "ar");
+  const seo = getDeveloperSEO(
+    { name: dev.name, slug: dev.slug, blurb: dev.blurb, projectCount: list.length },
+    "ar",
+  );
 
   return (
     <Shell>
@@ -84,14 +87,22 @@ function ArabicDeveloperPage() {
             <CheckCircle2 className="h-4 w-4 text-amber-600" />
             مراجعة لهجة مصرية: تم اعتماد اسم المطور باللاتينية {dev.name} مع محتوى تسويقي مصري.
           </span>
-          <Link to="/developers/$slug" params={{ slug: dev.slug }} className="underline text-[11px] font-bold">English Page</Link>
+          <Link
+            to="/developers/$slug"
+            params={{ slug: dev.slug }}
+            className="underline text-[11px] font-bold"
+          >
+            English Page
+          </Link>
         </div>
 
         {/* Header */}
         <div className="bg-primary text-primary-foreground py-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
             <div>
-              <span className="text-xs uppercase font-bold text-accent tracking-wider">سجل مشاريع المطور العقاري</span>
+              <span className="text-xs uppercase font-bold text-accent tracking-wider">
+                سجل مشاريع المطور العقاري
+              </span>
               <h1 className="font-display text-3xl sm:text-4xl font-bold tracking-tight mt-1">
                 {seo.h1}
               </h1>
@@ -109,7 +120,9 @@ function ArabicDeveloperPage() {
 
         {/* Compounds Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <h2 className="font-display text-2xl font-bold text-foreground mb-6">مشاريع شركة {dev.name} ({list.length})</h2>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+            مشاريع شركة {dev.name} ({list.length})
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {list.map((c) => (
               <CompoundCard key={c.slug} c={c} />

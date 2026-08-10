@@ -15,8 +15,20 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import {
-  Heart, MapPin, Calendar, Building2, Wallet, Check, Phone,
-  ChevronLeft, ChevronRight, Globe, Calculator, CheckCircle2, ChevronDown, Sparkles
+  Heart,
+  MapPin,
+  Calendar,
+  Building2,
+  Wallet,
+  Check,
+  Phone,
+  ChevronLeft,
+  ChevronRight,
+  Globe,
+  Calculator,
+  CheckCircle2,
+  ChevronDown,
+  Sparkles,
 } from "lucide-react";
 
 export const Route = createFileRoute("/ar/projects/$slug")({
@@ -90,15 +102,17 @@ function ArabicCompoundPage() {
     logo: `https://ui-avatars.com/api/?background=1f3a5f&color=fff&bold=true&size=128&name=${encodeURIComponent(c.developer || "D")}`,
     count: 1,
     blurb: `${c.developer} is an active real estate developer with projects tracked on PropTrack.`,
-    website: ""
+    website: "",
   };
-  const related = compoundsByDestination(c.destination).filter((x) => x.slug !== c.slug).slice(0, 4);
+  const related = compoundsByDestination(c.destination)
+    .filter((x) => x.slug !== c.slug)
+    .slice(0, 4);
 
   const priceStr = formatEGP(c.priceFrom);
   const favorites = useStore((s) => s.favorites);
   const toggleFav = useStore((s) => s.toggleFavorite);
   const isFav = favorites.includes(c.slug);
-  
+
   const [availabilityLoaded, setAvailabilityLoaded] = useState(false);
 
   const user = useStore((s) => s.user);
@@ -136,7 +150,7 @@ function ArabicCompoundPage() {
         budget: c.priceFrom || 0,
         interest: c.slug,
         stage: "new",
-        notes: `الوحدة المفضلة: ${leadUnit}\nنوع الاهتمام: ${leadInterestType}\nأفضل وقت للاتصال: ${leadTime}`
+        notes: `الوحدة المفضلة: ${leadUnit}\nنوع الاهتمام: ${leadInterestType}\nأفضل وقت للاتصال: ${leadTime}`,
       });
       toast.success("تم تسجيل اهتمامك بنجاح! سيتصل بك أحد وكلائنا قريباً.");
       setInterestModalOpen(false);
@@ -163,16 +177,23 @@ function ArabicCompoundPage() {
         <div className="bg-amber-500/10 border-b border-amber-500/20 px-4 py-2 text-xs text-amber-800 dark:text-amber-300 flex items-center justify-between">
           <span className="flex items-center gap-1.5 font-medium">
             <CheckCircle2 className="h-4 w-4 text-amber-600" />
-            مراجعة لهجة مصرية: تم صياغة المحتوى باللهجة المصرية التسويقية مع الحفاظ على أسماء المطورين والكمبوند باللاتينية.
+            مراجعة لهجة مصرية: تم صياغة المحتوى باللهجة المصرية التسويقية مع الحفاظ على أسماء
+            المطورين والكمبوند باللاتينية.
           </span>
-          <Link to="/projects/$slug" params={{ slug: c.slug }} className="underline text-[11px] font-bold">English Page</Link>
+          <Link
+            to="/projects/$slug"
+            params={{ slug: c.slug }}
+            className="underline text-[11px] font-bold"
+          >
+            English Page
+          </Link>
         </div>
 
         {/* Hero Section */}
         <div className="relative h-[340px] md:h-[420px] overflow-hidden">
           <img src={c.hero} alt={c.name} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
-          
+
           <div className="absolute bottom-6 inset-x-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
             <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-accent mb-2">
               <span>{c.developer}</span>
@@ -182,9 +203,7 @@ function ArabicCompoundPage() {
             <h1 className="font-display text-3xl sm:text-5xl font-bold tracking-tight">
               كمبوند {c.name} — {c.destination}
             </h1>
-            <p className="mt-2 text-sm sm:text-base text-white/80 max-w-2xl">
-              {c.blurb}
-            </p>
+            <p className="mt-2 text-sm sm:text-base text-white/80 max-w-2xl">{c.blurb}</p>
           </div>
         </div>
 
@@ -220,19 +239,30 @@ function ArabicCompoundPage() {
               </h2>
               <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  يعد كمبوند <strong>{c.name}</strong> من أبرز المشاريع السكنية والساحلية الصادرة عن شركة <strong>{c.developer}</strong> في منطقة <strong>{c.destination}</strong>. تم تصميم الماستر بلان لتقديم أعلى مستويات الخصوصية مع إطلالات مباشرة على اللاندسكيب والبحيرات الصناعية.
+                  يعد كمبوند <strong>{c.name}</strong> من أبرز المشاريع السكنية والساحلية الصادرة عن
+                  شركة <strong>{c.developer}</strong> في منطقة <strong>{c.destination}</strong>. تم
+                  تصميم الماستر بلان لتقديم أعلى مستويات الخصوصية مع إطلالات مباشرة على اللاندسكيب
+                  والبحيرات الصناعية.
                 </p>
                 <p>
-                  يبدأ سعر الوحدات في كمبوند <strong>{c.name}</strong> من <strong>{priceStr}</strong> مع توفير خطط سداد مريحة تعتمد على <strong>مقدم 5% إلى 10%</strong> وتقسيط الباقي على أقساط متساوية بدون فوائد تصل حتى <strong>8 سنوات</strong>.
+                  يبدأ سعر الوحدات في كمبوند <strong>{c.name}</strong> من{" "}
+                  <strong>{priceStr}</strong> مع توفير خطط سداد مريحة تعتمد على{" "}
+                  <strong>مقدم 5% إلى 10%</strong> وتقسيط الباقي على أقساط متساوية بدون فوائد تصل
+                  حتى <strong>8 سنوات</strong>.
                 </p>
               </div>
 
               {/* Unique Features List */}
               <div className="pt-2">
-                <h3 className="font-bold text-foreground text-base mb-3">الخدمات والمميزات الرئيسية:</h3>
+                <h3 className="font-bold text-foreground text-base mb-3">
+                  الخدمات والمميزات الرئيسية:
+                </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-muted-foreground">
                   {c.amenities.map((a) => (
-                    <div key={a} className="flex items-center gap-2 bg-secondary/40 p-2.5 rounded-xl border border-border/50">
+                    <div
+                      key={a}
+                      className="flex items-center gap-2 bg-secondary/40 p-2.5 rounded-xl border border-border/50"
+                    >
                       <Check className="h-4 w-4 text-accent shrink-0" />
                       <span>{a}</span>
                     </div>
@@ -243,7 +273,9 @@ function ArabicCompoundPage() {
 
             {/* Payment Plan Card */}
             <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-border rounded-2xl p-6">
-              <h3 className="font-display text-xl font-bold text-primary mb-2">أنظمة السداد والتقسيط المتاحة</h3>
+              <h3 className="font-display text-xl font-bold text-primary mb-2">
+                أنظمة السداد والتقسيط المتاحة
+              </h3>
               <p className="text-sm text-muted-foreground mb-4">
                 تتوفر خطط سداد مخصصة بخيارات تقسيط مرنة لمشروع {c.name}.
               </p>
@@ -251,10 +283,17 @@ function ArabicCompoundPage() {
                 {c.paymentPlan}
               </div>
               <div className="flex flex-wrap gap-3">
-                <a href="tel:201029324783" className="px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-xs font-bold hover:bg-primary/90">
+                <a
+                  href="tel:201029324783"
+                  className="px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-xs font-bold hover:bg-primary/90"
+                >
                   <Phone className="inline h-3.5 w-3.5 ml-1" /> تواصل مع مستشار العقارات
                 </a>
-                <Link to="/calculator" search={{ project: c.slug }} className="px-5 py-2.5 rounded-full border border-accent text-accent text-xs font-bold hover:bg-accent/10">
+                <Link
+                  to="/calculator"
+                  search={{ project: c.slug }}
+                  className="px-5 py-2.5 rounded-full border border-accent text-accent text-xs font-bold hover:bg-accent/10"
+                >
                   <Calculator className="inline h-3.5 w-3.5 ml-1" /> حساب قيمة الأقساط
                 </Link>
               </div>
@@ -263,7 +302,9 @@ function ArabicCompoundPage() {
             {/* Live Availability Section if available */}
             {availabilityBySlug(c.slug) && (
               <div className="space-y-3">
-                <h3 className="font-display text-xl font-bold text-foreground">الوحدات المتاحة حالياً للبيع</h3>
+                <h3 className="font-display text-xl font-bold text-foreground">
+                  الوحدات المتاحة حالياً للبيع
+                </h3>
                 <AvailabilitySection data={availabilityBySlug(c.slug)!} projectSlug={c.slug} />
               </div>
             )}
@@ -272,13 +313,24 @@ function ArabicCompoundPage() {
           {/* Sidebar CTA */}
           <div className="space-y-6">
             <div className="bg-card border border-border rounded-2xl p-6 space-y-4 shadow-sm">
-              <span className="text-xs uppercase font-bold text-muted-foreground block">السعر الإفتتاحي</span>
+              <span className="text-xs uppercase font-bold text-muted-foreground block">
+                السعر الإفتتاحي
+              </span>
               <div className="font-display text-3xl font-bold text-accent">{priceStr}</div>
               <div className="space-y-2 pt-2">
-                <Button className="w-full rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground font-bold cursor-pointer" size="lg" onClick={() => setInterestModalOpen(true)}>
+                <Button
+                  className="w-full rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground font-bold cursor-pointer"
+                  size="lg"
+                  onClick={() => setInterestModalOpen(true)}
+                >
                   <Sparkles className="ml-2 h-4 w-4" /> تسجيل الاهتمام بالكمبوند
                 </Button>
-                <Button onClick={() => toggleFav(c.slug)} variant="outline" className="w-full rounded-full" size="lg">
+                <Button
+                  onClick={() => toggleFav(c.slug)}
+                  variant="outline"
+                  className="w-full rounded-full"
+                  size="lg"
+                >
                   <Heart className={`ml-2 h-4 w-4 ${isFav ? "fill-sunset text-sunset" : ""}`} />
                   {isFav ? "محفوظ في المفضلة" : "حفظ في المفضلة"}
                 </Button>
@@ -287,10 +339,16 @@ function ArabicCompoundPage() {
 
             {/* Developer Summary Card */}
             {dev && (
-              <Link to="/ar/developers/$slug" params={{ slug: dev.slug }} className="block bg-card border border-border rounded-2xl p-5 hover:border-accent transition-colors">
+              <Link
+                to="/ar/developers/$slug"
+                params={{ slug: dev.slug }}
+                className="block bg-card border border-border rounded-2xl p-5 hover:border-accent transition-colors"
+              >
                 <span className="text-xs text-muted-foreground block mb-1">عن المطور العقاري</span>
                 <div className="font-bold text-foreground text-lg">{dev.name}</div>
-                <div className="text-xs text-accent font-semibold mt-1">تصفح جميع مشاريع {dev.name} ({dev.count}) ←</div>
+                <div className="text-xs text-accent font-semibold mt-1">
+                  تصفح جميع مشاريع {dev.name} ({dev.count}) ←
+                </div>
               </Link>
             )}
           </div>
@@ -299,7 +357,9 @@ function ArabicCompoundPage() {
         {/* Related Compounds in Same Destination */}
         {related.length > 0 && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-border">
-            <h2 className="font-display text-2xl font-bold text-foreground mb-6">مشاريع أخرى في {c.destination}</h2>
+            <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+              مشاريع أخرى في {c.destination}
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {related.map((r) => (
                 <CompoundCard key={r.slug} c={r} />
@@ -311,19 +371,28 @@ function ArabicCompoundPage() {
 
       {/* Register Interest Modal (Arabic) */}
       <Dialog open={interestModalOpen} onOpenChange={setInterestModalOpen}>
-        <DialogContent className="max-w-md rounded-3xl border border-border/80 bg-card p-6 shadow-2xl backdrop-blur-xl animate-fade-in z-50 text-right" dir="rtl">
+        <DialogContent
+          className="max-w-md rounded-3xl border border-border/80 bg-card p-6 shadow-2xl backdrop-blur-xl animate-fade-in z-50 text-right"
+          dir="rtl"
+        >
           <DialogHeader className="text-right sm:text-right">
             <DialogTitle className="font-display text-2xl font-bold text-primary">
               تسجيل الاهتمام
             </DialogTitle>
             <p className="text-xs text-muted-foreground mt-1">
-              مهتم بمشروع <strong className="text-primary font-semibold">{c.name}</strong>؟ يرجى ملء بياناتك أدناه للتواصل معك.
+              مهتم بمشروع <strong className="text-primary font-semibold">{c.name}</strong>؟ يرجى ملء
+              بياناتك أدناه للتواصل معك.
             </p>
           </DialogHeader>
 
           <form onSubmit={handleRegisterInterest} className="space-y-4 mt-3">
             <div className="space-y-1.5">
-              <label htmlFor="ar-lead-name" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">الاسم بالكامل</label>
+              <label
+                htmlFor="ar-lead-name"
+                className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80"
+              >
+                الاسم بالكامل
+              </label>
               <input
                 id="ar-lead-name"
                 type="text"
@@ -336,7 +405,12 @@ function ArabicCompoundPage() {
             </div>
 
             <div className="space-y-1.5">
-              <label htmlFor="ar-lead-phone" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">رقم الهاتف</label>
+              <label
+                htmlFor="ar-lead-phone"
+                className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80"
+              >
+                رقم الهاتف
+              </label>
               <input
                 id="ar-lead-phone"
                 type="tel"
@@ -351,7 +425,12 @@ function ArabicCompoundPage() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <label htmlFor="ar-lead-unit" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">الوحدة المفضلة</label>
+                <label
+                  htmlFor="ar-lead-unit"
+                  className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80"
+                >
+                  الوحدة المفضلة
+                </label>
                 <div className="relative">
                   <select
                     id="ar-lead-unit"
@@ -359,8 +438,13 @@ function ArabicCompoundPage() {
                     onChange={(e) => setLeadUnit(e.target.value)}
                     className="w-full appearance-none rounded-xl border border-border/80 bg-background/50 pl-8 pr-3.5 py-2.5 text-xs font-medium text-foreground transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15 cursor-pointer"
                   >
-                    {(c.types && c.types.length > 0 ? c.types : ["Apartment", "Chalet", "Villa", "Townhouse", "Twin House"]).map((type) => (
-                      <option key={type} value={type}>{type}</option>
+                    {(c.types && c.types.length > 0
+                      ? c.types
+                      : ["Apartment", "Chalet", "Villa", "Townhouse", "Twin House"]
+                    ).map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
                     ))}
                   </select>
                   <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground/60">
@@ -370,7 +454,12 @@ function ArabicCompoundPage() {
               </div>
 
               <div className="space-y-1.5">
-                <label htmlFor="ar-lead-interest" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">نوع الاهتمام</label>
+                <label
+                  htmlFor="ar-lead-interest"
+                  className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80"
+                >
+                  نوع الاهتمام
+                </label>
                 <div className="relative">
                   <select
                     id="ar-lead-interest"
@@ -391,7 +480,12 @@ function ArabicCompoundPage() {
             </div>
 
             <div className="space-y-1.5">
-              <label htmlFor="ar-lead-time" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">أفضل وقت للاتصال</label>
+              <label
+                htmlFor="ar-lead-time"
+                className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80"
+              >
+                أفضل وقت للاتصال
+              </label>
               <div className="relative">
                 <select
                   id="ar-lead-time"

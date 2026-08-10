@@ -4,17 +4,35 @@ import { Shell } from "@/components/layout/Shell";
 import { compounds, compoundBySlug } from "@/data/compounds";
 import { availabilityBySlug } from "@/data/availability";
 import { useStore } from "@/lib/store";
-import { 
-  GitCompareArrows, Search, ChevronDown, Check, Star, 
-  MapPin, Calendar, Building2, Wallet, Waves, ArrowRight,
-  TrendingDown, Info, ShieldCheck, ArrowUpDown, Sliders, Download
+import {
+  GitCompareArrows,
+  Search,
+  ChevronDown,
+  Check,
+  Star,
+  MapPin,
+  Calendar,
+  Building2,
+  Wallet,
+  Waves,
+  ArrowRight,
+  TrendingDown,
+  Info,
+  ShieldCheck,
+  ArrowUpDown,
+  Sliders,
+  Download,
 } from "lucide-react";
 
 export const Route = createFileRoute("/compare")({
   head: () => ({
     meta: [
       { title: "Side-by-Side Project Comparison | PropTrack" },
-      { name: "description", content: "Compare prices, delivery years, available inventory, and payment terms side-by-side for Egyptian real estate compounds." },
+      {
+        name: "description",
+        content:
+          "Compare prices, delivery years, available inventory, and payment terms side-by-side for Egyptian real estate compounds.",
+      },
     ],
   }),
   component: ComparePage,
@@ -22,7 +40,7 @@ export const Route = createFileRoute("/compare")({
 
 function ComparePage() {
   const compareList = useStore((s) => s.compareList);
-  
+
   // Set initial selected slugs based on compareList in store, fallback to default projects
   const initialA = compareList[0] || "creekview";
   const initialB = compareList[1] || "direction-white";
@@ -30,8 +48,8 @@ function ComparePage() {
   const [slugA, setSlugA] = useState(initialA);
   const [slugB, setSlugB] = useState(initialB);
 
-  const [selectedTypeIdxA, setSelectedTypeIdxA] = useState<number | 'all'>('all');
-  const [selectedTypeIdxB, setSelectedTypeIdxB] = useState<number | 'all'>('all');
+  const [selectedTypeIdxA, setSelectedTypeIdxA] = useState<number | "all">("all");
+  const [selectedTypeIdxB, setSelectedTypeIdxB] = useState<number | "all">("all");
 
   const [searchA, setSearchA] = useState("");
   const [searchB, setSearchB] = useState("");
@@ -73,14 +91,14 @@ function ComparePage() {
   // Reset selected unit types when compound slugs change
   const handleSelectA = (slug: string) => {
     setSlugA(slug);
-    setSelectedTypeIdxA('all');
+    setSelectedTypeIdxA("all");
     setShowDropdownA(false);
     setSearchA("");
   };
 
   const handleSelectB = (slug: string) => {
     setSlugB(slug);
-    setSelectedTypeIdxB('all');
+    setSelectedTypeIdxB("all");
     setShowDropdownB(false);
     setSearchB("");
   };
@@ -88,33 +106,45 @@ function ComparePage() {
   // Resolve specs dynamically
   const specsA = useMemo(() => {
     if (!compA) return null;
-    const isAll = selectedTypeIdxA === 'all';
+    const isAll = selectedTypeIdxA === "all";
     const bd = !isAll && availA ? availA.breakdown[selectedTypeIdxA as number] : null;
     return {
       price: bd ? bd.minPriceM : compA.priceFrom,
-      delivery: bd ? (bd.deliveryNote || compA.deliveryYear.toString()) : compA.deliveryYear.toString(),
+      delivery: bd
+        ? bd.deliveryNote || compA.deliveryYear.toString()
+        : compA.deliveryYear.toString(),
       qty: bd ? bd.available : (availA?.totalAvailable ?? 0),
-      area: bd ? (bd.minSqm === bd.maxSqm ? `${bd.minSqm} m²` : `${bd.minSqm}–${bd.maxSqm} m²`) : (compA.areaSize || "—"),
+      area: bd
+        ? bd.minSqm === bd.maxSqm
+          ? `${bd.minSqm} m²`
+          : `${bd.minSqm}–${bd.maxSqm} m²`
+        : compA.areaSize || "—",
       type: bd ? `${bd.type}${bd.beds ? ` (${bd.beds} BR)` : ""}` : compA.types.join(", "),
-      pay: bd ? (bd.paymentPlan || compA.paymentPlan) : compA.paymentPlan,
-      finish: bd ? (bd.finishing || "Project Standard") : "Project Standard",
-      cluster: bd ? bd.cluster || "All Phases" : "All Phases"
+      pay: bd ? bd.paymentPlan || compA.paymentPlan : compA.paymentPlan,
+      finish: bd ? bd.finishing || "Project Standard" : "Project Standard",
+      cluster: bd ? bd.cluster || "All Phases" : "All Phases",
     };
   }, [compA, availA, selectedTypeIdxA]);
 
   const specsB = useMemo(() => {
     if (!compB) return null;
-    const isAll = selectedTypeIdxB === 'all';
+    const isAll = selectedTypeIdxB === "all";
     const bd = !isAll && availB ? availB.breakdown[selectedTypeIdxB as number] : null;
     return {
       price: bd ? bd.minPriceM : compB.priceFrom,
-      delivery: bd ? (bd.deliveryNote || compB.deliveryYear.toString()) : compB.deliveryYear.toString(),
+      delivery: bd
+        ? bd.deliveryNote || compB.deliveryYear.toString()
+        : compB.deliveryYear.toString(),
       qty: bd ? bd.available : (availB?.totalAvailable ?? 0),
-      area: bd ? (bd.minSqm === bd.maxSqm ? `${bd.minSqm}.00 m²` : `${bd.minSqm}–${bd.maxSqm} m²`) : (compB.areaSize || "—"),
+      area: bd
+        ? bd.minSqm === bd.maxSqm
+          ? `${bd.minSqm}.00 m²`
+          : `${bd.minSqm}–${bd.maxSqm} m²`
+        : compB.areaSize || "—",
       type: bd ? `${bd.type}${bd.beds ? ` (${bd.beds} BR)` : ""}` : compB.types.join(", "),
-      pay: bd ? (bd.paymentPlan || compB.paymentPlan) : compB.paymentPlan,
-      finish: bd ? (bd.finishing || "Project Standard") : "Project Standard",
-      cluster: bd ? bd.cluster || "All Phases" : "All Phases"
+      pay: bd ? bd.paymentPlan || compB.paymentPlan : compB.paymentPlan,
+      finish: bd ? bd.finishing || "Project Standard" : "Project Standard",
+      cluster: bd ? bd.cluster || "All Phases" : "All Phases",
     };
   }, [compB, availB, selectedTypeIdxB]);
 
@@ -153,110 +183,130 @@ function ComparePage() {
     if (!compA || !compB || !specsA || !specsB) return [];
 
     return [
-      { 
-        label: "Developer", 
+      {
+        label: "Developer",
         displayA: compA.developer,
         displayB: compB.developer,
         icon: Building2,
-        isDifferent: compA.developer !== compB.developer
+        isDifferent: compA.developer !== compB.developer,
       },
-      { 
-        label: "Developer History & profile", 
+      {
+        label: "Developer History & profile",
         displayA: `Project by ${compA.developer}. Spanning leading footprints across top Egyptian destinations with proven quality delivery.`,
         displayB: `Project by ${compB.developer}. Spanning leading footprints across top Egyptian destinations with proven quality delivery.`,
         icon: Building2,
-        isDifferent: compA.developer !== compB.developer
+        isDifferent: compA.developer !== compB.developer,
       },
-      { 
-        label: "Destination", 
+      {
+        label: "Destination",
         displayA: compA.destination.replace("-", " ").toUpperCase(),
         displayB: compB.destination.replace("-", " ").toUpperCase(),
         icon: MapPin,
-        isDifferent: compA.destination !== compB.destination
+        isDifferent: compA.destination !== compB.destination,
       },
-      { 
-        label: "Exact Location Details", 
-        displayA: availA && (availA as any).city ? (availA as any).city : `${compA.destination.replace("-", " ")} region`,
-        displayB: availB && (availB as any).city ? (availB as any).city : `${compB.destination.replace("-", " ")} region`,
+      {
+        label: "Exact Location Details",
+        displayA:
+          availA && (availA as any).city
+            ? (availA as any).city
+            : `${compA.destination.replace("-", " ")} region`,
+        displayB:
+          availB && (availB as any).city
+            ? (availB as any).city
+            : `${compB.destination.replace("-", " ")} region`,
         icon: MapPin,
-        isDifferent: ((availA as any)?.city || "") !== ((availB as any)?.city || "")
+        isDifferent: ((availA as any)?.city || "") !== ((availB as any)?.city || ""),
       },
-      { 
-        label: "Compound Status", 
+      {
+        label: "Compound Status",
         displayA: compA.status,
         displayB: compB.status,
         icon: ShieldCheck,
-        isDifferent: compA.status !== compB.status
+        isDifferent: compA.status !== compB.status,
       },
-      { 
-        label: "Key Amenities", 
-        displayA: compA.amenities ? compA.amenities.slice(0, 6).join(", ") : ((availA as any)?.amenities ? (availA as any).amenities.slice(0, 6).join(", ") : "Green Areas, Security"),
-        displayB: compB.amenities ? compB.amenities.slice(0, 6).join(", ") : ((availB as any)?.amenities ? (availB as any).amenities.slice(0, 6).join(", ") : "Green Areas, Security"),
+      {
+        label: "Key Amenities",
+        displayA: compA.amenities
+          ? compA.amenities.slice(0, 6).join(", ")
+          : (availA as any)?.amenities
+            ? (availA as any).amenities.slice(0, 6).join(", ")
+            : "Green Areas, Security",
+        displayB: compB.amenities
+          ? compB.amenities.slice(0, 6).join(", ")
+          : (availB as any)?.amenities
+            ? (availB as any).amenities.slice(0, 6).join(", ")
+            : "Green Areas, Security",
         icon: Waves,
-        isDifferent: true
+        isDifferent: true,
       },
-      { 
-        label: "Unit Type / Configuration", 
+      {
+        label: "Unit Type / Configuration",
         displayA: specsA.type,
         displayB: specsB.type,
         icon: Sliders,
-        isDifferent: specsA.type !== specsB.type
+        isDifferent: specsA.type !== specsB.type,
       },
-      { 
-        label: "Inventory Cluster / Phase", 
+      {
+        label: "Inventory Cluster / Phase",
         displayA: specsA.cluster,
         displayB: specsB.cluster,
         icon: Info,
-        isDifferent: specsA.cluster !== specsB.cluster
+        isDifferent: specsA.cluster !== specsB.cluster,
       },
-      { 
-        label: "Finishing Type", 
+      {
+        label: "Finishing Type",
         displayA: specsA.finish,
         displayB: specsB.finish,
         icon: ShieldCheck,
-        isDifferent: specsA.finish !== specsB.finish
+        isDifferent: specsA.finish !== specsB.finish,
       },
-      { 
-        label: "Unit Area Size (BUA)", 
+      {
+        label: "Unit Area Size (BUA)",
         displayA: specsA.area,
         displayB: specsB.area,
         icon: ArrowUpDown,
-        isDifferent: specsA.area !== specsB.area
+        isDifferent: specsA.area !== specsB.area,
       },
-      { 
-        label: "Starting Price", 
+      {
+        label: "Starting Price",
         displayA: `EGP ${specsA.price}M ${cheaperPrice === "A" ? "★ Lower" : ""}`,
         displayB: `EGP ${specsB.price}M ${cheaperPrice === "B" ? "★ Lower" : ""}`,
         icon: Wallet,
-        isDifferent: specsA.price !== specsB.price
+        isDifferent: specsA.price !== specsB.price,
       },
-      { 
-        label: "Delivery Timeline", 
+      {
+        label: "Delivery Timeline",
         displayA: `${specsA.delivery} ${soonerDeliv === "A" ? "★ Sooner" : ""}`,
         displayB: `${specsB.delivery} ${soonerDeliv === "B" ? "★ Sooner" : ""}`,
         icon: Calendar,
-        isDifferent: specsA.delivery !== specsB.delivery
+        isDifferent: specsA.delivery !== specsB.delivery,
       },
-      { 
-        label: "Payment Terms", 
+      {
+        label: "Payment Terms",
         displayA: specsA.pay,
         displayB: specsB.pay,
         icon: Calendar,
-        isDifferent: specsA.pay !== specsB.pay
+        isDifferent: specsA.pay !== specsB.pay,
       },
-      { 
-        label: "Active Listings Volume", 
-        displayA: specsA.qty > 0 ? `${specsA.qty} units available ${largerQty === "A" ? "★ Higher" : ""}` : `Not updated yet`,
-        displayB: specsB.qty > 0 ? `${specsB.qty} units available ${largerQty === "B" ? "★ Higher" : ""}` : `Not updated yet`,
+      {
+        label: "Active Listings Volume",
+        displayA:
+          specsA.qty > 0
+            ? `${specsA.qty} units available ${largerQty === "A" ? "★ Higher" : ""}`
+            : `Not updated yet`,
+        displayB:
+          specsB.qty > 0
+            ? `${specsB.qty} units available ${largerQty === "B" ? "★ Higher" : ""}`
+            : `Not updated yet`,
         icon: Star,
-        isDifferent: specsA.qty !== specsB.qty
+        isDifferent: specsA.qty !== specsB.qty,
       },
     ];
   }, [compA, compB, specsA, specsB, cheaperPrice, soonerDeliv, largerQty, availA, availB]);
 
   const visibleRows = useMemo(() => {
     if (showDiffsOnly) {
-      return comparisonRows.filter(r => r.isDifferent);
+      return comparisonRows.filter((r) => r.isDifferent);
     }
     return comparisonRows;
   }, [comparisonRows, showDiffsOnly]);
@@ -300,7 +350,8 @@ function ComparePage() {
                 Side-by-Side Analysis
               </h1>
               <p className="mt-2 text-sm text-slate-400 max-w-xl">
-                Compare Egyptian properties, listing volumes, starting prices, and delivery terms in real-time.
+                Compare Egyptian properties, listing volumes, starting prices, and delivery terms in
+                real-time.
               </p>
               {compA && compB && (
                 <button
@@ -312,10 +363,12 @@ function ComparePage() {
                 </button>
               )}
             </div>
-            
+
             {/* Quick suggestions */}
             <div className="flex flex-wrap items-center gap-2 max-w-md bg-slate-950/40 p-4 rounded-2xl border border-white/5">
-              <span className="text-[10px] font-bold text-slate-500 uppercase w-full">Quick Comparisons</span>
+              <span className="text-[10px] font-bold text-slate-500 uppercase w-full">
+                Quick Comparisons
+              </span>
               {QUICK_PAIRS.map((qp) => (
                 <button
                   key={qp.label}
@@ -339,23 +392,25 @@ function ComparePage() {
           {/* Selector A Container */}
           <div className="space-y-4 bg-slate-900/10 p-5 rounded-2xl border border-border shadow-soft">
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">Project A</label>
+              <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
+                Project A
+              </label>
               <div className="relative">
-                <button 
+                <button
                   onClick={() => setShowDropdownA(!showDropdownA)}
                   className="flex w-full items-center justify-between rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold text-primary shadow-soft hover:bg-secondary/20 transition-colors"
                 >
                   <span>{compA?.name ?? "Select Project A"}</span>
                   <ChevronDown className="h-4 w-4 text-muted-foreground" />
                 </button>
-                
+
                 {showDropdownA && (
                   <div className="absolute left-0 right-0 z-20 mt-1 rounded-xl border border-border bg-card p-2 shadow-lg animate-fade-in">
                     <div className="relative flex items-center border-b border-border/60 pb-2 mb-2">
                       <Search className="absolute left-3 h-4 w-4 text-muted-foreground" />
-                      <input 
-                        type="text" 
-                        placeholder="Search compound..." 
+                      <input
+                        type="text"
+                        placeholder="Search compound..."
                         value={searchA}
                         onChange={(e) => setSearchA(e.target.value)}
                         className="w-full pl-9 pr-4 py-1.5 text-xs bg-secondary/50 rounded-lg border-0 focus:ring-1 focus:ring-accent focus:outline-none"
@@ -367,7 +422,9 @@ function ComparePage() {
                           key={c.slug}
                           onClick={() => handleSelectA(c.slug)}
                           className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-xs font-medium text-left transition-colors ${
-                            slugA === c.slug ? "bg-accent/15 text-accent" : "hover:bg-secondary/80 text-primary"
+                            slugA === c.slug
+                              ? "bg-accent/15 text-accent"
+                              : "hover:bg-secondary/80 text-primary"
                           }`}
                         >
                           <span>{c.name}</span>
@@ -383,27 +440,36 @@ function ComparePage() {
             {/* Unit Type Select A */}
             {availA && availA.breakdown.length > 0 ? (
               <div>
-                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">Project A Unit Type</label>
+                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
+                  Project A Unit Type
+                </label>
                 <select
                   value={selectedTypeIdxA}
                   onChange={(e) => {
                     const val = e.target.value;
-                    setSelectedTypeIdxA(val === 'all' ? 'all' : parseInt(val));
+                    setSelectedTypeIdxA(val === "all" ? "all" : parseInt(val));
                   }}
                   className="w-full rounded-xl border border-border bg-card px-3 py-2.5 text-xs font-semibold text-primary focus:outline-none focus:ring-1 focus:ring-accent"
                 >
                   <option value="all">All Unit Types (Compound Specs)</option>
                   {availA.breakdown.map((b, idx) => (
                     <option key={idx} value={idx}>
-                      {b.type}{b.beds ? ` - ${b.beds} BR` : ""}{b.cluster ? ` (${b.cluster})` : ""} · EGP {b.minPriceM}M+
+                      {b.type}
+                      {b.beds ? ` - ${b.beds} BR` : ""}
+                      {b.cluster ? ` (${b.cluster})` : ""} · EGP {b.minPriceM}M+
                     </option>
                   ))}
                 </select>
               </div>
             ) : (
               <div>
-                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">Project A Unit Type</label>
-                <select disabled className="w-full rounded-xl border border-border bg-card/50 px-3 py-2.5 text-xs font-semibold text-muted-foreground cursor-not-allowed">
+                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
+                  Project A Unit Type
+                </label>
+                <select
+                  disabled
+                  className="w-full rounded-xl border border-border bg-card/50 px-3 py-2.5 text-xs font-semibold text-muted-foreground cursor-not-allowed"
+                >
                   <option>No specific unit type available</option>
                 </select>
               </div>
@@ -413,23 +479,25 @@ function ComparePage() {
           {/* Selector B Container */}
           <div className="space-y-4 bg-slate-900/10 p-5 rounded-2xl border border-border shadow-soft">
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">Project B</label>
+              <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
+                Project B
+              </label>
               <div className="relative">
-                <button 
+                <button
                   onClick={() => setShowDropdownB(!showDropdownB)}
                   className="flex w-full items-center justify-between rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold text-primary shadow-soft hover:bg-secondary/20 transition-colors"
                 >
                   <span>{compB?.name ?? "Select Project B"}</span>
                   <ChevronDown className="h-4 w-4 text-muted-foreground" />
                 </button>
-                
+
                 {showDropdownB && (
                   <div className="absolute left-0 right-0 z-20 mt-1 rounded-xl border border-border bg-card p-2 shadow-lg animate-fade-in">
                     <div className="relative flex items-center border-b border-border/60 pb-2 mb-2">
                       <Search className="absolute left-3 h-4 w-4 text-muted-foreground" />
-                      <input 
-                        type="text" 
-                        placeholder="Search compound..." 
+                      <input
+                        type="text"
+                        placeholder="Search compound..."
                         value={searchB}
                         onChange={(e) => setSearchB(e.target.value)}
                         className="w-full pl-9 pr-4 py-1.5 text-xs bg-secondary/50 rounded-lg border-0 focus:ring-1 focus:ring-accent focus:outline-none"
@@ -441,7 +509,9 @@ function ComparePage() {
                           key={c.slug}
                           onClick={() => handleSelectB(c.slug)}
                           className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-xs font-medium text-left transition-colors ${
-                            slugB === c.slug ? "bg-accent/15 text-accent" : "hover:bg-secondary/80 text-primary"
+                            slugB === c.slug
+                              ? "bg-accent/15 text-accent"
+                              : "hover:bg-secondary/80 text-primary"
                           }`}
                         >
                           <span>{c.name}</span>
@@ -457,27 +527,36 @@ function ComparePage() {
             {/* Unit Type Select B */}
             {availB && availB.breakdown.length > 0 ? (
               <div>
-                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">Project B Unit Type</label>
+                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
+                  Project B Unit Type
+                </label>
                 <select
                   value={selectedTypeIdxB}
                   onChange={(e) => {
                     const val = e.target.value;
-                    setSelectedTypeIdxB(val === 'all' ? 'all' : parseInt(val));
+                    setSelectedTypeIdxB(val === "all" ? "all" : parseInt(val));
                   }}
                   className="w-full rounded-xl border border-border bg-card px-3 py-2.5 text-xs font-semibold text-primary focus:outline-none focus:ring-1 focus:ring-accent"
                 >
                   <option value="all">All Unit Types (Compound Specs)</option>
                   {availB.breakdown.map((b, idx) => (
                     <option key={idx} value={idx}>
-                      {b.type}{b.beds ? ` - ${b.beds} BR` : ""}{b.cluster ? ` (${b.cluster})` : ""} · EGP {b.minPriceM}M+
+                      {b.type}
+                      {b.beds ? ` - ${b.beds} BR` : ""}
+                      {b.cluster ? ` (${b.cluster})` : ""} · EGP {b.minPriceM}M+
                     </option>
                   ))}
                 </select>
               </div>
             ) : (
               <div>
-                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">Project B Unit Type</label>
-                <select disabled className="w-full rounded-xl border border-border bg-card/50 px-3 py-2.5 text-xs font-semibold text-muted-foreground cursor-not-allowed">
+                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
+                  Project B Unit Type
+                </label>
+                <select
+                  disabled
+                  className="w-full rounded-xl border border-border bg-card/50 px-3 py-2.5 text-xs font-semibold text-muted-foreground cursor-not-allowed"
+                >
                   <option>No specific unit type available</option>
                 </select>
               </div>
@@ -497,23 +576,31 @@ function ComparePage() {
                 </div>
                 <div className="relative h-4 rounded-full bg-slate-200 overflow-hidden flex">
                   {/* Progress bar A */}
-                  <div 
-                    style={{ width: `${Math.min(100, (specsA.price / (specsA.price + specsB.price + 0.1)) * 100)}%` }} 
+                  <div
+                    style={{
+                      width: `${Math.min(100, (specsA.price / (specsA.price + specsB.price + 0.1)) * 100)}%`,
+                    }}
                     className="bg-emerald-500 h-full flex items-center justify-center text-[9px] font-bold text-white transition-all duration-500"
                   >
                     A
                   </div>
                   {/* Progress bar B */}
-                  <div 
-                    style={{ width: `${Math.min(100, (specsB.price / (specsA.price + specsB.price + 0.1)) * 100)}%` }} 
+                  <div
+                    style={{
+                      width: `${Math.min(100, (specsB.price / (specsA.price + specsB.price + 0.1)) * 100)}%`,
+                    }}
                     className="bg-accent h-full flex items-center justify-center text-[9px] font-bold text-accent-foreground transition-all duration-500"
                   >
                     B
                   </div>
                 </div>
                 <div className="flex justify-between text-xs font-semibold text-slate-700">
-                  <span className={cheaperPrice === "A" ? "text-emerald-600 font-bold" : ""}>{compA.name} ({specsA.price}M)</span>
-                  <span className={cheaperPrice === "B" ? "text-emerald-600 font-bold" : ""}>{compB.name} ({specsB.price}M)</span>
+                  <span className={cheaperPrice === "A" ? "text-emerald-600 font-bold" : ""}>
+                    {compA.name} ({specsA.price}M)
+                  </span>
+                  <span className={cheaperPrice === "B" ? "text-emerald-600 font-bold" : ""}>
+                    {compB.name} ({specsB.price}M)
+                  </span>
                 </div>
               </div>
 
@@ -536,14 +623,14 @@ function ComparePage() {
                     const yrB = Math.max(1, extractYr(specsB.delivery) - 2024);
                     return (
                       <>
-                        <div 
-                          style={{ width: `${(yrA / (yrA + yrB)) * 100}%` }} 
+                        <div
+                          style={{ width: `${(yrA / (yrA + yrB)) * 100}%` }}
                           className="bg-emerald-500 h-full flex items-center justify-center text-[9px] font-bold text-white transition-all duration-500"
                         >
                           A
                         </div>
-                        <div 
-                          style={{ width: `${(yrB / (yrA + yrB)) * 100}%` }} 
+                        <div
+                          style={{ width: `${(yrB / (yrA + yrB)) * 100}%` }}
                           className="bg-accent h-full flex items-center justify-center text-[9px] font-bold text-accent-foreground transition-all duration-500"
                         >
                           B
@@ -553,8 +640,12 @@ function ComparePage() {
                   })()}
                 </div>
                 <div className="flex justify-between text-xs font-semibold text-slate-700">
-                  <span className={soonerDeliv === "A" ? "text-emerald-600 font-bold" : ""}>{compA.name} ({specsA.delivery})</span>
-                  <span className={soonerDeliv === "B" ? "text-emerald-600 font-bold" : ""}>{compB.name} ({specsB.delivery})</span>
+                  <span className={soonerDeliv === "A" ? "text-emerald-600 font-bold" : ""}>
+                    {compA.name} ({specsA.delivery})
+                  </span>
+                  <span className={soonerDeliv === "B" ? "text-emerald-600 font-bold" : ""}>
+                    {compB.name} ({specsB.delivery})
+                  </span>
                 </div>
               </div>
 
@@ -565,22 +656,30 @@ function ComparePage() {
                   <span>Units</span>
                 </div>
                 <div className="relative h-4 rounded-full bg-slate-200 overflow-hidden flex">
-                  <div 
-                    style={{ width: `${Math.max(10, Math.min(90, ((specsA.qty + 1) / (specsA.qty + specsB.qty + 2)) * 100))}%` }} 
+                  <div
+                    style={{
+                      width: `${Math.max(10, Math.min(90, ((specsA.qty + 1) / (specsA.qty + specsB.qty + 2)) * 100))}%`,
+                    }}
                     className="bg-emerald-500 h-full flex items-center justify-center text-[9px] font-bold text-white transition-all duration-500"
                   >
                     A
                   </div>
-                  <div 
-                    style={{ width: `${Math.max(10, Math.min(90, ((specsB.qty + 1) / (specsA.qty + specsB.qty + 2)) * 100))}%` }} 
+                  <div
+                    style={{
+                      width: `${Math.max(10, Math.min(90, ((specsB.qty + 1) / (specsA.qty + specsB.qty + 2)) * 100))}%`,
+                    }}
                     className="bg-accent h-full flex items-center justify-center text-[9px] font-bold text-accent-foreground transition-all duration-500"
                   >
                     B
                   </div>
                 </div>
                 <div className="flex justify-between text-xs font-semibold text-slate-700">
-                  <span className={largerQty === "A" ? "text-emerald-600 font-bold" : ""}>{compA.name} ({specsA.qty})</span>
-                  <span className={largerQty === "B" ? "text-emerald-600 font-bold" : ""}>{compB.name} ({specsB.qty})</span>
+                  <span className={largerQty === "A" ? "text-emerald-600 font-bold" : ""}>
+                    {compA.name} ({specsA.qty})
+                  </span>
+                  <span className={largerQty === "B" ? "text-emerald-600 font-bold" : ""}>
+                    {compB.name} ({specsB.qty})
+                  </span>
                 </div>
               </div>
             </div>
@@ -591,8 +690,8 @@ function ComparePage() {
                 <button
                   onClick={() => setShowDiffsOnly(!showDiffsOnly)}
                   className={`rounded-full px-4 py-1.5 text-xs font-bold transition-all ${
-                    showDiffsOnly 
-                      ? "bg-primary text-white" 
+                    showDiffsOnly
+                      ? "bg-primary text-white"
                       : "bg-secondary text-primary hover:bg-secondary/80"
                   }`}
                 >
@@ -601,8 +700,8 @@ function ComparePage() {
                 <button
                   onClick={() => setHighlightDiffs(!highlightDiffs)}
                   className={`rounded-full px-4 py-1.5 text-xs font-bold transition-all ${
-                    highlightDiffs 
-                      ? "bg-emerald-600 text-white" 
+                    highlightDiffs
+                      ? "bg-emerald-600 text-white"
                       : "bg-secondary text-primary hover:bg-secondary/80"
                   }`}
                 >
@@ -632,12 +731,22 @@ function ComparePage() {
                 </div>
                 <img src={compA.hero} alt={compA.name} className="h-48 w-full object-cover" />
                 <div className="p-6">
-                  <div className="text-xs font-bold text-accent uppercase tracking-wider">{compA.developer}</div>
-                  <h2 className="mt-1 font-display text-2xl font-bold text-primary">{compA.name}</h2>
-                  <p className="mt-2 line-clamp-2 text-xs text-muted-foreground leading-relaxed">{compA.blurb}</p>
+                  <div className="text-xs font-bold text-accent uppercase tracking-wider">
+                    {compA.developer}
+                  </div>
+                  <h2 className="mt-1 font-display text-2xl font-bold text-primary">
+                    {compA.name}
+                  </h2>
+                  <p className="mt-2 line-clamp-2 text-xs text-muted-foreground leading-relaxed">
+                    {compA.blurb}
+                  </p>
                   <div className="mt-4 flex items-center justify-between">
-                    <span className="text-sm font-semibold text-muted-foreground">Starting price</span>
-                    <span className="font-display text-xl font-bold text-emerald-600">EGP {specsA.price}M</span>
+                    <span className="text-sm font-semibold text-muted-foreground">
+                      Starting price
+                    </span>
+                    <span className="font-display text-xl font-bold text-emerald-600">
+                      EGP {specsA.price}M
+                    </span>
                   </div>
                 </div>
               </div>
@@ -649,12 +758,22 @@ function ComparePage() {
                 </div>
                 <img src={compB.hero} alt={compB.name} className="h-48 w-full object-cover" />
                 <div className="p-6">
-                  <div className="text-xs font-bold text-accent uppercase tracking-wider">{compB.developer}</div>
-                  <h2 className="mt-1 font-display text-2xl font-bold text-primary">{compB.name}</h2>
-                  <p className="mt-2 line-clamp-2 text-xs text-muted-foreground leading-relaxed">{compB.blurb}</p>
+                  <div className="text-xs font-bold text-accent uppercase tracking-wider">
+                    {compB.developer}
+                  </div>
+                  <h2 className="mt-1 font-display text-2xl font-bold text-primary">
+                    {compB.name}
+                  </h2>
+                  <p className="mt-2 line-clamp-2 text-xs text-muted-foreground leading-relaxed">
+                    {compB.blurb}
+                  </p>
                   <div className="mt-4 flex items-center justify-between">
-                    <span className="text-sm font-semibold text-muted-foreground">Starting price</span>
-                    <span className="font-display text-xl font-bold text-emerald-600">EGP {specsB.price}M</span>
+                    <span className="text-sm font-semibold text-muted-foreground">
+                      Starting price
+                    </span>
+                    <span className="font-display text-xl font-bold text-emerald-600">
+                      EGP {specsB.price}M
+                    </span>
                   </div>
                 </div>
               </div>
@@ -663,15 +782,23 @@ function ComparePage() {
             {/* Spec Table */}
             <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-soft">
               <div className="px-6 py-4 border-b border-border bg-secondary/20">
-                <h3 className="font-display text-lg font-bold text-primary">Technical Specification Comparison</h3>
+                <h3 className="font-display text-lg font-bold text-primary">
+                  Technical Specification Comparison
+                </h3>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse text-sm">
                   <thead>
                     <tr className="border-b border-border/80 bg-secondary/10">
-                      <th className="w-1/4 p-4 text-left text-xs font-bold uppercase tracking-wider text-muted-foreground">Specification</th>
-                      <th className="w-3/8 p-4 text-left text-xs font-bold uppercase tracking-wider text-primary">Project A: {compA.name}</th>
-                      <th className="w-3/8 p-4 text-left text-xs font-bold uppercase tracking-wider text-primary">Project B: {compB.name}</th>
+                      <th className="w-1/4 p-4 text-left text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                        Specification
+                      </th>
+                      <th className="w-3/8 p-4 text-left text-xs font-bold uppercase tracking-wider text-primary">
+                        Project A: {compA.name}
+                      </th>
+                      <th className="w-3/8 p-4 text-left text-xs font-bold uppercase tracking-wider text-primary">
+                        Project B: {compB.name}
+                      </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-border/60">
@@ -679,8 +806,8 @@ function ComparePage() {
                       const Icon = row.icon;
                       const hasDiff = row.isDifferent && highlightDiffs;
                       return (
-                        <tr 
-                          key={row.label} 
+                        <tr
+                          key={row.label}
                           className={`transition-colors hover:bg-secondary/15 ${
                             hasDiff ? "bg-amber-500/5 border-l-4 border-l-amber-500/80" : ""
                           }`}
@@ -689,10 +816,14 @@ function ComparePage() {
                             <Icon className="h-4 w-4 text-slate-500" />
                             {row.label}
                           </td>
-                          <td className={`p-4 font-medium text-slate-700 ${row.label === "Starting Price" ? "text-emerald-700 font-bold" : ""}`}>
+                          <td
+                            className={`p-4 font-medium text-slate-700 ${row.label === "Starting Price" ? "text-emerald-700 font-bold" : ""}`}
+                          >
                             {row.displayA}
                           </td>
-                          <td className={`p-4 font-medium text-slate-700 ${row.label === "Starting Price" ? "text-emerald-700 font-bold" : ""}`}>
+                          <td
+                            className={`p-4 font-medium text-slate-700 ${row.label === "Starting Price" ? "text-emerald-700 font-bold" : ""}`}
+                          >
                             {row.displayB}
                           </td>
                         </tr>
@@ -745,8 +876,12 @@ function ComparePage() {
         ) : (
           <div className="rounded-2xl border border-dashed border-border bg-card p-12 text-center">
             <GitCompareArrows className="mx-auto h-10 w-10 text-muted-foreground" />
-            <h2 className="mt-4 font-display text-2xl font-semibold text-primary">Invalid selection</h2>
-            <p className="mt-2 text-sm text-muted-foreground">Please choose two valid compounds above.</p>
+            <h2 className="mt-4 font-display text-2xl font-semibold text-primary">
+              Invalid selection
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Please choose two valid compounds above.
+            </p>
           </div>
         )}
       </div>

@@ -2,20 +2,20 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { 
-  Users, 
-  Settings2, 
-  TrendingUp, 
-  FileText, 
-  Plus, 
-  Trash2, 
-  ShieldCheck, 
-  Check, 
-  X, 
+import {
+  Users,
+  Settings2,
+  TrendingUp,
+  FileText,
+  Plus,
+  Trash2,
+  ShieldCheck,
+  Check,
+  X,
   Percent,
   Clock,
   ArrowUpRight,
-  Download
+  Download,
 } from "lucide-react";
 
 export const Route = createFileRoute("/dashboard/team")({
@@ -41,9 +41,12 @@ function TeamWorkspacePage() {
     return (
       <div className="flex flex-col items-center justify-center min-h-[400px] text-center p-6 border border-slate-200 dark:border-slate-800 rounded-3xl bg-card">
         <Users className="h-12 w-12 text-slate-400 mb-4" />
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white">Requires Brokerage Team Plan</h2>
+        <h2 className="text-xl font-bold text-slate-900 dark:text-white">
+          Requires Brokerage Team Plan
+        </h2>
         <p className="text-sm text-slate-500 max-w-sm mt-2">
-          This dashboard is only available to registered Brokerage Workspace Administrators. Please upgrade your plan in the Billing tab.
+          This dashboard is only available to registered Brokerage Workspace Administrators. Please
+          upgrade your plan in the Billing tab.
         </p>
       </div>
     );
@@ -72,7 +75,6 @@ function TeamWorkspacePage() {
 
   return (
     <div className="space-y-8 animate-in fade-in duration-300">
-      
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
@@ -80,7 +82,8 @@ function TeamWorkspacePage() {
             <Users className="h-7 w-7 text-indigo-500" /> Team Workspace
           </h1>
           <p className="text-sm text-slate-500 mt-1">
-            Manage your team seats, review performance analytics, toggle project brochures, and access itemized invoices.
+            Manage your team seats, review performance analytics, toggle project brochures, and
+            access itemized invoices.
           </p>
         </div>
       </div>
@@ -100,26 +103,33 @@ function TeamWorkspacePage() {
 
         <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-card p-5 shadow-sm">
           <div className="flex items-center justify-between text-muted-foreground">
-            <span className="text-xs font-semibold uppercase tracking-wider">Aggregated CRM Leads</span>
+            <span className="text-xs font-semibold uppercase tracking-wider">
+              Aggregated CRM Leads
+            </span>
             <TrendingUp className="h-4 w-4 text-emerald-500" />
           </div>
           <p className="text-3xl font-bold text-slate-900 dark:text-white mt-2">{totalLeads}</p>
-          <p className="text-[10px] text-muted-foreground mt-1">Total leads captured by all seat members</p>
+          <p className="text-[10px] text-muted-foreground mt-1">
+            Total leads captured by all seat members
+          </p>
         </div>
 
         <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-card p-5 shadow-sm">
           <div className="flex items-center justify-between text-muted-foreground">
-            <span className="text-xs font-semibold uppercase tracking-wider">Aggregated WhatsApp Sends</span>
+            <span className="text-xs font-semibold uppercase tracking-wider">
+              Aggregated WhatsApp Sends
+            </span>
             <Clock className="h-4 w-4 text-blue-500" />
           </div>
           <p className="text-3xl font-bold text-slate-900 dark:text-white mt-2">{totalSends}</p>
-          <p className="text-[10px] text-muted-foreground mt-1">Team messages broadcast this billing cycle</p>
+          <p className="text-[10px] text-muted-foreground mt-1">
+            Team messages broadcast this billing cycle
+          </p>
         </div>
       </div>
 
       {/* Grid: Seat Management & Central Controls */}
       <div className="grid gap-8 lg:grid-cols-3">
-        
         {/* Left 2 Columns: Seat Management */}
         <div className="lg:col-span-2 space-y-6">
           <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-card p-6 space-y-6">
@@ -128,14 +138,20 @@ function TeamWorkspacePage() {
                 Seat Allocation Management
               </h2>
               <p className="text-xs text-slate-500 mt-1">
-                Add brokers to your subscription plan. Removed brokers will instantly lose their workspace seat.
+                Add brokers to your subscription plan. Removed brokers will instantly lose their
+                workspace seat.
               </p>
             </div>
 
             {/* Add broker form */}
-            <form onSubmit={handleAddAgent} className="p-4 border border-dashed border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-900/50 space-y-4">
-              <h3 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Add Team Broker</h3>
-              
+            <form
+              onSubmit={handleAddAgent}
+              className="p-4 border border-dashed border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-900/50 space-y-4"
+            >
+              <h3 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                Add Team Broker
+              </h3>
+
               <div className="grid gap-3 sm:grid-cols-2">
                 <input
                   type="text"
@@ -158,7 +174,11 @@ function TeamWorkspacePage() {
               <div className="flex justify-between items-center">
                 {errorMsg && <p className="text-xs text-red-500 font-medium">{errorMsg}</p>}
                 {successMsg && <p className="text-xs text-emerald-500 font-medium">{successMsg}</p>}
-                <Button type="submit" size="sm" className="ml-auto rounded-lg text-xs bg-slate-900 text-white dark:bg-white dark:text-slate-900">
+                <Button
+                  type="submit"
+                  size="sm"
+                  className="ml-auto rounded-lg text-xs bg-slate-900 text-white dark:bg-white dark:text-slate-900"
+                >
                   <Plus className="h-3 w-3 mr-1" /> Provision Seat
                 </Button>
               </div>
@@ -166,13 +186,20 @@ function TeamWorkspacePage() {
 
             {/* List of active brokers */}
             <div className="space-y-3">
-              <h3 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Active Team Members</h3>
+              <h3 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                Active Team Members
+              </h3>
               {brokerageSeats.length === 0 ? (
-                <p className="text-xs text-muted-foreground italic">No seats provisioned. Add an agent above.</p>
+                <p className="text-xs text-muted-foreground italic">
+                  No seats provisioned. Add an agent above.
+                </p>
               ) : (
                 <div className="divide-y divide-slate-100 dark:divide-slate-800 border border-slate-100 dark:border-slate-800 rounded-xl overflow-hidden">
                   {brokerageSeats.map((seat) => (
-                    <div key={seat.email} className="p-3 flex items-center justify-between text-xs hover:bg-slate-50 dark:hover:bg-slate-900/50">
+                    <div
+                      key={seat.email}
+                      className="p-3 flex items-center justify-between text-xs hover:bg-slate-50 dark:hover:bg-slate-900/50"
+                    >
                       <div>
                         <p className="font-bold text-slate-900 dark:text-white">{seat.name}</p>
                         <p className="text-[10px] text-slate-500">{seat.email}</p>
@@ -182,7 +209,9 @@ function TeamWorkspacePage() {
                           <p className="font-semibold text-slate-700 dark:text-slate-300">
                             {seat.crmContacts || 0} leads · {seat.whatsappSends || 0} WA sends
                           </p>
-                          <p className="text-[9px] text-slate-400">Last active: {seat.lastActive || "Never"}</p>
+                          <p className="text-[9px] text-slate-400">
+                            Last active: {seat.lastActive || "Never"}
+                          </p>
                         </div>
                         <button
                           type="button"
@@ -203,7 +232,6 @@ function TeamWorkspacePage() {
 
         {/* Right 1 Column: Central Brochure Control & Invoicing */}
         <div className="space-y-6">
-          
           {/* Brochure Control */}
           <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-card p-5 space-y-4">
             <div>
@@ -214,13 +242,15 @@ function TeamWorkspacePage() {
                 Disable/enable specific project brochures for the entire team layout.
               </p>
             </div>
-            
+
             <div className="max-h-[220px] overflow-y-auto space-y-2 border border-slate-100 dark:border-slate-800 rounded-xl p-2.5">
               {compounds.map((c: any) => {
                 const blocked = projectAccessList.includes(c.slug);
                 return (
                   <div key={c.slug} className="flex items-center justify-between text-xs p-1">
-                    <span className="truncate max-w-[140px] font-medium text-slate-700 dark:text-slate-300">{c.name}</span>
+                    <span className="truncate max-w-[140px] font-medium text-slate-700 dark:text-slate-300">
+                      {c.name}
+                    </span>
                     <button
                       type="button"
                       onClick={() => toggleProjectAccess(c.slug)}
@@ -243,7 +273,7 @@ function TeamWorkspacePage() {
             <h2 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
               <FileText className="h-4 w-4 text-emerald-500" /> Itemized Invoice
             </h2>
-            
+
             <div className="text-xs space-y-2.5 bg-slate-50 dark:bg-slate-900/40 p-3.5 border border-slate-100 dark:border-slate-800 rounded-xl">
               <div className="flex justify-between">
                 <span className="text-slate-500">Billing Cycle:</span>
@@ -251,34 +281,42 @@ function TeamWorkspacePage() {
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500">Base Seats Required:</span>
-                <span className="font-semibold text-slate-700 dark:text-slate-300">5 Seats (Min)</span>
+                <span className="font-semibold text-slate-700 dark:text-slate-300">
+                  5 Seats (Min)
+                </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500">Active Allocated:</span>
-                <span className="font-semibold text-slate-700 dark:text-slate-300">{activeSeatsCount} seats</span>
+                <span className="font-semibold text-slate-700 dark:text-slate-300">
+                  {activeSeatsCount} seats
+                </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500">Rate per seat:</span>
                 <span className="font-semibold text-slate-700 dark:text-slate-300">EGP 199</span>
               </div>
-              
+
               <hr className="border-slate-200 dark:border-slate-800" />
-              
+
               <div className="flex justify-between text-sm">
                 <span className="font-bold text-slate-800 dark:text-slate-200">Total Monthly:</span>
-                <span className="font-extrabold text-indigo-500">EGP {Math.max(5, activeSeatsCount) * 199}</span>
+                <span className="font-extrabold text-indigo-500">
+                  EGP {Math.max(5, activeSeatsCount) * 199}
+                </span>
               </div>
             </div>
 
-            <Button variant="outline" size="sm" className="w-full text-xs rounded-xl" onClick={() => alert("Invoice downloaded (mock)")}>
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-full text-xs rounded-xl"
+              onClick={() => alert("Invoice downloaded (mock)")}
+            >
               <Download className="h-3 w-3 mr-1.5" /> Download Itemized Invoice
             </Button>
           </div>
-
         </div>
-
       </div>
-
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import * as fs from "fs";
 import * as path from "path";
 
-const logPath = "C:\\Users\\LORD LAPTOP\\.gemini\\antigravity\\brain\\3490eb79-8870-45a2-9ba9-c2ffb32aaeb2\\.system_generated\\logs\\transcript.jsonl";
+const logPath =
+  "C:\\Users\\LORD LAPTOP\\.gemini\\antigravity\\brain\\3490eb79-8870-45a2-9ba9-c2ffb32aaeb2\\.system_generated\\logs\\transcript.jsonl";
 
 if (fs.existsSync(logPath)) {
   const content = fs.readFileSync(logPath, "utf-8");

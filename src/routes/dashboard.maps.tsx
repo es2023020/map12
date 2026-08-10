@@ -1,13 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import {
-  Map,
-  Maximize2,
-  Minimize2,
-  ExternalLink,
-  X,
-  Globe,
-} from "lucide-react";
+import { Map, Maximize2, Minimize2, ExternalLink, X, Globe } from "lucide-react";
 
 import { useStore } from "@/lib/store";
 import { Lock, Sparkles, ArrowLeft } from "lucide-react";
@@ -18,8 +11,7 @@ export const Route = createFileRoute("/dashboard/maps")({
       { title: "Field Atlas — PropTrack" },
       {
         name: "description",
-        content:
-          "Interactive field atlas and compound maps library for PropTrack agents.",
+        content: "Interactive field atlas and compound maps library for PropTrack agents.",
       },
     ],
   }),
@@ -38,9 +30,12 @@ export default function MapsPage() {
             <Map className="h-5 w-5 text-white" />
           </div>
           <div>
-            <h1 className="text-2xl font-display font-bold text-primary">Interactive Field Atlas</h1>
+            <h1 className="text-2xl font-display font-bold text-primary">
+              Interactive Field Atlas
+            </h1>
             <p className="text-sm text-muted-foreground">
-              Dynamic maps showing perfect compound coordinates, zones, and kilometer locations across the North Coast and Greater Cairo.
+              Dynamic maps showing perfect compound coordinates, zones, and kilometer locations
+              across the North Coast and Greater Cairo.
             </p>
           </div>
         </div>
@@ -75,11 +70,7 @@ export default function MapsPage() {
               className="rounded-xl border border-border bg-secondary/40 p-1.5 text-muted-foreground hover:text-primary transition-all"
               title={isFullscreen ? "Exit fullscreen" : "Fullscreen"}
             >
-              {isFullscreen ? (
-                <Minimize2 className="h-4 w-4" />
-              ) : (
-                <Maximize2 className="h-4 w-4" />
-              )}
+              {isFullscreen ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
             </button>
             {isFullscreen && (
               <button
@@ -101,4 +92,3 @@ export default function MapsPage() {
     </div>
   );
 }
-

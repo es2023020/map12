@@ -3,16 +3,16 @@ import { useStore } from "@/lib/store";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { 
-  User, 
-  Shield, 
-  KeyRound, 
-  Building2, 
-  CheckCircle2, 
+import {
+  User,
+  Shield,
+  KeyRound,
+  Building2,
+  CheckCircle2,
   LogOut,
   CreditCard,
   Mail,
-  UserCheck
+  UserCheck,
 } from "lucide-react";
 
 export const Route = createFileRoute("/dashboard/profile")({
@@ -23,7 +23,7 @@ function ProfilePage() {
   const user = useStore((s) => s.user);
   const signOut = useStore((s) => s.signOut);
   const usersDatabase = useStore((s) => s.usersDatabase);
-  
+
   const router = useRouter();
 
   const [name, setName] = useState(user?.name || "");
@@ -34,7 +34,7 @@ function ProfilePage() {
     e.preventDefault();
     if (!user) return;
 
-    const updatedUsers = usersDatabase.map(u => {
+    const updatedUsers = usersDatabase.map((u) => {
       if (u.email.toLowerCase() === user.email.toLowerCase()) {
         return { ...u, name, ...(password ? { password } : {}) };
       }
@@ -43,7 +43,7 @@ function ProfilePage() {
 
     useStore.setState({
       usersDatabase: updatedUsers,
-      user: { ...user, name }
+      user: { ...user, name },
     });
 
     setSuccessMsg("Profile details updated successfully!");
@@ -57,25 +57,46 @@ function ProfilePage() {
   };
 
   const invoices = [
-    { id: "INV-2026-004", date: "June 28, 2026", amount: user?.tier === "BrokerageAdmin" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 499" : "EGP 0", status: "Paid via ADIB", method: "Bank Transfer" },
-    { id: "INV-2026-003", date: "May 28, 2026", amount: user?.tier === "BrokerageAdmin" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 499" : "EGP 0", status: "Paid via ADIB", method: "Bank Transfer" },
-    { id: "INV-2026-002", date: "April 28, 2026", amount: user?.tier === "BrokerageAdmin" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 499" : "EGP 0", status: "Paid via ADIB", method: "Bank Transfer" }
+    {
+      id: "INV-2026-004",
+      date: "June 28, 2026",
+      amount:
+        user?.tier === "BrokerageAdmin" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 499" : "EGP 0",
+      status: "Paid via ADIB",
+      method: "Bank Transfer",
+    },
+    {
+      id: "INV-2026-003",
+      date: "May 28, 2026",
+      amount:
+        user?.tier === "BrokerageAdmin" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 499" : "EGP 0",
+      status: "Paid via ADIB",
+      method: "Bank Transfer",
+    },
+    {
+      id: "INV-2026-002",
+      date: "April 28, 2026",
+      amount:
+        user?.tier === "BrokerageAdmin" ? "EGP 1,499" : user?.tier === "Pro" ? "EGP 499" : "EGP 0",
+      status: "Paid via ADIB",
+      method: "Bank Transfer",
+    },
   ];
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-5 duration-300">
-      
       <div className="border-b border-border/40 pb-4">
         <h2 className="font-display text-2xl font-bold text-primary flex items-center gap-2">
           <User className="h-6 w-6 text-accent" /> My Profile & Workspace Settings
         </h2>
-        <p className="mt-1 text-sm text-muted-foreground">Manage your broker credentials, check account subscription status, and view transaction history.</p>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Manage your broker credentials, check account subscription status, and view transaction
+          history.
+        </p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
-        
         <div className="lg:col-span-2 space-y-6">
-          
           <div className="rounded-3xl border border-border bg-card p-6 shadow-sm">
             <h3 className="font-display font-bold text-primary flex items-center gap-2 mb-4">
               <UserCheck className="h-5 w-5 text-accent" /> Profile Credentials
@@ -91,7 +112,11 @@ function ProfilePage() {
               {/* Profile Photo Uploader */}
               <div className="flex items-center gap-4 p-3.5 bg-secondary/20 rounded-2xl border border-border/60">
                 {user?.avatar ? (
-                  <img src={user.avatar} alt="Avatar" className="h-16 w-16 rounded-full object-cover border-2 border-accent" />
+                  <img
+                    src={user.avatar}
+                    alt="Avatar"
+                    className="h-16 w-16 rounded-full object-cover border-2 border-accent"
+                  />
                 ) : (
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent text-accent-foreground font-display text-2xl font-bold">
                     {user?.name[0]?.toUpperCase() || "B"}
@@ -102,10 +127,10 @@ function ProfilePage() {
                   <div className="flex gap-2">
                     <label className="cursor-pointer rounded-lg bg-accent text-accent-foreground hover:bg-accent/90 px-3 py-1.5 text-[10px] font-bold transition-all">
                       Choose Image
-                      <input 
-                        type="file" 
-                        className="hidden" 
-                        accept="image/*" 
+                      <input
+                        type="file"
+                        className="hidden"
+                        accept="image/*"
                         onChange={(e) => {
                           const file = e.target.files?.[0];
                           if (file) {
@@ -113,7 +138,7 @@ function ProfilePage() {
                             reader.onloadend = () => {
                               const base64 = reader.result as string;
                               if (user) {
-                                const updatedUsers = usersDatabase.map(u => {
+                                const updatedUsers = usersDatabase.map((u) => {
                                   if (u.email.toLowerCase() === user.email.toLowerCase()) {
                                     return { ...u, avatar: base64 };
                                   }
@@ -121,7 +146,7 @@ function ProfilePage() {
                                 });
                                 useStore.setState({
                                   user: { ...user, avatar: base64 },
-                                  usersDatabase: updatedUsers
+                                  usersDatabase: updatedUsers,
                                 });
                               }
                             };
@@ -135,7 +160,7 @@ function ProfilePage() {
                         type="button"
                         onClick={() => {
                           if (user) {
-                            const updatedUsers = usersDatabase.map(u => {
+                            const updatedUsers = usersDatabase.map((u) => {
                               if (u.email.toLowerCase() === user.email.toLowerCase()) {
                                 return { ...u, avatar: "" };
                               }
@@ -143,7 +168,7 @@ function ProfilePage() {
                             });
                             useStore.setState({
                               user: { ...user, avatar: "" },
-                              usersDatabase: updatedUsers
+                              usersDatabase: updatedUsers,
                             });
                           }
                         }}
@@ -163,12 +188,16 @@ function ProfilePage() {
                 <div className="mt-1.5 font-semibold text-primary text-sm bg-secondary/30 p-2.5 rounded-xl border border-border/60">
                   {user?.email || "guest@proptrack.eg"}
                 </div>
-                <p className="text-[9px] text-muted-foreground mt-1">Email address cannot be changed. Contact support to transfer workspace ownership.</p>
+                <p className="text-[9px] text-muted-foreground mt-1">
+                  Email address cannot be changed. Contact support to transfer workspace ownership.
+                </p>
               </div>
 
               <div>
-                <label className="text-[10px] font-bold text-muted-foreground uppercase">Full Display Name</label>
-                <Input 
+                <label className="text-[10px] font-bold text-muted-foreground uppercase">
+                  Full Display Name
+                </label>
+                <Input
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="mt-1.5 rounded-xl"
@@ -180,7 +209,7 @@ function ProfilePage() {
                 <label className="text-[10px] font-bold text-muted-foreground uppercase flex items-center gap-1">
                   <KeyRound className="h-3.5 w-3.5" /> Update Password (Optional)
                 </label>
-                <Input 
+                <Input
                   type="password"
                   placeholder="Enter new password to update..."
                   value={password}
@@ -190,7 +219,10 @@ function ProfilePage() {
               </div>
 
               <div className="pt-2">
-                <Button type="submit" className="rounded-xl font-bold bg-accent text-accent-foreground hover:bg-accent/90 px-5">
+                <Button
+                  type="submit"
+                  className="rounded-xl font-bold bg-accent text-accent-foreground hover:bg-accent/90 px-5"
+                >
                   Update Account Details
                 </Button>
               </div>
@@ -201,7 +233,7 @@ function ProfilePage() {
             <h3 className="font-display font-bold text-primary flex items-center gap-2 mb-4">
               <CreditCard className="h-5 w-5 text-accent" /> Payment History (ADIB Bank)
             </h3>
-            
+
             <div className="overflow-x-auto rounded-xl border border-border">
               <table className="w-full text-xs text-left">
                 <thead>
@@ -214,7 +246,10 @@ function ProfilePage() {
                 </thead>
                 <tbody>
                   {invoices.map((inv) => (
-                    <tr key={inv.id} className="border-b border-border/50 last:border-0 hover:bg-secondary/20 transition-all">
+                    <tr
+                      key={inv.id}
+                      className="border-b border-border/50 last:border-0 hover:bg-secondary/20 transition-all"
+                    >
                       <td className="p-3 font-mono font-bold text-primary">{inv.id}</td>
                       <td className="p-3 text-muted-foreground">{inv.date}</td>
                       <td className="p-3 font-semibold text-primary">{inv.amount}</td>
@@ -229,19 +264,19 @@ function ProfilePage() {
               </table>
             </div>
           </div>
-
         </div>
 
         <div className="space-y-6">
-          
           <div className="rounded-3xl border border-accent/20 bg-accent/5 p-6 shadow-sm space-y-4">
             <h3 className="font-display font-extrabold text-primary flex items-center gap-2">
               <Shield className="h-5 w-5 text-accent" /> Workspace Subscription
             </h3>
-            
+
             <div className="space-y-1.5">
               <div className="text-xs text-muted-foreground">Current Plan Level</div>
-              <div className="font-display text-2xl font-black text-accent uppercase tracking-wider">{user?.tier || "Starter"}</div>
+              <div className="font-display text-2xl font-black text-accent uppercase tracking-wider">
+                {user?.tier || "Starter"}
+              </div>
             </div>
 
             <div className="border-t border-border/40 pt-3 space-y-2.5 text-xs">
@@ -262,7 +297,7 @@ function ProfilePage() {
             </div>
 
             <div className="border-t border-border/40 pt-3">
-              <button 
+              <button
                 onClick={() => router.navigate({ to: "/dashboard/billing" })}
                 className="w-full rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 text-xs font-bold py-2"
               >
@@ -287,7 +322,9 @@ function ProfilePage() {
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-muted-foreground">AI Matchmaker alerts</span>
-                <span className={`font-semibold ${user?.tier === "Starter" ? "text-muted-foreground/60" : "text-emerald-600"}`}>
+                <span
+                  className={`font-semibold ${user?.tier === "Starter" ? "text-muted-foreground/60" : "text-emerald-600"}`}
+                >
                   {user?.tier === "Starter" ? "Unavailable (Upgrade)" : "Active"}
                 </span>
               </div>
@@ -295,7 +332,9 @@ function ProfilePage() {
           </div>
 
           <div className="rounded-3xl border border-border bg-card p-6 shadow-sm text-center space-y-3">
-            <div className="text-xs text-muted-foreground">Finished working in your broker workspace?</div>
+            <div className="text-xs text-muted-foreground">
+              Finished working in your broker workspace?
+            </div>
             <button
               onClick={handleSignOut}
               className="w-full rounded-xl border border-destructive/20 hover:bg-destructive/5 text-destructive font-bold text-xs py-2.5 flex items-center justify-center gap-2 transition-all"
@@ -303,11 +342,8 @@ function ProfilePage() {
               <LogOut className="h-4 w-4" /> Sign Out from PropTrack
             </button>
           </div>
-
         </div>
-
       </div>
-
     </div>
   );
 }

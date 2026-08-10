@@ -13,10 +13,26 @@ export const Route = createFileRoute("/developer-partnership")({
 });
 
 const benefits = [
-  { icon: Users, title: "Reach 2,400+ Active Brokers", desc: "Your project is visible to every PropTrack broker searching for listings in your location, price range, and unit type." },
-  { icon: MapPin, title: "Verified Map Pin", desc: "Your development appears with a precise, verified pin on our interactive real estate map used by brokers daily." },
-  { icon: TrendingUp, title: "Lead Reports & Analytics", desc: "Get weekly reports showing broker views, favorites, comparisons, and inquiry trends for your project." },
-  { icon: Building2, title: "Full Profile Showcase", desc: "A dedicated developer profile page with your company story, completed projects, and portfolio." },
+  {
+    icon: Users,
+    title: "Reach 2,400+ Active Brokers",
+    desc: "Your project is visible to every PropTrack broker searching for listings in your location, price range, and unit type.",
+  },
+  {
+    icon: MapPin,
+    title: "Verified Map Pin",
+    desc: "Your development appears with a precise, verified pin on our interactive real estate map used by brokers daily.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Lead Reports & Analytics",
+    desc: "Get weekly reports showing broker views, favorites, comparisons, and inquiry trends for your project.",
+  },
+  {
+    icon: Building2,
+    title: "Full Profile Showcase",
+    desc: "A dedicated developer profile page with your company story, completed projects, and portfolio.",
+  },
 ];
 
 const listingTiers = [
@@ -83,7 +99,8 @@ function DeveloperPartnershipPage() {
             Put your project in front of every top Egyptian broker
           </h1>
           <p className="mt-5 text-lg text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            PropTrack connects your development with 2,400+ active real estate brokers searching daily across Cairo, North Coast, New Capital, and all of Egypt.
+            PropTrack connects your development with 2,400+ active real estate brokers searching
+            daily across Cairo, North Coast, New Capital, and all of Egypt.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link to="/contact">
@@ -96,13 +113,17 @@ function DeveloperPartnershipPage() {
       </div>
 
       <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 space-y-20">
-
         {/* Benefits */}
         <section>
-          <h2 className="font-display text-3xl font-bold text-primary text-center mb-10">Why list on PropTrack?</h2>
+          <h2 className="font-display text-3xl font-bold text-primary text-center mb-10">
+            Why list on PropTrack?
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {benefits.map((b) => (
-              <div key={b.title} className="flex gap-5 rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <div
+                key={b.title}
+                className="flex gap-5 rounded-2xl border border-border bg-card p-6 shadow-sm"
+              >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10">
                   <b.icon className="h-6 w-6 text-emerald-500" />
                 </div>
@@ -117,8 +138,12 @@ function DeveloperPartnershipPage() {
 
         {/* Listing Tiers */}
         <section>
-          <h2 className="font-display text-3xl font-bold text-primary text-center mb-3">Listing Packages</h2>
-          <p className="text-center text-muted-foreground mb-10">Choose the visibility level that matches your project goals.</p>
+          <h2 className="font-display text-3xl font-bold text-primary text-center mb-3">
+            Listing Packages
+          </h2>
+          <p className="text-center text-muted-foreground mb-10">
+            Choose the visibility level that matches your project goals.
+          </p>
           <div className="grid gap-6 md:grid-cols-3">
             {listingTiers.map((tier) => (
               <div
@@ -136,7 +161,9 @@ function DeveloperPartnershipPage() {
                 )}
                 <h3 className="font-display text-xl font-bold text-primary">{tier.name}</h3>
                 <div className="mt-2 flex items-baseline gap-1">
-                  <span className="font-display text-3xl font-extrabold text-primary">{tier.price}</span>
+                  <span className="font-display text-3xl font-extrabold text-primary">
+                    {tier.price}
+                  </span>
                   <span className="text-sm text-muted-foreground">{tier.period}</span>
                 </div>
                 <ul className="mt-5 space-y-2 flex-1">
@@ -168,7 +195,10 @@ function DeveloperPartnershipPage() {
           </div>
           <div className="flex flex-wrap justify-center gap-6">
             {developers.map((d) => (
-              <div key={d.name} className="flex flex-col items-center gap-2 rounded-2xl border border-border bg-secondary/30 px-6 py-4 min-w-[100px]">
+              <div
+                key={d.name}
+                className="flex flex-col items-center gap-2 rounded-2xl border border-border bg-secondary/30 px-6 py-4 min-w-[100px]"
+              >
                 <span className="text-2xl">{d.logo}</span>
                 <span className="text-xs font-semibold text-foreground/70">{d.name}</span>
               </div>
@@ -178,9 +208,12 @@ function DeveloperPartnershipPage() {
 
         {/* CTA */}
         <section className="rounded-3xl bg-gradient-to-br from-emerald-900 via-primary to-accent/80 p-10 text-center text-primary-foreground">
-          <h2 className="font-display text-2xl font-bold mb-2">Ready to reach Egypt's top brokers?</h2>
+          <h2 className="font-display text-2xl font-bold mb-2">
+            Ready to reach Egypt's top brokers?
+          </h2>
           <p className="text-primary-foreground/80 text-sm mb-6 max-w-md mx-auto">
-            Contact our developer partnerships team to get your project listed and start generating broker interest today.
+            Contact our developer partnerships team to get your project listed and start generating
+            broker interest today.
           </p>
           <Link to="/contact">
             <Button className="rounded-full bg-white text-primary hover:bg-white/90 font-semibold">

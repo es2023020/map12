@@ -51,7 +51,9 @@ function main() {
         }
       }
     }
-    console.log(`Organized ${movedProjectsCount} project spreadsheets by developer folder inside 'projects/'.`);
+    console.log(
+      `Organized ${movedProjectsCount} project spreadsheets by developer folder inside 'projects/'.`,
+    );
   }
 
   // 4. Move raw files and developer directories from data/availability/ to raw_source_files/

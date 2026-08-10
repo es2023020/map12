@@ -15,7 +15,7 @@ export const Route = createFileRoute("/api/save-database")({
           if (!compoundsList || !destinationsList || !availabilityList) {
             return new Response(JSON.stringify({ error: "Missing lists in request body" }), {
               status: 400,
-              headers: { "Content-Type": "application/json" }
+              headers: { "Content-Type": "application/json" },
             });
           }
 
@@ -49,28 +49,34 @@ export const compoundsGenerated: Compound[] = ${JSON.stringify(compoundsList, nu
           console.log("Successfully wrote save-database payload to generated data files");
 
           // Auto-commit and push if in development local environment
-          if (process.env.NODE_ENV !== "production" && fs.existsSync(path.join(process.cwd(), ".git"))) {
-            exec('git add src/data/compounds.generated.ts src/data/destinations.generated.ts src/data/availability.generated.ts && git commit -m "Auto-sync database from Admin Dashboard" && git push origin main', (err, stdout, stderr) => {
-              if (err) {
-                console.error("Git auto-push error for database:", err);
-              } else {
-                console.log("Git auto-push success for database:", stdout);
-              }
-            });
+          if (
+            process.env.NODE_ENV !== "production" &&
+            fs.existsSync(path.join(process.cwd(), ".git"))
+          ) {
+            exec(
+              'git add src/data/compounds.generated.ts src/data/destinations.generated.ts src/data/availability.generated.ts && git commit -m "Auto-sync database from Admin Dashboard" && git push origin main',
+              (err, stdout, stderr) => {
+                if (err) {
+                  console.error("Git auto-push error for database:", err);
+                } else {
+                  console.log("Git auto-push success for database:", stdout);
+                }
+              },
+            );
           }
 
           return new Response(JSON.stringify({ success: true }), {
             status: 200,
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" },
           });
         } catch (error: any) {
           console.error("Save database error:", error);
           return new Response(JSON.stringify({ error: error.message }), {
             status: 500,
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" },
           });
         }
-      }
-    }
-  }
+      },
+    },
+  },
 });

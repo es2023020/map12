@@ -11,20 +11,20 @@ const deleteKeys = new Set([
   "sky-north",
   "summer",
   "cleo-mostakbal",
-  "palm-hills-sheikh-zayed"
+  "palm-hills-sheikh-zayed",
 ]);
 
 // 1. Clean project-images.ts
 if (fs.existsSync(imagesPath)) {
   let text = fs.readFileSync(imagesPath, "utf-8");
-  
+
   // project-images.ts exports a record projectImages: Record<string, string[]> = { ... }
   // We can parse it by matching each key: [ ... ] and deleting the key block
   for (const key of deleteKeys) {
     const regex = new RegExp(`\\s*"${key}":\\s*\\[[\\s\\S]*?\\],?`, "g");
     text = text.replace(regex, "");
   }
-  
+
   fs.writeFileSync(imagesPath, text, "utf-8");
   console.log("Cleaned project-images.ts");
 }
@@ -32,7 +32,7 @@ if (fs.existsSync(imagesPath)) {
 // 2. Clean media-registry.json
 if (fs.existsSync(registryJsonPath)) {
   const data = JSON.parse(fs.readFileSync(registryJsonPath, "utf-8"));
-  
+
   // Clean first dictionary
   if (data) {
     for (const key of deleteKeys) {
@@ -42,7 +42,7 @@ if (fs.existsSync(registryJsonPath)) {
       }
     }
   }
-  
+
   fs.writeFileSync(registryJsonPath, JSON.stringify(data, null, 2), "utf-8");
   console.log("Cleaned media-registry.json");
 }

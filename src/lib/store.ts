@@ -10,24 +10,59 @@ import type { AnalyticsEvent } from "@/lib/analytics";
 // sessionStorage is cleared when the browser tab/window is fully closed, so this
 // guarantees the user must re-login after closing the app.
 const SESSION_KEY = "proptrack-session-active";
-const isSessionActive = () => typeof sessionStorage !== "undefined" && sessionStorage.getItem(SESSION_KEY) === "1";
-const markSessionActive = () => { if (typeof sessionStorage !== "undefined") sessionStorage.setItem(SESSION_KEY, "1"); };
-const clearSession = () => { if (typeof sessionStorage !== "undefined") sessionStorage.removeItem(SESSION_KEY); };
+const isSessionActive = () =>
+  typeof sessionStorage !== "undefined" && sessionStorage.getItem(SESSION_KEY) === "1";
+const markSessionActive = () => {
+  if (typeof sessionStorage !== "undefined") sessionStorage.setItem(SESSION_KEY, "1");
+};
+const clearSession = () => {
+  if (typeof sessionStorage !== "undefined") sessionStorage.removeItem(SESSION_KEY);
+};
 
 export const launchSlugs = new Set([
-  "creekview", "elea-azha-north", "june", "sadaf", 
-  "commonhaus", "the-lynks", "park-sight", "silversands", 
-  "marresidence", "chapters-residence", "vea-new-cairo", "vie", 
-  "coral-coves", "menorca", "the-commons", "covaya", 
-  "solare", "sealine-seashore",
-  "hacienda-ras-el-hekma", "direction-white", "hap-town", "seazen",
-  "salt", "salt-marina", "perla", "ogami", "bloom-island-ogami",
-  "saada-sahel", "saada-north-coast", "citystars-park-street",
-  "the-med", "the-gray-laguna-the-boulevard", "surf-and-sand-seazen",
-  "central-water-residences", "safa-medi-plex-phase-2",
-  "caesar-sodic", "caesar-extension-2",
-  "katameya-coast", "cala-residences-katameya-coast",
-  "carnelia", "selina-carnelia", "azha-north-coast", "silvertown-lagoon-cabanas"
+  "creekview",
+  "elea-azha-north",
+  "june",
+  "sadaf",
+  "commonhaus",
+  "the-lynks",
+  "park-sight",
+  "silversands",
+  "marresidence",
+  "chapters-residence",
+  "vea-new-cairo",
+  "vie",
+  "coral-coves",
+  "menorca",
+  "the-commons",
+  "covaya",
+  "solare",
+  "sealine-seashore",
+  "hacienda-ras-el-hekma",
+  "direction-white",
+  "hap-town",
+  "seazen",
+  "salt",
+  "salt-marina",
+  "perla",
+  "ogami",
+  "bloom-island-ogami",
+  "saada-sahel",
+  "saada-north-coast",
+  "citystars-park-street",
+  "the-med",
+  "the-gray-laguna-the-boulevard",
+  "surf-and-sand-seazen",
+  "central-water-residences",
+  "safa-medi-plex-phase-2",
+  "caesar-sodic",
+  "caesar-extension-2",
+  "katameya-coast",
+  "cala-residences-katameya-coast",
+  "carnelia",
+  "selina-carnelia",
+  "azha-north-coast",
+  "silvertown-lagoon-cabanas",
 ]);
 
 export type LeadStage = "new" | "contacted" | "viewing" | "negotiating" | "closed";
@@ -110,10 +145,10 @@ export const TIER_LIMITS_MAP: Record<SubscriptionTier, TierLimits> = {
   },
 };
 
-export type BrokerUser = { 
-  email: string; 
-  name: string; 
-  tier: SubscriptionTier; 
+export type BrokerUser = {
+  email: string;
+  name: string;
+  tier: SubscriptionTier;
   avatar?: string;
   billingDate: string; // ISO YYYY-MM-DD
   lastCounterResetDate?: string; // ISO YYYY-MM-DD
@@ -144,11 +179,11 @@ export type BrokerageSeatAgent = {
   lastActive: string;
 };
 
-export type RegisteredUser = { 
-  email: string; 
-  name: string; 
-  password?: string; 
-  tier: SubscriptionTier; 
+export type RegisteredUser = {
+  email: string;
+  name: string;
+  password?: string;
+  tier: SubscriptionTier;
   avatar?: string;
   billingDate?: string;
   lastCounterResetDate?: string;
@@ -169,7 +204,14 @@ type UserData = {
   agentNotes: string;
   agentTasks: AgentTask[];
   customShortcuts: CustomShortcut[];
-  customBrochures: Array<{ name: string; type: string; category: string; file: string; path: string; size_mb?: number }>;
+  customBrochures: Array<{
+    name: string;
+    type: string;
+    category: string;
+    file: string;
+    path: string;
+    size_mb?: number;
+  }>;
   customProfiles: Array<{ clean_name: string; filename: string; path: string; size_mb: number }>;
   salesTarget: number;
   analyticsEvents: AnalyticsEvent[];
@@ -189,7 +231,14 @@ type State = {
   salesTarget: number; // in EGP Millions
   customShortcuts: CustomShortcut[];
   usersDatabase: RegisteredUser[];
-  customBrochures: Array<{ name: string; type: string; category: string; file: string; path: string; size_mb?: number }>;
+  customBrochures: Array<{
+    name: string;
+    type: string;
+    category: string;
+    file: string;
+    path: string;
+    size_mb?: number;
+  }>;
   customProfiles: Array<{ clean_name: string; filename: string; path: string; size_mb: number }>;
   userData?: Record<string, UserData>;
 
@@ -218,7 +267,12 @@ type State = {
   toggleFavorite: (slug: string) => void;
   toggleCompare: (slug: string) => void;
   addRecent: (slug: string) => void;
-  addLead: (lead: Omit<Lead, "id" | "createdAt" | "assignedUnits" | "lastContacted" | "priority" | "activityLog">) => void;
+  addLead: (
+    lead: Omit<
+      Lead,
+      "id" | "createdAt" | "assignedUnits" | "lastContacted" | "priority" | "activityLog"
+    >,
+  ) => void;
   updateLeadStage: (id: string, stage: LeadStage) => void;
   deleteLead: (id: string) => void;
   updateNotes: (notes: string) => void;
@@ -235,16 +289,39 @@ type State = {
   updateLeadContacted: (id: string) => void;
   addLeadActivity: (leadId: string, type: ActivityType, text: string) => void;
   updateLeadDetails: (id: string, updates: Partial<Lead>) => void;
-  addCustomBrochure: (brochure: { name: string; type: string; category: string; file: string; path: string; size_mb?: number }) => void;
-  addCustomProfile: (profile: { clean_name: string; filename: string; path: string; size_mb: number }) => void;
+  addCustomBrochure: (brochure: {
+    name: string;
+    type: string;
+    category: string;
+    file: string;
+    path: string;
+    size_mb?: number;
+  }) => void;
+  addCustomProfile: (profile: {
+    clean_name: string;
+    filename: string;
+    path: string;
+    size_mb: number;
+  }) => void;
   removeCustomBrochure: (filePath: string) => void;
   incrementUserTimeSpent: (email: string, seconds: number) => void;
 
   // Subscription Actions
-  checkLimit: (action: "crm" | "whatsapp" | "favorites") => { allowed: boolean; limit: number; nextTier: string; msg?: string };
+  checkLimit: (action: "crm" | "whatsapp" | "favorites") => {
+    allowed: boolean;
+    limit: number;
+    nextTier: string;
+    msg?: string;
+  };
   incrementWhatsAppSends: () => boolean;
-  upgradeTier: (newTier: "Starter" | "Pro" | "BrokerageAdmin", seats?: number) => { success: boolean; cost: number; prorationMsg: string };
-  downgradeTier: (newTier: "Explorer" | "Starter" | "Pro") => { success: boolean; effectiveDate: string };
+  upgradeTier: (
+    newTier: "Starter" | "Pro" | "BrokerageAdmin",
+    seats?: number,
+  ) => { success: boolean; cost: number; prorationMsg: string };
+  downgradeTier: (newTier: "Explorer" | "Starter" | "Pro") => {
+    success: boolean;
+    effectiveDate: string;
+  };
   addBrokerageSeatAgent: (email: string, name: string) => boolean;
   removeBrokerageSeatAgent: (email: string) => void;
   toggleProjectAccess: (slug: string) => void;
@@ -269,81 +346,147 @@ type State = {
   addPendingUpload: (upload: any) => void;
   approvePendingUpload: (id: string) => void;
   rejectPendingUpload: (id: string) => void;
-  addAuditLog: (log: { actor: string; entity: string; action: string; before?: string; after?: string }) => void;
+  addAuditLog: (log: {
+    actor: string;
+    entity: string;
+    action: string;
+    before?: string;
+    after?: string;
+  }) => void;
 
   // Analytics
   trackEvent: (ev: Omit<AnalyticsEvent, "timestamp">) => void;
 };
 
 const seedLeads: Lead[] = [
-  { 
-    id: "l1", 
-    name: "Ahmed Hassan", 
-    phone: "+20 100 111 2233", 
-    budget: 14, 
-    interest: "marassi", 
-    stage: "viewing", 
-    createdAt: Date.now() - 86400000 * 2, 
-    notes: "Looking for 3BR chalet, beachfront", 
-    assignedUnits: ["Marassi - Entry Layout (EGP 14.5M+)"], 
-    lastContacted: Date.now() - 86400000 * 4, 
+  {
+    id: "l1",
+    name: "Ahmed Hassan",
+    phone: "+20 100 111 2233",
+    budget: 14,
+    interest: "marassi",
+    stage: "viewing",
+    createdAt: Date.now() - 86400000 * 2,
+    notes: "Looking for 3BR chalet, beachfront",
+    assignedUnits: ["Marassi - Entry Layout (EGP 14.5M+)"],
+    lastContacted: Date.now() - 86400000 * 4,
     priority: "high",
     activityLog: [
-      { id: "a1", type: "system", text: "Prospect registered in system", timestamp: Date.now() - 86400000 * 5 },
-      { id: "a2", type: "whatsapp", text: "Welcome brochure sent via WhatsApp Web", timestamp: Date.now() - 86400000 * 4 },
-      { id: "a3", type: "stage", text: "Stage updated to Contacted", timestamp: Date.now() - 86400000 * 3 },
-      { id: "a4", type: "system", text: "Assigned compound: Marassi - Entry Layout (EGP 14.5M+)", timestamp: Date.now() - 86400000 * 2 },
-      { id: "a5", type: "stage", text: "Stage updated to Viewing Site", timestamp: Date.now() - 86400000 * 2 }
-    ]
+      {
+        id: "a1",
+        type: "system",
+        text: "Prospect registered in system",
+        timestamp: Date.now() - 86400000 * 5,
+      },
+      {
+        id: "a2",
+        type: "whatsapp",
+        text: "Welcome brochure sent via WhatsApp Web",
+        timestamp: Date.now() - 86400000 * 4,
+      },
+      {
+        id: "a3",
+        type: "stage",
+        text: "Stage updated to Contacted",
+        timestamp: Date.now() - 86400000 * 3,
+      },
+      {
+        id: "a4",
+        type: "system",
+        text: "Assigned compound: Marassi - Entry Layout (EGP 14.5M+)",
+        timestamp: Date.now() - 86400000 * 2,
+      },
+      {
+        id: "a5",
+        type: "stage",
+        text: "Stage updated to Viewing Site",
+        timestamp: Date.now() - 86400000 * 2,
+      },
+    ],
   },
-  { 
-    id: "l2", 
-    name: "Salma Adel", 
-    phone: "+20 122 555 8899", 
-    budget: 8, 
-    interest: "fouka-bay", 
-    stage: "contacted", 
-    createdAt: Date.now() - 86400000 * 5, 
-    assignedUnits: [], 
-    lastContacted: Date.now() - 86400000 * 5, 
+  {
+    id: "l2",
+    name: "Salma Adel",
+    phone: "+20 122 555 8899",
+    budget: 8,
+    interest: "fouka-bay",
+    stage: "contacted",
+    createdAt: Date.now() - 86400000 * 5,
+    assignedUnits: [],
+    lastContacted: Date.now() - 86400000 * 5,
     priority: "medium",
     activityLog: [
-      { id: "a6", type: "system", text: "Prospect registered in system", timestamp: Date.now() - 86400000 * 5 },
-      { id: "a7", type: "whatsapp", text: "Followup call: shared Solare brochure link", timestamp: Date.now() - 86400000 * 5 }
-    ]
+      {
+        id: "a6",
+        type: "system",
+        text: "Prospect registered in system",
+        timestamp: Date.now() - 86400000 * 5,
+      },
+      {
+        id: "a7",
+        type: "whatsapp",
+        text: "Followup call: shared Solare brochure link",
+        timestamp: Date.now() - 86400000 * 5,
+      },
+    ],
   },
-  { 
-    id: "l3", 
-    name: "Karim Nabil", 
-    phone: "+20 111 222 3344", 
-    budget: 22, 
-    interest: "soul", 
-    stage: "new", 
-    createdAt: Date.now() - 86400000, 
-    assignedUnits: [], 
-    lastContacted: Date.now() - 86400000, 
+  {
+    id: "l3",
+    name: "Karim Nabil",
+    phone: "+20 111 222 3344",
+    budget: 22,
+    interest: "soul",
+    stage: "new",
+    createdAt: Date.now() - 86400000,
+    assignedUnits: [],
+    lastContacted: Date.now() - 86400000,
     priority: "high",
     activityLog: [
-      { id: "a8", type: "system", text: "Prospect registered in system", timestamp: Date.now() - 86400000 * 1 }
-    ]
+      {
+        id: "a8",
+        type: "system",
+        text: "Prospect registered in system",
+        timestamp: Date.now() - 86400000 * 1,
+      },
+    ],
   },
-  { 
-    id: "l4", 
-    name: "Mona Sherif", 
-    phone: "+20 100 988 7766", 
-    budget: 18, 
-    interest: "mivida", 
-    stage: "negotiating", 
-    createdAt: Date.now() - 86400000 * 8, 
-    assignedUnits: [], 
-    lastContacted: Date.now() - 86400000 * 8, 
+  {
+    id: "l4",
+    name: "Mona Sherif",
+    phone: "+20 100 988 7766",
+    budget: 18,
+    interest: "mivida",
+    stage: "negotiating",
+    createdAt: Date.now() - 86400000 * 8,
+    assignedUnits: [],
+    lastContacted: Date.now() - 86400000 * 8,
     priority: "low",
     activityLog: [
-      { id: "a9", type: "system", text: "Prospect registered in system", timestamp: Date.now() - 86400000 * 8 },
-      { id: "a10", type: "stage", text: "Stage updated to Contacted", timestamp: Date.now() - 86400000 * 6 },
-      { id: "a11", type: "note", text: "Wants a payment plan spread over 8 years with equal installments", timestamp: Date.now() - 86400000 * 4 },
-      { id: "a12", type: "stage", text: "Stage updated to Negotiating", timestamp: Date.now() - 86400000 * 2 }
-    ]
+      {
+        id: "a9",
+        type: "system",
+        text: "Prospect registered in system",
+        timestamp: Date.now() - 86400000 * 8,
+      },
+      {
+        id: "a10",
+        type: "stage",
+        text: "Stage updated to Contacted",
+        timestamp: Date.now() - 86400000 * 6,
+      },
+      {
+        id: "a11",
+        type: "note",
+        text: "Wants a payment plan spread over 8 years with equal installments",
+        timestamp: Date.now() - 86400000 * 4,
+      },
+      {
+        id: "a12",
+        type: "stage",
+        text: "Stage updated to Negotiating",
+        timestamp: Date.now() - 86400000 * 2,
+      },
+    ],
   },
 ];
 
@@ -355,7 +498,7 @@ const syncUsersToServer = async (usersList: RegisteredUser[]) => {
     await fetch("/api/save-users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ usersList })
+      body: JSON.stringify({ usersList }),
     });
   } catch (e) {
     console.error("Failed to sync users to server:", e);
@@ -386,43 +529,48 @@ export const useStore = create<State>()(
                 customProfiles: merged.customProfiles,
                 salesTarget: merged.salesTarget,
                 analyticsEvents: merged.analyticsEvents,
-              }
+              },
             };
           }
           return merged;
         });
       };
 
-
-      const initialCompoundsList = compounds.map(c => {
+      const initialCompoundsList = compounds.map((c) => {
         const staticFile = brochureMap[c.slug];
         // Auto-purge any base64 upload data from project record
         const hasBase64Url = c.brochureUrl && c.brochureUrl.startsWith("data:");
         const isDeleted = c.brochureDeleted || hasBase64Url;
-        
+
         return {
           ...c,
           isNewLaunch: launchSlugs.has(c.slug),
-          brochureUrl: isDeleted ? undefined : (c.brochureUrl || (staticFile ? `/brochures/${staticFile}` : undefined)),
-          brochureFileName: isDeleted ? undefined : (c.brochureFileName || staticFile || undefined),
-          brochureType: isDeleted ? undefined : (c.brochureType || (staticFile ? "application/pdf" : undefined)),
-          brochureDeleted: isDeleted
+          brochureUrl: isDeleted
+            ? undefined
+            : c.brochureUrl || (staticFile ? `/brochures/${staticFile}` : undefined),
+          brochureFileName: isDeleted ? undefined : c.brochureFileName || staticFile || undefined,
+          brochureType: isDeleted
+            ? undefined
+            : c.brochureType || (staticFile ? "application/pdf" : undefined),
+          brochureDeleted: isDeleted,
         };
       });
 
       // Initial derived developer list from seed compounds
-      const seedDevelopers = Array.from(new Set(initialCompoundsList.map(c => c.developer))).map((name, i) => ({
-        slug: name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
-        name,
-        legalName: `${name} S.A.E.`,
-        description: `${name} is a leading real estate developer in Egypt, renowned for high-quality builds and luxury communities.`,
-        phone: "+20 19688",
-        email: `info@${name.toLowerCase().replace(/[^a-z0-9]+/g, "")}.com`,
-        address: "Cairo, Egypt",
-        tier: "Tier A",
-        status: "Verified",
-        projects: initialCompoundsList.filter(c => c.developer === name).map(c => c.name)
-      }));
+      const seedDevelopers = Array.from(new Set(initialCompoundsList.map((c) => c.developer))).map(
+        (name, i) => ({
+          slug: name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+          name,
+          legalName: `${name} S.A.E.`,
+          description: `${name} is a leading real estate developer in Egypt, renowned for high-quality builds and luxury communities.`,
+          phone: "+20 19688",
+          email: `info@${name.toLowerCase().replace(/[^a-z0-9]+/g, "")}.com`,
+          address: "Cairo, Egypt",
+          tier: "Tier A",
+          status: "Verified",
+          projects: initialCompoundsList.filter((c) => c.developer === name).map((c) => c.name),
+        }),
+      );
 
       return {
         user: null,
@@ -434,7 +582,7 @@ export const useStore = create<State>()(
         agentTasks: [],
         salesTarget: 0,
         customShortcuts: [
-          { id: "s1", label: "Developer Portals", url: "https://www.nawy.com/developers" }
+          { id: "s1", label: "Developer Portals", url: "https://www.nawy.com/developers" },
         ],
         usersDatabase: seedUsers,
         customBrochures: [],
@@ -454,14 +602,22 @@ export const useStore = create<State>()(
         developersList: seedDevelopers,
         pendingUploadsList: [],
         auditLogs: [
-          { id: "a1", actor: "System", entity: "Database", action: "Initialized PropTrack Command Center databases", timestamp: Date.now() - 3600000 * 2 }
+          {
+            id: "a1",
+            actor: "System",
+            entity: "Database",
+            action: "Initialized PropTrack Command Center databases",
+            timestamp: Date.now() - 3600000 * 2,
+          },
         ],
 
         signIn: (email, password) => {
-          const user = get().usersDatabase.find(u => u.email.toLowerCase() === email.toLowerCase());
+          const user = get().usersDatabase.find(
+            (u) => u.email.toLowerCase() === email.toLowerCase(),
+          );
           if (user && (!user.password || user.password === password)) {
-            const updatedUsersDatabase = get().usersDatabase.map(u => 
-              u.email.toLowerCase() === email.toLowerCase() ? { ...u, lastLoginAt: Date.now() } : u
+            const updatedUsersDatabase = get().usersDatabase.map((u) =>
+              u.email.toLowerCase() === email.toLowerCase() ? { ...u, lastLoginAt: Date.now() } : u,
             );
             originalSet({ usersDatabase: updatedUsersDatabase });
             syncUsersToServer(updatedUsersDatabase);
@@ -493,8 +649,8 @@ export const useStore = create<State>()(
                     billingHistory: state.billingHistory,
                     brokerageSeats: state.brokerageSeats,
                     projectAccessList: state.projectAccessList,
-                  }
-                }
+                  },
+                },
               }));
             }
 
@@ -502,19 +658,22 @@ export const useStore = create<State>()(
             const savedData = get().userData?.[email.toLowerCase()];
 
             // Check if this is a seed admin account (pre-populated with demo data only on first ever login)
-            const isSeedAdmin = ["admin@proptrack.com", "elsayedshoeip70@gmail.com"].includes(email.toLowerCase());
+            const isSeedAdmin = ["admin@proptrack.com", "elsayedshoeip70@gmail.com"].includes(
+              email.toLowerCase(),
+            );
             const isFirstLogin = !savedData;
 
             const todayStr = new Date().toISOString().split("T")[0];
-            const billingDate = user.billingDate || savedData?.billingHistory?.[0]?.date || todayStr;
+            const billingDate =
+              user.billingDate || savedData?.billingHistory?.[0]?.date || todayStr;
             const lastReset = user.lastCounterResetDate || todayStr;
             const whatsappSends = user.whatsappSendsCount || 0;
 
             originalSet({
-              user: { 
-                email: user.email, 
-                name: user.name, 
-                tier: mappedTier, 
+              user: {
+                email: user.email,
+                name: user.name,
+                tier: mappedTier,
                 avatar: user.avatar,
                 billingDate,
                 lastCounterResetDate: lastReset,
@@ -522,22 +681,34 @@ export const useStore = create<State>()(
                 seatsCount: user.seatsCount || (mappedTier === "BrokerageAdmin" ? 5 : undefined),
                 parentBrokerageId: user.parentBrokerageId,
                 projectAccessList: user.projectAccessList || savedData?.projectAccessList || [],
-                pendingDowngrade: user.pendingDowngrade
+                pendingDowngrade: user.pendingDowngrade,
               },
               favorites: savedData?.favorites || [],
               compareList: savedData?.compareList || [],
               recentlyViewed: savedData?.recentlyViewed || [],
               leads: savedData?.leads || (isSeedAdmin && isFirstLogin ? seedLeads : []),
-              agentNotes: savedData?.agentNotes || (isSeedAdmin && isFirstLogin
-                ? "### Agent Scratchpad\n- Follow up with Ahmed Hassan on Marassi chalets\n- Review new Sodics June brochure\n- Call new leads from Facebook Ads"
-                : "### Agent Scratchpad\n"),
-              agentTasks: savedData?.agentTasks || (isSeedAdmin && isFirstLogin
-                ? [
-                    { id: "t1", text: "Call back Karim Nabil about Soul villa", completed: false },
-                    { id: "t2", text: "Prepare compare sheet for Azha vs Seashore", completed: true },
-                    { id: "t3", text: "Open WhatsApp Web and sync leads", completed: false }
-                  ]
-                : []),
+              agentNotes:
+                savedData?.agentNotes ||
+                (isSeedAdmin && isFirstLogin
+                  ? "### Agent Scratchpad\n- Follow up with Ahmed Hassan on Marassi chalets\n- Review new Sodics June brochure\n- Call new leads from Facebook Ads"
+                  : "### Agent Scratchpad\n"),
+              agentTasks:
+                savedData?.agentTasks ||
+                (isSeedAdmin && isFirstLogin
+                  ? [
+                      {
+                        id: "t1",
+                        text: "Call back Karim Nabil about Soul villa",
+                        completed: false,
+                      },
+                      {
+                        id: "t2",
+                        text: "Prepare compare sheet for Azha vs Seashore",
+                        completed: true,
+                      },
+                      { id: "t3", text: "Open WhatsApp Web and sync leads", completed: false },
+                    ]
+                  : []),
               customShortcuts: savedData?.customShortcuts || [],
               customBrochures: savedData?.customBrochures || [],
               customProfiles: savedData?.customProfiles || [],
@@ -557,42 +728,47 @@ export const useStore = create<State>()(
         },
 
         signUp: (email, name, password, tier) => {
-          const exists = get().usersDatabase.some(u => u.email.toLowerCase() === email.toLowerCase());
+          const exists = get().usersDatabase.some(
+            (u) => u.email.toLowerCase() === email.toLowerCase(),
+          );
           if (exists) return false;
-          
+
           const todayStr = new Date().toISOString().split("T")[0];
           const chosenTier = tier || "Explorer";
-          
-          const newUser: RegisteredUser = { 
-            email, 
-            name, 
-            password, 
+
+          const newUser: RegisteredUser = {
+            email,
+            name,
+            password,
             tier: chosenTier,
             billingDate: todayStr,
             lastCounterResetDate: todayStr,
             whatsappSendsCount: 0,
             seatsCount: chosenTier === "BrokerageAdmin" ? 5 : undefined,
             lastLoginAt: Date.now(),
-            timeSpent: 0
+            timeSpent: 0,
           };
 
           const newUsersDatabase = [...get().usersDatabase, newUser];
           originalSet(() => ({
-            usersDatabase: newUsersDatabase
+            usersDatabase: newUsersDatabase,
           }));
           syncUsersToServer(newUsersDatabase);
 
           // Create base billing history if it is a paid tier
           if (chosenTier !== "Explorer") {
-            const price = chosenTier === "Starter" ? PRICING_CONFIG.starterPrice 
-                        : chosenTier === "Pro" ? PRICING_CONFIG.proPrice 
-                        : PRICING_CONFIG.brokerageSeatPrice * 5;
-            
+            const price =
+              chosenTier === "Starter"
+                ? PRICING_CONFIG.starterPrice
+                : chosenTier === "Pro"
+                  ? PRICING_CONFIG.proPrice
+                  : PRICING_CONFIG.brokerageSeatPrice * 5;
+
             const initialInvoice: BillingHistoryItem = {
               id: "inv_" + Math.random().toString(36).slice(2, 9),
               date: todayStr,
               amount: price,
-              description: `Initial subscription setup for ${chosenTier}`
+              description: `Initial subscription setup for ${chosenTier}`,
             };
 
             originalSet((s) => ({
@@ -612,9 +788,9 @@ export const useStore = create<State>()(
                   analyticsEvents: [],
                   billingHistory: [initialInvoice],
                   brokerageSeats: [],
-                  projectAccessList: []
-                }
-              }
+                  projectAccessList: [],
+                },
+              },
             }));
           }
 
@@ -645,8 +821,8 @@ export const useStore = create<State>()(
                   billingHistory: state.billingHistory,
                   brokerageSeats: state.brokerageSeats,
                   projectAccessList: state.projectAccessList,
-                }
-              }
+                },
+              },
             }));
           }
           originalSet({
@@ -674,7 +850,12 @@ export const useStore = create<State>()(
           if (isAdding) {
             const check = get().checkLimit("favorites");
             if (!check.allowed) {
-              set({ limitHitError: { action: "favorites", msg: check.msg || "Favorites limit reached." } });
+              set({
+                limitHitError: {
+                  action: "favorites",
+                  msg: check.msg || "Favorites limit reached.",
+                },
+              });
               return;
             }
           }
@@ -705,7 +886,9 @@ export const useStore = create<State>()(
         addLead: (lead) => {
           const check = get().checkLimit("crm");
           if (!check.allowed) {
-            set({ limitHitError: { action: "crm", msg: check.msg || "CRM contact limit reached." } });
+            set({
+              limitHitError: { action: "crm", msg: check.msg || "CRM contact limit reached." },
+            });
             return;
           }
           set((s) => {
@@ -717,8 +900,13 @@ export const useStore = create<State>()(
               lastContacted: Date.now(),
               priority: "medium",
               activityLog: [
-                { id: Math.random().toString(36).slice(2, 9), type: "system", text: "Lead captured / entered manually", timestamp: Date.now() }
-              ]
+                {
+                  id: Math.random().toString(36).slice(2, 9),
+                  type: "system",
+                  text: "Lead captured / entered manually",
+                  timestamp: Date.now(),
+                },
+              ],
             };
             return { leads: [newLead, ...s.leads] };
           });
@@ -732,18 +920,18 @@ export const useStore = create<State>()(
                   id: Math.random().toString(36).slice(2, 9),
                   type: "stage",
                   text: `Stage updated to ${stage.toUpperCase()}`,
-                  timestamp: Date.now()
+                  timestamp: Date.now(),
                 };
                 return { ...l, stage, activityLog: [logItem, ...l.activityLog] };
               }
               return l;
-            })
+            }),
           }));
         },
 
         deleteLead: (id) => {
           set((s) => ({
-            leads: s.leads.filter((l) => l.id !== id)
+            leads: s.leads.filter((l) => l.id !== id),
           }));
         },
 
@@ -757,93 +945,103 @@ export const useStore = create<State>()(
 
         addTask: (text) => {
           set((s) => ({
-            agentTasks: [...s.agentTasks, { id: "task_" + Math.random().toString(36).slice(2, 9), text, completed: false }]
+            agentTasks: [
+              ...s.agentTasks,
+              { id: "task_" + Math.random().toString(36).slice(2, 9), text, completed: false },
+            ],
           }));
         },
 
         toggleTask: (id) => {
           set((s) => ({
-            agentTasks: s.agentTasks.map((t) => (t.id === id ? { ...t, completed: !t.completed } : t))
+            agentTasks: s.agentTasks.map((t) =>
+              t.id === id ? { ...t, completed: !t.completed } : t,
+            ),
           }));
         },
 
         deleteTask: (id) => {
           set((s) => ({
-            agentTasks: s.agentTasks.filter((t) => t.id !== id)
+            agentTasks: s.agentTasks.filter((t) => t.id !== id),
           }));
         },
 
         addCustomShortcut: (label, url) => {
           set((s) => ({
-            customShortcuts: [...s.customShortcuts, { id: "sc_" + Math.random().toString(36).slice(2, 9), label, url }]
+            customShortcuts: [
+              ...s.customShortcuts,
+              { id: "sc_" + Math.random().toString(36).slice(2, 9), label, url },
+            ],
           }));
         },
 
         deleteCustomShortcut: (id) => {
           set((s) => ({
-            customShortcuts: s.customShortcuts.filter((x) => x.id !== id)
+            customShortcuts: s.customShortcuts.filter((x) => x.id !== id),
           }));
         },
 
         assignUnitToLead: (leadId, unitStr) => {
           set((s) => ({
-            leads: s.leads.map(l => {
+            leads: s.leads.map((l) => {
               if (l.id === leadId) {
-                const units = l.assignedUnits.includes(unitStr) ? l.assignedUnits : [...l.assignedUnits, unitStr];
+                const units = l.assignedUnits.includes(unitStr)
+                  ? l.assignedUnits
+                  : [...l.assignedUnits, unitStr];
                 const logItem: ActivityLogItem = {
                   id: Math.random().toString(36).slice(2, 9),
                   type: "system",
                   text: `Assigned unit: ${unitStr}`,
-                  timestamp: Date.now()
+                  timestamp: Date.now(),
                 };
                 return { ...l, assignedUnits: units, activityLog: [logItem, ...l.activityLog] };
               }
               return l;
-            })
+            }),
           }));
         },
 
         removeUnitFromLead: (leadId, unitStr) => {
           set((s) => ({
-            leads: s.leads.map(l => {
+            leads: s.leads.map((l) => {
               if (l.id === leadId) {
                 const logItem: ActivityLogItem = {
                   id: Math.random().toString(36).slice(2, 9),
                   type: "system",
                   text: `Removed unit assignment: ${unitStr}`,
-                  timestamp: Date.now()
+                  timestamp: Date.now(),
                 };
                 return {
                   ...l,
-                  assignedUnits: l.assignedUnits.filter(x => x !== unitStr),
-                  activityLog: [logItem, ...l.activityLog]
+                  assignedUnits: l.assignedUnits.filter((x) => x !== unitStr),
+                  activityLog: [logItem, ...l.activityLog],
                 };
               }
               return l;
-            })
+            }),
           }));
         },
 
         updateLeadPriority: (id, priority) => {
           set((s) => ({
-            leads: s.leads.map(l => {
+            leads: s.leads.map((l) => {
               if (l.id === id) {
                 const logItem: ActivityLogItem = {
                   id: Math.random().toString(36).slice(2, 9),
                   type: "system",
                   text: `Priority updated to ${priority.toUpperCase()}`,
-                  timestamp: Date.now()
+                  timestamp: Date.now(),
                 };
                 return { ...l, priority, activityLog: [logItem, ...l.activityLog] };
               }
               return l;
-            })
+            }),
           }));
         },
 
         updateLeadNotesAndBudget: (id, notes, budget) => {
           set((s) => ({
-            leads: s.leads.map(l => {
+            leads: s.leads.map((l) => {
               if (l.id === id) {
                 const logs: ActivityLogItem[] = [];
                 if (l.budget !== budget) {
@@ -851,7 +1049,7 @@ export const useStore = create<State>()(
                     id: Math.random().toString(36).slice(2, 9),
                     type: "system",
                     text: `Budget updated from EGP ${l.budget}M to EGP ${budget}M`,
-                    timestamp: Date.now()
+                    timestamp: Date.now(),
                   });
                 }
                 if (notes && l.notes !== notes) {
@@ -859,53 +1057,57 @@ export const useStore = create<State>()(
                     id: Math.random().toString(36).slice(2, 9),
                     type: "note",
                     text: `Client notes updated: "${notes}"`,
-                    timestamp: Date.now()
+                    timestamp: Date.now(),
                   });
                 }
                 return { ...l, notes, budget, activityLog: [...logs, ...l.activityLog] };
               }
               return l;
-            })
+            }),
           }));
         },
 
         updateLeadContacted: (id) => {
           set((s) => ({
-            leads: s.leads.map(l => {
+            leads: s.leads.map((l) => {
               if (l.id === id) {
                 const logItem: ActivityLogItem = {
                   id: Math.random().toString(36).slice(2, 9),
                   type: "whatsapp",
                   text: "Opened WhatsApp chat thread",
-                  timestamp: Date.now()
+                  timestamp: Date.now(),
                 };
-                return { ...l, lastContacted: Date.now(), activityLog: [logItem, ...l.activityLog] };
+                return {
+                  ...l,
+                  lastContacted: Date.now(),
+                  activityLog: [logItem, ...l.activityLog],
+                };
               }
               return l;
-            })
+            }),
           }));
         },
 
         addLeadActivity: (leadId, type, text) => {
           set((s) => ({
-            leads: s.leads.map(l => {
+            leads: s.leads.map((l) => {
               if (l.id === leadId) {
                 const logItem: ActivityLogItem = {
                   id: Math.random().toString(36).slice(2, 9),
                   type,
                   text,
-                  timestamp: Date.now()
+                  timestamp: Date.now(),
                 };
                 return { ...l, activityLog: [logItem, ...l.activityLog] };
               }
               return l;
-            })
+            }),
           }));
         },
 
         updateLeadDetails: (id, updates) => {
           set((s) => ({
-            leads: s.leads.map(l => {
+            leads: s.leads.map((l) => {
               if (l.id === id) {
                 const logs: ActivityLogItem[] = [];
                 for (const [key, value] of Object.entries(updates)) {
@@ -915,132 +1117,138 @@ export const useStore = create<State>()(
                       id: Math.random().toString(36).slice(2, 9),
                       type: "system",
                       text: `Field "${key}" updated from "${oldVal}" to "${value}"`,
-                      timestamp: Date.now()
+                      timestamp: Date.now(),
                     });
                   }
                 }
-                return { 
-                  ...l, 
-                  ...updates, 
-                  activityLog: [...logs, ...l.activityLog] 
+                return {
+                  ...l,
+                  ...updates,
+                  activityLog: [...logs, ...l.activityLog],
                 };
               }
               return l;
-            })
+            }),
           }));
         },
 
         addCustomBrochure: (brochure) => {
           set((s) => ({
-            customBrochures: [...(s.customBrochures || []), brochure]
+            customBrochures: [...(s.customBrochures || []), brochure],
           }));
         },
 
         addCustomProfile: (profile) => {
           set((s) => ({
-            customProfiles: [...(s.customProfiles || []), profile]
+            customProfiles: [...(s.customProfiles || []), profile],
           }));
         },
 
         removeCustomBrochure: (filePath) => {
           set((s) => ({
-            customBrochures: (s.customBrochures || []).filter(b => b.path !== filePath)
+            customBrochures: (s.customBrochures || []).filter((b) => b.path !== filePath),
           }));
         },
 
         checkLimit: (action) => {
           const user = get().user;
           if (!user) return { allowed: true, limit: 999999, nextTier: "" };
-          
+
           const limits = TIER_LIMITS_MAP[user.tier] || TIER_LIMITS_MAP.Explorer;
-          
+
           if (action === "crm") {
             const count = get().leads.length;
             if (count >= limits.crmLimit) {
               const nextTier = user.tier === "Explorer" ? "Starter" : "Pro";
               get().trackEvent({
                 type: "limit_hit" as any,
-                meta: { feature: "crm", limit: limits.crmLimit, tier: user.tier }
+                meta: { feature: "crm", limit: limits.crmLimit, tier: user.tier },
               });
               return {
                 allowed: false,
                 limit: limits.crmLimit,
                 nextTier,
-                msg: `CRM contact limit reached. Your ${user.tier} plan supports up to ${limits.crmLimit} contacts. Upgrade to ${nextTier} for higher limits.`
+                msg: `CRM contact limit reached. Your ${user.tier} plan supports up to ${limits.crmLimit} contacts. Upgrade to ${nextTier} for higher limits.`,
               };
             }
           }
-          
+
           if (action === "whatsapp") {
             const count = user.whatsappSendsCount || 0;
             if (count >= limits.whatsappLimit) {
               const nextTier = user.tier === "Explorer" ? "Starter" : "Pro";
               get().trackEvent({
                 type: "limit_hit" as any,
-                meta: { feature: "whatsapp", limit: limits.whatsappLimit, tier: user.tier }
+                meta: { feature: "whatsapp", limit: limits.whatsappLimit, tier: user.tier },
               });
               return {
                 allowed: false,
                 limit: limits.whatsappLimit,
                 nextTier,
-                msg: `WhatsApp monthly sharing limit reached. Your ${user.tier} plan supports up to ${limits.whatsappLimit} shares per billing cycle. Upgrade to ${nextTier} for higher limits.`
+                msg: `WhatsApp monthly sharing limit reached. Your ${user.tier} plan supports up to ${limits.whatsappLimit} shares per billing cycle. Upgrade to ${nextTier} for higher limits.`,
               };
             }
           }
-          
+
           if (action === "favorites") {
             const count = get().favorites.length;
             if (count >= limits.favoritesLimit) {
               const nextTier = user.tier === "Explorer" ? "Starter" : "Pro";
               get().trackEvent({
                 type: "limit_hit" as any,
-                meta: { feature: "favorites", limit: limits.favoritesLimit, tier: user.tier }
+                meta: { feature: "favorites", limit: limits.favoritesLimit, tier: user.tier },
               });
               return {
                 allowed: false,
                 limit: limits.favoritesLimit,
                 nextTier,
-                msg: `Favorites limit reached. Your ${user.tier} plan supports up to ${limits.favoritesLimit} saved projects. Upgrade to ${nextTier} for unlimited favorites.`
+                msg: `Favorites limit reached. Your ${user.tier} plan supports up to ${limits.favoritesLimit} saved projects. Upgrade to ${nextTier} for unlimited favorites.`,
               };
             }
           }
-          
+
           return { allowed: true, limit: 999999, nextTier: "" };
         },
 
         incrementWhatsAppSends: () => {
           const check = get().checkLimit("whatsapp");
           if (!check.allowed) {
-            set({ limitHitError: { action: "whatsapp", msg: check.msg || "WhatsApp limit reached." } });
+            set({
+              limitHitError: { action: "whatsapp", msg: check.msg || "WhatsApp limit reached." },
+            });
             return false;
           }
-          
+
           set((s) => {
             if (!s.user) return {};
             const whatsappSendsCount = (s.user.whatsappSendsCount || 0) + 1;
-            
+
             // Also if brokerage seat, update their usage stats in the parent database
             let brokerageSeats = s.brokerageSeats;
             if (s.user.tier === "BrokerageSeat" && s.user.parentBrokerageId) {
               const parentId = s.user.parentBrokerageId.toLowerCase();
               const parentData = s.userData?.[parentId];
               if (parentData && parentData.brokerageSeats) {
-                const updatedSeats = parentData.brokerageSeats.map(seat => 
+                const updatedSeats = parentData.brokerageSeats.map((seat) =>
                   seat.email.toLowerCase() === s.user?.email.toLowerCase()
-                    ? { ...seat, whatsappSends: seat.whatsappSends + 1, lastActive: new Date().toISOString().split("T")[0] }
-                    : seat
+                    ? {
+                        ...seat,
+                        whatsappSends: seat.whatsappSends + 1,
+                        lastActive: new Date().toISOString().split("T")[0],
+                      }
+                    : seat,
                 );
                 if (s.userData && s.userData[parentId]) {
                   s.userData[parentId].brokerageSeats = updatedSeats;
                 }
               }
             }
-            
+
             return {
               user: {
                 ...s.user,
-                whatsappSendsCount
-              }
+                whatsappSendsCount,
+              },
             };
           });
           return true;
@@ -1049,135 +1257,139 @@ export const useStore = create<State>()(
         upgradeTier: (newTier, seats) => {
           const user = get().user;
           if (!user) return { success: false, cost: 0, prorationMsg: "No active user logged in." };
-          
+
           const oldTier = user.tier;
           const todayStr = new Date().toISOString().split("T")[0];
-          
+
           // Calculate pricing difference
           let oldPrice = 0;
           if (oldTier === "Starter") oldPrice = PRICING_CONFIG.starterPrice;
           else if (oldTier === "Pro") oldPrice = PRICING_CONFIG.proPrice;
-          else if (oldTier === "BrokerageAdmin") oldPrice = PRICING_CONFIG.brokerageSeatPrice * (user.seatsCount || 5);
-          
+          else if (oldTier === "BrokerageAdmin")
+            oldPrice = PRICING_CONFIG.brokerageSeatPrice * (user.seatsCount || 5);
+
           let newPrice = 0;
           if (newTier === "Starter") newPrice = PRICING_CONFIG.starterPrice;
           else if (newTier === "Pro") newPrice = PRICING_CONFIG.proPrice;
-          else if (newTier === "BrokerageAdmin") newPrice = PRICING_CONFIG.brokerageSeatPrice * (seats || 5);
-          
+          else if (newTier === "BrokerageAdmin")
+            newPrice = PRICING_CONFIG.brokerageSeatPrice * (seats || 5);
+
           // Find days remaining in current month billing cycle (simplified 30 days)
           const billingDateParts = user.billingDate.split("-");
           const billingDay = parseInt(billingDateParts[2]) || new Date().getDate();
-          
+
           const now = new Date();
           const currentYear = now.getFullYear();
           const currentMonth = now.getMonth();
-          
+
           let resetDate = new Date(currentYear, currentMonth, billingDay);
           if (resetDate < now) {
             resetDate = new Date(currentYear, currentMonth + 1, billingDay);
           }
-          
+
           const msRemaining = resetDate.getTime() - now.getTime();
           const daysRemaining = Math.max(1, Math.ceil(msRemaining / (1000 * 60 * 60 * 24)));
           const prorationFraction = Math.min(1, Math.max(0, daysRemaining / 30));
-          
+
           const priceDiff = Math.max(0, newPrice - oldPrice);
           const prorationCharge = Math.round(priceDiff * prorationFraction);
-          
+
           const newInvoice: BillingHistoryItem = {
             id: "inv_" + Math.random().toString(36).slice(2, 9),
             date: todayStr,
             amount: prorationCharge,
-            description: `Prorated upgrade from ${oldTier} to ${newTier} (${daysRemaining} days remaining in current cycle).`
+            description: `Prorated upgrade from ${oldTier} to ${newTier} (${daysRemaining} days remaining in current cycle).`,
           };
-          
+
           const updatedHistory = [newInvoice, ...get().billingHistory];
-          
+
           set((s) => {
             if (!s.user) return {};
-            
-            const usersDatabase = s.usersDatabase.map(u => 
+
+            const usersDatabase = s.usersDatabase.map((u) =>
               u.email.toLowerCase() === s.user?.email.toLowerCase()
-                ? { 
-                    ...u, 
-                    tier: newTier, 
-                    seatsCount: newTier === "BrokerageAdmin" ? (seats || 5) : undefined,
-                    pendingDowngrade: undefined 
+                ? {
+                    ...u,
+                    tier: newTier,
+                    seatsCount: newTier === "BrokerageAdmin" ? seats || 5 : undefined,
+                    pendingDowngrade: undefined,
                   }
-                : u
+                : u,
             );
-            
+
             return {
               user: {
                 ...s.user,
                 tier: newTier,
-                seatsCount: newTier === "BrokerageAdmin" ? (seats || 5) : undefined,
-                pendingDowngrade: undefined
+                seatsCount: newTier === "BrokerageAdmin" ? seats || 5 : undefined,
+                pendingDowngrade: undefined,
               },
               billingHistory: updatedHistory,
-              usersDatabase
+              usersDatabase,
             };
           });
-          
+
           get().trackEvent({
             type: "conversion" as any,
-            meta: { from: oldTier, to: newTier, prorationCharge }
+            meta: { from: oldTier, to: newTier, prorationCharge },
           });
-          
+
           return {
             success: true,
             cost: prorationCharge,
-            prorationMsg: `Successfully upgraded to ${newTier}. A prorated charge of EGP ${prorationCharge} has been processed for the remaining ${daysRemaining} days of your cycle.`
+            prorationMsg: `Successfully upgraded to ${newTier}. A prorated charge of EGP ${prorationCharge} has been processed for the remaining ${daysRemaining} days of your cycle.`,
           };
         },
 
         downgradeTier: (newTier) => {
           const user = get().user;
           if (!user) return { success: false, effectiveDate: "" };
-          
+
           const billingDateParts = user.billingDate.split("-");
           const billingDay = parseInt(billingDateParts[2]) || new Date().getDate();
-          
+
           const now = new Date();
           let effectiveDate = new Date(now.getFullYear(), now.getMonth(), billingDay);
           if (effectiveDate < now) {
             effectiveDate = new Date(now.getFullYear(), now.getMonth() + 1, billingDay);
           }
           const effectiveDateStr = effectiveDate.toISOString().split("T")[0];
-          
+
           set((s) => {
             if (!s.user) return {};
-            const usersDatabase = s.usersDatabase.map(u => 
+            const usersDatabase = s.usersDatabase.map((u) =>
               u.email.toLowerCase() === s.user?.email.toLowerCase()
                 ? { ...u, pendingDowngrade: newTier }
-                : u
+                : u,
             );
             return {
               user: {
                 ...s.user,
-                pendingDowngrade: newTier
+                pendingDowngrade: newTier,
               },
-              usersDatabase
+              usersDatabase,
             };
           });
-          
+
           return {
             success: true,
-            effectiveDate: effectiveDateStr
+            effectiveDate: effectiveDateStr,
           };
         },
 
         addBrokerageSeatAgent: (email, name) => {
           const user = get().user;
           if (!user || user.tier !== "BrokerageAdmin") return false;
-          
+
           const seatsCount = user.seatsCount || 5;
           const currentSeatsCount = get().brokerageSeats.length;
-          
+
           if (currentSeatsCount >= seatsCount) return false;
-          
+
           set((s) => {
-            const exists = s.usersDatabase.some(u => u.email.toLowerCase() === email.toLowerCase());
+            const exists = s.usersDatabase.some(
+              (u) => u.email.toLowerCase() === email.toLowerCase(),
+            );
             let usersDatabase = s.usersDatabase;
             if (!exists) {
               const newAgent: RegisteredUser = {
@@ -1187,17 +1399,22 @@ export const useStore = create<State>()(
                 tier: "BrokerageSeat",
                 parentBrokerageId: user.email,
                 billingDate: user.billingDate,
-                projectAccessList: s.projectAccessList
+                projectAccessList: s.projectAccessList,
               };
               usersDatabase = [...usersDatabase, newAgent];
             } else {
-              usersDatabase = s.usersDatabase.map(u => 
+              usersDatabase = s.usersDatabase.map((u) =>
                 u.email.toLowerCase() === email.toLowerCase()
-                  ? { ...u, tier: "BrokerageSeat" as SubscriptionTier, parentBrokerageId: user.email, projectAccessList: s.projectAccessList }
-                  : u
+                  ? {
+                      ...u,
+                      tier: "BrokerageSeat" as SubscriptionTier,
+                      parentBrokerageId: user.email,
+                      projectAccessList: s.projectAccessList,
+                    }
+                  : u,
               );
             }
-            
+
             const newSeat: BrokerageSeatAgent = {
               email,
               name,
@@ -1205,31 +1422,38 @@ export const useStore = create<State>()(
               whatsappSends: 0,
               crmContacts: 0,
               favoritesCount: 0,
-              lastActive: new Date().toISOString().split("T")[0]
+              lastActive: new Date().toISOString().split("T")[0],
             };
-            
+
             const brokerageSeats = [...s.brokerageSeats, newSeat];
-            
+
             return {
               brokerageSeats,
-              usersDatabase
+              usersDatabase,
             };
           });
-          
+
           return true;
         },
 
         removeBrokerageSeatAgent: (email) => {
           set((s) => {
-            const brokerageSeats = s.brokerageSeats.filter(seat => seat.email.toLowerCase() !== email.toLowerCase());
-            const usersDatabase = s.usersDatabase.map(u => 
+            const brokerageSeats = s.brokerageSeats.filter(
+              (seat) => seat.email.toLowerCase() !== email.toLowerCase(),
+            );
+            const usersDatabase = s.usersDatabase.map((u) =>
               u.email.toLowerCase() === email.toLowerCase()
-                ? { ...u, tier: "Explorer" as SubscriptionTier, parentBrokerageId: undefined, projectAccessList: undefined }
-                : u
+                ? {
+                    ...u,
+                    tier: "Explorer" as SubscriptionTier,
+                    parentBrokerageId: undefined,
+                    projectAccessList: undefined,
+                  }
+                : u,
             );
             return {
               brokerageSeats,
-              usersDatabase
+              usersDatabase,
             };
           });
         },
@@ -1237,31 +1461,31 @@ export const useStore = create<State>()(
         toggleProjectAccess: (slug) => {
           set((s) => {
             const projectAccessList = s.projectAccessList.includes(slug)
-              ? s.projectAccessList.filter(x => x !== slug)
+              ? s.projectAccessList.filter((x) => x !== slug)
               : [...s.projectAccessList, slug];
-              
-            const usersDatabase = s.usersDatabase.map(u => 
+
+            const usersDatabase = s.usersDatabase.map((u) =>
               u.parentBrokerageId?.toLowerCase() === s.user?.email.toLowerCase()
                 ? { ...u, projectAccessList }
-                : u
+                : u,
             );
-            
+
             return {
               projectAccessList,
-              usersDatabase
+              usersDatabase,
             };
           });
         },
 
         incrementUserTimeSpent: (email: string, seconds: number) => {
-          const updatedUsersDatabase = get().usersDatabase.map(u => {
+          const updatedUsersDatabase = get().usersDatabase.map((u) => {
             if (u.email.toLowerCase() === email.toLowerCase()) {
               return { ...u, timeSpent: (u.timeSpent || 0) + seconds };
             }
             return u;
           });
           originalSet(() => ({
-            usersDatabase: updatedUsersDatabase
+            usersDatabase: updatedUsersDatabase,
           }));
           syncUsersToServer(updatedUsersDatabase);
         },
@@ -1269,49 +1493,56 @@ export const useStore = create<State>()(
         resetBillingCycleIfNeeded: () => {
           const user = get().user;
           if (!user) return;
-          
+
           const today = new Date();
           const todayStr = today.toISOString().split("T")[0];
-          
+
           const billingParts = user.billingDate.split("-");
           const billingDay = parseInt(billingParts[2]) || today.getDate();
-          
+
           const lastResetStr = user.lastCounterResetDate || user.billingDate;
           const lastResetParts = lastResetStr.split("-");
-          const lastResetMonth = parseInt(lastResetParts[1]) || (today.getMonth() + 1);
+          const lastResetMonth = parseInt(lastResetParts[1]) || today.getMonth() + 1;
           const lastResetYear = parseInt(lastResetParts[0]) || today.getFullYear();
-          
-          const monthsDiff = (today.getFullYear() - lastResetYear) * 12 + (today.getMonth() + 1 - lastResetMonth);
-          
+
+          const monthsDiff =
+            (today.getFullYear() - lastResetYear) * 12 + (today.getMonth() + 1 - lastResetMonth);
+
           if (monthsDiff >= 1 && today.getDate() >= billingDay) {
             set((s) => {
               if (!s.user) return {};
-              
+
               let tier = s.user.tier;
               let pendingDowngrade = s.user.pendingDowngrade;
-              
+
               if (pendingDowngrade) {
                 tier = pendingDowngrade;
                 pendingDowngrade = undefined;
               }
-              
+
               const updatedUser = {
                 ...s.user,
                 tier,
                 pendingDowngrade,
                 whatsappSendsCount: 0,
-                lastCounterResetDate: todayStr
+                lastCounterResetDate: todayStr,
               };
-              
-              const usersDatabase = s.usersDatabase.map(u => 
+
+              const usersDatabase = s.usersDatabase.map((u) =>
                 u.email.toLowerCase() === s.user?.email.toLowerCase()
-                  ? { ...u, tier, pendingDowngrade, whatsappSendsCount: 0, lastCounterResetDate: todayStr }
-                  : u
+                  ? {
+                      ...u,
+                      tier,
+                      pendingDowngrade,
+                      whatsappSendsCount: 0,
+                      lastCounterResetDate: todayStr,
+                    }
+                  : u,
               );
-              
+
               return {
                 user: updatedUser,
-                usersDatabase
+                usersDatabase,
               };
             });
           }
@@ -1323,7 +1554,7 @@ export const useStore = create<State>()(
             destinationsList: get().destinationsList,
             developersList: get().developersList,
             availabilityList: get().availabilityList,
-            exportedAt: new Date().toISOString()
+            exportedAt: new Date().toISOString(),
           };
           return JSON.stringify(backup, null, 2);
         },
@@ -1331,14 +1562,23 @@ export const useStore = create<State>()(
         importDatabaseBackup: (jsonStr) => {
           try {
             const parsed = JSON.parse(jsonStr);
-            if (parsed.compoundsList && parsed.destinationsList && parsed.developersList && parsed.availabilityList) {
+            if (
+              parsed.compoundsList &&
+              parsed.destinationsList &&
+              parsed.developersList &&
+              parsed.availabilityList
+            ) {
               set({
                 compoundsList: parsed.compoundsList,
                 destinationsList: parsed.destinationsList,
                 developersList: parsed.developersList,
-                availabilityList: parsed.availabilityList
+                availabilityList: parsed.availabilityList,
               });
-              get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Backup", action: "Imported full database sync backup" });
+              get().addAuditLog({
+                actor: "elsayedshoeip70@gmail.com",
+                entity: "Backup",
+                action: "Imported full database sync backup",
+              });
               return true;
             }
           } catch (e) {
@@ -1354,12 +1594,16 @@ export const useStore = create<State>()(
             const normalizedP = {
               ...p,
               developer: normalizedDev,
-              developerSlug: normalizedDev.toLowerCase().replace(/[^a-z0-9]+/g, "-")
+              developerSlug: normalizedDev.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
             };
             const compoundsList = [...s.compoundsList, normalizedP];
             return { compoundsList };
           });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Project", action: `Added new project: ${p.name}` });
+          get().addAuditLog({
+            actor: "elsayedshoeip70@gmail.com",
+            entity: "Project",
+            action: `Added new project: ${p.name}`,
+          });
         },
 
         updateProject: (slug, updates) => {
@@ -1368,23 +1612,37 @@ export const useStore = create<State>()(
             if (updates.developer) {
               const normalizedDev = normalizeDeveloperName(updates.developer);
               normalizedUpdates.developer = normalizedDev;
-              normalizedUpdates.developerSlug = normalizedDev.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+              normalizedUpdates.developerSlug = normalizedDev
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, "-");
             }
-            const before = JSON.stringify(s.compoundsList.find(c => c.slug === slug));
-            const compoundsList = s.compoundsList.map(c => c.slug === slug ? { ...c, ...normalizedUpdates } : c);
-            const after = JSON.stringify(compoundsList.find(c => c.slug === slug));
-            get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Project", action: `Updated project: ${slug}`, before, after });
+            const before = JSON.stringify(s.compoundsList.find((c) => c.slug === slug));
+            const compoundsList = s.compoundsList.map((c) =>
+              c.slug === slug ? { ...c, ...normalizedUpdates } : c,
+            );
+            const after = JSON.stringify(compoundsList.find((c) => c.slug === slug));
+            get().addAuditLog({
+              actor: "elsayedshoeip70@gmail.com",
+              entity: "Project",
+              action: `Updated project: ${slug}`,
+              before,
+              after,
+            });
             return { compoundsList };
           });
         },
 
         deleteProject: (slug) => {
           set((s) => {
-            const target = s.compoundsList.find(c => c.slug === slug);
-            const compoundsList = s.compoundsList.filter(c => c.slug !== slug);
+            const target = s.compoundsList.find((c) => c.slug === slug);
+            const compoundsList = s.compoundsList.filter((c) => c.slug !== slug);
             return { compoundsList };
           });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Project", action: `Deleted project: ${slug}` });
+          get().addAuditLog({
+            actor: "elsayedshoeip70@gmail.com",
+            entity: "Project",
+            action: `Deleted project: ${slug}`,
+          });
         },
 
         addDestination: (d) => {
@@ -1392,25 +1650,41 @@ export const useStore = create<State>()(
             const destinationsList = [...s.destinationsList, d];
             return { destinationsList };
           });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Destination", action: `Added new destination: ${d.name}` });
+          get().addAuditLog({
+            actor: "elsayedshoeip70@gmail.com",
+            entity: "Destination",
+            action: `Added new destination: ${d.name}`,
+          });
         },
 
         updateDestination: (slug, updates) => {
           set((s) => {
-            const before = JSON.stringify(s.destinationsList.find(d => d.slug === slug));
-            const destinationsList = s.destinationsList.map(d => d.slug === slug ? { ...d, ...updates } : d);
-            const after = JSON.stringify(destinationsList.find(d => d.slug === slug));
-            get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Destination", action: `Updated destination: ${slug}`, before, after });
+            const before = JSON.stringify(s.destinationsList.find((d) => d.slug === slug));
+            const destinationsList = s.destinationsList.map((d) =>
+              d.slug === slug ? { ...d, ...updates } : d,
+            );
+            const after = JSON.stringify(destinationsList.find((d) => d.slug === slug));
+            get().addAuditLog({
+              actor: "elsayedshoeip70@gmail.com",
+              entity: "Destination",
+              action: `Updated destination: ${slug}`,
+              before,
+              after,
+            });
             return { destinationsList };
           });
         },
 
         deleteDestination: (slug) => {
           set((s) => {
-            const destinationsList = s.destinationsList.filter(d => d.slug !== slug);
+            const destinationsList = s.destinationsList.filter((d) => d.slug !== slug);
             return { destinationsList };
           });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Destination", action: `Deleted destination: ${slug}` });
+          get().addAuditLog({
+            actor: "elsayedshoeip70@gmail.com",
+            entity: "Destination",
+            action: `Deleted destination: ${slug}`,
+          });
         },
 
         addDeveloper: (dev) => {
@@ -1419,12 +1693,16 @@ export const useStore = create<State>()(
             const normalizedDev = {
               ...dev,
               name: normalizedName,
-              slug: normalizedName.toLowerCase().replace(/[^a-z0-9]+/g, "-")
+              slug: normalizedName.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
             };
             const developersList = [...s.developersList, normalizedDev];
             return { developersList };
           });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Developer", action: `Added new developer: ${dev.name}` });
+          get().addAuditLog({
+            actor: "elsayedshoeip70@gmail.com",
+            entity: "Developer",
+            action: `Added new developer: ${dev.name}`,
+          });
         },
 
         updateDeveloper: (slug, updates) => {
@@ -1435,51 +1713,78 @@ export const useStore = create<State>()(
               normalizedUpdates.name = normalizedName;
               normalizedUpdates.slug = normalizedName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
             }
-            const before = JSON.stringify(s.developersList.find(d => d.slug === slug));
-            const developersList = s.developersList.map(d => d.slug === slug ? { ...d, ...normalizedUpdates } : d);
-            const after = JSON.stringify(developersList.find(d => d.slug === slug));
-            get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Developer", action: `Updated developer: ${slug}`, before, after });
+            const before = JSON.stringify(s.developersList.find((d) => d.slug === slug));
+            const developersList = s.developersList.map((d) =>
+              d.slug === slug ? { ...d, ...normalizedUpdates } : d,
+            );
+            const after = JSON.stringify(developersList.find((d) => d.slug === slug));
+            get().addAuditLog({
+              actor: "elsayedshoeip70@gmail.com",
+              entity: "Developer",
+              action: `Updated developer: ${slug}`,
+              before,
+              after,
+            });
             return { developersList };
           });
         },
 
         deleteDeveloper: (slug) => {
           set((s) => {
-            const developersList = s.developersList.filter(d => d.slug !== slug);
+            const developersList = s.developersList.filter((d) => d.slug !== slug);
             return { developersList };
           });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Developer", action: `Deleted developer: ${slug}` });
+          get().addAuditLog({
+            actor: "elsayedshoeip70@gmail.com",
+            entity: "Developer",
+            action: `Deleted developer: ${slug}`,
+          });
         },
 
         updateAvailability: (slug, data) => {
           set((s) => {
-            const exists = s.availabilityList.some(a => a.slug === slug);
+            const exists = s.availabilityList.some((a) => a.slug === slug);
             const availabilityList = exists
-              ? s.availabilityList.map(a => a.slug === slug ? data : a)
+              ? s.availabilityList.map((a) => (a.slug === slug ? data : a))
               : [...s.availabilityList, data];
             return { availabilityList };
           });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Availability", action: `Updated availability inventory for project: ${slug}` });
+          get().addAuditLog({
+            actor: "elsayedshoeip70@gmail.com",
+            entity: "Availability",
+            action: `Updated availability inventory for project: ${slug}`,
+          });
         },
 
         bulkUpdateAvailability: (data) => {
           set({ availabilityList: data });
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "Availability", action: `Bulk imported global availability database` });
+          get().addAuditLog({
+            actor: "elsayedshoeip70@gmail.com",
+            entity: "Availability",
+            action: `Bulk imported global availability database`,
+          });
         },
 
         addPendingUpload: (upload) => {
           set((s) => ({
-            pendingUploadsList: [...(s.pendingUploadsList || []), {
-              ...upload,
-              id: "up_" + Math.random().toString(36).slice(2, 9),
-              uploadedAt: Date.now()
-            }]
+            pendingUploadsList: [
+              ...(s.pendingUploadsList || []),
+              {
+                ...upload,
+                id: "up_" + Math.random().toString(36).slice(2, 9),
+                uploadedAt: Date.now(),
+              },
+            ],
           }));
-          get().addAuditLog({ actor: upload.uploadedBy || "elsayedshoeip70@gmail.com", entity: "AvailabilityUpload", action: `Submitted Excel availability update for ${upload.projectSlug} to review queue` });
+          get().addAuditLog({
+            actor: upload.uploadedBy || "elsayedshoeip70@gmail.com",
+            entity: "AvailabilityUpload",
+            action: `Submitted Excel availability update for ${upload.projectSlug} to review queue`,
+          });
         },
 
         approvePendingUpload: (id) => {
-          const upload = get().pendingUploadsList?.find(u => u.id === id);
+          const upload = get().pendingUploadsList?.find((u) => u.id === id);
           if (!upload) return;
 
           // Apply update
@@ -1487,19 +1792,27 @@ export const useStore = create<State>()(
 
           // Remove from list
           set((s) => ({
-            pendingUploadsList: (s.pendingUploadsList || []).filter(u => u.id !== id)
+            pendingUploadsList: (s.pendingUploadsList || []).filter((u) => u.id !== id),
           }));
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "AvailabilityUpload", action: `Approved and published Excel availability for ${upload.projectSlug}` });
+          get().addAuditLog({
+            actor: "elsayedshoeip70@gmail.com",
+            entity: "AvailabilityUpload",
+            action: `Approved and published Excel availability for ${upload.projectSlug}`,
+          });
         },
 
         rejectPendingUpload: (id) => {
-          const upload = get().pendingUploadsList?.find(u => u.id === id);
+          const upload = get().pendingUploadsList?.find((u) => u.id === id);
           if (!upload) return;
 
           set((s) => ({
-            pendingUploadsList: (s.pendingUploadsList || []).filter(u => u.id !== id)
+            pendingUploadsList: (s.pendingUploadsList || []).filter((u) => u.id !== id),
           }));
-          get().addAuditLog({ actor: "elsayedshoeip70@gmail.com", entity: "AvailabilityUpload", action: `Rejected Excel availability upload for ${upload.projectSlug}` });
+          get().addAuditLog({
+            actor: "elsayedshoeip70@gmail.com",
+            entity: "AvailabilityUpload",
+            action: `Rejected Excel availability upload for ${upload.projectSlug}`,
+          });
         },
 
         addAuditLog: (log) => {
@@ -1507,7 +1820,7 @@ export const useStore = create<State>()(
             const newItem = {
               ...log,
               id: "audit_" + Math.random().toString(36).slice(2, 9),
-              timestamp: Date.now()
+              timestamp: Date.now(),
             };
             return { auditLogs: [newItem, ...s.auditLogs].slice(0, 150) };
           });
@@ -1551,7 +1864,8 @@ export const useStore = create<State>()(
               const defaultFileType = staticFile ? "application/pdf" : undefined;
 
               if (localComp) {
-                const hasBase64Url = localComp.brochureUrl && localComp.brochureUrl.startsWith("data:");
+                const hasBase64Url =
+                  localComp.brochureUrl && localComp.brochureUrl.startsWith("data:");
                 const isDeleted = localComp.brochureDeleted || hasBase64Url;
                 return {
                   ...sc,
@@ -1579,10 +1893,12 @@ export const useStore = create<State>()(
                   highlights: sc.highlights || localComp.highlights,
                   parentSlug: sc.parentSlug || localComp.parentSlug,
                   isNewLaunch,
-                  brochureUrl: isDeleted ? undefined : (localComp.brochureUrl || defaultFileUrl),
-                  brochureFileName: isDeleted ? undefined : (localComp.brochureFileName || defaultFileName),
-                  brochureType: isDeleted ? undefined : (localComp.brochureType || defaultFileType),
-                  brochureDeleted: isDeleted
+                  brochureUrl: isDeleted ? undefined : localComp.brochureUrl || defaultFileUrl,
+                  brochureFileName: isDeleted
+                    ? undefined
+                    : localComp.brochureFileName || defaultFileName,
+                  brochureType: isDeleted ? undefined : localComp.brochureType || defaultFileType,
+                  brochureDeleted: isDeleted,
                 };
               }
               return {
@@ -1591,7 +1907,7 @@ export const useStore = create<State>()(
                 brochureUrl: defaultFileUrl,
                 brochureFileName: defaultFileName,
                 brochureType: defaultFileType,
-                brochureDeleted: false
+                brochureDeleted: false,
               };
             });
           } else {
@@ -1604,7 +1920,7 @@ export const useStore = create<State>()(
                 brochureUrl: staticFile ? `/brochures/${staticFile}` : undefined,
                 brochureFileName: staticFile || undefined,
                 brochureType: staticFile ? "application/pdf" : undefined,
-                brochureDeleted: false
+                brochureDeleted: false,
               };
             });
           }
@@ -1618,7 +1934,10 @@ export const useStore = create<State>()(
             state.availabilityList = availability.map((sa) => {
               const localAvail = state.availabilityList.find((a: any) => a.slug === sa.slug);
               if (localAvail) {
-                if (!localAvail.lastUpdated || (sa.lastUpdated && sa.lastUpdated >= localAvail.lastUpdated)) {
+                if (
+                  !localAvail.lastUpdated ||
+                  (sa.lastUpdated && sa.lastUpdated >= localAvail.lastUpdated)
+                ) {
                   return sa;
                 }
                 return { ...sa, ...localAvail };

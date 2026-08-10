@@ -108,7 +108,7 @@ const masterplanMappings: Record<string, string> = {
   "youd.jpg": "youd",
   "Zahra.jpg": "zahra",
   "ZED east.jpg": "zed-east",
-  "Zoya.jpg": "zoya"
+  "Zoya.jpg": "zoya",
 };
 
 // Invert map: slug -> masterplanUrl
@@ -118,7 +118,7 @@ for (const [filename, slug] of Object.entries(masterplanMappings)) {
 }
 
 // 1. Update compounds.generated.ts
-const updatedCompounds = compoundsGenerated.map(c => {
+const updatedCompounds = compoundsGenerated.map((c) => {
   let updatedC = { ...c };
 
   // Task 1: Fix developer for "the-med"
@@ -151,7 +151,7 @@ if (fs.existsSync(compoundsPath)) {
   let text = fs.readFileSync(compoundsPath, "utf-8");
   text = text.replace(
     /\["The Med", 192, "ras-el-hekma", "PRE Developments", 11, 2027, true\],/,
-    '["The Med", 192, "ras-el-hekma", "People and Places", 11, 2027, true],'
+    '["The Med", 192, "ras-el-hekma", "People and Places", 11, 2027, true],',
   );
   fs.writeFileSync(compoundsPath, text, "utf-8");
   console.log("Updated compounds.ts");

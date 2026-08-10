@@ -19,9 +19,7 @@ const moreLinks = [
   { to: "/contact" as const, label: "Contact" },
 ];
 
-const brokerLinks = [
-  { to: "/dashboard" as const, label: "Broker" },
-];
+const brokerLinks = [{ to: "/dashboard" as const, label: "Broker" }];
 
 export function Navbar() {
   const user = useStore((s) => s.user);
@@ -34,7 +32,7 @@ export function Navbar() {
   const moreRef = useRef<HTMLDivElement>(null);
   const userMenuRef = useRef<HTMLDivElement>(null);
   const avatarInputRef = useRef<HTMLInputElement>(null);
-  
+
   const links = user ? [...publicLinks, ...brokerLinks] : publicLinks;
 
   useEffect(() => {
@@ -57,7 +55,7 @@ export function Navbar() {
       reader.onloadend = () => {
         const base64 = reader.result as string;
         if (user) {
-          const updatedUsers = useStore.getState().usersDatabase.map(u => {
+          const updatedUsers = useStore.getState().usersDatabase.map((u) => {
             if (u.email.toLowerCase() === user.email.toLowerCase()) {
               return { ...u, avatar: base64 };
             }
@@ -65,7 +63,7 @@ export function Navbar() {
           });
           useStore.setState({
             user: { ...user, avatar: base64 },
-            usersDatabase: updatedUsers
+            usersDatabase: updatedUsers,
           });
         }
       };
@@ -80,13 +78,18 @@ export function Navbar() {
 
   const linkCls = (active: boolean) =>
     `rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-      active ? "bg-secondary text-primary" : "text-muted-foreground hover:bg-secondary/60 hover:text-primary"
+      active
+        ? "bg-secondary text-primary"
+        : "text-muted-foreground hover:bg-secondary/60 hover:text-primary"
     }`;
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/95 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 lg:px-8">
-        <Link to="/" className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-tight shrink-0">
+        <Link
+          to="/"
+          className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-tight shrink-0"
+        >
           <img src="/logo.png" alt="PropTrack" className="h-9 w-9 object-contain" />
           <span className="hidden sm:inline">
             Prop<span className="text-accent">Track</span>
@@ -108,9 +111,14 @@ export function Navbar() {
           <div className="relative" ref={moreRef}>
             <button
               onClick={() => setMoreOpen(!moreOpen)}
-              className={linkCls(moreLinks.some((l) => pathname === l.to)) + " flex items-center gap-1"}
+              className={
+                linkCls(moreLinks.some((l) => pathname === l.to)) + " flex items-center gap-1"
+              }
             >
-              More <ChevronDown className={`h-3.5 w-3.5 transition-transform ${moreOpen ? "rotate-180" : ""}`} />
+              More{" "}
+              <ChevronDown
+                className={`h-3.5 w-3.5 transition-transform ${moreOpen ? "rotate-180" : ""}`}
+              />
             </button>
             {moreOpen && (
               <div className="absolute left-0 top-full mt-1 w-52 rounded-xl border border-border bg-card shadow-lg py-1 z-50 animate-in fade-in zoom-in-95 duration-150">
@@ -136,7 +144,10 @@ export function Navbar() {
         {/* Right side */}
         <div className="ml-auto flex items-center gap-2">
           {user && (
-            <Link to="/dashboard/favorites" className="relative hidden rounded-md p-2 text-muted-foreground hover:bg-secondary md:inline-flex">
+            <Link
+              to="/dashboard/favorites"
+              className="relative hidden rounded-md p-2 text-muted-foreground hover:bg-secondary md:inline-flex"
+            >
               <Heart className="h-5 w-5" />
               {favCount > 0 && (
                 <span className="absolute -right-1 -top-1 rounded-full bg-accent px-1.5 text-[10px] font-bold text-accent-foreground">
@@ -147,12 +158,16 @@ export function Navbar() {
           )}
           {user ? (
             <div className="relative" ref={userMenuRef}>
-              <button 
+              <button
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
                 className="flex items-center gap-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm focus:outline-none"
               >
                 {user.avatar ? (
-                  <img src={user.avatar} alt={user.name} className="h-6 w-6 rounded-full object-cover border border-border shrink-0" />
+                  <img
+                    src={user.avatar}
+                    alt={user.name}
+                    className="h-6 w-6 rounded-full object-cover border border-border shrink-0"
+                  />
                 ) : (
                   <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground shrink-0">
                     {user.name[0]?.toUpperCase()}
@@ -161,12 +176,16 @@ export function Navbar() {
                 <span className="font-medium hidden sm:inline">{user.name}</span>
                 <ChevronDown className="h-3 w-3 text-muted-foreground" />
               </button>
-              
+
               {userMenuOpen && (
                 <div className="absolute right-0 top-full mt-1.5 w-60 rounded-2xl border border-border bg-card shadow-xl p-2.5 z-50 animate-in fade-in zoom-in-95 duration-150 space-y-2">
                   <div className="flex items-center gap-3 p-2 border-b border-border/50 pb-3">
                     {user.avatar ? (
-                      <img src={user.avatar} alt={user.name} className="h-10 w-10 rounded-full object-cover border border-border" />
+                      <img
+                        src={user.avatar}
+                        alt={user.name}
+                        className="h-10 w-10 rounded-full object-cover border border-border"
+                      />
                     ) : (
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                         {user.name[0]?.toUpperCase()}
@@ -178,22 +197,22 @@ export function Navbar() {
                     </div>
                   </div>
 
-                  <input 
-                    type="file" 
-                    ref={avatarInputRef} 
-                    className="hidden" 
+                  <input
+                    type="file"
+                    ref={avatarInputRef}
+                    className="hidden"
                     accept="image/*"
-                    onChange={handleAvatarChange} 
+                    onChange={handleAvatarChange}
                   />
 
-                  <button 
+                  <button
                     onClick={() => avatarInputRef.current?.click()}
                     className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-semibold text-foreground/80 hover:bg-secondary/60 hover:text-primary transition-all text-left"
                   >
                     <Upload className="h-3.5 w-3.5 text-accent" /> Change Profile Picture
                   </button>
 
-                  <Link 
+                  <Link
                     to="/dashboard/profile"
                     onClick={() => setUserMenuOpen(false)}
                     className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-semibold text-foreground/80 hover:bg-secondary/60 hover:text-primary transition-all text-left"
@@ -201,7 +220,7 @@ export function Navbar() {
                     <Settings className="h-3.5 w-3.5 text-accent" /> Profile Settings
                   </Link>
 
-                  <button 
+                  <button
                     onClick={handleSignOut}
                     className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-semibold text-destructive hover:bg-destructive/5 transition-all text-left border-t border-border/40 pt-2"
                   >
@@ -212,7 +231,9 @@ export function Navbar() {
             </div>
           ) : (
             <Link to="/auth" className="hidden md:block">
-              <Button size="sm" className="rounded-full">Sign in</Button>
+              <Button size="sm" className="rounded-full">
+                Sign in
+              </Button>
             </Link>
           )}
           <button
@@ -237,20 +258,26 @@ export function Navbar() {
                   to={l.to}
                   onClick={() => setOpen(false)}
                   className={`flex items-center gap-3 px-3 py-3 text-sm font-medium transition-colors rounded-xl ${
-                    active ? "bg-secondary text-primary font-semibold" : "text-muted-foreground hover:bg-secondary/60 hover:text-primary"
+                    active
+                      ? "bg-secondary text-primary font-semibold"
+                      : "text-muted-foreground hover:bg-secondary/60 hover:text-primary"
                   }`}
                 >
                   {l.label}
                 </Link>
               );
             })}
-            
+
             {user ? (
               <div className="pt-3 pb-2 space-y-2">
                 <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-secondary/50">
                   <div className="flex items-center gap-2.5">
                     {user.avatar ? (
-                      <img src={user.avatar} alt={user.name} className="h-8 w-8 rounded-full object-cover border border-border" />
+                      <img
+                        src={user.avatar}
+                        alt={user.name}
+                        className="h-8 w-8 rounded-full object-cover border border-border"
+                      />
                     ) : (
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
                         {user.name[0]?.toUpperCase()}
@@ -261,7 +288,10 @@ export function Navbar() {
                       <div className="text-[10px] text-muted-foreground">{user.tier} Partner</div>
                     </div>
                   </div>
-                  <button onClick={handleSignOut} className="text-xs font-bold text-destructive hover:underline px-2 py-1">
+                  <button
+                    onClick={handleSignOut}
+                    className="text-xs font-bold text-destructive hover:underline px-2 py-1"
+                  >
                     Sign Out
                   </button>
                 </div>
@@ -269,7 +299,9 @@ export function Navbar() {
             ) : (
               <div className="px-3 py-3">
                 <Link to="/auth" onClick={() => setOpen(false)}>
-                  <Button size="sm" className="w-full rounded-full h-11 font-bold text-sm">Sign in</Button>
+                  <Button size="sm" className="w-full rounded-full h-11 font-bold text-sm">
+                    Sign in
+                  </Button>
                 </Link>
               </div>
             )}

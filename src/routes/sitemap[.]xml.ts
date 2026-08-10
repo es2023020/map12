@@ -12,7 +12,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           `${BASE_URL}/sitemap-developers.xml`,
           `${BASE_URL}/sitemap-blog.xml`,
         ];
-        
+
         const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemaps.map((loc) => `  <sitemap>\n    <loc>${loc}</loc>\n  </sitemap>`).join("\n")}

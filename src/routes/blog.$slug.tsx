@@ -86,7 +86,10 @@ function BlogPostPage() {
       {/* Article Header */}
       <div className="bg-primary text-primary-foreground py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <Link to="/blog" className="inline-flex items-center gap-1.5 text-xs text-primary-foreground/70 hover:text-accent mb-6 transition-colors">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-1.5 text-xs text-primary-foreground/70 hover:text-accent mb-6 transition-colors"
+          >
             <ArrowLeft className="h-3.5 w-3.5" /> Back to All Articles
           </Link>
           <div className="flex items-center gap-2 mb-3">
@@ -124,10 +127,21 @@ function BlogPostPage() {
         <div className="prose prose-slate lg:prose-lg max-w-none dark:prose-invert">
           {post.content.split("\n\n").map((paragraph, idx) => {
             if (paragraph.startsWith("## ")) {
-              return <h2 key={idx} className="font-display text-2xl font-bold text-foreground mt-8 mb-4">{paragraph.replace("## ", "")}</h2>;
+              return (
+                <h2 key={idx} className="font-display text-2xl font-bold text-foreground mt-8 mb-4">
+                  {paragraph.replace("## ", "")}
+                </h2>
+              );
             }
             if (paragraph.startsWith("### ")) {
-              return <h3 key={idx} className="font-display text-xl font-semibold text-foreground mt-6 mb-3">{paragraph.replace("### ", "")}</h3>;
+              return (
+                <h3
+                  key={idx}
+                  className="font-display text-xl font-semibold text-foreground mt-6 mb-3"
+                >
+                  {paragraph.replace("### ", "")}
+                </h3>
+              );
             }
             if (paragraph.startsWith("- ")) {
               return (
@@ -138,18 +152,26 @@ function BlogPostPage() {
                 </ul>
               );
             }
-            return <p key={idx} className="text-foreground/80 leading-relaxed my-4">{paragraph}</p>;
+            return (
+              <p key={idx} className="text-foreground/80 leading-relaxed my-4">
+                {paragraph}
+              </p>
+            );
           })}
         </div>
 
         {/* Internal Cross-Linking Widgets */}
         {(relatedProjectObjects.length > 0 || relatedDestinationObjects.length > 0) && (
           <div className="mt-14 pt-8 border-t border-border space-y-6">
-            <h3 className="font-display text-xl font-bold text-foreground">Featured Developments & Locations Mentioned</h3>
-            
+            <h3 className="font-display text-xl font-bold text-foreground">
+              Featured Developments & Locations Mentioned
+            </h3>
+
             {relatedDestinationObjects.length > 0 && (
               <div>
-                <span className="text-xs uppercase font-semibold text-muted-foreground block mb-3">Explore Destinations</span>
+                <span className="text-xs uppercase font-semibold text-muted-foreground block mb-3">
+                  Explore Destinations
+                </span>
                 <div className="flex flex-wrap gap-2">
                   {relatedDestinationObjects.map((d: any) => (
                     <Link
@@ -167,7 +189,9 @@ function BlogPostPage() {
 
             {relatedProjectObjects.length > 0 && (
               <div>
-                <span className="text-xs uppercase font-semibold text-muted-foreground block mb-3">Explore Projects</span>
+                <span className="text-xs uppercase font-semibold text-muted-foreground block mb-3">
+                  Explore Projects
+                </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {relatedProjectObjects.map((c: any) => (
                     <Link
@@ -176,9 +200,15 @@ function BlogPostPage() {
                       params={{ slug: c.slug }}
                       className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-accent transition-colors"
                     >
-                      <img src={c.hero} alt={c.name} className="h-12 w-14 rounded-lg object-cover" />
+                      <img
+                        src={c.hero}
+                        alt={c.name}
+                        className="h-12 w-14 rounded-lg object-cover"
+                      />
                       <div className="min-w-0">
-                        <div className="font-semibold text-sm text-foreground truncate">{c.name}</div>
+                        <div className="font-semibold text-sm text-foreground truncate">
+                          {c.name}
+                        </div>
                         <div className="text-xs text-accent font-bold">From EGP {c.priceFrom}M</div>
                       </div>
                     </Link>

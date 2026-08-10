@@ -114,14 +114,18 @@ export function CompoundCard({ c }: { c: Compound }) {
           </span>
           <span className="inline-flex items-center gap-1.5">
             <Calendar className="h-3.5 w-3.5 text-muted-foreground/50" />
-            {c.deliveryYear === new Date().getFullYear() ? "Ready Now" : `Delivery ${c.deliveryYear}`}
+            {c.deliveryYear === new Date().getFullYear()
+              ? "Ready Now"
+              : `Delivery ${c.deliveryYear}`}
           </span>
         </div>
 
         {/* Card Footer pricing & details CTA */}
         <div className="mt-6 flex items-end justify-between border-t border-border/40 pt-4 mt-auto">
           <div className="flex flex-col">
-            <span className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground/60">Starting From</span>
+            <span className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground/60">
+              Starting From
+            </span>
             <span className="font-display text-lg font-bold text-primary tracking-tight">
               {c.priceFrom > 0 ? `EGP ${c.priceFrom}M` : "Price on Request"}
             </span>
@@ -131,7 +135,8 @@ export function CompoundCard({ c }: { c: Compound }) {
             params={{ slug: c.slug }}
             className="inline-flex items-center gap-1 rounded-xl bg-accent/10 hover:bg-accent px-4 py-2 text-xs font-bold text-accent hover:text-white transition-all duration-200"
           >
-            Details <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+            Details{" "}
+            <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
           </Link>
         </div>
       </div>

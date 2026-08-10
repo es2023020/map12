@@ -7,9 +7,20 @@ import type { UnitListing, ProjectAvailability } from "@/data/availability";
 import type { Compound } from "@/data/compounds";
 import { useStore } from "@/lib/store";
 import {
-  ArrowLeft, Phone, Ruler, Calendar, MapPin, Wallet,
-  CheckCircle2, AlertCircle, Info, Building2, ExternalLink,
-  Calculator, Filter, ArrowUpDown
+  ArrowLeft,
+  Phone,
+  Ruler,
+  Calendar,
+  MapPin,
+  Wallet,
+  CheckCircle2,
+  AlertCircle,
+  Info,
+  Building2,
+  ExternalLink,
+  Calculator,
+  Filter,
+  ArrowUpDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { createServerFn } from "@tanstack/react-start";
@@ -21,7 +32,13 @@ export const getUnitsList = createServerFn({ method: "GET" })
   .validator((d: { projectSlug: string; typeSlug: string }) => d)
   .handler(async ({ data: { projectSlug, typeSlug } }) => {
     try {
-      const jsonPath = path.resolve(process.cwd(), "public", "availability-data", projectSlug, `${typeSlug}.json`);
+      const jsonPath = path.resolve(
+        process.cwd(),
+        "public",
+        "availability-data",
+        projectSlug,
+        `${typeSlug}.json`,
+      );
       if (fs.existsSync(jsonPath)) {
         return JSON.parse(fs.readFileSync(jsonPath, "utf-8")) as UnitListing[];
       }
@@ -39,29 +56,33 @@ export const Route = createFileRoute("/units/$projectSlug/$typeSlug")({
     if (!compound) throw notFound();
     const result = breakdownByTypeSlug(params.projectSlug, params.typeSlug);
     if (!result) throw notFound();
-    
+
     // Call server function to fetch units
-    const units = await getUnitsList({ data: { projectSlug: params.projectSlug, typeSlug: params.typeSlug } });
-    
+    const units = await getUnitsList({
+      data: { projectSlug: params.projectSlug, typeSlug: params.typeSlug },
+    });
+
     return {
       compound,
       project: result.project,
       breakdown: {
         ...result.breakdown,
-        units: (units && units.length > 0) ? units : (result.breakdown.units || [])
-      }
+        units: units && units.length > 0 ? units : result.breakdown.units || [],
+      },
     };
   },
   head: ({ loaderData }) => ({
-    meta: loaderData ? [
-      {
-        title: `${loaderData.breakdown.type}${loaderData.breakdown.beds ? ` ${loaderData.breakdown.beds}BR` : ""} — ${loaderData.compound.name} | PropTrack`,
-      },
-      {
-        name: "description",
-        content: `${loaderData.breakdown.available} available ${loaderData.breakdown.type} units in ${loaderData.compound.name}. Prices from EGP ${loaderData.breakdown.minPriceM.toFixed(1)}M.`,
-      },
-    ] : [],
+    meta: loaderData
+      ? [
+          {
+            title: `${loaderData.breakdown.type}${loaderData.breakdown.beds ? ` ${loaderData.breakdown.beds}BR` : ""} — ${loaderData.compound.name} | PropTrack`,
+          },
+          {
+            name: "description",
+            content: `${loaderData.breakdown.available} available ${loaderData.breakdown.type} units in ${loaderData.compound.name}. Prices from EGP ${loaderData.breakdown.minPriceM.toFixed(1)}M.`,
+          },
+        ]
+      : [],
   }),
   component: UnitTypePage,
 });
@@ -78,7 +99,7 @@ function UnitTypePage() {
 
   // Reactive subscription to live Zustand availability store
   const availabilityList = useStore((s) => s.availabilityList);
-  
+
   const bd = useMemo(() => {
     if (!availabilityList || !availabilityList.length) return initialBd;
     const proj = availabilityList.find((a: any) => a.slug === projectSlug);
@@ -88,25 +109,42 @@ function UnitTypePage() {
     return {
       ...initialBd,
       ...match,
-      units: match.units !== undefined ? match.units : initialBd.units
+      units: match.units !== undefined ? match.units : initialBd.units,
     };
   }, [availabilityList, projectSlug, currentTypeSlug, initialBd]);
 
-  const [sortBy, setSortBy] = useState<"price-asc" | "price-desc" | "size-asc" | "size-desc">("price-asc");
+  const [sortBy, setSortBy] = useState<"price-asc" | "price-desc" | "size-asc" | "size-desc">(
+    "price-asc",
+  );
   const [filterView, setFilterView] = useState<string>("");
   const [filterFinishing, setFilterFinishing] = useState<string>("");
   const [filterStatus, setFilterStatus] = useState<string>("");
 
-  const title = bd.beds
-    ? `${bd.type} — ${bd.beds} Bedroom${bd.beds > 1 ? "s" : ""}`
-    : bd.type;
+  const title = bd.beds ? `${bd.type} — ${bd.beds} Bedroom${bd.beds > 1 ? "s" : ""}` : bd.type;
 
-  const standardKeys = useMemo(() => ["id", "unitNo", "type", "beds", "areaSqm", "view", "priceEGP", "status", "finishing", "cluster", "areaNote", "deliveryNote", "paymentPlan"], []);
+  const standardKeys = useMemo(
+    () => [
+      "id",
+      "unitNo",
+      "type",
+      "beds",
+      "areaSqm",
+      "view",
+      "priceEGP",
+      "status",
+      "finishing",
+      "cluster",
+      "areaNote",
+      "deliveryNote",
+      "paymentPlan",
+    ],
+    [],
+  );
   const extraKeys = useMemo(() => {
     const units = bd.units ?? [];
-    return Array.from(
-      new Set<string>(units.flatMap((u: any) => Object.keys(u)))
-    ).filter((k) => !standardKeys.includes(k));
+    return Array.from(new Set<string>(units.flatMap((u: any) => Object.keys(u)))).filter(
+      (k) => !standardKeys.includes(k),
+    );
   }, [bd.units, standardKeys]);
 
   const clusterLabel = bd.cluster ? ` · ${bd.cluster}` : "";
@@ -117,15 +155,21 @@ function UnitTypePage() {
   }, [bd.units]);
 
   const uniqueDeliveries = useMemo(() => {
-    return Array.from(new Set(bd.units?.map((u: any) => u.deliveryNote).filter(Boolean) ?? [])) as string[];
+    return Array.from(
+      new Set(bd.units?.map((u: any) => u.deliveryNote).filter(Boolean) ?? []),
+    ) as string[];
   }, [bd.units]);
 
   const uniqueFinishings = useMemo(() => {
-    return Array.from(new Set(bd.units?.map((u: any) => u.finishing).filter(Boolean) ?? [])) as string[];
+    return Array.from(
+      new Set(bd.units?.map((u: any) => u.finishing).filter(Boolean) ?? []),
+    ) as string[];
   }, [bd.units]);
 
   const uniqueStatuses = useMemo(() => {
-    return Array.from(new Set(bd.units?.map((u: any) => u.status).filter(Boolean) ?? [])) as string[];
+    return Array.from(
+      new Set(bd.units?.map((u: any) => u.status).filter(Boolean) ?? []),
+    ) as string[];
   }, [bd.units]);
 
   const filteredUnits = useMemo(() => {
@@ -152,7 +196,9 @@ function UnitTypePage() {
     return list;
   }, [bd.units, sortBy, filterView, filterFinishing, filterStatus]);
 
-  const otherTypes = (initialAvail?.breakdown || []).filter((b: any) => unitTypeSlug(b) !== currentTypeSlug);
+  const otherTypes = (initialAvail?.breakdown || []).filter(
+    (b: any) => unitTypeSlug(b) !== currentTypeSlug,
+  );
 
   return (
     <Shell>
@@ -160,11 +206,19 @@ function UnitTypePage() {
       <div className="border-b border-border/60 bg-card">
         <div className="mx-auto max-w-7xl px-4 py-3 lg:px-8">
           <div className="flex items-center gap-1.5 text-sm text-muted-foreground flex-wrap">
-            <Link to="/projects" search={{ destination: "", dev: "", q: "" }} className="hover:text-primary transition-colors inline-flex items-center gap-1">
+            <Link
+              to="/projects"
+              search={{ destination: "", dev: "", q: "" }}
+              className="hover:text-primary transition-colors inline-flex items-center gap-1"
+            >
               <ArrowLeft className="h-3.5 w-3.5" /> All projects
             </Link>
             <span>/</span>
-            <Link to="/projects/$slug" params={{ slug: compound.slug }} className="hover:text-primary transition-colors truncate max-w-[160px]">
+            <Link
+              to="/projects/$slug"
+              params={{ slug: compound.slug }}
+              className="hover:text-primary transition-colors truncate max-w-[160px]"
+            >
               {compound.name}
             </Link>
             <span>/</span>
@@ -194,9 +248,12 @@ function UnitTypePage() {
               </span>
             )}
           </div>
-          <h1 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">{title}</h1>
+          <h1 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">
+            {title}
+          </h1>
           <p className="mt-1 text-white/70">
-            {compound.name}{clusterLabel} · by {compound.developer}
+            {compound.name}
+            {clusterLabel} · by {compound.developer}
           </p>
         </div>
       </div>
@@ -205,26 +262,50 @@ function UnitTypePage() {
       <div className="border-b border-border/60 bg-card">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid grid-cols-2 divide-x divide-border md:grid-cols-4">
-            <StripStat icon={Wallet} label="Starting from" value={`EGP ${bd.minPriceM.toFixed(2)}M`} accent />
-            <StripStat icon={Ruler} label="Size range" value={bd.minSqm === bd.maxSqm ? `${bd.minSqm} m²` : `${bd.minSqm}–${bd.maxSqm} m²`} />
-            <StripStat icon={Building2} label="Units available" value={String(bd.available)} className="hidden md:flex" />
-            <StripStat icon={Calendar} label="Data updated" value={initialAvail?.lastUpdated || "Live"} className="hidden md:flex" />
+            <StripStat
+              icon={Wallet}
+              label="Starting from"
+              value={`EGP ${bd.minPriceM.toFixed(2)}M`}
+              accent
+            />
+            <StripStat
+              icon={Ruler}
+              label="Size range"
+              value={bd.minSqm === bd.maxSqm ? `${bd.minSqm} m²` : `${bd.minSqm}–${bd.maxSqm} m²`}
+            />
+            <StripStat
+              icon={Building2}
+              label="Units available"
+              value={String(bd.available)}
+              className="hidden md:flex"
+            />
+            <StripStat
+              icon={Calendar}
+              label="Data updated"
+              value={initialAvail?.lastUpdated || "Live"}
+              className="hidden md:flex"
+            />
           </div>
         </div>
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8 space-y-10 pb-32 lg:pb-10">
-
         {/* Feature pills */}
         {(uniqueViews.length > 0 || uniqueDeliveries.length > 0) && (
           <div className="flex flex-wrap gap-2">
             {uniqueViews.map((v) => (
-              <span key={v} className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/20 dark:text-blue-300">
+              <span
+                key={v}
+                className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 dark:border-blue-900/40 dark:bg-blue-950/20 dark:text-blue-300"
+              >
                 🌊 {v}
               </span>
             ))}
             {uniqueDeliveries.map((d) => (
-              <span key={d} className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700 dark:border-amber-900/40 dark:bg-amber-950/20 dark:text-amber-300">
+              <span
+                key={d}
+                className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700 dark:border-amber-900/40 dark:bg-amber-950/20 dark:text-amber-300"
+              >
                 📅 {d}
               </span>
             ))}
@@ -239,10 +320,13 @@ function UnitTypePage() {
                 <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">
                   Available Listings ({filteredUnits.length} shown)
                 </h2>
-                <p className="text-xs text-muted-foreground mt-0.5">Filter and sort current live developer feeds.</p>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Filter and sort current live developer feeds.
+                </p>
               </div>
               <span className="text-xs text-muted-foreground bg-emerald-50 border border-emerald-200 rounded-full px-3 py-1 dark:bg-emerald-950/20 dark:border-emerald-900/40">
-                Verified: {initialAvail?.developer || compound.developer} · {initialAvail?.lastUpdated || "Live"}
+                Verified: {initialAvail?.developer || compound.developer} ·{" "}
+                {initialAvail?.lastUpdated || "Live"}
               </span>
             </div>
 
@@ -259,7 +343,9 @@ function UnitTypePage() {
                 >
                   <option value="">All Views</option>
                   {uniqueViews.map((v) => (
-                    <option key={v} value={v}>{v}</option>
+                    <option key={v} value={v}>
+                      {v}
+                    </option>
                   ))}
                 </select>
               )}
@@ -271,7 +357,9 @@ function UnitTypePage() {
                 >
                   <option value="">All Finishings</option>
                   {uniqueFinishings.map((f) => (
-                    <option key={f} value={f}>{f}</option>
+                    <option key={f} value={f}>
+                      {f}
+                    </option>
                   ))}
                 </select>
               )}
@@ -283,13 +371,17 @@ function UnitTypePage() {
                 >
                   <option value="">All Statuses</option>
                   {uniqueStatuses.map((s) => (
-                    <option key={s} value={s}>{s}</option>
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
                   ))}
                 </select>
               )}
-              
+
               <div className="ml-auto flex items-center gap-1.5">
-                <span className="text-xs font-semibold text-muted-foreground flex items-center gap-1"><ArrowUpDown className="h-3 w-3" /> Sort by</span>
+                <span className="text-xs font-semibold text-muted-foreground flex items-center gap-1">
+                  <ArrowUpDown className="h-3 w-3" /> Sort by
+                </span>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
@@ -306,9 +398,7 @@ function UnitTypePage() {
             {/* Mobile cards */}
             <div className="grid gap-4 sm:hidden">
               {filteredUnits.length > 0 ? (
-                filteredUnits.map((unit, i) => (
-                  <UnitCard key={unit.id} unit={unit} index={i + 1} />
-                ))
+                filteredUnits.map((unit, i) => <UnitCard key={unit.id} unit={unit} index={i + 1} />)
               ) : (
                 <div className="rounded-xl border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
                   No units match your selected filters. Clear filters to see all listings.
@@ -323,22 +413,43 @@ function UnitTypePage() {
                   <table className="w-full text-sm">
                     <thead>
                       <tr className="border-b border-border bg-secondary/50">
-                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground w-10">#</th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground w-10">
+                          #
+                        </th>
                         {bd.units!.some((u: any) => u.cluster) && (
-                          <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Cluster</th>
+                          <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                            Cluster
+                          </th>
                         )}
-                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground font-semibold">Size</th>
-                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden lg:table-cell">Extra Area</th>
-                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden md:table-cell">View</th>
-                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden lg:table-cell">Delivery</th>
-                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Finishing</th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground font-semibold">
+                          Size
+                        </th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden lg:table-cell">
+                          Extra Area
+                        </th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden md:table-cell">
+                          View
+                        </th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden lg:table-cell">
+                          Delivery
+                        </th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                          Finishing
+                        </th>
                         {extraKeys.map((key) => (
-                          <th key={key} className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground capitalize">
+                          <th
+                            key={key}
+                            className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground capitalize"
+                          >
                             {key.replace(/([A-Z])/g, " $1")}
                           </th>
                         ))}
-                        <th className="px-4 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Price</th>
-                        <th className="px-4 py-3.5 text-center text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Status</th>
+                        <th className="px-4 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                          Price
+                        </th>
+                        <th className="px-4 py-3.5 text-center text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                          Status
+                        </th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-border/60">
@@ -347,11 +458,15 @@ function UnitTypePage() {
                           key={unit.id}
                           className={`hover:bg-secondary/20 transition-colors ${unit.status === "Last Unit" ? "bg-amber-50/20 dark:bg-amber-950/5" : ""}`}
                         >
-                          <td className="px-4 py-3.5 text-muted-foreground text-xs font-semibold">{i + 1}</td>
+                          <td className="px-4 py-3.5 text-muted-foreground text-xs font-semibold">
+                            {i + 1}
+                          </td>
                           {bd.units!.some((u: any) => u.cluster) && (
                             <td className="px-4 py-3.5">
                               {unit.cluster && (
-                                <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary">{unit.cluster}</span>
+                                <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary">
+                                  {unit.cluster}
+                                </span>
                               )}
                             </td>
                           )}
@@ -363,20 +478,26 @@ function UnitTypePage() {
                           </td>
                           <td className="px-4 py-3.5 hidden md:table-cell">
                             {unit.view ? (
-                              <span className="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 px-2 py-0.5 rounded">{unit.view}</span>
+                              <span className="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 px-2 py-0.5 rounded">
+                                {unit.view}
+                              </span>
                             ) : (
                               <span className="text-border text-xs">—</span>
                             )}
                           </td>
                           <td className="px-4 py-3.5 hidden lg:table-cell">
                             {unit.deliveryNote ? (
-                              <span className={`text-xs font-bold ${
-                                unit.deliveryNote === "Ready to Move"
-                                  ? "text-emerald-600"
-                                  : unit.deliveryNote.includes("1 ")
-                                  ? "text-amber-600"
-                                  : "text-muted-foreground"
-                              }`}>{unit.deliveryNote}</span>
+                              <span
+                                className={`text-xs font-bold ${
+                                  unit.deliveryNote === "Ready to Move"
+                                    ? "text-emerald-600"
+                                    : unit.deliveryNote.includes("1 ")
+                                      ? "text-amber-600"
+                                      : "text-muted-foreground"
+                                }`}
+                              >
+                                {unit.deliveryNote}
+                              </span>
                             ) : (
                               <span className="text-border text-xs">—</span>
                             )}
@@ -385,10 +506,15 @@ function UnitTypePage() {
                             <FinishingBadge label={unit.finishing} />
                           </td>
                           {extraKeys.map((key) => (
-                            <td key={key} className="px-4 py-3.5 text-muted-foreground text-xs font-medium">
-                              {unit[key] !== undefined && unit[key] !== null
-                                ? String(unit[key])
-                                : <span className="text-border">—</span>}
+                            <td
+                              key={key}
+                              className="px-4 py-3.5 text-muted-foreground text-xs font-medium"
+                            >
+                              {unit[key] !== undefined && unit[key] !== null ? (
+                                String(unit[key])
+                              ) : (
+                                <span className="text-border">—</span>
+                              )}
                             </td>
                           ))}
                           <td className="px-4 py-3.5 text-right">
@@ -422,8 +548,12 @@ function UnitTypePage() {
             {/* Payment plan note */}
             {bd.paymentPlan && (
               <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50/50 px-4 py-3.5 dark:border-blue-900/40 dark:bg-blue-950/20">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">Standard Payment Plan</div>
-                <p className="text-sm font-medium text-blue-800 dark:text-blue-200">{bd.paymentPlan}</p>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">
+                  Standard Payment Plan
+                </div>
+                <p className="text-sm font-medium text-blue-800 dark:text-blue-200">
+                  {bd.paymentPlan}
+                </p>
               </div>
             )}
           </section>
@@ -445,7 +575,8 @@ function UnitTypePage() {
                     {bd.paymentPlan && ` Payment: ${bd.paymentPlan}.`}
                   </p>
                   <p className="mt-3 text-sm text-muted-foreground">
-                    Call your PropTrack advisor for a complete unit-by-unit breakdown with exact floor plates, views and current offers.
+                    Call your PropTrack advisor for a complete unit-by-unit breakdown with exact
+                    floor plates, views and current offers.
                   </p>
                   <a href="tel:+201029324783" className="mt-3 inline-block">
                     <Button size="sm" className="rounded-full gap-1.5 font-bold">
@@ -507,13 +638,17 @@ function UnitTypePage() {
                 >
                   <div>
                     <div className="font-medium text-primary text-sm">
-                      {b.type}{b.beds ? ` · ${b.beds}BR` : ""}{b.cluster ? ` (${b.cluster})` : ""}
+                      {b.type}
+                      {b.beds ? ` · ${b.beds}BR` : ""}
+                      {b.cluster ? ` (${b.cluster})` : ""}
                     </div>
                     <div className="text-xs text-muted-foreground mt-0.5">
                       {b.available} available · from EGP {b.minPriceM.toFixed(1)}M
                     </div>
                   </div>
-                  <span className="text-muted-foreground group-hover:text-accent transition-colors text-lg leading-none">→</span>
+                  <span className="text-muted-foreground group-hover:text-accent transition-colors text-lg leading-none">
+                    →
+                  </span>
                 </Link>
               ))}
             </div>
@@ -525,8 +660,12 @@ function UnitTypePage() {
       <div className="fixed bottom-0 inset-x-0 z-30 border-t border-border bg-card/95 backdrop-blur-xl px-4 py-3 lg:hidden">
         <div className="flex items-center gap-3">
           <div className="flex-1 min-w-0">
-            <div className="text-[10px] uppercase tracking-wider text-muted-foreground truncate">{title}</div>
-            <div className="font-display text-base font-semibold text-primary">from EGP {bd.minPriceM.toFixed(1)}M</div>
+            <div className="text-[10px] uppercase tracking-wider text-muted-foreground truncate">
+              {title}
+            </div>
+            <div className="font-display text-base font-semibold text-primary">
+              from EGP {bd.minPriceM.toFixed(1)}M
+            </div>
           </div>
           <a href="tel:201029324783">
             <Button size="sm" className="rounded-full shrink-0 gap-1.5">
@@ -540,34 +679,55 @@ function UnitTypePage() {
 }
 
 function StripStat({
-  icon: Icon, label, value, accent = false, className = "",
+  icon: Icon,
+  label,
+  value,
+  accent = false,
+  className = "",
 }: {
-  icon: React.ComponentType<{ className?: string }>; label: string; value: string; accent?: boolean; className?: string;
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  value: string;
+  accent?: boolean;
+  className?: string;
 }) {
   return (
     <div className={`flex items-center gap-3 px-5 py-4 ${className}`}>
-      <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${accent ? "bg-accent/15 text-accent" : "bg-secondary text-muted-foreground"}`}>
+      <span
+        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${accent ? "bg-accent/15 text-accent" : "bg-secondary text-muted-foreground"}`}
+      >
         <Icon className="h-4 w-4" />
       </span>
       <div>
-        <div className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">{label}</div>
-        <div className={`mt-0.5 font-display text-sm font-semibold ${accent ? "text-accent" : "text-primary"}`}>{value}</div>
+        <div className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+          {label}
+        </div>
+        <div
+          className={`mt-0.5 font-display text-sm font-semibold ${accent ? "text-accent" : "text-primary"}`}
+        >
+          {value}
+        </div>
       </div>
     </div>
   );
 }
 
 function FinishingBadge({ label }: { label: string }) {
-  const isFullyFinished = label.toLowerCase().includes("finished") && !label.toLowerCase().includes("semi") && !label.toLowerCase().includes("core");
+  const isFullyFinished =
+    label.toLowerCase().includes("finished") &&
+    !label.toLowerCase().includes("semi") &&
+    !label.toLowerCase().includes("core");
   const isSemi = label.toLowerCase().includes("semi");
   return (
-    <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
-      isFullyFinished
-        ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-400"
-        : isSemi
-        ? "bg-blue-100 text-blue-700 dark:bg-blue-950/30 dark:text-blue-400"
-        : "bg-secondary text-muted-foreground"
-    }`}>
+    <span
+      className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+        isFullyFinished
+          ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-400"
+          : isSemi
+            ? "bg-blue-100 text-blue-700 dark:bg-blue-950/30 dark:text-blue-400"
+            : "bg-secondary text-muted-foreground"
+      }`}
+    >
       {label}
     </span>
   );
@@ -575,7 +735,9 @@ function FinishingBadge({ label }: { label: string }) {
 
 function UnitCard({ unit, index }: { unit: UnitListing; index: number }) {
   return (
-    <div className={`rounded-2xl border p-4 ${unit.status === "Last Unit" ? "border-amber-200 bg-amber-50/50 dark:border-amber-900/40 dark:bg-amber-950/10" : "border-border bg-card"}`}>
+    <div
+      className={`rounded-2xl border p-4 ${unit.status === "Last Unit" ? "border-amber-200 bg-amber-50/50 dark:border-amber-900/40 dark:bg-amber-950/10" : "border-border bg-card"}`}
+    >
       <div className="flex items-center justify-between mb-3">
         <span className="text-xs text-muted-foreground">Unit #{index}</span>
         {unit.status === "Last Unit" ? (
@@ -592,7 +754,9 @@ function UnitCard({ unit, index }: { unit: UnitListing; index: number }) {
       <div className="mt-2 grid grid-cols-2 gap-2 text-xs">
         <div>
           <span className="text-muted-foreground">Size</span>
-          <div className="font-medium text-primary">{unit.areaSqm} m²{unit.areaNote ? ` ${unit.areaNote}` : ""}</div>
+          <div className="font-medium text-primary">
+            {unit.areaSqm} m²{unit.areaNote ? ` ${unit.areaNote}` : ""}
+          </div>
         </div>
         {unit.view && (
           <div>
@@ -603,7 +767,11 @@ function UnitCard({ unit, index }: { unit: UnitListing; index: number }) {
         {unit.deliveryNote && (
           <div>
             <span className="text-muted-foreground">Delivery</span>
-            <div className={`font-medium ${unit.deliveryNote === "Ready to Move" ? "text-emerald-600" : "text-amber-600"}`}>{unit.deliveryNote}</div>
+            <div
+              className={`font-medium ${unit.deliveryNote === "Ready to Move" ? "text-emerald-600" : "text-amber-600"}`}
+            >
+              {unit.deliveryNote}
+            </div>
           </div>
         )}
         <div>
@@ -611,10 +779,29 @@ function UnitCard({ unit, index }: { unit: UnitListing; index: number }) {
           <div className="font-medium text-primary">{unit.finishing}</div>
         </div>
         {Object.keys(unit)
-          .filter((k) => !["id", "unitNo", "type", "beds", "areaSqm", "view", "priceEGP", "status", "finishing", "cluster", "areaNote", "deliveryNote", "paymentPlan"].includes(k))
+          .filter(
+            (k) =>
+              ![
+                "id",
+                "unitNo",
+                "type",
+                "beds",
+                "areaSqm",
+                "view",
+                "priceEGP",
+                "status",
+                "finishing",
+                "cluster",
+                "areaNote",
+                "deliveryNote",
+                "paymentPlan",
+              ].includes(k),
+          )
           .map((key) => (
             <div key={key}>
-              <span className="text-muted-foreground capitalize">{key.replace(/([A-Z])/g, " $1")}</span>
+              <span className="text-muted-foreground capitalize">
+                {key.replace(/([A-Z])/g, " $1")}
+              </span>
               <div className="font-medium text-primary">{String(unit[key])}</div>
             </div>
           ))}

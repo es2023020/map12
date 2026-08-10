@@ -1,5 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, ZoomControl, LayersControl, ScaleControl, LayerGroup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  Tooltip,
+  useMap,
+  ZoomControl,
+  LayersControl,
+  ScaleControl,
+  LayerGroup,
+} from "react-leaflet";
 import L from "leaflet";
 import type { Compound } from "@/data/compounds";
 import { destinations, destinationColor } from "@/data/destinations";
@@ -13,9 +24,8 @@ function getAvailableCount(slug: string): number {
 function projectIcon(c: Compound, active: boolean) {
   const color = destinationColor(c.destination);
   const avail = getAvailableCount(c.slug);
-  const availBadge = avail > 0
-    ? `<span class="pt-dot-avail">${avail > 99 ? "99+" : avail}</span>`
-    : "";
+  const availBadge =
+    avail > 0 ? `<span class="pt-dot-avail">${avail > 99 ? "99+" : avail}</span>` : "";
   const star = c.flagship ? `<span class="pt-dot-star">★</span>` : "";
   const sizeClass = active ? "pt-dot-lg" : "pt-dot-sm";
   const html = `<div class="pt-dot-wrap">
@@ -73,7 +83,7 @@ export function MapView({
   const activeId = activeSlug ?? focus?.slug ?? null;
   const baseIcons = useMemo(
     () => new Map(compounds.map((c) => [c.slug, projectIcon(c, false)])),
-    [compounds]
+    [compounds],
   );
   const activeIcon = useMemo(() => {
     if (!activeId) return null;
@@ -87,12 +97,14 @@ export function MapView({
   if (!ready) {
     return (
       <div ref={containerRef} className={className} style={{ background: "oklch(0.92 0.03 220)" }}>
-        <div className="flex h-full items-center justify-center text-sm text-muted-foreground">Loading map…</div>
+        <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
+          Loading map…
+        </div>
       </div>
     );
   }
 
-  const focused = focus ?? (activeId ? compounds.find((c) => c.slug === activeId) ?? null : null);
+  const focused = focus ?? (activeId ? (compounds.find((c) => c.slug === activeId) ?? null) : null);
 
   return (
     <div className={className}>
@@ -187,24 +199,40 @@ export function MapView({
         </LayersControl>
         <ZoomControl position="bottomright" />
         <ScaleControl position="bottomleft" metric imperial={false} />
-        <FlyTo center={focused ? [focused.lat, focused.lng] : undefined} zoom={focused ? Math.max(14, initialZoom) : undefined} />
+        <FlyTo
+          center={focused ? [focused.lat, focused.lng] : undefined}
+          zoom={focused ? Math.max(14, initialZoom) : undefined}
+        />
 
-        {showLandmarks && lmList.map((l) => {
-          if (Number.isNaN(l.lat) || Number.isNaN(l.lng)) return null;
-          return (
-            <Marker key={l.id} position={[l.lat, l.lng]} icon={lmIcons.get(l.id)!} interactive={false} keyboard={false} />
-          );
-        })}
+        {showLandmarks &&
+          lmList.map((l) => {
+            if (Number.isNaN(l.lat) || Number.isNaN(l.lng)) return null;
+            return (
+              <Marker
+                key={l.id}
+                position={[l.lat, l.lng]}
+                icon={lmIcons.get(l.id)!}
+                interactive={false}
+                keyboard={false}
+              />
+            );
+          })}
 
         {compounds.map((c) => {
           if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;
           const areaColor_ = destinationColor(c.destination);
           const avail = getAvailableCount(c.slug);
-          const availStr = avail > 0 ? `<div class="pt-popup-avail">✓ ${avail} units available</div>` : `<div class="pt-popup-avail-none">⏳ Not updated yet</div>`;
-          const typesHtml = (c.types ?? []).slice(0, 4).map((t: string) =>
-            `<span class="pt-popup-type">${t}</span>`
-          ).join("");
-          const kmBadge = c.km ? `<span style="display:inline-block; font-size:10px; background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; padding:1px 5px; border-radius:4px; font-weight:600; margin-left:6px; vertical-align:middle;">km ${c.km}</span>` : "";
+          const availStr =
+            avail > 0
+              ? `<div class="pt-popup-avail">✓ ${avail} units available</div>`
+              : `<div class="pt-popup-avail-none">⏳ Not updated yet</div>`;
+          const typesHtml = (c.types ?? [])
+            .slice(0, 4)
+            .map((t: string) => `<span class="pt-popup-type">${t}</span>`)
+            .join("");
+          const kmBadge = c.km
+            ? `<span style="display:inline-block; font-size:10px; background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; padding:1px 5px; border-radius:4px; font-weight:600; margin-left:6px; vertical-align:middle;">km ${c.km}</span>`
+            : "";
           const popupHtml = `
             <img class="pt-popup-img" src="${c.hero}" alt="${c.name}" loading="lazy" />
             <div class="pt-popup-body">
@@ -213,7 +241,7 @@ export function MapView({
               <div class="pt-popup-stats">
                 <div class="pt-popup-stat">
                   <div class="pt-popup-stat-label">From</div>
-                  <div class="pt-popup-stat-value">${c.priceFrom > 0 ? `EGP ${c.priceFrom}M` : 'Price on Request'}</div>
+                  <div class="pt-popup-stat-value">${c.priceFrom > 0 ? `EGP ${c.priceFrom}M` : "Price on Request"}</div>
                 </div>
                 <div class="pt-popup-stat">
                   <div class="pt-popup-stat-label">Delivery</div>
@@ -221,7 +249,7 @@ export function MapView({
                 </div>
                 <div class="pt-popup-stat">
                   <div class="pt-popup-stat-label">Status</div>
-                  <div class="pt-popup-stat-value" style="color:${c.status === 'RTM' ? '#16a34a' : '#2563eb'};font-size:10px;">${c.status}</div>
+                  <div class="pt-popup-stat-value" style="color:${c.status === "RTM" ? "#16a34a" : "#2563eb"};font-size:10px;">${c.status}</div>
                 </div>
               </div>
               ${availStr}
@@ -234,22 +262,24 @@ export function MapView({
             <Marker
               key={c.slug}
               position={[c.lat, c.lng]}
-              icon={(c.slug === activeId && activeIcon) ? activeIcon : (baseIcons.get(c.slug) || projectIcon(c, false))}
+              icon={
+                c.slug === activeId && activeIcon
+                  ? activeIcon
+                  : baseIcons.get(c.slug) || projectIcon(c, false)
+              }
               eventHandlers={onSelect ? { click: () => onSelect(c.slug) } : undefined}
             >
               <Popup closeButton={true} maxWidth={220} minWidth={220}>
                 <div dangerouslySetInnerHTML={{ __html: popupHtml }} />
               </Popup>
-              <Tooltip
-                direction="top"
-                offset={[0, -8]}
-                opacity={0.96}
-                permanent={false}
-              >
+              <Tooltip direction="top" offset={[0, -8]} opacity={0.96} permanent={false}>
                 <div style={{ fontSize: 11, fontWeight: 700, marginBottom: 1 }}>
                   {c.name} {c.km ? `(km ${c.km})` : ""}
                 </div>
-                <div style={{ fontSize: 10, color: "#64748b" }}>{c.priceFrom > 0 ? `EGP ${c.priceFrom}M+` : 'Price on Request'}{avail > 0 ? ` · ${avail} units avail.` : ""}</div>
+                <div style={{ fontSize: 10, color: "#64748b" }}>
+                  {c.priceFrom > 0 ? `EGP ${c.priceFrom}M+` : "Price on Request"}
+                  {avail > 0 ? ` · ${avail} units avail.` : ""}
+                </div>
               </Tooltip>
             </Marker>
           );

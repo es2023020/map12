@@ -7,13 +7,13 @@ console.log(`Loaded ${compoundsGenerated.length} compounds from compounds.genera
 const removeSlugs = new Set(["playa-seashell", "palm-hills-sheikh-zayed"]);
 
 const finalCompounds = compoundsGenerated
-  .filter(c => !removeSlugs.has(c.slug))
-  .map(c => {
+  .filter((c) => !removeSlugs.has(c.slug))
+  .map((c) => {
     const newC = { ...c };
-    
+
     // Set all project heros to 1.jpg
     newC.hero = `/projects/${c.slug}/1.jpg`;
-    
+
     // 1. Destination Overrides
     if (c.slug === "sodic-the-estates") {
       newC.destination = "new-zayed";
@@ -55,15 +55,15 @@ const finalCompounds = compoundsGenerated
       newC.developer = "Reedy Group";
       newC.areaSize = "400 feddan";
       newC.amenities = [
-        "Private beach", 
-        "Crystal lagoons", 
-        "Beach club", 
-        "Aqua park", 
-        "Commercial mall", 
-        "Health club", 
-        "Open-air theatre", 
-        "Equestrian paths", 
-        "24/7 security"
+        "Private beach",
+        "Crystal lagoons",
+        "Beach club",
+        "Aqua park",
+        "Commercial mall",
+        "Health club",
+        "Open-air theatre",
+        "Equestrian paths",
+        "24/7 security",
       ];
     }
 
@@ -77,12 +77,12 @@ const finalCompounds = compoundsGenerated
       newC.developer = "Mountain View";
       newC.areaSize = "470 feddan";
       newC.amenities = [
-        "Private beachfront", 
-        "Crystal lagoons", 
-        "Boutique hotels", 
-        "Commercial hubs", 
-        "Clubhouses", 
-        "Jogging tracks"
+        "Private beachfront",
+        "Crystal lagoons",
+        "Boutique hotels",
+        "Commercial hubs",
+        "Clubhouses",
+        "Jogging tracks",
       ];
     }
 
@@ -95,11 +95,11 @@ const finalCompounds = compoundsGenerated
       newC.developer = "SODIC";
       newC.areaSize = "655 feddan";
       newC.amenities = [
-        "SODIC Sports Club", 
-        "Green Spine", 
-        "Ravine park", 
-        "International school", 
-        "Commercial district"
+        "SODIC Sports Club",
+        "Green Spine",
+        "Ravine park",
+        "International school",
+        "Commercial district",
       ];
     }
 
@@ -112,11 +112,11 @@ const finalCompounds = compoundsGenerated
       newC.developer = "Marakez";
       newC.areaSize = "200 feddan";
       newC.amenities = [
-        "Commercial D5M", 
-        "Central parks", 
-        "Sports club", 
-        "Co-working spaces", 
-        "Walking tracks"
+        "Commercial D5M",
+        "Central parks",
+        "Sports club",
+        "Co-working spaces",
+        "Walking tracks",
       ];
     }
 
@@ -129,11 +129,11 @@ const finalCompounds = compoundsGenerated
       newC.developer = "Al Ahly Sabbour";
       newC.areaSize = "144 feddan";
       newC.amenities = [
-        "Central clubhouse", 
-        "Commercial retail", 
-        "Swimming pools", 
-        "Health club", 
-        "Walking tracks"
+        "Central clubhouse",
+        "Commercial retail",
+        "Swimming pools",
+        "Health club",
+        "Walking tracks",
       ];
     }
 
@@ -146,11 +146,11 @@ const finalCompounds = compoundsGenerated
       newC.developer = "La Vista Developments";
       newC.areaSize = "40 feddan";
       newC.amenities = [
-        "Green lawns", 
-        "Artificial lakes", 
-        "Clubhouses", 
-        "Fitness gym", 
-        "Commercial strip"
+        "Green lawns",
+        "Artificial lakes",
+        "Clubhouses",
+        "Fitness gym",
+        "Commercial strip",
       ];
     }
 
@@ -162,12 +162,7 @@ const finalCompounds = compoundsGenerated
       newC.deliveryYear = 2028;
       newC.developer = "Madinet Masr";
       newC.areaSize = "113 feddan";
-      newC.amenities = [
-        "Crystal lagoons", 
-        "Green parks", 
-        "Sports club", 
-        "Commercial area"
-      ];
+      newC.amenities = ["Crystal lagoons", "Green parks", "Sports club", "Commercial area"];
     }
 
     if (c.slug === "lvls") {
@@ -180,11 +175,11 @@ const finalCompounds = compoundsGenerated
       newC.developer = "Mountain View";
       newC.areaSize = "201 feddan";
       newC.amenities = [
-        "Private beach", 
-        "Crystal lagoons", 
-        "Horizon pools", 
-        "Promenades", 
-        "Restaurants"
+        "Private beach",
+        "Crystal lagoons",
+        "Horizon pools",
+        "Promenades",
+        "Restaurants",
       ];
     }
 
@@ -197,11 +192,11 @@ const finalCompounds = compoundsGenerated
       newC.developer = "Al Ahly Sabbour";
       newC.areaSize = "15 feddan";
       newC.amenities = [
-        "Green spaces", 
-        "Swimming pools", 
-        "Health club", 
-        "Commercial zone", 
-        "Jogging tracks"
+        "Green spaces",
+        "Swimming pools",
+        "Health club",
+        "Commercial zone",
+        "Jogging tracks",
       ];
     }
 
@@ -214,11 +209,11 @@ const finalCompounds = compoundsGenerated
       newC.developer = "Marakez";
       newC.areaSize = "118 feddan";
       newC.amenities = [
-        "Central crystal lagoon", 
-        "Clubhouse", 
-        "Sports club", 
-        "Commercial retail strip", 
-        "Pedestrian lanes"
+        "Central crystal lagoon",
+        "Clubhouse",
+        "Sports club",
+        "Commercial retail strip",
+        "Pedestrian lanes",
       ];
     }
 
@@ -232,11 +227,11 @@ const finalCompounds = compoundsGenerated
       newC.developer = "Serac Developments";
       newC.areaSize = "70 feddan";
       newC.amenities = [
-        "Private beachfront", 
-        "Crystal lagoons", 
-        "Boutique hotel", 
-        "Commercial strip", 
-        "Clubhouse"
+        "Private beachfront",
+        "Crystal lagoons",
+        "Boutique hotel",
+        "Commercial strip",
+        "Clubhouse",
       ];
     }
 

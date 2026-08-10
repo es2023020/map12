@@ -8,9 +8,16 @@ export const Route = createFileRoute("/destinations/")({
   head: () => ({
     meta: [
       { title: "Destinations — PropTrack" },
-      { name: "description", content: "Every coastal zone and Cairo district covered by PropTrack." },
+      {
+        name: "description",
+        content: "Every coastal zone and Cairo district covered by PropTrack.",
+      },
       { property: "og:title", content: "Destinations — PropTrack" },
-      { property: "og:description", content: "Sahel zones from Sidi Heneish to New Alamein, plus New Cairo, Sheikh Zayed, Red Sea, Sinai and more." },
+      {
+        property: "og:description",
+        content:
+          "Sahel zones from Sidi Heneish to New Alamein, plus New Cairo, Sheikh Zayed, Red Sea, Sinai and more.",
+      },
     ],
   }),
   component: AreasIndex,
@@ -64,19 +71,30 @@ function AreasIndex() {
         <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Property Atlas</div>
-              <h1 className="mt-1 font-display text-4xl font-semibold tracking-tight text-primary">Destinations</h1>
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                Property Atlas
+              </div>
+              <h1 className="mt-1 font-display text-4xl font-semibold tracking-tight text-primary">
+                Destinations
+              </h1>
               <p className="mt-2 max-w-xl text-muted-foreground">
-                {destinations.length} market zones covered — from the Mediterranean coast to the Red Sea, across Greater Cairo and beyond.
+                {destinations.length} market zones covered — from the Mediterranean coast to the Red
+                Sea, across Greater Cairo and beyond.
               </p>
             </div>
             <div className="flex gap-6 text-center">
               <div>
-                <div className="font-display text-3xl font-semibold text-primary">{totalProjects}</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">Projects</div>
+                <div className="font-display text-3xl font-semibold text-primary">
+                  {totalProjects}
+                </div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                  Projects
+                </div>
               </div>
               <div>
-                <div className="font-display text-3xl font-semibold text-primary">{destinations.length}</div>
+                <div className="font-display text-3xl font-semibold text-primary">
+                  {destinations.length}
+                </div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Zones</div>
               </div>
             </div>
@@ -89,17 +107,25 @@ function AreasIndex() {
         {REGION_GROUPS.map((g) => {
           const regionDestinations = destinations.filter((a) => a.region === g.region);
           if (regionDestinations.length === 0) return null;
-          const regionCount = regionDestinations.reduce((sum, a) => sum + compounds.filter((c) => c.destination === a.slug).length, 0);
+          const regionCount = regionDestinations.reduce(
+            (sum, a) => sum + compounds.filter((c) => c.destination === a.slug).length,
+            0,
+          );
 
           return (
             <section key={g.region}>
               <div className="mb-6 flex items-center gap-4">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl shrink-0" style={{ background: g.color + "22" }}>
+                <span
+                  className="flex h-10 w-10 items-center justify-center rounded-xl shrink-0"
+                  style={{ background: g.color + "22" }}
+                >
                   <g.icon className="h-5 w-5" style={{ color: g.color }} />
                 </span>
                 <div>
                   <h2 className="font-display text-2xl font-semibold text-primary">{g.title}</h2>
-                  <p className="text-sm text-muted-foreground">{g.subtitle} · {regionCount} projects</p>
+                  <p className="text-sm text-muted-foreground">
+                    {g.subtitle} · {regionCount} projects
+                  </p>
                 </div>
               </div>
 
@@ -125,7 +151,9 @@ function AreasIndex() {
                           style={{ background: a.color }}
                         />
                         <div className="absolute bottom-3 left-3 right-3">
-                          <h3 className="font-display text-lg font-semibold text-white leading-tight">{a.name}</h3>
+                          <h3 className="font-display text-lg font-semibold text-white leading-tight">
+                            {a.name}
+                          </h3>
                           {a.kmRange && (
                             <div className="text-xs text-white/80 mt-0.5">{a.kmRange}</div>
                           )}
@@ -136,11 +164,16 @@ function AreasIndex() {
                           <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
                             <MapPin className="h-3 w-3" /> {a.city ?? "Egypt"}
                           </span>
-                          <span className="rounded-full px-2.5 py-0.5 text-xs font-semibold" style={{ background: a.color + "22", color: a.color }}>
+                          <span
+                            className="rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                            style={{ background: a.color + "22", color: a.color }}
+                          >
                             {count} {count === 1 ? "project" : "projects"}
                           </span>
                         </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{a.blurb}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                          {a.blurb}
+                        </p>
                       </div>
                     </Link>
                   );

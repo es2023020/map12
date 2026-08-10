@@ -24,7 +24,7 @@ export const Route = createFileRoute("/ar/compare/$pair")({
         projectB: compB,
         pairSlug,
       },
-      "ar"
+      "ar",
     );
 
     const breadcrumbSchema = buildBreadcrumbSchema([
@@ -76,7 +76,13 @@ function ArabicComparePairPage() {
             <CheckCircle2 className="h-4 w-4 text-amber-600" />
             مقارنة محايدة بالعامية المصرية: تحليل الأسعار وأنظمة السداد للمشروعين.
           </span>
-          <Link to="/compare/$pair" params={{ pair: pairSlug }} className="underline text-[11px] font-bold">English Page</Link>
+          <Link
+            to="/compare/$pair"
+            params={{ pair: pairSlug }}
+            className="underline text-[11px] font-bold"
+          >
+            English Page
+          </Link>
         </div>
 
         {/* Header */}
@@ -86,10 +92,12 @@ function ArabicComparePairPage() {
               <GitCompareArrows className="h-3.5 w-3.5" /> مقارنة كمبوندات عقارية
             </div>
             <h1 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              مقارنة كمبوند {compA.name} <span className="text-accent font-normal italic">ضد</span> كمبوند {compB.name}
+              مقارنة كمبوند {compA.name} <span className="text-accent font-normal italic">ضد</span>{" "}
+              كمبوند {compB.name}
             </h1>
             <p className="mt-2 text-sm sm:text-base text-primary-foreground/80 max-w-3xl">
-              تحليل مقارن لأسعار المتر، شركات التطوير العقاري، أنظمة السداد والتقسيط، وسنة الاستلام المتوقعة.
+              تحليل مقارن لأسعار المتر، شركات التطوير العقاري، أنظمة السداد والتقسيط، وسنة الاستلام
+              المتوقعة.
             </p>
           </div>
         </div>
@@ -103,7 +111,9 @@ function ArabicComparePairPage() {
                 <img src={compA.hero} alt={compA.name} className="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4 text-white">
-                  <span className="text-xs uppercase font-semibold text-accent">{compA.developer}</span>
+                  <span className="text-xs uppercase font-semibold text-accent">
+                    {compA.developer}
+                  </span>
                   <h2 className="text-2xl font-bold font-display">{compA.name}</h2>
                 </div>
               </div>
@@ -121,7 +131,11 @@ function ArabicComparePairPage() {
                   <span className="font-semibold text-foreground">{compA.deliveryYear}</span>
                 </div>
                 <div className="pt-2">
-                  <Link to="/ar/projects/$slug" params={{ slug: compA.slug }} className="block w-full text-center py-2.5 bg-primary text-primary-foreground text-xs font-bold rounded-lg">
+                  <Link
+                    to="/ar/projects/$slug"
+                    params={{ slug: compA.slug }}
+                    className="block w-full text-center py-2.5 bg-primary text-primary-foreground text-xs font-bold rounded-lg"
+                  >
                     عرض تفاصيل وحدات {compA.name}
                   </Link>
                 </div>
@@ -134,7 +148,9 @@ function ArabicComparePairPage() {
                 <img src={compB.hero} alt={compB.name} className="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4 text-white">
-                  <span className="text-xs uppercase font-semibold text-accent">{compB.developer}</span>
+                  <span className="text-xs uppercase font-semibold text-accent">
+                    {compB.developer}
+                  </span>
                   <h2 className="text-2xl font-bold font-display">{compB.name}</h2>
                 </div>
               </div>
@@ -152,7 +168,11 @@ function ArabicComparePairPage() {
                   <span className="font-semibold text-foreground">{compB.deliveryYear}</span>
                 </div>
                 <div className="pt-2">
-                  <Link to="/ar/projects/$slug" params={{ slug: compB.slug }} className="block w-full text-center py-2.5 bg-primary text-primary-foreground text-xs font-bold rounded-lg">
+                  <Link
+                    to="/ar/projects/$slug"
+                    params={{ slug: compB.slug }}
+                    className="block w-full text-center py-2.5 bg-primary text-primary-foreground text-xs font-bold rounded-lg"
+                  >
                     عرض تفاصيل وحدات {compB.name}
                   </Link>
                 </div>

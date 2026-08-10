@@ -9,10 +9,10 @@ const registryJsonPath = path.join(process.cwd(), "src", "data", "media-registry
 // 1. Update project-images.ts
 if (fs.existsSync(imagesPath)) {
   let text = fs.readFileSync(imagesPath, "utf-8");
-  
+
   // Replace path names
   text = text.replace(/\/projects\/saada-sahel\//g, "/projects/sa-ada-sahel/");
-  
+
   // Add key "sa-ada-sahel"
   const newKeyBlock = `  "sa-ada-sahel": [
     "/projects/sa-ada-sahel/1.jpg",
@@ -24,9 +24,9 @@ if (fs.existsSync(imagesPath)) {
     "/projects/sa-ada-sahel/7.jpg",
     "/projects/sa-ada-sahel/8.jpg"
   ],`;
-  
+
   text = text.replace('  "saada-sahel": [', newKeyBlock + '\n  "saada-sahel": [');
-  
+
   fs.writeFileSync(imagesPath, text, "utf-8");
   console.log("Updated project-images.ts");
 }
@@ -34,7 +34,7 @@ if (fs.existsSync(imagesPath)) {
 // 2. Update media-registry.json
 if (fs.existsSync(registryJsonPath)) {
   const data = JSON.parse(fs.readFileSync(registryJsonPath, "utf-8"));
-  
+
   if (data) {
     // Replace paths inside data values
     for (const key of Object.keys(data)) {
@@ -47,19 +47,19 @@ if (fs.existsSync(registryJsonPath)) {
         });
       }
     }
-    
+
     // Add sa-ada-sahel key
     if (data["saada-sahel"]) {
       data["sa-ada-sahel"] = data["saada-sahel"].map((item: any) => {
         return {
           ...item,
-          path: item.path.replace("/projects/saada-sahel/", "/projects/sa-ada-sahel/")
+          path: item.path.replace("/projects/saada-sahel/", "/projects/sa-ada-sahel/"),
         };
       });
       console.log("Added sa-ada-sahel key in media-registry.json");
     }
   }
-  
+
   fs.writeFileSync(registryJsonPath, JSON.stringify(data, null, 2), "utf-8");
   console.log("Updated media-registry.json");
 }

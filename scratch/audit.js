@@ -72,7 +72,7 @@ for (const m of slugMatches) {
   } else {
     // Check if a file in public/brochures matches the slug or name
     const slugClean = slug.replace(/-/g, "").toLowerCase();
-    const found = brochureFiles.some(f => {
+    const found = brochureFiles.some((f) => {
       const fClean = f.replace(/[^a-z0-9]/gi, "").toLowerCase();
       return fClean.includes(slugClean) || slugClean.includes(fClean.replace("pdf", ""));
     });
@@ -86,7 +86,7 @@ for (const m of slugMatches) {
   } else {
     // Check if a file in public/Masterplans matches the slug or name
     const slugClean = slug.replace(/-/g, "").toLowerCase();
-    const found = masterplanFiles.some(f => {
+    const found = masterplanFiles.some((f) => {
       const fClean = f.replace(/[^a-z0-9]/gi, "").toLowerCase();
       return fClean.includes(slugClean);
     });
@@ -104,4 +104,7 @@ console.log(`MISSING MASTER PLAN COUNT: ${missingMasterPlan.length}`);
 console.log(`MISSING BOTH COUNT: ${missingBoth.length}`);
 
 fs.mkdirSync("scratch", { recursive: true });
-fs.writeFileSync("scratch/audit_results.json", JSON.stringify({ missingBrochure, missingMasterPlan, missingBoth }, null, 2));
+fs.writeFileSync(
+  "scratch/audit_results.json",
+  JSON.stringify({ missingBrochure, missingMasterPlan, missingBoth }, null, 2),
+);

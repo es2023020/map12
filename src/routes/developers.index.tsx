@@ -6,17 +6,34 @@ import { developersWithProfiles } from "@/data/profiles.generated";
 import { Search, Building2, TrendingUp, Globe, ArrowUpRight, FileText } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
-function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
+function LogoBadge({
+  src,
+  name,
+  className = "",
+}: {
+  src: string;
+  name: string;
+  className?: string;
+}) {
   const [loaded, setLoaded] = useState(false);
-  const initials = name.split(" ").slice(0, 2).map((w) => w[0] ?? "").join("").toUpperCase();
+  const initials = name
+    .split(" ")
+    .slice(0, 2)
+    .map((w) => w[0] ?? "")
+    .join("")
+    .toUpperCase();
   return (
     <div className={`relative overflow-hidden shrink-0 ${className}`}>
       <div className="absolute inset-0 flex items-center justify-center bg-primary">
         <span className="text-primary-foreground font-bold text-sm select-none">{initials}</span>
       </div>
-      <img src={src} alt={name}
+      <img
+        src={src}
+        alt={name}
         className={`absolute inset-0 h-full w-full object-contain bg-white transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"}`}
-        onLoad={() => setLoaded(true)} onError={() => {}} />
+        onLoad={() => setLoaded(true)}
+        onError={() => {}}
+      />
     </div>
   );
 }
@@ -38,7 +55,10 @@ function DevelopersPage() {
   const filtered = useMemo(() => {
     let list = developers.filter((d) => {
       if (!q) return true;
-      return d.name.toLowerCase().includes(q.toLowerCase()) || d.blurb.toLowerCase().includes(q.toLowerCase());
+      return (
+        d.name.toLowerCase().includes(q.toLowerCase()) ||
+        d.blurb.toLowerCase().includes(q.toLowerCase())
+      );
     });
     if (sort === "name") list = [...list].sort((a, b) => a.name.localeCompare(b.name));
     return list;
@@ -52,22 +72,33 @@ function DevelopersPage() {
         <div className="mx-auto max-w-7xl px-4 py-10 lg:py-14 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Property Atlas</div>
-              <h1 className="mt-1 font-display text-3xl md:text-4xl font-semibold text-primary">Developers</h1>
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                Property Atlas
+              </div>
+              <h1 className="mt-1 font-display text-3xl md:text-4xl font-semibold text-primary">
+                Developers
+              </h1>
               <p className="mt-2 text-muted-foreground max-w-lg">
-                {developers.length} developers actively building across Egypt's premium real-estate markets.
+                {developers.length} developers actively building across Egypt's premium real-estate
+                markets.
               </p>
             </div>
             <div className="flex gap-6 text-center">
               <div>
-                <div className="font-display text-3xl font-semibold text-primary">{developers.length}</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">Developers</div>
+                <div className="font-display text-3xl font-semibold text-primary">
+                  {developers.length}
+                </div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                  Developers
+                </div>
               </div>
               <div>
                 <div className="font-display text-3xl font-semibold text-primary">
                   {developers.reduce((s, d) => s + d.count, 0)}
                 </div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">Projects</div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                  Projects
+                </div>
               </div>
             </div>
           </div>
@@ -88,11 +119,21 @@ function DevelopersPage() {
                 className="group relative flex gap-4 rounded-2xl border border-border/60 bg-card p-5 shadow-soft hover:-translate-y-0.5 hover:shadow-lg hover:border-accent/40 transition-all overflow-hidden"
               >
                 <div className="absolute top-0 right-0 h-24 w-24 rounded-bl-full bg-accent/5 group-hover:bg-accent/10 transition-colors" />
-                <LogoBadge src={d.logo} name={d.name} className="h-14 w-14 shrink-0 rounded-xl object-contain bg-white border border-border/60 p-1" />
+                <LogoBadge
+                  src={d.logo}
+                  name={d.name}
+                  className="h-14 w-14 shrink-0 rounded-xl object-contain bg-white border border-border/60 p-1"
+                />
                 <div className="min-w-0 relative z-10">
-                  <div className="font-display text-lg font-semibold text-primary group-hover:text-accent transition-colors leading-tight">{d.name}</div>
-                  <div className="mt-0.5 text-xs text-muted-foreground">{d.count} projects tracked</div>
-                  <p className="mt-2 text-xs text-muted-foreground line-clamp-2 leading-relaxed">{d.blurb}</p>
+                  <div className="font-display text-lg font-semibold text-primary group-hover:text-accent transition-colors leading-tight">
+                    {d.name}
+                  </div>
+                  <div className="mt-0.5 text-xs text-muted-foreground">
+                    {d.count} projects tracked
+                  </div>
+                  <p className="mt-2 text-xs text-muted-foreground line-clamp-2 leading-relaxed">
+                    {d.blurb}
+                  </p>
                 </div>
                 <ArrowUpRight className="absolute top-4 right-4 h-4 w-4 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
@@ -103,7 +144,12 @@ function DevelopersPage() {
         <div className="mb-5 flex flex-wrap items-center gap-3">
           <div className="relative flex-1 min-w-[200px] max-w-sm">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search developers…" className="pl-9" />
+            <Input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Search developers…"
+              className="pl-9"
+            />
           </div>
           <select
             value={sort}
@@ -132,7 +178,9 @@ function DevelopersPage() {
                 className="h-12 w-12 shrink-0 rounded-xl object-contain bg-white border border-border/60 p-0.5"
               />
               <div className="min-w-0 flex-1">
-                <div className="font-display text-sm font-semibold text-primary group-hover:text-accent transition-colors leading-tight truncate">{d.name}</div>
+                <div className="font-display text-sm font-semibold text-primary group-hover:text-accent transition-colors leading-tight truncate">
+                  {d.name}
+                </div>
                 <div className="mt-0.5 flex items-center gap-1 text-xs text-muted-foreground">
                   <Building2 className="h-3 w-3 shrink-0" />
                   {d.count} {d.count === 1 ? "project" : "projects"}

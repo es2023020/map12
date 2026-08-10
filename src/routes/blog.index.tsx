@@ -8,7 +8,8 @@ export const Route = createFileRoute("/blog/")({
   head: () => {
     const canonicalUrl = getCanonicalUrl("/blog");
     const pageTitle = "Real Estate Blog & Market Intelligence Guides | PropTrack";
-    const metaDesc = "Expert real estate analysis, off-plan compound reviews, location comparison guides, and payment plan strategies for Egyptian property buyers.";
+    const metaDesc =
+      "Expert real estate analysis, off-plan compound reviews, location comparison guides, and payment plan strategies for Egyptian property buyers.";
 
     const breadcrumbSchema = buildBreadcrumbSchema([
       { name: "Home", item: "/" },
@@ -49,7 +50,8 @@ function BlogIndexPage() {
             PropTrack Real Estate Journal
           </h1>
           <p className="mt-3 text-sm sm:text-lg text-primary-foreground/80 max-w-2xl leading-relaxed">
-            Data-backed investment analysis, compound comparisons, and financial breakdowns for Egypt's prime property market.
+            Data-backed investment analysis, compound comparisons, and financial breakdowns for
+            Egypt's prime property market.
           </p>
         </div>
       </div>
@@ -98,7 +100,11 @@ function BlogIndexPage() {
 
                 <div className="pt-4 border-t border-border/50 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <img src={post.author.avatar} alt={post.author.name} className="h-6 w-6 rounded-full object-cover" />
+                    <img
+                      src={post.author.avatar}
+                      alt={post.author.name}
+                      className="h-6 w-6 rounded-full object-cover"
+                    />
                     <span className="text-xs font-medium text-foreground">{post.author.name}</span>
                   </div>
 
