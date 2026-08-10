@@ -11,6 +11,7 @@ import { type ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { PasswordGate } from "@/components/PasswordGate";
+import { Toaster } from "@/components/ui/sonner";
 
 import appCss from "../styles.css?url";
 
@@ -161,6 +162,7 @@ function RootComponent() {
       <PasswordGate>
         <Outlet />
       </PasswordGate>
+      <Toaster />
     </QueryClientProvider>
   );
 }

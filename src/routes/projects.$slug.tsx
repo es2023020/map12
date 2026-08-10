@@ -12,10 +12,12 @@ import { AvailabilitySection } from "@/components/AvailabilitySection";
 import { BrochureButton } from "@/components/BrochureButton";
 import { useStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { toast } from "sonner";
 import {
   Heart, MapPin, Waves, Calendar, Building2, Wallet, Ruler,
   Check, ArrowLeft, Phone, ChevronLeft, ChevronRight, Globe,
-  X, ExternalLink, Star, Calculator, Map as MapIcon, ZoomIn
+  X, ExternalLink, Star, Calculator, Map as MapIcon, ZoomIn, ChevronDown, Sparkles
 } from "lucide-react";
 function LogoBadge({ src, name, className = "" }: { src: string; name: string; className?: string }) {
   const [logoLoaded, setLogoLoaded] = useState(false);
@@ -233,6 +235,52 @@ function CompoundPage() {
   const addRecent = useStore((s) => s.addRecent);
   const trackEvent = useStore((s) => s.trackEvent);
   const [availabilityLoaded, setAvailabilityLoaded] = useState(false);
+
+  const user = useStore((s) => s.user);
+  const addLead = useStore((s) => s.addLead);
+
+  const [interestModalOpen, setInterestModalOpen] = useState(false);
+  const [leadName, setLeadName] = useState("");
+  const [leadPhone, setLeadPhone] = useState("");
+  const [leadUnit, setLeadUnit] = useState("");
+  const [leadInterestType, setLeadInterestType] = useState("Buying");
+  const [leadTime, setLeadTime] = useState("Any Time");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (interestModalOpen) {
+      setLeadName(user?.name || "");
+      setLeadPhone(user?.phone || "");
+      setLeadUnit(c.types?.[0] || "Apartment");
+      setLeadInterestType("Buying");
+      setLeadTime("Any Time");
+    }
+  }, [interestModalOpen, user, c.types]);
+
+  const handleRegisterInterest = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!leadName.trim() || !leadPhone.trim()) {
+      toast.error("Please fill in your name and phone number.");
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      addLead({
+        name: leadName,
+        phone: leadPhone,
+        budget: c.priceFrom || 0,
+        interest: c.slug,
+        stage: "new",
+        notes: `Preferred Unit: ${leadUnit}\nInterest Type: ${leadInterestType}\nBest Time to Call: ${leadTime}`
+      });
+      toast.success("Interest registered successfully! Our agent will call you shortly.");
+      setInterestModalOpen(false);
+    } catch (err) {
+      toast.error("Failed to register interest. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     addRecent(c.slug);
@@ -756,8 +804,8 @@ function CompoundPage() {
             <div className="text-xs uppercase tracking-wider text-muted-foreground">Starting from</div>
             <div className="mt-1 font-display text-3xl font-semibold text-primary">EGP {c.priceFrom}M</div>
             <div className="mt-4 space-y-2.5">
-              <Button className="w-full rounded-full" size="lg" onClick={() => trackEvent({ type: "call", slug: c.slug, area: c.destination })}>
-                <Phone className="mr-2 h-4 w-4" /> Request a viewing
+              <Button className="w-full rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground font-bold" size="lg" onClick={() => setInterestModalOpen(true)}>
+                <Sparkles className="mr-2 h-4 w-4" /> Register Interest
               </Button>
               <Button onClick={() => { toggleFav(c.slug); trackEvent({ type: isFav ? "unsave" : "save", slug: c.slug, area: c.destination }); }} variant="outline" className="w-full rounded-full" size="lg">
                 <Heart className={`mr-2 h-4 w-4 ${isFav ? "fill-sunset text-sunset" : ""}`} />
@@ -824,8 +872,8 @@ function CompoundPage() {
           <Button onClick={() => toggleFav(c.slug)} variant="outline" size="sm" className="rounded-full shrink-0">
             <Heart className={`h-4 w-4 ${isFav ? "fill-sunset text-sunset" : ""}`} />
           </Button>
-          <Button size="sm" className="rounded-full shrink-0 gap-1">
-            <Phone className="h-4 w-4" /> Request viewing
+          <Button onClick={() => setInterestModalOpen(true)} size="sm" className="rounded-full bg-accent text-accent-foreground font-semibold px-4 cursor-pointer">
+            Register Interest
           </Button>
         </div>
       </div>
@@ -855,11 +903,9 @@ function CompoundPage() {
           <div className="font-display text-base font-extrabold text-primary leading-tight truncate">EGP {c.priceFrom}M</div>
         </div>
 
-        <a href="tel:201029324783" className="flex-1">
-          <Button size="sm" className="w-full rounded-xl bg-accent text-accent-foreground font-bold text-xs py-2.5 h-10 shadow-sm" onClick={() => trackEvent({ type: "call", slug: c.slug, area: c.destination })}>
-            <Phone className="mr-1.5 h-3.5 w-3.5 shrink-0" /> Request Viewing
-          </Button>
-        </a>
+        <Button size="sm" className="flex-1 rounded-xl bg-accent text-accent-foreground font-bold text-xs py-2.5 h-10 shadow-sm cursor-pointer" onClick={() => setInterestModalOpen(true)}>
+          <Sparkles className="mr-1.5 h-3.5 w-3.5 shrink-0" /> Register Interest
+        </Button>
 
         <Button
           size="sm"
@@ -876,6 +922,127 @@ function CompoundPage() {
           </Button>
         </Link>
       </div>
+
+      {/* Register Interest Modal */}
+      <Dialog open={isInterestModalOpen} onOpenChange={setInterestModalOpen}>
+        <DialogContent className="max-w-md rounded-3xl border border-border/80 bg-card p-6 shadow-2xl backdrop-blur-xl animate-fade-in z-50">
+          <DialogHeader className="text-left sm:text-left">
+            <DialogTitle className="font-display text-2xl font-bold text-primary">
+              Register Interest
+            </DialogTitle>
+            <p className="text-xs text-muted-foreground mt-1">
+              Interested in <strong className="text-primary font-semibold">{c.name}</strong>? Fill out your details below and an agent will call you.
+            </p>
+          </DialogHeader>
+
+          <form onSubmit={handleRegisterInterest} className="space-y-4 mt-3">
+            <div className="space-y-1.5">
+              <label htmlFor="lead-name" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Full Name</label>
+              <input
+                id="lead-name"
+                type="text"
+                required
+                value={leadName}
+                onChange={(e) => setLeadName(e.target.value)}
+                placeholder="e.g. John Doe"
+                className="w-full rounded-xl border border-border/80 bg-background/50 px-4 py-2.5 text-sm font-medium text-foreground placeholder:text-muted-foreground/60 transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15"
+              />
+            </div>
+
+            <div className="space-y-1.5">
+              <label htmlFor="lead-phone" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Phone Number</label>
+              <input
+                id="lead-phone"
+                type="tel"
+                required
+                value={leadPhone}
+                onChange={(e) => setLeadPhone(e.target.value)}
+                placeholder="e.g. +20 100 123 4567"
+                className="w-full rounded-xl border border-border/80 bg-background/50 px-4 py-2.5 text-sm font-medium text-foreground placeholder:text-muted-foreground/60 transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15"
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-1.5">
+                <label htmlFor="lead-unit" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Preferred Unit</label>
+                <div className="relative">
+                  <select
+                    id="lead-unit"
+                    value={leadUnit}
+                    onChange={(e) => setLeadUnit(e.target.value)}
+                    className="w-full appearance-none rounded-xl border border-border/80 bg-background/50 pl-3.5 pr-8 py-2.5 text-xs font-medium text-foreground transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15 cursor-pointer"
+                  >
+                    {(c.types && c.types.length > 0 ? c.types : ["Apartment", "Chalet", "Villa", "Townhouse", "Twin House"]).map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                  <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground/60">
+                    <ChevronDown className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <label htmlFor="lead-interest" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Type of Interest</label>
+                <div className="relative">
+                  <select
+                    id="lead-interest"
+                    value={leadInterestType}
+                    onChange={(e) => setLeadInterestType(e.target.value)}
+                    className="w-full appearance-none rounded-xl border border-border/80 bg-background/50 pl-3.5 pr-8 py-2.5 text-xs font-medium text-foreground transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15 cursor-pointer"
+                  >
+                    <option value="Buying">Buying</option>
+                    <option value="Renting">Renting</option>
+                    <option value="Investing">Investing</option>
+                    <option value="Selling">Selling</option>
+                  </select>
+                  <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground/60">
+                    <ChevronDown className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-1.5">
+              <label htmlFor="lead-time" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">Best Time to Call</label>
+              <div className="relative">
+                <select
+                  id="lead-time"
+                  value={leadTime}
+                  onChange={(e) => setLeadTime(e.target.value)}
+                  className="w-full appearance-none rounded-xl border border-border/80 bg-background/50 pl-3.5 pr-8 py-2.5 text-xs font-medium text-foreground transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15 cursor-pointer"
+                >
+                  <option value="Any Time">Any Time</option>
+                  <option value="Morning (9 AM - 12 PM)">Morning (9 AM - 12 PM)</option>
+                  <option value="Afternoon (12 PM - 4 PM)">Afternoon (12 PM - 4 PM)</option>
+                  <option value="Evening (4 PM - 8 PM)">Evening (4 PM - 8 PM)</option>
+                </select>
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground/60">
+                  <ChevronDown className="h-3.5 w-3.5" />
+                </span>
+              </div>
+            </div>
+
+            <div className="pt-3 flex gap-3">
+              <Button
+                type="button"
+                variant="outline"
+                className="flex-1 rounded-xl cursor-pointer"
+                onClick={() => setInterestModalOpen(false)}
+              >
+                Cancel
+              </Button>
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex-1 rounded-xl bg-accent text-accent-foreground font-bold cursor-pointer"
+              >
+                {isSubmitting ? "Submitting..." : "Submit Interest"}
+              </Button>
+            </div>
+          </form>
+        </DialogContent>
+      </Dialog>
     </Shell>
   );
 }

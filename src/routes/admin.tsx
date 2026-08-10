@@ -13,7 +13,7 @@ import {
   ShieldCheck, Users, CreditCard, TrendingUp, Check, ExternalLink,
   Building2, MapPin, Layers, LayoutGrid, Calculator, Sliders, ShieldAlert,
   Send, Bot, Settings, Plus, Edit, Trash2, Save, FileText, HelpCircle,
-  Database, Upload, AlertCircle, RefreshCw, Star, ArrowLeftRight, CheckCircle, Info, X, Image as ImageIcon, ArrowLeft, FileSpreadsheet, Sparkles, Download, Search
+  Database, Upload, AlertCircle, RefreshCw, Star, ArrowLeftRight, CheckCircle, Info, X, Image as ImageIcon, ArrowLeft, FileSpreadsheet, Sparkles, Download, Search, ChevronDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -132,6 +132,11 @@ function AdminPage() {
 function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
   const [activeTab, setActiveTab] = useState<TabType>("overview");
   const user = useStore((s) => s.user);
+  
+  const [leadSearch, setLeadSearch] = useState("");
+  const [leadStageFilter, setLeadStageFilter] = useState("");
+  const updateLeadStage = useStore((s) => s.updateLeadStage);
+  const deleteLead = useStore((s) => s.deleteLead);
   
   // Read database state collections with fallback to empty arrays
   const rawCompounds = useStore((s) => s.compoundsList);
@@ -1439,7 +1444,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     { id: "map", label: "Map Control", icon: Layers },
     { id: "tools", label: "Engine Tools", icon: Calculator },
     { id: "people", label: "Agents & RBAC", icon: Users },
-    { id: "crm", label: "CRM Oversight", icon: ShieldAlert },
+    { id: "crm", label: "Leads", icon: Users },
     { id: "ai", label: "AI Grounding", icon: Bot },
     { id: "campaigns", label: "Broadcast Templates", icon: Send },
     { id: "audit", label: "System Audit Logs", icon: FileText },
@@ -3050,44 +3055,174 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                 )}
 
                 {/* crm */}
-                {activeTab === "crm" && (
-                  <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
-                    <div>
-                      <h2 className="font-display text-lg font-bold text-primary">CRM Oversight &amp; Leads Router</h2>
-                      <p className="text-xs text-muted-foreground mt-0.5">Global pool of leads captured across the platform.</p>
-                    </div>
+                {/* Leads Tab */}
+                {activeTab === "crm" && (() => {
+                  const filteredLeads = leads.filter((l) => {
+                    const matchesSearch =
+                      l.name.toLowerCase().includes(leadSearch.toLowerCase()) ||
+                      l.phone.includes(leadSearch);
+                    const matchesStage = !leadStageFilter || l.stage === leadStageFilter;
+                    return matchesSearch && matchesStage;
+                  });
 
-                    <div className="overflow-x-auto border border-border/80 rounded-xl">
-                      <table className="w-full text-left text-xs">
-                        <thead>
-                          <tr className="border-b border-border bg-secondary/50 font-bold text-[10px] uppercase text-muted-foreground tracking-wider">
-                            <th className="p-3">Client Contact</th>
-                            <th className="p-3">Budget Preference</th>
-                            <th className="p-3">Project Interest</th>
-                            <th className="p-3">Status Stage</th>
-                            <th className="p-3 text-right">Auto-Assigned Agent</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-border/60 font-medium">
-                          {leads.map((l) => (
-                            <tr key={l.id} className="hover:bg-secondary/15 transition-colors">
-                              <td className="p-3">
-                                <div className="font-bold text-primary">{l.name}</div>
-                                <div className="text-[10px] text-muted-foreground font-mono mt-0.5">{l.phone}</div>
-                              </td>
-                              <td className="p-3 font-bold text-primary">EGP {l.budget}M</td>
-                              <td className="p-3 text-accent font-semibold">{l.interest.replace(/-/g, " ")}</td>
-                              <td className="p-3">
-                                <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-600 font-bold border border-blue-500/20">{l.stage}</span>
-                              </td>
-                              <td className="p-3 text-right text-muted-foreground">Ahmed Khaled</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
+                  const totalLeadsCount = leads.length;
+                  const newLeadsCount = leads.filter((l) => l.stage === "new").length;
+                  const contactedLeadsCount = leads.filter((l) => l.stage === "contacted").length;
+                  const closedLeadsCount = leads.filter((l) => l.stage === "closed").length;
+                  const activeLeadsCount = totalLeadsCount - closedLeadsCount;
+
+                  return (
+                    <div className="space-y-6">
+                      {/* Summary Cards */}
+                      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                        <div className="rounded-2xl border border-border bg-card p-4 shadow-xs">
+                          <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Total Leads</div>
+                          <div className="mt-1 font-display text-2xl font-extrabold text-primary">{totalLeadsCount}</div>
+                        </div>
+                        <div className="rounded-2xl border border-border bg-card p-4 shadow-xs border-l-4 border-l-accent">
+                          <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">New Leads</div>
+                          <div className="mt-1 font-display text-2xl font-extrabold text-accent">{newLeadsCount}</div>
+                        </div>
+                        <div className="rounded-2xl border border-border bg-card p-4 shadow-xs border-l-4 border-l-blue-500">
+                          <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Contacted</div>
+                          <div className="mt-1 font-display text-2xl font-extrabold text-blue-600">{contactedLeadsCount}</div>
+                        </div>
+                        <div className="rounded-2xl border border-border bg-card p-4 shadow-xs border-l-4 border-l-amber-500">
+                          <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Active Pipeline</div>
+                          <div className="mt-1 font-display text-2xl font-extrabold text-amber-600">{activeLeadsCount}</div>
+                        </div>
+                        <div className="rounded-2xl border border-border bg-card p-4 shadow-xs border-l-4 border-l-emerald-500">
+                          <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Closed</div>
+                          <div className="mt-1 font-display text-2xl font-extrabold text-emerald-600">{closedLeadsCount}</div>
+                        </div>
+                      </div>
+
+                      {/* Header and Filters */}
+                      <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                          <div>
+                            <h2 className="font-display text-lg font-bold text-primary">Leads Manager</h2>
+                            <p className="text-xs text-muted-foreground mt-0.5">Manage and track client registrations captured across the platform.</p>
+                          </div>
+                          
+                          {/* Filters */}
+                          <div className="flex items-center gap-3 self-end sm:self-auto flex-wrap">
+                            <div className="relative min-w-[160px]">
+                              <input
+                                type="text"
+                                placeholder="Search by name or phone..."
+                                value={leadSearch}
+                                onChange={(e) => setLeadSearch(e.target.value)}
+                                className="w-full rounded-xl border border-border bg-background/50 pl-3.5 pr-8 py-2 text-xs font-semibold text-foreground placeholder:text-muted-foreground/60 transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-1 focus:ring-accent"
+                              />
+                              <Search className="absolute right-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/60 pointer-events-none" />
+                            </div>
+
+                            <div className="relative min-w-[140px]">
+                              <select
+                                value={leadStageFilter}
+                                onChange={(e) => setLeadStageFilter(e.target.value)}
+                                className="w-full appearance-none rounded-xl border border-border bg-background/50 pl-3.5 pr-8 py-2 text-xs font-semibold text-foreground transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-1 focus:ring-accent cursor-pointer"
+                              >
+                                <option value="">All Stages</option>
+                                <option value="new">New</option>
+                                <option value="contacted">Contacted</option>
+                                <option value="viewing">Viewing</option>
+                                <option value="negotiating">Negotiating</option>
+                                <option value="closed">Closed</option>
+                              </select>
+                              <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/60 pointer-events-none" />
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Leads Table */}
+                        <div className="overflow-x-auto border border-border/80 rounded-xl">
+                          <table className="w-full text-left text-xs">
+                            <thead>
+                              <tr className="border-b border-border bg-secondary/50 font-bold text-[10px] uppercase text-muted-foreground tracking-wider">
+                                <th className="p-3">Client Contact</th>
+                                <th className="p-3">Budget Preference</th>
+                                <th className="p-3">Project Interest</th>
+                                <th className="p-3">Status Stage</th>
+                                <th className="p-3 text-right">Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-border/60 font-medium">
+                              {filteredLeads.length === 0 ? (
+                                <tr>
+                                  <td colSpan={5} className="p-8 text-center text-muted-foreground">
+                                    No leads found matching the filters.
+                                  </td>
+                                </tr>
+                              ) : (
+                                filteredLeads.map((l) => {
+                                  const matchedProj = compoundsList.find((c) => c.slug === l.interest);
+                                  const projName = matchedProj ? matchedProj.name : l.interest.replace(/-/g, " ");
+
+                                  return (
+                                    <tr key={l.id} className="hover:bg-secondary/15 transition-colors">
+                                      <td className="p-3 align-top">
+                                        <div className="font-bold text-primary">{l.name}</div>
+                                        <div className="text-[10px] text-muted-foreground font-mono mt-0.5">{l.phone}</div>
+                                        <div className="text-[9px] text-muted-foreground/80 mt-1 font-medium">
+                                          Registered: {new Date(l.createdAt).toLocaleDateString()}
+                                        </div>
+                                        
+                                        {/* Serialized Notes/Preferences display */}
+                                        {l.notes && (
+                                          <div className="mt-2 text-[10px] bg-secondary/40 border border-border/50 rounded-xl p-2.5 text-muted-foreground whitespace-pre-line leading-relaxed max-w-xs shadow-3xs">
+                                            {l.notes}
+                                          </div>
+                                        )}
+                                      </td>
+                                      <td className="p-3 align-top font-bold text-primary">
+                                        {l.budget > 0 ? `EGP ${l.budget}M` : "On Request"}
+                                      </td>
+                                      <td className="p-3 align-top text-accent font-semibold">
+                                        {projName}
+                                      </td>
+                                      <td className="p-3 align-top">
+                                        <div className="relative max-w-[120px]">
+                                          <select
+                                            value={l.stage}
+                                            onChange={(e) => updateLeadStage(l.id, e.target.value as any)}
+                                            className="w-full appearance-none rounded-lg border border-border/80 bg-background/50 px-2.5 py-1 pr-6 text-xs font-semibold cursor-pointer focus:outline-none focus:ring-1 focus:ring-accent hover:border-accent/40"
+                                          >
+                                            <option value="new">New</option>
+                                            <option value="contacted">Contacted</option>
+                                            <option value="viewing">Viewing</option>
+                                            <option value="negotiating">Negotiating</option>
+                                            <option value="closed">Closed</option>
+                                          </select>
+                                          <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/60 pointer-events-none" />
+                                        </div>
+                                      </td>
+                                      <td className="p-3 align-top text-right">
+                                        <Button
+                                          onClick={() => {
+                                            if (confirm("Are you sure you want to delete this lead?")) {
+                                              deleteLead(l.id);
+                                            }
+                                          }}
+                                          variant="ghost"
+                                          size="xs"
+                                          className="text-destructive hover:bg-destructive/10 hover:text-destructive rounded-lg cursor-pointer"
+                                        >
+                                          <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                      </td>
+                                    </tr>
+                                  );
+                                })
+                              )}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  );
+                })()}
 
                 {/* ai */}
                 {activeTab === "ai" && (

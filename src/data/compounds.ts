@@ -303,11 +303,6 @@ export const parentChildMap: Record<string, string> = {
   "elea-azha-north": "azha-north-coast",
   "kynd-residence-gaia": "gaia",
   "sealine-seashore": "hyde-park-north-seashore",
-  "marresidence": "marville",
-  "coral-coves": "soma-bay",
-  "lake-residence-by-rotana": "fifth-square",
-  "telal-soul": "telal",
-  "covaya": "telal-sokhna",
 };
 
 function heroFor(slug: string, fallback: string): string {
@@ -3667,15 +3662,9 @@ function getActiveCompounds(): Compound[] {
       result.push(sc);
     }
   }
-  
-  const enrichedResult = result.map((c) => ({
-    ...c,
-    parentSlug: c.parentSlug || parentChildMap[c.slug] || undefined,
-  }));
-
-  cachedCompounds = enrichedResult;
+  cachedCompounds = result;
   lastCompoundsRead = now;
-  return enrichedResult;
+  return result;
 }
 
 export const compounds: Compound[] = new Proxy(staticCompounds, {

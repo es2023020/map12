@@ -12,9 +12,11 @@ import { getProjectSEO } from "@/lib/seo-templates";
 import { buildProjectSchema, buildBreadcrumbSchema, formatEGP } from "@/lib/seo";
 import { useStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { toast } from "sonner";
 import {
   Heart, MapPin, Calendar, Building2, Wallet, Check, Phone,
-  ChevronLeft, ChevronRight, Globe, Calculator, CheckCircle2
+  ChevronLeft, ChevronRight, Globe, Calculator, CheckCircle2, ChevronDown, Sparkles
 } from "lucide-react";
 
 export const Route = createFileRoute("/ar/projects/$slug")({
@@ -98,6 +100,52 @@ function ArabicCompoundPage() {
   const isFav = favorites.includes(c.slug);
   
   const [availabilityLoaded, setAvailabilityLoaded] = useState(false);
+
+  const user = useStore((s) => s.user);
+  const addLead = useStore((s) => s.addLead);
+
+  const [interestModalOpen, setInterestModalOpen] = useState(false);
+  const [leadName, setLeadName] = useState("");
+  const [leadPhone, setLeadPhone] = useState("");
+  const [leadUnit, setLeadUnit] = useState("");
+  const [leadInterestType, setLeadInterestType] = useState("Buying");
+  const [leadTime, setLeadTime] = useState("Any Time");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (interestModalOpen) {
+      setLeadName(user?.name || "");
+      setLeadPhone(user?.phone || "");
+      setLeadUnit(c.types?.[0] || "Apartment");
+      setLeadInterestType("Buying");
+      setLeadTime("Any Time");
+    }
+  }, [interestModalOpen, user, c.types]);
+
+  const handleRegisterInterest = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!leadName.trim() || !leadPhone.trim()) {
+      toast.error("يرجى ملء الاسم ورقم الهاتف.");
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      addLead({
+        name: leadName,
+        phone: leadPhone,
+        budget: c.priceFrom || 0,
+        interest: c.slug,
+        stage: "new",
+        notes: `الوحدة المفضلة: ${leadUnit}\nنوع الاهتمام: ${leadInterestType}\nأفضل وقت للاتصال: ${leadTime}`
+      });
+      toast.success("تم تسجيل اهتمامك بنجاح! سيتصل بك أحد وكلائنا قريباً.");
+      setInterestModalOpen(false);
+    } catch (err) {
+      toast.error("فشل في تسجيل الاهتمام. يرجى المحاولة مرة أخرى.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     // Load heavy availability data asynchronously in background
@@ -227,8 +275,8 @@ function ArabicCompoundPage() {
               <span className="text-xs uppercase font-bold text-muted-foreground block">السعر الإفتتاحي</span>
               <div className="font-display text-3xl font-bold text-accent">{priceStr}</div>
               <div className="space-y-2 pt-2">
-                <Button className="w-full rounded-full" size="lg">
-                  <Phone className="ml-2 h-4 w-4" /> طلب معاينة ومعلومات الوحدات
+                <Button className="w-full rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground font-bold cursor-pointer" size="lg" onClick={() => setInterestModalOpen(true)}>
+                  <Sparkles className="ml-2 h-4 w-4" /> تسجيل الاهتمام بالكمبوند
                 </Button>
                 <Button onClick={() => toggleFav(c.slug)} variant="outline" className="w-full rounded-full" size="lg">
                   <Heart className={`ml-2 h-4 w-4 ${isFav ? "fill-sunset text-sunset" : ""}`} />
@@ -260,6 +308,128 @@ function ArabicCompoundPage() {
           </div>
         )}
       </div>
+
+      {/* Register Interest Modal (Arabic) */}
+      <Dialog open={interestModalOpen} onOpenChange={setInterestModalOpen}>
+        <DialogContent className="max-w-md rounded-3xl border border-border/80 bg-card p-6 shadow-2xl backdrop-blur-xl animate-fade-in z-50 text-right" dir="rtl">
+          <DialogHeader className="text-right sm:text-right">
+            <DialogTitle className="font-display text-2xl font-bold text-primary">
+              تسجيل الاهتمام
+            </DialogTitle>
+            <p className="text-xs text-muted-foreground mt-1">
+              مهتم بمشروع <strong className="text-primary font-semibold">{c.name}</strong>؟ يرجى ملء بياناتك أدناه للتواصل معك.
+            </p>
+          </DialogHeader>
+
+          <form onSubmit={handleRegisterInterest} className="space-y-4 mt-3">
+            <div className="space-y-1.5">
+              <label htmlFor="ar-lead-name" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">الاسم بالكامل</label>
+              <input
+                id="ar-lead-name"
+                type="text"
+                required
+                value={leadName}
+                onChange={(e) => setLeadName(e.target.value)}
+                placeholder="مثال: أحمد محمد"
+                className="w-full rounded-xl border border-border/80 bg-background/50 px-4 py-2.5 text-sm font-medium text-foreground placeholder:text-muted-foreground/60 transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15"
+              />
+            </div>
+
+            <div className="space-y-1.5">
+              <label htmlFor="ar-lead-phone" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">رقم الهاتف</label>
+              <input
+                id="ar-lead-phone"
+                type="tel"
+                required
+                value={leadPhone}
+                onChange={(e) => setLeadPhone(e.target.value)}
+                placeholder="مثال: 01001234567"
+                className="w-full rounded-xl border border-border/80 bg-background/50 px-4 py-2.5 text-sm font-medium text-foreground placeholder:text-muted-foreground/60 transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15 text-left"
+                dir="ltr"
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-1.5">
+                <label htmlFor="ar-lead-unit" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">الوحدة المفضلة</label>
+                <div className="relative">
+                  <select
+                    id="ar-lead-unit"
+                    value={leadUnit}
+                    onChange={(e) => setLeadUnit(e.target.value)}
+                    className="w-full appearance-none rounded-xl border border-border/80 bg-background/50 pl-8 pr-3.5 py-2.5 text-xs font-medium text-foreground transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15 cursor-pointer"
+                  >
+                    {(c.types && c.types.length > 0 ? c.types : ["Apartment", "Chalet", "Villa", "Townhouse", "Twin House"]).map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground/60">
+                    <ChevronDown className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <label htmlFor="ar-lead-interest" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">نوع الاهتمام</label>
+                <div className="relative">
+                  <select
+                    id="ar-lead-interest"
+                    value={leadInterestType}
+                    onChange={(e) => setLeadInterestType(e.target.value)}
+                    className="w-full appearance-none rounded-xl border border-border/80 bg-background/50 pl-8 pr-3.5 py-2.5 text-xs font-medium text-foreground transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15 cursor-pointer"
+                  >
+                    <option value="Buying">شراء</option>
+                    <option value="Renting">إيجار</option>
+                    <option value="Investing">استثمار</option>
+                    <option value="Selling">بيع</option>
+                  </select>
+                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground/60">
+                    <ChevronDown className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-1.5">
+              <label htmlFor="ar-lead-time" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">أفضل وقت للاتصال</label>
+              <div className="relative">
+                <select
+                  id="ar-lead-time"
+                  value={leadTime}
+                  onChange={(e) => setLeadTime(e.target.value)}
+                  className="w-full appearance-none rounded-xl border border-border/80 bg-background/50 pl-8 pr-3.5 py-2.5 text-xs font-medium text-foreground transition-all hover:border-accent/40 focus:bg-background focus:outline-none focus:ring-2 focus:ring-accent/15 cursor-pointer"
+                >
+                  <option value="Any Time">أي وقت</option>
+                  <option value="Morning (9 AM - 12 PM)">صباحاً (9 ص - 12 م)</option>
+                  <option value="Afternoon (12 PM - 4 PM)">بعد الظهر (12 م - 4 م)</option>
+                  <option value="Evening (4 PM - 8 PM)">مساءً (4 م - 8 م)</option>
+                </select>
+                <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground/60">
+                  <ChevronDown className="h-3.5 w-3.5" />
+                </span>
+              </div>
+            </div>
+
+            <div className="pt-3 flex gap-3">
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex-1 rounded-xl bg-accent text-accent-foreground font-bold cursor-pointer"
+              >
+                {isSubmitting ? "جاري الإرسال..." : "سجل اهتمامك"}
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                className="flex-1 rounded-xl cursor-pointer"
+                onClick={() => setInterestModalOpen(false)}
+              >
+                إلغاء
+              </Button>
+            </div>
+          </form>
+        </DialogContent>
+      </Dialog>
     </Shell>
   );
 }
