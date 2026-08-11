@@ -1,0 +1,495 @@
+{
+  "c-north": {
+    "slug": "c-north",
+    "name": "C North",
+    "destination": "ras-el-hekma",
+    "km": 188,
+    "lat": 31.135,
+    "lng": 27.854,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 18,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": true,
+    "types": [
+      "Cabana",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Private Beach & Promenade",
+      "Beach Clubhouse & Cabanas",
+      "Infinity Lagoon",
+      "Boutique Hotel",
+      "Island Lagoons",
+      "Sports & Wellness Zone",
+      "Commercial & Retail Zone",
+      "24/7 Security & CCTV"
+    ],
+    "blurb": "Spanning 114 feddans along the pristine coastline at km 188, C North is a boutique beachfront community in Ras El Hekma. Designed on levels to guarantee uninterrupted sea views from every corner, the compound dedicates 85% of its masterplan to lush Mediterranean landscapes, open-air experiences, and natural flow.",
+    "highlights": [
+      "KM 188 Ras El Hekma: Premium beachfront position on the North Coast.",
+      "114 Feddans Masterplan: Built on natural elevations to optimize sea views.",
+      "85% Open Space & Greenery: Low-density design with only 15% developed footprint.",
+      "Integrated Luxury Amenities: Features a boutique hotel, sports wellness zones, and multiple lagoons."
+    ],
+    "paymentPlan": "10% down payment \u00b7 5% after 3 months \u00b7 8 years equal installments",
+    "areaSize": "114 feddan",
+    "unitSizes": "370 m\u00b2 (Signature Villa A), Townhouses (180-190 m\u00b2), Quads (210 m\u00b2)",
+    "type": "Coastal",
+    "brochureUrl": "/brochures/C-NORTH BROCHURE.pdf",
+    "hero": "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=800&q=80"
+    ]
+  },
+  "safia": {
+    "slug": "safia",
+    "name": "Safia",
+    "destination": "ras-el-hekma",
+    "km": 186,
+    "lat": 31.133,
+    "lng": 27.832,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 15,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": true,
+    "types": [
+      "Chalet",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Pristine Beach & Clubhouse",
+      "Tennis & Padel Courts",
+      "Multiple Swimming Pools",
+      "Commercial Promenade",
+      "Lush Landscaping & Parks",
+      "24/7 Gated Security",
+      "Children Play Areas"
+    ],
+    "blurb": "Safia is a luxury beachfront community spanning 180 acres at km 186 on the shores of Ras El Hekma. With only 15% of the total land developed, the compound is masterplanned to celebrate open space, sea breezes, and scenic coastal landscapes.",
+    "highlights": [
+      "KM 186 Ras El Hekma: Centered in the heart of Egypt's premium North Coast stretch.",
+      "180-Acre Scale: Massive beachfront masterplan with wide open-air parks.",
+      "85% Landscapes & Lagoons: Only 15% footprint developed to maximize natural spacing.",
+      "Excellent Connectivity: Located 30 minutes from Alamein Airport and 20 minutes from Dabaa Axis."
+    ],
+    "paymentPlan": "10% down payment \u00b7 8 years equal installments",
+    "areaSize": "180 feddan",
+    "unitSizes": "110\u2013350 m\u00b2",
+    "type": "Coastal",
+    "brochureUrl": "/brochures/Safia-E-Brochure-IL-Cazar.pdf",
+    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
+      "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80",
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80"
+    ]
+  },
+  "the-crest": {
+    "slug": "the-crest",
+    "name": "The Crest",
+    "destination": "new-cairo",
+    "lat": 30.015,
+    "lng": 31.476,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 10,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Exclusive Clubhouse",
+      "Swimming Pools & Lagoons",
+      "Fitness Center & Sports Facilities",
+      "Commercial Hub & Retail",
+      "Manicured Landscaped Gardens",
+      "24/7 Security & CCTV Monitoring"
+    ],
+    "blurb": "Redefining contemporary living in New Cairo's Fifth Settlement, The Crest is a premium 158-acre residential community located at the intersection of South 90th Street and the East Ring Road Axis. Featuring a dynamic layout of apartments and luxury villas, it integrates state-of-the-art sports, social, and commercial infrastructure.",
+    "highlights": [
+      "Prime Intersection Location: Situated directly on South 90th Street and East Ring Road.",
+      "158-Acre Premium Scale: Masterplanned with extensive green corridors and lakes.",
+      "Strategic AUC Proximity: Minutes from the American University in Cairo and New Capital routes.",
+      "Diverse Housing Options: Wide selection of fully finished apartments and spacious standalone villas."
+    ],
+    "paymentPlan": "10% down payment \u00b7 8 years equal installments",
+    "areaSize": "158 feddan",
+    "unitSizes": "85\u2013380 m\u00b2",
+    "type": "Residential",
+    "brochureUrl": "/brochures/The-Crest-Villas-E-Brochure-1-1.pdf",
+    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
+    ]
+  },
+  "westdays": {
+    "slug": "westdays",
+    "name": "Westdays",
+    "destination": "new-zayed",
+    "lat": 30.092,
+    "lng": 30.865,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 12,
+    "deliveryYear": 2029,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Vibrant Green Oasis Park",
+      "Boutique Hotel & Concierge",
+      "Clubhouse & Wellness Center",
+      "Commercial Retail District",
+      "Jogging & Cycling Tracks",
+      "24/7 Security & Patrols"
+    ],
+    "blurb": "Spanning 65 feddans in the expanding premium corridor of West Cairo, Westdays is a contemporary, masterplanned community designed to provide a sensory and emotional sanctuary. Blending sleek low-rise residential layouts with a central green park oasis, it combines residential seclusion with immediate access to 26 July Axis.",
+    "highlights": [
+      "65 Feddans Masterplan: Highly integrated, low-density modern layout.",
+      "Prime West Cairo Location: Just 5 minutes from the 26 July Axis.",
+      "Green Oasis Design: Features sprawling landscaped areas and pedestrian-first pathways.",
+      "Premium Facilities: Includes an exclusive clubhouse, business spaces, and recreational zones."
+    ],
+    "paymentPlan": "10% down payment \u00b7 7 years equal installments",
+    "areaSize": "65 feddan",
+    "unitSizes": "120\u2013320 m\u00b2",
+    "type": "Residential",
+    "brochureUrl": "/brochures/Westdays-E-Brochure.pdf",
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80"
+    ]
+  },
+  "glen": {
+    "slug": "glen",
+    "name": "Glen",
+    "destination": "new-cairo",
+    "lat": 30.0075,
+    "lng": 31.488,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 17,
+    "deliveryYear": 2029,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Townhouse",
+      "Quad",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Central Clubhouse & Social Hub",
+      "Water Features & Lagoons",
+      "Sports Fields & Fitness Zones",
+      "Children's Playgrounds",
+      "Jogging & Bicycle Tracks",
+      "24/7 Security Guard Patrols"
+    ],
+    "blurb": "Glen is an exclusive 200-feddan, all-villas residential community launched in 2025 in New Cairo's Sixth Settlement (directly adjacent to Zed East). Tailored for absolute privacy and exclusivity, the compound features premium Townhouses, Quads, and Standalone villas set amidst expansive natural landscape systems and artificial water structures.",
+    "highlights": [
+      "200-Feddan Villas-Only Community: Zero high-density apartments, ensuring extreme privacy.",
+      "Sixth Settlement Location: Positioned right next to Zed East and major premium developments.",
+      "Ain Sokhna & E-Ring Access: Just 1 minute from Sokhna Road and 4 minutes from the East Ring Road.",
+      "Flexible Payment Options: Extended repayment programs starting with a minimal 5% downpayment."
+    ],
+    "paymentPlan": "5% down payment \u00b7 5% after 3 months \u00b7 7 years equal installments",
+    "areaSize": "200 feddan",
+    "unitSizes": "180\u2013275 m\u00b2",
+    "type": "Residential",
+    "brochureUrl": "/brochures/GLEN-Sales-Kit.pdf",
+    "hero": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80"
+    ]
+  },
+  "stoda": {
+    "slug": "stoda",
+    "name": "Stoda",
+    "destination": "new-cairo",
+    "lat": 30.068,
+    "lng": 31.468,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 8.5,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Office"
+    ],
+    "amenities": [
+      "Business Park & Meeting Spaces",
+      "Boutique Retail Plaza",
+      "Community Mosque",
+      "Pedestrian Promenade & Plazas",
+      "Underground Parking Garage",
+      "Cycling & Jogging Tracks",
+      "Private Clubhouse"
+    ],
+    "blurb": "Launched in 2024 directly on Suez Road, Stoda is a premium ready-to-deliver mixed-use community situated minutes away from Cairo International Airport. Perfect for modern professionals and families, Stoda integrates fully finished apartments with a progressive Business Park and boutique retail promenade.",
+    "highlights": [
+      "Suez Road Position: Highly accessible mixed-use community in First Settlement.",
+      "Ready to Deliver (RTM): Ready for immediate handover options.",
+      "Incredible Proximity: Just 2 minutes from Cairo International Airport and 5 minutes from Heliopolis.",
+      "Mixed-Use Masterplan: Seamless division between residential apartments and professional office hubs."
+    ],
+    "paymentPlan": "10% down payment \u00b7 7 years equal installments",
+    "areaSize": "25 feddan",
+    "unitSizes": "90\u2013220 m\u00b2",
+    "type": "Residential",
+    "brochureUrl": "/brochures/Stoda-Sales-Kit.pdf",
+    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80"
+    ]
+  },
+  "creek-district": {
+    "slug": "creek-district",
+    "name": "Creek District",
+    "destination": "new-cairo",
+    "lat": 30.074,
+    "lng": 31.4705,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 12,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Office",
+      "Retail"
+    ],
+    "amenities": [
+      "State-of-the-Art Data Center",
+      "High-Speed Fiber Optics Network",
+      "Advanced Cloud Storage Systems",
+      "Automatic ID Main Gates",
+      "CCTV Surveillance & Guarding",
+      "Underground Parking Garage",
+      "Dining & Shopping Strip"
+    ],
+    "blurb": "Positioned directly on Suez Road in the First Settlement of New Cairo, Creek District is a linear commercial and office icon spanning almost one kilometer. Operating with advanced technological systems including a dedicated data center, smart power stations, and high-speed fiber optics, it stands as the ultimate professional and retail strip.",
+    "highlights": [
+      "1 KM Linear Commercial Strip: Prime frontage directly on Suez Road.",
+      "Advanced Tech Integration: Features high-speed fiber, cloud infrastructure, and private data center.",
+      "Integrated with Creek Town: Serves as the commercial anchor for the Creek Town compound.",
+      "Ready-to-Move Office Spaces: Grade-A administrative and retail assets."
+    ],
+    "paymentPlan": "10% down payment \u00b7 6 years equal installments",
+    "areaSize": "35 feddan",
+    "unitSizes": "60\u2013500 m\u00b2",
+    "type": "Commercial",
+    "brochureUrl": "/brochures/IL-CAZAR-CREEK-DISTRICT.pdf",
+    "hero": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+      "https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=800&q=80"
+    ]
+  },
+  "go-heliopolis": {
+    "slug": "go-heliopolis",
+    "name": "Go Heliopolis",
+    "destination": "new-cairo",
+    "lat": 30.103,
+    "lng": 31.352,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 7.5,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Office",
+      "Retail"
+    ],
+    "amenities": [
+      "First-of-its-Kind Roof Garden",
+      "Concierge & Housekeeping",
+      "Full-Fledged Fitness Gym & Spa",
+      "Medical Clinics & Pharmacies",
+      "Boutique Restaurants & Cafes",
+      "Dedicated Parking Space",
+      "24/7 Security Patrols"
+    ],
+    "blurb": "Go Heliopolis is the first integrated residential, commercial, and administrative compound in Heliopolis, located directly on El-Nozha Street. Spanning 18,000 SQM of land area, it offers a dynamic boutique community featuring state-of-the-art medical services, professional office hubs, a retail district, and a signature roof garden.",
+    "highlights": [
+      "First Compound in Heliopolis: Unbeatable location on El-Nozha Street.",
+      "Heliopolis Re-Branded Legacy: Standardized under IL Cazar developments' Grade-A standards.",
+      "Exclusive Roof Garden: First-of-its-kind escape featuring dining, gyms, and kids' zones.",
+      "Complete Service Integration: Integrated concierge, housekeeping, medical clinic, and fitness zones."
+    ],
+    "paymentPlan": "10% down payment \u00b7 6 years equal installments",
+    "areaSize": "18,000 sqm",
+    "unitSizes": "80\u2013210 m\u00b2",
+    "type": "Residential",
+    "brochureUrl": "/brochures/Go.pdf",
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
+    ]
+  },
+  "vea-new-cairo": {
+    "slug": "vea-new-cairo",
+    "name": "Vea New Cairo",
+    "destination": "new-cairo",
+    "lat": 30.025,
+    "lng": 31.48,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 18.5,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Private Clubhouse & Social Hub",
+      "Outdoor Wellness & Movement Zones",
+      "Lush Parkland & Widen Streets",
+      "Distributed Water Cooling Elements",
+      "Gated Community 24/7 Security",
+      "Dining & Boutique Retail Spaces"
+    ],
+    "blurb": "Vea New Cairo is an ultra-exclusive, all-villas boutique community spanning 100 acres in the prestigious Sixth Settlement of New Cairo. Delivering 417 premium single-family villa keys, the masterplan emphasizes nature-led identity, wide streetscapes, wellness parks, and cooling water features that seamlessly blend architecture with landscapes.",
+    "highlights": [
+      "All-Villas Boutique Concept: Features an exclusive collection of 417 luxury villa structures.",
+      "100-Acre Scale: Low-density masterplan with wide separation corridors.",
+      "Sixth Settlement Premium Spot: Placed in the heart of New Cairo's emerging luxury district.",
+      "Nature-Led Wellness Masterplan: Extensive outdoor wellness, parklands, and cooling lagoons."
+    ],
+    "paymentPlan": "10% down payment \u00b7 8 years equal installments",
+    "areaSize": "100 feddan",
+    "unitSizes": "180\u2013350 m\u00b2",
+    "type": "Residential",
+    "brochureUrl": "/brochures/VEA-E-BROCHURE.pdf",
+    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80"
+    ]
+  },
+  "the-c": {
+    "slug": "the-c",
+    "name": "The C",
+    "destination": "ras-el-hekma",
+    "km": 188,
+    "lat": 31.136,
+    "lng": 27.856,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 9,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": true,
+    "types": [
+      "Cabana",
+      "Chalet",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Private Beach & Crystal Lagoon",
+      "Beach Bar & Clubhouse",
+      "Restaurants & Dining Strip",
+      "Cycling Tracks & Promenades",
+      "Yacht Marina Access",
+      "24/7 Gated Security Patrols"
+    ],
+    "blurb": "The C is an exclusive beachfront resort compound ideally situated at km 188 in Ras El Hekma. Designed to offer a premium, slow-paced summer lifestyle, the community features private beachfront cabanas, crystalline swimming lagoons, a yacht marina, and classical Mediterranean architecture.",
+    "highlights": [
+      "KM 188 Ras El Hekma: Premium location on the pristine shores of the North Coast.",
+      "Exclusive Beachfront Resort: Spans 288 feddans of premium beachfront layout.",
+      "Lagoon & Marina Access: Features private marine access and clear swimming waters.",
+      "Mediterranean Inspired Architecture: Distinctive low-rise residences and villas."
+    ],
+    "paymentPlan": "5% down payment \u00b7 7 years equal installments",
+    "areaSize": "288 feddan",
+    "unitSizes": "91\u2013434 m\u00b2",
+    "type": "Coastal",
+    "brochureUrl": "/brochures/The-C-Brochure.pdf",
+    "hero": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
+      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80"
+    ]
+  },
+  "park-sight": {
+    "slug": "park-sight",
+    "name": "Park Sight",
+    "destination": "new-administrative-capital",
+    "lat": 30.012,
+    "lng": 31.745,
+    "developer": "IL Cazar Developments",
+    "developerSlug": "il-cazar-developments",
+    "priceFrom": 4.9,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Serviced Apartment"
+    ],
+    "amenities": [
+      "40-Acre Connected Green Park",
+      "Serviced Apartments & Concierge",
+      "Jogging & Cycling Tracks",
+      "Progressive Commercial District",
+      "Community Clubhouse & Gym",
+      "Outdoor Living & Gym Area",
+      "24/7 Gated Security & Patrols"
+    ],
+    "blurb": "Park Sight is a large-scale, 140-acre residential and lifestyle community in the New Administrative Capital. Designed by Mimar Architecture, the development integrates modern residential neighborhoods with a signature 40-acre connected green park, cycling tracks, and an expansive commercial district.",
+    "highlights": [
+      "140-Acre Masterplan Scale: Expansive layout designed by Mimar Architecture.",
+      "40-Acre Connected Green Park: Sprawling parks at the heart of the community.",
+      "Strategic Axis Proximity: Located directly off the Southern Mohamed Bin Zayed Axis.",
+      "Serviced Apartments: Professional hospitality features and concierge services."
+    ],
+    "paymentPlan": "10% down payment \u00b7 7 years equal installments",
+    "areaSize": "140 feddan",
+    "unitSizes": "112\u2013350 m\u00b2",
+    "type": "Residential",
+    "brochureUrl": "/brochures/Park-Sight-E-Brochure.pdf",
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
+    ]
+  }
+}

@@ -4165,7 +4165,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                                               }
                                             }}
                                             variant="ghost"
-                                            size="xs"
+                                            size="sm"
                                             className="text-destructive hover:bg-destructive/10 hover:text-destructive rounded-lg cursor-pointer"
                                           >
                                             <Trash2 className="h-4 w-4" />

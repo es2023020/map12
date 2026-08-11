@@ -328,7 +328,7 @@ function CompoundPage() {
   useEffect(() => {
     if (interestModalOpen) {
       setLeadName(user?.name || "");
-      setLeadPhone(user?.phone || "");
+      setLeadPhone((user as any)?.phone || "");
       if (!leadUnit) {
         setLeadUnit(c.types?.[0] || "Apartment");
       }
