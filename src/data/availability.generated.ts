@@ -54294,4 +54294,87 @@ export const availability: ProjectAvailability[] = [
     ],
     lastUpdated: "2026-08-10"
   },
+  {
+    slug: "city-gate",
+    developer: "Qatari Diar",
+    totalAvailable: 3,
+    breakdown: [
+      {
+        type: "Apartment",
+        beds: 3,
+        available: 1,
+        minSqm: 145,
+        maxSqm: 145,
+        minPriceM: 11.2,
+        maxPriceM: 11.2,
+        finishing: "Fully Finished",
+        deliveryNote: "Off-Plan - 2027",
+        paymentPlan: "10% down / 8 yrs",
+        units: [
+          {
+            id: "cg-apt-3b",
+            unitNo: "CG-A102",
+            beds: 3,
+            finishing: "Fully Finished",
+            areaSqm: 145,
+            view: "Golf & Park View",
+            priceEGP: 11200000,
+            paymentPlan: "10% down payment over 8 years equal installments",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Townhouse",
+        beds: 3,
+        available: 1,
+        minSqm: 240,
+        maxSqm: 240,
+        minPriceM: 22.0,
+        maxPriceM: 22.0,
+        finishing: "Semi-finished",
+        deliveryNote: "Off-Plan - 2027",
+        paymentPlan: "10% down / 8 yrs",
+        units: [
+          {
+            id: "cg-town-3b",
+            unitNo: "CG-T03",
+            beds: 3,
+            finishing: "Semi-finished",
+            areaSqm: 240,
+            view: "Park View",
+            priceEGP: 22000000,
+            paymentPlan: "10% down payment over 8 years equal installments",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Villa",
+        beds: 5,
+        available: 1,
+        minSqm: 350,
+        maxSqm: 350,
+        minPriceM: 38.0,
+        maxPriceM: 38.0,
+        finishing: "Semi-finished",
+        deliveryNote: "Off-Plan - 2027",
+        paymentPlan: "10% down / 8 yrs",
+        units: [
+          {
+            id: "cg-villa-5b",
+            unitNo: "CG-V01",
+            beds: 5,
+            finishing: "Semi-finished",
+            areaSqm: 350,
+            view: "Frontline Golf Course View",
+            priceEGP: 38000000,
+            paymentPlan: "10% down payment over 8 years equal installments",
+            status: "Available"
+          }
+        ]
+      }
+    ],
+    lastUpdated: "2026-08-11"
+  },
 ];

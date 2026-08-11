@@ -194,6 +194,15 @@ const cairoRaw: Array<{
     year: 2024,
   },
   {
+    name: "City Gate",
+    destination: "new-cairo",
+    lat: 30.010,
+    lng: 31.650,
+    developer: "Qatari Diar",
+    price: 11.2,
+    year: 2027,
+  },
+  {
     name: "Lake Residence by Rotana",
     destination: "new-cairo",
     lat: 30.0415,

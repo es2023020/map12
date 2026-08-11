@@ -22,6 +22,7 @@ export const brochureMap: Record<string, string> = {
   "belle-vie": "belle-vie.pdf",
   botanica: "botanica.pdf",
   "cairo-gate": "Cairo-Gate.pdf",
+  "city-gate": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
   "o-west": "O-west.pdf",
   "cairo-business-park": "cairo-business-park.pdf",
   "cleo-water-residence": "cleo Water Residences.pdf",

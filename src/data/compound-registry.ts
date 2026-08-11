@@ -814,6 +814,13 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
       "Elie Saab signature villas",
     ],
   },
+  "city-gate": {
+    destination: "new-cairo",
+    lat: 30.010,
+    lng: 31.650,
+    developer: "Qatari Diar",
+    city: "New Cairo, Cairo Governorate, Egypt",
+  },
   "cali-coast-ras-el-hekma": {
     destination: "ras-el-hekma",
     km: 193,

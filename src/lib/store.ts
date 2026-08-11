@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { compounds, staticCompounds, normalizeDeveloperName } from "@/data/compounds";
 import { availability } from "@/data/availability";
+import { availability as generatedAvailability } from "@/data/availability.generated";
 import { destinations, staticDestinations } from "@/data/destinations";
 import { brochureMap } from "@/data/brochure-map";
 import type { AnalyticsEvent } from "@/lib/analytics";
@@ -1931,7 +1932,7 @@ export const useStore = create<State>()(
 
           // 4. Sync availabilityList with latest static availability data
           if (Array.isArray(state.availabilityList)) {
-            state.availabilityList = availability.map((sa) => {
+            const mergedList = generatedAvailability.map((sa) => {
               const localAvail = state.availabilityList.find((a: any) => a.slug === sa.slug);
               if (localAvail) {
                 if (
@@ -1944,8 +1945,17 @@ export const useStore = create<State>()(
               }
               return sa;
             });
+
+            // Append any local-only ones or missing items
+            state.availabilityList.forEach((la: any) => {
+              if (!mergedList.some((a) => a.slug === la.slug)) {
+                mergedList.push(la);
+              }
+            });
+
+            state.availabilityList = mergedList;
           } else {
-            state.availabilityList = availability;
+            state.availabilityList = generatedAvailability;
           }
 
           // 3. Clear session if inactive
