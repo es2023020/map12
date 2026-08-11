@@ -141,11 +141,39 @@ function CalculatorPage() {
   const compoundsList = useStore((s) => s.compoundsList) || [];
   const availabilityList = useStore((s) => s.availabilityList) || [];
 
-  const mainCompounds = useMemo(() => compoundsList.filter((c) => !c.parentSlug), [compoundsList]);
+  const mainCompounds = useMemo(() => {
+    return compoundsList.filter((c) => {
+      if (c.parentSlug) return false;
+      const avail = availabilityList.find((a) => a.slug === c.slug);
+      if (avail && avail.totalAvailable === 0) return false;
+      return true;
+    });
+  }, [compoundsList, availabilityList]);
 
   const { project: projectParam } = Route.useSearch();
   const [mode, setMode] = useState<"project" | "budget">(projectParam ? "project" : "budget");
-  const [projectSlug, setProjectSlug] = useState((projectParam || mainCompounds[0]?.slug) ?? "");
+
+  const initialProjectSlug = useMemo(() => {
+    if (projectParam && mainCompounds.some((c) => c.slug === projectParam)) {
+      return projectParam;
+    }
+    return mainCompounds[0]?.slug ?? "";
+  }, [projectParam, mainCompounds]);
+
+  const [projectSlug, setProjectSlug] = useState(initialProjectSlug);
+
+  // Sync state if initialProjectSlug changes (e.g. when mainCompounds loads)
+  useEffect(() => {
+    if (initialProjectSlug) {
+      setProjectSlug((prev: string) => {
+        if (!prev || !mainCompounds.some((c) => c.slug === prev)) {
+          return initialProjectSlug;
+        }
+        return prev;
+      });
+    }
+  }, [initialProjectSlug, mainCompounds]);
+
   const [budgetText, setBudgetText] = useState("15,000,000");
   const [dpPct, setDpPct] = useState(10);
   const [duration, setDuration] = useState(8);

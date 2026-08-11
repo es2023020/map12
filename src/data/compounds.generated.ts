@@ -609,17 +609,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9132,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 6.97,
+    "priceFrom": 20.526,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Duplex",
-      "Penthouse",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Apartment", "Duplex", "Penthouse", "Standalone Villa", "Townhouse", "Twin House", "Villa"
     ],
     "amenities": [
       "Sports club",
@@ -727,11 +722,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Apartment", "Cabins", "Chalet", "Standalone Villa", "Townhouse", "Twin House", "Villa"
     ],
     "amenities": [
       "Crystal lagoons",
@@ -819,17 +810,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.5128,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 143.9,
+    "priceFrom": 143.939,
     "deliveryYear": 2024,
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa",
-      "Golf Villa"
+      "Apartment", "Chalet", "Golf Villa", "Standalone Villa", "Townhouse", "Twin House", "Villa"
     ],
     "amenities": [
       "Private beach",
@@ -874,16 +860,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.5827,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 24.4,
+    "priceFrom": 24.388,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Apartment", "Cabins", "Chalet", "Standalone Villa", "Townhouse", "Twin House"
     ],
     "amenities": [
       "5-star Hotel",
@@ -1052,13 +1034,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.85,
     "developer": "Horizon Egypt Developments",
     "developerSlug": "horizon-egypt-developments",
-    "priceFrom": 21.5,
+    "priceFrom": 15.5,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Standalone Villa",
-      "Apartment"
+      "Apartment", "Chalet", "Courtyard Town Villa", "Crystal Villa", "Shell Townhouse", "Standalone Villa", "The Houses", "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -1195,16 +1176,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.488,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 5.4,
+    "priceFrom": 6.791706,
     "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "iVilla",
-      "Duplex",
-      "Penthouse",
-      "Sky Villa"
+      "Apartment", "Duplex", "I-Villa Garden", "Millennial", "Penthouse", "Sky Villa", "Typical Apartment", "iVilla"
     ],
     "amenities": [
       "Clubhouse",
@@ -2289,7 +2266,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.512,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 5,
+    "priceFrom": 5.945,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
@@ -2333,14 +2310,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.985,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 15,
+    "priceFrom": 18.3,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Townhouse",
-      "Twin House",
-      "Villa"
+      "Standalone", "Townhouse", "Townhouse Corner", "Townhouse Middle", "Twin House", "Twinhouse Type A", "Twinhouse V", "Villa"
     ],
     "amenities": [
       "Green lawns",
@@ -2376,14 +2351,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.515,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 21,
+    "priceFrom": 5,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Townhouse",
-      "Twin House",
-      "Villa"
+      "Standalone A", "Standalone B", "Standalone C", "Standalone R1", "Standalone R2", "Town House Corner", "Town House Middle Type 1", "Town House Middle Type 2", "Townhouse", "Twin House", "Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -2420,14 +2393,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.735,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 19,
+    "priceFrom": 5,
     "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Townhouse",
-      "Twin House",
-      "Villa"
+      "Family House Type A Ground", "Family House Type A Upper", "Family House Type B Ground", "Family House Type B Upper", "Stand Alone", "Stand Alone Type A", "Stand Alone Type B", "Stand Alone Type C", "Stand Alone Type E", "Stand Alone Type R", "Town House Corner", "Town House Middle", "Townhouse", "Twin House", "Type", "Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -2504,14 +2475,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.516,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 11,
+    "priceFrom": 5,
     "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Duplex",
-      "Penthouse"
+      "Apartment", "Duplex", "Duplex Ground", "Duplex ground", "Ground Without Garden", "Ground with garden", "Ground without garden", "Penthouse", "Type", "Typical"
     ],
     "amenities": [
       "Clubhouse",
@@ -2598,9 +2567,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Duplex",
-      "Penthouse"
+      "3 BDRs Ground", "3 BDRs Typical", "4 BDRs Ground", "Apartment", "Duplex", "Duplex Ground", "Duplex Roof", "Penthouse", "Penthouses", "Quadro", "Semi Finished. (No separate payment plan / delivery specified for this table.)", "Stand Alone", "TownHouse Corner", "TownHouse Middle", "Twin House", "Twin Houses", "Type", "Villas"
     ],
     "amenities": [
       "Clubhouse",
@@ -2637,14 +2604,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.505,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 30,
+    "priceFrom": 5,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Townhouse",
-      "Twin House",
-      "Villa"
+      "Garden Town House Corner", "Garden Town House Middle", "New Release (Delivery Jan 2029, Fully Finished)", "Quadro", "Standalone", "Town Corner", "Town Middle", "Townhouse", "Twin", "Twin House", "Type", "Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -2681,13 +2646,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.65,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 22,
+    "priceFrom": 5,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Twin House"
+      "3 BDRs Ground", "3 BDRs Typical", "4 BDRs Ground", "Apartment", "Duplex Ground", "Duplex Roof", "Penthouses", "Quadro", "Semi Finished. (No separate payment plan / delivery specified for this table.)", "Stand Alone", "TownHouse Corner", "TownHouse Middle", "Twin House", "Twin Houses", "Type", "Villas"
     ],
     "amenities": [
       "Clubhouse",
@@ -2724,14 +2688,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.642,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 23,
+    "priceFrom": 5,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Townhouse",
-      "Twin House",
-      "Villa"
+      "3 BDRs Ground", "3 BDRs Typical", "4 BDRs Ground", "Duplex Ground", "Duplex Roof", "Penthouses", "Quadro", "Semi Finished. (No separate payment plan / delivery specified for this table.)", "Stand Alone", "TownHouse Corner", "TownHouse Middle", "Townhouse", "Twin House", "Twin Houses", "Type", "Villa", "Villas"
     ],
     "amenities": [
       "Clubhouse",
@@ -2768,14 +2730,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.638,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 24,
+    "priceFrom": 5,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Townhouse",
-      "Twin House",
-      "Villa"
+      "3 BDRs Ground", "3 BDRs Typical", "4 BDRs Ground", "Duplex Ground", "Duplex Roof", "Penthouses", "Quadro", "Semi Finished. (No separate payment plan / delivery specified for this table.)", "Stand Alone", "TownHouse Corner", "TownHouse Middle", "Townhouse", "Twin House", "Twin Houses", "Type", "Villa", "Villas"
     ],
     "amenities": [
       "Clubhouse",
@@ -2812,14 +2772,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.4816,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 9,
+    "priceFrom": 5,
     "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Twin House",
-      "Standalone Villa"
+      "1st Floor", "1st floor", "2nd floor", "2nd floor (2 bedrooms, access to open roof)", "2nd floor (2 bedrooms, access to roof)", "Chalet", "Chalet-First", "Chalet-Ground", "Chalet-Second", "Delivery 1/2028", "Delivery 1/2029", "Delivery: 1/1/2028 (Not Sea View)", "Delivery: 1/1/2029 (Not Sea View)", "Garden's Facilities", "Ground", "Ground floor", "New Phase (Delivery 1/1/2029)", "Ray's Facilities", "Ready to Move — Installments", "Standalone Villa", "Town House M", "Twin House", "Twin Villa (Not Sea View)", "Twin house", "Type", "•"
     ],
     "amenities": [
       "Private beach",
@@ -2860,14 +2818,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.4871,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 9,
+    "priceFrom": 5,
     "deliveryYear": 2025,
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Twin House",
-      "Standalone Villa"
+      "1st Floor", "1st floor", "2nd floor", "2nd floor (2 bedrooms, access to open roof)", "2nd floor (2 bedrooms, access to roof)", "Chalet", "Chalet-First", "Chalet-Ground", "Chalet-Second", "Delivery 1/2028", "Delivery 1/2029", "Delivery: 1/1/2028 (Not Sea View)", "Delivery: 1/1/2029 (Not Sea View)", "Garden's Facilities", "Ground", "Ground floor", "New Phase (Delivery 1/1/2029)", "Ray's Facilities", "Ready to Move — Installments", "Standalone Villa", "Town House M", "Twin House", "Twin Villa (Not Sea View)", "Twin house", "Type", "•"
     ],
     "amenities": [
       "Private beach",
@@ -2907,14 +2863,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.4837,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 13,
+    "priceFrom": 5,
     "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Twin House",
-      "Standalone Villa"
+      "1st Floor", "1st floor", "2nd floor", "2nd floor (2 bedrooms, access to open roof)", "2nd floor (2 bedrooms, access to roof)", "Chalet", "Chalet-First", "Chalet-Ground", "Chalet-Second", "Delivery 1/2028", "Delivery 1/2029", "Delivery: 1/1/2028 (Not Sea View)", "Delivery: 1/1/2029 (Not Sea View)", "Garden's Facilities", "Ground", "Ground floor", "New Phase (Delivery 1/1/2029)", "Ray's Facilities", "Ready to Move — Installments", "Standalone Villa", "Town House M", "Twin House", "Twin Villa (Not Sea View)", "Twin house", "Type", "•"
     ],
     "amenities": [
       "Private beach",
@@ -2952,15 +2906,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.4792,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 14,
+    "priceFrom": 5,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "1st Floor", "1st floor", "2nd floor", "2nd floor (2 bedrooms, access to open roof)", "2nd floor (2 bedrooms, access to roof)", "Chalet", "Chalet-First", "Chalet-Ground", "Chalet-Second", "Delivery 1/2028", "Delivery 1/2029", "Delivery: 1/1/2028 (Not Sea View)", "Delivery: 1/1/2029 (Not Sea View)", "Garden's Facilities", "Ground", "Ground floor", "New Phase (Delivery 1/1/2029)", "Ray's Facilities", "Ready to Move — Installments", "Standalone Villa", "Town House M", "Townhouse", "Twin House", "Twin Villa (Not Sea View)", "Twin house", "Type", "•"
     ],
     "amenities": [
       "Private beach",
@@ -3139,14 +3090,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.97775,
     "developer": "Ora Developers",
     "developerSlug": "ora-developers",
-    "priceFrom": 20,
+    "priceFrom": 5,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Townhouse",
-      "Twin House",
-      "Villa"
+      "1 BR", "134", "181", "2 BR Duplex", "2 BR Ground", "2 BR LOFT", "2 BR Penthouse", "2 BR Typical", "2 BR's", "2 BR's Duplex", "210", "240", "3 BR Ground", "3 BR LOFT", "3 BR Penthouse", "3 BR Typical", "3 BR's", "3 BR's Duplex", "3 BR's Loft", "369", "4 BR Penthouse", "4 BR's", "99", "BUA", "Branded Residence", "Duplex Ground", "Duplex Upper", "Emerald: 5% down payment + 5% after 3 months, installments over 8 years  |  Club side residence: 5% down payment + 5% after 3 months, installments over 10 years", "Fourplex Upper", "From 57 SQM -> 14.3M", "G Chalet", "Phase 3 (E3): 5% + 5%, installments over 10 years  |  Park side residence: 0% Down payment, installments over 10 years", "Silversands - Silvertown", "Solana", "Standalone", "Studio", "TH Corner", "TH Middle", "The Cove", "TownH L", "TownH M", "TownH S", "Townhouse", "Townhouse Corner", "Townhouse Middle", "Twin House", "Twin House L", "Twinhouse", "Type", "Unit Type", "Upper Chalet", "V2", "V3", "V4", "V6", "V7", "V8", "Value", "Villa", "Villa 2A", "Villa 3B", "Villa 4A", "Villa L", "Villa M", "Villa S", "Zed East - CSR Building C&D (Serviced Apartments)", "Zed East - Emerald", "Zed West - E3", "Zed West - PSR"
     ],
     "amenities": [
       "Clubhouse",
@@ -3655,7 +3604,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.92008,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 17,
+    "priceFrom": 17.192,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
@@ -3697,16 +3646,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.6061923,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 27.2,
+    "priceFrom": 33.164,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Family House",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa",
-      "Luxury Mansion"
+      "Apartment", "Family House", "Luxury Mansion", "Standalone Villa", "Townhouse", "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -3755,13 +3700,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.92,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 27.77,
+    "priceFrom": 33.17,
     "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Family House",
-      "Townhouse"
+      "Apartment", "Family House", "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -3803,7 +3747,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.91992,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 29,
+    "priceFrom": 36.861,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
@@ -3846,7 +3790,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9215,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 8,
+    "priceFrom": 7.874,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
@@ -3895,7 +3839,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.985,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 48,
+    "priceFrom": 47.549,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
@@ -3947,7 +3891,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.47773,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 14,
+    "priceFrom": 14.201,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
@@ -3991,13 +3935,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.75194,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 14,
+    "priceFrom": 23.117,
     "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Villa"
+      "Apartment", "Town House", "Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -4035,15 +3978,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.8708,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 8,
+    "priceFrom": 8.681153,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Apartment", "Garden Apartment", "I-Villa Garden", "I-Villa Roof", "One Storey House", "Penthouse", "Standalone Villa", "Town House", "Townhouse", "Twin House", "Villa"
     ],
     "amenities": [
       "Water promenade",
@@ -4088,14 +4028,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.8788,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 17,
+    "priceFrom": 16.600455,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Lake House", "Standalone Villa", "Town House", "Townhouse", "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -4134,14 +4072,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.7587,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 30,
+    "priceFrom": 30.463098,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Twin House",
-      "Standalone Villa",
-      "Mansion"
+      "Grand View Villa", "Mansion", "Standalone Villa", "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -4185,16 +4121,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9707,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 22,
+    "priceFrom": 10.056784,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "iVilla",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Apartment", "Beach House", "Garden Apartment", "Garden Millennial", "I-Apartment", "I-Villa", "I-Villa 3", "Lake House", "Millennial", "Park Side House", "Park Villa", "Sky Loft", "Standalone Villa", "Sun Roof", "Townhouse", "Twin House", "iVilla"
     ],
     "amenities": [
       "Clubhouse",
@@ -4242,15 +4174,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.875,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 9.4,
+    "priceFrom": 26.100814,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Chalet", "I-Villa Roof Garden", "I-Villa Sky Garden", "Standalone Villa", "Townhouse", "Twin House", "Villa"
     ],
     "amenities": [
       "Private beachfront",
@@ -4295,15 +4224,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.4627,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 23,
+    "priceFrom": 23.282379,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Duplex",
-      "Townhouse",
-      "Standalone Villa"
+      "Apartment", "Duplex", "Standalone Villa", "Town House", "Townhouse", "Villa"
     ],
     "amenities": [
       "Swimming pools",
@@ -5429,10 +5355,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Twin House",
-      "Townhouse",
-      "Villa"
+      "Chalet", "Standalone Villa", "Townhouse", "Twin House", "Villa"
     ],
     "amenities": [
       "Yacht Marina",
@@ -5582,16 +5505,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.595,
     "developer": "Ora Developers",
     "developerSlug": "ora-developers",
-    "priceFrom": 9.7,
+    "priceFrom": 5,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "1 BR", "134", "181", "2 BR Duplex", "2 BR Ground", "2 BR LOFT", "2 BR Penthouse", "2 BR Typical", "2 BR's", "2 BR's Duplex", "210", "240", "3 BR Ground", "3 BR LOFT", "3 BR Penthouse", "3 BR Typical", "3 BR's", "3 BR's Duplex", "3 BR's Loft", "369", "4 BR Penthouse", "4 BR's", "99", "Apartment", "BUA", "Branded Residence", "Chalet", "Duplex Ground", "Duplex Upper", "Emerald: 5% down payment + 5% after 3 months, installments over 8 years  |  Club side residence: 5% down payment + 5% after 3 months, installments over 10 years", "Fourplex Upper", "From 57 SQM -> 14.3M", "G Chalet", "Phase 3 (E3): 5% + 5%, installments over 10 years  |  Park side residence: 0% Down payment, installments over 10 years", "Silversands - Silvertown", "Solana", "Standalone", "Standalone Villa", "Studio", "TH Corner", "TH Middle", "The Cove", "TownH L", "TownH M", "TownH S", "Townhouse", "Townhouse Corner", "Townhouse Middle", "Twin House", "Twin House L", "Twinhouse", "Type", "Unit Type", "Upper Chalet", "V2", "V3", "V4", "V6", "V7", "V8", "Value", "Villa 2A", "Villa 3B", "Villa 4A", "Villa L", "Villa M", "Villa S", "Zed East - CSR Building C&D (Serviced Apartments)", "Zed East - Emerald", "Zed West - E3", "Zed West - PSR"
     ],
     "amenities": [
       "1.2 km Beachfront",
@@ -5792,11 +5711,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Apartment", "Chalet", "Standalone Villa", "Townhouse", "Twin House", "Villa"
     ],
     "amenities": [
       "4.8 km Beachfront",
@@ -6167,15 +6082,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.9842,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 11,
+    "priceFrom": 5,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "1st Floor", "1st floor", "1st floor (Sea view)", "2nd Floor", "2nd floor", "Chalet", "Chalet 1st Floor", "Chalet Ground", "Chalet Ground (Sea View)", "Chalet Ground Floor", "Delivery April 2027 (Sea View)", "Delivery April 2028 (Not Sea View)", "Ground", "Ground (Sea view)", "Penthouse (Pool view, 4bds)", "Standalone (Not sea view)", "Standalone Villa", "Townhouse", "Twin House", "Twin House (Not sea view)", "Type"
     ],
     "amenities": [
       "Private beach",
@@ -6421,15 +6333,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.9895,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 16,
+    "priceFrom": 25.211238,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Chalet", "Standalone Villa", "Town House", "Townhouse", "Twin House", "Villa"
     ],
     "amenities": [
       "Private beach",
@@ -7181,10 +7090,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Apartment", "Beach House", "Standalone Villa", "Town House", "Townhouse", "Twin House"
     ],
     "amenities": [
       "Private beach",
@@ -7501,14 +7407,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.48496,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 9,
+    "priceFrom": 5,
     "deliveryYear": 2025,
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Twin House",
-      "Villa"
+      "1st Floor", "1st floor", "1st floor (Sea view)", "2nd Floor", "2nd floor", "Chalet", "Chalet 1st Floor", "Chalet Ground", "Chalet Ground (Sea View)", "Chalet Ground Floor", "Delivery April 2027 (Sea View)", "Delivery April 2028 (Not Sea View)", "Ground", "Ground (Sea view)", "Penthouse (Pool view, 4bds)", "Standalone (Not sea view)", "Standalone Villa", "Twin House", "Twin House (Not sea view)", "Type", "Villa"
     ],
     "amenities": [
       "Private Beach",
@@ -9959,16 +9863,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.528,
     "developer": "ORA Developers",
     "developerSlug": "ora-developers",
-    "priceFrom": 13,
+    "priceFrom": 5,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Studio",
-      "Apartment",
-      "Loft",
-      "Serviced Apartment",
-      "Villa"
+      "1 BR", "134", "181", "2 BR Duplex", "2 BR Ground", "2 BR LOFT", "2 BR Penthouse", "2 BR Typical", "2 BR's", "2 BR's Duplex", "210", "240", "3 BR Ground", "3 BR LOFT", "3 BR Penthouse", "3 BR Typical", "3 BR's", "3 BR's Duplex", "3 BR's Loft", "369", "4 BR Penthouse", "4 BR's", "99", "Apartment", "BUA", "Branded Residence", "Duplex Ground", "Duplex Upper", "Emerald: 5% down payment + 5% after 3 months, installments over 8 years  |  Club side residence: 5% down payment + 5% after 3 months, installments over 10 years", "Fourplex Upper", "From 57 SQM -> 14.3M", "G Chalet", "Loft", "Phase 3 (E3): 5% + 5%, installments over 10 years  |  Park side residence: 0% Down payment, installments over 10 years", "Serviced Apartment", "Silversands - Silvertown", "Solana", "Standalone", "Studio", "TH Corner", "TH Middle", "The Cove", "TownH L", "TownH M", "TownH S", "Townhouse Corner", "Townhouse Middle", "Twin House", "Twin House L", "Twinhouse", "Type", "Unit Type", "Upper Chalet", "V2", "V3", "V4", "V6", "V7", "V8", "Value", "Villa", "Villa 2A", "Villa 3B", "Villa 4A", "Villa L", "Villa M", "Villa S", "Zed East - CSR Building C&D (Serviced Apartments)", "Zed East - Emerald", "Zed West - E3", "Zed West - PSR"
     ],
     "amenities": [
       "Central park",
@@ -11679,14 +11579,12 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.9894,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 8,
+    "priceFrom": 5,
     "deliveryYear": 2025,
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Apartment",
-      "Chalet",
-      "Penthouse"
+      "1st Floor", "1st floor", "1st floor (Sea view)", "2nd Floor", "2nd floor", "Apartment", "Chalet", "Chalet 1st Floor", "Chalet Ground", "Chalet Ground (Sea View)", "Chalet Ground Floor", "Delivery April 2027 (Sea View)", "Delivery April 2028 (Not Sea View)", "Ground", "Ground (Sea view)", "Penthouse", "Penthouse (Pool view, 4bds)", "Standalone (Not sea view)", "Standalone Villa", "Twin House", "Twin House (Not sea view)", "Type"
     ],
     "amenities": [
       "Private beach",
@@ -12492,14 +12390,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Town House Middle",
-      "Town House Corner",
-      "Twin House A",
-      "Twin House B",
-      "Villa A1",
-      "Villa 2A",
-      "Villa 2B",
-      "Villa V3"
+      "Town House Corner", "Town House Middle", "Twin House", "Twin House A", "Twin House B", "Villa 2A", "Villa 2B", "Villa A1", "Villa V1", "Villa V2", "Villa V3"
     ],
     "amenities": [
       "Clubhouse",
@@ -13276,18 +13167,14 @@ export const compoundsGenerated: Compound[] = [
     "km": 200,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 15,
+    "priceFrom": 38.53468,
     "paymentPlan": "5%–10% down payment · 7–8 years equal installments",
     "areaSize": "137 feddan",
     "deliveryYear": 2025,
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Apartment",
-      "Penthouse",
-      "Duplex",
-      "Standalone Villa"
+      "Apartment", "Chalet", "Duplex", "Penthouse", "Standalone Villa", "Villa"
     ],
     "amenities": [
       "Exclusive Beachfront",
