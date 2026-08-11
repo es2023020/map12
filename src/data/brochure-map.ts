@@ -50,6 +50,7 @@ export const brochureMap: Record<string, string> = {
 
   // ─── North Coast – Ras El Hekma ─────────────────────────────────────
   amwaj: "Amwaj.pdf",
+  "naia-bay": "NAIA BAY Brochure.pdf",
   "azha-north-coast": "Azha-North-ras-al-hekma-Madaar-Developments-Brochure.pdf",
   "caesar-bay": "Caesar-Bay-Residences-Brochure.pdf",
   "caesar-sodic": "Caesar-Bay-Residences-Brochure.pdf",

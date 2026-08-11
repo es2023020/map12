@@ -41,7 +41,7 @@ export const Route = createFileRoute("/calculator")({
 });
 
 const DURATIONS = [5, 7, 8, 10, 12, 15];
-const DP_OPTIONS = [5, 8, 10, 15, 20, 25, 30, 40, 50];
+const DP_OPTIONS = [2.5, 5, 10, 15, 20, 25, 30, 40, 50];
 
 function fmt(n: number, decimals = 2) {
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(decimals) + "M";
@@ -149,7 +149,6 @@ function CalculatorPage() {
   const [budgetText, setBudgetText] = useState("15,000,000");
   const [dpPct, setDpPct] = useState(10);
   const [duration, setDuration] = useState(8);
-  const [maintenance, setMaintenance] = useState(8);
   const [unitType, setUnitType] = useState("");
   const [tab, setTab] = useState<"monthly" | "quarterly" | "annual">("monthly");
 
@@ -226,7 +225,6 @@ function CalculatorPage() {
       : parsedPrice || 5;
 
   const downPayment = basePrice * (dpPct / 100);
-  const maintenanceFee = basePrice * (maintenance / 100);
   const remaining = basePrice - downPayment;
   const totalMonths = duration * 12;
   const monthly = remaining / totalMonths;
@@ -765,28 +763,7 @@ function CalculatorPage() {
               </div>
             </div>
 
-            {/* Maintenance */}
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-              <h2 className="mb-3 font-display text-base font-semibold text-primary flex items-center gap-2">
-                <Info className="h-4 w-4 text-accent" /> Maintenance Fee
-              </h2>
-              <div className="flex items-center gap-3">
-                <input
-                  type="range"
-                  min={5}
-                  max={15}
-                  step={1}
-                  value={maintenance}
-                  onChange={(e) => setMaintenance(Number(e.target.value))}
-                  className="flex-1 accent-accent"
-                />
-                <span className="w-12 text-right font-semibold text-primary">{maintenance}%</span>
-              </div>
-              <div className="mt-2 flex justify-between text-xs text-muted-foreground">
-                <span>Typically 8–10% one-time fee</span>
-                <span>{fmtEGP(maintenanceFee * 1_000_000)}</span>
-              </div>
-            </div>
+
 
             <a
               href="tel:201029324783"
@@ -802,7 +779,7 @@ function CalculatorPage() {
             {mode === "budget" && renderSuitableProperties()}
 
             {/* Summary cards */}
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
               {[
                 {
                   label: "Unit Price",
@@ -821,12 +798,6 @@ function CalculatorPage() {
                   value: fmtEGP(remaining * 1_000_000),
                   color: "text-primary",
                   bg: "bg-secondary/50",
-                },
-                {
-                  label: "Maintenance",
-                  value: fmtEGP(maintenanceFee * 1_000_000),
-                  color: "text-amber-600",
-                  bg: "bg-amber-50",
                 },
               ].map((s) => (
                 <div key={s.label} className={`rounded-2xl border border-border ${s.bg} p-4`}>
@@ -976,11 +947,7 @@ function CalculatorPage() {
                     value: fmtEGP(annual * 1_000_000),
                   },
                   {
-                    label: `Maintenance fee (${maintenance}%)`,
-                    value: fmtEGP(maintenanceFee * 1_000_000),
-                  },
-                  {
-                    label: "Total investment (excl. maintenance)",
+                    label: "Total investment",
                     value: fmtEGP(basePrice * 1_000_000),
                     total: true,
                   },

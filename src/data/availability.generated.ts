@@ -54377,4 +54377,119 @@ export const availability: ProjectAvailability[] = [
     ],
     lastUpdated: "2026-08-11"
   },
+  {
+    slug: "marassi",
+    developer: "Emaar Misr",
+    totalAvailable: 0,
+    breakdown: [],
+    lastUpdated: "2026-08-11"
+  },
+  {
+    slug: "marassi-red-sea",
+    developer: "Emaar Misr",
+    totalAvailable: 4,
+    breakdown: [
+      {
+        type: "Chalet",
+        beds: 2,
+        available: 1,
+        minSqm: 120,
+        maxSqm: 120,
+        minPriceM: 18.0,
+        maxPriceM: 18.0,
+        finishing: "Fully Finished",
+        deliveryNote: "Off-Plan - 2028",
+        paymentPlan: "5% down / 8 yrs",
+        units: [
+          {
+            id: "mrs-chalet-2b",
+            unitNo: "MRS-CH201",
+            beds: 2,
+            finishing: "Fully Finished",
+            areaSqm: 120,
+            view: "Lagoon View",
+            priceEGP: 18000000,
+            paymentPlan: "5% down payment, installments up to 8 years",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Townhouse",
+        beds: 3,
+        available: 1,
+        minSqm: 240,
+        maxSqm: 240,
+        minPriceM: 28.0,
+        maxPriceM: 28.0,
+        finishing: "Fully Finished",
+        deliveryNote: "Off-Plan - 2028",
+        paymentPlan: "5% down / 8 yrs",
+        units: [
+          {
+            id: "mrs-town-3b",
+            unitNo: "MRS-TH05",
+            beds: 3,
+            finishing: "Fully Finished",
+            areaSqm: 240,
+            view: "Marina Channel View",
+            priceEGP: 28000000,
+            paymentPlan: "5% down payment, installments up to 8 years",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Villa",
+        beds: 4,
+        available: 1,
+        minSqm: 350,
+        maxSqm: 350,
+        minPriceM: 55.0,
+        maxPriceM: 55.0,
+        finishing: "Fully Finished",
+        deliveryNote: "Off-Plan - 2028",
+        paymentPlan: "5% down / 8 yrs",
+        units: [
+          {
+            id: "mrs-villa-4b",
+            unitNo: "MRS-V12",
+            beds: 4,
+            finishing: "Fully Finished",
+            areaSqm: 350,
+            view: "Full Sea & Elevated Beach View",
+            priceEGP: 55000000,
+            paymentPlan: "5% down payment, installments up to 8 years",
+            status: "Available"
+          }
+        ]
+      },
+      {
+        type: "Chalet",
+        beds: 1,
+        available: 1,
+        minSqm: 80,
+        maxSqm: 80,
+        minPriceM: 15.0,
+        maxPriceM: 15.0,
+        finishing: "Fully Finished",
+        deliveryNote: "Off-Plan - 2028",
+        paymentPlan: "5% down / 8 yrs",
+        units: [
+          {
+            id: "mrs-cabana-1b",
+            unitNo: "MRS-FC03",
+            beds: 1,
+            finishing: "Fully Finished",
+            areaSqm: 80,
+            view: "Floating Cabana Lagoon View",
+            priceEGP: 15000000,
+            paymentPlan: "5% down payment, installments up to 8 years",
+            status: "Available"
+          }
+        ]
+      }
+    ],
+    lastUpdated: "2026-08-11"
+  },
 ];

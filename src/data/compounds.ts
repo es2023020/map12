@@ -913,6 +913,17 @@ const extraRaw: Array<{
     beach: true,
     type: "Resort",
   },
+  {
+    name: "Marassi Red Sea",
+    destination: "red-sea",
+    lat: 26.852,
+    lng: 33.985,
+    developer: "Emaar Misr",
+    price: 18,
+    year: 2028,
+    beach: true,
+    type: "Resort",
+  },
   // SOUTH SINAI
   {
     name: "Nabq Bay Residences",
