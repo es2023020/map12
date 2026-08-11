@@ -329,7 +329,9 @@ function CompoundPage() {
     if (interestModalOpen) {
       setLeadName(user?.name || "");
       setLeadPhone(user?.phone || "");
-      setLeadUnit(c.types?.[0] || "Apartment");
+      if (!leadUnit) {
+        setLeadUnit(c.types?.[0] || "Apartment");
+      }
       setLeadInterestType("Buying");
       setLeadTime("Any Time");
     }
@@ -1057,7 +1059,14 @@ function CompoundPage() {
           ) : (
             availabilityBySlug(c.slug) && (
               <Section title="Live Availability">
-                <AvailabilitySection data={availabilityBySlug(c.slug)!} projectSlug={c.slug} />
+                <AvailabilitySection
+                  data={availabilityBySlug(c.slug)!}
+                  projectSlug={c.slug}
+                  onRegisterInterest={(type) => {
+                    setLeadUnit(type);
+                    setInterestModalOpen(true);
+                  }}
+                />
               </Section>
             )
           )}
@@ -1352,7 +1361,13 @@ function CompoundPage() {
       </div>
 
       {/* Register Interest Modal */}
-      <Dialog open={interestModalOpen} onOpenChange={setInterestModalOpen}>
+      <Dialog
+        open={interestModalOpen}
+        onOpenChange={(open) => {
+          setInterestModalOpen(open);
+          if (!open) setLeadUnit("");
+        }}
+      >
         <DialogContent className="max-w-md rounded-3xl border border-border/80 bg-card p-6 shadow-2xl backdrop-blur-xl animate-fade-in z-50">
           <DialogHeader className="text-left sm:text-left">
             <DialogTitle className="font-display text-2xl font-bold text-primary">

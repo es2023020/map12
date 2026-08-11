@@ -130,7 +130,9 @@ function ArabicCompoundPage() {
     if (interestModalOpen) {
       setLeadName(user?.name || "");
       setLeadPhone(user?.phone || "");
-      setLeadUnit(c.types?.[0] || "Apartment");
+      if (!leadUnit) {
+        setLeadUnit(c.types?.[0] || "Apartment");
+      }
       setLeadInterestType("Buying");
       setLeadTime("Any Time");
     }
