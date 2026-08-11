@@ -105,12 +105,12 @@ function AreasIndex() {
       {/* Regions */}
       <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8 space-y-14">
         {REGION_GROUPS.map((g) => {
-          const regionDestinations = destinations.filter((a) => a.region === g.region);
+          const regionDestinations = destinations.filter((a) => a.region === g.region && !a.parentSlug);
           if (regionDestinations.length === 0) return null;
-          const regionCount = regionDestinations.reduce(
-            (sum, a) => sum + compounds.filter((c) => c.destination === a.slug).length,
-            0,
-          );
+          const allRegionSlugs = destinations.filter((a) => a.region === g.region).map((d) => d.slug);
+          const regionCount = compounds.filter(
+            (c) => allRegionSlugs.includes(c.destination) && !c.parentSlug,
+          ).length;
 
           return (
             <section key={g.region}>
@@ -131,7 +131,10 @@ function AreasIndex() {
 
               <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {regionDestinations.map((a) => {
-                  const count = compounds.filter((c) => c.destination === a.slug).length;
+                  const subDestSlugs = destinations.filter((d) => d.parentSlug === a.slug).map((d) => d.slug);
+                  const allowed = [a.slug, ...subDestSlugs];
+                  const count = compounds.filter((c) => allowed.includes(c.destination) && !c.parentSlug).length;
+                  const childrenList = destinations.filter((d) => d.parentSlug === a.slug);
                   return (
                     <Link
                       key={a.slug}
@@ -171,6 +174,11 @@ function AreasIndex() {
                             {count} {count === 1 ? "project" : "projects"}
                           </span>
                         </div>
+                        {childrenList.length > 0 && (
+                          <div className="text-xs text-accent font-medium mb-2 line-clamp-1">
+                            Includes: {childrenList.map((d) => d.name).join(", ")}
+                          </div>
+                        )}
                         <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
                           {a.blurb}
                         </p>

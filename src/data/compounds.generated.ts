@@ -4372,45 +4372,55 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.8788,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 16.600455,
+    "priceFrom": 16.6,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
     "types": [
+      "Townhouse",
       "Lake House",
       "Standalone Villa",
-      "Town House",
-      "Townhouse",
-      "Twin House"
+      "Kings Mansion"
     ],
     "amenities": [
       "Clubhouse",
       "Swimming pools",
-      "Parks",
+      "Central park & green corridors",
       "Sports club",
-      "Gym",
-      "Retail",
-      "Restaurants & cafés",
-      "Kids' areas",
-      "24/7 security"
+      "Gym & fitness",
+      "Retail & restaurants",
+      "Kids' play areas",
+      "Jogging & cycling tracks",
+      "Lakefront units",
+      "24/7 security & CCTV"
     ],
     "hero": "/projects/mountain-view-kingsway/1.jpg",
     "gallery": [
       "/projects/mountain-view-kingsway/1.jpg",
       "/projects/mountain-view-kingsway/2.jpg",
-      "/projects/mountain-view-kingsway/3.jpg"
+      "/projects/mountain-view-kingsway/3.jpg",
+      "/projects/mountain-view-kingsway/4.jpg",
+      "/projects/mountain-view-kingsway/5.jpg",
+      "/projects/mountain-view-kingsway/6.jpg",
+      "/projects/mountain-view-kingsway/7.jpg",
+      "/projects/mountain-view-kingsway/8.jpg",
+      "/projects/mountain-view-kingsway/9.jpg"
     ],
-    "blurb": "Kingsway is a luxury villa community by Mountain View in New Zayed, inspired by British suburban architecture and designed around expansive green landscapes near Al Dabaa Axis and Sphinx International Airport.",
+    "blurb": "Mountain View Kingsway is a premium villa and townhouse community in New Zayed, designed around a British suburban aesthetic with lakefront homes, grand villas, and curated green landscapes. Unit types range from 185 m² Townhouses and 180–280 m² Lake Houses to a 240 m² One-Storey Villa and the flagship 350 m² Kings Mansion.",
     "paymentPlan": "5% down, installments up to 9 years",
     "areaSize": "30 feddan",
-    "unitSizes": "185–185 m²",
+    "unitSizes": "135–350 m²",
     "type": "Residential",
     "highlights": [
-      "British suburban-inspired design",
-      "New Zayed Al Dabaa Axis location",
-      "Near Sphinx International Airport"
+      "Lakefront Lake House units (180–280 m²)",
+      "Flagship Kings Mansion 350 m² — 5BR",
+      "British suburban-inspired architecture",
+      "Near Sphinx International Airport & Al Dabaa Axis"
     ],
-    "city": "New Zayed, West Cairo, Egypt"
+    "city": "New Zayed, West Cairo, Egypt",
+    "masterPlanUrl": "/Masterplans/mountain-view-kingsway.jpg",
+    "brochureUrl": "/brochures/mountain-view-kingsway.pdf",
+    "brochureFileName": "mountain-view-kingsway.pdf"
   },
   {
     "slug": "mountain-view-grand-valley",
@@ -4646,11 +4656,11 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "esse-residence",
     "name": "Esse Residence",
-    "destination": "new-cairo",
-    "lat": 30.0067,
-    "lng": 31.7543,
-    "developer": "Cred Developments",
-    "developerSlug": "cred-developments",
+    "destination": "sarai",
+    "lat": 30.0965,
+    "lng": 31.6275,
+    "developer": "Madinet Masr",
+    "developerSlug": "madinet-masr",
     "priceFrom": 4,
     "deliveryYear": 2027,
     "status": "RTM",
@@ -4684,15 +4694,15 @@ export const compoundsGenerated: Compound[] = [
       "/projects/esse-residence/8.jpg",
       "/projects/esse-residence/9.jpg"
     ],
-    "blurb": "Esse Residence is a modern luxury residential compound by Cred Developments in the R8 District of the New Capital, focused on elegant architecture, smart planning, and extensive landscaping for families and professionals.",
+    "blurb": "Esse Residence is a premium residential phase located within the Sarai compound on Cairo-Suez Road, developed by Madinet Masr. Featuring a wide range of luxurious apartments, duplexes, and signature S-villas, the project integrates modern architecture with vast open landscapes and crystal lagoons.",
     "paymentPlan": "10% down, installments up to 10 years",
     "areaSize": "35 feddan",
     "unitSizes": "50–239 m²",
     "type": "Residential",
     "highlights": [
-      "Luxury living in the New Capital R8",
-      "Elegant contemporary architecture",
-      "Smart community planning"
+      "Premium phase inside Sarai Compound",
+      "Developed by Madinet Masr",
+      "Eco-friendly layout with crystal lagoons and open green spaces"
     ],
     "city": "Cairo-Suez Road, New Cairo, Egypt (within Sarai Compound)",
     "masterPlanUrl": "/Masterplans/esse-residence.jpg",
@@ -5729,7 +5739,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "alam-al-roum",
     "name": "Alam Al Roum",
-    "destination": "sidi-heneish",
+    "destination": "alam-el-roum",
     "km": 275,
     "lat": 31.352,
     "lng": 27.351,
@@ -11508,58 +11518,6 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Pet Park"
     ]
-  },
-  {
-    "slug": "esse-residence-nac",
-    "name": "Esse Residence NAC",
-    "destination": "new-administrative-capital",
-    "lat": 30.0067,
-    "lng": 31.7543,
-    "developer": "Cred Developments",
-    "developerSlug": "cred-developments",
-    "priceFrom": 9,
-    "deliveryYear": 2027,
-    "status": "RTM",
-    "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa"
-    ],
-    "amenities": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Kids Destination",
-      "Cycling Track",
-      "Private Beach"
-    ],
-    "hero": "/projects/esse-residence-nac/1.jpg",
-    "gallery": [
-      "/projects/esse-residence-nac/1.jpg",
-      "/projects/esse-residence-nac/2.jpg",
-      "/projects/esse-residence-nac/3.jpg",
-      "/projects/esse-residence-nac/4.jpg",
-      "/projects/esse-residence-nac/5.jpg",
-      "/projects/esse-residence-nac/6.jpg",
-      "/projects/esse-residence-nac/7.jpg",
-      "/projects/esse-residence-nac/8.jpg",
-      "/projects/esse-residence-nac/9.jpg"
-    ],
-    "blurb": "Esse Residence NAC by Cred Developments — a Residential community offering refined living with full amenities and strong location advantages.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "408 feddan",
-    "unitSizes": "111–286 m²",
-    "type": "Residential",
-    "highlights": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Kids Destination",
-      "Cycling Track",
-      "Private Beach"
-    ],
-    "masterPlanUrl": "/Masterplans/esse-residence-nac.jpg",
-    "brochureUrl": "/brochures/Sarai.pdf",
-    "brochureFileName": "Sarai.pdf"
   },
   {
     "slug": "business-district-nac",

@@ -6222,14 +6222,19 @@ export const compounds: Compound[] = new Proxy(staticCompounds, {
   },
 });
 export const compoundBySlug = (slug: string) => compounds.find((c) => c.slug === slug);
-export const compoundsByDestination = (destination: string) =>
-  compounds
-    .filter((c) => c.destination === destination && !c.parentSlug)
+export const compoundsByDestination = (destination: string) => {
+  const subDestSlugs = destinations
+    .filter((d) => d.parentSlug === destination)
+    .map((d) => d.slug);
+  const allowed = [destination, ...subDestSlugs];
+  return compounds
+    .filter((c) => allowed.includes(c.destination) && !c.parentSlug)
     .sort((a, b) => {
       if (a.km !== undefined && b.km !== undefined) return a.km - b.km;
       if (a.km !== undefined) return -1;
       if (b.km !== undefined) return 1;
       return a.priceFrom - b.priceFrom;
     });
+};
 export const compoundsByDeveloper = (devSlug: string) =>
   compounds.filter((c) => c.developerSlug === devSlug && !c.parentSlug);

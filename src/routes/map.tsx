@@ -151,7 +151,11 @@ function MapPage() {
     flagshipVal: boolean,
     kiloFilterVal: string,
   ) => {
-    if (destinationVal && c.destination !== destinationVal) return false;
+    if (destinationVal) {
+      const isMatch = c.destination === destinationVal || 
+                      destinations.some(d => d.slug === c.destination && d.parentSlug === destinationVal);
+      if (!isMatch) return false;
+    }
     if (devVal && c.developerSlug !== devVal) return false;
     if (flagshipVal && !c.flagship) return false;
     if (kiloFilterVal) {
@@ -215,7 +219,13 @@ function MapPage() {
     destinations.forEach((a) => m.set(a.slug, 0));
     mainCompounds.forEach((c) => {
       if (matchMapCompound(c, debouncedQ, null, dev, flagshipOnly, kiloFilter)) {
+        // Count into own destination
         m.set(c.destination, (m.get(c.destination) || 0) + 1);
+        // Also roll up into parent destination
+        const parentSlug = destinations.find((d) => d.slug === c.destination)?.parentSlug;
+        if (parentSlug) {
+          m.set(parentSlug, (m.get(parentSlug) || 0) + 1);
+        }
       }
     });
     return m;
@@ -444,7 +454,7 @@ function MapPage() {
               >
                 All · {compounds.length}
               </button>
-              {destinations.map((a) => {
+              {destinations.filter((a) => !a.parentSlug).map((a) => {
                 const isActive = destinationSlug === a.slug;
                 return (
                   <span

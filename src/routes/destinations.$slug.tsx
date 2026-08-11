@@ -95,22 +95,33 @@ function AreaPage() {
   const a = Route.useLoaderData();
   const list = compoundsByDestination(a.slug);
 
+  // Sub-destinations (for parent destination pages like North Coast)
+  const subDestinations = destinations.filter((d) => d.parentSlug === a.slug);
+  const isParentDestination = subDestinations.length > 0;
+  const parentDestination = a.parentSlug ? destinations.find((d) => d.slug === a.parentSlug) : null;
+
+  const [activeZone, setActiveZone] = useState<string | null>(null);
+
+  const filteredList = activeZone
+    ? list.filter((c) => c.destination === activeZone)
+    : list;
+
   const avgPrice =
-    list.length > 0 ? Math.round(list.reduce((s, c) => s + c.priceFrom, 0) / list.length) : 0;
-  const beachfrontCount = list.filter((c) => c.beachfront).length;
-  const rtmCount = list.filter((c) => c.status === "RTM").length;
-  const minPrice = list.length > 0 ? Math.min(...list.map((c) => c.priceFrom)) : 0;
-  const maxPrice = list.length > 0 ? Math.max(...list.map((c) => c.priceFrom)) : 0;
+    filteredList.length > 0 ? Math.round(filteredList.reduce((s, c) => s + c.priceFrom, 0) / filteredList.length) : 0;
+  const beachfrontCount = filteredList.filter((c) => c.beachfront).length;
+  const rtmCount = filteredList.filter((c) => c.status === "RTM").length;
+  const minPrice = filteredList.length > 0 ? Math.min(...filteredList.map((c) => c.priceFrom)) : 0;
+  const maxPrice = filteredList.length > 0 ? Math.max(...filteredList.map((c) => c.priceFrom)) : 0;
 
   // Kilometer stats & sorting
-  const kmCompounds = list.filter((c) => c.km !== undefined);
+  const kmCompounds = filteredList.filter((c) => c.km !== undefined);
   const hasKmData = kmCompounds.length > 0;
   const minKm = hasKmData ? Math.min(...kmCompounds.map((c) => c.km!)) : null;
   const maxKm = hasKmData ? Math.max(...kmCompounds.map((c) => c.km!)) : null;
 
   const [sortBy, setSortBy] = useState<string>(hasKmData ? "km-asc" : "price-asc");
 
-  const sortedList = [...list].sort((a, b) => {
+  const sortedList = [...filteredList].sort((a, b) => {
     if (sortBy === "km-asc") {
       if (a.km !== undefined && b.km !== undefined) return a.km - b.km;
       if (a.km !== undefined) return -1;
@@ -129,9 +140,9 @@ function AreaPage() {
     return 0;
   });
 
-  // Get related destinations in the same region
+  // Get related destinations (exclude sub-destinations of the same parent)
   const relatedAreas = destinations
-    .filter((x) => x.region === a.region && x.slug !== a.slug)
+    .filter((x) => x.region === a.region && x.slug !== a.slug && !x.parentSlug)
     .slice(0, 4);
 
   return (
@@ -141,12 +152,23 @@ function AreaPage() {
         <img src={a.hero} alt={a.name} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 mx-auto max-w-7xl px-4 pb-8 text-primary-foreground lg:px-8">
-          <Link
-            to="/destinations"
-            className="inline-flex items-center gap-1 text-sm text-primary-foreground/70 hover:text-accent transition-colors"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" /> All destinations
-          </Link>
+          <div className="flex items-center gap-2 text-sm text-primary-foreground/70">
+            <Link to="/destinations" className="hover:text-accent transition-colors inline-flex items-center gap-1">
+              <ArrowLeft className="h-3.5 w-3.5" /> Destinations
+            </Link>
+            {parentDestination && (
+              <>
+                <span className="opacity-40">/</span>
+                <Link
+                  to="/destinations/$slug"
+                  params={{ slug: parentDestination.slug }}
+                  className="hover:text-accent transition-colors"
+                >
+                  {parentDestination.name}
+                </Link>
+              </>
+            )}
+          </div>
           <div className="mt-2 flex items-center gap-2">
             <span
               className="h-4 w-4 rounded-full ring-2 ring-white/40"
@@ -209,6 +231,45 @@ function AreaPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
+        {/* Sub-zone chips for parent destinations (e.g. North Coast) */}
+        {isParentDestination && (
+          <div className="mb-8">
+            <div className="mb-3 text-sm font-semibold text-muted-foreground uppercase tracking-wider">Browse by zone</div>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setActiveZone(null)}
+                className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
+                  activeZone === null
+                    ? "border-accent bg-accent text-accent-foreground"
+                    : "border-border bg-card text-muted-foreground hover:border-accent/60 hover:text-primary"
+                }`}
+              >
+                All zones · {list.length}
+              </button>
+              {subDestinations.map((sub) => {
+                const subCount = list.filter((c) => c.destination === sub.slug).length;
+                return (
+                  <button
+                    key={sub.slug}
+                    onClick={() => setActiveZone(sub.slug === activeZone ? null : sub.slug)}
+                    className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
+                      activeZone === sub.slug
+                        ? "border-accent bg-accent text-accent-foreground"
+                        : "border-border bg-card text-muted-foreground hover:border-accent/60 hover:text-primary"
+                    }`}
+                    style={activeZone === sub.slug ? {} : { borderColor: sub.color + "55" }}
+                  >
+                    <span
+                      className="inline-block h-2 w-2 rounded-full mr-1.5"
+                      style={{ background: sub.color }}
+                    />
+                    {sub.name} · {subCount}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
         {/* Description & Comprehensive Destination Guide */}
         <div className="mb-10 max-w-4xl space-y-6">
           <p className="text-lg leading-relaxed text-foreground/80 font-medium">{a.blurb}</p>
@@ -291,7 +352,7 @@ function AreaPage() {
               search={{ destination: a.slug, dev: "", q: "" }}
               className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-primary hover:border-accent hover:text-accent transition-colors"
             >
-              <Building2 className="h-4 w-4" /> All {list.length} projects
+              <Building2 className="h-4 w-4" /> All {filteredList.length} projects
             </Link>
           </div>
         </div>
@@ -395,6 +456,45 @@ function AreaPage() {
           )}
         </div>
 
+        {/* Sub-zone links (when on parent, show all child destinations) */}
+        {isParentDestination && subDestinations.length > 0 && (
+          <div className="mt-16">
+            <h2 className="mb-5 font-display text-xl font-semibold text-primary">
+              Explore zones within {a.name}
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {subDestinations.map((sub) => {
+                const subCount = compounds.filter((c) => c.destination === sub.slug).length;
+                return (
+                  <Link
+                    key={sub.slug}
+                    to="/destinations/$slug"
+                    params={{ slug: sub.slug }}
+                    className="group overflow-hidden rounded-xl border border-border/60 bg-card transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-accent/40"
+                  >
+                    <div className="relative aspect-[16/9] overflow-hidden">
+                      <img
+                        src={sub.hero}
+                        alt={sub.name}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                      <div className="absolute left-2 top-2 h-2.5 w-2.5 rounded-full ring-2 ring-white/50" style={{ background: sub.color }} />
+                      <div className="absolute inset-x-0 bottom-0 p-3">
+                        <div className="font-display text-sm font-semibold text-white">{sub.name}</div>
+                        {sub.kmRange && <div className="text-xs text-white/70">{sub.kmRange}</div>}
+                      </div>
+                    </div>
+                    <div className="px-3 py-2 text-xs text-muted-foreground">
+                      {subCount} projects · {sub.city}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Related destinations */}
         {relatedAreas.length > 0 && (
           <div className="mt-16">
@@ -403,7 +503,8 @@ function AreaPage() {
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {relatedAreas.map((ra) => {
-                const raCount = compounds.filter((c) => c.destination === ra.slug).length;
+                const raSubSlugs = destinations.filter((d) => d.parentSlug === ra.slug).map((d) => d.slug);
+                const raCount = compounds.filter((c) => [ra.slug, ...raSubSlugs].includes(c.destination)).length;
                 return (
                   <Link
                     key={ra.slug}
@@ -419,9 +520,7 @@ function AreaPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
                       <div className="absolute inset-x-0 bottom-0 p-3">
-                        <div className="font-display text-sm font-semibold text-white">
-                          {ra.name}
-                        </div>
+                        <div className="font-display text-sm font-semibold text-white">{ra.name}</div>
                       </div>
                     </div>
                     <div className="px-3 py-2 text-xs text-muted-foreground">

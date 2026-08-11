@@ -9,6 +9,7 @@ export type Destination = {
   hero: string;
   center: [number, number];
   zoom: number;
+  parentSlug?: string;
 };
 
 import { destinationsGenerated } from "./destinations.generated";
