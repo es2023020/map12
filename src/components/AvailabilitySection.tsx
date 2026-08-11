@@ -1,14 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import type { ProjectAvailability } from "@/data/availability";
 import { unitTypeSlug } from "@/data/availability";
-import { Phone, TrendingUp, Home, BarChart2, Clock, ArrowRight } from "lucide-react";
+import { Phone, TrendingUp, Home, BarChart2, Clock, ArrowRight, Layers, Building, Waves } from "lucide-react";
 
 interface Props {
   data: ProjectAvailability;
   projectSlug?: string;
+  onRegisterInterest?: (type: string) => void;
 }
 
-export function AvailabilitySection({ data, projectSlug }: Props) {
+export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: Props) {
   const totalMin = Math.min(...data.breakdown.map((b) => b.minPriceM));
   const totalMax = Math.max(...data.breakdown.map((b) => b.maxPriceM));
 
@@ -48,114 +49,89 @@ export function AvailabilitySection({ data, projectSlug }: Props) {
         </div>
       </div>
 
-      {/* Unit breakdown table */}
-      <div className="overflow-hidden rounded-2xl border border-border shadow-soft bg-card">
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm border-collapse">
-            <thead>
-              <tr className="border-b border-border bg-secondary/40">
-                <th className="px-5 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                  Unit Type
-                </th>
-                <th className="px-5 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                  Available
-                </th>
-                <th className="px-5 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                  Size (m²)
-                </th>
-                <th className="px-5 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                  Price (EGP M)
-                </th>
-                <th className="hidden sm:table-cell px-5 py-3.5 text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                  % of Total
-                </th>
-                {projectSlug && (
-                  <th className="px-5 py-3.5 text-center text-[11px] font-bold uppercase tracking-wider text-muted-foreground hidden sm:table-cell">
-                    Listings
-                  </th>
-                )}
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-border/60">
-              {data.breakdown.map((row, i) => {
-                const pct = Math.round((row.available / data.totalAvailable) * 100);
-                const slug = projectSlug ? unitTypeSlug(row) : null;
-                const hasListings = row.available > 0;
-                const label = `${row.type}${row.beds ? ` · ${row.beds}BR` : ""}${row.cluster ? ` (${row.cluster})` : ""}`;
+      {/* Unit breakdown grid */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {data.breakdown.map((row, i) => {
+          const avgPriceM = (row.minPriceM + row.maxPriceM) / 2;
+          const label = `${row.type}${row.beds ? ` · ${row.beds}BR` : ""}`;
 
-                return (
-                  <tr key={i} className="group hover:bg-secondary/20 transition-colors">
-                    <td className="px-5 py-3.5">
-                      <div className="flex items-center gap-2.5">
-                        <span
-                          className="inline-block h-3 w-3 shrink-0 rounded-full border border-white/20 shadow-sm"
-                          style={{ background: typeColor(row.type) }}
-                        />
-                        {projectSlug && slug ? (
-                          <Link
-                            to="/units/$projectSlug/$typeSlug"
-                            params={{ projectSlug, typeSlug: slug }}
-                            className="font-semibold text-primary hover:text-accent transition-colors inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
-                          >
-                            {label}
-                          </Link>
-                        ) : (
-                          <span className="font-semibold text-primary">{label}</span>
-                        )}
-                      </div>
-                    </td>
-                    <td className="px-5 py-3.5 text-right">
-                      <span
-                        className={`inline-flex items-center justify-center rounded-full px-2.5 py-0.5 text-xs font-bold ${row.available > 0 ? "bg-primary/10 text-primary" : "bg-amber-100 text-amber-700 dark:bg-amber-950/30 dark:text-amber-400"}`}
-                      >
-                        {row.available > 0 ? row.available : "Not updated yet"}
-                      </span>
-                    </td>
-                    <td className="px-5 py-3.5 text-right text-muted-foreground font-medium">
-                      {row.minSqm === row.maxSqm ? `${row.minSqm}` : `${row.minSqm}–${row.maxSqm}`}
-                    </td>
-                    <td className="px-5 py-3.5 text-right">
-                      <span className="font-bold text-primary">
-                        {row.minPriceM.toFixed(1)}–{row.maxPriceM.toFixed(1)}
-                      </span>
-                    </td>
-                    <td className="hidden sm:table-cell px-5 py-3.5">
-                      <div className="flex items-center justify-end gap-2.5">
-                        <div className="h-2 w-20 overflow-hidden rounded-full bg-secondary">
-                          <div
-                            className="h-full rounded-full transition-all duration-500"
-                            style={{ width: `${pct}%`, background: typeColor(row.type) }}
-                          />
-                        </div>
-                        <span className="w-8 text-right text-xs font-semibold text-muted-foreground">
-                          {pct}%
-                        </span>
-                      </div>
-                    </td>
-                    {projectSlug && (
-                      <td className="px-5 py-3.5 text-center hidden sm:table-cell">
-                        {slug && (
-                          <Link
-                            to="/units/$projectSlug/$typeSlug"
-                            params={{ projectSlug, typeSlug: slug }}
-                            className={`inline-flex items-center gap-1 rounded-full px-3.5 py-1 text-xs font-bold shadow-soft transition-all duration-200 hover:scale-[1.03] ${
-                              hasListings
-                                ? "bg-emerald-600 text-white hover:bg-emerald-700"
-                                : "bg-secondary text-primary hover:bg-secondary/80"
-                            }`}
-                          >
-                            {hasListings ? `${row.available} listed` : "View"}
-                            <ArrowRight className="h-3.5 w-3.5" />
-                          </Link>
-                        )}
-                      </td>
-                    )}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+          return (
+            <div
+              key={i}
+              className="relative overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-soft transition-all duration-300 hover:shadow-medium hover:border-accent/40 group flex flex-col justify-between"
+            >
+              {/* Card top branding/icon */}
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary/80 text-muted-foreground group-hover:bg-accent/10 group-hover:text-accent transition-colors">
+                    {getUnitIcon(row.type)}
+                  </span>
+                  {row.available > 0 ? (
+                    <span className="inline-flex items-center rounded-full bg-emerald-50 px-2.5 py-0.5 text-[10px] font-bold text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-400">
+                      {row.available} Available
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center rounded-full bg-amber-50 px-2.5 py-0.5 text-[10px] font-bold text-amber-700 dark:bg-amber-950/30 dark:text-amber-400">
+                      Sold Out
+                    </span>
+                  )}
+                </div>
+
+                <div className="mt-4">
+                  <h3 className="font-display text-lg font-bold text-primary group-hover:text-accent transition-colors">
+                    {label}
+                  </h3>
+                  {row.cluster && (
+                    <p className="text-xs text-muted-foreground mt-0.5 font-semibold">
+                      Phase: {row.cluster}
+                    </p>
+                  )}
+                  <p className="text-[11px] text-muted-foreground mt-1">
+                    Typical Size:{" "}
+                    <strong className="text-primary font-semibold">
+                      {row.minSqm === row.maxSqm ? `${row.minSqm}` : `${row.minSqm}–${row.maxSqm}`} m²
+                    </strong>
+                  </p>
+                </div>
+              </div>
+
+              {/* Price details & Call to Action */}
+              <div className="mt-6 pt-5 border-t border-border/60">
+                <div className="flex justify-between items-baseline mb-4">
+                  <div>
+                    <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">
+                      Average Price
+                    </span>
+                    <div className="font-display text-2xl font-black text-primary">
+                      EGP {avgPriceM.toFixed(2)}M
+                    </div>
+                  </div>
+                  <div className="text-right text-xs text-muted-foreground">
+                    Range: {row.minPriceM.toFixed(1)}M–{row.maxPriceM.toFixed(1)}M
+                  </div>
+                </div>
+
+                {onRegisterInterest && row.available > 0 ? (
+                  <button
+                    onClick={() => onRegisterInterest(row.type)}
+                    className="w-full rounded-2xl bg-primary py-3 text-xs font-bold text-primary-foreground shadow hover:bg-primary/95 transition-all duration-200 cursor-pointer flex items-center justify-center gap-1.5"
+                  >
+                    Register Interest
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </button>
+                ) : (
+                  <a
+                    href="tel:201029324783"
+                    className="w-full rounded-2xl border border-border bg-secondary/30 py-3 text-xs font-bold text-primary text-center hover:bg-secondary/60 hover:border-accent/30 transition-all duration-200 cursor-pointer flex items-center justify-center gap-1.5"
+                  >
+                    Request Live Price
+                    <Phone className="h-3.5 w-3.5" />
+                  </a>
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       {/* Stats row */}
@@ -274,4 +250,21 @@ function typeColor(type: string): string {
     "Medical Clinic": "#EF4444",
   };
   return map[type] ?? "#6B7280";
+}
+
+function getUnitIcon(type: string) {
+  const t = type.toLowerCase();
+  if (t.includes("apartment") || t.includes("flat") || t.includes("studio") || t.includes("office") || t.includes("clinic")) {
+    return <Layers className="h-5 w-5" />;
+  }
+  if (t.includes("villa") || t.includes("standalone")) {
+    return <Home className="h-5 w-5" />;
+  }
+  if (t.includes("townhouse") || t.includes("town") || t.includes("twin") || t.includes("duplex")) {
+    return <Building className="h-5 w-5" />;
+  }
+  if (t.includes("chalet") || t.includes("cabin") || t.includes("floating") || t.includes("cabana")) {
+    return <Waves className="h-5 w-5" />;
+  }
+  return <Home className="h-5 w-5" />;
 }
