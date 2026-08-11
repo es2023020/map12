@@ -11,7 +11,6 @@ import {
   Building,
   Waves,
   X,
-  Maximize2,
   Ruler,
   BadgePercent,
   CalendarClock,
@@ -34,116 +33,91 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
 
   return (
     <>
-      <div className="space-y-8">
-        {/* Header banner */}
-        <div
-          style={{
-            background: "linear-gradient(135deg, rgba(16,185,129,0.08) 0%, rgba(6,182,212,0.06) 100%)",
-            border: "1px solid rgba(16,185,129,0.18)",
-          }}
-          className="flex flex-wrap items-center justify-between gap-4 rounded-2xl px-6 py-5 backdrop-blur-md shadow-sm"
-        >
+      <div className="space-y-6">
+        {/* Header banner - Simplified and professional */}
+        <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-border bg-secondary/35 px-6 py-5 shadow-sm">
           <div className="flex items-center gap-3">
-            <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-emerald-500 text-white shadow-lg">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
               <Home className="h-5 w-5" />
-              <span className="absolute -top-1.5 -right-1.5 flex h-3.5 w-3.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white dark:border-slate-900"></span>
-              </span>
             </span>
             <div>
-              <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse inline-block" />
-                Live Inventory
+              <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+                Unit Sizing & Availability
               </div>
-              <div className="font-display text-xl font-extrabold text-emerald-950 dark:text-emerald-50 leading-tight mt-0.5">
-                {data.breakdown.length} Unit{data.breakdown.length !== 1 ? " Types" : " Type"} Available
+              <div className="font-display text-lg font-bold text-primary leading-tight mt-0.5">
+                {data.breakdown.length} Unit{data.breakdown.length !== 1 ? " Types" : " Type"}
               </div>
             </div>
           </div>
           <div className="text-right">
-            <div className="text-[10px] font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+            <div className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
               Price Range
             </div>
-            <div className="font-display text-lg font-bold text-emerald-950 dark:text-emerald-50 mt-0.5">
+            <div className="font-display text-base font-bold text-primary mt-0.5">
               EGP {totalMin.toFixed(1)}M – {totalMax.toFixed(1)}M
             </div>
           </div>
         </div>
 
         {/* Instruction hint */}
-        <p className="text-xs text-muted-foreground text-center -mt-2 font-medium tracking-wide">
-          Tap a unit type to view full details
+        <p className="text-xs text-muted-foreground text-center font-medium tracking-wide">
+          Click any unit type below to view full details
         </p>
 
-        {/* Unit breakdown grid */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Unit breakdown grid - Simple, consistent, clean */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {data.breakdown.map((row, i) => {
             const avgPriceM = (row.minPriceM + row.maxPriceM) / 2;
             const label = `${row.type}${row.beds ? ` · ${row.beds}BR` : ""}`;
-            const color = typeColor(row.type);
 
             return (
               <button
                 key={i}
                 onClick={() => setSelectedUnit(row)}
-                className="group relative overflow-hidden rounded-3xl border border-border bg-card text-left transition-all duration-300 hover:shadow-xl hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
-                style={{ "--unit-color": color } as React.CSSProperties}
+                className="group relative overflow-hidden rounded-2xl border border-border bg-card text-left p-5 transition-all duration-200 hover:border-accent hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer flex flex-col justify-between"
               >
-                {/* Color accent bar */}
-                <div
-                  className="absolute top-0 left-0 right-0 h-1 rounded-t-3xl transition-all duration-300 group-hover:h-1.5"
-                  style={{ background: color }}
-                />
-
-                <div className="p-6 pt-7">
-                  {/* Icon + type */}
+                <div>
+                  {/* Icon + details badge */}
                   <div className="flex items-start justify-between mb-4">
-                    <span
-                      className="inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-md transition-transform duration-300 group-hover:scale-110"
-                      style={{ background: color }}
-                    >
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-secondary text-primary group-hover:bg-accent/10 group-hover:text-accent transition-colors">
                       {getUnitIcon(row.type)}
                     </span>
-                    <span
-                      className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider opacity-80 group-hover:opacity-100 transition-opacity"
-                      style={{ background: `${color}18`, color }}
-                    >
-                      View Details
+                    <span className="inline-flex items-center gap-0.5 rounded-full bg-secondary/80 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground group-hover:bg-accent/10 group-hover:text-accent transition-colors">
+                      Details
                       <ChevronRight className="h-3 w-3" />
                     </span>
                   </div>
 
-                  <h3 className="font-display text-lg font-bold text-primary leading-tight">
+                  <h3 className="font-display text-base font-bold text-primary group-hover:text-accent transition-colors leading-tight">
                     {label}
                   </h3>
                   {row.cluster && (
-                    <p className="text-xs text-muted-foreground mt-1 font-semibold">
+                    <p className="text-[11px] text-muted-foreground mt-0.5 font-medium">
                       Phase: {row.cluster}
                     </p>
                   )}
 
                   {/* Size */}
-                  <div className="mt-4 flex items-center gap-1.5 text-xs text-muted-foreground">
-                    <Ruler className="h-3.5 w-3.5 shrink-0" />
+                  <div className="mt-3 flex items-center gap-1 text-[11px] text-muted-foreground">
+                    <Ruler className="h-3 w-3 shrink-0" />
                     <span>
                       {row.minSqm === row.maxSqm
                         ? `${row.minSqm} m²`
                         : `${row.minSqm}–${row.maxSqm} m²`}
                     </span>
                   </div>
+                </div>
 
-                  {/* Price */}
-                  <div className="mt-5 pt-4 border-t border-border/60">
-                    <div className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold mb-1">
-                      Average Price
-                    </div>
-                    <div className="font-display text-2xl font-black" style={{ color }}>
-                      EGP {avgPriceM.toFixed(2)}M
-                    </div>
-                    <div className="text-[10px] text-muted-foreground mt-0.5">
-                      Range: {row.minPriceM.toFixed(1)}M – {row.maxPriceM.toFixed(1)}M
-                    </div>
+                {/* Price */}
+                <div className="mt-5 pt-3 border-t border-border/40 w-full">
+                  <div className="text-[9px] uppercase tracking-widest text-muted-foreground font-semibold">
+                    Average Price
+                  </div>
+                  <div className="font-display text-lg font-black text-primary group-hover:text-accent transition-colors mt-0.5">
+                    EGP {avgPriceM.toFixed(1)}M
+                  </div>
+                  <div className="text-[10px] text-muted-foreground">
+                    Range: {row.minPriceM.toFixed(1)}M – {row.maxPriceM.toFixed(1)}M
                   </div>
                 </div>
               </button>
@@ -177,9 +151,9 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
         </div>
 
         {data.note && (
-          <div className="flex items-start gap-2.5 rounded-xl border border-amber-200 bg-amber-50/50 px-4 py-3.5 dark:border-amber-900/40 dark:bg-amber-950/20">
-            <span className="mt-0.5 text-amber-600">ⓘ</span>
-            <p className="text-xs font-medium text-amber-800 dark:text-amber-200">{data.note}</p>
+          <div className="flex items-start gap-2 rounded-xl border border-border bg-secondary/10 px-4 py-3">
+            <span className="mt-0.5 text-muted-foreground text-xs">ⓘ</span>
+            <p className="text-xs text-muted-foreground">{data.note}</p>
           </div>
         )}
 
@@ -187,13 +161,13 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
         <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
           <a
             href="tel:201029324783"
-            className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-bold text-white shadow-soft hover:bg-emerald-700 transition-colors"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-primary-foreground shadow hover:bg-primary/95 transition-all"
           >
-            <Phone className="h-4 w-4" />
-            Request Updated Live List
+            <Phone className="h-3.5 w-3.5" />
+            Request Live Price List
           </a>
-          <span className="text-xs font-medium text-muted-foreground bg-secondary/50 border border-border px-3 py-1 rounded-full">
-            Developer Feed: {data.developer} · Checked {data.lastUpdated}
+          <span className="text-[11px] font-medium text-muted-foreground bg-secondary/50 border border-border px-3 py-1 rounded-lg">
+            Developer Feed: {data.developer}
           </span>
         </div>
       </div>
@@ -221,153 +195,125 @@ function UnitDetailModal({
   onClose: () => void;
   onRegisterInterest?: (type: string) => void;
 }) {
-  const color = typeColor(unit.type);
   const avgPriceM = (unit.minPriceM + unit.maxPriceM) / 2;
   const label = `${unit.type}${unit.beds ? ` · ${unit.beds} Bedroom${unit.beds > 1 ? "s" : ""}` : ""}`;
 
-  // Close on backdrop click
   const handleBackdrop = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) onClose();
   };
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: "rgba(0,0,0,0.55)", backdropFilter: "blur(6px)" }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/85 backdrop-blur-sm"
       onClick={handleBackdrop}
     >
       <div
-        className="relative w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl"
-        style={{ background: "var(--card, #fff)" }}
+        className="relative w-full max-w-md rounded-2xl overflow-hidden border border-border bg-card shadow-lg"
         role="dialog"
         aria-modal="true"
         aria-label={`${label} Details`}
       >
-        {/* Color header */}
-        <div
-          className="relative px-7 pt-8 pb-7"
-          style={{
-            background: `linear-gradient(135deg, ${color}22 0%, ${color}10 100%)`,
-            borderBottom: `1px solid ${color}30`,
-          }}
-        >
-          {/* Close */}
+        {/* Simple header */}
+        <div className="px-6 pt-6 pb-4 border-b border-border/60">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 h-9 w-9 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary transition-colors"
+            className="absolute top-4 right-4 h-8 w-8 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary transition-colors"
             aria-label="Close"
           >
-            <X className="h-5 w-5" />
+            <X className="h-4 w-4" />
           </button>
 
-          <div className="flex items-center gap-4">
-            <span
-              className="inline-flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg shrink-0"
-              style={{ background: color }}
-            >
+          <div className="flex items-center gap-3">
+            <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-secondary text-primary">
               {getUnitIcon(unit.type)}
             </span>
             <div>
-              <div className="text-[10px] font-bold uppercase tracking-widest mb-1" style={{ color }}>
-                Unit Type
+              <div className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
+                Unit Detail View
               </div>
-              <h2 className="font-display text-2xl font-black text-primary leading-tight">
+              <h2 className="font-display text-lg font-bold text-primary leading-tight">
                 {unit.type}
               </h2>
-              {unit.beds && (
-                <p className="text-sm text-muted-foreground mt-0.5">
-                  {unit.beds} Bedroom{unit.beds > 1 ? "s" : ""}
-                </p>
-              )}
             </div>
           </div>
         </div>
 
         {/* Body */}
-        <div className="px-7 py-6 space-y-5">
-          {/* Price spotlight */}
-          <div
-            className="rounded-2xl p-5"
-            style={{ background: `${color}0d`, border: `1px solid ${color}25` }}
-          >
-            <div className="text-[10px] uppercase tracking-widest font-bold mb-1" style={{ color }}>
+        <div className="p-6 space-y-4">
+          {/* Price details */}
+          <div className="rounded-xl bg-secondary/45 p-4 border border-border/40">
+            <div className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">
               Average Price
             </div>
-            <div className="font-display text-3xl font-black" style={{ color }}>
-              EGP {avgPriceM.toFixed(2)}M
+            <div className="font-display text-2xl font-black text-primary mt-0.5">
+              EGP {avgPriceM.toFixed(1)}M
             </div>
-            <div className="text-xs text-muted-foreground mt-1">
-              Range: EGP {unit.minPriceM.toFixed(2)}M – {unit.maxPriceM.toFixed(2)}M
+            <div className="text-xs text-muted-foreground mt-0.5">
+              Range: EGP {unit.minPriceM.toFixed(1)}M – {unit.maxPriceM.toFixed(1)}M
             </div>
           </div>
 
-          {/* Detail grid */}
-          <div className="grid grid-cols-2 gap-3">
+          {/* Sizing & details */}
+          <div className="grid grid-cols-2 gap-2 text-xs">
             <DetailChip
-              icon={<Ruler className="h-4 w-4" />}
-              label="Area"
+              icon={<Ruler className="h-3.5 w-3.5" />}
+              label="Typical Area"
               value={
                 unit.minSqm === unit.maxSqm
                   ? `${unit.minSqm} m²`
                   : `${unit.minSqm}–${unit.maxSqm} m²`
               }
-              color={color}
             />
             {unit.cluster && (
               <DetailChip
-                icon={<MapPin className="h-4 w-4" />}
-                label="Phase / Cluster"
+                icon={<MapPin className="h-3.5 w-3.5" />}
+                label="Phase/Cluster"
                 value={unit.cluster}
-                color={color}
               />
             )}
             {unit.finishing && (
               <DetailChip
-                icon={<Paintbrush2 className="h-4 w-4" />}
+                icon={<Paintbrush2 className="h-3.5 w-3.5" />}
                 label="Finishing"
                 value={unit.finishing}
-                color={color}
               />
             )}
             {unit.deliveryNote && (
               <DetailChip
-                icon={<CalendarClock className="h-4 w-4" />}
+                icon={<CalendarClock className="h-3.5 w-3.5" />}
                 label="Delivery"
                 value={unit.deliveryNote}
-                color={color}
               />
             )}
             {unit.paymentPlan && (
               <DetailChip
-                icon={<BadgePercent className="h-4 w-4" />}
+                icon={<BadgePercent className="h-3.5 w-3.5" />}
                 label="Payment Plan"
                 value={unit.paymentPlan}
-                color={color}
                 fullWidth
               />
             )}
           </div>
 
-          {/* Actions */}
-          <div className="flex flex-col gap-3 pt-1">
+          {/* Action buttons */}
+          <div className="flex flex-col gap-2 pt-2">
             {onRegisterInterest && (
               <button
                 onClick={() => {
                   onRegisterInterest(unit.type);
                   onClose();
                 }}
-                className="w-full rounded-2xl py-3.5 text-sm font-bold text-white shadow-md transition-all duration-200 hover:opacity-90 hover:shadow-lg flex items-center justify-center gap-2"
-                style={{ background: color }}
+                className="w-full rounded-xl bg-primary py-3 text-xs font-bold text-primary-foreground shadow hover:bg-primary/95 transition-all flex items-center justify-center gap-1.5"
               >
                 Register Interest
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-3.5 w-3.5" />
               </button>
             )}
             <a
               href="tel:201029324783"
-              className="w-full rounded-2xl border border-border bg-secondary/30 py-3 text-sm font-bold text-primary text-center hover:bg-secondary/60 transition-all duration-200 flex items-center justify-center gap-2"
+              className="w-full rounded-xl border border-border bg-card py-2.5 text-xs font-bold text-primary text-center hover:bg-secondary transition-all flex items-center justify-center gap-1.5"
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-3.5 w-3.5" />
               Request Live Price
             </a>
           </div>
@@ -383,25 +329,22 @@ function DetailChip({
   icon,
   label,
   value,
-  color,
   fullWidth,
 }: {
   icon: React.ReactNode;
   label: string;
   value: string;
-  color: string;
   fullWidth?: boolean;
 }) {
   return (
     <div
-      className={`rounded-xl p-3.5 ${fullWidth ? "col-span-2" : ""}`}
-      style={{ background: "var(--secondary, #f3f4f6)", border: "1px solid var(--border, #e5e7eb)" }}
+      className={`rounded-lg p-3 bg-secondary/20 border border-border/40 ${fullWidth ? "col-span-2" : ""}`}
     >
-      <div className="flex items-center gap-1.5 mb-1" style={{ color }}>
+      <div className="flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider text-muted-foreground mb-1">
         {icon}
-        <span className="text-[10px] font-bold uppercase tracking-wider">{label}</span>
+        <span>{label}</span>
       </div>
-      <div className="text-sm font-semibold text-primary">{value}</div>
+      <div className="font-semibold text-primary">{value}</div>
     </div>
   );
 }
@@ -420,15 +363,11 @@ function MiniStat({
   accent?: boolean;
 }) {
   return (
-    <div
-      className={`rounded-xl border p-3.5 ${accent ? "border-accent/30 bg-accent/5" : "border-border bg-card"}`}
-    >
-      <div
-        className={`inline-flex h-7 w-7 items-center justify-center rounded-lg ${accent ? "bg-accent/15 text-accent" : "bg-secondary text-muted-foreground"}`}
-      >
+    <div className={`rounded-xl border p-3 ${accent ? "border-accent/20 bg-accent/5" : "border-border bg-card"}`}>
+      <div className={`inline-flex h-6 w-6 items-center justify-center rounded-md ${accent ? "bg-accent/10 text-accent" : "bg-secondary text-muted-foreground"}`}>
         {icon}
       </div>
-      <div className="mt-2.5 text-[10px] uppercase tracking-wider text-muted-foreground">
+      <div className="mt-2 text-[9px] uppercase tracking-wider text-muted-foreground">
         {label}
       </div>
       <div className="mt-0.5 font-display text-sm font-semibold text-primary leading-tight">
@@ -440,45 +379,6 @@ function MiniStat({
 
 // ─── Helpers ───────────────────────────────────────────────────────────────────
 
-function typeColor(type: string): string {
-  const map: Record<string, string> = {
-    Apartment: "#6366F1",
-    "Garden Apartment": "#8B5CF6",
-    Villa: "#14B8A6",
-    "Town House": "#F59E0B",
-    Townhome: "#F59E0B",
-    "Twin House": "#F97316",
-    Twinhome: "#F97316",
-    Chalet: "#0EA5E9",
-    Cabin: "#10B981",
-    "Beach House": "#06B6D4",
-    Duplex: "#A855F7",
-    Penthouse: "#EC4899",
-    Studio: "#84CC16",
-    "Grand View Villa": "#14B8A6",
-    "Millennial Apartment": "#6366F1",
-    "Garden Millennial": "#8B5CF6",
-    "I-Villa": "#F97316",
-    "I-Apartment": "#6366F1",
-    "Park Villa": "#14B8A6",
-    "Lake House": "#0EA5E9",
-    "One Storey": "#F59E0B",
-    "Sky Loft": "#A855F7",
-    Cabana: "#06B6D4",
-    "One Storey Villa": "#F97316",
-    "Standalone Villa": "#14B8A6",
-    "Twin Villa": "#F97316",
-    "Sky Villa": "#EC4899",
-    "Typical Loft": "#A855F7",
-    "Boardwalk Apartment": "#0EA5E9",
-    "Garden Apartment NHF": "#8B5CF6",
-    "Serviced Office": "#6B7280",
-    "Admin Office": "#6B7280",
-    "Medical Clinic": "#EF4444",
-  };
-  return map[type] ?? "#6B7280";
-}
-
 function getUnitIcon(type: string) {
   const t = type.toLowerCase();
   if (
@@ -488,10 +388,10 @@ function getUnitIcon(type: string) {
     t.includes("office") ||
     t.includes("clinic")
   ) {
-    return <Layers className="h-6 w-6" />;
+    return <Layers className="h-5 w-5" />;
   }
   if (t.includes("villa") || t.includes("standalone")) {
-    return <Home className="h-6 w-6" />;
+    return <Home className="h-5 w-5" />;
   }
   if (
     t.includes("townhouse") ||
@@ -499,7 +399,7 @@ function getUnitIcon(type: string) {
     t.includes("twin") ||
     t.includes("duplex")
   ) {
-    return <Building className="h-6 w-6" />;
+    return <Building className="h-5 w-5" />;
   }
   if (
     t.includes("chalet") ||
@@ -507,7 +407,7 @@ function getUnitIcon(type: string) {
     t.includes("floating") ||
     t.includes("cabana")
   ) {
-    return <Waves className="h-6 w-6" />;
+    return <Waves className="h-5 w-5" />;
   }
-  return <Home className="h-6 w-6" />;
+  return <Home className="h-5 w-5" />;
 }

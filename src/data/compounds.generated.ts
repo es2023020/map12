@@ -524,7 +524,10 @@ export const compoundsGenerated: Compound[] = [
       "/projects/sarai/3.jpg",
       "/projects/sarai/4.jpg",
       "/projects/sarai/5.jpg",
-      "/projects/sarai/6.jpg"
+      "/projects/sarai/6.jpg",
+      "/projects/sarai/7.jpg",
+      "/projects/sarai/8.jpg",
+      "/projects/sarai/9.jpg"
     ],
     "blurb": "Sarai is a premium development by Madinet Masr in Sarai, presenting high-end unit designs and world-class compound amenities.",
     "paymentPlan": "10% / 8 yrs",
@@ -614,7 +617,13 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment", "Duplex", "Penthouse", "Standalone Villa", "Townhouse", "Twin House", "Villa"
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House",
+      "Villa"
     ],
     "amenities": [
       "Sports club",
@@ -722,7 +731,13 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Apartment", "Cabins", "Chalet", "Standalone Villa", "Townhouse", "Twin House", "Villa"
+      "Apartment",
+      "Cabins",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House",
+      "Villa"
     ],
     "amenities": [
       "Crystal lagoons",
@@ -815,7 +830,13 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Apartment", "Chalet", "Golf Villa", "Standalone Villa", "Townhouse", "Twin House", "Villa"
+      "Apartment",
+      "Chalet",
+      "Golf Villa",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House",
+      "Villa"
     ],
     "amenities": [
       "Private beach",
@@ -865,7 +886,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Apartment", "Cabins", "Chalet", "Standalone Villa", "Townhouse", "Twin House"
+      "Apartment",
+      "Cabins",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "5-star Hotel",
@@ -1039,7 +1065,14 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Apartment", "Chalet", "Courtyard Town Villa", "Crystal Villa", "Shell Townhouse", "Standalone Villa", "The Houses", "Townhouse"
+      "Apartment",
+      "Chalet",
+      "Courtyard Town Villa",
+      "Crystal Villa",
+      "Shell Townhouse",
+      "Standalone Villa",
+      "The Houses",
+      "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -1181,7 +1214,14 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment", "Duplex", "I-Villa Garden", "Millennial", "Penthouse", "Sky Villa", "Typical Apartment", "iVilla"
+      "Apartment",
+      "Duplex",
+      "I-Villa Garden",
+      "Millennial",
+      "Penthouse",
+      "Sky Villa",
+      "Typical Apartment",
+      "iVilla"
     ],
     "amenities": [
       "Clubhouse",
@@ -2315,7 +2355,14 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Standalone", "Townhouse", "Townhouse Corner", "Townhouse Middle", "Twin House", "Twinhouse Type A", "Twinhouse V", "Villa"
+      "Standalone",
+      "Townhouse",
+      "Townhouse Corner",
+      "Townhouse Middle",
+      "Twin House",
+      "Twinhouse Type A",
+      "Twinhouse V",
+      "Villa"
     ],
     "amenities": [
       "Green lawns",
@@ -2356,7 +2403,17 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Standalone A", "Standalone B", "Standalone C", "Standalone R1", "Standalone R2", "Town House Corner", "Town House Middle Type 1", "Town House Middle Type 2", "Townhouse", "Twin House", "Villa"
+      "Standalone A",
+      "Standalone B",
+      "Standalone C",
+      "Standalone R1",
+      "Standalone R2",
+      "Town House Corner",
+      "Town House Middle Type 1",
+      "Town House Middle Type 2",
+      "Townhouse",
+      "Twin House",
+      "Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -2398,7 +2455,22 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Family House Type A Ground", "Family House Type A Upper", "Family House Type B Ground", "Family House Type B Upper", "Stand Alone", "Stand Alone Type A", "Stand Alone Type B", "Stand Alone Type C", "Stand Alone Type E", "Stand Alone Type R", "Town House Corner", "Town House Middle", "Townhouse", "Twin House", "Type", "Villa"
+      "Family House Type A Ground",
+      "Family House Type A Upper",
+      "Family House Type B Ground",
+      "Family House Type B Upper",
+      "Stand Alone",
+      "Stand Alone Type A",
+      "Stand Alone Type B",
+      "Stand Alone Type C",
+      "Stand Alone Type E",
+      "Stand Alone Type R",
+      "Town House Corner",
+      "Town House Middle",
+      "Townhouse",
+      "Twin House",
+      "Type",
+      "Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -2480,7 +2552,16 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment", "Duplex", "Duplex Ground", "Duplex ground", "Ground Without Garden", "Ground with garden", "Ground without garden", "Penthouse", "Type", "Typical"
+      "Apartment",
+      "Duplex",
+      "Duplex Ground",
+      "Duplex ground",
+      "Ground Without Garden",
+      "Ground with garden",
+      "Ground without garden",
+      "Penthouse",
+      "Type",
+      "Typical"
     ],
     "amenities": [
       "Clubhouse",
@@ -2567,7 +2648,24 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "3 BDRs Ground", "3 BDRs Typical", "4 BDRs Ground", "Apartment", "Duplex", "Duplex Ground", "Duplex Roof", "Penthouse", "Penthouses", "Quadro", "Semi Finished. (No separate payment plan / delivery specified for this table.)", "Stand Alone", "TownHouse Corner", "TownHouse Middle", "Twin House", "Twin Houses", "Type", "Villas"
+      "3 BDRs Ground",
+      "3 BDRs Typical",
+      "4 BDRs Ground",
+      "Apartment",
+      "Duplex",
+      "Duplex Ground",
+      "Duplex Roof",
+      "Penthouse",
+      "Penthouses",
+      "Quadro",
+      "Semi Finished. (No separate payment plan / delivery specified for this table.)",
+      "Stand Alone",
+      "TownHouse Corner",
+      "TownHouse Middle",
+      "Twin House",
+      "Twin Houses",
+      "Type",
+      "Villas"
     ],
     "amenities": [
       "Clubhouse",
@@ -2609,7 +2707,18 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Garden Town House Corner", "Garden Town House Middle", "New Release (Delivery Jan 2029, Fully Finished)", "Quadro", "Standalone", "Town Corner", "Town Middle", "Townhouse", "Twin", "Twin House", "Type", "Villa"
+      "Garden Town House Corner",
+      "Garden Town House Middle",
+      "New Release (Delivery Jan 2029, Fully Finished)",
+      "Quadro",
+      "Standalone",
+      "Town Corner",
+      "Town Middle",
+      "Townhouse",
+      "Twin",
+      "Twin House",
+      "Type",
+      "Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -2651,7 +2760,22 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "3 BDRs Ground", "3 BDRs Typical", "4 BDRs Ground", "Apartment", "Duplex Ground", "Duplex Roof", "Penthouses", "Quadro", "Semi Finished. (No separate payment plan / delivery specified for this table.)", "Stand Alone", "TownHouse Corner", "TownHouse Middle", "Twin House", "Twin Houses", "Type", "Villas"
+      "3 BDRs Ground",
+      "3 BDRs Typical",
+      "4 BDRs Ground",
+      "Apartment",
+      "Duplex Ground",
+      "Duplex Roof",
+      "Penthouses",
+      "Quadro",
+      "Semi Finished. (No separate payment plan / delivery specified for this table.)",
+      "Stand Alone",
+      "TownHouse Corner",
+      "TownHouse Middle",
+      "Twin House",
+      "Twin Houses",
+      "Type",
+      "Villas"
     ],
     "amenities": [
       "Clubhouse",
@@ -2693,7 +2817,23 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "3 BDRs Ground", "3 BDRs Typical", "4 BDRs Ground", "Duplex Ground", "Duplex Roof", "Penthouses", "Quadro", "Semi Finished. (No separate payment plan / delivery specified for this table.)", "Stand Alone", "TownHouse Corner", "TownHouse Middle", "Townhouse", "Twin House", "Twin Houses", "Type", "Villa", "Villas"
+      "3 BDRs Ground",
+      "3 BDRs Typical",
+      "4 BDRs Ground",
+      "Duplex Ground",
+      "Duplex Roof",
+      "Penthouses",
+      "Quadro",
+      "Semi Finished. (No separate payment plan / delivery specified for this table.)",
+      "Stand Alone",
+      "TownHouse Corner",
+      "TownHouse Middle",
+      "Townhouse",
+      "Twin House",
+      "Twin Houses",
+      "Type",
+      "Villa",
+      "Villas"
     ],
     "amenities": [
       "Clubhouse",
@@ -2735,7 +2875,23 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "3 BDRs Ground", "3 BDRs Typical", "4 BDRs Ground", "Duplex Ground", "Duplex Roof", "Penthouses", "Quadro", "Semi Finished. (No separate payment plan / delivery specified for this table.)", "Stand Alone", "TownHouse Corner", "TownHouse Middle", "Townhouse", "Twin House", "Twin Houses", "Type", "Villa", "Villas"
+      "3 BDRs Ground",
+      "3 BDRs Typical",
+      "4 BDRs Ground",
+      "Duplex Ground",
+      "Duplex Roof",
+      "Penthouses",
+      "Quadro",
+      "Semi Finished. (No separate payment plan / delivery specified for this table.)",
+      "Stand Alone",
+      "TownHouse Corner",
+      "TownHouse Middle",
+      "Townhouse",
+      "Twin House",
+      "Twin Houses",
+      "Type",
+      "Villa",
+      "Villas"
     ],
     "amenities": [
       "Clubhouse",
@@ -2777,7 +2933,32 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "1st Floor", "1st floor", "2nd floor", "2nd floor (2 bedrooms, access to open roof)", "2nd floor (2 bedrooms, access to roof)", "Chalet", "Chalet-First", "Chalet-Ground", "Chalet-Second", "Delivery 1/2028", "Delivery 1/2029", "Delivery: 1/1/2028 (Not Sea View)", "Delivery: 1/1/2029 (Not Sea View)", "Garden's Facilities", "Ground", "Ground floor", "New Phase (Delivery 1/1/2029)", "Ray's Facilities", "Ready to Move — Installments", "Standalone Villa", "Town House M", "Twin House", "Twin Villa (Not Sea View)", "Twin house", "Type", "•"
+      "1st Floor",
+      "1st floor",
+      "2nd floor",
+      "2nd floor (2 bedrooms, access to open roof)",
+      "2nd floor (2 bedrooms, access to roof)",
+      "Chalet",
+      "Chalet-First",
+      "Chalet-Ground",
+      "Chalet-Second",
+      "Delivery 1/2028",
+      "Delivery 1/2029",
+      "Delivery: 1/1/2028 (Not Sea View)",
+      "Delivery: 1/1/2029 (Not Sea View)",
+      "Garden's Facilities",
+      "Ground",
+      "Ground floor",
+      "New Phase (Delivery 1/1/2029)",
+      "Ray's Facilities",
+      "Ready to Move — Installments",
+      "Standalone Villa",
+      "Town House M",
+      "Twin House",
+      "Twin Villa (Not Sea View)",
+      "Twin house",
+      "Type",
+      "•"
     ],
     "amenities": [
       "Private beach",
@@ -2823,7 +3004,32 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "1st Floor", "1st floor", "2nd floor", "2nd floor (2 bedrooms, access to open roof)", "2nd floor (2 bedrooms, access to roof)", "Chalet", "Chalet-First", "Chalet-Ground", "Chalet-Second", "Delivery 1/2028", "Delivery 1/2029", "Delivery: 1/1/2028 (Not Sea View)", "Delivery: 1/1/2029 (Not Sea View)", "Garden's Facilities", "Ground", "Ground floor", "New Phase (Delivery 1/1/2029)", "Ray's Facilities", "Ready to Move — Installments", "Standalone Villa", "Town House M", "Twin House", "Twin Villa (Not Sea View)", "Twin house", "Type", "•"
+      "1st Floor",
+      "1st floor",
+      "2nd floor",
+      "2nd floor (2 bedrooms, access to open roof)",
+      "2nd floor (2 bedrooms, access to roof)",
+      "Chalet",
+      "Chalet-First",
+      "Chalet-Ground",
+      "Chalet-Second",
+      "Delivery 1/2028",
+      "Delivery 1/2029",
+      "Delivery: 1/1/2028 (Not Sea View)",
+      "Delivery: 1/1/2029 (Not Sea View)",
+      "Garden's Facilities",
+      "Ground",
+      "Ground floor",
+      "New Phase (Delivery 1/1/2029)",
+      "Ray's Facilities",
+      "Ready to Move — Installments",
+      "Standalone Villa",
+      "Town House M",
+      "Twin House",
+      "Twin Villa (Not Sea View)",
+      "Twin house",
+      "Type",
+      "•"
     ],
     "amenities": [
       "Private beach",
@@ -2868,7 +3074,32 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "1st Floor", "1st floor", "2nd floor", "2nd floor (2 bedrooms, access to open roof)", "2nd floor (2 bedrooms, access to roof)", "Chalet", "Chalet-First", "Chalet-Ground", "Chalet-Second", "Delivery 1/2028", "Delivery 1/2029", "Delivery: 1/1/2028 (Not Sea View)", "Delivery: 1/1/2029 (Not Sea View)", "Garden's Facilities", "Ground", "Ground floor", "New Phase (Delivery 1/1/2029)", "Ray's Facilities", "Ready to Move — Installments", "Standalone Villa", "Town House M", "Twin House", "Twin Villa (Not Sea View)", "Twin house", "Type", "•"
+      "1st Floor",
+      "1st floor",
+      "2nd floor",
+      "2nd floor (2 bedrooms, access to open roof)",
+      "2nd floor (2 bedrooms, access to roof)",
+      "Chalet",
+      "Chalet-First",
+      "Chalet-Ground",
+      "Chalet-Second",
+      "Delivery 1/2028",
+      "Delivery 1/2029",
+      "Delivery: 1/1/2028 (Not Sea View)",
+      "Delivery: 1/1/2029 (Not Sea View)",
+      "Garden's Facilities",
+      "Ground",
+      "Ground floor",
+      "New Phase (Delivery 1/1/2029)",
+      "Ray's Facilities",
+      "Ready to Move — Installments",
+      "Standalone Villa",
+      "Town House M",
+      "Twin House",
+      "Twin Villa (Not Sea View)",
+      "Twin house",
+      "Type",
+      "•"
     ],
     "amenities": [
       "Private beach",
@@ -2911,7 +3142,33 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "1st Floor", "1st floor", "2nd floor", "2nd floor (2 bedrooms, access to open roof)", "2nd floor (2 bedrooms, access to roof)", "Chalet", "Chalet-First", "Chalet-Ground", "Chalet-Second", "Delivery 1/2028", "Delivery 1/2029", "Delivery: 1/1/2028 (Not Sea View)", "Delivery: 1/1/2029 (Not Sea View)", "Garden's Facilities", "Ground", "Ground floor", "New Phase (Delivery 1/1/2029)", "Ray's Facilities", "Ready to Move — Installments", "Standalone Villa", "Town House M", "Townhouse", "Twin House", "Twin Villa (Not Sea View)", "Twin house", "Type", "•"
+      "1st Floor",
+      "1st floor",
+      "2nd floor",
+      "2nd floor (2 bedrooms, access to open roof)",
+      "2nd floor (2 bedrooms, access to roof)",
+      "Chalet",
+      "Chalet-First",
+      "Chalet-Ground",
+      "Chalet-Second",
+      "Delivery 1/2028",
+      "Delivery 1/2029",
+      "Delivery: 1/1/2028 (Not Sea View)",
+      "Delivery: 1/1/2029 (Not Sea View)",
+      "Garden's Facilities",
+      "Ground",
+      "Ground floor",
+      "New Phase (Delivery 1/1/2029)",
+      "Ray's Facilities",
+      "Ready to Move — Installments",
+      "Standalone Villa",
+      "Town House M",
+      "Townhouse",
+      "Twin House",
+      "Twin Villa (Not Sea View)",
+      "Twin house",
+      "Type",
+      "•"
     ],
     "amenities": [
       "Private beach",
@@ -3095,7 +3352,75 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "1 BR", "134", "181", "2 BR Duplex", "2 BR Ground", "2 BR LOFT", "2 BR Penthouse", "2 BR Typical", "2 BR's", "2 BR's Duplex", "210", "240", "3 BR Ground", "3 BR LOFT", "3 BR Penthouse", "3 BR Typical", "3 BR's", "3 BR's Duplex", "3 BR's Loft", "369", "4 BR Penthouse", "4 BR's", "99", "BUA", "Branded Residence", "Duplex Ground", "Duplex Upper", "Emerald: 5% down payment + 5% after 3 months, installments over 8 years  |  Club side residence: 5% down payment + 5% after 3 months, installments over 10 years", "Fourplex Upper", "From 57 SQM -> 14.3M", "G Chalet", "Phase 3 (E3): 5% + 5%, installments over 10 years  |  Park side residence: 0% Down payment, installments over 10 years", "Silversands - Silvertown", "Solana", "Standalone", "Studio", "TH Corner", "TH Middle", "The Cove", "TownH L", "TownH M", "TownH S", "Townhouse", "Townhouse Corner", "Townhouse Middle", "Twin House", "Twin House L", "Twinhouse", "Type", "Unit Type", "Upper Chalet", "V2", "V3", "V4", "V6", "V7", "V8", "Value", "Villa", "Villa 2A", "Villa 3B", "Villa 4A", "Villa L", "Villa M", "Villa S", "Zed East - CSR Building C&D (Serviced Apartments)", "Zed East - Emerald", "Zed West - E3", "Zed West - PSR"
+      "1 BR",
+      "134",
+      "181",
+      "2 BR Duplex",
+      "2 BR Ground",
+      "2 BR LOFT",
+      "2 BR Penthouse",
+      "2 BR Typical",
+      "2 BR's",
+      "2 BR's Duplex",
+      "210",
+      "240",
+      "3 BR Ground",
+      "3 BR LOFT",
+      "3 BR Penthouse",
+      "3 BR Typical",
+      "3 BR's",
+      "3 BR's Duplex",
+      "3 BR's Loft",
+      "369",
+      "4 BR Penthouse",
+      "4 BR's",
+      "99",
+      "BUA",
+      "Branded Residence",
+      "Duplex Ground",
+      "Duplex Upper",
+      "Emerald: 5% down payment + 5% after 3 months, installments over 8 years  |  Club side residence: 5% down payment + 5% after 3 months, installments over 10 years",
+      "Fourplex Upper",
+      "From 57 SQM -> 14.3M",
+      "G Chalet",
+      "Phase 3 (E3): 5% + 5%, installments over 10 years  |  Park side residence: 0% Down payment, installments over 10 years",
+      "Silversands - Silvertown",
+      "Solana",
+      "Standalone",
+      "Studio",
+      "TH Corner",
+      "TH Middle",
+      "The Cove",
+      "TownH L",
+      "TownH M",
+      "TownH S",
+      "Townhouse",
+      "Townhouse Corner",
+      "Townhouse Middle",
+      "Twin House",
+      "Twin House L",
+      "Twinhouse",
+      "Type",
+      "Unit Type",
+      "Upper Chalet",
+      "V2",
+      "V3",
+      "V4",
+      "V6",
+      "V7",
+      "V8",
+      "Value",
+      "Villa",
+      "Villa 2A",
+      "Villa 3B",
+      "Villa 4A",
+      "Villa L",
+      "Villa M",
+      "Villa S",
+      "Zed East - CSR Building C&D (Serviced Apartments)",
+      "Zed East - Emerald",
+      "Zed West - E3",
+      "Zed West - PSR"
     ],
     "amenities": [
       "Clubhouse",
@@ -3651,7 +3976,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment", "Family House", "Luxury Mansion", "Standalone Villa", "Townhouse", "Twin House"
+      "Apartment",
+      "Family House",
+      "Luxury Mansion",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -3705,7 +4035,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment", "Family House", "Townhouse"
+      "Apartment",
+      "Family House",
+      "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -3940,7 +4272,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment", "Town House", "Villa"
+      "Apartment",
+      "Town House",
+      "Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -3983,7 +4317,17 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment", "Garden Apartment", "I-Villa Garden", "I-Villa Roof", "One Storey House", "Penthouse", "Standalone Villa", "Town House", "Townhouse", "Twin House", "Villa"
+      "Apartment",
+      "Garden Apartment",
+      "I-Villa Garden",
+      "I-Villa Roof",
+      "One Storey House",
+      "Penthouse",
+      "Standalone Villa",
+      "Town House",
+      "Townhouse",
+      "Twin House",
+      "Villa"
     ],
     "amenities": [
       "Water promenade",
@@ -4033,7 +4377,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Lake House", "Standalone Villa", "Town House", "Townhouse", "Twin House"
+      "Lake House",
+      "Standalone Villa",
+      "Town House",
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -4077,7 +4425,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Grand View Villa", "Mansion", "Standalone Villa", "Twin House"
+      "Grand View Villa",
+      "Mansion",
+      "Standalone Villa",
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -4126,7 +4477,23 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment", "Beach House", "Garden Apartment", "Garden Millennial", "I-Apartment", "I-Villa", "I-Villa 3", "Lake House", "Millennial", "Park Side House", "Park Villa", "Sky Loft", "Standalone Villa", "Sun Roof", "Townhouse", "Twin House", "iVilla"
+      "Apartment",
+      "Beach House",
+      "Garden Apartment",
+      "Garden Millennial",
+      "I-Apartment",
+      "I-Villa",
+      "I-Villa 3",
+      "Lake House",
+      "Millennial",
+      "Park Side House",
+      "Park Villa",
+      "Sky Loft",
+      "Standalone Villa",
+      "Sun Roof",
+      "Townhouse",
+      "Twin House",
+      "iVilla"
     ],
     "amenities": [
       "Clubhouse",
@@ -4179,7 +4546,13 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Chalet", "I-Villa Roof Garden", "I-Villa Sky Garden", "Standalone Villa", "Townhouse", "Twin House", "Villa"
+      "Chalet",
+      "I-Villa Roof Garden",
+      "I-Villa Sky Garden",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House",
+      "Villa"
     ],
     "amenities": [
       "Private beachfront",
@@ -4229,7 +4602,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment", "Duplex", "Standalone Villa", "Town House", "Townhouse", "Villa"
+      "Apartment",
+      "Duplex",
+      "Standalone Villa",
+      "Town House",
+      "Townhouse",
+      "Villa"
     ],
     "amenities": [
       "Swimming pools",
@@ -4300,7 +4678,11 @@ export const compoundsGenerated: Compound[] = [
       "/projects/esse-residence/2.jpg",
       "/projects/esse-residence/3.jpg",
       "/projects/esse-residence/4.jpg",
-      "/projects/esse-residence/5.jpg"
+      "/projects/esse-residence/5.jpg",
+      "/projects/esse-residence/6.jpg",
+      "/projects/esse-residence/7.jpg",
+      "/projects/esse-residence/8.jpg",
+      "/projects/esse-residence/9.jpg"
     ],
     "blurb": "Esse Residence is a modern luxury residential compound by Cred Developments in the R8 District of the New Capital, focused on elegant architecture, smart planning, and extensive landscaping for families and professionals.",
     "paymentPlan": "10% down, installments up to 10 years",
@@ -4312,7 +4694,10 @@ export const compoundsGenerated: Compound[] = [
       "Elegant contemporary architecture",
       "Smart community planning"
     ],
-    "city": "Cairo-Suez Road, New Cairo, Egypt (within Sarai Compound)"
+    "city": "Cairo-Suez Road, New Cairo, Egypt (within Sarai Compound)",
+    "masterPlanUrl": "/Masterplans/esse-residence.jpg",
+    "brochureUrl": "/brochures/Sarai.pdf",
+    "brochureFileName": "Sarai.pdf"
   },
   {
     "slug": "rai-valleys",
@@ -5355,7 +5740,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet", "Standalone Villa", "Townhouse", "Twin House", "Villa"
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House",
+      "Villa"
     ],
     "amenities": [
       "Yacht Marina",
@@ -5510,7 +5899,77 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "1 BR", "134", "181", "2 BR Duplex", "2 BR Ground", "2 BR LOFT", "2 BR Penthouse", "2 BR Typical", "2 BR's", "2 BR's Duplex", "210", "240", "3 BR Ground", "3 BR LOFT", "3 BR Penthouse", "3 BR Typical", "3 BR's", "3 BR's Duplex", "3 BR's Loft", "369", "4 BR Penthouse", "4 BR's", "99", "Apartment", "BUA", "Branded Residence", "Chalet", "Duplex Ground", "Duplex Upper", "Emerald: 5% down payment + 5% after 3 months, installments over 8 years  |  Club side residence: 5% down payment + 5% after 3 months, installments over 10 years", "Fourplex Upper", "From 57 SQM -> 14.3M", "G Chalet", "Phase 3 (E3): 5% + 5%, installments over 10 years  |  Park side residence: 0% Down payment, installments over 10 years", "Silversands - Silvertown", "Solana", "Standalone", "Standalone Villa", "Studio", "TH Corner", "TH Middle", "The Cove", "TownH L", "TownH M", "TownH S", "Townhouse", "Townhouse Corner", "Townhouse Middle", "Twin House", "Twin House L", "Twinhouse", "Type", "Unit Type", "Upper Chalet", "V2", "V3", "V4", "V6", "V7", "V8", "Value", "Villa 2A", "Villa 3B", "Villa 4A", "Villa L", "Villa M", "Villa S", "Zed East - CSR Building C&D (Serviced Apartments)", "Zed East - Emerald", "Zed West - E3", "Zed West - PSR"
+      "1 BR",
+      "134",
+      "181",
+      "2 BR Duplex",
+      "2 BR Ground",
+      "2 BR LOFT",
+      "2 BR Penthouse",
+      "2 BR Typical",
+      "2 BR's",
+      "2 BR's Duplex",
+      "210",
+      "240",
+      "3 BR Ground",
+      "3 BR LOFT",
+      "3 BR Penthouse",
+      "3 BR Typical",
+      "3 BR's",
+      "3 BR's Duplex",
+      "3 BR's Loft",
+      "369",
+      "4 BR Penthouse",
+      "4 BR's",
+      "99",
+      "Apartment",
+      "BUA",
+      "Branded Residence",
+      "Chalet",
+      "Duplex Ground",
+      "Duplex Upper",
+      "Emerald: 5% down payment + 5% after 3 months, installments over 8 years  |  Club side residence: 5% down payment + 5% after 3 months, installments over 10 years",
+      "Fourplex Upper",
+      "From 57 SQM -> 14.3M",
+      "G Chalet",
+      "Phase 3 (E3): 5% + 5%, installments over 10 years  |  Park side residence: 0% Down payment, installments over 10 years",
+      "Silversands - Silvertown",
+      "Solana",
+      "Standalone",
+      "Standalone Villa",
+      "Studio",
+      "TH Corner",
+      "TH Middle",
+      "The Cove",
+      "TownH L",
+      "TownH M",
+      "TownH S",
+      "Townhouse",
+      "Townhouse Corner",
+      "Townhouse Middle",
+      "Twin House",
+      "Twin House L",
+      "Twinhouse",
+      "Type",
+      "Unit Type",
+      "Upper Chalet",
+      "V2",
+      "V3",
+      "V4",
+      "V6",
+      "V7",
+      "V8",
+      "Value",
+      "Villa 2A",
+      "Villa 3B",
+      "Villa 4A",
+      "Villa L",
+      "Villa M",
+      "Villa S",
+      "Zed East - CSR Building C&D (Serviced Apartments)",
+      "Zed East - Emerald",
+      "Zed West - E3",
+      "Zed West - PSR"
     ],
     "amenities": [
       "1.2 km Beachfront",
@@ -5711,7 +6170,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Apartment", "Chalet", "Standalone Villa", "Townhouse", "Twin House", "Villa"
+      "Apartment",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House",
+      "Villa"
     ],
     "amenities": [
       "4.8 km Beachfront",
@@ -6087,7 +6551,27 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "1st Floor", "1st floor", "1st floor (Sea view)", "2nd Floor", "2nd floor", "Chalet", "Chalet 1st Floor", "Chalet Ground", "Chalet Ground (Sea View)", "Chalet Ground Floor", "Delivery April 2027 (Sea View)", "Delivery April 2028 (Not Sea View)", "Ground", "Ground (Sea view)", "Penthouse (Pool view, 4bds)", "Standalone (Not sea view)", "Standalone Villa", "Townhouse", "Twin House", "Twin House (Not sea view)", "Type"
+      "1st Floor",
+      "1st floor",
+      "1st floor (Sea view)",
+      "2nd Floor",
+      "2nd floor",
+      "Chalet",
+      "Chalet 1st Floor",
+      "Chalet Ground",
+      "Chalet Ground (Sea View)",
+      "Chalet Ground Floor",
+      "Delivery April 2027 (Sea View)",
+      "Delivery April 2028 (Not Sea View)",
+      "Ground",
+      "Ground (Sea view)",
+      "Penthouse (Pool view, 4bds)",
+      "Standalone (Not sea view)",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House",
+      "Twin House (Not sea view)",
+      "Type"
     ],
     "amenities": [
       "Private beach",
@@ -6338,7 +6822,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet", "Standalone Villa", "Town House", "Townhouse", "Twin House", "Villa"
+      "Chalet",
+      "Standalone Villa",
+      "Town House",
+      "Townhouse",
+      "Twin House",
+      "Villa"
     ],
     "amenities": [
       "Private beach",
@@ -7090,7 +7579,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Apartment", "Beach House", "Standalone Villa", "Town House", "Townhouse", "Twin House"
+      "Apartment",
+      "Beach House",
+      "Standalone Villa",
+      "Town House",
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "Private beach",
@@ -7412,7 +7906,27 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "1st Floor", "1st floor", "1st floor (Sea view)", "2nd Floor", "2nd floor", "Chalet", "Chalet 1st Floor", "Chalet Ground", "Chalet Ground (Sea View)", "Chalet Ground Floor", "Delivery April 2027 (Sea View)", "Delivery April 2028 (Not Sea View)", "Ground", "Ground (Sea view)", "Penthouse (Pool view, 4bds)", "Standalone (Not sea view)", "Standalone Villa", "Twin House", "Twin House (Not sea view)", "Type", "Villa"
+      "1st Floor",
+      "1st floor",
+      "1st floor (Sea view)",
+      "2nd Floor",
+      "2nd floor",
+      "Chalet",
+      "Chalet 1st Floor",
+      "Chalet Ground",
+      "Chalet Ground (Sea View)",
+      "Chalet Ground Floor",
+      "Delivery April 2027 (Sea View)",
+      "Delivery April 2028 (Not Sea View)",
+      "Ground",
+      "Ground (Sea view)",
+      "Penthouse (Pool view, 4bds)",
+      "Standalone (Not sea view)",
+      "Standalone Villa",
+      "Twin House",
+      "Twin House (Not sea view)",
+      "Type",
+      "Villa"
     ],
     "amenities": [
       "Private Beach",
@@ -9032,7 +9546,15 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/fifth-square/1.jpg",
     "gallery": [
-      "/projects/fifth-square/1.jpg"
+      "/projects/fifth-square/1.jpg",
+      "/projects/fifth-square/2.jpg",
+      "/projects/fifth-square/3.jpg",
+      "/projects/fifth-square/4.jpg",
+      "/projects/fifth-square/5.jpg",
+      "/projects/fifth-square/6.jpg",
+      "/projects/fifth-square/7.jpg",
+      "/projects/fifth-square/8.jpg",
+      "/projects/fifth-square/9.jpg"
     ],
     "blurb": "Fifth Square is a premium residential community by Al Marasem spanning approximately 158 acres in New Cairo's Fifth Settlement, featuring contemporary homes surrounded by landscaped gardens, retail, and leisure facilities.",
     "paymentPlan": "25% / 6 yrs",
@@ -9045,7 +9567,10 @@ export const compoundsGenerated: Compound[] = [
       "Directly on North 90 Street",
       "Minutes from AUC and Cairo Festival City"
     ],
-    "type": "Residential"
+    "type": "Residential",
+    "masterPlanUrl": "/Masterplans/fifth-square.jpg",
+    "brochureUrl": "/brochures/Fifth Square E brochure.pdf",
+    "brochureFileName": "Fifth Square E brochure.pdf"
   },
   {
     "slug": "lake-residence-by-rotana",
@@ -9434,7 +9959,10 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/katameya-heights/1.jpg",
     "gallery": [
-      "/projects/katameya-heights/1.jpg"
+      "/projects/katameya-heights/1.jpg",
+      "/projects/katameya-heights/2.jpg",
+      "/projects/katameya-heights/3.jpg",
+      "/projects/katameya-heights/4.jpg"
     ],
     "blurb": "Katameya Heights is a flagship development in New Cairo (Tagamo3) by Tameer, offering modern residences with full amenities for year-round living.",
     "paymentPlan": "10% down payment over 9 years equal installments",
@@ -9451,7 +9979,7 @@ export const compoundsGenerated: Compound[] = [
       "Private Beach",
       "Gym & Spa"
     ],
-    "masterPlanUrl": "/Masterplans/katameya heights.jpg"
+    "masterPlanUrl": "/Masterplans/katameya-heights.jpg"
   },
   {
     "slug": "katameya-dunes",
@@ -9481,7 +10009,11 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/katameya-dunes/1.jpg",
     "gallery": [
-      "/projects/katameya-dunes/1.jpg"
+      "/projects/katameya-dunes/1.jpg",
+      "/projects/katameya-dunes/2.jpg",
+      "/projects/katameya-dunes/3.jpg",
+      "/projects/katameya-dunes/4.jpg",
+      "/projects/katameya-dunes/5.jpg"
     ],
     "blurb": "Katameya Dunes is a flagship development in New Cairo (Tagamo3) by Starlight Developments, offering modern residences with full amenities for year-round living.",
     "paymentPlan": "10% down payment over 9 years equal installments",
@@ -9497,7 +10029,7 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Marina"
     ],
-    "masterPlanUrl": "/Masterplans/katameya dunes.jpg"
+    "masterPlanUrl": "/Masterplans/katameya-dunes.jpg"
   },
   {
     "slug": "al-rehab",
@@ -9868,7 +10400,77 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "1 BR", "134", "181", "2 BR Duplex", "2 BR Ground", "2 BR LOFT", "2 BR Penthouse", "2 BR Typical", "2 BR's", "2 BR's Duplex", "210", "240", "3 BR Ground", "3 BR LOFT", "3 BR Penthouse", "3 BR Typical", "3 BR's", "3 BR's Duplex", "3 BR's Loft", "369", "4 BR Penthouse", "4 BR's", "99", "Apartment", "BUA", "Branded Residence", "Duplex Ground", "Duplex Upper", "Emerald: 5% down payment + 5% after 3 months, installments over 8 years  |  Club side residence: 5% down payment + 5% after 3 months, installments over 10 years", "Fourplex Upper", "From 57 SQM -> 14.3M", "G Chalet", "Loft", "Phase 3 (E3): 5% + 5%, installments over 10 years  |  Park side residence: 0% Down payment, installments over 10 years", "Serviced Apartment", "Silversands - Silvertown", "Solana", "Standalone", "Studio", "TH Corner", "TH Middle", "The Cove", "TownH L", "TownH M", "TownH S", "Townhouse Corner", "Townhouse Middle", "Twin House", "Twin House L", "Twinhouse", "Type", "Unit Type", "Upper Chalet", "V2", "V3", "V4", "V6", "V7", "V8", "Value", "Villa", "Villa 2A", "Villa 3B", "Villa 4A", "Villa L", "Villa M", "Villa S", "Zed East - CSR Building C&D (Serviced Apartments)", "Zed East - Emerald", "Zed West - E3", "Zed West - PSR"
+      "1 BR",
+      "134",
+      "181",
+      "2 BR Duplex",
+      "2 BR Ground",
+      "2 BR LOFT",
+      "2 BR Penthouse",
+      "2 BR Typical",
+      "2 BR's",
+      "2 BR's Duplex",
+      "210",
+      "240",
+      "3 BR Ground",
+      "3 BR LOFT",
+      "3 BR Penthouse",
+      "3 BR Typical",
+      "3 BR's",
+      "3 BR's Duplex",
+      "3 BR's Loft",
+      "369",
+      "4 BR Penthouse",
+      "4 BR's",
+      "99",
+      "Apartment",
+      "BUA",
+      "Branded Residence",
+      "Duplex Ground",
+      "Duplex Upper",
+      "Emerald: 5% down payment + 5% after 3 months, installments over 8 years  |  Club side residence: 5% down payment + 5% after 3 months, installments over 10 years",
+      "Fourplex Upper",
+      "From 57 SQM -> 14.3M",
+      "G Chalet",
+      "Loft",
+      "Phase 3 (E3): 5% + 5%, installments over 10 years  |  Park side residence: 0% Down payment, installments over 10 years",
+      "Serviced Apartment",
+      "Silversands - Silvertown",
+      "Solana",
+      "Standalone",
+      "Studio",
+      "TH Corner",
+      "TH Middle",
+      "The Cove",
+      "TownH L",
+      "TownH M",
+      "TownH S",
+      "Townhouse Corner",
+      "Townhouse Middle",
+      "Twin House",
+      "Twin House L",
+      "Twinhouse",
+      "Type",
+      "Unit Type",
+      "Upper Chalet",
+      "V2",
+      "V3",
+      "V4",
+      "V6",
+      "V7",
+      "V8",
+      "Value",
+      "Villa",
+      "Villa 2A",
+      "Villa 3B",
+      "Villa 4A",
+      "Villa L",
+      "Villa M",
+      "Villa S",
+      "Zed East - CSR Building C&D (Serviced Apartments)",
+      "Zed East - Emerald",
+      "Zed West - E3",
+      "Zed West - PSR"
     ],
     "amenities": [
       "Central park",
@@ -10933,10 +11535,15 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/esse-residence-nac/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
+      "/projects/esse-residence-nac/1.jpg",
+      "/projects/esse-residence-nac/2.jpg",
+      "/projects/esse-residence-nac/3.jpg",
+      "/projects/esse-residence-nac/4.jpg",
+      "/projects/esse-residence-nac/5.jpg",
+      "/projects/esse-residence-nac/6.jpg",
+      "/projects/esse-residence-nac/7.jpg",
+      "/projects/esse-residence-nac/8.jpg",
+      "/projects/esse-residence-nac/9.jpg"
     ],
     "blurb": "Esse Residence NAC by Cred Developments — a Residential community offering refined living with full amenities and strong location advantages.",
     "paymentPlan": "5% down payment over 7 years equal installments",
@@ -10949,7 +11556,10 @@ export const compoundsGenerated: Compound[] = [
       "Kids Destination",
       "Cycling Track",
       "Private Beach"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/esse-residence-nac.jpg",
+    "brochureUrl": "/brochures/Sarai.pdf",
+    "brochureFileName": "Sarai.pdf"
   },
   {
     "slug": "business-district-nac",
@@ -11584,7 +12194,28 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "1st Floor", "1st floor", "1st floor (Sea view)", "2nd Floor", "2nd floor", "Apartment", "Chalet", "Chalet 1st Floor", "Chalet Ground", "Chalet Ground (Sea View)", "Chalet Ground Floor", "Delivery April 2027 (Sea View)", "Delivery April 2028 (Not Sea View)", "Ground", "Ground (Sea view)", "Penthouse", "Penthouse (Pool view, 4bds)", "Standalone (Not sea view)", "Standalone Villa", "Twin House", "Twin House (Not sea view)", "Type"
+      "1st Floor",
+      "1st floor",
+      "1st floor (Sea view)",
+      "2nd Floor",
+      "2nd floor",
+      "Apartment",
+      "Chalet",
+      "Chalet 1st Floor",
+      "Chalet Ground",
+      "Chalet Ground (Sea View)",
+      "Chalet Ground Floor",
+      "Delivery April 2027 (Sea View)",
+      "Delivery April 2028 (Not Sea View)",
+      "Ground",
+      "Ground (Sea view)",
+      "Penthouse",
+      "Penthouse (Pool view, 4bds)",
+      "Standalone (Not sea view)",
+      "Standalone Villa",
+      "Twin House",
+      "Twin House (Not sea view)",
+      "Type"
     ],
     "amenities": [
       "Private beach",
@@ -12390,7 +13021,17 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Town House Corner", "Town House Middle", "Twin House", "Twin House A", "Twin House B", "Villa 2A", "Villa 2B", "Villa A1", "Villa V1", "Villa V2", "Villa V3"
+      "Town House Corner",
+      "Town House Middle",
+      "Twin House",
+      "Twin House A",
+      "Twin House B",
+      "Villa 2A",
+      "Villa 2B",
+      "Villa A1",
+      "Villa V1",
+      "Villa V2",
+      "Villa V3"
     ],
     "amenities": [
       "Clubhouse",
@@ -13174,7 +13815,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Apartment", "Chalet", "Duplex", "Penthouse", "Standalone Villa", "Villa"
+      "Apartment",
+      "Chalet",
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Villa"
     ],
     "amenities": [
       "Exclusive Beachfront",
@@ -13827,7 +14473,10 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/katameya-gardens/1.jpg",
     "gallery": [
-      "/projects/katameya-gardens/1.jpg"
+      "/projects/katameya-gardens/1.jpg",
+      "/projects/katameya-gardens/2.jpg",
+      "/projects/katameya-gardens/3.jpg",
+      "/projects/katameya-gardens/4.jpg"
     ],
     "blurb": "Spanning 100 acres in the elite Golden Square district of New Cairo, Katameya Gardens is an ultra-low-density residential sanctuary designed for ultimate privacy and distinction. Located directly behind the American University in Cairo (AUC), the project features a master-planned community limited to just 342 primary villa and high-end residential estates. The compound blends contemporary architecture with German-designed natural landscapes, wide landscaped corridors, and artificial water features.",
     "highlights": [
@@ -13838,7 +14487,9 @@ export const compoundsGenerated: Compound[] = [
       "Diverse Luxury Inventory: Comprises spacious standalone villas, twin houses, townhouses, and high-end low-rise apartments."
     ],
     "paymentPlan": "30% / 4 yrs",
-    "masterPlanUrl": "/Masterplans/katameya-gardens.jpg"
+    "masterPlanUrl": "/Masterplans/katameya-gardens.jpg",
+    "brochureUrl": "/brochures/katamya-gardens.pdf",
+    "brochureFileName": "katamya-gardens.pdf"
   },
   {
     "slug": "sephora-heights",
@@ -14039,11 +14690,17 @@ export const compoundsGenerated: Compound[] = [
       "Safe children’s outdoor play zones and parks",
       "Underground and surface resident parking facilities"
     ],
-    "hero": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "hero": "/projects/galleria-moon-valley/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+      "/projects/galleria-moon-valley/1.jpg",
+      "/projects/galleria-moon-valley/2.jpg",
+      "/projects/galleria-moon-valley/3.jpg",
+      "/projects/galleria-moon-valley/4.jpg",
+      "/projects/galleria-moon-valley/5.jpg",
+      "/projects/galleria-moon-valley/6.jpg",
+      "/projects/galleria-moon-valley/7.jpg",
+      "/projects/galleria-moon-valley/8.jpg",
+      "/projects/galleria-moon-valley/9.jpg"
     ],
     "blurb": "Spanning 71 acres in the prestigious Golden Square district of New Cairo's Fifth Settlement, Galleria Moon Valley is an upscale, contemporary residential community designed with a heavy emphasis on art, nature, and modern architecture. Developed by Arabia Holding, the compound features sleek, low-rise buildings characterized by expansive glass facades, rooftop terraces, and natural stone finishes. The master plan allocates nearly 80% of the land to lush green landscapes, cascading water features, sculpture gardens, and open recreational spaces.",
     "highlights": [
@@ -14053,7 +14710,10 @@ export const compoundsGenerated: Compound[] = [
       "Art-Inspired Design: Integrates open-air art galleries, sculpture installations, and dedicated creative zones throughout the landscape.",
       "Diverse Real Estate Inventory: Comprises luxury apartments, spacious penthouses with private roof terraces, and ground-floor units with private gardens."
     ],
-    "paymentPlan": "10% / 5 yrs"
+    "paymentPlan": "10% / 5 yrs",
+    "masterPlanUrl": "/Masterplans/galleria-moon-valley.jpg",
+    "brochureUrl": "/brochures/Galleria-Brochure_.pdf",
+    "brochureFileName": "Galleria-Brochure_.pdf"
   },
   {
     "slug": "golden-heights-1",
@@ -14115,11 +14775,17 @@ export const compoundsGenerated: Compound[] = [
       "Safe children’s outdoor play zones and landscaped parks",
       "Private internal parking bays and wide, vehicle-friendly avenues"
     ],
-    "hero": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+    "hero": "/projects/golden-heights-2/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80"
+      "/projects/golden-heights-2/1.jpg",
+      "/projects/golden-heights-2/2.jpg",
+      "/projects/golden-heights-2/3.jpg",
+      "/projects/golden-heights-2/4.jpg",
+      "/projects/golden-heights-2/5.jpg",
+      "/projects/golden-heights-2/6.jpg",
+      "/projects/golden-heights-2/7.jpg",
+      "/projects/golden-heights-2/8.jpg",
+      "/projects/golden-heights-2/9.jpg"
     ],
     "blurb": "Expanding on the success of its predecessor, Golden Heights 2 is an upscale, low-density gated community situated right in the heart of New Cairo's Northern Investors district (directly opposite Al Rehab Gate 9). Developed by Novus Stanza, the compound is tailored exclusively for luxury villa living. The master plan prioritizes open space and privacy, dedicating roughly 78% to 80% of its land area to sprawling green landscapes, manicured gardens, and water features, while keeping the built-up footprint minimal.",
     "highlights": [
@@ -14129,7 +14795,10 @@ export const compoundsGenerated: Compound[] = [
       "Strategic Proximity: Just 8 minutes from the American University in Cairo (AUC), 10 minutes from Cairo Festival City and the New Administrative Capital, and 15 minutes from Cairo International Airport.",
       "Spansive Real Estate Inventory: Features generous architectural layouts (such as Types A through H variants) with grand land plots, private gardens, and multi-bedroom configurations ranging from 300 to over 750 square meters."
     ],
-    "paymentPlan": "25% / 5 yrs"
+    "paymentPlan": "25% / 5 yrs",
+    "masterPlanUrl": "/Masterplans/golden-heights-2.jpg",
+    "brochureUrl": "/brochures/golden heights.pdf",
+    "brochureFileName": "golden heights.pdf"
   },
   {
     "slug": "waterway-1",
@@ -14429,7 +15098,12 @@ export const compoundsGenerated: Compound[] = [
       "/projects/city-gate/1.jpg",
       "/projects/city-gate/2.jpg",
       "/projects/city-gate/3.jpg",
-      "/projects/city-gate/4.jpg"
+      "/projects/city-gate/4.jpg",
+      "/projects/city-gate/5.jpg",
+      "/projects/city-gate/6.jpg",
+      "/projects/city-gate/7.jpg",
+      "/projects/city-gate/8.jpg",
+      "/projects/city-gate/9.jpg"
     ],
     "blurb": "City Gate by Qatari Diar is a sprawling 8.5 million square meter self-sustained city in New Cairo, positioned as the gateway to the New Capital. It features an 18-hole championship golf course, luxurious villas, and modern apartments surrounded by 80% open green space.",
     "paymentPlan": "10% down payment over 8 years equal installments",
@@ -14446,7 +15120,7 @@ export const compoundsGenerated: Compound[] = [
     "brochureUrl": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
     "brochureFileName": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
     "brochureType": "application/pdf",
-    "masterPlanUrl": "/Masterplans/city gate.pdf"
+    "masterPlanUrl": "/Masterplans/city-gate.jpg"
   },
   {
     "slug": "marassi-red-sea",
