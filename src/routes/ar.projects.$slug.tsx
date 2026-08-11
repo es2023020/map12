@@ -379,7 +379,13 @@ function ArabicCompoundPage() {
       </div>
 
       {/* Register Interest Modal (Arabic) */}
-      <Dialog open={interestModalOpen} onOpenChange={setInterestModalOpen}>
+      <Dialog
+        open={interestModalOpen}
+        onOpenChange={(open) => {
+          setInterestModalOpen(open);
+          if (!open) setLeadUnit("");
+        }}
+      >
         <DialogContent
           className="max-w-md rounded-3xl border border-border/80 bg-card p-6 shadow-2xl backdrop-blur-xl animate-fade-in z-50 text-right"
           dir="rtl"
