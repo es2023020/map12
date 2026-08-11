@@ -77,9 +77,8 @@ export const compoundsGenerated: Compound[] = [
       "Medical center",
       "24/7 security"
     ],
-    "hero": "/projects/belle-vie/3.jpg",
+    "hero": "/projects/belle-vie/1.jpg",
     "gallery": [
-      "/projects/belle-vie/0.jpg",
       "/projects/belle-vie/1.jpg",
       "/projects/belle-vie/2.jpg",
       "/projects/belle-vie/3.jpg",
@@ -262,8 +261,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mivida/5.jpg",
       "/projects/mivida/6.jpg",
       "/projects/mivida/7.jpg",
-      "/projects/mivida/8.jpg",
-      "/projects/mivida/9.jpg"
+      "/projects/mivida/8.jpg"
     ],
     "blurb": "Mivida is a premium development by Emaar Misr in New Cairo, presenting high-end unit designs and world-class compound amenities.",
     "paymentPlan": "10% down · 7 years equal installments",
@@ -478,7 +476,8 @@ export const compoundsGenerated: Compound[] = [
     "hero": "/projects/kinda-residence/1.jpg",
     "gallery": [
       "/projects/kinda-residence/1.jpg",
-      "/projects/kinda-residence/2.jpg"
+      "/projects/kinda-residence/2.jpg",
+      "/projects/kinda-residence/3.jpg"
     ],
     "blurb": "Kinda Residence is a premium development by Madinet Masr in New Cairo, presenting high-end unit designs and world-class compound amenities.",
     "paymentPlan": "10% down · 7 years equal installments",
@@ -1029,12 +1028,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/kynd-residence-gaia/1.jpg",
     "gallery": [
-      "/projects/gaia/1.jpg",
-      "/projects/gaia/2.jpg",
-      "/projects/gaia/3.jpg",
-      "/projects/gaia/4.jpg",
-      "/projects/gaia/5.jpg",
-      "/projects/gaia/6.jpg"
+      "/projects/kynd-residence-gaia/1.jpg"
     ],
     "blurb": "Kynd Residence Gaia is a premium development by Al Ahly Sabbour in Ras El Hekma, presenting high-end unit designs and world-class compound amenities.",
     "paymentPlan": "10% down · 7 years equal installments",
@@ -1076,14 +1070,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/saada-sahel/1.jpg",
     "gallery": [
-      "/projects/saada-sahel/1.jpg",
-      "/projects/saada-sahel/2.jpg",
-      "/projects/saada-sahel/3.jpg",
-      "/projects/saada-sahel/4.jpg",
-      "/projects/saada-sahel/5.jpg",
-      "/projects/saada-sahel/6.jpg",
-      "/projects/saada-sahel/7.jpg",
-      "/projects/saada-sahel/8.jpg"
+      "/projects/saada-sahel/1.jpg"
     ],
     "blurb": "Saada Sahel is a premium development by Horizon Egypt Developments in Ras El Hekma, presenting high-end unit designs and world-class compound amenities.",
     "paymentPlan": "10% down · 7 years equal installments",
@@ -1271,16 +1258,10 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/elea-azha-north/1.jpg",
     "gallery": [
-      "/projects/azha-north-coast/1.jpg",
-      "/projects/azha-north-coast/2.jpg",
-      "/projects/azha-north-coast/3.jpg",
-      "/projects/azha-north-coast/4.jpg",
-      "/projects/azha-north-coast/5.jpg",
-      "/projects/azha-north-coast/6.jpg",
-      "/projects/azha-north-coast/7.jpg",
-      "/projects/azha-north-coast/8.jpg",
-      "/projects/azha-north-coast/9.jpg",
-      "/projects/azha-north-coast/10.jpg"
+      "/projects/elea-azha-north/1.jpg",
+      "/projects/elea-azha-north/2.jpg",
+      "/projects/elea-azha-north/3.jpg",
+      "/projects/elea-azha-north/4.jpg"
     ],
     "blurb": "Elea is the newest launch in the Azha Ras El Hekma mega-project by Madaar Development. Situated on the 214th km of Alexandria - Marsa Matrouh Road (International Coastal Road), the resort is one of the elite summer destinations in North Coast.Elea Azha Ras El Hekma boasts a lavish collection of lagoon-view properties.",
     "paymentPlan": "5% down · 8 years equal installments",
@@ -1324,8 +1305,7 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "/projects/aqua-lagoons-june/1.jpg",
       "/projects/aqua-lagoons-june/2.jpg",
-      "/projects/aqua-lagoons-june/3.jpg",
-      "/projects/aqua-lagoons-june/4.jpg"
+      "/projects/aqua-lagoons-june/3.jpg"
     ],
     "blurb": "Sodic is introducing a serene retreat inside June Resort, Aqua Lagoons. The phase offers vacationers an island-living coastal experience, with its houses connected through a network of sparkling lagoons.Aqua Lagoons June Ras El Hekma has a strategic location on Kilo 194.",
     "paymentPlan": "5% down · 7 years equal installments",
@@ -1366,8 +1346,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/sadaf/1.jpg",
     "gallery": [
-      "/projects/sadaf/1.jpg",
-      "/projects/sadaf/2.jpg"
+      "/projects/sadaf/1.jpg"
     ],
     "blurb": "New Plan is building a luxurious coastal destination overlooking the Mediterranean Sea, Sadaf North Coast Resort, and it extends over 22 acres of land. The project has a strategic location, and it is on the 68th km of International Coastal Road, also known as Alexandria - Marsa Matrouh Road.New Plan smartly planned Sadaf’s development.",
     "paymentPlan": "10% down · 7 years equal installments",
@@ -1380,7 +1359,8 @@ export const compoundsGenerated: Compound[] = [
       "Exclusive beach club",
       "Ready 2028"
     ],
-    "city": "Sadaf, sidi-abdelrahman"
+    "city": "Sadaf, sidi-abdelrahman",
+    "masterPlanUrl": "/Masterplans/sadaf.jpg"
   },
   {
     "slug": "commonhaus",
@@ -1492,10 +1472,17 @@ export const compoundsGenerated: Compound[] = [
       "Outdoor Living & Gym Area",
       "24/7 Gated Security & Patrols"
     ],
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/park-sight/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
+      "/projects/park-sight/1.jpg",
+      "/projects/park-sight/2.jpg",
+      "/projects/park-sight/3.jpg",
+      "/projects/park-sight/4.jpg",
+      "/projects/park-sight/5.jpg",
+      "/projects/park-sight/6.jpg",
+      "/projects/park-sight/7.jpg",
+      "/projects/park-sight/8.jpg",
+      "/projects/park-sight/9.jpg"
     ],
     "blurb": "Park Sight is a large-scale, 140-acre residential and lifestyle community in the New Administrative Capital. Designed by Mimar Architecture, the development integrates modern residential neighborhoods with a signature 40-acre connected green park, cycling tracks, and an expansive commercial district.",
     "paymentPlan": "10% down payment · 7 years equal installments",
@@ -1508,7 +1495,8 @@ export const compoundsGenerated: Compound[] = [
       "Strategic Axis Proximity: Located directly off the Southern Mohamed Bin Zayed Axis.",
       "Serviced Apartments: Professional hospitality features and concierge services."
     ],
-    "brochureUrl": "/brochures/Park-Sight-E-Brochure.pdf"
+    "brochureUrl": "/brochures/Park-Sight-E-Brochure.pdf",
+    "masterPlanUrl": "/Masterplans/park-sight.jpg"
   },
   {
     "slug": "silvertown-lagoon-cabanas",
@@ -1579,8 +1567,7 @@ export const compoundsGenerated: Compound[] = [
     "hero": "/projects/marresidence/1.jpg",
     "gallery": [
       "/projects/marresidence/1.jpg",
-      "/projects/marresidence/2.jpg",
-      "/projects/marresidence/3.jpg"
+      "/projects/marresidence/2.jpg"
     ],
     "blurb": "Marresidence Al Marasem is a premium serviced residence phase inside Mar Ville Compound, New Zayed, developed by Al Marasem Development. Following the remarkable success of Rotana Lake Residence in New Cairo, Al Marasem is now replicating the same lavish hospitality experience in West Cairo.Marresidence delivers fully furnished, fully finished luxury hotel apartments managed by Rotana, one of the world's most recognized hospitality brands.",
     "paymentPlan": "10% down · 8 years equal installments",
@@ -1620,10 +1607,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/chapters-residence/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=80"
+      "/projects/chapters-residence/1.jpg"
     ],
     "blurb": "Chapters Residence by Jadeer Developments is a modern, design-forward community in the New Capital's R8 district, offering smart apartments and vibrant public spaces.",
     "paymentPlan": "10% down · 7 years equal installments",
@@ -1663,11 +1647,17 @@ export const compoundsGenerated: Compound[] = [
       "Gated Community 24/7 Security",
       "Dining & Boutique Retail Spaces"
     ],
-    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+    "hero": "/projects/vea-new-cairo/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80"
+      "/projects/vea-new-cairo/1.jpg",
+      "/projects/vea-new-cairo/2.jpg",
+      "/projects/vea-new-cairo/3.jpg",
+      "/projects/vea-new-cairo/4.jpg",
+      "/projects/vea-new-cairo/5.jpg",
+      "/projects/vea-new-cairo/6.jpg",
+      "/projects/vea-new-cairo/7.jpg",
+      "/projects/vea-new-cairo/8.jpg",
+      "/projects/vea-new-cairo/9.jpg"
     ],
     "blurb": "Vea New Cairo is an ultra-exclusive, all-villas boutique community spanning 100 acres in the prestigious Sixth Settlement of New Cairo. Delivering 417 premium single-family villa keys, the masterplan emphasizes nature-led identity, wide streetscapes, wellness parks, and cooling water features that seamlessly blend architecture with landscapes.",
     "paymentPlan": "10% down payment · 8 years equal installments",
@@ -1680,7 +1670,7 @@ export const compoundsGenerated: Compound[] = [
       "Sixth Settlement Premium Spot: Placed in the heart of New Cairo's emerging luxury district.",
       "Nature-Led Wellness Masterplan: Extensive outdoor wellness, parklands, and cooling lagoons."
     ],
-    "masterPlanUrl": "/Masterplans/VEA.jpg",
+    "masterPlanUrl": "/Masterplans/vea-new-cairo.jpg",
     "brochureUrl": "/brochures/VEA-E-BROCHURE.pdf"
   },
   {
@@ -1792,7 +1782,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/coral-coves/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80"
+      "/projects/coral-coves/1.jpg"
     ],
     "blurb": "Coral Coves by Somabay Developments is an elevated cliffside coastal neighborhood on the Red Sea coast offering Mediterranean-inspired architecture, golf access, and sea views.",
     "paymentPlan": "5% down payment, remaining balance spread over up to 8 years in equal installments",
@@ -2003,8 +1993,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/club-hill-solare/1.jpg",
     "gallery": [
-      "/projects/club-hill-solare/1.jpg",
-      "/projects/club-hill-solare/2.jpg"
+      "/projects/club-hill-solare/1.jpg"
     ],
     "blurb": "Solare Ras El Hekma, one of Misr Italia’s luxurious projects, was developed on 7 distinct levels, one of which is Club Hill. The neighborhood is a Miami-inspired phase, rising above sea level by 30 meters.",
     "paymentPlan": "10% down · 7 years equal installments",
@@ -2091,8 +2080,7 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "/projects/keeva/1.jpg",
       "/projects/keeva/2.jpg",
-      "/projects/keeva/3.jpg",
-      "/projects/keeva/4.jpg"
+      "/projects/keeva/3.jpg"
     ],
     "blurb": "Keeva is a premium residential compound by Al Ahly Sabbour spread across approximately 144 acres in New Zayed City, offering modern homes surrounded by landscaped parks and integrated services near Sheikh Zayed.",
     "paymentPlan": "5% down, installments up to 9 years",
@@ -2142,7 +2130,9 @@ export const compoundsGenerated: Compound[] = [
     "hero": "/projects/31-west/1.jpg",
     "gallery": [
       "/projects/31-west/1.jpg",
-      "/projects/31-west/2.jpg"
+      "/projects/31-west/2.jpg",
+      "/projects/31-west/3.jpg",
+      "/projects/31-west/4.jpg"
     ],
     "blurb": "31 West is a modern gated residential community spanning approximately 31 acres in 6th of October City, designed around open green landscapes, water features, and pedestrian-friendly spaces. The project combines contemporary architecture with low-density planning to provide a balanced lifestyle for families and professionals.",
     "paymentPlan": "Apartments: 5% down + 5% after 3 mos, remaining over 8 yrs | Villas: 5% down + 5% after 3 mos, remaining over 9 yrs",
@@ -2183,7 +2173,15 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/business-district/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+      "/projects/business-district/1.jpg",
+      "/projects/business-district/2.jpg",
+      "/projects/business-district/3.jpg",
+      "/projects/business-district/4.jpg",
+      "/projects/business-district/5.jpg",
+      "/projects/business-district/6.jpg",
+      "/projects/business-district/7.jpg",
+      "/projects/business-district/8.jpg",
+      "/projects/business-district/9.jpg"
     ],
     "blurb": "Business District is a commercial and retail development by M Squared Developments in New Cairo offering premium office and retail spaces.",
     "paymentPlan": "Contact PropTrack advisor for details",
@@ -2194,7 +2192,8 @@ export const compoundsGenerated: Compound[] = [
       "Prime New Cairo commercial",
       "Modern workspaces"
     ],
-    "city": "New Cairo, Egypt"
+    "city": "New Cairo, Egypt",
+    "masterPlanUrl": "/Masterplans/business-district.jpg"
   },
   {
     "slug": "mist",
@@ -2265,11 +2264,9 @@ export const compoundsGenerated: Compound[] = [
       "Children’s playgrounds, theme parks, and on-site community nursery",
       "Secure underground and surface resident parking with full mobility accessibility (wheelchair friendly)"
     ],
-    "hero": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=80",
+    "hero": "/projects/trio/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80"
+      "/projects/trio/1.jpg"
     ],
     "blurb": "Spanning 35.5 acres in the heart of New Cairo's Fifth Settlement, Trio Gardens is an innovative, boutique residential community structured around an exclusive 'three-in-one' architectural concept. Developed by M Squared (part of the INTRO Group) and designed alongside international architectural houses like TDF, the compound features overlapping villa complexes equipped with signature hanging gardens and flying plunge pools. With 75% of the land dedicated to verdant landscapes, open parks, and water features, Trio balances eco-friendly sustainable living with sleek, ultra-modern urban design.",
     "paymentPlan": "10% down · 8 years equal installments",
@@ -2661,8 +2658,7 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "/projects/el-patio-town/1.jpg",
       "/projects/el-patio-town/2.jpg",
-      "/projects/el-patio-town/3.jpg",
-      "/projects/el-patio-town/4.jpg"
+      "/projects/el-patio-town/3.jpg"
     ],
     "blurb": "El Patio Town by La Vista Developments is a luxury residential compound in the heart of New Cairo's Fifth Settlement. Spanning 330 acres, it features standalone villas, twinhouses, and townhouses.",
     "paymentPlan": "5% down · 7 years equal installments",
@@ -2934,7 +2930,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/la-vista-topaz/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
+      "/projects/la-vista-topaz/1.jpg"
     ],
     "blurb": "La Vista Topaz is a premium terraced Red Sea resort by La Vista in Ain Sokhna offering uninterrupted sea views through elevated terrace design, luxury residences, and direct beach access with integrated leisure facilities.",
     "paymentPlan": "10% down, installments up to 8 years",
@@ -2979,7 +2975,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/la-vista-gardens/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80"
+      "/projects/la-vista-gardens/1.jpg"
     ],
     "blurb": "La Vista Gardens is a luxury Red Sea resort by La Vista in Ain Sokhna designed around landscaped gardens, private beaches, and contemporary coastal residences combining lush greenery with beachfront living.",
     "paymentPlan": "10% down, installments up to 8 years",
@@ -3071,7 +3067,15 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/swanlake-west/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80"
+      "/projects/swanlake-west/1.jpg",
+      "/projects/swanlake-west/2.jpg",
+      "/projects/swanlake-west/3.jpg",
+      "/projects/swanlake-west/4.jpg",
+      "/projects/swanlake-west/5.jpg",
+      "/projects/swanlake-west/6.jpg",
+      "/projects/swanlake-west/7.jpg",
+      "/projects/swanlake-west/8.jpg",
+      "/projects/swanlake-west/9.jpg"
     ],
     "blurb": "Swanlake West by Hassan Allam Properties is a luxury residential compound in 6th of October City. Spanning 170 acres, it features standalone villas, twinhouses, and townhouses with pyramids views.",
     "paymentPlan": "5% down · 10 years equal installments",
@@ -3083,7 +3087,8 @@ export const compoundsGenerated: Compound[] = [
       "Swimable lagoon 3.5 acres",
       "Villas and townhouses only",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/swanlake-west.jpg"
   },
   {
     "slug": "swanlake-el-gouna",
@@ -3111,7 +3116,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/swanlake-el-gouna/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
+      "/projects/swanlake-el-gouna/1.jpg"
     ],
     "blurb": "Swanlake El Gouna by Hassan Allam Properties is an exclusive beach resort in El Gouna. Spanning Greek architecture, it offers sandy beaches, private crystal lagoons, and fully finished chalets.",
     "paymentPlan": "5% down · 6 years equal installments",
@@ -3245,7 +3250,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/jebal-sokhna/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
+      "/projects/jebal-sokhna/1.jpg"
     ],
     "blurb": "Jebal Sokhna is a luxury terraced mountain resort by PRE Developments spread across approximately 71 acres in Ain Sokhna, designed to ensure panoramic Red Sea views from the majority of residences.",
     "paymentPlan": "10% down, installments up to 8 years",
@@ -3332,7 +3337,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/rivers/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80"
+      "/projects/rivers/1.jpg"
     ],
     "blurb": "Rivers by Tatweer Misr is a boutique residential compound in New Sheikh Zayed. Spanning 100 acres, it features townhouses, twinhouses, and standalone villas with extensive green lanes.",
     "paymentPlan": "5% down · 8 years equal installments",
@@ -3378,7 +3383,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/kai-sokhna/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80"
+      "/projects/kai-sokhna/1.jpg"
     ],
     "blurb": "Kai Sokhna is a luxury beachfront resort by Misr Italia spanning approximately 147 acres in Ain Sokhna, featuring a wide sandy beach, terraced master planning that maximizes sea views, and contemporary coastal architecture.",
     "paymentPlan": "10% down, installments up to 9 years",
@@ -3421,7 +3426,15 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/cairo-business-park/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+      "/projects/cairo-business-park/1.jpg",
+      "/projects/cairo-business-park/2.jpg",
+      "/projects/cairo-business-park/3.jpg",
+      "/projects/cairo-business-park/4.jpg",
+      "/projects/cairo-business-park/5.jpg",
+      "/projects/cairo-business-park/6.jpg",
+      "/projects/cairo-business-park/7.jpg",
+      "/projects/cairo-business-park/8.jpg",
+      "/projects/cairo-business-park/9.jpg"
     ],
     "blurb": "Cairo Business Park is a fully delivered 18-acre business hub by Misr Italia in New Cairo, combining Grade-A corporate office buildings, retail, and the Hilton Garden Inn.",
     "paymentPlan": "Resale / 20% down payment over 6–8 years",
@@ -3433,7 +3446,8 @@ export const compoundsGenerated: Compound[] = [
       "Grade-A office and retail spaces",
       "Lush, walking-friendly business hub"
     ],
-    "city": "New Cairo, Cairo Governorate, Egypt"
+    "city": "New Cairo, Cairo Governorate, Egypt",
+    "masterPlanUrl": "/Masterplans/cairo-business-park.jpg"
   },
   {
     "slug": "rock-ville",
@@ -3660,7 +3674,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/palm-parks/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80"
+      "/projects/palm-parks/1.jpg"
     ],
     "blurb": "Palm Parks is Palm Hills' newest apartment destination in 6th of October City, offering thoughtfully designed 2–3 bedroom homes with panoramic views over landscaped gardens. Positioned minutes from the Ring Road and Mall of Arabia, it combines urban connectivity with resort-grade amenities.",
     "paymentPlan": "10% down · 8 years equal installments",
@@ -3809,7 +3823,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/the-crown-extension/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
+      "/projects/the-crown-extension/1.jpg"
     ],
     "blurb": "The Crown Extension expands Palm Hills' Crown compound with a new phase of ultra-premium large apartments in New Cairo. Sizes range from 217 to 223 m² — perfect for family buyers who won't compromise on space. All units face green spaces.",
     "paymentPlan": "10% down · 8 years equal installments",
@@ -3856,7 +3870,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/palm-hills-jirian/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80"
+      "/projects/palm-hills-jirian/1.jpg"
     ],
     "blurb": "Palm Hills Jirian is an expansive mixed-use community in Mostakbal City, east of New Cairo. With 465 available units across apartments, townhouses and villas, this is Palm Hills' largest current launch. The Jirian lagoon is the centrepiece of a resort-quality master plan.",
     "paymentPlan": "10% down · 10 years equal installments",
@@ -3954,7 +3968,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/px/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=80"
+      "/projects/px/1.jpg"
     ],
     "blurb": "PX by Palm Hills is a bold new community in Sheikh Zayed, merging modern design with west-Cairo's best connectivity. Apartments from 78 m² and townhouses up to 214 m² offer flexible entry points for first-home buyers and investors alike.",
     "paymentPlan": "10% down · 8 years equal installments",
@@ -3998,7 +4012,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/village-de-la-capitale/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=1600&q=80"
+      "/projects/village-de-la-capitale/1.jpg"
     ],
     "blurb": "Village de la Capitale is Palm Hills' entry into Egypt's New Administrative Capital — a strategic bet on the country's future administrative and commercial heart. Apartments start at EGP 13.6M and villas reach up to EGP 41.7M, making this one of the best-value Palm Hills launches.",
     "paymentPlan": "10% down · 8 years equal installments",
@@ -4052,8 +4066,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-jirian/6.jpg",
       "/projects/mountain-view-jirian/7.jpg",
       "/projects/mountain-view-jirian/8.jpg",
-      "/projects/mountain-view-jirian/9.jpg",
-      "/projects/mountain-view-jirian/10.jpg"
+      "/projects/mountain-view-jirian/9.jpg"
     ],
     "blurb": "Jirian is Mountain View's newest luxury mixed-use development in Sheikh Zayed Extension, centered around a flowing waterway and modern urban living, combining waterfront residences, green spaces, business districts, and entertainment facilities.",
     "paymentPlan": "5% down, installments up to 8 years",
@@ -4149,8 +4162,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-grand-valley/4.jpg",
       "/projects/mountain-view-grand-valley/5.jpg",
       "/projects/mountain-view-grand-valley/6.jpg",
-      "/projects/mountain-view-grand-valley/7.jpg",
-      "/projects/mountain-view-grand-valley/8.jpg"
+      "/projects/mountain-view-grand-valley/7.jpg"
     ],
     "blurb": "Grand Valleys is Mountain View's luxury villa-only community in the New Capital, inspired by expansive valley landscapes and low-density planning near the Green River and Diplomatic District.",
     "paymentPlan": "5% down, installments up to 9 years",
@@ -4207,8 +4219,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-chillout/7.jpg",
       "/projects/mountain-view-chillout/8.jpg",
       "/projects/mountain-view-chillout/9.jpg",
-      "/projects/mountain-view-chillout/10.jpg",
-      "/projects/mountain-view-chillout/12.jpg"
+      "/projects/mountain-view-chillout/10.jpg"
     ],
     "blurb": "Chillout Park is a premium residential compound by Mountain View centered around landscaped parks and modern family living in 6th of October City, near Juhayna Square, Mall of Arabia, and Sheikh Zayed.",
     "paymentPlan": "10% down, installments up to 8 years",
@@ -4259,8 +4270,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-crystal/6.jpg",
       "/projects/mountain-view-crystal/7.jpg",
       "/projects/mountain-view-crystal/8.jpg",
-      "/projects/mountain-view-crystal/9.jpg",
-      "/projects/mountain-view-crystal/10.jpg"
+      "/projects/mountain-view-crystal/9.jpg"
     ],
     "blurb": "Crysta is Mountain View's newest luxury beachfront community centered around crystal lagoons and premium Mediterranean-inspired residences, featuring modern coastal architecture, lush landscaping, and waterfront promenades.",
     "paymentPlan": "5% down, installments up to 8 years",
@@ -4314,8 +4324,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-mv4/7.jpg",
       "/projects/mountain-view-mv4/8.jpg",
       "/projects/mountain-view-mv4/9.jpg",
-      "/projects/mountain-view-mv4/10.jpg",
-      "/projects/mountain-view-mv4/11.jpg"
+      "/projects/mountain-view-mv4/10.jpg"
     ],
     "blurb": "Mountain View 4 (MV4) is one of Mountain View's established residential compounds in New Cairo, offering contemporary homes within landscaped surroundings close to the Ring Road and Cairo Festival City.",
     "paymentPlan": "Primarily resale units — payment terms vary by seller",
@@ -4410,10 +4419,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/rai-valleys/2.jpg",
       "/projects/rai-valleys/3.jpg",
       "/projects/rai-valleys/4.jpg",
-      "/projects/rai-valleys/5.jpg",
-      "/projects/rai-valleys/6.jpg",
-      "/projects/rai-valleys/7.jpg",
-      "/projects/rai-valleys/8.jpg"
+      "/projects/rai-valleys/5.jpg"
     ],
     "blurb": "Rai Valleys is a pure standalone-villa community nestled within the Sarai masterplan — 37 available villas from 175 to 212 m² at EGP 17–28M. With generous land plots and valley views, this is the premium residential offering within Madinet Masr's Sarai city.",
     "paymentPlan": "10% down · 8 years equal installments",
@@ -4553,8 +4559,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/talala/1.jpg",
       "/projects/talala/2.jpg",
       "/projects/talala/3.jpg",
-      "/projects/talala/4.jpg",
-      "/projects/talala/5.jpg"
+      "/projects/talala/4.jpg"
     ],
     "blurb": "TALALA is Madinet Masr's largest master-planned community to date — over 1,040 available units across apartments and villas within Sarai's final mega-zone. With entry-level apartments from EGP 4M and villas reaching EGP 46M, TALALA suits every segment of the market.",
     "paymentPlan": "5% down · 10 years equal installments",
@@ -4569,7 +4574,7 @@ export const compoundsGenerated: Compound[] = [
       "10-year payment plan"
     ],
     "city": "TALALA, new-cairo",
-    "masterPlanUrl": "/Masterplans/Talala.jpg"
+    "masterPlanUrl": "/Masterplans/talala.jpg"
   },
   {
     "slug": "sheya-residence",
@@ -4786,7 +4791,13 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/vye-sodic/1.jpg",
     "gallery": [
-      "/projects/vie/1.jpg"
+      "/projects/vye-sodic/1.jpg",
+      "/projects/vye-sodic/2.jpg",
+      "/projects/vye-sodic/3.jpg",
+      "/projects/vye-sodic/4.jpg",
+      "/projects/vye-sodic/5.jpg",
+      "/projects/vye-sodic/6.jpg",
+      "/projects/vye-sodic/7.jpg"
     ],
     "blurb": "VYE SODIC is a vibrant mixed-use community in New Sheikh Zayed — the third phase of SODIC's western expansion. 76 available units across apartments, townhouses and twin-houses at EGP 16–47M, set around a crystal lagoon with the SODIC signature design language.",
     "paymentPlan": "10% down · 9 years equal installments",
@@ -5043,8 +5054,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/crescent-walk/4.jpg",
       "/projects/crescent-walk/5.jpg",
       "/projects/crescent-walk/6.jpg",
-      "/projects/crescent-walk/7.jpg",
-      "/projects/crescent-walk/8.jpg"
+      "/projects/crescent-walk/7.jpg"
     ],
     "blurb": "Crescent Walk by Marakez Properties — New Cairo's most complete Marakez community spanning apartments to standalone villas across three parcels: PS (South), PC (Central) and PE (East). 74 units from fully-finished 1BR apartments at EGP 8.46M to semi-finished 7BR villas at EGP 72M.",
     "paymentPlan": "8% DP + 4% first installment + rest over 8 years",
@@ -5343,8 +5353,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/cleo-water-residence/3.jpg",
       "/projects/cleo-water-residence/4.jpg",
       "/projects/cleo-water-residence/5.jpg",
-      "/projects/cleo-water-residence/6.jpg",
-      "/projects/cleo-water-residence/7.jpg"
+      "/projects/cleo-water-residence/6.jpg"
     ],
     "blurb": "Cleo Water Residences is a luxury lagoon-facing residential phase within the 500-acre Palm Hills New Cairo master development.",
     "paymentPlan": "3% down payment, remaining balance spread over up to 10 years in equal installments",
@@ -5491,8 +5500,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/jamila/3.jpg",
       "/projects/jamila/4.jpg",
       "/projects/jamila/5.jpg",
-      "/projects/jamila/6.jpg",
-      "/projects/jamila/7.jpg"
+      "/projects/jamila/6.jpg"
     ],
     "blurb": "Jamila Sidi Heneish by New Jersey Developments is a 130-feddan premium beachfront community with a low 9% building footprint, featuring a 5-star Marriott hotel and a 700m private beach.",
     "paymentPlan": "5% down payment · installments up to 10 years",
@@ -5548,9 +5556,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/almaza-bay/2.jpg",
       "/projects/almaza-bay/3.jpg",
       "/projects/almaza-bay/4.jpg",
-      "/projects/almaza-bay/5.jpg",
-      "/projects/almaza-bay/6.jpg",
-      "/projects/almaza-bay/7.jpg"
+      "/projects/almaza-bay/5.jpg"
     ],
     "blurb": "Almaza Bay is Travco Properties' flagship luxury beach destination on Egypt's North Coast. Developed over multiple phases, it combines upscale residences, boutique hotels, retail areas, and one of the Mediterranean's most renowned white-sand beaches.",
     "paymentPlan": "6% down + 6% upon contract, remaining balance over 7 yrs | 10% down over 6 yrs",
@@ -5656,8 +5662,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/marsa-baghush/2.jpg",
       "/projects/marsa-baghush/3.jpg",
       "/projects/marsa-baghush/4.jpg",
-      "/projects/marsa-baghush/5.jpg",
-      "/projects/marsa-baghush/6.jpg"
+      "/projects/marsa-baghush/5.jpg"
     ],
     "blurb": "Marsa Baghush by Shehab Mazhar (SQM Developments) is a boutique 130-feddan community in Sidi Heneish, designed with tiered elevations to ensure panoramic sea views from every residence.",
     "paymentPlan": "5% down payment · installments up to 8 years",
@@ -5709,8 +5714,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/beit-al-bahr/5.jpg",
       "/projects/beit-al-bahr/6.jpg",
       "/projects/beit-al-bahr/7.jpg",
-      "/projects/beit-al-bahr/8.jpg",
-      "/projects/beit-al-bahr/9.jpg"
+      "/projects/beit-al-bahr/8.jpg"
     ],
     "blurb": "Beit El Bahr inside El Abd Resort Sidi Heneish is a tiered 450-feddan beachfront project offering 3.5 km of private white sand beach and swimmable lagoons.",
     "paymentPlan": "10% down payment · installments up to 8 years",
@@ -5759,10 +5763,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/marbay-ras-el-hekma/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80"
+      "/projects/marbay-ras-el-hekma/1.jpg"
     ],
     "blurb": "Mar Bay is Al Marasem's luxury beachfront destination in Ras El Hekma, designed with contemporary Mediterranean architecture and premium hospitality services, featuring low-density beachfront neighborhoods, crystal lagoons, and integrated leisure facilities.",
     "paymentPlan": "5% down, installments up to 8 years",
@@ -6030,8 +6031,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/naia-bay/5.jpg",
       "/projects/naia-bay/6.jpg",
       "/projects/naia-bay/7.jpg",
-      "/projects/naia-bay/8.jpg",
-      "/projects/naia-bay/9.jpg"
+      "/projects/naia-bay/8.jpg"
     ],
     "blurb": "Naia Bay by Naia Developments — a Greek Santorini-inspired 112-feddan beach community at Km 212 Ras El Hekma, featuring a 15-Acre Crystal Lagoon, Swissôtel by Accor, and Fairmont Beach Clubhouse.",
     "paymentPlan": "Phase 1: 10%–20% down · 8–10 years. Phase 2: 10% down · 10 years.",
@@ -6195,8 +6195,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/la-vista-ras-el-hekma/2.jpg",
       "/projects/la-vista-ras-el-hekma/3.jpg",
       "/projects/la-vista-ras-el-hekma/4.jpg",
-      "/projects/la-vista-ras-el-hekma/5.jpg",
-      "/projects/la-vista-ras-el-hekma/6.jpg"
+      "/projects/la-vista-ras-el-hekma/5.jpg"
     ],
     "blurb": "La Vista Ras El Hekma is a luxury coastal resort by La Vista featuring terraced residences, private beaches, and panoramic Mediterranean views, emphasizing contemporary architecture and premium hospitality in Ras El Hekma.",
     "paymentPlan": "10% down, installments up to 8 years",
@@ -6288,8 +6287,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/koun/2.jpg",
       "/projects/koun/3.jpg",
       "/projects/koun/4.jpg",
-      "/projects/koun/5.jpg",
-      "/projects/koun/6.jpg"
+      "/projects/koun/5.jpg"
     ],
     "blurb": "Koun at km 201 � Mabany Edris' Ras El Hekma lagoon resort with 100% waterfront units, central lagoon and private beach access.",
     "paymentPlan": "5% down � up to 10 years",
@@ -6398,8 +6396,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/lyv/2.jpg",
       "/projects/lyv/3.jpg",
       "/projects/lyv/4.jpg",
-      "/projects/lyv/5.jpg",
-      "/projects/lyv/6.jpg"
+      "/projects/lyv/5.jpg"
     ],
     "blurb": "LYV Caesar by Gates Developments — a 206-feddan Mediterranean resort at Km 200 Ras El Hekma with 38m sea elevations, a 55,000 sqm crystal lagoon, and 21,000 sqm pool expanses.",
     "paymentPlan": "0%–5% down payment · 8–10 years equal installments",
@@ -6454,10 +6451,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-ras-el-hekma/4.jpg",
       "/projects/mountain-view-ras-el-hekma/5.jpg",
       "/projects/mountain-view-ras-el-hekma/6.jpg",
+      "/projects/mountain-view-ras-el-hekma/7.jpg",
       "/projects/mountain-view-ras-el-hekma/8.jpg",
-      "/projects/mountain-view-ras-el-hekma/9.jpg",
-      "/projects/mountain-view-ras-el-hekma/10.jpg",
-      "/projects/mountain-view-ras-el-hekma/11.jpg"
+      "/projects/mountain-view-ras-el-hekma/9.jpg"
     ],
     "blurb": "Mountain View Ras El Hekma is a 500-acre luxury beachfront community inspired by Greek island architecture, featuring white sandy beaches, swimmable lagoons, beach clubs, landscaped parks, and recreational facilities.",
     "paymentPlan": "5% down, installments up to 8 years",
@@ -6668,10 +6664,8 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "/projects/june/1.jpg",
       "/projects/june/2.jpg",
-      "/projects/june/3.jpeg",
-      "/projects/june/4.jpg",
-      "/projects/june/5.jpg",
-      "/projects/june/6.jpg"
+      "/projects/june/3.jpg",
+      "/projects/june/4.jpg"
     ],
     "blurb": "June is a Miami-inspired beachfront community by SODIC spanning approximately 300 acres in Ras El Hekma, offering crystal-clear Mediterranean waters, swimmable lagoons, and premium residential neighborhoods with a vibrant coastal atmosphere.",
     "paymentPlan": "5% down, installments up to 8 years",
@@ -6685,7 +6679,8 @@ export const compoundsGenerated: Compound[] = [
       "Crystal swimmable lagoons",
       "SODIC premium delivery"
     ],
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/Masterplans/june.jpg"
   },
   {
     "slug": "direction-white",
@@ -6876,11 +6871,9 @@ export const compoundsGenerated: Compound[] = [
       "Yacht Marina Access",
       "24/7 Gated Security Patrols"
     ],
-    "hero": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
+    "hero": "/projects/the-c/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80"
+      "/projects/the-c/1.jpg"
     ],
     "blurb": "The C is an exclusive beachfront resort compound ideally situated at km 188 in Ras El Hekma. Designed to offer a premium, slow-paced summer lifestyle, the community features private beachfront cabanas, crystalline swimming lagoons, a yacht marina, and classical Mediterranean architecture.",
     "paymentPlan": "5% down payment · 7 years equal installments",
@@ -7037,11 +7030,16 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Gated Security",
       "Children Play Areas"
     ],
-    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
+    "hero": "/projects/safia/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
-      "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80",
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80"
+      "/projects/safia/1.jpg",
+      "/projects/safia/2.jpg",
+      "/projects/safia/3.jpg",
+      "/projects/safia/4.jpg",
+      "/projects/safia/5.jpg",
+      "/projects/safia/6.jpg",
+      "/projects/safia/7.jpg",
+      "/projects/safia/8.jpg"
     ],
     "blurb": "Safia is a luxury beachfront community spanning 180 acres at km 186 on the shores of Ras El Hekma. With only 15% of the total land developed, the compound is masterplanned to celebrate open space, sea breezes, and scenic coastal landscapes.",
     "paymentPlan": "10% down payment · 8 years equal installments",
@@ -7087,10 +7085,14 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/sa-ada-sahel/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=1600&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80"
+      "/projects/sa-ada-sahel/1.jpg",
+      "/projects/sa-ada-sahel/2.jpg",
+      "/projects/sa-ada-sahel/3.jpg",
+      "/projects/sa-ada-sahel/4.jpg",
+      "/projects/sa-ada-sahel/5.jpg",
+      "/projects/sa-ada-sahel/6.jpg",
+      "/projects/sa-ada-sahel/7.jpg",
+      "/projects/sa-ada-sahel/8.jpg"
     ],
     "blurb": "Sa'ada Sahel sits at km 183 on the North Coast in ras el hekma, developed by Horizon Egypt Developments. A beachfront community designed for premium summer living.",
     "paymentPlan": "5% down payment over 7 years equal installments",
@@ -7141,10 +7143,15 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/azzar-islands/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80"
+      "/projects/azzar-islands/1.jpg",
+      "/projects/azzar-islands/2.jpg",
+      "/projects/azzar-islands/3.jpg",
+      "/projects/azzar-islands/4.jpg",
+      "/projects/azzar-islands/5.jpg",
+      "/projects/azzar-islands/6.jpg",
+      "/projects/azzar-islands/7.jpg",
+      "/projects/azzar-islands/8.jpg",
+      "/projects/azzar-islands/9.jpg"
     ],
     "blurb": "AZZAR Islands is a boutique luxury beachfront community by Reedy Group in Ras El Hekma designed around exclusive island-inspired neighborhoods, offering privacy and direct sea access with low-density 400-acre master plan (20% footprint).",
     "paymentPlan": "5% down payment, remaining balance over 8 yrs equal interest-free installments | 5% + 5% in 3 mos, 6–7 yrs",
@@ -7158,7 +7165,7 @@ export const compoundsGenerated: Compound[] = [
       "Panoramic sea views",
       "km 182 Ras El Hekma"
     ],
-    "masterPlanUrl": "/Masterplans/azzar island.jpg"
+    "masterPlanUrl": "/Masterplans/azzar-islands.jpg"
   },
   {
     "slug": "lvls",
@@ -7192,8 +7199,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/lvls/2.jpg",
       "/projects/lvls/3.jpg",
       "/projects/lvls/4.jpg",
-      "/projects/lvls/5.jpg",
-      "/projects/lvls/6.jpg"
+      "/projects/lvls/5.jpg"
     ],
     "blurb": "LVLS is Mountain View's luxury residential community in New Zayed, designed around elevated neighborhoods, green landscapes, and modern architecture near Al Dabaa Axis and Sphinx International Airport.",
     "paymentPlan": "5% down, installments up to 9 years",
@@ -7569,7 +7575,6 @@ export const compoundsGenerated: Compound[] = [
     "hero": "/projects/lasirena-sahel/1.jpg",
     "gallery": [
       "/projects/lasirena-sahel/1.jpg",
-      "/projects/lasirena-sahel/1.webp",
       "/projects/lasirena-sahel/2.jpg",
       "/projects/lasirena-sahel/3.jpg",
       "/projects/lasirena-sahel/4.jpg",
@@ -7783,8 +7788,7 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "/projects/zoya/1.jpg",
       "/projects/zoya/2.jpg",
-      "/projects/zoya/3.jpg",
-      "/projects/zoya/4.jpg"
+      "/projects/zoya/3.jpg"
     ],
     "blurb": "Zoya sits at km 145 on the North Coast in ghazala bay, developed by LMD. A beachfront community designed for premium summer living.",
     "paymentPlan": "5% down payment over 7 years equal installments",
@@ -7801,7 +7805,7 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Mosque"
     ],
-    "masterPlanUrl": "/Masterplans/Zoya.jpg"
+    "masterPlanUrl": "/Masterplans/zoya.jpg"
   },
   {
     "slug": "telal",
@@ -8361,10 +8365,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/diplo-3/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1600&q=80"
+      "/projects/diplo-3/1.jpg"
     ],
     "blurb": "Diplo 3 (Diplomats Village 3) is a classic established Mediterranean summer resort in Sidi Abdel Rahman (km 126) next to Marassi and Amwaj.",
     "paymentPlan": "Resale: Cash / secondary market terms",
@@ -8415,8 +8416,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/zahra/3.jpg",
       "/projects/zahra/4.jpg",
       "/projects/zahra/5.jpg",
-      "/projects/zahra/6.jpg",
-      "/projects/zahra/7.jpg"
+      "/projects/zahra/6.jpg"
     ],
     "blurb": "Zahra sits at km 123 on the North Coast in new alamein, developed by Morshedy Group. A beachfront community designed for premium summer living.",
     "paymentPlan": "5% down payment over 7 years equal installments",
@@ -8433,7 +8433,7 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Kids Destination"
     ],
-    "masterPlanUrl": "/Masterplans/Zahra.jpg"
+    "masterPlanUrl": "/Masterplans/zahra.jpg"
   },
   {
     "slug": "il-latini-city-edge",
@@ -8464,7 +8464,6 @@ export const compoundsGenerated: Compound[] = [
     "hero": "/projects/il-latini-city-edge/1.jpg",
     "gallery": [
       "/projects/il-latini-city-edge/1.jpg",
-      "/projects/il-latini-city-edge/1.webp",
       "/projects/il-latini-city-edge/2.jpg",
       "/projects/il-latini-city-edge/3.jpg",
       "/projects/il-latini-city-edge/4.jpg"
@@ -8715,8 +8714,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mazarine/1.jpg",
       "/projects/mazarine/2.jpg",
       "/projects/mazarine/3.jpg",
-      "/projects/mazarine/4.jpg",
-      "/projects/mazarine/5.jpg"
+      "/projects/mazarine/4.jpg"
     ],
     "blurb": "Mazarine is a luxury 707-feddan coastal community in New Alamein, offering premium villas, townhouses, and Celeste, Tiffany, Sapphire, and Boulevard apartments.",
     "paymentPlan": "5%+5% down · 3–12 years or 1.2%–5% down · 12 years offer",
@@ -9071,10 +9069,15 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/the-waterway-new-cairo/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
+      "/projects/the-waterway-new-cairo/1.jpg",
+      "/projects/the-waterway-new-cairo/2.jpg",
+      "/projects/the-waterway-new-cairo/3.jpg",
+      "/projects/the-waterway-new-cairo/4.jpg",
+      "/projects/the-waterway-new-cairo/5.jpg",
+      "/projects/the-waterway-new-cairo/6.jpg",
+      "/projects/the-waterway-new-cairo/7.jpg",
+      "/projects/the-waterway-new-cairo/8.jpg",
+      "/projects/the-waterway-new-cairo/9.jpg"
     ],
     "blurb": "The Waterway New Cairo is a flagship development in New Cairo (Tagamo3) by The Waterway Developments, offering modern residences with full amenities for year-round living.",
     "paymentPlan": "10% down payment over 8 years equal installments",
@@ -9089,7 +9092,8 @@ export const compoundsGenerated: Compound[] = [
       "Smart Home",
       "24/7 Security",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/the-waterway-new-cairo.jpg"
   },
   {
     "slug": "fifth-square",
@@ -9124,10 +9128,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/fifth-square/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+      "/projects/fifth-square/1.jpg"
     ],
     "blurb": "Fifth Square is a premium residential community by Al Marasem spanning approximately 158 acres in New Cairo's Fifth Settlement, featuring contemporary homes surrounded by landscaped gardens, retail, and leisure facilities.",
     "paymentPlan": "25% / 6 yrs",
@@ -9269,8 +9270,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-icity-new-cairo/8.jpg",
       "/projects/mountain-view-icity-new-cairo/9.jpg",
       "/projects/mountain-view-icity-new-cairo/10.jpg",
-      "/projects/mountain-view-icity-new-cairo/12.jpg",
-      "/projects/mountain-view-icity-new-cairo/13.jpg"
+      "/projects/mountain-view-icity-new-cairo/11.jpg"
     ],
     "blurb": "Mountain View iCity New Cairo is a flagship development in New Cairo (Tagamo3) by Mountain View, offering modern residences with full amenities for year-round living.",
     "paymentPlan": "5% / 8 yrs",
@@ -9485,10 +9485,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/sky-condos/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+      "/projects/sky-condos/1.jpg"
     ],
     "blurb": "Sky Condos is a flagship development in New Cairo (Tagamo3) by SODIC, offering modern residences with full amenities for year-round living.",
     "paymentPlan": "10% down payment over 8 years equal installments",
@@ -9533,10 +9530,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/katameya-heights/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80"
+      "/projects/katameya-heights/1.jpg"
     ],
     "blurb": "Katameya Heights is a flagship development in New Cairo (Tagamo3) by Tameer, offering modern residences with full amenities for year-round living.",
     "paymentPlan": "10% down payment over 9 years equal installments",
@@ -9583,10 +9577,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/katameya-dunes/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80"
+      "/projects/katameya-dunes/1.jpg"
     ],
     "blurb": "Katameya Dunes is a flagship development in New Cairo (Tagamo3) by Starlight Developments, offering modern residences with full amenities for year-round living.",
     "paymentPlan": "10% down payment over 9 years equal installments",
@@ -9635,8 +9626,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/al-rehab/1.jpg",
       "/projects/al-rehab/2.jpg",
       "/projects/al-rehab/3.jpg",
-      "/projects/al-rehab/4.jpg",
-      "/projects/al-rehab/5.jpg"
+      "/projects/al-rehab/4.jpg"
     ],
     "blurb": "Al Rehab City by Talaat Moustafa Group is a mature, fully integrated city in New Cairo developed across 10 distinct phases over 2,380 acres, featuring complete services, schools, and commercial centers.",
     "paymentPlan": "Resale: Cash / secondary market terms",
@@ -9690,8 +9680,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/madinaty/6.jpg",
       "/projects/madinaty/7.jpg",
       "/projects/madinaty/8.jpg",
-      "/projects/madinaty/9.jpg",
-      "/projects/madinaty/10.jpg"
+      "/projects/madinaty/9.jpg"
     ],
     "blurb": "Madinaty is a flagship development in New Cairo (Tagamo3) by Talaat Moustafa Group, offering modern residences with full amenities for year-round living.",
     "paymentPlan": "5% down payment over 7 years equal installments",
@@ -9944,7 +9933,6 @@ export const compoundsGenerated: Compound[] = [
     "hero": "/projects/lake-view-residence/1.jpg",
     "gallery": [
       "/projects/lake-view-residence/1.jpg",
-      "/projects/lake-view-residence/1.webp",
       "/projects/lake-view-residence/2.jpg",
       "/projects/lake-view-residence/3.jpg",
       "/projects/lake-view-residence/4.jpg",
@@ -9996,8 +9984,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/zed-east/1.jpg",
       "/projects/zed-east/2.jpg",
       "/projects/zed-east/3.jpg",
-      "/projects/zed-east/4.jpg",
-      "/projects/zed-east/5.jpg"
+      "/projects/zed-east/4.jpg"
     ],
     "blurb": "Zed East is Naguib Sawiris' flagship 400-acre master-planned community in New Cairo, featuring iconic towers, expansive central park, and sports club.",
     "paymentPlan": "5% down, installments up to 10 years",
@@ -10602,10 +10589,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/zayed-2000/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80"
+      "/projects/zayed-2000/1.jpg"
     ],
     "blurb": "Zayed 2000 by Wadi Degla — a Residential community offering refined living with full amenities and strong location advantages.",
     "paymentPlan": "5% down payment over 7 years equal installments",
@@ -10700,10 +10684,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/bamboo-extension/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+      "/projects/bamboo-extension/1.jpg"
     ],
     "blurb": "Bamboo Extension is an extension of the successful Bamboo residential community, offering modern low-density living with landscaped surroundings and premium residential planning.",
     "paymentPlan": "5% down, installments up to 10 years",
@@ -10957,9 +10938,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/city-oval/2.jpg",
       "/projects/city-oval/3.jpg",
       "/projects/city-oval/4.jpg",
-      "/projects/city-oval/6.jpg",
-      "/projects/city-oval/7.jpg",
-      "/projects/city-oval/8.jpg"
+      "/projects/city-oval/5.jpg",
+      "/projects/city-oval/6.jpg"
     ],
     "blurb": "City Oval by Master Group is a 30–37 feddan English-themed residential compound in the New Administrative Capital R7 district.",
     "paymentPlan": "5%–10% down payment, remaining balance spread over 6 to 10 years in equal installments",
@@ -11102,10 +11082,15 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/business-district-nac/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+      "/projects/business-district-nac/1.jpg",
+      "/projects/business-district-nac/2.jpg",
+      "/projects/business-district-nac/3.jpg",
+      "/projects/business-district-nac/4.jpg",
+      "/projects/business-district-nac/5.jpg",
+      "/projects/business-district-nac/6.jpg",
+      "/projects/business-district-nac/7.jpg",
+      "/projects/business-district-nac/8.jpg",
+      "/projects/business-district-nac/9.jpg"
     ],
     "blurb": "The Central Business District (CBD) is the premier commercial landmark of the New Administrative Capital, featuring 20 skyscrapers including the Iconic Tower.",
     "paymentPlan": "5%–10% down payment, remaining balance spread over 7 to 10 years in equal installments",
@@ -11118,7 +11103,8 @@ export const compoundsGenerated: Compound[] = [
       "Adjacent to Government District & towers",
       "World-class commercial infrastructure",
       "Mixed-use business center"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/business-district-nac.jpg"
   },
   {
     "slug": "bloomfields",
@@ -11208,8 +11194,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-aliva/7.jpg",
       "/projects/mountain-view-aliva/8.jpg",
       "/projects/mountain-view-aliva/9.jpg",
-      "/projects/mountain-view-aliva/10.jpg",
-      "/projects/mountain-view-aliva/11.jpg"
+      "/projects/mountain-view-aliva/10.jpg"
     ],
     "blurb": "Mountain View Aliva by Mountain View — a Residential community offering refined living with full amenities and strong location advantages.",
     "paymentPlan": "10% down payment over 7 years equal installments",
@@ -11468,8 +11453,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/il-monte-galala/2.jpg",
       "/projects/il-monte-galala/3.jpg",
       "/projects/il-monte-galala/4.jpg",
-      "/projects/il-monte-galala/5.jpg",
-      "/projects/il-monte-galala/download.jpg"
+      "/projects/il-monte-galala/5.jpg"
     ],
     "blurb": "IL Monte Galala is Tatweer Misr's flagship mountain-seaside destination spanning approximately 2.2 million m² (530 acres), inspired by Portofino, combining mountain landscapes with Red Sea beaches and one of Egypt's most iconic integrated resorts.",
     "paymentPlan": "10% down, installments up to 10 years",
@@ -11570,8 +11554,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/murano/4.jpg",
       "/projects/murano/5.jpg",
       "/projects/murano/6.jpg",
-      "/projects/murano/7.jpg",
-      "/projects/murano/8.jpg"
+      "/projects/murano/7.jpg"
     ],
     "blurb": "Murano by Wadi Degla — a Resort community offering refined living with full amenities and strong location advantages.",
     "paymentPlan": "5% down payment over 7 years equal installments",
@@ -11776,10 +11759,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/azha-sokhna/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80",
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80"
+      "/projects/azha-sokhna/1.jpg"
     ],
     "blurb": "Azha Ain Sokhna is a luxury coastal destination spread across approximately 380–400 acres, combining beachfront residences, lagoons, hospitality, and leisure facilities directly on the Red Sea coastline.",
     "paymentPlan": "5%–10% down payment, remaining balance spread over 8–10 years in equal installments",
@@ -11825,9 +11805,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/blumar-sokhna/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80"
+      "/projects/blumar-sokhna/1.jpg"
     ],
     "blurb": "Blumar El Sokhna is a luxury beachfront resort by Wadi Degla Developments featuring terraced residences across 110–260 acres with panoramic Red Sea views.",
     "paymentPlan": "Resale: Cash / secondary market terms",
@@ -11944,8 +11922,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/makadi-heights/5.jpg",
       "/projects/makadi-heights/6.jpg",
       "/projects/makadi-heights/7.jpg",
-      "/projects/makadi-heights/8.jpg",
-      "/projects/makadi-heights/9.jpg"
+      "/projects/makadi-heights/8.jpg"
     ],
     "blurb": "Makadi Heights is a fully integrated hillside town by Orascom Development spanning approximately 3.4 million m² in Makadi Bay, offering panoramic Red Sea views, year-round living, and a complete community with residential, hospitality, and commercial facilities.",
     "paymentPlan": "10% down, installments up to 8 years",
@@ -12290,10 +12267,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/sodic-the-estates/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+      "/projects/sodic-the-estates/1.jpg"
     ],
     "blurb": "SODIC The Estates by SODIC — a flagship master-plan in New Sheikh Zayed offering large-plot villas, lower density, and the latest generation of West-Cairo design language.",
     "paymentPlan": "10% down payment over 9 years equal installments",
@@ -12339,10 +12313,9 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/zed-west/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80"
+      "/projects/zed-west/1.jpg",
+      "/projects/zed-west/2.jpg",
+      "/projects/zed-west/3.jpg"
     ],
     "blurb": "ZED West by Ora Developers — a flagship master-plan in New Sheikh Zayed offering large-plot villas, lower density, and the latest generation of West-Cairo design language.",
     "paymentPlan": "10% down payment over 9 years equal installments",
@@ -12491,10 +12464,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/elm-tree-new-zayed/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+      "/projects/elm-tree-new-zayed/1.jpg"
     ],
     "blurb": "Elm Tree New Zayed by Westway Developments — a flagship master-plan in New Sheikh Zayed offering large-plot villas, lower density, and the latest generation of West-Cairo design language.",
     "paymentPlan": "10% down payment over 7 years equal installments",
@@ -12540,7 +12510,9 @@ export const compoundsGenerated: Compound[] = [
       "24/7 security"
     ],
     "hero": "/projects/grova-east-hills/1.jpg",
-    "gallery": [],
+    "gallery": [
+      "/projects/grova-east-hills/1.jpg"
+    ],
     "blurb": "Grova East Hills is Hassan Allam Holding's newest 300-feddan luxury villa community in New Cairo, adjacent to Patio Town. Starting from EGP 34M, the compound features townhouses, twin houses and standalone villas with a 7% annual maintenance fee.",
     "paymentPlan": "5% down payment · 5% after 3 months · 90% over 8 years equal installments · 7% annual maintenance",
     "areaSize": "300 feddan",
@@ -12629,8 +12601,7 @@ export const compoundsGenerated: Compound[] = [
     "hero": "/projects/dejoya-residence/1.jpg",
     "gallery": [
       "/projects/dejoya-residence/1.jpg",
-      "/projects/dejoya-residence/2.jpg",
-      "/projects/dejoya-residence/dejoya_residence_2.png"
+      "/projects/dejoya-residence/2.jpg"
     ],
     "blurb": "De Joya Residence by Taj Misr is a 132-feddan master-planned compound in New Zayed featuring minimalist architecture, central lakes, and De Joya Plaza.",
     "paymentPlan": "5%–10% down payment, remaining balance spread over 7 to 10 years in equal, interest-free installments",
@@ -12883,14 +12854,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/saada-north-coast/1.jpg",
     "gallery": [
-      "/projects/saada-sahel/1.jpg",
-      "/projects/saada-sahel/2.jpg",
-      "/projects/saada-sahel/3.jpg",
-      "/projects/saada-sahel/4.jpg",
-      "/projects/saada-sahel/5.jpg",
-      "/projects/saada-sahel/6.jpg",
-      "/projects/saada-sahel/7.jpg",
-      "/projects/saada-sahel/8.jpg"
+      "/projects/saada-north-coast/1.jpg"
     ],
     "blurb": "Saada North Coast is a newly launched luxury phase by Horizon Egypt Developments in Ras El Hekma.",
     "paymentPlan": "5% down payment · 9 years equal installments",
@@ -12926,7 +12890,9 @@ export const compoundsGenerated: Compound[] = [
       "High-speed elevators"
     ],
     "hero": "/projects/citystars-park-street/1.jpg",
-    "gallery": [],
+    "gallery": [
+      "/projects/citystars-park-street/1.jpg"
+    ],
     "blurb": "Citystars Park Street is a premium mixed-use commercial and residential landmark in New Cairo by Sky Innovo Developments.",
     "paymentPlan": "5% down payment · 8 years equal installments",
     "type": "Mixed-use",
@@ -13206,7 +13172,9 @@ export const compoundsGenerated: Compound[] = [
       "Infinity Pools"
     ],
     "hero": "/projects/carnelia/1.jpg",
-    "gallery": [],
+    "gallery": [
+      "/projects/carnelia/1.jpg"
+    ],
     "blurb": "Carnelia Ain Sokhna by Ajna Developments is a 100-acre coastal resort built on tiered elevations up to 160 meters above sea level near El Galala Plateau.",
     "paymentPlan": "5% down + 5% after 3 mos, remaining balance spread over up to 10 years in equal, interest-free installments",
     "areaSize": "100 feddan",
@@ -13276,7 +13244,15 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/vie/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+      "/projects/vie/1.jpg",
+      "/projects/vie/2.jpg",
+      "/projects/vie/3.jpg",
+      "/projects/vie/4.jpg",
+      "/projects/vie/5.jpg",
+      "/projects/vie/6.jpg",
+      "/projects/vie/7.jpg",
+      "/projects/vie/8.jpg",
+      "/projects/vie/9.jpg"
     ],
     "blurb": "Vie by Vie Communities is a signature master-planned community in New Cairo, featuring luxurious residential phases (Vie Collective and Vie Halo) surrounded by lush landscape.",
     "paymentPlan": "10% down · 7 years equal installments",
@@ -13287,7 +13263,8 @@ export const compoundsGenerated: Compound[] = [
       "Premium master community",
       "Lush landscapes",
       "Strategic New Cairo location"
-    ]
+    ],
+    "masterPlanUrl": "/Masterplans/vie.jpg"
   },
   {
     "slug": "hacienda-west",
@@ -13330,7 +13307,10 @@ export const compoundsGenerated: Compound[] = [
     ],
     "type": "Coastal",
     "gallery": [
-      "/projects/hacienda-west/1.jpg"
+      "/projects/hacienda-west/1.jpg",
+      "/projects/hacienda-west/2.jpg",
+      "/projects/hacienda-west/3.jpg",
+      "/projects/hacienda-west/4.jpg"
     ]
   },
   {
@@ -13460,12 +13440,17 @@ export const compoundsGenerated: Compound[] = [
       "Eco-friendly integrations including solar-assisted water heating systems and garbage chute systems",
       "Ample resident and visitor parking facilities"
     ],
-    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+    "hero": "/projects/zizinia/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80"
+      "/projects/zizinia/1.jpg",
+      "/projects/zizinia/2.jpg",
+      "/projects/zizinia/3.jpg",
+      "/projects/zizinia/4.jpg",
+      "/projects/zizinia/5.jpg",
+      "/projects/zizinia/6.jpg",
+      "/projects/zizinia/7.jpg",
+      "/projects/zizinia/8.jpg",
+      "/projects/zizinia/9.jpg"
     ],
     "blurb": "Spanning 70 acres right at the gateway of Mostakbal City, Zizinia El Mostakbal is a low-density, master-planned residential community where nature and modern architecture intersect. Designed with an emphasis on open space and wellbeing, only 20% of the land is dedicated to built structures, leaving 80% devoted to expansive green landscapes, crystal-clear water features, and community facilities. The project comprises 1,807 units, offering a serene environment combined with immediate connectivity to New Cairo and the New Administrative Capital.",
     "highlights": [
@@ -13478,7 +13463,8 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "10% / 8 yrs",
     "brochureUrl": "/brochures/zizinia.pdf",
     "brochureFileName": "zizinia.pdf",
-    "brochureType": "application/pdf"
+    "brochureType": "application/pdf",
+    "masterPlanUrl": "/Masterplans/zizinia.jpg"
   },
   {
     "slug": "lavenir",
@@ -13596,11 +13582,17 @@ export const compoundsGenerated: Compound[] = [
       "Solar-powered outdoor street lighting and eco-friendly utility integrations",
       "Underground and surface resident parking facilities"
     ],
-    "hero": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1600&q=80",
+    "hero": "/projects/beta-greens/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80"
+      "/projects/beta-greens/1.jpg",
+      "/projects/beta-greens/2.jpg",
+      "/projects/beta-greens/3.jpg",
+      "/projects/beta-greens/4.jpg",
+      "/projects/beta-greens/5.jpg",
+      "/projects/beta-greens/6.jpg",
+      "/projects/beta-greens/7.jpg",
+      "/projects/beta-greens/8.jpg",
+      "/projects/beta-greens/9.jpg"
     ],
     "blurb": "Spread across 25 acres in a prime, highly accessible corner of Mostakbal City, Beta Greens is a carefully master-planned, family-centric residential community. Designed around the concept of sustainable green living, the project allocates 80% of its total area to open landscapes, artificial lakes, and gardens, leaving only 20% for residential structures. It combines modern architectural creativity with an intimate neighborhood layout comprising both low-rise apartment clusters and private family villas.",
     "highlights": [
@@ -13613,7 +13605,8 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "50% / 2 yrs",
     "brochureUrl": "/brochures/Beta Greens MC E-Brochure.pdf",
     "brochureFileName": "Beta Greens MC E-Brochure.pdf",
-    "brochureType": "application/pdf"
+    "brochureType": "application/pdf",
+    "masterPlanUrl": "/Masterplans/beta-greens.jpg"
   },
   {
     "slug": "la-mirada",
@@ -13687,13 +13680,17 @@ export const compoundsGenerated: Compound[] = [
       "Safe children’s outdoor playgrounds and nursery areas",
       "Ample resident parking and visitor spaces"
     ],
-    "hero": "https://ilcazar.com/wp-content/uploads/2023/06/creek-town.jpg",
+    "hero": "/projects/creek-town/1.jpg",
     "gallery": [
-      "https://ilcazar.com/wp-content/uploads/2023/06/creek-town.jpg",
-      "https://ilcazar.com/wp-content/uploads/2023/04/1-scaled.jpg",
-      "https://ilcazar.com/wp-content/uploads/2023/04/2-scaled.jpg",
-      "https://ilcazar.com/wp-content/uploads/2023/04/3-1-scaled.jpg",
-      "https://ilcazar.com/wp-content/uploads/2023/04/4-scaled.jpg"
+      "/projects/creek-town/1.jpg",
+      "/projects/creek-town/2.jpg",
+      "/projects/creek-town/3.jpg",
+      "/projects/creek-town/4.jpg",
+      "/projects/creek-town/5.jpg",
+      "/projects/creek-town/6.jpg",
+      "/projects/creek-town/7.jpg",
+      "/projects/creek-town/8.jpg",
+      "/projects/creek-town/9.jpg"
     ],
     "blurb": "Spanning 100 acres directly on the Suez Road in the First Settlement of New Cairo, Creek Town is an upscale, master-planned residential community designed to maximize space, natural light, and open air. Created with an emphasis on low density, 80% of the compound's layout is dedicated to sprawling green landscapes, parks, and shimmering water streams. Featuring modern architectural designs by renowned firms like Hany Saad Innovations and YBA, the project pairs tranquil suburban living with immediate proximity to Cairo's most vibrant commercial and transit hubs.",
     "highlights": [
@@ -13704,9 +13701,9 @@ export const compoundsGenerated: Compound[] = [
       "Diverse Real Estate Mix: Comprises a wide range of property types including luxurious standalone villas, twin houses, townhouses, duplexes, penthouses, and contemporary apartments."
     ],
     "paymentPlan": "10% / 10 yrs",
-    "brochureUrl": "/brochures/Creek-Town-E-brochure.pdf",
-    "brochureFileName": "Creek-Town-E-brochure.pdf",
-    "brochureType": "application/pdf"
+    "brochureUrl": "/brochures/creek-town-brochure.pdf",
+    "brochureFileName": "creek-town-brochure.pdf",
+    "masterPlanUrl": "/Masterplans/creek-town.jpg"
   },
   {
     "slug": "address-east",
@@ -13812,11 +13809,17 @@ export const compoundsGenerated: Compound[] = [
       "Safe children’s play areas and family gathering parks",
       "Secure underground and surface resident parking facilities"
     ],
-    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+    "hero": "/projects/mountain-view-hyde-park/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80"
+      "/projects/mountain-view-hyde-park/1.jpg",
+      "/projects/mountain-view-hyde-park/2.jpg",
+      "/projects/mountain-view-hyde-park/3.jpg",
+      "/projects/mountain-view-hyde-park/4.jpg",
+      "/projects/mountain-view-hyde-park/5.jpg",
+      "/projects/mountain-view-hyde-park/6.jpg",
+      "/projects/mountain-view-hyde-park/7.jpg",
+      "/projects/mountain-view-hyde-park/8.jpg",
+      "/projects/mountain-view-hyde-park/9.jpg"
     ],
     "blurb": "Spanning over 200 acres in the heart of New Cairo's Fifth Settlement, Mountain View Hyde Park is an iconic, American-inspired master-planned residential community designed around grand open spaces and nature-infused living. The development integrates royal-styled architecture with vast green parks, signature water features, and creative pedestrian-only zones. By incorporating pedestrian crossover bridges and intelligent neighborhood layouts, it offers a secure, resort-like atmosphere just minutes away from New Cairo's primary educational, commercial, and financial hubs.",
     "highlights": [
@@ -13826,7 +13829,8 @@ export const compoundsGenerated: Compound[] = [
       "Signature Architecture: Features Mountain View's patented concepts, including the innovative iVilla (combining the privacy of villas with the efficiency of apartments).",
       "Diverse Housing Inventory: Comprises luxury apartments, signature iVillas, penthouses, townhouses, and grand twin/standalone villas."
     ],
-    "paymentPlan": "20% / 7 yrs"
+    "paymentPlan": "20% / 7 yrs",
+    "masterPlanUrl": "/Masterplans/mountain-view-hyde-park.jpg"
   },
   {
     "slug": "amorada",
@@ -13934,11 +13938,9 @@ export const compoundsGenerated: Compound[] = [
       "Community mosque",
       "Secure private parking and visitor bays"
     ],
-    "hero": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+    "hero": "/projects/katameya-gardens/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80"
+      "/projects/katameya-gardens/1.jpg"
     ],
     "blurb": "Spanning 100 acres in the elite Golden Square district of New Cairo, Katameya Gardens is an ultra-low-density residential sanctuary designed for ultimate privacy and distinction. Located directly behind the American University in Cairo (AUC), the project features a master-planned community limited to just 342 primary villa and high-end residential estates. The compound blends contemporary architecture with German-designed natural landscapes, wide landscaped corridors, and artificial water features.",
     "highlights": [
@@ -13948,7 +13950,8 @@ export const compoundsGenerated: Compound[] = [
       "Tiered Elevation Planning: Designed with varied terrain levels to ensure unobstructed views of green open spaces from all homes.",
       "Diverse Luxury Inventory: Comprises spacious standalone villas, twin houses, townhouses, and high-end low-rise apartments."
     ],
-    "paymentPlan": "30% / 4 yrs"
+    "paymentPlan": "30% / 4 yrs",
+    "masterPlanUrl": "/Masterplans/katameya-gardens.jpg"
   },
   {
     "slug": "sephora-heights",
@@ -14269,11 +14272,17 @@ export const compoundsGenerated: Compound[] = [
       "Community mosque",
       "Underground resident parking garages and secure surface visitor spaces"
     ],
-    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+    "hero": "/projects/waterway-1/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80"
+      "/projects/waterway-1/1.jpg",
+      "/projects/waterway-1/2.jpg",
+      "/projects/waterway-1/3.jpg",
+      "/projects/waterway-1/4.jpg",
+      "/projects/waterway-1/5.jpg",
+      "/projects/waterway-1/6.jpg",
+      "/projects/waterway-1/7.jpg",
+      "/projects/waterway-1/8.jpg",
+      "/projects/waterway-1/9.jpg"
     ],
     "blurb": "Spanning a prime tract of land in the heart of New Cairo's Fifth Settlement along the Northern Investors / Mohamed Naguib axis, The Waterway 1 is a boutique, ultra-luxury mixed-use residential and commercial community. Inspired by modern European architecture and sophisticated aesthetic lines, the project is defined by its signature cascading water features, serene artificial lakes, and lush landscaped walkways. It blends absolute residential privacy with an energetic, high-end commercial and retail strip right outside residents' doors.",
     "highlights": [
@@ -14283,7 +14292,8 @@ export const compoundsGenerated: Compound[] = [
       "Strategic Accessibility: Easy connectivity to North 90th Street, the Ring Road, and Cairo International Airport.",
       "Diverse Real Estate Inventory: Comprises luxury ready-to-move apartments, spacious duplexes, signature penthouses, and select standalone/townhouse options with sweeping water or garden views."
     ],
-    "paymentPlan": "20% / 4 yrs"
+    "paymentPlan": "20% / 4 yrs",
+    "masterPlanUrl": "/Masterplans/waterway-1.jpg"
   },
   {
     "slug": "ashrafieh",
@@ -14438,11 +14448,9 @@ export const compoundsGenerated: Compound[] = [
       "Safe children’s outdoor play parks and green recreation zones",
       "Underground resident parking garages and secure surface visitor bays"
     ],
-    "hero": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+    "hero": "/projects/katameya-creeks/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80"
+      "/projects/katameya-creeks/1.jpg"
     ],
     "blurb": "Spanning approximately 43 acres in the heart of New Cairo's prestigious Golden Square district, Katameya Creeks is an ultra-luxury, low-density residential community. Developed by Starlight Developments, the project is meticulously designed to offer a refined, serene living environment inspired by classic European architectural elegance. The master plan prioritizes absolute privacy and open space, dedicating the vast majority of its area to lush green landscaping, water features, and manicured walking avenues while keeping the built-up density remarkably low.",
     "highlights": [
@@ -14451,7 +14459,8 @@ export const compoundsGenerated: Compound[] = [
       "Strategic Accessibility: Positioned within close proximity to the American University in Cairo (AUC), North 90th Street, the Ring Road, and the Middle Ring Road.",
       "Exclusive Architectural Style: Features a harmonious blend of low-rise apartment buildings, high-end penthouses, and luxury standalone villas/townhouses with timeless stone facades."
     ],
-    "paymentPlan": "25% / 3 yrs"
+    "paymentPlan": "25% / 3 yrs",
+    "masterPlanUrl": "/Masterplans/katameya-creeks.jpg"
   },
   {
     "slug": "beachfront-towers",
@@ -14582,11 +14591,17 @@ export const compoundsGenerated: Compound[] = [
       "Convention Center",
       "Water Park"
     ],
-    "hero": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
+    "hero": "/projects/marassi-red-sea/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
-      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800&q=80"
+      "/projects/marassi-red-sea/1.jpg",
+      "/projects/marassi-red-sea/2.jpg",
+      "/projects/marassi-red-sea/3.jpg",
+      "/projects/marassi-red-sea/4.jpg",
+      "/projects/marassi-red-sea/5.jpg",
+      "/projects/marassi-red-sea/6.jpg",
+      "/projects/marassi-red-sea/7.jpg",
+      "/projects/marassi-red-sea/8.jpg",
+      "/projects/marassi-red-sea/9.jpg"
     ],
     "blurb": "Marassi Red Sea by Emaar Misr is an ultra-luxury year-round resort spanning 2,400 acres on Egypt's East Coast, featuring island living, floating cabanas, swimmable crystal lagoons, and a 600-berth international marina.",
     "paymentPlan": "5% down payment, installments up to 8 years",
@@ -14602,7 +14617,8 @@ export const compoundsGenerated: Compound[] = [
     ],
     "brochureUrl": "/brochures/Marassi-Red-Sea-Brochure.pdf",
     "brochureFileName": "Marassi-Red-Sea-Brochure.pdf",
-    "brochureType": "application/pdf"
+    "brochureType": "application/pdf",
+    "masterPlanUrl": "/Masterplans/marassi-red-sea.jpg"
   },
   {
     "slug": "c-north",
@@ -14645,12 +14661,19 @@ export const compoundsGenerated: Compound[] = [
     "unitSizes": "370 m² (Signature Villa A), Townhouses (180-190 m²), Quads (210 m²)",
     "type": "Coastal",
     "brochureUrl": "/brochures/C-NORTH BROCHURE.pdf",
-    "hero": "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80",
+    "hero": "/projects/c-north/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=800&q=80"
-    ]
+      "/projects/c-north/1.jpg",
+      "/projects/c-north/2.jpg",
+      "/projects/c-north/3.jpg",
+      "/projects/c-north/4.jpg",
+      "/projects/c-north/5.jpg",
+      "/projects/c-north/6.jpg",
+      "/projects/c-north/7.jpg",
+      "/projects/c-north/8.jpg",
+      "/projects/c-north/9.jpg"
+    ],
+    "masterPlanUrl": "/Masterplans/c-north.jpg"
   },
   {
     "slug": "the-crest",
@@ -14690,12 +14713,19 @@ export const compoundsGenerated: Compound[] = [
     "unitSizes": "85–380 m²",
     "type": "Residential",
     "brochureUrl": "/brochures/The-Crest-Villas-E-Brochure-1-1.pdf",
-    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+    "hero": "/projects/the-crest/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
-    ]
+      "/projects/the-crest/1.jpg",
+      "/projects/the-crest/2.jpg",
+      "/projects/the-crest/3.jpg",
+      "/projects/the-crest/4.jpg",
+      "/projects/the-crest/5.jpg",
+      "/projects/the-crest/6.jpg",
+      "/projects/the-crest/7.jpg",
+      "/projects/the-crest/8.jpg",
+      "/projects/the-crest/9.jpg"
+    ],
+    "masterPlanUrl": "/Masterplans/the-crest.jpg"
   },
   {
     "slug": "westdays",
@@ -14735,12 +14765,19 @@ export const compoundsGenerated: Compound[] = [
     "unitSizes": "120–320 m²",
     "type": "Residential",
     "brochureUrl": "/brochures/Westdays-E-Brochure.pdf",
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/westdays/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80"
-    ]
+      "/projects/westdays/1.jpg",
+      "/projects/westdays/2.jpg",
+      "/projects/westdays/3.jpg",
+      "/projects/westdays/4.jpg",
+      "/projects/westdays/5.jpg",
+      "/projects/westdays/6.jpg",
+      "/projects/westdays/7.jpg",
+      "/projects/westdays/8.jpg",
+      "/projects/westdays/9.jpg"
+    ],
+    "masterPlanUrl": "/Masterplans/westdays.jpg"
   },
   {
     "slug": "glen",
@@ -14779,12 +14816,19 @@ export const compoundsGenerated: Compound[] = [
     "unitSizes": "180–275 m²",
     "type": "Residential",
     "brochureUrl": "/brochures/GLEN-Sales-Kit.pdf",
-    "hero": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+    "hero": "/projects/glen/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80"
-    ]
+      "/projects/glen/1.jpg",
+      "/projects/glen/2.jpg",
+      "/projects/glen/3.jpg",
+      "/projects/glen/4.jpg",
+      "/projects/glen/5.jpg",
+      "/projects/glen/6.jpg",
+      "/projects/glen/7.jpg",
+      "/projects/glen/8.jpg",
+      "/projects/glen/9.jpg"
+    ],
+    "masterPlanUrl": "/Masterplans/glen.jpg"
   },
   {
     "slug": "stoda",
@@ -14823,12 +14867,19 @@ export const compoundsGenerated: Compound[] = [
     "unitSizes": "90–220 m²",
     "type": "Residential",
     "brochureUrl": "/brochures/Stoda-Sales-Kit.pdf",
-    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+    "hero": "/projects/stoda/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80"
-    ]
+      "/projects/stoda/1.jpg",
+      "/projects/stoda/2.jpg",
+      "/projects/stoda/3.jpg",
+      "/projects/stoda/4.jpg",
+      "/projects/stoda/5.jpg",
+      "/projects/stoda/6.jpg",
+      "/projects/stoda/7.jpg",
+      "/projects/stoda/8.jpg",
+      "/projects/stoda/9.jpg"
+    ],
+    "masterPlanUrl": "/Masterplans/stoda.jpg"
   },
   {
     "slug": "creek-district",
@@ -14867,11 +14918,19 @@ export const compoundsGenerated: Compound[] = [
     "unitSizes": "60–500 m²",
     "type": "Mixed-use",
     "brochureUrl": "/brochures/IL-CAZAR-CREEK-DISTRICT.pdf",
-    "hero": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "hero": "/projects/creek-district/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
-      "https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=800&q=80"
-    ]
+      "/projects/creek-district/1.jpg",
+      "/projects/creek-district/2.jpg",
+      "/projects/creek-district/3.jpg",
+      "/projects/creek-district/4.jpg",
+      "/projects/creek-district/5.jpg",
+      "/projects/creek-district/6.jpg",
+      "/projects/creek-district/7.jpg",
+      "/projects/creek-district/8.jpg",
+      "/projects/creek-district/9.jpg"
+    ],
+    "masterPlanUrl": "/Masterplans/creek-district.jpg"
   },
   {
     "slug": "go-heliopolis",
@@ -14911,10 +14970,18 @@ export const compoundsGenerated: Compound[] = [
     "unitSizes": "80–210 m²",
     "type": "Residential",
     "brochureUrl": "/brochures/Go.pdf",
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/go-heliopolis/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
-    ]
+      "/projects/go-heliopolis/1.jpg",
+      "/projects/go-heliopolis/2.jpg",
+      "/projects/go-heliopolis/3.jpg",
+      "/projects/go-heliopolis/4.jpg",
+      "/projects/go-heliopolis/5.jpg",
+      "/projects/go-heliopolis/6.jpg",
+      "/projects/go-heliopolis/7.jpg",
+      "/projects/go-heliopolis/8.jpg",
+      "/projects/go-heliopolis/9.jpg"
+    ],
+    "masterPlanUrl": "/Masterplans/go-heliopolis.jpg"
   }
 ];
