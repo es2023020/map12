@@ -307,7 +307,14 @@ function ArabicCompoundPage() {
                 <h3 className="font-display text-xl font-bold text-foreground">
                   الوحدات المتاحة حالياً للبيع
                 </h3>
-                <AvailabilitySection data={availabilityBySlug(c.slug)!} projectSlug={c.slug} />
+                <AvailabilitySection
+                  data={availabilityBySlug(c.slug)!}
+                  projectSlug={c.slug}
+                  onRegisterInterest={(type) => {
+                    setLeadUnit(type);
+                    setInterestModalOpen(true);
+                  }}
+                />
               </div>
             )}
           </div>
