@@ -612,9 +612,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9132,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 20.526,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "priceFrom": 17,
+    "deliveryYear": 2025,
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -623,7 +623,9 @@ export const compoundsGenerated: Compound[] = [
       "Standalone Villa",
       "Townhouse",
       "Twin House",
-      "Villa"
+      "Villa",
+      "Typical Apartment",
+      "ground Apartment"
     ],
     "amenities": [
       "Sports club",
@@ -652,9 +654,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/badya/10.jpg"
     ],
     "blurb": "Badya is Palm Hills' flagship smart city spanning approximately 3,000 acres, designed as one of Egypt's first sustainable smart cities with integrated residential, educational, commercial, and healthcare districts.",
-    "paymentPlan": "0%–5% down payment, remaining balance spread over 8–10 years in equal installments",
+    "paymentPlan": "10% DP - 5% After 3 Months / over 8 Years",
     "areaSize": "3,000 feddan",
-    "unitSizes": "80–300 m²",
+    "unitSizes": "170+ m²",
     "type": "Residential",
     "highlights": [
       "Sustainable smart city",
@@ -3592,14 +3594,15 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.858,
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
-    "priceFrom": 12,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "priceFrom": 30.7,
+    "deliveryYear": 2026,
+    "status": "RTM",
     "beachfront": false,
     "types": [
       "Townhouse",
       "Twin House",
-      "Villa"
+      "Villa",
+      "StandAlone"
     ],
     "amenities": [
       "Clubhouse",
@@ -3614,9 +3617,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/rivers/1.jpg"
     ],
     "blurb": "Rivers by Tatweer Misr is a boutique residential compound in New Sheikh Zayed. Spanning 100 acres, it features townhouses, twinhouses, and standalone villas with extensive green lanes.",
-    "paymentPlan": "5% down · 8 years equal installments",
+    "paymentPlan": "5% DP / over 8 Years",
     "areaSize": "100 feddan",
-    "unitSizes": "120–320 m²",
+    "unitSizes": "250–350 m²",
     "type": "Residential",
     "highlights": [
       "New Zayed prime location",
@@ -11012,9 +11015,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/karmell/5.jpg"
     ],
     "blurb": "Karmell is a flagship development in Sheikh Zayed by SODIC, offering modern residences with full amenities for year-round living.",
-    "paymentPlan": "10% down payment over 8 years equal installments",
+    "paymentPlan": "5% Down Payment - 3% after 6 months - 8% after 9 months over 8 years",
     "areaSize": "203 feddan",
-    "unitSizes": "143–407 m²",
+    "unitSizes": "108–383 m²",
     "city": "New Zayed, Giza Governorate, Egypt",
     "type": "Residential",
     "highlights": [
@@ -11062,7 +11065,7 @@ export const compoundsGenerated: Compound[] = [
     "blurb": "Mountain View iCity October by Mountain View — a Residential community offering refined living with full amenities and strong location advantages.",
     "paymentPlan": "10% down payment over 8 years equal installments",
     "areaSize": "89 feddan",
-    "unitSizes": "108–273 m²",
+    "unitSizes": "209+ m²",
     "type": "Residential",
     "highlights": [
       "Crystal Lagoon",
@@ -11125,7 +11128,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9013,
     "developer": "Arabia Holding",
     "developerSlug": "arabia-holding",
-    "priceFrom": 6,
+    "priceFrom": 8.33,
     "deliveryYear": 2025,
     "status": "RTM",
     "beachfront": false,
@@ -11133,7 +11136,14 @@ export const compoundsGenerated: Compound[] = [
       "Apartment",
       "Penthouse",
       "Villa",
-      "Studio"
+      "Studio",
+      "Typical Apartment",
+      "ground Apartment",
+      "Duplexes",
+      "Penthouses",
+      "Townhouse",
+      "Twinhouse",
+      "StandAlone"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -11151,9 +11161,9 @@ export const compoundsGenerated: Compound[] = [
       "/projects/sun-capital/4.jpg"
     ],
     "blurb": "Sun Capital by Arabia Holding — a Residential community offering refined living with full amenities and strong location advantages.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
+    "paymentPlan": "10% Dp - ⁠5% After 6 months / Over 8 years",
     "areaSize": "147 feddan",
-    "unitSizes": "134–319 m²",
+    "unitSizes": "113–215 m²",
     "type": "Residential",
     "city": "6th of October City, Giza Governorate, Egypt",
     "highlights": [
@@ -12759,7 +12769,7 @@ export const compoundsGenerated: Compound[] = [
     "blurb": "SODIC The Estates by SODIC — a flagship master-plan in New Sheikh Zayed offering large-plot villas, lower density, and the latest generation of West-Cairo design language.",
     "paymentPlan": "10% down payment over 9 years equal installments",
     "areaSize": "60 feddan",
-    "unitSizes": "120–320 m²",
+    "unitSizes": "308+ m²",
     "city": "New Zayed City, West Cairo, Egypt",
     "type": "Residential",
     "highlights": [
@@ -15502,5 +15512,765 @@ export const compoundsGenerated: Compound[] = [
       "/projects/go-heliopolis/9.jpg"
     ],
     "masterPlanUrl": "/Masterplans/go-heliopolis.jpg"
+  },
+  {
+    "slug": "genova",
+    "name": "Genova",
+    "destination": "sheikh-zayed",
+    "lat": 30.05913519640575,
+    "lng": 30.972033809130732,
+    "developer": "Eastern",
+    "developerSlug": "eastern",
+    "priceFrom": 12,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Typical Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/genova/1.jpg",
+    "gallery": [
+      "/projects/genova/1.jpg",
+      "/projects/genova/2.jpg",
+      "/projects/genova/3.jpg"
+    ],
+    "blurb": "Genova is a ready-to-move residential project by Eastern in Sheikh Zayed, offering Typical Apartment units from 162–250 m².",
+    "paymentPlan": "5 % over 8 years   5% + 5% after 3 month over 10 years",
+    "unitSizes": "162–250 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Sheikh Zayed location",
+      "core & shell"
+    ],
+    "city": "Sheikh Zayed, Egypt"
+  },
+  {
+    "slug": "lake-west-1",
+    "name": "LAKE WEST 1",
+    "destination": "northern-expansion",
+    "lat": 30.06023208107402,
+    "lng": 31.010609572225956,
+    "developer": "Cairo Capital",
+    "developerSlug": "cairo-capital",
+    "priceFrom": 17.48,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "TownHouse Corner"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/lake-west-1/1.jpg",
+    "gallery": [
+      "/projects/lake-west-1/1.jpg",
+      "/projects/lake-west-1/2.jpg",
+      "/projects/lake-west-1/3.jpg"
+    ],
+    "blurb": "LAKE WEST 1 is a ready-to-move residential project by Cairo Capital in Green Belt, offering TownHouse Corner units from 256–285 m².",
+    "paymentPlan": "91% Dp / over 3  years 93% Dp / over 3  years",
+    "unitSizes": "256–285 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Green Belt location",
+      "Core & Shell"
+    ],
+    "city": "Green Belt, Egypt",
+    "brochureUrl": "/brochures/31-west.pdf",
+    "brochureFileName": "31-west.pdf"
+  },
+  {
+    "slug": "lake-west-2",
+    "name": "LAKE WEST 2",
+    "destination": "new-zayed",
+    "lat": 30.10997413630242,
+    "lng": 30.87970161978419,
+    "developer": "Unknown",
+    "developerSlug": "unknown",
+    "priceFrom": 12.5,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "TownHouse Middle",
+      "standalone"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/lake-west-2/1.jpg",
+    "gallery": [
+      "/projects/lake-west-2/1.jpg",
+      "/projects/lake-west-2/2.jpg",
+      "/projects/lake-west-2/3.jpg"
+    ],
+    "blurb": "LAKE WEST 2 is a ready-to-move residential project by a leading developer in West Cairo, offering TownHouse Middle, standalone units from 230–296 m².",
+    "paymentPlan": "94% Dp / over 1,5  years 95% Dp / over 1,5  years",
+    "unitSizes": "230–296 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "West Cairo location",
+      "Core & Shell"
+    ],
+    "city": "West Cairo, Egypt",
+    "brochureUrl": "/brochures/31-west.pdf",
+    "brochureFileName": "31-west.pdf"
+  },
+  {
+    "slug": "lac-ville",
+    "name": "Lac Ville",
+    "destination": "northern-expansion",
+    "lat": 30.066270436828773,
+    "lng": 31.006962395808173,
+    "developer": "El Gabry",
+    "developerSlug": "el-gabry",
+    "priceFrom": 11.84,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Town Corner",
+      "standalone"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/lac-ville/1.jpg",
+    "gallery": [
+      "/projects/lac-ville/1.jpg",
+      "/projects/lac-ville/2.jpg",
+      "/projects/lac-ville/3.jpg"
+    ],
+    "blurb": "Lac Ville is a ready-to-move residential project by El Gabry in Green Belt, offering Town Corner, standalone units from up to 259 m².",
+    "paymentPlan": "80% Dp / over 5  years",
+    "unitSizes": "up to 259 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Green Belt location",
+      "Core & Shell"
+    ],
+    "city": "Green Belt, Egypt"
+  },
+  {
+    "slug": "montania",
+    "name": "Montania",
+    "destination": "northern-expansion",
+    "lat": 30.078111312823015,
+    "lng": 31.010546826647573,
+    "developer": "Everst View",
+    "developerSlug": "everst-view",
+    "priceFrom": 22.85,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "standalone - View",
+      "standalone  - Elite",
+      "standalone  - Panorama"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/montania/1.jpg",
+    "gallery": [
+      "/projects/montania/1.jpg",
+      "/projects/montania/2.jpg",
+      "/projects/montania/3.jpg"
+    ],
+    "blurb": "Montania is a ready-to-move residential project by Everst View in Green Belt, offering standalone - View, standalone  - Elite, standalone  - Panorama units from up to 304 m².",
+    "paymentPlan": "30% Dp / over 6  years",
+    "unitSizes": "up to 304 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Green Belt location",
+      "Core & Shell"
+    ],
+    "city": "Green Belt, Egypt"
+  },
+  {
+    "slug": "montania-park",
+    "name": "Montania Park",
+    "destination": "northern-expansion",
+    "lat": 30.065431750758222,
+    "lng": 31.011825643369484,
+    "developer": "Everst View",
+    "developerSlug": "everst-view",
+    "priceFrom": 17.5,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Twin House",
+      "standalone"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/montania-park/1.jpg",
+    "gallery": [
+      "/projects/montania-park/1.jpg",
+      "/projects/montania-park/2.jpg",
+      "/projects/montania-park/3.jpg"
+    ],
+    "blurb": "Montania Park is a ready-to-move residential project by Everst View in Green Belt, offering Twin House, standalone units from 305+ m².",
+    "paymentPlan": "15% Dp / over 7  years",
+    "unitSizes": "305+ m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Green Belt location",
+      "Core & Shell"
+    ],
+    "city": "Green Belt, Egypt",
+    "brochureUrl": "/brochures/cairo-business-park.pdf",
+    "brochureFileName": "cairo-business-park.pdf"
+  },
+  {
+    "slug": "zg2",
+    "name": "Zg2",
+    "destination": "northern-expansion",
+    "lat": 30.073666680419926,
+    "lng": 31.000859356404376,
+    "developer": "Zg",
+    "developerSlug": "zg",
+    "priceFrom": 21.75,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Standalone"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/zg2/1.jpg",
+    "gallery": [
+      "/projects/zg2/1.jpg",
+      "/projects/zg2/2.jpg",
+      "/projects/zg2/3.jpg"
+    ],
+    "blurb": "Zg2 is a ready-to-move residential project by Zg in Green Belt, offering Standalone units from 362–378 m².",
+    "paymentPlan": "25% DP  / over 3 Years",
+    "unitSizes": "362–378 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Green Belt location",
+      "Core & Shell"
+    ],
+    "city": "Green Belt, Egypt"
+  },
+  {
+    "slug": "joya",
+    "name": "Joya",
+    "destination": "6th-october",
+    "lat": 29.97476013206875,
+    "lng": 30.933489142905184,
+    "developer": "Tcc",
+    "developerSlug": "tcc",
+    "priceFrom": 20.97,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Garden Apartment",
+      "Typical Apartment",
+      "Penthouse",
+      "TownHouse Middle",
+      "TownHouse Corner",
+      "Twin House"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/joya/1.jpg",
+    "gallery": [
+      "/projects/joya/1.jpg",
+      "/projects/joya/2.jpg",
+      "/projects/joya/3.jpg"
+    ],
+    "blurb": "Joya is a ready-to-move residential project by Tcc in Eastern Expansions, offering Garden Apartment, Typical Apartment, Penthouse, TownHouse Middle, TownHouse Corner, Twin House units from 220–475 m².",
+    "paymentPlan": "20% Dp / over 6 years",
+    "areaSize": "44 Acres",
+    "unitSizes": "220–475 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Eastern Expansions location",
+      "Core & Shell"
+    ],
+    "city": "Eastern Expansions, Egypt"
+  },
+  {
+    "slug": "garden-lakes",
+    "name": "Garden Lakes",
+    "destination": "6th-october",
+    "lat": 29.962875699294102,
+    "lng": 30.94556858196044,
+    "developer": "Hyde Park",
+    "developerSlug": "hyde-park",
+    "priceFrom": 6.8,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Typical Apartment",
+      "Garden Apartment",
+      "Townhouse",
+      "Twin House"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/garden-lakes/1.jpg",
+    "gallery": [
+      "/projects/garden-lakes/1.jpg",
+      "/projects/garden-lakes/2.jpg",
+      "/projects/garden-lakes/3.jpg"
+    ],
+    "blurb": "Garden Lakes is a ready-to-move residential project by Hyde Park in Eastern Expansions, offering Typical Apartment, Garden Apartment, Townhouse, Twin House units from 71–154 m².",
+    "paymentPlan": "20% Dp / over 6 years",
+    "areaSize": "69 Acres",
+    "unitSizes": "71–154 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Eastern Expansions location",
+      "Core & Shell"
+    ],
+    "city": "Eastern Expansions, Egypt"
+  },
+  {
+    "slug": "cleopatra-square",
+    "name": "Cleopatra Square",
+    "destination": "6th-october",
+    "lat": 29.969036271722377,
+    "lng": 30.946053485214403,
+    "developer": "Cleopatra",
+    "developerSlug": "cleopatra",
+    "priceFrom": 35.4,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Cleo",
+      "Twin House",
+      "standalone"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/cleopatra-square/1.jpg",
+    "gallery": [
+      "/projects/cleopatra-square/1.jpg",
+      "/projects/cleopatra-square/2.jpg",
+      "/projects/cleopatra-square/3.jpg"
+    ],
+    "blurb": "Cleopatra Square is a ready-to-move residential project by Cleopatra in Eastern Expansions, offering Cleo, Twin House, standalone units from 265–512 m².",
+    "paymentPlan": "25% Dp / over 4 years",
+    "areaSize": "48 acres",
+    "unitSizes": "265–512 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Eastern Expansions location",
+      "Core & Shell"
+    ],
+    "city": "Eastern Expansions, Egypt",
+    "brochureUrl": "/brochures/Fifth Square E brochure.pdf",
+    "brochureFileName": "Fifth Square E brochure.pdf"
+  },
+  {
+    "slug": "nyoum-pyramids",
+    "name": "Nyoum Pyramids",
+    "destination": "6th-october",
+    "lat": 29.95894136261796,
+    "lng": 30.936083657022742,
+    "developer": "Arab Developers Holding",
+    "developerSlug": "arab-developers-holding",
+    "priceFrom": 7.16,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/nyoum-pyramids/1.jpg",
+    "gallery": [
+      "/projects/nyoum-pyramids/1.jpg",
+      "/projects/nyoum-pyramids/2.jpg",
+      "/projects/nyoum-pyramids/3.jpg"
+    ],
+    "blurb": "Nyoum Pyramids is a ready-to-move residential project by Arab Developers Holding in Eastern Expansions, offering Apartment units from 170+ m².",
+    "paymentPlan": "25% DP / over 5 Years 50% DP / over 5 Years",
+    "unitSizes": "170+ m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Eastern Expansions location",
+      "Core & Shell"
+    ],
+    "city": "Eastern Expansions, Egypt"
+  },
+  {
+    "slug": "mv-4",
+    "name": "MV 4",
+    "destination": "northern-expansion",
+    "lat": 30.07764701861007,
+    "lng": 31.005417351185308,
+    "developer": "Mountain View",
+    "developerSlug": "mountain-view",
+    "priceFrom": 25.43,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Town House Middle",
+      "Villa"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/mv-4/1.jpg",
+    "gallery": [
+      "/projects/mv-4/1.jpg",
+      "/projects/mv-4/2.jpg",
+      "/projects/mv-4/3.jpg"
+    ],
+    "blurb": "MV 4 is a ready-to-move residential project by Mountain View in Northern Expansions, offering Town House Middle, Villa units from 210–275 m².",
+    "paymentPlan": "Over 7 Years",
+    "areaSize": "47 acres",
+    "unitSizes": "210–275 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Northern Expansions location",
+      "Fully Finished"
+    ],
+    "city": "Northern Expansions, Egypt"
+  },
+  {
+    "slug": "hadaba",
+    "name": "Hadaba",
+    "destination": "northern-expansion",
+    "lat": 30.064114533216813,
+    "lng": 31.009490838130255,
+    "developer": "Pre",
+    "developerSlug": "pre",
+    "priceFrom": 26.9,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Town House",
+      "Twin House"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/hadaba/1.jpg",
+    "gallery": [
+      "/projects/hadaba/1.jpg",
+      "/projects/hadaba/2.jpg",
+      "/projects/hadaba/3.jpg"
+    ],
+    "blurb": "Hadaba is a ready-to-move residential project by Pre in Northern Expansions, offering Town House, Twin House units from 300–362 m².",
+    "paymentPlan": "15% DP - 10% After 6 Months (On Delivery) / over 5 Years",
+    "areaSize": "33 Acres",
+    "unitSizes": "300–362 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Northern Expansions location",
+      "Semi Finished"
+    ],
+    "city": "Northern Expansions, Egypt"
+  },
+  {
+    "slug": "kayan",
+    "name": "Kayan",
+    "destination": "northern-expansion",
+    "lat": 30.0662628981283,
+    "lng": 31.007256737851538,
+    "developer": "badreldin",
+    "developerSlug": "badreldin",
+    "priceFrom": 8.8,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Garden Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/kayan/1.jpg",
+    "gallery": [
+      "/projects/kayan/1.jpg",
+      "/projects/kayan/2.jpg",
+      "/projects/kayan/3.jpg"
+    ],
+    "blurb": "Kayan is a ready-to-move residential project by badreldin in Northern Expansions, offering Garden Apartment units from 125–130 m².",
+    "paymentPlan": "25% DP  / over 4 Years",
+    "unitSizes": "125–130 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Northern Expansions location",
+      "Fully Finished"
+    ],
+    "city": "Northern Expansions, Egypt"
+  },
+  {
+    "slug": "villaria",
+    "name": "Villaria",
+    "destination": "northern-expansion",
+    "lat": 30.063315601113437,
+    "lng": 31.00214461071305,
+    "developer": "Mirad",
+    "developerSlug": "mirad",
+    "priceFrom": 7.92,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Penthouse",
+      "Duplex"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/villaria/1.jpg",
+    "gallery": [
+      "/projects/villaria/1.jpg",
+      "/projects/villaria/2.jpg",
+      "/projects/villaria/3.jpg"
+    ],
+    "blurb": "Villaria is a ready-to-move residential project by Mirad in Northern Expansions, offering Penthouse, Duplex units from 240+ m².",
+    "paymentPlan": "35% DP / over 5 Years",
+    "unitSizes": "240+ m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Northern Expansions location",
+      "Core & Shell"
+    ],
+    "city": "Northern Expansions, Egypt"
+  },
+  {
+    "slug": "m-apartments",
+    "name": "M Apartments",
+    "destination": "northern-expansion",
+    "lat": 30.078592843087346,
+    "lng": 31.01029149403057,
+    "developer": "Mirad",
+    "developerSlug": "mirad",
+    "priceFrom": 6.02,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Typical Apartment",
+      "Penthouse"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/m-apartments/1.jpg",
+    "gallery": [
+      "/projects/m-apartments/1.jpg",
+      "/projects/m-apartments/2.jpg",
+      "/projects/m-apartments/3.jpg"
+    ],
+    "blurb": "M Apartments is a ready-to-move residential project by Mirad in Northern Expansions, offering Typical Apartment, Penthouse units from 177–192 m².",
+    "paymentPlan": "35% DP / over 5 Years",
+    "unitSizes": "177–192 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "Northern Expansions location",
+      "Core & Shell"
+    ],
+    "city": "Northern Expansions, Egypt"
+  },
+  {
+    "slug": "ashgar-city",
+    "name": "Ashgar city",
+    "destination": "6th-october",
+    "lat": 29.965815478900552,
+    "lng": 30.943818793233163,
+    "developer": "Igi",
+    "developerSlug": "igi",
+    "priceFrom": 4.4,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Typical Apartment",
+      "Penthouse"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/ashgar-city/1.jpg",
+    "gallery": [
+      "/projects/ashgar-city/1.jpg",
+      "/projects/ashgar-city/2.jpg",
+      "/projects/ashgar-city/3.jpg"
+    ],
+    "blurb": "Ashgar city is a ready-to-move residential project by Igi in October Gardens, offering Typical Apartment, Penthouse units from up to 125 m².",
+    "paymentPlan": "20% Dp / over 8  years",
+    "areaSize": "148 acres",
+    "unitSizes": "up to 125 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "October Gardens location",
+      "Semi Finished"
+    ],
+    "city": "October Gardens, Egypt"
+  },
+  {
+    "slug": "green-town",
+    "name": "Green Town",
+    "destination": "6th-october",
+    "lat": 29.958801376914817,
+    "lng": 30.944851074799136,
+    "developer": "Tesla",
+    "developerSlug": "tesla",
+    "priceFrom": 4.66,
+    "deliveryYear": 2026,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Typical Apartment",
+      "Garden Apartment",
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/green-town/1.jpg",
+    "gallery": [
+      "/projects/green-town/1.jpg",
+      "/projects/green-town/2.jpg",
+      "/projects/green-town/3.jpg"
+    ],
+    "blurb": "Green Town is a ready-to-move residential project by Tesla in October Gardens, offering Typical Apartment, Garden Apartment, Apartment units from 139–207 m².",
+    "paymentPlan": "15% DP - 10%  Delivery / over 6 Years",
+    "unitSizes": "139–207 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "October Gardens location",
+      "Core & Shell"
+    ],
+    "city": "October Gardens, Egypt",
+    "brochureUrl": "/brochures/creek-town-brochure.pdf",
+    "brochureFileName": "creek-town-brochure.pdf"
+  },
+  {
+    "slug": "rock-eden",
+    "name": "Rock Eden",
+    "destination": "6th-october",
+    "lat": 29.9713864692958,
+    "lng": 30.944119557990852,
+    "developer": "Al Batal",
+    "developerSlug": "al-batal",
+    "priceFrom": 10.81,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Swimming pools",
+      "Green spaces",
+      "24/7 security"
+    ],
+    "hero": "/projects/rock-eden/1.jpg",
+    "gallery": [
+      "/projects/rock-eden/1.jpg",
+      "/projects/rock-eden/2.jpg",
+      "/projects/rock-eden/3.jpg"
+    ],
+    "blurb": "Rock Eden is a ready-to-move residential project by Al Batal in October Gardens, offering Apartment units from 195+ m².",
+    "paymentPlan": "15% DP / over 10 years 8% DP / over 8 years 15% DP / over 6 years - Discount 10%",
+    "unitSizes": "195+ m²",
+    "type": "Residential",
+    "highlights": [
+      "Ready to Move",
+      "October Gardens location",
+      "Semi-finished"
+    ],
+    "city": "October Gardens, Egypt"
   }
 ];
