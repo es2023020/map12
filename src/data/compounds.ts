@@ -715,8 +715,17 @@ const extraRaw: Array<{
     lat: 30.078,
     lng: 31.665,
     developer: "Tatweer Misr",
-    price: 9,
+    price: 5.8,
     year: 2027,
+  },
+  {
+    name: "Scenes",
+    destination: "mostakbal-city",
+    lat: 30.0425,
+    lng: 31.648,
+    developer: "Tatweer Misr",
+    price: 14.6,
+    year: 2030,
   },
   {
     name: "Mountain View Aliva",

@@ -553,11 +553,36 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     areaSize: "415 feddan",
     types: ["Apartment", "Duplex", "Townhouse", "Twin House", "Standalone Villa"],
     highlights: [
+      "1BR from 5.8M, 2BR from 8.6M, 3BR from 10.4M, Duplex from 22.1M",
       "415-feddan college town concept",
       "Mostakbal City prime location",
       "Tatweer Misr signature masterplan",
     ],
   },
+  scenes: {
+    destination: "mostakbal-city",
+    lat: 30.0425,
+    lng: 31.648,
+    developer: "Tatweer Misr",
+    city: "Mostakbal City, East Cairo, Egypt",
+    priceFrom: 14.6,
+    deliveryYear: 2030,
+    blurb:
+      "Scenes by Tatweer Misr is a luxury, low-density, villas-only residential compound spanning 100 acres in Mostakbal City, East Cairo. 80% of the land is dedicated to green landscapes, water features, and open spaces.",
+    paymentPlan: "Flexible down payment with equal installments over 10 years · 30% Cash Discount",
+    areaSize: "100 feddan",
+    unitSizes: "165–210 m²",
+    types: ["Townhouse", "Twin House", "Standalone Villa"],
+    highlights: [
+      "Luxury low-density villas-only community across 100 acres",
+      "80% green landscapes & water features, 20% building footprint",
+      "Townhouses from 14.6M, Standalone Villas from 17.15M, Twin Houses from 17.8M",
+      "Payment plans up to 10 years · 30% Cash Discount",
+      "Delivered fully finished by December 2030",
+      "Heart of Mostakbal City near Hub Town & Neom",
+    ],
+  },
+
   blumar: {
     destination: "sidi-abdelrahman",
     km: 137,

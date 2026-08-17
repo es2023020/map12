@@ -1,5 +1,4 @@
-// Auto-generated from Command Center save action — do not edit by hand.
-import type { Compound } from "./compounds";
+import { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = [
   {
@@ -11628,12 +11627,10 @@ export const compoundsGenerated: Compound[] = [
     "city": "Mostakbal City, New Cairo, Cairo",
     "flagship": true,
     "highlights": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Restaurants Strip",
-      "18-Hole Golf",
-      "Cycling Track",
-      "Marina"
+      "1BR from 5.8M EGP, 2BR from 8.6M EGP, 3BR from 10.4M EGP, Duplex from 22.1M EGP",
+      "415-feddan college town concept in Mostakbal City",
+      "Sprawling green spaces & crystal lagoons",
+      "Tatweer Misr signature masterplan"
     ]
   },
   {
@@ -16272,5 +16269,58 @@ export const compoundsGenerated: Compound[] = [
       "Semi-finished"
     ],
     "city": "October Gardens, Egypt"
+  },
+  {
+    "slug": "scenes",
+    "name": "Scenes",
+    "destination": "mostakbal-city",
+    "lat": 30.0425,
+    "lng": 31.648,
+    "developer": "Tatweer Misr",
+    "developerSlug": "tatweer-misr",
+    "priceFrom": 14.6,
+    "deliveryYear": 2030,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Green Corridors",
+      "Artificial Lakes",
+      "Botanical Stations",
+      "Sports Facilities",
+      "Commercial Retail Area",
+      "24/7 Security",
+      "Backup Generators"
+    ],
+    "hero": "/projects/scenes/1.jpeg",
+    "gallery": [
+      "/projects/scenes/1.jpeg",
+      "/projects/scenes/2.jpg",
+      "/projects/scenes/3.jpg",
+      "/projects/scenes/4.jpg",
+      "/projects/scenes/5.jpg"
+    ],
+    "blurb": "Scenes by Tatweer Misr is a luxury, low-density, villas-only residential compound spanning 100 acres in Mostakbal City, East Cairo. 80% of the land is dedicated to green landscapes, water features, and open spaces.",
+    "paymentPlan": "10 Years equal installments · 30% Cash Discount",
+    "areaSize": "100 feddan",
+    "unitSizes": "165–210 m²",
+    "type": "Residential",
+    "city": "Mostakbal City, East Cairo, Egypt",
+    "flagship": true,
+    "isNewLaunch": true,
+    "masterPlanUrl": "/Masterplans/scenes.jpg",
+    "highlights": [
+      "Luxury low-density villas-only community (100 acres)",
+      "80% green landscapes & water features, 20% footprint",
+      "Townhouses from 14.6M, Standalones from 17.15M, Twin Houses from 17.8M",
+      "10 years payment plan · 30% Cash Discount",
+      "Delivered fully finished by Dec 2030",
+      "Heart of Mostakbal City near Hub Town & Neom"
+    ]
   }
 ];

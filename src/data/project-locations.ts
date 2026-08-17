@@ -216,6 +216,12 @@ export const projectLocations: Record<string, ProjectLocation> = {
     location: "Mostakbal City, New Cairo, Cairo Governorate, Egypt",
     mapsUrl: "https://www.google.com/maps/place/Bloomfields/@30.0684083,31.6451278,15z",
   },
+  scenes: {
+    name: "Scenes",
+    destination: "mostakbal-city",
+    location: "Mostakbal City, East Cairo, Egypt",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=30.0425,31.6480",
+  },
   blumar: {
     name: "Blumar",
     destination: "sidi-abdelrahman",
