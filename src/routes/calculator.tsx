@@ -137,6 +137,73 @@ function matchDestination(compDest: string, filterVal: string): boolean {
   return compDest === filterVal;
 }
 
+function matchPropertyType(typeStr: string | string[] | undefined, filterVal: string): boolean {
+  if (!filterVal) return true;
+  if (!typeStr) return false;
+
+  const checkSingle = (t: string) => {
+    const lowerT = t.toLowerCase();
+    switch (filterVal) {
+      case "Apartment":
+        return (
+          lowerT.includes("apartment") ||
+          lowerT.includes("studio") ||
+          lowerT.includes("condo") ||
+          lowerT.includes("br")
+        );
+      case "Duplex":
+        return (
+          lowerT.includes("duplex") ||
+          lowerT.includes("i-villa") ||
+          lowerT.includes("ivilla") ||
+          lowerT.includes("sky villa") ||
+          lowerT.includes("park villa") ||
+          lowerT.includes("family house")
+        );
+      case "Penthouse":
+        return lowerT.includes("penthouse") || lowerT.includes("loft");
+      case "Town House":
+        return (
+          lowerT.includes("town") ||
+          lowerT.includes("quad") ||
+          lowerT.includes("fourplex") ||
+          lowerT.includes("court")
+        );
+      case "Twin House":
+        return lowerT.includes("twin");
+      case "Villa":
+        return (
+          lowerT.includes("villa") ||
+          lowerT.includes("stand alone") ||
+          lowerT.includes("standalone") ||
+          lowerT.includes("mansion") ||
+          lowerT.includes("palace")
+        );
+      case "Chalet":
+        return (
+          lowerT.includes("chalet") ||
+          lowerT.includes("cabana") ||
+          lowerT.includes("cabin") ||
+          lowerT.includes("beach house")
+        );
+      case "Commercial":
+        return (
+          lowerT.includes("office") ||
+          lowerT.includes("retail") ||
+          lowerT.includes("clinic") ||
+          lowerT.includes("commercial")
+        );
+      default:
+        return lowerT.includes(filterVal.toLowerCase());
+    }
+  };
+
+  if (Array.isArray(typeStr)) {
+    return typeStr.some(checkSingle);
+  }
+  return checkSingle(typeStr);
+}
+
 function CalculatorPage() {
   const compoundsList = useStore((s) => s.compoundsList) || [];
   const availabilityList = useStore((s) => s.availabilityList) || [];
@@ -296,7 +363,7 @@ function CalculatorPage() {
 
       p.breakdown.forEach((b: any) => {
         // Filter by unit type
-        if (budgetTypeFilter && b.type !== budgetTypeFilter) return;
+        if (budgetTypeFilter && !matchPropertyType(b.type, budgetTypeFilter)) return;
 
         const units = b.units ?? [];
         units.forEach((u: any) => {
@@ -336,7 +403,7 @@ function CalculatorPage() {
       .filter((c) => {
         const matchPrice = c.priceFrom <= budgetLimit;
         const matchDest = matchDestination(c.destination, budgetDestFilter);
-        const matchType = !budgetTypeFilter || c.types.includes(budgetTypeFilter);
+        const matchType = !budgetTypeFilter || matchPropertyType(c.types, budgetTypeFilter);
         const matchStatus = budgetStatusFilter === "all" || c.status === budgetStatusFilter;
         return matchPrice && matchDest && matchType && matchStatus;
       })
@@ -402,11 +469,14 @@ function CalculatorPage() {
             className="w-full appearance-none rounded-xl border border-border bg-card px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-accent"
           >
             <option value="">All Property Types</option>
-            <option value="Apartment">Apartment</option>
-            <option value="Villa">Standalone Villa</option>
-            <option value="Chalet">Chalet</option>
+            <option value="Apartment">Apartment &amp; Studio</option>
+            <option value="Duplex">Duplex &amp; I-Villa</option>
+            <option value="Penthouse">Penthouse &amp; Loft</option>
             <option value="Town House">Town House</option>
             <option value="Twin House">Twin House</option>
+            <option value="Villa">Standalone Villa</option>
+            <option value="Chalet">Chalet &amp; Cabana</option>
+            <option value="Commercial">Commercial, Office &amp; Clinic</option>
           </select>
         </div>
         <div>

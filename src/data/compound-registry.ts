@@ -813,7 +813,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 30.9237,
     developer: "Emaar Misr",
     city: "Sheikh Zayed City, Giza, Egypt",
-    priceFrom: 5.4,
+    priceFrom: 13.3,
     deliveryYear: 2026,
     blurb:
       "Cairo Gate is a luxury gated community by Emaar Misr spanning 133 acres in Sheikh Zayed on Cairo-Alex Desert Road, featuring Elie Saab signature villas and Locanda serviced residences.",
@@ -2267,7 +2267,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lat: 30.03274,
     lng: 31.47867,
     developer: "Emaar Misr",
-    city: "Mivida, new-cairo",
+    city: "Mivida, New Cairo, Egypt",
+    priceFrom: 20,
   },
   "modon-ras-el-hekma": {
     destination: "ras-el-hekma",

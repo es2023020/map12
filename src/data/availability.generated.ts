@@ -54747,5 +54747,21 @@ export const availability: ProjectAvailability[] = [
     ],
     "lastUpdated": "2026-08-16",
     "note": "Scenes Tatweer Misr: Luxury villas compound in Mostakbal City. Townhouses from 14.6M, Standalones from 17.15M, Twin Houses from 17.8M. 10 yrs payment plan, 30% cash discount."
+  },
+  {
+    "slug": "cairo-gate",
+    "developer": "Emaar Misr",
+    "totalAvailable": 0,
+    "breakdown": [],
+    "lastUpdated": "2026-08-17",
+    "note": "Sold Out. Starting price: EGP 13.3M."
+  },
+  {
+    "slug": "mivida",
+    "developer": "Emaar Misr",
+    "totalAvailable": 0,
+    "breakdown": [],
+    "lastUpdated": "2026-08-17",
+    "note": "Sold Out. Starting price: EGP 20M."
   }
 ];

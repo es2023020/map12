@@ -116,7 +116,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9237,
     "developer": "Emaar Misr",
     "developerSlug": "emaar-misr",
-    "priceFrom": 5.4,
+    "priceFrom": 13.3,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
@@ -148,12 +148,13 @@ export const compoundsGenerated: Compound[] = [
       "/projects/cairo-gate/5.jpg",
       "/projects/cairo-gate/6.jpg"
     ],
-    "blurb": "Cairo Gate is a luxury gated community by Emaar Misr spanning 133 acres in Sheikh Zayed on Cairo-Alex Desert Road, featuring Elie Saab signature villas and Locanda serviced residences.",
+    "blurb": "Cairo Gate by Emaar Misr is a luxury 133-acre master community in Sheikh Zayed (Sold Out, starting from EGP 13.3M).",
     "paymentPlan": "5%–10% down payment, remaining balance spread over 6 to 8 years in equal, interest-free installments",
     "areaSize": "133 feddan",
     "unitSizes": "80–300 m²",
     "type": "Residential",
     "highlights": [
+      "Sold Out — Starting price EGP 13.3M",
       "Luxury Emaar gated community",
       "Located on Cairo-Alex Desert Road",
       "Boutique retail & residential blend"
@@ -232,7 +233,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.47867,
     "developer": "Emaar Misr",
     "developerSlug": "emaar-misr",
-    "priceFrom": 12,
+    "priceFrom": 20,
     "deliveryYear": 2015,
     "status": "RTM",
     "beachfront": false,
@@ -262,12 +263,13 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mivida/7.jpg",
       "/projects/mivida/8.jpg"
     ],
-    "blurb": "Mivida is a premium development by Emaar Misr in New Cairo, presenting high-end unit designs and world-class compound amenities.",
+    "blurb": "Mivida by Emaar Misr is a prime master-planned development in New Cairo (Sold Out, starting from EGP 20M).",
     "paymentPlan": "10% down · 7 years equal installments",
     "areaSize": "100 feddan",
     "unitSizes": "80–300 m²",
     "type": "Residential",
     "highlights": [
+      "Sold Out — Starting price EGP 20M",
       "Mivida prime location",
       "Emaar Misr signature design",
       "Premium amenities & spaces",
