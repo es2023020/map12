@@ -21,6 +21,7 @@ import {
   WIKIMAPIA_TILE_URL,
   WIKIMAPIA_SUBDOMAINS,
   resolveWikimapiaLocation,
+  wikimapiaLocations,
   getWikimapiaBoxPlaces,
   type WikimapiaPlace,
 } from "@/lib/wikimapia";
@@ -232,8 +233,78 @@ export function MapView({
               maxZoom={19}
             />
           </LayersControl.BaseLayer>
-          <LayersControl.Overlay checked name="Wikimapia Places &amp; Polygons">
+          <LayersControl.Overlay name="Wikimapia Outlines &amp; Polygons">
             <WikimapiaPlacesOverlay />
+          </LayersControl.Overlay>
+          <LayersControl.Overlay checked name="Project Markers &amp; Pins">
+            <LayerGroup>
+              {compounds.map((c) => {
+                if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;
+                const areaColor_ = destinationColor(c.destination);
+                const avail = getAvailableCount(c.slug);
+                const availStr =
+                  avail > 0
+                    ? `<div class="pt-popup-avail">✓ ${avail} units available</div>`
+                    : `<div class="pt-popup-avail-none">⏳ Not updated yet</div>`;
+                const typesHtml = (c.types ?? [])
+                  .slice(0, 4)
+                  .map((t: string) => `<span class="pt-popup-type">${t}</span>`)
+                  .join("");
+                const kmBadge = c.km
+                  ? `<span style="display:inline-block; font-size:10px; background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; padding:1px 5px; border-radius:4px; font-weight:600; margin-left:6px; vertical-align:middle;">km ${c.km}</span>`
+                  : "";
+                const popupHtml = `
+                  <img class="pt-popup-img" src="${c.hero}" alt="${c.name}" loading="lazy" />
+                  <div class="pt-popup-body">
+                    <p class="pt-popup-name">${c.name}${kmBadge}</p>
+                    <p class="pt-popup-dev">${c.developer}</p>
+                    <div class="pt-popup-stats">
+                      <div class="pt-popup-stat">
+                        <div class="pt-popup-stat-label">From</div>
+                        <div class="pt-popup-stat-value">${c.priceFrom > 0 ? `EGP ${c.priceFrom}M` : "Price on Request"}</div>
+                      </div>
+                      <div class="pt-popup-stat">
+                        <div class="pt-popup-stat-label">Delivery</div>
+                        <div class="pt-popup-stat-value">${c.deliveryYear}</div>
+                      </div>
+                      <div class="pt-popup-stat">
+                        <div class="pt-popup-stat-label">Status</div>
+                        <div class="pt-popup-stat-value" style="color:${c.status === "RTM" ? "#16a34a" : "#2563eb"};font-size:10px;">${c.status}</div>
+                      </div>
+                    </div>
+                    ${availStr}
+                    <div class="pt-popup-types">${typesHtml}</div>
+                    <a class="pt-popup-btn" href="/projects/${c.slug}">View full project →</a>
+                  </div>
+                `;
+
+                return (
+                  <Marker
+                    key={c.slug}
+                    position={[c.lat, c.lng]}
+                    icon={
+                      c.slug === activeId && activeIcon
+                        ? activeIcon
+                        : baseIcons.get(c.slug) || projectIcon(c, false)
+                    }
+                    eventHandlers={onSelect ? { click: () => onSelect(c.slug) } : undefined}
+                  >
+                    <Popup closeButton={true} maxWidth={220} minWidth={220}>
+                      <div dangerouslySetInnerHTML={{ __html: popupHtml }} />
+                    </Popup>
+                    <Tooltip direction="top" offset={[0, -8]} opacity={0.96} permanent={false}>
+                      <div style={{ fontSize: 11, fontWeight: 700, marginBottom: 1 }}>
+                        {c.name} {c.km ? `(km ${c.km})` : ""}
+                      </div>
+                      <div style={{ fontSize: 10, color: "#64748b" }}>
+                        {c.priceFrom > 0 ? `EGP ${c.priceFrom}M+` : "Price on Request"}
+                        {avail > 0 ? ` · ${avail} units avail.` : ""}
+                      </div>
+                    </Tooltip>
+                  </Marker>
+                );
+              })}
+            </LayerGroup>
           </LayersControl.Overlay>
         </LayersControl>
         <ZoomControl position="bottomright" />
@@ -256,147 +327,50 @@ export function MapView({
               />
             );
           })}
-
-        {compounds.map((c) => {
-          if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;
-          const areaColor_ = destinationColor(c.destination);
-          const avail = getAvailableCount(c.slug);
-          const availStr =
-            avail > 0
-              ? `<div class="pt-popup-avail">✓ ${avail} units available</div>`
-              : `<div class="pt-popup-avail-none">⏳ Not updated yet</div>`;
-          const typesHtml = (c.types ?? [])
-            .slice(0, 4)
-            .map((t: string) => `<span class="pt-popup-type">${t}</span>`)
-            .join("");
-          const kmBadge = c.km
-            ? `<span style="display:inline-block; font-size:10px; background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; padding:1px 5px; border-radius:4px; font-weight:600; margin-left:6px; vertical-align:middle;">km ${c.km}</span>`
-            : "";
-          const popupHtml = `
-            <img class="pt-popup-img" src="${c.hero}" alt="${c.name}" loading="lazy" />
-            <div class="pt-popup-body">
-              <p class="pt-popup-name">${c.name}${kmBadge}</p>
-              <p class="pt-popup-dev">${c.developer}</p>
-              <div class="pt-popup-stats">
-                <div class="pt-popup-stat">
-                  <div class="pt-popup-stat-label">From</div>
-                  <div class="pt-popup-stat-value">${c.priceFrom > 0 ? `EGP ${c.priceFrom}M` : "Price on Request"}</div>
-                </div>
-                <div class="pt-popup-stat">
-                  <div class="pt-popup-stat-label">Delivery</div>
-                  <div class="pt-popup-stat-value">${c.deliveryYear}</div>
-                </div>
-                <div class="pt-popup-stat">
-                  <div class="pt-popup-stat-label">Status</div>
-                  <div class="pt-popup-stat-value" style="color:${c.status === "RTM" ? "#16a34a" : "#2563eb"};font-size:10px;">${c.status}</div>
-                </div>
-              </div>
-              ${availStr}
-              <div class="pt-popup-types">${typesHtml}</div>
-              <a class="pt-popup-btn" href="/projects/${c.slug}">View full project →</a>
-            </div>
-          `;
-
-          return (
-            <Marker
-              key={c.slug}
-              position={[c.lat, c.lng]}
-              icon={
-                c.slug === activeId && activeIcon
-                  ? activeIcon
-                  : baseIcons.get(c.slug) || projectIcon(c, false)
-              }
-              eventHandlers={onSelect ? { click: () => onSelect(c.slug) } : undefined}
-            >
-              <Popup closeButton={true} maxWidth={220} minWidth={220}>
-                <div dangerouslySetInnerHTML={{ __html: popupHtml }} />
-              </Popup>
-              <Tooltip direction="top" offset={[0, -8]} opacity={0.96} permanent={false}>
-                <div style={{ fontSize: 11, fontWeight: 700, marginBottom: 1 }}>
-                  {c.name} {c.km ? `(km ${c.km})` : ""}
-                </div>
-                <div style={{ fontSize: 10, color: "#64748b" }}>
-                  {c.priceFrom > 0 ? `EGP ${c.priceFrom}M+` : "Price on Request"}
-                  {avail > 0 ? ` · ${avail} units avail.` : ""}
-                </div>
-              </Tooltip>
-            </Marker>
-          );
-        })}
       </MapContainer>
     </div>
   );
 }
 
-function wikimapiaPinIcon(name: string) {
-  const html = `<div class="pt-wm-pin" title="${name}"><span class="pt-wm-dot"></span></div>`;
-  return L.divIcon({ html, className: "pt-wm-icon", iconSize: [12, 12], iconAnchor: [6, 6] });
-}
-
 function WikimapiaPlacesOverlay() {
   const map = useMap();
-  const [places, setPlaces] = useState<WikimapiaPlace[]>([]);
+  const [bounds, setBounds] = useState(() => map.getBounds());
+  const [zoom, setZoom] = useState(() => map.getZoom());
 
   useEffect(() => {
-    let active = true;
-    const fetchPlaces = async () => {
-      if (map.getZoom() < 12) {
-        if (active) setPlaces([]);
-        return;
-      }
-      const bounds = map.getBounds();
-      const bbox = {
-        lon_min: bounds.getWest(),
-        lat_min: bounds.getSouth(),
-        lon_max: bounds.getEast(),
-        lat_max: bounds.getNorth(),
-      };
-      const data = await getWikimapiaBoxPlaces(bbox, 25);
-      if (active) setPlaces(data);
+    const updateView = () => {
+      setBounds(map.getBounds());
+      setZoom(map.getZoom());
     };
-
-    fetchPlaces();
-    map.on("moveend", fetchPlaces);
+    map.on("moveend", updateView);
     return () => {
-      active = false;
-      map.off("moveend", fetchPlaces);
+      map.off("moveend", updateView);
     };
   }, [map]);
 
+  if (zoom < 12) return null;
+
+  const places = Object.values(wikimapiaLocations).filter((p: any) => {
+    if (!p.lat || !p.lng) return false;
+    return (
+      p.lat >= bounds.getSouth() &&
+      p.lat <= bounds.getNorth() &&
+      p.lng >= bounds.getWest() &&
+      p.lng <= bounds.getEast()
+    );
+  });
+
   return (
     <LayerGroup>
-      {places.map((place) => {
-        const positions = place.polygon?.map((p) => [p.y, p.x] as [number, number]);
-        const center: [number, number] = [place.location.lat, place.location.lon];
+      {places.map((place: any) => {
+        const positions = place.polygon?.map((p: any) => [p.y, p.x] as [number, number]);
+        if (!positions || positions.length <= 2) return null;
         return (
-          <LayerGroup key={place.id}>
-            {positions && positions.length > 2 && (
-              <Polygon
-                positions={positions}
-                pathOptions={{ color: "#f97316", fillColor: "#f97316", fillOpacity: 0.15, weight: 1.5 }}
-              />
-            )}
-            <Marker position={center} icon={wikimapiaPinIcon(place.name)}>
-              <Popup>
-                <div className="p-3 text-xs space-y-1.5 max-w-[200px]">
-                  <div className="font-bold text-primary flex items-center gap-1.5 text-sm">
-                    🌐 {place.name}
-                  </div>
-                  <div className="text-[10px] text-muted-foreground">Wikimapia ID: #{place.id}</div>
-                  {place.url && (
-                    <a
-                      href={place.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-1 text-[11px] font-bold text-accent hover:underline"
-                    >
-                      View on Wikimapia ↗
-                    </a>
-                  )}
-                </div>
-              </Popup>
-            </Marker>
-          </LayerGroup>
+          <Polygon
+            key={place.id || place.name}
+            positions={positions}
+            pathOptions={{ color: "#f97316", fillColor: "#f97316", fillOpacity: 0.15, weight: 1.5 }}
+          />
         );
       })}
     </LayerGroup>
