@@ -2659,10 +2659,16 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Origami Golf, new-cairo",
   },
   "palm-hills-alexandria": {
-    lat: 31.20006,
-    lng: 29.92217,
     developer: "Palm Hills Developments",
-    city: "Palm Hills Alexandria, alexandria",
+    destination: "alexandria",
+    city: "Alexandria, Egypt",
+    amenities: ["The Green Spine Corridor","Clubhouse","International School","Sports Courts & Jogging Tracks","Commercial & Retail Hubs","Children's Play Zones","24/7 Security & Surveillance"],
+    highlights: [
+      "Master-planned residential compound spanning 135-160 acres in Alexandria.",
+      "Situated near the International Coastal Road, Nozha International Airport, and Carrefour City Centre.",
+      "Features 'The Green Spine'—a central multi-purpose green corridor connecting all residential zones.",
+      "Offers full range of housing: 1-3BR apartments, townhouses, twin houses, and standalone villas."
+],
   },
   "palm-hills-jirian": {
     destination: "new-zayed",
@@ -4137,30 +4143,16 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   },
 
   "palm-hills-ritz-carlton": {
-    name: "Palm Hills Ritz Carlton Residences",
-    destination: "october",
-    lat: 29.985,
-    lng: 30.955,
     developer: "Palm Hills Developments",
-    city: "6th of October City, Giza, Egypt",
-    blurb:
-      "Palm Hills Ritz Carlton Residences offers ultra-luxury hotel-serviced villas and branded residences with 5-star Ritz-Carlton hospitality services.",
-    paymentPlan: "15% down, installments up to 7 years",
-    amenities: [
-      "Ritz-Carlton hotel services",
-      "Concierge",
-      "Fine dining",
-      "Spa & wellness center",
-      "Infinity pool",
-      "Golf views",
-      "Private club",
-    ],
-    types: ["Branded Villa", "Palace"],
+    destination: "6th-october",
+    city: "Palm Hills October, 6th of October City, Egypt",
+    amenities: ["Direct Ritz-Carlton Hotel Access","24/7 Hospitality Concierge & Valet","In-Residence Dining & Room Service","Overlooking Palm Hills Golf Course","Views of Giza Pyramids","Private Residents' Lounge & Spa","Infinity Pools & Wellness Center"],
     highlights: [
-      "5-star Ritz-Carlton branded luxury",
-      "Overlooking 18-hole golf course",
-      "Exclusive ultra-private enclave",
-    ],
+      "Created in partnership between Palm Hills Developments and Marriott International.",
+      "Designed by renowned OBMI International featuring 150 exclusive branded residences.",
+      "Overlooks the Palm Hills Golf Course and the Giza Pyramids in West Cairo.",
+      "Offers 5-star hospitality services, private spa, concierge, valet, and in-residence dining."
+],
   },
 
   palmet: {

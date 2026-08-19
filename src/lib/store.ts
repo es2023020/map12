@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { compounds, staticCompounds, normalizeDeveloperName } from "@/data/compounds";
+import { compounds, staticCompounds, normalizeDeveloperName, getLowestPriceFromAvailability } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import { availability as generatedAvailability } from "@/data/availability.generated";
 import { destinations, staticDestinations } from "@/data/destinations";
@@ -1748,7 +1748,16 @@ export const useStore = create<State>()(
             const availabilityList = exists
               ? s.availabilityList.map((a) => (a.slug === slug ? data : a))
               : [...s.availabilityList, data];
-            return { availabilityList };
+
+            const lowest = getLowestPriceFromAvailability(data);
+            const compoundsList = s.compoundsList.map((c) => {
+              if (c.slug === slug && lowest !== null && lowest > 0) {
+                return { ...c, priceFrom: lowest };
+              }
+              return c;
+            });
+
+            return { availabilityList, compoundsList };
           });
           get().addAuditLog({
             actor: "elsayedshoeip70@gmail.com",
@@ -1758,7 +1767,23 @@ export const useStore = create<State>()(
         },
 
         bulkUpdateAvailability: (data) => {
-          set({ availabilityList: data });
+          set((s) => {
+            const availMap = new Map<string, any>();
+            data.forEach((a: any) => { if (a && a.slug) availMap.set(a.slug, a); });
+
+            const compoundsList = s.compoundsList.map((c) => {
+              const a = availMap.get(c.slug);
+              if (a) {
+                const lowest = getLowestPriceFromAvailability(a);
+                if (lowest !== null && lowest > 0) {
+                  return { ...c, priceFrom: lowest };
+                }
+              }
+              return c;
+            });
+
+            return { availabilityList: data, compoundsList };
+          });
           get().addAuditLog({
             actor: "elsayedshoeip70@gmail.com",
             entity: "Availability",
@@ -1854,7 +1879,11 @@ export const useStore = create<State>()(
             state.destinationsList = staticDestinations;
           }
 
-          // 2. Sync compoundsList with latest static compounds data (ensuring no defunct projects are kept)
+          // 2. Sync compoundsList with latest static compounds data & automatically update starting price to lowest available unit price
+          const currentAvail = (Array.isArray(state.availabilityList) && state.availabilityList.length) ? state.availabilityList : generatedAvailability;
+          const availMap = new Map<string, any>();
+          currentAvail.forEach((a: any) => { if (a && a.slug) availMap.set(a.slug, a); });
+
           if (Array.isArray(state.compoundsList)) {
             state.compoundsList = staticCompounds.map((sc) => {
               const localComp = state.compoundsList.find((c: any) => c.slug === sc.slug);
@@ -1863,6 +1892,10 @@ export const useStore = create<State>()(
               const defaultFileUrl = staticFile ? `/brochures/${staticFile}` : undefined;
               const defaultFileName = staticFile || undefined;
               const defaultFileType = staticFile ? "application/pdf" : undefined;
+
+              const availForProj = availMap.get(sc.slug);
+              const lowestAvailPrice = availForProj ? getLowestPriceFromAvailability(availForProj) : null;
+              const effectivePriceFrom = (lowestAvailPrice !== null && lowestAvailPrice > 0) ? lowestAvailPrice : sc.priceFrom;
 
               if (localComp) {
                 const hasBase64Url =
@@ -1879,7 +1912,7 @@ export const useStore = create<State>()(
                   lng: sc.lng,
                   developer: sc.developer,
                   developerSlug: sc.developerSlug,
-                  priceFrom: sc.priceFrom,
+                  priceFrom: effectivePriceFrom,
                   deliveryYear: sc.deliveryYear,
                   status: sc.status,
                   beachfront: sc.beachfront,
@@ -1904,6 +1937,7 @@ export const useStore = create<State>()(
               }
               return {
                 ...sc,
+                priceFrom: effectivePriceFrom,
                 isNewLaunch,
                 brochureUrl: defaultFileUrl,
                 brochureFileName: defaultFileName,
@@ -1915,8 +1949,12 @@ export const useStore = create<State>()(
             state.compoundsList = staticCompounds.map((sc) => {
               const isNewLaunch = launchSlugs.has(sc.slug);
               const staticFile = brochureMap[sc.slug];
+              const availForProj = availMap.get(sc.slug);
+              const lowestAvailPrice = availForProj ? getLowestPriceFromAvailability(availForProj) : null;
+              const effectivePriceFrom = (lowestAvailPrice !== null && lowestAvailPrice > 0) ? lowestAvailPrice : sc.priceFrom;
               return {
                 ...sc,
+                priceFrom: effectivePriceFrom,
                 isNewLaunch,
                 brochureUrl: staticFile ? `/brochures/${staticFile}` : undefined,
                 brochureFileName: staticFile || undefined,

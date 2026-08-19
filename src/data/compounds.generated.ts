@@ -5680,7 +5680,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/cleo-water-residence/5.jpg",
       "/projects/cleo-water-residence/6.jpg"
     ],
-    "blurb": "Cleo Water Residences is a luxury lagoon-facing residential phase within the 500-acre Palm Hills New Cairo master development.",
+    "blurb": "Cleo Water Residences is a luxury lagoon-facing residential phase within the 500-acre Palm Hills New Cairo master development. (Currently 100% Sold Out).",
     "paymentPlan": "3% down payment, remaining balance spread over up to 10 years in equal installments",
     "areaSize": "500 feddan",
     "unitSizes": "70–170 m²",
@@ -8329,7 +8329,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/hacienda-white/3.jpg",
       "/projects/hacienda-white/4.jpg"
     ],
-    "blurb": "Hacienda White is one of Palm Hills' signature luxury beach resorts, covering approximately 154 feddans. The community is renowned for its white Mediterranean-inspired architecture, pristine sandy beach, and turquoise waters.",
+    "blurb": "Hacienda White is one of Palm Hills' signature luxury beach resorts, covering approximately 154 feddans. The community is renowned for its white Mediterranean-inspired architecture, pristine sandy beach, and turquoise waters. (Currently 100% Sold Out).",
     "paymentPlan": "5% down, installments up to 8 years",
     "areaSize": "402 feddan",
     "unitSizes": "109–396 m²",
@@ -9095,7 +9095,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/palm-hills-new-alamein/4.jpg",
       "/projects/palm-hills-new-alamein/5.jpg"
     ],
-    "blurb": "Palm Hills New Alamein sits at km 108 on the North Coast in new alamein, developed by Palm Hills Developments. A beachfront community designed for premium summer living.",
+    "blurb": "Palm Hills New Alamein sits at km 108 on the North Coast in new alamein, developed by Palm Hills Developments. A beachfront community designed for premium summer living. (Currently 100% Sold Out).",
     "paymentPlan": "10% down payment over 8 years equal installments",
     "areaSize": "331 feddan",
     "unitSizes": "142–253 m²",
@@ -9456,7 +9456,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/q-bay/7.jpg",
       "/projects/q-bay/8.jpg"
     ],
-    "blurb": "Q Bay sits at km 92 on the North Coast in new alamein, developed by Palm Hills Developments. A beachfront community designed for premium summer living.",
+    "blurb": "Q Bay sits at km 92 on the North Coast in new alamein, developed by Palm Hills Developments. A beachfront community designed for premium summer living. (Currently 100% Sold Out).",
     "paymentPlan": "5% down payment over 7 years equal installments",
     "areaSize": "240 feddan",
     "unitSizes": "85–400 m²",
@@ -10237,7 +10237,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/palm-hills-katameya/8.jpg",
       "/projects/palm-hills-katameya/9.jpg"
     ],
-    "blurb": "Palm Hills Katameya is a flagship development in New Cairo (Tagamo3) by Palm Hills Developments, offering modern residences with full amenities for year-round living.",
+    "blurb": "Palm Hills Katameya is a flagship development in New Cairo (Tagamo3) by Palm Hills Developments, offering modern residences with full amenities for year-round living. (Currently 100% Sold Out).",
     "paymentPlan": "10% down payment over 9 years equal installments",
     "areaSize": "265 feddan",
     "unitSizes": "105–315 m²",
@@ -12135,7 +12135,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/hacienda-red/2.jpg",
       "/projects/hacienda-red/3.jpg"
     ],
-    "blurb": "Hacienda Red is a boutique Palm Hills coastal development offering modern beachfront residences in a low-density environment with direct access to the Mediterranean.",
+    "blurb": "Hacienda Red is a boutique Palm Hills coastal development offering modern beachfront residences in a low-density environment with direct access to the Mediterranean. (Currently 100% Sold Out).",
     "paymentPlan": "5% down, installments up to 8–10 years",
     "areaSize": "434 feddan",
     "unitSizes": "153–368 m²",
@@ -16379,5 +16379,170 @@ export const compoundsGenerated: Compound[] = [
       "Azzurri Sports & Social Club & Fontana Commercial/Cinema Hub",
       "15 min to Juhayna Square, 20 min to Sphinx Airport, on Boulevard Axis"
     ]
+  },
+  {
+    "slug": "palm-hills-alexandria",
+    "name": "Palm Hills Alexandria",
+    "destination": "alexandria",
+    "lat": 31.185,
+    "lng": 29.932,
+    "developer": "Palm Hills Developments",
+    "developerSlug": "palm-hills-developments",
+    "priceFrom": 10.74,
+    "deliveryYear": 2027,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Studio",
+      "Apartment",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "The Green Spine Corridor",
+      "Clubhouse",
+      "International School",
+      "Sports Courts & Jogging Tracks",
+      "Commercial & Retail Hubs",
+      "Children's Play Zones",
+      "24/7 Security & Surveillance"
+    ],
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80"
+    ],
+    "blurb": "Palm Hills Alexandria is a luxury, master-planned residential community spanning 135 to 160 acres along the International Coastal Road, near Nozha Airport and Carrefour City Centre. Designed around 'The Green Spine', it integrates lush multi-purpose parks, an international school, clubhouse, and modern residences.",
+    "paymentPlan": "10% Down Payment, up to 7-8 Years Installments",
+    "city": "Alexandria, Egypt",
+    "type": "Residential",
+    "areaSize": "135 - 160 feddans",
+    "unitSizes": "75 - 380 sqm",
+    "highlights": [
+      "Master-planned residential compound spanning 135-160 acres in Alexandria.",
+      "Situated near the International Coastal Road, Nozha International Airport, and Carrefour City Centre.",
+      "Features 'The Green Spine'—a central multi-purpose green corridor connecting all residential zones.",
+      "Offers full range of housing: 1-3BR apartments, townhouses, twin houses, and standalone villas."
+    ]
+  },
+  {
+    "slug": "palm-hills-ritz-carlton",
+    "name": "The Ritz-Carlton Residences, Cairo, Palm Hills",
+    "destination": "6th-october",
+    "lat": 29.972,
+    "lng": 31.025,
+    "developer": "Palm Hills Developments",
+    "developerSlug": "palm-hills-developments",
+    "priceFrom": 141.99,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Branded Apartment",
+      "Penthouse",
+      "Serviced Suite"
+    ],
+    "amenities": [
+      "Direct Ritz-Carlton Hotel Access",
+      "24/7 Hospitality Concierge & Valet",
+      "In-Residence Dining & Room Service",
+      "Overlooking Palm Hills Golf Course",
+      "Views of Giza Pyramids",
+      "Private Residents' Lounge & Spa",
+      "Infinity Pools & Wellness Center"
+    ],
+    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
+    ],
+    "blurb": "The Ritz-Carlton Residences, Cairo, Palm Hills is an exclusive luxury branded development created through a partnership between Palm Hills Developments and Marriott International. Designed by OBMI International in the Palmet district of 6th of October City, it features 150 branded residences overlooking the Palm Hills Golf Course and Giza Pyramids with 24/7 five-star hotel services.",
+    "paymentPlan": "10% Down Payment, up to 7-8 Years Installments",
+    "city": "Palm Hills October, 6th of October City, Egypt",
+    "type": "Residential",
+    "areaSize": "Exclusive 150 Branded Units",
+    "unitSizes": "120 - 450 sqm",
+    "highlights": [
+      "Created in partnership between Palm Hills Developments and Marriott International.",
+      "Designed by renowned OBMI International featuring 150 exclusive branded residences.",
+      "Overlooks the Palm Hills Golf Course and the Giza Pyramids in West Cairo.",
+      "Offers 5-star hospitality services, private spa, concierge, valet, and in-residence dining."
+    ]
+  },
+  {
+    "slug": "palmet",
+    "name": "Palmet October",
+    "destination": "6th-october",
+    "lat": 29.975,
+    "lng": 31.022,
+    "developer": "Palm Hills Developments",
+    "developerSlug": "palm-hills-developments",
+    "priceFrom": 25.69,
+    "deliveryYear": 2027,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Administrative Office",
+      "Retail Shop",
+      "Branded Serviced Apartment"
+    ],
+    "amenities": [
+      "Central Landscaped Green Spine",
+      "Open-Air Plazas & Retail Arcade",
+      "Boutique Hotel & Serviced Suites",
+      "Fine Dining & Rooftop Venues",
+      "Wellness & Outdoor Fitness Hubs",
+      "Low-Rise Modern Architecture (G+1)",
+      "Underground Parking"
+    ],
+    "hero": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80"
+    ],
+    "blurb": "Palmet October by Palm Hills Developments is a high-end, mixed-use downtown project spanning 45 to 54 acres atop West Cairo Hill on Boulevard Road. Featuring low-rise G+1 architecture centered around green courtyards, Palmet offers Grade-A administrative offices, retail arcades, fine dining, and boutique serviced apartments.",
+    "paymentPlan": "10% Down Payment, up to 7-8 Years Installments",
+    "city": "Palm Hills October, 6th of October City, Egypt",
+    "type": "Mixed-use",
+    "areaSize": "45 - 54 feddans",
+    "unitSizes": "80 - 400 sqm",
+    "highlights": [
+      "Spans 45 to 54 acres atop the West Cairo Hill in 6th of October City.",
+      "Located on Boulevard Road near 26th of July Axis, Dahshour Link, and Palm Central.",
+      "Features low-rise Ground + 1 architecture designed around open green courtyards.",
+      "Integrated metropolitan hub with Grade-A offices, retail arcades, dining, and boutique hospitality."
+    ]
+  },
+  {
+    "slug": "phnc-commercial",
+    "name": "Palmet New Cairo",
+    "destination": "new-cairo",
+    "lat": 30.015,
+    "lng": 31.488,
+    "developer": "Palm Hills Developments",
+    "developerSlug": "palm-hills-developments",
+    "priceFrom": 13.03,
+    "deliveryYear": 2027,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Administrative Office",
+      "Commercial Shop"
+    ],
+    "amenities": [
+      "Corporate Hub",
+      "Retail Promenade",
+      "Smart Building System",
+      "Plaza Gardens",
+      "Underground Parking"
+    ],
+    "hero": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80"
+    ],
+    "blurb": "Palmet New Cairo is the commercial & corporate center within Palm Hills New Cairo, offering core & shell and finished administrative office spaces in prime East Cairo.",
+    "paymentPlan": "10% Down Payment, up to 7-8 Years Installments",
+    "city": "Palm Hills New Cairo, New Cairo, Egypt",
+    "type": "Mixed-use"
   }
 ];

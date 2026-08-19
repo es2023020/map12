@@ -4,6 +4,7 @@ import { projectImages } from "./project-images";
 import { projectLocations } from "./project-locations";
 import { sahelDetails } from "./sahel-details";
 import { destinations } from "./destinations";
+import { availability } from "./availability";
 
 export type Compound = {
   slug: string;
@@ -6182,6 +6183,28 @@ export const staticCompounds: Compound[] = compoundsGenerated;
 let cachedCompounds: Compound[] | null = null;
 let lastCompoundsRead = 0;
 
+export function getLowestPriceFromAvailability(avail: any): number | null {
+  if (!avail || !avail.breakdown || !Array.isArray(avail.breakdown) || avail.breakdown.length === 0) {
+    return null;
+  }
+  const prices: number[] = [];
+  for (const b of avail.breakdown) {
+    if (typeof b.minPriceM === "number" && b.minPriceM > 0) {
+      prices.push(b.minPriceM);
+    }
+    if (b.units && Array.isArray(b.units)) {
+      for (const u of b.units) {
+        if (typeof u.priceEGP === "number" && u.priceEGP > 0) {
+          prices.push(u.priceEGP / 1_000_000);
+        }
+      }
+    }
+  }
+  if (prices.length === 0) return null;
+  const min = Math.min(...prices);
+  return Math.round(min * 100) / 100;
+}
+
 function getActiveCompounds(): Compound[] {
   const now = Date.now();
   if (cachedCompounds && now - lastCompoundsRead < 500) {
@@ -6207,9 +6230,44 @@ function getActiveCompounds(): Compound[] {
       result.push(sc);
     }
   }
-  cachedCompounds = result;
+
+  // Get active availability list (from store or static availability)
+  let availList: any[] = availability;
+  if (typeof window !== "undefined") {
+    try {
+      const storeStr = localStorage.getItem("proptrack-broker");
+      if (storeStr) {
+        const parsed = JSON.parse(storeStr);
+        if (parsed?.state?.availabilityList?.length) {
+          availList = parsed.state.availabilityList;
+        }
+      }
+    } catch (e) {
+      // fallback
+    }
+  }
+
+  const availMap = new Map<string, any>();
+  if (availList && availList.length) {
+    for (const a of availList) {
+      if (a && a.slug) availMap.set(a.slug, a);
+    }
+  }
+
+  const updatedResult = result.map((c) => {
+    const a = availMap.get(c.slug);
+    if (a) {
+      const lowestUnit = getLowestPriceFromAvailability(a);
+      if (lowestUnit !== null && lowestUnit > 0) {
+        return { ...c, priceFrom: lowestUnit };
+      }
+    }
+    return c;
+  });
+
+  cachedCompounds = updatedResult;
   lastCompoundsRead = now;
-  return result;
+  return updatedResult;
 }
 
 export const compounds: Compound[] = new Proxy(staticCompounds, {
