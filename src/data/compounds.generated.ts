@@ -2015,8 +2015,8 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "/projects/club-hill-solare/1.jpg"
     ],
-    "blurb": "Solare Ras El Hekma, one of Misr Italia’s luxurious projects, was developed on 7 distinct levels, one of which is Club Hill. The neighborhood is a Miami-inspired phase, rising above sea level by 30 meters.",
-    "paymentPlan": "10% down · 7 years equal installments",
+    "blurb": "Club Hill Chalets is the premium chalet phase of Solare Ras El Hekma by Misr Italia Properties featuring 1BR (6M), 2BR (7.8M), and 3BR (9.9M) chalets with 5% down payment and 10-year installments.",
+    "paymentPlan": "5% Down Payment, Installments up to 10 Years (EOI 100k)",
     "areaSize": "180 feddan",
     "unitSizes": "66–150 m²",
     "type": "Resort",
@@ -2408,7 +2408,6 @@ export const compoundsGenerated: Compound[] = [
     "types": [
       "Standalone A",
       "Standalone B",
-      "Standalone C",
       "Standalone R1",
       "Standalone R2",
       "Town House Corner",
@@ -6890,29 +6889,24 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.9808,
     "developer": "Misr Italia Properties",
     "developerSlug": "misr-italia-properties",
-    "priceFrom": 10,
+    "priceFrom": 6,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": true,
     "types": [
       "Chalet",
-      "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Water Villa Loft",
+      "Standalone Villa",
+      "Twin Villa"
     ],
     "amenities": [
-      "Private beach",
-      "Beach club",
-      "Crystal lagoons",
-      "Swimming pools",
-      "Clubhouse",
-      "Gym",
-      "Restaurants & cafés",
-      "Sports facilities",
-      "Retail promenade",
-      "Kids' areas",
-      "24/7 security"
+      "Club Hill Chalets Phase",
+      "Olive Oasis Villas Phase",
+      "EOI 100k (Chalets) / 200k (Villas)",
+      "5% Down Payment + 10 Years Installments",
+      "Italian Coastal Architecture",
+      "Crystal Lagoons & Beachfront Access",
+      "Clubhouse & Sports Courts"
     ],
     "hero": "/projects/solare/1.jpg",
     "gallery": [
@@ -6925,8 +6919,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/solare/7.jpg",
       "/projects/solare/8.jpg"
     ],
-    "blurb": "Solare is a luxury beachfront community by Misr Italia spanning approximately 386 acres in Ras El Hekma, designed around terraced elevations maximizing Mediterranean Sea views, with contemporary architecture, crystal lagoons, and premium coastal living.",
-    "paymentPlan": "10% down, installments up to 8 years",
+    "blurb": "Solare Ras El Hekma by Misr Italia Properties features Italian coastal architecture in Ras El Hekma. Offering Club Hill Chalets (starting at 6M) and Olive Oasis Villas (starting at 13.3M) with 5% down payment and up to 10-year payment plans.",
+    "paymentPlan": "5% Down Payment, Installments up to 10 Years (EOI 100k Chalets / 200k Villas)",
     "areaSize": "342 feddan",
     "unitSizes": "139–266 m²",
     "city": "Ras El Hekma, North Coast (km 199), Matrouh Governorate, Egypt",
@@ -16589,5 +16583,45 @@ export const compoundsGenerated: Compound[] = [
     "unitSizes": "70 - 377 m²",
     "city": "New Cairo, Egypt",
     "type": "Residential"
+  },
+  {
+    "slug": "olive-oasis-solare",
+    "name": "Olive Oasis Villas - Solare",
+    "parentSlug": "solare",
+    "destination": "ras-el-hekma",
+    "lat": 31.065,
+    "lng": 27.882,
+    "developer": "Misr Italia Properties",
+    "developerSlug": "misr-italia-properties",
+    "priceFrom": 13.3,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "isNewLaunch": true,
+    "beachfront": true,
+    "types": [
+      "Water Villa Loft",
+      "Standalone Villa",
+      "Twin Villa"
+    ],
+    "amenities": [
+      "EOI 200,000 EGP",
+      "5% Down Payment + 10 Years Installments",
+      "Water Villa Lofts",
+      "One-Story Twin Villas",
+      "Standalone Villas",
+      "Italian Coastal Lagoons"
+    ],
+    "hero": "/projects/solare/1.jpg",
+    "gallery": [
+      "/projects/solare/1.jpg",
+      "/projects/solare/2.jpg",
+      "/projects/solare/3.jpg"
+    ],
+    "blurb": "Olive Oasis Villas is the luxury villa phase of Solare Ras El Hekma by Misr Italia Properties featuring Water Villa Lofts (2BR starting at 13.3M, 3BR starting at 15.3M), Standalone Villas (starting at 20.6M), and One-Story Twin Villas (starting at 21.7M) with 5% down payment and 10-year payment plans.",
+    "paymentPlan": "5% Down Payment, Installments up to 10 Years (EOI 200k)",
+    "areaSize": "Exclusive Villa Phase in Solare",
+    "unitSizes": "130 - 235 m²",
+    "city": "Ras El Hekma, North Coast, Egypt",
+    "type": "Resort"
   }
 ];

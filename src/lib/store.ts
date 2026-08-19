@@ -65,6 +65,8 @@ export const launchSlugs = new Set([
   "azha-north-coast",
   "silvertown-lagoon-cabanas",
   "one-hyde-park-new-cairo",
+  "club-hill-solare",
+  "olive-oasis-solare",
 ]);
 
 export type LeadStage = "new" | "contacted" | "viewing" | "negotiating" | "closed";

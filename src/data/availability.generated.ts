@@ -835,7 +835,7 @@ export const availability: ProjectAvailability[] = [
   {
     "slug": "patio-hills",
     "developer": "La Vista",
-    "totalAvailable": 8,
+    "totalAvailable": 7,
     "breakdown": [
       {
         "type": "Town House Middle Type 1",
@@ -944,28 +944,6 @@ export const availability: ProjectAvailability[] = [
             "priceEGP": 36800000,
             "status": "Available",
             "Land Area": "361m2"
-          }
-        ]
-      },
-      {
-        "type": "Standalone C",
-        "beds": 2,
-        "available": 1,
-        "minSqm": 309,
-        "maxSqm": 309,
-        "minPriceM": 5,
-        "maxPriceM": 5,
-        "units": [
-          {
-            "id": "patio-hills-6",
-            "unitNo": "U-6",
-            "beds": 2,
-            "finishing": "Finished",
-            "areaSqm": 309,
-            "view": "Scenic View",
-            "priceEGP": 5000000,
-            "status": "Available",
-            "Land Area": "371m2"
           }
         ]
       },
@@ -43671,6 +43649,189 @@ export const availability: ProjectAvailability[] = [
             "areaSqm": 377,
             "priceEGP": 68000000,
             "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "slug": "solare",
+    "developer": "Misr Italia Properties",
+    "totalAvailable": 7,
+    "breakdown": [
+      {
+        "type": "Chalet",
+        "beds": 1,
+        "available": 1,
+        "minSqm": 65,
+        "maxSqm": 75,
+        "minPriceM": 6,
+        "maxPriceM": 6.5,
+        "finishing": "Finished",
+        "cluster": "Club Hill Chalets",
+        "deliveryNote": "4 Years",
+        "paymentPlan": "5% Down Payment, up to 10 Years Installments (EOI 100k)",
+        "units": [
+          {
+            "id": "solare-ch-1bd",
+            "unitNo": "CH-1BD-6M",
+            "cluster": "Club Hill Chalets",
+            "beds": 1,
+            "finishing": "Finished",
+            "areaSqm": 65,
+            "priceEGP": 6000000,
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Chalet",
+        "beds": 2,
+        "available": 1,
+        "minSqm": 95,
+        "maxSqm": 105,
+        "minPriceM": 7.8,
+        "maxPriceM": 8.5,
+        "finishing": "Finished",
+        "cluster": "Club Hill Chalets",
+        "deliveryNote": "4 Years",
+        "paymentPlan": "5% Down Payment, up to 10 Years Installments (EOI 100k)",
+        "units": [
+          {
+            "id": "solare-ch-2bd",
+            "unitNo": "CH-2BD-7.8M",
+            "cluster": "Club Hill Chalets",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 95,
+            "priceEGP": 7800000,
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Chalet",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 125,
+        "maxSqm": 140,
+        "minPriceM": 9.9,
+        "maxPriceM": 11,
+        "finishing": "Finished",
+        "cluster": "Club Hill Chalets",
+        "deliveryNote": "4 Years",
+        "paymentPlan": "5% Down Payment, up to 10 Years Installments (EOI 100k)",
+        "units": [
+          {
+            "id": "solare-ch-3bd",
+            "unitNo": "CH-3BD-9.9M",
+            "cluster": "Club Hill Chalets",
+            "beds": 3,
+            "finishing": "Finished",
+            "areaSqm": 125,
+            "priceEGP": 9900000,
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Water Villa Loft",
+        "beds": 2,
+        "available": 1,
+        "minSqm": 130,
+        "maxSqm": 145,
+        "minPriceM": 13.3,
+        "maxPriceM": 14.5,
+        "finishing": "Finished",
+        "cluster": "Olive Oasis Villas",
+        "deliveryNote": "4 Years",
+        "paymentPlan": "5% Down Payment, up to 10 Years Installments (EOI 200k)",
+        "units": [
+          {
+            "id": "solare-wv-2bd",
+            "unitNo": "WV-2BD-13.3M",
+            "cluster": "Olive Oasis Villas",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 130,
+            "priceEGP": 13300000,
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Water Villa Loft",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 160,
+        "maxSqm": 180,
+        "minPriceM": 15.3,
+        "maxPriceM": 17,
+        "finishing": "Finished",
+        "cluster": "Olive Oasis Villas",
+        "deliveryNote": "4 Years",
+        "paymentPlan": "5% Down Payment, up to 10 Years Installments (EOI 200k)",
+        "units": [
+          {
+            "id": "solare-wv-3bd",
+            "unitNo": "WV-3BD-15.3M",
+            "cluster": "Olive Oasis Villas",
+            "beds": 3,
+            "finishing": "Finished",
+            "areaSqm": 160,
+            "priceEGP": 15300000,
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 206,
+        "maxSqm": 220,
+        "minPriceM": 20.6,
+        "maxPriceM": 22,
+        "finishing": "Finished",
+        "cluster": "Olive Oasis Villas",
+        "deliveryNote": "4 Years",
+        "paymentPlan": "5% Down Payment, up to 10 Years Installments (EOI 200k)",
+        "units": [
+          {
+            "id": "solare-sv-3bd",
+            "unitNo": "SV-3BD-20.6M",
+            "cluster": "Olive Oasis Villas",
+            "beds": 3,
+            "finishing": "Finished",
+            "areaSqm": 206,
+            "priceEGP": 20600000,
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Twin Villa (One Story)",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 217,
+        "maxSqm": 235,
+        "minPriceM": 21.7,
+        "maxPriceM": 24,
+        "finishing": "Finished",
+        "cluster": "Olive Oasis Villas",
+        "deliveryNote": "4 Years",
+        "paymentPlan": "5% Down Payment, up to 10 Years Installments (EOI 200k)",
+        "units": [
+          {
+            "id": "solare-tv-4bd",
+            "unitNo": "TV-4BD-21.7M",
+            "cluster": "Olive Oasis Villas",
+            "beds": 4,
+            "finishing": "Finished",
+            "areaSqm": 217,
+            "priceEGP": 21700000,
             "status": "Available"
           }
         ]

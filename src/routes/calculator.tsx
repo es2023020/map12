@@ -20,8 +20,9 @@ import {
 import { destinations } from "@/data/destinations";
 
 export const Route = createFileRoute("/calculator")({
-  validateSearch: (search: Record<string, unknown>) => ({
+  validateSearch: (search: Record<string, unknown>): { project?: string; price?: string } => ({
     project: typeof search.project === "string" ? search.project : "",
+    price: typeof search.price === "string" ? search.price : undefined,
   }),
   loader: async () => {
     const { loadAvailabilityAsync } = await import("@/data/availability");

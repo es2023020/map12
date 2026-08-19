@@ -10,12 +10,19 @@ import {
   LayersControl,
   ScaleControl,
   LayerGroup,
+  Polygon,
 } from "react-leaflet";
 import L from "leaflet";
 import type { Compound } from "@/data/compounds";
 import { destinations, destinationColor } from "@/data/destinations";
 import { landmarks as allLandmarks, landmarkColors, type Landmark } from "@/data/landmarks";
 import { availability } from "@/data/availability";
+import {
+  WIKIMAPIA_TILE_URL,
+  WIKIMAPIA_SUBDOMAINS,
+  getWikimapiaBoxPlaces,
+  type WikimapiaPlace,
+} from "@/lib/wikimapia";
 
 function getAvailableCount(slug: string): number {
   return availability.find((a) => a.slug === slug)?.totalAvailable ?? 0;
@@ -147,6 +154,8 @@ export function MapView({
         .leaflet-popup-content-wrapper { border-radius: 10px !important; padding: 0 !important; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important; border: 1px solid #e2e8f0 !important; }
         .leaflet-popup-content { margin: 0 !important; width: 220px !important; }
         .leaflet-popup-tip-container { margin-top: -1px; }
+        .pt-wm-pin { width: 12px; height: 12px; display: flex; align-items: center; justify-center: center; }
+        .pt-wm-dot { width: 8px; height: 8px; background: #f97316; border: 1.5px solid #ffffff; border-radius: 99px; box-shadow: 0 0 6px rgba(249, 115, 22, 0.6); }
       `}</style>
       <MapContainer
         center={focused ? [focused.lat, focused.lng] : initialCenter}
@@ -157,23 +166,15 @@ export function MapView({
         style={{ height: "100%", width: "100%" }}
       >
         <LayersControl position="topright">
-          <LayersControl.BaseLayer name="Streets">
+          <LayersControl.BaseLayer checked name="Wikimapia Map (Streets)">
             <TileLayer
-              attribution="&copy; OpenStreetMap &copy; CARTO"
-              url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-              subdomains={["a", "b", "c", "d"]}
+              attribution='&copy; <a href="http://wikimapia.org" target="_blank" rel="noopener noreferrer">Wikimapia.org</a>'
+              url={WIKIMAPIA_TILE_URL}
+              subdomains={WIKIMAPIA_SUBDOMAINS}
               maxZoom={19}
             />
           </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Satellite">
-            <TileLayer
-              attribution="Tiles &copy; Esri"
-              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-              maxZoom={19}
-            />
-          </LayersControl.BaseLayer>
-
-          <LayersControl.BaseLayer checked name="Satellite Hybrid">
+          <LayersControl.BaseLayer name="Wikimapia Hybrid">
             <LayerGroup>
               <TileLayer
                 attribution="Tiles &copy; Esri"
@@ -181,12 +182,20 @@ export function MapView({
                 maxZoom={19}
               />
               <TileLayer
-                attribution="&copy; CARTO"
-                url="https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png"
-                subdomains={["a", "b", "c", "d"]}
+                attribution='&copy; <a href="http://wikimapia.org" target="_blank" rel="noopener noreferrer">Wikimapia.org</a>'
+                url={WIKIMAPIA_TILE_URL}
+                subdomains={WIKIMAPIA_SUBDOMAINS}
                 maxZoom={19}
+                opacity={0.7}
               />
             </LayerGroup>
+          </LayersControl.BaseLayer>
+          <LayersControl.BaseLayer name="Satellite">
+            <TileLayer
+              attribution="Tiles &copy; Esri"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+              maxZoom={19}
+            />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Light">
             <TileLayer
@@ -196,6 +205,9 @@ export function MapView({
               maxZoom={19}
             />
           </LayersControl.BaseLayer>
+          <LayersControl.Overlay checked name="Wikimapia Places &amp; Polygons">
+            <WikimapiaPlacesOverlay />
+          </LayersControl.Overlay>
         </LayersControl>
         <ZoomControl position="bottomright" />
         <ScaleControl position="bottomleft" metric imperial={false} />
@@ -286,6 +298,81 @@ export function MapView({
         })}
       </MapContainer>
     </div>
+  );
+}
+
+function wikimapiaPinIcon(name: string) {
+  const html = `<div class="pt-wm-pin" title="${name}"><span class="pt-wm-dot"></span></div>`;
+  return L.divIcon({ html, className: "pt-wm-icon", iconSize: [12, 12], iconAnchor: [6, 6] });
+}
+
+function WikimapiaPlacesOverlay() {
+  const map = useMap();
+  const [places, setPlaces] = useState<WikimapiaPlace[]>([]);
+
+  useEffect(() => {
+    let active = true;
+    const fetchPlaces = async () => {
+      if (map.getZoom() < 12) {
+        if (active) setPlaces([]);
+        return;
+      }
+      const bounds = map.getBounds();
+      const bbox = {
+        lon_min: bounds.getWest(),
+        lat_min: bounds.getSouth(),
+        lon_max: bounds.getEast(),
+        lat_max: bounds.getNorth(),
+      };
+      const data = await getWikimapiaBoxPlaces(bbox, 25);
+      if (active) setPlaces(data);
+    };
+
+    fetchPlaces();
+    map.on("moveend", fetchPlaces);
+    return () => {
+      active = false;
+      map.off("moveend", fetchPlaces);
+    };
+  }, [map]);
+
+  return (
+    <LayerGroup>
+      {places.map((place) => {
+        const positions = place.polygon?.map((p) => [p.y, p.x] as [number, number]);
+        const center: [number, number] = [place.location.lat, place.location.lon];
+        return (
+          <LayerGroup key={place.id}>
+            {positions && positions.length > 2 && (
+              <Polygon
+                positions={positions}
+                pathOptions={{ color: "#f97316", fillColor: "#f97316", fillOpacity: 0.15, weight: 1.5 }}
+              />
+            )}
+            <Marker position={center} icon={wikimapiaPinIcon(place.name)}>
+              <Popup>
+                <div className="p-3 text-xs space-y-1.5 max-w-[200px]">
+                  <div className="font-bold text-primary flex items-center gap-1.5 text-sm">
+                    🌐 {place.name}
+                  </div>
+                  <div className="text-[10px] text-muted-foreground">Wikimapia ID: #{place.id}</div>
+                  {place.url && (
+                    <a
+                      href={place.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-1 text-[11px] font-bold text-accent hover:underline"
+                    >
+                      View on Wikimapia ↗
+                    </a>
+                  )}
+                </div>
+              </Popup>
+            </Marker>
+          </LayerGroup>
+        );
+      })}
+    </LayerGroup>
   );
 }
 

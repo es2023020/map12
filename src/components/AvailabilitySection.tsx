@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import type { ProjectAvailability, UnitBreakdown } from "@/data/availability";
 import {
   Phone,
@@ -17,6 +18,7 @@ import {
   ChevronRight,
   Paintbrush2,
   MapPin,
+  Calculator,
 } from "lucide-react";
 
 interface Props {
@@ -119,6 +121,16 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
                   <div className="text-[10px] text-muted-foreground">
                     Range: {row.minPriceM.toFixed(1)}M – {row.maxPriceM.toFixed(1)}M
                   </div>
+
+                  <Link
+                    to="/calculator"
+                    search={{ project: data.slug, price: String(row.minPriceM * 1000000) }}
+                    onClick={(e) => e.stopPropagation()}
+                    className="mt-3 w-full inline-flex items-center justify-center gap-1.5 rounded-xl bg-accent/10 border border-accent/30 py-2 text-[11px] font-bold text-accent hover:bg-accent hover:text-accent-foreground transition-all cursor-pointer shadow-2xs"
+                  >
+                    <Calculator className="h-3.5 w-3.5" />
+                    Calculate Payment
+                  </Link>
                 </div>
               </button>
             );
@@ -297,13 +309,23 @@ function UnitDetailModal({
 
           {/* Action buttons */}
           <div className="flex flex-col gap-2 pt-2">
+            <Link
+              to="/calculator"
+              search={{ project: (unit as any).projectSlug || "", price: String(unit.minPriceM * 1000000) }}
+              onClick={onClose}
+              className="w-full rounded-xl bg-accent py-3 text-xs font-bold text-accent-foreground shadow-md hover:bg-accent/90 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <Calculator className="h-4 w-4" />
+              Calculate Payment Plan
+            </Link>
+
             {onRegisterInterest && (
               <button
                 onClick={() => {
                   onRegisterInterest(unit.type);
                   onClose();
                 }}
-                className="w-full rounded-xl bg-primary py-3 text-xs font-bold text-primary-foreground shadow hover:bg-primary/95 transition-all flex items-center justify-center gap-1.5"
+                className="w-full rounded-xl bg-primary py-2.5 text-xs font-bold text-primary-foreground shadow hover:bg-primary/95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 Register Interest
                 <ArrowRight className="h-3.5 w-3.5" />

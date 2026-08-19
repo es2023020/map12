@@ -248,13 +248,26 @@ function UnitTypePage() {
               </span>
             )}
           </div>
-          <h1 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">
-            {title}
-          </h1>
-          <p className="mt-1 text-white/70">
-            {compound.name}
-            {clusterLabel} · by {compound.developer}
-          </p>
+          <div className="flex flex-wrap items-center justify-between gap-4 mt-2">
+            <div>
+              <h1 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">
+                {title}
+              </h1>
+              <p className="mt-1 text-white/70">
+                {compound.name}
+                {clusterLabel} · by {compound.developer}
+              </p>
+            </div>
+
+            <Link
+              to="/calculator"
+              search={{ project: projectSlug, price: String(bd.minPriceM * 1000000) }}
+              className="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-xs font-bold text-accent-foreground shadow-lg hover:bg-accent/90 transition-all cursor-pointer hover:scale-105"
+            >
+              <Calculator className="h-4 w-4" />
+              Calculate Payment Plan
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -750,7 +763,17 @@ function UnitCard({ unit, index }: { unit: UnitListing; index: number }) {
           </span>
         )}
       </div>
-      <div className="font-display text-xl font-bold text-primary">{fmtShort(unit.priceEGP)}</div>
+      <div className="flex items-center justify-between my-3">
+        <div className="font-display text-xl font-bold text-primary">{fmtShort(unit.priceEGP)}</div>
+        <Link
+          to="/calculator"
+          search={{ project: (unit as any).projectSlug || "", price: String(unit.priceEGP) }}
+          className="inline-flex items-center gap-1.5 rounded-xl bg-accent/10 border border-accent/30 px-3 py-1.5 text-xs font-bold text-accent hover:bg-accent hover:text-accent-foreground transition-all cursor-pointer shadow-2xs"
+        >
+          <Calculator className="h-3.5 w-3.5" />
+          Calculate
+        </Link>
+      </div>
       <div className="mt-2 grid grid-cols-2 gap-2 text-xs">
         <div>
           <span className="text-muted-foreground">Size</span>
