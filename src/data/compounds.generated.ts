@@ -16544,5 +16544,50 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "10% Down Payment, up to 7-8 Years Installments",
     "city": "Palm Hills New Cairo, New Cairo, Egypt",
     "type": "Mixed-use"
+  },
+  {
+    "slug": "one-hyde-park-new-cairo",
+    "name": "One Hyde Park New Cairo",
+    "parentSlug": "hyde-park-new-cairo",
+    "destination": "new-cairo",
+    "lat": 29.9868,
+    "lng": 31.5548,
+    "developer": "Hyde Park Developments",
+    "developerSlug": "hyde-park",
+    "priceFrom": 6,
+    "deliveryYear": 2030,
+    "status": "Off-Plan",
+    "isNewLaunch": true,
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Sky Villa",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "EOIs 100,000 EGP",
+      "5% Down Payment + 8 Years Installments",
+      "7% Maintenance",
+      "25% Cash Discount",
+      "Core & Shell Finishing",
+      "Egypt's Largest Landscaped Park",
+      "Clubhouse & RYZE Sports Club",
+      "Villas Launch: Aug 20 | Apartments: End of Sept"
+    ],
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80"
+    ],
+    "blurb": "One Hyde Park New Cairo is the exclusive new launch phase inside Hyde Park New Cairo. Featuring standalone luxury villas (SV1 to SV6), townhouses, twin houses, sky villas, and apartments with EOI 100,000 EGP, 5% down payment, and 8-year payment plans.",
+    "paymentPlan": "5% Down Payment, Installments over 8 Years (7% Maintenance, 25% Cash Discount)",
+    "areaSize": "Exclusive Phase inside Hyde Park New Cairo",
+    "unitSizes": "70 - 377 m²",
+    "city": "New Cairo, Egypt",
+    "type": "Residential"
   }
 ];

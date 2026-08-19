@@ -43253,5 +43253,429 @@ export const availability: ProjectAvailability[] = [
     "breakdown": [],
     "lastUpdated": "2026-08-19",
     "note": "Sold Out"
+  },
+  {
+    "slug": "one-hyde-park-new-cairo",
+    "developer": "Hyde Park Developments",
+    "totalAvailable": 16,
+    "breakdown": [
+      {
+        "type": "Apartment",
+        "beds": 1,
+        "available": 1,
+        "minSqm": 70,
+        "maxSqm": 75,
+        "minPriceM": 6,
+        "maxPriceM": 7,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - Apartments",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-1bd",
+            "unitNo": "1BD-70",
+            "cluster": "Apartments",
+            "beds": 1,
+            "finishing": "Core & Shell",
+            "areaSqm": 70,
+            "priceEGP": 6000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 2,
+        "available": 1,
+        "minSqm": 105,
+        "maxSqm": 115,
+        "minPriceM": 9,
+        "maxPriceM": 10,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - Apartments",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-2bd",
+            "unitNo": "2BD-105",
+            "cluster": "Apartments",
+            "beds": 2,
+            "finishing": "Core & Shell",
+            "areaSqm": 105,
+            "priceEGP": 9000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 130,
+        "maxSqm": 134,
+        "minPriceM": 11,
+        "maxPriceM": 12,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - Apartments",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-3bd",
+            "unitNo": "3BD-130",
+            "cluster": "Apartments",
+            "beds": 3,
+            "finishing": "Core & Shell",
+            "areaSqm": 130,
+            "priceEGP": 11000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 150,
+        "maxSqm": 150,
+        "minPriceM": 12,
+        "maxPriceM": 13,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - 3BD + Nanny",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-3bd-nanny",
+            "unitNo": "3BD-Nanny-150",
+            "cluster": "Apartments",
+            "beds": 3,
+            "finishing": "Core & Shell",
+            "areaSqm": 150,
+            "priceEGP": 12000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Duplex",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 195,
+        "maxSqm": 240,
+        "minPriceM": 17,
+        "maxPriceM": 18,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - Duplexes",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-duplex",
+            "unitNo": "DUP-195",
+            "cluster": "Duplexes",
+            "beds": 4,
+            "finishing": "Core & Shell",
+            "areaSqm": 195,
+            "priceEGP": 17000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Penthouse",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 175,
+        "maxSqm": 190,
+        "minPriceM": 16,
+        "maxPriceM": 17,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - Penthouses",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-penthouse",
+            "unitNo": "PENT-175",
+            "cluster": "Penthouses",
+            "beds": 4,
+            "finishing": "Core & Shell",
+            "areaSqm": 175,
+            "priceEGP": 16000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Sky Villa",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 195,
+        "maxSqm": 240,
+        "minPriceM": 18,
+        "maxPriceM": 19,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - Sky Villas",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-sky-villa",
+            "unitNo": "SKYV-195",
+            "cluster": "Sky Villas",
+            "beds": 4,
+            "finishing": "Core & Shell",
+            "areaSqm": 195,
+            "priceEGP": 18000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Townhouse",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 196,
+        "maxSqm": 196,
+        "minPriceM": 24,
+        "maxPriceM": 27,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - Townhouse Middle",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-th-mid",
+            "unitNo": "TH-MID-196",
+            "cluster": "Townhouses",
+            "beds": 3,
+            "finishing": "Core & Shell",
+            "areaSqm": 196,
+            "priceEGP": 24000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Townhouse",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 198,
+        "maxSqm": 198,
+        "minPriceM": 27.5,
+        "maxPriceM": 29.5,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - Townhouse Corner",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-th-cor",
+            "unitNo": "TH-COR-198",
+            "cluster": "Townhouses",
+            "beds": 3,
+            "finishing": "Core & Shell",
+            "areaSqm": 198,
+            "priceEGP": 27500000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Twin House",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 218,
+        "maxSqm": 218,
+        "minPriceM": 32,
+        "maxPriceM": 36,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - Twin Houses",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-twh",
+            "unitNo": "TWH-218",
+            "cluster": "Twin Houses",
+            "beds": 4,
+            "finishing": "Core & Shell",
+            "areaSqm": 218,
+            "priceEGP": 32000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 220,
+        "maxSqm": 220,
+        "minPriceM": 39,
+        "maxPriceM": 42,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - SV6 Villa",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-sv6",
+            "unitNo": "SV6-220",
+            "cluster": "Standalone Villas",
+            "beds": 4,
+            "finishing": "Core & Shell",
+            "areaSqm": 220,
+            "priceEGP": 39000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 240,
+        "maxSqm": 240,
+        "minPriceM": 43,
+        "maxPriceM": 47,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - SV5 Villa",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-sv5",
+            "unitNo": "SV5-240",
+            "cluster": "Standalone Villas",
+            "beds": 4,
+            "finishing": "Core & Shell",
+            "areaSqm": 240,
+            "priceEGP": 43000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 270,
+        "maxSqm": 270,
+        "minPriceM": 48,
+        "maxPriceM": 51,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - SV4 Villa",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-sv4",
+            "unitNo": "SV4-270",
+            "cluster": "Standalone Villas",
+            "beds": 4,
+            "finishing": "Core & Shell",
+            "areaSqm": 270,
+            "priceEGP": 48000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 5,
+        "available": 1,
+        "minSqm": 285,
+        "maxSqm": 285,
+        "minPriceM": 52,
+        "maxPriceM": 55,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - SV3 Villa",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-sv3",
+            "unitNo": "SV3-285",
+            "cluster": "Standalone Villas",
+            "beds": 5,
+            "finishing": "Core & Shell",
+            "areaSqm": 285,
+            "priceEGP": 52000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 5,
+        "available": 1,
+        "minSqm": 350,
+        "maxSqm": 350,
+        "minPriceM": 62,
+        "maxPriceM": 66,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - SV2 Villa",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-sv2",
+            "unitNo": "SV2-350",
+            "cluster": "Standalone Villas",
+            "beds": 5,
+            "finishing": "Core & Shell",
+            "areaSqm": 350,
+            "priceEGP": 62000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 6,
+        "available": 1,
+        "minSqm": 377,
+        "maxSqm": 377,
+        "minPriceM": 68,
+        "maxPriceM": 73,
+        "finishing": "Core & Shell",
+        "cluster": "One Hyde Park - SV1 Villa",
+        "deliveryNote": "4 Years (2030)",
+        "paymentPlan": "5% Down Payment, up to 8 Years Installments",
+        "units": [
+          {
+            "id": "one-hp-sv1",
+            "unitNo": "SV1-377",
+            "cluster": "Standalone Villas",
+            "beds": 6,
+            "finishing": "Core & Shell",
+            "areaSqm": 377,
+            "priceEGP": 68000000,
+            "deliveryNote": "4 Years",
+            "status": "Available"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-19"
   }
 ];
