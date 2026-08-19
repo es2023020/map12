@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Explore 155+ compounds in Sahel, New Cairo, and Sheikh Zayed. Built for Egyptian buyers, investors, and real estate brokers.",
+          "Explore 328+ compounds in Sahel, New Cairo, Sheikh Zayed, and across Egypt. Built for Egyptian buyers, investors, and real estate brokers.",
       },
       { name: "robots", content: "index, follow" },
       {

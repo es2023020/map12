@@ -1,6 +1,8 @@
+import wikimapiaLocationsRaw from "@/data/wikimapia-locations.json";
+
 export const WIKIMAPIA_API_KEY = "3F982F58-7F9183CE-7062C621-4D295418-CAED2D59-CB05F1E2-22EEB064-1E90E75";
 export const WIKIMAPIA_TILE_URL = `https://i{s}.wikimapia.org/?x={x}&y={y}&zoom={z}&type=&lng=0&key=${WIKIMAPIA_API_KEY}`;
-export const WIKIMAPIA_SUBDOMAINS = ["0", "1", "2", "3", "4", "5", "6", "7"];
+export const WIKIMAPIA_SUBDOMAINS = Array.from({ length: 16 }, (_, i) => String(i));
 
 export interface WikimapiaPlace {
   id: number;
@@ -16,6 +18,38 @@ export interface WikimapiaPlace {
   };
   polygon?: Array<{ x: number; y: number }>;
   description?: string;
+}
+
+/**
+ * Calculates official Wikimapia tile host i[NUM].wikimapia.org
+ * Algorithm: NUM = (X % 4) + (Y % 4) * 4
+ */
+export function getWikimapiaTileUrl(x: number, y: number, z: number): string {
+  const num = (((x % 4) + 4) % 4) + (((y % 4) + 4) % 4) * 4;
+  return `https://i${num}.wikimapia.org/?x=${x}&y=${y}&zoom=${z}&type=&lng=0&key=${WIKIMAPIA_API_KEY}`;
+}
+
+export const wikimapiaLocations = wikimapiaLocationsRaw as Record<string, any>;
+
+/**
+ * Resolve project slug or name to exact Wikimapia location metadata
+ */
+export function resolveWikimapiaLocation(query: string): { lat: number; lng: number; name?: string; url?: string } | null {
+  if (!query) return null;
+  const clean = query.toLowerCase().trim().replace(/-/g, " ");
+  
+  // 1. Direct match in Wikimapia dictionary
+  for (const [key, val] of Object.entries(wikimapiaLocations)) {
+    if (key.includes(clean) || clean.includes(key)) {
+      return {
+        lat: val.lat,
+        lng: val.lng,
+        name: val.name,
+        url: val.url,
+      };
+    }
+  }
+  return null;
 }
 
 /**

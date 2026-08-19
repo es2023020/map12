@@ -337,7 +337,7 @@ function CompoundPage() {
     }
   }, [interestModalOpen, user, c.types]);
 
-  const handleRegisterInterest = (e: React.FormEvent) => {
+  const handleRegisterInterest = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!leadName.trim() || !leadPhone.trim()) {
       toast.error("Please fill in your name and phone number.");
@@ -345,14 +345,23 @@ function CompoundPage() {
     }
     setIsSubmitting(true);
     try {
-      addLead({
+      const payload = {
         name: leadName,
         phone: leadPhone,
         budget: c.priceFrom || 0,
         interest: c.slug,
-        stage: "new",
+        stage: "new" as const,
         notes: `Preferred Unit: ${leadUnit}\nInterest Type: ${leadInterestType}\nBest Time to Call: ${leadTime}`,
-      });
+      };
+      addLead(payload);
+
+      // Persist to server backend API
+      fetch("/api/save-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch((err) => console.error("Lead API sync notice:", err));
+
       toast.success("Interest registered successfully! Our agent will call you shortly.");
       setInterestModalOpen(false);
     } catch (err) {

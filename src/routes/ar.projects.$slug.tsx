@@ -138,7 +138,7 @@ function ArabicCompoundPage() {
     }
   }, [interestModalOpen, user, c.types]);
 
-  const handleRegisterInterest = (e: React.FormEvent) => {
+  const handleRegisterInterest = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!leadName.trim() || !leadPhone.trim()) {
       toast.error("يرجى ملء الاسم ورقم الهاتف.");
@@ -146,14 +146,23 @@ function ArabicCompoundPage() {
     }
     setIsSubmitting(true);
     try {
-      addLead({
+      const payload = {
         name: leadName,
         phone: leadPhone,
         budget: c.priceFrom || 0,
         interest: c.slug,
-        stage: "new",
+        stage: "new" as const,
         notes: `الوحدة المفضلة: ${leadUnit}\nنوع الاهتمام: ${leadInterestType}\nأفضل وقت للاتصال: ${leadTime}`,
-      });
+      };
+      addLead(payload);
+
+      // Persist to server backend API
+      fetch("/api/save-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch((err) => console.error("Lead API sync notice:", err));
+
       toast.success("تم تسجيل اهتمامك بنجاح! سيتصل بك أحد وكلائنا قريباً.");
       setInterestModalOpen(false);
     } catch (err) {

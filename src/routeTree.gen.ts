@@ -52,6 +52,7 @@ import { Route as ComparePairRouteImport } from './routes/compare.$pair'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiUploadAssetRouteImport } from './routes/api.upload-asset'
 import { Route as ApiSaveUsersRouteImport } from './routes/api.save-users'
+import { Route as ApiSaveLeadRouteImport } from './routes/api.save-lead'
 import { Route as ApiSaveDatabaseRouteImport } from './routes/api.save-database'
 import { Route as ApiBrochuresMatchRouteImport } from './routes/api.brochures-match'
 import { Route as UnitsProjectSlugTypeSlugRouteImport } from './routes/units.$projectSlug.$typeSlug'
@@ -278,6 +279,11 @@ const ApiSaveUsersRoute = ApiSaveUsersRouteImport.update({
   path: '/api/save-users',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiSaveLeadRoute = ApiSaveLeadRouteImport.update({
+  id: '/api/save-lead',
+  path: '/api/save-lead',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiSaveDatabaseRoute = ApiSaveDatabaseRouteImport.update({
   id: '/api/save-database',
   path: '/api/save-database',
@@ -350,6 +356,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/brochures-match': typeof ApiBrochuresMatchRoute
   '/api/save-database': typeof ApiSaveDatabaseRoute
+  '/api/save-lead': typeof ApiSaveLeadRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -400,6 +407,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/brochures-match': typeof ApiBrochuresMatchRoute
   '/api/save-database': typeof ApiSaveDatabaseRoute
+  '/api/save-lead': typeof ApiSaveLeadRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -455,6 +463,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/brochures-match': typeof ApiBrochuresMatchRoute
   '/api/save-database': typeof ApiSaveDatabaseRoute
+  '/api/save-lead': typeof ApiSaveLeadRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -511,6 +520,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/api/brochures-match'
     | '/api/save-database'
+    | '/api/save-lead'
     | '/api/save-users'
     | '/api/upload-asset'
     | '/blog/$slug'
@@ -561,6 +571,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/api/brochures-match'
     | '/api/save-database'
+    | '/api/save-lead'
     | '/api/save-users'
     | '/api/upload-asset'
     | '/blog/$slug'
@@ -615,6 +626,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/api/brochures-match'
     | '/api/save-database'
+    | '/api/save-lead'
     | '/api/save-users'
     | '/api/upload-asset'
     | '/blog/$slug'
@@ -670,6 +682,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiBrochuresMatchRoute: typeof ApiBrochuresMatchRoute
   ApiSaveDatabaseRoute: typeof ApiSaveDatabaseRoute
+  ApiSaveLeadRoute: typeof ApiSaveLeadRoute
   ApiSaveUsersRoute: typeof ApiSaveUsersRoute
   ApiUploadAssetRoute: typeof ApiUploadAssetRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -985,6 +998,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiSaveUsersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/save-lead': {
+      id: '/api/save-lead'
+      path: '/api/save-lead'
+      fullPath: '/api/save-lead'
+      preLoaderRoute: typeof ApiSaveLeadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/save-database': {
       id: '/api/save-database'
       path: '/api/save-database'
@@ -1180,6 +1200,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiBrochuresMatchRoute: ApiBrochuresMatchRoute,
   ApiSaveDatabaseRoute: ApiSaveDatabaseRoute,
+  ApiSaveLeadRoute: ApiSaveLeadRoute,
   ApiSaveUsersRoute: ApiSaveUsersRoute,
   ApiUploadAssetRoute: ApiUploadAssetRoute,
   BlogSlugRoute: BlogSlugRoute,

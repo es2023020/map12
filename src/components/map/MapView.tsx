@@ -20,9 +20,35 @@ import { availability } from "@/data/availability";
 import {
   WIKIMAPIA_TILE_URL,
   WIKIMAPIA_SUBDOMAINS,
+  resolveWikimapiaLocation,
   getWikimapiaBoxPlaces,
   type WikimapiaPlace,
 } from "@/lib/wikimapia";
+
+const WikimapiaTileLayerClass = L.TileLayer.extend({
+  getSubdomain: function (coords: L.Coords) {
+    const x = coords.x;
+    const y = coords.y;
+    const num = (((x % 4) + 4) % 4) + (((y % 4) + 4) % 4) * 4;
+    return String(num);
+  },
+});
+
+function CustomWikimapiaTileLayer({ opacity = 1.0 }: { opacity?: number }) {
+  const map = useMap();
+  useEffect(() => {
+    const layer = new (WikimapiaTileLayerClass as any)(WIKIMAPIA_TILE_URL, {
+      maxZoom: 19,
+      opacity,
+      attribution: '&copy; <a href="http://wikimapia.org" target="_blank" rel="noopener noreferrer">Wikimapia.org</a>',
+    });
+    layer.addTo(map);
+    return () => {
+      map.removeLayer(layer);
+    };
+  }, [map, opacity]);
+  return null;
+}
 
 function getAvailableCount(slug: string): number {
   return availability.find((a) => a.slug === slug)?.totalAvailable ?? 0;
@@ -111,7 +137,19 @@ export function MapView({
     );
   }
 
-  const focused = focus ?? (activeId ? (compounds.find((c) => c.slug === activeId) ?? null) : null);
+  const rawFocused = focus ?? (activeId ? (compounds.find((c) => c.slug === activeId) ?? null) : null);
+  const focused = useMemo(() => {
+    if (!rawFocused) return null;
+    const wmLoc = resolveWikimapiaLocation(rawFocused.slug) || resolveWikimapiaLocation(rawFocused.name);
+    if (wmLoc) {
+      return {
+        ...rawFocused,
+        lat: wmLoc.lat,
+        lng: wmLoc.lng,
+      };
+    }
+    return rawFocused;
+  }, [rawFocused]);
 
   return (
     <div className={className}>
@@ -167,12 +205,7 @@ export function MapView({
       >
         <LayersControl position="topright">
           <LayersControl.BaseLayer checked name="Wikimapia Map (Streets)">
-            <TileLayer
-              attribution='&copy; <a href="http://wikimapia.org" target="_blank" rel="noopener noreferrer">Wikimapia.org</a>'
-              url={WIKIMAPIA_TILE_URL}
-              subdomains={WIKIMAPIA_SUBDOMAINS}
-              maxZoom={19}
-            />
+            <CustomWikimapiaTileLayer />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Wikimapia Hybrid">
             <LayerGroup>
@@ -181,13 +214,7 @@ export function MapView({
                 url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
                 maxZoom={19}
               />
-              <TileLayer
-                attribution='&copy; <a href="http://wikimapia.org" target="_blank" rel="noopener noreferrer">Wikimapia.org</a>'
-                url={WIKIMAPIA_TILE_URL}
-                subdomains={WIKIMAPIA_SUBDOMAINS}
-                maxZoom={19}
-                opacity={0.7}
-              />
+              <CustomWikimapiaTileLayer opacity={0.75} />
             </LayerGroup>
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Satellite">

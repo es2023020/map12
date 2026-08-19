@@ -93,7 +93,7 @@ function ArabicHomePage() {
                   search={{ search: "", sort: "name-asc", view: "grid" } as any}
                   className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent text-white px-6 py-3 text-sm font-semibold hover:bg-white/10"
                 >
-                  تصفح جميع الكمبوندات (155+)
+                  تصفح جميع الكمبوندات (328+)
                 </Link>
               </div>
             </div>

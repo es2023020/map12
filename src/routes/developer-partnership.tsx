@@ -15,8 +15,8 @@ export const Route = createFileRoute("/developer-partnership")({
 const benefits = [
   {
     icon: Users,
-    title: "Reach 2,400+ Active Brokers",
-    desc: "Your project is visible to every PropTrack broker searching for listings in your location, price range, and unit type.",
+    title: "Direct Broker Market Visibility",
+    desc: "Your project is visible to brokers searching for listings in your location, price range, and unit type across 26 prime Egyptian destinations.",
   },
   {
     icon: MapPin,
@@ -99,8 +99,7 @@ function DeveloperPartnershipPage() {
             Put your project in front of every top Egyptian broker
           </h1>
           <p className="mt-5 text-lg text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            PropTrack connects your development with 2,400+ active real estate brokers searching
-            daily across Cairo, North Coast, New Capital, and all of Egypt.
+            PropTrack showcases your development alongside 328+ compounds across Cairo, North Coast, New Capital, and all of Egypt.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link to="/contact">
