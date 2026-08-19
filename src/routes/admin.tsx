@@ -58,12 +58,8 @@ export const Route = createFileRoute("/admin")({
   },
   head: () => ({
     meta: [
-      { title: "Super-Admin Command Center — PropTrack" },
-      {
-        name: "description",
-        content:
-          "Platform control layer for managing projects, companies, map coordinates, pricing logic, and user roles.",
-      },
+      { title: "Page Not Found — PropTrack" },
+      { name: "robots", content: "noindex, nofollow" },
     ],
   }),
   component: AdminPage,
@@ -94,10 +90,20 @@ function AdminPage() {
   // Admin credentials checking
   const isAdmin = user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
 
-  // Form states for login
+  // Form states for login & stealth 404 security gate
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [loginError, setLoginError] = useState("");
+  const [showGate, setShowGate] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.location.search.includes("access=") || window.location.search.includes("admin=")) {
+        setShowGate(true);
+      }
+    }
+  }, []);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -117,6 +123,44 @@ function AdminPage() {
   };
 
   if (!user || !isAdmin) {
+    if (!showGate) {
+      return (
+        <Shell>
+          <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-16">
+            <div
+              onClick={() => {
+                const next = clickCount + 1;
+                setClickCount(next);
+                if (next >= 3) setShowGate(true);
+              }}
+              className="cursor-default select-none mb-4 group"
+            >
+              <h1 className="font-display text-8xl font-extrabold text-primary/20 transition-colors group-hover:text-primary/30">
+                404
+              </h1>
+            </div>
+            <h2 className="font-display text-2xl font-bold text-primary">Page Not Found</h2>
+            <p className="mt-2 text-sm text-muted-foreground max-w-md">
+              The page you are looking for does not exist, has been removed, or is temporarily unavailable.
+            </p>
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href="/"
+                className="rounded-full bg-primary text-primary-foreground px-6 py-2.5 text-xs font-bold hover:bg-primary/90 transition-colors"
+              >
+                Back to Home
+              </a>
+              <a
+                href="/projects"
+                className="rounded-full border border-border bg-card px-6 py-2.5 text-xs font-semibold text-primary hover:bg-secondary transition-colors"
+              >
+                Browse Projects
+              </a>
+            </div>
+          </div>
+        </Shell>
+      );
+    }
     return (
       <Shell>
         <div className="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-primary/10 via-transparent to-accent/5 py-12 px-4 sm:px-6 lg:px-8">

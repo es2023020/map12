@@ -7,23 +7,30 @@ import { Sparkles, MapPin, Search } from "lucide-react";
 
 export function NewLaunchesDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedDest, setSelectedDest] = useState<string>("All");
+  const [selectedDests, setSelectedDests] = useState<string[]>([]);
 
   const compoundsList = useStore((s) => s.compoundsList) || [];
   const dashboardCompounds = compoundsList.filter((c) => c.isNewLaunch && !c.parentSlug);
+
+  const toggleDest = (dest: string) => {
+    if (dest === "All") {
+      setSelectedDests([]);
+    } else if (selectedDests.includes(dest)) {
+      setSelectedDests(selectedDests.filter((d) => d !== dest));
+    } else {
+      setSelectedDests([...selectedDests, dest]);
+    }
+  };
 
   const filtered = dashboardCompounds.filter((c) => {
     const matchesSearch =
       c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       c.developer.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesDest = selectedDest === "All" || c.destination === selectedDest;
+    const matchesDest = selectedDests.length === 0 || selectedDests.includes(c.destination);
     return matchesSearch && matchesDest;
   });
 
-  const uniqueDestinations = [
-    "All",
-    ...Array.from(new Set(dashboardCompounds.map((c) => c.destination))),
-  ];
+  const uniqueDestinations = Array.from(new Set(dashboardCompounds.map((c) => c.destination)));
 
   return (
     <Sheet>
@@ -66,19 +73,32 @@ export function NewLaunchesDashboard() {
               />
             </div>
             <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-              {uniqueDestinations.map((dest) => (
-                <button
-                  key={dest}
-                  onClick={() => setSelectedDest(dest)}
-                  className={`shrink-0 px-4 py-1.5 rounded-full text-xs font-medium transition-colors ${
-                    selectedDest === dest
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-muted text-muted-foreground hover:bg-muted/80"
-                  }`}
-                >
-                  {dest === "All" ? "All Regions" : dest.replace(/-/g, " ")}
-                </button>
-              ))}
+              <button
+                onClick={() => setSelectedDests([])}
+                className={`shrink-0 px-4 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                  selectedDests.length === 0
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted text-muted-foreground hover:bg-muted/80"
+                }`}
+              >
+                All Regions
+              </button>
+              {uniqueDestinations.map((dest) => {
+                const isSelected = selectedDests.includes(dest);
+                return (
+                  <button
+                    key={dest}
+                    onClick={() => toggleDest(dest)}
+                    className={`shrink-0 px-4 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                      isSelected
+                        ? "bg-accent text-accent-foreground font-bold"
+                        : "bg-muted text-muted-foreground hover:bg-muted/80"
+                    }`}
+                  >
+                    {dest.replace(/-/g, " ")} {isSelected ? "✓" : ""}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>

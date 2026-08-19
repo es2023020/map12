@@ -36,7 +36,12 @@ function ProjectsPage() {
   const { destination: destinationParam, dev: devParam, q: qParam } = Route.useSearch();
   const [q, setQ] = useState(qParam || "");
   const debouncedQ = useDebounce(q, 250);
-  const [destination, setArea] = useState(destinationParam || "");
+  const initialDestinations = useMemo(() => {
+    if (!destinationParam) return [];
+    return destinationParam.split(",").map((s) => s.trim()).filter(Boolean);
+  }, [destinationParam]);
+
+  const [destinationsSelected, setDestinationsSelected] = useState<string[]>(initialDestinations);
   const [dev, setDev] = useState(devParam || "");
   const [status, setStatus] = useState("");
   const [type, setType] = useState("");
@@ -68,12 +73,13 @@ function ProjectsPage() {
   const [maxPrice, setMaxPrice] = useState<number | null>(null);
   const currentMaxPrice = maxPrice ?? PRICE_MAX;
   const [sort, setSort] = useState<"name" | "price-asc" | "price-desc" | "delivery">("name");
+  const [visibleLimit, setVisibleLimit] = useState(12);
   const [filtersOpen, setFiltersOpen] = useState(!!(destinationParam || devParam || qParam));
   const trackEvent = useStore((s) => s.trackEvent);
 
   const hasFilters = !!(
     q ||
-    destination ||
+    destinationsSelected.length > 0 ||
     dev ||
     status ||
     type ||
@@ -83,7 +89,7 @@ function ProjectsPage() {
 
   function clearAll() {
     setQ("");
-    setArea("");
+    setDestinationsSelected([]);
     setDev("");
     setStatus("");
     setType("");
@@ -92,8 +98,9 @@ function ProjectsPage() {
   }
 
   const handleSelectPreset = (presetType: "destination" | "dev" | "q", val: string) => {
-    if (presetType === "destination") setArea(val);
-    else if (presetType === "dev") setDev(val);
+    if (presetType === "destination") {
+      setDestinationsSelected((prev) => (prev.includes(val) ? prev : [...prev, val]));
+    } else if (presetType === "dev") setDev(val);
     else setQ(val);
   };
 
@@ -146,7 +153,7 @@ function ProjectsPage() {
   const matchCompound = (
     c: any,
     qVal: string,
-    destinationVal: string,
+    destinationVal: string | string[],
     devVal: string,
     statusVal: string,
     typeVal: string,
@@ -223,7 +230,13 @@ function ProjectsPage() {
         }
       }
     }
-    if (destinationVal && c.destination !== destinationVal) return false;
+    if (destinationVal && (Array.isArray(destinationVal) ? destinationVal.length > 0 : true)) {
+      if (Array.isArray(destinationVal)) {
+        if (!destinationVal.includes(c.destination)) return false;
+      } else if (c.destination !== destinationVal) {
+        return false;
+      }
+    }
     if (devVal && c.developerSlug !== devVal) return false;
     if (statusVal && c.status !== statusVal) return false;
     if (typeVal && !c.types.includes(typeVal)) return false;
@@ -241,7 +254,7 @@ function ProjectsPage() {
 
   const filtered = useMemo(() => {
     let list = mainCompounds.filter((c) =>
-      matchCompound(c, debouncedQ, destination, dev, status, type, currentMaxPrice, kiloFilter),
+      matchCompound(c, debouncedQ, destinationsSelected, dev, status, type, currentMaxPrice, kiloFilter),
     );
     return [...list].sort((a, b) => {
       if (sort === "name") return a.name.localeCompare(b.name);
@@ -251,7 +264,7 @@ function ProjectsPage() {
     });
   }, [
     debouncedQ,
-    destination,
+    destinationsSelected,
     dev,
     status,
     type,
@@ -271,21 +284,21 @@ function ProjectsPage() {
 
     mainCompounds.forEach((c) => {
       // For activeDestinations (match everything except destination filter)
-      if (matchCompound(c, debouncedQ, "", dev, status, type, currentMaxPrice, kiloFilter)) {
+      if (matchCompound(c, debouncedQ, [], dev, status, type, currentMaxPrice, kiloFilter)) {
         activeDests.add(c.destination);
       }
       // For activeDevelopers (match everything except developer filter)
       if (
-        matchCompound(c, debouncedQ, destination, "", status, type, currentMaxPrice, kiloFilter)
+        matchCompound(c, debouncedQ, destinationsSelected, "", status, type, currentMaxPrice, kiloFilter)
       ) {
         activeDevs.add(c.developerSlug);
       }
       // For activeStatuses (match everything except status filter)
-      if (matchCompound(c, debouncedQ, destination, dev, "", type, currentMaxPrice, kiloFilter)) {
+      if (matchCompound(c, debouncedQ, destinationsSelected, dev, "", type, currentMaxPrice, kiloFilter)) {
         activeStats.add(c.status);
       }
       // For activeTypes (match everything except type filter)
-      if (matchCompound(c, debouncedQ, destination, dev, status, "", currentMaxPrice, kiloFilter)) {
+      if (matchCompound(c, debouncedQ, destinationsSelected, dev, status, "", currentMaxPrice, kiloFilter)) {
         c.types.forEach((t) => activeTyps.add(t));
       }
     });
@@ -298,11 +311,11 @@ function ProjectsPage() {
     };
   }, [
     debouncedQ,
-    destination,
+    destinationsSelected,
     dev,
     status,
     type,
-    maxPrice,
+    currentMaxPrice,
     kiloFilter,
     searchableTextMap,
     mainCompounds,
@@ -328,21 +341,17 @@ function ProjectsPage() {
         onChange={setQ}
         onSelectProject={(slug) => navigate({ to: "/projects/$slug", params: { slug } })}
         onSelectDeveloper={setDev}
-        onSelectDestination={setArea}
+        onSelectDestination={(val) => setDestinationsSelected([val])}
         onSelectPreset={handleSelectPreset}
         variant="compact"
         showPresets={false}
         placeholder="Filter projects..."
       />
 
-      <FilterSelect
-        label="Destination"
-        value={destination}
-        onChange={setArea}
-        options={[
-          { value: "", label: "All destinations" },
-          ...activeFilters.destinations.map((a) => ({ value: a.slug, label: a.name })),
-        ]}
+      <MultiDestinationSelect
+        selected={destinationsSelected}
+        onChange={setDestinationsSelected}
+        options={activeFilters.destinations.map((a) => ({ value: a.slug, label: a.name }))}
       />
       <FilterSelect
         label="Developer"
@@ -371,8 +380,10 @@ function ProjectsPage() {
           ...activeFilters.types.map((t) => ({ value: t, label: t })),
         ]}
       />
-      {(!destination ||
-        destinations.find((d) => d.slug === destination)?.region === "north-coast") && (
+      {(!destinationsSelected.length ||
+        destinationsSelected.some(
+          (slug) => destinations.find((d) => d.slug === slug)?.region === "north-coast",
+        )) && (
         <FilterSelect
           label="Sahel Highway Marker (Kilo)"
           value={kiloFilter}
@@ -452,7 +463,7 @@ function ProjectsPage() {
               onChange={setQ}
               onSelectProject={(slug) => navigate({ to: "/projects/$slug", params: { slug } })}
               onSelectDeveloper={setDev}
-              onSelectDestination={setArea}
+              onSelectDestination={(val) => setDestinationsSelected([val])}
               onSelectPreset={handleSelectPreset}
               variant="hero"
               showPresets={true}
@@ -508,10 +519,22 @@ function ProjectsPage() {
               </div>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              {filtered.map((c) => (
+              {filtered.slice(0, visibleLimit).map((c) => (
                 <CompoundCard key={c.slug} c={c} />
               ))}
             </div>
+
+            {filtered.length > visibleLimit && (
+              <div className="mt-10 text-center">
+                <button
+                  onClick={() => setVisibleLimit((prev) => prev + 12)}
+                  className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-8 py-3.5 text-xs font-bold text-accent hover:bg-accent hover:text-accent-foreground transition-all shadow-md hover:scale-105 cursor-pointer"
+                >
+                  <span>See More Projects (+{filtered.length - visibleLimit} more options)</span>
+                  <ChevronDown className="h-4 w-4" />
+                </button>
+              </div>
+            )}
             {filtered.length === 0 && (
               <div className="rounded-3xl border border-dashed border-border p-16 text-center shadow-2xs bg-card/10">
                 <Search className="mx-auto h-12 w-12 text-muted-foreground/25 mb-4" />
@@ -567,6 +590,153 @@ function FilterSelect({
         <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground/60">
           <ChevronDown className="h-3.5 w-3.5" />
         </span>
+      </div>
+    </div>
+  );
+}
+
+function MultiDestinationSelect({
+  selected,
+  onChange,
+  options,
+}: {
+  selected: string[];
+  onChange: (slugs: string[]) => void;
+  options: Array<{ value: string; label: string }>;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showAllOptions, setShowAllOptions] = useState(false);
+
+  const toggleSlug = (slug: string) => {
+    if (selected.includes(slug)) {
+      onChange(selected.filter((s) => s !== slug));
+    } else {
+      onChange([...selected, slug]);
+    }
+  };
+
+  const selectedNames = options
+    .filter((o) => selected.includes(o.value))
+    .map((o) => o.label);
+
+  const INITIAL_LIMIT = 5;
+  const visibleOptions = showAllOptions ? options : options.slice(0, INITIAL_LIMIT);
+  const remainingCount = options.length - INITIAL_LIMIT;
+
+  return (
+    <div className="space-y-1.5 relative">
+      <label className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">
+        <span>Destinations / Regions</span>
+        {selected.length > 0 && (
+          <span className="text-[10px] text-accent font-bold">
+            {selected.length} selected
+          </span>
+        )}
+      </label>
+
+      {selected.length > 0 && (
+        <div className="flex flex-wrap gap-1 mb-1">
+          {options
+            .filter((o) => selected.includes(o.value))
+            .map((o) => (
+              <span
+                key={o.value}
+                className="inline-flex items-center gap-1 rounded-full bg-accent/15 border border-accent/30 px-2 py-0.5 text-[10px] font-bold text-accent"
+              >
+                {o.label}
+                <button
+                  type="button"
+                  onClick={() => toggleSlug(o.value)}
+                  className="hover:text-destructive text-accent/80 font-bold"
+                >
+                  ×
+                </button>
+              </span>
+            ))}
+          <button
+            type="button"
+            onClick={() => onChange([])}
+            className="text-[9px] font-semibold text-muted-foreground hover:text-primary underline px-1"
+          >
+            Clear
+          </button>
+        </div>
+      )}
+
+      <div className="relative">
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-full text-left rounded-xl border border-border/80 bg-background/50 pl-3.5 pr-10 py-2.5 text-xs font-medium text-foreground transition-all hover:border-accent/40 focus:outline-none flex items-center justify-between"
+        >
+          <span className="truncate">
+            {selected.length === 0
+              ? "All destinations (Select 1 or more)"
+              : selected.length === 1
+                ? selectedNames[0]
+                : `${selected.length} regions (${selectedNames.slice(0, 2).join(", ")}${selectedNames.length > 2 ? "..." : ""})`}
+          </span>
+          <ChevronDown className="h-3.5 w-3.5 shrink-0 text-muted-foreground/60" />
+        </button>
+
+        {isOpen && (
+          <div className="absolute left-0 right-0 z-30 mt-1 max-h-72 overflow-y-auto rounded-xl border border-border bg-card p-2 shadow-2xl space-y-1 animate-fade-in">
+            <button
+              type="button"
+              onClick={() => {
+                onChange([]);
+                setIsOpen(false);
+              }}
+              className={`w-full text-left px-2.5 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
+                selected.length === 0 ? "bg-accent/15 text-accent font-bold" : "hover:bg-secondary text-muted-foreground"
+              }`}
+            >
+              All destinations
+            </button>
+            {visibleOptions.map((o) => {
+              const isChecked = selected.includes(o.value);
+              return (
+                <label
+                  key={o.value}
+                  className={`flex items-center justify-between px-2.5 py-1.5 text-xs rounded-lg cursor-pointer transition-colors ${
+                    isChecked ? "bg-accent/15 text-accent font-bold" : "hover:bg-secondary text-primary"
+                  }`}
+                >
+                  <span className="truncate">{o.label}</span>
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={() => toggleSlug(o.value)}
+                    className="rounded text-accent focus:ring-accent h-3.5 w-3.5 cursor-pointer"
+                  />
+                </label>
+              );
+            })}
+
+            {options.length > INITIAL_LIMIT && (
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowAllOptions(!showAllOptions);
+                }}
+                className="w-full text-center py-2 text-[11px] font-bold text-accent hover:bg-accent/10 rounded-lg transition-colors border-t border-border/40 mt-1 flex items-center justify-center gap-1 cursor-pointer"
+              >
+                {showAllOptions ? (
+                  <>
+                    <span>Show less</span>
+                    <ChevronUp className="h-3.5 w-3.5" />
+                  </>
+                ) : (
+                  <>
+                    <span>See more (+{remainingCount} more options)</span>
+                    <ChevronDown className="h-3.5 w-3.5" />
+                  </>
+                )}
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

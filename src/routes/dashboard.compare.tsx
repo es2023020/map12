@@ -75,15 +75,6 @@ function ComparePage() {
     { label: "Unit sizes", get: (c) => c.unitSizes ?? "—" },
     { label: "Unit types", get: (c) => c.types.join(", ") },
     { label: "Payment plan", get: (c) => c.paymentPlan },
-    {
-      label: "Live Connected Inventory",
-      get: (c) => {
-        const avail = availabilityBySlug(c.slug);
-        return avail && avail.totalAvailable > 0
-          ? `${avail.totalAvailable} units available`
-          : "Not updated yet";
-      },
-    },
   ];
 
   const handleDownloadPDF = () => {

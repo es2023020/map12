@@ -1277,4 +1277,10 @@ export const projectLocations: Record<string, ProjectLocation> = {
     location: "New Cairo, Cairo Governorate, Egypt",
     mapsUrl: "https://www.google.com/maps/place/Vie+collective/@30.0440484,31.6001079,17z",
   },
+  "nyoum-october": {
+    name: "Nyoum October",
+    destination: "6th-october",
+    location: "Boulevard Axis, 6th of October City, Giza Governorate, Egypt",
+    mapsUrl: "https://maps.google.com/?q=Nyoum+October+Compound+Boulevard+Axis+6th+of+October",
+  },
 };

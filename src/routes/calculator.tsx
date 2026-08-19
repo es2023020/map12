@@ -94,47 +94,48 @@ function parsePaymentPlan(plan?: string): { dp: number; duration: number } {
   return { dp, duration };
 }
 
-function matchDestination(compDest: string, filterVal: string): boolean {
-  if (!filterVal) return true;
-  
-  if (filterVal === "macro-new-cairo") {
-    const eastCairoSlugs = [
-      "new-cairo",
-      "mostakbal-city",
-      "shorouk",
-      "heliopolis",
-      "obour",
-      "sarai",
-      "6th-settlement",
-      "eastern-expansion",
-      "new-administrative-capital"
-    ];
-    return eastCairoSlugs.includes(compDest);
-  }
-  
-  if (filterVal === "macro-west-cairo") {
-    const westCairoSlugs = [
-      "sheikh-zayed",
-      "new-zayed",
-      "6th-october",
-      "northern-expansion"
-    ];
-    return westCairoSlugs.includes(compDest);
-  }
-  
-  if (filterVal === "macro-north-coast") {
-    const sahelSlugs = [
-      "sidi-heneish",
-      "ras-el-hekma",
-      "al-dabaa",
-      "ghazala-bay",
-      "sidi-abdelrahman",
-      "new-alamein"
-    ];
-    return sahelSlugs.includes(compDest);
-  }
-  
-  return compDest === filterVal;
+function matchDestination(compDest: string, filterVal: string | string[]): boolean {
+  if (!filterVal || (Array.isArray(filterVal) && filterVal.length === 0)) return true;
+  const filters = Array.isArray(filterVal) ? filterVal : [filterVal];
+
+  return filters.some((f) => {
+    if (!f) return true;
+    if (f === "macro-new-cairo") {
+      const eastCairoSlugs = [
+        "new-cairo",
+        "mostakbal-city",
+        "shorouk",
+        "heliopolis",
+        "obour",
+        "sarai",
+        "6th-settlement",
+        "eastern-expansion",
+        "new-administrative-capital",
+      ];
+      return eastCairoSlugs.includes(compDest);
+    }
+    if (f === "macro-west-cairo") {
+      const westCairoSlugs = [
+        "sheikh-zayed",
+        "new-zayed",
+        "6th-october",
+        "northern-expansion",
+      ];
+      return westCairoSlugs.includes(compDest);
+    }
+    if (f === "macro-north-coast") {
+      const sahelSlugs = [
+        "sidi-heneish",
+        "ras-el-hekma",
+        "al-dabaa",
+        "ghazala-bay",
+        "sidi-abdelrahman",
+        "new-alamein",
+      ];
+      return sahelSlugs.includes(compDest);
+    }
+    return compDest === f;
+  });
 }
 
 function matchPropertyType(typeStr: string | string[] | undefined, filterVal: string): boolean {
@@ -228,6 +229,26 @@ function CalculatorPage() {
   }, [projectParam, mainCompounds]);
 
   const [projectSlug, setProjectSlug] = useState(initialProjectSlug);
+  const [projectSearchQuery, setProjectSearchQuery] = useState("");
+
+  const filteredMainCompounds = useMemo(() => {
+    if (!projectSearchQuery.trim()) return mainCompounds;
+    const q = projectSearchQuery.toLowerCase().trim();
+    return mainCompounds.filter(
+      (c) =>
+        c.name.toLowerCase().includes(q) ||
+        c.developer.toLowerCase().includes(q) ||
+        c.destination.toLowerCase().includes(q),
+    );
+  }, [mainCompounds, projectSearchQuery]);
+
+  useEffect(() => {
+    if (projectSearchQuery.trim() && filteredMainCompounds.length > 0) {
+      if (!filteredMainCompounds.some((c) => c.slug === projectSlug)) {
+        setProjectSlug(filteredMainCompounds[0].slug);
+      }
+    }
+  }, [filteredMainCompounds, projectSearchQuery, projectSlug]);
 
   // Sync state if initialProjectSlug changes (e.g. when mainCompounds loads)
   useEffect(() => {
@@ -251,7 +272,7 @@ function CalculatorPage() {
   const [selectedUnitId, setSelectedUnitId] = useState("");
 
   // Advanced filters for "Find by Budget" mode
-  const [budgetDestFilter, setBudgetDestFilter] = useState("");
+  const [budgetDestFilters, setBudgetDestFilters] = useState<string[]>([]);
   const [budgetTypeFilter, setBudgetTypeFilter] = useState("");
   const [budgetStatusFilter, setBudgetStatusFilter] = useState<"all" | "RTM" | "Off-Plan">("all");
 
@@ -356,7 +377,7 @@ function CalculatorPage() {
       if (!comp) return;
 
       // Filter by destination
-      if (!matchDestination(comp.destination, budgetDestFilter)) return;
+      if (!matchDestination(comp.destination, budgetDestFilters)) return;
 
       // Filter by status (RTM vs Off-Plan)
       if (budgetStatusFilter !== "all" && comp.status !== budgetStatusFilter) return;
@@ -390,7 +411,7 @@ function CalculatorPage() {
     return list.sort((a, b) => b.priceEGP - a.priceEGP).slice(0, 8);
   }, [
     basePrice,
-    budgetDestFilter,
+    budgetDestFilters,
     budgetTypeFilter,
     budgetStatusFilter,
     compoundsList,
@@ -402,14 +423,14 @@ function CalculatorPage() {
     return mainCompounds
       .filter((c) => {
         const matchPrice = c.priceFrom <= budgetLimit;
-        const matchDest = matchDestination(c.destination, budgetDestFilter);
+        const matchDest = matchDestination(c.destination, budgetDestFilters);
         const matchType = !budgetTypeFilter || matchPropertyType(c.types, budgetTypeFilter);
         const matchStatus = budgetStatusFilter === "all" || c.status === budgetStatusFilter;
         return matchPrice && matchDest && matchType && matchStatus;
       })
       .sort((a, b) => b.priceFrom - a.priceFrom)
       .slice(0, 6);
-  }, [basePrice, budgetDestFilter, budgetTypeFilter, budgetStatusFilter, mainCompounds]);
+  }, [basePrice, budgetDestFilters, budgetTypeFilter, budgetStatusFilter, mainCompounds]);
 
   const projectTypes = selectedProject?.types ?? [];
 
@@ -436,28 +457,86 @@ function CalculatorPage() {
       {/* Advanced Budget Filters */}
       <div className="grid gap-3 sm:grid-cols-3 bg-secondary/20 p-4 rounded-xl border border-border/40">
         <div>
-          <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1">
-            <MapPin className="h-3 w-3" /> Region Filter
+          <label className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
+            <span className="flex items-center gap-1">
+              <MapPin className="h-3 w-3" /> Region Filter
+            </span>
+            {budgetDestFilters.length > 0 && (
+              <span className="text-[10px] text-accent font-bold">
+                {budgetDestFilters.length} selected
+              </span>
+            )}
           </label>
-          <select
-            value={budgetDestFilter}
-            onChange={(e) => setBudgetDestFilter(e.target.value)}
-            className="w-full appearance-none rounded-xl border border-border bg-card px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-accent cursor-pointer"
-          >
-            <option value="">All Regions & Destinations</option>
-            <optgroup label="Macro Regions">
-              <option value="macro-new-cairo">New Cairo (All East)</option>
-              <option value="macro-west-cairo">West Cairo (Zayed & October)</option>
-              <option value="macro-north-coast">North Coast (All Sahel)</option>
-            </optgroup>
-            <optgroup label="Specific Destinations">
-              {destinations.map((d) => (
-                <option key={d.slug} value={d.slug}>
-                  {d.name}
-                </option>
-              ))}
-            </optgroup>
-          </select>
+          <div className="relative">
+            <select
+              value=""
+              onChange={(e) => {
+                const val = e.target.value;
+                if (!val) {
+                  setBudgetDestFilters([]);
+                } else if (!budgetDestFilters.includes(val)) {
+                  setBudgetDestFilters([...budgetDestFilters, val]);
+                }
+              }}
+              className="w-full appearance-none rounded-xl border border-border bg-card px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-accent cursor-pointer"
+            >
+              <option value="">
+                {budgetDestFilters.length === 0
+                  ? "All Regions (Choose 1 or more)"
+                  : "+ Add another region..."}
+              </option>
+              <optgroup label="Macro Regions">
+                <option value="macro-new-cairo">New Cairo (All East)</option>
+                <option value="macro-west-cairo">West Cairo (Zayed &amp; October)</option>
+                <option value="macro-north-coast">North Coast (All Sahel)</option>
+              </optgroup>
+              <optgroup label="Specific Destinations">
+                {destinations.map((d) => (
+                  <option key={d.slug} value={d.slug}>
+                    {d.name} {budgetDestFilters.includes(d.slug) ? "✓" : ""}
+                  </option>
+                ))}
+              </optgroup>
+            </select>
+          </div>
+          {budgetDestFilters.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-1.5">
+              {budgetDestFilters.map((slug) => {
+                const dName =
+                  slug === "macro-new-cairo"
+                    ? "New Cairo (All East)"
+                    : slug === "macro-west-cairo"
+                      ? "West Cairo (Zayed & October)"
+                      : slug === "macro-north-coast"
+                        ? "North Coast (All Sahel)"
+                        : destinations.find((d) => d.slug === slug)?.name || slug;
+                return (
+                  <span
+                    key={slug}
+                    className="inline-flex items-center gap-1 rounded-full bg-accent/15 border border-accent/30 px-2 py-0.5 text-[10px] font-bold text-accent"
+                  >
+                    {dName}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setBudgetDestFilters(budgetDestFilters.filter((s) => s !== slug))
+                      }
+                      className="hover:text-destructive text-accent/80 font-bold"
+                    >
+                      ×
+                    </button>
+                  </span>
+                );
+              })}
+              <button
+                type="button"
+                onClick={() => setBudgetDestFilters([])}
+                className="text-[9px] font-semibold text-muted-foreground hover:text-primary underline px-1"
+              >
+                Clear
+              </button>
+            </div>
+          )}
         </div>
         <div>
           <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1">
@@ -628,22 +707,55 @@ function CalculatorPage() {
 
               {mode === "project" && (
                 <div className="space-y-3">
-                  <label className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                    Project
-                  </label>
-                  <div className="relative">
-                    <select
-                      value={projectSlug}
-                      onChange={(e) => setProjectSlug(e.target.value)}
-                      className="w-full appearance-none rounded-xl border border-border bg-background px-4 py-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
-                    >
-                      {mainCompounds.map((c) => (
-                        <option key={c.slug} value={c.slug}>
-                          {c.name} — EGP {c.priceFrom}M
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                  {/* Search Bar for Project */}
+                  <div className="space-y-1.5">
+                    <label className="flex items-center justify-between text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                      <span>Search Project</span>
+                      {projectSearchQuery && (
+                        <span className="text-[10px] text-accent font-semibold">
+                          {filteredMainCompounds.length} matches
+                        </span>
+                      )}
+                    </label>
+                    <div className="relative">
+                      <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
+                      <input
+                        type="text"
+                        placeholder="Type to search project, developer, region..."
+                        value={projectSearchQuery}
+                        onChange={(e) => setProjectSearchQuery(e.target.value)}
+                        className="w-full rounded-xl border border-border bg-background pl-9 pr-8 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-accent"
+                      />
+                      {projectSearchQuery && (
+                        <button
+                          onClick={() => setProjectSearchQuery("")}
+                          className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-primary text-xs font-bold"
+                          title="Clear search"
+                        >
+                          ✕
+                        </button>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                      Selected Project ({filteredMainCompounds.length} available)
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={projectSlug}
+                        onChange={(e) => setProjectSlug(e.target.value)}
+                        className="w-full appearance-none rounded-xl border border-border bg-background px-4 py-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+                      >
+                        {filteredMainCompounds.map((c) => (
+                          <option key={c.slug} value={c.slug}>
+                            {c.name} ({c.developer}) — EGP {c.priceFrom}M
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                    </div>
                   </div>
 
                   {/* Unit Selector */}

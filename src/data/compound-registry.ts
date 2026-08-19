@@ -4483,4 +4483,5 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
       "Meditation Lake & Jacuzzi Jungles",
     ],
   },
+  "nyoum-october": {},
 };

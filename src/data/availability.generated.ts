@@ -54763,5 +54763,69 @@ export const availability: ProjectAvailability[] = [
     "breakdown": [],
     "lastUpdated": "2026-08-17",
     "note": "Sold Out. Starting price: EGP 20M."
+  },
+  {
+    "slug": "nyoum-october",
+    "developer": "Arab Developers Holding",
+    "totalAvailable": 32,
+    "breakdown": [
+      {
+        "type": "Apartment",
+        "beds": 2,
+        "available": 12,
+        "minSqm": 95,
+        "maxSqm": 140,
+        "minPriceM": 4.5,
+        "maxPriceM": 6.8,
+        "finishing": "Semi-Finished / Fully-Finished",
+        "deliveryNote": "2026",
+        "paymentPlan": "10% down / 8 yrs",
+        "cluster": "Stanley Phase",
+        "units": []
+      },
+      {
+        "type": "Apartment",
+        "beds": 3,
+        "available": 10,
+        "minSqm": 150,
+        "maxSqm": 242,
+        "minPriceM": 7.2,
+        "maxPriceM": 11.5,
+        "finishing": "Semi-Finished / Fully-Finished",
+        "deliveryNote": "2026",
+        "paymentPlan": "10% down / 8 yrs",
+        "cluster": "Little Rome Phase",
+        "units": []
+      },
+      {
+        "type": "Townhouse",
+        "beds": 3,
+        "available": 6,
+        "minSqm": 185,
+        "maxSqm": 230,
+        "minPriceM": 12.5,
+        "maxPriceM": 15.8,
+        "finishing": "Core & Shell",
+        "deliveryNote": "2026",
+        "paymentPlan": "10% down / 7 yrs",
+        "cluster": "Capri & Milan Villa Zone",
+        "units": []
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 5,
+        "available": 4,
+        "minSqm": 350,
+        "maxSqm": 700,
+        "minPriceM": 22.0,
+        "maxPriceM": 45.0,
+        "finishing": "Core & Shell",
+        "deliveryNote": "2026",
+        "paymentPlan": "10% down / 7 yrs",
+        "cluster": "Verona & Napoli-Bari Palaces",
+        "units": []
+      }
+    ],
+    "lastUpdated": "2026-08-19"
   }
 ];

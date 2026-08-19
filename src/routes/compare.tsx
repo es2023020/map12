@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { Shell } from "@/components/layout/Shell";
-import { compounds, compoundBySlug } from "@/data/compounds";
+import { compounds, compoundBySlug, Compound } from "@/data/compounds";
 import { availabilityBySlug } from "@/data/availability";
 import { useStore } from "@/lib/store";
 import {
@@ -9,319 +9,373 @@ import {
   Search,
   ChevronDown,
   Check,
-  Star,
   MapPin,
   Calendar,
   Building2,
   Wallet,
   Waves,
-  ArrowRight,
-  TrendingDown,
   Info,
   ShieldCheck,
   ArrowUpDown,
   Sliders,
   Download,
+  Plus,
+  X,
+  Layers,
+  Sparkles,
 } from "lucide-react";
 
 export const Route = createFileRoute("/compare")({
   head: () => ({
     meta: [
-      { title: "Side-by-Side Project Comparison | PropTrack" },
+      { title: "Multi-Project Side-by-Side Comparison | PropTrack" },
       {
         name: "description",
         content:
-          "Compare prices, delivery years, available inventory, and payment terms side-by-side for Egyptian real estate compounds.",
+          "Compare multiple Egyptian real estate compounds side-by-side. Compare whole projects or specific unit types, starting prices, delivery timelines, and payment plans.",
       },
     ],
   }),
   component: ComparePage,
 });
 
-function ComparePage() {
+interface SelectedSlot {
+  id: string;
+  slug: string;
+  selectedTypeIdx: number | "all";
+}
+
+export function ComparePage() {
   const compareList = useStore((s) => s.compareList);
 
-  // Set initial selected slugs based on compareList in store, fallback to default projects
-  const initialA = compareList[0] || "creekview";
-  const initialB = compareList[1] || "direction-white";
+  // Initialize slots with store items or empty slots (no pre-filled default placeholders)
+  const [slots, setSlots] = useState<SelectedSlot[]>(() => {
+    if (compareList.length >= 2) {
+      return compareList.map((slug, idx) => ({
+        id: `slot-${idx}-${Date.now()}`,
+        slug,
+        selectedTypeIdx: "all",
+      }));
+    }
+    if (compareList.length === 1) {
+      return [
+        { id: `slot-0-${Date.now()}`, slug: compareList[0], selectedTypeIdx: "all" },
+        { id: `slot-1-${Date.now()}`, slug: "", selectedTypeIdx: "all" },
+      ];
+    }
+    return [
+      { id: `slot-0-${Date.now()}`, slug: "", selectedTypeIdx: "all" },
+      { id: `slot-1-${Date.now()}`, slug: "", selectedTypeIdx: "all" },
+    ];
+  });
 
-  const [slugA, setSlugA] = useState(initialA);
-  const [slugB, setSlugB] = useState(initialB);
+  const [activeSearchSlotId, setActiveSearchSlotId] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const [selectedTypeIdxA, setSelectedTypeIdxA] = useState<number | "all">("all");
-  const [selectedTypeIdxB, setSelectedTypeIdxB] = useState<number | "all">("all");
-
-  const [searchA, setSearchA] = useState("");
-  const [searchB, setSearchB] = useState("");
-  const [showDropdownA, setShowDropdownA] = useState(false);
-  const [showDropdownB, setShowDropdownB] = useState(false);
-
-  // States for difference highlighting & filtering
   const [highlightDiffs, setHighlightDiffs] = useState(true);
   const [showDiffsOnly, setShowDiffsOnly] = useState(false);
 
-  const compA = useMemo(() => compoundBySlug(slugA), [slugA]);
-  const compB = useMemo(() => compoundBySlug(slugB), [slugB]);
-
-  const availA = useMemo(() => availabilityBySlug(slugA), [slugA]);
-  const availB = useMemo(() => availabilityBySlug(slugB), [slugB]);
-
-  const filteredCompoundsA = useMemo(() => {
-    if (!searchA) return compounds.slice(0, 10);
-    return compounds
-      .filter((c) => c.name.toLowerCase().includes(searchA.toLowerCase()))
-      .slice(0, 10);
-  }, [searchA]);
-
-  const filteredCompoundsB = useMemo(() => {
-    if (!searchB) return compounds.slice(0, 10);
-    return compounds
-      .filter((c) => c.name.toLowerCase().includes(searchB.toLowerCase()))
-      .slice(0, 10);
-  }, [searchB]);
-
-  // Quick Comparison suggestions
-  const QUICK_PAIRS = [
-    { label: "Creekview vs Marresidence", a: "creekview", b: "marresidence" },
-    { label: "Marassi vs Gaia", a: "marassi", b: "gaia" },
-    { label: "Solana vs Badya", a: "solana", b: "badya" },
-    { label: "Ogami vs Cali Coast", a: "ogami", b: "cali-coast-ras-el-hekma" },
+  // Quick preset comparisons
+  const QUICK_PRESETS = [
+    {
+      label: "Nyoum October vs Creekview vs Direction White",
+      slugs: ["nyoum-october", "creekview", "direction-white"],
+    },
+    {
+      label: "Marassi vs Solare vs Ogami",
+      slugs: ["marassi", "solare", "ogami"],
+    },
+    {
+      label: "Saada New Cairo vs Badya vs Solana",
+      slugs: ["horizon-by-saada", "badya", "solana"],
+    },
+    {
+      label: "Ashrafieh vs Fifth Square vs Mivida",
+      slugs: ["ashrafieh", "fifth-square", "mivida"],
+    },
   ];
 
-  // Reset selected unit types when compound slugs change
-  const handleSelectA = (slug: string) => {
-    setSlugA(slug);
-    setSelectedTypeIdxA("all");
-    setShowDropdownA(false);
-    setSearchA("");
+  const handleAddSlot = () => {
+    if (slots.length >= 5) return;
+    setSlots((prev) => [
+      ...prev,
+      {
+        id: `slot-${prev.length}-${Date.now()}`,
+        slug: "",
+        selectedTypeIdx: "all",
+      },
+    ]);
   };
 
-  const handleSelectB = (slug: string) => {
-    setSlugB(slug);
-    setSelectedTypeIdxB("all");
-    setShowDropdownB(false);
-    setSearchB("");
+  const handleRemoveSlot = (slotId: string) => {
+    if (slots.length <= 2) return; // Keep at least 2 projects
+    setSlots((prev) => prev.filter((s) => s.id !== slotId));
   };
 
-  // Resolve specs dynamically
-  const specsA = useMemo(() => {
-    if (!compA) return null;
-    const isAll = selectedTypeIdxA === "all";
-    const bd = !isAll && availA ? availA.breakdown[selectedTypeIdxA as number] : null;
-    return {
-      price: bd ? bd.minPriceM : compA.priceFrom,
-      delivery: bd
-        ? bd.deliveryNote || compA.deliveryYear.toString()
-        : compA.deliveryYear.toString(),
-      qty: bd ? bd.available : (availA?.totalAvailable ?? 0),
-      area: bd
+  const handleSelectCompound = (slotId: string, slug: string) => {
+    setSlots((prev) =>
+      prev.map((s) => (s.id === slotId ? { ...s, slug, selectedTypeIdx: "all" } : s)),
+    );
+    setActiveSearchSlotId(null);
+    setSearchQuery("");
+  };
+
+  const handleSelectUnitType = (slotId: string, value: string) => {
+    const selectedTypeIdx = value === "all" ? "all" : parseInt(value, 10);
+    setSlots((prev) =>
+      prev.map((s) => (s.id === slotId ? { ...s, selectedTypeIdx } : s)),
+    );
+  };
+
+  const handleApplyPreset = (slugs: string[]) => {
+    setSlots(
+      slugs.map((slug, idx) => ({
+        id: `preset-${idx}-${Date.now()}`,
+        slug,
+        selectedTypeIdx: "all",
+      })),
+    );
+  };
+
+  // Resolve data and specs for each slot
+  const resolvedSlots = useMemo(() => {
+    return slots.map((slot) => {
+      const comp = compoundBySlug(slot.slug);
+      const avail = availabilityBySlug(slot.slug);
+      const isAll = slot.selectedTypeIdx === "all";
+      const bd =
+        !isAll && avail && typeof slot.selectedTypeIdx === "number"
+          ? avail.breakdown[slot.selectedTypeIdx]
+          : null;
+
+      const price = bd ? bd.minPriceM : comp?.priceFrom ?? 0;
+      const delivery = bd
+        ? bd.deliveryNote || comp?.deliveryYear.toString() || "—"
+        : comp?.deliveryYear.toString() || "—";
+      const area = bd
         ? bd.minSqm === bd.maxSqm
           ? `${bd.minSqm} m²`
           : `${bd.minSqm}–${bd.maxSqm} m²`
-        : compA.areaSize || "—",
-      type: bd ? `${bd.type}${bd.beds ? ` (${bd.beds} BR)` : ""}` : compA.types.join(", "),
-      pay: bd ? bd.paymentPlan || compA.paymentPlan : compA.paymentPlan,
-      finish: bd ? bd.finishing || "Project Standard" : "Project Standard",
-      cluster: bd ? bd.cluster || "All Phases" : "All Phases",
-    };
-  }, [compA, availA, selectedTypeIdxA]);
+        : comp?.areaSize || "—";
+      const unitTypeDisplay = bd
+        ? `${bd.type}${bd.beds ? ` (${bd.beds} BR)` : ""}`
+        : comp?.types.join(", ") || "—";
+      const paymentPlan = bd ? bd.paymentPlan || comp?.paymentPlan || "—" : comp?.paymentPlan || "—";
+      const finishing = bd ? bd.finishing || "Project Standard" : "Project Standard";
+      const cluster = bd ? bd.cluster || "All Phases" : "All Phases";
+      const scopeLabel = isAll
+        ? "Whole Project Specs"
+        : bd
+          ? `Unit: ${bd.type}${bd.beds ? ` (${bd.beds} BR)` : ""}`
+          : "Whole Project Specs";
 
-  const specsB = useMemo(() => {
-    if (!compB) return null;
-    const isAll = selectedTypeIdxB === "all";
-    const bd = !isAll && availB ? availB.breakdown[selectedTypeIdxB as number] : null;
-    return {
-      price: bd ? bd.minPriceM : compB.priceFrom,
-      delivery: bd
-        ? bd.deliveryNote || compB.deliveryYear.toString()
-        : compB.deliveryYear.toString(),
-      qty: bd ? bd.available : (availB?.totalAvailable ?? 0),
-      area: bd
-        ? bd.minSqm === bd.maxSqm
-          ? `${bd.minSqm}.00 m²`
-          : `${bd.minSqm}–${bd.maxSqm} m²`
-        : compB.areaSize || "—",
-      type: bd ? `${bd.type}${bd.beds ? ` (${bd.beds} BR)` : ""}` : compB.types.join(", "),
-      pay: bd ? bd.paymentPlan || compB.paymentPlan : compB.paymentPlan,
-      finish: bd ? bd.finishing || "Project Standard" : "Project Standard",
-      cluster: bd ? bd.cluster || "All Phases" : "All Phases",
-    };
-  }, [compB, availB, selectedTypeIdxB]);
+      return {
+        slot,
+        comp,
+        avail,
+        specs: {
+          price,
+          delivery,
+          area,
+          unitTypeDisplay,
+          paymentPlan,
+          finishing,
+          cluster,
+          scopeLabel,
+          isSpecificUnit: !isAll,
+        },
+      };
+    });
+  }, [slots]);
 
-  // Highlights Calculations
-  const cheaperPrice = useMemo(() => {
-    if (!specsA || !specsB) return null;
-    if (specsA.price < specsB.price) return "A";
-    if (specsB.price < specsA.price) return "B";
-    return null;
-  }, [specsA, specsB]);
+  const validSlots = useMemo(() => resolvedSlots.filter((rs) => rs.comp), [resolvedSlots]);
 
-  const largerQty = useMemo(() => {
-    if (!specsA || !specsB) return null;
-    if (specsA.qty > specsB.qty) return "A";
-    if (specsB.qty > specsA.qty) return "B";
-    return null;
-  }, [specsA, specsB]);
+  // Find lowest price and earliest delivery for highlights
+  const minPriceVal = useMemo(() => {
+    if (validSlots.length === 0) return null;
+    const prices = validSlots.map((s) => s.specs.price).filter((p) => p > 0);
+    return prices.length > 0 ? Math.min(...prices) : null;
+  }, [validSlots]);
 
-  const soonerDeliv = useMemo(() => {
-    if (!specsA || !specsB) return null;
+  const earliestYearVal = useMemo(() => {
+    if (validSlots.length === 0) return null;
     const extractYear = (str: string) => {
       const match = str.match(/\d+/);
       if (!match) return 9999;
-      const y = parseInt(match[0]);
+      const y = parseInt(match[0], 10);
       return y < 100 ? 2000 + y : y;
     };
-    const yrA = extractYear(specsA.delivery);
-    const yrB = extractYear(specsB.delivery);
-    if (yrA < yrB) return "A";
-    if (yrB < yrA) return "B";
-    return null;
-  }, [specsA, specsB]);
+    const years = validSlots.map((s) => extractYear(s.specs.delivery));
+    const validYears = years.filter((y) => y < 9999);
+    return validYears.length > 0 ? Math.min(...validYears) : null;
+  }, [validSlots]);
 
-  // Construct comparison rows
-  const comparisonRows = useMemo(() => {
-    if (!compA || !compB || !specsA || !specsB) return [];
+  const filteredCompounds = useMemo(() => {
+    if (!searchQuery) return compounds.slice(0, 12);
+    return compounds
+      .filter((c) => c.name.toLowerCase().includes(searchQuery.toLowerCase()) || c.developer.toLowerCase().includes(searchQuery.toLowerCase()))
+      .slice(0, 12);
+  }, [searchQuery]);
+
+  // Construct table rows
+  const tableRows = useMemo(() => {
+    if (validSlots.length === 0) return [];
+
+    const getRowIsDifferent = (values: string[]) => {
+      if (values.length <= 1) return false;
+      return new Set(values).size > 1;
+    };
+
+    const developerVals = validSlots.map((s) => s.comp?.developer || "—");
+    const destVals = validSlots.map((s) => s.comp?.destination.replace(/-/g, " ").toUpperCase() || "—");
+    const statusVals = validSlots.map((s) => s.comp?.status || "—");
+    const scopeVals = validSlots.map((s) => s.specs.scopeLabel);
+    const typeVals = validSlots.map((s) => s.specs.unitTypeDisplay);
+    const clusterVals = validSlots.map((s) => s.specs.cluster);
+    const finishingVals = validSlots.map((s) => s.specs.finishing);
+    const areaVals = validSlots.map((s) => s.specs.area);
+    const priceVals = validSlots.map((s) => `${s.specs.price}M`);
+    const deliveryVals = validSlots.map((s) => s.specs.delivery);
+    const payVals = validSlots.map((s) => s.specs.paymentPlan);
 
     return [
       {
         label: "Developer",
-        displayA: compA.developer,
-        displayB: compB.developer,
         icon: Building2,
-        isDifferent: compA.developer !== compB.developer,
+        isDifferent: getRowIsDifferent(developerVals),
+        values: validSlots.map((s) => ({ text: s.comp?.developer || "—", isHighlight: false })),
       },
       {
-        label: "Developer History & profile",
-        displayA: `Project by ${compA.developer}. Spanning leading footprints across top Egyptian destinations with proven quality delivery.`,
-        displayB: `Project by ${compB.developer}. Spanning leading footprints across top Egyptian destinations with proven quality delivery.`,
+        label: "Developer Profile",
         icon: Building2,
-        isDifferent: compA.developer !== compB.developer,
+        isDifferent: getRowIsDifferent(developerVals),
+        values: validSlots.map((s) => ({
+          text: `Project by ${s.comp?.developer}. Leading footprint in Egyptian real estate with high build standards.`,
+          isHighlight: false,
+        })),
       },
       {
         label: "Destination",
-        displayA: compA.destination.replace("-", " ").toUpperCase(),
-        displayB: compB.destination.replace("-", " ").toUpperCase(),
         icon: MapPin,
-        isDifferent: compA.destination !== compB.destination,
+        isDifferent: getRowIsDifferent(destVals),
+        values: validSlots.map((s) => ({
+          text: s.comp?.destination.replace(/-/g, " ").toUpperCase() || "—",
+          isHighlight: false,
+        })),
       },
       {
         label: "Exact Location Details",
-        displayA:
-          availA && (availA as any).city
-            ? (availA as any).city
-            : `${compA.destination.replace("-", " ")} region`,
-        displayB:
-          availB && (availB as any).city
-            ? (availB as any).city
-            : `${compB.destination.replace("-", " ")} region`,
         icon: MapPin,
-        isDifferent: ((availA as any)?.city || "") !== ((availB as any)?.city || ""),
+        isDifferent: true,
+        values: validSlots.map((s) => ({
+          text: (s.avail as any)?.city || s.comp?.city || `${s.comp?.destination.replace(/-/g, " ")} region`,
+          isHighlight: false,
+        })),
       },
       {
         label: "Compound Status",
-        displayA: compA.status,
-        displayB: compB.status,
         icon: ShieldCheck,
-        isDifferent: compA.status !== compB.status,
+        isDifferent: getRowIsDifferent(statusVals),
+        values: validSlots.map((s) => ({ text: s.comp?.status || "—", isHighlight: false })),
       },
       {
-        label: "Key Amenities",
-        displayA: compA.amenities
-          ? compA.amenities.slice(0, 6).join(", ")
-          : (availA as any)?.amenities
-            ? (availA as any).amenities.slice(0, 6).join(", ")
-            : "Green Areas, Security",
-        displayB: compB.amenities
-          ? compB.amenities.slice(0, 6).join(", ")
-          : (availB as any)?.amenities
-            ? (availB as any).amenities.slice(0, 6).join(", ")
-            : "Green Areas, Security",
-        icon: Waves,
-        isDifferent: true,
+        label: "Comparison Scope",
+        icon: Layers,
+        isDifferent: getRowIsDifferent(scopeVals),
+        values: validSlots.map((s) => ({
+          text: s.specs.scopeLabel,
+          isHighlight: s.specs.isSpecificUnit,
+        })),
       },
       {
-        label: "Unit Type / Configuration",
-        displayA: specsA.type,
-        displayB: specsB.type,
+        label: "Unit Type / Layout",
         icon: Sliders,
-        isDifferent: specsA.type !== specsB.type,
+        isDifferent: getRowIsDifferent(typeVals),
+        values: validSlots.map((s) => ({ text: s.specs.unitTypeDisplay, isHighlight: false })),
       },
       {
-        label: "Inventory Cluster / Phase",
-        displayA: specsA.cluster,
-        displayB: specsB.cluster,
+        label: "Phase / Cluster",
         icon: Info,
-        isDifferent: specsA.cluster !== specsB.cluster,
+        isDifferent: getRowIsDifferent(clusterVals),
+        values: validSlots.map((s) => ({ text: s.specs.cluster, isHighlight: false })),
       },
       {
         label: "Finishing Type",
-        displayA: specsA.finish,
-        displayB: specsB.finish,
         icon: ShieldCheck,
-        isDifferent: specsA.finish !== specsB.finish,
+        isDifferent: getRowIsDifferent(finishingVals),
+        values: validSlots.map((s) => ({ text: s.specs.finishing, isHighlight: false })),
       },
       {
-        label: "Unit Area Size (BUA)",
-        displayA: specsA.area,
-        displayB: specsB.area,
+        label: "Unit BUA Size",
         icon: ArrowUpDown,
-        isDifferent: specsA.area !== specsB.area,
+        isDifferent: getRowIsDifferent(areaVals),
+        values: validSlots.map((s) => ({ text: s.specs.area, isHighlight: false })),
       },
       {
         label: "Starting Price",
-        displayA: `EGP ${specsA.price}M ${cheaperPrice === "A" ? "★ Lower" : ""}`,
-        displayB: `EGP ${specsB.price}M ${cheaperPrice === "B" ? "★ Lower" : ""}`,
         icon: Wallet,
-        isDifferent: specsA.price !== specsB.price,
+        isDifferent: getRowIsDifferent(priceVals),
+        values: validSlots.map((s) => {
+          const isLowest = minPriceVal !== null && s.specs.price === minPriceVal;
+          return {
+            text: `EGP ${s.specs.price}M ${isLowest ? "★ Lowest" : ""}`,
+            isHighlight: isLowest,
+          };
+        }),
       },
       {
         label: "Delivery Timeline",
-        displayA: `${specsA.delivery} ${soonerDeliv === "A" ? "★ Sooner" : ""}`,
-        displayB: `${specsB.delivery} ${soonerDeliv === "B" ? "★ Sooner" : ""}`,
         icon: Calendar,
-        isDifferent: specsA.delivery !== specsB.delivery,
+        isDifferent: getRowIsDifferent(deliveryVals),
+        values: validSlots.map((s) => {
+          const extractYr = (str: string) => {
+            const match = str.match(/\d+/);
+            if (!match) return 9999;
+            const y = parseInt(match[0], 10);
+            return y < 100 ? 2000 + y : y;
+          };
+          const yr = extractYr(s.specs.delivery);
+          const isEarliest = earliestYearVal !== null && yr === earliestYearVal;
+          return {
+            text: `${s.specs.delivery} ${isEarliest ? "★ Earliest" : ""}`,
+            isHighlight: isEarliest,
+          };
+        }),
       },
       {
         label: "Payment Terms",
-        displayA: specsA.pay,
-        displayB: specsB.pay,
         icon: Calendar,
-        isDifferent: specsA.pay !== specsB.pay,
+        isDifferent: getRowIsDifferent(payVals),
+        values: validSlots.map((s) => ({ text: s.specs.paymentPlan, isHighlight: false })),
       },
       {
-        label: "Active Listings Volume",
-        displayA:
-          specsA.qty > 0
-            ? `${specsA.qty} units available ${largerQty === "A" ? "★ Higher" : ""}`
-            : `Not updated yet`,
-        displayB:
-          specsB.qty > 0
-            ? `${specsB.qty} units available ${largerQty === "B" ? "★ Higher" : ""}`
-            : `Not updated yet`,
-        icon: Star,
-        isDifferent: specsA.qty !== specsB.qty,
+        label: "Key Amenities",
+        icon: Waves,
+        isDifferent: true,
+        values: validSlots.map((s) => ({
+          text: s.comp?.amenities ? s.comp.amenities.slice(0, 6).join(", ") : "Green landscapes, Security",
+          isHighlight: false,
+        })),
       },
     ];
-  }, [compA, compB, specsA, specsB, cheaperPrice, soonerDeliv, largerQty, availA, availB]);
+  }, [validSlots, minPriceVal, earliestYearVal]);
 
   const visibleRows = useMemo(() => {
     if (showDiffsOnly) {
-      return comparisonRows.filter((r) => r.isDifferent);
+      return tableRows.filter((r) => r.isDifferent);
     }
-    return comparisonRows;
-  }, [comparisonRows, showDiffsOnly]);
+    return tableRows;
+  }, [tableRows, showDiffsOnly]);
 
-  // Download PDF using browser print dialog (print only the comparison report)
   const handleDownloadPDF = () => {
-    const printContent = document.getElementById("comparison-report-container");
-    if (!printContent) return;
     const originalTitle = document.title;
-    document.title = `PropTrack — ${compA?.name ?? "Project A"} vs ${compB?.name ?? "Project B"}`;
+    const names = validSlots.map((s) => s.comp?.name).join(" vs ");
+    document.title = `PropTrack — Multi-Project Comparison (${names})`;
     const style = document.createElement("style");
     style.id = "print-only-style";
     style.innerHTML = `
       @media print {
-        header, footer, nav, aside, .no-print, button, .quick-comps-header { display: none !important; }
+        header, footer, nav, aside, .no-print, button { display: none !important; }
         body { background: white !important; color: black !important; }
         #comparison-report-container { display: block !important; width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
         .shadow-soft, .shadow-sm, .shadow-2xl { box-shadow: none !important; border: 1px solid #ddd !important; }
@@ -339,359 +393,189 @@ function ComparePage() {
 
   return (
     <Shell>
+      {/* Header Banner */}
       <div className="bg-slate-900 text-white border-b border-white/5 py-8 md:py-12">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div>
               <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-400">
-                <GitCompareArrows className="h-3.5 w-3.5" /> Project Comparison Engine
+                <GitCompareArrows className="h-3.5 w-3.5" /> Multi-Project Comparison Engine
               </div>
               <h1 className="mt-2 font-display text-3xl md:text-4xl font-extrabold tracking-tight">
                 Side-by-Side Analysis
               </h1>
               <p className="mt-2 text-sm text-slate-400 max-w-xl">
-                Compare Egyptian properties, listing volumes, starting prices, and delivery terms in
-                real-time.
+                Compare 2 or more projects simultaneously. Choose whether to compare whole projects or specific unit types per compound.
               </p>
-              {compA && compB && (
+              <div className="mt-4 flex flex-wrap items-center gap-3">
                 <button
                   onClick={handleDownloadPDF}
-                  className="no-print mt-4 inline-flex items-center gap-1.5 rounded-xl bg-accent text-accent-foreground px-4 py-2 text-xs font-bold transition-all hover:bg-accent/80 shadow-md"
+                  className="no-print inline-flex items-center gap-1.5 rounded-xl bg-accent text-accent-foreground px-4 py-2 text-xs font-bold transition-all hover:bg-accent/80 shadow-md"
                 >
                   <Download className="h-3.5 w-3.5" />
                   Export PDF Report
                 </button>
-              )}
+                {slots.length < 5 && (
+                  <button
+                    onClick={handleAddSlot}
+                    className="no-print inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 text-white px-4 py-2 text-xs font-bold transition-all hover:bg-emerald-500 shadow-md"
+                  >
+                    <Plus className="h-3.5 w-3.5" />
+                    Add Another Project ({slots.length}/5)
+                  </button>
+                )}
+              </div>
             </div>
 
-            {/* Quick suggestions */}
-            <div className="flex flex-wrap items-center gap-2 max-w-md bg-slate-950/40 p-4 rounded-2xl border border-white/5">
-              <span className="text-[10px] font-bold text-slate-500 uppercase w-full">
-                Quick Comparisons
+            {/* Quick Presets */}
+            <div className="flex flex-col gap-2 max-w-md bg-slate-950/50 p-4 rounded-2xl border border-white/10">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                Quick Multi-Project Presets
               </span>
-              {QUICK_PAIRS.map((qp) => (
-                <button
-                  key={qp.label}
-                  onClick={() => {
-                    handleSelectA(qp.a);
-                    handleSelectB(qp.b);
-                  }}
-                  className="rounded-lg bg-slate-800/80 hover:bg-slate-700/80 px-2.5 py-1 text-[10px] font-semibold text-slate-300 transition-colors border border-white/5"
-                >
-                  {qp.label}
-                </button>
-              ))}
+              <div className="flex flex-wrap gap-2">
+                {QUICK_PRESETS.map((qp) => (
+                  <button
+                    key={qp.label}
+                    onClick={() => handleApplyPreset(qp.slugs)}
+                    className="rounded-lg bg-slate-800/90 hover:bg-slate-700 px-2.5 py-1.5 text-[11px] font-semibold text-slate-200 transition-colors border border-white/5 text-left"
+                  >
+                    {qp.label}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-8 lg:px-8">
-        {/* Selector Bar */}
-        <div className="grid gap-6 md:grid-cols-2 mb-10">
-          {/* Selector A Container */}
-          <div className="space-y-4 bg-slate-900/10 p-5 rounded-2xl border border-border shadow-soft">
-            <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
-                Project A
-              </label>
-              <div className="relative">
-                <button
-                  onClick={() => setShowDropdownA(!showDropdownA)}
-                  className="flex w-full items-center justify-between rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold text-primary shadow-soft hover:bg-secondary/20 transition-colors"
-                >
-                  <span>{compA?.name ?? "Select Project A"}</span>
-                  <ChevronDown className="h-4 w-4 text-muted-foreground" />
-                </button>
-
-                {showDropdownA && (
-                  <div className="absolute left-0 right-0 z-20 mt-1 rounded-xl border border-border bg-card p-2 shadow-lg animate-fade-in">
-                    <div className="relative flex items-center border-b border-border/60 pb-2 mb-2">
-                      <Search className="absolute left-3 h-4 w-4 text-muted-foreground" />
-                      <input
-                        type="text"
-                        placeholder="Search compound..."
-                        value={searchA}
-                        onChange={(e) => setSearchA(e.target.value)}
-                        className="w-full pl-9 pr-4 py-1.5 text-xs bg-secondary/50 rounded-lg border-0 focus:ring-1 focus:ring-accent focus:outline-none"
-                      />
-                    </div>
-                    <div className="max-h-60 overflow-y-auto space-y-1">
-                      {filteredCompoundsA.map((c) => (
-                        <button
-                          key={c.slug}
-                          onClick={() => handleSelectA(c.slug)}
-                          className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-xs font-medium text-left transition-colors ${
-                            slugA === c.slug
-                              ? "bg-accent/15 text-accent"
-                              : "hover:bg-secondary/80 text-primary"
-                          }`}
-                        >
-                          <span>{c.name}</span>
-                          {slugA === c.slug && <Check className="h-3.5 w-3.5" />}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Unit Type Select A */}
-            {availA && availA.breakdown.length > 0 ? (
-              <div>
-                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                  Project A Unit Type
-                </label>
-                <select
-                  value={selectedTypeIdxA}
-                  onChange={(e) => {
-                    const val = e.target.value;
-                    setSelectedTypeIdxA(val === "all" ? "all" : parseInt(val));
-                  }}
-                  className="w-full rounded-xl border border-border bg-card px-3 py-2.5 text-xs font-semibold text-primary focus:outline-none focus:ring-1 focus:ring-accent"
-                >
-                  <option value="all">All Unit Types (Compound Specs)</option>
-                  {availA.breakdown.map((b, idx) => (
-                    <option key={idx} value={idx}>
-                      {b.type}
-                      {b.beds ? ` - ${b.beds} BR` : ""}
-                      {b.cluster ? ` (${b.cluster})` : ""} · EGP {b.minPriceM}M+
-                    </option>
-                  ))}
-                </select>
-              </div>
-            ) : (
-              <div>
-                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                  Project A Unit Type
-                </label>
-                <select
-                  disabled
-                  className="w-full rounded-xl border border-border bg-card/50 px-3 py-2.5 text-xs font-semibold text-muted-foreground cursor-not-allowed"
-                >
-                  <option>No specific unit type available</option>
-                </select>
-              </div>
+        {/* Project Selector Grid */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
+              Comparing {slots.length} Projects
+            </h2>
+            {slots.length < 5 && (
+              <button
+                onClick={handleAddSlot}
+                className="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 hover:text-emerald-700"
+              >
+                <Plus className="h-4 w-4" /> Add Project Column
+              </button>
             )}
           </div>
 
-          {/* Selector B Container */}
-          <div className="space-y-4 bg-slate-900/10 p-5 rounded-2xl border border-border shadow-soft">
-            <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
-                Project B
-              </label>
-              <div className="relative">
-                <button
-                  onClick={() => setShowDropdownB(!showDropdownB)}
-                  className="flex w-full items-center justify-between rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold text-primary shadow-soft hover:bg-secondary/20 transition-colors"
+          <div className={`grid gap-4 ${slots.length === 2 ? "grid-cols-1 md:grid-cols-2" : slots.length === 3 ? "grid-cols-1 md:grid-cols-3" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"}`}>
+            {resolvedSlots.map(({ slot, comp, avail }, index) => {
+              const isSearchOpen = activeSearchSlotId === slot.id;
+              return (
+                <div
+                  key={slot.id}
+                  className="space-y-3 bg-card p-4 rounded-2xl border border-border shadow-soft relative"
                 >
-                  <span>{compB?.name ?? "Select Project B"}</span>
-                  <ChevronDown className="h-4 w-4 text-muted-foreground" />
-                </button>
-
-                {showDropdownB && (
-                  <div className="absolute left-0 right-0 z-20 mt-1 rounded-xl border border-border bg-card p-2 shadow-lg animate-fade-in">
-                    <div className="relative flex items-center border-b border-border/60 pb-2 mb-2">
-                      <Search className="absolute left-3 h-4 w-4 text-muted-foreground" />
-                      <input
-                        type="text"
-                        placeholder="Search compound..."
-                        value={searchB}
-                        onChange={(e) => setSearchB(e.target.value)}
-                        className="w-full pl-9 pr-4 py-1.5 text-xs bg-secondary/50 rounded-lg border-0 focus:ring-1 focus:ring-accent focus:outline-none"
-                      />
-                    </div>
-                    <div className="max-h-60 overflow-y-auto space-y-1">
-                      {filteredCompoundsB.map((c) => (
-                        <button
-                          key={c.slug}
-                          onClick={() => handleSelectB(c.slug)}
-                          className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-xs font-medium text-left transition-colors ${
-                            slugB === c.slug
-                              ? "bg-accent/15 text-accent"
-                              : "hover:bg-secondary/80 text-primary"
-                          }`}
-                        >
-                          <span>{c.name}</span>
-                          {slugB === c.slug && <Check className="h-3.5 w-3.5" />}
-                        </button>
-                      ))}
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-accent">
+                      Project #{index + 1}
+                    </span>
+                    {slots.length > 2 && (
+                      <button
+                        onClick={() => handleRemoveSlot(slot.id)}
+                        className="rounded-full bg-secondary/80 hover:bg-destructive/20 hover:text-destructive p-1 text-muted-foreground transition-colors"
+                        title="Remove column"
+                      >
+                        <X className="h-3.5 w-3.5" />
+                      </button>
+                    )}
                   </div>
-                )}
-              </div>
-            </div>
 
-            {/* Unit Type Select B */}
-            {availB && availB.breakdown.length > 0 ? (
-              <div>
-                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                  Project B Unit Type
-                </label>
-                <select
-                  value={selectedTypeIdxB}
-                  onChange={(e) => {
-                    const val = e.target.value;
-                    setSelectedTypeIdxB(val === "all" ? "all" : parseInt(val));
-                  }}
-                  className="w-full rounded-xl border border-border bg-card px-3 py-2.5 text-xs font-semibold text-primary focus:outline-none focus:ring-1 focus:ring-accent"
-                >
-                  <option value="all">All Unit Types (Compound Specs)</option>
-                  {availB.breakdown.map((b, idx) => (
-                    <option key={idx} value={idx}>
-                      {b.type}
-                      {b.beds ? ` - ${b.beds} BR` : ""}
-                      {b.cluster ? ` (${b.cluster})` : ""} · EGP {b.minPriceM}M+
-                    </option>
-                  ))}
-                </select>
-              </div>
-            ) : (
-              <div>
-                <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                  Project B Unit Type
-                </label>
-                <select
-                  disabled
-                  className="w-full rounded-xl border border-border bg-card/50 px-3 py-2.5 text-xs font-semibold text-muted-foreground cursor-not-allowed"
-                >
-                  <option>No specific unit type available</option>
-                </select>
-              </div>
-            )}
+                  {/* Compound Dropdown */}
+                  <div className="relative">
+                    <button
+                      onClick={() => {
+                        if (isSearchOpen) {
+                          setActiveSearchSlotId(null);
+                        } else {
+                          setActiveSearchSlotId(slot.id);
+                          setSearchQuery("");
+                        }
+                      }}
+                      className="flex w-full items-center justify-between rounded-xl border border-border bg-secondary/30 px-3.5 py-2.5 text-xs font-semibold text-primary shadow-sm hover:bg-secondary/60 transition-colors"
+                    >
+                      <span className="truncate">{comp?.name ?? "Select Project"}</span>
+                      <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
+                    </button>
+
+                    {isSearchOpen && (
+                      <div className="absolute left-0 right-0 z-30 mt-1 rounded-xl border border-border bg-card p-2 shadow-2xl animate-fade-in">
+                        <div className="relative flex items-center border-b border-border/60 pb-2 mb-2">
+                          <Search className="absolute left-3 h-3.5 w-3.5 text-muted-foreground" />
+                          <input
+                            type="text"
+                            placeholder="Search project..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="w-full pl-8 pr-3 py-1 text-xs bg-secondary/50 rounded-lg border-0 focus:ring-1 focus:ring-accent focus:outline-none"
+                            autoFocus
+                          />
+                        </div>
+                        <div className="max-h-56 overflow-y-auto space-y-1">
+                          {filteredCompounds.map((c) => (
+                            <button
+                              key={c.slug}
+                              onClick={() => handleSelectCompound(slot.id, c.slug)}
+                              className={`flex w-full items-center justify-between rounded-lg px-2.5 py-1.5 text-xs font-medium text-left transition-colors ${
+                                slot.slug === c.slug
+                                  ? "bg-accent/15 text-accent font-bold"
+                                  : "hover:bg-secondary/80 text-primary"
+                              }`}
+                            >
+                              <span className="truncate">{c.name}</span>
+                              {slot.slug === c.slug && <Check className="h-3.5 w-3.5 shrink-0" />}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Scope Selector: Whole Project vs Specific Unit */}
+                  <div>
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1">
+                      Compare Scope / Unit
+                    </label>
+                    <select
+                      value={slot.selectedTypeIdx}
+                      onChange={(e) => handleSelectUnitType(slot.id, e.target.value)}
+                      className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs font-semibold text-primary focus:outline-none focus:ring-1 focus:ring-accent"
+                    >
+                      <option value="all">Whole Project (Overall Compound)</option>
+                      {avail && avail.breakdown.length > 0 ? (
+                        avail.breakdown.map((b, idx) => (
+                          <option key={idx} value={idx}>
+                            Unit: {b.type} {b.beds ? `(${b.beds} BR)` : ""} · EGP {b.minPriceM}M+
+                          </option>
+                        ))
+                      ) : (
+                        <option disabled>No specific breakdown available</option>
+                      )}
+                    </select>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        {compA && compB && specsA && specsB ? (
+        {validSlots.length >= 2 ? (
           <div id="comparison-report-container" className="space-y-8 animate-fade-in">
-            {/* Visual Analytics / Metrics Bar */}
-            <div className="grid gap-6 md:grid-cols-3 bg-secondary/20 p-6 rounded-3xl border border-border/60 shadow-soft">
-              {/* Starting Price Metric */}
-              <div className="space-y-2">
-                <div className="flex items-center justify-between text-xs font-bold text-muted-foreground uppercase">
-                  <span>Entry Price Level</span>
-                  <span>EGP</span>
-                </div>
-                <div className="relative h-4 rounded-full bg-slate-200 overflow-hidden flex">
-                  {/* Progress bar A */}
-                  <div
-                    style={{
-                      width: `${Math.min(100, (specsA.price / (specsA.price + specsB.price + 0.1)) * 100)}%`,
-                    }}
-                    className="bg-emerald-500 h-full flex items-center justify-center text-[9px] font-bold text-white transition-all duration-500"
-                  >
-                    A
-                  </div>
-                  {/* Progress bar B */}
-                  <div
-                    style={{
-                      width: `${Math.min(100, (specsB.price / (specsA.price + specsB.price + 0.1)) * 100)}%`,
-                    }}
-                    className="bg-accent h-full flex items-center justify-center text-[9px] font-bold text-accent-foreground transition-all duration-500"
-                  >
-                    B
-                  </div>
-                </div>
-                <div className="flex justify-between text-xs font-semibold text-slate-700">
-                  <span className={cheaperPrice === "A" ? "text-emerald-600 font-bold" : ""}>
-                    {compA.name} ({specsA.price}M)
-                  </span>
-                  <span className={cheaperPrice === "B" ? "text-emerald-600 font-bold" : ""}>
-                    {compB.name} ({specsB.price}M)
-                  </span>
-                </div>
-              </div>
-
-              {/* Delivery Speed Metric */}
-              <div className="space-y-2">
-                <div className="flex items-center justify-between text-xs font-bold text-muted-foreground uppercase">
-                  <span>Delivery Year timeline</span>
-                  <span>Year</span>
-                </div>
-                <div className="relative h-4 rounded-full bg-slate-200 overflow-hidden flex">
-                  {/* Display relative years left starting from 2024 */}
-                  {(() => {
-                    const extractYr = (s: string) => {
-                      const match = s.match(/\d+/);
-                      if (!match) return 2028;
-                      const v = parseInt(match[0]);
-                      return v < 100 ? 2000 + v : v;
-                    };
-                    const yrA = Math.max(1, extractYr(specsA.delivery) - 2024);
-                    const yrB = Math.max(1, extractYr(specsB.delivery) - 2024);
-                    return (
-                      <>
-                        <div
-                          style={{ width: `${(yrA / (yrA + yrB)) * 100}%` }}
-                          className="bg-emerald-500 h-full flex items-center justify-center text-[9px] font-bold text-white transition-all duration-500"
-                        >
-                          A
-                        </div>
-                        <div
-                          style={{ width: `${(yrB / (yrA + yrB)) * 100}%` }}
-                          className="bg-accent h-full flex items-center justify-center text-[9px] font-bold text-accent-foreground transition-all duration-500"
-                        >
-                          B
-                        </div>
-                      </>
-                    );
-                  })()}
-                </div>
-                <div className="flex justify-between text-xs font-semibold text-slate-700">
-                  <span className={soonerDeliv === "A" ? "text-emerald-600 font-bold" : ""}>
-                    {compA.name} ({specsA.delivery})
-                  </span>
-                  <span className={soonerDeliv === "B" ? "text-emerald-600 font-bold" : ""}>
-                    {compB.name} ({specsB.delivery})
-                  </span>
-                </div>
-              </div>
-
-              {/* Inventory Metric */}
-              <div className="space-y-2">
-                <div className="flex items-center justify-between text-xs font-bold text-muted-foreground uppercase">
-                  <span>Available Inventory</span>
-                  <span>Units</span>
-                </div>
-                <div className="relative h-4 rounded-full bg-slate-200 overflow-hidden flex">
-                  <div
-                    style={{
-                      width: `${Math.max(10, Math.min(90, ((specsA.qty + 1) / (specsA.qty + specsB.qty + 2)) * 100))}%`,
-                    }}
-                    className="bg-emerald-500 h-full flex items-center justify-center text-[9px] font-bold text-white transition-all duration-500"
-                  >
-                    A
-                  </div>
-                  <div
-                    style={{
-                      width: `${Math.max(10, Math.min(90, ((specsB.qty + 1) / (specsA.qty + specsB.qty + 2)) * 100))}%`,
-                    }}
-                    className="bg-accent h-full flex items-center justify-center text-[9px] font-bold text-accent-foreground transition-all duration-500"
-                  >
-                    B
-                  </div>
-                </div>
-                <div className="flex justify-between text-xs font-semibold text-slate-700">
-                  <span className={largerQty === "A" ? "text-emerald-600 font-bold" : ""}>
-                    {compA.name} ({specsA.qty})
-                  </span>
-                  <span className={largerQty === "B" ? "text-emerald-600 font-bold" : ""}>
-                    {compB.name} ({specsB.qty})
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Table Settings bar */}
+            {/* Display Options Bar */}
             <div className="flex flex-wrap items-center justify-between gap-4 bg-card p-4 rounded-2xl border border-border shadow-soft">
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setShowDiffsOnly(!showDiffsOnly)}
                   className={`rounded-full px-4 py-1.5 text-xs font-bold transition-all ${
                     showDiffsOnly
-                      ? "bg-primary text-white"
+                      ? "bg-primary text-white shadow-sm"
                       : "bg-secondary text-primary hover:bg-secondary/80"
                   }`}
                 >
@@ -701,16 +585,16 @@ function ComparePage() {
                   onClick={() => setHighlightDiffs(!highlightDiffs)}
                   className={`rounded-full px-4 py-1.5 text-xs font-bold transition-all ${
                     highlightDiffs
-                      ? "bg-emerald-600 text-white"
+                      ? "bg-emerald-600 text-white shadow-sm"
                       : "bg-secondary text-primary hover:bg-secondary/80"
                   }`}
                 >
                   {highlightDiffs ? "Highlights On" : "Highlights Off"}
                 </button>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <span className="text-xs text-muted-foreground font-semibold">
-                  Showing {visibleRows.length} attributes
+                  Showing {visibleRows.length} attributes across {validSlots.length} projects
                 </span>
                 <button
                   onClick={handleDownloadPDF}
@@ -722,83 +606,75 @@ function ComparePage() {
               </div>
             </div>
 
-            {/* Project Header Cards */}
-            <div className="grid gap-6 md:grid-cols-2">
-              {/* Card A */}
-              <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-soft">
-                <div className="absolute top-3 left-3 z-10 rounded-full bg-emerald-500 px-3 py-1 text-[10px] font-bold text-white uppercase shadow-sm">
-                  Project A
-                </div>
-                <img src={compA.hero} alt={compA.name} className="h-48 w-full object-cover" />
-                <div className="p-6">
-                  <div className="text-xs font-bold text-accent uppercase tracking-wider">
-                    {compA.developer}
+            {/* Top Cards Grid */}
+            <div className={`grid gap-4 ${validSlots.length === 2 ? "grid-cols-1 md:grid-cols-2" : validSlots.length === 3 ? "grid-cols-1 md:grid-cols-3" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"}`}>
+              {validSlots.map(({ slot, comp, specs }, idx) => (
+                <div
+                  key={slot.id}
+                  className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-soft flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="relative">
+                      <img src={comp?.hero} alt={comp?.name} className="h-40 w-full object-cover" />
+                      <div className="absolute top-2 left-2 rounded-full bg-slate-900/80 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-bold text-white uppercase shadow-sm border border-white/10">
+                        #{idx + 1} {specs.isSpecificUnit ? "Unit View" : "Whole Compound"}
+                      </div>
+                    </div>
+                    <div className="p-4">
+                      <div className="text-[10px] font-bold text-accent uppercase tracking-wider">
+                        {comp?.developer}
+                      </div>
+                      <h3 className="mt-0.5 font-display text-xl font-bold text-primary truncate">
+                        {comp?.name}
+                      </h3>
+                      <p className="mt-1.5 line-clamp-2 text-xs text-muted-foreground leading-relaxed">
+                        {comp?.blurb}
+                      </p>
+                    </div>
                   </div>
-                  <h2 className="mt-1 font-display text-2xl font-bold text-primary">
-                    {compA.name}
-                  </h2>
-                  <p className="mt-2 line-clamp-2 text-xs text-muted-foreground leading-relaxed">
-                    {compA.blurb}
-                  </p>
-                  <div className="mt-4 flex items-center justify-between">
-                    <span className="text-sm font-semibold text-muted-foreground">
-                      Starting price
-                    </span>
-                    <span className="font-display text-xl font-bold text-emerald-600">
-                      EGP {specsA.price}M
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card B */}
-              <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-soft">
-                <div className="absolute top-3 left-3 z-10 rounded-full bg-accent px-3 py-1 text-[10px] font-bold text-accent-foreground uppercase shadow-sm">
-                  Project B
-                </div>
-                <img src={compB.hero} alt={compB.name} className="h-48 w-full object-cover" />
-                <div className="p-6">
-                  <div className="text-xs font-bold text-accent uppercase tracking-wider">
-                    {compB.developer}
-                  </div>
-                  <h2 className="mt-1 font-display text-2xl font-bold text-primary">
-                    {compB.name}
-                  </h2>
-                  <p className="mt-2 line-clamp-2 text-xs text-muted-foreground leading-relaxed">
-                    {compB.blurb}
-                  </p>
-                  <div className="mt-4 flex items-center justify-between">
-                    <span className="text-sm font-semibold text-muted-foreground">
-                      Starting price
-                    </span>
-                    <span className="font-display text-xl font-bold text-emerald-600">
-                      EGP {specsB.price}M
+                  <div className="p-4 border-t border-border bg-secondary/10 flex items-center justify-between">
+                    <span className="text-xs font-medium text-muted-foreground">Price</span>
+                    <span className="font-display text-lg font-bold text-emerald-600">
+                      EGP {specs.price}M
                     </span>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
 
-            {/* Spec Table */}
+            {/* Spec Matrix Table */}
             <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-soft">
-              <div className="px-6 py-4 border-b border-border bg-secondary/20">
-                <h3 className="font-display text-lg font-bold text-primary">
-                  Technical Specification Comparison
-                </h3>
+              <div className="px-6 py-4 border-b border-border bg-secondary/20 flex items-center justify-between">
+                <div>
+                  <h3 className="font-display text-lg font-bold text-primary">
+                    Side-by-Side Specifications Matrix
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    Comparing {validSlots.length} projects side-by-side with dynamic unit type configuration.
+                  </p>
+                </div>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse text-sm">
                   <thead>
-                    <tr className="border-b border-border/80 bg-secondary/10">
-                      <th className="w-1/4 p-4 text-left text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                        Specification
+                    <tr className="border-b border-border/80 bg-secondary/15">
+                      <th className="w-48 min-w-[180px] p-4 text-left text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                        Attribute
                       </th>
-                      <th className="w-3/8 p-4 text-left text-xs font-bold uppercase tracking-wider text-primary">
-                        Project A: {compA.name}
-                      </th>
-                      <th className="w-3/8 p-4 text-left text-xs font-bold uppercase tracking-wider text-primary">
-                        Project B: {compB.name}
-                      </th>
+                      {validSlots.map(({ slot, comp, specs }, idx) => (
+                        <th
+                          key={slot.id}
+                          className="min-w-[200px] p-4 text-left text-xs font-bold uppercase tracking-wider text-primary border-l border-border/60"
+                        >
+                          <div className="flex flex-col gap-0.5">
+                            <span className="text-[10px] text-accent">Project #{idx + 1}</span>
+                            <span className="text-sm text-primary font-bold">{comp?.name}</span>
+                            <span className="text-[10px] font-normal text-muted-foreground">
+                              {specs.scopeLabel}
+                            </span>
+                          </div>
+                        </th>
+                      ))}
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-border/60">
@@ -809,23 +685,25 @@ function ComparePage() {
                         <tr
                           key={row.label}
                           className={`transition-colors hover:bg-secondary/15 ${
-                            hasDiff ? "bg-amber-500/5 border-l-4 border-l-amber-500/80" : ""
+                            hasDiff ? "bg-amber-500/5" : ""
                           }`}
                         >
                           <td className="p-4 font-bold text-primary flex items-center gap-2">
-                            <Icon className="h-4 w-4 text-slate-500" />
-                            {row.label}
+                            <Icon className="h-4 w-4 text-slate-500 shrink-0" />
+                            <span>{row.label}</span>
                           </td>
-                          <td
-                            className={`p-4 font-medium text-slate-700 ${row.label === "Starting Price" ? "text-emerald-700 font-bold" : ""}`}
-                          >
-                            {row.displayA}
-                          </td>
-                          <td
-                            className={`p-4 font-medium text-slate-700 ${row.label === "Starting Price" ? "text-emerald-700 font-bold" : ""}`}
-                          >
-                            {row.displayB}
-                          </td>
+                          {row.values.map((valObj, idx) => (
+                            <td
+                              key={idx}
+                              className={`p-4 font-medium text-slate-700 border-l border-border/60 ${
+                                valObj.isHighlight && highlightDiffs
+                                  ? "bg-emerald-500/10 text-emerald-800 font-bold"
+                                  : ""
+                              }`}
+                            >
+                              {valObj.text}
+                            </td>
+                          ))}
                         </tr>
                       );
                     })}
@@ -834,53 +712,32 @@ function ComparePage() {
               </div>
             </div>
 
-            {/* CTA bar */}
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="flex gap-4">
-                <Link to="/projects/$slug" params={{ slug: slugA }} className="flex-1">
-                  <button className="w-full rounded-xl bg-primary py-3.5 text-xs font-bold text-white hover:bg-primary/90 transition-colors shadow-soft">
-                    View Project A Dashboard
-                  </button>
-                </Link>
-                <Link to="/calculator" search={{ project: slugA }} className="flex-1">
-                  <button className="w-full rounded-xl border border-accent bg-card py-3.5 text-xs font-semibold text-accent hover:bg-accent/5 transition-colors shadow-soft">
-                    Installment Plans A
-                  </button>
-                </Link>
-              </div>
-
-              <div className="flex gap-4">
-                <Link to="/projects/$slug" params={{ slug: slugB }} className="flex-1">
-                  <button className="w-full rounded-xl bg-primary py-3.5 text-xs font-bold text-white hover:bg-primary/90 transition-colors shadow-soft">
-                    View Project B Dashboard
-                  </button>
-                </Link>
-                <Link to="/calculator" search={{ project: slugB }} className="flex-1">
-                  <button className="w-full rounded-xl border border-accent bg-card py-3.5 text-xs font-semibold text-accent hover:bg-accent/5 transition-colors shadow-soft">
-                    Installment Plans B
-                  </button>
-                </Link>
-              </div>
-            </div>
-            {/* Bottom PDF Download Action */}
-            <div className="no-print flex justify-center pt-6">
-              <button
-                onClick={handleDownloadPDF}
-                className="inline-flex items-center gap-2 rounded-xl bg-accent text-accent-foreground px-6 py-3 font-bold text-xs hover:bg-accent/80 transition-all shadow-md"
-              >
-                <Download className="h-4 w-4" />
-                Download Complete Comparison Report (PDF)
-              </button>
+            {/* Bottom Actions */}
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              {validSlots.map(({ slot, comp }) => (
+                <div key={slot.id} className="flex gap-2">
+                  <Link to="/projects/$slug" params={{ slug: slot.slug }} className="flex-1">
+                    <button className="w-full rounded-xl bg-primary py-3 text-xs font-bold text-white hover:bg-primary/90 transition-colors shadow-soft">
+                      {comp?.name} Page
+                    </button>
+                  </Link>
+                  <Link to="/calculator" search={{ project: slot.slug }} className="flex-1">
+                    <button className="w-full rounded-xl border border-accent bg-card py-3 text-xs font-semibold text-accent hover:bg-accent/5 transition-colors shadow-soft">
+                      Calculator
+                    </button>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
         ) : (
           <div className="rounded-2xl border border-dashed border-border bg-card p-12 text-center">
             <GitCompareArrows className="mx-auto h-10 w-10 text-muted-foreground" />
             <h2 className="mt-4 font-display text-2xl font-semibold text-primary">
-              Invalid selection
+              Select projects to compare
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Please choose two valid compounds above.
+              Choose at least 2 compounds above to view side-by-side specs.
             </p>
           </div>
         )}

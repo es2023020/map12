@@ -246,7 +246,7 @@ function Index() {
                   Start free
                 </Button>
               </Link>
-              <Link to="/admin" className="w-full sm:w-auto">
+              <Link to="/pricing" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"

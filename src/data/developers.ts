@@ -14,6 +14,8 @@ export type Developer = {
 };
 
 const blurbs: Record<string, string> = {
+  "Arab Developers Holding":
+    "Arab Developers Holding — major master-plan real estate developer behind iconic projects like Nyoum October, Nyoum Pyramids, and Ashrafieh, specializing in Italian-inspired architectures and self-sufficient townships.",
   "New Plan Developments":
     "New Plan Developments — an innovative real estate developer known for luxury resorts and premium residential compounds across Egypt.",
   "Upwyde Developments":

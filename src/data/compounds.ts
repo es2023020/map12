@@ -16,7 +16,7 @@ export type Compound = {
   developerSlug: string;
   priceFrom: number; // EGP millions
   deliveryYear: number;
-  status: "RTM" | "Off-Plan";
+  status: "RTM" | "Off-Plan" | "On-Hold";
   beachfront?: boolean;
   types: string[]; // Chalet, Twin, Villa, Apartment, Townhouse, Penthouse
   amenities: string[];
@@ -3024,7 +3024,7 @@ const newProjects: Compound[] = [
     blurb:
       "Patio Hills by La Vista Developments is a premium residential community in the 6th Settlement, New Cairo. Offering classical townhouses, twinhouses, and standalones, it features private park spaces and full amenities.",
     paymentPlan: "5% down · 8 years equal installments",
-    areaSize: "100 feddan",
+    areaSize: "400 feddan",
     unitSizes: "180–475 m²",
     type: "Residential",
     highlights: [

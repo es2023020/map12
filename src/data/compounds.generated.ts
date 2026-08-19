@@ -11,7 +11,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "horizon-egypt-developments",
     "priceFrom": 33,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Townhouse",
@@ -34,7 +34,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/saada-sahel/4.jpg",
       "/projects/saada-sahel/5.jpg"
     ],
-    "blurb": "Horizon by Saada is a premium residential boutique compound in New Cairo, developed by Horizon Egypt Developments. Featuring top-tier townhouses, twin houses, and standalone villas with ready-to-move convenience.",
+    "blurb": "Saada New Cairo (Horizon by Saada) is a premium residential boutique compound in New Cairo by Horizon Egypt Developments. NOTE: Sales are currently ON HOLD and units are not actively being sold.",
     "highlights": [
       "Boutique New Cairo Location",
       "Premium Townhouse & Twin House layouts",
@@ -2435,7 +2435,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "blurb": "Patio Hills by La Vista Developments is a premium residential community in the 6th Settlement, New Cairo. Offering classical townhouses, twinhouses, and standalones, it features private park spaces and full amenities.",
     "paymentPlan": "5% down · 8 years equal installments",
-    "areaSize": "100 feddan",
+    "areaSize": "400 feddan",
     "unitSizes": "180–475 m²",
     "type": "Residential",
     "highlights": [
@@ -14824,8 +14824,8 @@ export const compoundsGenerated: Compound[] = [
     "destination": "new-cairo",
     "lat": 30.045,
     "lng": 31.461,
-    "developer": "Arabia Holding",
-    "developerSlug": "arabia-holding",
+    "developer": "Arab Developers Holding",
+    "developerSlug": "arab-developers-holding",
     "priceFrom": 5.3,
     "deliveryYear": 2026,
     "status": "RTM",
@@ -16323,6 +16323,61 @@ export const compoundsGenerated: Compound[] = [
       "10 years payment plan · 30% Cash Discount",
       "Delivered fully finished by Dec 2030",
       "Heart of Mostakbal City near Hub Town & Neom"
+    ]
+  },
+  {
+    "slug": "nyoum-october",
+    "name": "Nyoum October",
+    "destination": "6th-october",
+    "lat": 29.985,
+    "lng": 30.94,
+    "developer": "Arab Developers Holding",
+    "developerSlug": "arab-developers-holding",
+    "priceFrom": 4.5,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+      "Palace",
+      "Duplex"
+    ],
+    "amenities": [
+      "Azzurri Sports & Social Club",
+      "Fontana Lifestyle Hub",
+      "Cinema Hall Complex",
+      "Commercial Strip",
+      "Medical Center",
+      "International Schools",
+      "Health Club (Gym, Spa, Sauna, Jacuzzi)",
+      "Horse Riding Club",
+      "Cycling & Jogging Tracks",
+      "Swimming Pools",
+      "24/7 Security",
+      "70%-80% Green Landscapes & Lakes"
+    ],
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80"
+    ],
+    "blurb": "Nyoum October Compound by Arab Developers Holding is a major 330-acre Italian-inspired self-sufficient township in the heart of 6th of October City directly on Boulevard Axis. Features 70%-80% open green space, distinct residential zones (Little Rome, Stanley, Boulevard, Capri, Milan, Verona, Venecia, Napoli-Bari), Azzurri Sports Club, Fontana hub, and ~3,000 residential units.",
+    "paymentPlan": "5%–10% down payment · flexible installments up to 7–8 years",
+    "areaSize": "330 feddan",
+    "unitSizes": "60–700+ m²",
+    "city": "Boulevard Axis, 6th of October City, Giza Governorate, Egypt",
+    "type": "Residential",
+    "highlights": [
+      "Italian-Inspired Architecture & Self-Sufficient Township",
+      "330 Feddans / Acres Master Plan with ~3,000 Total Units",
+      "70%-80% Open Green Landscapes, Gardens & Lakes",
+      "Phases: Little Rome, Stanley, Boulevard, Capri, Milan, Verona, Venecia, Napoli-Bari",
+      "Azzurri Sports & Social Club & Fontana Commercial/Cinema Hub",
+      "15 min to Juhayna Square, 20 min to Sphinx Airport, on Boulevard Axis"
     ]
   }
 ];
