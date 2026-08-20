@@ -93556,26 +93556,26 @@
   "patio-casa": {
     "id": "patio-casa",
     "name": "Patio Casa",
-    "lat": 30.092,
-    "lng": 31.65,
-    "destination": "new-cairo",
-    "url": "https://wikimapia.org/#lang=en&lat=30.092&lon=31.65&z=15"
+    "destination": "shorouk",
+    "lat": 30.118,
+    "lng": 31.605,
+    "url": "https://wikimapia.org/#lang=en&lat=30.118&lon=31.605&z=16"
   },
   "patio-5-east": {
     "id": "patio-5-east",
     "name": "Patio 5 East",
-    "lat": 30.088,
-    "lng": 31.642,
-    "destination": "new-cairo",
-    "url": "https://wikimapia.org/#lang=en&lat=30.088&lon=31.642&z=15"
+    "destination": "shorouk",
+    "lat": 30.115,
+    "lng": 31.602,
+    "url": "https://wikimapia.org/#lang=en&lat=30.115&lon=31.602&z=16"
   },
   "patio-prime": {
     "id": "patio-prime",
     "name": "Patio Prime",
-    "lat": 30.086,
-    "lng": 31.638,
-    "destination": "new-cairo",
-    "url": "https://wikimapia.org/#lang=en&lat=30.086&lon=31.638&z=15"
+    "destination": "shorouk",
+    "lat": 30.112,
+    "lng": 31.6,
+    "url": "https://wikimapia.org/#lang=en&lat=30.112&lon=31.600&z=16"
   },
   "la-vista-6": {
     "id": "la-vista-6",
