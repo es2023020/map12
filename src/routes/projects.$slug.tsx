@@ -476,7 +476,11 @@ function CompoundPage() {
                 <Star className="h-3 w-3 fill-amber-500 text-amber-500" /> Flagship
               </span>
             )}
-            {destination && (
+            {c.km ? (
+              <span className="inline-flex items-center gap-1 rounded-full bg-sky-500/10 border border-sky-500/30 px-3 py-1 text-xs font-bold text-sky-700 dark:text-sky-400">
+                <MapPin className="h-3.5 w-3.5 text-sky-600 dark:text-sky-400" /> Km {c.km} · {destination?.name || c.destination}
+              </span>
+            ) : destination ? (
               <Link
                 to="/destinations/$slug"
                 params={{ slug: destination.slug }}
@@ -484,9 +488,8 @@ function CompoundPage() {
               >
                 <MapPin className="h-3 w-3" />
                 {destination.name}
-                {c.km ? ` · km ${c.km}` : ""}
               </Link>
-            )}
+            ) : null}
           </div>
 
           {/* Title */}
@@ -598,11 +601,12 @@ function CompoundPage() {
           )}
 
           {/* Key stats + Brochure */}
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-5">
             <StatCard icon={Wallet} label="Starting from" value={`EGP ${c.priceFrom}M`} accent />
             <StatCard icon={Calendar} label="Delivery" value={String(c.deliveryYear)} />
             <StatCard icon={Ruler} label="Unit sizes" value={c.unitSizes ?? "—"} />
             <StatCard icon={Building2} label="Project size" value={c.areaSize ?? "—"} />
+            {c.km && <StatCard icon={MapPin} label="Highway Location" value={`Km ${c.km}`} accent />}
           </div>
           <div className="mt-4 flex flex-wrap gap-3">
             <BrochureButton projectSlug={c.slug} projectName={c.name} />

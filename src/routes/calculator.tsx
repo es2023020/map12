@@ -214,7 +214,15 @@ function CalculatorPage() {
     return compoundsList.filter((c) => {
       if (c.parentSlug) return false;
       const avail = availabilityList.find((a) => a.slug === c.slug);
-      if (avail && avail.totalAvailable === 0) return false;
+      if (!avail) return false;
+      if (typeof avail.totalAvailable !== "number" || avail.totalAvailable <= 0) return false;
+      if (!Array.isArray(avail.breakdown) || avail.breakdown.length === 0) return false;
+      const hasPricing = avail.breakdown.some(
+        (b: any) =>
+          (typeof b.minPriceM === "number" && b.minPriceM > 0) ||
+          (Array.isArray(b.units) && b.units.length > 0),
+      );
+      if (!hasPricing) return false;
       return true;
     });
   }, [compoundsList, availabilityList]);
@@ -376,6 +384,7 @@ function CalculatorPage() {
     availabilityList.forEach((p) => {
       const comp = compoundsList.find((c) => c.slug === p.slug);
       if (!comp) return;
+      if (!p.totalAvailable || p.totalAvailable === 0 || !Array.isArray(p.breakdown) || p.breakdown.length === 0) return;
 
       // Filter by destination
       if (!matchDestination(comp.destination, budgetDestFilters)) return;
