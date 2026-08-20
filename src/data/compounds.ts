@@ -6243,7 +6243,32 @@ function getActiveCompounds(): Compound[] {
       if (storeStr) {
         const parsed = JSON.parse(storeStr);
         if (parsed?.state?.compoundsList?.length) {
-          activeList = parsed.state.compoundsList;
+          const localMap = new Map<string, any>(
+            parsed.state.compoundsList.map((c: any) => [c.slug, c]),
+          );
+          const merged = staticCompounds.map((sc) => {
+            const local = localMap.get(sc.slug);
+            if (local) {
+              return {
+                ...local,
+                name: sc.name,
+                destination: sc.destination,
+                km: sc.km,
+                lat: sc.lat,
+                lng: sc.lng,
+                developer: sc.developer,
+                developerSlug: sc.developerSlug,
+                beachfront: sc.beachfront,
+              };
+            }
+            return sc;
+          });
+          parsed.state.compoundsList.forEach((lc: any) => {
+            if (!staticCompounds.some((sc) => sc.slug === lc.slug)) {
+              merged.push(lc);
+            }
+          });
+          activeList = merged;
         }
       }
     } catch (e) {
