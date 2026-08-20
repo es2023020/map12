@@ -4,6 +4,7 @@ import { Shell } from "@/components/layout/Shell";
 import { useStore } from "@/lib/store";
 import { useDebounce } from "@/lib/useDebounce";
 import { BrochuresMatcherTab } from "@/components/admin/BrochuresMatcherTab";
+import { MapClient } from "@/components/map/MapClient";
 import { compounds } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import { destinations } from "@/data/destinations";
@@ -3767,18 +3768,25 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                         </div>
                       </div>
 
-                      <div className="h-80 rounded-xl bg-zinc-900 border border-zinc-800 flex flex-col items-center justify-center text-center p-8 relative overflow-hidden">
-                        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-                        <MapPin className="h-10 w-10 text-accent animate-bounce relative z-10" />
-                        <h4 className="font-bold text-white text-sm mt-3 relative z-10">
-                          Staging Map Viewer
-                        </h4>
-                        <p className="text-[11px] text-zinc-400 max-w-xs mt-1 relative z-10 leading-relaxed">
-                          Coordinates calibrated: Lat{" "}
-                          <strong>{parseFloat(editLat).toFixed(4)}</strong>, Lng{" "}
-                          <strong>{parseFloat(editLng).toFixed(4)}</strong>. Live pins synchronized
-                          inside PropTrack Map module.
-                        </p>
+                      <div className="h-[480px] rounded-xl border border-border overflow-hidden relative shadow-inner">
+                        <div className="absolute top-3 left-3 z-[1000] bg-card/90 backdrop-blur-md border border-border px-3 py-1.5 rounded-lg text-[11px] font-semibold text-primary shadow-sm flex items-center gap-1.5 select-none pointer-events-none">
+                          <MapPin className="h-3.5 w-3.5 text-accent animate-pulse" />
+                          <span>Click anywhere on map to position pin</span>
+                        </div>
+                        <MapClient
+                          compounds={compoundsList}
+                          activeSlug={pinnedProjectSlug}
+                          onMapClick={(lat, lng) => {
+                            setEditLat(lat.toFixed(6));
+                            setEditLng(lng.toFixed(6));
+                          }}
+                          onSelect={(slug) => {
+                            setPinnedProjectSlug(slug);
+                          }}
+                          initialCenter={[parseFloat(editLat) || 31.0, parseFloat(editLng) || 28.5]}
+                          initialZoom={12}
+                          className="h-full w-full"
+                        />
                       </div>
                     </div>
                   </div>

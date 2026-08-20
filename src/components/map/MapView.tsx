@@ -6,6 +6,7 @@ import {
   Popup,
   Tooltip,
   useMap,
+  useMapEvents,
   ZoomControl,
   LayersControl,
   ScaleControl,
@@ -13,6 +14,17 @@ import {
   Polygon,
 } from "react-leaflet";
 import L from "leaflet";
+
+function MapClickEvents({ onMapClick }: { onMapClick?: (lat: number, lng: number) => void }) {
+  useMapEvents({
+    click(e) {
+      if (onMapClick) {
+        onMapClick(e.latlng.lat, e.latlng.lng);
+      }
+    },
+  });
+  return null;
+}
 import type { Compound } from "@/data/compounds";
 import { destinations, destinationColor } from "@/data/destinations";
 import { landmarks as allLandmarks, landmarkColors, type Landmark } from "@/data/landmarks";
@@ -99,6 +111,7 @@ type Props = {
   focus?: Compound | null;
   activeSlug?: string | null;
   onSelect?: (slug: string) => void;
+  onMapClick?: (lat: number, lng: number) => void;
   showLandmarks?: boolean;
   landmarks?: Landmark[];
   className?: string;
@@ -111,6 +124,7 @@ export function MapView({
   focus,
   activeSlug,
   onSelect,
+  onMapClick,
   showLandmarks = true,
   landmarks: lmProp,
   className,
@@ -155,8 +169,6 @@ export function MapView({
       </div>
     );
   }
-
-
 
   return (
     <div className={className}>
@@ -210,6 +222,7 @@ export function MapView({
         preferCanvas={false}
         style={{ height: "100%", width: "100%" }}
       >
+        <MapClickEvents onMapClick={onMapClick} />
         <LayersControl position="topright">
           <LayersControl.BaseLayer checked name="Wikimapia Map (Streets)">
             <CustomWikimapiaTileLayer />
