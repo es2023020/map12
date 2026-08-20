@@ -49405,41 +49405,12 @@
     "url": "http://wikimapia.org/36821813/ar/%D8%A7%D9%85%D8%AA%D8%AF%D8%A7%D8%AF-%D8%B3%D9%8A%D8%AF%D9%89-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86"
   },
   "zahra": {
-    "id": "39977659",
+    "id": "zahra",
     "name": "Zahra",
-    "lat": 30.9409262,
-    "lng": 28.8009273,
-    "polygon": [
-      {
-        "x": 28.8051223,
-        "y": 30.9551527
-      },
-      {
-        "x": 28.8112806,
-        "y": 30.9555207
-      },
-      {
-        "x": 28.8114737,
-        "y": 30.9399887
-      },
-      {
-        "x": 28.796389,
-        "y": 30.9263317
-      },
-      {
-        "x": 28.7903809,
-        "y": 30.9332156
-      },
-      {
-        "x": 28.8004445,
-        "y": 30.9448657
-      },
-      {
-        "x": 28.8046502,
-        "y": 30.9447737
-      }
-    ],
-    "url": "http://wikimapia.org/39977659/Zahra"
+    "lat": 30.9524885,
+    "lng": 28.8069929,
+    "destination": "new-alamein",
+    "url": "https://wikimapia.org/#lang=en&lat=30.9524885&lon=28.8069929&z=16"
   },
   "hacienda bay": {
     "id": "15782453",
@@ -50255,10 +50226,11 @@
   },
   "playa": {
     "id": "playa",
-    "name": "Playa - Ghazala Bay",
+    "name": "Playa",
     "lat": 31.0250849,
     "lng": 28.5852691,
-    "url": "https://wikimapia.org/#lat=31.0250849&lon=28.5852691&z=15"
+    "destination": "ghazala-bay",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0250849&lon=28.5852691&z=16"
   },
   "اولاد عباس ابوشعفه (ar)": {
     "id": "21084929",
@@ -92409,10 +92381,11 @@
   },
   "soul": {
     "id": "soul",
-    "name": "Soul Emaar North Coast",
+    "name": "Soul",
     "lat": 31.0640551,
     "lng": 28.2256345,
-    "url": "https://wikimapia.org/#lat=31.0640551&lon=28.2256345&z=15"
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0640551&lon=28.2256345&z=16"
   },
   "saada north coast": {
     "id": "saada-north-coast",
@@ -92422,10 +92395,11 @@
   },
   "youd": {
     "id": "youd",
-    "name": "Youd Ras El-Hekma",
+    "name": "Youd",
     "lat": 31.0868086,
     "lng": 28.1608845,
-    "url": "https://wikimapia.org/#lat=31.0868086&lon=28.1608845&z=15"
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0868086&lon=28.1608845&z=16"
   },
   "telal soul": {
     "id": "telal-soul",
@@ -92434,10 +92408,12 @@
     "lng": 28.5977631
   },
   "seazen": {
-    "id": "seazen",
-    "name": "Seazen North Coast",
+    "id": "surf-and-sand-seazen",
+    "name": "Surf and Sand - Seazen",
     "lat": 31.0688546,
-    "lng": 28.3525583
+    "lng": 28.3525583,
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0688546&lon=28.3525583&z=16"
   },
   "la sirena north coast": {
     "id": "la-sirena-north-coast",
@@ -92456,7 +92432,8 @@
     "name": "Seashell",
     "lat": 30.9895515,
     "lng": 28.6934,
-    "url": "https://wikimapia.org/#lat=30.9895515&lon=28.6934&z=15"
+    "destination": "sidi-abdelrahman",
+    "url": "https://wikimapia.org/#lang=en&lat=30.9895515&lon=28.6934&z=16"
   },
   "dayz vil": {
     "id": "dayz-vil",
@@ -93139,63 +93116,72 @@
     "name": "Telal Soul",
     "lat": 31.0139519,
     "lng": 28.5977631,
-    "url": "https://wikimapia.org/#lat=31.0139519&lon=28.5977631&z=15"
+    "destination": "sidi-abdelrahman",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0139519&lon=28.5977631&z=16"
   },
   "surf-and-sand-seazen": {
     "id": "surf-and-sand-seazen",
-    "name": "Seazen North Coast",
+    "name": "Surf and Sand - Seazen",
     "lat": 31.0688546,
     "lng": 28.3525583,
-    "url": "https://wikimapia.org/#lat=31.0688546&lon=28.3525583&z=15"
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0688546&lon=28.3525583&z=16"
   },
   "la-vista-bay": {
     "id": "la-vista-bay",
-    "name": "La Vista Bay Sahel",
+    "name": "La Vista Bay",
     "lat": 31.0657004,
     "lng": 28.3583149,
-    "url": "https://wikimapia.org/#lat=31.0657004&lon=28.3583149&z=15"
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0657004&lon=28.3583149&z=16"
   },
   "azzar-islands": {
     "id": "azzar-islands",
     "name": "AZZAR Islands",
     "lat": 31.2466667,
     "lng": 27.855,
-    "url": "https://wikimapia.org/#lat=31.2466667&lon=27.855&z=15"
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.2466667&lon=27.855&z=16"
   },
   "la-sirena-north-coast": {
-    "id": "la-sirena-north-coast",
-    "name": "La Sirena North Coast",
+    "id": "lasirena-sahel",
+    "name": "Lasirena Sahel",
     "lat": 31.0228412,
     "lng": 28.5255196,
-    "url": "https://wikimapia.org/#lat=31.0228412&lon=28.5255196&z=15"
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0228412&lon=28.5255196&z=16"
   },
   "the-waterway-north-coast": {
     "id": "the-waterway-north-coast",
     "name": "The Waterway North Coast",
     "lat": 31.0689544,
     "lng": 28.3450598,
-    "url": "https://wikimapia.org/#lat=31.0689544&lon=28.3450598&z=15"
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0689544&lon=28.3450598&z=16"
   },
   "south-med": {
     "id": "south-med",
-    "name": "South Med Egypt",
+    "name": "South Med",
     "lat": 31.06555,
     "lng": 28.3975181,
-    "url": "https://wikimapia.org/#lat=31.06555&lon=28.3975181&z=15"
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.06555&lon=28.3975181&z=16"
   },
   "dayz-vil": {
-    "id": "dayz-vil",
-    "name": "Dayz Vil",
+    "id": "dayz",
+    "name": "Dayz",
     "lat": 30.8473374,
     "lng": 28.9802767,
-    "url": "https://wikimapia.org/#lat=30.8473374&lon=28.9802767&z=15"
+    "destination": "new-alamein",
+    "url": "https://wikimapia.org/#lang=en&lat=30.8473374&lon=28.9802767&z=16"
   },
   "zahra-north-coast": {
-    "id": "zahra-north-coast",
-    "name": "Zahra North Coast",
+    "id": "zahra",
+    "name": "Zahra",
     "lat": 30.9524885,
     "lng": 28.8069929,
-    "url": "https://wikimapia.org/#lat=30.9524885&lon=28.8069929&z=15"
+    "destination": "new-alamein",
+    "url": "https://wikimapia.org/#lang=en&lat=30.9524885&lon=28.8069929&z=16"
   },
   "district-5": {
     "id": "district-5",
@@ -93254,5 +93240,853 @@
     "lng": 27.7702,
     "destination": "ras-el-hekma",
     "url": "https://wikimapia.org/#lang=en&lat=31.1315&lon=27.7702&z=16"
+  },
+  "cairo-gate": {
+    "id": "cairo-gate",
+    "name": "Cairo Gate",
+    "lat": 30.045,
+    "lng": 30.975,
+    "destination": "sheikh-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.045&lon=30.975&z=15"
+  },
+  "uptown-cairo": {
+    "id": "uptown-cairo",
+    "name": "Uptown Cairo",
+    "lat": 30.03,
+    "lng": 31.47,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.03&lon=31.47&z=15"
+  },
+  "o-west": {
+    "id": "o-west",
+    "name": "O West",
+    "lat": 29.97,
+    "lng": 30.93,
+    "destination": "6th-october",
+    "url": "https://wikimapia.org/#lang=en&lat=29.97&lon=30.93&z=15"
+  },
+  "kinda-residence": {
+    "id": "kinda-residence",
+    "name": "Kinda Residence",
+    "lat": 30.03,
+    "lng": 31.47,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.03&lon=31.47&z=15"
+  },
+  "ogami": {
+    "id": "ogami",
+    "name": "Ogami",
+    "lat": 31.13,
+    "lng": 27.85,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.13&lon=27.85&z=15"
+  },
+  "hacienda-waters": {
+    "id": "hacienda-waters",
+    "name": "Hacienda Waters",
+    "lat": 29.6,
+    "lng": 32.33,
+    "destination": "ain-sokhna",
+    "url": "https://wikimapia.org/#lang=en&lat=29.6&lon=32.33&z=15"
+  },
+  "palm-hills-new-cairo": {
+    "id": "palm-hills-new-cairo",
+    "name": "Palm Hills New Cairo",
+    "lat": 30.03,
+    "lng": 31.47,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.03&lon=31.47&z=15"
+  },
+  "hacienda-bay": {
+    "id": "hacienda-bay",
+    "name": "Hacienda Bay",
+    "lat": 30.895,
+    "lng": 28.55,
+    "destination": "sidi-abdelrahman",
+    "url": "https://wikimapia.org/#lang=en&lat=30.895&lon=28.55&z=15"
+  },
+  "hacienda-heneish": {
+    "id": "hacienda-heneish",
+    "name": "Hacienda Heneish",
+    "lat": 31.1927,
+    "lng": 27.5827,
+    "destination": "sidi-heneish",
+    "url": "https://wikimapia.org/#lang=en&lat=31.1927&lon=27.5827&z=15"
+  },
+  "riv-amwaj": {
+    "id": "riv-amwaj",
+    "name": "Rivette Amwaj",
+    "lat": 30.895,
+    "lng": 28.55,
+    "destination": "sidi-abdelrahman",
+    "url": "https://wikimapia.org/#lang=en&lat=30.895&lon=28.55&z=15"
+  },
+  "kynd-residence-gaia": {
+    "id": "kynd-residence-gaia",
+    "name": "Kynd Residence Gaia",
+    "lat": 31.13,
+    "lng": 27.85,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.13&lon=27.85&z=15"
+  },
+  "gaia": {
+    "id": "gaia",
+    "name": "Gaia",
+    "lat": 31.13,
+    "lng": 27.85,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.13&lon=27.85&z=15"
+  },
+  "elea-azha-north": {
+    "id": "elea-azha-north",
+    "name": "Elea - Azha North",
+    "lat": 31.1,
+    "lng": 27.95,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.1&lon=27.95&z=15"
+  },
+  "aqua-lagoons-june": {
+    "id": "aqua-lagoons-june",
+    "name": "Aqua Lagoons - June",
+    "lat": 31.08,
+    "lng": 27.92,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.08&lon=27.92&z=15"
+  },
+  "sadaf": {
+    "id": "sadaf",
+    "name": "Sadaf",
+    "lat": 30.95,
+    "lng": 28.5,
+    "destination": "sidi-abdelrahman",
+    "url": "https://wikimapia.org/#lang=en&lat=30.95&lon=28.5&z=15"
+  },
+  "the-lynks": {
+    "id": "the-lynks",
+    "name": "The Lynks",
+    "lat": 30.02,
+    "lng": 31.49,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.02&lon=31.49&z=15"
+  },
+  "park-sight": {
+    "id": "park-sight",
+    "name": "Park Sight",
+    "lat": 30.01,
+    "lng": 31.74,
+    "destination": "new-administrative-capital",
+    "url": "https://wikimapia.org/#lang=en&lat=30.01&lon=31.74&z=15"
+  },
+  "silvertown-lagoon-cabanas": {
+    "id": "silvertown-lagoon-cabanas",
+    "name": "Silvertown - Lagoon Cabanas",
+    "lat": 31.15,
+    "lng": 27.6,
+    "destination": "sidi-heneish",
+    "url": "https://wikimapia.org/#lang=en&lat=31.15&lon=27.6&z=15"
+  },
+  "chapters-residence": {
+    "id": "chapters-residence",
+    "name": "Chapters Residence",
+    "lat": 30.005,
+    "lng": 31.75,
+    "destination": "new-administrative-capital",
+    "url": "https://wikimapia.org/#lang=en&lat=30.005&lon=31.75&z=15"
+  },
+  "vea-new-cairo": {
+    "id": "vea-new-cairo",
+    "name": "Vea New Cairo",
+    "lat": 30.025,
+    "lng": 31.48,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.025&lon=31.48&z=15"
+  },
+  "vie-collective": {
+    "id": "vie-collective",
+    "name": "Vie Collective",
+    "lat": 30.03,
+    "lng": 31.485,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.03&lon=31.485&z=15"
+  },
+  "vie-halo": {
+    "id": "vie-halo",
+    "name": "Vie Halo",
+    "lat": 30.032,
+    "lng": 31.488,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.032&lon=31.488&z=15"
+  },
+  "coral-coves": {
+    "id": "coral-coves",
+    "name": "Coral Coves",
+    "lat": 26.85,
+    "lng": 33.98,
+    "destination": "red-sea",
+    "url": "https://wikimapia.org/#lang=en&lat=26.85&lon=33.98&z=15"
+  },
+  "the-commons": {
+    "id": "the-commons",
+    "name": "The Commons",
+    "lat": 30.045,
+    "lng": 30.975,
+    "destination": "sheikh-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.045&lon=30.975&z=15"
+  },
+  "covaya": {
+    "id": "covaya",
+    "name": "Covaya",
+    "lat": 29.582,
+    "lng": 32.342,
+    "destination": "ain-sokhna",
+    "url": "https://wikimapia.org/#lang=en&lat=29.582&lon=32.342&z=15"
+  },
+  "olive-oasis": {
+    "id": "olive-oasis",
+    "name": "Olive Oasis",
+    "lat": 31.095,
+    "lng": 27.935,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.095&lon=27.935&z=15"
+  },
+  "club-hill-solare": {
+    "id": "club-hill-solare",
+    "name": "Club Hill - Solare",
+    "lat": 31.096,
+    "lng": 27.936,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.096&lon=27.936&z=15"
+  },
+  "sealine-seashore": {
+    "id": "sealine-seashore",
+    "name": "Sealine - Seashore",
+    "lat": 31.09,
+    "lng": 27.94,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.09&lon=27.94&z=15"
+  },
+  "31-west": {
+    "id": "31-west",
+    "name": "31 West",
+    "lat": 30.0037794,
+    "lng": 31.0212979,
+    "destination": "eastern-expansion",
+    "url": "https://wikimapia.org/#lang=en&lat=30.0037794&lon=31.0212979&z=15"
+  },
+  "business-district": {
+    "id": "business-district",
+    "name": "Business District",
+    "lat": 30.045,
+    "lng": 31.475,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.045&lon=31.475&z=15"
+  },
+  "el-patio-riva": {
+    "id": "el-patio-riva",
+    "name": "El Patio Riva",
+    "lat": 30.005,
+    "lng": 31.512,
+    "destination": "6th-settlement",
+    "url": "https://wikimapia.org/#lang=en&lat=30.005&lon=31.512&z=15"
+  },
+  "el-patio-vera": {
+    "id": "el-patio-vera",
+    "name": "El Patio Vera",
+    "lat": 30.065,
+    "lng": 30.985,
+    "destination": "sheikh-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.065&lon=30.985&z=15"
+  },
+  "patio-hills": {
+    "id": "patio-hills",
+    "name": "Patio Hills",
+    "lat": 30.002,
+    "lng": 31.515,
+    "destination": "6th-settlement",
+    "url": "https://wikimapia.org/#lang=en&lat=30.002&lon=31.515&z=15"
+  },
+  "patio-jade": {
+    "id": "patio-jade",
+    "name": "Patio Jade",
+    "lat": 30.016,
+    "lng": 31.735,
+    "destination": "new-administrative-capital",
+    "url": "https://wikimapia.org/#lang=en&lat=30.016&lon=31.735&z=15"
+  },
+  "patio-oro": {
+    "id": "patio-oro",
+    "name": "Patio Oro",
+    "lat": 30.025,
+    "lng": 31.488,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.025&lon=31.488&z=15"
+  },
+  "patio-vida": {
+    "id": "patio-vida",
+    "name": "Patio Vida",
+    "lat": 30.008,
+    "lng": 31.516,
+    "destination": "6th-settlement",
+    "url": "https://wikimapia.org/#lang=en&lat=30.008&lon=31.516&z=15"
+  },
+  "patio-zahraa": {
+    "id": "patio-zahraa",
+    "name": "Patio Zahraa",
+    "lat": 30.012,
+    "lng": 30.985,
+    "destination": "sheikh-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.012&lon=30.985&z=15"
+  },
+  "el-patio-sola": {
+    "id": "el-patio-sola",
+    "name": "El Patio Sola",
+    "lat": 30.082,
+    "lng": 31.645,
+    "destination": "shorouk",
+    "url": "https://wikimapia.org/#lang=en&lat=30.082&lon=31.645&z=15"
+  },
+  "el-patio-town": {
+    "id": "el-patio-town",
+    "name": "El Patio Town",
+    "lat": 30.015,
+    "lng": 31.505,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.015&lon=31.505&z=15"
+  },
+  "patio-casa": {
+    "id": "patio-casa",
+    "name": "Patio Casa",
+    "lat": 30.092,
+    "lng": 31.65,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.092&lon=31.65&z=15"
+  },
+  "patio-5-east": {
+    "id": "patio-5-east",
+    "name": "Patio 5 East",
+    "lat": 30.088,
+    "lng": 31.642,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.088&lon=31.642&z=15"
+  },
+  "patio-prime": {
+    "id": "patio-prime",
+    "name": "Patio Prime",
+    "lat": 30.086,
+    "lng": 31.638,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.086&lon=31.638&z=15"
+  },
+  "la-vista-6": {
+    "id": "la-vista-6",
+    "name": "La Vista 6",
+    "lat": 29.605,
+    "lng": 32.325,
+    "destination": "ain-sokhna",
+    "url": "https://wikimapia.org/#lang=en&lat=29.605&lon=32.325&z=15"
+  },
+  "la-vista-7": {
+    "id": "la-vista-7",
+    "name": "La Vista 7",
+    "lat": 29.608,
+    "lng": 32.328,
+    "destination": "ain-sokhna",
+    "url": "https://wikimapia.org/#lang=en&lat=29.608&lon=32.328&z=15"
+  },
+  "la-vista-topaz": {
+    "id": "la-vista-topaz",
+    "name": "La Vista Topaz",
+    "lat": 29.595,
+    "lng": 32.345,
+    "destination": "ain-sokhna",
+    "url": "https://wikimapia.org/#lang=en&lat=29.595&lon=32.345&z=15"
+  },
+  "la-vista-gardens": {
+    "id": "la-vista-gardens",
+    "name": "La Vista Gardens",
+    "lat": 29.59,
+    "lng": 32.342,
+    "destination": "ain-sokhna",
+    "url": "https://wikimapia.org/#lang=en&lat=29.59&lon=32.342&z=15"
+  },
+  "swanlake-west": {
+    "id": "swanlake-west",
+    "name": "Swanlake West",
+    "lat": 29.968,
+    "lng": 30.912,
+    "destination": "eastern-expansion",
+    "url": "https://wikimapia.org/#lang=en&lat=29.968&lon=30.912&z=15"
+  },
+  "swanlake-el-gouna": {
+    "id": "swanlake-el-gouna",
+    "name": "Swanlake El Gouna",
+    "lat": 27.392,
+    "lng": 33.68,
+    "destination": "red-sea",
+    "url": "https://wikimapia.org/#lang=en&lat=27.392&lon=33.68&z=15"
+  },
+  "solana-east": {
+    "id": "solana-east",
+    "name": "Solana East",
+    "lat": 30.022,
+    "lng": 31.522,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.022&lon=31.522&z=15"
+  },
+  "the-brooks": {
+    "id": "the-brooks",
+    "name": "The Brooks",
+    "lat": 30.04,
+    "lng": 31.465,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.04&lon=31.465&z=15"
+  },
+  "jebal-sokhna": {
+    "id": "jebal-sokhna",
+    "name": "Jebal Sokhna",
+    "lat": 29.585,
+    "lng": 32.338,
+    "destination": "ain-sokhna",
+    "url": "https://wikimapia.org/#lang=en&lat=29.585&lon=32.338&z=15"
+  },
+  "telal-east": {
+    "id": "telal-east",
+    "name": "Telal East",
+    "lat": 30.024,
+    "lng": 31.528,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.024&lon=31.528&z=15"
+  },
+  "kai-sokhna": {
+    "id": "kai-sokhna",
+    "name": "Kai Sokhna",
+    "lat": 29.61,
+    "lng": 32.32,
+    "destination": "ain-sokhna",
+    "url": "https://wikimapia.org/#lang=en&lat=29.61&lon=32.32&z=15"
+  },
+  "cairo-business-park": {
+    "id": "cairo-business-park",
+    "name": "Cairo Business Park",
+    "lat": 30.035,
+    "lng": 31.468,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.035&lon=31.468&z=15"
+  },
+  "rock-ville": {
+    "id": "rock-ville",
+    "name": "Rock Ville",
+    "lat": 30.082,
+    "lng": 31.658,
+    "destination": "mostakbal-city",
+    "url": "https://wikimapia.org/#lang=en&lat=30.082&lon=31.658&z=15"
+  },
+  "rock-vera": {
+    "id": "rock-vera",
+    "name": "Rock Vera",
+    "lat": 30.015,
+    "lng": 31.488,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.015&lon=31.488&z=15"
+  },
+  "rock-gold": {
+    "id": "rock-gold",
+    "name": "Rock Gold",
+    "lat": 30.012,
+    "lng": 31.492,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.012&lon=31.492&z=15"
+  },
+  "rock-capital-1": {
+    "id": "rock-capital-1",
+    "name": "Rock Capital 1",
+    "lat": 30.018,
+    "lng": 31.722,
+    "destination": "new-administrative-capital",
+    "url": "https://wikimapia.org/#lang=en&lat=30.018&lon=31.722&z=15"
+  },
+  "rock-sheraton": {
+    "id": "rock-sheraton",
+    "name": "Rock Sheraton",
+    "lat": 30.098,
+    "lng": 31.35,
+    "destination": "heliopolis",
+    "url": "https://wikimapia.org/#lang=en&lat=30.098&lon=31.35&z=15"
+  },
+  "palm-parks": {
+    "id": "palm-parks",
+    "name": "Palm Parks",
+    "lat": 29.962,
+    "lng": 30.932,
+    "destination": "eastern-expansion",
+    "url": "https://wikimapia.org/#lang=en&lat=29.962&lon=30.932&z=15"
+  },
+  "97-hills": {
+    "id": "97-hills",
+    "name": "97 Hills",
+    "lat": 30.0459489,
+    "lng": 31.6061923,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.0459489&lon=31.6061923&z=15"
+  },
+  "bamboo-iii": {
+    "id": "bamboo-iii",
+    "name": "Bamboo III",
+    "lat": 29.98,
+    "lng": 30.92,
+    "destination": "6th-october",
+    "url": "https://wikimapia.org/#lang=en&lat=29.98&lon=30.92&z=15"
+  },
+  "the-crown-extension": {
+    "id": "the-crown-extension",
+    "name": "The Crown Extension",
+    "lat": 30.018,
+    "lng": 31.483,
+    "destination": "eastern-expansion",
+    "url": "https://wikimapia.org/#lang=en&lat=30.018&lon=31.483&z=15"
+  },
+  "palm-hills-one": {
+    "id": "palm-hills-one",
+    "name": "Palm Hills One",
+    "lat": 30.035,
+    "lng": 30.985,
+    "destination": "sheikh-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.035&lon=30.985&z=15"
+  },
+  "village-de-la-capitale": {
+    "id": "village-de-la-capitale",
+    "name": "Village de la Capitale",
+    "lat": 30.018,
+    "lng": 31.74,
+    "destination": "new-administrative-capital",
+    "url": "https://wikimapia.org/#lang=en&lat=30.018&lon=31.74&z=15"
+  },
+  "mountain-view-jirian": {
+    "id": "mountain-view-jirian",
+    "name": "Mountain View Jirian",
+    "lat": 30.079,
+    "lng": 31.662,
+    "destination": "mostakbal-city",
+    "url": "https://wikimapia.org/#lang=en&lat=30.079&lon=31.662&z=15"
+  },
+  "mountain-view-kingsway": {
+    "id": "mountain-view-kingsway",
+    "name": "Mountain View Kingsway",
+    "lat": 30.026,
+    "lng": 31.488,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.026&lon=31.488&z=15"
+  },
+  "mountain-view-grand-valley": {
+    "id": "mountain-view-grand-valley",
+    "name": "Mountain View Grand Valley",
+    "lat": 29.972,
+    "lng": 30.908,
+    "destination": "6th-october",
+    "url": "https://wikimapia.org/#lang=en&lat=29.972&lon=30.908&z=15"
+  },
+  "mountain-view-chillout": {
+    "id": "mountain-view-chillout",
+    "name": "Mountain View Chillout",
+    "lat": 29.962,
+    "lng": 30.922,
+    "destination": "6th-october",
+    "url": "https://wikimapia.org/#lang=en&lat=29.962&lon=30.922&z=15"
+  },
+  "mountain-view-crystal": {
+    "id": "mountain-view-crystal",
+    "name": "Mountain View Crystal",
+    "lat": 30.9375,
+    "lng": 28.525,
+    "destination": "sidi-abdelrahman",
+    "url": "https://wikimapia.org/#lang=en&lat=30.9375&lon=28.525&z=15"
+  },
+  "mountain-view-mv4": {
+    "id": "mountain-view-mv4",
+    "name": "Mountain View MV4",
+    "lat": 29.967,
+    "lng": 30.898,
+    "destination": "6th-october",
+    "url": "https://wikimapia.org/#lang=en&lat=29.967&lon=30.898&z=15"
+  },
+  "esse-residence": {
+    "id": "esse-residence",
+    "name": "Esse Residence",
+    "lat": 30.097,
+    "lng": 31.628,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.097&lon=31.628&z=15"
+  },
+  "rai-valleys": {
+    "id": "rai-valleys",
+    "name": "Rai Valleys",
+    "lat": 30.096,
+    "lng": 31.626,
+    "destination": "sarai",
+    "url": "https://wikimapia.org/#lang=en&lat=30.096&lon=31.626&z=15"
+  },
+  "the-butterfly": {
+    "id": "the-butterfly",
+    "name": "The Butterfly",
+    "lat": 30.068,
+    "lng": 31.412,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.068&lon=31.412&z=15"
+  },
+  "club-views": {
+    "id": "club-views",
+    "name": "Club Views",
+    "lat": 30.098,
+    "lng": 31.631,
+    "destination": "sarai",
+    "url": "https://wikimapia.org/#lang=en&lat=30.098&lon=31.631&z=15"
+  },
+  "talala": {
+    "id": "talala",
+    "name": "TALALA",
+    "lat": 30.094,
+    "lng": 31.622,
+    "destination": "heliopolis",
+    "url": "https://wikimapia.org/#lang=en&lat=30.094&lon=31.622&z=15"
+  },
+  "sheya-residence": {
+    "id": "sheya-residence",
+    "name": "Sheya Residence",
+    "lat": 30.093,
+    "lng": 31.629,
+    "destination": "sarai",
+    "url": "https://wikimapia.org/#lang=en&lat=30.093&lon=31.629&z=15"
+  },
+  "origami-golf": {
+    "id": "origami-golf",
+    "name": "Origami Golf",
+    "lat": 30.099,
+    "lng": 31.618,
+    "destination": "sarai",
+    "url": "https://wikimapia.org/#lang=en&lat=30.099&lon=31.618&z=15"
+  },
+  "vye-sodic": {
+    "id": "vye-sodic",
+    "name": "VYE SODIC",
+    "lat": 30.082,
+    "lng": 30.878,
+    "destination": "new-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.082&lon=30.878&z=15"
+  },
+  "cali-coast-ras-el-hekma": {
+    "id": "cali-coast-ras-el-hekma",
+    "name": "Cali Coast Ras El Hekma",
+    "lat": 31.09,
+    "lng": 27.77,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.09&lon=27.77&z=15"
+  },
+  "crescent-walk": {
+    "id": "crescent-walk",
+    "name": "Crescent Walk",
+    "lat": 30.01,
+    "lng": 31.52,
+    "destination": "6th-settlement",
+    "url": "https://wikimapia.org/#lang=en&lat=30.01&lon=31.52&z=15"
+  },
+  "ramla": {
+    "id": "ramla",
+    "name": "Ramla",
+    "lat": 31.095,
+    "lng": 27.77,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.095&lon=27.77&z=15"
+  },
+  "at-east": {
+    "id": "at-east",
+    "name": "At East",
+    "lat": 30.082,
+    "lng": 31.662,
+    "destination": "mostakbal-city",
+    "url": "https://wikimapia.org/#lang=en&lat=30.082&lon=31.662&z=15"
+  },
+  "the-mornings": {
+    "id": "the-mornings",
+    "name": "The Mornings",
+    "lat": 30.035,
+    "lng": 31.435,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.035&lon=31.435&z=15"
+  },
+  "cleo-water-residence": {
+    "id": "cleo-water-residence",
+    "name": "Cleo Water Residence",
+    "lat": 30.015,
+    "lng": 31.545,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.015&lon=31.545&z=15"
+  },
+  "diplo-village": {
+    "id": "diplo-village",
+    "name": "Diplo Village",
+    "lat": 30.943,
+    "lng": 28.468,
+    "destination": "sidi-abdelrahman",
+    "url": "https://wikimapia.org/#lang=en&lat=30.943&lon=28.468&z=15"
+  },
+  "grova-east-hills": {
+    "id": "grova-east-hills",
+    "name": "Grova East Hills",
+    "lat": 30.008,
+    "lng": 31.542,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.008&lon=31.542&z=15"
+  },
+  "la-vista-east": {
+    "id": "la-vista-east",
+    "name": "La Vista East",
+    "lat": 29.9788,
+    "lng": 31.6415,
+    "destination": "6th-settlement",
+    "url": "https://wikimapia.org/#lang=en&lat=29.9788&lon=31.6415&z=15"
+  },
+  "dejoya-residence": {
+    "id": "dejoya-residence",
+    "name": "Dejoya Residence",
+    "lat": 30.046,
+    "lng": 30.972,
+    "destination": "sheikh-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.046&lon=30.972&z=15"
+  },
+  "salt-marina": {
+    "id": "salt-marina",
+    "name": "Salt Marina",
+    "lat": 31.09,
+    "lng": 27.91,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.09&lon=27.91&z=15"
+  },
+  "perla": {
+    "id": "perla",
+    "name": "Perla",
+    "lat": 31.02,
+    "lng": 28.18,
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.02&lon=28.18&z=15"
+  },
+  "bloom-island-ogami": {
+    "id": "bloom-island-ogami",
+    "name": "Bloom Island - Ogami",
+    "lat": 31.11,
+    "lng": 27.87,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.11&lon=27.87&z=15"
+  },
+  "citystars-park-street": {
+    "id": "citystars-park-street",
+    "name": "Citystars Park Street",
+    "lat": 30.025,
+    "lng": 31.49,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.025&lon=31.49&z=15"
+  },
+  "the-gray-laguna-the-boulevard": {
+    "id": "the-gray-laguna-the-boulevard",
+    "name": "The Gray Laguna - The Boulevard",
+    "lat": 31.1,
+    "lng": 27.89,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.1&lon=27.89&z=15"
+  },
+  "central-water-residences": {
+    "id": "central-water-residences",
+    "name": "Central Water Residences",
+    "lat": 30.005,
+    "lng": 31.51,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.005&lon=31.51&z=15"
+  },
+  "safa-medi-plex-phase-2": {
+    "id": "safa-medi-plex-phase-2",
+    "name": "Safa Medi Plex Phase 2",
+    "lat": 30.004,
+    "lng": 31.509,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.004&lon=31.509&z=15"
+  },
+  "caesar-extension-2": {
+    "id": "caesar-extension-2",
+    "name": "Caesar Extension 2",
+    "lat": 31.105,
+    "lng": 27.86,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.105&lon=27.86&z=15"
+  },
+  "cala-residences-katameya-coast": {
+    "id": "cala-residences-katameya-coast",
+    "name": "Cala Residences - Katameya Coast",
+    "lat": 31.115,
+    "lng": 27.81,
+    "destination": "ras-el-hekma",
+    "url": "https://wikimapia.org/#lang=en&lat=31.115&lon=27.81&z=15"
+  },
+  "carnelia": {
+    "id": "carnelia",
+    "name": "Carnelia",
+    "lat": 29.58,
+    "lng": 32.35,
+    "destination": "ain-sokhna",
+    "url": "https://wikimapia.org/#lang=en&lat=29.58&lon=32.35&z=15"
+  },
+  "selina-carnelia": {
+    "id": "selina-carnelia",
+    "name": "Selina Carnelia",
+    "lat": 29.581,
+    "lng": 32.351,
+    "destination": "ain-sokhna",
+    "url": "https://wikimapia.org/#lang=en&lat=29.581&lon=32.351&z=15"
+  },
+  "la-vista-bay-sahel": {
+    "id": "la-vista-bay",
+    "name": "La Vista Bay",
+    "lat": 31.0657004,
+    "lng": 28.3583149,
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0657004&lon=28.3583149&z=16"
+  },
+  "playa-ghazala-bay": {
+    "id": "playa",
+    "name": "Playa",
+    "lat": 31.0250849,
+    "lng": 28.5852691,
+    "destination": "ghazala-bay",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0250849&lon=28.5852691&z=16"
+  },
+  "lasirena-sahel": {
+    "id": "lasirena-sahel",
+    "name": "Lasirena Sahel",
+    "lat": 31.0228412,
+    "lng": 28.5255196,
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0228412&lon=28.5255196&z=16"
+  },
+  "the-waterway": {
+    "id": "the-waterway-north-coast",
+    "name": "The Waterway North Coast",
+    "lat": 31.0689544,
+    "lng": 28.3450598,
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.0689544&lon=28.3450598&z=16"
+  },
+  "southmed": {
+    "id": "south-med",
+    "name": "South Med",
+    "lat": 31.06555,
+    "lng": 28.3975181,
+    "destination": "al-dabaa",
+    "url": "https://wikimapia.org/#lang=en&lat=31.06555&lon=28.3975181&z=16"
+  },
+  "dayz": {
+    "id": "dayz",
+    "name": "Dayz",
+    "lat": 30.8473374,
+    "lng": 28.9802767,
+    "destination": "new-alamein",
+    "url": "https://wikimapia.org/#lang=en&lat=30.8473374&lon=28.9802767&z=16"
   }
 }
