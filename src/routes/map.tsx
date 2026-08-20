@@ -287,9 +287,6 @@ function MapPage() {
           <div className="border-b border-border/60 px-4 pt-4 pb-3 space-y-3 shrink-0">
             <div className="flex items-center justify-between">
               <div>
-                <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">
-                  The Address
-                </div>
                 <h2 className="font-display text-lg font-semibold text-primary leading-tight">
                   Property Atlas
                 </h2>

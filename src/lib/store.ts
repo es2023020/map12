@@ -1867,6 +1867,48 @@ export const useStore = create<State>()(
     },
     {
       name: "proptrack-broker",
+      // Only persist lightweight user-specific data — never the large static lists
+      // that are already loaded from source files. This prevents localStorage quota errors.
+      partialize: (state) => ({
+        user: state.user,
+        favorites: state.favorites,
+        compareList: state.compareList,
+        leads: state.leads,
+        recentlyViewed: state.recentlyViewed,
+        agentNotes: state.agentNotes,
+        agentTasks: state.agentTasks,
+        salesTarget: state.salesTarget,
+        customShortcuts: state.customShortcuts,
+        customBrochures: state.customBrochures,
+        customProfiles: state.customProfiles,
+        userData: state.userData,
+        billingHistory: state.billingHistory,
+        brokerageSeats: state.brokerageSeats,
+        projectAccessList: state.projectAccessList,
+        usersDatabase: state.usersDatabase,
+        // Keep last 200 analytics events (not 2000) to stay well under quota
+        analyticsEvents: state.analyticsEvents.slice(0, 200),
+        // Keep last 50 audit logs (not 150)
+        auditLogs: state.auditLogs.slice(0, 50),
+        // Exclude: compoundsList, availabilityList, destinationsList,
+        // developersList, pendingUploadsList — all loaded from static files on startup
+      }),
+      storage: createJSONStorage(() => ({
+        getItem: (key: string) => {
+          try { return localStorage.getItem(key); } catch { return null; }
+        },
+        setItem: (key: string, value: string) => {
+          try {
+            localStorage.setItem(key, value);
+          } catch (e) {
+            // localStorage quota exceeded — silently ignore to prevent crash
+            console.warn("[store] localStorage setItem failed (quota?):", e);
+          }
+        },
+        removeItem: (key: string) => {
+          try { localStorage.removeItem(key); } catch { /* ignore */ }
+        },
+      })),
       onRehydrateStorage: () => (state) => {
         if (state) {
           // 1. Sync destinationsList with latest static destination data (cleaning up old/defunct data)

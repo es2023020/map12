@@ -151,6 +151,20 @@ function RootComponent() {
   const incrementUserTimeSpent = useStore((s) => s.incrementUserTimeSpent);
 
   useEffect(() => {
+    // One-time cleanup: if the old localStorage entry is bloated (>500 KB),
+    // remove it so the app can rehydrate cleanly with the new partialize config.
+    try {
+      const raw = localStorage.getItem("proptrack-broker");
+      if (raw && raw.length > 500_000) {
+        localStorage.removeItem("proptrack-broker");
+        console.info("[store] Cleared oversized localStorage entry — will rehydrate fresh.");
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  useEffect(() => {
     if (!user) return;
 
     // Track time spent: check every 15 seconds, increment if browser window is focused

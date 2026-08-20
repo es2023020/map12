@@ -1,0 +1,810 @@
+[
+    {
+        "slug":  "soul",
+        "name":  "Soul",
+        "developer":  "Emaar Misr",
+        "destination":  "new-administrative-capital",
+        "lat":  30.022,
+        "lng":  31.74
+    },
+    {
+        "slug":  "kinda-residence",
+        "name":  "Kinda Residence",
+        "developer":  "Madinet Masr",
+        "destination":  "new-cairo",
+        "lat":  30.03,
+        "lng":  31.47
+    },
+    {
+        "slug":  "ogami",
+        "name":  "Ogami",
+        "developer":  "Sodic",
+        "destination":  "ras-el-hekma",
+        "lat":  31.13,
+        "lng":  27.85
+    },
+    {
+        "slug":  "badya",
+        "name":  "Badya",
+        "developer":  "Palm Hills Developments",
+        "destination":  "6th-october",
+        "lat":  29.97,
+        "lng":  30.93
+    },
+    {
+        "slug":  "hacienda-blue",
+        "name":  "Hacienda Blue",
+        "developer":  "Palm Hills Developments",
+        "destination":  "al-dabaa",
+        "lat":  31.1098,
+        "lng":  27.7715
+    },
+    {
+        "slug":  "hacienda-waters",
+        "name":  "Hacienda Waters",
+        "developer":  "Palm Hills Developments",
+        "destination":  "ain-sokhna",
+        "lat":  29.6,
+        "lng":  32.33
+    },
+    {
+        "slug":  "hacienda-heneish",
+        "name":  "Hacienda Heneish",
+        "developer":  "Palm Hills Developments",
+        "destination":  "sidi-heneish",
+        "lat":  31.1927,
+        "lng":  27.5827
+    },
+    {
+        "slug":  "nmq",
+        "name":  "NMQ",
+        "developer":  "Arkan Palm",
+        "destination":  "eastern-expansion",
+        "lat":  30.045,
+        "lng":  30.975
+    },
+    {
+        "slug":  "kynd-residence-gaia",
+        "name":  "Kynd Residence Gaia",
+        "developer":  "Al Ahly Sabbour",
+        "destination":  "ras-el-hekma",
+        "lat":  31.13,
+        "lng":  27.85
+    },
+    {
+        "slug":  "saada-sahel",
+        "name":  "Saada Sahel",
+        "developer":  "Horizon Egypt Developments",
+        "destination":  "ras-el-hekma",
+        "lat":  31.13,
+        "lng":  27.85
+    },
+    {
+        "slug":  "the-hillage",
+        "name":  "The Hillage",
+        "developer":  "Madaar",
+        "destination":  "sheikh-zayed",
+        "lat":  31.1,
+        "lng":  27.95
+    },
+    {
+        "slug":  "gaia",
+        "name":  "Gaia",
+        "developer":  "Al Ahly Sabbour",
+        "destination":  "ras-el-hekma",
+        "lat":  31.13,
+        "lng":  27.85
+    },
+    {
+        "slug":  "creekview",
+        "name":  "Creekview",
+        "developer":  "Mountain View",
+        "destination":  "new-cairo",
+        "lat":  30.015,
+        "lng":  31.488
+    },
+    {
+        "slug":  "aqua-lagoons-june",
+        "name":  "Aqua Lagoons - June",
+        "developer":  "SODIC",
+        "destination":  "ras-el-hekma",
+        "lat":  31.08,
+        "lng":  27.92
+    },
+    {
+        "slug":  "sadaf",
+        "name":  "Sadaf",
+        "developer":  "New Plan Developments",
+        "destination":  "sidi-abdelrahman",
+        "lat":  30.95,
+        "lng":  28.5
+    },
+    {
+        "slug":  "commonhaus",
+        "name":  "Commonhaus",
+        "developer":  "Upwyde Developments",
+        "destination":  "sheikh-zayed",
+        "lat":  30.05,
+        "lng":  30.98
+    },
+    {
+        "slug":  "the-lynks",
+        "name":  "The Lynks",
+        "developer":  "Living Yards Developments",
+        "destination":  "new-cairo",
+        "lat":  30.02,
+        "lng":  31.49
+    },
+    {
+        "slug":  "park-sight",
+        "name":  "Park Sight",
+        "developer":  "IL Cazar Developments",
+        "destination":  "new-administrative-capital",
+        "lat":  30.01,
+        "lng":  31.74
+    },
+    {
+        "slug":  "silvertown-lagoon-cabanas",
+        "name":  "Silvertown - Lagoon Cabanas",
+        "developer":  "Ora Developers",
+        "destination":  "sidi-heneish",
+        "lat":  31.15,
+        "lng":  27.6
+    },
+    {
+        "slug":  "marresidence",
+        "name":  "Marresidence",
+        "developer":  "Al Marasem Developments",
+        "destination":  "new-zayed",
+        "lat":  30.12,
+        "lng":  30.88
+    },
+    {
+        "slug":  "chapters-residence",
+        "name":  "Chapters Residence",
+        "developer":  "Jadeer Developments",
+        "destination":  "new-administrative-capital",
+        "lat":  30.005,
+        "lng":  31.75
+    },
+    {
+        "slug":  "vie-collective",
+        "name":  "Vie Collective",
+        "developer":  "Vie Communities",
+        "destination":  "new-cairo",
+        "lat":  30.03,
+        "lng":  31.485
+    },
+    {
+        "slug":  "vie-halo",
+        "name":  "Vie Halo",
+        "developer":  "Vie Communities",
+        "destination":  "new-cairo",
+        "lat":  30.032,
+        "lng":  31.488
+    },
+    {
+        "slug":  "coral-coves",
+        "name":  "Coral Coves",
+        "developer":  "Somabay Developments",
+        "destination":  "red-sea",
+        "lat":  26.85,
+        "lng":  33.98
+    },
+    {
+        "slug":  "menorca",
+        "name":  "Menorca",
+        "developer":  "Mardev Developments",
+        "destination":  "new-administrative-capital",
+        "lat":  30.008,
+        "lng":  31.752
+    },
+    {
+        "slug":  "the-commons",
+        "name":  "The Commons",
+        "developer":  "Melee Development",
+        "destination":  "sheikh-zayed",
+        "lat":  30.045,
+        "lng":  30.975
+    },
+    {
+        "slug":  "covaya",
+        "name":  "Covaya",
+        "developer":  "Roya Developments",
+        "destination":  "ain-sokhna",
+        "lat":  29.582,
+        "lng":  32.342
+    },
+    {
+        "slug":  "olive-oasis",
+        "name":  "Olive Oasis",
+        "developer":  "Misr Italia",
+        "destination":  "ras-el-hekma",
+        "lat":  31.095,
+        "lng":  27.935
+    },
+    {
+        "slug":  "club-hill-solare",
+        "name":  "Club Hill - Solare",
+        "developer":  "Misr Italia Properties",
+        "destination":  "ras-el-hekma",
+        "lat":  31.096,
+        "lng":  27.936
+    },
+    {
+        "slug":  "sealine-seashore",
+        "name":  "Sealine - Seashore",
+        "developer":  "Hyde Park",
+        "destination":  "ras-el-hekma",
+        "lat":  31.09,
+        "lng":  27.94
+    },
+    {
+        "slug":  "keeva",
+        "name":  "Keeva",
+        "developer":  "Al Ahly Sabbour",
+        "destination":  "eastern-expansion",
+        "lat":  30.015,
+        "lng":  31.005
+    },
+    {
+        "slug":  "31-west",
+        "name":  "31 West",
+        "developer":  "M Squared",
+        "destination":  "eastern-expansion",
+        "lat":  30.0037794,
+        "lng":  31.0212979
+    },
+    {
+        "slug":  "business-district",
+        "name":  "Business District",
+        "developer":  "M Squared",
+        "destination":  "new-cairo",
+        "lat":  30.045,
+        "lng":  31.475
+    },
+    {
+        "slug":  "mist",
+        "name":  "Mist",
+        "developer":  "M Squared",
+        "destination":  "new-cairo",
+        "lat":  30.042,
+        "lng":  31.482
+    },
+    {
+        "slug":  "trio",
+        "name":  "Trio",
+        "developer":  "M Squared",
+        "destination":  "new-cairo",
+        "lat":  30.038,
+        "lng":  31.498
+    },
+    {
+        "slug":  "el-patio-riva",
+        "name":  "El Patio Riva",
+        "developer":  "La Vista Developments",
+        "destination":  "6th-settlement",
+        "lat":  30.005,
+        "lng":  31.512
+    },
+    {
+        "slug":  "el-patio-vera",
+        "name":  "El Patio Vera",
+        "developer":  "La Vista Developments",
+        "destination":  "sheikh-zayed",
+        "lat":  30.065,
+        "lng":  30.985
+    },
+    {
+        "slug":  "patio-hills",
+        "name":  "Patio Hills",
+        "developer":  "La Vista Developments",
+        "destination":  "6th-settlement",
+        "lat":  30.002,
+        "lng":  31.515
+    },
+    {
+        "slug":  "patio-jade",
+        "name":  "Patio Jade",
+        "developer":  "La Vista Developments",
+        "destination":  "new-administrative-capital",
+        "lat":  30.016,
+        "lng":  31.735
+    },
+    {
+        "slug":  "patio-oro",
+        "name":  "Patio Oro",
+        "developer":  "La Vista Developments",
+        "destination":  "new-cairo",
+        "lat":  30.025,
+        "lng":  31.488
+    },
+    {
+        "slug":  "patio-vida",
+        "name":  "Patio Vida",
+        "developer":  "La Vista Developments",
+        "destination":  "6th-settlement",
+        "lat":  30.008,
+        "lng":  31.516
+    },
+    {
+        "slug":  "el-patio-sola",
+        "name":  "El Patio Sola",
+        "developer":  "La Vista Developments",
+        "destination":  "shorouk",
+        "lat":  30.082,
+        "lng":  31.645
+    },
+    {
+        "slug":  "el-patio-town",
+        "name":  "El Patio Town",
+        "developer":  "La Vista Developments",
+        "destination":  "new-cairo",
+        "lat":  30.015,
+        "lng":  31.505
+    },
+    {
+        "slug":  "patio-casa",
+        "name":  "Patio Casa",
+        "developer":  "La Vista Developments",
+        "destination":  "new-cairo",
+        "lat":  30.092,
+        "lng":  31.65
+    },
+    {
+        "slug":  "patio-5-east",
+        "name":  "Patio 5 East",
+        "developer":  "La Vista Developments",
+        "destination":  "new-cairo",
+        "lat":  30.088,
+        "lng":  31.642
+    },
+    {
+        "slug":  "patio-prime",
+        "name":  "Patio Prime",
+        "developer":  "La Vista Developments",
+        "destination":  "new-cairo",
+        "lat":  30.086,
+        "lng":  31.638
+    },
+    {
+        "slug":  "la-vista-6",
+        "name":  "La Vista 6",
+        "developer":  "La Vista Developments",
+        "destination":  "ain-sokhna",
+        "lat":  29.605,
+        "lng":  32.325
+    },
+    {
+        "slug":  "la-vista-7",
+        "name":  "La Vista 7",
+        "developer":  "La Vista Developments",
+        "destination":  "ain-sokhna",
+        "lat":  29.608,
+        "lng":  32.328
+    },
+    {
+        "slug":  "la-vista-topaz",
+        "name":  "La Vista Topaz",
+        "developer":  "La Vista Developments",
+        "destination":  "ain-sokhna",
+        "lat":  29.595,
+        "lng":  32.345
+    },
+    {
+        "slug":  "haptown",
+        "name":  "Haptown",
+        "developer":  "Hassan Allam Properties",
+        "destination":  "mostakbal-city",
+        "lat":  30.076,
+        "lng":  31.658
+    },
+    {
+        "slug":  "swanlake-el-gouna",
+        "name":  "Swanlake El Gouna",
+        "developer":  "Hassan Allam Properties",
+        "destination":  "red-sea",
+        "lat":  27.392,
+        "lng":  33.68
+    },
+    {
+        "slug":  "solana-east",
+        "name":  "Solana East",
+        "developer":  "Ora Developers",
+        "destination":  "new-cairo",
+        "lat":  30.022,
+        "lng":  31.522
+    },
+    {
+        "slug":  "the-brooks",
+        "name":  "The Brooks",
+        "developer":  "PRE Developments",
+        "destination":  "new-cairo",
+        "lat":  30.04,
+        "lng":  31.465
+    },
+    {
+        "slug":  "jebal-sokhna",
+        "name":  "Jebal Sokhna",
+        "developer":  "PRE Developments",
+        "destination":  "ain-sokhna",
+        "lat":  29.585,
+        "lng":  32.338
+    },
+    {
+        "slug":  "kai-sokhna",
+        "name":  "Kai Sokhna",
+        "developer":  "Misr Italia",
+        "destination":  "ain-sokhna",
+        "lat":  29.61,
+        "lng":  32.32
+    },
+    {
+        "slug":  "rock-ville",
+        "name":  "Rock Ville",
+        "developer":  "El Batal Developments",
+        "destination":  "mostakbal-city",
+        "lat":  30.082,
+        "lng":  31.658
+    },
+    {
+        "slug":  "rock-vera",
+        "name":  "Rock Vera",
+        "developer":  "El Batal Developments",
+        "destination":  "new-cairo",
+        "lat":  30.015,
+        "lng":  31.488
+    },
+    {
+        "slug":  "rock-gold",
+        "name":  "Rock Gold",
+        "developer":  "El Batal Developments",
+        "destination":  "new-cairo",
+        "lat":  30.012,
+        "lng":  31.492
+    },
+    {
+        "slug":  "rock-capital-1",
+        "name":  "Rock Capital 1",
+        "developer":  "El Batal Developments",
+        "destination":  "new-administrative-capital",
+        "lat":  30.018,
+        "lng":  31.722
+    },
+    {
+        "slug":  "palm-parks",
+        "name":  "Palm Parks",
+        "developer":  "Palm Hills Developments",
+        "destination":  "eastern-expansion",
+        "lat":  29.962,
+        "lng":  30.932
+    },
+    {
+        "slug":  "97-hills",
+        "name":  "97 Hills",
+        "developer":  "Palm Hills Developments",
+        "destination":  "new-cairo",
+        "lat":  30.0459489,
+        "lng":  31.6061923
+    },
+    {
+        "slug":  "bamboo-iii",
+        "name":  "Bamboo III",
+        "developer":  "Palm Hills Developments",
+        "destination":  "6th-october",
+        "lat":  29.98,
+        "lng":  30.92
+    },
+    {
+        "slug":  "the-crown-extension",
+        "name":  "The Crown Extension",
+        "developer":  "Palm Hills Developments",
+        "destination":  "eastern-expansion",
+        "lat":  30.018,
+        "lng":  31.483
+    },
+    {
+        "slug":  "palm-hills-jirian",
+        "name":  "Palm Hills Jirian",
+        "developer":  "Palm Hills Developments",
+        "destination":  "new-zayed",
+        "lat":  30.075,
+        "lng":  31.658
+    },
+    {
+        "slug":  "palm-hills-one",
+        "name":  "Palm Hills One",
+        "developer":  "Palm Hills Developments",
+        "destination":  "sheikh-zayed",
+        "lat":  30.035,
+        "lng":  30.985
+    },
+    {
+        "slug":  "px",
+        "name":  "PX",
+        "developer":  "Palm Hills Developments",
+        "destination":  "eastern-expansion",
+        "lat":  30.042,
+        "lng":  30.928
+    },
+    {
+        "slug":  "village-de-la-capitale",
+        "name":  "Village de la Capitale",
+        "developer":  "Palm Hills Developments",
+        "destination":  "new-administrative-capital",
+        "lat":  30.018,
+        "lng":  31.74
+    },
+    {
+        "slug":  "esse-residence",
+        "name":  "Esse Residence",
+        "developer":  "Madinet Masr",
+        "destination":  "new-cairo",
+        "lat":  30.097,
+        "lng":  31.628
+    },
+    {
+        "slug":  "rai-valleys",
+        "name":  "Rai Valleys",
+        "developer":  "Madinet Masr",
+        "destination":  "sarai",
+        "lat":  30.096,
+        "lng":  31.626
+    },
+    {
+        "slug":  "club-views",
+        "name":  "Club Views",
+        "developer":  "Madinet Masr",
+        "destination":  "sarai",
+        "lat":  30.098,
+        "lng":  31.631
+    },
+    {
+        "slug":  "talala",
+        "name":  "TALALA",
+        "developer":  "Madinet Masr",
+        "destination":  "heliopolis",
+        "lat":  30.094,
+        "lng":  31.622
+    },
+    {
+        "slug":  "sheya-residence",
+        "name":  "Sheya Residence",
+        "developer":  "Madinet Masr",
+        "destination":  "sarai",
+        "lat":  30.093,
+        "lng":  31.629
+    },
+    {
+        "slug":  "elm-tree-park",
+        "name":  "ELM TREE PARK",
+        "developer":  "Madinet Masr",
+        "destination":  "northern-expansion",
+        "lat":  30.12,
+        "lng":  31.61
+    },
+    {
+        "slug":  "origami",
+        "name":  "ORIGAMI",
+        "developer":  "Madinet Masr",
+        "destination":  "sarai",
+        "lat":  30.1,
+        "lng":  31.62
+    },
+    {
+        "slug":  "botanica",
+        "name":  "Botanica",
+        "developer":  "New Generation Developments",
+        "destination":  "new-administrative-capital",
+        "lat":  30.025,
+        "lng":  31.745
+    },
+    {
+        "slug":  "cali-coast-ras-el-hekma",
+        "name":  "Cali Coast Ras El Hekma",
+        "developer":  "Maven Developments",
+        "destination":  "ras-el-hekma",
+        "lat":  31.09,
+        "lng":  27.77
+    },
+    {
+        "slug":  "youd",
+        "name":  "Youd",
+        "developer":  "Al Ahly Sabbour",
+        "destination":  "ras-el-hekma",
+        "lat":  31.082,
+        "lng":  27.748
+    },
+    {
+        "slug":  "district-5",
+        "name":  "District 5",
+        "developer":  "Marakez",
+        "destination":  "new-cairo",
+        "lat":  29.985,
+        "lng":  31.425
+    },
+    {
+        "slug":  "crescent-walk",
+        "name":  "Crescent Walk",
+        "developer":  "Marakez",
+        "destination":  "6th-settlement",
+        "lat":  30.01,
+        "lng":  31.52
+    },
+    {
+        "slug":  "ramla",
+        "name":  "Ramla",
+        "developer":  "Marakez",
+        "destination":  "ras-el-hekma",
+        "lat":  31.095,
+        "lng":  27.77
+    },
+    {
+        "slug":  "aeon",
+        "name":  "Aeon",
+        "developer":  "Marakez",
+        "destination":  "6th-october",
+        "lat":  30.0061,
+        "lng":  30.9751
+    },
+    {
+        "slug":  "at-east",
+        "name":  "At East",
+        "developer":  "Al Ahly Sabbour",
+        "destination":  "mostakbal-city",
+        "lat":  30.082,
+        "lng":  31.662
+    },
+    {
+        "slug":  "the-mornings",
+        "name":  "The Mornings",
+        "developer":  "Al Ahly Sabbour",
+        "destination":  "new-cairo",
+        "lat":  30.035,
+        "lng":  31.435
+    },
+    {
+        "slug":  "cleo-water-residence",
+        "name":  "Cleo Water Residence",
+        "developer":  "Palm Hills Developments",
+        "destination":  "new-cairo",
+        "lat":  30.015,
+        "lng":  31.545
+    },
+    {
+        "slug":  "diplo-village",
+        "name":  "Diplo Village",
+        "developer":  "NCB",
+        "destination":  "sidi-abdelrahman",
+        "lat":  30.943,
+        "lng":  28.468
+    },
+    {
+        "slug":  "grova-east-hills",
+        "name":  "Grova East Hills",
+        "developer":  "Hassan Allam Holding",
+        "destination":  "new-cairo",
+        "lat":  30.008,
+        "lng":  31.542
+    },
+    {
+        "slug":  "dejoya-residence",
+        "name":  "Dejoya Residence",
+        "developer":  "Taj Misr Developments",
+        "destination":  "sheikh-zayed",
+        "lat":  30.046,
+        "lng":  30.972
+    },
+    {
+        "slug":  "v-levels",
+        "name":  "V-Levels",
+        "developer":  "Dunes Development",
+        "destination":  "sheikh-zayed",
+        "lat":  30.048,
+        "lng":  30.97
+    },
+    {
+        "slug":  "one33",
+        "name":  "ONE33",
+        "developer":  "Arkan Palm",
+        "destination":  "northern-expansion",
+        "lat":  30.044,
+        "lng":  30.965
+    },
+    {
+        "slug":  "perla",
+        "name":  "Perla",
+        "developer":  "Nations Of Sky",
+        "destination":  "al-dabaa",
+        "lat":  31.02,
+        "lng":  28.18
+    },
+    {
+        "slug":  "bloom-island-ogami",
+        "name":  "Bloom Island - Ogami",
+        "developer":  "SODIC",
+        "destination":  "ras-el-hekma",
+        "lat":  31.11,
+        "lng":  27.87
+    },
+    {
+        "slug":  "saada-north-coast",
+        "name":  "Saada North Coast",
+        "developer":  "Horizon Egypt Developments",
+        "destination":  "ras-el-hekma",
+        "lat":  31.12,
+        "lng":  27.82
+    },
+    {
+        "slug":  "citystars-park-street",
+        "name":  "Citystars Park Street",
+        "developer":  "Sky Innovo Developments",
+        "destination":  "new-cairo",
+        "lat":  30.025,
+        "lng":  31.49
+    },
+    {
+        "slug":  "the-gray-laguna-the-boulevard",
+        "name":  "The Gray Laguna - The Boulevard",
+        "developer":  "People \u0026 Places",
+        "destination":  "ras-el-hekma",
+        "lat":  31.1,
+        "lng":  27.89
+    },
+    {
+        "slug":  "surf-and-sand-seazen",
+        "name":  "Surf and Sand - Seazen",
+        "developer":  "Al Qamzi Developments",
+        "destination":  "al-dabaa",
+        "lat":  31.015,
+        "lng":  28.16
+    },
+    {
+        "slug":  "central-water-residences",
+        "name":  "Central Water Residences",
+        "developer":  "Hyde Park",
+        "destination":  "new-cairo",
+        "lat":  30.005,
+        "lng":  31.51
+    },
+    {
+        "slug":  "safa-medi-plex-phase-2",
+        "name":  "Safa Medi Plex Phase 2",
+        "developer":  "Hyde Park",
+        "destination":  "new-cairo",
+        "lat":  30.004,
+        "lng":  31.509
+    },
+    {
+        "slug":  "caesar-extension-2",
+        "name":  "Caesar Extension 2",
+        "developer":  "SODIC",
+        "destination":  "ras-el-hekma",
+        "lat":  31.105,
+        "lng":  27.86
+    },
+    {
+        "slug":  "cala-residences-katameya-coast",
+        "name":  "Cala Residences - Katameya Coast",
+        "developer":  "Starlight Developments",
+        "destination":  "ras-el-hekma",
+        "lat":  31.115,
+        "lng":  27.81
+    },
+    {
+        "slug":  "carnelia",
+        "name":  "Carnelia",
+        "developer":  "Ajna Developments",
+        "destination":  "ain-sokhna",
+        "lat":  29.58,
+        "lng":  32.35
+    },
+    {
+        "slug":  "selina-carnelia",
+        "name":  "Selina Carnelia",
+        "developer":  "Ajna Developments",
+        "destination":  "ain-sokhna",
+        "lat":  29.581,
+        "lng":  32.351
+    }
+]

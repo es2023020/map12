@@ -18,27 +18,29 @@ import { destinations, destinationColor } from "@/data/destinations";
 import { landmarks as allLandmarks, landmarkColors, type Landmark } from "@/data/landmarks";
 import { availability } from "@/data/availability";
 import {
-  WIKIMAPIA_TILE_URL,
-  WIKIMAPIA_SUBDOMAINS,
+  WIKIMAPIA_API_KEY,
   resolveWikimapiaLocation,
   wikimapiaLocations,
   getWikimapiaBoxPlaces,
   type WikimapiaPlace,
 } from "@/lib/wikimapia";
 
+// Override getTileUrl directly — Leaflet's {s} substitution doesn't work well
+// for Wikimapia's numeric subdomain scheme (i0–i15), so we build the URL ourselves.
 const WikimapiaTileLayerClass = L.TileLayer.extend({
-  getSubdomain: function (coords: L.Coords) {
+  getTileUrl: function (coords: L.Coords) {
     const x = coords.x;
     const y = coords.y;
+    const z = (this as any)._getZoomForUrl();
     const num = (((x % 4) + 4) % 4) + (((y % 4) + 4) % 4) * 4;
-    return String(num);
+    return `https://i${num}.wikimapia.org/?x=${x}&y=${y}&zoom=${z}&type=&lng=0&key=${WIKIMAPIA_API_KEY}`;
   },
 });
 
 function CustomWikimapiaTileLayer({ opacity = 1.0 }: { opacity?: number }) {
   const map = useMap();
   useEffect(() => {
-    const layer = new (WikimapiaTileLayerClass as any)(WIKIMAPIA_TILE_URL, {
+    const layer = new (WikimapiaTileLayerClass as any)("", {
       maxZoom: 19,
       opacity,
       attribution: '&copy; <a href="http://wikimapia.org" target="_blank" rel="noopener noreferrer">Wikimapia.org</a>',
@@ -50,6 +52,7 @@ function CustomWikimapiaTileLayer({ opacity = 1.0 }: { opacity?: number }) {
   }, [map, opacity]);
   return null;
 }
+
 
 function getAvailableCount(slug: string): number {
   return availability.find((a) => a.slug === slug)?.totalAvailable ?? 0;
@@ -128,16 +131,7 @@ export function MapView({
   const lmIcons = useMemo(() => new Map(lmList.map((l) => [l.id, landmarkIcon(l)])), [lmList]);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  if (!ready) {
-    return (
-      <div ref={containerRef} className={className} style={{ background: "oklch(0.92 0.03 220)" }}>
-        <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
-          Loading map…
-        </div>
-      </div>
-    );
-  }
-
+  // ⚠️ This useMemo MUST be above the early return — hooks must always run in the same order
   const rawFocused = focus ?? (activeId ? (compounds.find((c) => c.slug === activeId) ?? null) : null);
   const focused = useMemo(() => {
     if (!rawFocused) return null;
@@ -151,6 +145,18 @@ export function MapView({
     }
     return rawFocused;
   }, [rawFocused]);
+
+  if (!ready) {
+    return (
+      <div ref={containerRef} className={className} style={{ background: "oklch(0.92 0.03 220)" }}>
+        <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
+          Loading map…
+        </div>
+      </div>
+    );
+  }
+
+
 
   return (
     <div className={className}>
@@ -236,7 +242,7 @@ export function MapView({
           <LayersControl.Overlay name="Wikimapia Outlines &amp; Polygons">
             <WikimapiaPlacesOverlay />
           </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Project Markers &amp; Pins">
+          <LayersControl.Overlay name="Project Markers &amp; Pins">
             <LayerGroup>
               {compounds.map((c) => {
                 if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;
