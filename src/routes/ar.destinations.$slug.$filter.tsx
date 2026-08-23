@@ -70,9 +70,9 @@ function ArabicDestinationFilterPage() {
   const filteredCompounds = allCompounds
     .filter((c) => {
       const f = filter.toLowerCase();
-      if (f === "off-plan") return c.status === "Off-Plan";
+      if (f === "off-plan") return c.status === "Off-Plan" || c.deliveryYear > 2027;
       if (f === "rtm" || f === "delivered" || f === "ready-to-move" || f === "under-construction")
-        return c.status === "RTM";
+        return c.status === "RTM" || c.deliveryYear <= 2027;
       if (f === "villas") return c.types.some((t) => /villa|townhouse|twin/i.test(t));
       if (f === "apartments") return c.types.some((t) => /apartment|duplex|penthouse/i.test(t));
       if (f.startsWith("under-")) {

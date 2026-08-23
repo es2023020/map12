@@ -1161,6 +1161,7 @@ function CompoundPage() {
               </span>
               <a
                 href={
+                  c.mapsUrl ||
                   projectLocations[c.slug]?.mapsUrl ||
                   `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`
                 }

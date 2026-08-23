@@ -36,12 +36,12 @@ export function CompoundCard({ c }: { c: Compound }) {
             )}
             <span
               className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider shadow-2xs border ${
-                c.status === "RTM"
+                c.deliveryYear <= 2027 || c.status === "RTM"
                   ? "bg-emerald-500/90 text-white border-emerald-400/20"
                   : "bg-primary/95 text-white border-primary-foreground/15"
               }`}
             >
-              {c.status === "RTM" ? "Ready" : "Off-Plan"}
+              {c.deliveryYear <= 2027 || c.status === "RTM" ? "Ready to Move" : "Off-Plan"}
             </span>
           </div>
 

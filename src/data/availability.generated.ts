@@ -43838,5 +43838,2820 @@ export const availability: ProjectAvailability[] = [
       }
     ],
     "lastUpdated": "2026-08-19"
+  },
+  {
+    "slug": "31-west",
+    "developer": "M Squared Developments",
+    "totalAvailable": 61,
+    "breakdown": [
+      {
+        "type": "Apartment",
+        "beds": 2,
+        "available": 46,
+        "minSqm": 115.0,
+        "maxSqm": 165.0,
+        "minPriceM": 13.95417188,
+        "maxPriceM": 21.99736667,
+        "finishing": "Fully Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "31-west_1",
+            "unitNo": "A5A101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 140.0,
+            "priceEGP": 16664112.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_2",
+            "unitNo": "A5A106",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 140.0,
+            "priceEGP": 16664112.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_3",
+            "unitNo": "A5A201",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 135.0,
+            "priceEGP": 16068965.63,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_4",
+            "unitNo": "A5A206",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 135.0,
+            "priceEGP": 16068965.63,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_5",
+            "unitNo": "A5A301",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 130.0,
+            "priceEGP": 15323587.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_6",
+            "unitNo": "A5A306",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 130.0,
+            "priceEGP": 15323587.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_7",
+            "unitNo": "A5B101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 140.0,
+            "priceEGP": 16664112.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_8",
+            "unitNo": "A5B106",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 140.0,
+            "priceEGP": 16664112.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_9",
+            "unitNo": "A5B201",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 135.0,
+            "priceEGP": 16068965.63,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_10",
+            "unitNo": "A5B206",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 135.0,
+            "priceEGP": 16068965.63,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_11",
+            "unitNo": "A5B301",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 130.0,
+            "priceEGP": 15323587.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_12",
+            "unitNo": "A5B306",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 130.0,
+            "priceEGP": 15323587.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_14",
+            "unitNo": "A7A101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 136.0,
+            "priceEGP": 17987534.26,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_15",
+            "unitNo": "A7A106",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 165.0,
+            "priceEGP": 20673056.25,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_16",
+            "unitNo": "A7A201",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 129.0,
+            "priceEGP": 17061705.29,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_17",
+            "unitNo": "A7A301",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 129.0,
+            "priceEGP": 16905175.88,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_19",
+            "unitNo": "A7B101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 140.0,
+            "priceEGP": 17311262.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_20",
+            "unitNo": "A7B106",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 140.0,
+            "priceEGP": 17311262.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_21",
+            "unitNo": "A7B201",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 135.0,
+            "priceEGP": 16693003.13,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_22",
+            "unitNo": "A7B206",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 135.0,
+            "priceEGP": 16693003.13,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_23",
+            "unitNo": "A7B306",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 130.0,
+            "priceEGP": 16224975.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_34",
+            "unitNo": "A7B302A",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 14485759.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_35",
+            "unitNo": "A5A105B",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 125.0,
+            "priceEGP": 15312031.25,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_36",
+            "unitNo": "A5A205B",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 120.0,
+            "priceEGP": 14699550.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_37",
+            "unitNo": "A5A305B",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 13954171.88,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_38",
+            "unitNo": "A5B102A",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 125.0,
+            "priceEGP": 15023125.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_39",
+            "unitNo": "A5B202A",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 120.0,
+            "priceEGP": 14422200.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_42",
+            "unitNo": "A6A101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 140.0,
+            "priceEGP": 17311262.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_44",
+            "unitNo": "A6A103",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 150.0,
+            "priceEGP": 18027750.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_45",
+            "unitNo": "A6A104",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 150.0,
+            "priceEGP": 18027750.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_46",
+            "unitNo": "A6A106",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 140.0,
+            "priceEGP": 17473050.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_47",
+            "unitNo": "A6A203",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 17426825.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_48",
+            "unitNo": "A6A204",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 17426825.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_49",
+            "unitNo": "A6A206",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 135.0,
+            "priceEGP": 16849012.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_50",
+            "unitNo": "A6A303",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 140.0,
+            "priceEGP": 16664112.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_51",
+            "unitNo": "A6A304",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 140.0,
+            "priceEGP": 16664112.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_52",
+            "unitNo": "A4CG06",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 165.0,
+            "priceEGP": 21997366.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_53",
+            "unitNo": "A4C101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 136.0,
+            "priceEGP": 16502325.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_54",
+            "unitNo": "A4C105",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 165.0,
+            "priceEGP": 19156500.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_55",
+            "unitNo": "A4C106",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 165.0,
+            "priceEGP": 18979125.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_56",
+            "unitNo": "A4C201",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 129.0,
+            "priceEGP": 15652940.63,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_57",
+            "unitNo": "A4C205",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 160.0,
+            "priceEGP": 18576000.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_58",
+            "unitNo": "A4C206",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 160.0,
+            "priceEGP": 18404000.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_59",
+            "unitNo": "A4C301",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 129.0,
+            "priceEGP": 15503865.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_60",
+            "unitNo": "A4C305",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 155.0,
+            "priceEGP": 17828875.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_61",
+            "unitNo": "A4C306",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 155.0,
+            "priceEGP": 17662250.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 1,
+        "available": 4,
+        "minSqm": 80.0,
+        "maxSqm": 165.0,
+        "minPriceM": 13.23712,
+        "maxPriceM": 24.33585,
+        "finishing": "Fully Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "31-west_13",
+            "unitNo": "A7AG06",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 165.0,
+            "priceEGP": 24335850.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_18",
+            "unitNo": "A7BG06",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 90.0,
+            "priceEGP": 13674000.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_40",
+            "unitNo": "A6AG02B",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 80.0,
+            "priceEGP": 13237120.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_41",
+            "unitNo": "A6AG06",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 90.0,
+            "priceEGP": 13480930.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 3,
+        "available": 4,
+        "minSqm": 155.0,
+        "maxSqm": 180.0,
+        "minPriceM": 19.42014375,
+        "maxPriceM": 20.7045,
+        "finishing": "Fully Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "31-west_24",
+            "unitNo": "A7A105",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 165.0,
+            "priceEGP": 20486812.5,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_25",
+            "unitNo": "A7A205",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 160.0,
+            "priceEGP": 20046600.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_26",
+            "unitNo": "A7A305",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 155.0,
+            "priceEGP": 19420143.75,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_43",
+            "unitNo": "A6A102",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 180.0,
+            "priceEGP": 20704500.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      },
+      {
+        "type": "Villa",
+        "beds": 5,
+        "available": 1,
+        "minSqm": 330.0,
+        "maxSqm": 330.0,
+        "minPriceM": 59.267264,
+        "maxPriceM": 59.267264,
+        "finishing": "Semi Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "31-west_27",
+            "unitNo": "V02AM",
+            "beds": 5,
+            "finishing": "Semi Finished",
+            "areaSqm": 330.0,
+            "priceEGP": 59267264.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      },
+      {
+        "type": "Twinhouse",
+        "beds": 5,
+        "available": 1,
+        "minSqm": 275.0,
+        "maxSqm": 275.0,
+        "minPriceM": 37.72554967,
+        "maxPriceM": 37.72554967,
+        "finishing": "Semi Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "31-west_28",
+            "unitNo": "TV15A0BM",
+            "beds": 5,
+            "finishing": "Semi Finished",
+            "areaSqm": 275.0,
+            "priceEGP": 37725549.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      },
+      {
+        "type": "Townhouse",
+        "beds": 5,
+        "available": 5,
+        "minSqm": 225.0,
+        "maxSqm": 225.0,
+        "minPriceM": 25.318186670000003,
+        "maxPriceM": 29.20621367,
+        "finishing": "Semi Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "31-west_29",
+            "unitNo": "TH1102",
+            "beds": 5,
+            "finishing": "Semi Finished",
+            "areaSqm": 225.0,
+            "priceEGP": 25486081.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_30",
+            "unitNo": "TH1103",
+            "beds": 5,
+            "finishing": "Semi Finished",
+            "areaSqm": 225.0,
+            "priceEGP": 25318186.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_31",
+            "unitNo": "TH1201",
+            "beds": 5,
+            "finishing": "Semi Finished",
+            "areaSqm": 225.0,
+            "priceEGP": 29206213.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_32",
+            "unitNo": "TH1304",
+            "beds": 5,
+            "finishing": "Semi Finished",
+            "areaSqm": 225.0,
+            "priceEGP": 25985671.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "31-west_33",
+            "unitNo": "TH1305",
+            "beds": 5,
+            "finishing": "Semi Finished",
+            "areaSqm": 225.0,
+            "priceEGP": 25514746.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-23",
+    "note": "Updated from official M Squared Availability Spreadsheet (23 Aug 2026)"
+  },
+  {
+    "slug": "el-masyaf",
+    "developer": "M Squared Developments",
+    "totalAvailable": 38,
+    "breakdown": [
+      {
+        "type": "Townhouse",
+        "beds": 2,
+        "available": 6,
+        "minSqm": 165.0,
+        "maxSqm": 232.0,
+        "minPriceM": 36.67784738,
+        "maxPriceM": 55.596359840000005,
+        "finishing": "Fully Finished",
+        "deliveryNote": "8/5/2028",
+        "units": [
+          {
+            "id": "el-masyaf_1",
+            "unitNo": "ATOH5A01",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 232.0,
+            "priceEGP": 51692253.32,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "el-masyaf_2",
+            "unitNo": "ATOH5A02",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 232.0,
+            "priceEGP": 42457614.98,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "el-masyaf_3",
+            "unitNo": "ATOH5A04",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 232.0,
+            "priceEGP": 55596359.84,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "el-masyaf_4",
+            "unitNo": "ATOH5B01",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 232.0,
+            "priceEGP": 54000387.95,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "el-masyaf_5",
+            "unitNo": "ATOH5B08",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 232.0,
+            "priceEGP": 52332578.21,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "el-masyaf_8",
+            "unitNo": "LTOH0501",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 165.0,
+            "priceEGP": 36677847.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          }
+        ]
+      },
+      {
+        "type": "Lagoon Chalet",
+        "beds": 2,
+        "available": 22,
+        "minSqm": 105.0,
+        "maxSqm": 145.0,
+        "minPriceM": 15.7148769,
+        "maxPriceM": 24.312366219999998,
+        "finishing": "Fully Finished",
+        "deliveryNote": "8/5/2029",
+        "units": [
+          {
+            "id": "el-masyaf_6",
+            "unitNo": "L105C101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 105.0,
+            "priceEGP": 20183113.42,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_7",
+            "unitNo": "L105D301",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 23582995.23,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_9",
+            "unitNo": "L080C101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 105.0,
+            "priceEGP": 18458638.34,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_10",
+            "unitNo": "L080C102",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 105.0,
+            "priceEGP": 18458638.34,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_11",
+            "unitNo": "L080D401",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 21568029.22,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_12",
+            "unitNo": "L086C101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 105.0,
+            "priceEGP": 20183113.42,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_13",
+            "unitNo": "L086C102",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 105.0,
+            "priceEGP": 19896149.72,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_14",
+            "unitNo": "L086D301",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 23582995.23,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_15",
+            "unitNo": "L097C201",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 110.0,
+            "priceEGP": 17134600.99,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_16",
+            "unitNo": "L078C202",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 120.0,
+            "priceEGP": 19315368.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_17",
+            "unitNo": "L087C101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 105.0,
+            "priceEGP": 20807333.42,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_18",
+            "unitNo": "L087D301",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 24312366.22,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_29",
+            "unitNo": "L010C202",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 110.0,
+            "priceEGP": 15788310.91,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_30",
+            "unitNo": "L010C301",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 110.0,
+            "priceEGP": 16008612.93,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_31",
+            "unitNo": "L010D401",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 23285255.17,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_32",
+            "unitNo": "L010D402",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 22964815.87,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_33",
+            "unitNo": "L011C201",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 110.0,
+            "priceEGP": 15861744.91,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_34",
+            "unitNo": "L011C301",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 110.0,
+            "priceEGP": 15861744.91,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_35",
+            "unitNo": "L012C201",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 110.0,
+            "priceEGP": 15714876.9,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_36",
+            "unitNo": "L012C202",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 110.0,
+            "priceEGP": 15788310.91,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_37",
+            "unitNo": "L012D401",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 22858002.77,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          },
+          {
+            "id": "el-masyaf_38",
+            "unitNo": "L079D401",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 20872651.07,
+            "status": "Available",
+            "deliveryNote": "8/5/2029"
+          }
+        ]
+      },
+      {
+        "type": "Chalet",
+        "beds": 2,
+        "available": 1,
+        "minSqm": 118.0,
+        "maxSqm": 118.0,
+        "minPriceM": 18.196293269999998,
+        "maxPriceM": 18.196293269999998,
+        "finishing": "Standard Finishing",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "el-masyaf_19",
+            "unitNo": "LH0B2208",
+            "beds": 2,
+            "finishing": "Standard Finishing",
+            "areaSqm": 118.0,
+            "priceEGP": 18196293.27,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      },
+      {
+        "type": "Chalet",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 160.0,
+        "maxSqm": 160.0,
+        "minPriceM": 29.89962955,
+        "maxPriceM": 29.89962955,
+        "finishing": "Standard Finishing",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "el-masyaf_20",
+            "unitNo": "LH0B2302",
+            "beds": 3,
+            "finishing": "Standard Finishing",
+            "areaSqm": 160.0,
+            "priceEGP": 29899629.55,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      },
+      {
+        "type": "Staggered Chalet",
+        "beds": 2,
+        "available": 8,
+        "minSqm": 75.0,
+        "maxSqm": 170.0,
+        "minPriceM": 15.42745406,
+        "maxPriceM": 33.04560659,
+        "finishing": "Fully Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "el-masyaf_21",
+            "unitNo": "C0311101",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 105.0,
+            "priceEGP": 23979873.59,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "el-masyaf_22",
+            "unitNo": "C0311102",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 75.0,
+            "priceEGP": 15427454.06,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "el-masyaf_23",
+            "unitNo": "C0311103",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 90.0,
+            "priceEGP": 17390948.21,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "el-masyaf_24",
+            "unitNo": "C0311104",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 110.0,
+            "priceEGP": 22159434.01,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "el-masyaf_25",
+            "unitNo": "C0311105",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 110.0,
+            "priceEGP": 22159434.01,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "el-masyaf_26",
+            "unitNo": "C0311106",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 90.0,
+            "priceEGP": 17390948.21,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "el-masyaf_27",
+            "unitNo": "C0311108",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 105.0,
+            "priceEGP": 23979873.59,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "el-masyaf_28",
+            "unitNo": "C0311303",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 170.0,
+            "priceEGP": 33045606.59,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-23",
+    "note": "Updated from official M Squared Availability Spreadsheet (23 Aug 2026)"
+  },
+  {
+    "slug": "business-district",
+    "developer": "M Squared Developments",
+    "totalAvailable": 10,
+    "breakdown": [
+      {
+        "type": "Office",
+        "beds": 2,
+        "available": 10,
+        "minSqm": 130.0,
+        "maxSqm": 220.0,
+        "minPriceM": 13.26469117,
+        "maxPriceM": 21.68266825,
+        "finishing": "Finished",
+        "deliveryNote": "2/5/2029",
+        "units": [
+          {
+            "id": "business-district_1",
+            "unitNo": "A0401",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 195.0,
+            "priceEGP": 19170937.5,
+            "status": "Available",
+            "deliveryNote": "2/5/2029"
+          },
+          {
+            "id": "business-district_2",
+            "unitNo": "A0411",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 220.0,
+            "priceEGP": 19519946.6,
+            "status": "Available",
+            "deliveryNote": "2/5/2029"
+          },
+          {
+            "id": "business-district_3",
+            "unitNo": "A0611",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 220.0,
+            "priceEGP": 18281181.6,
+            "status": "Available",
+            "deliveryNote": "2/5/2029"
+          },
+          {
+            "id": "business-district_4",
+            "unitNo": "A1001",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 180.0,
+            "priceEGP": 20350687.5,
+            "status": "Available",
+            "deliveryNote": "2/5/2029"
+          },
+          {
+            "id": "business-district_5",
+            "unitNo": "A1005",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 150.0,
+            "priceEGP": 16245218.95,
+            "status": "Available",
+            "deliveryNote": "2/5/2029"
+          },
+          {
+            "id": "business-district_6",
+            "unitNo": "A1006",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 185.0,
+            "priceEGP": 19870185.17,
+            "status": "Available",
+            "deliveryNote": "2/5/2029"
+          },
+          {
+            "id": "business-district_7",
+            "unitNo": "A1007",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 15573928.91,
+            "status": "Available",
+            "deliveryNote": "2/5/2029"
+          },
+          {
+            "id": "business-district_8",
+            "unitNo": "A1008",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 130.0,
+            "priceEGP": 13962832.82,
+            "status": "Available",
+            "deliveryNote": "2/5/2029"
+          },
+          {
+            "id": "business-district_9",
+            "unitNo": "A1010",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 130.0,
+            "priceEGP": 13264691.17,
+            "status": "Available",
+            "deliveryNote": "2/5/2029"
+          },
+          {
+            "id": "business-district_10",
+            "unitNo": "A1011",
+            "beds": 2,
+            "finishing": "Finished",
+            "areaSqm": 210.0,
+            "priceEGP": 21682668.25,
+            "status": "Available",
+            "deliveryNote": "2/5/2029"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-23",
+    "note": "Updated from official M Squared Availability Spreadsheet (23 Aug 2026)"
+  },
+  {
+    "slug": "trio",
+    "developer": "M Squared Developments",
+    "totalAvailable": 14,
+    "breakdown": [
+      {
+        "type": "Apartment",
+        "beds": 2,
+        "available": 11,
+        "minSqm": 130.0,
+        "maxSqm": 290.0,
+        "minPriceM": 11.63789077,
+        "maxPriceM": 31.6419672,
+        "finishing": "Flexi finishing",
+        "deliveryNote": "8/5/2028",
+        "units": [
+          {
+            "id": "trio_1",
+            "unitNo": "E2-102",
+            "beds": 2,
+            "finishing": "Flexi finishing",
+            "areaSqm": 130.0,
+            "priceEGP": 11940085.6,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "trio_2",
+            "unitNo": "E2-301",
+            "beds": 2,
+            "finishing": "Flexi finishing",
+            "areaSqm": 130.0,
+            "priceEGP": 11716237.3,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "trio_3",
+            "unitNo": "E2-401",
+            "beds": 2,
+            "finishing": "Flexi finishing",
+            "areaSqm": 130.0,
+            "priceEGP": 11660276.2,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "trio_4",
+            "unitNo": "E5-101",
+            "beds": 2,
+            "finishing": "Flexi finishing",
+            "areaSqm": 130.0,
+            "priceEGP": 11637890.77,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "trio_5",
+            "unitNo": "E5-103",
+            "beds": 2,
+            "finishing": "Flexi finishing",
+            "areaSqm": 130.0,
+            "priceEGP": 12052009.19,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "trio_6",
+            "unitNo": "E5-302",
+            "beds": 2,
+            "finishing": "Flexi finishing",
+            "areaSqm": 130.0,
+            "priceEGP": 11996047.25,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "trio_7",
+            "unitNo": "E5-G02",
+            "beds": 2,
+            "finishing": "Flexi finishing",
+            "areaSqm": 130.0,
+            "priceEGP": 14095337.78,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "trio_8",
+            "unitNo": "E7-403",
+            "beds": 2,
+            "finishing": "Flexi finishing",
+            "areaSqm": 290.0,
+            "priceEGP": 31641967.2,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "trio_10",
+            "unitNo": "TL03-A21",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 135.0,
+            "priceEGP": 15498335.81,
+            "status": "Available",
+            "deliveryNote": "2/5/2027"
+          },
+          {
+            "id": "trio_11",
+            "unitNo": "TL05-A31",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 135.0,
+            "priceEGP": 14282963.85,
+            "status": "Available",
+            "deliveryNote": "2/5/2027"
+          },
+          {
+            "id": "trio_12",
+            "unitNo": "TL09-A32",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 150.0,
+            "priceEGP": 16559715.5,
+            "status": "Available",
+            "deliveryNote": "2/5/2027"
+          }
+        ]
+      },
+      {
+        "type": "Duplex",
+        "beds": 2,
+        "available": 1,
+        "minSqm": 145.0,
+        "maxSqm": 145.0,
+        "minPriceM": 16.29918402,
+        "maxPriceM": 16.29918402,
+        "finishing": "Fully Finished",
+        "deliveryNote": "2/5/2027",
+        "units": [
+          {
+            "id": "trio_9",
+            "unitNo": "QS05-V43",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 145.0,
+            "priceEGP": 16299184.02,
+            "status": "Available",
+            "deliveryNote": "2/5/2027"
+          }
+        ]
+      },
+      {
+        "type": "Townhouse",
+        "beds": 2,
+        "available": 2,
+        "minSqm": 241.7,
+        "maxSqm": 241.7,
+        "minPriceM": 30.04444,
+        "maxPriceM": 30.04444,
+        "finishing": "Core & Shell",
+        "deliveryNote": "8/5/2028",
+        "units": [
+          {
+            "id": "trio_13",
+            "unitNo": "D4-T18-4",
+            "beds": 2,
+            "finishing": "Core & Shell",
+            "areaSqm": 241.7,
+            "priceEGP": 30044440.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          },
+          {
+            "id": "trio_14",
+            "unitNo": "D4-T18-5",
+            "beds": 2,
+            "finishing": "Core & Shell",
+            "areaSqm": 241.7,
+            "priceEGP": 30044440.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2028"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-23",
+    "note": "Updated from official M Squared Availability Spreadsheet (23 Aug 2026)"
+  },
+  {
+    "slug": "mist",
+    "developer": "M Squared Developments",
+    "totalAvailable": 110,
+    "breakdown": [
+      {
+        "type": "Apartment",
+        "beds": 3,
+        "available": 68,
+        "minSqm": 146.0,
+        "maxSqm": 180.0,
+        "minPriceM": 13.6157848,
+        "maxPriceM": 19.14516064,
+        "finishing": "Fully Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "mist_1",
+            "unitNo": "A1-1-G01",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 16814151.07,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_2",
+            "unitNo": "A1-1-G02",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17291002.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_4",
+            "unitNo": "A1-1-101",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15194146.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_5",
+            "unitNo": "A1-1-102",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15332274.6,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_7",
+            "unitNo": "A1-1-201",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15194146.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_8",
+            "unitNo": "A1-1-202",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15332274.6,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_10",
+            "unitNo": "A1-1-301",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 18252624.07,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_11",
+            "unitNo": "A1-1-302",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 18420079.33,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_12",
+            "unitNo": "A1-1-303",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 180.0,
+            "priceEGP": 18670822.33,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_13",
+            "unitNo": "A1-1-304",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 180.0,
+            "priceEGP": 18496328.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_14",
+            "unitNo": "A1-2-G01",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 16814151.07,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_15",
+            "unitNo": "A1-2-G02",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 16662238.93,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_17",
+            "unitNo": "A1-2-101",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15194146.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_18",
+            "unitNo": "A1-2-102",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 14779760.2,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_21",
+            "unitNo": "A1-2-201",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15194146.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_22",
+            "unitNo": "A1-2-202",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 14779760.2,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_25",
+            "unitNo": "A1-2-301",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 18252624.07,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_26",
+            "unitNo": "A1-2-302",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17750258.27,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_27",
+            "unitNo": "A1-2-303",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 180.0,
+            "priceEGP": 18670822.33,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_29",
+            "unitNo": "A2-1-G01",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 16309726.53,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_30",
+            "unitNo": "A2-1-102",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 14604336.88,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_32",
+            "unitNo": "A2-1-201",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 14738321.62,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_33",
+            "unitNo": "A2-1-301",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17705045.35,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_34",
+            "unitNo": "A2-1-302",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17542613.74,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_35",
+            "unitNo": "A2-1-304",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 180.0,
+            "priceEGP": 17602921.09,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_36",
+            "unitNo": "A2-2-G01",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 16309726.53,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_37",
+            "unitNo": "A2-2-G02",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 16009896.56,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_39",
+            "unitNo": "A2-2-101",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 14738321.62,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_41",
+            "unitNo": "A2-2-301",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17705045.35,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_42",
+            "unitNo": "A2-2-302",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17055318.91,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_43",
+            "unitNo": "A3-1-G01",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 16814151.07,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_44",
+            "unitNo": "A3-1-G02",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 16819429.87,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_46",
+            "unitNo": "A3-1-101",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15194146.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_47",
+            "unitNo": "A3-1-102",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 14917888.8,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_49",
+            "unitNo": "A3-1-201",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15194146.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_50",
+            "unitNo": "A3-1-202",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 14917888.8,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_52",
+            "unitNo": "A3-1-301",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 18252624.07,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_53",
+            "unitNo": "A3-1-302",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17917713.53,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_54",
+            "unitNo": "A3-1-304",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 180.0,
+            "priceEGP": 17972847.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_55",
+            "unitNo": "A3-2-G01",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 16814151.07,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_56",
+            "unitNo": "A3-2-G02",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 16819429.87,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_60",
+            "unitNo": "A3-2-101",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15194146.0,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_61",
+            "unitNo": "A3-2-102",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 14917888.8,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_63",
+            "unitNo": "A3-2-104",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 146.0,
+            "priceEGP": 13615784.8,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_65",
+            "unitNo": "A3-2-301",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 18252624.07,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_66",
+            "unitNo": "A3-2-302",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17917713.53,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_67",
+            "unitNo": "A4-1-G01",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17477461.61,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_68",
+            "unitNo": "A4-1-G02",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 18133546.07,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_70",
+            "unitNo": "A4-1-101",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15649970.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_71",
+            "unitNo": "A4-1-102",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15934515.3,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_74",
+            "unitNo": "A4-1-201",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15649970.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_75",
+            "unitNo": "A4-1-202",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15934515.3,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_78",
+            "unitNo": "A4-2-G01",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17477461.61,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_79",
+            "unitNo": "A4-2-G02",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 17809732.75,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_83",
+            "unitNo": "A4-2-101",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15649970.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_84",
+            "unitNo": "A4-2-102",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15649970.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_86",
+            "unitNo": "A4-2-104",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 146.0,
+            "priceEGP": 14288866.99,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_88",
+            "unitNo": "A4-2-202",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15649970.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_93",
+            "unitNo": "A4-1-301",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15649970.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_94",
+            "unitNo": "A4-1-302",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15934515.3,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_97",
+            "unitNo": "A4-1-401",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 18800202.79,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_98",
+            "unitNo": "A4-1-402",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 19145160.64,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_101",
+            "unitNo": "A4-2-301",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15649970.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_102",
+            "unitNo": "A4-2-302",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 15649970.38,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_104",
+            "unitNo": "A4-2-304",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 146.0,
+            "priceEGP": 14288866.99,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_106",
+            "unitNo": "A4-2-401",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 18800202.79,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_107",
+            "unitNo": "A4-2-402",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 157.0,
+            "priceEGP": 18800202.79,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_109",
+            "unitNo": "A4-2-404",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 146.0,
+            "priceEGP": 14156562.67,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 1,
+        "available": 4,
+        "minSqm": 80.0,
+        "maxSqm": 88.0,
+        "minPriceM": 8.78626933,
+        "maxPriceM": 9.91738714,
+        "finishing": "Fully Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "mist_3",
+            "unitNo": "A1-1-G03",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 80.0,
+            "priceEGP": 8786269.33,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_16",
+            "unitNo": "A1-2-G03",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 88.0,
+            "priceEGP": 9539378.13,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_57",
+            "unitNo": "A3-2-G03",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 88.0,
+            "priceEGP": 9539378.13,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_80",
+            "unitNo": "A4-2-G03",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 88.0,
+            "priceEGP": 9917387.14,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 2,
+        "available": 34,
+        "minSqm": 115.0,
+        "maxSqm": 134.0,
+        "minPriceM": 10.76320926,
+        "maxPriceM": 15.16707772,
+        "finishing": "Fully Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "mist_6",
+            "unitNo": "A1-1-104",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12425353.81,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_9",
+            "unitNo": "A1-1-203",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12541478.62,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_19",
+            "unitNo": "A1-2-103",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12541478.62,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_20",
+            "unitNo": "A1-2-105",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 10862868.61,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_23",
+            "unitNo": "A1-2-203",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12541478.62,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_24",
+            "unitNo": "A1-2-205",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 10862868.61,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_28",
+            "unitNo": "A1-2-305",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 10763209.26,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_31",
+            "unitNo": "A2-1-103",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12165234.26,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_38",
+            "unitNo": "A2-2-G05",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 11672639.78,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_40",
+            "unitNo": "A2-2-103",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12165234.26,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_45",
+            "unitNo": "A3-1-G04",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 14043590.48,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_48",
+            "unitNo": "A3-1-104",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12076979.41,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_51",
+            "unitNo": "A3-1-204",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12076979.41,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_58",
+            "unitNo": "A3-2-G04",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 14316281.56,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_59",
+            "unitNo": "A3-2-G05",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 12147174.25,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_62",
+            "unitNo": "A3-2-103",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12541478.62,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_64",
+            "unitNo": "A3-2-203",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12541478.62,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_69",
+            "unitNo": "A4-1-G04",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 15167077.72,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_72",
+            "unitNo": "A4-1-103",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12917722.97,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_73",
+            "unitNo": "A4-1-104",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12917722.97,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_76",
+            "unitNo": "A4-1-203",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12917722.97,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_77",
+            "unitNo": "A4-1-204",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12917722.97,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_81",
+            "unitNo": "A4-2-G04",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 15167077.72,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_82",
+            "unitNo": "A4-2-G05",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 12745450.96,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_85",
+            "unitNo": "A4-2-103",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12917722.97,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_87",
+            "unitNo": "A4-2-105",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 11188754.66,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_95",
+            "unitNo": "A4-1-303",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12917722.97,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_96",
+            "unitNo": "A4-1-304",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12917722.97,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_99",
+            "unitNo": "A4-1-403",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12798114.43,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_100",
+            "unitNo": "A4-1-404",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12798114.43,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_103",
+            "unitNo": "A4-2-303",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12917722.97,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_105",
+            "unitNo": "A4-2-305",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 11188754.66,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_108",
+            "unitNo": "A4-2-403",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 134.0,
+            "priceEGP": 12798114.43,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_110",
+            "unitNo": "A4-2-405",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 115.0,
+            "priceEGP": 11086105.54,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      },
+      {
+        "type": "Townhouse",
+        "beds": 4,
+        "available": 4,
+        "minSqm": 200.0,
+        "maxSqm": 200.0,
+        "minPriceM": 28.3231788,
+        "maxPriceM": 33.9028704,
+        "finishing": "Semi Finished",
+        "deliveryNote": "8/5/2030",
+        "units": [
+          {
+            "id": "mist_89",
+            "unitNo": "B1-01",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 200.0,
+            "priceEGP": 32405573.76,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_90",
+            "unitNo": "B1-05",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 200.0,
+            "priceEGP": 28323178.8,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_91",
+            "unitNo": "B1-06",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 200.0,
+            "priceEGP": 28573826.4,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          },
+          {
+            "id": "mist_92",
+            "unitNo": "B1-07",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 200.0,
+            "priceEGP": 33902870.4,
+            "status": "Available",
+            "deliveryNote": "8/5/2030"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-23",
+    "note": "Updated from official M Squared Availability Spreadsheet (23 Aug 2026)"
+  },
+  {
+    "slug": "mayan-el-shorouk",
+    "developer": "STM Developments",
+    "totalAvailable": 8,
+    "lastUpdated": "2026-08-23",
+    "note": "Official STM Developments Mayan El Shorouk Availability",
+    "breakdown": [
+      {
+        "type": "Townhouse",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 228,
+        "maxSqm": 228,
+        "minPriceM": 33.6,
+        "maxPriceM": 33.6,
+        "finishing": "Fully Finished",
+        "deliveryNote": "Ready to Move (RTM)",
+        "units": [
+          {
+            "id": "mayan-shorouk-th-1",
+            "unitNo": "Townhouse-A1",
+            "beds": 4,
+            "finishing": "Fully Finished",
+            "areaSqm": 228,
+            "priceEGP": 33600000,
+            "status": "Available",
+            "deliveryNote": "Ready to Move (RTM)"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 2,
+        "available": 2,
+        "minSqm": 93,
+        "maxSqm": 101,
+        "minPriceM": 5.2275,
+        "maxPriceM": 5.6375,
+        "finishing": "Fully Finished",
+        "deliveryNote": "Delivery 9 Months (2027)",
+        "units": [
+          {
+            "id": "mayan-shorouk-apt-93",
+            "unitNo": "Apt-93m",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 93,
+            "priceEGP": 5227500,
+            "status": "Available",
+            "deliveryNote": "Delivery 9 Months (2027)"
+          },
+          {
+            "id": "mayan-shorouk-apt-101",
+            "unitNo": "Apt-101m",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 101,
+            "priceEGP": 5637500,
+            "status": "Available",
+            "deliveryNote": "Delivery 9 Months (2027)"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 3,
+        "available": 5,
+        "minSqm": 126,
+        "maxSqm": 180,
+        "minPriceM": 6.9,
+        "maxPriceM": 10.3,
+        "finishing": "Fully Finished",
+        "deliveryNote": "Delivery 9 Months (2027)",
+        "units": [
+          {
+            "id": "mayan-shorouk-apt-126",
+            "unitNo": "Apt-126m",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 126,
+            "priceEGP": 6900000,
+            "status": "Available",
+            "deliveryNote": "Delivery 9 Months (2027)"
+          },
+          {
+            "id": "mayan-shorouk-apt-143",
+            "unitNo": "Apt-143m",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 143,
+            "priceEGP": 7995000,
+            "status": "Available",
+            "deliveryNote": "Delivery 9 Months (2027)"
+          },
+          {
+            "id": "mayan-shorouk-apt-162",
+            "unitNo": "Apt-162m",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 162,
+            "priceEGP": 8800000,
+            "status": "Available",
+            "deliveryNote": "Delivery 9 Months (2027)"
+          },
+          {
+            "id": "mayan-shorouk-apt-170",
+            "unitNo": "Apt-170m",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 170,
+            "priceEGP": 9300000,
+            "status": "Available",
+            "deliveryNote": "Delivery 9 Months (2027)"
+          },
+          {
+            "id": "mayan-shorouk-apt-180",
+            "unitNo": "Apt-180m",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 180,
+            "priceEGP": 10300000,
+            "status": "Available",
+            "deliveryNote": "Delivery 9 Months (2027)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "mayan-new-cairo",
+    "developer": "STM Developments",
+    "totalAvailable": 3,
+    "lastUpdated": "2026-08-23",
+    "note": "Official STM Developments Mayan New Cairo Availability",
+    "breakdown": [
+      {
+        "type": "Apartment",
+        "beds": 2,
+        "available": 1,
+        "minSqm": 99,
+        "maxSqm": 99,
+        "minPriceM": 8.5,
+        "maxPriceM": 8.5,
+        "finishing": "Fully Finished",
+        "deliveryNote": "Delivery 9-12 Months (2027)",
+        "units": [
+          {
+            "id": "mayan-cairo-apt-99",
+            "unitNo": "Apt-99m",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 99,
+            "priceEGP": 8500000,
+            "status": "Available",
+            "deliveryNote": "Delivery 9-12 Months (2027)"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 3,
+        "available": 2,
+        "minSqm": 135,
+        "maxSqm": 160,
+        "minPriceM": 12.5,
+        "maxPriceM": 14.8,
+        "finishing": "Fully Finished",
+        "deliveryNote": "Delivery 9-12 Months (2027)",
+        "units": [
+          {
+            "id": "mayan-cairo-apt-135",
+            "unitNo": "Apt-135m",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 135,
+            "priceEGP": 12500000,
+            "status": "Available",
+            "deliveryNote": "Delivery 9-12 Months (2027)"
+          },
+          {
+            "id": "mayan-cairo-apt-160",
+            "unitNo": "Apt-160m",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 160,
+            "priceEGP": 14800000,
+            "status": "Available",
+            "deliveryNote": "Delivery 9-12 Months (2027)"
+          }
+        ]
+      }
+    ]
   }
 ];

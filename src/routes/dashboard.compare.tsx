@@ -56,7 +56,27 @@ function ComparePage() {
           : `${c.destination.replace(/-/g, " ")} region`;
       },
     },
-    { label: "Status", get: (c) => c.status },
+    {
+      label: "Status",
+      get: (c) => (c.deliveryYear <= 2027 || c.status === "RTM" ? "Ready to Move (RTM)" : "Off-Plan"),
+    },
+    { label: "Delivery Year", get: (c) => `${c.deliveryYear} (${c.deliveryYear <= 2027 ? "RTM" : "Off-Plan"})` },
+    {
+      label: "Finishing Specs",
+      get: (c) => {
+        const avail = availabilityBySlug(c.slug);
+        if (avail && avail.breakdown && avail.breakdown.length > 0) {
+          const finishings = Array.from(
+            new Set(avail.breakdown.map((b) => b.finishing).filter(Boolean)),
+          );
+          if (finishings.length > 0) return finishings.join(" · ");
+        }
+        if (/core\s*&\s*shell/i.test(c.blurb)) return "Core & Shell";
+        if (/semi[- ]finished/i.test(c.blurb)) return "Semi Finished";
+        if (/fully[- ]finished|finished/i.test(c.blurb)) return "Fully Finished";
+        return "Fully Finished";
+      },
+    },
     {
       label: "Key Amenities",
       get: (c) => {
@@ -68,7 +88,6 @@ function ComparePage() {
             : "Green Areas, Security";
       },
     },
-    { label: "Delivery", get: (c) => String(c.deliveryYear) },
     { label: "Starting price", get: (c) => `EGP ${c.priceFrom}M` },
     { label: "Beachfront", get: (c) => (c.beachfront ? "Yes" : "No") },
     { label: "Project size", get: (c) => c.areaSize ?? "—" },

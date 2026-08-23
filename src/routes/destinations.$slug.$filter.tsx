@@ -58,9 +58,9 @@ function DestinationFilterPage() {
   const filteredCompounds = allCompounds
     .filter((c) => {
       const f = filter.toLowerCase();
-      if (f === "off-plan") return c.status === "Off-Plan";
+      if (f === "off-plan") return c.status === "Off-Plan" || c.deliveryYear > 2027;
       if (f === "rtm" || f === "delivered" || f === "ready-to-move" || f === "under-construction")
-        return c.status === "RTM";
+        return c.status === "RTM" || c.deliveryYear <= 2027;
       if (f === "beachfront") return c.beachfront;
       if (f.startsWith("under-")) {
         const match = f.match(/under-(\d+)m/);

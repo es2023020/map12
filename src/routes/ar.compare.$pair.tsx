@@ -127,8 +127,16 @@ function ArabicComparePairPage() {
                   <span className="font-bold text-accent">{priceAStr}</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-border/50">
-                  <span className="text-muted-foreground">سنة الاستلام</span>
-                  <span className="font-semibold text-foreground">{compA.deliveryYear}</span>
+                  <span className="text-muted-foreground">سنة الاستلام والحالة</span>
+                  <span className="font-semibold text-foreground">
+                    {compA.deliveryYear} ({compA.deliveryYear <= 2027 || compA.status === "RTM" ? "تسليم فوري / جاهز" : "تحت الإنشاء"})
+                  </span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-border/50">
+                  <span className="text-muted-foreground">حالة التشطيب</span>
+                  <span className="font-semibold text-accent">
+                    {/core\s*&\s*shell/i.test(compA.blurb) ? "محارة وواجهات" : /semi[- ]finished/i.test(compA.blurb) ? "نصف تشطيب" : "تشطيب كامل"}
+                  </span>
                 </div>
                 <div className="pt-2">
                   <Link
@@ -164,8 +172,16 @@ function ArabicComparePairPage() {
                   <span className="font-bold text-accent">{priceBStr}</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-border/50">
-                  <span className="text-muted-foreground">سنة الاستلام</span>
-                  <span className="font-semibold text-foreground">{compB.deliveryYear}</span>
+                  <span className="text-muted-foreground">سنة الاستلام والحالة</span>
+                  <span className="font-semibold text-foreground">
+                    {compB.deliveryYear} ({compB.deliveryYear <= 2027 || compB.status === "RTM" ? "تسليم فوري / جاهز" : "تحت الإنشاء"})
+                  </span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-border/50">
+                  <span className="text-muted-foreground">حالة التشطيب</span>
+                  <span className="font-semibold text-accent">
+                    {/core\s*&\s*shell/i.test(compB.blurb) ? "محارة وواجهات" : /semi[- ]finished/i.test(compB.blurb) ? "نصف تشطيب" : "تشطيب كامل"}
+                  </span>
                 </div>
                 <div className="pt-2">
                   <Link

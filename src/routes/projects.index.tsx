@@ -237,9 +237,17 @@ function ProjectsPage() {
         return false;
       }
     }
-    if (devVal && c.developerSlug !== devVal) return false;
-    if (statusVal && c.status !== statusVal) return false;
-    if (typeVal && !c.types.includes(typeVal)) return false;
+    if (statusVal) {
+      if (statusVal === "RTM") {
+        const isRtm = c.status === "RTM" || c.deliveryYear <= 2027;
+        if (!isRtm) return false;
+      } else if (statusVal === "Off-Plan") {
+        const isOffPlan = c.status === "Off-Plan" || c.deliveryYear > 2027;
+        if (!isOffPlan) return false;
+      } else if (c.status !== statusVal) {
+        return false;
+      }
+    }
     if (c.priceFrom > maxPriceVal) return false;
     if (kiloFilterVal) {
       if (c.km === undefined || c.km === null) return false;

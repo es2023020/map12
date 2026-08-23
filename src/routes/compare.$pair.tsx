@@ -133,7 +133,23 @@ function ComparePairPage() {
               <div className="flex justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Delivery Year</span>
                 <span className="font-semibold text-foreground">
-                  {compA.deliveryYear} ({compA.status})
+                  {compA.deliveryYear} ({compA.deliveryYear <= 2027 || compA.status === "RTM" ? "RTM" : "Off-Plan"})
+                </span>
+              </div>
+              <div className="flex justify-between py-2 border-b border-border/50">
+                <span className="text-muted-foreground">Finishing Specs</span>
+                <span className="font-semibold text-foreground font-medium text-accent">
+                  {(() => {
+                    if (availA && availA.breakdown && availA.breakdown.length > 0) {
+                      const finishings = Array.from(
+                        new Set(availA.breakdown.map((b) => b.finishing).filter(Boolean)),
+                      );
+                      if (finishings.length > 0) return finishings.join(" · ");
+                    }
+                    if (/core\s*&\s*shell/i.test(compA.blurb)) return "Core & Shell";
+                    if (/semi[- ]finished/i.test(compA.blurb)) return "Semi Finished";
+                    return "Fully Finished";
+                  })()}
                 </span>
               </div>
               <div className="flex justify-between py-2 border-b border-border/50">
@@ -193,7 +209,23 @@ function ComparePairPage() {
               <div className="flex justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Delivery Year</span>
                 <span className="font-semibold text-foreground">
-                  {compB.deliveryYear} ({compB.status})
+                  {compB.deliveryYear} ({compB.deliveryYear <= 2027 || compB.status === "RTM" ? "RTM" : "Off-Plan"})
+                </span>
+              </div>
+              <div className="flex justify-between py-2 border-b border-border/50">
+                <span className="text-muted-foreground">Finishing Specs</span>
+                <span className="font-semibold text-foreground font-medium text-accent">
+                  {(() => {
+                    if (availB && availB.breakdown && availB.breakdown.length > 0) {
+                      const finishings = Array.from(
+                        new Set(availB.breakdown.map((b) => b.finishing).filter(Boolean)),
+                      );
+                      if (finishings.length > 0) return finishings.join(" · ");
+                    }
+                    if (/core\s*&\s*shell/i.test(compB.blurb)) return "Core & Shell";
+                    if (/semi[- ]finished/i.test(compB.blurb)) return "Semi Finished";
+                    return "Fully Finished";
+                  })()}
                 </span>
               </div>
               <div className="flex justify-between py-2 border-b border-border/50">

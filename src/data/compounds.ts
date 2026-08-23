@@ -38,6 +38,7 @@ export type Compound = {
   brochureType?: string;
   brochureDeleted?: boolean;
   masterPlanUrl?: string;
+  mapsUrl?: string;
 };
 
 const beachImgs = [
@@ -6250,15 +6251,8 @@ function getActiveCompounds(): Compound[] {
             const local = localMap.get(sc.slug);
             if (local) {
               return {
+                ...sc,
                 ...local,
-                name: sc.name,
-                destination: sc.destination,
-                km: sc.km,
-                lat: sc.lat,
-                lng: sc.lng,
-                developer: sc.developer,
-                developerSlug: sc.developerSlug,
-                beachfront: sc.beachfront,
               };
             }
             return sc;
