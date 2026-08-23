@@ -18,6 +18,7 @@ import {
   Tag,
 } from "lucide-react";
 import { destinations } from "@/data/destinations";
+import { isReadyToMove } from "@/lib/delivery";
 
 export const Route = createFileRoute("/calculator")({
   validateSearch: (search: Record<string, unknown>): { project?: string; price?: string } => ({
@@ -389,15 +390,18 @@ function CalculatorPage() {
       // Filter by destination
       if (!matchDestination(comp.destination, budgetDestFilters)) return;
 
-      // Filter by status (RTM vs Off-Plan)
-      if (budgetStatusFilter !== "all" && comp.status !== budgetStatusFilter) return;
-
       p.breakdown.forEach((b: any) => {
         // Filter by unit type
         if (budgetTypeFilter && !matchPropertyType(b.type, budgetTypeFilter)) return;
 
         const units = b.units ?? [];
         units.forEach((u: any) => {
+          const deliveryNote = u.deliveryNote || b.deliveryNote || "";
+          const isRTM = isReadyToMove(comp.deliveryYear, deliveryNote, comp.status);
+
+          if (budgetStatusFilter === "RTM" && !isRTM) return;
+          if (budgetStatusFilter === "Off-Plan" && isRTM) return;
+
           const budgetLimit = basePrice * 1_000_000 * 1.1;
           if (u.priceEGP > 0 && u.priceEGP <= budgetLimit) {
             list.push({
@@ -410,7 +414,7 @@ function CalculatorPage() {
               areaSqm: u.areaSqm || 0,
               priceEGP: u.priceEGP,
               paymentPlan: u.paymentPlan || b.paymentPlan || comp.paymentPlan,
-              deliveryNote: u.deliveryNote || b.deliveryNote || "",
+              deliveryNote: deliveryNote,
               unitId: u.id,
             });
           }
@@ -435,7 +439,10 @@ function CalculatorPage() {
         const matchPrice = c.priceFrom <= budgetLimit;
         const matchDest = matchDestination(c.destination, budgetDestFilters);
         const matchType = !budgetTypeFilter || matchPropertyType(c.types, budgetTypeFilter);
-        const matchStatus = budgetStatusFilter === "all" || c.status === budgetStatusFilter;
+        const isRTM = isReadyToMove(c.deliveryYear, undefined, c.status);
+        const matchStatus =
+          budgetStatusFilter === "all" ||
+          (budgetStatusFilter === "RTM" ? isRTM : !isRTM);
         return matchPrice && matchDest && matchType && matchStatus;
       })
       .sort((a, b) => b.priceFrom - a.priceFrom)
