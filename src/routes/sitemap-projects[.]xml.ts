@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { compounds } from "@/data/compounds";
 
-const BASE_URL = "https://proptrack1.vercel.app";
+const BASE_URL = "https://propertyatlas.vercel.app";
 
 export const Route = createFileRoute("/sitemap-projects.xml")({
   server: {

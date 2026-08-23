@@ -90,9 +90,9 @@ export function Navbar() {
           to="/"
           className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-tight shrink-0"
         >
-          <img src="/logo.png" alt="PropTrack" className="h-9 w-9 object-contain" />
+          <img src="/logo.png" alt="Property Atlas" className="h-9 w-9 object-contain" />
           <span className="hidden sm:inline">
-            Prop<span className="text-accent">Track</span>
+            Property <span className="text-accent">Atlas</span>
           </span>
         </Link>
 

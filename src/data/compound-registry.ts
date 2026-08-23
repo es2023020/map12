@@ -683,7 +683,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Mixed-use",
     blurb:
       "Business District is a commercial and retail development by M Squared Developments in New Cairo offering premium office and retail spaces.",
-    paymentPlan: "Contact PropTrack advisor for details",
+    paymentPlan: "Contact Property Atlas advisor for details",
     amenities: ["Office spaces", "Retail spaces", "Restaurants", "Parking", "Security"],
     types: ["Office", "Retail"],
     highlights: ["Prime New Cairo commercial", "Modern workspaces"],

@@ -344,7 +344,7 @@ export const developers: Developer[] = Array.from(map.entries())
     logo: logoMap[slug] ?? fallbackLogo(v.name),
     blurb:
       blurbs[v.name] ??
-      `${v.name} — active developer with ${v.count} ${v.count === 1 ? "project" : "projects"} on PropTrack.`,
+      `${v.name} — active developer with ${v.count} ${v.count === 1 ? "project" : "projects"} on Property Atlas.`,
     website: websiteMap[slug],
     foundingYear: foundingYears[slug],
     landBank: landBanks[slug],

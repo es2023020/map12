@@ -1,4 +1,4 @@
-export const BASE_SITE_URL = "https://proptrack1.vercel.app";
+export const BASE_SITE_URL = "https://propertyatlas.vercel.app";
 
 export function formatEGP(amount: number): string {
   if (!amount) return "Price on Request";
@@ -126,7 +126,7 @@ export function buildWebsiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "PropTrack",
+    name: "Property Atlas",
     url: BASE_SITE_URL,
     description: "Egypt's premier real estate compound atlas and property intelligence platform.",
     potentialAction: {
@@ -144,7 +144,7 @@ export function buildOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "PropTrack Egypt",
+    name: "Property Atlas Egypt",
     url: BASE_SITE_URL,
     logo: `${BASE_SITE_URL}/logo.png`,
     description:

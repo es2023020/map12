@@ -28,7 +28,7 @@ import {
 export const Route = createFileRoute("/compare")({
   head: () => ({
     meta: [
-      { title: "Multi-Project Side-by-Side Comparison | PropTrack" },
+      { title: "Multi-Project Side-by-Side Comparison | Property Atlas" },
       {
         name: "description",
         content:
@@ -370,7 +370,7 @@ export function ComparePage() {
   const handleDownloadPDF = () => {
     const originalTitle = document.title;
     const names = validSlots.map((s) => s.comp?.name).join(" vs ");
-    document.title = `PropTrack — Multi-Project Comparison (${names})`;
+    document.title = `Property Atlas — Multi-Project Comparison (${names})`;
     const style = document.createElement("style");
     style.id = "print-only-style";
     style.innerHTML = `

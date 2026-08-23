@@ -30,7 +30,7 @@ export const Route = createFileRoute("/calculator")({
   },
   head: () => ({
     meta: [
-      { title: "Payment Calculator — PropTrack" },
+      { title: "Payment Calculator — Property Atlas" },
       {
         name: "description",
         content:
@@ -675,7 +675,7 @@ function CalculatorPage() {
             </span>
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-                PropTrack Tools
+                Property Atlas Tools
               </div>
               <h1 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-primary flex items-center gap-2">
                 Payment Calculator &amp; Budget Finder
@@ -1202,7 +1202,7 @@ function CalculatorPage() {
               <p className="mt-4 text-[11px] text-muted-foreground leading-relaxed">
                 * Calculations assume 0% interest developer installment plan (standard for Egyptian
                 off-plan real estate). Actual payment plan terms vary by developer and project
-                launch. Contact your PropTrack advisor for exact terms.
+                launch. Contact your Property Atlas advisor for exact terms.
               </p>
             </div>
 

@@ -68,7 +68,7 @@ function AIAssistantPage() {
           lead,
           type: "followup",
           text: `Follow up with ${lead.name} (${daysSinceContact} days inactive). Pitch new releases.`,
-          message: `Hi ${lead.name},\n\nHope you're having a great day! Just checking in to see if you reviewed the project specifications. Let me know if you would like me to compile another option list!\n\nBest,\n${user ? user.name : "your PropTrack partner"}`,
+          message: `Hi ${lead.name},\n\nHope you're having a great day! Just checking in to see if you reviewed the project specifications. Let me know if you would like me to compile another option list!\n\nBest,\n${user ? user.name : "your Property Atlas partner"}`,
         });
       }
 

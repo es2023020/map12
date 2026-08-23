@@ -70,7 +70,7 @@ export const Route = createFileRoute("/map")({
   }),
   head: () => ({
     meta: [
-      { title: "Property Atlas — Interactive Map | PropTrack" },
+      { title: "Property Atlas — Interactive Real Estate Map" },
       {
         name: "description",
         content:

@@ -79,7 +79,7 @@ function ComparePage() {
 
   const handleDownloadPDF = () => {
     const originalTitle = document.title;
-    document.title = `PropTrack Agent Report — ${list.map((c) => c.name).join(" vs ")}`;
+    document.title = `Property Atlas Agent Report — ${list.map((c) => c.name).join(" vs ")}`;
     const style = document.createElement("style");
     style.id = "print-only-style";
     style.innerHTML = `

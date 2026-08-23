@@ -160,7 +160,7 @@ function DevPage() {
               <h1 className="font-display text-3xl md:text-4xl font-semibold tracking-tight">
                 {d.name}
               </h1>
-              <p className="mt-1 text-primary-foreground/70">{d.count} projects on PropTrack</p>
+              <p className="mt-1 text-primary-foreground/70">{d.count} projects on Property Atlas</p>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-primary-foreground/80">
                 {d.blurb}
               </p>

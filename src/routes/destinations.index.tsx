@@ -7,12 +7,12 @@ import { MapPin, Waves, Building2 } from "lucide-react";
 export const Route = createFileRoute("/destinations/")({
   head: () => ({
     meta: [
-      { title: "Destinations — PropTrack" },
+      { title: "Destinations — Property Atlas" },
       {
         name: "description",
-        content: "Every coastal zone and Cairo district covered by PropTrack.",
+        content: "Every coastal zone and Cairo district covered by Property Atlas.",
       },
-      { property: "og:title", content: "Destinations — PropTrack" },
+      { property: "og:title", content: "Destinations — Property Atlas" },
       {
         property: "og:description",
         content:

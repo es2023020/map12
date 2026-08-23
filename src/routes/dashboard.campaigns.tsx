@@ -378,7 +378,7 @@ function CampaignsPage() {
     const greeting = greetings[idx % greetings.length];
     const signoff = signoffs[idx % signoffs.length];
 
-    const brokerName = user?.name || "PropTrack Broker";
+    const brokerName = user?.name || "Property Atlas Broker";
     let text = body
       .replace(/^Hello|^Hi|^Dear|^Greetings|^Good day/gi, greeting)
       .replace(/Best regards|Warmly|Best|Sincerely|Cheers/gi, signoff)
@@ -438,8 +438,8 @@ function CampaignsPage() {
     const success = incrementWhatsAppSends();
     if (!success) return;
 
-    const brokerName = user?.name || "PropTrack Broker";
-    const msg = `Hello!\n\nI wanted to share this listing with you:\n\n*${comp.name}*\nDeveloper: ${comp.developer}\nLocation: ${comp.destination.replace(/-/g, " ").toUpperCase()}\nStarting Price: EGP ${comp.priceFrom}M\nStatus: ${comp.status}\n\nFull Facts & Brochure:\nhttps://proptrack.eg/projects/${comp.slug}\n\nBest regards,\n${brokerName}`;
+    const brokerName = user?.name || "Property Atlas Broker";
+    const msg = `Hello!\n\nI wanted to share this listing with you:\n\n*${comp.name}*\nDeveloper: ${comp.developer}\nLocation: ${comp.destination.replace(/-/g, " ").toUpperCase()}\nStarting Price: EGP ${comp.priceFrom}M\nStatus: ${comp.status}\n\nFull Facts & Brochure:\nhttps://propertyatlas.eg/projects/${comp.slug}\n\nBest regards,\n${brokerName}`;
     openWhatsAppUrl(`https://web.whatsapp.com/send?text=${encodeURIComponent(msg)}`);
   };
 

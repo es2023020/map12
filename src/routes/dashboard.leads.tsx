@@ -108,7 +108,7 @@ function LeadsPage() {
     templateType: "welcome" | "followup" | "offer",
     customText?: string,
   ) => {
-    const brokerName = user ? user.name : "your PropTrack broker partner";
+    const brokerName = user ? user.name : "your Property Atlas broker partner";
     const compoundName = lead.interest ? lead.interest.toUpperCase() : "your preferred project";
 
     if (customText) {
@@ -118,7 +118,7 @@ function LeadsPage() {
 
     if (templateType === "welcome") {
       setCustomMsg(
-        `Hello ${lead.name},\n\nThis is ${brokerName} from PropTrack. I noticed your interest in ${compoundName}. I have prepared the latest exclusive availability and pricing brochures for you. Let me know when you are free for a brief call!\n\nBest regards,\n${brokerName}`,
+        `Hello ${lead.name},\n\nThis is ${brokerName} from Property Atlas. I noticed your interest in ${compoundName}. I have prepared the latest exclusive availability and pricing brochures for you. Let me know when you are free for a brief call!\n\nBest regards,\n${brokerName}`,
       );
     } else if (templateType === "followup") {
       setCustomMsg(
@@ -237,9 +237,9 @@ function LeadsPage() {
       meetingType === "Google Meet" ? "Google Meet Link (Auto)" : "Compound Project Site Location";
 
     // Personalize calendar invite with connected Gmail details
-    const organizerName = user ? user.name : "PropTrack Broker";
+    const organizerName = user ? user.name : "Property Atlas Broker";
     const organizerEmail = user ? user.email : "";
-    const detailsStr = `Organizer: ${organizerName} (${organizerEmail})\n\nViewing presentation compiled via PropTrack workspace.\nClient name: ${lead.name}\nClient budget: EGP ${lead.budget}M.\nClient interest: ${lead.interest || "General"}.`;
+    const detailsStr = `Organizer: ${organizerName} (${organizerEmail})\n\nViewing presentation compiled via Property Atlas workspace.\nClient name: ${lead.name}\nClient budget: EGP ${lead.budget}M.\nClient interest: ${lead.interest || "General"}.`;
 
     // Construct URL for Google Calendar with attendee/src parameters
     let calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(meetingTitle)}&dates=${startStr}/${endStr}&details=${encodeURIComponent(detailsStr)}&location=${encodeURIComponent(locationStr)}`;

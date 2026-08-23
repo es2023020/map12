@@ -7,9 +7,9 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 lg:grid-cols-4 lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="PropTrack" className="h-10 w-10 object-contain" />
+            <img src="/logo.png" alt="Property Atlas" className="h-10 w-10 object-contain" />
             <div className="font-display text-2xl font-semibold">
-              Prop<span className="text-accent">Track</span>
+              Property <span className="text-accent">Atlas</span>
             </div>
           </div>
           <p className="mt-3 max-w-xs text-sm text-primary-foreground/70">
@@ -48,7 +48,7 @@ export function Footer() {
         />
       </div>
       <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-primary-foreground/60 lg:px-8">
-        © {new Date().getFullYear()} PropTrack — Built for the Egyptian property market.
+        © {new Date().getFullYear()} Property Atlas — Built for the Egyptian property market.
       </div>
     </footer>
   );

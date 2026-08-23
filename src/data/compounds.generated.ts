@@ -2210,7 +2210,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/business-district/9.jpg"
     ],
     "blurb": "Business District is a commercial and retail development by M Squared Developments in New Cairo offering premium office and retail spaces.",
-    "paymentPlan": "Contact PropTrack advisor for details",
+    "paymentPlan": "Contact Property Atlas advisor for details",
     "areaSize": "18 feddan",
     "unitSizes": "140–220 m²",
     "type": "Mixed-use",

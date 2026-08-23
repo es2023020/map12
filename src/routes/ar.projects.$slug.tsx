@@ -101,7 +101,7 @@ function ArabicCompoundPage() {
     name: c.developer || "Unknown Developer",
     logo: `https://ui-avatars.com/api/?background=1f3a5f&color=fff&bold=true&size=128&name=${encodeURIComponent(c.developer || "D")}`,
     count: 1,
-    blurb: `${c.developer} is an active real estate developer with projects tracked on PropTrack.`,
+    blurb: `${c.developer} is an active real estate developer with projects tracked on Property Atlas.`,
     website: "",
   };
   const related = compoundsByDestination(c.destination)

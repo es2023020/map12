@@ -16,7 +16,7 @@ const agencyBenefits = [
   {
     icon: Users,
     title: "Multi-Seat Team Access",
-    desc: "Give every broker in your agency their own PropTrack account under a single agency subscription, with shared lead pools and documents.",
+    desc: "Give every broker in your agency their own Property Atlas account under a single agency subscription, with shared lead pools and documents.",
   },
   {
     icon: BarChart2,
@@ -129,7 +129,7 @@ function AgencyPartnershipPage() {
             One platform for your entire brokerage team
           </h1>
           <p className="mt-5 text-lg text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            PropTrack Agency gives your whole team shared access to Egypt's best real estate
+            Property Atlas Agency gives your whole team shared access to Egypt's best real estate
             intelligence tools — with centralized lead management, analytics, and WhatsApp
             campaigns.
           </p>
@@ -252,7 +252,7 @@ function AgencyPartnershipPage() {
           </h2>
           <p className="text-primary-foreground/80 text-sm mb-6 max-w-md mx-auto">
             Contact our agency team to discuss seats, pricing, and onboarding your entire brokerage
-            onto PropTrack.
+            onto Property Atlas.
           </p>
           <Link to="/contact">
             <Button className="rounded-full bg-white text-primary hover:bg-white/90 font-semibold">

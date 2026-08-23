@@ -32,11 +32,11 @@ import {
 export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
-      { title: "Broker Workspace — PropTrack" },
+      { title: "Broker Workspace — Property Atlas" },
       {
         name: "description",
         content:
-          "Your PropTrack Notion workspace — lead CRM, documents library, targets and integrations.",
+          "Your Property Atlas Notion workspace — lead CRM, documents library, targets and integrations.",
       },
     ],
   }),

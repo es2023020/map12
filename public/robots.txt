@@ -7,4 +7,4 @@ Disallow: /auth/
 Disallow: /dashboard
 Disallow: /dashboard/
 
-Sitemap: https://proptrack1.vercel.app/sitemap.xml
+Sitemap: https://propertyatlas.vercel.app/sitemap.xml

@@ -59,7 +59,7 @@ const listingTiers = [
       "Priority new launch announcements",
       "WhatsApp broadcast to broker network",
       "Detailed broker engagement analytics",
-      "Dedicated PropTrack account manager",
+      "Dedicated Property Atlas account manager",
     ],
   },
   {
@@ -99,7 +99,7 @@ function DeveloperPartnershipPage() {
             Put your project in front of every top Egyptian broker
           </h1>
           <p className="mt-5 text-lg text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            PropTrack showcases your development alongside 328+ compounds across Cairo, North Coast, New Capital, and all of Egypt.
+            Property Atlas showcases your development alongside 328+ compounds across Cairo, North Coast, New Capital, and all of Egypt.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link to="/contact">
@@ -115,7 +115,7 @@ function DeveloperPartnershipPage() {
         {/* Benefits */}
         <section>
           <h2 className="font-display text-3xl font-bold text-primary text-center mb-10">
-            Why list on PropTrack?
+            Why list on Property Atlas?
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {benefits.map((b) => (

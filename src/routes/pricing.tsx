@@ -7,11 +7,11 @@ import { PRICING_CONFIG } from "@/data/pricing-config";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing Plans — PropTrack" },
+      { title: "Pricing Plans — Property Atlas" },
       {
         name: "description",
         content:
-          "PropTrack broker subscription plans for individual agents and brokerage teams operating in Egypt's primary property market.",
+          "Property Atlas broker subscription plans for individual agents and brokerage teams operating in Egypt's primary property market.",
       },
     ],
   }),

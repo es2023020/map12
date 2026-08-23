@@ -10,14 +10,14 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/ar/")({
   head: () => ({
     meta: [
-      { title: "PropTrack مصر — محرك بحث وعروض كمبوندات الساحل والتجمع وزايد" },
+      { title: "Property Atlas مصر — محرك بحث وعروض كمبوندات الساحل والتجمع وزايد" },
       {
         name: "description",
         content:
           "استعرض كل كمبوندات الساحل الشمالي، New Cairo، و Sheikh Zayed على الخريطة مباشرة. قارن الاسعار وخطة السداد واستلام 2026.",
       },
       { name: "robots", content: "index, follow" },
-      { property: "og:title", content: "PropTrack مصر — دليلك لأفضل الكمبوندات والعقارات" },
+      { property: "og:title", content: "Property Atlas مصر — دليلك لأفضل الكمبوندات والعقارات" },
       {
         property: "og:description",
         content:

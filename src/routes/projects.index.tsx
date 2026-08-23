@@ -20,11 +20,11 @@ export const Route = createFileRoute("/projects/")({
   }),
   head: () => ({
     meta: [
-      { title: "All Projects — PropTrack" },
+      { title: "All Projects — Property Atlas" },
       {
         name: "description",
         content:
-          "Browse every compound in the PropTrack database. Filter by destination, developer, price and delivery year.",
+          "Browse every compound in the Property Atlas database. Filter by destination, developer, price and delivery year.",
       },
     ],
   }),

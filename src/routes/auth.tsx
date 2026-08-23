@@ -10,8 +10,8 @@ import { Compass, Sparkles, AlertCircle, CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign in — PropTrack" },
-      { name: "description", content: "Sign in or sign up to your PropTrack broker workspace." },
+      { title: "Sign in — Property Atlas" },
+      { name: "description", content: "Sign in or sign up to your Property Atlas broker workspace." },
     ],
   }),
   component: AuthPage,
@@ -44,7 +44,7 @@ function AuthPage() {
         setSuccessMsg("Success! Redirecting to workspace...");
         setTimeout(() => navigate({ to: "/dashboard" }), 1000);
       } else {
-        setErrorMsg("Invalid credentials. Try admin@proptrack.com / Team1");
+        setErrorMsg("Invalid credentials. Try admin@propertyatlas.com / Team1");
       }
     } else {
       if (!name || !password) {
@@ -230,7 +230,7 @@ function AuthPage() {
               <div className="text-center text-xs text-muted-foreground mt-3">
                 {mode === "signin" ? (
                   <span>
-                    Demo Admin login: <strong>admin@proptrack.com</strong> / <strong>Team1</strong>
+                    Demo Admin login: <strong>admin@propertyatlas.com</strong> / <strong>Team1</strong>
                   </span>
                 ) : (
                   <span>Demo databases store sessions locally in this browser.</span>

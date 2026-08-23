@@ -10,7 +10,7 @@ import type { AnalyticsEvent } from "@/lib/analytics";
 // Session-scoped login: on every page load we check if a browser session is still active.
 // sessionStorage is cleared when the browser tab/window is fully closed, so this
 // guarantees the user must re-login after closing the app.
-const SESSION_KEY = "proptrack-session-active";
+const SESSION_KEY = "property-atlas-session-active";
 const isSessionActive = () =>
   typeof sessionStorage !== "undefined" && sessionStorage.getItem(SESSION_KEY) === "1";
 const markSessionActive = () => {
@@ -610,7 +610,7 @@ export const useStore = create<State>()(
             id: "a1",
             actor: "System",
             entity: "Database",
-            action: "Initialized PropTrack Command Center databases",
+            action: "Initialized Property Atlas Command Center databases",
             timestamp: Date.now() - 3600000 * 2,
           },
         ],
@@ -662,7 +662,7 @@ export const useStore = create<State>()(
             const savedData = get().userData?.[email.toLowerCase()];
 
             // Check if this is a seed admin account (pre-populated with demo data only on first ever login)
-            const isSeedAdmin = ["admin@proptrack.com", "elsayedshoeip70@gmail.com"].includes(
+            const isSeedAdmin = ["admin@propertyatlas.com", "admin@proptrack.com", "elsayedshoeip70@gmail.com"].includes(
               email.toLowerCase(),
             );
             const isFirstLogin = !savedData;
@@ -1866,7 +1866,7 @@ export const useStore = create<State>()(
       };
     },
     {
-      name: "proptrack-broker",
+      name: "property-atlas-broker",
       // Only persist lightweight user-specific data — never the large static lists
       // that are already loaded from source files. This prevents localStorage quota errors.
       partialize: (state) => ({

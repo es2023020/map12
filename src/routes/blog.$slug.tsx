@@ -29,10 +29,10 @@ export const Route = createFileRoute("/blog/$slug")({
       },
       publisher: {
         "@type": "Organization",
-        name: "PropTrack",
+        name: "Property Atlas",
         logo: {
           "@type": "ImageObject",
-          url: "https://proptrack1.vercel.app/logo.png",
+          url: "https://propertyatlas.vercel.app/logo.png",
         },
       },
     };
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/blog/$slug")({
 
     return {
       meta: [
-        { title: `${loaderData.title} | PropTrack Journal` },
+        { title: `${loaderData.title} | Property Atlas Journal` },
         { name: "description", content: loaderData.excerpt },
         { name: "robots", content: "index, follow" },
         { property: "og:title", content: loaderData.title },

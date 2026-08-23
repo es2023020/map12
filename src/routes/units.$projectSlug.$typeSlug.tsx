@@ -75,7 +75,7 @@ export const Route = createFileRoute("/units/$projectSlug/$typeSlug")({
     meta: loaderData
       ? [
           {
-            title: `${loaderData.breakdown.type}${loaderData.breakdown.beds ? ` ${loaderData.breakdown.beds}BR` : ""} — ${loaderData.compound.name} | PropTrack`,
+            title: `${loaderData.breakdown.type}${loaderData.breakdown.beds ? ` ${loaderData.breakdown.beds}BR` : ""} — ${loaderData.compound.name} | Property Atlas`,
           },
           {
             name: "description",

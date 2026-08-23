@@ -305,7 +305,7 @@ function CompoundPage() {
     name: c.developer || "Unknown Developer",
     logo: `https://ui-avatars.com/api/?background=1f3a5f&color=fff&bold=true&size=128&name=${encodeURIComponent(c.developer || "D")}`,
     count: 1,
-    blurb: `${c.developer} is an active real estate developer with projects tracked on PropTrack.`,
+    blurb: `${c.developer} is an active real estate developer with projects tracked on Property Atlas.`,
     website: "",
   };
   const isFav = useStore((s) => s.favorites.includes(c.slug));
@@ -1122,7 +1122,7 @@ function CompoundPage() {
                 {livePaymentPlans.length > 0 ? livePaymentPlans.join(" / ") : c.paymentPlan}
               </div>
               <p className="mt-3 text-sm text-muted-foreground">
-                Bespoke plans available — contact your PropTrack advisor for current launch offers
+                Bespoke plans available — contact your Property Atlas advisor for current launch offers
                 and exclusive discounts.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">

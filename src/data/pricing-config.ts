@@ -1,5 +1,5 @@
 /**
- * Configurable pricing variables for PropTrack.
+ * Configurable pricing variables for Property Atlas.
  * These are used to determine user billing, invoices, and payment pages.
  */
 export const PRICING_CONFIG = {

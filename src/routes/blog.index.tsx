@@ -7,7 +7,7 @@ import { BookOpen, Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 export const Route = createFileRoute("/blog/")({
   head: () => {
     const canonicalUrl = getCanonicalUrl("/blog");
-    const pageTitle = "Real Estate Blog & Market Intelligence Guides | PropTrack";
+    const pageTitle = "Real Estate Blog & Market Intelligence Guides | Property Atlas";
     const metaDesc =
       "Expert real estate analysis, off-plan compound reviews, location comparison guides, and payment plan strategies for Egyptian property buyers.";
 
@@ -47,7 +47,7 @@ function BlogIndexPage() {
             <BookOpen className="h-4 w-4" /> Market Intelligence & Insights
           </div>
           <h1 className="font-display text-3xl sm:text-5xl font-bold tracking-tight">
-            PropTrack Real Estate Journal
+            Property Atlas Real Estate Journal
           </h1>
           <p className="mt-3 text-sm sm:text-lg text-primary-foreground/80 max-w-2xl leading-relaxed">
             Data-backed investment analysis, compound comparisons, and financial breakdowns for

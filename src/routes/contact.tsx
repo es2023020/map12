@@ -8,11 +8,11 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact PropTrack — Get in Touch" },
+      { title: "Contact Property Atlas — Get in Touch" },
       {
         name: "description",
         content:
-          "Reach out to PropTrack for sales inquiries, broker support, developer partnerships, or agency pricing.",
+          "Reach out to Property Atlas for sales inquiries, broker support, developer partnerships, or agency pricing.",
       },
     ],
   }),
@@ -33,8 +33,8 @@ const contactMethods = [
     icon: Mail,
     title: "Email Us",
     desc: "We respond to all inquiries within 24 hours.",
-    action: "support@proptrack.eg",
-    href: "mailto:support@proptrack.eg",
+    action: "support@propertyatlas.eg",
+    href: "mailto:support@propertyatlas.eg",
     color: "text-blue-500",
     bg: "bg-blue-500/10",
   },
@@ -134,7 +134,7 @@ function ContactPage() {
             <div className="rounded-2xl border border-border bg-secondary/30 p-5">
               <h3 className="font-semibold text-primary text-sm mb-2">💳 Subscription Payments</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                All PropTrack subscriptions are paid via{" "}
+                All Property Atlas subscriptions are paid via{" "}
                 <strong className="text-primary">ADIB bank transfer</strong>. After registering and
                 selecting your plan, you'll receive full payment instructions in your dashboard's
                 Billing section.

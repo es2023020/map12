@@ -1,8 +1,8 @@
 // Auto-generated initial users seed file.
 export const usersGenerated: any[] = [
   {
-    email: "admin@proptrack.com",
-    name: "PropTrack Admin",
+    email: "admin@propertyatlas.com",
+    name: "Property Atlas Admin",
     password: "Team1",
     tier: "BrokerageAdmin",
     whatsappSendsCount: 0,

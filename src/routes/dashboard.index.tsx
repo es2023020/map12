@@ -1209,7 +1209,7 @@ function DashboardOverview() {
                     <Eye className="h-3.5 w-3.5" />
                   </button>
                   <a
-                    href={`https://web.whatsapp.com/send?text=${encodeURIComponent(`Check out this document: ${doc.name} (${doc.category}) — available in PropTrack broker library.`)}`}
+                    href={`https://web.whatsapp.com/send?text=${encodeURIComponent(`Check out this document: ${doc.name} (${doc.category}) — available in Property Atlas broker library.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-green-500/10 text-green-600 hover:bg-green-500 hover:text-white transition-all"
@@ -1268,7 +1268,7 @@ function DashboardOverview() {
                       <Eye className="h-3 w-3" /> Preview
                     </button>
                     <a
-                      href={`https://web.whatsapp.com/send?text=${encodeURIComponent(`Check out this developer company profile: ${dev.clean_name} — ${window?.location?.origin || "https://proptrack.eg"}${dev.path}`)}`}
+                      href={`https://web.whatsapp.com/send?text=${encodeURIComponent(`Check out this developer company profile: ${dev.clean_name} — ${window?.location?.origin || "https://propertyatlas.eg"}${dev.path}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex h-6 items-center gap-1 rounded-lg bg-green-500/10 text-green-600 hover:bg-green-500 hover:text-white px-2 text-[9px] font-bold transition-all"
@@ -1517,7 +1517,7 @@ function DashboardOverview() {
           <div className="flex items-center justify-between border-b border-border pb-3 mb-3">
             <div>
               <span className="text-[10px] font-bold text-muted-foreground uppercase">
-                PropTrack PDF Document Viewer
+                Property Atlas PDF Document Viewer
               </span>
               <h3 className="font-display font-bold text-primary text-sm truncate max-w-md">
                 {previewPdfTitle}

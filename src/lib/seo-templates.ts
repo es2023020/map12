@@ -138,7 +138,7 @@ export function getDestinationSEO(d: DestinationSEOData, lang: Language = "en") 
   } else if (filterKey.startsWith("under-")) {
     const match = filterKey.match(/under-(\d+)m/);
     const limit = match ? match[1] : "6";
-    title = `Properties Under ${limit}M EGP in ${d.name} | PropTrack`;
+    title = `Properties Under ${limit}M EGP in ${d.name} | Property Atlas`;
     metaDesc = `Browse real estate inventory priced under ${limit} Million EGP in ${d.name}. Compare payment plans and unit layouts.`;
     h1 = `Properties Under ${limit}M EGP in ${d.name}`;
   }

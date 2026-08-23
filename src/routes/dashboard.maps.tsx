@@ -8,10 +8,10 @@ import { Lock, Sparkles, ArrowLeft } from "lucide-react";
 export const Route = createFileRoute("/dashboard/maps")({
   head: () => ({
     meta: [
-      { title: "Field Atlas — PropTrack" },
+      { title: "Field Atlas — Property Atlas" },
       {
         name: "description",
-        content: "Interactive field atlas and compound maps library for PropTrack agents.",
+        content: "Interactive field atlas and compound maps library for Property Atlas agents.",
       },
     ],
   }),

@@ -6,11 +6,11 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About PropTrack — Egypt Real Estate Intelligence" },
+      { title: "About Property Atlas — Egypt Real Estate Intelligence" },
       {
         name: "description",
         content:
-          "PropTrack is Egypt's real estate intelligence platform, mapping 328+ compounds across 26 prime destinations for real estate professionals.",
+          "Property Atlas is Egypt's real estate intelligence platform, mapping 328+ compounds across 26 prime destinations for real estate professionals.",
       },
     ],
   }),
@@ -42,7 +42,7 @@ const values = [
   },
   {
     title: "Direct Market Insights",
-    desc: "PropTrack provides direct visibility into active compound inventories, launch price points, delivery timelines, and unit breakdowns.",
+    desc: "Property Atlas provides direct visibility into active compound inventories, launch price points, delivery timelines, and unit breakdowns.",
     icon: "🏆",
   },
 ];
@@ -50,7 +50,7 @@ const values = [
 const timeline = [
   {
     year: "2026",
-    title: "PropTrack Platform Launch",
+    title: "Property Atlas Platform Launch",
     desc: "Built in 2026 to map Egypt's real estate market — cataloging 328+ compounds across 26 prime destinations.",
   },
   {
@@ -70,7 +70,7 @@ function AboutPage() {
             Built for Egypt's Real Estate Market
           </h1>
           <p className="mt-5 text-lg text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            PropTrack is the real-estate intelligence platform mapping 328+ compounds across 26 prime Egyptian destinations — giving professionals instant access to project data, availability, and pricing.
+            Property Atlas is the real-estate intelligence platform mapping 328+ compounds across 26 prime Egyptian destinations — giving professionals instant access to project data, availability, and pricing.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link to="/map" search={{ destination: "", dev: "", q: "" }}>
@@ -109,7 +109,7 @@ function AboutPage() {
         <section className="text-center max-w-3xl mx-auto">
           <h2 className="font-display text-3xl font-bold text-primary mb-4">Our Mission</h2>
           <p className="text-foreground/70 leading-relaxed text-base">
-            Egypt's real estate market is one of the fastest-growing in the region — yet project information has traditionally been fragmented across offline spreadsheets and launch PDFs. PropTrack was built in 2026 to solve this by creating a single, unified map and intelligence platform for 328+ compounds.
+            Egypt's real estate market is one of the fastest-growing in the region — yet project information has traditionally been fragmented across offline spreadsheets and launch PDFs. Property Atlas was built in 2026 to solve this by creating a single, unified map and intelligence platform for 328+ compounds.
           </p>
         </section>
 

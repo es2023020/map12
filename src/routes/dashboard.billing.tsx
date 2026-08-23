@@ -103,7 +103,7 @@ const agencyPlans = [
     name: "Agency Enterprise",
     price: "EGP 80",
     period: "per agent / month (100+ seats)",
-    description: "PropTrack API & full customization suite",
+    description: "Property Atlas API & full customization suite",
     features: [
       "EGP 80-90 per seat for major broker groups",
       "Dedicated account manager & support SLA",
@@ -132,7 +132,7 @@ const developerPlans = [
     name: "Premium Project Slot",
     price: "EGP 45,000",
     period: "per day",
-    description: "Top-tier prominence on PropTrack map",
+    description: "Top-tier prominence on Property Atlas map",
     features: [
       "Animated featured pin style on 17 areas map",
       "Include project video brochures & gallery assets",
@@ -331,7 +331,7 @@ function BillingPage() {
           <div className="space-y-3 pt-2 text-xs">
             <div className="flex items-center justify-between border-b border-border/40 pb-2">
               <span className="text-muted-foreground font-semibold">Beneficiary Name</span>
-              <span className="font-bold text-primary">PropTrack Gated Solutions</span>
+              <span className="font-bold text-primary">Property Atlas Gated Solutions</span>
             </div>
             <div className="flex items-center justify-between border-b border-border/40 pb-2">
               <span className="text-muted-foreground font-semibold">Bank Name</span>
@@ -470,7 +470,7 @@ function BillingPage() {
         </p>
         <div className="grid gap-2 sm:grid-cols-2">
           {[
-            { label: "Beneficiary Name", val: "PropTrack Gated Solutions" },
+            { label: "Beneficiary Name", val: "Property Atlas Gated Solutions" },
             { label: "Bank", val: "Abu Dhabi Islamic Bank (ADIB)" },
             { label: "Account Number", val: "100 2382 1202 001" },
             { label: "IBAN", val: "EG49 0004 0100 2382 1202 0010 021" },

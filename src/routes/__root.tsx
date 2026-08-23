@@ -15,9 +15,9 @@ import { Toaster } from "@/components/ui/sonner";
 
 import appCss from "../styles.css?url";
 
-const SITE_NAME = "PropTrack";
+const SITE_NAME = "Property Atlas";
 const SITE_DESCRIPTION =
-  "Egypt Prop Insights is a real estate intelligence platform for Egyptian brokers.";
+  "Property Atlas is a real estate intelligence platform for Egyptian brokers.";
 
 function NotFoundComponent() {
   return (
@@ -100,10 +100,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "/logo.png" },
     ],
     links: [
-      { rel: "canonical", href: "https://proptrack1.vercel.app" },
-      { rel: "alternate", hrefLang: "en", href: "https://proptrack1.vercel.app" },
-      { rel: "alternate", hrefLang: "ar", href: "https://proptrack1.vercel.app" },
-      { rel: "alternate", hrefLang: "x-default", href: "https://proptrack1.vercel.app" },
+      { rel: "canonical", href: "https://propertyatlas.vercel.app" },
+      { rel: "alternate", hrefLang: "en", href: "https://propertyatlas.vercel.app" },
+      { rel: "alternate", hrefLang: "ar", href: "https://propertyatlas.vercel.app" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://propertyatlas.vercel.app" },
       {
         rel: "stylesheet",
         href: appCss,
@@ -154,8 +154,9 @@ function RootComponent() {
     // One-time cleanup: if the old localStorage entry is bloated (>500 KB),
     // remove it so the app can rehydrate cleanly with the new partialize config.
     try {
-      const raw = localStorage.getItem("proptrack-broker");
+      const raw = localStorage.getItem("property-atlas-broker") || localStorage.getItem("proptrack-broker");
       if (raw && raw.length > 500_000) {
+        localStorage.removeItem("property-atlas-broker");
         localStorage.removeItem("proptrack-broker");
         console.info("[store] Cleared oversized localStorage entry — will rehydrate fresh.");
       }

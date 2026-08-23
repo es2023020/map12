@@ -88,7 +88,7 @@ function getActiveAvailability(): ProjectAvailability[] {
   let activeList = staticAvailability;
   if (typeof window !== "undefined") {
     try {
-      const storeStr = localStorage.getItem("proptrack-broker");
+      const storeStr = localStorage.getItem("property-atlas-broker") || localStorage.getItem("proptrack-broker");
       if (storeStr) {
         const parsed = JSON.parse(storeStr);
         if (parsed?.state?.availabilityList?.length) {

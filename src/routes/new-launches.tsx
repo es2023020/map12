@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/new-launches")({
   head: () => ({
     meta: [
-      { title: "Exclusive New Launches 2026 — PropTrack" },
+      { title: "Exclusive New Launches 2026 — Property Atlas" },
       {
         name: "description",
         content: "Egypt's most anticipated real estate developments, updated in real time.",

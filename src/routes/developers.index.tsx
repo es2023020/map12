@@ -41,8 +41,8 @@ function LogoBadge({
 export const Route = createFileRoute("/developers/")({
   head: () => ({
     meta: [
-      { title: "Developers — PropTrack" },
-      { name: "description", content: "All Egyptian real-estate developers tracked by PropTrack." },
+      { title: "Developers — Property Atlas" },
+      { name: "description", content: "All Egyptian real-estate developers tracked by Property Atlas." },
     ],
   }),
   component: DevelopersPage,

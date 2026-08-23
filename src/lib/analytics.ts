@@ -1,6 +1,6 @@
 /**
  * analytics.ts
- * Scoring engine for PropTrack Insight Dashboard.
+ * Scoring engine for Property Atlas Insight Dashboard.
  *
  * Scoring formula (per project):
  *   View      = +1

@@ -85,7 +85,7 @@ This directory contains the property availability spreadsheets and raw source fi
 
 ## Directory Structure
 
-* **\`projects/\`**: Contains standard project-level Excel sheets structured for the PropTrack database.
+* **\`projects/\`**: Contains standard project-level Excel sheets structured for the Property Atlas database.
   * These spreadsheets are organized in subdirectories by developer slug (e.g. \`projects/al-marasem/fifth-square.xlsx\`).
   * If you add a new project, simply place its \`.xlsx\` file inside the corresponding developer folder (or in the root of \`projects/\`) and run \`npm run import-availability\`.
 * **\`raw_source_files/\`**: Contains raw, non-standard Excel sheets, brochures, PDFs, and images provided directly by developers. Kept for reference.

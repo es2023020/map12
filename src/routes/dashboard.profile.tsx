@@ -186,7 +186,7 @@ function ProfilePage() {
                   <Mail className="h-3.5 w-3.5" /> Email Address (Primary)
                 </label>
                 <div className="mt-1.5 font-semibold text-primary text-sm bg-secondary/30 p-2.5 rounded-xl border border-border/60">
-                  {user?.email || "guest@proptrack.eg"}
+                  {user?.email || "guest@propertyatlas.eg"}
                 </div>
                 <p className="text-[9px] text-muted-foreground mt-1">
                   Email address cannot be changed. Contact support to transfer workspace ownership.
@@ -339,7 +339,7 @@ function ProfilePage() {
               onClick={handleSignOut}
               className="w-full rounded-xl border border-destructive/20 hover:bg-destructive/5 text-destructive font-bold text-xs py-2.5 flex items-center justify-center gap-2 transition-all"
             >
-              <LogOut className="h-4 w-4" /> Sign Out from PropTrack
+              <LogOut className="h-4 w-4" /> Sign Out from Property Atlas
             </button>
           </div>
         </div>

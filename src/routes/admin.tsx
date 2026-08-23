@@ -59,7 +59,7 @@ export const Route = createFileRoute("/admin")({
   },
   head: () => ({
     meta: [
-      { title: "Page Not Found — PropTrack" },
+      { title: "Page Not Found — Property Atlas" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -172,7 +172,7 @@ function AdminPage() {
               <div className="mx-auto h-12 w-12 bg-accent/15 rounded-2xl flex items-center justify-center text-accent shadow-soft mb-3">
                 <ShieldCheck className="h-6 w-6 stroke-[2.5]" />
               </div>
-              <h2 className="font-display text-2xl font-bold text-primary">PropTrack Admin Gate</h2>
+              <h2 className="font-display text-2xl font-bold text-primary">Property Atlas Admin Gate</h2>
               <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
                 Super-Admin Control layer access panel. Please enter credentials to proceed.
               </p>
@@ -283,7 +283,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
             id: "a1",
             actor: "System",
             entity: "Database",
-            action: "Initialized PropTrack Command Center databases",
+            action: "Initialized Property Atlas Command Center databases",
             timestamp: Date.now(),
           },
         ],
@@ -3879,7 +3879,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                               const url = URL.createObjectURL(blob);
                               const link = document.createElement("a");
                               link.href = url;
-                              link.download = `proptrack_backup_${new Date().toISOString().split("T")[0]}.json`;
+                              link.download = `property_atlas_backup_${new Date().toISOString().split("T")[0]}.json`;
                               document.body.appendChild(link);
                               link.click();
                               document.body.removeChild(link);

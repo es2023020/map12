@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
       "Comprehensive advisor breakdown of Ras El Hekma, Sidi Heneish, and Sidi Abd El Rahman off-plan luxury compound launches, expected ROI, and payment terms.",
     category: "Market Guide",
     author: {
-      name: "PropTrack Advisory Team",
+      name: "Property Atlas Advisory Team",
       role: "Real Estate Intelligence",
       avatar: "/logo.png",
     },
@@ -71,7 +71,7 @@ Most tier-1 developers on the North Coast now offer:
       "Detailed comparative analysis of price per sqm trends, infrastructure developments, compound densities, and rental yields between Fifth Settlement and West Cairo.",
     category: "Comparison Analysis",
     author: {
-      name: "PropTrack Advisory Team",
+      name: "Property Atlas Advisory Team",
       role: "Market Analyst",
       avatar: "/logo.png",
     },
@@ -123,7 +123,7 @@ Sheikh Zayed offers an elevated, boutique residential experience with lower dens
       "Everything you need to know about down payments, delivery payments, maintenance deposits, interest-free installments, and cash discount calculation.",
     category: "Financial Guide",
     author: {
-      name: "PropTrack Advisory Team",
+      name: "Property Atlas Advisory Team",
       role: "Financial Advisory",
       avatar: "/logo.png",
     },
