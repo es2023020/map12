@@ -1,0 +1,34 @@
+[
+  {
+    "id": "zed-east-1",
+    "unitNo": "U-1",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 90,
+    "view": "Landscape / City",
+    "priceEGP": 12800000,
+    "status": "Available",
+    "slug": "zed-east",
+    "unit_id": "ZE-CSR-1BR",
+    "cluster": "CSR Building A&B",
+    "area_note": "86-93 sqm",
+    "delivery_note": "Phase 1 Q1 2026",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
+  },
+  {
+    "id": "zed-east-6",
+    "unitNo": "U-6",
+    "beds": 1,
+    "finishing": "Fully Finished & Serviced",
+    "areaSqm": 89,
+    "view": "Landscape / City",
+    "priceEGP": 11700000,
+    "status": "Available",
+    "slug": "zed-east",
+    "unit_id": "ZE-CSR-SER-1BR",
+    "cluster": "CSR Building C&D (Serviced)",
+    "area_note": "86-92 sqm",
+    "delivery_note": "Serviced Apartments",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-west-18",
+    "unitNo": "U-18",
+    "beds": 4,
+    "finishing": "Finished with ACs",
+    "areaSqm": 232,
+    "view": "Landscape / City",
+    "priceEGP": 28000000,
+    "status": "Available",
+    "slug": "solana-west",
+    "unit_id": "SW-4BR-PENT",
+    "cluster": "Multiple Family (4 BR Penthouse)",
+    "area_note": "232 sqm + Roof 60 sqm",
+    "delivery_note": "Delivery 2027",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
+  }
+]

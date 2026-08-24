@@ -1,0 +1,50 @@
+[
+  {
+    "id": "karmell-202",
+    "unitNo": "U-202",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 384,
+    "view": "Landscape & City View",
+    "priceEGP": 84365000,
+    "status": "Available",
+    "slug": "karmell",
+    "unit_id": "464 Acre-Karmell 04-10",
+    "cluster": "Karmell 04",
+    "area_note": "Floor: G+1+R | Roof: 93 sqm",
+    "delivery_note": "2028-2029",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
+    "id": "karmell-203",
+    "unitNo": "U-203",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 384,
+    "view": "Landscape & City View",
+    "priceEGP": 82589000,
+    "status": "Available",
+    "slug": "karmell",
+    "unit_id": "464 Acre-Karmell 04-14",
+    "cluster": "Karmell 04",
+    "area_note": "Floor: G+1+R | Roof: 93 sqm",
+    "delivery_note": "2028-2029",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
+    "id": "karmell-240",
+    "unitNo": "U-240",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 302,
+    "view": "Landscape & City View",
+    "priceEGP": 70959000,
+    "status": "Available",
+    "slug": "karmell",
+    "unit_id": "464-KRM05-87",
+    "cluster": "Karmell 05",
+    "area_note": "Floor: G+1+R | Roof: 89 sqm",
+    "delivery_note": "2028-2029",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  }
+]

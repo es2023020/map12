@@ -382,7 +382,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     destination: "6th-october",
     lat: 29.97,
     lng: 30.93,
-    developer: "M Squared Developments",
+    developer: "Palm Hills Developments",
     city: "6th of October City, Giza, Egypt",
     blurb:
       "Bamboo Extension is an extension of the successful Bamboo residential community, offering modern low-density living with landscaped surroundings and premium residential planning.",
@@ -2486,9 +2486,9 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     ],
   },
   "mountain-view-mv4": {
-    destination: "6th-of-october-city",
-    lat: 30.0583311,
-    lng: 31.6686487,
+    destination: "6th-october",
+    lat: 29.9849216,
+    lng: 31.0800406,
     developer: "Mountain View",
     city: "6th of October City, Giza, Egypt",
     priceFrom: 21,
@@ -2990,7 +2990,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 30.895,
     developer: "ORA Developers (Naguib Sawiris)",
     city: "New Zayed, West Cairo, Egypt",
-    priceFrom: 9.8,
+    priceFrom: 15.8,
     deliveryYear: 2027,
     status: "RTM",
     blurb:
@@ -4377,7 +4377,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.542,
     developer: "Hassan Allam Holding",
     city: "6th Settlement, New Cairo, Cairo, Egypt",
-    priceFrom: 34,
+    priceFrom: 8.9,
     deliveryYear: 2028,
     status: "Off-Plan",
     blurb:
@@ -4529,5 +4529,40 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     paymentPlan: "10% down · 10 years equal installments",
     types: ["Apartment"],
     amenities: ["Integrated Social Clubhouse", "Infinity Swimming Pools", "Gold's Gym Fitness Partnership", "Kids Play Zones", "Green Landscapes & Water Features", "Retail & F&B Outlets", "On-site Concierge", "24/7 Security"]
+  },
+  "la-vista-city": {
+    destination: "new-administrative-capital",
+    lat: 30.0125,
+    lng: 31.635,
+    developer: "La Vista Developments",
+    city: "R4 District, New Administrative Capital, Cairo, Egypt",
+    priceFrom: 30.07,
+    deliveryYear: 2026,
+    status: "RTM",
+    blurb: "La Vista City is one of the largest and most prestigious master-planned villa communities in Egypt's New Administrative Capital, spanning 910 feddans in the elite R4 District. With only 15% built-up area and 85% dedicated to greenery, lakes, and 84 swimming pools across 16 self-sustained parcels, it offers fully finished ready-to-move luxury townhouses, twin houses, and standalone villas.",
+    paymentPlan: "10% - 20% down, up to 8 years equal installments",
+    areaSize: "910 feddan",
+    amenities: [
+      "Central Sporting Club & 16 Sub-Clubhouses",
+      "84 Swimming Pools",
+      "85% Green Spaces & Parks",
+      "Commercial & Administrative Strips",
+      "International Schools & Nurseries",
+      "Medical Center & Hospital",
+      "Gym, Spa, Jogging & Cycling Tracks",
+      "24/7 Gated Security & Surveillance"
+],
+    types: [
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+],
+    highlights: [
+      "910 Feddans (15% BUA, 85% Greenery)",
+      "R4 District directly overlooking Green River",
+      "84 Swimming Pools & 16 Sub-Clubhouses",
+      "Ready to Move \u2014 Fully Finished Villas",
+      "10% - 20% DP \u00b7 Up to 8 Years Equal Installments"
+],
   },
 };

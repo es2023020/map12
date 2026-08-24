@@ -1,0 +1,18 @@
+[
+  {
+    "id": "silversands-10",
+    "unitNo": "U-10",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 380,
+    "view": "Landscape / City",
+    "priceEGP": 180000000,
+    "status": "Available",
+    "slug": "silversands",
+    "unit_id": "SS-CRY-V2A",
+    "cluster": "Crystalline",
+    "area_note": "Villa 2A 380 sqm",
+    "delivery_note": "North Coast Delivery",
+    "payment_plan": "5% + 5% + 5%, installments over 8 years"
+  }
+]

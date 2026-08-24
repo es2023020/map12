@@ -16,6 +16,9 @@ import {
   Sliders,
   MapPin,
   Tag,
+  RefreshCw,
+  Plus,
+  RotateCcw,
 } from "lucide-react";
 import { destinations } from "@/data/destinations";
 import { isReadyToMove } from "@/lib/delivery";
@@ -121,6 +124,7 @@ function matchDestination(compDest: string, filterVal: string | string[]): boole
         "sheikh-zayed",
         "new-zayed",
         "6th-october",
+        "6th-of-october-city",
         "northern-expansion",
       ];
       return westCairoSlugs.includes(compDest);
@@ -286,6 +290,16 @@ function CalculatorPage() {
   const [budgetTypeFilter, setBudgetTypeFilter] = useState("");
   const [budgetStatusFilter, setBudgetStatusFilter] = useState<"all" | "RTM" | "Off-Plan">("all");
 
+  // Pagination & shuffle state for suggested units
+  const [unitsLimit, setUnitsLimit] = useState(8);
+  const [unitsOffset, setUnitsOffset] = useState(0);
+
+  // Reset units offset & limit whenever filters or budget text change
+  useEffect(() => {
+    setUnitsLimit(8);
+    setUnitsOffset(0);
+  }, [budgetText, budgetDestFilters, budgetTypeFilter, budgetStatusFilter]);
+
   const selectedProject = useMemo(
     () => compoundsList.find((c) => c.slug === projectSlug),
     [projectSlug, compoundsList],
@@ -367,7 +381,7 @@ function CalculatorPage() {
     });
   }, [basePrice, downPayment]);
 
-  const suitableUnits = useMemo(() => {
+  const allMatchingUnits = useMemo(() => {
     const list: Array<{
       projectSlug: string;
       projectName: string;
@@ -422,7 +436,7 @@ function CalculatorPage() {
       });
     });
 
-    return list.sort((a, b) => b.priceEGP - a.priceEGP).slice(0, 8);
+    return list.sort((a, b) => b.priceEGP - a.priceEGP);
   }, [
     basePrice,
     budgetDestFilters,
@@ -431,6 +445,16 @@ function CalculatorPage() {
     compoundsList,
     availabilityList,
   ]);
+
+  const suitableUnits = useMemo(() => {
+    if (allMatchingUnits.length === 0) return [];
+    const effectiveOffset = unitsOffset % allMatchingUnits.length;
+    const sliced = allMatchingUnits.slice(effectiveOffset, effectiveOffset + unitsLimit);
+    if (sliced.length < unitsLimit && allMatchingUnits.length > sliced.length) {
+      return [...sliced, ...allMatchingUnits.slice(0, unitsLimit - sliced.length)];
+    }
+    return sliced;
+  }, [allMatchingUnits, unitsOffset, unitsLimit]);
 
   const suitableProjects = useMemo(() => {
     const budgetLimit = basePrice;
@@ -467,7 +491,7 @@ function CalculatorPage() {
 
         {/* Dynamic Insight Banner */}
         <div className="rounded-lg bg-emerald-500/10 px-3 py-1.5 border border-emerald-500/20 text-[11px] font-bold text-emerald-700 dark:text-emerald-400">
-          💡 Found {suitableProjects.length} Projects &amp; {suitableUnits.length} Live Units
+          💡 Found {suitableProjects.length} Projects &amp; {allMatchingUnits.length} Live Units
         </div>
       </div>
 
@@ -591,15 +615,56 @@ function CalculatorPage() {
         </div>
       </div>
 
-      {suitableUnits.length > 0 ? (
-        <div className="space-y-3">
-          <h4 className="text-[10px] font-semibold uppercase tracking-wider text-accent flex items-center gap-1.5">
-            <Search className="h-3 w-3" /> Matching Live Units
-          </h4>
+      {allMatchingUnits.length > 0 ? (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <h4 className="text-[10px] font-semibold uppercase tracking-wider text-accent flex items-center gap-1.5">
+              <Search className="h-3 w-3" /> Matching Live Units (Showing {suitableUnits.length} of {allMatchingUnits.length})
+            </h4>
+
+            <div className="flex items-center gap-2 flex-wrap">
+              {allMatchingUnits.length > unitsLimit && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setUnitsOffset((prev) => (prev + unitsLimit) % allMatchingUnits.length);
+                  }}
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-accent/30 bg-accent/10 px-2.5 py-1 text-xs font-semibold text-accent hover:bg-accent/20 transition-colors shadow-sm"
+                  title="Show a different set of suggested units matching your budget"
+                >
+                  <RefreshCw className="h-3 w-3" /> See Different Suggested Units
+                </button>
+              )}
+
+              {unitsLimit < allMatchingUnits.length && (
+                <button
+                  type="button"
+                  onClick={() => setUnitsLimit((prev) => Math.min(prev + 8, allMatchingUnits.length))}
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-2.5 py-1 text-xs font-semibold text-primary hover:bg-secondary transition-colors"
+                >
+                  <Plus className="h-3 w-3 text-accent" /> Load More (+8)
+                </button>
+              )}
+
+              {(unitsOffset > 0 || unitsLimit > 8) && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setUnitsOffset(0);
+                    setUnitsLimit(8);
+                  }}
+                  className="inline-flex items-center gap-1 text-[10px] font-bold text-muted-foreground hover:text-primary transition-colors px-1"
+                >
+                  <RotateCcw className="h-2.5 w-2.5" /> Reset View
+                </button>
+              )}
+            </div>
+          </div>
+
           <div className="grid gap-3 sm:grid-cols-2">
             {suitableUnits.map((u, i) => (
               <div
-                key={i}
+                key={`${u.unitId}-${i}`}
                 className="rounded-xl border border-border bg-secondary/30 p-3 hover:bg-secondary/50 transition-colors flex flex-col justify-between"
               >
                 <div>
@@ -635,6 +700,20 @@ function CalculatorPage() {
               </div>
             ))}
           </div>
+
+          {allMatchingUnits.length > 8 && (
+            <div className="flex justify-center pt-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setUnitsOffset((prev) => (prev + unitsLimit) % allMatchingUnits.length);
+                }}
+                className="inline-flex items-center gap-2 rounded-xl border border-accent/40 bg-accent/10 px-4 py-2 text-xs font-bold text-accent hover:bg-accent/20 transition-all shadow-soft cursor-pointer"
+              >
+                <RefreshCw className="h-3.5 w-3.5" /> Didn't like these? Click to see different suggested units ({allMatchingUnits.length - suitableUnits.length} more available)
+              </button>
+            </div>
+          )}
         </div>
       ) : (
         <div className="rounded-xl border border-dashed border-border p-5 text-center text-xs text-muted-foreground">

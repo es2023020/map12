@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-east-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Finished with ACs",
+    "areaSqm": 210,
+    "view": "Landscape / City",
+    "priceEGP": 44000000,
+    "status": "Available",
+    "slug": "solana-east",
+    "unit_id": "SE-THM",
+    "cluster": "Solana East Residential",
+    "area_note": "Townhouse Middle",
+    "delivery_note": "Delivery 2028",
+    "payment_plan": "5% + 5% – 8 years equal installments"
+  }
+]

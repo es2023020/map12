@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-east-7",
+    "unitNo": "U-7",
+    "beds": 2,
+    "finishing": "Core & Shell / Finished",
+    "areaSqm": 57,
+    "view": "Landscape / City",
+    "priceEGP": 14300000,
+    "status": "Available",
+    "slug": "solana-east",
+    "unit_id": "SE-OFF-57",
+    "cluster": "Solana East Offices",
+    "area_note": "Office space from 57 sqm",
+    "delivery_note": "Delivery 2028",
+    "payment_plan": "5% + 5% – 8 years equal installments"
+  }
+]

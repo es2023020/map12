@@ -1,0 +1,50 @@
+[
+  {
+    "id": "zed-east-9",
+    "unitNo": "U-9",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 188,
+    "view": "Landscape / City",
+    "priceEGP": 27000000,
+    "status": "Available",
+    "slug": "zed-east",
+    "unit_id": "ZE-EM-DUP-UP",
+    "cluster": "Emerald",
+    "area_note": "Duplex Upper 188 sqm",
+    "delivery_note": "Phase 1 Q1 2026",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 8 years"
+  },
+  {
+    "id": "zed-east-10",
+    "unitNo": "U-10",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 191,
+    "view": "Landscape / City",
+    "priceEGP": 29000000,
+    "status": "Available",
+    "slug": "zed-east",
+    "unit_id": "ZE-EM-DUP-GND",
+    "cluster": "Emerald",
+    "area_note": "Duplex Ground 191 sqm",
+    "delivery_note": "Phase 1 Q1 2026",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 8 years"
+  },
+  {
+    "id": "zed-east-11",
+    "unitNo": "U-11",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 190,
+    "view": "Landscape / City",
+    "priceEGP": 29000000,
+    "status": "Available",
+    "slug": "zed-east",
+    "unit_id": "ZE-EM-4PLEX",
+    "cluster": "Emerald",
+    "area_note": "Fourplex Upper 174-206 sqm",
+    "delivery_note": "Phase 1 Q1 2026",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 8 years"
+  }
+]

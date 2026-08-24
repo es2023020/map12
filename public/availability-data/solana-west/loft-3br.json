@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-west-16",
+    "unitNo": "U-16",
+    "beds": 3,
+    "finishing": "Finished with ACs",
+    "areaSqm": 193,
+    "view": "Landscape / City",
+    "priceEGP": 22500000,
+    "status": "Available",
+    "slug": "solana-west",
+    "unit_id": "SW-3BR-LOFT",
+    "cluster": "Multiple Family (3 BR Loft)",
+    "area_note": "193 sqm",
+    "delivery_note": "Delivery 2027",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
+  }
+]

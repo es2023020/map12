@@ -1,0 +1,18 @@
+[
+  {
+    "id": "zed-east-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 300,
+    "view": "Landscape / City",
+    "priceEGP": 46000000,
+    "status": "Available",
+    "slug": "zed-east",
+    "unit_id": "ZE-CSR-3BR-LOFT",
+    "cluster": "CSR Building A&B",
+    "area_note": "300 sqm",
+    "delivery_note": "Phase 1 Q1 2026",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
+  }
+]

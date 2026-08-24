@@ -1,0 +1,32 @@
+[
+  {
+    "id": "v-editions-5",
+    "unitNo": "U-5",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape & City View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "v-editions",
+    "unit_id": "4.0",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
+    "id": "v-editions-6",
+    "unitNo": "U-6",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape & City View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "v-editions",
+    "unit_id": "1367.0",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  }
+]

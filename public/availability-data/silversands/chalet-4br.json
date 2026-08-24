@@ -1,0 +1,18 @@
+[
+  {
+    "id": "silversands-14",
+    "unitNo": "U-14",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 192,
+    "view": "Landscape / City",
+    "priceEGP": 40000000,
+    "status": "Available",
+    "slug": "silversands",
+    "unit_id": "SS-ST-4BR",
+    "cluster": "Silvertown",
+    "area_note": "192 sqm",
+    "delivery_note": "Lagoon View",
+    "payment_plan": "5% + 5%, installments over 10 years"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "silversands-22",
+    "unitNo": "U-22",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 123,
+    "view": "Landscape / City",
+    "priceEGP": 22000000,
+    "status": "Available",
+    "slug": "silversands",
+    "unit_id": "SS-COVE-3BR-TYP",
+    "cluster": "The Cove",
+    "area_note": "123 sqm",
+    "delivery_note": "30 equal installments",
+    "payment_plan": "5% + 5%, equal installments over 8 years"
+  }
+]

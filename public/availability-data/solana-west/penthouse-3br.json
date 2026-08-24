@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-west-17",
+    "unitNo": "U-17",
+    "beds": 3,
+    "finishing": "Finished with ACs",
+    "areaSqm": 200,
+    "view": "Landscape / City",
+    "priceEGP": 26300000,
+    "status": "Available",
+    "slug": "solana-west",
+    "unit_id": "SW-3BR-PENT",
+    "cluster": "Multiple Family (3 BR Penthouse)",
+    "area_note": "200 sqm + Roof 55 sqm",
+    "delivery_note": "Delivery 2027",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-west-13",
+    "unitNo": "U-13",
+    "beds": 2,
+    "finishing": "Finished with ACs",
+    "areaSqm": 174,
+    "view": "Landscape / City",
+    "priceEGP": 23000000,
+    "status": "Available",
+    "slug": "solana-west",
+    "unit_id": "SW-2BR-DUP",
+    "cluster": "Multiple Family (2 BR Duplex)",
+    "area_note": "174 sqm",
+    "delivery_note": "Delivery 2027",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
+  }
+]

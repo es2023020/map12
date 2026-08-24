@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-east-6",
+    "unitNo": "U-6",
+    "beds": 5,
+    "finishing": "Finished with ACs",
+    "areaSqm": 369,
+    "view": "Landscape / City",
+    "priceEGP": 119000000,
+    "status": "Available",
+    "slug": "solana-east",
+    "unit_id": "SE-V1A",
+    "cluster": "Solana East Residential",
+    "area_note": "Standalone Villa V1a",
+    "delivery_note": "Delivery 2028",
+    "payment_plan": "5% + 5% – 8 years equal installments"
+  }
+]

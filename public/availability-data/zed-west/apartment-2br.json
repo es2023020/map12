@@ -1,0 +1,34 @@
+[
+  {
+    "id": "zed-west-3",
+    "unitNo": "U-3",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 106,
+    "view": "Landscape / City",
+    "priceEGP": 13000000,
+    "status": "Available",
+    "slug": "zed-west",
+    "unit_id": "ZW-PSR-2BR",
+    "cluster": "Park Side Residence (PSR)",
+    "area_note": "106 sqm",
+    "delivery_note": "Delivered / Off-Plan",
+    "payment_plan": "0% DP, installments over 10 years"
+  },
+  {
+    "id": "zed-west-6",
+    "unitNo": "U-6",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 125,
+    "view": "Landscape / City",
+    "priceEGP": 15000000,
+    "status": "Available",
+    "slug": "zed-west",
+    "unit_id": "ZW-E3-2BR",
+    "cluster": "Phase 3 (E3)",
+    "area_note": "125 sqm",
+    "delivery_note": "Phase 3 Delivery",
+    "payment_plan": "5% + 5%, installments over 10 years"
+  }
+]

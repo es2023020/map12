@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-12",
+    "unitNo": "U-12",
+    "beds": 2,
+    "finishing": "Finished with ACs",
+    "areaSqm": 149,
+    "view": "Landscape / City",
+    "priceEGP": 20700000,
+    "status": "Available",
+    "slug": "solana-west",
+    "unit_id": "SW-2BR-LOFT",
+    "cluster": "Multiple Family (2 BR Loft)",
+    "area_note": "149 sqm",
+    "delivery_note": "Delivery 2027",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
+  }
+]

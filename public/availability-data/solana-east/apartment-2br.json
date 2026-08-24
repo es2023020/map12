@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-east-2",
+    "unitNo": "U-2",
+    "beds": 2,
+    "finishing": "Finished with ACs",
+    "areaSqm": 134,
+    "view": "Landscape / City",
+    "priceEGP": 19500000,
+    "status": "Available",
+    "slug": "solana-east",
+    "unit_id": "SE-2BR",
+    "cluster": "Solana East Residential",
+    "area_note": "134 sqm",
+    "delivery_note": "Delivery 2028",
+    "payment_plan": "5% + 5% – 8 years equal installments"
+  }
+]

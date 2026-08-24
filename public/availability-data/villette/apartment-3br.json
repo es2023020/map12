@@ -1,0 +1,34 @@
+[
+  {
+    "id": "villette-2",
+    "unitNo": "U-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 199,
+    "view": "Landscape & City View",
+    "priceEGP": 48865000,
+    "status": "Available",
+    "slug": "villette",
+    "unit_id": "Villette-V Residence-4F-41",
+    "cluster": "1 - V Residence",
+    "area_note": "Floor: 4 | Roof: 149 sqm",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
+    "id": "villette-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 201,
+    "view": "Landscape & City View",
+    "priceEGP": 51426000,
+    "status": "Available",
+    "slug": "villette",
+    "unit_id": "Villette-V Residence-5G-44",
+    "cluster": "1 - V Residence",
+    "area_note": "Floor: 4 | Roof: 177 sqm",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  }
+]

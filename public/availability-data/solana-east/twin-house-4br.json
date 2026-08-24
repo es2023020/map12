@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-east-5",
+    "unitNo": "U-5",
+    "beds": 4,
+    "finishing": "Finished with ACs",
+    "areaSqm": 240,
+    "view": "Landscape / City",
+    "priceEGP": 54000000,
+    "status": "Available",
+    "slug": "solana-east",
+    "unit_id": "SE-TWH",
+    "cluster": "Solana East Residential",
+    "area_note": "Twinhouse",
+    "delivery_note": "Delivery 2028",
+    "payment_plan": "5% + 5% – 8 years equal installments"
+  }
+]

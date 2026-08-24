@@ -1,0 +1,28 @@
+[
+  {
+    "id": "el-patio-oro-availability-13",
+    "unitNo": "U-13",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 164,
+    "view": "Scenic View",
+    "priceEGP": 18200000,
+    "status": "Available",
+    "Avg Outdoor Roof Area": "-",
+    "Avg Garden Area": "30m - 40m",
+    "Finishing": "Fully Finished"
+  },
+  {
+    "id": "el-patio-oro-availability-20",
+    "unitNo": "U-20",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 164,
+    "view": "Scenic View",
+    "priceEGP": 18900000,
+    "status": "Available",
+    "Avg Outdoor Roof Area": "-",
+    "Avg Garden Area": "25m - 40m",
+    "Finishing": "Semi-Finished"
+  }
+]

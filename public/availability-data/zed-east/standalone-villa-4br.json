@@ -1,0 +1,18 @@
+[
+  {
+    "id": "zed-east-14",
+    "unitNo": "U-14",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 270,
+    "view": "Landscape / City",
+    "priceEGP": 57000000,
+    "status": "Available",
+    "slug": "zed-east",
+    "unit_id": "ZE-EM-VILLA",
+    "cluster": "Emerald",
+    "area_note": "Standalone 250-290 sqm",
+    "delivery_note": "Phase 1 Q1 2026",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 8 years"
+  }
+]
