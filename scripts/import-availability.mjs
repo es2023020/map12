@@ -146,19 +146,10 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
   if (!fs.existsSync(filePath)) return null;
   const wb = XLSX.readFile(filePath);
 
-  if (wb.Sheets["Projects"]) {
-    const pMatrix = XLSX.utils.sheet_to_json(wb.Sheets["Projects"], { header: 1, defval: "" });
-    if (pMatrix && pMatrix.length > 1 && pMatrix[1][1]) {
-      defaultDev = String(pMatrix[1][1]).trim();
-    }
-  }
-
   let targetSheets = wb.SheetNames;
-  if (wb.SheetNames.includes("Units")) {
-    targetSheets = ["Units"];
-  } else if (wb.SheetNames.length > 1) {
+  if (wb.SheetNames.length > 1) {
     const nonOverview = wb.SheetNames.filter(
-      (sn) => !["overview", "summary", "index", "instructions", "projects", "breakdown"].includes(sn.toLowerCase().trim()),
+      (sn) => !["overview", "summary", "index", "instructions"].includes(sn.toLowerCase().trim()),
     );
     if (nonOverview.length > 0) targetSheets = nonOverview;
   }
@@ -366,16 +357,8 @@ function main() {
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-|-$/g, "");
-    const parentFolder = path.basename(path.dirname(filePath)).toLowerCase();
-    let dev = "Developer";
-    if (parentFolder === "sodic") dev = "SODIC";
-    else if (parentFolder === "emaar-misr") dev = "Emaar Misr";
-    else if (parentFolder === "palm-hills-developments") dev = "Palm Hills Developments";
-    else if (parentFolder === "orascom-development") dev = "Orascom Development";
-    else if (parentFolder === "madinet-masr") dev = "Madinet Masr";
-
-    const pObj = parseUniversalWorkbook(filePath, slug, dev);
-    if (pObj) {
+    const pObj = parseUniversalWorkbook(filePath, slug, "Developer");
+    if (pObj && pObj.breakdown.length > 0) {
       projectMap.set(slug, pObj);
     }
   });

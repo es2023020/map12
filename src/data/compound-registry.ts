@@ -382,7 +382,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     destination: "6th-october",
     lat: 29.97,
     lng: 30.93,
-    developer: "Palm Hills Developments",
+    developer: "M Squared Developments",
     city: "6th of October City, Giza, Egypt",
     blurb:
       "Bamboo Extension is an extension of the successful Bamboo residential community, offering modern low-density living with landscaped surroundings and premium residential planning.",
@@ -1001,7 +1001,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Tatweer Misr",
     beachfront: true,
     type: "Resort",
-    priceFrom: 45.0,
+    priceFrom: 14,
     deliveryYear: 2026,
     blurb:
       "D-Bay is Tatweer Misr's luxury coastal destination spanning 200 acres in Dabaa with an 800-meter beachfront and 25 feddans of swimmable crystal lagoons.",
@@ -1320,7 +1320,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Tatweer Misr",
     beachfront: true,
     type: "Resort",
-    priceFrom: 12.0,
+    priceFrom: 13,
     deliveryYear: 2026,
     status: "RTM",
     blurb:
@@ -2990,7 +2990,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 30.895,
     developer: "ORA Developers (Naguib Sawiris)",
     city: "New Zayed, West Cairo, Egypt",
-    priceFrom: 15.8,
+    priceFrom: 9.8,
     deliveryYear: 2027,
     status: "RTM",
     blurb:
@@ -4377,7 +4377,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 31.542,
     developer: "Hassan Allam Holding",
     city: "6th Settlement, New Cairo, Cairo, Egypt",
-    priceFrom: 8.9,
+    priceFrom: 34,
     deliveryYear: 2028,
     status: "Off-Plan",
     blurb:
@@ -4529,70 +4529,5 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     paymentPlan: "10% down · 10 years equal installments",
     types: ["Apartment"],
     amenities: ["Integrated Social Clubhouse", "Infinity Swimming Pools", "Gold's Gym Fitness Partnership", "Kids Play Zones", "Green Landscapes & Water Features", "Retail & F&B Outlets", "On-site Concierge", "24/7 Security"]
-  },
-  "la-vista-city": {
-    destination: "new-administrative-capital",
-    lat: 30.0125,
-    lng: 31.635,
-    developer: "STM",
-    city: "R4 District, New Administrative Capital, Cairo, Egypt",
-    priceFrom: 30.07,
-    deliveryYear: 2026,
-    status: "RTM",
-    blurb: "La Vista City is one of the largest and most prestigious master-planned villa communities in Egypt's New Administrative Capital, spanning 910 feddans in the elite R4 District. With only 15% built-up area and 85% dedicated to greenery, lakes, and 84 swimming pools across 16 self-sustained parcels, it offers fully finished ready-to-move luxury townhouses, twin houses, and standalone villas.",
-    paymentPlan: "10% - 20% down, up to 8 years equal installments",
-    areaSize: "910 feddan",
-    amenities: [
-      "Central Sporting Club & 16 Sub-Clubhouses",
-      "84 Swimming Pools",
-      "85% Green Spaces & Parks",
-      "Commercial & Administrative Strips",
-      "International Schools & Nurseries",
-      "Medical Center & Hospital",
-      "Gym, Spa, Jogging & Cycling Tracks",
-      "24/7 Gated Security & Surveillance"
-],
-    types: [
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
-],
-    highlights: [
-      "910 Feddans (15% BUA, 85% Greenery)",
-      "R4 District directly overlooking Green River",
-      "84 Swimming Pools & 16 Sub-Clubhouses",
-      "Ready to Move \u2014 Fully Finished Villas",
-      "10% - 20% DP \u00b7 Up to 8 Years Equal Installments"
-],
-  },
-  "village-west": {
-    destination: "sheikh-zayed",
-    lat: 30.048,
-    lng: 30.985,
-    developer: "Dorra Group",
-    city: "Central Sheikh Zayed City, Giza, Egypt",
-    priceFrom: 7.0,
-    deliveryYear: 2028,
-    status: "Off-Plan",
-    blurb:
-      "Village West is a premier 125-acre high-end residential community located at the entrance of Sheikh Zayed City, developed by Dorra Group. Styled with Californian-inspired low-rise architecture (G+5), open green layouts, and vibrant commercial strip.",
-    paymentPlan: "10% down · up to 8 years equal installments",
-    areaSize: "125 acres",
-    amenities: [
-      "Clubhouse",
-      "Semi-Olympic & Leisure Swimming Pools",
-      "Gym & Yoga Studios",
-      "Commercial Strip & Fine Dining",
-      "On-site Medical Clinics",
-      "24/7 Security",
-    ],
-    types: ["Apartment", "Duplex", "Penthouse", "Townhouse", "Twin House"],
-    highlights: [
-      "125-Acre Masterplan (G+5 Low-Rise)",
-      "Central Sheikh Zayed (2 mins to Hyper One)",
-      "Clubhouse, Pools, Gym & Commercial Strip",
-      "Fully Finished Apartments & Villas",
-      "10% DP · Up to 8 Years Installments",
-    ],
   },
 };
