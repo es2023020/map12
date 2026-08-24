@@ -1,0 +1,17 @@
+[
+  {
+    "id": "westdays-1",
+    "unitNo": "U-1",
+    "beds": 1,
+    "finishing": "Semi-finished",
+    "areaSqm": 75,
+    "view": "Landscape / View",
+    "priceEGP": 4496712,
+    "status": "Available",
+    "slug": "westdays",
+    "unit_id": "WD-1BD-75",
+    "cluster": "Westdays October",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years · Maintenance 8%"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-crest-5",
+    "unitNo": "U-5",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 220,
+    "view": "Landscape / View",
+    "priceEGP": 28733288,
+    "status": "Available",
+    "slug": "the-crest",
+    "unit_id": "TC-SA-220",
+    "cluster": "The Crest",
+    "delivery_note": "Delivery 2 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years"
+  }
+]

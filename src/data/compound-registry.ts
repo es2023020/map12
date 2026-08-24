@@ -1001,7 +1001,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Tatweer Misr",
     beachfront: true,
     type: "Resort",
-    priceFrom: 14,
+    priceFrom: 45.0,
     deliveryYear: 2026,
     blurb:
       "D-Bay is Tatweer Misr's luxury coastal destination spanning 200 acres in Dabaa with an 800-meter beachfront and 25 feddans of swimmable crystal lagoons.",
@@ -1320,7 +1320,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Tatweer Misr",
     beachfront: true,
     type: "Resort",
-    priceFrom: 13,
+    priceFrom: 12.0,
     deliveryYear: 2026,
     status: "RTM",
     blurb:
@@ -4534,7 +4534,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     destination: "new-administrative-capital",
     lat: 30.0125,
     lng: 31.635,
-    developer: "La Vista Developments",
+    developer: "STM",
     city: "R4 District, New Administrative Capital, Cairo, Egypt",
     priceFrom: 30.07,
     deliveryYear: 2026,
@@ -4564,5 +4564,35 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
       "Ready to Move \u2014 Fully Finished Villas",
       "10% - 20% DP \u00b7 Up to 8 Years Equal Installments"
 ],
+  },
+  "village-west": {
+    destination: "sheikh-zayed",
+    lat: 30.048,
+    lng: 30.985,
+    developer: "Dorra Group",
+    city: "Central Sheikh Zayed City, Giza, Egypt",
+    priceFrom: 7.0,
+    deliveryYear: 2028,
+    status: "Off-Plan",
+    blurb:
+      "Village West is a premier 125-acre high-end residential community located at the entrance of Sheikh Zayed City, developed by Dorra Group. Styled with Californian-inspired low-rise architecture (G+5), open green layouts, and vibrant commercial strip.",
+    paymentPlan: "10% down · up to 8 years equal installments",
+    areaSize: "125 acres",
+    amenities: [
+      "Clubhouse",
+      "Semi-Olympic & Leisure Swimming Pools",
+      "Gym & Yoga Studios",
+      "Commercial Strip & Fine Dining",
+      "On-site Medical Clinics",
+      "24/7 Security",
+    ],
+    types: ["Apartment", "Duplex", "Penthouse", "Townhouse", "Twin House"],
+    highlights: [
+      "125-Acre Masterplan (G+5 Low-Rise)",
+      "Central Sheikh Zayed (2 mins to Hyper One)",
+      "Clubhouse, Pools, Gym & Commercial Strip",
+      "Fully Finished Apartments & Villas",
+      "10% DP · Up to 8 Years Installments",
+    ],
   },
 };

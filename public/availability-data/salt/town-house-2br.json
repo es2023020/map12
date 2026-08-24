@@ -1,0 +1,47 @@
+[
+  {
+    "id": "salt-315",
+    "unitNo": "U-315",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 145,
+    "view": "Landscape",
+    "priceEGP": 31896000,
+    "status": "Available",
+    "slug": "salt",
+    "unit_id": "K5-TH11-1",
+    "cluster": "Salt North Coast",
+    "delivery_note": "Delivery 4 Years",
+    "payment_plan": "5% DP · 8 years installments"
+  },
+  {
+    "id": "salt-345",
+    "unitNo": "U-345",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 29071000,
+    "status": "Available",
+    "slug": "salt",
+    "unit_id": "K6-TH8-F",
+    "cluster": "Salt North Coast",
+    "delivery_note": "Delivery 4 Years",
+    "payment_plan": "5% DP · 8 years installments"
+  },
+  {
+    "id": "salt-348",
+    "unitNo": "U-348",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 26304000,
+    "status": "Available",
+    "slug": "salt",
+    "unit_id": "K6-TH8-C",
+    "cluster": "Salt North Coast",
+    "delivery_note": "Delivery 4 Years",
+    "payment_plan": "5% DP · 8 years installments"
+  }
+]

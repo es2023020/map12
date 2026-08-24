@@ -1,0 +1,47 @@
+[
+  {
+    "id": "d-bay-1",
+    "unitNo": "U-1",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 240,
+    "view": "Landscape",
+    "priceEGP": 54714000,
+    "status": "Available",
+    "slug": "d-bay",
+    "unit_id": "L2-V15",
+    "cluster": "L2",
+    "delivery_note": "Delivery Handed-over-3Month",
+    "payment_plan": "5% DP + 5% after 3 months · 8 years installments"
+  },
+  {
+    "id": "d-bay-2",
+    "unitNo": "U-2",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 240,
+    "view": "Landscape",
+    "priceEGP": 54714000,
+    "status": "Available",
+    "slug": "d-bay",
+    "unit_id": "L2-V16",
+    "cluster": "L2",
+    "delivery_note": "Delivery Handed-over-3Month",
+    "payment_plan": "5% DP + 5% after 3 months · 8 years installments"
+  },
+  {
+    "id": "d-bay-3",
+    "unitNo": "U-3",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 240,
+    "view": "Landscape",
+    "priceEGP": 54714000,
+    "status": "Available",
+    "slug": "d-bay",
+    "unit_id": "L2-V18",
+    "cluster": "L2",
+    "delivery_note": "Delivery Handed-over-3Month",
+    "payment_plan": "5% DP + 5% after 3 months · 8 years installments"
+  }
+]

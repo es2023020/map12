@@ -1,0 +1,17 @@
+[
+  {
+    "id": "c-north-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 160,
+    "view": "Landscape / View",
+    "priceEGP": 22000000,
+    "status": "Available",
+    "slug": "c-north",
+    "unit_id": "CN-TH-160",
+    "cluster": "Townhouses",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years"
+  }
+]

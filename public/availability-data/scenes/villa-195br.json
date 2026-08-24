@@ -1,0 +1,47 @@
+[
+  {
+    "id": "scenes-2",
+    "unitNo": "U-2",
+    "beds": 195,
+    "finishing": "Core & Shell",
+    "areaSqm": 25720000,
+    "view": "Landscape",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "scenes",
+    "unit_id": "-",
+    "cluster": "Scenes Mostakbal City",
+    "delivery_note": "Delivery 2 Years",
+    "payment_plan": "5% DP · 10 years installments"
+  },
+  {
+    "id": "scenes-3",
+    "unitNo": "U-3",
+    "beds": 195,
+    "finishing": "Core & Shell",
+    "areaSqm": 24574000,
+    "view": "Landscape",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "scenes",
+    "unit_id": "-",
+    "cluster": "Scenes Mostakbal City",
+    "delivery_note": "Delivery 2 Years",
+    "payment_plan": "5% DP · 10 years installments"
+  },
+  {
+    "id": "scenes-4",
+    "unitNo": "U-4",
+    "beds": 195,
+    "finishing": "Core & Shell",
+    "areaSqm": 24574000,
+    "view": "Landscape",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "scenes",
+    "unit_id": "-",
+    "cluster": "Scenes Mostakbal City",
+    "delivery_note": "Delivery 2 Years",
+    "payment_plan": "5% DP · 10 years installments"
+  }
+]

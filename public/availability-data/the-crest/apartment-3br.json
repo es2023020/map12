@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-crest-3",
+    "unitNo": "U-3",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 135,
+    "view": "Landscape / View",
+    "priceEGP": 8704584,
+    "status": "Available",
+    "slug": "the-crest",
+    "unit_id": "TC-3BD-135",
+    "cluster": "The Crest",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years"
+  }
+]

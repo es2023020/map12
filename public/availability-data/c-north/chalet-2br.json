@@ -1,0 +1,17 @@
+[
+  {
+    "id": "c-north-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Fully finished",
+    "areaSqm": 95,
+    "view": "Landscape / View",
+    "priceEGP": 8500000,
+    "status": "Available",
+    "slug": "c-north",
+    "unit_id": "CN-2BD-95",
+    "cluster": "C North",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years"
+  }
+]

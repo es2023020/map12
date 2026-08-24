@@ -1,0 +1,17 @@
+[
+  {
+    "id": "creek-town-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 128,
+    "view": "Landscape / View",
+    "priceEGP": 11448396,
+    "status": "Available",
+    "slug": "creek-town",
+    "unit_id": "CT-2BD-128",
+    "cluster": "Creek Town",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% over 8 years · Maintenance 10%"
+  }
+]

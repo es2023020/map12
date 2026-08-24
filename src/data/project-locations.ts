@@ -1283,4 +1283,11 @@ export const projectLocations: Record<string, ProjectLocation> = {
     location: "Boulevard Axis, 6th of October City, Giza Governorate, Egypt",
     mapsUrl: "https://maps.google.com/?q=Nyoum+October+Compound+Boulevard+Axis+6th+of+October",
   },
+  "village-west": {
+    name: "Village West",
+    destination: "sheikh-zayed",
+    lat: 30.048,
+    lng: 30.985,
+    mapsUrl: "https://maps.google.com/?q=Village+West+Sheikh+Zayed",
+  },
 };

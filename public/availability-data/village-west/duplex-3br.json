@@ -1,0 +1,32 @@
+[
+  {
+    "id": "village-west-19",
+    "unitNo": "U-19",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 203,
+    "view": "Landscape / Pool View",
+    "priceEGP": 21300000,
+    "status": "Available",
+    "slug": "village-west",
+    "unit_id": "VW-28-DUP-203",
+    "cluster": "Phase 2028",
+    "delivery_note": "Delivery 2028",
+    "payment_plan": "DP 10% / 7-Years · Maintenance 7%"
+  },
+  {
+    "id": "village-west-43",
+    "unitNo": "U-43",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 203,
+    "view": "Landscape / Pool View",
+    "priceEGP": 20700000,
+    "status": "Available",
+    "slug": "village-west",
+    "unit_id": "VW-29-DUP-203",
+    "cluster": "Phase 2029",
+    "delivery_note": "Delivery 2029",
+    "payment_plan": "DP 10% / 8-Years · Maintenance 7%"
+  }
+]

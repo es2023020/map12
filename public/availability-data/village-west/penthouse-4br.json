@@ -1,0 +1,62 @@
+[
+  {
+    "id": "village-west-22",
+    "unitNo": "U-22",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 231,
+    "view": "Landscape / Pool View",
+    "priceEGP": 24100000,
+    "status": "Available",
+    "slug": "village-west",
+    "unit_id": "VW-28-PENT-231",
+    "cluster": "Phase 2028",
+    "delivery_note": "Delivery 2028",
+    "payment_plan": "DP 10% / 7-Years · Maintenance 7%"
+  },
+  {
+    "id": "village-west-23",
+    "unitNo": "U-23",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 243,
+    "view": "Landscape / Pool View",
+    "priceEGP": 25900000,
+    "status": "Available",
+    "slug": "village-west",
+    "unit_id": "VW-28-PENT-243",
+    "cluster": "Phase 2028",
+    "delivery_note": "Delivery 2028",
+    "payment_plan": "DP 10% / 7-Years · Maintenance 7%"
+  },
+  {
+    "id": "village-west-46",
+    "unitNo": "U-46",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 231,
+    "view": "Landscape / Pool View",
+    "priceEGP": 24100000,
+    "status": "Available",
+    "slug": "village-west",
+    "unit_id": "VW-29-PENT-231",
+    "cluster": "Phase 2029",
+    "delivery_note": "Delivery 2029",
+    "payment_plan": "DP 10% / 8-Years · Maintenance 7%"
+  },
+  {
+    "id": "village-west-47",
+    "unitNo": "U-47",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 243,
+    "view": "Landscape / Pool View",
+    "priceEGP": 26200000,
+    "status": "Available",
+    "slug": "village-west",
+    "unit_id": "VW-29-PENT-243",
+    "cluster": "Phase 2029",
+    "delivery_note": "Delivery 2029",
+    "payment_plan": "DP 10% / 8-Years · Maintenance 7%"
+  }
+]

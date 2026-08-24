@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-crest-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 180,
+    "view": "Landscape / View",
+    "priceEGP": 21070216,
+    "status": "Available",
+    "slug": "the-crest",
+    "unit_id": "TC-TH-180",
+    "cluster": "The Crest",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years"
+  }
+]

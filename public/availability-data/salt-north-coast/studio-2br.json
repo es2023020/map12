@@ -1,0 +1,47 @@
+[
+  {
+    "id": "salt-north-coast-26",
+    "unitNo": "U-26",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 55,
+    "view": "Landscape",
+    "priceEGP": 11940000,
+    "status": "Available",
+    "slug": "salt",
+    "unit_id": "E5-CH7-105",
+    "cluster": "Salt Marina",
+    "delivery_note": "Delivery 4 Years",
+    "payment_plan": "5% DP · 8 years installments"
+  },
+  {
+    "id": "salt-north-coast-63",
+    "unitNo": "U-63",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 55,
+    "view": "Landscape",
+    "priceEGP": 10940000,
+    "status": "Available",
+    "slug": "salt",
+    "unit_id": "E5-CH5-102",
+    "cluster": "Salt Marina",
+    "delivery_note": "Delivery 4 Years",
+    "payment_plan": "5% DP · 8 years installments"
+  },
+  {
+    "id": "salt-north-coast-93",
+    "unitNo": "U-93",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 45,
+    "view": "Landscape",
+    "priceEGP": 9461000,
+    "status": "Available",
+    "slug": "salt",
+    "unit_id": "E5-CH3-205",
+    "cluster": "Salt Marina",
+    "delivery_note": "Delivery 4 Years",
+    "payment_plan": "5% DP · 8 years installments"
+  }
+]

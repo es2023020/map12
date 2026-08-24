@@ -311,13 +311,13 @@ function ArabicCompoundPage() {
             </div>
 
             {/* Live Availability Section if available */}
-            {availabilityBySlug(c.slug) && (
+            {avail && (
               <div className="space-y-3">
                 <h3 className="font-display text-xl font-bold text-foreground">
                   الوحدات المتاحة حالياً للبيع
                 </h3>
                 <AvailabilitySection
-                  data={availabilityBySlug(c.slug)!}
+                  data={avail}
                   projectSlug={c.slug}
                   onRegisterInterest={(type) => {
                     setLeadUnit(type);

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "westdays-3",
+    "unitNo": "U-3",
+    "beds": 3,
+    "finishing": "Semi-finished",
+    "areaSqm": 135,
+    "view": "Landscape / View",
+    "priceEGP": 7610714,
+    "status": "Available",
+    "slug": "westdays",
+    "unit_id": "WD-3BD-135",
+    "cluster": "Westdays October",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years · Maintenance 8%"
+  }
+]

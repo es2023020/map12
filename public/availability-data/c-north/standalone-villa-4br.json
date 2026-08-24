@@ -1,0 +1,17 @@
+[
+  {
+    "id": "c-north-5",
+    "unitNo": "U-5",
+    "beds": 4,
+    "finishing": "Fully finished",
+    "areaSqm": 180,
+    "view": "Landscape / View",
+    "priceEGP": 28000000,
+    "status": "Available",
+    "slug": "c-north",
+    "unit_id": "CN-SA-180",
+    "cluster": "Standalone Villas",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years"
+  }
+]

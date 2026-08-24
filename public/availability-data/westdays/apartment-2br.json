@@ -1,0 +1,17 @@
+[
+  {
+    "id": "westdays-2",
+    "unitNo": "U-2",
+    "beds": 2,
+    "finishing": "Semi-finished",
+    "areaSqm": 100,
+    "view": "Landscape / View",
+    "priceEGP": 5793562,
+    "status": "Available",
+    "slug": "westdays",
+    "unit_id": "WD-2BD-100",
+    "cluster": "Westdays October",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years · Maintenance 8%"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "glen-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 130,
+    "view": "Landscape / View",
+    "priceEGP": 8303412,
+    "status": "Available",
+    "slug": "glen",
+    "unit_id": "GLEN-2BD-130",
+    "cluster": "Glen",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years · Maintenance 8%"
+  }
+]

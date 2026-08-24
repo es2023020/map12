@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-crest-2",
+    "unitNo": "U-2",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 115,
+    "view": "Landscape / View",
+    "priceEGP": 6304622,
+    "status": "Available",
+    "slug": "the-crest",
+    "unit_id": "TC-2BD-115",
+    "cluster": "The Crest",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years"
+  }
+]

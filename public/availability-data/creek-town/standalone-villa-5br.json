@@ -1,0 +1,17 @@
+[
+  {
+    "id": "creek-town-6",
+    "unitNo": "U-6",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 420,
+    "view": "Landscape / View",
+    "priceEGP": 75000000,
+    "status": "Available",
+    "slug": "creek-town",
+    "unit_id": "CT-PV-420",
+    "cluster": "Prime Villas",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "15% over 5 years"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-crest-1",
+    "unitNo": "U-1",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 80,
+    "view": "Landscape / View",
+    "priceEGP": 4977280,
+    "status": "Available",
+    "slug": "the-crest",
+    "unit_id": "TC-1BD-80",
+    "cluster": "The Crest",
+    "delivery_note": "Delivery 4 years",
+    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years"
+  }
+]

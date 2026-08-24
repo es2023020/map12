@@ -1,0 +1,32 @@
+[
+  {
+    "id": "creek-town-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "Landscape / View",
+    "priceEGP": 25445545,
+    "status": "Available",
+    "slug": "creek-town",
+    "unit_id": "CT-TV-185",
+    "cluster": "Town Villas",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% over 10 years"
+  },
+  {
+    "id": "creek-town-5",
+    "unitNo": "U-5",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 210,
+    "view": "Landscape / View",
+    "priceEGP": 28712871,
+    "status": "Available",
+    "slug": "creek-town",
+    "unit_id": "CT-TV-210",
+    "cluster": "Town Villas",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% over 10 years"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "bloomfields-1",
+    "unitNo": "U-1",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 76,
+    "view": "Landscape",
+    "priceEGP": 5845000,
+    "status": "Available",
+    "slug": "bloomfields",
+    "unit_id": "DT5-A-604",
+    "cluster": "Downtown (DT)",
+    "delivery_note": "Delivery 1 Year",
+    "payment_plan": "5% DP · 10 years installments"
+  },
+  {
+    "id": "bloomfields-2",
+    "unitNo": "U-2",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 76,
+    "view": "Landscape",
+    "priceEGP": 6598000,
+    "status": "Available",
+    "slug": "bloomfields",
+    "unit_id": "DT5-C-G02",
+    "cluster": "Downtown (DT)",
+    "delivery_note": "Delivery 1 Year",
+    "payment_plan": "5% DP · 10 years installments"
+  },
+  {
+    "id": "bloomfields-3",
+    "unitNo": "U-3",
+    "beds": 1,
+    "finishing": "Semi-Finished",
+    "areaSqm": 76,
+    "view": "Landscape",
+    "priceEGP": 6538000,
+    "status": "Available",
+    "slug": "bloomfields",
+    "unit_id": "DT6-C-204",
+    "cluster": "Downtown (DT)",
+    "delivery_note": "Delivery 1 Year",
+    "payment_plan": "5% DP · 10 years installments"
+  },
+  {
+    "id": "bloomfields-4",
+    "unitNo": "U-4",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 76,
+    "view": "Landscape",
+    "priceEGP": 5996000,
+    "status": "Available",
+    "slug": "bloomfields",
+    "unit_id": "DT4-F-605",
+    "cluster": "Downtown (DT)",
+    "delivery_note": "Delivery 1 Year",
+    "payment_plan": "5% DP · 10 years installments"
+  }
+]
