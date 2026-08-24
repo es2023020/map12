@@ -4653,7 +4653,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "city": "6th of October City, Giza Governorate, Egypt",
     "masterPlanUrl": "/Masterplans/m4.jpg"
-  }
+  },
   {
     "slug": "esse-residence",
     "name": "Esse Residence",
