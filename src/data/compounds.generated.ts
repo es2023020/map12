@@ -5655,7 +5655,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 4.2,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Studio",
@@ -6554,7 +6554,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.966,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 5,
+    "priceFrom": 20.8,
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": true,
@@ -6602,7 +6602,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/la-vista-ras-el-hekma/5.jpg"
     ],
     "blurb": "La Vista Ras El Hekma is a luxury coastal resort by La Vista featuring terraced residences, private beaches, and panoramic Mediterranean views, emphasizing contemporary architecture and premium hospitality in Ras El Hekma.",
-    "paymentPlan": "10% down, installments up to 8 years",
+    "paymentPlan": "20% DP over 4 yrs",
     "areaSize": "120 feddan",
     "unitSizes": "85\u2013390 m\u00b2",
     "city": "Ras El Hekma, North Coast (km 204), Matrouh Governorate, Egypt",
@@ -6938,7 +6938,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "hassan-allam-properties",
     "priceFrom": 11,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7246,7 +7246,7 @@ export const compoundsGenerated: Compound[] = [
     "masterPlanUrl": "/Masterplans/jefaira.jpg"
   },
   {
-    "slug": "the-c",
+    "slug": "c-north-coast",
     "name": "The C",
     "destination": "ras-el-hekma",
     "km": 188.4,
@@ -7904,7 +7904,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.3688556,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 5,
+    "priceFrom": 19.8,
     "deliveryYear": 2025,
     "status": "RTM",
     "beachfront": true,
@@ -7949,7 +7949,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/la-vista-bay-east/5.jpg"
     ],
     "blurb": "La Vista Bay East sits at km 169 on the North Coast in al dabaa, developed by La Vista Developments. A beachfront community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
+    "paymentPlan": "5%+5% DP over 7 yrs",
     "areaSize": "106 feddan",
     "unitSizes": "97\u2013228 m\u00b2",
     "city": "Al Dabaa, North Coast (km 169), Matrouh Governorate, Egypt",
@@ -8288,7 +8288,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 13,
     "deliveryYear": 2024,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -9059,7 +9059,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 14,
     "deliveryYear": 2027,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -9416,7 +9416,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -9787,7 +9787,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 9,
     "deliveryYear": 2024,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10198,7 +10198,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 16,
     "deliveryYear": 2024,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10617,7 +10617,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 5,
     "deliveryYear": 2005,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10671,7 +10671,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 17,
     "deliveryYear": 2014,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10727,7 +10727,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 13,
     "deliveryYear": 2024,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10774,7 +10774,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 12,
     "deliveryYear": 2025,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -12146,7 +12146,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.97,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
-    "priceFrom": 5,
+    "priceFrom": 27.8,
     "deliveryYear": 2025,
     "status": "RTM",
     "beachfront": true,
@@ -12198,7 +12198,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/la-vista-cascada/8.jpg"
     ],
     "blurb": "La Vista Cascada is a premium luxury beachfront community in Ras El Hekma offering modern residences with panoramic sea views, cascading terraces, landscaped gardens, and resort-style amenities designed to maximize Mediterranean views.",
-    "paymentPlan": "35% down, installments as per launched phase",
+    "paymentPlan": "35% DP over 3 yrs",
     "areaSize": "112 feddan",
     "unitSizes": "109\u2013414 m\u00b2",
     "type": "Resort",
@@ -15359,7 +15359,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "il-cazar-developments",
     "priceFrom": 8.5,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -15410,7 +15410,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "il-cazar-developments",
     "priceFrom": 12,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Office",
@@ -15461,7 +15461,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "il-cazar-developments",
     "priceFrom": 7.5,
     "deliveryYear": 2025,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -17307,5 +17307,156 @@ export const compoundsGenerated: Compound[] = [
       "5% Down Payment over 10 Years"
     ],
     "paymentPlan": "5% DP over 10 yrs"
+  },
+  {
+    "slug": "youd-ras-el-hekma",
+    "name": "YOUD Ras El Hekma",
+    "destination": "ras-el-hekma",
+    "lat": 31.02,
+    "lng": 27.85,
+    "developer": "Al Ahly Sabbour",
+    "developerSlug": "al-ahly-sabbour",
+    "priceFrom": 6.6,
+    "deliveryYear": 2027,
+    "status": "Off-Plan",
+    "beachfront": true,
+    "types": [
+      "Chalet",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "114 Acres + 50 Acres Beach",
+      "1,050m Beach Front",
+      "90% Sea & Lagoon Views",
+      "G+2 & G+3 Buildings",
+      "First Row Serviced Apartments"
+    ],
+    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
+    ],
+    "blurb": "YOUD Ras El Hekma by Al Ahly Sabbour spans 114 acres plus 50 acres of beach at Kilo 187 with a 1,050m beachfront, 90% sea/lagoon views, Chalets, Twin Villas, and Standalones.",
+    "highlights": [
+      "Kilo 187 Ras El Hekma",
+      "1,050m Sandy Beachfront",
+      "10% Down Payment over 4 to 10 Years"
+    ],
+    "paymentPlan": "10% DP over 4 to 10 yrs"
+  },
+  {
+    "slug": "gaia-ras-el-hekma",
+    "name": "GAIA Ras El Hekma",
+    "destination": "ras-el-hekma",
+    "lat": 31.025,
+    "lng": 27.86,
+    "developer": "Al Ahly Sabbour",
+    "developerSlug": "al-ahly-sabbour",
+    "priceFrom": 47.6,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": true,
+    "types": [
+      "Chalet",
+      "Duplex",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "280 Acres Resort",
+      "600m Beachfront",
+      "45 Swimming Pools",
+      "2 Swimmable Lagoons",
+      "Commercial Strip",
+      "Clubhouse"
+    ],
+    "hero": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80"
+    ],
+    "blurb": "GAIA Ras El Hekma by Al Ahly Sabbour spans 280 acres at Kilo 194 (between SODIC June and Arco El Sharbtly) featuring 45 pools, 2 swimmable lagoons, and luxury Standalone Villas.",
+    "highlights": [
+      "Kilo 194 Ras El Hekma",
+      "45 Swimming Pools & 2 Lagoons",
+      "10% Down Payment over 8 Years"
+    ],
+    "paymentPlan": "10% DP over 8 yrs"
+  },
+  {
+    "slug": "al-east-mostakbal-city",
+    "name": "AL EAST",
+    "destination": "mostakbal-city",
+    "lat": 30.022,
+    "lng": 31.625,
+    "developer": "Al Ahly Sabbour",
+    "developerSlug": "al-ahly-sabbour",
+    "priceFrom": 5.0,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+      "Penthouse"
+    ],
+    "amenities": [
+      "181 Acres Masterplan",
+      "80% Villas / 10% Apartments",
+      "In Front of Boulevard",
+      "3 Main Gates",
+      "Commercial Strip",
+      "Clubhouse"
+    ],
+    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80"
+    ],
+    "blurb": "AL EAST by Al Ahly Sabbour in Mostakbal City spans 181 acres (80% villas, 10% apartments, 10% commercial) featuring Roofscape Apartments, Townhouses, Twin Villas, and Standalones.",
+    "highlights": [
+      "Directly in Front of Boulevard",
+      "80% Villas Masterplan",
+      "5% Down Payment over 8 Years"
+    ],
+    "paymentPlan": "5%+5% DP over 8 yrs"
+  },
+  {
+    "slug": "keeva-6th-of-october",
+    "name": "KEEVA",
+    "destination": "6th-october",
+    "lat": 29.985,
+    "lng": 30.93,
+    "developer": "Al Ahly Sabbour",
+    "developerSlug": "al-ahly-sabbour",
+    "priceFrom": 15.615,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House"
+    ],
+    "amenities": [
+      "Waslet Dahshour Location",
+      "180 Acres (95% Villas)",
+      "1km Commercial Strip",
+      "3-Feddan Clubhouse",
+      "5 min to Mall of Arabia"
+    ],
+    "hero": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
+    ],
+    "blurb": "KEEVA by Al Ahly Sabbour on Waslet Dahshour in 6th of October spans 180 acres (95% villas) featuring a 1km commercial strip, 3-feddan clubhouse, Townhouses, and Twin Houses.",
+    "highlights": [
+      "Directly on Waslet Dahshour",
+      "95% Villas Masterplan",
+      "5% Down Payment over 8 Years"
+    ],
+    "paymentPlan": "5%+5% DP over 8 yrs"
   }
 ];

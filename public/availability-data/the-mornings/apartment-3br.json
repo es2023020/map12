@@ -1,0 +1,16 @@
+[
+  {
+    "id": "the-mornings-3",
+    "unitNo": "TM-3B-148",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 148,
+    "view": "Landscape",
+    "priceEGP": 11800000,
+    "status": "Available",
+    "slug": "the-mornings",
+    "cluster": "Residential",
+    "delivery_note": "3 Years",
+    "payment_plan": "5%+5% over 8 yrs"
+  }
+]

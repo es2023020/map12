@@ -1,0 +1,16 @@
+[
+  {
+    "id": "the-mornings-2",
+    "unitNo": "TM-2B-83",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 83,
+    "view": "Landscape",
+    "priceEGP": 7100000,
+    "status": "Available",
+    "slug": "the-mornings",
+    "cluster": "Residential",
+    "delivery_note": "3 Years",
+    "payment_plan": "5%+5% over 8 yrs"
+  }
+]

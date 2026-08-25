@@ -1,0 +1,16 @@
+[
+  {
+    "id": "al-east-mostakbal-city-1",
+    "unitNo": "ALEAST-1B-65",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 65,
+    "view": "Landscape",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "al-east-mostakbal-city",
+    "cluster": "Roofscape",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 yrs"
+  }
+]
