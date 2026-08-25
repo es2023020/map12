@@ -1,16 +1,32 @@
 [
   {
-    "id": "garden-lakes-6",
-    "unitNo": "GL-TH",
+    "id": "garden-lakes-17",
+    "unitNo": "GL4/4PLEX/21D",
     "beds": 3,
     "finishing": "Core & Shell",
-    "areaSqm": 240,
-    "view": "Landscape",
-    "priceEGP": 27380000,
+    "areaSqm": 215,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 30480000,
     "status": "Available",
     "slug": "garden-lakes",
-    "cluster": "Phase 1",
-    "delivery_note": "1 Year",
-    "payment_plan": "20% DP over 6 yrs"
+    "cluster": "GL4",
+    "area_note": "Land: 300.12 sqm",
+    "delivery_note": "2027-2028",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "garden-lakes-24",
+    "unitNo": "GL4/4PLEX/1D",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 29200000,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "GL4",
+    "area_note": "Land: 259.66 sqm",
+    "delivery_note": "2027-2028",
+    "payment_plan": "5%+5% over 8 yrs"
   }
 ]

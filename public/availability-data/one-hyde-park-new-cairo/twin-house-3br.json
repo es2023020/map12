@@ -1,0 +1,62 @@
+[
+  {
+    "id": "one-hyde-park-new-cairo-3",
+    "unitNo": "OHPC1/TW/5A",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 218,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 37520000,
+    "status": "Available",
+    "slug": "one-hyde-park-new-cairo",
+    "cluster": "Cluster 1",
+    "area_note": "Land: 290 sqm",
+    "delivery_note": "2028",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-5",
+    "unitNo": "OHPC1/TW/10B",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 218,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 35950000,
+    "status": "Available",
+    "slug": "one-hyde-park-new-cairo",
+    "cluster": "Cluster 1",
+    "area_note": "Land: 259 sqm",
+    "delivery_note": "2028",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-11",
+    "unitNo": "OHPC1/TW/30B",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 218,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 38190000,
+    "status": "Available",
+    "slug": "one-hyde-park-new-cairo",
+    "cluster": "Cluster 1",
+    "area_note": "Land: 263 sqm",
+    "delivery_note": "2028",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-12",
+    "unitNo": "OHPC1/TW/31B",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 218,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 39350000,
+    "status": "Available",
+    "slug": "one-hyde-park-new-cairo",
+    "cluster": "Cluster 1",
+    "area_note": "Land: 288 sqm",
+    "delivery_note": "2028",
+    "payment_plan": "5%+5% over 8 yrs"
+  }
+]

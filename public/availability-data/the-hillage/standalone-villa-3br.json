@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-hillage-7",
+    "unitNo": "HIL-SA-SM-210",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 210,
+    "view": "Landscape",
+    "priceEGP": 40000000,
+    "status": "Available",
+    "slug": "the-hillage",
+    "cluster": "Villas",
+    "area_note": "3 Master BR, Living Room",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 10 yrs"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "the-hillage-1",
+    "unitNo": "HIL-2B-138",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 138,
+    "view": "Landscape",
+    "priceEGP": 17000000,
+    "status": "Available",
+    "slug": "the-hillage",
+    "cluster": "Apartments",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 10 yrs"
+  }
+]

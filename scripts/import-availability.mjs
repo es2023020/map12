@@ -421,4 +421,59 @@ function main() {
   );
 }
 
-main();
+syncProjectImages();
+  main();
+
+
+function syncProjectImages() {
+  const compoundsFile = path.join(ROOT, "src", "data", "compounds.generated.ts");
+  const projectsImgDir = path.join(ROOT, "public", "projects");
+  if (!fs.existsSync(compoundsFile) || !fs.existsSync(projectsImgDir)) return;
+
+  let compContent = fs.readFileSync(compoundsFile, "utf8");
+  const matches = compContent.matchAll(/(\{\s*"slug":\s*"([^"]+)".*?\})/gs);
+
+  let updatedCount = 0;
+  const validExts = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
+
+  for (const m of matches) {
+    const block = m[1];
+    const slug = m[2];
+
+    const folderPath = path.join(projectsImgDir, slug);
+    if (!fs.existsSync(folderPath)) continue;
+
+    const files = fs.readdirSync(folderPath).filter((f) => {
+      const ext = path.extname(f).toLowerCase();
+      return validExts.includes(ext) && fs.statSync(path.join(folderPath, f)).isFile();
+    }).sort();
+
+    if (files.length === 0) continue;
+
+    let heroFile = files[0];
+    for (const candidate of ["1.jpg", "hero.jpg", "cover.jpg", "main.jpg", "1.png", "1.jpeg"]) {
+      if (files.includes(candidate)) {
+        heroFile = candidate;
+        break;
+      }
+    }
+
+    const newHero = `/projects/${slug}/${heroFile}`;
+    const newGallery = files.slice(0, 10).map((f) => `/projects/${slug}/${f}`);
+
+    let newBlock = block;
+    newBlock = newBlock.replace(/"hero":\s*"[^"]+"/, `"hero": "${newHero}"`);
+    const galleryStr = JSON.stringify(newGallery, null, 6);
+    newBlock = newBlock.replace(/"gallery":\s*\[.*?\]/s, `"gallery": ${galleryStr}`);
+
+    if (newBlock !== block) {
+      compContent = compContent.replace(block, newBlock);
+      updatedCount++;
+    }
+  }
+
+  if (updatedCount > 0) {
+    fs.writeFileSync(compoundsFile, compContent, "utf8");
+    console.log(`Auto-synced local images for ${updatedCount} compound(s) in compounds.generated.ts`);
+  }
+}

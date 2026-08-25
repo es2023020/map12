@@ -1,0 +1,62 @@
+[
+  {
+    "id": "garden-lakes-41",
+    "unitNo": "GL1/TW/35A",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 242,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 33560000,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "Lakeside",
+    "area_note": "Land: 372.2009 sqm",
+    "delivery_note": "2027-2028",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "garden-lakes-42",
+    "unitNo": "GL1/TW/35B",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 242,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 33550000,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "Lakeside",
+    "area_note": "Land: 372.0305 sqm",
+    "delivery_note": "2027-2028",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "garden-lakes-43",
+    "unitNo": "GL1/TW/36A",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 242,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 31310000,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "Lakeside",
+    "area_note": "Land: 352.6361 sqm",
+    "delivery_note": "2027-2028",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "garden-lakes-44",
+    "unitNo": "GL1/TW/36B",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 242,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 29000000,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "Lakeside",
+    "area_note": "Land: 326.7639 sqm",
+    "delivery_note": "2027-2028",
+    "payment_plan": "5%+5% over 8 yrs"
+  }
+]
