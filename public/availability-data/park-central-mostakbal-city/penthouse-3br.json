@@ -1,0 +1,17 @@
+[
+  {
+    "id": "park-central-mostakbal-city-5",
+    "unitNo": "PC-TER-3B-PH-215",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 215,
+    "view": "Landscape",
+    "priceEGP": 24900000,
+    "status": "Available",
+    "slug": "park-central-mostakbal-city",
+    "cluster": "Terraces",
+    "area_note": "Roof 48 sqm",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  }
+]

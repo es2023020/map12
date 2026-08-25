@@ -1,0 +1,47 @@
+[
+  {
+    "id": "swanlake-west-7",
+    "unitNo": "SLW-TWIN-1ST-260",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 260,
+    "view": "Landscape",
+    "priceEGP": 46600000,
+    "status": "Available",
+    "slug": "swanlake-west",
+    "cluster": "Villas",
+    "area_note": "Land 441 sqm, One Storey",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 10 yrs"
+  },
+  {
+    "id": "swanlake-west-8",
+    "unitNo": "SLW-TWIN-237",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 237,
+    "view": "Landscape",
+    "priceEGP": 50100000,
+    "status": "Available",
+    "slug": "swanlake-west",
+    "cluster": "Villas",
+    "area_note": "Land 351 sqm",
+    "delivery_note": "1.5 Years",
+    "payment_plan": "5%+5% over 7 yrs"
+  },
+  {
+    "id": "swanlake-west-9",
+    "unitNo": "SLW-TWIN-LOFT-254",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 254,
+    "view": "Landscape",
+    "priceEGP": 50000000,
+    "status": "Available",
+    "slug": "swanlake-west",
+    "cluster": "Villas",
+    "area_note": "Land 380 sqm",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 10 yrs"
+  }
+]

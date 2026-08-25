@@ -1,0 +1,44 @@
+[
+  {
+    "id": "swanlake-residences-new-cairo-11",
+    "unitNo": "AMPM-C02-155",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 155,
+    "view": "Landscape",
+    "priceEGP": 42600000,
+    "status": "Available",
+    "slug": "swanlake-residences-new-cairo",
+    "cluster": "am:pm Offices",
+    "delivery_note": "1.5 Years",
+    "payment_plan": "5%+5% over 7 yrs"
+  },
+  {
+    "id": "swanlake-residences-new-cairo-12",
+    "unitNo": "AMPM-A04-221",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 221,
+    "view": "Landscape",
+    "priceEGP": 66000000,
+    "status": "Available",
+    "slug": "swanlake-residences-new-cairo",
+    "cluster": "am:pm Offices",
+    "delivery_note": "1.5 Years",
+    "payment_plan": "5%+5% over 7 yrs"
+  },
+  {
+    "id": "swanlake-residences-new-cairo-13",
+    "unitNo": "AMPM-A02-497",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 497,
+    "view": "Landscape",
+    "priceEGP": 142100000,
+    "status": "Available",
+    "slug": "swanlake-residences-new-cairo",
+    "cluster": "am:pm Offices",
+    "delivery_note": "1.5 Years",
+    "payment_plan": "5%+5% over 7 yrs"
+  }
+]

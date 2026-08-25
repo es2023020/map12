@@ -3261,7 +3261,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.912,
     "developer": "Hassan Allam Properties",
     "developerSlug": "hassan-allam-properties",
-    "priceFrom": 22,
+    "priceFrom": 24.2,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
@@ -3292,7 +3292,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/swanlake-west/9.jpg"
     ],
     "blurb": "Swanlake West by Hassan Allam Properties is a luxury residential compound in 6th of October City. Spanning 170 acres, it features standalone villas, twinhouses, and townhouses with pyramids views.",
-    "paymentPlan": "5% down \u00b7 10 years equal installments",
+    "paymentPlan": "5%+5% DP over 10 yrs",
     "areaSize": "170 feddan",
     "unitSizes": "151\u2013606 m\u00b2",
     "type": "Residential",
@@ -3310,11 +3310,11 @@ export const compoundsGenerated: Compound[] = [
     "destination": "red-sea",
     "lat": 27.392,
     "lng": 33.68,
-    "developer": "Orascom",
-    "developerSlug": "orascom",
-    "priceFrom": 25,
+    "developer": "Hassan Allam Properties",
+    "developerSlug": "hassan-allam-properties",
+    "priceFrom": 27.9,
     "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -3333,7 +3333,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/swanlake-el-gouna/1.jpg"
     ],
     "blurb": "Swanlake El Gouna by Hassan Allam Properties is an exclusive beach resort in El Gouna. Spanning Greek architecture, it offers sandy beaches, private crystal lagoons, and fully finished chalets.",
-    "paymentPlan": "5% down \u00b7 6 years equal installments",
+    "paymentPlan": "5%+5% DP over 6 yrs",
     "areaSize": "27 feddan",
     "unitSizes": "115\u2013185 m\u00b2",
     "type": "Resort",
@@ -11684,8 +11684,8 @@ export const compoundsGenerated: Compound[] = [
     "destination": "new-cairo",
     "lat": 29.9788,
     "lng": 31.6415,
-    "developer": "STM",
-    "developerSlug": "stm",
+    "developer": "STM Developments",
+    "developerSlug": "stm-developments",
     "priceFrom": 30.07,
     "deliveryYear": 2026,
     "status": "RTM",
@@ -17191,6 +17191,119 @@ export const compoundsGenerated: Compound[] = [
     "highlights": [
       "Boutique 15 Buildings Enclave",
       "Extension of Stone Park & West Golf",
+      "5% Down Payment over 10 Years"
+    ],
+    "paymentPlan": "5% DP over 10 yrs"
+  },
+  {
+    "slug": "swanlake-residences-new-cairo",
+    "name": "SwanLake Residences (New Cairo)",
+    "destination": "new-cairo",
+    "lat": 30.035,
+    "lng": 31.48,
+    "developer": "Hassan Allam Properties",
+    "developerSlug": "hassan-allam-properties",
+    "priceFrom": 15.7,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Twin House",
+      "Standalone Villa",
+      "Commercial"
+    ],
+    "amenities": [
+      "1.9 Million sqm Masterplan",
+      "CRTKL Masterplan & Cracknell Landscaping",
+      "KODE Sports Club",
+      "am:pm Administrative Strip",
+      "Private Clubhouse",
+      "3km Jogging Track"
+    ],
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+    ],
+    "blurb": "SwanLake Residences \u2013 New Cairo by Hassan Allam Properties spans 454 acres directly on the Cairo\u2013Suez Road, featuring The Amaia, The Phoenix, The Selina, and am:pm Offices.",
+    "highlights": [
+      "Directly on Suez Road",
+      "Master Plan by CRTKL & Cracknell",
+      "5% Down Payment over 6 to 10 Years"
+    ],
+    "paymentPlan": "5%+5% DP over 6 to 10 yrs"
+  },
+  {
+    "slug": "the-valleys-mostakbal-city",
+    "name": "The Valleys",
+    "destination": "mostakbal-city",
+    "lat": 30.025,
+    "lng": 31.62,
+    "developer": "Hassan Allam Properties",
+    "developerSlug": "hassan-allam-properties",
+    "priceFrom": 26.4,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "110 Acres 100% Villa Community",
+      "20 Acres Green Spine & Lakes",
+      "Wellness Hub",
+      "Kids Area",
+      "BBQ Area & Pets Park"
+    ],
+    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80"
+    ],
+    "blurb": "The Valleys III (Off Script) by Hassan Allam Properties in Mostakbal City is a 110-acre exclusive 100% villa community featuring connected valleys, townhouses, twin houses, and standalones.",
+    "highlights": [
+      "100% Villa Community",
+      "20 Acres Green Spine & Water Bodies",
+      "5% Down Payment over 9 Years"
+    ],
+    "paymentPlan": "5%+5% DP over 9 yrs"
+  },
+  {
+    "slug": "park-central-mostakbal-city",
+    "name": "Park Central",
+    "destination": "mostakbal-city",
+    "lat": 30.02,
+    "lng": 31.615,
+    "developer": "Hassan Allam Properties",
+    "developerSlug": "hassan-allam-properties",
+    "priceFrom": 8.3,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+      "Penthouse"
+    ],
+    "amenities": [
+      "133 Acres Masterplan",
+      "200,000 sqm Central Park",
+      "Multi-Purpose Courts",
+      "Pocket Parks",
+      "BBQ & F&B Kiosks"
+    ],
+    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80"
+    ],
+    "blurb": "Park Central in Mostakbal City by Hassan Allam Properties spans 133 acres with a 200,000m\u00b2 Central Park, featuring Terraces and The Great Lawn (60% villas / 40% apartments).",
+    "highlights": [
+      "200,000 sqm Central Park",
+      "92% of Units Overlooking Park",
       "5% Down Payment over 10 Years"
     ],
     "paymentPlan": "5% DP over 10 yrs"
