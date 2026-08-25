@@ -1,0 +1,16 @@
+[
+  {
+    "id": "garden-lakes-1",
+    "unitNo": "GL-1BR",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 71,
+    "view": "Landscape",
+    "priceEGP": 6800000,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "Phase 1",
+    "delivery_note": "1 Year",
+    "payment_plan": "20% DP over 6 yrs"
+  }
+]

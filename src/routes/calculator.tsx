@@ -286,6 +286,10 @@ function CalculatorPage() {
   const [budgetTypeFilter, setBudgetTypeFilter] = useState("");
   const [budgetStatusFilter, setBudgetStatusFilter] = useState<"all" | "RTM" | "Off-Plan">("all");
 
+  // Pagination / expansion limits for matched properties
+  const [visibleUnitsLimit, setVisibleUnitsLimit] = useState(8);
+  const [visibleProjectsLimit, setVisibleProjectsLimit] = useState(6);
+
   const selectedProject = useMemo(
     () => compoundsList.find((c) => c.slug === projectSlug),
     [projectSlug, compoundsList],
@@ -422,7 +426,7 @@ function CalculatorPage() {
       });
     });
 
-    return list.sort((a, b) => b.priceEGP - a.priceEGP).slice(0, 8);
+    return list.sort((a, b) => b.priceEGP - a.priceEGP);
   }, [
     basePrice,
     budgetDestFilters,
@@ -450,8 +454,7 @@ function CalculatorPage() {
           (budgetStatusFilter === "RTM" ? rtm : offPlan);
         return matchPrice && matchDest && matchType && matchStatus;
       })
-      .sort((a, b) => b.priceFrom - a.priceFrom)
-      .slice(0, 6);
+      .sort((a, b) => b.priceFrom - a.priceFrom);
   }, [basePrice, budgetDestFilters, budgetTypeFilter, budgetStatusFilter, mainCompounds, availabilityList]);
 
   const projectTypes = selectedProject?.types ?? [];
@@ -598,11 +601,18 @@ function CalculatorPage() {
 
       {suitableUnits.length > 0 ? (
         <div className="space-y-3">
-          <h4 className="text-[10px] font-semibold uppercase tracking-wider text-accent flex items-center gap-1.5">
-            <Search className="h-3 w-3" /> Matching Live Units
-          </h4>
+          <div className="flex items-center justify-between">
+            <h4 className="text-[10px] font-semibold uppercase tracking-wider text-accent flex items-center gap-1.5">
+              <Search className="h-3 w-3" /> Matching Live Units ({suitableUnits.length} total)
+            </h4>
+            {suitableUnits.length > 8 && (
+              <span className="text-[10px] text-muted-foreground font-medium">
+                Showing {Math.min(visibleUnitsLimit, suitableUnits.length)} of {suitableUnits.length}
+              </span>
+            )}
+          </div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {suitableUnits.map((u, i) => (
+            {suitableUnits.slice(0, visibleUnitsLimit).map((u, i) => (
               <div
                 key={i}
                 className="rounded-xl border border-border bg-secondary/30 p-3 hover:bg-secondary/50 transition-colors flex flex-col justify-between"
@@ -640,6 +650,29 @@ function CalculatorPage() {
               </div>
             ))}
           </div>
+
+          {/* See More Live Units Button */}
+          {suitableUnits.length > visibleUnitsLimit ? (
+            <div className="pt-2 text-center">
+              <button
+                type="button"
+                onClick={() => setVisibleUnitsLimit((prev) => prev + 8)}
+                className="inline-flex items-center gap-1.5 rounded-xl border border-accent/40 bg-accent/10 px-4 py-2 text-xs font-bold text-accent hover:bg-accent hover:text-white transition-all shadow-sm"
+              >
+                See More Live Units ({suitableUnits.length - visibleUnitsLimit} remaining) ↓
+              </button>
+            </div>
+          ) : visibleUnitsLimit > 8 ? (
+            <div className="pt-2 text-center">
+              <button
+                type="button"
+                onClick={() => setVisibleUnitsLimit(8)}
+                className="text-[11px] font-semibold text-muted-foreground hover:text-primary underline"
+              >
+                Show Less Units ↑
+              </button>
+            </div>
+          ) : null}
         </div>
       ) : (
         <div className="rounded-xl border border-dashed border-border p-5 text-center text-xs text-muted-foreground">
@@ -649,11 +682,18 @@ function CalculatorPage() {
       )}
 
       <div className="space-y-3">
-        <h4 className="text-[10px] font-semibold uppercase tracking-wider text-accent">
-          Projects Starting Within Budget
-        </h4>
+        <div className="flex items-center justify-between">
+          <h4 className="text-[10px] font-semibold uppercase tracking-wider text-accent">
+            Projects Starting Within Budget ({suitableProjects.length} total)
+          </h4>
+          {suitableProjects.length > 6 && (
+            <span className="text-[10px] text-muted-foreground font-medium">
+              Showing {Math.min(visibleProjectsLimit, suitableProjects.length)} of {suitableProjects.length}
+            </span>
+          )}
+        </div>
         <div className="grid gap-3 sm:grid-cols-3">
-          {suitableProjects.map((p) => (
+          {suitableProjects.slice(0, visibleProjectsLimit).map((p) => (
             <Link
               key={p.slug}
               to="/projects/$slug"
@@ -673,6 +713,29 @@ function CalculatorPage() {
             </Link>
           ))}
         </div>
+
+        {/* See More Projects Button */}
+        {suitableProjects.length > visibleProjectsLimit ? (
+          <div className="pt-2 text-center">
+            <button
+              type="button"
+              onClick={() => setVisibleProjectsLimit((prev) => prev + 6)}
+              className="inline-flex items-center gap-1.5 rounded-xl border border-accent/40 bg-accent/10 px-4 py-2 text-xs font-bold text-accent hover:bg-accent hover:text-white transition-all shadow-sm"
+            >
+              See More Projects ({suitableProjects.length - visibleProjectsLimit} remaining) ↓
+            </button>
+          </div>
+        ) : visibleProjectsLimit > 6 ? (
+          <div className="pt-2 text-center">
+            <button
+              type="button"
+              onClick={() => setVisibleProjectsLimit(6)}
+              className="text-[11px] font-semibold text-muted-foreground hover:text-primary underline"
+            >
+              Show Less Projects ↑
+            </button>
+          </div>
+        ) : null}
       </div>
     </div>
   );

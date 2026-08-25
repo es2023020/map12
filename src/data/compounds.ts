@@ -2103,6 +2103,7 @@ const newProjects: Compound[] = [
   },
   {
     slug: "aqua-lagoons-june",
+    isNewLaunch: true,
     name: "Aqua Lagoons - June",
     destination: "ras-el-hekma",
     lat: 31.08,
@@ -2242,7 +2243,7 @@ const newProjects: Compound[] = [
     developerSlug: "il-cazar-developments",
     priceFrom: 4.9,
     deliveryYear: 2028,
-    status: "Off-Plan",
+    status: "On-Hold",
     beachfront: false,
     types: ["Apartment", "Villa"],
     amenities: [
@@ -2270,6 +2271,7 @@ const newProjects: Compound[] = [
   },
   {
     slug: "silvertown-lagoon-cabanas",
+    isNewLaunch: true,
     name: "Silvertown - Lagoon Cabanas",
     destination: "sidi-heneish",
     lat: 31.15,
@@ -3154,7 +3156,7 @@ const newProjects: Compound[] = [
     developerSlug: "la-vista-developments",
     priceFrom: 27,
     deliveryYear: 2026,
-    status: "RTM",
+    status: "On-Hold",
     beachfront: false,
     types: ["Townhouse", "Twin House", "Villa"],
     amenities: [

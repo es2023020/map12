@@ -1,0 +1,16 @@
+[
+  {
+    "id": "badya-1",
+    "unitNo": "BAD-3BR-TYP",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 195,
+    "view": "Landscape",
+    "priceEGP": 18700000,
+    "status": "Available",
+    "slug": "badya",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10%+5% over 8 yrs"
+  }
+]

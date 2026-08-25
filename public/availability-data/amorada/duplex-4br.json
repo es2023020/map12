@@ -1,0 +1,16 @@
+[
+  {
+    "id": "amorada-2",
+    "unitNo": "AMO-DUP",
+    "beds": 4,
+    "finishing": "Furnished/finished",
+    "areaSqm": 230,
+    "view": "Landscape",
+    "priceEGP": 20000000,
+    "status": "Available",
+    "slug": "amorada",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "Cash"
+  }
+]

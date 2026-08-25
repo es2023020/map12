@@ -1,0 +1,16 @@
+[
+  {
+    "id": "saada-1",
+    "unitNo": "SAA-TH",
+    "beds": 3,
+    "finishing": "Red brick",
+    "areaSqm": 210,
+    "view": "Landscape",
+    "priceEGP": 33000000,
+    "status": "Available",
+    "slug": "saada",
+    "cluster": "Phase 1",
+    "delivery_note": "6 months",
+    "payment_plan": "20% / 5 yrs"
+  }
+]

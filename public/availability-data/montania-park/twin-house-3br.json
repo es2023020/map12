@@ -1,0 +1,16 @@
+[
+  {
+    "id": "montania-park-1",
+    "unitNo": "MONP-TW",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 140,
+    "view": "Landscape",
+    "priceEGP": 17500000,
+    "status": "Available",
+    "slug": "montania-park",
+    "cluster": "Phase 1",
+    "delivery_note": "6 Months",
+    "payment_plan": "15% DP over 7 yrs"
+  }
+]

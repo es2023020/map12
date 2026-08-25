@@ -1,0 +1,16 @@
+[
+  {
+    "id": "galleria-moon-valley-1",
+    "unitNo": "GMV-2BR",
+    "beds": 2,
+    "finishing": "Red brick",
+    "areaSqm": 125,
+    "view": "Landscape",
+    "priceEGP": 12500000,
+    "status": "Available",
+    "slug": "galleria-moon-valley",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10% / 5 yrs"
+  }
+]

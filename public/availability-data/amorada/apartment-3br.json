@@ -1,0 +1,16 @@
+[
+  {
+    "id": "amorada-1",
+    "unitNo": "AMO-3BR",
+    "beds": 3,
+    "finishing": "Furnished/finished",
+    "areaSqm": 155,
+    "view": "Landscape",
+    "priceEGP": 12000000,
+    "status": "Available",
+    "slug": "amorada",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "Cash"
+  }
+]

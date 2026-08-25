@@ -1,0 +1,30 @@
+[
+  {
+    "id": "garden-lakes-4",
+    "unitNo": "GL-3BR-TYP",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 19350000,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "Phase 1",
+    "delivery_note": "1 Year",
+    "payment_plan": "20% DP over 6 yrs"
+  },
+  {
+    "id": "garden-lakes-5",
+    "unitNo": "GL-3BR-G",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 148,
+    "view": "Landscape",
+    "priceEGP": 21482500,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "Phase 1",
+    "delivery_note": "1 Year",
+    "payment_plan": "20% DP over 6 yrs"
+  }
+]

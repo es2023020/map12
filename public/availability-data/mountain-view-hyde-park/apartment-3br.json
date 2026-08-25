@@ -1,0 +1,16 @@
+[
+  {
+    "id": "mountain-view-hyde-park-1",
+    "unitNo": "MVHP-3BR",
+    "beds": 3,
+    "finishing": "Red brick",
+    "areaSqm": 175,
+    "view": "Landscape",
+    "priceEGP": 20341000,
+    "status": "Available",
+    "slug": "mountain-view-hyde-park",
+    "cluster": "Phase 1",
+    "delivery_note": "Immediate – 1 year",
+    "payment_plan": "20% / 7 yrs"
+  }
+]

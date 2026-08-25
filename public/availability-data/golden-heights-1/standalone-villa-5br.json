@@ -1,0 +1,16 @@
+[
+  {
+    "id": "golden-heights-1-1",
+    "unitNo": "GH1-SA",
+    "beds": 5,
+    "finishing": "Red brick",
+    "areaSqm": 350,
+    "view": "Landscape",
+    "priceEGP": 57641000,
+    "status": "Available",
+    "slug": "golden-heights-1",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "25% / 5 yrs"
+  }
+]

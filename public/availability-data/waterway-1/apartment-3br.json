@@ -1,0 +1,16 @@
+[
+  {
+    "id": "waterway-1-1",
+    "unitNo": "WW1-3BR",
+    "beds": 3,
+    "finishing": "Semi-finished",
+    "areaSqm": 185,
+    "view": "Landscape",
+    "priceEGP": 35000000,
+    "status": "Available",
+    "slug": "waterway-1",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% / 5 yrs"
+  }
+]

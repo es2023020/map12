@@ -1,0 +1,16 @@
+[
+  {
+    "id": "hyde-park-new-cairo-4",
+    "unitNo": "HP-SA",
+    "beds": 5,
+    "finishing": "Red brick",
+    "areaSqm": 380,
+    "view": "Landscape",
+    "priceEGP": 80000000,
+    "status": "Available",
+    "slug": "hyde-park-new-cairo",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "6% / 10 yrs"
+  }
+]

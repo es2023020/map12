@@ -1,0 +1,16 @@
+[
+  {
+    "id": "saada-2",
+    "unitNo": "SAA-TW",
+    "beds": 4,
+    "finishing": "Red brick",
+    "areaSqm": 260,
+    "view": "Landscape",
+    "priceEGP": 56000000,
+    "status": "Available",
+    "slug": "saada",
+    "cluster": "Phase 1",
+    "delivery_note": "6 months",
+    "payment_plan": "20% / 5 yrs"
+  }
+]
