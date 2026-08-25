@@ -1,0 +1,62 @@
+[
+  {
+    "id": "azha-north-coast-1",
+    "unitNo": "ELEA-2B-LAG-R2",
+    "beds": 2,
+    "finishing": "Fully Finished with A/C & Kitchen",
+    "areaSqm": 110,
+    "view": "Sea & Lagoon View",
+    "priceEGP": 18195000,
+    "status": "Available",
+    "slug": "azha-north-coast",
+    "cluster": "ELEA",
+    "area_note": "Lagoon View Second Row",
+    "delivery_note": "4 Years",
+    "payment_plan": "0% DP over 8 yrs"
+  },
+  {
+    "id": "azha-north-coast-2",
+    "unitNo": "ELEA-2B-LAG-R1",
+    "beds": 2,
+    "finishing": "Fully Finished with A/C & Kitchen",
+    "areaSqm": 115,
+    "view": "Sea & Lagoon View",
+    "priceEGP": 22890000,
+    "status": "Available",
+    "slug": "azha-north-coast",
+    "cluster": "ELEA",
+    "area_note": "Lagoon View First Row",
+    "delivery_note": "4 Years",
+    "payment_plan": "0% DP over 8 yrs"
+  },
+  {
+    "id": "azha-north-coast-3",
+    "unitNo": "ELEA-2B-SEA-148",
+    "beds": 2,
+    "finishing": "Fully Finished with A/C & Kitchen",
+    "areaSqm": 148,
+    "view": "Sea & Lagoon View",
+    "priceEGP": 30281000,
+    "status": "Available",
+    "slug": "azha-north-coast",
+    "cluster": "ELEA",
+    "area_note": "Sea View — Last Unit",
+    "delivery_note": "4 Years",
+    "payment_plan": "0% DP over 8 yrs"
+  },
+  {
+    "id": "azha-north-coast-7",
+    "unitNo": "SV-2B-TYP",
+    "beds": 2,
+    "finishing": "Fully Finished with A/C & Kitchen",
+    "areaSqm": 110,
+    "view": "Sea & Lagoon View",
+    "priceEGP": 20700000,
+    "status": "Available",
+    "slug": "azha-north-coast",
+    "cluster": "SEA VEIL",
+    "area_note": "Typical Floors, 70% Sea View",
+    "delivery_note": "4 Years",
+    "payment_plan": "0% DP over 8 yrs"
+  }
+]

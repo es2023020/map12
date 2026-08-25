@@ -1067,7 +1067,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.174,
     "developer": "Horizon Egypt Developments",
     "developerSlug": "horizon-egypt-developments",
-    "priceFrom": 15.5,
+    "priceFrom": 21.5,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
@@ -1094,7 +1094,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/saada-sahel/1.jpg"
     ],
     "blurb": "Saada Sahel is a premium development by Horizon Egypt Developments in Ras El Hekma, presenting high-end unit designs and world-class compound amenities.",
-    "paymentPlan": "10% down \u00b7 7 years equal installments",
+    "paymentPlan": "5%+5% DP over 9 yrs",
     "areaSize": "100 feddan",
     "unitSizes": "80\u2013300 m\u00b2",
     "type": "Resort",
@@ -1157,9 +1157,9 @@ export const compoundsGenerated: Compound[] = [
     "destination": "ras-el-hekma",
     "lat": 31.0765,
     "lng": 28.07,
-    "developer": "Al Ahly Sabbour Developments",
-    "developerSlug": "al-ahly-sabbour-developments",
-    "priceFrom": 13.9,
+    "developer": "Al Ahly Sabbour",
+    "developerSlug": "al-ahly-sabbour",
+    "priceFrom": 47.6,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
@@ -1195,7 +1195,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/gaia/6.jpg"
     ],
     "blurb": "Gaia is a luxury beachfront community by Al Ahly Sabbour spanning approximately 280 acres in Ras El Hekma, offering premium residences, crystal lagoons, and direct access to one of the North Coast's finest Mediterranean beaches.",
-    "paymentPlan": "10% down, installments up to 8 years",
+    "paymentPlan": "10% DP over 8 yrs",
     "areaSize": "100 feddan",
     "unitSizes": "80\u2013300 m\u00b2",
     "type": "Resort",
@@ -1265,7 +1265,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.3750245,
     "developer": "Madaar Development",
     "developerSlug": "madaar-development",
-    "priceFrom": 14,
+    "priceFrom": 14.0,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
@@ -1289,7 +1289,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/elea-azha-north/4.jpg"
     ],
     "blurb": "Elea is the newest launch in the Azha Ras El Hekma mega-project by Madaar Development. Situated on the 214th km of Alexandria - Marsa Matrouh Road (International Coastal Road), the resort is one of the elite summer destinations in North Coast.Elea Azha Ras El Hekma boasts a lavish collection of lagoon-view properties.",
-    "paymentPlan": "5% down \u00b7 8 years equal installments",
+    "paymentPlan": "0% DP (Limited Offer) over 8 yrs",
     "areaSize": "250 feddan",
     "unitSizes": "110\u2013400 m\u00b2",
     "type": "Resort",
@@ -2076,52 +2076,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "parentSlug": "hyde-park-north-seashore"
   },
-  {
-    "slug": "keeva",
-    "name": "Keeva",
-    "destination": "eastern-expansion",
-    "lat": 30.015,
-    "lng": 31.005,
-    "developer": "Al Ahly Sabbour",
-    "developerSlug": "al-ahly-sabbour-developments",
-    "priceFrom": 5.7,
-    "deliveryYear": 2027,
-    "status": "RTM",
-    "beachfront": false,
-    "types": [
-      "Apartment",
-      "Duplex",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
-    ],
-    "amenities": [
-      "Central clubhouse",
-      "Commercial retail",
-      "Swimming pools",
-      "Health club",
-      "Walking tracks"
-    ],
-    "hero": "/projects/keeva/1.jpg",
-    "gallery": [
-      "/projects/keeva/1.jpg",
-      "/projects/keeva/2.jpg",
-      "/projects/keeva/3.jpg"
-    ],
-    "blurb": "Keeva is a premium residential compound by Al Ahly Sabbour spread across approximately 144 acres in New Zayed City, offering modern homes surrounded by landscaped parks and integrated services near Sheikh Zayed.",
-    "paymentPlan": "5% down, installments up to 9 years",
-    "areaSize": "144 feddan",
-    "unitSizes": "120\u2013360 m\u00b2",
-    "type": "Residential",
-    "highlights": [
-      "144 acres in New Zayed prime location",
-      "Al Ahly Sabbour quality delivery",
-      "Near Sphinx Airport & Sheikh Zayed"
-    ],
-    "city": "New Zayed City, West Cairo, Egypt",
-    "masterPlanUrl": "/Masterplans/keeva.jpg"
-  },
-  {
+    {
     "slug": "31-west",
     "name": "31 West",
     "destination": "eastern-expansion",
@@ -5254,7 +5209,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.136,
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
-    "priceFrom": 8,
+    "priceFrom": 6.6,
     "deliveryYear": 2030,
     "status": "Off-Plan",
     "beachfront": true,
@@ -5285,7 +5240,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/youd/7.jpg"
     ],
     "blurb": "Youd by Al Ahly Sabbour at km 187 Ras El Hekma \u2014 90% of units with sea or partial sea views on a 114-acre lagoon-front site. Fully-finished chalets (85\u2013145 m\u00b2), twin villas (220 m\u00b2) and standalone villas (220 m\u00b2) with multiple payment plans from 5%+5% over 8 years. Significant discounts for larger down payments \u2014 up to 50% cash discount.",
-    "paymentPlan": "5%+5% over 8 years (various discount plans available)",
+    "paymentPlan": "10% DP over 4 to 10 yrs",
     "areaSize": "114 feddan",
     "unitSizes": "85\u2013220 m\u00b2",
     "type": "Resort",
@@ -5624,14 +5579,8 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Restaurants Strip"
     ],
-    "hero": "/projects/telal-soul/1.jpg",
-    "gallery": [
-      "/projects/telal-soul/1.jpg",
-      "/projects/telal-soul/2.jpg",
-      "/projects/telal-soul/3.jpg",
-      "/projects/telal-soul/4.jpg",
-      "/projects/telal-soul/5.jpg"
-    ],
+    "hero": "/projects/telal/1.jpg",
+    "gallery": ["/projects/telal/1.jpg", "/projects/telal/2.jpg"],
     "blurb": "Telal Soul by Roya Developments at km 143 Sidi Abdelrahman \u2014 1,300m of private beachfront with 38 available units across fully-finished chalets (3BR, 135 m\u00b2, from EGP 12.4M), twin houses (4BR, 225\u2013250 m\u00b2, from EGP 41.25M) and standalone villas (5BR, 315 m\u00b2, from EGP 52.1M). Reserve with 100K EGP fully refundable deposit.",
     "paymentPlan": "5% DP over 8 or 10 years equal installments",
     "areaSize": "55 feddan",
@@ -5848,9 +5797,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.5,
     "developer": "Travco Properties",
     "developerSlug": "travco-properties",
-    "priceFrom": 10.7,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "priceFrom": 18.59,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5883,7 +5832,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/almaza-bay/5.jpg"
     ],
     "blurb": "Almaza Bay is Travco Properties' flagship luxury beach destination on Egypt's North Coast. Developed over multiple phases, it combines upscale residences, boutique hotels, retail areas, and one of the Mediterranean's most renowned white-sand beaches.",
-    "paymentPlan": "6% down + 6% upon contract, remaining balance over 7 yrs | 10% down over 6 yrs",
+    "paymentPlan": "5%+5% DP over 7 yrs",
     "areaSize": "1,550 feddan",
     "unitSizes": "103\u2013262 m\u00b2",
     "city": "Almaza Bay, Marsa Matrouh, North Coast (km 37 Alexandria\u2013Matrouh Road), Egypt",
@@ -6282,9 +6231,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.87,
     "developer": "Madaar Developments",
     "developerSlug": "madaar-developments",
-    "priceFrom": 11.1,
+    "priceFrom": 14.0,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6318,7 +6267,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/azha-north-coast/10.jpg"
     ],
     "blurb": "Azha North Coast by Madaar Developments \u2014 a 250-feddan luxury coastal destination at Km 214 Ras El Hekma, featuring an 800m private beach, a 45-acre crystal lagoon, 5-star hotel, and fine dining.",
-    "paymentPlan": "5% down payment, remaining balance spread over 8\u201310 years in equal installments",
+    "paymentPlan": "0% DP (Limited Offer) over 8 yrs",
     "areaSize": "250 feddan",
     "unitSizes": "142\u2013243 m\u00b2",
     "type": "Coastal",
@@ -7457,62 +7406,7 @@ export const compoundsGenerated: Compound[] = [
     "masterPlanUrl": "/Masterplans/safia.jpg",
     "brochureUrl": "/brochures/Safia-E-Brochure-IL-Cazar.pdf"
   },
-  {
-    "slug": "sa-ada-sahel",
-    "name": "Sa'ada Sahel",
-    "destination": "ras-el-hekma",
-    "km": 183,
-    "lat": 31.065,
-    "lng": 28.18,
-    "developer": "Horizon Egypt Developments",
-    "developerSlug": "horizon-egypt-developments",
-    "priceFrom": 9,
-    "deliveryYear": 2027,
-    "status": "RTM",
-    "beachfront": true,
-    "types": [
-      "Chalet",
-      "Twin House",
-      "Villa"
-    ],
-    "amenities": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "24/7 Security",
-      "Gym & Spa",
-      "18-Hole Golf",
-      "Mosque"
-    ],
-    "hero": "/projects/sa-ada-sahel/1.jpg",
-    "gallery": [
-      "/projects/sa-ada-sahel/1.jpg",
-      "/projects/sa-ada-sahel/2.jpg",
-      "/projects/sa-ada-sahel/3.jpg",
-      "/projects/sa-ada-sahel/4.jpg",
-      "/projects/sa-ada-sahel/5.jpg",
-      "/projects/sa-ada-sahel/6.jpg",
-      "/projects/sa-ada-sahel/7.jpg",
-      "/projects/sa-ada-sahel/8.jpg"
-    ],
-    "blurb": "Sa'ada Sahel sits at km 183 on the North Coast in ras el hekma, developed by Horizon Egypt Developments. A beachfront community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "123 feddan",
-    "unitSizes": "136\u2013289 m\u00b2",
-    "city": "Ras El Hekma, North Coast (km 183), Matrouh Governorate, Egypt",
-    "type": "Coastal",
-    "highlights": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "24/7 Security",
-      "Gym & Spa",
-      "18-Hole Golf",
-      "Mosque"
-    ],
-    "masterPlanUrl": "/Masterplans/saada.jpg"
-  },
-  {
+    {
     "slug": "azzar-islands",
     "name": "AZZAR Islands",
     "destination": "ras-el-hekma",
@@ -8228,56 +8122,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "masterPlanUrl": "/Masterplans/zoya.jpg"
   },
-  {
-    "slug": "telal",
-    "name": "Telal",
-    "destination": "sidi-abdelrahman",
-    "km": 142.4,
-    "lat": 31.0136,
-    "lng": 28.6108,
-    "developer": "Roya Developments",
-    "developerSlug": "roya-developments",
-    "priceFrom": 9,
-    "deliveryYear": 2025,
-    "status": "RTM",
-    "beachfront": true,
-    "types": [
-      "Chalet",
-      "Twin House",
-      "Villa"
-    ],
-    "amenities": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Pet Park",
-      "Mosque",
-      "Cycling Track",
-      "Co-working"
-    ],
-    "hero": "/projects/telal/1.jpg",
-    "gallery": [
-      "/projects/telal/1.jpg",
-      "/projects/telal/2.jpg",
-      "/projects/telal/3.jpg"
-    ],
-    "blurb": "Telal sits at km 142 on the North Coast in sidi abdelrahman, developed by Roya Developments. A beachfront community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "365 feddan",
-    "unitSizes": "100\u2013375 m\u00b2",
-    "city": "Sidi Abdel Rahman, North Coast (km 142), Matrouh Governorate, Egypt",
-    "type": "Coastal",
-    "highlights": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Pet Park",
-      "Mosque",
-      "Cycling Track",
-      "Co-working"
-    ]
-  },
-  {
+    {
     "slug": "hacienda-white",
     "name": "Hacienda White",
     "destination": "sidi-abdelrahman",
@@ -8858,13 +8703,13 @@ export const compoundsGenerated: Compound[] = [
   },
   {
     "slug": "il-latini-city-edge",
-    "name": "Il Latini City Edge",
+    "name": "Il Latini / Latin City",
     "destination": "new-alamein",
     "km": 109,
     "lat": 30.8375,
     "lng": 28.85,
-    "developer": "City Edge",
-    "developerSlug": "city-edge",
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
     "priceFrom": 4.3,
     "deliveryYear": 2026,
     "status": "RTM",
@@ -8890,7 +8735,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/il-latini-city-edge/4.jpg"
     ],
     "blurb": "Il Latini City Edge sits at km 109 in New Alamein, featuring G+4 & G+7 apartment buildings across a 404-feddan master plan, with ready-to-move options.",
-    "paymentPlan": "5%+5% down \u00b7 3\u20139 years or 1.2%\u20135% down \u00b7 12 years offer",
+    "paymentPlan": "5%+5% DP over 3 to 12 years",
     "areaSize": "404 feddan",
     "unitSizes": "120\u2013255 m\u00b2",
     "city": "New Alamein, North Coast (km 109), Matrouh Governorate, Egypt",
@@ -8903,56 +8748,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "masterPlanUrl": "/Masterplans/illatini city edge.jpg"
   },
-  {
-    "slug": "il-latini-sed",
-    "name": "Il Latini SED",
-    "destination": "new-alamein",
-    "km": 109.27,
-    "lat": 30.836905,
-    "lng": 28.8473,
-    "developer": "SED Developments",
-    "developerSlug": "sed-developments",
-    "priceFrom": 9,
-    "deliveryYear": 2026,
-    "status": "RTM",
-    "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa"
-    ],
-    "amenities": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Pet Park",
-      "Mosque",
-      "Cycling Track",
-      "Co-working"
-    ],
-    "hero": "/projects/il-latini-sed/1.jpg",
-    "gallery": [
-      "/projects/il-latini-sed/1.jpg",
-      "/projects/il-latini-sed/2.jpg",
-      "/projects/il-latini-sed/3.jpg",
-      "/projects/il-latini-sed/4.jpg",
-      "/projects/il-latini-sed/5.jpg"
-    ],
-    "blurb": "Il Latini SED sits at km 109 on the North Coast in new alamein, developed by SED Developments. A lagoon-front community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
-    "areaSize": "220 feddan",
-    "unitSizes": "115\u2013440 m\u00b2",
-    "city": "New Alamein, North Coast (km 109), Matrouh Governorate, Egypt",
-    "type": "Residential",
-    "highlights": [
-      "Crystal Lagoon",
-      "Clubhouse",
-      "Pet Park",
-      "Mosque",
-      "Cycling Track",
-      "Co-working"
-    ]
-  },
-  {
+    {
     "slug": "lagoons-al-alamein",
     "name": "Lagoons Al Alamein",
     "destination": "new-alamein",
@@ -13328,7 +13124,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.7702,
     "developer": "Horizon Egypt Developments",
     "developerSlug": "horizon-egypt-developments",
-    "priceFrom": 19.4,
+    "priceFrom": 21.5,
     "deliveryYear": 2030,
     "status": "Off-Plan",
     "beachfront": true,
@@ -13347,7 +13143,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/saada-north-coast/1.jpg"
     ],
     "blurb": "Saada North Coast is a newly launched luxury phase by Horizon Egypt Developments in Ras El Hekma.",
-    "paymentPlan": "5% down payment \u00b7 9 years equal installments",
+    "paymentPlan": "5%+5% DP over 9 yrs",
     "type": "Coastal",
     "highlights": [
       "Horizon Egypt signature design",
@@ -14857,8 +14653,8 @@ export const compoundsGenerated: Compound[] = [
     "destination": "new-cairo",
     "lat": 30.0527971,
     "lng": 31.6809331,
-    "developer": "Tabarak Developments",
-    "developerSlug": "tabarak-developments",
+    "developer": "TBK Developments",
+    "developerSlug": "tbk-developments",
     "priceFrom": 16.3,
     "deliveryYear": 2026,
     "status": "RTM",
@@ -14976,53 +14772,7 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "25% / 3 yrs",
     "masterPlanUrl": "/Masterplans/katameya-creeks.jpg"
   },
-  {
-    "slug": "beachfront-towers",
-    "name": "Beachfront Towers",
-    "destination": "new-alamein",
-    "km": 106,
-    "lat": 30.834,
-    "lng": 28.88,
-    "developer": "City Edge",
-    "developerSlug": "city-edge",
-    "priceFrom": 17.1,
-    "deliveryYear": 2026,
-    "status": "RTM",
-    "beachfront": true,
-    "types": [
-      "Apartment",
-      "Duplex",
-      "Penthouse"
-    ],
-    "amenities": [
-      "Private Beach",
-      "Infinity Pool",
-      "Fairmont Beach Clubhouse",
-      "Sky Lounge",
-      "24/7 Security",
-      "Gym & Spa"
-    ],
-    "hero": "/projects/north-edge-towers/1.jpg",
-    "gallery": [
-      "/projects/north-edge-towers/1.jpg",
-      "/projects/north-edge-towers/2.jpg",
-      "/projects/north-edge-towers/3.jpg",
-      "/projects/north-edge-towers/4.jpg"
-    ],
-    "blurb": "Beachfront Towers (Tower B1) by City Edge is a luxury high-rise development in New Alamein, offering premium apartments, duplexes, and penthouses with direct sea views and high-end commercial spaces.",
-    "paymentPlan": "5%+5% down \u00b7 3\u201312 years or 1.2%\u20135% down \u00b7 12 years offer",
-    "areaSize": "10 feddan",
-    "unitSizes": "217\u2013398 m\u00b2",
-    "city": "New Alamein, North Coast (km 106), Matrouh Governorate, Egypt",
-    "type": "Coastal",
-    "highlights": [
-      "10 Feddan Beachfront site",
-      "4 Towers G+35 floors",
-      "Apartments, Duplexes & Penthouses",
-      "Direct Mediterranean views"
-    ]
-  },
-  {
+    {
     "slug": "city-gate",
     "name": "City Gate",
     "destination": "new-cairo",
@@ -16732,42 +16482,7 @@ export const compoundsGenerated: Compound[] = [
       "Diverse unit mix from 1BD to Standalone Townhouses"
     ]
   },
-  {
-    "slug": "latin-city-new-alamein",
-    "name": "Latin City",
-    "destination": "new-alamein",
-    "lat": 30.885,
-    "lng": 28.95,
-    "developer": "City Edge Developments",
-    "developerSlug": "city-edge-developments",
-    "priceFrom": 4.3,
-    "deliveryYear": 2025,
-    "status": "RTM",
-    "beachfront": true,
-    "types": [
-      "Apartment"
-    ],
-    "amenities": [
-      "2 Clubhouses",
-      "Beach Access",
-      "G+4 & G+7 Buildings",
-      "Swimming Pools",
-      "Commercial Area",
-      "24/7 Security"
-    ],
-    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
-    ],
-    "blurb": "Latin City in New Alamein City by City Edge Developments spans 404 feddans offering classic Mediterranean architecture, apartments (Studio-4B), 2 clubhouses, and beachfront access.",
-    "highlights": [
-      "404 Feddans Masterplan",
-      "Ready to Move (RTM)",
-      "Beach Side & Road Side Zones"
-    ],
-    "paymentPlan": "5%+5% DP over 3 to 12 years"
-  },
-  {
+    {
     "slug": "mazarine-apartments-new-alamein",
     "name": "Mazarine Apartments",
     "destination": "new-alamein",
@@ -16826,10 +16541,8 @@ export const compoundsGenerated: Compound[] = [
       "Concierge Service",
       "Commercial Area"
     ],
-    "hero": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80"
-    ],
+    "hero": "/projects/beachfront-towers/1.jpg",
+    "gallery": ["/projects/beachfront-towers/1.jpg", "/projects/beachfront-towers/2.jpg"],
     "blurb": "Beachfront Towers (Tower B1) in New Alamein by City Edge Developments features iconic coastal skyscrapers (27-35 floors) with direct sea views, luxury apartments, duplexes, and penthouses.",
     "highlights": [
       "Skyline Iconic Towers",
@@ -17308,82 +17021,7 @@ export const compoundsGenerated: Compound[] = [
     ],
     "paymentPlan": "5% DP over 10 yrs"
   },
-  {
-    "slug": "youd-ras-el-hekma",
-    "name": "YOUD Ras El Hekma",
-    "destination": "ras-el-hekma",
-    "lat": 31.02,
-    "lng": 27.85,
-    "developer": "Al Ahly Sabbour",
-    "developerSlug": "al-ahly-sabbour",
-    "priceFrom": 6.6,
-    "deliveryYear": 2027,
-    "status": "Off-Plan",
-    "beachfront": true,
-    "types": [
-      "Chalet",
-      "Twin House",
-      "Standalone Villa"
-    ],
-    "amenities": [
-      "114 Acres + 50 Acres Beach",
-      "1,050m Beach Front",
-      "90% Sea & Lagoon Views",
-      "G+2 & G+3 Buildings",
-      "First Row Serviced Apartments"
-    ],
-    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
-    ],
-    "blurb": "YOUD Ras El Hekma by Al Ahly Sabbour spans 114 acres plus 50 acres of beach at Kilo 187 with a 1,050m beachfront, 90% sea/lagoon views, Chalets, Twin Villas, and Standalones.",
-    "highlights": [
-      "Kilo 187 Ras El Hekma",
-      "1,050m Sandy Beachfront",
-      "10% Down Payment over 4 to 10 Years"
-    ],
-    "paymentPlan": "10% DP over 4 to 10 yrs"
-  },
-  {
-    "slug": "gaia-ras-el-hekma",
-    "name": "GAIA Ras El Hekma",
-    "destination": "ras-el-hekma",
-    "lat": 31.025,
-    "lng": 27.86,
-    "developer": "Al Ahly Sabbour",
-    "developerSlug": "al-ahly-sabbour",
-    "priceFrom": 47.6,
-    "deliveryYear": 2025,
-    "status": "RTM",
-    "beachfront": true,
-    "types": [
-      "Chalet",
-      "Duplex",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
-    ],
-    "amenities": [
-      "280 Acres Resort",
-      "600m Beachfront",
-      "45 Swimming Pools",
-      "2 Swimmable Lagoons",
-      "Commercial Strip",
-      "Clubhouse"
-    ],
-    "hero": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80"
-    ],
-    "blurb": "GAIA Ras El Hekma by Al Ahly Sabbour spans 280 acres at Kilo 194 (between SODIC June and Arco El Sharbtly) featuring 45 pools, 2 swimmable lagoons, and luxury Standalone Villas.",
-    "highlights": [
-      "Kilo 194 Ras El Hekma",
-      "45 Swimming Pools & 2 Lagoons",
-      "10% Down Payment over 8 Years"
-    ],
-    "paymentPlan": "10% DP over 8 yrs"
-  },
-  {
+      {
     "slug": "al-east-mostakbal-city",
     "name": "AL EAST",
     "destination": "mostakbal-city",
@@ -17447,10 +17085,8 @@ export const compoundsGenerated: Compound[] = [
       "3-Feddan Clubhouse",
       "5 min to Mall of Arabia"
     ],
-    "hero": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
-    ],
+    "hero": "/projects/keeva/1.jpg",
+    "gallery": ["/projects/keeva/1.jpg", "/projects/keeva/2.jpg", "/projects/keeva/3.jpg"],
     "blurb": "KEEVA by Al Ahly Sabbour on Waslet Dahshour in 6th of October spans 180 acres (95% villas) featuring a 1km commercial strip, 3-feddan clubhouse, Townhouses, and Twin Houses.",
     "highlights": [
       "Directly on Waslet Dahshour",
@@ -17458,5 +17094,44 @@ export const compoundsGenerated: Compound[] = [
       "5% Down Payment over 8 Years"
     ],
     "paymentPlan": "5%+5% DP over 8 yrs"
+  },
+  {
+    "slug": "saada-boutique",
+    "name": "Saada Boutique",
+    "destination": "6th-settlement",
+    "lat": 30.015,
+    "lng": 31.512,
+    "developer": "Horizon Egypt Developments",
+    "developerSlug": "horizon-egypt-developments",
+    "priceFrom": 7.7,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "66 Feddans Masterplan",
+      "7 Swimmable Lagoons",
+      "5,000 sqm Clubhouse",
+      "High-End Outlet Village",
+      "6-Acre Commercial Area",
+      "Outdoor Yoga & Gym",
+      "Heated Pools"
+    ],
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+    ],
+    "blurb": "Saada Boutique New Cairo by Horizon Egypt Developments spans 66 feddans in the 6th Settlement, offering European-minimalist apartments (G+4), 7 swimmable lagoons, and luxury Standalone Villas.",
+    "highlights": [
+      "6th Settlement Location",
+      "7 Swimmable Lagoons & 15% Footprint",
+      "5% Down Payment over 9 Years"
+    ],
+    "paymentPlan": "5%+5% DP over 9 yrs"
   }
 ];
