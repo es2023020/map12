@@ -3,14 +3,15 @@
     "id": "el-masyaf-north-coast-18",
     "unitNo": "LH0B2208",
     "beds": 2,
-    "finishing": "Standard Finishing",
+    "finishing": "Fully Finished",
     "areaSqm": 118,
-    "view": "Scenic View",
+    "view": "Landscape",
     "priceEGP": 18196293.27,
     "status": "Available",
     "slug": "el-masyaf-north-coast",
-    "cluster": "Masyaf",
-    "delivery_note": "8/5/2030",
-    "payment_plan": "10% DP over 7-8 yrs"
+    "cluster": "Phase 2",
+    "area_note": "2nd Floor",
+    "delivery_note": "Aug 2030",
+    "payment_plan": "10% DP over 8 Yrs"
   }
 ]

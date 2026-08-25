@@ -1,31 +1,18 @@
 [
   {
-    "id": "el-masyaf-north-coast-20",
-    "unitNo": "C0311102",
-    "beds": 2,
-    "finishing": "Fully Finished",
-    "areaSqm": 75,
-    "view": "Scenic View",
-    "priceEGP": 15427454.06,
-    "status": "Available",
-    "slug": "el-masyaf-north-coast",
-    "cluster": "Masyaf",
-    "delivery_note": "8/5/2030",
-    "payment_plan": "10% DP over 7-8 yrs"
-  },
-  {
     "id": "el-masyaf-north-coast-21",
     "unitNo": "C0311103",
     "beds": 2,
     "finishing": "Fully Finished",
     "areaSqm": 90,
-    "view": "Scenic View",
+    "view": "Landscape",
     "priceEGP": 17390948.21,
     "status": "Available",
     "slug": "el-masyaf-north-coast",
-    "cluster": "Masyaf",
-    "delivery_note": "8/5/2030",
-    "payment_plan": "10% DP over 7-8 yrs"
+    "cluster": "Phase 2",
+    "area_note": "40m Garden",
+    "delivery_note": "Aug 2030",
+    "payment_plan": "10% DP over 8 Yrs"
   },
   {
     "id": "el-masyaf-north-coast-22",
@@ -33,13 +20,14 @@
     "beds": 2,
     "finishing": "Fully Finished",
     "areaSqm": 110,
-    "view": "Scenic View",
+    "view": "Landscape",
     "priceEGP": 22159434.01,
     "status": "Available",
     "slug": "el-masyaf-north-coast",
-    "cluster": "Masyaf",
-    "delivery_note": "8/5/2030",
-    "payment_plan": "10% DP over 7-8 yrs"
+    "cluster": "Phase 2",
+    "area_note": "65m Garden",
+    "delivery_note": "Aug 2030",
+    "payment_plan": "10% DP over 8 Yrs"
   },
   {
     "id": "el-masyaf-north-coast-23",
@@ -47,13 +35,14 @@
     "beds": 2,
     "finishing": "Fully Finished",
     "areaSqm": 110,
-    "view": "Scenic View",
+    "view": "Landscape",
     "priceEGP": 22159434.01,
     "status": "Available",
     "slug": "el-masyaf-north-coast",
-    "cluster": "Masyaf",
-    "delivery_note": "8/5/2030",
-    "payment_plan": "10% DP over 7-8 yrs"
+    "cluster": "Phase 2",
+    "area_note": "65m Garden",
+    "delivery_note": "Aug 2030",
+    "payment_plan": "10% DP over 8 Yrs"
   },
   {
     "id": "el-masyaf-north-coast-24",
@@ -61,13 +50,14 @@
     "beds": 2,
     "finishing": "Fully Finished",
     "areaSqm": 90,
-    "view": "Scenic View",
+    "view": "Landscape",
     "priceEGP": 17390948.21,
     "status": "Available",
     "slug": "el-masyaf-north-coast",
-    "cluster": "Masyaf",
-    "delivery_note": "8/5/2030",
-    "payment_plan": "10% DP over 7-8 yrs"
+    "cluster": "Phase 2",
+    "area_note": "40m Garden",
+    "delivery_note": "Aug 2030",
+    "payment_plan": "10% DP over 8 Yrs"
   },
   {
     "id": "el-masyaf-north-coast-25",
@@ -75,26 +65,13 @@
     "beds": 2,
     "finishing": "Fully Finished",
     "areaSqm": 105,
-    "view": "Scenic View",
+    "view": "Landscape",
     "priceEGP": 23979873.59,
     "status": "Available",
     "slug": "el-masyaf-north-coast",
-    "cluster": "Masyaf",
-    "delivery_note": "8/5/2030",
-    "payment_plan": "10% DP over 7-8 yrs"
-  },
-  {
-    "id": "el-masyaf-north-coast-26",
-    "unitNo": "C0311303",
-    "beds": 2,
-    "finishing": "Fully Finished",
-    "areaSqm": 170,
-    "view": "Scenic View",
-    "priceEGP": 33045606.59,
-    "status": "Available",
-    "slug": "el-masyaf-north-coast",
-    "cluster": "Masyaf",
-    "delivery_note": "8/5/2030",
-    "payment_plan": "10% DP over 7-8 yrs"
+    "cluster": "Phase 2",
+    "area_note": "100m Garden",
+    "delivery_note": "Aug 2030",
+    "payment_plan": "10% DP over 8 Yrs"
   }
 ]

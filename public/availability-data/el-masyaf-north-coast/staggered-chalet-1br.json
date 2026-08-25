@@ -1,16 +1,16 @@
 [
   {
-    "id": "el-masyaf-north-coast-19",
-    "unitNo": "LH0B2302",
-    "beds": 3,
+    "id": "el-masyaf-north-coast-20",
+    "unitNo": "C0311102",
+    "beds": 1,
     "finishing": "Fully Finished",
-    "areaSqm": 160,
+    "areaSqm": 75,
     "view": "Landscape",
-    "priceEGP": 29899629.55,
+    "priceEGP": 15427454.06,
     "status": "Available",
     "slug": "el-masyaf-north-coast",
     "cluster": "Phase 2",
-    "area_note": "75m Roof",
+    "area_note": "50m Garden",
     "delivery_note": "Aug 2030",
     "payment_plan": "10% DP over 8 Yrs"
   }

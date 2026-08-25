@@ -985,7 +985,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 13.4,
     "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Chalet"
@@ -1029,7 +1029,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 12.45,
     "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Cabin"
@@ -4454,7 +4454,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "mountain-view",
     "priceFrom": 10.056784,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4876,7 +4876,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge-developments",
     "priceFrom": 6,
     "deliveryYear": 2027,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -5014,7 +5014,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 7,
     "deliveryYear": 2027,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -6309,7 +6309,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.89,
     "developer": "M Squared",
     "developerSlug": "m-squared-developments",
-    "priceFrom": 15.43,
+    "priceFrom": 15.42,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
@@ -8254,7 +8254,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-ahly-sabbour-developments",
     "priceFrom": 7.2,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8778,11 +8778,11 @@ export const compoundsGenerated: Compound[] = [
     "km": 109.53,
     "lat": 30.8483185,
     "lng": 28.9124106,
-    "developer": "City Edge",
-    "developerSlug": "city-edge",
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
     "priceFrom": 8,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8830,8 +8830,8 @@ export const compoundsGenerated: Compound[] = [
     "km": 108,
     "lat": 30.836,
     "lng": 28.86,
-    "developer": "City Edge",
-    "developerSlug": "city-edge",
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
     "priceFrom": 9.4,
     "deliveryYear": 2025,
     "status": "RTM",
@@ -8926,11 +8926,11 @@ export const compoundsGenerated: Compound[] = [
     "km": 107,
     "lat": 30.835,
     "lng": 28.87,
-    "developer": "City Edge",
-    "developerSlug": "city-edge",
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
     "priceFrom": 7.3,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -8977,8 +8977,8 @@ export const compoundsGenerated: Compound[] = [
     "km": 107.53,
     "lat": 30.83753,
     "lng": 28.8647,
-    "developer": "City Edge",
-    "developerSlug": "city-edge",
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
     "priceFrom": 8,
     "deliveryYear": 2026,
     "status": "RTM",
@@ -9029,8 +9029,8 @@ export const compoundsGenerated: Compound[] = [
     "km": 106.4,
     "lat": 30.8334,
     "lng": 28.876,
-    "developer": "City Edge",
-    "developerSlug": "city-edge",
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
     "priceFrom": 13,
     "deliveryYear": 2025,
     "status": "RTM",
@@ -9082,11 +9082,11 @@ export const compoundsGenerated: Compound[] = [
     "km": 100.53,
     "lat": 30.834177,
     "lng": 28.9347,
-    "developer": "City Edge",
-    "developerSlug": "city-edge",
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
     "priceFrom": 10,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -10114,7 +10114,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 9,
     "deliveryYear": 2025,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10988,7 +10988,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 8,
     "deliveryYear": 2027,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -11913,7 +11913,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 14,
     "deliveryYear": 2027,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -15726,7 +15726,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.005417351185308,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
-    "priceFrom": 25.43,
+    "priceFrom": 23.3,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
@@ -16292,7 +16292,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "palm-hills-developments",
     "priceFrom": 13.03,
     "deliveryYear": 2027,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Administrative Office",
@@ -16530,7 +16530,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge-developments",
     "priceFrom": 7.3,
     "deliveryYear": 2026,
-    "status": "Off-Plan",
+    "status": "On-Hold",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -16605,7 +16605,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "city-edge-developments",
     "priceFrom": 5.8,
     "deliveryYear": 2026,
-    "status": "Off-Plan",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Commercial"
@@ -17107,49 +17107,6 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "5% DP over 10 yrs"
   },
       {
-    "slug": "al-east-mostakbal-city",
-    "name": "AL EAST",
-    "destination": "mostakbal-city",
-    "lat": 30.022,
-    "lng": 31.625,
-    "developer": "Al Ahly Sabbour",
-    "developerSlug": "al-ahly-sabbour",
-    "priceFrom": 5.0,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
-    "beachfront": false,
-    "types": [
-      "Apartment",
-      "Duplex",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa",
-      "Penthouse"
-    ],
-    "amenities": [
-      "181 Acres Masterplan",
-      "80% Villas / 10% Apartments",
-      "In Front of Boulevard",
-      "3 Main Gates",
-      "Commercial Strip",
-      "Clubhouse"
-    ],
-    "hero": "/projects/al-east-mostakbal-city/1.jpg",
-    "gallery": [
-      "/projects/al-east-mostakbal-city/1.jpg",
-      "/projects/al-east-mostakbal-city/2.jpg",
-      "/projects/al-east-mostakbal-city/3.jpg",
-      "/projects/al-east-mostakbal-city/4.jpg"
-],
-    "blurb": "AL EAST by Al Ahly Sabbour in Mostakbal City spans 181 acres (80% villas, 10% apartments, 10% commercial) featuring Roofscape Apartments, Townhouses, Twin Villas, and Standalones.",
-    "highlights": [
-      "Directly in Front of Boulevard",
-      "80% Villas Masterplan",
-      "5% Down Payment over 8 Years"
-    ],
-    "paymentPlan": "5%+5% DP over 8 yrs"
-  },
-  {
     "slug": "keeva-6th-of-october",
     "name": "KEEVA",
     "destination": "6th-october",
