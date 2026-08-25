@@ -1,18 +1,37 @@
 [
   {
+    "id": "solana-2",
+    "unitNo": "U-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "solana",
+    "available": 1,
+    "min_sqm": 196,
+    "max_sqm": 196,
+    "min_price_m": 30,
+    "max_price_m": 30,
+    "cluster": "Single Family",
+    "delivery_note": "2028",
+    "payment_plan": "0% DP, installments over 10 years"
+  },
+  {
     "id": "solana-5",
     "unitNo": "U-5",
     "beds": 3,
     "finishing": "Finished",
     "areaSqm": 196,
-    "view": "Landscape / City",
+    "view": "Landscape",
     "priceEGP": 30000000,
     "status": "Available",
-    "slug": "solana-west",
-    "unit_id": "SW-V7-01",
-    "cluster": "Single Family (V7)",
-    "area_note": "Land 305 sqm",
-    "delivery_note": "Ready / Off-Plan",
+    "slug": "solana",
+    "unit_id": "SW-SF-V7",
+    "cluster": "Single Family",
+    "area_note": "Land 305 SQM",
+    "delivery_note": "2028",
     "payment_plan": "0% DP, installments over 10 years"
   }
 ]

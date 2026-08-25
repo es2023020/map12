@@ -1,5 +1,24 @@
 [
   {
+    "id": "westown-medical-centre-2",
+    "unitNo": "U-2",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "westown-medical-centre",
+    "available": 1,
+    "min_sqm": 0,
+    "max_sqm": 0,
+    "min_price_m": 0,
+    "max_price_m": 0,
+    "cluster": "Phase 1",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
     "id": "westown-medical-centre-14",
     "unitNo": "U-14",
     "beds": 1,

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "patio-hills-3",
+    "unitNo": "U-3",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "patio-hills",
+    "available": 2,
+    "min_sqm": 218,
+    "max_sqm": 255,
+    "min_price_m": 37.9,
+    "max_price_m": 38.3,
+    "cluster": "Villas",
+    "delivery_note": "2029-09-01",
+    "payment_plan": "5% DP + 2.5% 1st inst + 2.5% 2nd inst over 8 years"
+  },
+  {
+    "id": "patio-hills-4",
+    "unitNo": "U-4",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 218,
+    "view": "Landscape",
+    "priceEGP": 37900000,
+    "status": "Available",
+    "slug": "patio-hills",
+    "unit_id": "EPH-SA-A",
+    "cluster": "Villas",
+    "area_note": "Standalone A (Land 272m-294m)",
+    "delivery_note": "2029-09-01",
+    "payment_plan": "5% DP + 2.5% 1st inst + 2.5% 2nd inst over 8 years"
+  },
+  {
+    "id": "patio-hills-5",
+    "unitNo": "U-5",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 255,
+    "view": "Landscape",
+    "priceEGP": 38300000,
+    "status": "Available",
+    "slug": "patio-hills",
+    "unit_id": "EPH-SA-B",
+    "cluster": "Villas",
+    "area_note": "Standalone B (Land 361m)",
+    "delivery_note": "2029-09-01",
+    "payment_plan": "5% DP + 2.5% 1st inst + 2.5% 2nd inst over 8 years"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "solana-east-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Fully Finished + ACs",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "solana-east",
+    "available": 1,
+    "min_sqm": 210,
+    "max_sqm": 210,
+    "min_price_m": 44,
+    "max_price_m": 44,
+    "cluster": "Villas",
+    "delivery_note": "2028",
+    "payment_plan": "5% + 5% – 8 years equal installments"
+  },
+  {
+    "id": "solana-east-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Fully Finished + ACs",
+    "areaSqm": 210,
+    "view": "Landscape",
+    "priceEGP": 44000000,
+    "status": "Available",
+    "slug": "solana-east",
+    "unit_id": "SE-THM",
+    "cluster": "Villas",
+    "area_note": "Townhouse Middle",
+    "delivery_note": "2028",
+    "payment_plan": "5% + 5% – 8 years equal installments"
+  }
+]

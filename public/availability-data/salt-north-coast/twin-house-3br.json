@@ -1,5 +1,24 @@
 [
   {
+    "id": "salt-north-coast-6",
+    "unitNo": "U-6",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "salt",
+    "available": 7,
+    "min_sqm": 165,
+    "max_sqm": 185,
+    "min_price_m": 28.75,
+    "max_price_m": 33.59,
+    "cluster": "Salt North Coast",
+    "delivery_note": "Delivery 4 Years",
+    "payment_plan": "5% DP · 8 years installments"
+  },
+  {
     "id": "salt-north-coast-404",
     "unitNo": "U-404",
     "beds": 3,

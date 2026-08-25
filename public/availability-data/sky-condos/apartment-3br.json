@@ -1,5 +1,24 @@
 [
   {
+    "id": "sky-condos-2",
+    "unitNo": "U-2",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "sky-condos",
+    "available": 5,
+    "min_sqm": 181,
+    "max_sqm": 318,
+    "min_price_m": 31.93,
+    "max_price_m": 54.61,
+    "cluster": "SKY CONDOS 3",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
     "id": "sky-condos-3",
     "unitNo": "U-3",
     "beds": 3,

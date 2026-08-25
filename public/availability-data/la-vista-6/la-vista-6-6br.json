@@ -1,0 +1,16 @@
+[
+  {
+    "id": "la-vista-6-1",
+    "unitNo": "U-1",
+    "beds": 6,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "developer": "La Vista Developments",
+    "total_available": 6,
+    "last_updated": "2026-08-25",
+    "note": "Updated inventory for la-vista-6"
+  }
+]

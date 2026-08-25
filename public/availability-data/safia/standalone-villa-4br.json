@@ -1,17 +1,37 @@
 [
   {
+    "id": "safia-5",
+    "unitNo": "U-5",
+    "beds": 4,
+    "finishing": "Fully finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "safia",
+    "available": 1,
+    "min_sqm": 185,
+    "max_sqm": 185,
+    "min_price_m": 28.25,
+    "max_price_m": 28.25,
+    "cluster": "Phase 1",
+    "delivery_note": "4 years",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years; Maintenance 10%"
+  },
+  {
     "id": "safia-6",
     "unitNo": "U-6",
     "beds": 4,
     "finishing": "Fully finished",
     "areaSqm": 185,
-    "view": "Landscape / View",
+    "view": "Landscape",
     "priceEGP": 28248250,
     "status": "Available",
     "slug": "safia",
-    "unit_id": "SAFIA-SA-185",
-    "cluster": "Safia Villas",
-    "delivery_note": "Delivery 4 years",
-    "payment_plan": "2.5%+2.5%+2.5%+2.5% over 10 years · Maintenance 10%"
+    "unit_id": "SF-SA",
+    "cluster": "Phase 1",
+    "area_note": "185 SQM Standalone",
+    "delivery_note": "4 years",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years; Maintenance 10%"
   }
 ]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "patio-vida-5",
+    "unitNo": "U-5",
+    "beds": 4,
+    "finishing": "Semi finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "patio-vida",
+    "available": 1,
+    "min_sqm": 336,
+    "max_sqm": 336,
+    "min_price_m": 27.69,
+    "max_price_m": 27.69,
+    "cluster": "Phase One",
+    "delivery_note": "2029-07-01",
+    "payment_plan": "5%+2.5%+2.5% over 8/10 years"
+  },
+  {
+    "id": "patio-vida-27",
+    "unitNo": "U-27",
+    "beds": 4,
+    "finishing": "Semi finished",
+    "areaSqm": 336,
+    "view": "Landscape",
+    "priceEGP": 27690000,
+    "status": "Available",
+    "slug": "patio-vida",
+    "unit_id": "EPVD-DUP-336",
+    "cluster": "Phase One",
+    "area_note": "Duplex ground 336m + Garden 30m",
+    "delivery_note": "2029-07-01",
+    "payment_plan": "5%+2.5%+2.5% over 8/10 years"
+  }
+]

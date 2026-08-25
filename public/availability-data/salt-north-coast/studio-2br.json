@@ -1,5 +1,24 @@
 [
   {
+    "id": "salt-north-coast-2",
+    "unitNo": "U-2",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "salt",
+    "available": 3,
+    "min_sqm": 45,
+    "max_sqm": 55,
+    "min_price_m": 9.46,
+    "max_price_m": 11.94,
+    "cluster": "Salt Marina",
+    "delivery_note": "Delivery 4 Years",
+    "payment_plan": "5% DP · 8 years installments"
+  },
+  {
     "id": "salt-north-coast-26",
     "unitNo": "U-26",
     "beds": 2,

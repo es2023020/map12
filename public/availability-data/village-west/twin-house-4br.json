@@ -1,5 +1,24 @@
 [
   {
+    "id": "village-west-25",
+    "unitNo": "U-25",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "village-west",
+    "available": 1,
+    "min_sqm": 270,
+    "max_sqm": 270,
+    "min_price_m": 28,
+    "max_price_m": 28,
+    "cluster": "Village West Villas",
+    "delivery_note": "Delivery 2028",
+    "payment_plan": "DP 15% / 4-Years · Maintenance 5%"
+  },
+  {
     "id": "village-west-52",
     "unitNo": "U-52",
     "beds": 4,

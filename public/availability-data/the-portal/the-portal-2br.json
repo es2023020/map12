@@ -1,0 +1,16 @@
+[
+  {
+    "id": "the-portal-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "developer": "SODIC",
+    "total_available": 8,
+    "last_updated": "2026-08-19",
+    "note": "Live inventory for the-portal"
+  }
+]

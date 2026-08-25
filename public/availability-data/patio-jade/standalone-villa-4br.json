@@ -1,0 +1,37 @@
+[
+  {
+    "id": "patio-jade-3",
+    "unitNo": "U-3",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "patio-jade",
+    "available": 1,
+    "min_sqm": 265,
+    "max_sqm": 265,
+    "min_price_m": 34.4,
+    "max_price_m": 34.4,
+    "cluster": "Villas",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "5% down payment over 8 years"
+  },
+  {
+    "id": "patio-jade-3",
+    "unitNo": "U-3",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 265,
+    "view": "Landscape",
+    "priceEGP": 34400000,
+    "status": "Available",
+    "slug": "patio-jade",
+    "unit_id": "EPJ-SA-B",
+    "cluster": "Villas",
+    "area_note": "Standalone B 265m (Land 364m)",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "5% down payment over 8 years"
+  }
+]

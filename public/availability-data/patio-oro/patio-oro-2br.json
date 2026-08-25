@@ -1,0 +1,16 @@
+[
+  {
+    "id": "patio-oro-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "developer": "La Vista Developments",
+    "total_available": 9,
+    "last_updated": "2026-08-25",
+    "note": "Updated inventory for patio-oro"
+  }
+]

@@ -1,5 +1,24 @@
 [
   {
+    "id": "sodic-east-7",
+    "unitNo": "U-7",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "sodic-east",
+    "available": 28,
+    "min_sqm": 125,
+    "max_sqm": 141,
+    "min_price_m": 13.53,
+    "max_price_m": 16.96,
+    "cluster": "08M",
+    "delivery_note": "2028-2029",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
     "id": "sodic-east-115",
     "unitNo": "U-115",
     "beds": 2,

@@ -1,5 +1,24 @@
 [
   {
+    "id": "the-estates-residences-6",
+    "unitNo": "U-6",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "the-estates-residences",
+    "available": 8,
+    "min_sqm": 338,
+    "max_sqm": 338,
+    "min_price_m": 78.67,
+    "max_price_m": 101.13,
+    "cluster": "4",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
     "id": "the-estates-residences-92",
     "unitNo": "U-92",
     "beds": 5,

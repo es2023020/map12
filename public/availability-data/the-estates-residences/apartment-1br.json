@@ -1,5 +1,24 @@
 [
   {
+    "id": "the-estates-residences-7",
+    "unitNo": "U-7",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "the-estates-residences",
+    "available": 1,
+    "min_sqm": 0,
+    "max_sqm": 0,
+    "min_price_m": 0,
+    "max_price_m": 0,
+    "cluster": "Phase 1",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
     "id": "the-estates-residences-115",
     "unitNo": "U-115",
     "beds": 1,

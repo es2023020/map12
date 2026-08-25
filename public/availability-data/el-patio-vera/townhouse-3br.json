@@ -1,0 +1,53 @@
+[
+  {
+    "id": "el-patio-vera-1",
+    "unitNo": "U-1",
+    "beds": 3,
+    "finishing": "Core and Shell",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "el-patio-vera",
+    "available": 2,
+    "min_sqm": 176,
+    "max_sqm": 192,
+    "min_price_m": 18.3,
+    "max_price_m": 22.6,
+    "cluster": "Villas",
+    "delivery_note": "Jan 2028",
+    "payment_plan": "5%+5% after 1m over 7 years"
+  },
+  {
+    "id": "el-patio-vera-1",
+    "unitNo": "U-1",
+    "beds": 3,
+    "finishing": "Core and Shell",
+    "areaSqm": 176,
+    "view": "Landscape",
+    "priceEGP": 18300000,
+    "status": "Available",
+    "slug": "el-patio-vera",
+    "unit_id": "EPV-THM-176",
+    "cluster": "Villas",
+    "area_note": "Townhouse Middle (Land 198m)",
+    "delivery_note": "Jan 2028",
+    "payment_plan": "5%+5% after 1m over 7 years"
+  },
+  {
+    "id": "el-patio-vera-2",
+    "unitNo": "U-2",
+    "beds": 3,
+    "finishing": "Core and Shell",
+    "areaSqm": 192,
+    "view": "Landscape",
+    "priceEGP": 22600000,
+    "status": "Available",
+    "slug": "el-patio-vera",
+    "unit_id": "EPV-THC-192",
+    "cluster": "Villas",
+    "area_note": "Townhouse Corner 179m-206m (Land 240m-297m)",
+    "delivery_note": "Jan 2028",
+    "payment_plan": "5%+5% after 1m over 7 years"
+  }
+]

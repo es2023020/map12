@@ -1,0 +1,37 @@
+[
+  {
+    "id": "la-vista-6-5",
+    "unitNo": "U-5",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "la-vista-6",
+    "available": 1,
+    "min_sqm": 180,
+    "max_sqm": 180,
+    "min_price_m": 21.5,
+    "max_price_m": 21.5,
+    "cluster": "New Phase",
+    "delivery_note": "2029-01-01",
+    "payment_plan": "10% DP over 8 years"
+  },
+  {
+    "id": "la-vista-6-6",
+    "unitNo": "U-6",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 180,
+    "view": "Landscape",
+    "priceEGP": 21500000,
+    "status": "Available",
+    "slug": "la-vista-6",
+    "unit_id": "LV6-NP-TW-180",
+    "cluster": "New Phase",
+    "area_note": "Twin Villa Not Sea View + Garden 50m",
+    "delivery_note": "2029-01-01",
+    "payment_plan": "10% DP over 8 years"
+  }
+]

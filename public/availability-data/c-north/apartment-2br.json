@@ -1,0 +1,37 @@
+[
+  {
+    "id": "c-north-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Fully finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "c-north",
+    "available": 1,
+    "min_sqm": 95,
+    "max_sqm": 95,
+    "min_price_m": 8.5,
+    "max_price_m": 8.5,
+    "cluster": "Launch Phase",
+    "delivery_note": "4 years",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years"
+  },
+  {
+    "id": "c-north-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Fully finished",
+    "areaSqm": 95,
+    "view": "Landscape",
+    "priceEGP": 8500000,
+    "status": "Available",
+    "slug": "c-north",
+    "unit_id": "CN-2BR",
+    "cluster": "Launch Phase",
+    "area_note": "95 SQM",
+    "delivery_note": "4 years",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years"
+  }
+]

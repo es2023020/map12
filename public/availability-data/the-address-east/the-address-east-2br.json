@@ -1,0 +1,16 @@
+[
+  {
+    "id": "the-address-east-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "developer": "Dorra Group",
+    "total_available": 0,
+    "last_updated": "2026-08-24",
+    "note": "On Hold / Sold Out"
+  }
+]

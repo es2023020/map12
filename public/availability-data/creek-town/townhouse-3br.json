@@ -1,0 +1,37 @@
+[
+  {
+    "id": "creek-town-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "creek-town",
+    "available": 1,
+    "min_sqm": 185,
+    "max_sqm": 185,
+    "min_price_m": 25.45,
+    "max_price_m": 25.45,
+    "cluster": "New Cairo",
+    "delivery_note": "Ready To Move",
+    "payment_plan": "10% over 10 years"
+  },
+  {
+    "id": "creek-town-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "Landscape",
+    "priceEGP": 25445544,
+    "status": "Available",
+    "slug": "creek-town",
+    "unit_id": "CT-TV-185",
+    "cluster": "New Cairo",
+    "area_note": "185 SQM Town Villa",
+    "delivery_note": "Ready To Move",
+    "payment_plan": "10% over 10 years"
+  }
+]

@@ -1,5 +1,24 @@
 [
   {
+    "id": "caesar-sodic-4",
+    "unitNo": "U-4",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "caesar-sodic",
+    "available": 9,
+    "min_sqm": 221,
+    "max_sqm": 225,
+    "min_price_m": 50.26,
+    "max_price_m": 53.576,
+    "cluster": "Extension 1 - 1",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
     "id": "caesar-sodic-21",
     "unitNo": "U-21",
     "beds": 3,

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "el-patio-sola-1",
+    "unitNo": "U-1",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "el-patio-sola",
+    "available": 2,
+    "min_sqm": 163,
+    "max_sqm": 177,
+    "min_price_m": 11.65,
+    "max_price_m": 11.8,
+    "cluster": "El Shorouk",
+    "delivery_note": "2029-09-01",
+    "payment_plan": "5% DP over 8 years (31 installments)"
+  },
+  {
+    "id": "el-patio-sola-1",
+    "unitNo": "U-1",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 177,
+    "view": "Landscape",
+    "priceEGP": 11800000,
+    "status": "Available",
+    "slug": "el-patio-sola",
+    "unit_id": "EPS-3BR-TYP",
+    "cluster": "El Shorouk",
+    "area_note": "155m - 200m Typical",
+    "delivery_note": "2029-09-01",
+    "payment_plan": "5% DP over 8 years (31 installments)"
+  },
+  {
+    "id": "el-patio-sola-2",
+    "unitNo": "U-2",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 163,
+    "view": "Landscape",
+    "priceEGP": 11650000,
+    "status": "Available",
+    "slug": "el-patio-sola",
+    "unit_id": "EPS-3BR-G",
+    "cluster": "El Shorouk",
+    "area_note": "156m - 170m + Garden 30m-50m",
+    "delivery_note": "2029-09-01",
+    "payment_plan": "5% DP over 8 years (31 installments)"
+  }
+]

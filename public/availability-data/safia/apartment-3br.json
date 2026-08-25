@@ -1,0 +1,37 @@
+[
+  {
+    "id": "safia-3",
+    "unitNo": "U-3",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "safia",
+    "available": 1,
+    "min_sqm": 138,
+    "max_sqm": 138,
+    "min_price_m": 11.04,
+    "max_price_m": 11.04,
+    "cluster": "Phase 1",
+    "delivery_note": "4 years",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years; Maintenance 10%"
+  },
+  {
+    "id": "safia-3",
+    "unitNo": "U-3",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 138,
+    "view": "Landscape",
+    "priceEGP": 11039446,
+    "status": "Available",
+    "slug": "safia",
+    "unit_id": "SF-3BR",
+    "cluster": "Phase 1",
+    "area_note": "138 SQM",
+    "delivery_note": "4 years",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years; Maintenance 10%"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "la-vista-7-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "la-vista-7",
+    "available": 1,
+    "min_sqm": 120,
+    "max_sqm": 120,
+    "min_price_m": 9.6,
+    "max_price_m": 9.6,
+    "cluster": "RTM Phase",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10% downpayment over 5 years"
+  },
+  {
+    "id": "la-vista-7-1",
+    "unitNo": "U-1",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 9600000,
+    "status": "Available",
+    "slug": "la-vista-7",
+    "unit_id": "LV7-2ND-120",
+    "cluster": "RTM Phase",
+    "area_note": "2nd Floor + Roof 100m",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10% downpayment over 5 years"
+  }
+]

@@ -1,5 +1,24 @@
 [
   {
+    "id": "salt-5",
+    "unitNo": "U-5",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "salt",
+    "available": 13,
+    "min_sqm": 180,
+    "max_sqm": 290,
+    "min_price_m": 37.11,
+    "max_price_m": 101.21,
+    "cluster": "Salt North Coast",
+    "delivery_note": "Delivery 4 Years",
+    "payment_plan": "5% DP · 8 years installments"
+  },
+  {
     "id": "salt-340",
     "unitNo": "U-340",
     "beds": 3,

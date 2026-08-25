@@ -1,0 +1,37 @@
+[
+  {
+    "id": "el-patio-riva-4",
+    "unitNo": "U-4",
+    "beds": 1,
+    "finishing": "Semi-finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "el-patio-riva",
+    "available": 1,
+    "min_sqm": 85,
+    "max_sqm": 85,
+    "min_price_m": 5.98,
+    "max_price_m": 5.98,
+    "cluster": "Apartments",
+    "delivery_note": "2030-01-01",
+    "payment_plan": "5%+2.5%+2.5% over 8/10 years"
+  },
+  {
+    "id": "el-patio-riva-13",
+    "unitNo": "U-13",
+    "beds": 1,
+    "finishing": "Semi-finished",
+    "areaSqm": 85,
+    "view": "Landscape",
+    "priceEGP": 5977500,
+    "status": "Available",
+    "slug": "el-patio-riva",
+    "unit_id": "EPR-TYP-85",
+    "cluster": "Apartments",
+    "area_note": "Typical 85m",
+    "delivery_note": "2030-01-01",
+    "payment_plan": "5%+2.5%+2.5% over 8/10 years"
+  }
+]

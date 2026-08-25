@@ -1,5 +1,24 @@
 [
   {
+    "id": "fouka-bay-3",
+    "unitNo": "U-3",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "fouka-bay",
+    "available": 1,
+    "min_sqm": 110,
+    "max_sqm": 110,
+    "min_price_m": 0,
+    "max_price_m": 0,
+    "cluster": "Fouka Bay Ras El Hekma",
+    "delivery_note": "Delivery 2 Year",
+    "payment_plan": "10% DP · up to 8 years installments"
+  },
+  {
     "id": "fouka-bay-11",
     "unitNo": "U-11",
     "beds": 2,

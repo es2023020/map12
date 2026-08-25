@@ -1,0 +1,37 @@
+[
+  {
+    "id": "silversands-10",
+    "unitNo": "U-10",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "silversands",
+    "available": 1,
+    "min_sqm": 192,
+    "max_sqm": 192,
+    "min_price_m": 40,
+    "max_price_m": 40,
+    "cluster": "Silvertown",
+    "delivery_note": "2028",
+    "payment_plan": "5% + 5%, installments over 10 years"
+  },
+  {
+    "id": "silversands-14",
+    "unitNo": "U-14",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 192,
+    "view": "Landscape",
+    "priceEGP": 40000000,
+    "status": "Available",
+    "slug": "silversands",
+    "unit_id": "SS-ST-4BR",
+    "cluster": "Silvertown",
+    "area_note": "192 SQM",
+    "delivery_note": "2028",
+    "payment_plan": "5% + 5%, installments over 10 years"
+  }
+]

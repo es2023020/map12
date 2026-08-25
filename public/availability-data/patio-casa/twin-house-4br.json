@@ -1,0 +1,37 @@
+[
+  {
+    "id": "patio-casa-1",
+    "unitNo": "U-1",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "patio-casa",
+    "available": 1,
+    "min_sqm": 250,
+    "max_sqm": 250,
+    "min_price_m": 29.85,
+    "max_price_m": 29.85,
+    "cluster": "Apartments (Twin Houses)",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 4 years"
+  },
+  {
+    "id": "patio-casa-1",
+    "unitNo": "U-1",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 250,
+    "view": "Landscape",
+    "priceEGP": 29850000,
+    "status": "Available",
+    "slug": "patio-casa",
+    "unit_id": "EPC-TW-201",
+    "cluster": "Apartments (Twin Houses)",
+    "area_note": "201m - 298m BUA (Land 235m - 350m)",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 4 years"
+  }
+]

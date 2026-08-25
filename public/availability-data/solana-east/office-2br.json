@@ -1,0 +1,37 @@
+[
+  {
+    "id": "solana-east-7",
+    "unitNo": "U-7",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "solana-east",
+    "available": 1,
+    "min_sqm": 57,
+    "max_sqm": 57,
+    "min_price_m": 14.3,
+    "max_price_m": 14.3,
+    "cluster": "Commercial Area",
+    "delivery_note": "2028",
+    "payment_plan": "5% + 5% – 8 years equal installments"
+  },
+  {
+    "id": "solana-east-7",
+    "unitNo": "U-7",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 57,
+    "view": "Landscape",
+    "priceEGP": 14300000,
+    "status": "Available",
+    "slug": "solana-east",
+    "unit_id": "SE-OFF-57",
+    "cluster": "Commercial Area",
+    "area_note": "Available Commercial/Office Space",
+    "delivery_note": "2028",
+    "payment_plan": "5% + 5% – 8 years equal installments"
+  }
+]

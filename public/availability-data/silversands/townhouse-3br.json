@@ -1,0 +1,53 @@
+[
+  {
+    "id": "silversands-11",
+    "unitNo": "U-11",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "silversands",
+    "available": 2,
+    "min_sqm": 150,
+    "max_sqm": 170,
+    "min_price_m": 38,
+    "max_price_m": 42,
+    "cluster": "Silvertown",
+    "delivery_note": "2028",
+    "payment_plan": "5% + 5%, installments over 10 years"
+  },
+  {
+    "id": "silversands-15",
+    "unitNo": "U-15",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 38000000,
+    "status": "Available",
+    "slug": "silversands",
+    "unit_id": "SS-ST-THS",
+    "cluster": "Silvertown",
+    "area_note": "Townhouse S 150 SQM",
+    "delivery_note": "2028",
+    "payment_plan": "5% + 5%, installments over 10 years"
+  },
+  {
+    "id": "silversands-16",
+    "unitNo": "U-16",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 170,
+    "view": "Landscape",
+    "priceEGP": 42000000,
+    "status": "Available",
+    "slug": "silversands",
+    "unit_id": "SS-ST-THM",
+    "cluster": "Silvertown",
+    "area_note": "Townhouse M 170 SQM",
+    "delivery_note": "2028",
+    "payment_plan": "5% + 5%, installments over 10 years"
+  }
+]

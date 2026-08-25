@@ -1,18 +1,37 @@
 [
   {
+    "id": "silversands-15",
+    "unitNo": "U-15",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "silversands",
+    "available": 1,
+    "min_sqm": 96,
+    "max_sqm": 96,
+    "min_price_m": 21,
+    "max_price_m": 21,
+    "cluster": "The Cove",
+    "delivery_note": "2028",
+    "payment_plan": "5% + 5%, equal installments over 8 years"
+  },
+  {
     "id": "silversands-21",
     "unitNo": "U-21",
     "beds": 2,
-    "finishing": "Fully Finished",
+    "finishing": "Finished",
     "areaSqm": 96,
-    "view": "Landscape / City",
+    "view": "Landscape",
     "priceEGP": 21000000,
     "status": "Available",
     "slug": "silversands",
-    "unit_id": "SS-COVE-2BR-PENT",
+    "unit_id": "SS-CV-2BR-PH",
     "cluster": "The Cove",
-    "area_note": "96 sqm + Roof 76 sqm",
-    "delivery_note": "30 equal installments",
+    "area_note": "96 + 76 SQM Roof",
+    "delivery_note": "2028",
     "payment_plan": "5% + 5%, equal installments over 8 years"
   }
 ]

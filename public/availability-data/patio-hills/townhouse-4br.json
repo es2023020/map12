@@ -1,0 +1,37 @@
+[
+  {
+    "id": "patio-hills-2",
+    "unitNo": "U-2",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "patio-hills",
+    "available": 1,
+    "min_sqm": 195,
+    "max_sqm": 195,
+    "min_price_m": 28,
+    "max_price_m": 28,
+    "cluster": "Villas",
+    "delivery_note": "2029-09-01",
+    "payment_plan": "5% DP + 2.5% 1st inst + 2.5% 2nd inst over 8 years"
+  },
+  {
+    "id": "patio-hills-3",
+    "unitNo": "U-3",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 195,
+    "view": "Landscape",
+    "priceEGP": 28000000,
+    "status": "Available",
+    "slug": "patio-hills",
+    "unit_id": "EPH-THC",
+    "cluster": "Villas",
+    "area_note": "Town House Corner (Land 214m-235m)",
+    "delivery_note": "2029-09-01",
+    "payment_plan": "5% DP + 2.5% 1st inst + 2.5% 2nd inst over 8 years"
+  }
+]

@@ -1,5 +1,24 @@
 [
   {
+    "id": "sodic-the-estates-2",
+    "unitNo": "U-2",
+    "beds": 6,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "sodic-the-estates",
+    "available": 1,
+    "min_sqm": 444,
+    "max_sqm": 444,
+    "min_price_m": 103.26348,
+    "max_price_m": 103.26348,
+    "cluster": "Block 1",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
     "id": "sodic-the-estates-5",
     "unitNo": "U-5",
     "beds": 6,

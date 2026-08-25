@@ -1,0 +1,37 @@
+[
+  {
+    "id": "patio-5-east-2",
+    "unitNo": "U-2",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "patio-5-east",
+    "available": 1,
+    "min_sqm": 226,
+    "max_sqm": 226,
+    "min_price_m": 34.1,
+    "max_price_m": 34.1,
+    "cluster": "Villas",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 4 years"
+  },
+  {
+    "id": "patio-5-east-3",
+    "unitNo": "U-3",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 226,
+    "view": "Landscape",
+    "priceEGP": 34100000,
+    "status": "Available",
+    "slug": "patio-5-east",
+    "unit_id": "EP5-THC",
+    "cluster": "Villas",
+    "area_note": "TownHouse Corner 218m-235m (Land 270m-351m)",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 4 years"
+  }
+]

@@ -1,5 +1,24 @@
 [
   {
+    "id": "june-4",
+    "unitNo": "U-4",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Scenic View",
+    "priceEGP": 5000000,
+    "status": "Available",
+    "slug": "june",
+    "available": 3,
+    "min_sqm": 102,
+    "max_sqm": 102,
+    "min_price_m": 28.22,
+    "max_price_m": 28.94,
+    "cluster": "Block 7",
+    "delivery_note": "2028-2029",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
     "id": "june-74",
     "unitNo": "U-74",
     "beds": 2,
