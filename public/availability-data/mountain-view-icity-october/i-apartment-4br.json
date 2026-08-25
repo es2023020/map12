@@ -1,0 +1,44 @@
+[
+  {
+    "id": "mountain-view-icity-october-51",
+    "unitNo": "CA-05-23-B2-02",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 18795503,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Phase 1",
+    "delivery_note": "OFF PLAN - 3",
+    "payment_plan": "5%+5% DP over 8 years"
+  },
+  {
+    "id": "mountain-view-icity-october-52",
+    "unitNo": "CA-05-23-B2-03",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 18232665,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Phase 1",
+    "delivery_note": "OFF PLAN - 3",
+    "payment_plan": "5%+5% DP over 8 years"
+  },
+  {
+    "id": "mountain-view-icity-october-53",
+    "unitNo": "CA-05-23-B3-03",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 18232665,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Phase 1",
+    "delivery_note": "OFF PLAN - 3",
+    "payment_plan": "5%+5% DP over 8 years"
+  }
+]

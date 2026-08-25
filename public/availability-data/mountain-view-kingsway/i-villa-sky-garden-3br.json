@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mountain-view-kingsway-2",
+    "unitNo": "M-iV-B-252-B2-2",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 27600000,
+    "status": "Available",
+    "slug": "mountain-view-kingsway",
+    "cluster": "Phase 1",
+    "delivery_note": "EARLY DELIVERY - 12",
+    "payment_plan": "5%+5% DP over 8 years"
+  },
+  {
+    "id": "mountain-view-kingsway-3",
+    "unitNo": "M-iV-B-252-B2-3",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 27025000,
+    "status": "Available",
+    "slug": "mountain-view-kingsway",
+    "cluster": "Phase 1",
+    "delivery_note": "EARLY DELIVERY - 12",
+    "payment_plan": "5%+5% DP over 8 years"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "oak-residences-1",
+    "unitNo": "OAK-3BR-142",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 142,
+    "view": "Landscape",
+    "priceEGP": 10600000,
+    "status": "Available",
+    "slug": "oak-residences",
+    "cluster": "Phase 1",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  },
+  {
+    "id": "oak-residences-2",
+    "unitNo": "OAK-3BR-152",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 152,
+    "view": "Landscape",
+    "priceEGP": 11000000,
+    "status": "Available",
+    "slug": "oak-residences",
+    "cluster": "Phase 1",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  },
+  {
+    "id": "oak-residences-3",
+    "unitNo": "OAK-3BR-165",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 165,
+    "view": "Landscape",
+    "priceEGP": 11900000,
+    "status": "Available",
+    "slug": "oak-residences",
+    "cluster": "Phase 1",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  },
+  {
+    "id": "oak-residences-4",
+    "unitNo": "OAK-3BR-174",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 174,
+    "view": "Landscape",
+    "priceEGP": 13700000,
+    "status": "Available",
+    "slug": "oak-residences",
+    "cluster": "Phase 1",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  }
+]

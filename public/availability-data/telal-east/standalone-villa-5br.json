@@ -1,0 +1,30 @@
+[
+  {
+    "id": "telal-east-8",
+    "unitNo": "TE-SR-VILLA",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 453,
+    "view": "Landscape",
+    "priceEGP": 47298300,
+    "status": "Available",
+    "slug": "telal-east",
+    "cluster": "Privé",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  },
+  {
+    "id": "telal-east-9",
+    "unitNo": "TE-SIGN-VILLA",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 472,
+    "view": "Landscape",
+    "priceEGP": 54000600,
+    "status": "Available",
+    "slug": "telal-east",
+    "cluster": "Privé",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  }
+]

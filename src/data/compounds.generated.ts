@@ -1912,7 +1912,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.342,
     "developer": "Roya Developments",
     "developerSlug": "roya-developments",
-    "priceFrom": 5,
+    "priceFrom": 5.5,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
@@ -1938,7 +1938,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/covaya/6.jpg"
     ],
     "blurb": "Covaya is an upscale luxury hotel-serviced phase integrated inside Telal Ain Sokhna by Roya Developments with 4-star hospitality management and panoramic Red Sea views.",
-    "paymentPlan": "5% down payment, remaining balance spread over up to 10 to 12 years in equal, interest-free installments",
+    "paymentPlan": "5% DP over 10 yrs",
     "areaSize": "90 feddan",
     "unitSizes": "105\u2013300 m\u00b2",
     "type": "Resort",
@@ -3465,7 +3465,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.465,
     "developer": "PRE Developments",
     "developerSlug": "pre-developments",
-    "priceFrom": 12,
+    "priceFrom": 7.444,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
@@ -3487,7 +3487,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/the-brooks/1.jpg"
     ],
     "blurb": "The Brooks by PRE Developments is a luxury residential compound in New Cairo. Spanning 190 acres with low-density housing, it features artificial lakes, a commercial area, and a sports club.",
-    "paymentPlan": "8% maintenance \u00b7 10 years equal installments",
+    "paymentPlan": "5% DP over 10 yrs",
     "areaSize": "194 feddan",
     "unitSizes": "115\u2013300 m\u00b2",
     "type": "Residential",
@@ -3506,7 +3506,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 32.338,
     "developer": "PRE Developments",
     "developerSlug": "pre-developments",
-    "priceFrom": 6,
+    "priceFrom": 7.755,
     "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": true,
@@ -3533,7 +3533,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/jebal-sokhna/1.jpg"
     ],
     "blurb": "Jebal Sokhna is a luxury terraced mountain resort by PRE Developments spread across approximately 71 acres in Ain Sokhna, designed to ensure panoramic Red Sea views from the majority of residences.",
-    "paymentPlan": "10% down, installments up to 8 years",
+    "paymentPlan": "10% DP over 6 yrs",
     "areaSize": "71 feddan",
     "unitSizes": "90\u2013330 m\u00b2",
     "type": "Resort",
@@ -3547,12 +3547,12 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "telal-east",
     "name": "Telal East",
-    "destination": "new-cairo",
+    "destination": "6th-settlement",
     "lat": 31.0136,
     "lng": 28.6108,
     "developer": "Roya Developments",
     "developerSlug": "roya-developments",
-    "priceFrom": 23,
+    "priceFrom": 8.705,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
@@ -3577,7 +3577,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/telal-east/4.jpg"
     ],
     "blurb": "Telal East by Roya Developments is a luxury residential compound in New Cairo. Spanning 184 acres, it features standalone villas, twinhouses, and townhouses overlooking a private lagoon.",
-    "paymentPlan": "5% down \u00b7 9 years equal installments",
+    "paymentPlan": "5% DP over 10 yrs",
     "areaSize": "184 feddan",
     "unitSizes": "175\u2013373 m\u00b2",
     "type": "Residential",
@@ -10250,7 +10250,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.6809331,
     "developer": "PRE Developments",
     "developerSlug": "pre-developments",
-    "priceFrom": 9.38,
+    "priceFrom": 9.702,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
@@ -10275,7 +10275,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/stone-residence/3.jpg"
     ],
     "blurb": "Stone Residence is a flagship development in New Cairo (Tagamo3) by PRE Developments, offering modern residences with full amenities for year-round living.",
-    "paymentPlan": "20% / 5 yrs",
+    "paymentPlan": "20% DP over 5 yrs",
     "areaSize": "306 feddan",
     "unitSizes": "116\u2013334 m\u00b2",
     "city": "New Cairo, Cairo Governorate, Egypt",
@@ -16269,9 +16269,9 @@ export const compoundsGenerated: Compound[] = [
     "destination": "mostakbal-city",
     "lat": 30.0527971,
     "lng": 31.6809331,
-    "developer": "Tatweer Misr",
-    "developerSlug": "tatweer-misr",
-    "priceFrom": 14.6,
+    "developer": "Akam Developments",
+    "developerSlug": "akam-developments",
+    "priceFrom": 15.159,
     "deliveryYear": 2030,
     "status": "Off-Plan",
     "beachfront": false,
@@ -16731,5 +16731,468 @@ export const compoundsGenerated: Compound[] = [
       "Flexible 7\u20138 year payment plans",
       "Diverse unit mix from 1BD to Standalone Townhouses"
     ]
+  },
+  {
+    "slug": "latin-city-new-alamein",
+    "name": "Latin City",
+    "destination": "new-alamein",
+    "lat": 30.885,
+    "lng": 28.95,
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
+    "priceFrom": 4.3,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": true,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "2 Clubhouses",
+      "Beach Access",
+      "G+4 & G+7 Buildings",
+      "Swimming Pools",
+      "Commercial Area",
+      "24/7 Security"
+    ],
+    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
+    ],
+    "blurb": "Latin City in New Alamein City by City Edge Developments spans 404 feddans offering classic Mediterranean architecture, apartments (Studio-4B), 2 clubhouses, and beachfront access.",
+    "highlights": [
+      "404 Feddans Masterplan",
+      "Ready to Move (RTM)",
+      "Beach Side & Road Side Zones"
+    ],
+    "paymentPlan": "5%+5% DP over 3 to 12 years"
+  },
+  {
+    "slug": "mazarine-apartments-new-alamein",
+    "name": "Mazarine Apartments",
+    "destination": "new-alamein",
+    "lat": 30.89,
+    "lng": 28.955,
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
+    "priceFrom": 7.3,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": true,
+    "types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "amenities": [
+      "Clubhouse",
+      "Lagoon Pools",
+      "Commercial Promenade",
+      "Private Gardens",
+      "24/7 Security"
+    ],
+    "hero": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80"
+    ],
+    "blurb": "Mazarine Apartments in New Alamein by City Edge Developments features 4 distinct sub-brands (Tiffany, Celeste, Sapphire, Boulevard) within a 707-feddan coastal resort community.",
+    "highlights": [
+      "707 Feddans Resort",
+      "4 Sub-Brands (Tiffany, Celeste, Sapphire, Boulevard)",
+      "Delivery from 2026"
+    ],
+    "paymentPlan": "5%+5% DP over 3 to 12 years"
+  },
+  {
+    "slug": "beachfront-towers-new-alamein",
+    "name": "Beachfront Towers (Tower B1)",
+    "destination": "new-alamein",
+    "lat": 30.9,
+    "lng": 28.965,
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
+    "priceFrom": 17.1,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": true,
+    "types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse"
+    ],
+    "amenities": [
+      "Panoramic Sea Views",
+      "Infinity Pool",
+      "Private Beach",
+      "Concierge Service",
+      "Commercial Area"
+    ],
+    "hero": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1600&q=80"
+    ],
+    "blurb": "Beachfront Towers (Tower B1) in New Alamein by City Edge Developments features iconic coastal skyscrapers (27-35 floors) with direct sea views, luxury apartments, duplexes, and penthouses.",
+    "highlights": [
+      "Skyline Iconic Towers",
+      "Direct Sea Frontage",
+      "Delivery from 07/2026"
+    ],
+    "paymentPlan": "5%+5% DP over 3 to 12 years"
+  },
+  {
+    "slug": "mazarine-hub-new-alamein",
+    "name": "Mazarine HUB",
+    "destination": "new-alamein",
+    "lat": 30.892,
+    "lng": 28.958,
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
+    "priceFrom": 5.8,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Commercial"
+    ],
+    "amenities": [
+      "F&B Promenade",
+      "Administrative Offices",
+      "Outdoor Dining",
+      "Underground Parking"
+    ],
+    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80"
+    ],
+    "blurb": "Mazarine HUB by City Edge Developments features 22 commercial & administrative G+6 buildings in New Alamein hosting offices, retail, and F&B venues.",
+    "highlights": [
+      "22 G+6 Buildings",
+      "Offices & Commercial Space",
+      "Delivery from 2026"
+    ],
+    "paymentPlan": "5%+5% DP over 3 to 12 years"
+  },
+  {
+    "slug": "new-garden-city-r5",
+    "name": "New Garden City (R5)",
+    "destination": "new-administrative-capital",
+    "lat": 30.01,
+    "lng": 31.65,
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
+    "priceFrom": 4.1,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "3 International Schools",
+      "3 Universities",
+      "French Architecture",
+      "Clubhouse",
+      "Commercial Areas"
+    ],
+    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80"
+    ],
+    "blurb": "New Garden City (R5 Verandas & Centria) by City Edge Developments in the New Administrative Capital spans 985 feddans featuring French classic architecture, 3 international schools, and universities.",
+    "highlights": [
+      "985 Feddans Masterplan",
+      "Ready to Move & Ready to Deliver",
+      "French Parisian Design"
+    ],
+    "paymentPlan": "5%+5% DP over 3 to 12 years"
+  },
+  {
+    "slug": "jade-park-al-maqsad",
+    "name": "Jade Park (Al Maqsad)",
+    "destination": "new-administrative-capital",
+    "lat": 30.015,
+    "lng": 31.66,
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
+    "priceFrom": 3.8,
+    "deliveryYear": 2025,
+    "status": "RTM",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "amenities": [
+      "International Schools",
+      "Universities",
+      "G+7 Buildings",
+      "Commercial Malls",
+      "Sports Courts"
+    ],
+    "hero": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
+    ],
+    "blurb": "Jade Park in Al Maqsad, New Administrative Capital, by City Edge Developments spans 425 feddans with G+7 residential buildings, commercial areas, and international schools.",
+    "highlights": [
+      "425 Feddans Masterplan",
+      "Al Maqsad District Location",
+      "Delivery from 2025"
+    ],
+    "paymentPlan": "5%+5% DP over 3 to 12 years"
+  },
+  {
+    "slug": "jirian-nations-of-sky",
+    "name": "Jiryan",
+    "destination": "new-cairo",
+    "lat": 30.035,
+    "lng": 31.62,
+    "developer": "Nations of Sky",
+    "developerSlug": "nations-of-sky",
+    "priceFrom": 22.0,
+    "deliveryYear": 2029,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Townhouse",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Exclusive Clubhouse",
+      "Grand Mansions",
+      "Fully Finished Villas",
+      "Private Pools",
+      "24/7 Security"
+    ],
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+    ],
+    "blurb": "Jiryan (JIRIAN) by Nations of Sky in New Cairo is an ultra-exclusive luxury villa community featuring Townhouses, Standalone Villas, Grand Villas, and 1000m\u00b2 Mansions.",
+    "highlights": [
+      "100% Villas & Mansions",
+      "Fully Finished Delivery",
+      "5% Down Payment over 10 Years"
+    ],
+    "paymentPlan": "5% DP + 5% in 6m + 5% on delivery over 10 yrs"
+  },
+  {
+    "slug": "zomra-east",
+    "name": "Zomra East",
+    "destination": "new-cairo",
+    "lat": 30.028,
+    "lng": 31.485,
+    "developer": "Nations of Sky",
+    "developerSlug": "nations-of-sky",
+    "priceFrom": 6.6,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex",
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa",
+      "Penthouse"
+    ],
+    "amenities": [
+      "South 90th St Location",
+      "370 Acres Masterplan",
+      "2 Exclusive Clubhouses",
+      "7 Lifestyle Pods",
+      "EDEN Facility Management",
+      "Sports Club"
+    ],
+    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80"
+    ],
+    "blurb": "Zomra East by Nations of Sky is a 370-acre mega compound directly on South 90th Street, New Cairo, featuring Studios, Sky Gardens, Townhouses, and Standalones (operated by EDEN FM).",
+    "highlights": [
+      "Directly on South 90th Street",
+      "370 Acres Masterplan",
+      "Operated by EDEN Facility Management"
+    ],
+    "paymentPlan": "5% DP + 5% in 1m + 5% on delivery over 8-10 yrs"
+  },
+  {
+    "slug": "point-90-offices-park",
+    "name": "Point 90 Offices Park",
+    "destination": "new-cairo",
+    "lat": 30.025,
+    "lng": 31.47,
+    "developer": "PRE Developments",
+    "developerSlug": "pre-developments",
+    "priceFrom": 11.0,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Commercial"
+    ],
+    "amenities": [
+      "Direct on South 90th St",
+      "AUC Neighbor",
+      "EV Chargers",
+      "Triple Play IT Room",
+      "24/7 Housekeeping & Maintenance",
+      "Skate Zone & Entertainment"
+    ],
+    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+    ],
+    "blurb": "Point 90 Offices Park by PRE Developments in New Cairo (South 90th St & AUC location) offers modern administrative units, flexi-finished clinics, and prime retail spaces.",
+    "highlights": [
+      "Directly on South 90th Street",
+      "Next to AUC & Palm Hills Village",
+      "10% Down Payment over 7 Years"
+    ],
+    "paymentPlan": "10% DP + 10% on delivery over 7 yrs"
+  },
+  {
+    "slug": "ivoire-west",
+    "name": "Ivoire West",
+    "destination": "sheikh-zayed",
+    "lat": 30.045,
+    "lng": 30.985,
+    "developer": "PRE Developments",
+    "developerSlug": "pre-developments",
+    "priceFrom": 9.65,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse"
+    ],
+    "amenities": [
+      "El Rabwa Gate 4 Location",
+      "77 Acres Masterplan",
+      "Yasser El Beltagy Design",
+      "Commercial Strip",
+      "Flowers & Meditation Park",
+      "Clubhouse"
+    ],
+    "hero": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80"
+    ],
+    "blurb": "Ivoire West by PRE Developments in Sheikh Zayed (77 acres, designed by YBA) sits directly opposite El Rabwa Gate 4 near Allegria and Etapa.",
+    "highlights": [
+      "77 Acres Masterplan",
+      "Opposite El Rabwa Gate 4",
+      "5% Down Payment over 10 Years"
+    ],
+    "paymentPlan": "5% DP over 10 yrs (backloaded)"
+  },
+  {
+    "slug": "ivoire-east",
+    "name": "Ivoire East",
+    "destination": "new-cairo",
+    "lat": 30.02,
+    "lng": 31.49,
+    "developer": "PRE Developments",
+    "developerSlug": "pre-developments",
+    "priceFrom": 9.904,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex",
+      "Townhouse",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Southern 90th St Location",
+      "Opposite Hyde Park & Mivida",
+      "104 Feddans Masterplan",
+      "20 Feddans Commercial Strip",
+      "Butterfly Garden",
+      "Serenity Lake"
+    ],
+    "hero": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
+    ],
+    "blurb": "Ivoire East by PRE Developments spans 104 feddans directly on Southern 90th Street in New Cairo, featuring 20 feddans of commercial strip, duplexes, townhouses, and standalones.",
+    "highlights": [
+      "Directly on Southern 90th Street",
+      "Opposite Hyde Park & Mivida Emaar",
+      "5% Down Payment over 10 Years"
+    ],
+    "paymentPlan": "5% DP over 10 yrs"
+  },
+  {
+    "slug": "telal-shores",
+    "name": "Telal Shores",
+    "destination": "ain-sokhna",
+    "lat": 29.62,
+    "lng": 32.33,
+    "developer": "Roya Developments",
+    "developerSlug": "roya-developments",
+    "priceFrom": 20.78,
+    "deliveryYear": 2027,
+    "status": "Off-Plan",
+    "beachfront": true,
+    "types": [
+      "Townhouse",
+      "Twin House"
+    ],
+    "amenities": [
+      "80 Acres Masterplan",
+      "500m Beachfront",
+      "16,800 sqm Swimmable Lagoon",
+      "10 min to Galala City",
+      "Clubhouse & Swimming Pools"
+    ],
+    "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
+    ],
+    "blurb": "Telal Shores El Sokhna by Roya Developments spans 80 acres featuring a 500m beachfront, 16,800m\u00b2 swimmable lagoon, and luxury townhouses and twin houses.",
+    "highlights": [
+      "80 Acres Masterplan",
+      "16,800 sqm Swimmable Lagoon",
+      "500m Beachfront"
+    ],
+    "paymentPlan": "5% DP over 10 yrs"
+  },
+  {
+    "slug": "oak-residences",
+    "name": "Oak Residences (Stone Park)",
+    "destination": "new-cairo",
+    "lat": 30.012,
+    "lng": 31.425,
+    "developer": "Roya Developments",
+    "developerSlug": "roya-developments",
+    "priceFrom": 10.6,
+    "deliveryYear": 2027,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "amenities": [
+      "The Hills at Stone Park",
+      "33 Acres Masterplan (17% Footprint)",
+      "Only 15 Buildings (G+5)",
+      "Adjacent to West Golf & Katameya Heights",
+      "Clubhouse"
+    ],
+    "hero": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80"
+    ],
+    "blurb": "Oak Residences (The Hills at Stone Park) by Roya Developments is an exclusive 11-acre boutique residential enclave in 5th Settlement featuring G+5 apartment buildings.",
+    "highlights": [
+      "Boutique 15 Buildings Enclave",
+      "Extension of Stone Park & West Golf",
+      "5% Down Payment over 10 Years"
+    ],
+    "paymentPlan": "5% DP over 10 yrs"
   }
 ];

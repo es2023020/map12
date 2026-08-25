@@ -1,0 +1,47 @@
+[
+  {
+    "id": "jirian-nations-of-sky-11",
+    "unitNo": "JIR-STB-MIN",
+    "beds": 6,
+    "finishing": "Fully finished",
+    "areaSqm": 460,
+    "view": "Panoramic View",
+    "priceEGP": 77000000,
+    "status": "Available",
+    "slug": "jirian-nations-of-sky",
+    "cluster": "Phase 1",
+    "area_note": "Land 500-650 sqm",
+    "delivery_note": "4 years",
+    "payment_plan": "5%+5%+5% over 10 yrs"
+  },
+  {
+    "id": "jirian-nations-of-sky-12",
+    "unitNo": "JIR-STB-MAX",
+    "beds": 6,
+    "finishing": "Fully finished",
+    "areaSqm": 460,
+    "view": "Panoramic View",
+    "priceEGP": 80000000,
+    "status": "Available",
+    "slug": "jirian-nations-of-sky",
+    "cluster": "Phase 1",
+    "area_note": "Land 500-650 sqm",
+    "delivery_note": "4 years",
+    "payment_plan": "5%+5%+5% over 10 yrs"
+  },
+  {
+    "id": "jirian-nations-of-sky-13",
+    "unitNo": "JIR-GRAND-VILLA",
+    "beds": 6,
+    "finishing": "Fully finished",
+    "areaSqm": 600,
+    "view": "Panoramic View",
+    "priceEGP": 162000000,
+    "status": "Available",
+    "slug": "jirian-nations-of-sky",
+    "cluster": "Phase 1",
+    "area_note": "Land 996 sqm",
+    "delivery_note": "4 years",
+    "payment_plan": "5%+5%+5% over 10 yrs"
+  }
+]

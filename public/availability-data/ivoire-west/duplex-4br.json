@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ivoire-west-4",
+    "unitNo": "IW-DUP-GARDEN",
+    "beds": 4,
+    "finishing": "Fully finished",
+    "areaSqm": 240,
+    "view": "Landscape",
+    "priceEGP": 19950000,
+    "status": "Available",
+    "slug": "ivoire-west",
+    "cluster": "Phase 1",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "zomra-east-12",
+    "unitNo": "ZE-TW",
+    "beds": 4,
+    "finishing": "Fully finished",
+    "areaSqm": 270,
+    "view": "Panoramic View",
+    "priceEGP": 41000000,
+    "status": "Available",
+    "slug": "zomra-east",
+    "cluster": "Phase 1",
+    "area_note": "Land 278 sqm",
+    "delivery_note": "3 years",
+    "payment_plan": "5%+5%+5% over 8-10 yrs"
+  }
+]

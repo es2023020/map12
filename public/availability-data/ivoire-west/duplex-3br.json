@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ivoire-west-2",
+    "unitNo": "IW-DUP-LOFT",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 233,
+    "view": "Landscape",
+    "priceEGP": 16830000,
+    "status": "Available",
+    "slug": "ivoire-west",
+    "cluster": "Phase 1",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  }
+]

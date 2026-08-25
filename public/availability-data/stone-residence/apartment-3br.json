@@ -1,16 +1,16 @@
 [
   {
     "id": "stone-residence-2",
-    "unitNo": "SR-3BR",
+    "unitNo": "SR-3BR-175",
     "beds": 3,
     "finishing": "Semi-finished",
-    "areaSqm": 150,
+    "areaSqm": 175,
     "view": "Landscape",
-    "priceEGP": 12000000,
+    "priceEGP": 12312000,
     "status": "Available",
     "slug": "stone-residence",
     "cluster": "Phase 1",
-    "delivery_note": "6 months",
-    "payment_plan": "20% / 5 yrs"
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 5 yrs"
   }
 ]

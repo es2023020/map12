@@ -1,0 +1,72 @@
+[
+  {
+    "id": "hacienda-west-6",
+    "unitNo": "WST-LDG-514-M",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 112,
+    "view": "Landscape",
+    "priceEGP": 39207600,
+    "status": "Available",
+    "slug": "hacienda-west",
+    "cluster": "Phase 1",
+    "delivery_note": "2025",
+    "payment_plan": "10% DP over 8 years"
+  },
+  {
+    "id": "hacienda-west-7",
+    "unitNo": "WST-LDG-516",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 40773000,
+    "status": "Available",
+    "slug": "hacienda-west",
+    "cluster": "Phase 1",
+    "delivery_note": "2025",
+    "payment_plan": "10% DP over 8 years"
+  },
+  {
+    "id": "hacienda-west-8",
+    "unitNo": "WST-LDG-517-M",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 118,
+    "view": "Landscape",
+    "priceEGP": 40095400,
+    "status": "Available",
+    "slug": "hacienda-west",
+    "cluster": "Phase 1",
+    "delivery_note": "2025",
+    "payment_plan": "10% DP over 8 years"
+  },
+  {
+    "id": "hacienda-west-9",
+    "unitNo": "WST-LDG-518",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 118,
+    "view": "Landscape",
+    "priceEGP": 40095400,
+    "status": "Available",
+    "slug": "hacienda-west",
+    "cluster": "Phase 1",
+    "delivery_note": "2025",
+    "payment_plan": "10% DP over 8 years"
+  },
+  {
+    "id": "hacienda-west-10",
+    "unitNo": "WST-LDG-519",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 179,
+    "view": "Landscape",
+    "priceEGP": 58408040,
+    "status": "Available",
+    "slug": "hacienda-west",
+    "cluster": "Phase 1",
+    "delivery_note": "2025",
+    "payment_plan": "10% DP over 8 years"
+  }
+]

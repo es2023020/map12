@@ -1,0 +1,16 @@
+[
+  {
+    "id": "telal-east-2",
+    "unitNo": "TE-3BR-129",
+    "beds": 3,
+    "finishing": "Fully finished with A/C",
+    "areaSqm": 129,
+    "view": "Landscape",
+    "priceEGP": 10071600,
+    "status": "Available",
+    "slug": "telal-east",
+    "cluster": "Selection",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  }
+]
