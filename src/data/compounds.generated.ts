@@ -5743,7 +5743,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/alam-al-roum/4.jpg"
 ],
     "blurb": "Alam El Roum is a massive $29.7 billion mega-development on Egypt's Mediterranean coast west of Marsa Matrouh. Developed by Qatari Diar, the 4,900-acre project features a 7.2-kilometer shoreline, an international marina, luxury hotels, and year-round residential districts.",
-    "paymentPlan": "5% down payment, remaining balance spread over 8\u201310 years in equal installments",
+    "paymentPlan": "5%+5% over 8 Yrs",
     "areaSize": "4,900 feddan",
     "unitSizes": "125 \u2013 601 m\u00b2",
     "city": "East of Marsa Matrouh, North Coast, Egypt",

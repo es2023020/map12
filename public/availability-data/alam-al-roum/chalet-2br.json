@@ -1,0 +1,32 @@
+[
+  {
+    "id": "alam-al-roum-22",
+    "unitNo": "AER-BC-QUAD-GF-125",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 125,
+    "view": "Sea & Natural Lagoons",
+    "priceEGP": 18800000,
+    "status": "Available",
+    "slug": "alam-al-roum",
+    "cluster": "Beach Chalets Ground Floor",
+    "area_note": "Terrace 25m² · Garden 75m²",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 Yrs"
+  },
+  {
+    "id": "alam-al-roum-23",
+    "unitNo": "AER-BC-QUAD-UF-125",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 125,
+    "view": "Sea & Natural Lagoons",
+    "priceEGP": 15600000,
+    "status": "Available",
+    "slug": "alam-al-roum",
+    "cluster": "Beach Chalets Upper Floor",
+    "area_note": "Terrace 25m² Upper Floor",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 Yrs"
+  }
+]
