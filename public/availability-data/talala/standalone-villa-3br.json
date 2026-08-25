@@ -1,0 +1,16 @@
+[
+  {
+    "id": "talala-10",
+    "unitNo": "TAL-SA-179",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 179,
+    "view": "Landscape",
+    "priceEGP": 25100000,
+    "status": "Available",
+    "slug": "talala",
+    "cluster": "Talala",
+    "delivery_note": "5 Years",
+    "payment_plan": "5.2% - 15 Yrs"
+  }
+]

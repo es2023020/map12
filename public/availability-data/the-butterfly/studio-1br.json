@@ -1,0 +1,16 @@
+[
+  {
+    "id": "the-butterfly-1",
+    "unitNo": "BUT-STD-38",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 38,
+    "view": "Landscape",
+    "priceEGP": 3000000,
+    "status": "Available",
+    "slug": "the-butterfly",
+    "cluster": "Apartments",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "1.5% - 12Y Backloaded"
+  }
+]

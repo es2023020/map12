@@ -1,0 +1,16 @@
+[
+  {
+    "id": "sarai-3",
+    "unitNo": "SAR-2B-100",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 100,
+    "view": "Landscape",
+    "priceEGP": 7600000,
+    "status": "Available",
+    "slug": "sarai",
+    "cluster": "Royal Residence",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "1.5% - 12Y Backloaded"
+  }
+]

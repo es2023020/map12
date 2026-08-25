@@ -1,0 +1,30 @@
+[
+  {
+    "id": "talala-11",
+    "unitNo": "TAL-SA-208",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 208,
+    "view": "Landscape",
+    "priceEGP": 29200000,
+    "status": "Available",
+    "slug": "talala",
+    "cluster": "Talala",
+    "delivery_note": "5 Years",
+    "payment_plan": "5.2% - 15 Yrs"
+  },
+  {
+    "id": "talala-12",
+    "unitNo": "TAL-SA-247",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 247,
+    "view": "Landscape",
+    "priceEGP": 34000000,
+    "status": "Available",
+    "slug": "talala",
+    "cluster": "Talala",
+    "delivery_note": "5 Years",
+    "payment_plan": "5.2% - 15 Yrs"
+  }
+]

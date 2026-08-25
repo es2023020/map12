@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mist-3",
+    "unitNo": "A1-1-G03",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 80,
+    "view": "Scenic View",
+    "priceEGP": 8786269.33,
+    "status": "Available",
+    "slug": "mist",
+    "cluster": "Mist",
+    "delivery_note": "8/5/2030",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "mist-4",
+    "unitNo": "A1-1-G05",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 63,
+    "view": "Scenic View",
+    "priceEGP": 6683840.6,
+    "status": "Available",
+    "slug": "mist",
+    "cluster": "Mist",
+    "delivery_note": "8/5/2030",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "mist-17",
+    "unitNo": "A1-2-G03",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 88,
+    "view": "Scenic View",
+    "priceEGP": 9539378.13,
+    "status": "Available",
+    "slug": "mist",
+    "cluster": "Mist",
+    "delivery_note": "8/5/2030",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "mist-58",
+    "unitNo": "A3-2-G03",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 88,
+    "view": "Scenic View",
+    "priceEGP": 9539378.13,
+    "status": "Available",
+    "slug": "mist",
+    "cluster": "Mist",
+    "delivery_note": "8/5/2030",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "mist-81",
+    "unitNo": "A4-2-G03",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 88,
+    "view": "Scenic View",
+    "priceEGP": 9917387.14,
+    "status": "Available",
+    "slug": "mist",
+    "cluster": "Mist",
+    "delivery_note": "8/5/2030",
+    "payment_plan": "10% DP over 7-8 yrs"
+  }
+]

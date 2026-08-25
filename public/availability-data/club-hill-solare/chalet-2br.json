@@ -1,0 +1,30 @@
+[
+  {
+    "id": "club-hill-solare-1",
+    "unitNo": "SOL-LUM-2B-115",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 115,
+    "view": "Landscape",
+    "priceEGP": 12200000,
+    "status": "Available",
+    "slug": "club-hill-solare",
+    "cluster": "Lumera Phase",
+    "delivery_note": "Dec 2028",
+    "payment_plan": "5%+5% over 10 yrs"
+  },
+  {
+    "id": "club-hill-solare-8",
+    "unitNo": "SOL-MAISON-2B-129",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 129,
+    "view": "Landscape",
+    "priceEGP": 14800000,
+    "status": "Available",
+    "slug": "club-hill-solare",
+    "cluster": "Maison Solare",
+    "delivery_note": "Dec 2030",
+    "payment_plan": "5%+10% over 9 yrs"
+  }
+]

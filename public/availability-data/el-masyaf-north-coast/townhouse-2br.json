@@ -1,0 +1,72 @@
+[
+  {
+    "id": "el-masyaf-north-coast-1",
+    "unitNo": "ATOH5A01",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "view": "Scenic View",
+    "priceEGP": 51692253.32,
+    "status": "Available",
+    "slug": "el-masyaf-north-coast",
+    "cluster": "Masyaf",
+    "delivery_note": "8/5/2028",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "el-masyaf-north-coast-2",
+    "unitNo": "ATOH5A02",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "view": "Scenic View",
+    "priceEGP": 42457614.98,
+    "status": "Available",
+    "slug": "el-masyaf-north-coast",
+    "cluster": "Masyaf",
+    "delivery_note": "8/5/2028",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "el-masyaf-north-coast-3",
+    "unitNo": "ATOH5A04",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "view": "Scenic View",
+    "priceEGP": 55596359.84,
+    "status": "Available",
+    "slug": "el-masyaf-north-coast",
+    "cluster": "Masyaf",
+    "delivery_note": "8/5/2028",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "el-masyaf-north-coast-4",
+    "unitNo": "ATOH5B01",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "view": "Scenic View",
+    "priceEGP": 54000387.95,
+    "status": "Available",
+    "slug": "el-masyaf-north-coast",
+    "cluster": "Masyaf",
+    "delivery_note": "8/5/2028",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "el-masyaf-north-coast-7",
+    "unitNo": "LTOH0501",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 165,
+    "view": "Scenic View",
+    "priceEGP": 36677847.38,
+    "status": "Available",
+    "slug": "el-masyaf-north-coast",
+    "cluster": "Masyaf",
+    "delivery_note": "8/5/2029",
+    "payment_plan": "10% DP over 7-8 yrs"
+  }
+]

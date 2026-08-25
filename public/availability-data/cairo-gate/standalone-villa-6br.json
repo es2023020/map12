@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cairo-gate-15",
+    "unitNo": "CG Haven-V-V-12",
+    "beds": 6,
+    "finishing": "Fully Finished",
+    "areaSqm": 703.3,
+    "view": "Landscape & Lakes",
+    "priceEGP": 98132888,
+    "status": "Available",
+    "slug": "cairo-gate",
+    "cluster": "Haven",
+    "delivery_note": "31/05/2028",
+    "payment_plan": "5% DP over 8 Yrs"
+  },
+  {
+    "id": "cairo-gate-16",
+    "unitNo": "CG Haven-V-V-13",
+    "beds": 6,
+    "finishing": "Fully Finished",
+    "areaSqm": 735,
+    "view": "Landscape & Lakes",
+    "priceEGP": 97354888,
+    "status": "Available",
+    "slug": "cairo-gate",
+    "cluster": "Haven",
+    "delivery_note": "31/05/2028",
+    "payment_plan": "5% DP over 8 Yrs"
+  }
+]

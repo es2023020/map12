@@ -1,0 +1,16 @@
+[
+  {
+    "id": "sarai-5",
+    "unitNo": "SAR-ELM-SV-212",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 212,
+    "view": "Landscape",
+    "priceEGP": 18200000,
+    "status": "Available",
+    "slug": "sarai",
+    "cluster": "Elm Tree Park",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "1.5% - 12Y Backloaded"
+  }
+]

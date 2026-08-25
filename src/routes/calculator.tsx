@@ -612,43 +612,71 @@ function CalculatorPage() {
             )}
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {suitableUnits.slice(0, visibleUnitsLimit).map((u, i) => (
-              <div
-                key={i}
-                className="rounded-xl border border-border bg-secondary/30 p-3 hover:bg-secondary/50 transition-colors flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-start justify-between gap-1.5">
-                    <span className="font-semibold text-primary text-xs truncate">
-                      {u.projectName}
-                    </span>
-                    <span className="text-xs font-bold text-accent shrink-0">
-                      {fmt(u.priceEGP)}
-                    </span>
+            {suitableUnits.slice(0, visibleUnitsLimit).map((u, i) => {
+              const uDp = u.priceEGP * (dpPct / 100);
+              const uRem = u.priceEGP - uDp;
+              const uMonthly = uRem / (duration * 12);
+              return (
+                <div
+                  key={i}
+                  className="group relative rounded-xl border border-border bg-secondary/30 p-3.5 hover:bg-card hover:border-accent/60 hover:shadow-lg transition-all duration-200 flex flex-col justify-between cursor-pointer"
+                >
+                  <div>
+                    <div className="flex items-start justify-between gap-1.5">
+                      <span className="font-semibold text-primary text-xs truncate group-hover:text-accent transition-colors">
+                        {u.projectName}
+                      </span>
+                      <span className="text-xs font-bold text-accent shrink-0">
+                        {fmtEGP(u.priceEGP)}
+                      </span>
+                    </div>
+                    <div className="text-[10px] text-muted-foreground">{u.developer}</div>
+                    <div className="text-xs text-primary mt-2 font-medium">
+                      {u.type} · {u.beds > 0 ? `${u.beds} Beds` : ""} ·{" "}
+                      {u.areaSqm > 0 ? `${u.areaSqm} sqm` : ""}
+                    </div>
+                    <div className="text-[10px] text-muted-foreground mt-1 line-clamp-1">
+                      {u.finishing} · {u.deliveryNote || "Contact for delivery"}
+                    </div>
                   </div>
-                  <div className="text-[10px] text-muted-foreground">{u.developer}</div>
-                  <div className="text-xs text-primary mt-2 font-medium">
-                    {u.type} · {u.beds > 0 ? `${u.beds} Beds` : ""} ·{" "}
-                    {u.areaSqm > 0 ? `${u.areaSqm} sqm` : ""}
+
+                  {/* Light Hover Popups for Down Payment & Monthly Payment */}
+                  <div className="mt-3 opacity-95 transition-all">
+                    <div className="grid grid-cols-2 gap-1.5 pt-2 border-t border-border/40 text-[10px]">
+                      <div className="rounded-lg bg-accent/10 border border-accent/25 p-1.5 text-center">
+                        <div className="text-[8px] uppercase tracking-wider text-muted-foreground font-bold">
+                          💡 {dpPct}% Down Payment
+                        </div>
+                        <div className="font-bold text-accent truncate">
+                          {fmtEGP(uDp)}
+                        </div>
+                      </div>
+                      <div className="rounded-lg bg-primary/10 border border-primary/20 p-1.5 text-center">
+                        <div className="text-[8px] uppercase tracking-wider text-muted-foreground font-bold">
+                          📅 Monthly ({duration}Y)
+                        </div>
+                        <div className="font-bold text-primary truncate">
+                          {fmtEGP(uMonthly)}/mo
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-[10px] text-muted-foreground mt-1 line-clamp-1">
-                    {u.finishing} · {u.deliveryNote || "Contact for delivery"}
+
+                  <div className="mt-2.5 flex items-center justify-between">
+                    <span className="text-[9px] text-muted-foreground truncate max-w-[120px]">
+                      {u.paymentPlan}
+                    </span>
+                    <Link
+                      to="/projects/$slug"
+                      params={{ slug: u.projectSlug }}
+                      className="text-[10px] font-bold text-accent hover:underline shrink-0 flex items-center gap-0.5"
+                    >
+                      View Project →
+                    </Link>
                   </div>
                 </div>
-                <div className="mt-3 pt-2 border-t border-border/40 flex items-center justify-between">
-                  <span className="text-[9px] text-muted-foreground truncate max-w-[120px]">
-                    {u.paymentPlan}
-                  </span>
-                  <Link
-                    to="/projects/$slug"
-                    params={{ slug: u.projectSlug }}
-                    className="text-[10px] font-bold text-accent hover:underline shrink-0"
-                  >
-                    View →
-                  </Link>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* See More Live Units Button */}

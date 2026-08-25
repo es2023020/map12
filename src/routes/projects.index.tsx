@@ -231,6 +231,11 @@ function ProjectsPage() {
         }
       }
     }
+    if (devVal) {
+      if (c.developerSlug !== devVal && !c.developer.toLowerCase().includes(devVal.toLowerCase())) {
+        return false;
+      }
+    }
     if (destinationVal && (Array.isArray(destinationVal) ? destinationVal.length > 0 : true)) {
       if (Array.isArray(destinationVal)) {
         if (!destinationVal.includes(c.destination)) return false;

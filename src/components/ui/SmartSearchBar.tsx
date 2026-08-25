@@ -362,8 +362,11 @@ export function SmartSearchBar({
                           key={d.slug}
                           type="button"
                           onClick={() => {
-                            if (onSelectDeveloper) onSelectDeveloper(d.slug);
-                            else onChange(d.name);
+                            if (onSelectDeveloper) {
+                              onSelectDeveloper(d.slug);
+                            } else {
+                              onChange(d.name);
+                            }
                             setIsOpen(false);
                           }}
                           className={`flex w-full items-center justify-between rounded-xl px-3 py-1.5 text-left transition-colors ${

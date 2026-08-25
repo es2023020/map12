@@ -1,0 +1,16 @@
+[
+  {
+    "id": "talala-2",
+    "unitNo": "TAL-2B-9M7",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 105,
+    "view": "Landscape",
+    "priceEGP": 9700000,
+    "status": "Available",
+    "slug": "talala",
+    "cluster": "Talala",
+    "delivery_note": "5 Years",
+    "payment_plan": "5.2% - 15 Yrs"
+  }
+]

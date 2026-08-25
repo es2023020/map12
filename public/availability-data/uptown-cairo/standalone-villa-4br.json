@@ -1,0 +1,58 @@
+[
+  {
+    "id": "uptown-cairo-1",
+    "unitNo": "UTC The Peak P1-V-V-1",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 414.7,
+    "view": "Landscape & Lakes",
+    "priceEGP": 57011888,
+    "status": "Available",
+    "slug": "uptown-cairo",
+    "cluster": "The Peak",
+    "delivery_note": "30/06/2028",
+    "payment_plan": "5% DP over 8 Yrs"
+  },
+  {
+    "id": "uptown-cairo-3",
+    "unitNo": "UTC The Peak P1-V-V-18",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 431.1,
+    "view": "Landscape & Lakes",
+    "priceEGP": 49454888,
+    "status": "Available",
+    "slug": "uptown-cairo",
+    "cluster": "The Peak",
+    "delivery_note": "30/06/2028",
+    "payment_plan": "5% DP over 8 Yrs"
+  },
+  {
+    "id": "uptown-cairo-4",
+    "unitNo": "UTC The Peak P1-V-V-72",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 492.4,
+    "view": "Landscape & Lakes",
+    "priceEGP": 71048888,
+    "status": "Available",
+    "slug": "uptown-cairo",
+    "cluster": "The Peak",
+    "delivery_note": "30/06/2028",
+    "payment_plan": "5% DP over 8 Yrs"
+  },
+  {
+    "id": "uptown-cairo-6",
+    "unitNo": "UTC The Peak P1-V-V-113",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 532.7,
+    "view": "Landscape & Lakes",
+    "priceEGP": 74417888,
+    "status": "Available",
+    "slug": "uptown-cairo",
+    "cluster": "The Peak",
+    "delivery_note": "30/06/2028",
+    "payment_plan": "5% DP over 8 Yrs"
+  }
+]

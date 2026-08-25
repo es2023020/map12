@@ -1,0 +1,16 @@
+[
+  {
+    "id": "sarai-12",
+    "unitNo": "SAR-S1-TRIPLEX-337",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 337,
+    "view": "Landscape",
+    "priceEGP": 30300000,
+    "status": "Available",
+    "slug": "sarai",
+    "cluster": "S1",
+    "delivery_note": "RTM",
+    "payment_plan": "10% - 8 Yrs"
+  }
+]

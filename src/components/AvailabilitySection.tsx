@@ -124,7 +124,7 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
                   </div>
                 </div>
 
-                {/* Price */}
+                {/* Price & Hover Popups */}
                 <div className="mt-5 pt-3 border-t border-border/40 w-full">
                   <div className="text-[9px] uppercase tracking-widest text-muted-foreground font-semibold">
                     Average Price
@@ -135,6 +135,33 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
                   <div className="text-[10px] text-muted-foreground">
                     Range: {row.minPriceM.toFixed(1)}M – {row.maxPriceM.toFixed(1)}M
                   </div>
+
+                  {/* Light Hover Popups */}
+                  {(() => {
+                    const samplePrice = row.minPriceM * 1000000;
+                    const sampleDp = samplePrice * 0.10; // 10% DP
+                    const sampleMonthly = (samplePrice - sampleDp) / (8 * 12); // 8 Yrs
+                    return (
+                      <div className="mt-3 hidden group-hover:grid grid-cols-2 gap-1.5 transition-all duration-200 animate-in fade-in-50">
+                        <div className="rounded-lg bg-accent/10 border border-accent/30 p-1.5 text-center">
+                          <div className="text-[8px] uppercase tracking-wider text-muted-foreground font-bold">
+                            💡 10% Down Payment
+                          </div>
+                          <div className="text-[10px] font-bold text-accent truncate">
+                            EGP {(sampleDp / 1000000).toFixed(2)}M
+                          </div>
+                        </div>
+                        <div className="rounded-lg bg-primary/10 border border-primary/20 p-1.5 text-center">
+                          <div className="text-[8px] uppercase tracking-wider text-muted-foreground font-bold">
+                            📅 Est. Monthly (8Y)
+                          </div>
+                          <div className="text-[10px] font-bold text-primary truncate">
+                            EGP {Math.round(sampleMonthly).toLocaleString()}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
 
                   <Link
                     to="/calculator"
