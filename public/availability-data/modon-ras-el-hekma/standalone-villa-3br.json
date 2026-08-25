@@ -1,0 +1,32 @@
+[
+  {
+    "id": "modon-ras-el-hekma-15",
+    "unitNo": "MOD-WE-SA-3B-244",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 244,
+    "view": "Sea & Natural Lagoons",
+    "priceEGP": 64200000,
+    "status": "Available",
+    "slug": "modon-ras-el-hekma",
+    "cluster": "Wadi East",
+    "area_note": "265m Garden",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 Yrs"
+  },
+  {
+    "id": "modon-ras-el-hekma-18",
+    "unitNo": "MOD-MON-3B-398",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 398,
+    "view": "Sea & Natural Lagoons",
+    "priceEGP": 135200000,
+    "status": "Available",
+    "slug": "modon-ras-el-hekma",
+    "cluster": "Montage Villas",
+    "area_note": "495m Garden",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 Yrs"
+  }
+]

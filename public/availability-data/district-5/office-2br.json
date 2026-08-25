@@ -1,0 +1,72 @@
+[
+  {
+    "id": "district-5-53",
+    "unitNo": "C3B-02-02",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 183,
+    "view": "Landscape & Amenities",
+    "priceEGP": 49764000,
+    "status": "Available",
+    "slug": "district-5",
+    "cluster": "Campus +",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 8 Yrs"
+  },
+  {
+    "id": "district-5-54",
+    "unitNo": "35-04-02",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 188,
+    "view": "Landscape & Amenities",
+    "priceEGP": 49830000,
+    "status": "Available",
+    "slug": "district-5",
+    "cluster": "MINDHAUS STRIP",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 8 Yrs"
+  },
+  {
+    "id": "district-5-55",
+    "unitNo": "34-00-09",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 156,
+    "view": "Landscape & Amenities",
+    "priceEGP": 39168000,
+    "status": "Available",
+    "slug": "district-5",
+    "cluster": "MINDHAUS STRIP",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 8 Yrs"
+  },
+  {
+    "id": "district-5-56",
+    "unitNo": "34-02-01",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 101,
+    "view": "Landscape & Amenities",
+    "priceEGP": 25720000,
+    "status": "Available",
+    "slug": "district-5",
+    "cluster": "MINDHAUS STRIP",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 8 Yrs"
+  },
+  {
+    "id": "district-5-57",
+    "unitNo": "34-02-09",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 138,
+    "view": "Landscape & Amenities",
+    "priceEGP": 35297000,
+    "status": "Available",
+    "slug": "district-5",
+    "cluster": "MINDHAUS STRIP",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 8 Yrs"
+  }
+]

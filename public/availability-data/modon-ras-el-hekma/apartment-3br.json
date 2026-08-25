@@ -1,0 +1,30 @@
+[
+  {
+    "id": "modon-ras-el-hekma-6",
+    "unitNo": "MOD-BOU-3B-225",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 225,
+    "view": "Sea & Natural Lagoons",
+    "priceEGP": 38000000,
+    "status": "Available",
+    "slug": "modon-ras-el-hekma",
+    "cluster": "Boulevard Luxury",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 Yrs"
+  },
+  {
+    "id": "modon-ras-el-hekma-8",
+    "unitNo": "MOD-BOU-PREM-3B-194",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 194,
+    "view": "Sea & Natural Lagoons",
+    "priceEGP": 25200000,
+    "status": "Available",
+    "slug": "modon-ras-el-hekma",
+    "cluster": "Boulevard Premium",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 Yrs"
+  }
+]

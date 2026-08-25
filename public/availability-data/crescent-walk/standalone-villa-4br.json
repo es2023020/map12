@@ -1,0 +1,30 @@
+[
+  {
+    "id": "crescent-walk-12",
+    "unitNo": "PC-13",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 279,
+    "view": "Landscape & Amenities",
+    "priceEGP": 56305000,
+    "status": "Available",
+    "slug": "crescent-walk",
+    "cluster": "Single Family",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 8 Yrs"
+  },
+  {
+    "id": "crescent-walk-82",
+    "unitNo": "PE-16",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 212,
+    "view": "Landscape & Amenities",
+    "priceEGP": 39796000,
+    "status": "Available",
+    "slug": "crescent-walk",
+    "cluster": "Single Family",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 8 Yrs"
+  }
+]
