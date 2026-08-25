@@ -1,7 +1,7 @@
 /**
  * Smart Ready to Move (RTM) determination utility.
- * RTM is defined strictly as delivery within 9 months or less from now (deliveryYear <= 2027).
- * Any unit or project with deliveryYear > 2027 (e.g. 2028, 2029, 2030) is NOT RTM (it is Off-Plan).
+ * RTM is defined strictly as delivery within 9 months or less from today's date (August 2026 => delivery <= 2027 / May 2027).
+ * Any unit or project with deliveryYear > 2027 (e.g. 2028, 2029, 2030) or relative delivery > 9 months is NOT RTM (it is Off-Plan).
  */
 
 export const MAX_RTM_DELIVERY_YEAR = 2027;
@@ -70,4 +70,60 @@ export function isReadyToMove(
   }
 
   return false;
+}
+
+export function hasRTMUnits(
+  c: { deliveryYear?: number; status?: string },
+  avail?: { breakdown?: any[] }
+): boolean {
+  if (avail && avail.breakdown && avail.breakdown.length > 0) {
+    let checkedAny = false;
+    for (const b of avail.breakdown) {
+      if (b.units && b.units.length > 0) {
+        for (const u of b.units) {
+          checkedAny = true;
+          const note = u.deliveryNote || u.delivery_note || b.deliveryNote || b.delivery_note;
+          if (isReadyToMove(c.deliveryYear, note, c.status)) {
+            return true;
+          }
+        }
+      } else {
+        checkedAny = true;
+        const note = b.deliveryNote || b.delivery_note;
+        if (isReadyToMove(c.deliveryYear, note, c.status)) {
+          return true;
+        }
+      }
+    }
+    if (checkedAny) return false;
+  }
+  return isReadyToMove(c.deliveryYear, undefined, c.status);
+}
+
+export function hasOffPlanUnits(
+  c: { deliveryYear?: number; status?: string },
+  avail?: { breakdown?: any[] }
+): boolean {
+  if (avail && avail.breakdown && avail.breakdown.length > 0) {
+    let checkedAny = false;
+    for (const b of avail.breakdown) {
+      if (b.units && b.units.length > 0) {
+        for (const u of b.units) {
+          checkedAny = true;
+          const note = u.deliveryNote || u.delivery_note || b.deliveryNote || b.delivery_note;
+          if (!isReadyToMove(c.deliveryYear, note, c.status)) {
+            return true;
+          }
+        }
+      } else {
+        checkedAny = true;
+        const note = b.deliveryNote || b.delivery_note;
+        if (!isReadyToMove(c.deliveryYear, note, c.status)) {
+          return true;
+        }
+      }
+    }
+    if (checkedAny) return false;
+  }
+  return !isReadyToMove(c.deliveryYear, undefined, c.status);
 }

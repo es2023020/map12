@@ -4,16 +4,19 @@ import { useStore } from "@/lib/store";
 import { destinationBySlug } from "@/data/destinations";
 import { developers } from "@/data/developers";
 import type { Compound } from "@/data/compounds";
-import { isReadyToMove } from "@/lib/delivery";
+import { isReadyToMove, hasRTMUnits, hasOffPlanUnits } from "@/lib/delivery";
 
 export function CompoundCard({ c }: { c: Compound }) {
   const isFav = useStore((s) => s.favorites.includes(c.slug));
   const isCmp = useStore((s) => s.compareList.includes(c.slug));
   const toggleFav = useStore((s) => s.toggleFavorite);
   const toggleCmp = useStore((s) => s.toggleCompare);
+  const availabilityList = useStore((s) => s.availabilityList);
 
   const developerInfo = developers.find((d) => d.slug === c.developerSlug);
-  const rtm = isReadyToMove(c.deliveryYear, undefined, c.status);
+  const avail = availabilityList.find((a) => a.slug === c.slug);
+  const hasRtm = hasRTMUnits(c, avail);
+  const hasOffPlan = hasOffPlanUnits(c, avail);
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card shadow-soft hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 bg-gradient-to-b from-card to-background/5">
@@ -38,12 +41,18 @@ export function CompoundCard({ c }: { c: Compound }) {
             )}
             <span
               className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider shadow-2xs border ${
-                rtm
+                hasRtm && hasOffPlan
+                  ? "bg-gradient-to-r from-emerald-500/90 to-blue-600/90 text-white border-emerald-400/20"
+                  : hasRtm
                   ? "bg-emerald-500/90 text-white border-emerald-400/20"
                   : "bg-primary/95 text-white border-primary-foreground/15"
               }`}
             >
-              {rtm ? "Ready to Move" : "Off-Plan"}
+              {hasRtm && hasOffPlan
+                ? "RTM & Off-Plan"
+                : hasRtm
+                ? "Ready to Move"
+                : "Off-Plan"}
             </span>
           </div>
 

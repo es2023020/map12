@@ -13,6 +13,7 @@ const publicLinks = [
 ];
 
 const moreLinks = [
+  { to: "/developer-announcements" as const, label: "Announcements" },
   { to: "/developers" as const, label: "Developers" },
   { to: "/pricing" as const, label: "Pricing" },
   { to: "/about" as const, label: "About" },

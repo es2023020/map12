@@ -20,6 +20,7 @@ import { Route as NewLaunchesRouteImport } from './routes/new-launches'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as DevelopersRouteImport } from './routes/developers'
 import { Route as DeveloperPartnershipRouteImport } from './routes/developer-partnership'
+import { Route as DeveloperAnnouncementsRouteImport } from './routes/developer-announcements'
 import { Route as DestinationsRouteImport } from './routes/destinations'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -47,6 +48,7 @@ import { Route as DashboardFavoritesRouteImport } from './routes/dashboard.favor
 import { Route as DashboardCompareRouteImport } from './routes/dashboard.compare'
 import { Route as DashboardCampaignsRouteImport } from './routes/dashboard.campaigns'
 import { Route as DashboardBillingRouteImport } from './routes/dashboard.billing'
+import { Route as DashboardAnnouncementsRouteImport } from './routes/dashboard.announcements'
 import { Route as DashboardAiAssistantRouteImport } from './routes/dashboard.ai-assistant'
 import { Route as ComparePairRouteImport } from './routes/compare.$pair'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -117,6 +119,11 @@ const DevelopersRoute = DevelopersRouteImport.update({
 const DeveloperPartnershipRoute = DeveloperPartnershipRouteImport.update({
   id: '/developer-partnership',
   path: '/developer-partnership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeveloperAnnouncementsRoute = DeveloperAnnouncementsRouteImport.update({
+  id: '/developer-announcements',
+  path: '/developer-announcements',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DestinationsRoute = DestinationsRouteImport.update({
@@ -254,6 +261,11 @@ const DashboardBillingRoute = DashboardBillingRouteImport.update({
   path: '/billing',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardAnnouncementsRoute = DashboardAnnouncementsRouteImport.update({
+  id: '/announcements',
+  path: '/announcements',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardAiAssistantRoute = DashboardAiAssistantRouteImport.update({
   id: '/ai-assistant',
   path: '/ai-assistant',
@@ -343,6 +355,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/destinations': typeof DestinationsRouteWithChildren
+  '/developer-announcements': typeof DeveloperAnnouncementsRoute
   '/developer-partnership': typeof DeveloperPartnershipRoute
   '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
@@ -362,6 +375,7 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
+  '/dashboard/announcements': typeof DashboardAnnouncementsRoute
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
   '/dashboard/compare': typeof DashboardCompareRoute
@@ -396,6 +410,7 @@ export interface FileRoutesByTo {
   '/calculator': typeof CalculatorRoute
   '/compare': typeof CompareRouteWithChildren
   '/contact': typeof ContactRoute
+  '/developer-announcements': typeof DeveloperAnnouncementsRoute
   '/developer-partnership': typeof DeveloperPartnershipRoute
   '/map': typeof MapRoute
   '/new-launches': typeof NewLaunchesRoute
@@ -413,6 +428,7 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
+  '/dashboard/announcements': typeof DashboardAnnouncementsRoute
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
   '/dashboard/compare': typeof DashboardCompareRoute
@@ -450,6 +466,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/destinations': typeof DestinationsRouteWithChildren
+  '/developer-announcements': typeof DeveloperAnnouncementsRoute
   '/developer-partnership': typeof DeveloperPartnershipRoute
   '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
@@ -469,6 +486,7 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
+  '/dashboard/announcements': typeof DashboardAnnouncementsRoute
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
   '/dashboard/compare': typeof DashboardCompareRoute
@@ -507,6 +525,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/dashboard'
     | '/destinations'
+    | '/developer-announcements'
     | '/developer-partnership'
     | '/developers'
     | '/map'
@@ -526,6 +545,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$pair'
     | '/dashboard/ai-assistant'
+    | '/dashboard/announcements'
     | '/dashboard/billing'
     | '/dashboard/campaigns'
     | '/dashboard/compare'
@@ -560,6 +580,7 @@ export interface FileRouteTypes {
     | '/calculator'
     | '/compare'
     | '/contact'
+    | '/developer-announcements'
     | '/developer-partnership'
     | '/map'
     | '/new-launches'
@@ -577,6 +598,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$pair'
     | '/dashboard/ai-assistant'
+    | '/dashboard/announcements'
     | '/dashboard/billing'
     | '/dashboard/campaigns'
     | '/dashboard/compare'
@@ -613,6 +635,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/dashboard'
     | '/destinations'
+    | '/developer-announcements'
     | '/developer-partnership'
     | '/developers'
     | '/map'
@@ -632,6 +655,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$pair'
     | '/dashboard/ai-assistant'
+    | '/dashboard/announcements'
     | '/dashboard/billing'
     | '/dashboard/campaigns'
     | '/dashboard/compare'
@@ -669,6 +693,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DashboardRoute: typeof DashboardRouteWithChildren
   DestinationsRoute: typeof DestinationsRouteWithChildren
+  DeveloperAnnouncementsRoute: typeof DeveloperAnnouncementsRoute
   DeveloperPartnershipRoute: typeof DeveloperPartnershipRoute
   DevelopersRoute: typeof DevelopersRouteWithChildren
   MapRoute: typeof MapRoute
@@ -772,6 +797,13 @@ declare module '@tanstack/react-router' {
       path: '/developer-partnership'
       fullPath: '/developer-partnership'
       preLoaderRoute: typeof DeveloperPartnershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/developer-announcements': {
+      id: '/developer-announcements'
+      path: '/developer-announcements'
+      fullPath: '/developer-announcements'
+      preLoaderRoute: typeof DeveloperAnnouncementsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/destinations': {
@@ -963,6 +995,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardBillingRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/announcements': {
+      id: '/dashboard/announcements'
+      path: '/announcements'
+      fullPath: '/dashboard/announcements'
+      preLoaderRoute: typeof DashboardAnnouncementsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/ai-assistant': {
       id: '/dashboard/ai-assistant'
       path: '/ai-assistant'
@@ -1084,6 +1123,7 @@ const CompareRouteWithChildren =
 
 interface DashboardRouteChildren {
   DashboardAiAssistantRoute: typeof DashboardAiAssistantRoute
+  DashboardAnnouncementsRoute: typeof DashboardAnnouncementsRoute
   DashboardBillingRoute: typeof DashboardBillingRoute
   DashboardCampaignsRoute: typeof DashboardCampaignsRoute
   DashboardCompareRoute: typeof DashboardCompareRoute
@@ -1097,6 +1137,7 @@ interface DashboardRouteChildren {
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAiAssistantRoute: DashboardAiAssistantRoute,
+  DashboardAnnouncementsRoute: DashboardAnnouncementsRoute,
   DashboardBillingRoute: DashboardBillingRoute,
   DashboardCampaignsRoute: DashboardCampaignsRoute,
   DashboardCompareRoute: DashboardCompareRoute,
@@ -1187,6 +1228,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DashboardRoute: DashboardRouteWithChildren,
   DestinationsRoute: DestinationsRouteWithChildren,
+  DeveloperAnnouncementsRoute: DeveloperAnnouncementsRoute,
   DeveloperPartnershipRoute: DeveloperPartnershipRoute,
   DevelopersRoute: DevelopersRouteWithChildren,
   MapRoute: MapRoute,

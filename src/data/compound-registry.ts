@@ -382,7 +382,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     destination: "6th-october",
     lat: 29.97,
     lng: 30.93,
-    developer: "M Squared Developments",
+    developer: "Palm Hills Developments",
     city: "6th of October City, Giza, Egypt",
     blurb:
       "Bamboo Extension is an extension of the successful Bamboo residential community, offering modern low-density living with landscaped surroundings and premium residential planning.",

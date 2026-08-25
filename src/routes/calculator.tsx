@@ -18,7 +18,7 @@ import {
   Tag,
 } from "lucide-react";
 import { destinations } from "@/data/destinations";
-import { isReadyToMove } from "@/lib/delivery";
+import { isReadyToMove, hasRTMUnits, hasOffPlanUnits } from "@/lib/delivery";
 
 export const Route = createFileRoute("/calculator")({
   validateSearch: (search: Record<string, unknown>): { project?: string; price?: string } => ({
@@ -434,20 +434,25 @@ function CalculatorPage() {
 
   const suitableProjects = useMemo(() => {
     const budgetLimit = basePrice;
+    const availMap = new Map(availabilityList.map((a) => [a.slug, a]));
+
     return mainCompounds
       .filter((c) => {
         const matchPrice = c.priceFrom <= budgetLimit;
         const matchDest = matchDestination(c.destination, budgetDestFilters);
         const matchType = !budgetTypeFilter || matchPropertyType(c.types, budgetTypeFilter);
-        const isRTM = isReadyToMove(c.deliveryYear, undefined, c.status);
+        const avail = availMap.get(c.slug);
+        const rtm = hasRTMUnits(c, avail);
+        const offPlan = hasOffPlanUnits(c, avail);
+
         const matchStatus =
           budgetStatusFilter === "all" ||
-          (budgetStatusFilter === "RTM" ? isRTM : !isRTM);
+          (budgetStatusFilter === "RTM" ? rtm : offPlan);
         return matchPrice && matchDest && matchType && matchStatus;
       })
       .sort((a, b) => b.priceFrom - a.priceFrom)
       .slice(0, 6);
-  }, [basePrice, budgetDestFilters, budgetTypeFilter, budgetStatusFilter, mainCompounds]);
+  }, [basePrice, budgetDestFilters, budgetTypeFilter, budgetStatusFilter, mainCompounds, availabilityList]);
 
   const projectTypes = selectedProject?.types ?? [];
 

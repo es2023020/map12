@@ -113,6 +113,9 @@ function ArabicCompoundPage() {
   const toggleFav = useStore((s) => s.toggleFavorite);
   const isFav = favorites.includes(c.slug);
 
+  const availabilityList = useStore((s) => s.availabilityList) || [];
+  const avail = availabilityList.find((a) => a.slug === c.slug);
+
   const [availabilityLoaded, setAvailabilityLoaded] = useState(false);
 
   const user = useStore((s) => s.user);

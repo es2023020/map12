@@ -11,6 +11,7 @@ import { availability } from "@/data/availability";
 import { useStore } from "@/lib/store";
 import { useDebounce } from "@/lib/useDebounce";
 import { SmartSearchBar } from "@/components/ui/SmartSearchBar";
+import { hasRTMUnits, hasOffPlanUnits } from "@/lib/delivery";
 
 export const Route = createFileRoute("/projects/")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -238,12 +239,11 @@ function ProjectsPage() {
       }
     }
     if (statusVal) {
+      const avail = availabilityMap.get(c.slug) as any;
       if (statusVal === "RTM") {
-        const isRtm = c.status === "RTM" || c.deliveryYear <= 2027;
-        if (!isRtm) return false;
+        if (!hasRTMUnits(c, avail)) return false;
       } else if (statusVal === "Off-Plan") {
-        const isOffPlan = c.status === "Off-Plan" || c.deliveryYear > 2027;
-        if (!isOffPlan) return false;
+        if (!hasOffPlanUnits(c, avail)) return false;
       } else if (c.status !== statusVal) {
         return false;
       }

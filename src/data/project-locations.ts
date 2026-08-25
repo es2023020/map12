@@ -1286,8 +1286,7 @@ export const projectLocations: Record<string, ProjectLocation> = {
   "village-west": {
     name: "Village West",
     destination: "sheikh-zayed",
-    lat: 30.048,
-    lng: 30.985,
+    location: "Sheikh Zayed City, Giza Governorate, Egypt",
     mapsUrl: "https://maps.google.com/?q=Village+West+Sheikh+Zayed",
   },
 };

@@ -20,6 +20,7 @@ import {
   MapPin,
   Calculator,
 } from "lucide-react";
+import { isReadyToMove } from "@/lib/delivery";
 
 interface Props {
   data: ProjectAvailability;
@@ -84,10 +85,23 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
                     <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-secondary text-primary group-hover:bg-accent/10 group-hover:text-accent transition-colors">
                       {getUnitIcon(row.type)}
                     </span>
-                    <span className="inline-flex items-center gap-0.5 rounded-full bg-secondary/80 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground group-hover:bg-accent/10 group-hover:text-accent transition-colors">
-                      Details
-                      <ChevronRight className="h-3 w-3" />
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      {row.deliveryNote && (
+                        <span
+                          className={`inline-flex items-center rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
+                            isReadyToMove(undefined, row.deliveryNote)
+                              ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30"
+                              : "bg-primary/10 text-primary border border-primary/20"
+                          }`}
+                        >
+                          {isReadyToMove(undefined, row.deliveryNote) ? "RTM" : "Off-Plan"}
+                        </span>
+                      )}
+                      <span className="inline-flex items-center gap-0.5 rounded-full bg-secondary/80 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground group-hover:bg-accent/10 group-hover:text-accent transition-colors">
+                        Details
+                        <ChevronRight className="h-3 w-3" />
+                      </span>
+                    </div>
                   </div>
 
                   <h3 className="font-display text-base font-bold text-primary group-hover:text-accent transition-colors leading-tight">
