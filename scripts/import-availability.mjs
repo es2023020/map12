@@ -1,5 +1,5 @@
 /**
- * Read data/availability/ and data/availability/projects/ spreadsheets
+ * Read data/availability/projects/ spreadsheets
  * and regenerate src/data/availability.generated.ts & public/availability-data/
  */
 import fs from "fs";
@@ -58,7 +58,10 @@ function findHeaderRow(rows) {
 
 function parsePriceRange(val) {
   if (val === undefined || val === null || val === "") return { min: 0, max: 0 };
-  if (typeof val === "number") return { min: val, max: val };
+  if (typeof val === "number") {
+    if (val <= 0) return { min: 0, max: 0 };
+    return { min: val, max: val };
+  }
   let str = String(val).replace(/EGP/gi, "").replace(/,/g, "").trim();
   if (str.toLowerCase().includes("sold")) return { min: 0, max: 0 };
 
@@ -146,10 +149,25 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
   if (!fs.existsSync(filePath)) return null;
   const wb = XLSX.readFile(filePath);
 
+  let developerName = defaultDev;
+  const projectsSheet = wb.SheetNames.find((s) => s.toLowerCase().trim() === "projects");
+  if (projectsSheet) {
+    const projData = XLSX.utils.sheet_to_json(wb.Sheets[projectsSheet]);
+    if (projData && projData.length > 0 && projData[0].developer) {
+      developerName = String(projData[0].developer).trim();
+    }
+  }
+
   let targetSheets = wb.SheetNames;
-  if (wb.SheetNames.length > 1) {
+  const unitsSheet = wb.SheetNames.find((sn) => sn.toLowerCase().trim() === "units");
+  if (unitsSheet) {
+    targetSheets = [unitsSheet];
+  } else {
     const nonOverview = wb.SheetNames.filter(
-      (sn) => !["overview", "summary", "index", "instructions"].includes(sn.toLowerCase().trim()),
+      (sn) =>
+        !["projects", "breakdown", "overview", "summary", "index", "instructions"].includes(
+          sn.toLowerCase().trim(),
+        ),
     );
     if (nonOverview.length > 0) targetSheets = nonOverview;
   }
@@ -183,6 +201,7 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
     const priceKey = findHeaderKey([
       "price",
       "priceegp",
+      "price_egp",
       "unitprice",
       "egp",
       "cost",
@@ -200,12 +219,13 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
       "size",
       "sqm",
       "areasqm",
+      "area_sqm",
       "bua",
       "unitarea",
       "aream2",
       "builtarea",
     ]);
-    const unitNoKey = findHeaderKey(["unitno", "unitnumber", "unit", "no", "unitcode", "#"]);
+    const unitNoKey = findHeaderKey(["unitno", "unitnumber", "unit", "unit_id", "no", "unitcode", "#"]);
     const viewKey = findHeaderKey(["view", "aspect", "unitview"]);
     const statusKey = findHeaderKey(["status", "availability", "unitstatus"]);
 
@@ -239,10 +259,14 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
           ? String(rowObj[typeKey]).trim()
           : sheetName !== "Availability"
             ? sheetName
-            : "Chalet";
-      const priceRange = priceKey
-        ? parsePriceRange(rowObj[priceKey])
-        : { min: 5000000, max: 5000000 };
+            : "Apartment";
+
+      const priceRange = priceKey ? parsePriceRange(rowObj[priceKey]) : { min: 0, max: 0 };
+      if (priceRange.min <= 0 && priceRange.max <= 0) {
+        // Skip rows without valid price
+        return;
+      }
+
       const areaRange = areaKey ? parseAreaRange(rowObj[areaKey]) : { min: 120, max: 120 };
       const beds =
         bedsKey && rowObj[bedsKey]
@@ -269,8 +293,8 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
           available: 0,
           minSqm: areaRange.min || 120,
           maxSqm: areaRange.max || 120,
-          minPriceM: (priceRange.min || 5000000) / 1000000,
-          maxPriceM: (priceRange.max || 5000000) / 1000000,
+          minPriceM: priceRange.min / 1000000,
+          maxPriceM: priceRange.max / 1000000,
           units: [],
         };
       }
@@ -280,7 +304,7 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
       bd.available += isSold ? 0 : 1;
       if (areaRange.min > 0 && areaRange.min < bd.minSqm) bd.minSqm = areaRange.min;
       if (areaRange.max > bd.maxSqm) bd.maxSqm = areaRange.max;
-      if (priceRange.min > 0 && priceRange.min / 1000000 < bd.minPriceM)
+      if (priceRange.min > 0 && (bd.minPriceM === 0 || priceRange.min / 1000000 < bd.minPriceM))
         bd.minPriceM = priceRange.min / 1000000;
       if (priceRange.max / 1000000 > bd.maxPriceM) bd.maxPriceM = priceRange.max / 1000000;
 
@@ -291,19 +315,19 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
         finishing: "Finished",
         areaSqm: areaRange.min || 120,
         view,
-        priceEGP: priceRange.min || 5000000,
+        priceEGP: priceRange.min,
         status: isSold ? "Sold" : "Available",
         ...extraFields,
       });
     });
   });
 
-  const breakdown = Object.values(breakdownMap);
+  const breakdown = Object.values(breakdownMap).filter((b) => b.units.length > 0);
   const totalAvailable = breakdown.reduce((acc, curr) => acc + curr.available, 0);
 
   return {
     slug: defaultSlug,
-    developer: defaultDev,
+    developer: developerName,
     totalAvailable,
     breakdown,
     lastUpdated: new Date().toISOString().slice(0, 10),
@@ -326,6 +350,7 @@ function main() {
       const fullPath = path.join(dir, f);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
+        if (f.toLowerCase() === "raw_source_files") continue;
         scan(fullPath);
       } else if (
         (f.endsWith(".xlsx") || f.endsWith(".xls") || f.endsWith(".csv")) &&
@@ -335,12 +360,11 @@ function main() {
       }
     }
   }
-  scan(rootDir);
-  if (fs.existsSync("D:/new availability")) {
-    scan("D:/new availability");
-  }
 
-  console.log(`Found ${files.length} spreadsheet file(s) in data/availability/`);
+  // Scan projects directory only
+  scan(projectsDir);
+
+  console.log(`Found ${files.length} project spreadsheet file(s) in data/availability/projects/`);
 
   // Clear previous public/availability-data folder to completely delete old units
   const availabilityDataDir = path.join(ROOT, "public", "availability-data");

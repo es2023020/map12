@@ -1,26 +1,7 @@
 [
   {
     "id": "solana-east-3",
-    "unitNo": "U-3",
-    "beds": 3,
-    "finishing": "Fully Finished + ACs",
-    "areaSqm": 120,
-    "view": "Scenic View",
-    "priceEGP": 5000000,
-    "status": "Available",
-    "slug": "solana-east",
-    "available": 1,
-    "min_sqm": 181,
-    "max_sqm": 181,
-    "min_price_m": 27.5,
-    "max_price_m": 27.5,
-    "cluster": "Residential",
-    "delivery_note": "2028",
-    "payment_plan": "5% + 5% – 8 years equal installments"
-  },
-  {
-    "id": "solana-east-3",
-    "unitNo": "U-3",
+    "unitNo": "SE-3BR",
     "beds": 3,
     "finishing": "Fully Finished + ACs",
     "areaSqm": 181,
@@ -28,7 +9,6 @@
     "priceEGP": 27500000,
     "status": "Available",
     "slug": "solana-east",
-    "unit_id": "SE-3BR",
     "cluster": "Residential",
     "delivery_note": "2028",
     "payment_plan": "5% + 5% – 8 years equal installments"
