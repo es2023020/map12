@@ -6358,9 +6358,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.886,
     "developer": "Naia Developments",
     "developerSlug": "naia-developments",
-    "priceFrom": 8.6,
+    "priceFrom": 8.7,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -6390,7 +6390,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/naia-bay/9.jpg"
 ],
     "blurb": "Naia Bay by Naia Developments \u2014 a Greek Santorini-inspired 112-feddan beach community at Km 212 Ras El Hekma, featuring a 15-Acre Crystal Lagoon, Swiss\u00f4tel by Accor, and Fairmont Beach Clubhouse.",
-    "paymentPlan": "Phase 1: 10%\u201320% down \u00b7 8\u201310 years. Phase 2: 10% down \u00b7 10 years.",
+    "paymentPlan": "10% DP over 10 Yrs",
     "areaSize": "112 feddan",
     "type": "Coastal",
     "highlights": [
@@ -7064,7 +7064,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "arabella-group",
     "priceFrom": 8.1,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7096,7 +7096,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/direction-white/6.jpg"
 ],
     "blurb": "Direction White by Arabella Developments is a 290-acre all-white Mediterranean coastal resort in Ras El Hekma elevated up to 50m above sea level with a 600m beach.",
-    "paymentPlan": "5%\u201310% down payment, remaining balance spread over 7 to 8 years (up to 22% cash discount)",
+    "paymentPlan": "10% DP over 8 Yrs",
     "areaSize": "290 feddan",
     "unitSizes": "115\u2013350 m\u00b2",
     "city": "Ras El Hekma, North Coast (km 192), Matrouh Governorate, Egypt",
@@ -7165,9 +7165,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.097333,
     "developer": "Inertia Egypt",
     "developerSlug": "inertia-egypt",
-    "priceFrom": 12,
+    "priceFrom": 8.43,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -7201,7 +7201,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/jefaira/5.jpg"
 ],
     "blurb": "Jefaira is Inertia Egypt's flagship coastal city spanning approximately 5.5 million m\u00b2 (1,300+ acres), planned as a year-round mixed-use destination featuring residential neighborhoods, hospitality, education, and commercial districts.",
-    "paymentPlan": "10% down, installments up to 8 years",
+    "paymentPlan": "5%+5% over 10 Yrs",
     "areaSize": "251 feddan",
     "unitSizes": "142\u2013413 m\u00b2",
     "city": "Ras El Hekma, North Coast (km 190), Matrouh Governorate, Egypt",
@@ -7710,9 +7710,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.3529341,
     "developer": "Al Qamzi Developments",
     "developerSlug": "al-qamzi-developments",
-    "priceFrom": 8,
+    "priceFrom": 6.9,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7740,7 +7740,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/seazen/6.jpg"
 ],
     "blurb": "Seazen sits at km 172 on the North Coast in al dabaa, developed by Al Qamzi Developments. A beachfront community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
+    "paymentPlan": "5%+5% over 9 Yrs",
     "areaSize": "382 feddan",
     "unitSizes": "139\u2013436 m\u00b2",
     "city": "Al Dabaa, North Coast (km 172), Matrouh Governorate, Egypt",
@@ -13243,47 +13243,6 @@ export const compoundsGenerated: Compound[] = [
       "Stunning layout"
     ],
     "parentSlug": "the-med"
-  },
-  {
-    "slug": "surf-and-sand-seazen",
-    "name": "Surf and Sand - Seazen",
-    "destination": "al-dabaa",
-    "lat": 31.0688546,
-    "lng": 28.3525583,
-    "developer": "Al Qamzi Developments",
-    "developerSlug": "al-qamzi-developments",
-    "priceFrom": 6.3,
-    "deliveryYear": 2029,
-    "status": "Off-Plan",
-    "beachfront": true,
-    "types": [
-      "Chalet",
-      "Townhouse"
-    ],
-    "amenities": [
-      "Wave Pool",
-      "Sandy Beach",
-      "Clubhouses",
-      "Sports courts"
-    ],
-    "hero": "/projects/surf-and-sand-seazen/1.jpg",
-    "gallery": [
-      "/projects/seazen/1.jpg",
-      "/projects/seazen/2.jpg",
-      "/projects/seazen/3.jpg",
-      "/projects/seazen/4.jpg",
-      "/projects/seazen/5.jpg",
-      "/projects/seazen/6.jpg"
-    ],
-    "blurb": "Surf and Sand is a premium waterfront release in the celebrated Seazen Al Dabaa community by Al Qamzi Developments.",
-    "paymentPlan": "5% down payment \u00b7 9 years equal installments",
-    "type": "Coastal",
-    "highlights": [
-      "Direct sandy beach",
-      "9 Years payment plan",
-      "Wave pool access"
-    ],
-    "parentSlug": "seazen"
   },
   {
     "slug": "central-water-residences",
