@@ -41069,7 +41069,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "lvls",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41083,7 +41083,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "lvls",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -41108,7 +41108,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "lvls",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41122,7 +41122,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "lvls",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41136,7 +41136,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "lvls",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41150,7 +41150,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "lvls",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41164,7 +41164,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "lvls",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41178,7 +41178,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "lvls",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -41484,7 +41484,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41498,7 +41498,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41512,7 +41512,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41526,7 +41526,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41540,7 +41540,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -41565,7 +41565,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41579,7 +41579,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41593,7 +41593,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41607,7 +41607,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41621,7 +41621,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41635,7 +41635,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41649,7 +41649,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41663,7 +41663,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41677,7 +41677,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41691,7 +41691,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41705,7 +41705,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41719,7 +41719,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41733,7 +41733,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41747,7 +41747,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41761,7 +41761,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41775,7 +41775,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41789,7 +41789,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41803,7 +41803,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41817,7 +41817,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41831,7 +41831,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41845,7 +41845,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41859,7 +41859,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41873,7 +41873,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41887,7 +41887,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41901,7 +41901,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41915,7 +41915,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41929,7 +41929,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41943,7 +41943,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41957,7 +41957,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41971,7 +41971,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41985,7 +41985,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -41999,7 +41999,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42013,7 +42013,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42027,7 +42027,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42041,7 +42041,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42055,7 +42055,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42069,7 +42069,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42083,7 +42083,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42097,7 +42097,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42111,7 +42111,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42125,7 +42125,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42139,7 +42139,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42153,7 +42153,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42167,7 +42167,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42181,7 +42181,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42195,7 +42195,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42209,7 +42209,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42223,7 +42223,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42237,7 +42237,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42251,7 +42251,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42265,7 +42265,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42279,7 +42279,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42293,7 +42293,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42307,7 +42307,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42321,7 +42321,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42335,7 +42335,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42349,7 +42349,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42363,7 +42363,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42377,7 +42377,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42391,7 +42391,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42405,7 +42405,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42419,7 +42419,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42433,7 +42433,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -42458,7 +42458,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42472,7 +42472,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42486,7 +42486,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42500,7 +42500,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42514,7 +42514,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42528,7 +42528,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42542,7 +42542,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42556,7 +42556,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42570,7 +42570,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42584,7 +42584,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42598,7 +42598,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42612,7 +42612,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42626,7 +42626,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42640,7 +42640,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42654,7 +42654,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42668,7 +42668,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -42693,7 +42693,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42707,7 +42707,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42721,7 +42721,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42735,7 +42735,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42749,7 +42749,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42763,7 +42763,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42777,7 +42777,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42791,7 +42791,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42805,7 +42805,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42819,7 +42819,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42833,7 +42833,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42847,7 +42847,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42861,7 +42861,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42875,7 +42875,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42889,7 +42889,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42903,7 +42903,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42917,7 +42917,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42931,7 +42931,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42945,7 +42945,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42959,7 +42959,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42973,7 +42973,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -42987,7 +42987,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43001,7 +43001,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43015,7 +43015,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43029,7 +43029,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43043,7 +43043,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -43068,7 +43068,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43082,7 +43082,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43096,7 +43096,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43110,7 +43110,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43124,7 +43124,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43138,7 +43138,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43152,7 +43152,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43166,7 +43166,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43180,7 +43180,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43194,7 +43194,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43208,7 +43208,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43222,7 +43222,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43236,7 +43236,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43250,7 +43250,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43264,7 +43264,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43278,7 +43278,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43292,7 +43292,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43306,7 +43306,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43320,7 +43320,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43334,7 +43334,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43348,7 +43348,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43362,7 +43362,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43376,7 +43376,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43390,7 +43390,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43404,7 +43404,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43418,7 +43418,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43432,7 +43432,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43446,7 +43446,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43460,7 +43460,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43474,7 +43474,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43488,7 +43488,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43502,7 +43502,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43516,7 +43516,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43530,7 +43530,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43544,7 +43544,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43558,7 +43558,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43572,7 +43572,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43586,7 +43586,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43600,7 +43600,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43614,7 +43614,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43628,7 +43628,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43642,7 +43642,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43656,7 +43656,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43670,7 +43670,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43684,7 +43684,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43698,7 +43698,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43712,7 +43712,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43726,7 +43726,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43740,7 +43740,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43754,7 +43754,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43768,7 +43768,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43782,7 +43782,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43796,7 +43796,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43810,7 +43810,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43824,7 +43824,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43838,7 +43838,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43852,7 +43852,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43866,7 +43866,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43880,7 +43880,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43894,7 +43894,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43908,7 +43908,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43922,7 +43922,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43936,7 +43936,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43950,7 +43950,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43964,7 +43964,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43978,7 +43978,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -43992,7 +43992,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44006,7 +44006,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44020,7 +44020,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44034,7 +44034,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44048,7 +44048,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44062,7 +44062,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44076,7 +44076,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44090,7 +44090,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44104,7 +44104,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44118,7 +44118,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44132,7 +44132,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44146,7 +44146,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44160,7 +44160,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44174,7 +44174,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44188,7 +44188,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44202,7 +44202,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44216,7 +44216,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44230,7 +44230,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44244,7 +44244,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44258,7 +44258,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44272,7 +44272,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44286,7 +44286,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44300,7 +44300,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44314,7 +44314,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44328,7 +44328,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44342,7 +44342,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44356,7 +44356,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44370,7 +44370,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44384,7 +44384,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44398,7 +44398,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44412,7 +44412,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44426,7 +44426,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44440,7 +44440,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44454,7 +44454,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44468,7 +44468,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44482,7 +44482,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44496,7 +44496,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44510,7 +44510,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44524,7 +44524,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44538,7 +44538,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44552,7 +44552,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44566,7 +44566,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -44591,7 +44591,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -44616,7 +44616,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -44641,7 +44641,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -44666,7 +44666,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-crystal",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -44741,7 +44741,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44755,7 +44755,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44769,7 +44769,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44783,7 +44783,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44797,7 +44797,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44811,7 +44811,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44825,7 +44825,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44839,7 +44839,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44853,7 +44853,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44867,7 +44867,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44881,7 +44881,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44895,7 +44895,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44909,7 +44909,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -44923,7 +44923,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-grand-valley",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45439,7 +45439,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-new-cairo",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -45464,7 +45464,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-new-cairo",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -45489,7 +45489,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-new-cairo",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -45522,7 +45522,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45536,7 +45536,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45550,7 +45550,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45564,7 +45564,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45578,7 +45578,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45592,7 +45592,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45606,7 +45606,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45620,7 +45620,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45634,7 +45634,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45648,7 +45648,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45662,7 +45662,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45676,7 +45676,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45690,7 +45690,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45704,7 +45704,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45718,7 +45718,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45732,7 +45732,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45746,7 +45746,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45760,7 +45760,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45774,7 +45774,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45788,7 +45788,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45802,7 +45802,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -45827,7 +45827,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45841,7 +45841,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45855,7 +45855,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45869,7 +45869,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45883,7 +45883,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45897,7 +45897,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45911,7 +45911,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45925,7 +45925,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45939,7 +45939,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45953,7 +45953,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45967,7 +45967,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45981,7 +45981,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -45995,7 +45995,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46009,7 +46009,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46023,7 +46023,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46037,7 +46037,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46051,7 +46051,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46065,7 +46065,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46079,7 +46079,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46093,7 +46093,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46107,7 +46107,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46121,7 +46121,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46135,7 +46135,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46149,7 +46149,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46163,7 +46163,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46177,7 +46177,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46191,7 +46191,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46205,7 +46205,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46219,7 +46219,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46233,7 +46233,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -46258,7 +46258,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -46283,7 +46283,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46297,7 +46297,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46311,7 +46311,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46325,7 +46325,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46339,7 +46339,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46353,7 +46353,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -46378,7 +46378,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46392,7 +46392,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46406,7 +46406,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -46431,7 +46431,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 3",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -46495,7 +46495,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 2",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -46520,7 +46520,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46534,7 +46534,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46548,7 +46548,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46562,7 +46562,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -46587,7 +46587,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46601,7 +46601,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46615,7 +46615,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46629,7 +46629,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46643,7 +46643,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46657,7 +46657,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46671,7 +46671,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46685,7 +46685,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46699,7 +46699,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46713,7 +46713,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46727,7 +46727,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -46752,7 +46752,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -46777,7 +46777,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46791,7 +46791,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46805,7 +46805,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46819,7 +46819,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46833,7 +46833,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46847,7 +46847,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46861,7 +46861,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46875,7 +46875,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46889,7 +46889,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46903,7 +46903,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46917,7 +46917,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46931,7 +46931,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46945,7 +46945,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46959,7 +46959,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46973,7 +46973,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -46987,7 +46987,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47001,7 +47001,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47015,7 +47015,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47029,7 +47029,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47043,7 +47043,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47057,7 +47057,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47071,7 +47071,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47085,7 +47085,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47099,7 +47099,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47113,7 +47113,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47127,7 +47127,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47141,7 +47141,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47155,7 +47155,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47169,7 +47169,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47183,7 +47183,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47197,7 +47197,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47211,7 +47211,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47225,7 +47225,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47239,7 +47239,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47253,7 +47253,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47267,7 +47267,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47281,7 +47281,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47295,7 +47295,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47309,7 +47309,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47323,7 +47323,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47337,7 +47337,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47351,7 +47351,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47365,7 +47365,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -47390,7 +47390,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47404,7 +47404,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47418,7 +47418,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47432,7 +47432,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47446,7 +47446,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47460,7 +47460,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47474,7 +47474,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47488,7 +47488,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47502,7 +47502,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47516,7 +47516,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47530,7 +47530,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47544,7 +47544,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47558,7 +47558,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47572,7 +47572,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47586,7 +47586,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47600,7 +47600,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47614,7 +47614,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47628,7 +47628,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47642,7 +47642,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47656,7 +47656,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47670,7 +47670,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47684,7 +47684,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47698,7 +47698,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47712,7 +47712,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47726,7 +47726,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47740,7 +47740,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47754,7 +47754,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47768,7 +47768,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47782,7 +47782,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47796,7 +47796,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47810,7 +47810,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47824,7 +47824,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47838,7 +47838,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47852,7 +47852,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47866,7 +47866,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47880,7 +47880,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47894,7 +47894,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47908,7 +47908,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47922,7 +47922,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47936,7 +47936,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47950,7 +47950,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47964,7 +47964,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47978,7 +47978,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -47992,7 +47992,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48006,7 +48006,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48020,7 +48020,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48034,7 +48034,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48048,7 +48048,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48062,7 +48062,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48076,7 +48076,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48090,7 +48090,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48104,7 +48104,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48118,7 +48118,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48132,7 +48132,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48146,7 +48146,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48160,7 +48160,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48174,7 +48174,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48188,7 +48188,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48202,7 +48202,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48216,7 +48216,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48230,7 +48230,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48244,7 +48244,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48258,7 +48258,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48272,7 +48272,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48286,7 +48286,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48300,7 +48300,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48314,7 +48314,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48328,7 +48328,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48342,7 +48342,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48356,7 +48356,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48370,7 +48370,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48384,7 +48384,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],
@@ -48409,7 +48409,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48423,7 +48423,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48437,7 +48437,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
             {
@@ -48451,7 +48451,7 @@ export const availability: ProjectAvailability[] = [
             status: "Available",
             slug: "mountain-view-icity-october",
             cluster: "Phase 1",
-            delivery_note: "OFF PLAN - 4.5",
+            delivery_note: "Ready to Move (RTM)",
             payment_plan: "5%+5% DP over 8 years",
           },
           ],

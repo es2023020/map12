@@ -76,6 +76,9 @@ export function PdfProposalModal({ data, onClose }: Props) {
 
   const [projectName, setProjectName] = useState(data.projectName);
   const [developerName, setDeveloperName] = useState(data.developerName);
+  const [developerBrief, setDeveloperBrief] = useState(
+    `${data.developerName} is one of Egypt's premier real estate developers with a proven track record of delivering master-planned luxury communities, top-tier construction standards, and high investment yields.`
+  );
   const [locationStr, setLocationStr] = useState(data.location || "North Coast, Egypt");
   const [unitType, setUnitType] = useState(data.unitType);
   const [areaSqm, setAreaSqm] = useState(String(data.areaSqm));

@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import {
   X,
   Download,
@@ -8,12 +8,11 @@ import {
   ZoomIn,
   ZoomOut,
   RotateCcw,
-  ChevronLeft,
-  ChevronRight,
   FileText,
   Sparkles,
   ExternalLink,
-  Printer,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 interface Props {
@@ -31,8 +30,6 @@ export function BrochureViewerModal({
 }: Props) {
   const [zoomLevel, setZoomLevel] = useState(100);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
 
   const fullUrl = pdfUrl.startsWith("http")
     ? pdfUrl
@@ -58,142 +55,133 @@ export function BrochureViewerModal({
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 overflow-hidden animate-in fade-in duration-200 ${
-        isFullscreen ? "p-0" : "p-4 sm:p-6"
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl animate-in fade-in duration-200 ${
+        isFullscreen ? "p-0" : "p-3 sm:p-6"
       }`}
     >
       <div
-        className={`relative flex flex-col w-full max-w-6xl h-[90vh] rounded-3xl border border-white/10 bg-zinc-950 shadow-2xl overflow-hidden transition-all duration-300 ${
+        className={`relative flex flex-col w-full max-w-6xl h-[92vh] rounded-3xl border border-white/15 bg-slate-900 shadow-2xl overflow-hidden transition-all duration-300 ${
           isFullscreen ? "h-full w-full max-w-none rounded-none border-none" : ""
         }`}
       >
-        {/* Header Toolbar */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 bg-zinc-900/90 px-6 py-4 backdrop-blur-md shrink-0">
+        {/* Luxury Dark Header Toolbar */}
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 bg-slate-950/90 px-6 py-4 backdrop-blur-md shrink-0">
           <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground font-bold shadow-sm">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500/20 to-amber-700/30 border border-amber-500/30 text-amber-400 font-bold shadow-inner">
               <FileText className="h-5 w-5" />
-            </span>
+            </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-accent">
-                  Official Project Presentation
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-400">
+                  {developerName}
                 </span>
-                <span className="rounded-full bg-emerald-500/15 text-emerald-400 px-2 py-0.5 text-[9px] font-bold border border-emerald-500/20">
-                  HD Document Viewer
+                <span className="rounded-full bg-emerald-500/20 text-emerald-400 px-2 py-0.5 text-[9px] font-bold border border-emerald-500/30 flex items-center gap-1">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" /> HD PDF Presentation
                 </span>
               </div>
-              <div className="font-display text-base font-bold text-white leading-tight mt-0.5">
+              <div className="font-display text-lg font-black text-white leading-tight mt-0.5">
                 {projectName} Brochure
               </div>
             </div>
           </div>
 
-          {/* Action Toolbar Controls */}
+          {/* Action Control Panel */}
           <div className="flex items-center gap-2 flex-wrap">
             {/* Zoom Controls */}
-            <div className="flex items-center gap-1 rounded-xl bg-zinc-800/80 border border-white/10 p-1 text-xs text-white">
+            <div className="flex items-center gap-1 rounded-2xl bg-slate-800/90 border border-white/10 p-1 text-xs text-white shadow-inner">
               <button
                 onClick={handleZoomOut}
-                className="rounded-lg p-1.5 hover:bg-zinc-700 transition-colors"
+                className="rounded-xl p-2 hover:bg-slate-700 transition-colors cursor-pointer"
                 title="Zoom Out"
               >
                 <ZoomOut className="h-4 w-4" />
               </button>
-              <span className="px-2 font-mono font-bold text-[11px] min-w-[42px] text-center">
-                {zoomLevel}%
-              </span>
+              <span className="px-2 font-mono font-bold text-amber-400 text-xs">{zoomLevel}%</span>
               <button
                 onClick={handleZoomIn}
-                className="rounded-lg p-1.5 hover:bg-zinc-700 transition-colors"
+                className="rounded-xl p-2 hover:bg-slate-700 transition-colors cursor-pointer"
                 title="Zoom In"
               >
                 <ZoomIn className="h-4 w-4" />
               </button>
-              <button
-                onClick={handleResetZoom}
-                className="rounded-lg p-1.5 hover:bg-zinc-700 transition-colors border-l border-white/10 ml-0.5"
-                title="Reset Zoom"
-              >
-                <RotateCcw className="h-3.5 w-3.5" />
-              </button>
+              {zoomLevel !== 100 && (
+                <button
+                  onClick={handleResetZoom}
+                  className="rounded-xl p-2 hover:bg-slate-700 transition-colors text-slate-400 hover:text-white cursor-pointer"
+                  title="Reset Zoom"
+                >
+                  <RotateCcw className="h-3.5 w-3.5" />
+                </button>
+              )}
             </div>
 
-            {/* Direct Download PDF */}
+            {/* Direct Download Button */}
             <button
               onClick={handleDownload}
-              className="inline-flex items-center gap-1.5 rounded-xl bg-primary px-4 py-2 text-xs font-bold text-primary-foreground shadow hover:bg-primary/90 transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 rounded-2xl bg-amber-500/20 text-amber-300 hover:bg-amber-500/30 px-3.5 py-2 text-xs font-bold transition-all border border-amber-500/30 cursor-pointer"
+              title="Download Original PDF"
             >
               <Download className="h-4 w-4" />
-              Download PDF
+              <span className="hidden sm:inline">Download Brochure</span>
             </button>
 
-            {/* Share WhatsApp */}
+            {/* WhatsApp Share Button */}
             <button
               onClick={handleShareWhatsApp}
-              className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 px-3.5 py-2 text-xs font-bold text-white shadow hover:bg-emerald-700 transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 rounded-2xl bg-emerald-600/20 text-emerald-300 hover:bg-emerald-600/30 px-3.5 py-2 text-xs font-bold transition-all border border-emerald-500/30 cursor-pointer"
+              title="Share via WhatsApp"
             >
               <Share2 className="h-4 w-4" />
-              Share
+              <span className="hidden sm:inline">Share</span>
             </button>
 
-            {/* Open Raw Tab */}
-            <a
-              href={pdfUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl border border-white/10 bg-zinc-800 p-2 text-white/80 hover:text-white hover:bg-zinc-700 transition-all cursor-pointer"
-              title="Open Raw PDF"
-            >
-              <ExternalLink className="h-4 w-4" />
-            </a>
-
-            {/* Toggle Fullscreen */}
+            {/* Fullscreen Toggle */}
             <button
               onClick={() => setIsFullscreen(!isFullscreen)}
-              className="rounded-xl border border-white/10 bg-zinc-800 p-2 text-white/80 hover:text-white hover:bg-zinc-700 transition-all cursor-pointer"
+              className="rounded-2xl bg-slate-800 p-2 text-slate-300 hover:bg-slate-700 hover:text-white border border-white/10 transition-colors cursor-pointer"
+              title={isFullscreen ? "Exit Fullscreen" : "Fullscreen Mode"}
             >
               {isFullscreen ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
             </button>
 
-            {/* Close Modal */}
+            {/* Close Button */}
             <button
               onClick={onClose}
-              className="rounded-xl border border-white/10 bg-zinc-800 p-2 text-white/80 hover:text-white hover:bg-zinc-700 transition-all cursor-pointer"
+              className="rounded-2xl bg-slate-800 p-2 text-slate-300 hover:bg-rose-600 hover:text-white border border-white/10 transition-colors ml-1 cursor-pointer"
             >
               <X className="h-4 w-4" />
             </button>
           </div>
         </div>
 
-        {/* PDF Presentation Frame */}
-        <div className="relative flex-1 bg-zinc-950 overflow-hidden flex items-center justify-center p-2">
+        {/* PDF Reader Canvas Body */}
+        <div className="relative flex-1 bg-slate-950 overflow-auto p-2 sm:p-4 flex justify-center items-start">
           <div
-            className="w-full h-full transition-transform duration-200"
-            style={{
-              transform: `scale(${zoomLevel / 100})`,
-              transformOrigin: "center center",
-            }}
+            className="w-full h-full transition-transform duration-200 origin-top"
+            style={{ transform: `scale(${zoomLevel / 100})`, transformOrigin: "top center" }}
           >
             <iframe
-              src={`${pdfUrl}#toolbar=0&navpanes=0&scrollbar=1`}
+              src={`${pdfUrl}#toolbar=1&view=FitH`}
+              className="w-full h-full min-h-[750px] rounded-2xl border border-white/10 bg-slate-900 shadow-2xl"
               title={`${projectName} Brochure`}
-              className="w-full h-full rounded-2xl border border-white/10 shadow-2xl bg-zinc-900"
             />
           </div>
         </div>
 
-        {/* Modal Footer Info */}
-        <div className="flex items-center justify-between border-t border-white/10 bg-zinc-900/80 px-6 py-3 text-xs text-white/70 shrink-0">
+        {/* Executive Footer Bar */}
+        <div className="flex items-center justify-between border-t border-white/10 bg-slate-950 px-6 py-2.5 text-[11px] text-slate-400 shrink-0">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-3.5 w-3.5 text-accent" />
-            <span className="font-medium text-white">{developerName}</span>
-            <span>•</span>
-            <span className="text-white/60">{projectName} Master Presentation</span>
+            <Sparkles className="h-3.5 w-3.5 text-amber-400" />
+            <span>Interactive Presentation Canvas for <strong>{projectName}</strong></span>
           </div>
-
-          <div className="text-[11px] font-medium text-white/50">
-            Press ESC or click close to exit reader
-          </div>
+          <a
+            href={fullUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-amber-400 hover:underline font-semibold"
+          >
+            Open Original PDF <ExternalLink className="h-3 w-3" />
+          </a>
         </div>
       </div>
     </div>

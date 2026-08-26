@@ -123,6 +123,16 @@ function PublicOfferPage() {
             <div className="font-bold text-white">Dear {offer.clientName},</div>
             <p>{offer.projectDescription}</p>
           </div>
+
+          {/* Developer Brief & Overview */}
+          <div className="rounded-2xl bg-amber-500/10 p-4 border border-amber-500/20 text-xs text-slate-200 leading-relaxed space-y-1">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+              <ShieldCheck className="h-4 w-4 text-amber-400" /> About Developer: {offer.developerName}
+            </div>
+            <p className="text-slate-300">
+              {offer.developerName} is one of Egypt's premier real estate developers, renowned for iconic master-planned developments, architectural excellence, and prime destination delivery.
+            </p>
+          </div>
         </div>
 
         {/* Specifications & Pricing Grid */}
