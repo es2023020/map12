@@ -16629,7 +16629,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.485,
     "developer": "Nations of Sky",
     "developerSlug": "nations-of-sky",
-    "priceFrom": 6.6,
+    "priceFrom": 8.9,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,

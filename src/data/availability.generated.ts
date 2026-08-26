@@ -52764,61 +52764,8 @@ export const availability: ProjectAvailability[] = [
   {
     slug: "zomra-east",
     developer: "Nations of Sky",
-    totalAvailable: 18,
+    totalAvailable: 17,
     breakdown: [
-        {
-        type: "Apartment",
-        beds: 2,
-        available: 3,
-        minSqm: 60,
-        maxSqm: 130,
-        minPriceM: 6.6,
-        maxPriceM: 14.6,
-        units: [
-            {
-            id: "zomra-east-1",
-            unitNo: "ZE-STU",
-            beds: 2,
-            finishing: "Fully finished",
-            areaSqm: 60,
-            view: "Panoramic View",
-            priceEGP: 6600000,
-            status: "Available",
-            slug: "zomra-east",
-            cluster: "Phase 1",
-            delivery_note: "3 years",
-            payment_plan: "5%+5%+5% over 8-10 yrs",
-          },
-            {
-            id: "zomra-east-4",
-            unitNo: "ZE-2BR-MIN",
-            beds: 2,
-            finishing: "Fully finished",
-            areaSqm: 130,
-            view: "Panoramic View",
-            priceEGP: 13200000,
-            status: "Available",
-            slug: "zomra-east",
-            cluster: "Phase 1",
-            delivery_note: "3 years",
-            payment_plan: "5%+5%+5% over 8-10 yrs",
-          },
-            {
-            id: "zomra-east-5",
-            unitNo: "ZE-2BR-MAX",
-            beds: 2,
-            finishing: "Fully finished",
-            areaSqm: 130,
-            view: "Panoramic View",
-            priceEGP: 14600000,
-            status: "Available",
-            slug: "zomra-east",
-            cluster: "Phase 1",
-            delivery_note: "3 years",
-            payment_plan: "5%+5%+5% over 8-10 yrs",
-          },
-          ],
-      },
         {
         type: "Apartment",
         beds: 1,
@@ -52829,7 +52776,7 @@ export const availability: ProjectAvailability[] = [
         maxPriceM: 9.7,
         units: [
             {
-            id: "zomra-east-2",
+            id: "zomra-east-1",
             unitNo: "ZE-1BR-MIN",
             beds: 1,
             finishing: "Fully finished",
@@ -52843,13 +52790,52 @@ export const availability: ProjectAvailability[] = [
             payment_plan: "5%+5%+5% over 8-10 yrs",
           },
             {
-            id: "zomra-east-3",
+            id: "zomra-east-2",
             unitNo: "ZE-1BR-MAX",
             beds: 1,
             finishing: "Fully finished",
             areaSqm: 90,
             view: "Panoramic View",
             priceEGP: 9700000,
+            status: "Available",
+            slug: "zomra-east",
+            cluster: "Phase 1",
+            delivery_note: "3 years",
+            payment_plan: "5%+5%+5% over 8-10 yrs",
+          },
+          ],
+      },
+        {
+        type: "Apartment",
+        beds: 2,
+        available: 2,
+        minSqm: 130,
+        maxSqm: 130,
+        minPriceM: 13.2,
+        maxPriceM: 14.6,
+        units: [
+            {
+            id: "zomra-east-3",
+            unitNo: "ZE-2BR-MIN",
+            beds: 2,
+            finishing: "Fully finished",
+            areaSqm: 130,
+            view: "Panoramic View",
+            priceEGP: 13200000,
+            status: "Available",
+            slug: "zomra-east",
+            cluster: "Phase 1",
+            delivery_note: "3 years",
+            payment_plan: "5%+5%+5% over 8-10 yrs",
+          },
+            {
+            id: "zomra-east-4",
+            unitNo: "ZE-2BR-MAX",
+            beds: 2,
+            finishing: "Fully finished",
+            areaSqm: 130,
+            view: "Panoramic View",
+            priceEGP: 14600000,
             status: "Available",
             slug: "zomra-east",
             cluster: "Phase 1",
@@ -52868,7 +52854,7 @@ export const availability: ProjectAvailability[] = [
         maxPriceM: 26.5,
         units: [
             {
-            id: "zomra-east-6",
+            id: "zomra-east-5",
             unitNo: "ZE-SKY-GARDEN-MIN",
             beds: 3,
             finishing: "Fully finished",
@@ -52883,7 +52869,7 @@ export const availability: ProjectAvailability[] = [
             payment_plan: "5%+5%+5% over 8-10 yrs",
           },
             {
-            id: "zomra-east-7",
+            id: "zomra-east-6",
             unitNo: "ZE-SKY-GARDEN-MAX",
             beds: 3,
             finishing: "Fully finished",
@@ -52909,7 +52895,7 @@ export const availability: ProjectAvailability[] = [
         maxPriceM: 27.3,
         units: [
             {
-            id: "zomra-east-8",
+            id: "zomra-east-7",
             unitNo: "ZE-SKY-PANO-MIN",
             beds: 3,
             finishing: "Fully finished",
@@ -52924,7 +52910,7 @@ export const availability: ProjectAvailability[] = [
             payment_plan: "5%+5%+5% over 8-10 yrs",
           },
             {
-            id: "zomra-east-9",
+            id: "zomra-east-8",
             unitNo: "ZE-SKY-PANO-MAX",
             beds: 3,
             finishing: "Fully finished",
@@ -52950,7 +52936,7 @@ export const availability: ProjectAvailability[] = [
         maxPriceM: 31.8,
         units: [
             {
-            id: "zomra-east-10",
+            id: "zomra-east-9",
             unitNo: "ZE-THM",
             beds: 3,
             finishing: "Fully finished",
@@ -52965,7 +52951,7 @@ export const availability: ProjectAvailability[] = [
             payment_plan: "5%+5%+5% over 8-10 yrs",
           },
             {
-            id: "zomra-east-11",
+            id: "zomra-east-10",
             unitNo: "ZE-THC",
             beds: 3,
             finishing: "Fully finished",
@@ -52991,7 +52977,7 @@ export const availability: ProjectAvailability[] = [
         maxPriceM: 41,
         units: [
             {
-            id: "zomra-east-12",
+            id: "zomra-east-11",
             unitNo: "ZE-TW",
             beds: 4,
             finishing: "Fully finished",
@@ -53017,7 +53003,7 @@ export const availability: ProjectAvailability[] = [
         maxPriceM: 55.8,
         units: [
             {
-            id: "zomra-east-13",
+            id: "zomra-east-12",
             unitNo: "ZE-STD",
             beds: 4,
             finishing: "Fully finished",
@@ -53032,7 +53018,7 @@ export const availability: ProjectAvailability[] = [
             payment_plan: "5%+5%+5% over 8-10 yrs",
           },
             {
-            id: "zomra-east-14",
+            id: "zomra-east-13",
             unitNo: "ZE-STC-MIN",
             beds: 4,
             finishing: "Fully finished",
@@ -53047,7 +53033,7 @@ export const availability: ProjectAvailability[] = [
             payment_plan: "5%+5%+5% over 8-10 yrs",
           },
             {
-            id: "zomra-east-15",
+            id: "zomra-east-14",
             unitNo: "ZE-STC-MAX",
             beds: 4,
             finishing: "Fully finished",
@@ -53073,7 +53059,7 @@ export const availability: ProjectAvailability[] = [
         maxPriceM: 65,
         units: [
             {
-            id: "zomra-east-16",
+            id: "zomra-east-15",
             unitNo: "ZE-STB-MIN",
             beds: 5,
             finishing: "Fully finished",
@@ -53088,7 +53074,7 @@ export const availability: ProjectAvailability[] = [
             payment_plan: "5%+5%+5% over 8-10 yrs",
           },
             {
-            id: "zomra-east-17",
+            id: "zomra-east-16",
             unitNo: "ZE-STB-MAX",
             beds: 5,
             finishing: "Fully finished",
@@ -53103,7 +53089,7 @@ export const availability: ProjectAvailability[] = [
             payment_plan: "5%+5%+5% over 8-10 yrs",
           },
             {
-            id: "zomra-east-18",
+            id: "zomra-east-17",
             unitNo: "ZE-STA",
             beds: 5,
             finishing: "Fully finished",

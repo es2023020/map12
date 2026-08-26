@@ -1,6 +1,6 @@
 [
   {
-    "id": "zomra-east-16",
+    "id": "zomra-east-15",
     "unitNo": "ZE-STB-MIN",
     "beds": 5,
     "finishing": "Fully finished",
@@ -15,7 +15,7 @@
     "payment_plan": "5%+5%+5% over 8-10 yrs"
   },
   {
-    "id": "zomra-east-17",
+    "id": "zomra-east-16",
     "unitNo": "ZE-STB-MAX",
     "beds": 5,
     "finishing": "Fully finished",
@@ -30,7 +30,7 @@
     "payment_plan": "5%+5%+5% over 8-10 yrs"
   },
   {
-    "id": "zomra-east-18",
+    "id": "zomra-east-17",
     "unitNo": "ZE-STA",
     "beds": 5,
     "finishing": "Fully finished",
