@@ -1,3 +1,4 @@
+import { useOfferStore } from "@/lib/offerStore";
 import mediaRegistry from "@/data/media-registry.json";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
@@ -8,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   Plus,
+  Upload,
+  Download,
   Phone,
   Trash2,
   Search,
@@ -63,6 +66,106 @@ const stages: Array<{ id: LeadStage; label: string; color: string; border: strin
 ];
 
 function LeadsPage() {
+
+  // Trackable Offer Store hook
+  const createOffer = useOfferStore((s) => s.createOffer);
+  const offers = useOfferStore((s) => s.offers);
+
+  // Bulk CSV Import Modal State
+  const [importOpen, setImportOpen] = useState(false);
+  const [csvText, setCsvText] = useState("");
+
+  // Handle Export Leads to CSV
+  const handleExportCSV = () => {
+    if (!leads || leads.length === 0) return;
+    const headers = ["ID", "Name", "Phone", "Budget_EGP_M", "Stage", "Interest", "Notes", "Last_Contacted"];
+    const rows = leads.map((l) => [
+      l.id,
+      `"${l.name.replace(/"/g, '""')}"`,
+      `"${l.phone}"`,
+      l.budget,
+      l.stage,
+      `"${l.interest || ""}"`,
+      `"${(l.notes || "").replace(/"/g, '""')}"`,
+      l.lastContacted ? new Date(l.lastContacted).toISOString() : "",
+    ]);
+    const csvContent = [headers.join(","), ...rows.map((r) => r.join(","))].join("\n");
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `Leads_Export_${new Date().toISOString().split("T")[0]}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  // Handle Bulk CSV Import
+  const handleImportCSV = () => {
+    if (!csvText.trim()) return;
+    const lines = csvText.trim().split("\n");
+    let count = 0;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line || (i === 0 && line.toLowerCase().includes("name"))) continue;
+
+      const cols = line.split(",").map((c) => c.replace(/^"|"$/g, "").trim());
+      if (cols.length >= 2) {
+        const name = cols[0] || cols[1];
+        const phone = cols[1] || cols[0];
+        const budget = cols[2] ? parseFloat(cols[2]) || 10 : 10;
+        const interest = cols[4] || cols[3] || "";
+        const notes = cols[5] || "";
+
+        if (name && phone) {
+          addLead({
+            name,
+            phone,
+            budget,
+            interest,
+            notes: `Imported via CSV. ${notes}`,
+            stage: "new",
+          });
+          count++;
+        }
+      }
+    }
+    setImportOpen(false);
+    setCsvText("");
+  };
+
+  // Generate 1-Click Trackable Offer Link for a Lead
+  const handleGenerateTrackableOffer = (lead: Lead) => {
+    const compoundObj = compounds.find((c) => c.slug === lead.interest);
+    const newOffer = createOffer({
+      clientName: lead.name,
+      projectName: compoundObj ? compoundObj.name : (lead.interest || "Featured Luxury Project"),
+      projectSlug: compoundObj ? compoundObj.slug : "zoya",
+      developerName: compoundObj ? compoundObj.developer : "Premium Developer",
+      location: compoundObj ? compoundObj.destination : "North Coast, Egypt",
+      unitType: "Selected Luxury Layout",
+      areaSqm: 145,
+      totalPriceEgp: (lead.budget || 15) * 1000000,
+      dpPct: 10,
+      durationYrs: 8,
+      deliveryNote: compoundObj ? `Q4 ${compoundObj.deliveryYear}` : "Ready to Move",
+      finishingStatus: "Fully Finished",
+      maintenanceFee: "8% Maintenance Deposit",
+      otherFees: "Clubhouse Included",
+      projectDescription: compoundObj ? compoundObj.blurb : "Exclusive coastal development with world-class master plan.",
+      amenities: compoundObj ? compoundObj.amenities : ["24/7 Security", "Crystal Lagoons", "Private Beachfront"],
+      photoPaths: compoundObj ? [compoundObj.hero, ...(compoundObj.gallery || [])] : ["/projects/zoya/1.jpg"],
+      agentName: user ? user.name : "Senior Property Advisor",
+      agentTitle: "Luxury Advisory Division",
+      agentPhone: lead.phone,
+      agentEmail: user ? user.email : "consultant@realestate.eg",
+      agencyName: "Exclusive Real Estate Advisory",
+    });
+
+    const offerUrl = `${window?.location?.origin || "https://propertyatlas.eg"}/offer/${newOffer.id}`;
+    navigator.clipboard.writeText(offerUrl);
+    alert(`Trackable Offer Link Created! Link copied to clipboard:\n${offerUrl}`);
+  };
   const leads = useStore((s) => s.leads);
   const addLead = useStore((s) => s.addLead);
   const updateStage = useStore((s) => s.updateLeadStage);
@@ -322,14 +425,58 @@ function LeadsPage() {
               className="w-full rounded-xl border border-border/60 bg-transparent pl-9 pr-4 py-2 text-sm text-primary placeholder:text-muted-foreground focus:border-accent focus:outline-none"
             />
           </div>
-          <Button
-            onClick={() => setOpen(!open)}
-            className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90"
-          >
-            <Plus className="mr-1 h-4 w-4" /> Add Lead
-          </Button>
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={handleExportCSV}
+              className="inline-flex items-center gap-1 rounded-xl border border-border bg-card px-3 py-2 text-xs font-bold text-primary hover:bg-secondary transition-all cursor-pointer"
+              title="Export Leads to CSV"
+            >
+              <Download className="h-3.5 w-3.5" /> Export CSV
+            </button>
+
+            <button
+              onClick={() => setImportOpen(true)}
+              className="inline-flex items-center gap-1 rounded-xl border border-border bg-card px-3 py-2 text-xs font-bold text-primary hover:bg-secondary transition-all cursor-pointer"
+              title="Import Contacts from CSV"
+            >
+              <Upload className="h-3.5 w-3.5" /> Import CSV
+            </button>
+
+            <Button
+              onClick={() => setOpen(!open)}
+              className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 cursor-pointer"
+            >
+              <Plus className="mr-1 h-4 w-4" /> Add Lead
+            </Button>
+          </div>
         </div>
       </div>
+
+      
+      {/* Import CSV Contacts Modal */}
+      {importOpen && (
+        <div className="rounded-2xl border border-border bg-card p-5 shadow-soft max-w-2xl animate-in fade-in duration-200">
+          <h3 className="text-sm font-semibold text-primary mb-1">Import Contacts from CSV Spreadsheet</h3>
+          <p className="text-xs text-muted-foreground mb-3">
+            Paste CSV formatted text (columns: Name, Phone, Budget, Interest, Notes) or paste from Excel:
+          </p>
+          <textarea
+            rows={5}
+            placeholder="Name, Phone, Budget, Interest, Notes\nAhmed Hassan, +201001234567, 20, zoya, Looking for 2BR Chalet"
+            value={csvText}
+            onChange={(e) => setCsvText(e.target.value)}
+            className="w-full rounded-xl border border-border bg-background p-3 text-xs font-mono text-primary focus:border-accent focus:outline-none"
+          />
+          <div className="mt-3 flex justify-end gap-2">
+            <Button variant="ghost" onClick={() => setImportOpen(false)}>
+              Cancel
+            </Button>
+            <Button onClick={handleImportCSV}>
+              Import Contacts
+            </Button>
+          </div>
+        </div>
+      )}
 
       {open && (
         <div className="rounded-2xl border border-border bg-card p-5 shadow-soft max-w-2xl animate-in fade-in duration-200">

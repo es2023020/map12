@@ -37,7 +37,9 @@ import { Route as DestinationsIndexRouteImport } from './routes/destinations.ind
 import { Route as DashboardIndexRouteImport } from './routes/dashboard.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ArIndexRouteImport } from './routes/ar.index'
+import { Route as SeoSlugRouteImport } from './routes/seo.$slug'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
+import { Route as OfferIdRouteImport } from './routes/offer.$id'
 import { Route as DevelopersSlugRouteImport } from './routes/developers.$slug'
 import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
 import { Route as DashboardTeamRouteImport } from './routes/dashboard.team'
@@ -206,10 +208,20 @@ const ArIndexRoute = ArIndexRouteImport.update({
   path: '/ar/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SeoSlugRoute = SeoSlugRouteImport.update({
+  id: '/seo/$slug',
+  path: '/seo/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => ProjectsRoute,
+} as any)
+const OfferIdRoute = OfferIdRouteImport.update({
+  id: '/offer/$id',
+  path: '/offer/$id',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const DevelopersSlugRoute = DevelopersSlugRouteImport.update({
   id: '/$slug',
@@ -386,7 +398,9 @@ export interface FileRoutesByFullPath {
   '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
   '/developers/$slug': typeof DevelopersSlugRoute
+  '/offer/$id': typeof OfferIdRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/seo/$slug': typeof SeoSlugRoute
   '/ar/': typeof ArIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
@@ -439,7 +453,9 @@ export interface FileRoutesByTo {
   '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
   '/developers/$slug': typeof DevelopersSlugRoute
+  '/offer/$id': typeof OfferIdRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/seo/$slug': typeof SeoSlugRoute
   '/ar': typeof ArIndexRoute
   '/blog': typeof BlogIndexRoute
   '/dashboard': typeof DashboardIndexRoute
@@ -497,7 +513,9 @@ export interface FileRoutesById {
   '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
   '/developers/$slug': typeof DevelopersSlugRoute
+  '/offer/$id': typeof OfferIdRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/seo/$slug': typeof SeoSlugRoute
   '/ar/': typeof ArIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
@@ -556,7 +574,9 @@ export interface FileRouteTypes {
     | '/dashboard/team'
     | '/destinations/$slug'
     | '/developers/$slug'
+    | '/offer/$id'
     | '/projects/$slug'
+    | '/seo/$slug'
     | '/ar/'
     | '/blog/'
     | '/dashboard/'
@@ -609,7 +629,9 @@ export interface FileRouteTypes {
     | '/dashboard/team'
     | '/destinations/$slug'
     | '/developers/$slug'
+    | '/offer/$id'
     | '/projects/$slug'
+    | '/seo/$slug'
     | '/ar'
     | '/blog'
     | '/dashboard'
@@ -666,7 +688,9 @@ export interface FileRouteTypes {
     | '/dashboard/team'
     | '/destinations/$slug'
     | '/developers/$slug'
+    | '/offer/$id'
     | '/projects/$slug'
+    | '/seo/$slug'
     | '/ar/'
     | '/blog/'
     | '/dashboard/'
@@ -711,6 +735,8 @@ export interface RootRouteChildren {
   ApiSaveUsersRoute: typeof ApiSaveUsersRoute
   ApiUploadAssetRoute: typeof ApiUploadAssetRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  OfferIdRoute: typeof OfferIdRoute
+  SeoSlugRoute: typeof SeoSlugRoute
   ArIndexRoute: typeof ArIndexRoute
   BlogIndexRoute: typeof BlogIndexRoute
   ArComparePairRoute: typeof ArComparePairRoute
@@ -918,12 +944,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/seo/$slug': {
+      id: '/seo/$slug'
+      path: '/seo/$slug'
+      fullPath: '/seo/$slug'
+      preLoaderRoute: typeof SeoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/$slug': {
       id: '/projects/$slug'
       path: '/$slug'
       fullPath: '/projects/$slug'
       preLoaderRoute: typeof ProjectsSlugRouteImport
       parentRoute: typeof ProjectsRoute
+    }
+    '/offer/$id': {
+      id: '/offer/$id'
+      path: '/offer/$id'
+      fullPath: '/offer/$id'
+      preLoaderRoute: typeof OfferIdRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/developers/$slug': {
       id: '/developers/$slug'
@@ -1246,6 +1286,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiSaveUsersRoute: ApiSaveUsersRoute,
   ApiUploadAssetRoute: ApiUploadAssetRoute,
   BlogSlugRoute: BlogSlugRoute,
+  OfferIdRoute: OfferIdRoute,
+  SeoSlugRoute: SeoSlugRoute,
   ArIndexRoute: ArIndexRoute,
   BlogIndexRoute: BlogIndexRoute,
   ArComparePairRoute: ArComparePairRoute,
