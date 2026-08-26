@@ -19,7 +19,8 @@ export const compoundsGenerated: Compound[] = [
     "hero": "/projects/w55/hero.jpg",
     "gallery": ["/projects/w55/1.jpg"],
     "lat": 30.0419111,
-    "lng": 31.508651
+    "lng": 31.508651,
+    "masterPlanUrl": "/masterplans/w55.svg"
   },
   {
     "slug": "horizon-by-saada",
@@ -60,7 +61,8 @@ export const compoundsGenerated: Compound[] = [
       "Premium Townhouse & Twin House layouts",
       "Ready to Move - 6 Months Delivery"
     ],
-    "paymentPlan": "20% / 5 yrs"
+    "paymentPlan": "20% / 5 yrs",
+    "masterPlanUrl": "/masterplans/horizon-by-saada.svg"
   },
   {
     "slug": "belle-vie",
@@ -993,7 +995,8 @@ export const compoundsGenerated: Compound[] = [
       "Arkan Palm signature design",
       "Premium amenities & spaces",
       "Ready by 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/nmq.svg"
   },
   {
     "slug": "riv-amwaj",
@@ -1037,7 +1040,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready by 2028"
     ],
     "city": "Amwaj, north-coast-sidi-abdel-rahman",
-    "km": 136.4
+    "km": 136.4,
+    "masterPlanUrl": "/masterplans/riv-amwaj.svg"
   },
   {
     "slug": "kynd-residence-gaia",
@@ -1078,7 +1082,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready by 2028"
     ],
     "city": "Gaia, north-coast-sidi-abdel-rahman",
-    "parentSlug": "gaia"
+    "parentSlug": "gaia",
+    "masterPlanUrl": "/masterplans/kynd-residence-gaia.svg"
   },
   {
     "slug": "saada-sahel",
@@ -1127,7 +1132,8 @@ export const compoundsGenerated: Compound[] = [
       "Premium amenities & spaces",
       "Ready by 2028"
     ],
-    "km": 183.4
+    "km": 183.4,
+    "masterPlanUrl": "/masterplans/saada-sahel.svg"
   },
   {
     "slug": "the-hillage",
@@ -1172,7 +1178,8 @@ export const compoundsGenerated: Compound[] = [
       "Madaar signature design",
       "Premium amenities & spaces",
       "Ready by 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/the-hillage.svg"
   },
   {
     "slug": "gaia",
@@ -1279,7 +1286,8 @@ export const compoundsGenerated: Compound[] = [
       "Water creeks and lush greenery",
       "Premium villa designs",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/creekview.svg"
   },
   {
     "slug": "elea-azha-north",
@@ -1324,7 +1332,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready 2028"
     ],
     "city": "Azha, ain-sokhna",
-    "parentSlug": "azha-north-coast"
+    "parentSlug": "azha-north-coast",
+    "masterPlanUrl": "/masterplans/elea-azha-north.svg"
   },
   {
     "slug": "aqua-lagoons-june",
@@ -1368,7 +1377,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready 2028"
     ],
     "city": "June, new-cairo",
-    "parentSlug": "june"
+    "parentSlug": "june",
+    "masterPlanUrl": "/masterplans/aqua-lagoons-june.svg"
   },
   {
     "slug": "sadaf",
@@ -1453,7 +1463,8 @@ export const compoundsGenerated: Compound[] = [
       "Urban-chic architecture",
       "Premium lifestyle amenities",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/commonhaus.svg"
   },
   {
     "slug": "the-lynks",
@@ -1495,7 +1506,8 @@ export const compoundsGenerated: Compound[] = [
       "Smart home technology",
       "Commercial promenades",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/the-lynks.svg"
   },
   {
     "slug": "park-sight",
@@ -1587,7 +1599,8 @@ export const compoundsGenerated: Compound[] = [
       "Ora luxury standards",
       "Ready 2028"
     ],
-    "parentSlug": "silversands"
+    "parentSlug": "silversands",
+    "masterPlanUrl": "/masterplans/silvertown-lagoon-cabanas.svg"
   },
   {
     "slug": "marresidence",
@@ -1629,7 +1642,8 @@ export const compoundsGenerated: Compound[] = [
       "Al Marasem signature quality",
       "Comprehensive amenities",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/marresidence.svg"
   },
   {
     "slug": "chapters-residence",
@@ -1762,7 +1776,8 @@ export const compoundsGenerated: Compound[] = [
       "Vibrant community hubs",
       "Ready 2028"
     ],
-    "parentSlug": "vie"
+    "parentSlug": "vie",
+    "masterPlanUrl": "/masterplans/vie-collective.svg"
   },
   {
     "slug": "vie-halo",
@@ -1803,7 +1818,8 @@ export const compoundsGenerated: Compound[] = [
       "State-of-the-art facilities",
       "Ready 2028"
     ],
-    "parentSlug": "vie"
+    "parentSlug": "vie",
+    "masterPlanUrl": "/masterplans/vie-halo.svg"
   },
   {
     "slug": "coral-coves",
@@ -1844,7 +1860,8 @@ export const compoundsGenerated: Compound[] = [
       "World-class golf and spa",
       "Exquisite seafront villas",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/coral-coves.svg"
   },
   {
     "slug": "menorca",
@@ -1885,7 +1902,8 @@ export const compoundsGenerated: Compound[] = [
       "Spanish-inspired architecture",
       "Comprehensive amenities",
       "Ready 2027"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/menorca.svg"
   },
   {
     "slug": "the-commons",
@@ -1926,7 +1944,8 @@ export const compoundsGenerated: Compound[] = [
       "Vast green parks",
       "Ready 2028"
     ],
-    "city": "The C, new-administrative-capital"
+    "city": "The C, new-administrative-capital",
+    "masterPlanUrl": "/masterplans/the-commons.svg"
   },
   {
     "slug": "covaya",
@@ -1971,7 +1990,8 @@ export const compoundsGenerated: Compound[] = [
       "Modern coastal architecture",
       "High-end leisure facilities",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/covaya.svg"
   },
   {
     "slug": "club-hill-solare",
@@ -2012,7 +2032,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready 2028"
     ],
     "city": "Solare, ras-el-hekma",
-    "parentSlug": "solare"
+    "parentSlug": "solare",
+    "masterPlanUrl": "/masterplans/club-hill-solare.svg"
   },
   {
     "slug": "sealine-seashore",
@@ -2053,7 +2074,8 @@ export const compoundsGenerated: Compound[] = [
       "Waterfront living",
       "Ready 2028"
     ],
-    "parentSlug": "hyde-park-north-seashore"
+    "parentSlug": "hyde-park-north-seashore",
+    "masterPlanUrl": "/masterplans/sealine-seashore.svg"
   },
     {
     "slug": "31-west",
@@ -2193,7 +2215,8 @@ export const compoundsGenerated: Compound[] = [
       "Boutique smart community",
       "Lush landscapes and water features",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/mist.svg"
   },
   {
     "slug": "trio",
@@ -2238,7 +2261,8 @@ export const compoundsGenerated: Compound[] = [
       "Smart Home Integration: All residential units are equipped with state-of-the-art smart automation systems (controlling lighting, climate, curtains, and security).",
       "Strategic Accessibility: Positioned conveniently close to the Regional Ring Road, Sokhna Road, the American University in Cairo (AUC), and major commercial destinations in New Cairo.",
       "Diverse Real Estate Inventory: Features a mix of custom apartments, lofts, duplexes, townhouses, and standalone villas."
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/trio.svg"
   },
   {
     "slug": "el-patio-riva",
@@ -2282,7 +2306,8 @@ export const compoundsGenerated: Compound[] = [
       "Lush classical layouts",
       "Water canals and parks",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/el-patio-riva.svg"
   },
   {
     "slug": "el-patio-vera",
@@ -2330,7 +2355,8 @@ export const compoundsGenerated: Compound[] = [
       "Waslet Dahshour access",
       "Villa-only gated privacy",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/el-patio-vera.svg"
   },
   {
     "slug": "patio-hills",
@@ -2381,7 +2407,8 @@ export const compoundsGenerated: Compound[] = [
       "Exclusive villa compound",
       "Generous land allotments",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/patio-hills.svg"
   },
   {
     "slug": "patio-jade",
@@ -2435,7 +2462,8 @@ export const compoundsGenerated: Compound[] = [
       "Premium New Capital location",
       "Lush green landscapes",
       "Ready 2029"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/patio-jade.svg"
   },
   {
     "slug": "patio-oro",
@@ -2478,7 +2506,8 @@ export const compoundsGenerated: Compound[] = [
       "Mona Hussein interiors",
       "Flexible finish options",
       "Ready 2026"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/patio-oro.svg"
   },
   {
     "slug": "patio-vida",
@@ -2529,7 +2558,8 @@ export const compoundsGenerated: Compound[] = [
       "Padel and co-working amenities",
       "Lush modern apartments",
       "Ready 2029"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/patio-vida.svg"
   },
   {
     "slug": "patio-zahraa",
@@ -2574,7 +2604,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready for immediate delivery",
       "Core & Shell finish"
     ],
-    "city": "Zahra, new-cairo"
+    "city": "Zahra, new-cairo",
+    "masterPlanUrl": "/masterplans/patio-zahraa.svg"
   },
   {
     "slug": "el-patio-sola",
@@ -2633,7 +2664,8 @@ export const compoundsGenerated: Compound[] = [
       "Lush gardens and water brooks",
       "Semi-finished premium homes",
       "Ready 2029"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/el-patio-sola.svg"
   },
   {
     "slug": "el-patio-town",
@@ -2743,7 +2775,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready to move options",
       "Pool and street views",
       "Core & Shell villas"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/patio-casa.svg"
   },
   {
     "slug": "patio-5-east",
@@ -2801,7 +2834,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready to move villas",
       "Quadro and Twin designs",
       "Core & Shell finish"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/patio-5-east.svg"
   },
   {
     "slug": "patio-prime",
@@ -2859,7 +2893,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready to move villas",
       "Pool and street view layouts",
       "Core & Shell finish"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/patio-prime.svg"
   },
   {
     "slug": "la-vista-6",
@@ -2930,7 +2965,8 @@ export const compoundsGenerated: Compound[] = [
       "Direct beach access",
       "La Vista established quality"
     ],
-    "city": "Ain Sokhna, Suez Governorate, Egypt"
+    "city": "Ain Sokhna, Suez Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/la-vista-6.svg"
   },
   {
     "slug": "la-vista-7",
@@ -3000,7 +3036,8 @@ export const compoundsGenerated: Compound[] = [
       "Cascading terrace design",
       "Direct Red Sea beachfront access"
     ],
-    "city": "Ain Sokhna, Suez Governorate, Egypt"
+    "city": "Ain Sokhna, Suez Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/la-vista-7.svg"
   },
   {
     "slug": "la-vista-topaz",
@@ -3068,7 +3105,8 @@ export const compoundsGenerated: Compound[] = [
       "Adjacent to La Vista 6 & Gardens",
       "Ain Sokhna Zaafarana Road location"
     ],
-    "city": "Ain Sokhna, Suez Governorate, Egypt"
+    "city": "Ain Sokhna, Suez Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/la-vista-topaz.svg"
   },
   {
     "slug": "la-vista-gardens",
@@ -3136,7 +3174,8 @@ export const compoundsGenerated: Compound[] = [
       "Adjacent to La Vista Topaz & La Vista 6",
       "Ain Sokhna Zaafarana Road location"
     ],
-    "city": "Ain Sokhna, Suez Governorate, Egypt"
+    "city": "Ain Sokhna, Suez Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/la-vista-gardens.svg"
   },
   {
     "slug": "haptown",
@@ -3186,7 +3225,8 @@ export const compoundsGenerated: Compound[] = [
       "Lush green landscape & cycling trails",
       "Premium Hassan Allam build quality"
     ],
-    "city": "Mostakbal City, New Cairo, Egypt"
+    "city": "Mostakbal City, New Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/haptown.svg"
   },
   {
     "slug": "swanlake-west",
@@ -3279,7 +3319,8 @@ export const compoundsGenerated: Compound[] = [
       "Fully finished interiors",
       "Ready 2028"
     ],
-    "city": "El Gouna, hurghada"
+    "city": "El Gouna, hurghada",
+    "masterPlanUrl": "/masterplans/swanlake-el-gouna.svg"
   },
   {
     "slug": "solana-east",
@@ -3391,7 +3432,8 @@ export const compoundsGenerated: Compound[] = [
     "brochureUrl": "/brochures/Solana.pdf",
     "brochureFileName": "Solana.pdf",
     "brochureType": "application/pdf",
-    "city": "Solana, sheikh-zayed"
+    "city": "Solana, sheikh-zayed",
+    "masterPlanUrl": "/masterplans/solana-east.svg"
   },
   {
     "slug": "the-brooks",
@@ -3432,7 +3474,8 @@ export const compoundsGenerated: Compound[] = [
       "Low density 194-acre masterplan",
       "Designed by Yasser El Beltagy",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/the-brooks.svg"
   },
   {
     "slug": "jebal-sokhna",
@@ -3478,7 +3521,8 @@ export const compoundsGenerated: Compound[] = [
       "km 127 Ain Sokhna location",
       "71 acres of mountain-sea resort living"
     ],
-    "city": "Ain Sokhna, Suez Governorate, Egypt"
+    "city": "Ain Sokhna, Suez Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/jebal-sokhna.svg"
   },
   {
     "slug": "telal-east",
@@ -3567,7 +3611,8 @@ export const compoundsGenerated: Compound[] = [
       "Boutique compound setting",
       "Lush river-like channels",
       "Ready 2028"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/rivers.svg"
   },
   {
     "slug": "kai-sokhna",
@@ -3613,7 +3658,8 @@ export const compoundsGenerated: Compound[] = [
       "Wide private sandy beach",
       "km 100 Ain Sokhna prime location"
     ],
-    "city": "Ain Sokhna, Suez Governorate, Egypt"
+    "city": "Ain Sokhna, Suez Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/kai-sokhna.svg"
   },
   {
     "slug": "cairo-business-park",
@@ -3704,7 +3750,8 @@ export const compoundsGenerated: Compound[] = [
       "Asian-themed minimalist villas",
       "Villas only community",
       "Ready 2027"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/rock-ville.svg"
   },
   {
     "slug": "rock-vera",
@@ -3745,7 +3792,8 @@ export const compoundsGenerated: Compound[] = [
       "Rock Vera Plaza commercial zone",
       "Ready 2027",
       "Lush landscapes"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/rock-vera.svg"
   },
   {
     "slug": "rock-gold",
@@ -3785,7 +3833,8 @@ export const compoundsGenerated: Compound[] = [
       "Lotus area Fifth Settlement",
       "Ready 2026",
       "Underground parking slots"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/rock-gold.svg"
   },
   {
     "slug": "rock-capital-1",
@@ -3823,7 +3872,8 @@ export const compoundsGenerated: Compound[] = [
       "Premium office space design",
       "Ready 2028",
       "Underground parking"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/rock-capital-1.svg"
   },
   {
     "slug": "rock-sheraton",
@@ -3863,7 +3913,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready 2026",
       "Premium commercial spaces",
       "Underground parking slots"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/rock-sheraton.svg"
   },
   {
     "slug": "palm-parks",
@@ -3906,7 +3957,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready 2027",
       "Limited 10 units remaining"
     ],
-    "city": "Palm Parks, 6th-of-october-city"
+    "city": "Palm Parks, 6th-of-october-city",
+    "masterPlanUrl": "/masterplans/palm-parks.svg"
   },
   {
     "slug": "97-hills",
@@ -4014,7 +4066,8 @@ export const compoundsGenerated: Compound[] = [
       "Premium New Cairo location",
       "43 units available"
     ],
-    "city": "Bamboo III, 6th-of-october-city"
+    "city": "Bamboo III, 6th-of-october-city",
+    "masterPlanUrl": "/masterplans/bamboo-iii.svg"
   },
   {
     "slug": "the-crown-extension",
@@ -4057,7 +4110,8 @@ export const compoundsGenerated: Compound[] = [
       "Handover 2027",
       "52 units available"
     ],
-    "city": "The Crown Extension, 6th-of-october-city"
+    "city": "The Crown Extension, 6th-of-october-city",
+    "masterPlanUrl": "/masterplans/the-crown-extension.svg"
   },
   {
     "slug": "palm-hills-jirian",
@@ -4158,7 +4212,8 @@ export const compoundsGenerated: Compound[] = [
       "Only 59 units total",
       "Villas up to 673 m\u00b2"
     ],
-    "city": "Palm Hills One, sheikh-zayed"
+    "city": "Palm Hills One, sheikh-zayed",
+    "masterPlanUrl": "/masterplans/palm-hills-one.svg"
   },
   {
     "slug": "px",
@@ -4202,7 +4257,8 @@ export const compoundsGenerated: Compound[] = [
       "296 available units",
       "Mix of apartments & townhouses"
     ],
-    "city": "PX, new-cairo"
+    "city": "PX, new-cairo",
+    "masterPlanUrl": "/masterplans/px.svg"
   },
   {
     "slug": "village-de-la-capitale",
@@ -4247,7 +4303,8 @@ export const compoundsGenerated: Compound[] = [
       "Entry from EGP 13.6M",
       "Villas from EGP 29.2M"
     ],
-    "city": "Village de la Capitale, new-administrative-capital"
+    "city": "Village de la Capitale, new-administrative-capital",
+    "masterPlanUrl": "/masterplans/village-de-la-capitale.svg"
   },
   {
     "slug": "mountain-view-jirian",
@@ -4307,7 +4364,8 @@ export const compoundsGenerated: Compound[] = [
       "Jirian Corridor prime location",
       "Near Sphinx Airport & Al Dabaa Axis"
     ],
-    "city": "Sheikh Zayed Extension, West Cairo, Egypt"
+    "city": "Sheikh Zayed Extension, West Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/mountain-view-jirian.svg"
   },
   {
     "slug": "mountain-view-kingsway",
@@ -4696,7 +4754,8 @@ export const compoundsGenerated: Compound[] = [
       "37 units available",
       "Valley views",
       "EGP 17\u201328M range"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/rai-valleys.svg"
   },
   {
     "slug": "the-butterfly",
@@ -4742,7 +4801,8 @@ export const compoundsGenerated: Compound[] = [
       "New Cairo Taj City location",
       "Near AUC"
     ],
-    "city": "The Butterfly, new-cairo"
+    "city": "The Butterfly, new-cairo",
+    "masterPlanUrl": "/masterplans/the-butterfly.svg"
   },
   {
     "slug": "club-views",
@@ -4789,7 +4849,8 @@ export const compoundsGenerated: Compound[] = [
       "Entry from EGP 5M",
       "Central park views"
     ],
-    "city": "Club Views, new-cairo"
+    "city": "Club Views, new-cairo",
+    "masterPlanUrl": "/masterplans/club-views.svg"
   },
   {
     "slug": "talala",
@@ -4883,7 +4944,8 @@ export const compoundsGenerated: Compound[] = [
       "Within Sarai"
     ],
     "city": "Sheya Residence, new-alamein-city",
-    "km": 107.27
+    "km": 107.27,
+    "masterPlanUrl": "/masterplans/sheya-residence.svg"
   },
   {
     "slug": "elm-tree-park",
@@ -4929,7 +4991,8 @@ export const compoundsGenerated: Compound[] = [
       "New Zayed prime location",
       "Close to Sphinx Airport & Belle Vie"
     ],
-    "city": "New Zayed City, West Cairo, Egypt"
+    "city": "New Zayed City, West Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/elm-tree-park.svg"
   },
   {
     "slug": "origami",
@@ -4977,7 +5040,8 @@ export const compoundsGenerated: Compound[] = [
       "EGP 10\u201312M range",
       "Origami-inspired fa\u00e7ade"
     ],
-    "city": "ORIGAMI, new-cairo"
+    "city": "ORIGAMI, new-cairo",
+    "masterPlanUrl": "/masterplans/origami.svg"
   },
   {
     "slug": "origami-golf",
@@ -5025,7 +5089,8 @@ export const compoundsGenerated: Compound[] = [
       "EGP 7\u201312M",
       "Origami design language"
     ],
-    "city": "Origami Golf, new-cairo"
+    "city": "Origami Golf, new-cairo",
+    "masterPlanUrl": "/masterplans/origami-golf.svg"
   },
   {
     "slug": "vye-sodic",
@@ -5129,7 +5194,8 @@ export const compoundsGenerated: Compound[] = [
       "Lush botanical gardens",
       "Low-density planning"
     ],
-    "city": "R7 District, New Administrative Capital, Egypt"
+    "city": "R7 District, New Administrative Capital, Egypt",
+    "masterPlanUrl": "/masterplans/botanica.svg"
   },
   {
     "slug": "cali-coast-ras-el-hekma",
@@ -5185,7 +5251,8 @@ export const compoundsGenerated: Compound[] = [
       "Swimmable lagoons and beachfront",
       "Ras El Hekma coastal strip"
     ],
-    "city": "Ras El Hekma, North Coast (km 193), Matrouh Governorate, Egypt"
+    "city": "Ras El Hekma, North Coast (km 193), Matrouh Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/cali-coast-ras-el-hekma.svg"
   },
   {
     "slug": "youd",
@@ -5283,7 +5350,8 @@ export const compoundsGenerated: Compound[] = [
       "EGP 11.3M\u201326.1M",
       "Semi & fully finished"
     ],
-    "city": "Mostakbal City, New Cairo, Cairo"
+    "city": "Mostakbal City, New Cairo, Cairo",
+    "masterPlanUrl": "/masterplans/district-5.svg"
   },
   {
     "slug": "crescent-walk",
@@ -5536,7 +5604,8 @@ export const compoundsGenerated: Compound[] = [
       "Mixed residential + commercial",
       "25% cash discount"
     ],
-    "city": "The Mornings, sheikh-zayed"
+    "city": "The Mornings, sheikh-zayed",
+    "masterPlanUrl": "/masterplans/the-mornings.svg"
   },
   {
     "slug": "telal-soul",
@@ -5586,7 +5655,8 @@ export const compoundsGenerated: Compound[] = [
       "Chalets from EGP 12.4M",
       "Villas from EGP 52.1M"
     ],
-    "city": "Sidi Abdel Rahman, North Coast (km 143), Matrouh Governorate, Egypt"
+    "city": "Sidi Abdel Rahman, North Coast (km 143), Matrouh Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/telal-soul.svg"
   },
   {
     "slug": "cleo-water-residence",
@@ -5632,7 +5702,8 @@ export const compoundsGenerated: Compound[] = [
       "82% open green spaces",
       "5,000 m\u00b2 lake & lagoons"
     ],
-    "city": "Palm Hills New Cairo, New Cairo, Egypt"
+    "city": "Palm Hills New Cairo, New Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/cleo-water-residence.svg"
   },
   {
     "slug": "diplo-village",
@@ -5679,7 +5750,8 @@ export const compoundsGenerated: Compound[] = [
       "Value pricing",
       "Near Marassi & Hacienda Bay",
       "2026 delivery"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/diplo-village.svg"
   },
   {
     "slug": "alam-al-roum",
@@ -5959,7 +6031,8 @@ export const compoundsGenerated: Compound[] = [
       "Ora premium masterplan"
     ],
     "type": "Resort",
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/masterplans/silversands.svg"
   },
   {
     "slug": "marsa-baghush",
@@ -6215,7 +6288,8 @@ export const compoundsGenerated: Compound[] = [
       "Internal international airport",
       "Phase 1 Wadi Yemm"
     ],
-    "type": "Coastal"
+    "type": "Coastal",
+    "masterPlanUrl": "/masterplans/modon-ras-el-hekma.svg"
   },
   {
     "slug": "azha-north-coast",
@@ -6322,7 +6396,8 @@ export const compoundsGenerated: Compound[] = [
       "Barbarossa Beach Club",
       "80% landscape footprint",
       "103 feddan masterplan"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/el-masyaf.svg"
   },
   {
     "slug": "naia-bay",
@@ -6430,7 +6505,8 @@ export const compoundsGenerated: Compound[] = [
       "Terraced sea view levels",
       "220 feddan masterplan"
     ],
-    "type": "Coastal"
+    "type": "Coastal",
+    "masterPlanUrl": "/masterplans/fouka-bay.svg"
   },
   {
     "slug": "hyde-park-north-seashore",
@@ -6705,7 +6781,8 @@ export const compoundsGenerated: Compound[] = [
       "Terraced sea-view master plan",
       "Exclusive Ras El Hekma resort",
       "Mediterranean Tourism Investment Company luxury delivery"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/caesar-bay.svg"
   },
   {
     "slug": "lyv",
@@ -6914,7 +6991,8 @@ export const compoundsGenerated: Compound[] = [
       "Crystal Lagoon",
       "Beach Bar"
     ],
-    "type": "Coastal"
+    "type": "Coastal",
+    "masterPlanUrl": "/masterplans/swan-lake.svg"
   },
   {
     "slug": "seashell-ras-el-hekma",
@@ -7292,7 +7370,8 @@ export const compoundsGenerated: Compound[] = [
       "White sandy beach at km 185",
       "Tatweer Misr signature quality",
       "Raw architectural minimalist design"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/salt.jpg"
   },
   {
     "slug": "katameya-coast",
@@ -7795,7 +7874,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "24/7 Security",
       "Gym & Spa"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/la-vista-bay-east.svg"
   },
   {
     "slug": "lasirena-sahel",
@@ -7850,7 +7930,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Kids Destination",
       "Smart Home"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/lasirena-sahel.svg"
   },
   {
     "slug": "south-med",
@@ -7955,7 +8036,8 @@ export const compoundsGenerated: Compound[] = [
       "Beach Bar",
       "Cycling Track",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/playa.svg"
   },
   {
     "slug": "ghazala-bay",
@@ -8009,7 +8091,8 @@ export const compoundsGenerated: Compound[] = [
       "Revitalized Inertia neighborhoods",
       "Premium Sidi Abdel Rahman beach",
       "Relaxed Mediterranean lifestyle"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/ghazala-bay.svg"
   },
   {
     "slug": "zoya",
@@ -8114,7 +8197,8 @@ export const compoundsGenerated: Compound[] = [
       "Pristine white sandy beach",
       "Turquoise swimmable lagoons"
     ],
-    "type": "Resort"
+    "type": "Resort",
+    "masterPlanUrl": "/masterplans/hacienda-white.svg"
   },
   {
     "slug": "blumar",
@@ -8160,7 +8244,8 @@ export const compoundsGenerated: Compound[] = [
       "Cozy beach resort",
       "Established community",
       "Direct sea access"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/blumar.jpg"
   },
   {
     "slug": "amwaj",
@@ -8274,7 +8359,8 @@ export const compoundsGenerated: Compound[] = [
       "Pet Park",
       "18-Hole Golf",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/seashell.jpg"
   },
   {
     "slug": "bianchi-ilios",
@@ -8538,7 +8624,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Kids Destination",
       "Smart Home"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/stella-sidi-abdel-rahman.svg"
   },
   {
     "slug": "diplo-3",
@@ -8740,7 +8827,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Kids Destination",
       "Clubhouse"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/lagoons-al-alamein.svg"
   },
   {
     "slug": "downtown-new-alamein",
@@ -8784,7 +8872,8 @@ export const compoundsGenerated: Compound[] = [
       "Residential Apartments - SOLD OUT",
       "Prime Commercial & Retail Spaces",
       "Delivery from August 2025"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/downtown-new-alamein.svg"
   },
   {
     "slug": "palm-hills-new-alamein",
@@ -8836,7 +8925,8 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Cycling Track",
       "Restaurants Strip"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/palm-hills-new-alamein.svg"
   },
   {
     "slug": "mazarine",
@@ -8939,7 +9029,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Private Beach",
       "18-Hole Golf"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/the-gate-new-alamein.svg"
   },
   {
     "slug": "north-edge-towers",
@@ -8992,7 +9083,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Cycling Track",
       "Pet Park"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/north-edge-towers.svg"
   },
   {
     "slug": "the-islands",
@@ -9036,7 +9128,8 @@ export const compoundsGenerated: Compound[] = [
       "Beach Bar",
       "Kids Destination",
       "Cycling Track"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/the-islands.svg"
   },
   {
     "slug": "dayz",
@@ -9084,7 +9177,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "24/7 Security",
       "Gym & Spa"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/dayz.jpg"
   },
   {
     "slug": "marina",
@@ -9141,7 +9235,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Cycling Track",
       "Marina"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/marina.svg"
   },
   {
     "slug": "q-bay",
@@ -9198,7 +9293,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Kids Destination",
       "Smart Home"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/q-bay.svg"
   },
   {
     "slug": "the-waterway-new-cairo",
@@ -9353,7 +9449,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Cycling Track",
       "Co-working"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/lake-residence-by-rotana.svg"
   },
   {
     "slug": "marville",
@@ -9400,7 +9497,8 @@ export const compoundsGenerated: Compound[] = [
       "Beach Bar",
       "Gym & Spa",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/marville.svg"
   },
   {
     "slug": "mountain-view-icity-new-cairo",
@@ -9509,7 +9607,8 @@ export const compoundsGenerated: Compound[] = [
       "Minutes from AUC New Cairo"
     ],
     "type": "Residential",
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/masterplans/hyde-park-new-cairo.svg"
   },
   {
     "slug": "eastown",
@@ -9564,7 +9663,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Private Beach",
       "18-Hole Golf"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/eastown.svg"
   },
   {
     "slug": "villette",
@@ -9618,7 +9718,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Cycling Track",
       "Pet Park"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/villette.svg"
   },
   {
     "slug": "sky-condos",
@@ -9661,7 +9762,8 @@ export const compoundsGenerated: Compound[] = [
       "Kids Destination",
       "Cycling Track",
       "Private Beach"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/sky-condos.svg"
   },
   {
     "slug": "katameya-heights",
@@ -9810,7 +9912,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Kids Destination",
       "Smart Home"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/al-rehab.svg"
   },
   {
     "slug": "madinaty",
@@ -9916,7 +10019,8 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Kids Destination",
       "Private Beach"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/cairo-festival-city.svg"
   },
   {
     "slug": "palm-hills-katameya",
@@ -10018,7 +10122,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Private Beach",
       "Mosque"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/stone-residence.svg"
   },
   {
     "slug": "the-square-sabbour",
@@ -10065,7 +10170,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Cycling Track",
       "Co-working"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/the-square-sabbour.svg"
   },
   {
     "slug": "lake-view-residence",
@@ -10119,7 +10225,8 @@ export const compoundsGenerated: Compound[] = [
       "77 acres Golden Square New Cairo",
       "Minutes from AUC & Ring Road"
     ],
-    "type": "Residential"
+    "type": "Residential",
+    "masterPlanUrl": "/masterplans/lake-view-residence.svg"
   },
   {
     "slug": "zed-east",
@@ -10284,7 +10391,8 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Cycling Track",
       "Restaurants Strip"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/taj-city.svg"
   },
   {
     "slug": "sodic-east",
@@ -10336,7 +10444,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Kids Destination",
       "Beach Bar"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/sodic-east.svg"
   },
   {
     "slug": "beverly-hills",
@@ -10390,7 +10499,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Private Beach",
       "18-Hole Golf"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/beverly-hills.svg"
   },
   {
     "slug": "allegria",
@@ -10493,7 +10603,8 @@ export const compoundsGenerated: Compound[] = [
       "Kids Destination",
       "Cycling Track",
       "Private Beach"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/westown-residences.svg"
   },
   {
     "slug": "sodic-west",
@@ -10545,7 +10656,8 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Private Beach",
       "Gym & Spa"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/sodic-west.svg"
   },
   {
     "slug": "hyde-park-west",
@@ -10597,7 +10709,8 @@ export const compoundsGenerated: Compound[] = [
       "Lakeside living in October City",
       "Hyde Park modern design philosophy"
     ],
-    "type": "Residential"
+    "type": "Residential",
+    "masterPlanUrl": "/masterplans/hyde-park-west.svg"
   },
   {
     "slug": "zed-towers",
@@ -10645,7 +10758,8 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Kids Destination",
       "Private Beach"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/zed-towers.svg"
   },
   {
     "slug": "vinci",
@@ -10698,7 +10812,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Cycling Track",
       "Co-working"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/vinci.svg"
   },
   {
     "slug": "karmell",
@@ -10746,7 +10861,8 @@ export const compoundsGenerated: Compound[] = [
       "Beach Bar",
       "Gym & Spa",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/karmell.svg"
   },
   {
     "slug": "mountain-view-icity-october",
@@ -10794,7 +10910,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Private Beach",
       "24/7 Security"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/mountain-view-icity-october.svg"
   },
   {
     "slug": "zayed-2000",
@@ -10837,7 +10954,8 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Kids Destination",
       "Private Beach"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/zayed-2000.svg"
   },
   {
     "slug": "sun-capital",
@@ -10892,7 +11010,8 @@ export const compoundsGenerated: Compound[] = [
       "Smart Home",
       "24/7 Security",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/sun-capital.svg"
   },
   {
     "slug": "bamboo-extension",
@@ -10996,7 +11115,8 @@ export const compoundsGenerated: Compound[] = [
       "Smart sustainable community",
       "Misr Italia premium quality"
     ],
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/masterplans/il-bosco-city.svg"
   },
   {
     "slug": "la-verde",
@@ -11047,7 +11167,8 @@ export const compoundsGenerated: Compound[] = [
       "Spanish-Catalan inspired architecture",
       "80%+ green landscapes & water features",
       "Overlooks Green River R8 District"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/la-verde.svg"
   },
   {
     "slug": "anakaji",
@@ -11145,7 +11266,8 @@ export const compoundsGenerated: Compound[] = [
       "Green-first R7 District compound",
       "Contemporary family-oriented design",
       "Investment-friendly in the New Capital"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/capital-heights.svg"
   },
   {
     "slug": "city-oval",
@@ -11246,7 +11368,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Cycling Track",
       "Pet Park"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/iconic-tower-district.svg"
   },
   {
     "slug": "business-district-nac",
@@ -11351,7 +11474,8 @@ export const compoundsGenerated: Compound[] = [
       "415-feddan college town concept in Mostakbal City",
       "Sprawling green spaces & crystal lagoons",
       "Tatweer Misr signature masterplan"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/bloomfields.svg"
   },
   {
     "slug": "mountain-view-aliva",
@@ -11451,7 +11575,8 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Kids Destination",
       "Private Beach"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/la-vista-city.svg"
   },
   {
     "slug": "heliopark",
@@ -11504,7 +11629,8 @@ export const compoundsGenerated: Compound[] = [
       "Self-sustained urban community",
       "Proximity to New Capital & Madinaty",
       "Heliopolis Company quality build"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/heliopark.svg"
   },
   {
     "slug": "new-heliopolis",
@@ -11554,7 +11680,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Private Beach",
       "Mosque"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/new-heliopolis.svg"
   },
   {
     "slug": "telal-sokhna",
@@ -11604,7 +11731,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Kids Destination",
       "Clubhouse"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/telal-sokhna.svg"
   },
   {
     "slug": "il-monte-galala",
@@ -11662,7 +11790,8 @@ export const compoundsGenerated: Compound[] = [
       "110 km from Cairo via Galala Road",
       "Tatweer Misr flagship quality"
     ],
-    "flagship": true
+    "flagship": true,
+    "masterPlanUrl": "/masterplans/il-monte-galala.svg"
   },
   {
     "slug": "stella-di-mare",
@@ -11713,7 +11842,8 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Cycling Track",
       "Restaurants Strip"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/stella-di-mare.svg"
   },
   {
     "slug": "murano",
@@ -11817,7 +11947,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "18-Hole Golf"
     ],
-    "km": 150
+    "km": 150,
+    "masterPlanUrl": "/masterplans/azzar-island.svg"
   },
   {
     "slug": "hacienda-red",
@@ -11866,7 +11997,8 @@ export const compoundsGenerated: Compound[] = [
       "Direct Mediterranean beach access",
       "Contemporary beach villas"
     ],
-    "km": 195
+    "km": 195,
+    "masterPlanUrl": "/masterplans/hacienda-red.svg"
   },
   {
     "slug": "la-vista-cascada",
@@ -12091,7 +12223,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Gym & Spa",
       "24/7 Security"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/el-gouna.svg"
   },
   {
     "slug": "makadi-heights",
@@ -12201,7 +12334,8 @@ export const compoundsGenerated: Compound[] = [
       "Smart Home",
       "24/7 Security",
       "Kids Destination"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/soma-bay.svg"
   },
   {
     "slug": "sahl-hasheesh",
@@ -12253,7 +12387,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "18-Hole Golf",
       "Mosque"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/sahl-hasheesh.svg"
   },
   {
     "slug": "nabq-bay-residences",
@@ -12304,7 +12439,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Kids Destination",
       "Clubhouse"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/nabq-bay-residences.svg"
   },
   {
     "slug": "ras-sudr-riviera",
@@ -12345,7 +12481,8 @@ export const compoundsGenerated: Compound[] = [
       "Private Beach",
       "Crystal Lagoon",
       "Beach Bar"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/ras-sudr-riviera.svg"
   },
   {
     "slug": "byoum-lakeside",
@@ -12399,7 +12536,8 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Cycling Track",
       "Restaurants Strip"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/byoum-lakeside.svg"
   },
   {
     "slug": "lazib-inn-tunis",
@@ -12448,7 +12586,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Kids Destination",
       "Beach Bar"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/lazib-inn-tunis.svg"
   },
   {
     "slug": "sodic-the-estates",
@@ -12495,7 +12634,8 @@ export const compoundsGenerated: Compound[] = [
       "24/7 Security",
       "Private Beach",
       "Gym & Spa"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/sodic-the-estates.svg"
   },
   {
     "slug": "zed-west",
@@ -12542,7 +12682,8 @@ export const compoundsGenerated: Compound[] = [
       "18-Hole Golf",
       "Cycling Track",
       "Marina"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/zed-west.svg"
   },
   {
     "slug": "solana",
@@ -12595,7 +12736,8 @@ export const compoundsGenerated: Compound[] = [
       "Mosque",
       "Kids Destination",
       "Smart Home"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/solana.svg"
   },
   {
     "slug": "belle-vie-new-zayed",
@@ -12649,7 +12791,8 @@ export const compoundsGenerated: Compound[] = [
       "Gym & Spa",
       "Private Beach",
       "24/7 Security"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/belle-vie-new-zayed.svg"
   },
   {
     "slug": "elm-tree-new-zayed",
@@ -12690,7 +12833,8 @@ export const compoundsGenerated: Compound[] = [
       "Cycling Track",
       "Kids Destination",
       "Private Beach"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/elm-tree-new-zayed.svg"
   },
   {
     "slug": "grova-east-hills",
@@ -12783,7 +12927,8 @@ export const compoundsGenerated: Compound[] = [
       "Sixth Settlement prime location",
       "Close to New Administrative Capital"
     ],
-    "city": "Sixth Settlement, New Cairo, Cairo, Egypt"
+    "city": "Sixth Settlement, New Cairo, Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/la-vista-east.svg"
   },
   {
     "slug": "dejoya-residence",
@@ -12831,7 +12976,8 @@ export const compoundsGenerated: Compound[] = [
       "Up to 15 Years Installments",
       "Developed by Taj Misr"
     ],
-    "city": "New Zayed City, West Cairo, Egypt"
+    "city": "New Zayed City, West Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/dejoya-residence.svg"
   },
   {
     "slug": "v-levels",
@@ -12879,7 +13025,8 @@ export const compoundsGenerated: Compound[] = [
       "Apartments from EGP 14M",
       "Dec-2027 Delivery"
     ],
-    "city": "6th of October City, Giza, Egypt"
+    "city": "6th of October City, Giza, Egypt",
+    "masterPlanUrl": "/masterplans/v-levels.svg"
   },
   {
     "slug": "one33",
@@ -12929,7 +13076,8 @@ export const compoundsGenerated: Compound[] = [
       "Close to Arkan Plaza & Mall of Arabia",
       "Luxury mixed-use Sheikh Zayed community"
     ],
-    "city": "Northern Expansion, West Cairo, Egypt"
+    "city": "Northern Expansion, West Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/one33.svg"
   },
   {
     "slug": "salt-marina",
@@ -12966,7 +13114,8 @@ export const compoundsGenerated: Compound[] = [
       "Marina lifestyle",
       "10 Years installment plan"
     ],
-    "parentSlug": "salt"
+    "parentSlug": "salt",
+    "masterPlanUrl": "/masterplans/salt-marina.svg"
   },
   {
     "slug": "perla",
@@ -13002,7 +13151,8 @@ export const compoundsGenerated: Compound[] = [
       "6 Years installment plan",
       "Premium design"
     ],
-    "km": 165.27
+    "km": 165.27,
+    "masterPlanUrl": "/masterplans/perla.svg"
   },
   {
     "slug": "bloom-island-ogami",
@@ -13046,7 +13196,8 @@ export const compoundsGenerated: Compound[] = [
       "8 Years installment plan",
       "High-end luxury resort"
     ],
-    "parentSlug": "ogami"
+    "parentSlug": "ogami",
+    "masterPlanUrl": "/masterplans/bloom-island-ogami.svg"
   },
   {
     "slug": "saada-north-coast",
@@ -13083,7 +13234,8 @@ export const compoundsGenerated: Compound[] = [
       "9 Years payment plan",
       "Premium seaside villas"
     ],
-    "parentSlug": "saada-sahel"
+    "parentSlug": "saada-sahel",
+    "masterPlanUrl": "/masterplans/saada-north-coast.svg"
   },
   {
     "slug": "citystars-park-street",
@@ -13119,7 +13271,8 @@ export const compoundsGenerated: Compound[] = [
       "Prime New Cairo location",
       "8 Years installment plan",
       "Premium retail & offices"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/citystars-park-street.svg"
   },
   {
     "slug": "the-gray-laguna-the-boulevard",
@@ -13158,7 +13311,8 @@ export const compoundsGenerated: Compound[] = [
       "8 Years payment plan",
       "Stunning layout"
     ],
-    "parentSlug": "the-med"
+    "parentSlug": "the-med",
+    "masterPlanUrl": "/masterplans/the-gray-laguna-the-boulevard.svg"
   },
   {
     "slug": "central-water-residences",
@@ -13199,7 +13353,8 @@ export const compoundsGenerated: Compound[] = [
       "10 Years payment plan",
       "Lush water features"
     ],
-    "parentSlug": "hyde-park-new-cairo"
+    "parentSlug": "hyde-park-new-cairo",
+    "masterPlanUrl": "/masterplans/central-water-residences.svg"
   },
   {
     "slug": "safa-medi-plex-phase-2",
@@ -13241,7 +13396,8 @@ export const compoundsGenerated: Compound[] = [
       "8 Years payment plan",
       "Premium clinics & offices"
     ],
-    "parentSlug": "hyde-park-new-cairo"
+    "parentSlug": "hyde-park-new-cairo",
+    "masterPlanUrl": "/masterplans/safa-medi-plex-phase-2.svg"
   },
   {
     "slug": "caesar-extension-2",
@@ -13282,7 +13438,8 @@ export const compoundsGenerated: Compound[] = [
       "7-8 Years payment plans",
       "Ultra-premium villas"
     ],
-    "parentSlug": "caesar-sodic"
+    "parentSlug": "caesar-sodic",
+    "masterPlanUrl": "/masterplans/caesar-extension-2.svg"
   },
   {
     "slug": "cala-residences-katameya-coast",
@@ -13323,7 +13480,8 @@ export const compoundsGenerated: Compound[] = [
       "8 Years payment plan",
       "Stunning architecture"
     ],
-    "parentSlug": "katameya-coast"
+    "parentSlug": "katameya-coast",
+    "masterPlanUrl": "/masterplans/cala-residences-katameya-coast.svg"
   },
   {
     "slug": "carnelia",
@@ -13361,7 +13519,8 @@ export const compoundsGenerated: Compound[] = [
       "Overlooking Galala Marina",
       "Mountain-sea views",
       "Crystal lagoons"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/carnelia.svg"
   },
   {
     "slug": "selina-carnelia",
@@ -13393,7 +13552,8 @@ export const compoundsGenerated: Compound[] = [
       "Carnelia premium phase",
       "8 Years payment plan"
     ],
-    "parentSlug": "carnelia"
+    "parentSlug": "carnelia",
+    "masterPlanUrl": "/masterplans/selina-carnelia.svg"
   },
   {
     "slug": "vie",
@@ -13490,7 +13650,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/hacienda-west/2.jpg",
       "/projects/hacienda-west/3.jpg",
       "/projects/hacienda-west/4.jpg"
-]
+],
+    "masterPlanUrl": "/masterplans/hacienda-west.svg"
   },
   {
     "slug": "green-square",
@@ -13586,7 +13747,8 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "10% / 8 yrs",
     "brochureUrl": "/brochures/Full-Brochure-Montenapoleone-1.pdf",
     "brochureFileName": "Full-Brochure-Montenapoleone-1.pdf",
-    "brochureType": "application/pdf"
+    "brochureType": "application/pdf",
+    "masterPlanUrl": "/masterplans/monte-napoleone.svg"
   },
   {
     "slug": "zizinia",
@@ -13728,7 +13890,8 @@ export const compoundsGenerated: Compound[] = [
       "Integrated Sports Anchor: Features a massive on-site Wadi Degla Club branch, providing high-tier athletic and social amenities directly inside the master plan.",
       "Diverse Housing Range: Includes well-spaced apartments, duplexes, penthouses, townhouses, and independent luxury villas."
     ],
-    "paymentPlan": "40% / 4 yrs"
+    "paymentPlan": "40% / 4 yrs",
+    "masterPlanUrl": "/masterplans/neopolis.svg"
   },
   {
     "slug": "beta-greens",
@@ -13825,7 +13988,8 @@ export const compoundsGenerated: Compound[] = [
       "Proximity Landmarks: Roughly 5 minutes from the American University in Cairo (AUC), 10 minutes from the New Administrative Capital, and close to major transit axes like the Ring Road and Suez Road.",
       "Diverse Housing Inventory: Features chic studios, expansive luxury apartments, duplexes, penthouses, and spacious townhouses."
     ],
-    "paymentPlan": "20% / 8 yrs"
+    "paymentPlan": "20% / 8 yrs",
+    "masterPlanUrl": "/masterplans/la-mirada.svg"
   },
   {
     "slug": "creek-town",
@@ -13926,7 +14090,8 @@ export const compoundsGenerated: Compound[] = [
       "Feng Shui-Inspired Zen Gardens: Specially landscaped meditation spaces built to create positive energy and sensory relaxation.",
       "Diverse Housing Inventory: Features a curated selection of fully finished contemporary apartments, spacious duplexes, twin houses, and standalone villas."
     ],
-    "paymentPlan": "15% / 4 yrs or 15% / 5 yrs"
+    "paymentPlan": "15% / 4 yrs or 15% / 5 yrs",
+    "masterPlanUrl": "/masterplans/address-east.svg"
   },
   {
     "slug": "m-squared",
@@ -13961,7 +14126,8 @@ export const compoundsGenerated: Compound[] = [
       "Premium construction quality",
       "Highly accessible location"
     ],
-    "paymentPlan": "30% / 7 yrs"
+    "paymentPlan": "30% / 7 yrs",
+    "masterPlanUrl": "/masterplans/m-squared.svg"
   },
   {
     "slug": "mountain-view-hyde-park",
@@ -14057,7 +14223,8 @@ export const compoundsGenerated: Compound[] = [
       "Extensive Open Spaces: Roughly 78% of the total land area is devoted to gardens, water fountains, and open recreational amenities.",
       "Diverse Housing Inventory: Features luxury apartments, spacious duplexes with private gardens, and expansive penthouses."
     ],
-    "paymentPlan": "Cash"
+    "paymentPlan": "Cash",
+    "masterPlanUrl": "/masterplans/amorada.svg"
   },
   {
     "slug": "promenade",
@@ -14092,7 +14259,8 @@ export const compoundsGenerated: Compound[] = [
       "Premium construction quality",
       "Highly accessible location"
     ],
-    "paymentPlan": "10% / 6 yrs"
+    "paymentPlan": "10% / 6 yrs",
+    "masterPlanUrl": "/masterplans/promenade.svg"
   },
   {
     "slug": "katameya-gardens",
@@ -14182,7 +14350,8 @@ export const compoundsGenerated: Compound[] = [
       "Low-Rise Architecture: Buildings are strictly limited to a ground floor plus five upper typical floors (no high-rise towers), preserving an intimate neighborhood feel.",
       "Diverse Real Estate Mix: Features carefully configured typical apartments, ground-floor units with private gardens, and spacious duplexes."
     ],
-    "paymentPlan": "10%/7 yrs or 15%/8 yrs"
+    "paymentPlan": "10%/7 yrs or 15%/8 yrs",
+    "masterPlanUrl": "/masterplans/sephora-heights.svg"
   },
   {
     "slug": "riviera",
@@ -14225,7 +14394,8 @@ export const compoundsGenerated: Compound[] = [
       "Low-Rise & Private Layout: Comprises an exclusive collection of low-rise residential blocks and private standalone villas to preserve individual privacy and scenic views.",
       "Diverse Real Estate Inventory: Features spacious typical apartments, grand multi-level duplexes, connected twin houses, and luxury standalone villas."
     ],
-    "paymentPlan": "25% / 5 yrs"
+    "paymentPlan": "25% / 5 yrs",
+    "masterPlanUrl": "/masterplans/riviera.svg"
   },
   {
     "slug": "midtown-new-cairo",
@@ -14270,7 +14440,8 @@ export const compoundsGenerated: Compound[] = [
       "Strategic Proximity: Just a short drive from the American University in Cairo (AUC), Al Rehab City, and the New Administrative Capital.",
       "Exclusive Villa & Upscale Inventory: Features a curated collection of spacious townhouses, twin houses, and grand standalone luxury villas."
     ],
-    "paymentPlan": "50% / 2 yrs"
+    "paymentPlan": "50% / 2 yrs",
+    "masterPlanUrl": "/masterplans/midtown-new-cairo.svg"
   },
   {
     "slug": "azad",
@@ -14313,7 +14484,8 @@ export const compoundsGenerated: Compound[] = [
       "Art & Culture Integration: Incorporates unique outdoor community spaces, public art installations, reading nooks, and social gathering squares.",
       "Diverse Real Estate Inventory: Comprises 53 low-rise residential buildings featuring meticulously designed typical apartments, garden apartments, spacious duplexes, and fully finished penthouses."
     ],
-    "paymentPlan": "30% / 5 yrs"
+    "paymentPlan": "30% / 5 yrs",
+    "masterPlanUrl": "/masterplans/azad.svg"
   },
   {
     "slug": "galleria-moon-valley",
@@ -14400,7 +14572,8 @@ export const compoundsGenerated: Compound[] = [
       "Premium construction quality",
       "Highly accessible location"
     ],
-    "paymentPlan": "25% / 4 yrs"
+    "paymentPlan": "25% / 4 yrs",
+    "masterPlanUrl": "/masterplans/golden-heights-1.svg"
   },
   {
     "slug": "golden-heights-2",
@@ -14538,7 +14711,8 @@ export const compoundsGenerated: Compound[] = [
       "Strategic Accessibility: Swift connectivity to North 90th Street, the Ring Road, and Cairo International Airport.",
       "Real Estate Inventory: Comprises a curated selection of refined apartments and spacious duplexes starting from roughly 115 square meters."
     ],
-    "paymentPlan": "25% / 3 yrs"
+    "paymentPlan": "25% / 3 yrs",
+    "masterPlanUrl": "/masterplans/ashrafieh.svg"
   },
   {
     "slug": "90-avenue",
@@ -14584,7 +14758,8 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "50% / 2 yrs",
     "brochureUrl": "https://tbkdevelopments.com/wp-content/uploads/2025/04/90-Avenue-Brochure.pdf",
     "brochureFileName": "90-Avenue-Brochure.pdf",
-    "brochureType": "application/pdf"
+    "brochureType": "application/pdf",
+    "masterPlanUrl": "/masterplans/90-avenue.svg"
   },
   {
     "slug": "w-signature",
@@ -14626,7 +14801,8 @@ export const compoundsGenerated: Compound[] = [
       "Strategic Proximity: Minutes away from the American University in Cairo (AUC), Al Rehab City, Cairo International Airport, and luxury lifestyle hubs like 5A Waterway.",
       "Diverse Real Estate Inventory: Comprises highly curated luxury apartments (ranging from 1 to 3 bedrooms) and expansive 4-bedroom multi-level duplexes, alongside dedicated boutique office and administrative spaces."
     ],
-    "paymentPlan": "10% / 7 yrs"
+    "paymentPlan": "10% / 7 yrs",
+    "masterPlanUrl": "/masterplans/w-signature.svg"
   },
   {
     "slug": "katameya-creeks",
@@ -15185,7 +15361,8 @@ export const compoundsGenerated: Compound[] = [
       "Sheikh Zayed location",
       "core & shell"
     ],
-    "city": "Sheikh Zayed, Egypt"
+    "city": "Sheikh Zayed, Egypt",
+    "masterPlanUrl": "/masterplans/genova.svg"
   },
   {
     "slug": "lake-west-1",
@@ -15225,7 +15402,8 @@ export const compoundsGenerated: Compound[] = [
     ],
     "city": "Green Belt, Egypt",
     "brochureUrl": "/brochures/31-west.pdf",
-    "brochureFileName": "31-west.pdf"
+    "brochureFileName": "31-west.pdf",
+    "masterPlanUrl": "/masterplans/lake-west-1.svg"
   },
   {
     "slug": "lake-west-2",
@@ -15266,7 +15444,8 @@ export const compoundsGenerated: Compound[] = [
     ],
     "city": "West Cairo, Egypt",
     "brochureUrl": "/brochures/31-west.pdf",
-    "brochureFileName": "31-west.pdf"
+    "brochureFileName": "31-west.pdf",
+    "masterPlanUrl": "/masterplans/lake-west-2.svg"
   },
   {
     "slug": "lac-ville",
@@ -15305,7 +15484,8 @@ export const compoundsGenerated: Compound[] = [
       "Green Belt location",
       "Core & Shell"
     ],
-    "city": "Green Belt, Egypt"
+    "city": "Green Belt, Egypt",
+    "masterPlanUrl": "/masterplans/lac-ville.svg"
   },
   {
     "slug": "montania",
@@ -15345,7 +15525,8 @@ export const compoundsGenerated: Compound[] = [
       "Green Belt location",
       "Core & Shell"
     ],
-    "city": "Green Belt, Egypt"
+    "city": "Green Belt, Egypt",
+    "masterPlanUrl": "/masterplans/montania.svg"
   },
   {
     "slug": "montania-park",
@@ -15386,7 +15567,8 @@ export const compoundsGenerated: Compound[] = [
     ],
     "city": "Green Belt, Egypt",
     "brochureUrl": "/brochures/cairo-business-park.pdf",
-    "brochureFileName": "cairo-business-park.pdf"
+    "brochureFileName": "cairo-business-park.pdf",
+    "masterPlanUrl": "/masterplans/montania-park.svg"
   },
   {
     "slug": "zg2",
@@ -15424,7 +15606,8 @@ export const compoundsGenerated: Compound[] = [
       "Green Belt location",
       "Core & Shell"
     ],
-    "city": "Green Belt, Egypt"
+    "city": "Green Belt, Egypt",
+    "masterPlanUrl": "/masterplans/zg2.svg"
   },
   {
     "slug": "joya",
@@ -15468,7 +15651,8 @@ export const compoundsGenerated: Compound[] = [
       "Eastern Expansions location",
       "Core & Shell"
     ],
-    "city": "Eastern Expansions, Egypt"
+    "city": "Eastern Expansions, Egypt",
+    "masterPlanUrl": "/masterplans/joya.svg"
   },
   {
     "slug": "garden-lakes",
@@ -15510,7 +15694,8 @@ export const compoundsGenerated: Compound[] = [
       "Eastern Expansions location",
       "Core & Shell"
     ],
-    "city": "Eastern Expansions, Egypt"
+    "city": "Eastern Expansions, Egypt",
+    "masterPlanUrl": "/masterplans/garden-lakes.svg"
   },
   {
     "slug": "cleopatra-square",
@@ -15553,7 +15738,8 @@ export const compoundsGenerated: Compound[] = [
     ],
     "city": "Eastern Expansions, Egypt",
     "brochureUrl": "/brochures/Fifth Square E brochure.pdf",
-    "brochureFileName": "Fifth Square E brochure.pdf"
+    "brochureFileName": "Fifth Square E brochure.pdf",
+    "masterPlanUrl": "/masterplans/cleopatra-square.svg"
   },
   {
     "slug": "nyoum-pyramids",
@@ -15591,7 +15777,8 @@ export const compoundsGenerated: Compound[] = [
       "Eastern Expansions location",
       "Core & Shell"
     ],
-    "city": "Eastern Expansions, Egypt"
+    "city": "Eastern Expansions, Egypt",
+    "masterPlanUrl": "/masterplans/nyoum-pyramids.svg"
   },
   {
     "slug": "mv-4",
@@ -15631,7 +15818,8 @@ export const compoundsGenerated: Compound[] = [
       "Northern Expansions location",
       "Fully Finished"
     ],
-    "city": "Northern Expansions, Egypt"
+    "city": "Northern Expansions, Egypt",
+    "masterPlanUrl": "/masterplans/mv-4.svg"
   },
   {
     "slug": "hadaba",
@@ -15671,7 +15859,8 @@ export const compoundsGenerated: Compound[] = [
       "Northern Expansions location",
       "Semi Finished"
     ],
-    "city": "Northern Expansions, Egypt"
+    "city": "Northern Expansions, Egypt",
+    "masterPlanUrl": "/masterplans/hadaba.svg"
   },
   {
     "slug": "kayan",
@@ -15709,7 +15898,8 @@ export const compoundsGenerated: Compound[] = [
       "Northern Expansions location",
       "Fully Finished"
     ],
-    "city": "Northern Expansions, Egypt"
+    "city": "Northern Expansions, Egypt",
+    "masterPlanUrl": "/masterplans/kayan.svg"
   },
   {
     "slug": "villaria",
@@ -15748,7 +15938,8 @@ export const compoundsGenerated: Compound[] = [
       "Northern Expansions location",
       "Core & Shell"
     ],
-    "city": "Northern Expansions, Egypt"
+    "city": "Northern Expansions, Egypt",
+    "masterPlanUrl": "/masterplans/villaria.svg"
   },
   {
     "slug": "m-apartments",
@@ -15787,7 +15978,8 @@ export const compoundsGenerated: Compound[] = [
       "Northern Expansions location",
       "Core & Shell"
     ],
-    "city": "Northern Expansions, Egypt"
+    "city": "Northern Expansions, Egypt",
+    "masterPlanUrl": "/masterplans/m-apartments.svg"
   },
   {
     "slug": "ashgar-city",
@@ -15827,7 +16019,8 @@ export const compoundsGenerated: Compound[] = [
       "October Gardens location",
       "Semi Finished"
     ],
-    "city": "October Gardens, Egypt"
+    "city": "October Gardens, Egypt",
+    "masterPlanUrl": "/masterplans/ashgar-city.svg"
   },
   {
     "slug": "green-town",
@@ -15869,7 +16062,8 @@ export const compoundsGenerated: Compound[] = [
     ],
     "city": "October Gardens, Egypt",
     "brochureUrl": "/brochures/creek-town-brochure.pdf",
-    "brochureFileName": "creek-town-brochure.pdf"
+    "brochureFileName": "creek-town-brochure.pdf",
+    "masterPlanUrl": "/masterplans/green-town.svg"
   },
   {
     "slug": "rock-eden",
@@ -15907,7 +16101,8 @@ export const compoundsGenerated: Compound[] = [
       "October Gardens location",
       "Semi-finished"
     ],
-    "city": "October Gardens, Egypt"
+    "city": "October Gardens, Egypt",
+    "masterPlanUrl": "/masterplans/rock-eden.svg"
   },
   {
     "slug": "scenes",
@@ -16016,7 +16211,8 @@ export const compoundsGenerated: Compound[] = [
       "Phases: Little Rome, Stanley, Boulevard, Capri, Milan, Verona, Venecia, Napoli-Bari",
       "Azzurri Sports & Social Club & Fontana Commercial/Cinema Hub",
       "15 min to Juhayna Square, 20 min to Sphinx Airport, on Boulevard Axis"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/nyoum-october.svg"
   },
   {
     "slug": "palm-hills-alexandria",
@@ -16064,7 +16260,8 @@ export const compoundsGenerated: Compound[] = [
       "Situated near the International Coastal Road, Nozha International Airport, and Carrefour City Centre.",
       "Features 'The Green Spine'\u2014a central multi-purpose green corridor connecting all residential zones.",
       "Offers full range of housing: 1-3BR apartments, townhouses, twin houses, and standalone villas."
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/palm-hills-alexandria.svg"
   },
   {
     "slug": "palm-hills-ritz-carlton",
@@ -16109,7 +16306,8 @@ export const compoundsGenerated: Compound[] = [
       "Designed by renowned OBMI International featuring 150 exclusive branded residences.",
       "Overlooks the Palm Hills Golf Course and the Giza Pyramids in West Cairo.",
       "Offers 5-star hospitality services, private spa, concierge, valet, and in-residence dining."
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/palm-hills-ritz-carlton.svg"
   },
   {
     "slug": "palmet",
@@ -16155,7 +16353,8 @@ export const compoundsGenerated: Compound[] = [
       "Located on Boulevard Road near 26th of July Axis, Dahshour Link, and Palm Central.",
       "Features low-rise Ground + 1 architecture designed around open green courtyards.",
       "Integrated metropolitan hub with Grade-A offices, retail arcades, dining, and boutique hospitality."
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/palmet.svg"
   },
   {
     "slug": "phnc-commercial",
@@ -16187,7 +16386,8 @@ export const compoundsGenerated: Compound[] = [
     "blurb": "Palmet New Cairo is the commercial & corporate center within Palm Hills New Cairo, offering core & shell and finished administrative office spaces in prime East Cairo.",
     "paymentPlan": "10% Down Payment, up to 7-8 Years Installments",
     "city": "Palm Hills New Cairo, New Cairo, Egypt",
-    "type": "Mixed-use"
+    "type": "Mixed-use",
+    "masterPlanUrl": "/masterplans/phnc-commercial.svg"
   },
   {
     "slug": "one-hyde-park-new-cairo",
@@ -16233,7 +16433,8 @@ export const compoundsGenerated: Compound[] = [
     "areaSize": "Exclusive Phase inside Hyde Park New Cairo",
     "unitSizes": "70 - 377 m\u00b2",
     "city": "New Cairo, Egypt",
-    "type": "Residential"
+    "type": "Residential",
+    "masterPlanUrl": "/masterplans/one-hyde-park-new-cairo.svg"
   },
   {
     "slug": "mayan-el-shorouk",
@@ -16270,7 +16471,8 @@ export const compoundsGenerated: Compound[] = [
     "blurb": "Mayan El Shorouk is a 36-acre residential compound by STM Developments directly opposite Madinaty at the Suez Road & Sadat Axis intersection, offering fully finished apartments and ready-to-move townhouses.",
     "paymentPlan": "10% DP over 10 Yrs",
     "areaSize": "36 feddan",
-    "unitSizes": "93-228 sqm"
+    "unitSizes": "93-228 sqm",
+    "masterPlanUrl": "/masterplans/mayan-el-shorouk.svg"
   },
   {
     "slug": "mayan-new-cairo",
@@ -16307,7 +16509,8 @@ export const compoundsGenerated: Compound[] = [
     "blurb": "Mayan New Cairo is a 48-acre low-density residential compound by STM Developments situated directly on Mohamed Naguib Axis & Old Suez Road (facing Al Rehab), featuring fully finished G+6 apartments delivered in 9-12 months.",
     "paymentPlan": "10% DP over 10 Yrs",
     "areaSize": "48 feddan",
-    "unitSizes": "99-160 sqm"
+    "unitSizes": "99-160 sqm",
+    "masterPlanUrl": "/masterplans/mayan-new-cairo.svg"
   },
   {
     "slug": "village-west",
@@ -16353,7 +16556,8 @@ export const compoundsGenerated: Compound[] = [
       "Prime Sheikh Zayed location",
       "Flexible 7\u20138 year payment plans",
       "Diverse unit mix from 1BD to Standalone Townhouses"
-    ]
+    ],
+    "masterPlanUrl": "/masterplans/village-west.svg"
   },
     {
     "slug": "mazarine-apartments-new-alamein",
@@ -16391,7 +16595,8 @@ export const compoundsGenerated: Compound[] = [
       "4 Sub-Brands (Tiffany, Celeste, Sapphire, Boulevard)",
       "Delivery from 2026"
     ],
-    "paymentPlan": "5%+5% DP over 3 to 12 years"
+    "paymentPlan": "5%+5% DP over 3 to 12 years",
+    "masterPlanUrl": "/masterplans/mazarine-apartments-new-alamein.svg"
   },
   {
     "slug": "beachfront-towers-new-alamein",
@@ -16428,7 +16633,8 @@ export const compoundsGenerated: Compound[] = [
       "Direct Sea Frontage",
       "Delivery from 07/2026"
     ],
-    "paymentPlan": "5%+5% DP over 3 to 12 years"
+    "paymentPlan": "5%+5% DP over 3 to 12 years",
+    "masterPlanUrl": "/masterplans/beachfront-towers-new-alamein.svg"
   },
   {
     "slug": "mazarine-hub-new-alamein",
@@ -16463,7 +16669,8 @@ export const compoundsGenerated: Compound[] = [
       "Offices & Commercial Space",
       "Delivery from 2026"
     ],
-    "paymentPlan": "5%+5% DP over 3 to 12 years"
+    "paymentPlan": "5%+5% DP over 3 to 12 years",
+    "masterPlanUrl": "/masterplans/mazarine-hub-new-alamein.svg"
   },
   {
     "slug": "new-garden-city-r5",
@@ -16501,7 +16708,8 @@ export const compoundsGenerated: Compound[] = [
       "Ready to Move & Ready to Deliver",
       "French Parisian Design"
     ],
-    "paymentPlan": "5%+5% DP over 3 to 12 years"
+    "paymentPlan": "5%+5% DP over 3 to 12 years",
+    "masterPlanUrl": "/masterplans/new-garden-city-r5.svg"
   },
   {
     "slug": "jade-park-al-maqsad",
@@ -16539,7 +16747,8 @@ export const compoundsGenerated: Compound[] = [
       "Al Maqsad District Location",
       "Delivery from 2025"
     ],
-    "paymentPlan": "5%+5% DP over 3 to 12 years"
+    "paymentPlan": "5%+5% DP over 3 to 12 years",
+    "masterPlanUrl": "/masterplans/jade-park-al-maqsad.svg"
   },
   {
     "slug": "jirian-nations-of-sky",
@@ -16578,7 +16787,8 @@ export const compoundsGenerated: Compound[] = [
       "Fully Finished Delivery",
       "5% Down Payment over 10 Years"
     ],
-    "paymentPlan": "5% DP + 5% in 6m + 5% on delivery over 10 yrs"
+    "paymentPlan": "5% DP + 5% in 6m + 5% on delivery over 10 yrs",
+    "masterPlanUrl": "/masterplans/jirian-nations-of-sky.svg"
   },
   {
     "slug": "zomra-east",
@@ -16621,7 +16831,8 @@ export const compoundsGenerated: Compound[] = [
       "370 Acres Masterplan",
       "Operated by EDEN Facility Management"
     ],
-    "paymentPlan": "5% DP + 5% in 1m + 5% on delivery over 8-10 yrs"
+    "paymentPlan": "5% DP + 5% in 1m + 5% on delivery over 8-10 yrs",
+    "masterPlanUrl": "/masterplans/zomra-east.svg"
   },
   {
     "slug": "point-90-offices-park",
@@ -16656,7 +16867,8 @@ export const compoundsGenerated: Compound[] = [
       "Next to AUC & Palm Hills Village",
       "10% Down Payment over 7 Years"
     ],
-    "paymentPlan": "10% DP + 10% on delivery over 7 yrs"
+    "paymentPlan": "10% DP + 10% on delivery over 7 yrs",
+    "masterPlanUrl": "/masterplans/point-90-offices-park.svg"
   },
   {
     "slug": "ivoire-west",
@@ -16697,7 +16909,8 @@ export const compoundsGenerated: Compound[] = [
       "Opposite El Rabwa Gate 4",
       "5% Down Payment over 10 Years"
     ],
-    "paymentPlan": "5% DP over 10 yrs (backloaded)"
+    "paymentPlan": "5% DP over 10 yrs (backloaded)",
+    "masterPlanUrl": "/masterplans/ivoire-west.svg"
   },
   {
     "slug": "ivoire-east",
@@ -16738,7 +16951,8 @@ export const compoundsGenerated: Compound[] = [
       "Opposite Hyde Park & Mivida Emaar",
       "5% Down Payment over 10 Years"
     ],
-    "paymentPlan": "5% DP over 10 yrs"
+    "paymentPlan": "5% DP over 10 yrs",
+    "masterPlanUrl": "/masterplans/ivoire-east.svg"
   },
   {
     "slug": "telal-shores",
@@ -16777,7 +16991,8 @@ export const compoundsGenerated: Compound[] = [
       "16,800 sqm Swimmable Lagoon",
       "500m Beachfront"
     ],
-    "paymentPlan": "5% DP over 10 yrs"
+    "paymentPlan": "5% DP over 10 yrs",
+    "masterPlanUrl": "/masterplans/telal-shores.svg"
   },
   {
     "slug": "oak-residences",
@@ -16816,7 +17031,8 @@ export const compoundsGenerated: Compound[] = [
       "Extension of Stone Park & West Golf",
       "5% Down Payment over 10 Years"
     ],
-    "paymentPlan": "5% DP over 10 yrs"
+    "paymentPlan": "5% DP over 10 yrs",
+    "masterPlanUrl": "/masterplans/oak-residences.svg"
   },
   {
     "slug": "swanlake-residences-new-cairo",
@@ -16859,7 +17075,8 @@ export const compoundsGenerated: Compound[] = [
       "Master Plan by CRTKL & Cracknell",
       "5% Down Payment over 6 to 10 Years"
     ],
-    "paymentPlan": "5%+5% DP over 6 to 10 yrs"
+    "paymentPlan": "5%+5% DP over 6 to 10 yrs",
+    "masterPlanUrl": "/masterplans/swanlake-residences-new-cairo.svg"
   },
   {
     "slug": "the-valleys-mostakbal-city",
@@ -16895,7 +17112,8 @@ export const compoundsGenerated: Compound[] = [
       "20 Acres Green Spine & Water Bodies",
       "5% Down Payment over 9 Years"
     ],
-    "paymentPlan": "5%+5% DP over 9 yrs"
+    "paymentPlan": "5%+5% DP over 9 yrs",
+    "masterPlanUrl": "/masterplans/the-valleys-mostakbal-city.svg"
   },
   {
     "slug": "park-central-mostakbal-city",
@@ -16939,7 +17157,8 @@ export const compoundsGenerated: Compound[] = [
       "92% of Units Overlooking Park",
       "5% Down Payment over 10 Years"
     ],
-    "paymentPlan": "5% DP over 10 yrs"
+    "paymentPlan": "5% DP over 10 yrs",
+    "masterPlanUrl": "/masterplans/park-central-mostakbal-city.svg"
   },
       {
     "slug": "keeva-6th-of-october",
@@ -16973,7 +17192,8 @@ export const compoundsGenerated: Compound[] = [
       "95% Villas Masterplan",
       "5% Down Payment over 8 Years"
     ],
-    "paymentPlan": "5%+5% DP over 8 yrs"
+    "paymentPlan": "5%+5% DP over 8 yrs",
+    "masterPlanUrl": "/masterplans/keeva-6th-of-october.svg"
   },
   {
     "slug": "saada-boutique",
@@ -17012,7 +17232,8 @@ export const compoundsGenerated: Compound[] = [
       "7 Swimmable Lagoons & 15% Footprint",
       "5% Down Payment over 9 Years"
     ],
-    "paymentPlan": "5%+5% DP over 9 yrs"
+    "paymentPlan": "5%+5% DP over 9 yrs",
+    "masterPlanUrl": "/masterplans/saada-boutique.svg"
   },
   {
     "slug": "hyde-park-central",
@@ -17051,6 +17272,7 @@ export const compoundsGenerated: Compound[] = [
       "Central Villas & Quads",
       "5% Down Payment over 10 Years"
     ],
-    "paymentPlan": "5%+5% DP over 10 yrs"
+    "paymentPlan": "5%+5% DP over 10 yrs",
+    "masterPlanUrl": "/masterplans/hyde-park-central.svg"
   }
 ];

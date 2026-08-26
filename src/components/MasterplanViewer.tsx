@@ -69,64 +69,46 @@ export function MasterplanViewer({
     masterplanImage ||
     (projectImages.length > 0 ? projectImages[0].path : `/projects/${projectSlug}/1.jpg`);
 
-  // Default fallback precincts if none provided
+  // Dynamically resolve 100% accurate precincts from project availability breakdown
+  const availabilityList = useStore((s) => s.availabilityList) || [];
+  const projectAvail = availabilityList.find((a) => a.slug === projectSlug);
+
   const resolvedPrecincts: MasterplanPrecinct[] = useMemo(() => {
     if (precincts && precincts.length > 0) return precincts;
-    return [
-      {
-        id: "p-1",
-        name: "Phase 1 • First Row Beachfront",
-        type: "Shoreline Mansions & Sea View Villas",
-        xPct: 28,
-        yPct: 32,
-        minPriceM: 86.4,
-        maxPriceM: 230,
-        availableCount: 5,
-        deliveryNote: "Ready to Move (Q2/Q3 2027)",
-        isRtm: true,
-        unitTypes: ["Standalone Villa", "Shoreline Mansion"],
-      },
-      {
-        id: "p-2",
-        name: "Lagoon Sector 1",
-        type: "Palm Condos & Town Casas",
-        xPct: 54,
-        yPct: 48,
-        minPriceM: 30.3,
-        maxPriceM: 108,
-        availableCount: 8,
-        deliveryNote: "Q2 2028 Delivery",
-        isRtm: false,
-        unitTypes: ["Chalet", "Townhouse", "Twin House"],
-      },
-      {
-        id: "p-3",
-        name: "Coconut Condos & Lagoon 2",
-        type: "Luxury Lagoon Residences",
-        xPct: 76,
-        yPct: 62,
-        minPriceM: 20.0,
-        maxPriceM: 24.1,
-        availableCount: 6,
-        deliveryNote: "Q4 2028 Delivery",
-        isRtm: false,
-        unitTypes: ["2BR Chalet", "3BR Chalet"],
-      },
-      {
-        id: "p-4",
-        name: "Rituals Village (Serviced)",
-        type: "Branded Hotel Apartments",
-        xPct: 38,
-        yPct: 75,
-        minPriceM: 11.5,
-        maxPriceM: 15.9,
-        availableCount: 4,
-        deliveryNote: "Q4 2029 Delivery",
-        isRtm: false,
-        unitTypes: ["Serviced Chalet 2BR", "Serviced Chalet 3BR"],
-      },
+    if (!projectAvail || !Array.isArray(projectAvail.breakdown) || projectAvail.breakdown.length === 0) {
+      return [];
+    }
+
+    // Map real breakdown items to map positions
+    const positions = [
+      { x: 30, y: 35 },
+      { x: 55, y: 48 },
+      { x: 75, y: 62 },
+      { x: 40, y: 75 },
+      { x: 65, y: 30 },
+      { x: 25, y: 65 },
     ];
-  }, [precincts]);
+
+    return projectAvail.breakdown.slice(0, 6).map((b: any, idx: number) => {
+      const pos = positions[idx % positions.length];
+      const isRtm = b.deliveryNote?.toLowerCase().includes("ready") || 
+                    b.deliveryNote?.toLowerCase().includes("1 month") || 
+                    b.deliveryNote?.toLowerCase().includes("rtm");
+      return {
+        id: `precinct-${idx}`,
+        name: b.cluster || `${b.type}${b.beds ? ` (${b.beds} BR)` : ""}`,
+        type: b.type,
+        xPct: pos.x,
+        yPct: pos.y,
+        minPriceM: b.minPriceM,
+        maxPriceM: b.maxPriceM,
+        availableCount: b.available || 1,
+        deliveryNote: b.deliveryNote || "Standard Delivery",
+        isRtm,
+        unitTypes: [b.type],
+      };
+    });
+  }, [precincts, projectAvail]);
 
   const activePrecinct = useMemo(
     () => resolvedPrecincts.find((p) => p.id === selectedPrecinctId) || resolvedPrecincts[0],

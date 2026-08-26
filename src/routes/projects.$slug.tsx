@@ -662,36 +662,14 @@ function CompoundPage() {
                 </div>
 
                 {/* Content */}
-                {masterPlanUrl ? (
-                  <div className="max-h-[75vh] overflow-auto flex items-center justify-center bg-zinc-900 p-4">
-                    <img
-                      src={masterPlanUrl}
-                      alt={`${c.name} Master Plan`}
-                      className="max-w-full rounded-lg shadow-xl"
-                      style={{ maxHeight: "68vh" }}
-                    />
-                  </div>
-                ) : (
-                  <div className="flex flex-col items-center justify-center p-12 text-center bg-zinc-900 min-h-[300px]">
-                    <div className="mx-auto rounded-full bg-accent/10 p-5 w-fit mb-5">
-                      <MapIcon className="h-10 w-10 text-accent" />
-                    </div>
-                    <h3 className="font-bold text-white text-lg">Master Plan Coming Soon</h3>
-                    <p className="text-sm text-zinc-400 mt-2 max-w-md leading-relaxed">
-                      The official master plan layout for{" "}
-                      <strong className="text-white">{c.name}</strong> is being prepared by the
-                      developer. Request it directly from our team.
-                    </p>
-                    <a
-                      href={`https://wa.me/201029324783?text=Hi!%20I%20am%20requesting%20the%20master%20plan%20for%20${encodeURIComponent(c.name)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 text-white font-bold text-sm hover:bg-green-600 transition-colors py-3 px-6 shadow-md"
-                    >
-                      Request via WhatsApp
-                    </a>
-                  </div>
-                )}
+                <div className="p-4 bg-zinc-950">
+                  <MasterplanViewer
+                    projectSlug={c.slug}
+                    projectName={c.name}
+                    developerName={c.developer}
+                    masterplanImage={masterPlanUrl || c.hero}
+                  />
+                </div>
               </div>
             </div>
           )}
@@ -742,15 +720,7 @@ function CompoundPage() {
             );
           })()}
 
-                    {/* Interactive 3D Masterplan Viewer Section */}
-          <Section title="Interactive 3D Masterplan &amp; Precincts">
-            <MasterplanViewer
-              projectSlug={c.slug}
-              projectName={c.name}
-              developerName={c.developer}
-              masterplanImage={masterPlanUrl || c.hero}
-            />
-          </Section>
+          
 
           {/* Live Availability from developer sheets */}
           {c.slug === "alam-al-roum" ? (
