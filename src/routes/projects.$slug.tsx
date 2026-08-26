@@ -1,4 +1,3 @@
-import { MasterplanViewer } from "@/components/MasterplanViewer";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
@@ -16,6 +15,10 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import {
+  ZoomOut,
+  RotateCcw,
+  Minimize2,
+  Maximize2,
   Heart,
   MapPin,
   Waves,
@@ -662,14 +665,36 @@ function CompoundPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-4 bg-zinc-950">
-                  <MasterplanViewer
-                    projectSlug={c.slug}
-                    projectName={c.name}
-                    developerName={c.developer}
-                    masterplanImage={masterPlanUrl || c.hero}
-                  />
-                </div>
+                {masterPlanUrl ? (
+                  <div className="max-h-[75vh] overflow-auto flex items-center justify-center bg-zinc-900 p-4">
+                    <img
+                      src={masterPlanUrl}
+                      alt={`${c.name} Master Plan`}
+                      className="max-w-full rounded-lg shadow-xl"
+                      style={{ maxHeight: "68vh" }}
+                    />
+                  </div>
+                ) : (
+                  <div className="flex flex-col items-center justify-center p-12 text-center bg-zinc-900 min-h-[300px]">
+                    <div className="mx-auto rounded-full bg-accent/10 p-5 w-fit mb-5">
+                      <MapIcon className="h-10 w-10 text-accent" />
+                    </div>
+                    <h3 className="font-bold text-white text-lg">Master Plan Coming Soon</h3>
+                    <p className="text-sm text-zinc-400 mt-2 max-w-md leading-relaxed">
+                      The official master plan layout for{" "}
+                      <strong className="text-white">{c.name}</strong> is being prepared by the
+                      developer. Request it directly from our team.
+                    </p>
+                    <a
+                      href={`https://wa.me/201029324783?text=Hi!%20I%20am%20requesting%20the%20master%20plan%20for%20${encodeURIComponent(c.name)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 text-white font-bold text-sm hover:bg-green-600 transition-colors py-3 px-6 shadow-md"
+                    >
+                      Request via WhatsApp
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           )}
@@ -1549,6 +1574,185 @@ function Section({ title, children }: { title: string; children: React.ReactNode
     <div className="mt-10">
       <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">{title}</h2>
       <div className="mt-4">{children}</div>
+    </div>
+  );
+}
+
+
+function MasterplanModal({
+  c,
+  masterPlanUrl,
+  onClose,
+}: {
+  c: any;
+  masterPlanUrl?: string;
+  onClose: () => void;
+}) {
+  const [zoomLevel, setZoomLevel] = useState(100);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const handleZoomIn = () => setZoomLevel((z) => Math.min(z + 25, 300));
+  const handleZoomOut = () => setZoomLevel((z) => Math.max(z - 25, 50));
+  const handleResetZoom = () => setZoomLevel(100);
+
+  const handleShareWhatsApp = () => {
+    const url = masterPlanUrl || `${window?.location?.origin || "https://propertyatlas.eg"}/projects/${c.slug}/1.jpg`;
+    const text = `*${c.name} Official Master Plan* (${c.developer})
+View site layout & masterplan map:
+${url}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
+  };
+
+  return (
+    <div
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 overflow-hidden animate-in fade-in duration-200 ${
+        isFullscreen ? "p-0" : "p-4 sm:p-6"
+      }`}
+      onClick={onClose}
+    >
+      <div
+        className={`relative flex flex-col w-full max-w-5xl h-[88vh] rounded-3xl border border-white/10 bg-zinc-950 shadow-2xl overflow-hidden transition-all duration-300 ${
+          isFullscreen ? "h-full w-full max-w-none rounded-none border-none" : ""
+        }`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header Bar */}
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 bg-zinc-900/90 px-6 py-4 backdrop-blur-md shrink-0">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground font-bold shadow-sm">
+              <MapIcon className="h-5 w-5" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-accent">
+                  Official Master Plan Layout
+                </span>
+                <span className="rounded-full bg-emerald-500/15 text-emerald-400 px-2 py-0.5 text-[9px] font-bold border border-emerald-500/20">
+                  HD Site Footprint
+                </span>
+              </div>
+              <h3 className="font-display font-bold text-white text-base leading-tight mt-0.5">
+                {c.name}
+              </h3>
+            </div>
+          </div>
+
+          {/* Action Toolbar */}
+          <div className="flex items-center gap-2 flex-wrap">
+            {masterPlanUrl && (
+              <>
+                {/* Zoom controls */}
+                <div className="flex items-center gap-1 rounded-xl bg-zinc-800/80 border border-white/10 p-1 text-xs text-white">
+                  <button
+                    onClick={handleZoomOut}
+                    className="rounded-lg p-1.5 hover:bg-zinc-700 transition-colors"
+                    title="Zoom Out"
+                  >
+                    <ZoomOut className="h-4 w-4" />
+                  </button>
+                  <span className="px-2 font-mono font-bold text-[11px] min-w-[42px] text-center">
+                    {zoomLevel}%
+                  </span>
+                  <button
+                    onClick={handleZoomIn}
+                    className="rounded-lg p-1.5 hover:bg-zinc-700 transition-colors"
+                    title="Zoom In"
+                  >
+                    <ZoomIn className="h-4 w-4" />
+                  </button>
+                  <button
+                    onClick={handleResetZoom}
+                    className="rounded-lg p-1.5 hover:bg-zinc-700 transition-colors border-l border-white/10 ml-0.5"
+                    title="Reset Zoom"
+                  >
+                    <RotateCcw className="h-3.5 w-3.5" />
+                  </button>
+                </div>
+
+                {/* Direct Download */}
+                <a
+                  href={masterPlanUrl}
+                  download={`${c.name.replace(/[^a-zA-Z0-9]/g, "_")}_Masterplan.jpg`}
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-primary px-3.5 py-1.5 text-xs font-bold text-primary-foreground shadow hover:bg-primary/90 transition-all cursor-pointer"
+                >
+                  Download Map
+                </a>
+
+                {/* Share WhatsApp */}
+                <button
+                  onClick={handleShareWhatsApp}
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 px-3.5 py-1.5 text-xs font-bold text-white shadow hover:bg-emerald-700 transition-all cursor-pointer"
+                >
+                  Share Map
+                </button>
+              </>
+            )}
+
+            {/* Toggle Fullscreen */}
+            <button
+              onClick={() => setIsFullscreen(!isFullscreen)}
+              className="rounded-xl border border-white/10 bg-zinc-800 p-2 text-white/80 hover:text-white hover:bg-zinc-700 transition-all cursor-pointer"
+            >
+              {isFullscreen ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
+            </button>
+
+            {/* Close Modal */}
+            <button
+              onClick={onClose}
+              className="rounded-xl border border-white/10 bg-zinc-800 p-2 text-white/80 hover:text-white hover:bg-zinc-700 transition-all cursor-pointer"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* Content Viewer Frame */}
+        <div className="relative flex-1 bg-zinc-950 overflow-auto flex items-center justify-center p-4">
+          {masterPlanUrl ? (
+            <div
+              className="transition-transform duration-200 flex items-center justify-center min-h-full min-w-full"
+              style={{
+                transform: `scale(${zoomLevel / 100})`,
+                transformOrigin: "center center",
+              }}
+            >
+              <img
+                src={masterPlanUrl}
+                alt={`${c.name} Master Plan`}
+                className="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl border border-white/10"
+              />
+            </div>
+          ) : (
+            <div className="flex flex-col items-center justify-center p-12 text-center bg-zinc-900/60 rounded-2xl border border-white/10 max-w-md my-auto">
+              <div className="mx-auto rounded-2xl bg-accent/15 p-5 w-fit mb-4 text-accent border border-accent/20">
+                <MapIcon className="h-10 w-10" />
+              </div>
+              <h3 className="font-display font-bold text-white text-lg">Official Master Plan Pending</h3>
+              <p className="text-xs text-zinc-400 mt-2 leading-relaxed">
+                The high-resolution masterplan layout for <strong className="text-white">{c.name}</strong> is currently being formatted by {c.developer}.
+              </p>
+              <a
+                href={`https://wa.me/201029324783?text=Hi!%20I%20am%20requesting%20the%20official%20master%20plan%20for%20${encodeURIComponent(c.name)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition-all py-3 px-6 shadow-lg"
+              >
+                Request Masterplan via WhatsApp
+              </a>
+            </div>
+          )}
+        </div>
+
+        {/* Footer info bar */}
+        <div className="flex items-center justify-between border-t border-white/10 bg-zinc-900/80 px-6 py-3 text-xs text-zinc-400 shrink-0">
+          <div>
+            Developer: <strong className="text-white">{c.developer}</strong> • Location: <strong className="text-white">{destinationLocationString(c.destination)}</strong>
+          </div>
+          <div className="text-[11px] text-zinc-500 font-medium">
+            Use zoom controls or scroll to inspect site layout
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -13,5 +13,20 @@
     "area_note": "Roof 50 sqm, 100% North Facing",
     "delivery_note": "3 Years",
     "payment_plan": "5%+5% over 9 yrs"
+  },
+  {
+    "id": "saada-north-coast-8",
+    "unitNo": "SNC-2B-CH-149",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 149,
+    "view": "Sea View & Lagoons",
+    "priceEGP": 21500000,
+    "status": "Available",
+    "slug": "saada-north-coast",
+    "cluster": "Chalets",
+    "area_note": "Roof 50 sqm, 100% North Facing",
+    "delivery_note": "3 Years",
+    "payment_plan": "5%+5% over 9 yrs"
   }
 ]

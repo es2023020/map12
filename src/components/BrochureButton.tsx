@@ -1,3 +1,4 @@
+import { BrochureViewerModal } from "@/components/BrochureViewerModal";
 import { useState, useEffect } from "react";
 import {
   FileText,

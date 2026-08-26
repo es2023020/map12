@@ -1085,57 +1085,7 @@ export const compoundsGenerated: Compound[] = [
     "parentSlug": "gaia",
     "masterPlanUrl": "/masterplans/kynd-residence-gaia.svg"
   },
-  {
-    "slug": "saada-sahel",
-    "name": "Saada Sahel",
-    "destination": "ras-el-hekma",
-    "lat": 31.0646,
-    "lng": 28.174,
-    "developer": "Horizon Egypt Developments",
-    "developerSlug": "horizon-egypt-developments",
-    "priceFrom": 21.5,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
-    "beachfront": true,
-    "types": [
-      "Apartment",
-      "Chalet",
-      "Courtyard Town Villa",
-      "Crystal Villa",
-      "Shell Townhouse",
-      "Standalone Villa",
-      "The Houses",
-      "Townhouse"
-    ],
-    "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Gym & Spa",
-      "24/7 Security",
-      "Green Spaces",
-      "Commercial Strip"
-    ],
-    "hero": "/projects/saada-sahel/1.jpg",
-    "gallery": [
-      "/projects/saada-sahel/1.jpg",
-      "/projects/saada-sahel/cover.jpg",
-      "/projects/saada-sahel/hero.jpg"
-],
-    "blurb": "Saada Sahel is a premium development by Horizon Egypt Developments in Ras El Hekma, presenting high-end unit designs and world-class compound amenities.",
-    "paymentPlan": "5%+5% DP over 9 yrs",
-    "areaSize": "100 feddan",
-    "unitSizes": "80\u2013300 m\u00b2",
-    "type": "Resort",
-    "highlights": [
-      "Saada Sahel prime location",
-      "Horizon Egypt Developments signature design",
-      "Premium amenities & spaces",
-      "Ready by 2028"
-    ],
-    "km": 183.4,
-    "masterPlanUrl": "/masterplans/saada-sahel.svg"
-  },
-  {
+    {
     "slug": "the-hillage",
     "name": "The Hillage",
     "destination": "sheikh-zayed",
@@ -13234,7 +13184,6 @@ export const compoundsGenerated: Compound[] = [
       "9 Years payment plan",
       "Premium seaside villas"
     ],
-    "parentSlug": "saada-sahel",
     "masterPlanUrl": "/masterplans/saada-north-coast.svg"
   },
   {
@@ -14653,11 +14602,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/waterway-1/2.jpg",
       "/projects/waterway-1/3.jpg",
       "/projects/waterway-1/4.jpg",
-      "/projects/waterway-1/5.jpg",
-      "/projects/waterway-1/6.jpg",
-      "/projects/waterway-1/7.jpg",
-      "/projects/waterway-1/8.jpg",
-      "/projects/waterway-1/9.jpg"
+      "/projects/waterway-1/6.jpg"
 ],
     "blurb": "Spanning a prime tract of land in the heart of New Cairo's Fifth Settlement along the Northern Investors / Mohamed Naguib axis, The Waterway 1 is a boutique, ultra-luxury mixed-use residential and commercial community. Inspired by modern European architecture and sophisticated aesthetic lines, the project is defined by its signature cascading water features, serene artificial lakes, and lush landscaped walkways. It blends absolute residential privacy with an energetic, high-end commercial and retail strip right outside residents' doors.",
     "highlights": [
