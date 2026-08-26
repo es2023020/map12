@@ -1,3 +1,4 @@
+import { MasterplanViewer } from "@/components/MasterplanViewer";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
@@ -740,6 +741,16 @@ function CompoundPage() {
               </Section>
             );
           })()}
+
+                    {/* Interactive 3D Masterplan Viewer Section */}
+          <Section title="Interactive 3D Masterplan &amp; Precincts">
+            <MasterplanViewer
+              projectSlug={c.slug}
+              projectName={c.name}
+              developerName={c.developer}
+              masterplanImage={masterPlanUrl || c.hero}
+            />
+          </Section>
 
           {/* Live Availability from developer sheets */}
           {c.slug === "alam-al-roum" ? (

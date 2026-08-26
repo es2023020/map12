@@ -242,7 +242,14 @@ function CalculatorPage() {
     return mainCompounds[0]?.slug ?? "";
   }, [projectParam, mainCompounds]);
 
-  const [projectSlug, setProjectSlug] = useState(initialProjectSlug);
+  const [projectSlug, setProjectSlug] = useState(projectParam || initialProjectSlug);
+  // Directly sync projectParam from URL query to projectSlug and force mode="project"
+  useEffect(() => {
+    if (projectParam) {
+      setProjectSlug(projectParam);
+      setMode("project");
+    }
+  }, [projectParam]);
   const [projectSearchQuery, setProjectSearchQuery] = useState("");
 
   const filteredMainCompounds = useMemo(() => {

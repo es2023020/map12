@@ -1,0 +1,44 @@
+[
+  {
+    "id": "the-waterway-17",
+    "unitNo": "WW-P2-F2-F4",
+    "beds": 2,
+    "finishing": "Fully Finished w/o AC",
+    "areaSqm": 135,
+    "view": "Panoramic Views",
+    "priceEGP": 23409000,
+    "status": "Available",
+    "slug": "the-waterway",
+    "cluster": "Phase 2A",
+    "delivery_note": "2028",
+    "payment_plan": "10% DP over 6 Yrs"
+  },
+  {
+    "id": "the-waterway-18",
+    "unitNo": "WW-P2-E5-F1",
+    "beds": 2,
+    "finishing": "Fully Finished w/o AC",
+    "areaSqm": 140,
+    "view": "Panoramic Views",
+    "priceEGP": 25466000,
+    "status": "Available",
+    "slug": "the-waterway",
+    "cluster": "Phase 2A",
+    "delivery_note": "2028",
+    "payment_plan": "10% DP over 6 Yrs"
+  },
+  {
+    "id": "the-waterway-19",
+    "unitNo": "WW-P2-F4-S6",
+    "beds": 2,
+    "finishing": "Fully Finished w/o AC",
+    "areaSqm": 145,
+    "view": "Panoramic Views",
+    "priceEGP": 26622000,
+    "status": "Available",
+    "slug": "the-waterway",
+    "cluster": "Phase 2A",
+    "delivery_note": "2028",
+    "payment_plan": "10% DP over 6 Yrs"
+  }
+]

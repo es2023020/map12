@@ -2,6 +2,26 @@ import { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = [
   {
+    "slug": "w55",
+    "name": "W55",
+    "developer": "The Waterway Developments",
+    "developerSlug": "the-waterway-developments",
+    "destination": "new-cairo",
+    "city": "North 90th Street, New Cairo (Fifth Settlement)",
+    "priceFrom": 36.56,
+    "areaSize": "55 Feddans (230,000+ m²)",
+    "status": "Off-Plan",
+    "deliveryYear": 2030,
+    "paymentPlan": "10% DP over 8 Yrs",
+    "types": ["Admin", "Commercial", "Medical", "Apartments"],
+    "blurb": "W55 is a major mixed-use business resort spanning 55 feddans directly fronting North 90th Street in New Cairo by The Waterway Developments.",
+    "amenities": ["24/7 Security", "CCTV", "Underground Parking", "Green Plazas", "Water Features", "High-Speed Elevators"],
+    "hero": "/projects/w55/hero.jpg",
+    "gallery": ["/projects/w55/1.jpg"],
+    "lat": 30.0419111,
+    "lng": 31.508651
+  },
+  {
     "slug": "horizon-by-saada",
     "name": "Saada",
     "destination": "new-cairo",
@@ -284,7 +304,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Emaar Misr",
     "developerSlug": "emaar-misr",
     "priceFrom": 22.0,
-    "deliveryYear": 2028,
+    "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -615,7 +635,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
     "priceFrom": 17,
-    "deliveryYear": 2025,
+    "deliveryYear": 2024,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -732,7 +752,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
     "priceFrom": 13.76,
-    "deliveryYear": 2028,
+    "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -1163,7 +1183,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 47.6,
-    "deliveryYear": 2028,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -2850,7 +2870,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
     "priceFrom": 5,
-    "deliveryYear": 2029,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -2991,7 +3011,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
     "priceFrom": 5,
-    "deliveryYear": 2029,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -3423,7 +3443,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "PRE Developments",
     "developerSlug": "pre-developments",
     "priceFrom": 7.755,
-    "deliveryYear": 2029,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -4298,7 +4318,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 16.6,
-    "deliveryYear": 2027,
+    "deliveryYear": 2012,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -4356,7 +4376,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 30.463098,
-    "deliveryYear": 2026,
+    "deliveryYear": 2012,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -4533,7 +4553,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 23.0,
-    "deliveryYear": 2026,
+    "deliveryYear": 2012,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -5177,7 +5197,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 6.6,
-    "deliveryYear": 2030,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -6422,7 +6442,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Hyde Park Developments",
     "developerSlug": "hyde-park-developments",
     "priceFrom": 8.48,
-    "deliveryYear": 2028,
+    "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -6479,7 +6499,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
     "priceFrom": 20.8,
-    "deliveryYear": 2027,
+    "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": true,
     "types": [
@@ -6750,7 +6770,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 25.211238,
-    "deliveryYear": 2028,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -7549,11 +7569,11 @@ export const compoundsGenerated: Compound[] = [
     "km": 173,
     "lat": 31.0689544,
     "lng": 28.3450598,
-    "developer": "Equity",
+    "developer": "The Waterway Developments",
     "developerSlug": "equity",
-    "priceFrom": 8,
-    "deliveryYear": 2025,
-    "status": "RTM",
+    "priceFrom": 15.6,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -7584,7 +7604,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/the-waterway/8.jpg"
 ],
     "blurb": "The Waterway sits at km 173 on the North Coast in al dabaa, developed by Equity. A lagoon-front community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
+    "paymentPlan": "10% DP over 6 Yrs",
     "areaSize": "345 feddan",
     "unitSizes": "130\u2013415 m\u00b2",
     "city": "Al Dabaa, North Coast (km 173), Matrouh Governorate, Egypt",
@@ -9213,10 +9233,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/the-waterway-new-cairo/3.jpg",
       "/projects/the-waterway-new-cairo/4.jpg",
       "/projects/the-waterway-new-cairo/5.jpg",
-      "/projects/the-waterway-new-cairo/6.jpg",
-      "/projects/the-waterway-new-cairo/7.jpg",
-      "/projects/the-waterway-new-cairo/8.jpg",
-      "/projects/the-waterway-new-cairo/9.jpg"
+      "/projects/the-waterway-new-cairo/6.jpg"
 ],
     "blurb": "The Waterway New Cairo is a flagship development in New Cairo (Tagamo3) by The Waterway Developments, offering modern residences with full amenities for year-round living.",
     "paymentPlan": "10% down payment over 8 years equal installments",
@@ -9612,7 +9629,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 13,
-    "deliveryYear": 2027,
+    "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -10113,7 +10130,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "ORA Developers",
     "developerSlug": "ora-developers",
     "priceFrom": 5,
-    "deliveryYear": 2027,
+    "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -10639,7 +10656,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Misr Italia Properties",
     "developerSlug": "misr-italia-properties",
     "priceFrom": 11.7,
-    "deliveryYear": 2027,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -12489,7 +12506,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Ora Developers",
     "developerSlug": "ora-developers",
     "priceFrom": 16,
-    "deliveryYear": 2028,
+    "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -12589,7 +12606,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Emaar Misr",
     "developerSlug": "emaar-misr",
     "priceFrom": 16,
-    "deliveryYear": 2027,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -12735,7 +12752,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
     "priceFrom": 16,
-    "deliveryYear": 2028,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -12996,7 +13013,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 28,
-    "deliveryYear": 2030,
+    "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -13235,7 +13252,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 37,
-    "deliveryYear": 2030,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -13440,7 +13457,7 @@ export const compoundsGenerated: Compound[] = [
     "priceFrom": 38.53468,
     "paymentPlan": "5%\u201310% down payment \u00b7 7\u20138 years equal installments",
     "areaSize": "137 feddan",
-    "deliveryYear": 2028,
+    "deliveryYear": 2025,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -13484,7 +13501,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 21,
-    "deliveryYear": 2028,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -13634,7 +13651,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 17,
-    "deliveryYear": 2028,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -13679,7 +13696,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Wadi Degla",
     "developerSlug": "wadi-degla",
     "priceFrom": 7.2,
-    "deliveryYear": 2028,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -13722,7 +13739,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Beta Egypt Developments",
     "developerSlug": "beta-egypt-developments",
     "priceFrom": 5.5,
-    "deliveryYear": 2028,
+    "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -14437,7 +14454,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.7822776,
     "developer": "The Waterway Developments",
     "developerSlug": "the-waterway-developments",
-    "priceFrom": 35,
+    "priceFrom": 23.3,
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
@@ -14477,7 +14494,7 @@ export const compoundsGenerated: Compound[] = [
       "Strategic Accessibility: Easy connectivity to North 90th Street, the Ring Road, and Cairo International Airport.",
       "Diverse Real Estate Inventory: Comprises luxury ready-to-move apartments, spacious duplexes, signature penthouses, and select standalone/townhouse options with sweeping water or garden views."
     ],
-    "paymentPlan": "20% / 4 yrs",
+    "paymentPlan": "20% DP over 4 Yrs",
     "masterPlanUrl": "/Masterplans/waterway-1.jpg"
   },
   {
@@ -15547,7 +15564,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Arab Developers Holding",
     "developerSlug": "arab-developers-holding",
     "priceFrom": 7.16,
-    "deliveryYear": 2025,
+    "deliveryYear": 2010,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -16182,7 +16199,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Hyde Park Developments",
     "developerSlug": "hyde-park-developments",
     "priceFrom": 25.73,
-    "deliveryYear": 2030,
+    "deliveryYear": 2028,
     "status": "Off-Plan",
     "isNewLaunch": true,
     "beachfront": false,
@@ -16301,7 +16318,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Dorra Group",
     "developerSlug": "dorra-group",
     "priceFrom": 7.0,
-    "deliveryYear": 2028,
+    "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
