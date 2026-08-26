@@ -6,6 +6,9 @@ import { formatCurrency, formatExactPrice } from "@/lib/currency";
 import mediaRegistry from "@/data/media-registry.json";
 import {
   X,
+  ZoomIn,
+  ZoomOut,
+  RotateCcw,
   Printer,
   Download,
   Share2,
@@ -64,6 +67,75 @@ export function PdfProposalModal({ data, onClose }: Props) {
   const [downloading, setDownloading] = useState(false);
   const [copiedText, setCopiedText] = useState(false);
   const [editMode, setEditMode] = useState(false);
+  // Zoom state (50% to 200%)
+  const [zoomScale, setZoomScale] = useState(100);
+
+  const handleZoomIn = () => setZoomScale((z) => Math.min(z + 20, 200));
+  const handleZoomOut = () => setZoomScale((z) => Math.max(z - 20, 50));
+  const handleResetZoom = () => setZoomScale(100);
+
+  // Generate alternative proposal variation (Cycle unit layout types, areas, payment terms & colors)
+  const handleGenerateAlternative = () => {
+    const unitConfigs = [
+      {
+        type: "2BR Executive Lagoon Chalet",
+        bua: "125",
+        price: data.startingPriceEgp || 14500000,
+        dp: 10,
+        years: 8,
+        plan: "10% DP over 8 Years Equal Installments",
+      },
+      {
+        type: "3BR Sky Villa & Terrace",
+        bua: "185",
+        price: (data.startingPriceEgp || 14500000) * 1.35,
+        dp: 5,
+        years: 10,
+        plan: "5% DP over 10 Years Flexible Schedule",
+      },
+      {
+        type: "4BR Beachfront Garden Villa",
+        bua: "240",
+        price: (data.startingPriceEgp || 14500000) * 1.8,
+        dp: 15,
+        years: 7,
+        plan: "15% DP over 7 Years Premium Offer",
+      },
+      {
+        type: "Townhouse Corner Signature",
+        bua: "210",
+        price: (data.startingPriceEgp || 14500000) * 1.5,
+        dp: 10,
+        years: 9,
+        plan: "10% DP over 9 Years Zero Interest",
+      },
+    ];
+
+    const intros = [
+      `Discover luxury living at ${projectName} by ${developerName} — prime location in ${locationStr} featuring exclusive masterplan architecture and world-class amenities.`,
+      `Official Executive Portfolio for ${projectName} developed by ${developerName}. Positioned strategically in ${locationStr} with flexible payment schedules tailored for you.`,
+      `Tailored Investment Summary for ${projectName} (${developerName}). Premium residential inventory offering high capital appreciation in ${locationStr}.`,
+      `Exclusive Masterplan Release for ${projectName} by ${developerName} — prime opportunity in ${locationStr} with flexible long-term installment structures.`,
+    ];
+
+    const colors: Array<"gold" | "emerald" | "indigo" | "rose"> = ["gold", "emerald", "indigo", "rose"];
+    const nextIdx = (variationIndex + 1) % unitConfigs.length;
+    const cfg = unitConfigs[nextIdx];
+    const nextColor = colors[nextIdx % colors.length];
+
+    setUnitType(cfg.type);
+    setAreaSqm(cfg.bua);
+    setTotalPriceEgp(cfg.price);
+    setDpPct(cfg.dp);
+    setDurationYrs(cfg.years);
+    setPaymentPlanStr(cfg.plan);
+    setAccentColor(nextColor);
+    setVariationIndex(nextIdx);
+    setProjectDescription(intros[nextIdx % intros.length]);
+
+    toast.success(`Generated New Unit Variation: ${cfg.type} (${cfg.bua}m²)!`);
+  };
+
   // Mode (Dark vs Light) & Accent Color Presets
   const [docMode, setDocMode] = useState<"dark" | "light">("dark");
   const [accentColor, setAccentColor] = useState<"gold" | "emerald" | "indigo" | "rose">("gold");
@@ -133,25 +205,7 @@ export function PdfProposalModal({ data, onClose }: Props) {
     }
   }, [data]);
 
-  // Generate alternative proposal variation (Re-wording, color palette & tone cycling)
-  const handleGenerateAlternative = () => {
-    const intros = [
-      `Discover luxury living at ${projectName} by ${developerName} — prime location in ${locationStr} featuring exclusive masterplan architecture and world-class amenities.`,
-      `Official Executive Portfolio for ${projectName} developed by ${developerName}. Positioned strategically in ${locationStr} with flexible payment schedules tailored for you.`,
-      `Tailored Investment Summary for ${projectName} (${developerName}). Premium residential inventory offering high capital appreciation in ${locationStr}.`,
-      `Exclusive Masterplan Release for ${projectName} by ${developerName} — prime opportunity in ${locationStr} with flexible long-term installment structures.`,
-    ];
 
-    const colors: Array<"gold" | "emerald" | "indigo" | "rose"> = ["gold", "emerald", "indigo", "rose"];
-    const nextColor = colors[(colors.indexOf(accentColor) + 1) % colors.length];
-    const nextIdx = (variationIndex + 1) % intros.length;
-
-    setAccentColor(nextColor);
-    setVariationIndex(nextIdx);
-    setProjectDescription(intros[nextIdx]);
-
-    toast.success(`Generated New Proposal Variation (${nextColor.toUpperCase()} Palette)!`);
-  };
 
 
   // Dynamic Theme Helpers
@@ -369,25 +423,53 @@ export function PdfProposalModal({ data, onClose }: Props) {
                 title="Rose Gold Accent"
               />
             </div>
+            {/* Zoom Scale Controls */}
+            <div className="flex items-center gap-1 rounded-2xl bg-slate-800 p-1 border border-white/10 text-xs text-white">
+              <button
+                onClick={handleZoomOut}
+                className="rounded-xl p-1.5 hover:bg-slate-700 transition-colors cursor-pointer"
+                title="Zoom Out (-)"
+              >
+                <ZoomOut className="h-3.5 w-3.5" />
+              </button>
+              <span className="px-1.5 font-mono font-bold text-amber-400 text-xs">{zoomScale}%</span>
+              <button
+                onClick={handleZoomIn}
+                className="rounded-xl p-1.5 hover:bg-slate-700 transition-colors cursor-pointer"
+                title="Zoom In (+)"
+              >
+                <ZoomIn className="h-3.5 w-3.5" />
+              </button>
+              {zoomScale !== 100 && (
+                <button
+                  onClick={handleResetZoom}
+                  className="rounded-xl p-1 hover:bg-slate-700 text-slate-400 hover:text-white cursor-pointer"
+                  title="Reset Zoom"
+                >
+                  <RotateCcw className="h-3 w-3" />
+                </button>
+              )}
+            </div>
+
             <button
               onClick={handleGenerateAlternative}
-              className="inline-flex items-center gap-1.5 rounded-2xl border border-amber-500/40 bg-amber-500/15 px-3.5 py-2 text-xs font-bold text-amber-300 hover:bg-amber-500/25 transition-all cursor-pointer shadow-sm"
-              title="Change proposal intro wording & theme"
+              className="inline-flex items-center gap-1.5 rounded-2xl border border-amber-500/40 bg-amber-500/20 px-3.5 py-2 text-xs font-bold text-amber-300 hover:bg-amber-500/35 transition-all cursor-pointer shadow-md"
+              title="Generate new unit form & layout variation"
             >
               <RefreshCw className="h-3.5 w-3.5" />
-              <span>Regenerate Proposal</span>
+              <span>Regenerate Unit Variation</span>
             </button>
 
             <button
               onClick={() => setEditMode(!editMode)}
-              className={`inline-flex items-center gap-1.5 rounded-2xl px-3.5 py-2 text-xs font-bold transition-all border cursor-pointer ${
+              className={`inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-xs font-black transition-all border cursor-pointer ${
                 editMode
-                  ? "bg-amber-500 text-slate-950 border-amber-400 shadow-md"
-                  : "border border-white/20 bg-slate-800 text-white hover:bg-slate-700"
+                  ? "bg-amber-400 text-slate-950 border-amber-300 shadow-lg scale-105"
+                  : "bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 border-amber-400 hover:from-amber-400 hover:to-amber-500 shadow-lg"
               }`}
             >
-              {editMode ? <Eye className="h-3.5 w-3.5" /> : <Edit3 className="h-3.5 w-3.5" />}
-              {editMode ? "Preview Document" : "Edit All Details"}
+              <Edit3 className="h-4 w-4" />
+              <span>{editMode ? "Hide Editor Panel" : "EDIT ALL DETAILS"}</span>
             </button>
 
             <button
@@ -551,7 +633,8 @@ export function PdfProposalModal({ data, onClose }: Props) {
         )}
 
         {/* 📄 3-PAGE EXECUTIVE LUXURY PROPOSAL CANVAS */}
-        <div ref={docRef} className={`p-6 sm:p-10 space-y-12 font-sans transition-colors duration-300 ${theme.canvasBg}`}>
+        <div ref={docRef} className={`p-6 sm:p-10 space-y-12 font-sans transition-all duration-200 origin-top ${theme.canvasBg}`}
+        style={{ transform: `scale(${zoomScale / 100})`, transformOrigin: "top center" }}>
 
           {/* ─── PAGE 1: EXECUTIVE COVER & DEVELOPER OVERVIEW ─── */}
           <div className={`rounded-3xl border p-8 space-y-6 shadow-2xl backdrop-blur-xl transition-colors duration-300 ${theme.cardBg}`}>

@@ -1202,16 +1202,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Duplex",
-      "I-Villa Garden",
-      "Millennial",
-      "Penthouse",
-      "Sky Villa",
-      "Typical Apartment",
-      "iVilla"
-    ],
+    "types": ["One-Story Standalone Villa", "Standalone Villa", "Twin House", "Townhouse", "I-Villa"],
     "amenities": [
       "Clubhouse",
       "Swimming Pools",
@@ -1783,11 +1774,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": true,
-    "types": [
-      "Apartment",
-      "Chalet",
-      "Villa"
-    ],
+    "types": ["Beach Chalet", "One-Story Villa", "Standalone Villa"],
     "amenities": [
       "Private Beach",
       "Crystal Lagoon",
@@ -3190,12 +3177,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Villa"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa", "Twin House", "Townhouse"],
     "amenities": [
       "Clubhouse",
       "Swimming Pools",
@@ -3241,11 +3223,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2028,
     "status": "On-Hold",
     "beachfront": true,
-    "types": [
-      "Chalet",
-      "Apartment",
-      "Duplex"
-    ],
+    "types": ["Beach Chalet", "One-Story Villa", "Standalone Villa"],
     "amenities": [
       "Private Beach",
       "Crystal Lagoon",
@@ -3922,14 +3900,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Family House",
-      "Luxury Mansion",
-      "Standalone Villa",
-      "Townhouse",
-      "Twin House"
-    ],
+    "types": ["Luxury One-Story Mansion", "Standalone Villa", "Twin House", "Townhouse"],
     "amenities": [
       "Clubhouse",
       "Swimming pools",
@@ -4075,11 +4046,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Villa",
-      "Town House"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa", "Town House"],
     "amenities": [
       "Clubhouse",
       "Crystal Lagoon",
@@ -4222,11 +4189,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Town House",
-      "Villa"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa", "Town House"],
     "amenities": [
       "Clubhouse",
       "Swimming Pools",
@@ -4719,10 +4682,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Villa"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa", "Townhouse"],
     "amenities": [
       "Clubhouse",
       "Swimming Pools",
@@ -4766,10 +4726,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Villa"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa", "Townhouse"],
     "amenities": [
       "Clubhouse",
       "Swimming Pools",
@@ -4814,10 +4771,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Villa"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa"],
     "amenities": [
       "Clubhouse",
       "Swimming Pools",
@@ -5217,11 +5171,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": true,
-    "types": [
-      "Apartment",
-      "Twin Villa",
-      "Standalone Villa"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa", "Twin Villa"],
     "amenities": [
       "Private Beach",
       "Crystal Lagoon",
@@ -5315,13 +5265,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Garden Apartment",
-      "Townhome",
-      "Twinhome",
-      "Villa"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa", "Twinhome", "Townhome"],
     "amenities": [
       "Central crystal lagoon",
       "Clubhouse",
@@ -5668,11 +5612,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
-    "types": [
-      "Chalet",
-      "Apartment",
-      "Town House"
-    ],
+    "types": ["Beach Chalet", "One-Story Villa", "Standalone Villa"],
     "amenities": [
       "Clubhouse",
       "Swimming Pools",
@@ -8891,13 +8831,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2026,
     "status": "On-Hold",
     "beachfront": true,
-    "types": [
-      "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Villa",
-      "Duplex"
-    ],
+    "types": ["Standalone Villa", "Twin House", "Townhouse", "Chalet"],
     "amenities": [
       "Private Beach",
       "Crystal Lagoon",
@@ -9727,12 +9661,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2020,
     "status": "RTM",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa",
-      "Standalone Villa"
-    ],
+    "types": ["One-Story Mansion", "Standalone Villa"],
     "amenities": [
       "Crystal Lagoon",
       "Clubhouse",
@@ -9778,12 +9707,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2018,
     "status": "RTM",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa",
-      "Standalone Villa"
-    ],
+    "types": ["One-Story Mansion", "Standalone Villa"],
     "amenities": [
       "Crystal Lagoon",
       "Clubhouse",
@@ -11859,11 +11783,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": true,
-    "types": [
-      "Chalet",
-      "Twin House",
-      "Villa"
-    ],
+    "types": ["One-Story Standalone Villa", "Beachfront Villa", "Twin House"],
     "amenities": [
       "Private Beach",
       "Crystal Lagoon",
@@ -12551,12 +12471,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa",
-      "Standalone Villa"
-    ],
+    "types": ["One-Story Standalone Villa", "Standalone Villa", "Twin House", "Townhouse"],
     "amenities": [
       "Crystal Lagoon",
       "Clubhouse",
@@ -12599,12 +12514,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2027,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa",
-      "Standalone Villa"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa", "Townhouse"],
     "amenities": [
       "Crystal Lagoon",
       "Clubhouse",
@@ -12647,12 +12557,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa",
-      "Standalone Villa"
-    ],
+    "types": ["One-Story Standalone Villa", "Standalone Villa", "Twin House", "Townhouse"],
     "amenities": [
       "Crystal Lagoon",
       "Clubhouse",
@@ -12701,12 +12606,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2026,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa",
-      "Standalone Villa"
-    ],
+    "types": ["One-Story Standalone Villa", "Standalone Villa", "Townhouse"],
     "amenities": [
       "Crystal Lagoon",
       "Clubhouse",
@@ -12756,11 +12656,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Penthouse",
-      "Villa"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa", "Townhouse"],
     "amenities": [
       "Crystal Lagoon",
       "Clubhouse",
@@ -12941,11 +12837,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2027,
     "status": "RTM",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Townhouse",
-      "Twin House"
-    ],
+    "types": ["One-Story Villa", "Townhouse", "Twin House"],
     "amenities": [
       "Sports Club",
       "Commercial Strip",
@@ -13079,10 +12971,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2030,
     "status": "Off-Plan",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Chalet"
-    ],
+    "types": ["Beach Chalet", "One-Story Villa", "Standalone Villa"],
     "amenities": [
       "Swimming Pools",
       "Green Spaces",
@@ -14761,10 +14650,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2026,
     "status": "RTM",
     "beachfront": false,
-    "types": [
-      "Apartment",
-      "Standalone Villa"
-    ],
+    "types": ["One-Story Villa", "Standalone Villa"],
     "amenities": [
       "Gated perimeter with advanced electronic security gates, 24/7 security personnel, and comprehensive surveillance systems",
       "Exclusive resident clubhouse featuring social lounges, fine dining, and family gathering spaces",
