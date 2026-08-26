@@ -1,3 +1,4 @@
+import { PdfProposalModal } from "@/components/ui/PdfProposalModal";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
@@ -15,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import {
+  FileText,
   ZoomOut,
   RotateCcw,
   Minimize2,
@@ -399,6 +401,8 @@ function CompoundPage() {
 
   // Master plan popup state
   const [masterPlanOpen, setMasterPlanOpen] = useState(false);
+  // Proposal PDF modal state
+  const [proposalModalOpen, setProposalModalOpen] = useState(false);
   // Read live compound data from the store to get admin-updated fields
   const storeCompounds = useStore((s) => s.compoundsList);
   const liveProject = storeCompounds?.find((p: any) => p.slug === c.slug);
@@ -616,13 +620,21 @@ function CompoundPage() {
             <BrochureButton projectSlug={c.slug} projectName={c.name} />
             <button
               onClick={() => setMasterPlanOpen(true)}
-              className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-semibold text-primary shadow-soft hover:border-accent/60 hover:bg-accent/5 hover:text-accent transition-all duration-200 group"
+              className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-semibold text-primary shadow-soft hover:border-accent/60 hover:bg-accent/5 hover:text-accent transition-all duration-200 group cursor-pointer"
             >
               <MapIcon className="h-4 w-4 text-accent group-hover:scale-110 transition-transform" />
               View Master Plan
               {masterPlanUrl && (
                 <span className="ml-1 inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
               )}
+            </button>
+
+            <button
+              onClick={() => setProposalModalOpen(true)}
+              className="inline-flex items-center gap-2 rounded-xl bg-slate-900 border border-white/10 px-4 py-2.5 text-sm font-bold text-white shadow-md hover:bg-slate-800 hover:border-amber-500/50 transition-all duration-200 cursor-pointer"
+            >
+              <FileText className="h-4 w-4 text-amber-400" />
+              Create Client Proposal PDF
             </button>
           </div>
 
@@ -1537,6 +1549,28 @@ function CompoundPage() {
           </form>
         </DialogContent>
       </Dialog>
+    
+      {/* Client Proposal PDF Modal */}
+      {proposalModalOpen && (
+        <PdfProposalModal
+          data={{
+            projectName: c.name,
+            projectSlug: c.slug,
+            developerName: c.developer,
+            location: destination ? `${destination.name}, Egypt` : `${c.destination.replace("-", " ").toUpperCase()}, Egypt`,
+            unitType: c.types && c.types.length > 0 ? c.types[0] : "Luxury Layout",
+            areaSqm: c.unitSizes || "145",
+            startingPriceEgp: (c.priceFrom || 10) * 1000000,
+            paymentPlanStr: c.paymentPlan || "10% DP over 8 Yrs",
+            dpPct: 10,
+            durationYrs: 8,
+            deliveryNote: String(c.deliveryYear),
+            amenities: c.amenities,
+            description: c.blurb,
+          }}
+          onClose={() => setProposalModalOpen(false)}
+        />
+      )}
     </Shell>
   );
 }
