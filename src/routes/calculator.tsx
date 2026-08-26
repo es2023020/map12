@@ -21,8 +21,10 @@ import { destinations } from "@/data/destinations";
 import { isReadyToMove, hasRTMUnits, hasOffPlanUnits } from "@/lib/delivery";
 
 export const Route = createFileRoute("/calculator")({
-  validateSearch: (search: Record<string, unknown>): { project?: string; price?: string } => ({
+  validateSearch: (search: Record<string, unknown>): { project?: string; unitId?: string; unitType?: string; price?: string } => ({
     project: typeof search.project === "string" ? search.project : "",
+    unitId: typeof search.unitId === "string" ? search.unitId : "",
+    unitType: typeof search.unitType === "string" ? search.unitType : "",
     price: typeof search.price === "string" ? search.price : undefined,
   }),
   loader: async () => {
@@ -228,7 +230,7 @@ function CalculatorPage() {
     });
   }, [compoundsList, availabilityList]);
 
-  const { project: projectParam } = Route.useSearch();
+  const { project: projectParam, unitId: unitIdParam, unitType: unitTypeParam, price: priceParam } = Route.useSearch();
   const [mode, setMode] = useState<"project" | "budget">(projectParam ? "project" : "budget");
 
   const initialProjectSlug = useMemo(() => {
@@ -281,6 +283,9 @@ function CalculatorPage() {
   // New unit selector state
   const [selectedUnitId, setSelectedUnitId] = useState("");
 
+
+
+
   // Advanced filters for "Find by Budget" mode
   const [budgetDestFilters, setBudgetDestFilters] = useState<string[]>([]);
   const [budgetTypeFilter, setBudgetTypeFilter] = useState("");
@@ -323,6 +328,35 @@ function CalculatorPage() {
     });
     return list;
   }, [projectAvail]);
+
+  // Auto-select unit or unit type when passed in URL params
+  useEffect(() => {
+    if (selectableItems.length === 0) return;
+    if (unitIdParam) {
+      const match = selectableItems.find((item) => item.id === `unit-${unitIdParam}` || item.id === unitIdParam);
+      if (match) {
+        setSelectedUnitId(match.id);
+        return;
+      }
+    }
+    if (unitTypeParam) {
+      const match = selectableItems.find((item) => item.label.toLowerCase().includes(unitTypeParam.toLowerCase()));
+      if (match) {
+        setSelectedUnitId(match.id);
+        return;
+      }
+    }
+    if (priceParam) {
+      const priceNum = parseFloat(priceParam);
+      if (!isNaN(priceNum) && priceNum > 0) {
+        const priceM = priceNum > 1000 ? priceNum / 1_000_000 : priceNum;
+        const closest = [...selectableItems].sort((a, b) => Math.abs(a.priceM - priceM) - Math.abs(b.priceM - priceM))[0];
+        if (closest) {
+          setSelectedUnitId(closest.id);
+        }
+      }
+    }
+  }, [selectableItems, unitIdParam, unitTypeParam, priceParam]);
 
   const activeUnitItem = useMemo(() => {
     return selectableItems.find((item) => item.id === selectedUnitId);

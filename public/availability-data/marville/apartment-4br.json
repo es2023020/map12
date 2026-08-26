@@ -1,0 +1,17 @@
+[
+  {
+    "id": "marville-4",
+    "unitNo": "MV-4B-240",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 240,
+    "view": "Sea & Lagoons",
+    "priceEGP": 23000000,
+    "status": "Available",
+    "slug": "marville",
+    "cluster": "Riverfront Sector",
+    "area_note": "240–272 sqm",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 10 Yrs"
+  }
+]

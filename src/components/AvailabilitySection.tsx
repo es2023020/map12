@@ -273,12 +273,14 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
 
 export function UnitDetailModal({
   unit,
+  projectSlug,
   deliveryYear,
   compoundStatus,
   onClose,
   onRegisterInterest,
 }: {
   unit: UnitBreakdown;
+  projectSlug?: string;
   deliveryYear?: number;
   compoundStatus?: string;
   onClose: () => void;
@@ -419,7 +421,11 @@ export function UnitDetailModal({
           <div className="flex flex-col gap-2.5 pt-2">
             <Link
               to="/calculator"
-              search={{ project: (unit as any).projectSlug || "", price: String(unit.minPriceM * 1000000) }}
+              search={{
+                project: projectSlug || (unit as any).projectSlug || "",
+                unitType: unit.type,
+                price: String(unit.minPriceM * 1000000)
+              }}
               onClick={onClose}
               className="w-full rounded-2xl bg-accent py-3.5 text-xs font-bold text-accent-foreground shadow-md hover:bg-accent/90 transition-all flex items-center justify-center gap-2 cursor-pointer"
             >

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "marresidence-1",
+    "unitNo": "MAR-STD-49",
+    "beds": 1,
+    "finishing": "Fully Furnished + ACs & Appliances",
+    "areaSqm": 49,
+    "view": "Sea & Lagoons",
+    "priceEGP": 8800000,
+    "status": "Available",
+    "slug": "marresidence",
+    "cluster": "Rotana Branded Hotel Apartments",
+    "area_note": "49–62 sqm",
+    "delivery_note": "3 Years",
+    "payment_plan": "10% DP over 8 Yrs"
+  }
+]
