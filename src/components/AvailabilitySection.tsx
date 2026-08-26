@@ -1,3 +1,22 @@
+function parsePaymentPlan(plan?: string): { dp: number; duration: number } {
+  if (!plan) return { dp: 10, duration: 8 };
+  const lower = plan.toLowerCase();
+
+  let dp = 10;
+  const dpMatch = lower.match(/(\d+(?:\.\d+)?)\s*%\s*(?:dp|down)/);
+  if (dpMatch) {
+    dp = parseFloat(dpMatch[1]);
+  }
+
+  let duration = 8;
+  const durMatch = lower.match(/(\d+)\s*(?:years?|yrs?)/);
+  if (durMatch) {
+    duration = parseInt(durMatch[1], 10);
+  }
+
+  return { dp, duration };
+}
+
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import type { ProjectAvailability, UnitBreakdown } from "@/data/availability";
@@ -86,17 +105,30 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
                       {getUnitIcon(row.type)}
                     </span>
                     <div className="flex items-center gap-1.5">
-                      {row.deliveryNote && (
-                        <span
-                          className={`inline-flex items-center rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
-                            isReadyToMove(undefined, row.deliveryNote)
-                              ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30"
-                              : "bg-primary/10 text-primary border border-primary/20"
-                          }`}
-                        >
-                          {isReadyToMove(undefined, row.deliveryNote) ? "RTM" : "Off-Plan"}
-                        </span>
-                      )}
+                      {(() => {
+                        const unitRtm = isReadyToMove(undefined, row.deliveryNote);
+                        return (
+                          <span
+                            className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider shadow-2xs border ${
+                              unitRtm
+                                ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30"
+                                : "bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30"
+                            }`}
+                          >
+                            {unitRtm ? (
+                              <>
+                                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                                <span>RTM</span>
+                              </>
+                            ) : (
+                              <>
+                                <CalendarClock className="h-3 w-3 text-amber-500" />
+                                <span>Off-Plan</span>
+                              </>
+                            )}
+                          </span>
+                        );
+                      })()}
                       <span className="inline-flex items-center gap-0.5 rounded-full bg-secondary/80 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground group-hover:bg-accent/10 group-hover:text-accent transition-colors">
                         Details
                         <ChevronRight className="h-3 w-3" />
@@ -239,125 +271,160 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
 
 // ─── Unit Detail Modal ─────────────────────────────────────────────────────────
 
-function UnitDetailModal({
+export function UnitDetailModal({
   unit,
+  deliveryYear,
+  compoundStatus,
   onClose,
   onRegisterInterest,
 }: {
   unit: UnitBreakdown;
+  deliveryYear?: number;
+  compoundStatus?: string;
   onClose: () => void;
-  onRegisterInterest?: (type: string) => void;
+  onRegisterInterest?: (unitType: string) => void;
 }) {
   const avgPriceM = (unit.minPriceM + unit.maxPriceM) / 2;
-  const label = `${unit.type}${unit.beds ? ` · ${unit.beds} Bedroom${unit.beds > 1 ? "s" : ""}` : ""}`;
+  const unitRtm = isReadyToMove(deliveryYear, unit.deliveryNote, compoundStatus);
 
-  const handleBackdrop = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget) onClose();
-  };
+  // Parse DP and duration from payment plan
+  const parsedPlan = parsePaymentPlan(unit.paymentPlan || "");
+  const estimatedDpEgp = (avgPriceM * 1_000_000) * (parsedPlan.dp / 100);
+  const estimatedRemainingEgp = (avgPriceM * 1_000_000) - estimatedDpEgp;
+  const estimatedMonthlyEgp = parsedPlan.duration > 0 ? estimatedRemainingEgp / (parsedPlan.duration * 12) : 0;
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/85 backdrop-blur-sm"
-      onClick={handleBackdrop}
-    >
-      <div
-        className="relative w-full max-w-md rounded-2xl overflow-hidden border border-border bg-card shadow-lg"
-        role="dialog"
-        aria-modal="true"
-        aria-label={`${label} Details`}
-      >
-        {/* Simple header */}
-        <div className="px-6 pt-6 pb-4 border-b border-border/60">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
+      <div className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-border bg-card shadow-2xl transition-all">
+        {/* Modal Header */}
+        <div className="relative border-b border-border/40 p-6 bg-gradient-to-r from-secondary/50 via-card to-secondary/30">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 h-8 w-8 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary transition-colors"
-            aria-label="Close"
+            aria-label="Close modal"
+            className="absolute right-4 top-4 rounded-full p-2 text-muted-foreground hover:bg-secondary hover:text-primary transition-colors cursor-pointer"
           >
             <X className="h-4 w-4" />
           </button>
-
+          
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-secondary text-primary">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent/15 text-accent border border-accent/20">
               {getUnitIcon(unit.type)}
-            </span>
+            </div>
             <div>
-              <div className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
-                Unit Detail View
+              <div className="flex items-center gap-2">
+                <span
+                  className={`inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider shadow-2xs border ${
+                    unitRtm
+                      ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30"
+                      : "bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30"
+                  }`}
+                >
+                  {unitRtm ? (
+                    <>
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      <span>Ready to Move</span>
+                    </>
+                  ) : (
+                    <>
+                      <CalendarClock className="h-3 w-3 text-amber-500" />
+                      <span>Off-Plan</span>
+                    </>
+                  )}
+                </span>
+                {unit.cluster && (
+                  <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">
+                    {unit.cluster}
+                  </span>
+                )}
               </div>
-              <h2 className="font-display text-lg font-bold text-primary leading-tight">
-                {unit.type}
+              <h2 className="font-display text-xl font-bold text-primary leading-tight mt-1">
+                {unit.type} {unit.beds ? `(${unit.beds} Bedrooms)` : ""}
               </h2>
             </div>
           </div>
         </div>
 
-        {/* Body */}
-        <div className="p-6 space-y-4">
-          {/* Price details */}
-          <div className="rounded-xl bg-secondary/45 p-4 border border-border/40">
-            <div className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">
-              Average Price
-            </div>
-            <div className="font-display text-2xl font-black text-primary mt-0.5">
-              EGP {avgPriceM.toFixed(1)}M
-            </div>
-            <div className="text-xs text-muted-foreground mt-0.5">
-              Range: EGP {unit.minPriceM.toFixed(1)}M – {unit.maxPriceM.toFixed(1)}M
+        {/* Modal Body */}
+        <div className="p-6 space-y-5 max-h-[80vh] overflow-y-auto">
+          {/* Price Banner */}
+          <div className="rounded-2xl bg-gradient-to-br from-primary/5 via-card to-accent/5 p-5 border border-accent/20 shadow-xs">
+            <div className="flex items-baseline justify-between flex-wrap gap-2">
+              <div>
+                <div className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">
+                  Starting Price
+                </div>
+                <div className="font-display text-3xl font-black text-primary mt-0.5 tracking-tight">
+                  EGP {unit.minPriceM.toFixed(2)}M
+                  {unit.minPriceM !== unit.maxPriceM && (
+                    <span className="text-sm font-semibold text-muted-foreground"> – {unit.maxPriceM.toFixed(2)}M</span>
+                  )}
+                </div>
+              </div>
+
+              {/* Quick DP & Monthly badges */}
+              <div className="flex flex-col items-end gap-1">
+                <span className="inline-flex items-center gap-1 rounded-lg bg-emerald-500/10 px-2.5 py-1 text-[11px] font-bold text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                  💡 DP ({parsedPlan.dp}%): EGP {(estimatedDpEgp / 1_000_000).toFixed(2)}M
+                </span>
+                {estimatedMonthlyEgp > 0 && (
+                  <span className="inline-flex items-center gap-1 rounded-lg bg-blue-500/10 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:text-blue-400 border border-blue-500/20">
+                    📅 EGP {Math.round(estimatedMonthlyEgp).toLocaleString()}/mo
+                  </span>
+                )}
+              </div>
             </div>
           </div>
 
-          {/* Sizing & details */}
-          <div className="grid grid-cols-2 gap-2 text-xs">
+          {/* Sizing & Specs Grid */}
+          <div className="grid grid-cols-2 gap-3 text-xs">
             <DetailChip
-              icon={<Ruler className="h-3.5 w-3.5" />}
-              label="Typical Area"
+              icon={<Ruler className="h-4 w-4 text-accent" />}
+              label="BUA / Unit Area"
               value={
                 unit.minSqm === unit.maxSqm
                   ? `${unit.minSqm} m²`
                   : `${unit.minSqm}–${unit.maxSqm} m²`
               }
             />
-            {unit.cluster && (
-              <DetailChip
-                icon={<MapPin className="h-3.5 w-3.5" />}
-                label="Phase/Cluster"
-                value={unit.cluster}
-              />
-            )}
+            <DetailChip
+              icon={<CalendarClock className="h-4 w-4 text-accent" />}
+              label="Delivery Timeline"
+              value={unit.deliveryNote || (unitRtm ? "Ready to Move" : "4 Years")}
+            />
             {unit.finishing && (
               <DetailChip
-                icon={<Paintbrush2 className="h-3.5 w-3.5" />}
-                label="Finishing"
+                icon={<Paintbrush2 className="h-4 w-4 text-accent" />}
+                label="Finishing Type"
                 value={unit.finishing}
               />
             )}
-            {unit.deliveryNote && (
+            {unit.available > 0 && (
               <DetailChip
-                icon={<CalendarClock className="h-3.5 w-3.5" />}
-                label="Delivery"
-                value={unit.deliveryNote}
+                icon={<Layers className="h-4 w-4 text-accent" />}
+                label="Available Units"
+                value={`${unit.available} Units Listed`}
               />
             )}
             {unit.paymentPlan && (
               <DetailChip
-                icon={<BadgePercent className="h-3.5 w-3.5" />}
-                label="Payment Plan"
+                icon={<BadgePercent className="h-4 w-4 text-accent" />}
+                label="Payment Terms"
                 value={unit.paymentPlan}
                 fullWidth
               />
             )}
           </div>
 
-          {/* Action buttons */}
-          <div className="flex flex-col gap-2 pt-2">
+          {/* Action Buttons */}
+          <div className="flex flex-col gap-2.5 pt-2">
             <Link
               to="/calculator"
               search={{ project: (unit as any).projectSlug || "", price: String(unit.minPriceM * 1000000) }}
               onClick={onClose}
-              className="w-full rounded-xl bg-accent py-3 text-xs font-bold text-accent-foreground shadow-md hover:bg-accent/90 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full rounded-2xl bg-accent py-3.5 text-xs font-bold text-accent-foreground shadow-md hover:bg-accent/90 transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <Calculator className="h-4 w-4" />
-              Calculate Payment Plan
+              Open Live Mortgage & Installment Calculator
             </Link>
 
             {onRegisterInterest && (
@@ -366,18 +433,18 @@ function UnitDetailModal({
                   onRegisterInterest(unit.type);
                   onClose();
                 }}
-                className="w-full rounded-xl bg-primary py-2.5 text-xs font-bold text-primary-foreground shadow hover:bg-primary/95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full rounded-2xl bg-primary py-3 text-xs font-bold text-primary-foreground shadow hover:bg-primary/95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
               >
-                Register Interest
-                <ArrowRight className="h-3.5 w-3.5" />
+                Register Interest for this Unit
+                <ArrowRight className="h-4 w-4" />
               </button>
             )}
             <a
               href="tel:201029324783"
-              className="w-full rounded-xl border border-border bg-card py-2.5 text-xs font-bold text-primary text-center hover:bg-secondary transition-all flex items-center justify-center gap-1.5"
+              className="w-full rounded-2xl border border-border bg-card py-3 text-xs font-bold text-primary text-center hover:bg-secondary transition-all flex items-center justify-center gap-2"
             >
-              <Phone className="h-3.5 w-3.5" />
-              Request Live Price
+              <Phone className="h-4 w-4 text-accent" />
+              Speak with Property Representative
             </a>
           </div>
         </div>

@@ -1487,7 +1487,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "il-cazar-developments",
     "priceFrom": 4.9,
     "deliveryYear": 2028,
-    "status": "Off-Plan",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -1952,51 +1952,6 @@ export const compoundsGenerated: Compound[] = [
       "High-end leisure facilities",
       "Ready 2028"
     ]
-  },
-  {
-    "slug": "olive-oasis",
-    "name": "Olive Oasis",
-    "destination": "ras-el-hekma",
-    "lat": 31.095,
-    "lng": 27.935,
-    "developer": "Misr Italia",
-    "developerSlug": "misr-italia",
-    "priceFrom": 12.6,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
-    "beachfront": true,
-    "types": [
-      "Chalet",
-      "Villa"
-    ],
-    "amenities": [
-      "Private Beach",
-      "Crystal Lagoon",
-      "Beach Bar",
-      "Clubhouse",
-      "Swimming Pools"
-    ],
-    "hero": "/projects/olive-oasis/1.jpg",
-    "gallery": [
-      "/projects/olive-oasis/1.jpg",
-      "/projects/olive-oasis/2.jpg",
-      "/projects/olive-oasis/3.jpg",
-      "/projects/olive-oasis/4.jpg",
-      "/projects/olive-oasis/5.jpg",
-      "/projects/olive-oasis/6.jpg"
-],
-    "blurb": "Olive Oasis by Misr Italia Properties is among the premium beachfront phases inside the Solare Resort in Ras El Hekma. The Olive Oasis Solare Phase has a prime location on kilometer 199 of the International Coastal Road.",
-    "paymentPlan": "5% down \u00b7 8 years equal installments",
-    "areaSize": "180 feddan",
-    "unitSizes": "120\u2013350 m\u00b2",
-    "type": "Resort",
-    "highlights": [
-      "Ras El Hekma location",
-      "Mediterranean serenity",
-      "Lush olive groves",
-      "Ready 2028"
-    ],
-    "parentSlug": "solare"
   },
   {
     "slug": "club-hill-solare",
@@ -3650,7 +3605,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "misr-italia-properties",
     "priceFrom": 7.8,
     "deliveryYear": 2023,
-    "status": "RTM",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Offices",
@@ -5165,9 +5120,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.08,
     "developer": "Maven Developments",
     "developerSlug": "maven-developments",
-    "priceFrom": 8.1,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "priceFrom": 6.59,
+    "deliveryYear": 2029,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -5192,16 +5147,16 @@ export const compoundsGenerated: Compound[] = [
       "/projects/cali-coast-ras-el-hekma/1.jpg",
       "/projects/cali-coast-ras-el-hekma/10.jpg",
       "/projects/cali-coast-ras-el-hekma/11.jpg",
+      "/projects/cali-coast-ras-el-hekma/12.jpeg",
       "/projects/cali-coast-ras-el-hekma/2.jpg",
       "/projects/cali-coast-ras-el-hekma/3.jpg",
       "/projects/cali-coast-ras-el-hekma/4.jpg",
       "/projects/cali-coast-ras-el-hekma/5.jpg",
       "/projects/cali-coast-ras-el-hekma/6.jpg",
-      "/projects/cali-coast-ras-el-hekma/7.jpg",
-      "/projects/cali-coast-ras-el-hekma/8.jpg"
+      "/projects/cali-coast-ras-el-hekma/7.jpg"
 ],
     "blurb": "Cali Coast is a California-inspired 230\u2013245 feddan beach resort by Maven Developments in Ras El Hekma with a 600m beachfront and swimmable lagoons.",
-    "paymentPlan": "0%\u201310% down payment, remaining balance spread over 8\u201310 years (up to 31% cash discount)",
+    "paymentPlan": "5% DP over 9 Yrs",
     "areaSize": "230\u2013245 feddan",
     "unitSizes": "45\u2013242 m\u00b2",
     "type": "Resort",
@@ -7271,8 +7226,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
     "priceFrom": 8,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2029,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -7428,62 +7383,6 @@ export const compoundsGenerated: Compound[] = [
     "brochureUrl": "/brochures/Safia-E-Brochure-IL-Cazar.pdf"
   },
     {
-    "slug": "azzar-islands",
-    "name": "AZZAR Islands",
-    "destination": "ras-el-hekma",
-    "km": 182,
-    "lat": 31.0636,
-    "lng": 28.19,
-    "developer": "Reedy Group",
-    "developerSlug": "reedy-group",
-    "priceFrom": 16.5,
-    "deliveryYear": 2026,
-    "status": "RTM",
-    "beachfront": true,
-    "types": [
-      "Chalet",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
-    ],
-    "amenities": [
-      "Private beach",
-      "Crystal lagoons",
-      "Beach club",
-      "Aqua park",
-      "Commercial mall",
-      "Health club",
-      "Open-air theatre",
-      "Equestrian paths",
-      "24/7 security"
-    ],
-    "hero": "/projects/azzar-islands/1.jpg",
-    "gallery": [
-      "/projects/azzar-islands/1.jpg",
-      "/projects/azzar-islands/2.jpg",
-      "/projects/azzar-islands/3.jpg",
-      "/projects/azzar-islands/4.jpg",
-      "/projects/azzar-islands/5.jpg",
-      "/projects/azzar-islands/6.jpg",
-      "/projects/azzar-islands/7.jpg",
-      "/projects/azzar-islands/8.jpg",
-      "/projects/azzar-islands/9.jpg"
-],
-    "blurb": "AZZAR Islands is a boutique luxury beachfront community by Reedy Group in Ras El Hekma designed around exclusive island-inspired neighborhoods, offering privacy and direct sea access with low-density 400-acre master plan (20% footprint).",
-    "paymentPlan": "5% down payment, remaining balance over 8 yrs equal interest-free installments | 5% + 5% in 3 mos, 6\u20137 yrs",
-    "areaSize": "400 feddan",
-    "unitSizes": "85\u2013310 m\u00b2",
-    "city": "Ras El Hekma, North Coast (km 182), Matrouh Governorate, Egypt",
-    "type": "Resort",
-    "highlights": [
-      "Exclusive island-inspired resort",
-      "Low-density private living",
-      "Panoramic sea views",
-      "km 182 Ras El Hekma"
-    ],
-    "masterPlanUrl": "/Masterplans/azzar-islands.jpg"
-  },
-  {
     "slug": "lvls",
     "name": "LVLS",
     "destination": "ras-el-hekma",
@@ -7997,8 +7896,8 @@ export const compoundsGenerated: Compound[] = [
     "km": 146,
     "lat": 31.027,
     "lng": 28.576,
-    "developer": "Maven Developments",
-    "developerSlug": "maven-developments",
+    "developer": "G Developments",
+    "developerSlug": "g-developments",
     "priceFrom": 24,
     "deliveryYear": 2026,
     "status": "RTM",
@@ -10641,7 +10540,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "hyde-park-developments",
     "priceFrom": 10.97,
     "deliveryYear": 2027,
-    "status": "Off-Plan",
+    "status": "On-Hold",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -11396,8 +11295,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
     "priceFrom": 5.8,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2029,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -11446,8 +11345,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 10,
-    "deliveryYear": 2027,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -11649,8 +11548,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Roya Developments",
     "developerSlug": "roya-developments",
     "priceFrom": 7,
-    "deliveryYear": 2025,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -11699,8 +11598,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
     "priceFrom": 9,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2029,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -12590,8 +12489,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Ora Developers",
     "developerSlug": "ora-developers",
     "priceFrom": 16,
-    "deliveryYear": 2027,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -12637,8 +12536,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Ora Developers",
     "developerSlug": "ora-developers",
     "priceFrom": 14,
-    "deliveryYear": 2027,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -12691,7 +12590,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "emaar-misr",
     "priceFrom": 16,
     "deliveryYear": 2027,
-    "status": "RTM",
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -13024,7 +12923,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
     "priceFrom": 7.916,
-    "deliveryYear": 2030,
+    "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -13541,8 +13440,8 @@ export const compoundsGenerated: Compound[] = [
     "priceFrom": 38.53468,
     "paymentPlan": "5%\u201310% down payment \u00b7 7\u20138 years equal installments",
     "areaSize": "137 feddan",
-    "deliveryYear": 2025,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -13585,8 +13484,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 21,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -13735,8 +13634,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 17,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -13780,8 +13679,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Wadi Degla",
     "developerSlug": "wadi-degla",
     "priceFrom": 7.2,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -13823,8 +13722,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Beta Egypt Developments",
     "developerSlug": "beta-egypt-developments",
     "priceFrom": 5.5,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -16320,46 +16219,6 @@ export const compoundsGenerated: Compound[] = [
     "type": "Residential"
   },
   {
-    "slug": "olive-oasis-solare",
-    "name": "Olive Oasis Villas - Solare",
-    "parentSlug": "solare",
-    "destination": "ras-el-hekma",
-    "lat": 31.095,
-    "lng": 27.935,
-    "developer": "Misr Italia Properties",
-    "developerSlug": "misr-italia-properties",
-    "priceFrom": 13.3,
-    "deliveryYear": 2028,
-    "status": "Off-Plan",
-    "isNewLaunch": true,
-    "beachfront": true,
-    "types": [
-      "Water Villa Loft",
-      "Standalone Villa",
-      "Twin Villa"
-    ],
-    "amenities": [
-      "EOI 200,000 EGP",
-      "5% Down Payment + 10 Years Installments",
-      "Water Villa Lofts",
-      "One-Story Twin Villas",
-      "Standalone Villas",
-      "Italian Coastal Lagoons"
-    ],
-    "hero": "/projects/solare/1.jpg",
-    "gallery": [
-      "/projects/solare/1.jpg",
-      "/projects/solare/2.jpg",
-      "/projects/solare/3.jpg"
-    ],
-    "blurb": "Olive Oasis Villas is the luxury villa phase of Solare Ras El Hekma by Misr Italia Properties featuring Water Villa Lofts (2BR starting at 13.3M, 3BR starting at 15.3M), Standalone Villas (starting at 20.6M), and One-Story Twin Villas (starting at 21.7M) with 5% down payment and 10-year payment plans.",
-    "paymentPlan": "5% Down Payment, Installments up to 10 Years (EOI 200k)",
-    "areaSize": "Exclusive Villa Phase in Solare",
-    "unitSizes": "130 - 235 m\u00b2",
-    "city": "Ras El Hekma, North Coast, Egypt",
-    "type": "Resort"
-  },
-  {
     "slug": "mayan-el-shorouk",
     "name": "Mayan El Shorouk",
     "destination": "shorouk",
@@ -16367,9 +16226,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.621,
     "developer": "STM Developments",
     "developerSlug": "stm-developments",
-    "priceFrom": 5.1,
-    "deliveryYear": 2027,
-    "status": "RTM",
+    "priceFrom": 5.6,
+    "deliveryYear": 2029,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -16392,7 +16251,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mayan-el-shorouk/4.jpg"
 ],
     "blurb": "Mayan El Shorouk is a 36-acre residential compound by STM Developments directly opposite Madinaty at the Suez Road & Sadat Axis intersection, offering fully finished apartments and ready-to-move townhouses.",
-    "paymentPlan": "10% down \u00b7 10 years equal installments",
+    "paymentPlan": "10% DP over 10 Yrs",
     "areaSize": "36 feddan",
     "unitSizes": "93-228 sqm"
   },
@@ -16404,9 +16263,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.489,
     "developer": "STM Developments",
     "developerSlug": "stm-developments",
-    "priceFrom": 8.5,
-    "deliveryYear": 2027,
-    "status": "RTM",
+    "priceFrom": 8.6,
+    "deliveryYear": 2029,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment"
@@ -16429,7 +16288,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mayan-new-cairo/4.jpg"
 ],
     "blurb": "Mayan New Cairo is a 48-acre low-density residential compound by STM Developments situated directly on Mohamed Naguib Axis & Old Suez Road (facing Al Rehab), featuring fully finished G+6 apartments delivered in 9-12 months.",
-    "paymentPlan": "10% down \u00b7 10 years equal installments",
+    "paymentPlan": "10% DP over 10 Yrs",
     "areaSize": "48 feddan",
     "unitSizes": "99-160 sqm"
   },
