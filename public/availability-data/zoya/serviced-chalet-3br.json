@@ -1,0 +1,16 @@
+[
+  {
+    "id": "zoya-2",
+    "unitNo": "ZY-RV-3B-123",
+    "beds": 3,
+    "finishing": "Fully Finished Serviced",
+    "areaSqm": 123,
+    "view": "Sea & Lagoon Views",
+    "priceEGP": 15900000,
+    "status": "Available",
+    "slug": "zoya",
+    "cluster": "Rituals Village (Serviced)",
+    "delivery_note": "Q4 2029",
+    "payment_plan": "5% DP over 10 Yrs"
+  }
+]

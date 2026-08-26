@@ -231,7 +231,9 @@ function CalculatorPage() {
   }, [compoundsList, availabilityList]);
 
   const { project: projectParam, unitId: unitIdParam, unitType: unitTypeParam, price: priceParam } = Route.useSearch();
-  const [mode, setMode] = useState<"project" | "budget">(projectParam ? "project" : "budget");
+  const [mode, setMode] = useState<"project" | "budget">(
+    (projectParam || unitTypeParam || unitIdParam) ? "project" : "budget"
+  );
 
   const initialProjectSlug = useMemo(() => {
     if (projectParam && mainCompounds.some((c) => c.slug === projectParam)) {
@@ -372,10 +374,14 @@ function CalculatorPage() {
     }
   }, [mode, projectSlug, selectedProject, activeUnitItem]);
 
-  // Reset selected unit if project changes
+  // Reset selected unit when project changes (except on initial load with URL params)
+  const [prevProjectSlug, setPrevProjectSlug] = useState(projectSlug);
   useEffect(() => {
-    setSelectedUnitId("");
-  }, [projectSlug]);
+    if (prevProjectSlug && prevProjectSlug !== projectSlug) {
+      setSelectedUnitId("");
+    }
+    setPrevProjectSlug(projectSlug);
+  }, [projectSlug, prevProjectSlug]);
 
   const parsedPrice = useMemo(() => {
     return parseBudgetInput(budgetText);

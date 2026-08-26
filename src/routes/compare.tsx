@@ -1,3 +1,6 @@
+import mediaRegistry from "@/data/media-registry.json";
+import { formatCurrency, formatExactPrice } from "@/lib/currency";
+import { Share2, Copy } from "lucide-react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { Shell } from "@/components/layout/Shell";
@@ -74,6 +77,9 @@ export function ComparePage() {
 
   const [highlightDiffs, setHighlightDiffs] = useState(true);
   const [showDiffsOnly, setShowDiffsOnly] = useState(false);
+
+
+
 
   // Quick preset comparisons
   const QUICK_PRESETS = [
@@ -218,6 +224,48 @@ export function ComparePage() {
   }, [searchQuery]);
 
   // Construct table rows
+  const currency = useStore((s) => s.currency);
+  const [copiedCompare, setCopiedCompare] = useState(false);
+
+  const compareShareText = useMemo(() => {
+    if (validSlots.length === 0) return "";
+    let msg = `Hello [Client Name],\n\n`;
+    msg += `Here is your customized side-by-side property comparison sheet:\n\n`;
+
+    validSlots.forEach((s, idx) => {
+      const slug = s.comp?.slug || "";
+      const projectMedia = (mediaRegistry.projects_media as any)?.[slug] || [];
+      const images = projectMedia.filter((m: any) => m.type === "image");
+      const videos = projectMedia.filter((m: any) => m.type === "video");
+
+      msg += `*${idx + 1}. ${s.comp?.name}* by ${s.comp?.developer}\n`;
+      msg += ` • Location: ${s.comp?.destination.replace(/-/g, " ").toUpperCase()}\n`;
+      msg += ` • Unit Type: ${s.specs.unitTypeDisplay}\n`;
+      msg += ` • Built-up Area: ${s.specs.area}\n`;
+      msg += ` • Starting Price: ${formatCurrency(s.specs.price, currency)}\n`;
+      msg += ` • Payment Plan: ${s.specs.paymentPlan}\n`;
+      msg += ` • Delivery Date: ${s.specs.delivery}\n`;
+
+      if (images.length > 0) {
+        msg += ` 🖼️ Photos: ${window?.location?.origin || "https://propertyatlas.eg"}${images[0].path}\n`;
+      }
+      if (videos.length > 0) {
+        msg += ` 📹 Video Walkthrough: ${window?.location?.origin || "https://propertyatlas.eg"}${videos[0].path}\n`;
+      }
+      msg += `\n`;
+    });
+
+    msg += `If you are interested in any of these projects, reply to this message to arrange a site visit or schedule a presentation meeting.\n\n`;
+    msg += `Contact Representative: Property Atlas Sales Team (+20 102 932 4783)`;
+    return msg;
+  }, [validSlots, currency]);
+
+  const handleCopyCompare = () => {
+    navigator.clipboard.writeText(compareShareText);
+    setCopiedCompare(true);
+    setTimeout(() => setCopiedCompare(false), 2000);
+  };
+
   const tableRows = useMemo(() => {
     if (validSlots.length === 0) return [];
 

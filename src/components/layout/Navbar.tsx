@@ -1,3 +1,4 @@
+import { CurrencySelector } from "@/components/ui/CurrencySelector";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
@@ -144,6 +145,7 @@ export function Navbar() {
 
         {/* Right side */}
         <div className="ml-auto flex items-center gap-2">
+          <CurrencySelector />
           {user && (
             <Link
               to="/dashboard/favorites"

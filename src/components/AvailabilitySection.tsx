@@ -1,3 +1,7 @@
+import { PdfProposalModal, type OfferProposalData } from "@/components/ui/PdfProposalModal";
+import { useStore } from "@/lib/store";
+import { formatCurrency, formatExactPrice } from "@/lib/currency";
+import { Share2, Copy, Check, Printer, FileText } from "lucide-react";
 function parsePaymentPlan(plan?: string): { dp: number; duration: number } {
   if (!plan) return { dp: 10, duration: 8 };
   const lower = plan.toLowerCase();
@@ -197,7 +201,11 @@ export function AvailabilitySection({ data, projectSlug, onRegisterInterest }: P
 
                   <Link
                     to="/calculator"
-                    search={{ project: data.slug, price: String(row.minPriceM * 1000000) }}
+                    search={{
+                      project: data.slug,
+                      unitType: row.type,
+                      price: String(row.minPriceM * 1000000)
+                    }}
                     onClick={(e) => e.stopPropagation()}
                     className="mt-3 w-full inline-flex items-center justify-center gap-1.5 rounded-xl bg-accent/10 border border-accent/30 py-2 text-[11px] font-bold text-accent hover:bg-accent hover:text-accent-foreground transition-all cursor-pointer shadow-2xs"
                   >
@@ -287,13 +295,37 @@ export function UnitDetailModal({
   onRegisterInterest?: (unitType: string) => void;
 }) {
   const avgPriceM = (unit.minPriceM + unit.maxPriceM) / 2;
-  const unitRtm = isReadyToMove(deliveryYear, unit.deliveryNote, compoundStatus);
+  const currency = useStore((s) => s.currency);
+  const [copied, setCopied] = useState(false);
+  const [showPdfModal, setShowPdfModal] = useState(false);
 
-  // Parse DP and duration from payment plan
+  const unitRtm = isReadyToMove(deliveryYear, unit.deliveryNote, compoundStatus);
   const parsedPlan = parsePaymentPlan(unit.paymentPlan || "");
   const estimatedDpEgp = (avgPriceM * 1_000_000) * (parsedPlan.dp / 100);
   const estimatedRemainingEgp = (avgPriceM * 1_000_000) - estimatedDpEgp;
   const estimatedMonthlyEgp = parsedPlan.duration > 0 ? estimatedRemainingEgp / (parsedPlan.duration * 12) : 0;
+
+  const ctaText = unitRtm
+    ? "If you are interested, reply to this message to arrange a site visit or private viewing."
+    : "If you are interested, reply to this message to schedule a presentation meeting or site visit.";
+
+  const shareText = `Hello [Client Name],\n\n` +
+    `Discover premium living at ${projectSlug ? projectSlug.replace(/-/g, " ").toUpperCase() : "Property Atlas"}.\n\n` +
+    `Property Specifications & Financials\n` +
+    `• Unit Type: ${unit.type}\n` +
+    `• Built-up Area (BUA): ${unit.minSqm === unit.maxSqm ? `${unit.minSqm} m²` : `${unit.minSqm}–${unit.maxSqm} m²`}\n` +
+    `• Starting Price: ${formatCurrency(unit.minPriceM, currency)}\n` +
+    `• Down Payment (${parsedPlan.dp}%): ${formatExactPrice(estimatedDpEgp, currency)}\n` +
+    `• Estimated Monthly: ${formatExactPrice(estimatedMonthlyEgp, currency)}/mo\n` +
+    `• Payment Terms: ${unit.paymentPlan || "Flexible Installments"}\n` +
+    `• Delivery Date: ${unit.deliveryNote || (unitRtm ? "Ready to Move" : "4 Years")}\n\n` +
+    `${ctaText}`;
+
+  const handleCopyQuote = () => {
+    navigator.clipboard.writeText(shareText);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
@@ -356,9 +388,9 @@ export function UnitDetailModal({
                   Starting Price
                 </div>
                 <div className="font-display text-3xl font-black text-primary mt-0.5 tracking-tight">
-                  EGP {unit.minPriceM.toFixed(2)}M
+                  {formatCurrency(unit.minPriceM, currency)}
                   {unit.minPriceM !== unit.maxPriceM && (
-                    <span className="text-sm font-semibold text-muted-foreground"> – {unit.maxPriceM.toFixed(2)}M</span>
+                    <span className="text-sm font-semibold text-muted-foreground"> – {formatCurrency(unit.maxPriceM, currency)}</span>
                   )}
                 </div>
               </div>
@@ -366,11 +398,11 @@ export function UnitDetailModal({
               {/* Quick DP & Monthly badges */}
               <div className="flex flex-col items-end gap-1">
                 <span className="inline-flex items-center gap-1 rounded-lg bg-emerald-500/10 px-2.5 py-1 text-[11px] font-bold text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
-                  💡 DP ({parsedPlan.dp}%): EGP {(estimatedDpEgp / 1_000_000).toFixed(2)}M
+                  💡 DP ({parsedPlan.dp}%): {formatExactPrice(estimatedDpEgp, currency)}
                 </span>
                 {estimatedMonthlyEgp > 0 && (
                   <span className="inline-flex items-center gap-1 rounded-lg bg-blue-500/10 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:text-blue-400 border border-blue-500/20">
-                    📅 EGP {Math.round(estimatedMonthlyEgp).toLocaleString()}/mo
+                    📅 {formatExactPrice(estimatedMonthlyEgp, currency)}/mo
                   </span>
                 )}
               </div>
@@ -417,7 +449,7 @@ export function UnitDetailModal({
             )}
           </div>
 
-          {/* Action Buttons */}
+                    {/* Action Buttons */}
           <div className="flex flex-col gap-2.5 pt-2">
             <Link
               to="/calculator"
@@ -427,10 +459,10 @@ export function UnitDetailModal({
                 price: String(unit.minPriceM * 1000000)
               }}
               onClick={onClose}
-              className="w-full rounded-2xl bg-accent py-3.5 text-xs font-bold text-accent-foreground shadow-md hover:bg-accent/90 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full rounded-2xl bg-accent py-3 text-xs font-bold text-accent-foreground shadow-md hover:bg-accent/90 transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <Calculator className="h-4 w-4" />
-              Open Live Mortgage & Installment Calculator
+              Open Live Mortgage &amp; Installment Calculator
             </Link>
 
             {onRegisterInterest && (
@@ -445,16 +477,57 @@ export function UnitDetailModal({
                 <ArrowRight className="h-4 w-4" />
               </button>
             )}
+
             <a
               href="tel:201029324783"
-              className="w-full rounded-2xl border border-border bg-card py-3 text-xs font-bold text-primary text-center hover:bg-secondary transition-all flex items-center justify-center gap-2"
+              className="w-full rounded-2xl border border-border bg-card py-2.5 text-xs font-bold text-primary text-center hover:bg-secondary transition-all flex items-center justify-center gap-2"
             >
               <Phone className="h-4 w-4 text-accent" />
               Speak with Property Representative
             </a>
+
+            {/* PDF Proposal & WhatsApp Sharing Tools */}
+            <div className="grid grid-cols-2 gap-2 pt-2 border-t border-border/40">
+              <button
+                onClick={() => setShowPdfModal(true)}
+                className="rounded-xl bg-accent hover:bg-accent/90 py-2.5 px-3 text-xs font-bold text-accent-foreground shadow-sm transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <FileText className="h-3.5 w-3.5" />
+                Generate PDF Offer
+              </button>
+
+              <a
+                href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl bg-emerald-600 hover:bg-emerald-700 py-2.5 px-3 text-xs font-bold text-white shadow-sm transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <Share2 className="h-3.5 w-3.5" />
+                WhatsApp Offer
+              </a>
+            </div>
           </div>
         </div>
       </div>
+
+      {showPdfModal && (
+        <PdfProposalModal
+          data={{
+            projectName: projectSlug ? projectSlug.replace(/-/g, " ").toUpperCase() : "Property Atlas",
+            projectSlug: projectSlug || "",
+            developerName: "Developer",
+            unitType: unit.type,
+            areaSqm: unit.minSqm === unit.maxSqm ? unit.minSqm : `${unit.minSqm}–${unit.maxSqm}`,
+            startingPriceEgp: unit.minPriceM * 1000000,
+            paymentPlanStr: unit.paymentPlan || "Flexible Installments",
+            dpPct: parsedPlan.dp,
+            durationYrs: parsedPlan.duration,
+            deliveryNote: unit.deliveryNote || (unitRtm ? "Ready to Move" : "4 Years"),
+            finishing: unit.finishing
+          }}
+          onClose={() => setShowPdfModal(false)}
+        />
+      )}
     </div>
   );
 }

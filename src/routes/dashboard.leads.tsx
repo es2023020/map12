@@ -1,3 +1,4 @@
+import mediaRegistry from "@/data/media-registry.json";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useStore, type LeadStage, type Lead, type ActivityLogItem } from "@/lib/store";

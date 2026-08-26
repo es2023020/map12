@@ -1,3 +1,4 @@
+import { type CurrencyCode } from "@/lib/currency";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { compounds, staticCompounds, normalizeDeveloperName, getLowestPriceFromAvailability } from "@/data/compounds";
@@ -225,6 +226,9 @@ type UserData = {
 };
 
 type State = {
+  currency: CurrencyCode;
+  setCurrency: (c: CurrencyCode) => void;
+
   user: BrokerUser | null;
   favorites: string[]; // compound slugs
   compareList: string[];
@@ -577,6 +581,8 @@ export const useStore = create<State>()(
       );
 
       return {
+        currency: "EGP" as CurrencyCode,
+        setCurrency: (c: CurrencyCode) => set({ currency: c }),
         user: null,
         favorites: [],
         compareList: [],

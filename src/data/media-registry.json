@@ -319,6 +319,12 @@
       "size_mb": 7.94
     },
     {
+      "filename": "MAresidence.pdf",
+      "clean_name": "Maresidence",
+      "path": "/brochures/MAresidence.pdf",
+      "size_mb": 2.08
+    },
+    {
       "filename": "Marsa-Baghush-Brochure.pdf",
       "clean_name": "Marsa Baghush Brochure",
       "path": "/brochures/Marsa-Baghush-Brochure.pdf",
@@ -341,6 +347,18 @@
       "clean_name": "Mivida",
       "path": "/brochures/Mivida.pdf",
       "size_mb": 2.94
+    },
+    {
+      "filename": "MODON AVAILABILITY & FACT SHEET SHORT VERSION AUGUST 2026.pdf",
+      "clean_name": "Modon Availability & Fact Sheet Short Version August 2026",
+      "path": "/brochures/MODON AVAILABILITY & FACT SHEET SHORT VERSION AUGUST 2026.pdf",
+      "size_mb": 9.42
+    },
+    {
+      "filename": "MODON-Wadi Yemm-Sales Additional Kit 1.pdf",
+      "clean_name": "Modon Wadi Yemm Sales Additional Kit 1",
+      "path": "/brochures/MODON-Wadi Yemm-Sales Additional Kit 1.pdf",
+      "size_mb": 35.96
     },
     {
       "filename": "mountain-view-grand-valley.pdf",
@@ -781,6 +799,33 @@
         "path": "/projects/31-west/images.jpg"
       }
     ],
+    "90-avenue": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/90-avenue/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/90-avenue/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/90-avenue/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/90-avenue/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/90-avenue/5.jpg"
+      }
+    ],
     "97-hills": [
       {
         "filename": "1.jpg",
@@ -811,6 +856,43 @@
         "filename": "6.jpg",
         "type": "image",
         "path": "/projects/97-hills/6.jpg"
+      }
+    ],
+    "address-east": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/address-east/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/address-east/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/address-east/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/address-east/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/address-east/5.jpg"
+      },
+      {
+        "filename": "6.jpg",
+        "type": "image",
+        "path": "/projects/address-east/6.jpg"
+      },
+      {
+        "filename": "7.jpg",
+        "type": "image",
+        "path": "/projects/address-east/7.jpg"
       }
     ],
     "aeon": [
@@ -848,6 +930,28 @@
         "filename": "Master plan.jpg",
         "type": "image",
         "path": "/projects/aeon/Master plan.jpg"
+      }
+    ],
+    "al-east-mostakbal-city": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/al-east-mostakbal-city/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/al-east-mostakbal-city/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/al-east-mostakbal-city/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/al-east-mostakbal-city/4.jpg"
       }
     ],
     "al-rehab": [
@@ -968,6 +1072,33 @@
         "path": "/projects/almaza-bay/6.jpg"
       }
     ],
+    "amorada": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/amorada/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/amorada/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/amorada/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/amorada/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/amorada/5.jpg"
+      }
+    ],
     "amwaj": [
       {
         "filename": "1.jpg",
@@ -1081,6 +1212,28 @@
         "path": "/projects/ashgar-city/3.jpg"
       }
     ],
+    "ashrafieh": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/ashrafieh/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/ashrafieh/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/ashrafieh/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/ashrafieh/4.jpg"
+      }
+    ],
     "at-east": [
       {
         "filename": "1.jpg",
@@ -1101,6 +1254,28 @@
         "filename": "4.jpg",
         "type": "image",
         "path": "/projects/at-east/4.jpg"
+      }
+    ],
+    "azad": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/azad/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/azad/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/azad/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/azad/4.jpg"
       }
     ],
     "azha-north-coast": [
@@ -1330,6 +1505,18 @@
         "filename": "6.jpg",
         "type": "image",
         "path": "/projects/bamboo-iii/6.jpg"
+      }
+    ],
+    "beachfront-towers-new-alamein": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/beachfront-towers-new-alamein/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/beachfront-towers-new-alamein/2.jpg"
       }
     ],
     "beit-al-bahr": [
@@ -2112,6 +2299,11 @@
         "path": "/projects/cali-coast-ras-el-hekma/1.jpg"
       },
       {
+        "filename": "1.mp4",
+        "type": "video",
+        "path": "/projects/cali-coast-ras-el-hekma/1.mp4"
+      },
+      {
         "filename": "10.jpg",
         "type": "image",
         "path": "/projects/cali-coast-ras-el-hekma/10.jpg"
@@ -2122,14 +2314,29 @@
         "path": "/projects/cali-coast-ras-el-hekma/11.jpg"
       },
       {
+        "filename": "12.jpeg",
+        "type": "image",
+        "path": "/projects/cali-coast-ras-el-hekma/12.jpeg"
+      },
+      {
         "filename": "2.jpg",
         "type": "image",
         "path": "/projects/cali-coast-ras-el-hekma/2.jpg"
       },
       {
+        "filename": "2.mp4",
+        "type": "video",
+        "path": "/projects/cali-coast-ras-el-hekma/2.mp4"
+      },
+      {
         "filename": "3.jpg",
         "type": "image",
         "path": "/projects/cali-coast-ras-el-hekma/3.jpg"
+      },
+      {
+        "filename": "3.mp4",
+        "type": "video",
+        "path": "/projects/cali-coast-ras-el-hekma/3.mp4"
       },
       {
         "filename": "4.jpg",
@@ -2150,6 +2357,11 @@
         "filename": "7.jpg",
         "type": "image",
         "path": "/projects/cali-coast-ras-el-hekma/7.jpg"
+      },
+      {
+        "filename": "8.jpeg",
+        "type": "image",
+        "path": "/projects/cali-coast-ras-el-hekma/8.jpeg"
       },
       {
         "filename": "8.jpg",
@@ -3267,6 +3479,48 @@
         "filename": "6.jpg",
         "type": "image",
         "path": "/projects/gaia/6.jpg"
+      },
+      {
+        "filename": "images.jpg",
+        "type": "image",
+        "path": "/projects/gaia/images.jpg"
+      }
+    ],
+    "gaia-ras-el-hekma": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/gaia-ras-el-hekma/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/gaia-ras-el-hekma/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/gaia-ras-el-hekma/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/gaia-ras-el-hekma/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/gaia-ras-el-hekma/5.jpg"
+      },
+      {
+        "filename": "6.jpg",
+        "type": "image",
+        "path": "/projects/gaia-ras-el-hekma/6.jpg"
+      },
+      {
+        "filename": "images.jpg",
+        "type": "image",
+        "path": "/projects/gaia-ras-el-hekma/images.jpg"
       }
     ],
     "galleria-moon-valley": [
@@ -3486,36 +3740,23 @@
         "filename": "3.jpg",
         "type": "image",
         "path": "/projects/golden-heights-2/3.jpg"
+      }
+    ],
+    "green-square": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/green-square/1.jpg"
       },
       {
-        "filename": "4.jpg",
+        "filename": "2.jpg",
         "type": "image",
-        "path": "/projects/golden-heights-2/4.jpg"
+        "path": "/projects/green-square/2.jpg"
       },
       {
-        "filename": "5.jpg",
+        "filename": "3.jpg",
         "type": "image",
-        "path": "/projects/golden-heights-2/5.jpg"
-      },
-      {
-        "filename": "6.jpg",
-        "type": "image",
-        "path": "/projects/golden-heights-2/6.jpg"
-      },
-      {
-        "filename": "7.jpg",
-        "type": "image",
-        "path": "/projects/golden-heights-2/7.jpg"
-      },
-      {
-        "filename": "8.jpg",
-        "type": "image",
-        "path": "/projects/golden-heights-2/8.jpg"
-      },
-      {
-        "filename": "9.jpg",
-        "type": "image",
-        "path": "/projects/golden-heights-2/9.jpg"
+        "path": "/projects/green-square/3.jpg"
       }
     ],
     "green-town": [
@@ -3954,6 +4195,11 @@
         "filename": "4.jpg",
         "type": "image",
         "path": "/projects/il-latini-city-edge/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/il-latini-city-edge/5.jpg"
       }
     ],
     "il-latini-sed": [
@@ -4013,6 +4259,77 @@
         "filename": "download.jpg",
         "type": "image",
         "path": "/projects/il-monte-galala/download.jpg"
+      }
+    ],
+    "ivoire-east": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/ivoire-east/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/ivoire-east/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/ivoire-east/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/ivoire-east/4.jpg"
+      }
+    ],
+    "ivoire-west": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/ivoire-west/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/ivoire-west/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/ivoire-west/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/ivoire-west/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/ivoire-west/5.jpg"
+      }
+    ],
+    "jade-park-al-maqsad": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/jade-park-al-maqsad/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/jade-park-al-maqsad/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/jade-park-al-maqsad/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/jade-park-al-maqsad/4.jpg"
       }
     ],
     "jamila": [
@@ -4079,6 +4396,33 @@
         "filename": "5.jpg",
         "type": "image",
         "path": "/projects/jefaira/5.jpg"
+      }
+    ],
+    "jirian-nations-of-sky": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/jirian-nations-of-sky/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/jirian-nations-of-sky/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/jirian-nations-of-sky/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/jirian-nations-of-sky/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/jirian-nations-of-sky/5.jpg"
       }
     ],
     "joya": [
@@ -4386,6 +4730,33 @@
         "filename": "1.jpg",
         "type": "image",
         "path": "/projects/kynd-residence-gaia/1.jpg"
+      }
+    ],
+    "la-mirada": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/la-mirada/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/la-mirada/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/la-mirada/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/la-mirada/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/la-mirada/5.jpg"
       }
     ],
     "la-verde": [
@@ -5249,6 +5620,50 @@
         "path": "/projects/masaya/6.jpg"
       }
     ],
+    "mayan-el-shorouk": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/mayan-el-shorouk/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/mayan-el-shorouk/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/mayan-el-shorouk/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/mayan-el-shorouk/4.jpg"
+      }
+    ],
+    "mayan-new-cairo": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/mayan-new-cairo/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/mayan-new-cairo/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/mayan-new-cairo/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/mayan-new-cairo/4.jpg"
+      }
+    ],
     "mazarine": [
       {
         "filename": "1.jpg",
@@ -5271,6 +5686,45 @@
         "path": "/projects/mazarine/5.jpg"
       }
     ],
+    "mazarine-apartments-new-alamein": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/mazarine-apartments-new-alamein/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/mazarine-apartments-new-alamein/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/mazarine-apartments-new-alamein/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/mazarine-apartments-new-alamein/4.jpg"
+      }
+    ],
+    "mazarine-hub-new-alamein": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/mazarine-hub-new-alamein/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/mazarine-hub-new-alamein/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/mazarine-hub-new-alamein/3.jpg"
+      }
+    ],
     "menorca": [
       {
         "filename": "1.jpg",
@@ -5281,6 +5735,28 @@
         "filename": "2.jpg",
         "type": "image",
         "path": "/projects/menorca/2.jpg"
+      }
+    ],
+    "midtown-new-cairo": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/midtown-new-cairo/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/midtown-new-cairo/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/midtown-new-cairo/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/midtown-new-cairo/4.jpg"
       }
     ],
     "mist": [
@@ -6095,6 +6571,50 @@
         "path": "/projects/naia-bay/9.jpg"
       }
     ],
+    "neopolis": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/neopolis/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/neopolis/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/neopolis/3.jpg"
+      }
+    ],
+    "new-garden-city-r5": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/new-garden-city-r5/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/new-garden-city-r5/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/new-garden-city-r5/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/new-garden-city-r5/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/new-garden-city-r5/5.jpg"
+      }
+    ],
     "new-heliopolis": [
       {
         "filename": "1.jpg",
@@ -6164,6 +6684,28 @@
         "filename": "4.jpg",
         "type": "image",
         "path": "/projects/north-edge-towers/4.jpg"
+      }
+    ],
+    "nyoum-october": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/nyoum-october/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/nyoum-october/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/nyoum-october/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/nyoum-october/4.jpg"
       }
     ],
     "nyoum-pyramids": [
@@ -6410,6 +6952,33 @@
         "path": "/projects/o-west/IMG-20250509-WA0130.jpg"
       }
     ],
+    "oak-residences": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/oak-residences/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/oak-residences/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/oak-residences/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/oak-residences/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/oak-residences/5.jpg"
+      }
+    ],
     "ogami": [
       {
         "filename": "1.jpg",
@@ -6482,6 +7051,23 @@
         "filename": "6.jpg",
         "type": "image",
         "path": "/projects/olive-oasis/6.jpg"
+      }
+    ],
+    "one-hyde-park-new-cairo": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/one-hyde-park-new-cairo/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/one-hyde-park-new-cairo/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/one-hyde-park-new-cairo/3.jpg"
       }
     ],
     "one33": [
@@ -6593,6 +7179,28 @@
         "filename": "8.jpg",
         "type": "image",
         "path": "/projects/origami-golf/8.jpg"
+      }
+    ],
+    "palm-hills-alexandria": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/palm-hills-alexandria/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/palm-hills-alexandria/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/palm-hills-alexandria/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/palm-hills-alexandria/4.jpg"
       }
     ],
     "palm-hills-jirian": [
@@ -6740,6 +7348,23 @@
         "path": "/projects/palm-hills-one/7.jpg"
       }
     ],
+    "palm-hills-ritz-carlton": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/palm-hills-ritz-carlton/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/palm-hills-ritz-carlton/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/palm-hills-ritz-carlton/3.jpg"
+      }
+    ],
     "palm-hills-sheikh-zayed": [
       {
         "filename": "1.jpg",
@@ -6777,6 +7402,65 @@
         "filename": "1.jpg",
         "type": "image",
         "path": "/projects/palm-parks/1.jpg"
+      },
+      {
+        "filename": "1.webp",
+        "type": "image",
+        "path": "/projects/palm-parks/1.webp"
+      }
+    ],
+    "palmet": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/palmet/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/palmet/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/palmet/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/palmet/4.jpg"
+      }
+    ],
+    "park-central-mostakbal-city": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/park-central-mostakbal-city/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/park-central-mostakbal-city/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/park-central-mostakbal-city/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/park-central-mostakbal-city/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/park-central-mostakbal-city/5.jpg"
+      },
+      {
+        "filename": "6.jpg",
+        "type": "image",
+        "path": "/projects/park-central-mostakbal-city/6.jpg"
       }
     ],
     "park-sight": [
@@ -7021,6 +7705,13 @@
         "path": "/projects/playa/5.jpg"
       }
     ],
+    "point-90-offices-park": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/point-90-offices-park/1.jpg"
+      }
+    ],
     "px": [
       {
         "filename": "1.jpg",
@@ -7188,6 +7879,28 @@
         "filename": "1.jpg",
         "type": "image",
         "path": "/projects/rivers/1.jpg"
+      },
+      {
+        "filename": "1.webp",
+        "type": "image",
+        "path": "/projects/rivers/1.webp"
+      }
+    ],
+    "riviera": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/riviera/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/riviera/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/riviera/3.jpg"
       }
     ],
     "rock-capital-1": [
@@ -7292,6 +8005,13 @@
         "filename": "8.jpg",
         "type": "image",
         "path": "/projects/sa-ada-sahel/8.jpg"
+      }
+    ],
+    "saada": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/saada/1.jpg"
       }
     ],
     "saada-north-coast": [
@@ -7628,6 +8348,23 @@
         "filename": "6.jpg",
         "type": "image",
         "path": "/projects/seazen/6.jpg"
+      }
+    ],
+    "sephora-heights": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/sephora-heights/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/sephora-heights/2.jpg"
+      },
+      {
+        "filename": "3jpg.jpg",
+        "type": "image",
+        "path": "/projects/sephora-heights/3jpg.jpg"
       }
     ],
     "shamasi": [
@@ -8316,9 +9053,46 @@
     ],
     "swanlake-el-gouna": [
       {
+        "filename": "1.jpeg",
+        "type": "image",
+        "path": "/projects/swanlake-el-gouna/1.jpeg"
+      },
+      {
         "filename": "1.jpg",
         "type": "image",
         "path": "/projects/swanlake-el-gouna/1.jpg"
+      }
+    ],
+    "swanlake-residences-new-cairo": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/swanlake-residences-new-cairo/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/swanlake-residences-new-cairo/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/swanlake-residences-new-cairo/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/swanlake-residences-new-cairo/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/swanlake-residences-new-cairo/5.jpg"
+      },
+      {
+        "filename": "6.jpg",
+        "type": "image",
+        "path": "/projects/swanlake-residences-new-cairo/6.jpg"
       }
     ],
     "swanlake-west": [
@@ -8454,6 +9228,33 @@
         "filename": "4.jpg",
         "type": "image",
         "path": "/projects/telal-east/4.jpg"
+      }
+    ],
+    "telal-shores": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/telal-shores/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/telal-shores/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/telal-shores/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/telal-shores/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/telal-shores/5.jpg"
       }
     ],
     "telal-sokhna": [
@@ -8595,11 +9396,25 @@
         "path": "/projects/the-crest/9.jpg"
       }
     ],
+    "the-crown": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/the-crown/1.jpg"
+      }
+    ],
     "the-crown-extension": [
       {
         "filename": "1.jpg",
         "type": "image",
         "path": "/projects/the-crown-extension/1.jpg"
+      }
+    ],
+    "the-estates": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/the-estates/1.jpg"
       }
     ],
     "the-gate-new-alamein": [
@@ -8741,6 +9556,11 @@
         "filename": "2.jpg",
         "type": "image",
         "path": "/projects/the-valleys/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/the-valleys/3.jpg"
       }
     ],
     "the-waterway": [
@@ -9026,6 +9846,33 @@
         "path": "/projects/village-de-la-capitale/1.jpg"
       }
     ],
+    "village-west": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/village-west/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/village-west/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/village-west/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/village-west/4.jpg"
+      },
+      {
+        "filename": "5.jpg",
+        "type": "image",
+        "path": "/projects/village-west/5.jpg"
+      }
+    ],
     "villaria": [
       {
         "filename": "1.jpg",
@@ -9209,6 +10056,28 @@
         "filename": "7.jpg",
         "type": "image",
         "path": "/projects/vye-sodic/7.jpg"
+      }
+    ],
+    "w-signature": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/w-signature/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/w-signature/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/w-signature/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/w-signature/4.jpg"
       }
     ],
     "waterway-1": [
@@ -9408,6 +10277,13 @@
         "path": "/projects/zayed-2000/1.jpg"
       }
     ],
+    "zayed2000": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/zayed2000/1.jpg"
+      }
+    ],
     "zed-east": [
       {
         "filename": "1.jpg",
@@ -9548,6 +10424,28 @@
         "path": "/projects/zizinia/9.jpg"
       }
     ],
+    "zomra-east": [
+      {
+        "filename": "1.jpg",
+        "type": "image",
+        "path": "/projects/zomra-east/1.jpg"
+      },
+      {
+        "filename": "2.jpg",
+        "type": "image",
+        "path": "/projects/zomra-east/2.jpg"
+      },
+      {
+        "filename": "3.jpg",
+        "type": "image",
+        "path": "/projects/zomra-east/3.jpg"
+      },
+      {
+        "filename": "4.jpg",
+        "type": "image",
+        "path": "/projects/zomra-east/4.jpg"
+      }
+    ],
     "zoya": [
       {
         "filename": "1.jpg",
@@ -9555,14 +10453,34 @@
         "path": "/projects/zoya/1.jpg"
       },
       {
+        "filename": "1.mp4",
+        "type": "video",
+        "path": "/projects/zoya/1.mp4"
+      },
+      {
         "filename": "2.jpg",
         "type": "image",
         "path": "/projects/zoya/2.jpg"
       },
       {
+        "filename": "2.mp4",
+        "type": "video",
+        "path": "/projects/zoya/2.mp4"
+      },
+      {
         "filename": "3.jpg",
         "type": "image",
         "path": "/projects/zoya/3.jpg"
+      },
+      {
+        "filename": "3.mp4",
+        "type": "video",
+        "path": "/projects/zoya/3.mp4"
+      },
+      {
+        "filename": "WhatsApp Video 2026-08-26 at 12.05.07 PM.mp4",
+        "type": "video",
+        "path": "/projects/zoya/WhatsApp Video 2026-08-26 at 12.05.07 PM.mp4"
       }
     ]
   },
@@ -9815,6 +10733,34 @@
         "size_mb": 3.9
       }
     ],
+    "c-north-coast": [
+      {
+        "filename": "cali coast.pdf",
+        "clean_name": "Cali Coast",
+        "path": "/brochures/cali coast.pdf",
+        "size_mb": 37.81
+      },
+      {
+        "filename": "Hassan-Allam-SwanLake-North-C.pdf",
+        "clean_name": "Hassan Allam Swanlake North C",
+        "path": "/brochures/Hassan-Allam-SwanLake-North-C.pdf",
+        "size_mb": 3.9
+      }
+    ],
+    "cala-residences-katameya-coast": [
+      {
+        "filename": "cali coast.pdf",
+        "clean_name": "Cali Coast",
+        "path": "/brochures/cali coast.pdf",
+        "size_mb": 37.81
+      },
+      {
+        "filename": "cleo Water Residences.pdf",
+        "clean_name": "Cleo Water Residences",
+        "path": "/brochures/cleo Water Residences.pdf",
+        "size_mb": 12.92
+      }
+    ],
     "cali-coast-ras-el-hekma": [
       {
         "filename": "cali coast.pdf",
@@ -9849,18 +10795,46 @@
         "clean_name": "Hassan Allam Swanlake North C",
         "path": "/brochures/Hassan-Allam-SwanLake-North-C.pdf",
         "size_mb": 3.9
+      }
+    ],
+    "top-off-plan-projects-north-coast-2026": [
+      {
+        "filename": "cali coast.pdf",
+        "clean_name": "Cali Coast",
+        "path": "/brochures/cali coast.pdf",
+        "size_mb": 37.81
       },
       {
-        "filename": "saada brochure 1.pdf",
-        "clean_name": "Saada Brochure 1",
-        "path": "/brochures/saada brochure 1.pdf",
-        "size_mb": 20.43
+        "filename": "Hassan-Allam-SwanLake-North-C.pdf",
+        "clean_name": "Hassan Allam Swanlake North C",
+        "path": "/brochures/Hassan-Allam-SwanLake-North-C.pdf",
+        "size_mb": 3.9
       },
       {
-        "filename": "saada sa7el.pdf",
-        "clean_name": "Saada Sa7El",
-        "path": "/brochures/saada sa7el.pdf",
-        "size_mb": 61.24
+        "filename": "MODON AVAILABILITY & FACT SHEET SHORT VERSION AUGUST 2026.pdf",
+        "clean_name": "Modon Availability & Fact Sheet Short Version August 2026",
+        "path": "/brochures/MODON AVAILABILITY & FACT SHEET SHORT VERSION AUGUST 2026.pdf",
+        "size_mb": 9.42
+      }
+    ],
+    "al-east-mostakbal-city": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      },
+      {
+        "filename": "Grova Easthills.pdf",
+        "clean_name": "Grova Easthills",
+        "path": "/brochures/Grova Easthills.pdf",
+        "size_mb": 29.71
+      },
+      {
+        "filename": "lavista Bay-east-brochure-v07-2022.pdf",
+        "clean_name": "Lavista Bay East Brochure V07 2022",
+        "path": "/brochures/lavista Bay-east-brochure-v07-2022.pdf",
+        "size_mb": 32.14
       }
     ],
     "ashgar-city": [
@@ -9909,6 +10883,22 @@
         "size_mb": 3.57
       }
     ],
+    "ii-bosco-city": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      }
+    ],
+    "ii-latini-city-edge": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      }
+    ],
     "il-bosco-city": [
       {
         "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
@@ -9945,12 +10935,78 @@
         "size_mb": 18.85
       }
     ],
+    "latin-city-new-alamein": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      }
+    ],
+    "mayan-new-cairo": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      }
+    ],
+    "midtown-new-cairo": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      }
+    ],
     "mountain-view-icity-new-cairo": [
       {
         "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
         "clean_name": "Citygate New Cairo Project Brochure Digital V1",
         "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
         "size_mb": 5.39
+      }
+    ],
+    "new-cairo-vs-sheikh-zayed-investment-guide": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      }
+    ],
+    "new-garden-city-r5": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      },
+      {
+        "filename": "katamya-gardens.pdf",
+        "clean_name": "Katamya Gardens",
+        "path": "/brochures/katamya-gardens.pdf",
+        "size_mb": 7.24
+      },
+      {
+        "filename": "New Capital Gardens brochure.pdf",
+        "clean_name": "New Capital Gardens Brochure",
+        "path": "/brochures/New Capital Gardens brochure.pdf",
+        "size_mb": 15.82
+      }
+    ],
+    "one-hyde-park-new-cairo": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      },
+      {
+        "filename": "Hyde-park-seashore .pdf",
+        "clean_name": "Hyde Park Seashore",
+        "path": "/brochures/Hyde-park-seashore .pdf",
+        "size_mb": 3.57
       }
     ],
     "palm-hills-new-cairo": [
@@ -9973,6 +11029,40 @@
         "size_mb": 6.09
       }
     ],
+    "park-central-mostakbal-city": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      },
+      {
+        "filename": "Hyde-park-seashore .pdf",
+        "clean_name": "Hyde Park Seashore",
+        "path": "/brochures/Hyde-park-seashore .pdf",
+        "size_mb": 3.57
+      }
+    ],
+    "swanlake-residences-new-cairo": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      },
+      {
+        "filename": "cleo Water Residences.pdf",
+        "clean_name": "Cleo Water Residences",
+        "path": "/brochures/cleo Water Residences.pdf",
+        "size_mb": 12.92
+      },
+      {
+        "filename": "Hassan-Allam-SwanLake-North-C.pdf",
+        "clean_name": "Hassan Allam Swanlake North C",
+        "path": "/brochures/Hassan-Allam-SwanLake-North-C.pdf",
+        "size_mb": 3.9
+      }
+    ],
     "taj-city": [
       {
         "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
@@ -9982,6 +11072,14 @@
       }
     ],
     "the-gate-new-alamein": [
+      {
+        "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "clean_name": "Citygate New Cairo Project Brochure Digital V1",
+        "path": "/brochures/CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
+        "size_mb": 5.39
+      }
+    ],
+    "the-valleys-mostakbal-city": [
       {
         "filename": "CityGate-New-Cairo-Project-Brochure-Digital-V1.pdf",
         "clean_name": "Citygate New Cairo Project Brochure Digital V1",
@@ -10019,7 +11117,29 @@
         "size_mb": 5.39
       }
     ],
+    "central-water-residences": [
+      {
+        "filename": "cleo Water Residences.pdf",
+        "clean_name": "Cleo Water Residences",
+        "path": "/brochures/cleo Water Residences.pdf",
+        "size_mb": 12.92
+      }
+    ],
     "chapters-residence": [
+      {
+        "filename": "cleo Water Residences.pdf",
+        "clean_name": "Cleo Water Residences",
+        "path": "/brochures/cleo Water Residences.pdf",
+        "size_mb": 12.92
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
+      }
+    ],
+    "cleo-mostakbal": [
       {
         "filename": "cleo Water Residences.pdf",
         "clean_name": "Cleo Water Residences",
@@ -10033,6 +11153,12 @@
         "clean_name": "Cleo Water Residences",
         "path": "/brochures/cleo Water Residences.pdf",
         "size_mb": 12.92
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
       }
     ],
     "dejoya-residence": [
@@ -10041,6 +11167,12 @@
         "clean_name": "Cleo Water Residences",
         "path": "/brochures/cleo Water Residences.pdf",
         "size_mb": 12.92
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
       }
     ],
     "esse-residence": [
@@ -10049,6 +11181,12 @@
         "clean_name": "Cleo Water Residences",
         "path": "/brochures/cleo Water Residences.pdf",
         "size_mb": 12.92
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
       }
     ],
     "kinda-residence": [
@@ -10057,6 +11195,12 @@
         "clean_name": "Cleo Water Residences",
         "path": "/brochures/cleo Water Residences.pdf",
         "size_mb": 12.92
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
       }
     ],
     "kynd-residence-gaia": [
@@ -10065,6 +11209,32 @@
         "clean_name": "Cleo Water Residences",
         "path": "/brochures/cleo Water Residences.pdf",
         "size_mb": 12.92
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
+      }
+    ],
+    "lake-residence": [
+      {
+        "filename": "cleo Water Residences.pdf",
+        "clean_name": "Cleo Water Residences",
+        "path": "/brochures/cleo Water Residences.pdf",
+        "size_mb": 12.92
+      },
+      {
+        "filename": "Hassan-Allam-SwanLake-North-C.pdf",
+        "clean_name": "Hassan Allam Swanlake North C",
+        "path": "/brochures/Hassan-Allam-SwanLake-North-C.pdf",
+        "size_mb": 3.9
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
       }
     ],
     "lake-residence-by-rotana": [
@@ -10079,6 +11249,12 @@
         "clean_name": "Hassan Allam Swanlake North C",
         "path": "/brochures/Hassan-Allam-SwanLake-North-C.pdf",
         "size_mb": 3.9
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
       }
     ],
     "lake-view-residence": [
@@ -10093,9 +11269,31 @@
         "clean_name": "Hassan Allam Swanlake North C",
         "path": "/brochures/Hassan-Allam-SwanLake-North-C.pdf",
         "size_mb": 3.9
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
       }
     ],
     "nabq-bay-residences": [
+      {
+        "filename": "cleo Water Residences.pdf",
+        "clean_name": "Cleo Water Residences",
+        "path": "/brochures/cleo Water Residences.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "oak-residences": [
+      {
+        "filename": "cleo Water Residences.pdf",
+        "clean_name": "Cleo Water Residences",
+        "path": "/brochures/cleo Water Residences.pdf",
+        "size_mb": 12.92
+      }
+    ],
+    "sheraton-residences": [
       {
         "filename": "cleo Water Residences.pdf",
         "clean_name": "Cleo Water Residences",
@@ -10109,6 +11307,12 @@
         "clean_name": "Cleo Water Residences",
         "path": "/brochures/cleo Water Residences.pdf",
         "size_mb": 12.92
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
       }
     ],
     "stone-residence": [
@@ -10117,6 +11321,12 @@
         "clean_name": "Cleo Water Residences",
         "path": "/brochures/cleo Water Residences.pdf",
         "size_mb": 12.92
+      },
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
       }
     ],
     "westown-residences": [
@@ -10141,12 +11351,6 @@
         "clean_name": "Fifth Square E Brochure",
         "path": "/brochures/Fifth Square E brochure.pdf",
         "size_mb": 14.22
-      },
-      {
-        "filename": "green-square.pdf",
-        "clean_name": "Green Square",
-        "path": "/brochures/green-square.pdf",
-        "size_mb": 4.49
       }
     ],
     "fouka-bay": [
@@ -10158,6 +11362,14 @@
       }
     ],
     "il-monte-galala": [
+      {
+        "filename": "Full-Brochure-Montenapoleone-1.pdf",
+        "clean_name": "Full Brochure Montenapoleone 1",
+        "path": "/brochures/Full-Brochure-Montenapoleone-1.pdf",
+        "size_mb": 23.52
+      }
+    ],
+    "monte-napoleone": [
       {
         "filename": "Full-Brochure-Montenapoleone-1.pdf",
         "clean_name": "Full Brochure Montenapoleone 1",
@@ -10203,6 +11415,14 @@
         "size_mb": 15.82
       }
     ],
+    "golden-heights-1": [
+      {
+        "filename": "golden heights.pdf",
+        "clean_name": "Golden Heights",
+        "path": "/brochures/golden heights.pdf",
+        "size_mb": 10.97
+      }
+    ],
     "golden-heights-2": [
       {
         "filename": "golden heights.pdf",
@@ -10235,6 +11455,14 @@
         "size_mb": 10.97
       }
     ],
+    "sephora-heights": [
+      {
+        "filename": "golden heights.pdf",
+        "clean_name": "Golden Heights",
+        "path": "/brochures/golden heights.pdf",
+        "size_mb": 10.97
+      }
+    ],
     "stella-heights": [
       {
         "filename": "golden heights.pdf",
@@ -10243,7 +11471,7 @@
         "size_mb": 10.97
       }
     ],
-    "cleopatra-square": [
+    "green-square": [
       {
         "filename": "green-square.pdf",
         "clean_name": "Green Square",
@@ -10251,20 +11479,18 @@
         "size_mb": 4.49
       }
     ],
-    "green-town": [
+    "address-east": [
       {
-        "filename": "green-square.pdf",
-        "clean_name": "Green Square",
-        "path": "/brochures/green-square.pdf",
-        "size_mb": 4.49
-      }
-    ],
-    "the-square-sabbour": [
+        "filename": "Grova Easthills.pdf",
+        "clean_name": "Grova Easthills",
+        "path": "/brochures/Grova Easthills.pdf",
+        "size_mb": 29.71
+      },
       {
-        "filename": "green-square.pdf",
-        "clean_name": "Green Square",
-        "path": "/brochures/green-square.pdf",
-        "size_mb": 4.49
+        "filename": "lavista Bay-east-brochure-v07-2022.pdf",
+        "clean_name": "Lavista Bay East Brochure V07 2022",
+        "path": "/brochures/lavista Bay-east-brochure-v07-2022.pdf",
+        "size_mb": 32.14
       }
     ],
     "beverly-hills": [
@@ -10315,6 +11541,20 @@
         "size_mb": 6.09
       }
     ],
+    "ivoire-east": [
+      {
+        "filename": "Grova Easthills.pdf",
+        "clean_name": "Grova Easthills",
+        "path": "/brochures/Grova Easthills.pdf",
+        "size_mb": 29.71
+      },
+      {
+        "filename": "lavista Bay-east-brochure-v07-2022.pdf",
+        "clean_name": "Lavista Bay East Brochure V07 2022",
+        "path": "/brochures/lavista Bay-east-brochure-v07-2022.pdf",
+        "size_mb": 32.14
+      }
+    ],
     "la-vista-bay-east": [
       {
         "filename": "Grova Easthills.pdf",
@@ -10333,6 +11573,40 @@
         "clean_name": "Lavista Ras Hikma",
         "path": "/brochures/Lavista-Ras-Hikma.pdf",
         "size_mb": 18.85
+      }
+    ],
+    "la-vista-east": [
+      {
+        "filename": "Grova Easthills.pdf",
+        "clean_name": "Grova Easthills",
+        "path": "/brochures/Grova Easthills.pdf",
+        "size_mb": 29.71
+      },
+      {
+        "filename": "lavista Bay-east-brochure-v07-2022.pdf",
+        "clean_name": "Lavista Bay East Brochure V07 2022",
+        "path": "/brochures/lavista Bay-east-brochure-v07-2022.pdf",
+        "size_mb": 32.14
+      },
+      {
+        "filename": "Lavista-Ras-Hikma.pdf",
+        "clean_name": "Lavista Ras Hikma",
+        "path": "/brochures/Lavista-Ras-Hikma.pdf",
+        "size_mb": 18.85
+      }
+    ],
+    "palm-hills-alexandria": [
+      {
+        "filename": "Grova Easthills.pdf",
+        "clean_name": "Grova Easthills",
+        "path": "/brochures/Grova Easthills.pdf",
+        "size_mb": 29.71
+      },
+      {
+        "filename": "palm-hills-new alamen.pdf",
+        "clean_name": "Palm Hills New Alamen",
+        "path": "/brochures/palm-hills-new alamen.pdf",
+        "size_mb": 6.09
       }
     ],
     "palm-hills-jirian": [
@@ -10377,7 +11651,35 @@
         "size_mb": 6.09
       }
     ],
+    "palm-hills-october": [
+      {
+        "filename": "Grova Easthills.pdf",
+        "clean_name": "Grova Easthills",
+        "path": "/brochures/Grova Easthills.pdf",
+        "size_mb": 29.71
+      },
+      {
+        "filename": "palm-hills-new alamen.pdf",
+        "clean_name": "Palm Hills New Alamen",
+        "path": "/brochures/palm-hills-new alamen.pdf",
+        "size_mb": 6.09
+      }
+    ],
     "palm-hills-one": [
+      {
+        "filename": "Grova Easthills.pdf",
+        "clean_name": "Grova Easthills",
+        "path": "/brochures/Grova Easthills.pdf",
+        "size_mb": 29.71
+      },
+      {
+        "filename": "palm-hills-new alamen.pdf",
+        "clean_name": "Palm Hills New Alamen",
+        "path": "/brochures/palm-hills-new alamen.pdf",
+        "size_mb": 6.09
+      }
+    ],
+    "palm-hills-ritz-carlton": [
       {
         "filename": "Grova Easthills.pdf",
         "clean_name": "Grova Easthills",
@@ -10495,6 +11797,20 @@
         "size_mb": 32.14
       }
     ],
+    "zomra-east": [
+      {
+        "filename": "Grova Easthills.pdf",
+        "clean_name": "Grova Easthills",
+        "path": "/brochures/Grova Easthills.pdf",
+        "size_mb": 29.71
+      },
+      {
+        "filename": "lavista Bay-east-brochure-v07-2022.pdf",
+        "clean_name": "Lavista Bay East Brochure V07 2022",
+        "path": "/brochures/lavista Bay-east-brochure-v07-2022.pdf",
+        "size_mb": 32.14
+      }
+    ],
     "hacienda-blue": [
       {
         "filename": "Hacienda-Blue.pdf",
@@ -10595,6 +11911,14 @@
         "size_mb": 3.9
       }
     ],
+    "swan-lake-el-gouna": [
+      {
+        "filename": "Hassan-Allam-SwanLake-North-C.pdf",
+        "clean_name": "Hassan Allam Swanlake North C",
+        "path": "/brochures/Hassan-Allam-SwanLake-North-C.pdf",
+        "size_mb": 3.9
+      }
+    ],
     "swanlake-el-gouna": [
       {
         "filename": "Hassan-Allam-SwanLake-North-C.pdf",
@@ -10635,7 +11959,23 @@
         "size_mb": 3.57
       }
     ],
+    "jade-park-al-maqsad": [
+      {
+        "filename": "Hyde-park-seashore .pdf",
+        "clean_name": "Hyde Park Seashore",
+        "path": "/brochures/Hyde-park-seashore .pdf",
+        "size_mb": 3.57
+      }
+    ],
     "montania-park": [
+      {
+        "filename": "Hyde-park-seashore .pdf",
+        "clean_name": "Hyde Park Seashore",
+        "path": "/brochures/Hyde-park-seashore .pdf",
+        "size_mb": 3.57
+      }
+    ],
+    "mountain-view-chillout-park": [
       {
         "filename": "Hyde-park-seashore .pdf",
         "clean_name": "Hyde Park Seashore",
@@ -10663,6 +12003,14 @@
         "clean_name": "Park Sight E Brochure",
         "path": "/brochures/Park-Sight-E-Brochure.pdf",
         "size_mb": 27.67
+      }
+    ],
+    "point-90-offices-park": [
+      {
+        "filename": "Hyde-park-seashore .pdf",
+        "clean_name": "Hyde Park Seashore",
+        "path": "/brochures/Hyde-park-seashore .pdf",
+        "size_mb": 3.57
       }
     ],
     "sealine-seashore": [
@@ -10821,6 +12169,20 @@
         "size_mb": 18.85
       }
     ],
+    "la-vista-ray": [
+      {
+        "filename": "lavista Bay-east-brochure-v07-2022.pdf",
+        "clean_name": "Lavista Bay East Brochure V07 2022",
+        "path": "/brochures/lavista Bay-east-brochure-v07-2022.pdf",
+        "size_mb": 32.14
+      },
+      {
+        "filename": "Lavista-Ras-Hikma.pdf",
+        "clean_name": "Lavista Ras Hikma",
+        "path": "/brochures/Lavista-Ras-Hikma.pdf",
+        "size_mb": 18.85
+      }
+    ],
     "la-vista-topaz": [
       {
         "filename": "lavista Bay-east-brochure-v07-2022.pdf",
@@ -10828,6 +12190,14 @@
         "path": "/brochures/lavista Bay-east-brochure-v07-2022.pdf",
         "size_mb": 32.14
       },
+      {
+        "filename": "Lavista-Ras-Hikma.pdf",
+        "clean_name": "Lavista Ras Hikma",
+        "path": "/brochures/Lavista-Ras-Hikma.pdf",
+        "size_mb": 18.85
+      }
+    ],
+    "ras-el-hikma-lagoona": [
       {
         "filename": "Lavista-Ras-Hikma.pdf",
         "clean_name": "Lavista Ras Hikma",
@@ -10881,6 +12251,14 @@
         "size_mb": 7.94
       }
     ],
+    "stella-di-mare": [
+      {
+        "filename": "MAresidence.pdf",
+        "clean_name": "Maresidence",
+        "path": "/brochures/MAresidence.pdf",
+        "size_mb": 2.08
+      }
+    ],
     "marsa-baghush": [
       {
         "filename": "Marsa-Baghush-Brochure.pdf",
@@ -10909,6 +12287,20 @@
         "clean_name": "Mivida",
         "path": "/brochures/Mivida.pdf",
         "size_mb": 2.94
+      }
+    ],
+    "modon-ras-el-hekma": [
+      {
+        "filename": "MODON AVAILABILITY & FACT SHEET SHORT VERSION AUGUST 2026.pdf",
+        "clean_name": "Modon Availability & Fact Sheet Short Version August 2026",
+        "path": "/brochures/MODON AVAILABILITY & FACT SHEET SHORT VERSION AUGUST 2026.pdf",
+        "size_mb": 9.42
+      },
+      {
+        "filename": "MODON-Wadi Yemm-Sales Additional Kit 1.pdf",
+        "clean_name": "Modon Wadi Yemm Sales Additional Kit 1",
+        "path": "/brochures/MODON-Wadi Yemm-Sales Additional Kit 1.pdf",
+        "size_mb": 35.96
       }
     ],
     "mountain-view-grand": [
@@ -10991,6 +12383,14 @@
         "size_mb": 6.09
       }
     ],
+    "alam-el-roum": [
+      {
+        "filename": "palm-hills-new alamen.pdf",
+        "clean_name": "Palm Hills New Alamen",
+        "path": "/brochures/palm-hills-new alamen.pdf",
+        "size_mb": 6.09
+      }
+    ],
     "palm-parks": [
       {
         "filename": "palm-hills-new alamen.pdf",
@@ -11007,7 +12407,7 @@
         "size_mb": 7.63
       }
     ],
-    "saada-sahel": [
+    "saada": [
       {
         "filename": "saada brochure 1.pdf",
         "clean_name": "Saada Brochure 1",
@@ -11159,6 +12559,14 @@
         "clean_name": "The Crest Villas E Brochure 1 1",
         "path": "/brochures/The-Crest-Villas-E-Brochure-1-1.pdf",
         "size_mb": 23.7
+      }
+    ],
+    "safa-medi-plex-phase-2": [
+      {
+        "filename": "The-Mediterranean-Two-Storey-Villas-Brochure.pdf",
+        "clean_name": "The Mediterranean Two Storey Villas Brochure",
+        "path": "/brochures/The-Mediterranean-Two-Storey-Villas-Brochure.pdf",
+        "size_mb": 3.51
       }
     ],
     "the-waterway": [

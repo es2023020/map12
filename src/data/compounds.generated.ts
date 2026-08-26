@@ -8000,9 +8000,9 @@ export const compoundsGenerated: Compound[] = [
     "lng": 28.59,
     "developer": "LMD",
     "developerSlug": "lmd",
-    "priceFrom": 11,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "priceFrom": 11.5,
+    "deliveryYear": 2027,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Chalet",
@@ -8026,7 +8026,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/zoya/3.jpg"
 ],
     "blurb": "Zoya sits at km 145 on the North Coast in ghazala bay, developed by LMD. A beachfront community designed for premium summer living.",
-    "paymentPlan": "5% down payment over 7 years equal installments",
+    "paymentPlan": "5% DP over 10 Yrs",
     "areaSize": "328 feddan",
     "unitSizes": "91\u2013354 m\u00b2",
     "city": "Ghazala Bay, North Coast (km 145), Matrouh Governorate, Egypt",

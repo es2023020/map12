@@ -1,0 +1,31 @@
+[
+  {
+    "id": "zoya-4",
+    "unitNo": "ZY-LG2-3B-145",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 145,
+    "view": "Sea & Lagoon Views",
+    "priceEGP": 24100000,
+    "status": "Available",
+    "slug": "zoya",
+    "cluster": "Lagoon 2 (Coconut Condos)",
+    "delivery_note": "Q4 2028",
+    "payment_plan": "10%+10% over 8 Yrs"
+  },
+  {
+    "id": "zoya-6",
+    "unitNo": "ZY-LG1-COND-170",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 170,
+    "view": "Sea & Lagoon Views",
+    "priceEGP": 30300000,
+    "status": "Available",
+    "slug": "zoya",
+    "cluster": "Lagoon 1 (Palm Condos)",
+    "area_note": "170–235 sqm",
+    "delivery_note": "Q2 2028",
+    "payment_plan": "10% DP over 6 Yrs"
+  }
+]

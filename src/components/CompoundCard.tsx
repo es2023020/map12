@@ -1,3 +1,4 @@
+import { formatCurrency } from "@/lib/currency";
 import { Link } from "@tanstack/react-router";
 import { Heart, MapPin, Waves, Calendar, GitCompareArrows } from "lucide-react";
 import { useStore } from "@/lib/store";
@@ -12,6 +13,7 @@ export function CompoundCard({ c }: { c: Compound }) {
   const toggleFav = useStore((s) => s.toggleFavorite);
   const toggleCmp = useStore((s) => s.toggleCompare);
   const availabilityList = useStore((s) => s.availabilityList);
+  const currency = useStore((s) => s.currency);
 
   const developerInfo = developers.find((d) => d.slug === c.developerSlug);
   const avail = availabilityList.find((a) => a.slug === c.slug);
@@ -138,7 +140,7 @@ export function CompoundCard({ c }: { c: Compound }) {
               Starting From
             </span>
             <span className="font-display text-lg font-bold text-primary tracking-tight">
-              {c.priceFrom > 0 ? `EGP ${c.priceFrom}M` : "Price on Request"}
+              {formatCurrency(c.priceFrom, currency)}
             </span>
           </div>
           <Link
