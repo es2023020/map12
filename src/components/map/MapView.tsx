@@ -224,8 +224,15 @@ export function MapView({
       >
         <MapClickEvents onMapClick={onMapClick} />
         <LayersControl position="topright">
-          <LayersControl.BaseLayer checked name="Wikimapia Map (Streets)">
-            <CustomWikimapiaTileLayer />
+          <LayersControl.BaseLayer checked name="Satellite (Default)">
+            <TileLayer
+              attribution="Tiles &copy; Esri"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+              maxZoom={19}
+            />
+          </LayersControl.BaseLayer>
+          <LayersControl.BaseLayer name="Wikimapia Only">
+            <CustomWikimapiaTileLayer opacity={1.0} />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Wikimapia Hybrid">
             <LayerGroup>
@@ -237,14 +244,7 @@ export function MapView({
               <CustomWikimapiaTileLayer opacity={0.75} />
             </LayerGroup>
           </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Satellite">
-            <TileLayer
-              attribution="Tiles &copy; Esri"
-              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-              maxZoom={19}
-            />
-          </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Light">
+          <LayersControl.BaseLayer name="Light Street Map">
             <TileLayer
               attribution="&copy; OpenStreetMap &copy; CARTO"
               url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"

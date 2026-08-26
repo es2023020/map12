@@ -1,6 +1,5 @@
 import mediaRegistry from "@/data/media-registry.json";
 import { formatCurrency, formatExactPrice } from "@/lib/currency";
-import { Share2, Copy } from "lucide-react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { Shell } from "@/components/layout/Shell";
@@ -26,6 +25,12 @@ import {
   X,
   Layers,
   Sparkles,
+  Share2,
+  Copy,
+  Edit3,
+  Eye,
+  User,
+  Phone,
 } from "lucide-react";
 
 export const Route = createFileRoute("/compare")({
@@ -415,28 +420,57 @@ export function ComparePage() {
     return tableRows;
   }, [tableRows, showDiffsOnly]);
 
-  const handleDownloadPDF = () => {
-    const originalTitle = document.title;
-    const names = validSlots.map((s) => s.comp?.name).join(" vs ");
-    document.title = `Property Atlas — Multi-Project Comparison (${names})`;
-    const style = document.createElement("style");
-    style.id = "print-only-style";
-    style.innerHTML = `
-      @media print {
-        header, footer, nav, aside, .no-print, button { display: none !important; }
-        body { background: white !important; color: black !important; }
-        #comparison-report-container { display: block !important; width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
-        .shadow-soft, .shadow-sm, .shadow-2xl { box-shadow: none !important; border: 1px solid #ddd !important; }
-        tr { page-break-inside: avoid !important; }
-      }
-    `;
-    document.head.appendChild(style);
-    window.print();
-    document.title = originalTitle;
-    setTimeout(() => {
-      const s = document.getElementById("print-only-style");
-      if (s) s.remove();
-    }, 1000);
+  // Editable comparison state
+  const [editMode, setEditMode] = useState(false);
+  const [downloadingPdf, setDownloadingPdf] = useState(false);
+
+  const [clientName, setClientName] = useState("Valued Client");
+  const [agentName, setAgentName] = useState("Senior Real Estate Consultant");
+  const [agentTitle, setAgentTitle] = useState("Luxury Advisory Division");
+  const [agentPhone, setAgentPhone] = useState("+20 102 932 4783");
+  const [agentEmail, setAgentEmail] = useState("consultant@realestate.eg");
+  const [agencyName, setAgencyName] = useState("Exclusive Real Estate Advisory");
+  const [summaryHook, setSummaryHook] = useState("Here is your curated side-by-side multi-project comparison analysis detailing pricing, payment schedules, unit specifications, and delivery timelines.");
+
+  // Direct PDF Download using html2canvas & jsPDF
+  const handleDownloadPDF = async () => {
+    const targetEl = document.getElementById("comparison-report-container");
+    if (!targetEl) return;
+    setDownloadingPdf(true);
+    try {
+      // @ts-ignore
+      const html2canvasModule = await import(/* @vite-ignore */ "html2canvas");
+      // @ts-ignore
+      const jsPdfModule = await import(/* @vite-ignore */ "jspdf");
+
+      const html2canvas = html2canvasModule.default || html2canvasModule;
+      const jsPDF = jsPdfModule.jsPDF || jsPdfModule.default || jsPdfModule;
+
+      const canvas = await html2canvas(targetEl, {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        backgroundColor: "#ffffff",
+      });
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF({
+        orientation: "landscape",
+        unit: "mm",
+        format: "a4",
+      });
+
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+      const names = validSlots.map((s) => s.comp?.name || "Project").join("_vs_");
+      pdf.save(`Comparison_${names.replace(/[^a-zA-Z0-9_]/g, "")}.pdf`);
+    } catch (e) {
+      console.error("Direct PDF export fallback", e);
+      window.print();
+    } finally {
+      setDownloadingPdf(false);
+    }
   };
 
   return (
@@ -457,11 +491,24 @@ export function ComparePage() {
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-3">
                 <button
+                  onClick={() => setEditMode(!editMode)}
+                  className={`no-print inline-flex items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-bold transition-all shadow-md cursor-pointer ${
+                    editMode
+                      ? "bg-accent text-accent-foreground"
+                      : "border border-white/20 bg-slate-800 text-white hover:bg-slate-700"
+                  }`}
+                >
+                  {editMode ? <Eye className="h-3.5 w-3.5" /> : <Edit3 className="h-3.5 w-3.5" />}
+                  {editMode ? "Preview Comparison" : "Edit Fields & Agent Info"}
+                </button>
+
+                <button
                   onClick={handleDownloadPDF}
-                  className="no-print inline-flex items-center gap-1.5 rounded-xl bg-accent text-accent-foreground px-4 py-2 text-xs font-bold transition-all hover:bg-accent/80 shadow-md"
+                  disabled={downloadingPdf}
+                  className="no-print inline-flex items-center gap-1.5 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-xs font-bold transition-all hover:bg-primary/90 shadow-md cursor-pointer disabled:opacity-50"
                 >
                   <Download className="h-3.5 w-3.5" />
-                  Export PDF Report
+                  {downloadingPdf ? "Exporting PDF..." : "Download Comparison PDF"}
                 </button>
                 {slots.length < 5 && (
                   <button
@@ -613,6 +660,83 @@ export function ComparePage() {
             })}
           </div>
         </div>
+
+        {/* Live Edit Drawer Controls (Hidden when in preview mode or print) */}
+        {editMode && (
+          <div className="no-print mb-6 rounded-2xl border border-border bg-card p-6 space-y-4 shadow-lg animate-in fade-in-50 duration-200">
+            <div className="text-xs font-bold uppercase tracking-wider text-accent flex items-center gap-1.5">
+              <Edit3 className="h-4 w-4" /> Edit Comparison Details &amp; Representative Information
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+              <div>
+                <label className="text-[10px] font-bold text-muted-foreground uppercase">Client Name</label>
+                <input
+                  type="text"
+                  value={clientName}
+                  onChange={(e) => setClientName(e.target.value)}
+                  className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-1.5 text-xs font-bold text-primary focus:border-accent focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="text-[10px] font-bold text-muted-foreground uppercase">Agent Name</label>
+                <input
+                  type="text"
+                  value={agentName}
+                  onChange={(e) => setAgentName(e.target.value)}
+                  className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-1.5 text-xs font-bold text-primary focus:border-accent focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="text-[10px] font-bold text-muted-foreground uppercase">Agent Title &amp; Division</label>
+                <input
+                  type="text"
+                  value={agentTitle}
+                  onChange={(e) => setAgentTitle(e.target.value)}
+                  className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-1.5 text-xs font-bold text-primary focus:border-accent focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="text-[10px] font-bold text-muted-foreground uppercase">Agent Phone</label>
+                <input
+                  type="text"
+                  value={agentPhone}
+                  onChange={(e) => setAgentPhone(e.target.value)}
+                  className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-1.5 text-xs font-bold text-primary focus:border-accent focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="text-[10px] font-bold text-muted-foreground uppercase">Agent Email / Agency</label>
+                <input
+                  type="text"
+                  value={agentEmail}
+                  onChange={(e) => setAgentEmail(e.target.value)}
+                  className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-1.5 text-xs font-bold text-primary focus:border-accent focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="text-[10px] font-bold text-muted-foreground uppercase">Agency / Advisory Name</label>
+                <input
+                  type="text"
+                  value={agencyName}
+                  onChange={(e) => setAgencyName(e.target.value)}
+                  className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-1.5 text-xs font-bold text-primary focus:border-accent focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="text-[10px] font-bold text-muted-foreground uppercase">Executive Proposal Introduction</label>
+              <textarea
+                rows={2}
+                value={summaryHook}
+                onChange={(e) => setSummaryHook(e.target.value)}
+                className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-1.5 text-xs font-medium text-primary focus:border-accent focus:outline-none"
+              />
+            </div>
+          </div>
+        )}
 
         {validSlots.length >= 2 ? (
           <div id="comparison-report-container" className="space-y-8 animate-fade-in">
