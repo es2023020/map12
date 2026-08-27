@@ -10,7 +10,7 @@
     "status": "Available",
     "slug": "mivida",
     "cluster": "Business Park 3",
-    "delivery_note": "30/09/2022",
+    "delivery_note": "Ready to Move (RTM)",
     "payment_plan": "5% DP over 8 Yrs"
   },
   {
@@ -24,7 +24,7 @@
     "status": "Available",
     "slug": "mivida",
     "cluster": "The Place",
-    "delivery_note": "31/03/2026",
+    "delivery_note": "Ready to Move (RTM)",
     "payment_plan": "5% DP over 8 Yrs"
   },
   {
@@ -38,7 +38,7 @@
     "status": "Available",
     "slug": "mivida",
     "cluster": "Crystal",
-    "delivery_note": "31/05/2029",
+    "delivery_note": "Ready to Move (RTM)",
     "payment_plan": "5% DP over 8 Yrs"
   },
   {
@@ -52,7 +52,7 @@
     "status": "Available",
     "slug": "mivida",
     "cluster": "Aqua",
-    "delivery_note": "31/01/2030",
+    "delivery_note": "Ready to Move (RTM)",
     "payment_plan": "5% DP over 8 Yrs"
   },
   {
@@ -66,7 +66,7 @@
     "status": "Available",
     "slug": "mivida",
     "cluster": "Aqua",
-    "delivery_note": "31/01/2030",
+    "delivery_note": "Ready to Move (RTM)",
     "payment_plan": "5% DP over 8 Yrs"
   }
 ]

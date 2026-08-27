@@ -1,5 +1,19 @@
 [
   {
+    "id": "sarai-1",
+    "unitNo": "SAR-STD-38",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 38,
+    "view": "Landscape",
+    "priceEGP": 3600000,
+    "status": "Available",
+    "slug": "sarai",
+    "cluster": "Royal Residence",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "1.5% - 12Y Backloaded"
+  },
+  {
     "id": "sarai-2",
     "unitNo": "SAR-1B-50",
     "beds": 1,

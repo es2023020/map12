@@ -1,5 +1,19 @@
 [
   {
+    "id": "talala-3",
+    "unitNo": "TAL-3B-11M3",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 135,
+    "view": "Landscape",
+    "priceEGP": 11300000,
+    "status": "Available",
+    "slug": "talala",
+    "cluster": "Talala",
+    "delivery_note": "5 Years",
+    "payment_plan": "5.2% - 15 Yrs"
+  },
+  {
     "id": "talala-10",
     "unitNo": "TAL-SA-179",
     "beds": 3,

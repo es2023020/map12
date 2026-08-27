@@ -1,0 +1,16 @@
+[
+  {
+    "id": "31-west-27",
+    "unitNo": "V02AM",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 330,
+    "view": "Scenic View",
+    "priceEGP": 59267264,
+    "status": "Available",
+    "slug": "31-west",
+    "cluster": "31 west",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7-8 yrs"
+  }
+]

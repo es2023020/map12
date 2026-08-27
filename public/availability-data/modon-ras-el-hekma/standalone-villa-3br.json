@@ -1,5 +1,20 @@
 [
   {
+    "id": "modon-ras-el-hekma-12",
+    "unitNo": "MOD-LH-2ND-3B-239",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 239,
+    "view": "Sea & Natural Lagoons",
+    "priceEGP": 47500000,
+    "status": "Available",
+    "slug": "modon-ras-el-hekma",
+    "cluster": "Lighthouse Luxury",
+    "area_note": "2nd Row Sea Front",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 8 Yrs"
+  },
+  {
     "id": "modon-ras-el-hekma-15",
     "unitNo": "MOD-WE-SA-3B-244",
     "beds": 3,
@@ -11,7 +26,7 @@
     "slug": "modon-ras-el-hekma",
     "cluster": "Wadi East",
     "area_note": "265m Garden",
-    "delivery_note": "4 Years",
+    "delivery_note": "Ready to Move (RTM)",
     "payment_plan": "5%+5% over 8 Yrs"
   },
   {
@@ -26,7 +41,7 @@
     "slug": "modon-ras-el-hekma",
     "cluster": "Montage Villas",
     "area_note": "495m Garden",
-    "delivery_note": "4 Years",
+    "delivery_note": "Ready to Move (RTM)",
     "payment_plan": "5%+5% over 8 Yrs"
   }
 ]
