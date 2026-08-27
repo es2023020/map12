@@ -321,32 +321,13 @@ export function UnitDetailModal({
               {getUnitIcon(unit.type)}
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <span
-                  className={`inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider shadow-2xs border ${
-                    unitRtm
-                      ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30"
-                      : "bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30"
-                  }`}
-                >
-                  {unitRtm ? (
-                    <>
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                      <span>Ready to Move</span>
-                    </>
-                  ) : (
-                    <>
-                      <CalendarClock className="h-3 w-3 text-amber-500" />
-                      <span>Off-Plan</span>
-                    </>
-                  )}
-                </span>
-                {unit.cluster && (
+              {unit.cluster && (
+                <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">
                     {unit.cluster}
                   </span>
-                )}
-              </div>
+                </div>
+              )}
               <h2 className="font-display text-xl font-bold text-primary leading-tight mt-1">
                 {unit.type} {unit.beds ? `(${unit.beds} Bedrooms)` : ""}
               </h2>
