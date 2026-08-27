@@ -20,22 +20,22 @@ slug_to_comp = {c["slug"]: c for c in compounds}
 
 def clean_type(t):
     t_lower = str(t).lower().strip()
-    if "penthouse" in t_lower:
+    if "apartment" in t_lower or "flat" in t_lower or "studio" in t_lower or "apt" in t_lower:
+        return "Apartment"
+    elif "penthouse" in t_lower:
         return "Penthouse"
-    elif "townhouse" in t_lower or "town house" in t_lower or "town" in t_lower or "townhome" in t_lower:
+    elif "duplex" in t_lower or "ivilla" in t_lower or "i-villa" in t_lower:
+        return "Duplex"
+    elif "townhouse" in t_lower or "town house" in t_lower or "townhome" in t_lower or "town" in t_lower:
         return "Townhouse"
-    elif "twinhouse" in t_lower or "twin house" in t_lower or "twin" in t_lower or "twinhome" in t_lower:
+    elif "twinhouse" in t_lower or "twin house" in t_lower or "twinhome" in t_lower or "twin" in t_lower:
         return "Twin House"
-    elif "standalone" in t_lower or "stand alone" in t_lower or "villa" in t_lower or "house" in t_lower:
+    elif "standalone" in t_lower or "stand alone" in t_lower or "villa" in t_lower or "single family" in t_lower:
         return "Standalone Villa"
     elif "chalet" in t_lower:
         return "Chalet"
     elif "cabin" in t_lower:
         return "Cabin"
-    elif "apartment" in t_lower or "flat" in t_lower or "bedroom" in t_lower or "studio" in t_lower or "apt" in t_lower:
-        return "Apartment"
-    elif "duplex" in t_lower or "ivilla" in t_lower or "i-villa" in t_lower:
-        return "Duplex"
     elif "office" in t_lower or "admin" in t_lower or "commercial" in t_lower:
         return "Office"
     elif "clinic" in t_lower or "medical" in t_lower:

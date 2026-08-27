@@ -5271,6 +5271,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Standalone Villa",
       "Townhome",
       "Twinhome"
