@@ -15,6 +15,21 @@
     "payment_plan": "10% DP over 8 Yrs"
   },
   {
+    "id": "naia-bay-6",
+    "unitNo": "NAIA-P2-FLOAT-TH-180",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 180,
+    "view": "Sea & Landscape",
+    "priceEGP": 27000000,
+    "status": "Available",
+    "slug": "naia-bay",
+    "cluster": "Phase 2 Floating Villas",
+    "area_note": "80m Deck · 60m Roof",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 10 Yrs"
+  },
+  {
     "id": "naia-bay-7",
     "unitNo": "NAIA-P2-TH-D-225",
     "beds": 3,

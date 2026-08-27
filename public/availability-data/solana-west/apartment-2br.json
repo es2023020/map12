@@ -28,5 +28,20 @@
     "area_note": "131 + Garden 60 SQM",
     "delivery_note": "2028",
     "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
+  },
+  {
+    "id": "solana-west-12",
+    "unitNo": "SW-MF-2BR-LOFT",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 149,
+    "view": "Landscape",
+    "priceEGP": 20950000,
+    "status": "Available",
+    "slug": "solana-west",
+    "cluster": "Multiple Family",
+    "area_note": "149 SQM Loft",
+    "delivery_note": "2028",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
   }
 ]

@@ -12,5 +12,19 @@
     "cluster": "Apartments",
     "delivery_note": "4.5 Years",
     "payment_plan": "1.5% - 12Y Backloaded"
+  },
+  {
+    "id": "the-butterfly-2",
+    "unitNo": "BUT-1B-50",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 50,
+    "view": "Landscape",
+    "priceEGP": 4000000,
+    "status": "Available",
+    "slug": "the-butterfly",
+    "cluster": "Apartments",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "1.5% - 12Y Backloaded"
   }
 ]

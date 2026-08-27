@@ -12,5 +12,61 @@
     "cluster": "Phase 1",
     "delivery_note": "Ready to Move (RTM)",
     "payment_plan": "5%+5% DP over 8 years"
+  },
+  {
+    "id": "mountain-view-icity-october-132",
+    "unitNo": "L-IVPA-07-A2-2",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 13036354,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP over 8 years"
+  },
+  {
+    "id": "mountain-view-icity-october-187",
+    "unitNo": "L-IVPA-24-B2-2",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 11530571,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP over 8 years"
+  },
+  {
+    "id": "mountain-view-icity-october-188",
+    "unitNo": "L-IVPA-25-A2-3",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 11865581,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP over 8 years"
+  },
+  {
+    "id": "mountain-view-icity-october-190",
+    "unitNo": "L-IVPB-10-A2-2",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 12770829,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP over 8 years"
   }
 ]

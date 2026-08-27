@@ -12,5 +12,33 @@
     "cluster": "Royal Residence",
     "delivery_note": "4.5 Years",
     "payment_plan": "1.5% - 12Y Backloaded"
+  },
+  {
+    "id": "sarai-13",
+    "unitNo": "SAR-D2N-OFF-46",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 46,
+    "view": "Landscape",
+    "priceEGP": 7400000,
+    "status": "Available",
+    "slug": "sarai",
+    "cluster": "D2N Commercial",
+    "delivery_note": "4 Years",
+    "payment_plan": "10% - 15 Yrs"
+  },
+  {
+    "id": "sarai-14",
+    "unitNo": "SAR-D2N-RET-67",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 67,
+    "view": "Landscape",
+    "priceEGP": 11600000,
+    "status": "Available",
+    "slug": "sarai",
+    "cluster": "D2N Commercial",
+    "delivery_note": "4 Years",
+    "payment_plan": "10% - 15 Yrs"
   }
 ]

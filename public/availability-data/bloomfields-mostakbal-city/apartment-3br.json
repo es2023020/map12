@@ -574,6 +574,20 @@
     "payment_plan": "5% DP · 10 years installments"
   },
   {
+    "id": "bloomfields-mostakbal-city-72",
+    "unitNo": "CR4-A-205",
+    "beds": 3,
+    "finishing": "Semi-Finished",
+    "areaSqm": 247,
+    "view": "Landscape",
+    "priceEGP": 18205000,
+    "status": "Available",
+    "slug": "bloomfields",
+    "cluster": "Clusters (CR & S13-25)",
+    "delivery_note": "Delivery 3 Months",
+    "payment_plan": "5% DP · 10 years installments"
+  },
+  {
     "id": "bloomfields-mostakbal-city-74",
     "unitNo": "S13-B4-401",
     "beds": 3,

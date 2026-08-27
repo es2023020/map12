@@ -1,5 +1,20 @@
 [
   {
+    "id": "hyde-park-north-seashore-37",
+    "unitNo": "HPN1/TW/38A",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 218,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 75810000,
+    "status": "Available",
+    "slug": "hyde-park-north-seashore",
+    "cluster": "HPN1",
+    "area_note": "Land: 309 sqm",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
     "id": "hyde-park-north-seashore-51",
     "unitNo": "HPN1/ TW/68A",
     "beds": 3,

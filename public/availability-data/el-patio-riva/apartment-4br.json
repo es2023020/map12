@@ -43,5 +43,20 @@
     "area_note": "Typical 212m",
     "delivery_note": "Ready to Move (RTM)",
     "payment_plan": "5%+2.5%+2.5% over 8/10 years"
+  },
+  {
+    "id": "el-patio-riva-25",
+    "unitNo": "EPR-PH-206",
+    "beds": 4,
+    "finishing": "Semi-finished",
+    "areaSqm": 206,
+    "view": "Landscape",
+    "priceEGP": 18790000,
+    "status": "Available",
+    "slug": "el-patio-riva",
+    "cluster": "Apartments",
+    "area_note": "Penthouse 206m + Roof 124m",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+2.5%+2.5% over 8/10 years"
   }
 ]

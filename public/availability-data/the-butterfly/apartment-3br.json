@@ -1,12 +1,12 @@
 [
   {
-    "id": "the-butterfly-2",
-    "unitNo": "BUT-1B-50",
-    "beds": 1,
+    "id": "the-butterfly-4",
+    "unitNo": "BUT-3B-120",
+    "beds": 3,
     "finishing": "Core & Shell",
-    "areaSqm": 50,
+    "areaSqm": 120,
     "view": "Landscape",
-    "priceEGP": 4000000,
+    "priceEGP": 10600000,
     "status": "Available",
     "slug": "the-butterfly",
     "cluster": "Apartments",

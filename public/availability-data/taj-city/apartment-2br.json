@@ -12,5 +12,19 @@
     "cluster": "Origami",
     "delivery_note": "4 Years",
     "payment_plan": "5% - 10 Yrs"
+  },
+  {
+    "id": "taj-city-6",
+    "unitNo": "TAJ-KINDA-OFF-56",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 56,
+    "view": "Landscape",
+    "priceEGP": 12400000,
+    "status": "Available",
+    "slug": "taj-city",
+    "cluster": "Kinda Offices",
+    "delivery_note": "1 Year",
+    "payment_plan": "15% - 7 Yrs"
   }
 ]

@@ -108,11 +108,25 @@ function parseBedsFromType(typeStr) {
   return match ? parseInt(match[1], 10) : undefined;
 }
 
+function cleanType(t, cluster = "") {
+  const str = String(t || "").toLowerCase().trim();
+  const cl = String(cluster || "").toLowerCase().trim();
+  if (cl === "apartments" || cl === "private residences" || cl.endsWith("apartments") || str.includes("apartment") || str.includes("flat") || str.includes("studio")) {
+    return "Apartment";
+  }
+  if (str.includes("penthouse")) return "Penthouse";
+  if (str.includes("duplex") || str.includes("ivilla")) return "Duplex";
+  if (str.includes("townhouse") || str.includes("town house") || str.includes("townhome")) return "Townhouse";
+  if (str.includes("twinhouse") || str.includes("twin house") || str.includes("twinhome")) return "Twin House";
+  if (str.includes("chalet")) return "Chalet";
+  if (str.includes("standalone") || str.includes("stand alone") || str.includes("villa") || cl === "single family") return "Standalone Villa";
+  return "Apartment";
+}
+
 function unitTypeSlug(b) {
-  const parts = [b.type.toLowerCase().replace(/[^a-z0-9]+/g, "-")];
-  if (b.beds) parts.push(`${b.beds}br`);
-  if (b.cluster) parts.push(b.cluster.toLowerCase().replace(/[^a-z0-9]+/g, "-"));
-  return parts.join("-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+  const cleanT = cleanType(b.type, b.cluster);
+  const tSlug = cleanT.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  return `${tSlug}-${b.beds || 1}br`;
 }
 
 function esc(s) {
@@ -261,6 +275,9 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
             ? sheetName
             : "Apartment";
 
+      const clusterVal = rowObj["cluster"] || rowObj["Cluster"] || sheetName || "";
+      const normalizedType = cleanType(rawType, clusterVal);
+
       const priceRange = priceKey ? parsePriceRange(rowObj[priceKey]) : { min: 0, max: 0 };
       if (priceRange.min <= 0 && priceRange.max <= 0) {
         // Skip rows without valid price
@@ -285,10 +302,10 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
         }
       });
 
-      const key = `${rawType}-${beds}`;
+      const key = `${normalizedType}-${beds}`;
       if (!breakdownMap[key]) {
         breakdownMap[key] = {
-          type: rawType,
+          type: normalizedType,
           beds,
           available: 0,
           minSqm: areaRange.min || 120,
@@ -419,6 +436,33 @@ function main() {
   console.log(
     `Wrote ${projectsList.length} projects & ${unitFilesCount} unit JSON files. Wiped old availability data.`,
   );
+
+  // Sync types in compounds.generated.ts
+  const compoundsFile = path.join(ROOT, "src", "data", "compounds.generated.ts");
+  if (fs.existsSync(compoundsFile)) {
+    let compContent = fs.readFileSync(compoundsFile, "utf8");
+    let updatedTypesCount = 0;
+    projectsList.forEach((p) => {
+      const availTypes = Array.from(new Set((p.breakdown || []).map((b) => b.type))).filter(Boolean);
+      if (availTypes.length > 0) {
+        const pattern = new RegExp(`("slug":\\s*"${p.slug}"[\\s\\S]*?"types":\\s*\\[)([^\\]]*?)(\\])`, "g");
+        if (pattern.test(compContent)) {
+          compContent = compContent.replace(pattern, (match, prefix, existingContent, suffix) => {
+            let existingList = [];
+            try {
+              existingList = JSON.parse(`[${existingContent}]`);
+            } catch (e) {}
+            const combined = Array.from(new Set([...existingList, ...availTypes]));
+            const formatted = combined.map(t => `\n      "${t}"`).join(",");
+            return `${prefix}${formatted}\n    ${suffix}`;
+          });
+          updatedTypesCount++;
+        }
+      }
+    });
+    fs.writeFileSync(compoundsFile, compContent, "utf8");
+    console.log(`Synced unit types for ${updatedTypesCount} compound(s) in compounds.generated.ts`);
+  }
 }
 
 syncProjectImages();
