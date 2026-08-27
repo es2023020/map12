@@ -6253,8 +6253,10 @@ function getActiveCompounds(): Compound[] {
             const local = localMap.get(sc.slug);
             if (local) {
               return {
-                ...sc,
                 ...local,
+                ...sc,
+                brochureUrl: local.brochureUrl || sc.brochureUrl,
+                masterPlanUrl: local.masterPlanUrl || sc.masterPlanUrl,
               };
             }
             return sc;

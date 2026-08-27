@@ -85,26 +85,39 @@ function getActiveAvailability(): ProjectAvailability[] {
     return cachedAvailability;
   }
   const staticAvailability = loadedAvailability || [];
-  let activeList = staticAvailability;
+  let localList: ProjectAvailability[] = [];
   if (typeof window !== "undefined") {
     try {
       const storeStr = localStorage.getItem("property-atlas-broker") || localStorage.getItem("proptrack-broker");
       if (storeStr) {
         const parsed = JSON.parse(storeStr);
         if (parsed?.state?.availabilityList?.length) {
-          activeList = parsed.state.availabilityList;
+          localList = parsed.state.availabilityList;
         }
       }
     } catch (e) {
       // fallback
     }
   }
-  const result = [...activeList];
+  
+  const result: ProjectAvailability[] = [];
+  const localMap = new Map(localList.map((a) => [a.slug, a]));
+
   for (const sa of staticAvailability) {
-    if (!result.some((a) => a.slug === sa.slug)) {
+    const la = localMap.get(sa.slug);
+    if (la && la.lastUpdated && sa.lastUpdated && la.lastUpdated > sa.lastUpdated) {
+      result.push(la);
+    } else {
       result.push(sa);
     }
   }
+
+  for (const la of localList) {
+    if (!result.some((a) => a.slug === la.slug)) {
+      result.push(la);
+    }
+  }
+
   cachedAvailability = result;
   lastAvailabilityRead = now;
   return result;

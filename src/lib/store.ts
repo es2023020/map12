@@ -2023,14 +2023,8 @@ export const useStore = create<State>()(
           if (Array.isArray(state.availabilityList)) {
             const mergedList = generatedAvailability.map((sa) => {
               const localAvail = state.availabilityList.find((a: any) => a.slug === sa.slug);
-              if (localAvail) {
-                if (
-                  !localAvail.lastUpdated ||
-                  (sa.lastUpdated && sa.lastUpdated >= localAvail.lastUpdated)
-                ) {
-                  return sa;
-                }
-                return { ...sa, ...localAvail };
+              if (localAvail && localAvail.lastUpdated && sa.lastUpdated && localAvail.lastUpdated > sa.lastUpdated) {
+                return localAvail;
               }
               return sa;
             });
