@@ -1,0 +1,5180 @@
+[
+  {
+    "slug": "noll-new-cairo",
+    "name": "Noll New Cairo",
+    "developer": "Kleek Developments",
+    "total_available": 11,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Studio"
+    ],
+    "price_range_m": [
+      4.925,
+      18.5852
+    ],
+    "sqm_range": [
+      75,
+      280
+    ],
+    "delivery_notes": [
+      "2028"
+    ]
+  },
+  {
+    "slug": "noll",
+    "name": "Noll",
+    "developer": "Kleek Developments",
+    "total_available": 11,
+    "unit_types": [
+      "Studio"
+    ],
+    "price_range_m": [
+      4.925,
+      4.925
+    ],
+    "sqm_range": [
+      75,
+      75
+    ],
+    "delivery_notes": [
+      "2028"
+    ]
+  },
+  {
+    "slug": "ever-new-cairo",
+    "name": "Ever New Cairo",
+    "developer": "Cred Developments",
+    "total_available": 6,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      15.5,
+      49.0
+    ],
+    "sqm_range": [
+      165,
+      423
+    ],
+    "delivery_notes": [
+      "2 Years",
+      "4 Years"
+    ]
+  },
+  {
+    "slug": "noll-new-cairo",
+    "name": "Noll New Cairo",
+    "developer": "Kleek Developments",
+    "total_available": 11,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Studio"
+    ],
+    "price_range_m": [
+      4.925,
+      18.5852
+    ],
+    "sqm_range": [
+      75,
+      280
+    ],
+    "delivery_notes": [
+      "2028"
+    ]
+  },
+  {
+    "slug": "noll",
+    "name": "Noll",
+    "developer": "Kleek Developments",
+    "total_available": 11,
+    "unit_types": [
+      "Studio"
+    ],
+    "price_range_m": [
+      4.925,
+      4.925
+    ],
+    "sqm_range": [
+      75,
+      75
+    ],
+    "delivery_notes": [
+      "2028"
+    ]
+  },
+  {
+    "slug": "ever-new-cairo",
+    "name": "Ever New Cairo",
+    "developer": "Cred Developments",
+    "total_available": 6,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      15.5,
+      49.0
+    ],
+    "sqm_range": [
+      165,
+      423
+    ],
+    "delivery_notes": [
+      "2 Years",
+      "4 Years"
+    ]
+  },
+  {
+    "slug": "amorada",
+    "name": "Amorada",
+    "developer": "Afaq",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "price_range_m": [
+      12,
+      20
+    ],
+    "sqm_range": [
+      155,
+      230
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "al-east-mostakbal-city",
+    "name": "Al East Mostakbal City",
+    "developer": "Al Ahly Sabbour",
+    "total_available": 11,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      5,
+      42.75
+    ],
+    "sqm_range": [
+      65,
+      370
+    ],
+    "delivery_notes": [
+      "4 Years"
+    ]
+  },
+  {
+    "slug": "gaia-ras-el-hekma",
+    "name": "Gaia Ras El Hekma",
+    "developer": "Al Ahly Sabbour",
+    "total_available": 1,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      47.6,
+      47.6
+    ],
+    "sqm_range": [
+      250,
+      250
+    ],
+    "delivery_notes": [
+      "Ready to Move / 3 Years"
+    ]
+  },
+  {
+    "slug": "gaia",
+    "name": "Gaia",
+    "developer": "Al Ahly Sabbour",
+    "total_available": 1,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      47.6,
+      47.6
+    ],
+    "sqm_range": [
+      250,
+      250
+    ],
+    "delivery_notes": [
+      "Ready to Move / 3 Years"
+    ]
+  },
+  {
+    "slug": "green-square",
+    "name": "Green Square",
+    "developer": "Al Ahly Sabbour",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      21,
+      21
+    ],
+    "sqm_range": [
+      165,
+      165
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "keeva-6th-of-october",
+    "name": "Keeva 6Th Of October",
+    "developer": "Al Ahly Sabbour",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      15.615,
+      33.92
+    ],
+    "sqm_range": [
+      180,
+      265
+    ],
+    "delivery_notes": [
+      "2-3 Years"
+    ]
+  },
+  {
+    "slug": "lavenir",
+    "name": "Lavenir",
+    "developer": "Al Ahly Sabbour",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      17,
+      17
+    ],
+    "sqm_range": [
+      160,
+      160
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "the-mornings",
+    "name": "The Mornings",
+    "developer": "Al Ahly Sabbour",
+    "total_available": 5,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      4.7,
+      11.8
+    ],
+    "sqm_range": [
+      43,
+      148
+    ],
+    "delivery_notes": [
+      "3 Years"
+    ]
+  },
+  {
+    "slug": "youd-ras-el-hekma",
+    "name": "Youd Ras El Hekma",
+    "developer": "Al Ahly Sabbour",
+    "total_available": 13,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      6.6,
+      68.3
+    ],
+    "sqm_range": [
+      60,
+      220
+    ],
+    "delivery_notes": [
+      "4 Years",
+      "Q3 2027",
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "youd",
+    "name": "Youd",
+    "developer": "Al Ahly Sabbour",
+    "total_available": 13,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      6.6,
+      68.3
+    ],
+    "sqm_range": [
+      60,
+      220
+    ],
+    "delivery_notes": [
+      "Q3 2027",
+      "Ready to Move",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "fifth-square",
+    "name": "Fifth Square",
+    "developer": "Al Marasem Developments",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      15,
+      17.3
+    ],
+    "sqm_range": [
+      120,
+      150
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "marbay-ras-el-hekma",
+    "name": "Marbay Ras El Hekma",
+    "developer": "Al Marasem Developments",
+    "total_available": 5,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      13.1,
+      34.7
+    ],
+    "sqm_range": [
+      98,
+      220
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "marresidence",
+    "name": "Marresidence",
+    "developer": "Al Marasem Developments",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      8.8,
+      19.7
+    ],
+    "sqm_range": [
+      49,
+      113
+    ],
+    "delivery_notes": [
+      "3 Years"
+    ]
+  },
+  {
+    "slug": "marville",
+    "name": "Marville",
+    "developer": "Al Marasem Developments",
+    "total_available": 4,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      9.5,
+      23
+    ],
+    "sqm_range": [
+      96,
+      240
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "seazen",
+    "name": "Seazen",
+    "developer": "Al Qamzi Developments",
+    "total_available": 6,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      6.9,
+      32
+    ],
+    "sqm_range": [
+      54,
+      235
+    ],
+    "delivery_notes": [
+      "3 Years",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "nyoum-pyramids",
+    "name": "Nyoum Pyramids",
+    "developer": "Arab Developers Holding",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      7.156,
+      9
+    ],
+    "sqm_range": [
+      170,
+      204
+    ],
+    "delivery_notes": [
+      "6 - 10 Months"
+    ]
+  },
+  {
+    "slug": "direction-white",
+    "name": "Direction White",
+    "developer": "Arabella Group",
+    "total_available": 17,
+    "unit_types": [
+      "Chalet",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      8.1,
+      82
+    ],
+    "sqm_range": [
+      65,
+      373
+    ],
+    "delivery_notes": [
+      "3 Years",
+      "Aug 2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "ashrafieh",
+    "name": "Ashrafieh",
+    "developer": "Arabia",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "price_range_m": [
+      5.3,
+      8.92
+    ],
+    "sqm_range": [
+      110,
+      190
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "galleria-moon-valley",
+    "name": "Galleria Moon Valley",
+    "developer": "Arabia Holding",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      12.5,
+      15.5
+    ],
+    "sqm_range": [
+      125,
+      155
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "sun-capital",
+    "name": "Sun Capital",
+    "developer": "Arabia Holding",
+    "total_available": 9,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      8.333,
+      31.112484
+    ],
+    "sqm_range": [
+      113,
+      267
+    ],
+    "delivery_notes": [
+      "6 months"
+    ]
+  },
+  {
+    "slug": "zizinia",
+    "name": "Zizinia",
+    "developer": "Ardic",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "price_range_m": [
+      6.2,
+      10.2
+    ],
+    "sqm_range": [
+      120,
+      220
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "kayan",
+    "name": "Kayan",
+    "developer": "Badreldin Developments",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      8.920755,
+      8.920755
+    ],
+    "sqm_range": [
+      128,
+      128
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "beta-greens",
+    "name": "Beta Greens",
+    "developer": "Beta Egypt",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      5.5,
+      5.8
+    ],
+    "sqm_range": [
+      115,
+      145
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "midtown-new-cairo",
+    "name": "Midtown New Cairo",
+    "developer": "Better Home",
+    "total_available": 1,
+    "unit_types": [
+      "Townhouse"
+    ],
+    "price_range_m": [
+      17.6,
+      17.6
+    ],
+    "sqm_range": [
+      200,
+      200
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "lake-west-1",
+    "name": "Lake West 1",
+    "developer": "Cairo Capital",
+    "total_available": 1,
+    "unit_types": [
+      "Townhouse"
+    ],
+    "price_range_m": [
+      17.97429,
+      17.97429
+    ],
+    "sqm_range": [
+      270,
+      270
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "lake-west-2",
+    "name": "Lake West 2",
+    "developer": "Cairo Capital",
+    "total_available": 2,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      13.75,
+      19.751522
+    ],
+    "sqm_range": [
+      211,
+      289
+    ],
+    "delivery_notes": [
+      "6 Months"
+    ]
+  },
+  {
+    "slug": "beachfront-towers-new-alamein",
+    "name": "Beachfront Towers New Alamein",
+    "developer": "City Edge Developments",
+    "total_available": 8,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      17.1,
+      35.6
+    ],
+    "sqm_range": [
+      217,
+      398
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "downtown-new-alamein",
+    "name": "Downtown New Alamein",
+    "developer": "City Edge Developments",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      9.4,
+      70.4
+    ],
+    "sqm_range": [
+      121,
+      911
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "il-latini-city-edge",
+    "name": "Il Latini City Edge",
+    "developer": "City Edge Developments",
+    "total_available": 12,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      4.3,
+      8.9
+    ],
+    "sqm_range": [
+      120,
+      255
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "jade-park-al-maqsad",
+    "name": "Jade Park Al Maqsad",
+    "developer": "City Edge Developments",
+    "total_available": 8,
+    "unit_types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "price_range_m": [
+      3.8,
+      19.6
+    ],
+    "sqm_range": [
+      75,
+      692
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "latin-city-new-alamein",
+    "name": "Latin City New Alamein",
+    "developer": "City Edge Developments",
+    "total_available": 12,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      4.3,
+      8.9
+    ],
+    "sqm_range": [
+      120,
+      255
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "mazarine-apartments-new-alamein",
+    "name": "Mazarine Apartments New Alamein",
+    "developer": "City Edge Developments",
+    "total_available": 13,
+    "unit_types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "price_range_m": [
+      7.3,
+      23.3
+    ],
+    "sqm_range": [
+      140,
+      451
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "mazarine-hub-new-alamein",
+    "name": "Mazarine Hub New Alamein",
+    "developer": "City Edge Developments",
+    "total_available": 6,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      5.8,
+      12.6
+    ],
+    "sqm_range": [
+      75,
+      170
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "new-garden-city-r5",
+    "name": "New Garden City R5",
+    "developer": "City Edge Developments",
+    "total_available": 6,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      4.1,
+      11.1
+    ],
+    "sqm_range": [
+      84,
+      243
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "cleopatra-square",
+    "name": "Cleopatra Square",
+    "developer": "Cleopatra Real Estate",
+    "total_available": 2,
+    "unit_types": [
+      "Twin House"
+    ],
+    "price_range_m": [
+      39.085,
+      52.531
+    ],
+    "sqm_range": [
+      298,
+      341
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "address-east",
+    "name": "Address East",
+    "developer": "Dorra Group",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      9.5,
+      9.5
+    ],
+    "sqm_range": [
+      160,
+      160
+    ],
+    "delivery_notes": [
+      "6 months"
+    ]
+  },
+  {
+    "slug": "the-address-east",
+    "name": "The Address East",
+    "developer": "Dorra Group",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      9.5,
+      9.5
+    ],
+    "sqm_range": [
+      160,
+      160
+    ],
+    "delivery_notes": [
+      "6 months"
+    ]
+  },
+  {
+    "slug": "village-west",
+    "name": "Village West",
+    "developer": "Dorra Group",
+    "total_available": 52,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      7,
+      28
+    ],
+    "sqm_range": [
+      65,
+      270
+    ],
+    "delivery_notes": [
+      "Delivery 2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "genova",
+    "name": "Genova",
+    "developer": "Eastern",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      15.375,
+      15.375
+    ],
+    "sqm_range": [
+      206,
+      206
+    ],
+    "delivery_notes": [
+      "3 - 6 month"
+    ]
+  },
+  {
+    "slug": "rock-eden",
+    "name": "Rock Eden",
+    "developer": "El Batal Developments",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      10.808,
+      10.808
+    ],
+    "sqm_range": [
+      195,
+      195
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "lac-ville",
+    "name": "Lac Ville",
+    "developer": "El Gabry",
+    "total_available": 2,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      11.83608,
+      15.5
+    ],
+    "sqm_range": [
+      259,
+      290
+    ],
+    "delivery_notes": [
+      "9 Months"
+    ]
+  },
+  {
+    "slug": "belle-vie-new-zayed",
+    "name": "Belle Vie New Zayed",
+    "developer": "Emaar Misr",
+    "total_available": 97,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      10.648888,
+      378.449888
+    ],
+    "sqm_range": [
+      120,
+      857
+    ],
+    "delivery_notes": [
+      "30/04/2027",
+      "30/06/2027",
+      "30/11/2027",
+      "31/03/2027",
+      "31/05/2027",
+      "31/07/2027",
+      "31/08/2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "belle-vie",
+    "name": "Belle Vie",
+    "developer": "Emaar Misr",
+    "total_available": 97,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      10.648888,
+      378.449888
+    ],
+    "sqm_range": [
+      120,
+      857
+    ],
+    "delivery_notes": [
+      "30/04/2027",
+      "30/06/2027",
+      "30/11/2027",
+      "31/03/2027",
+      "31/05/2027",
+      "31/07/2027",
+      "31/08/2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "cairo-gate",
+    "name": "Cairo Gate",
+    "developer": "Emaar Misr",
+    "total_available": 92,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      11.368888,
+      167.305888
+    ],
+    "sqm_range": [
+      95.8,
+      997.5
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "marassi-red-sea",
+    "name": "Marassi Red Sea",
+    "developer": "Emaar Misr",
+    "total_available": 77,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      27.848888,
+      236.597888
+    ],
+    "sqm_range": [
+      120,
+      860.6
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "mivida",
+    "name": "Mivida",
+    "developer": "Emaar Misr",
+    "total_available": 88,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      9.665888,
+      117.027888
+    ],
+    "sqm_range": [
+      120,
+      827.2
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "soul",
+    "name": "Soul",
+    "developer": "Emaar Misr",
+    "total_available": 86,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      46.322888,
+      318.843888
+    ],
+    "sqm_range": [
+      125.3,
+      690.9
+    ],
+    "delivery_notes": [
+      "31/05/2027",
+      "31/07/2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "uptown-cairo",
+    "name": "Uptown Cairo",
+    "developer": "Emaar Misr",
+    "total_available": 7,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      46.294888,
+      101.187888
+    ],
+    "sqm_range": [
+      216.7,
+      532.7
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "montania-park",
+    "name": "Montania Park",
+    "developer": "Everest View",
+    "total_available": 2,
+    "unit_types": [
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      17.5,
+      24.5
+    ],
+    "sqm_range": [
+      140,
+      225
+    ],
+    "delivery_notes": [
+      "6 Months"
+    ]
+  },
+  {
+    "slug": "montania",
+    "name": "Montania",
+    "developer": "Everest View",
+    "total_available": 2,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      23.5,
+      23.85
+    ],
+    "sqm_range": [
+      179,
+      220
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "grova-east-hills",
+    "name": "Grova East Hills",
+    "developer": "Hassan Allam Properties",
+    "total_available": 6,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      31,
+      78
+    ],
+    "sqm_range": [
+      263,
+      465
+    ],
+    "delivery_notes": [
+      "2 Years"
+    ]
+  },
+  {
+    "slug": "haptown",
+    "name": "Haptown",
+    "developer": "Hassan Allam Properties",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      15.5,
+      16
+    ],
+    "sqm_range": [
+      125,
+      165
+    ],
+    "delivery_notes": [
+      "6 months"
+    ]
+  },
+  {
+    "slug": "park-central-mostakbal-city",
+    "name": "Park Central Mostakbal City",
+    "developer": "Hassan Allam Properties",
+    "total_available": 14,
+    "unit_types": [
+      "Apartment",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      8.3,
+      52
+    ],
+    "sqm_range": [
+      81,
+      253
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "swanlake-el-gouna",
+    "name": "Swanlake El Gouna",
+    "developer": "Hassan Allam Properties",
+    "total_available": 8,
+    "unit_types": [
+      "Chalet",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      27.9,
+      47.7
+    ],
+    "sqm_range": [
+      110,
+      185
+    ],
+    "delivery_notes": [
+      "2 Years"
+    ]
+  },
+  {
+    "slug": "swanlake-residences-new-cairo",
+    "name": "Swanlake Residences New Cairo",
+    "developer": "Hassan Allam Properties",
+    "total_available": 13,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      15.7,
+      228.5
+    ],
+    "sqm_range": [
+      93,
+      497
+    ],
+    "delivery_notes": [
+      "1.5 Years",
+      "2 Years",
+      "2.5 Years",
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "swanlake-west",
+    "name": "Swanlake West",
+    "developer": "Hassan Allam Properties",
+    "total_available": 14,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      24.2,
+      129
+    ],
+    "sqm_range": [
+      151,
+      606
+    ],
+    "delivery_notes": [
+      "1.5 Years",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "the-valleys-mostakbal-city",
+    "name": "The Valleys Mostakbal City",
+    "developer": "Hassan Allam Properties",
+    "total_available": 7,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      26.4,
+      57
+    ],
+    "sqm_range": [
+      175,
+      300
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "sa-ada-sahel",
+    "name": "Sa Ada Sahel",
+    "developer": "Horizon Egypt Developments",
+    "total_available": 7,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      21.5,
+      320
+    ],
+    "sqm_range": [
+      149,
+      600
+    ],
+    "delivery_notes": [
+      "3 Years"
+    ]
+  },
+  {
+    "slug": "saada-boutique",
+    "name": "Saada Boutique",
+    "developer": "Horizon Egypt Developments",
+    "total_available": 12,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      7.7,
+      63.6
+    ],
+    "sqm_range": [
+      71,
+      380
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "saada-north-coast",
+    "name": "Saada North Coast",
+    "developer": "Horizon Egypt Developments",
+    "total_available": 14,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      21.5,
+      320
+    ],
+    "sqm_range": [
+      149,
+      600
+    ],
+    "delivery_notes": [
+      "3 Years"
+    ]
+  },
+  {
+    "slug": "saada",
+    "name": "Saada",
+    "developer": "Horizon Egypt Developments",
+    "total_available": 3,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      33,
+      56
+    ],
+    "sqm_range": [
+      210,
+      320
+    ],
+    "delivery_notes": [
+      "6 months"
+    ]
+  },
+  {
+    "slug": "garden-lakes",
+    "name": "Garden Lakes",
+    "developer": "Hyde Park Developments",
+    "total_available": 44,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      6.8,
+      37.68
+    ],
+    "sqm_range": [
+      68,
+      242
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "hyde-park-new-cairo",
+    "name": "Hyde Park New Cairo",
+    "developer": "Hyde Park Developments",
+    "total_available": 138,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      6.54,
+      385
+    ],
+    "sqm_range": [
+      49,
+      1287
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "hyde-park-central",
+    "name": "Hyde Park Central",
+    "developer": "Hyde Park Developments",
+    "total_available": 117,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      6.43,
+      50.14
+    ],
+    "sqm_range": [
+      63,
+      265
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "hyde-park-north-seashore",
+    "name": "Hyde Park North Seashore",
+    "developer": "Hyde Park Developments",
+    "total_available": 137,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      8.48,
+      198.99
+    ],
+    "sqm_range": [
+      62,
+      385
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "one-hyde-park-new-cairo",
+    "name": "One Hyde Park New Cairo",
+    "developer": "Hyde Park Developments",
+    "total_available": 20,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      26.73,
+      94.59
+    ],
+    "sqm_range": [
+      196,
+      350
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "ashgar-city",
+    "name": "Ashgar City",
+    "developer": "IGI Real Estate",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      4.4,
+      5.85
+    ],
+    "sqm_range": [
+      85,
+      125
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "c-north",
+    "name": "C North",
+    "developer": "IL Cazar Developments",
+    "total_available": 5,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      8.5,
+      28
+    ],
+    "sqm_range": [
+      95,
+      180
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "creek-town",
+    "name": "Creek Town",
+    "developer": "IL Cazar Developments",
+    "total_available": 6,
+    "unit_types": [
+      "Apartment",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      11.448396,
+      75
+    ],
+    "sqm_range": [
+      128,
+      420
+    ],
+    "delivery_notes": [
+      "Ready To Move"
+    ]
+  },
+  {
+    "slug": "glen",
+    "name": "Glen",
+    "developer": "IL Cazar Developments",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      8.303412,
+      13.606093
+    ],
+    "sqm_range": [
+      130,
+      171
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "safia",
+    "name": "Safia",
+    "developer": "IL Cazar Developments",
+    "total_available": 6,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      6.913764,
+      28.24825
+    ],
+    "sqm_range": [
+      72,
+      185
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "the-crest",
+    "name": "The Crest",
+    "developer": "IL Cazar Developments",
+    "total_available": 5,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      4.97728,
+      28.733288
+    ],
+    "sqm_range": [
+      80,
+      220
+    ],
+    "delivery_notes": [
+      "2 years",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "vea-new-cairo",
+    "name": "Vea New Cairo",
+    "developer": "IL Cazar Developments",
+    "total_available": 2,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      18.227343,
+      26.037598
+    ],
+    "sqm_range": [
+      180,
+      220
+    ],
+    "delivery_notes": [
+      "2 years",
+      "3 years"
+    ]
+  },
+  {
+    "slug": "westdays",
+    "name": "Westdays",
+    "developer": "IL Cazar Developments",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      4.496712,
+      7.610713
+    ],
+    "sqm_range": [
+      75,
+      135
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "jefaira",
+    "name": "Jefaira",
+    "developer": "Inertia Egypt",
+    "total_available": 16,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      8.431,
+      36.191
+    ],
+    "sqm_range": [
+      84,
+      253
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "la-mirada",
+    "name": "La Mirada",
+    "developer": "La Mirada",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      7.89,
+      7.89
+    ],
+    "sqm_range": [
+      165,
+      165
+    ],
+    "delivery_notes": [
+      "6 months"
+    ]
+  },
+  {
+    "slug": "el-patio-riva",
+    "name": "El Patio Riva",
+    "developer": "La Vista Developments",
+    "total_available": 25,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      5.9775,
+      18.79
+    ],
+    "sqm_range": [
+      85,
+      212
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "el-patio-sola",
+    "name": "El Patio Sola",
+    "developer": "La Vista Developments",
+    "total_available": 5,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      11.65,
+      21.55
+    ],
+    "sqm_range": [
+      145,
+      344
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "el-patio-town",
+    "name": "El Patio Town",
+    "developer": "La Vista Developments",
+    "total_available": 15,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      30,
+      78.65
+    ],
+    "sqm_range": [
+      215,
+      341
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "el-patio-vera",
+    "name": "El Patio Vera",
+    "developer": "La Vista Developments",
+    "total_available": 5,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      18.3,
+      39.4
+    ],
+    "sqm_range": [
+      176,
+      324
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "la-vista-6",
+    "name": "La Vista 6",
+    "developer": "La Vista Developments",
+    "total_available": 6,
+    "unit_types": [
+      "Chalet",
+      "Twin House"
+    ],
+    "price_range_m": [
+      9.8,
+      21.5
+    ],
+    "sqm_range": [
+      130,
+      180
+    ],
+    "delivery_notes": [
+      "Ready to Move",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "la-vista-7",
+    "name": "La Vista 7",
+    "developer": "La Vista Developments",
+    "total_available": 4,
+    "unit_types": [
+      "Chalet",
+      "Twin House"
+    ],
+    "price_range_m": [
+      9.6,
+      44
+    ],
+    "sqm_range": [
+      120,
+      400
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "la-vista-bay-east",
+    "name": "La Vista Bay East",
+    "developer": "La Vista Developments",
+    "total_available": 5,
+    "unit_types": [
+      "Chalet"
+    ],
+    "price_range_m": [
+      19.8,
+      27.8
+    ],
+    "sqm_range": [
+      110,
+      150
+    ],
+    "delivery_notes": [
+      "April 2027",
+      "Ready to Move",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "la-vista-cascada",
+    "name": "La Vista Cascada",
+    "developer": "La Vista Developments",
+    "total_available": 1,
+    "unit_types": [
+      "Penthouse"
+    ],
+    "price_range_m": [
+      27.8,
+      27.8
+    ],
+    "sqm_range": [
+      185,
+      185
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "la-vista-east",
+    "name": "La Vista East",
+    "developer": "La Vista Developments",
+    "total_available": 5,
+    "unit_types": [
+      "Chalet"
+    ],
+    "price_range_m": [
+      19.8,
+      27.8
+    ],
+    "sqm_range": [
+      110,
+      150
+    ],
+    "delivery_notes": [
+      "2027-04-01",
+      "Ready to Move",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "la-vista-gardens",
+    "name": "La Vista Gardens",
+    "developer": "La Vista Developments",
+    "total_available": 16,
+    "unit_types": [
+      "Chalet"
+    ],
+    "price_range_m": [
+      11.7,
+      20.79
+    ],
+    "sqm_range": [
+      130,
+      180
+    ],
+    "delivery_notes": [
+      "Ready to Move",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "la-vista-ras-el-hekma",
+    "name": "La Vista Ras El Hekma",
+    "developer": "La Vista Developments",
+    "total_available": 4,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      20.8,
+      100
+    ],
+    "sqm_range": [
+      140,
+      320
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "la-vista-topaz",
+    "name": "La Vista Topaz",
+    "developer": "La Vista Developments",
+    "total_available": 6,
+    "unit_types": [
+      "Chalet"
+    ],
+    "price_range_m": [
+      13.8,
+      16.95
+    ],
+    "sqm_range": [
+      150,
+      150
+    ],
+    "delivery_notes": [
+      "Ready to Move",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "patio-5-east",
+    "name": "Patio 5 East",
+    "developer": "La Vista Developments",
+    "total_available": 4,
+    "unit_types": [
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      24.1,
+      34.1
+    ],
+    "sqm_range": [
+      202,
+      260
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "patio-casa",
+    "name": "Patio Casa",
+    "developer": "La Vista Developments",
+    "total_available": 2,
+    "unit_types": [
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      22.8,
+      29.85
+    ],
+    "sqm_range": [
+      250,
+      275
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "patio-hills",
+    "name": "Patio Hills",
+    "developer": "La Vista Developments",
+    "total_available": 7,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      21.68,
+      66.35
+    ],
+    "sqm_range": [
+      180,
+      475
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "patio-jade",
+    "name": "Patio Jade",
+    "developer": "La Vista Developments",
+    "total_available": 4,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      21.25,
+      41.8
+    ],
+    "sqm_range": [
+      185,
+      358
+    ],
+    "delivery_notes": [
+      "4.5 Years"
+    ]
+  },
+  {
+    "slug": "patio-oro",
+    "name": "Patio Oro",
+    "developer": "La Vista Developments",
+    "total_available": 9,
+    "unit_types": [
+      "Apartment",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      16.55,
+      29.65
+    ],
+    "sqm_range": [
+      164,
+      220
+    ],
+    "delivery_notes": [
+      "2027-01-01",
+      "Ready to Move",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "patio-prime",
+    "name": "Patio Prime",
+    "developer": "La Vista Developments",
+    "total_available": 4,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      24.45,
+      41.1
+    ],
+    "sqm_range": [
+      208,
+      312
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "patio-vida",
+    "name": "Patio Vida",
+    "developer": "La Vista Developments",
+    "total_available": 27,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      11.56,
+      27.69
+    ],
+    "sqm_range": [
+      158,
+      336
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "zoya",
+    "name": "Zoya",
+    "developer": "LMD",
+    "total_available": 13,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      11.5,
+      230
+    ],
+    "sqm_range": [
+      66,
+      945
+    ],
+    "delivery_notes": [
+      "Q2 2027",
+      "Q3 2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "trio",
+    "name": "Trio",
+    "developer": "M Squared Developments",
+    "total_available": 14,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      11.63789077,
+      31.6419672
+    ],
+    "sqm_range": [
+      130,
+      290
+    ],
+    "delivery_notes": [
+      "2/5/2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "31-west",
+    "name": "31 West",
+    "developer": "M Squared Developments",
+    "total_available": 61,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      13.23712,
+      59.267264
+    ],
+    "sqm_range": [
+      80,
+      330
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "business-district",
+    "name": "Business District",
+    "developer": "M Squared Developments",
+    "total_available": 10,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      13.26469117,
+      21.68266825
+    ],
+    "sqm_range": [
+      130,
+      220
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "el-masyaf-north-coast",
+    "name": "El Masyaf North Coast",
+    "developer": "M Squared Developments",
+    "total_available": 39,
+    "unit_types": [
+      "Chalet",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      15.42745406,
+      55.596359840000005
+    ],
+    "sqm_range": [
+      75,
+      232
+    ],
+    "delivery_notes": [
+      "Aug 2028",
+      "Aug 2029",
+      "Aug 2030"
+    ]
+  },
+  {
+    "slug": "mist",
+    "name": "Mist",
+    "developer": "M Squared Developments",
+    "total_available": 111,
+    "unit_types": [
+      "Apartment",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      6.6838406,
+      33.9028704
+    ],
+    "sqm_range": [
+      63,
+      200
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "azha-north-coast",
+    "name": "Azha North Coast",
+    "developer": "Madaar Developments",
+    "total_available": 10,
+    "unit_types": [
+      "Chalet",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      14,
+      32.247
+    ],
+    "sqm_range": [
+      75,
+      165
+    ],
+    "delivery_notes": [
+      "4 Years"
+    ]
+  },
+  {
+    "slug": "azha-sokhna",
+    "name": "Azha Sokhna",
+    "developer": "Madaar Developments",
+    "total_available": 1,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      40,
+      40
+    ],
+    "sqm_range": [
+      312,
+      312
+    ],
+    "delivery_notes": [
+      "3 Years"
+    ]
+  },
+  {
+    "slug": "elea-azha-north",
+    "name": "Elea Azha North",
+    "developer": "Madaar Developments",
+    "total_available": 10,
+    "unit_types": [
+      "Chalet",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      14,
+      32.247
+    ],
+    "sqm_range": [
+      75,
+      165
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "the-hillage",
+    "name": "The Hillage",
+    "developer": "Madaar Developments",
+    "total_available": 8,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      17,
+      50.8
+    ],
+    "sqm_range": [
+      138,
+      248
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "elm-tree-park",
+    "name": "Elm Tree Park",
+    "developer": "Madinet Masr",
+    "total_available": 3,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      18.2,
+      23.6
+    ],
+    "sqm_range": [
+      175,
+      212
+    ],
+    "delivery_notes": [
+      "4.5 Years"
+    ]
+  },
+  {
+    "slug": "kinda-residence",
+    "name": "Kinda Residence",
+    "developer": "Madinet Masr",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment",
+      "Twin House"
+    ],
+    "price_range_m": [
+      12.4,
+      53
+    ],
+    "sqm_range": [
+      56,
+      392
+    ],
+    "delivery_notes": [
+      "1 Year"
+    ]
+  },
+  {
+    "slug": "rai-valleys",
+    "name": "Rai Valleys",
+    "developer": "Madinet Masr",
+    "total_available": 2,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      16.2,
+      25
+    ],
+    "sqm_range": [
+      160,
+      175
+    ],
+    "delivery_notes": [
+      "2.5 Years"
+    ]
+  },
+  {
+    "slug": "sarai",
+    "name": "Sarai",
+    "developer": "Madinet Masr",
+    "total_available": 14,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      3.6,
+      30.3
+    ],
+    "sqm_range": [
+      38,
+      337
+    ],
+    "delivery_notes": [
+      "2.5 Years",
+      "3 Years",
+      "4 Years",
+      "4.5 Years",
+      "RTM"
+    ]
+  },
+  {
+    "slug": "taj-city",
+    "name": "Taj City",
+    "developer": "Madinet Masr",
+    "total_available": 6,
+    "unit_types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      7.7,
+      53
+    ],
+    "sqm_range": [
+      56,
+      392
+    ],
+    "delivery_notes": [
+      "1 Year",
+      "4 Years"
+    ]
+  },
+  {
+    "slug": "talala",
+    "name": "Talala",
+    "developer": "Madinet Masr",
+    "total_available": 13,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      4.5,
+      41.2
+    ],
+    "sqm_range": [
+      65,
+      288
+    ],
+    "delivery_notes": [
+      "5 Years"
+    ]
+  },
+  {
+    "slug": "the-butterfly",
+    "name": "The Butterfly",
+    "developer": "Madinet Masr",
+    "total_available": 8,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      3,
+      32.6
+    ],
+    "sqm_range": [
+      38,
+      248
+    ],
+    "delivery_notes": [
+      "4 Years",
+      "4.5 Years"
+    ]
+  },
+  {
+    "slug": "aeon",
+    "name": "Aeon",
+    "developer": "Marakez",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      36,
+      36
+    ],
+    "sqm_range": [
+      246,
+      246
+    ],
+    "delivery_notes": [
+      "4 Years"
+    ]
+  },
+  {
+    "slug": "crescent-walk",
+    "name": "Crescent Walk",
+    "developer": "Marakez",
+    "total_available": 141,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      8.464,
+      126.049
+    ],
+    "sqm_range": [
+      74,
+      574
+    ],
+    "delivery_notes": [
+      "4 Years"
+    ]
+  },
+  {
+    "slug": "district-5",
+    "name": "District 5",
+    "developer": "Marakez",
+    "total_available": 57,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      11.285,
+      49.83
+    ],
+    "sqm_range": [
+      81,
+      343
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "ramla-north-coast",
+    "name": "Ramla North Coast",
+    "developer": "Marakez",
+    "total_available": 139,
+    "unit_types": [
+      "Chalet",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      22.176,
+      105.761
+    ],
+    "sqm_range": [
+      100,
+      313
+    ],
+    "delivery_notes": [
+      "4 Years"
+    ]
+  },
+  {
+    "slug": "cali-coast-ras-el-hekma",
+    "name": "Cali Coast Ras El Hekma",
+    "developer": "Maven Developments",
+    "total_available": 22,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      6.59,
+      35.922
+    ],
+    "sqm_range": [
+      67,
+      221
+    ],
+    "delivery_notes": [
+      "1 Year",
+      "2.5 Years",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "m-apartments",
+    "name": "M Apartments",
+    "developer": "Mirad",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      6.177,
+      7.616
+    ],
+    "sqm_range": [
+      184,
+      224
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "villaria",
+    "name": "Villaria",
+    "developer": "Mirad",
+    "total_available": 2,
+    "unit_types": [
+      "Duplex",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      7.92,
+      8.415
+    ],
+    "sqm_range": [
+      240,
+      255
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "club-hill-solare",
+    "name": "Club Hill Solare",
+    "developer": "Misr Italia Properties",
+    "total_available": 8,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      12,
+      35
+    ],
+    "sqm_range": [
+      109,
+      207
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "il-bosco-city",
+    "name": "Il Bosco City",
+    "developer": "Misr Italia Properties",
+    "total_available": 3,
+    "unit_types": [
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      32.3,
+      57
+    ],
+    "sqm_range": [
+      316,
+      488
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "kai-sokhna",
+    "name": "Kai Sokhna",
+    "developer": "Misr Italia Properties",
+    "total_available": 7,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      8,
+      60.3
+    ],
+    "sqm_range": [
+      78,
+      272
+    ],
+    "delivery_notes": [
+      "March 2027",
+      "Nov 2027"
+    ]
+  },
+  {
+    "slug": "solare",
+    "name": "Solare",
+    "developer": "Misr Italia Properties",
+    "total_available": 12,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      12,
+      35
+    ],
+    "sqm_range": [
+      109,
+      240
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "vinci",
+    "name": "Vinci",
+    "developer": "Misr Italia Properties",
+    "total_available": 8,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      11.7,
+      57.7
+    ],
+    "sqm_range": [
+      134,
+      510
+    ],
+    "delivery_notes": [
+      "March 2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "modon-ras-el-hekma",
+    "name": "Modon Ras El Hekma",
+    "developer": "Modon Holding",
+    "total_available": 20,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      20.7,
+      203.6
+    ],
+    "sqm_range": [
+      145,
+      604
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "creekview",
+    "name": "Creekview",
+    "developer": "Mountain View",
+    "total_available": 85,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      6.791706,
+      17.721622
+    ],
+    "sqm_range": [
+      41.55,
+      120
+    ],
+    "delivery_notes": [
+      "OFF PLAN - 2.5",
+      "OFF PLAN - 4"
+    ]
+  },
+  {
+    "slug": "icity-new-cairo",
+    "name": "Icity New Cairo",
+    "developer": "Mountain View",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      15.133,
+      60.706
+    ],
+    "sqm_range": [
+      125,
+      350
+    ],
+    "delivery_notes": [
+      "6 months"
+    ]
+  },
+  {
+    "slug": "icity-october",
+    "name": "Icity October",
+    "developer": "Mountain View",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      16.197828,
+      16.197828
+    ],
+    "sqm_range": [
+      209,
+      209
+    ],
+    "delivery_notes": [
+      "1 Year"
+    ]
+  },
+  {
+    "slug": "lvls",
+    "name": "Lvls",
+    "developer": "Mountain View",
+    "total_available": 8,
+    "unit_types": [
+      "Apartment",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      19.692375,
+      39.994615
+    ],
+    "sqm_range": [
+      120,
+      122
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "mountain-view-aliva",
+    "name": "Mountain View Aliva",
+    "developer": "Mountain View",
+    "total_available": 15,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      12.828883,
+      37.439592
+    ],
+    "sqm_range": [
+      120,
+      120
+    ],
+    "delivery_notes": [
+      "OFF PLAN - 3"
+    ]
+  },
+  {
+    "slug": "mountain-view-crystal",
+    "name": "Mountain View Crystal",
+    "developer": "Mountain View",
+    "total_available": 129,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      9.757007,
+      121.704351
+    ],
+    "sqm_range": [
+      16.33,
+      168.23
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "mountain-view-grand-valley",
+    "name": "Mountain View Grand Valley",
+    "developer": "Mountain View",
+    "total_available": 33,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      30.463098,
+      37.410687
+    ],
+    "sqm_range": [
+      120,
+      120
+    ],
+    "delivery_notes": [
+      "EARLY DELIVERY - 12",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "mountain-view-hyde-park",
+    "name": "Mountain View Hyde Park",
+    "developer": "Mountain View",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "price_range_m": [
+      20.341,
+      28.653
+    ],
+    "sqm_range": [
+      175,
+      240
+    ],
+    "delivery_notes": [
+      "Immediate \u2013 1 year"
+    ]
+  },
+  {
+    "slug": "mountain-view-icity-new-cairo",
+    "name": "Mountain View Icity New Cairo",
+    "developer": "Mountain View",
+    "total_available": 14,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      12.369394,
+      87.973052
+    ],
+    "sqm_range": [
+      36.76,
+      484.21
+    ],
+    "delivery_notes": [
+      "PARTIAL DELIVERY",
+      "READY TO DELIVER",
+      "READY TO MOVE - 3",
+      "READY TO MOVE - 6",
+      "READY TO MOVE - 9",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "mountain-view-icity-october",
+    "name": "Mountain View Icity October",
+    "developer": "Mountain View",
+    "total_available": 200,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      9.895677,
+      31.374153
+    ],
+    "sqm_range": [
+      17.15,
+      273
+    ],
+    "delivery_notes": [
+      "READY TO DELIVER",
+      "READY TO MOVE - 3",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "mountain-view-jirian",
+    "name": "Mountain View Jirian",
+    "developer": "Mountain View",
+    "total_available": 186,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      8.681153,
+      51.912354
+    ],
+    "sqm_range": [
+      15,
+      120
+    ],
+    "delivery_notes": [
+      "OFF PLAN - 4"
+    ]
+  },
+  {
+    "slug": "mountain-view-kingsway",
+    "name": "Mountain View Kingsway",
+    "developer": "Mountain View",
+    "total_available": 4,
+    "unit_types": [
+      "Duplex",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      27.025,
+      30.907361
+    ],
+    "sqm_range": [
+      81.39,
+      120
+    ],
+    "delivery_notes": [
+      "EARLY DELIVERY - 12"
+    ]
+  },
+  {
+    "slug": "mountain-view-mv4",
+    "name": "Mountain View Mv4",
+    "developer": "Mountain View",
+    "total_available": 17,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      23.307369,
+      41.32914
+    ],
+    "sqm_range": [
+      210,
+      275
+    ],
+    "delivery_notes": [
+      "Early Delivery",
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "mountain-view-ras-el-hekma",
+    "name": "Mountain View Ras El Hekma",
+    "developer": "Mountain View",
+    "total_available": 14,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      25.211238,
+      58.931675
+    ],
+    "sqm_range": [
+      62.9,
+      120
+    ],
+    "delivery_notes": [
+      "READY TO MOVE - 3",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "naia-bay",
+    "name": "Naia Bay",
+    "developer": "Naia Developments",
+    "total_available": 8,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      8.7,
+      123
+    ],
+    "sqm_range": [
+      65,
+      520
+    ],
+    "delivery_notes": [
+      "1 Year",
+      "Ready in 1 Month"
+    ]
+  },
+  {
+    "slug": "jirian-nations-of-sky",
+    "name": "Jirian Nations Of Sky",
+    "developer": "Nations of Sky",
+    "total_available": 14,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      22,
+      285
+    ],
+    "sqm_range": [
+      185,
+      1000
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "perla",
+    "name": "Perla",
+    "developer": "Nations of Sky",
+    "total_available": 10,
+    "unit_types": [
+      "Chalet",
+      "Penthouse",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      12.9,
+      275
+    ],
+    "sqm_range": [
+      100,
+      575
+    ],
+    "delivery_notes": [
+      "Off-Plan"
+    ]
+  },
+  {
+    "slug": "zomra-east",
+    "name": "Zomra East",
+    "developer": "Nations of Sky",
+    "total_available": 17,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      8.9,
+      65
+    ],
+    "sqm_range": [
+      85,
+      370
+    ],
+    "delivery_notes": [
+      "3 years"
+    ]
+  },
+  {
+    "slug": "katameya-gardens",
+    "name": "Katameya Gardens",
+    "developer": "North Africa",
+    "total_available": 4,
+    "unit_types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      7.255,
+      64.2
+    ],
+    "sqm_range": [
+      115,
+      270
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "golden-heights-1",
+    "name": "Golden Heights 1",
+    "developer": "Novus Stanza",
+    "total_available": 1,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      57.641,
+      57.641
+    ],
+    "sqm_range": [
+      350,
+      350
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "golden-heights-2",
+    "name": "Golden Heights 2",
+    "developer": "Novus Stanza",
+    "total_available": 1,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      60.731,
+      60.731
+    ],
+    "sqm_range": [
+      380,
+      380
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "silversands",
+    "name": "Silversands",
+    "developer": "Ora Developers",
+    "total_available": 23,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      21,
+      180
+    ],
+    "sqm_range": [
+      96,
+      380
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "solana-east",
+    "name": "Solana East",
+    "developer": "Ora Developers",
+    "total_available": 7,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      13.9,
+      119
+    ],
+    "sqm_range": [
+      57,
+      369
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "solana-west",
+    "name": "Solana West",
+    "developer": "Ora Developers",
+    "total_available": 18,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      17.3,
+      76
+    ],
+    "sqm_range": [
+      131,
+      337
+    ],
+    "delivery_notes": [
+      "2028"
+    ]
+  },
+  {
+    "slug": "solana",
+    "name": "Solana",
+    "developer": "Ora Developers",
+    "total_available": 18,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      17.3,
+      76
+    ],
+    "sqm_range": [
+      131,
+      337
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "zed-east",
+    "name": "Zed East",
+    "developer": "Ora Developers",
+    "total_available": 14,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      9.45,
+      73
+    ],
+    "sqm_range": [
+      65,
+      300
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "zed-west",
+    "name": "Zed West",
+    "developer": "Ora Developers",
+    "total_available": 7,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      9,
+      27
+    ],
+    "sqm_range": [
+      60,
+      219
+    ],
+    "delivery_notes": [
+      "2027"
+    ]
+  },
+  {
+    "slug": "97-hills",
+    "name": "97 Hills",
+    "developer": "Palm Hills Developments",
+    "total_available": 56,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      27.705,
+      65.525
+    ],
+    "sqm_range": [
+      183,
+      416.5
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "badya",
+    "name": "Badya",
+    "developer": "Palm Hills Developments",
+    "total_available": 354,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      10.9934384,
+      60.216
+    ],
+    "sqm_range": [
+      107.91,
+      466
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "bamboo-iii",
+    "name": "Bamboo Iii",
+    "developer": "Palm Hills Developments",
+    "total_available": 43,
+    "unit_types": [
+      "Apartment",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      28.256,
+      35.567
+    ],
+    "sqm_range": [
+      191,
+      222
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "hacienda-bay",
+    "name": "Hacienda Bay",
+    "developer": "Palm Hills Developments",
+    "total_available": 1,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      146.578,
+      146.578
+    ],
+    "sqm_range": [
+      357.59,
+      357.59
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "hacienda-blue",
+    "name": "Hacienda Blue",
+    "developer": "Palm Hills Developments",
+    "total_available": 16,
+    "unit_types": [
+      "Chalet"
+    ],
+    "price_range_m": [
+      24.117,
+      31.136
+    ],
+    "sqm_range": [
+      114.5,
+      164
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "hacienda-heneish",
+    "name": "Hacienda Heneish",
+    "developer": "Palm Hills Developments",
+    "total_available": 5,
+    "unit_types": [
+      "Chalet",
+      "Twin House"
+    ],
+    "price_range_m": [
+      15.63,
+      53.714
+    ],
+    "sqm_range": [
+      67.5,
+      253
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "hacienda-ras-el-hekma",
+    "name": "Hacienda Ras El Hekma",
+    "developer": "Palm Hills Developments",
+    "total_available": 607,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      11.736,
+      209.08
+    ],
+    "sqm_range": [
+      65,
+      519
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "hacienda-waters",
+    "name": "Hacienda Waters",
+    "developer": "Palm Hills Developments",
+    "total_available": 213,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      14.001,
+      114.007
+    ],
+    "sqm_range": [
+      41.5,
+      374
+    ],
+    "delivery_notes": [
+      "2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "hacienda-west",
+    "name": "Hacienda West",
+    "developer": "Palm Hills Developments",
+    "total_available": 14,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      25.55508,
+      123.584
+    ],
+    "sqm_range": [
+      111,
+      339.9
+    ],
+    "delivery_notes": [
+      "2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "palm-hills-alexandria",
+    "name": "Palm Hills Alexandria",
+    "developer": "Palm Hills Developments",
+    "total_available": 48,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      10.742,
+      80.905
+    ],
+    "sqm_range": [
+      89.86,
+      383.83
+    ],
+    "delivery_notes": [
+      "2027",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "palm-hills-jirian",
+    "name": "Palm Hills Jirian",
+    "developer": "Palm Hills Developments",
+    "total_available": 463,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      7.874,
+      95.012
+    ],
+    "sqm_range": [
+      62,
+      405
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "palm-hills-new-cairo-commercial",
+    "name": "Palm Hills New Cairo Commercial",
+    "developer": "Palm Hills Developments",
+    "total_available": 73,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      13.03,
+      36.774
+    ],
+    "sqm_range": [
+      68,
+      207.5
+    ],
+    "delivery_notes": [
+      "2027",
+      "2028"
+    ]
+  },
+  {
+    "slug": "palm-hills-new-cairo",
+    "name": "Palm Hills New Cairo",
+    "developer": "Palm Hills Developments",
+    "total_available": 110,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      10.288,
+      29.918
+    ],
+    "sqm_range": [
+      70,
+      200
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "palm-hills-one",
+    "name": "Palm Hills One",
+    "developer": "Palm Hills Developments",
+    "total_available": 53,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      47.549,
+      340.405
+    ],
+    "sqm_range": [
+      195,
+      673
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "palm-hills-ritz-carlton",
+    "name": "Palm Hills Ritz Carlton",
+    "developer": "Palm Hills Developments",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      141.993,
+      141.993
+    ],
+    "sqm_range": [
+      375.5,
+      375.5
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "palm-parks",
+    "name": "Palm Parks",
+    "developer": "Palm Hills Developments",
+    "total_available": 8,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      17.498,
+      21.397
+    ],
+    "sqm_range": [
+      132.38,
+      170.19
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "palmet",
+    "name": "Palmet",
+    "developer": "Palm Hills Developments",
+    "total_available": 18,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      25.694,
+      48.794
+    ],
+    "sqm_range": [
+      123.5,
+      254
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "px",
+    "name": "Px",
+    "developer": "Palm Hills Developments",
+    "total_available": 270,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      14.452,
+      53.568
+    ],
+    "sqm_range": [
+      77.84,
+      313.67
+    ],
+    "delivery_notes": [
+      "2028"
+    ]
+  },
+  {
+    "slug": "the-crown-extension",
+    "name": "The Crown Extension",
+    "developer": "Palm Hills Developments",
+    "total_available": 53,
+    "unit_types": [
+      "Apartment",
+      "Twin House"
+    ],
+    "price_range_m": [
+      29.997,
+      37.569
+    ],
+    "sqm_range": [
+      217,
+      225.5
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "village-de-la-capitale",
+    "name": "Village De La Capitale",
+    "developer": "Palm Hills Developments",
+    "total_available": 264,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      6.764,
+      43.195
+    ],
+    "sqm_range": [
+      61.5,
+      262
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "hadaba",
+    "name": "Hadaba",
+    "developer": "PRE Developments",
+    "total_available": 2,
+    "unit_types": [
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      26.9,
+      32.9
+    ],
+    "sqm_range": [
+      304,
+      331
+    ],
+    "delivery_notes": [
+      "6 Months"
+    ]
+  },
+  {
+    "slug": "ivoire-east",
+    "name": "Ivoire East",
+    "developer": "PRE Developments",
+    "total_available": 7,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      9.904,
+      42.187
+    ],
+    "sqm_range": [
+      117,
+      312
+    ],
+    "delivery_notes": [
+      "2 Years",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "ivoire-west",
+    "name": "Ivoire West",
+    "developer": "PRE Developments",
+    "total_available": 4,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      9.65,
+      19.95
+    ],
+    "sqm_range": [
+      132,
+      240
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "jebal-sokhna",
+    "name": "Jebal Sokhna",
+    "developer": "PRE Developments",
+    "total_available": 4,
+    "unit_types": [
+      "Chalet"
+    ],
+    "price_range_m": [
+      7.755,
+      9.989
+    ],
+    "sqm_range": [
+      97,
+      135
+    ],
+    "delivery_notes": [
+      "2 Years",
+      "6 Months"
+    ]
+  },
+  {
+    "slug": "point-90-offices-park",
+    "name": "Point 90 Offices Park",
+    "developer": "PRE Developments",
+    "total_available": 6,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      11,
+      44
+    ],
+    "sqm_range": [
+      58,
+      166
+    ],
+    "delivery_notes": [
+      "2 Years"
+    ]
+  },
+  {
+    "slug": "stone-residence",
+    "name": "Stone Residence",
+    "developer": "PRE Developments",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment",
+      "Penthouse"
+    ],
+    "price_range_m": [
+      9.702,
+      15.708
+    ],
+    "sqm_range": [
+      140,
+      220
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "the-brooks",
+    "name": "The Brooks",
+    "developer": "PRE Developments",
+    "total_available": 12,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      7.444,
+      33.7
+    ],
+    "sqm_range": [
+      126,
+      304
+    ],
+    "delivery_notes": [
+      "2 Years",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "alam-al-roum",
+    "name": "Alam Al Roum",
+    "developer": "Qatari Diar",
+    "total_available": 23,
+    "unit_types": [
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      15.6,
+      227
+    ],
+    "sqm_range": [
+      125,
+      601
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "monte-napoleone",
+    "name": "Monte Napoleone",
+    "developer": "Reportage Properties",
+    "total_available": 4,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      7.5,
+      13.7
+    ],
+    "sqm_range": [
+      110,
+      210
+    ],
+    "delivery_notes": [
+      "Immediate \u2013 1 year"
+    ]
+  },
+  {
+    "slug": "covaya",
+    "name": "Covaya",
+    "developer": "Roya Developments",
+    "total_available": 3,
+    "unit_types": [
+      "Chalet"
+    ],
+    "price_range_m": [
+      5.5,
+      16.7
+    ],
+    "sqm_range": [
+      56,
+      181
+    ],
+    "delivery_notes": [
+      "3 Years"
+    ]
+  },
+  {
+    "slug": "oak-residences",
+    "name": "Oak Residences",
+    "developer": "Roya Developments",
+    "total_available": 5,
+    "unit_types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "price_range_m": [
+      10.6,
+      19.8
+    ],
+    "sqm_range": [
+      142,
+      288
+    ],
+    "delivery_notes": [
+      "3 Years"
+    ]
+  },
+  {
+    "slug": "telal-east",
+    "name": "Telal East",
+    "developer": "Roya Developments",
+    "total_available": 9,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      8.7053,
+      54.0006
+    ],
+    "sqm_range": [
+      110,
+      472
+    ],
+    "delivery_notes": [
+      "3 Years"
+    ]
+  },
+  {
+    "slug": "telal-shores",
+    "name": "Telal Shores",
+    "developer": "Roya Developments",
+    "total_available": 2,
+    "unit_types": [
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      20.78,
+      22.7
+    ],
+    "sqm_range": [
+      140,
+      150
+    ],
+    "delivery_notes": [
+      "3 Years"
+    ]
+  },
+  {
+    "slug": "sephora-heights",
+    "name": "Sephora Heights",
+    "developer": "Sephora",
+    "total_available": 3,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      9,
+      48.665
+    ],
+    "sqm_range": [
+      125,
+      320
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "bloom-island-ogami",
+    "name": "Bloom Island Ogami",
+    "developer": "SODIC",
+    "total_available": 219,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      18.8433,
+      245.949
+    ],
+    "sqm_range": [
+      123,
+      394
+    ],
+    "delivery_notes": [
+      "2027"
+    ]
+  },
+  {
+    "slug": "caesar-extension-2",
+    "name": "Caesar Extension 2",
+    "developer": "SODIC",
+    "total_available": 21,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      42.32,
+      62.102
+    ],
+    "sqm_range": [
+      182,
+      254
+    ],
+    "delivery_notes": [
+      "Ready / 2027"
+    ]
+  },
+  {
+    "slug": "caesar-sodic",
+    "name": "Caesar Sodic",
+    "developer": "SODIC",
+    "total_available": 29,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      50.263,
+      121.67528
+    ],
+    "sqm_range": [
+      221,
+      546
+    ],
+    "delivery_notes": [
+      "Ready / 2027"
+    ]
+  },
+  {
+    "slug": "june",
+    "name": "June",
+    "developer": "SODIC",
+    "total_available": 83,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      28.016,
+      240.392
+    ],
+    "sqm_range": [
+      102,
+      347
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "karmell",
+    "name": "Karmell",
+    "developer": "SODIC",
+    "total_available": 231,
+    "unit_types": [
+      "Apartment",
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      9.777,
+      84.365
+    ],
+    "sqm_range": [
+      82,
+      383
+    ],
+    "delivery_notes": [
+      "2027"
+    ]
+  },
+  {
+    "slug": "ogami",
+    "name": "Ogami",
+    "developer": "SODIC",
+    "total_available": 219,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      18.8433,
+      245.949
+    ],
+    "sqm_range": [
+      123,
+      394
+    ],
+    "delivery_notes": [
+      "2027"
+    ]
+  },
+  {
+    "slug": "sky-condos",
+    "name": "Sky Condos",
+    "developer": "SODIC",
+    "total_available": 7,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      29.185,
+      54.607
+    ],
+    "sqm_range": [
+      159,
+      318
+    ],
+    "delivery_notes": [
+      "Ready / 2027"
+    ]
+  },
+  {
+    "slug": "sodic-east-vale",
+    "name": "Sodic East Vale",
+    "developer": "SODIC",
+    "total_available": 384,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      9.361,
+      78.172
+    ],
+    "sqm_range": [
+      70,
+      311
+    ],
+    "delivery_notes": [
+      "2027"
+    ]
+  },
+  {
+    "slug": "sodic-east",
+    "name": "Sodic East",
+    "developer": "SODIC",
+    "total_available": 155,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      13.53,
+      72.7
+    ],
+    "sqm_range": [
+      125,
+      395
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "sodic-the-estates",
+    "name": "Sodic The Estates",
+    "developer": "SODIC",
+    "total_available": 9,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      73.24284,
+      208.525
+    ],
+    "sqm_range": [
+      349,
+      444
+    ],
+    "delivery_notes": [
+      "Ready / 2027"
+    ]
+  },
+  {
+    "slug": "the-estates-residences",
+    "name": "The Estates Residences",
+    "developer": "SODIC",
+    "total_available": 114,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      19.135,
+      101.128
+    ],
+    "sqm_range": [
+      115,
+      338
+    ],
+    "delivery_notes": [
+      "Ready / 2027"
+    ]
+  },
+  {
+    "slug": "the-estates",
+    "name": "The Estates",
+    "developer": "SODIC",
+    "total_available": 4,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      58.4004,
+      208
+    ],
+    "sqm_range": [
+      308,
+      631
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "the-portal",
+    "name": "The Portal",
+    "developer": "SODIC",
+    "total_available": 7,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      23.835,
+      77.093
+    ],
+    "sqm_range": [
+      81,
+      262
+    ],
+    "delivery_notes": [
+      "Ready / 2027"
+    ]
+  },
+  {
+    "slug": "v-editions",
+    "name": "V Editions",
+    "developer": "SODIC",
+    "total_available": 4,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      53.044,
+      55.894
+    ],
+    "sqm_range": [
+      218,
+      233
+    ],
+    "delivery_notes": [
+      "Ready / 2027"
+    ]
+  },
+  {
+    "slug": "villette",
+    "name": "Villette",
+    "developer": "SODIC",
+    "total_available": 4,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      22.602,
+      51.426
+    ],
+    "sqm_range": [
+      109,
+      201
+    ],
+    "delivery_notes": [
+      "Ready / 2027"
+    ]
+  },
+  {
+    "slug": "vye-sodic",
+    "name": "Vye Sodic",
+    "developer": "SODIC",
+    "total_available": 27,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      26.868,
+      46.537
+    ],
+    "sqm_range": [
+      196,
+      238
+    ],
+    "delivery_notes": [
+      "2027"
+    ]
+  },
+  {
+    "slug": "westown-medical-centre",
+    "name": "Westown Medical Centre",
+    "developer": "SODIC",
+    "total_available": 13,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      12.275,
+      30.314
+    ],
+    "sqm_range": [
+      56,
+      162
+    ],
+    "delivery_notes": [
+      "Ready / 2027"
+    ]
+  },
+  {
+    "slug": "katameya-creeks",
+    "name": "Katameya Creeks",
+    "developer": "Starlight Developments",
+    "total_available": 3,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      30,
+      111
+    ],
+    "sqm_range": [
+      140,
+      420
+    ],
+    "delivery_notes": [
+      "6 months"
+    ]
+  },
+  {
+    "slug": "la-vista-city",
+    "name": "La Vista City",
+    "developer": "STM",
+    "total_available": 12,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      30.07,
+      70.28
+    ],
+    "sqm_range": [
+      228,
+      450
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "mayan-el-shorouk",
+    "name": "Mayan El Shorouk",
+    "developer": "STM Developments",
+    "total_available": 15,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      5.6,
+      10.1
+    ],
+    "sqm_range": [
+      92,
+      180
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "mayan-new-cairo",
+    "name": "Mayan New Cairo",
+    "developer": "STM Developments",
+    "total_available": 12,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      8.6,
+      15.3
+    ],
+    "sqm_range": [
+      99,
+      176
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "azad",
+    "name": "Azad",
+    "developer": "Tameer",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      18.35,
+      19.5
+    ],
+    "sqm_range": [
+      130,
+      160
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "bloomfields-mostakbal-city",
+    "name": "Bloomfields Mostakbal City",
+    "developer": "Tatweer Misr",
+    "total_available": 90,
+    "unit_types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "price_range_m": [
+      5.845,
+      30.516
+    ],
+    "sqm_range": [
+      76,
+      333
+    ],
+    "delivery_notes": [
+      "Delivery 1 Year",
+      "Delivery 2 Years",
+      "Delivery 3 Months",
+      "Delivery 4.5 Years"
+    ]
+  },
+  {
+    "slug": "bloomfields",
+    "name": "Bloomfields",
+    "developer": "Tatweer Misr",
+    "total_available": 90,
+    "unit_types": [
+      "Apartment",
+      "Duplex"
+    ],
+    "price_range_m": [
+      5.845,
+      30.516
+    ],
+    "sqm_range": [
+      76,
+      333
+    ],
+    "delivery_notes": [
+      "Delivery 1 Year",
+      "Delivery 2 Years",
+      "Delivery 3 Months",
+      "Delivery 4.5 Years"
+    ]
+  },
+  {
+    "slug": "d-bay",
+    "name": "D Bay",
+    "developer": "Tatweer Misr",
+    "total_available": 12,
+    "unit_types": [
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      54.714,
+      54.714
+    ],
+    "sqm_range": [
+      240,
+      240
+    ],
+    "delivery_notes": [
+      "Delivery 2 Years",
+      "Delivery Handed-over-3Month"
+    ]
+  },
+  {
+    "slug": "dbay",
+    "name": "Dbay",
+    "developer": "Tatweer Misr",
+    "total_available": 12,
+    "unit_types": [
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      54.714,
+      54.714
+    ],
+    "sqm_range": [
+      240,
+      240
+    ],
+    "delivery_notes": [
+      "Delivery 2 Years",
+      "Delivery Handed-over-3Month"
+    ]
+  },
+  {
+    "slug": "fouka-bay",
+    "name": "Fouka Bay",
+    "developer": "Tatweer Misr",
+    "total_available": 8,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      12,
+      12
+    ],
+    "sqm_range": [
+      110,
+      110
+    ],
+    "delivery_notes": [
+      "Delivery 4.5 Years"
+    ]
+  },
+  {
+    "slug": "il-monte-galala",
+    "name": "Il Monte Galala",
+    "developer": "Tatweer Misr",
+    "total_available": 468,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Penthouse",
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      5.603,
+      91.015
+    ],
+    "sqm_range": [
+      45,
+      446
+    ],
+    "delivery_notes": [
+      "Fully Finished by Mona Hussein"
+    ]
+  },
+  {
+    "slug": "monte-galala",
+    "name": "Monte Galala",
+    "developer": "Tatweer Misr",
+    "total_available": 468,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Penthouse",
+      "Standalone Villa",
+      "Twin House"
+    ],
+    "price_range_m": [
+      5.603,
+      91.015
+    ],
+    "sqm_range": [
+      45,
+      446
+    ],
+    "delivery_notes": [
+      "Fully Finished by Mona Hussein"
+    ]
+  },
+  {
+    "slug": "rivers",
+    "name": "Rivers",
+    "developer": "Tatweer Misr",
+    "total_available": 1,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      36.5,
+      36.5
+    ],
+    "sqm_range": [
+      300,
+      300
+    ],
+    "delivery_notes": [
+      "1 Year"
+    ]
+  },
+  {
+    "slug": "salt-north-coast",
+    "name": "Salt North Coast",
+    "developer": "Tatweer Misr",
+    "total_available": 445,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      9.461,
+      101.212
+    ],
+    "sqm_range": [
+      45,
+      290
+    ],
+    "delivery_notes": [
+      "Delivery 4 Years"
+    ]
+  },
+  {
+    "slug": "salt",
+    "name": "Salt",
+    "developer": "Tatweer Misr",
+    "total_available": 445,
+    "unit_types": [
+      "Apartment",
+      "Chalet",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      9.461,
+      101.212
+    ],
+    "sqm_range": [
+      45,
+      290
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "scenes-mostakbal-city",
+    "name": "Scenes Mostakbal City",
+    "developer": "Akam Developments",
+    "total_available": 19,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      15.159,
+      27.266
+    ],
+    "sqm_range": [
+      158,
+      210
+    ],
+    "delivery_notes": [
+      "2 Years"
+    ]
+  },
+  {
+    "slug": "scenes",
+    "name": "Scenes",
+    "developer": "Akam Developments",
+    "total_available": 19,
+    "unit_types": [
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      15.159,
+      27.266
+    ],
+    "sqm_range": [
+      158,
+      210
+    ],
+    "delivery_notes": [
+      "2 Years"
+    ]
+  },
+  {
+    "slug": "90-avenue",
+    "name": "90 Avenue",
+    "developer": "Tabarak",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      16.3,
+      19.5
+    ],
+    "sqm_range": [
+      125,
+      160
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "joya",
+    "name": "Joya",
+    "developer": "Tcc",
+    "total_available": 6,
+    "unit_types": [
+      "Apartment",
+      "Penthouse",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      23.2165,
+      48.981
+    ],
+    "sqm_range": [
+      240,
+      490
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "green-town",
+    "name": "Green Town",
+    "developer": "Tesla",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      5.7005,
+      5.7505
+    ],
+    "sqm_range": [
+      163,
+      185
+    ],
+    "delivery_notes": [
+      "9 Months"
+    ]
+  },
+  {
+    "slug": "w-signature",
+    "name": "W Signature",
+    "developer": "The Waterway",
+    "total_available": 2,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      22,
+      28
+    ],
+    "sqm_range": [
+      130,
+      170
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "waterway-1",
+    "name": "Waterway 1",
+    "developer": "The Waterway Developments",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      23.3,
+      23.3
+    ],
+    "sqm_range": [
+      165,
+      165
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "the-waterway",
+    "name": "The Waterway",
+    "developer": "The Waterway Developments",
+    "total_available": 25,
+    "unit_types": [
+      "Chalet",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      15.606,
+      100.233
+    ],
+    "sqm_range": [
+      85,
+      490
+    ],
+    "delivery_notes": [
+      "Ready to Move",
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "w55",
+    "name": "W55",
+    "developer": "The Waterway Developments",
+    "total_available": 55,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      36.561,
+      63.231
+    ],
+    "sqm_range": [
+      182,
+      305
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "almaza-bay",
+    "name": "Almaza Bay",
+    "developer": "Travco Properties",
+    "total_available": 7,
+    "unit_types": [
+      "Duplex",
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "price_range_m": [
+      18.59,
+      46.13
+    ],
+    "sqm_range": [
+      137,
+      198
+    ],
+    "delivery_notes": [
+      "Ready to Move (RTM)"
+    ]
+  },
+  {
+    "slug": "neopolis",
+    "name": "Neopolis",
+    "developer": "Wadi Degla",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      7.2,
+      7.2
+    ],
+    "sqm_range": [
+      155,
+      155
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "promenade",
+    "name": "Promenade",
+    "developer": "Wadi Degla",
+    "total_available": 1,
+    "unit_types": [
+      "Apartment"
+    ],
+    "price_range_m": [
+      10.7,
+      10.7
+    ],
+    "sqm_range": [
+      150,
+      150
+    ],
+    "delivery_notes": [
+      "Ready to Move"
+    ]
+  },
+  {
+    "slug": "zg2",
+    "name": "Zg2",
+    "developer": "Zg",
+    "total_available": 1,
+    "unit_types": [
+      "Standalone Villa"
+    ],
+    "price_range_m": [
+      22.25,
+      22.25
+    ],
+    "sqm_range": [
+      194,
+      194
+    ],
+    "delivery_notes": [
+      "6 months"
+    ]
+  },
+  {
+    "slug": "one33",
+    "name": "One33",
+    "developer": "Arkan Palm",
+    "total_available": 8,
+    "unit_types": [
+      "Apartment",
+      "Duplex",
+      "Standalone Villa",
+      "Townhouse"
+    ],
+    "price_range_m": [
+      5.5,
+      24.1
+    ],
+    "sqm_range": [
+      85,
+      261
+    ],
+    "delivery_notes": [
+      "Off-Plan (4 Years)"
+    ]
+  }
+]

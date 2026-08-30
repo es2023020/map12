@@ -1,0 +1,5667 @@
+{
+  "projects_with_rtm_units": {
+    "amorada": {
+      "slug": "amorada",
+      "project_name": "amorada",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "AMO-3BR",
+          "type": null,
+          "areaSqm": "155",
+          "priceEGP": "12000000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "AMO-DUP",
+          "type": null,
+          "areaSqm": "230",
+          "priceEGP": "20000000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "gaia-ras-el-hekma": {
+      "slug": "gaia-ras-el-hekma",
+      "project_name": "gaia-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "GAIA-SA-47.6M",
+          "type": null,
+          "areaSqm": "250",
+          "priceEGP": "47600000",
+          "delivery_note": "Ready to Move / 3 Years"
+        },
+        {
+          "unitNo": "GAIA-SA-47.6M",
+          "type": null,
+          "areaSqm": "250",
+          "priceEGP": "47600000",
+          "delivery_note": "Ready to Move / 3 Years"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move / 3 Years"
+      ]
+    },
+    "green-square": {
+      "slug": "green-square",
+      "project_name": "green-square",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "GS-3BR",
+          "type": null,
+          "areaSqm": "165",
+          "priceEGP": "21000000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "lavenir": {
+      "slug": "lavenir",
+      "project_name": "lavenir",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "LAV-3BR",
+          "type": null,
+          "areaSqm": "160",
+          "priceEGP": "17000000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "youd-ras-el-hekma": {
+      "slug": "youd-ras-el-hekma",
+      "project_name": "youd-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "YOUD-RTM-1B-6.6",
+          "type": null,
+          "areaSqm": "60",
+          "priceEGP": "6600000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "YOUD-RTM-2B-10",
+          "type": null,
+          "areaSqm": "85",
+          "priceEGP": "10000000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "YOUD-RTM-3B-14.2",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "14200000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "youd": {
+      "slug": "youd",
+      "project_name": "youd",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 9,
+      "sample_units": [
+        {
+          "unitNo": "YOUD-RTM-1B-6.6",
+          "type": null,
+          "areaSqm": "60",
+          "priceEGP": "6600000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "YOUD-SERV-1B",
+          "type": null,
+          "areaSqm": "65",
+          "priceEGP": "10000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "YOUD-RTM-2B-10",
+          "type": null,
+          "areaSqm": "85",
+          "priceEGP": "10000000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "YOUD-OP-2B-85",
+          "type": null,
+          "areaSqm": "85",
+          "priceEGP": "8800000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "YOUD-OP-2B-105",
+          "type": null,
+          "areaSqm": "105",
+          "priceEGP": "10200000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)",
+        "Ready to Move"
+      ]
+    },
+    "fifth-square": {
+      "slug": "fifth-square",
+      "project_name": "fifth-square",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "FS-2BR",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "15000000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "FS-3BR",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "17300000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "marbay-ras-el-hekma": {
+      "slug": "marbay-ras-el-hekma",
+      "project_name": "marbay-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 5,
+      "sample_units": [
+        {
+          "unitNo": "MB-CH-2B-98",
+          "type": null,
+          "areaSqm": "98",
+          "priceEGP": "13100000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MB-CH-3B-127",
+          "type": null,
+          "areaSqm": "127",
+          "priceEGP": "15500000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MB-TH-155",
+          "type": null,
+          "areaSqm": "155",
+          "priceEGP": "22300000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MB-TWIN-175",
+          "type": null,
+          "areaSqm": "175",
+          "priceEGP": "26500000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MB-SA-220",
+          "type": null,
+          "areaSqm": "220",
+          "priceEGP": "34700000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "marville": {
+      "slug": "marville",
+      "project_name": "marville",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "MV-1B-96",
+          "type": null,
+          "areaSqm": "96",
+          "priceEGP": "9500000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "seazen": {
+      "slug": "seazen",
+      "project_name": "seazen",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "SEA-SS-STD-54",
+          "type": null,
+          "areaSqm": "54",
+          "priceEGP": "6900000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SEA-SS-1B-63",
+          "type": null,
+          "areaSqm": "63",
+          "priceEGP": "8600000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SEA-SS-2B-86",
+          "type": null,
+          "areaSqm": "86",
+          "priceEGP": "9900000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "direction-white": {
+      "slug": "direction-white",
+      "project_name": "direction-white",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "DW-P3-1B-65",
+          "type": null,
+          "areaSqm": "65",
+          "priceEGP": "10000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "DW-P3-2B-145",
+          "type": null,
+          "areaSqm": "145",
+          "priceEGP": "19000000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "ashrafieh": {
+      "slug": "ashrafieh",
+      "project_name": "ashrafieh",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "ASH-2BR",
+          "type": null,
+          "areaSqm": "110",
+          "priceEGP": "5300000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "ASH-3BR",
+          "type": null,
+          "areaSqm": "140",
+          "priceEGP": "7700000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "ASH-DUP",
+          "type": null,
+          "areaSqm": "190",
+          "priceEGP": "8920000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "galleria-moon-valley": {
+      "slug": "galleria-moon-valley",
+      "project_name": "galleria-moon-valley",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "GMV-2BR",
+          "type": null,
+          "areaSqm": "125",
+          "priceEGP": "12500000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "GMV-3BR",
+          "type": null,
+          "areaSqm": "155",
+          "priceEGP": "15500000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "zizinia": {
+      "slug": "zizinia",
+      "project_name": "zizinia",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "ZIZ-2BR",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "6200000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "ZIZ-3BR",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "7000000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "ZIZ-DUP",
+          "type": null,
+          "areaSqm": "220",
+          "priceEGP": "10200000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "kayan": {
+      "slug": "kayan",
+      "project_name": "kayan",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "KAY-3BR-G",
+          "type": null,
+          "areaSqm": "128",
+          "priceEGP": "8920755",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "beta-greens": {
+      "slug": "beta-greens",
+      "project_name": "beta-greens",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "BG-2BR",
+          "type": null,
+          "areaSqm": "115",
+          "priceEGP": "5800000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "BG-3BR",
+          "type": null,
+          "areaSqm": "145",
+          "priceEGP": "5500000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "midtown-new-cairo": {
+      "slug": "midtown-new-cairo",
+      "project_name": "midtown-new-cairo",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "MNC-TH",
+          "type": null,
+          "areaSqm": "200",
+          "priceEGP": "17600000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "lake-west-1": {
+      "slug": "lake-west-1",
+      "project_name": "lake-west-1",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "LW1-THC",
+          "type": null,
+          "areaSqm": "270",
+          "priceEGP": "17974290",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "beachfront-towers-new-alamein": {
+      "slug": "beachfront-towers-new-alamein",
+      "project_name": "beachfront-towers-new-alamein",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 8,
+      "sample_units": [
+        {
+          "unitNo": "BFT-2BR-MIN",
+          "type": null,
+          "areaSqm": "217",
+          "priceEGP": "17100000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "BFT-2BR-MAX",
+          "type": null,
+          "areaSqm": "232",
+          "priceEGP": "18100000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "BFT-3BR-MIN",
+          "type": null,
+          "areaSqm": "310",
+          "priceEGP": "24900000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "BFT-3BR-MAX",
+          "type": null,
+          "areaSqm": "398",
+          "priceEGP": "35600000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "BFT-PH-2BR",
+          "type": null,
+          "areaSqm": "217",
+          "priceEGP": "17500000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "downtown-new-alamein": {
+      "slug": "downtown-new-alamein",
+      "project_name": "downtown-new-alamein",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "DT-RET-MIN",
+          "type": null,
+          "areaSqm": "121",
+          "priceEGP": "9400000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "DT-RET-MID",
+          "type": null,
+          "areaSqm": "450",
+          "priceEGP": "34100000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "DT-RET-MAX",
+          "type": null,
+          "areaSqm": "911",
+          "priceEGP": "70400000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "latin-city-new-alamein": {
+      "slug": "latin-city-new-alamein",
+      "project_name": "latin-city-new-alamein",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 24,
+      "sample_units": [
+        {
+          "unitNo": "LC-BS-2BR-MIN",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "4300000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "LC-BS-2BR-MAX",
+          "type": null,
+          "areaSqm": "180",
+          "priceEGP": "6700000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "LC-RS-2BR-MIN",
+          "type": null,
+          "areaSqm": "133",
+          "priceEGP": "4500000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "LC-RS-2BR-MAX",
+          "type": null,
+          "areaSqm": "180",
+          "priceEGP": "6000000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "LC-BS-3BR-MIN",
+          "type": null,
+          "areaSqm": "143",
+          "priceEGP": "5100000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "jade-park-al-maqsad": {
+      "slug": "jade-park-al-maqsad",
+      "project_name": "jade-park-al-maqsad",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 8,
+      "sample_units": [
+        {
+          "unitNo": "JP-1BR",
+          "type": null,
+          "areaSqm": "75",
+          "priceEGP": "3800000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JP-2BR",
+          "type": null,
+          "areaSqm": "178",
+          "priceEGP": "5700000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JP-3BR-MIN",
+          "type": null,
+          "areaSqm": "218",
+          "priceEGP": "6000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JP-3BR-MAX",
+          "type": null,
+          "areaSqm": "284",
+          "priceEGP": "8000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JP-4BR-MIN",
+          "type": null,
+          "areaSqm": "246",
+          "priceEGP": "6900000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "mazarine-apartments-new-alamein": {
+      "slug": "mazarine-apartments-new-alamein",
+      "project_name": "mazarine-apartments-new-alamein",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 11,
+      "sample_units": [
+        {
+          "unitNo": "MA-TIF-2BR",
+          "type": null,
+          "areaSqm": "140",
+          "priceEGP": "7300000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MA-BOU-2BR",
+          "type": null,
+          "areaSqm": "207",
+          "priceEGP": "10700000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MA-TIF-3BR-MIN",
+          "type": null,
+          "areaSqm": "231",
+          "priceEGP": "9900000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MA-TIF-3BR-MAX",
+          "type": null,
+          "areaSqm": "258",
+          "priceEGP": "12400000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MA-CEL-3BR-MIN",
+          "type": null,
+          "areaSqm": "235",
+          "priceEGP": "10000000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "mazarine-hub-new-alamein": {
+      "slug": "mazarine-hub-new-alamein",
+      "project_name": "mazarine-hub-new-alamein",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 6,
+      "sample_units": [
+        {
+          "unitNo": "MH-OFF-75",
+          "type": null,
+          "areaSqm": "75",
+          "priceEGP": "5800000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MH-OFF-85",
+          "type": null,
+          "areaSqm": "85",
+          "priceEGP": "5900000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MH-OFF-90",
+          "type": null,
+          "areaSqm": "90",
+          "priceEGP": "6900000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MH-OFF-110",
+          "type": null,
+          "areaSqm": "110",
+          "priceEGP": "8600000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MH-OFF-140",
+          "type": null,
+          "areaSqm": "140",
+          "priceEGP": "10600000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "new-garden-city-r5": {
+      "slug": "new-garden-city-r5",
+      "project_name": "new-garden-city-r5",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 6,
+      "sample_units": [
+        {
+          "unitNo": "NGC-1BR-MIN",
+          "type": null,
+          "areaSqm": "84",
+          "priceEGP": "4100000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "NGC-1BR-MAX",
+          "type": null,
+          "areaSqm": "118",
+          "priceEGP": "5400000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "NGC-2BR-MIN",
+          "type": null,
+          "areaSqm": "123",
+          "priceEGP": "5600000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "NGC-2BR-MAX",
+          "type": null,
+          "areaSqm": "190",
+          "priceEGP": "8600000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "NGC-3BR-MIN",
+          "type": null,
+          "areaSqm": "164",
+          "priceEGP": "7400000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "cleopatra-square": {
+      "slug": "cleopatra-square",
+      "project_name": "cleopatra-square",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "CS-CLEO",
+          "type": null,
+          "areaSqm": "341",
+          "priceEGP": "39085000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "CS-TW",
+          "type": null,
+          "areaSqm": "298",
+          "priceEGP": "52531000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "village-west": {
+      "slug": "village-west",
+      "project_name": "village-west",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 50,
+      "sample_units": [
+        {
+          "unitNo": "VW-28-1BD-89",
+          "type": null,
+          "areaSqm": "89",
+          "priceEGP": "9200000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VW-28-1BDG-89",
+          "type": null,
+          "areaSqm": "89",
+          "priceEGP": "9600000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VW-28-1BDG-95",
+          "type": null,
+          "areaSqm": "95",
+          "priceEGP": "9900000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VW-29-1BD-75",
+          "type": null,
+          "areaSqm": "75",
+          "priceEGP": "7900000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VW-29-1BDG-65",
+          "type": null,
+          "areaSqm": "65",
+          "priceEGP": "7000000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "rock-eden": {
+      "slug": "rock-eden",
+      "project_name": "rock-eden",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "RE-3BR",
+          "type": null,
+          "areaSqm": "195",
+          "priceEGP": "10808000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "belle-vie-new-zayed": {
+      "slug": "belle-vie-new-zayed",
+      "project_name": "belle-vie-new-zayed",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 58,
+      "sample_units": [
+        {
+          "unitNo": "BV Plaza Residence-I-G-9",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "10881888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "BV Plaza Residence-I-3-11",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "10648888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "BV Plaza Residence-X-3-5",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "13753888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Belle Vie Waterfront Residence-B1 -1-7",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "13852888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Belle Vie Waterfront Residence-B1 -2-1",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "13776888",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "belle-vie": {
+      "slug": "belle-vie",
+      "project_name": "belle-vie",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 58,
+      "sample_units": [
+        {
+          "unitNo": "BV Plaza Residence-I-G-9",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "10881888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "BV Plaza Residence-I-3-11",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "10648888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "BV Plaza Residence-X-3-5",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "13753888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Belle Vie Waterfront Residence-B1 -1-7",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "13852888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Belle Vie Waterfront Residence-B1 -2-1",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "13776888",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "cairo-gate": {
+      "slug": "cairo-gate",
+      "project_name": "cairo-gate",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 92,
+      "sample_units": [
+        {
+          "unitNo": "Town Square - Office - B4-1-28",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "17834888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Town Square - Office - B4-1-12",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "11892888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Town Square - Office - B4-4-16",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "11368888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Cairo Gate Aspen V-V-82",
+          "type": null,
+          "areaSqm": "300.6",
+          "priceEGP": "36397888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Cairo Gate Aspen V-V-83",
+          "type": null,
+          "areaSqm": "300.6",
+          "priceEGP": "36397888",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "marassi-red-sea": {
+      "slug": "marassi-red-sea",
+      "project_name": "marassi-red-sea",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 77,
+      "sample_units": [
+        {
+          "unitNo": "Marassi Red Infinity I-TH-133-TH-2",
+          "type": null,
+          "areaSqm": "167.3",
+          "priceEGP": "37123888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Marassi Red Marina Views I-B1-G-3B",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "32498888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Marassi Red Marina Views I-B2-2-2",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "41750888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Marassi Red Marina Views II-B10-2-2B",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "36345888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Marassi Red Marina Bay-B-G-15",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "39927888",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "mivida": {
+      "slug": "mivida",
+      "project_name": "mivida",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 88,
+      "sample_units": [
+        {
+          "unitNo": "Mivida Business Park 3-B2-1-1.c",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "29793888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Mivida The Place -B8-2-25",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "39598888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Mivida Gardens Crystal-B3-G-1",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "14753888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Mivida Gardens Aqua-B1-G-1",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "15655888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Mivida Gardens Aqua-B5-1-7",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "12866888",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "soul": {
+      "slug": "soul",
+      "project_name": "soul",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 53,
+      "sample_units": [
+        {
+          "unitNo": "Soul Lagoons-V-V-143",
+          "type": null,
+          "areaSqm": "497.6",
+          "priceEGP": "101086888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Soul Lagoons-V-V-117",
+          "type": null,
+          "areaSqm": "451.5",
+          "priceEGP": "120029888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Soul Waters-V-V-11",
+          "type": null,
+          "areaSqm": "601.7",
+          "priceEGP": "106382888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Soul Ext Shoreline-V-V-5",
+          "type": null,
+          "areaSqm": "591.8",
+          "priceEGP": "123524888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Soul Ext Shoreline-V-V-6",
+          "type": null,
+          "areaSqm": "529.1",
+          "priceEGP": "122480888",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "uptown-cairo": {
+      "slug": "uptown-cairo",
+      "project_name": "uptown-cairo",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 7,
+      "sample_units": [
+        {
+          "unitNo": "UTC The Peak P1-V-V-1",
+          "type": null,
+          "areaSqm": "414.7",
+          "priceEGP": "57011888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "UTC The Peak P1-V-V-18",
+          "type": null,
+          "areaSqm": "431.1",
+          "priceEGP": "49454888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "UTC The Peak P1-V-V-72",
+          "type": null,
+          "areaSqm": "492.4",
+          "priceEGP": "71048888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "UTC The Peak P1-V-V-113",
+          "type": null,
+          "areaSqm": "532.7",
+          "priceEGP": "74417888",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "UTC The Peak P1-V-V-89",
+          "type": null,
+          "areaSqm": "492.1",
+          "priceEGP": "79342888",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "montania": {
+      "slug": "montania",
+      "project_name": "montania",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "MON-VIEW",
+          "type": null,
+          "areaSqm": "179",
+          "priceEGP": "23850000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "MON-ELITE",
+          "type": null,
+          "areaSqm": "220",
+          "priceEGP": "23500000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "park-central-mostakbal-city": {
+      "slug": "park-central-mostakbal-city",
+      "project_name": "park-central-mostakbal-city",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 7,
+      "sample_units": [
+        {
+          "unitNo": "PC-TER-1B-81",
+          "type": null,
+          "areaSqm": "81",
+          "priceEGP": "8300000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PC-GL-1B-85",
+          "type": null,
+          "areaSqm": "85",
+          "priceEGP": "8300000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PC-TER-2B-105",
+          "type": null,
+          "areaSqm": "105",
+          "priceEGP": "11200000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PC-GL-2B-143",
+          "type": null,
+          "areaSqm": "143",
+          "priceEGP": "14100000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PC-TER-3B-142",
+          "type": null,
+          "areaSqm": "142",
+          "priceEGP": "14600000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "swanlake-residences-new-cairo": {
+      "slug": "swanlake-residences-new-cairo",
+      "project_name": "swanlake-residences-new-cairo",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "AMAIA-MONOS-281",
+          "type": null,
+          "areaSqm": "281",
+          "priceEGP": "60000000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "AMAIA-MONOS-291",
+          "type": null,
+          "areaSqm": "291",
+          "priceEGP": "62000000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "swanlake-west": {
+      "slug": "swanlake-west",
+      "project_name": "swanlake-west",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "SLW-SHIM-2B-151",
+          "type": null,
+          "areaSqm": "151",
+          "priceEGP": "24200000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SLW-SHIM-3B-190",
+          "type": null,
+          "areaSqm": "190",
+          "priceEGP": "29000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SLW-SHIM-4B-348",
+          "type": null,
+          "areaSqm": "348",
+          "priceEGP": "57500000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "saada-boutique": {
+      "slug": "saada-boutique",
+      "project_name": "saada-boutique",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 12,
+      "sample_units": [
+        {
+          "unitNo": "SB-1B-71",
+          "type": null,
+          "areaSqm": "71",
+          "priceEGP": "7700000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SB-2B-105",
+          "type": null,
+          "areaSqm": "105",
+          "priceEGP": "9900000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SB-3B-134",
+          "type": null,
+          "areaSqm": "134",
+          "priceEGP": "11700000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SB-THA-MID-175",
+          "type": null,
+          "areaSqm": "175",
+          "priceEGP": "24000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SB-THA-CNR-175",
+          "type": null,
+          "areaSqm": "175",
+          "priceEGP": "26000000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "garden-lakes": {
+      "slug": "garden-lakes",
+      "project_name": "garden-lakes",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 37,
+      "sample_units": [
+        {
+          "unitNo": "GL5/9-4/403",
+          "type": null,
+          "areaSqm": "73.5",
+          "priceEGP": "7630000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "GL5/8A-4/402",
+          "type": null,
+          "areaSqm": "71",
+          "priceEGP": "6870000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "GL5/6-2/204",
+          "type": null,
+          "areaSqm": "68",
+          "priceEGP": "7200000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "GL5/4-G/G03",
+          "type": null,
+          "areaSqm": "69",
+          "priceEGP": "8210000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "GL5/3B-1/105",
+          "type": null,
+          "areaSqm": "71",
+          "priceEGP": "6800000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "hyde-park-new-cairo": {
+      "slug": "hyde-park-new-cairo",
+      "project_name": "hyde-park-new-cairo",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 107,
+      "sample_units": [
+        {
+          "unitNo": "HPS/2/201",
+          "type": null,
+          "areaSqm": "108",
+          "priceEGP": "10350000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPS/2/301",
+          "type": null,
+          "areaSqm": "108",
+          "priceEGP": "10180000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPS/3/G01",
+          "type": null,
+          "areaSqm": "108",
+          "priceEGP": "11710000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPS/3/G04",
+          "type": null,
+          "areaSqm": "100",
+          "priceEGP": "11270000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPS/3/101",
+          "type": null,
+          "areaSqm": "108",
+          "priceEGP": "10090000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "hyde-park-central": {
+      "slug": "hyde-park-central",
+      "project_name": "hyde-park-central",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 94,
+      "sample_units": [
+        {
+          "unitNo": "HPC/WR-4A/902",
+          "type": null,
+          "areaSqm": "130",
+          "priceEGP": "11380000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPC/WR-1C/G06",
+          "type": null,
+          "areaSqm": "135",
+          "priceEGP": "13490000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPC/WR-3C/G06",
+          "type": null,
+          "areaSqm": "135",
+          "priceEGP": "13500000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPC/WR-3C/104",
+          "type": null,
+          "areaSqm": "135",
+          "priceEGP": "11230000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPC/WR-3C/501",
+          "type": null,
+          "areaSqm": "135",
+          "priceEGP": "11560000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "hyde-park-north-seashore": {
+      "slug": "hyde-park-north-seashore",
+      "project_name": "hyde-park-north-seashore",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 99,
+      "sample_units": [
+        {
+          "unitNo": "HPN4/WSB-19/G03",
+          "type": null,
+          "areaSqm": "65",
+          "priceEGP": "10400000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPN4/WSB-2/G03",
+          "type": null,
+          "areaSqm": "65",
+          "priceEGP": "9980000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPN4/WSB-9/G03",
+          "type": null,
+          "areaSqm": "65",
+          "priceEGP": "11330000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPN4/WSB-12/G02",
+          "type": null,
+          "areaSqm": "65",
+          "priceEGP": "10220000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HPN4/WSA-14/G05",
+          "type": null,
+          "areaSqm": "65",
+          "priceEGP": "10470000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "ashgar-city": {
+      "slug": "ashgar-city",
+      "project_name": "ashgar-city",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "AC-2BR-85",
+          "type": null,
+          "areaSqm": "85",
+          "priceEGP": "4400000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "AC-2BR-100",
+          "type": null,
+          "areaSqm": "100",
+          "priceEGP": "5500000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "AC-PH-125",
+          "type": null,
+          "areaSqm": "125",
+          "priceEGP": "5850000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "jefaira": {
+      "slug": "jefaira",
+      "project_name": "jefaira",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 16,
+      "sample_units": [
+        {
+          "unitNo": "JEF-FURL-ATT-139",
+          "type": null,
+          "areaSqm": "139",
+          "priceEGP": "14380000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JEF-QS-TH-164",
+          "type": null,
+          "areaSqm": "164",
+          "priceEGP": "17746000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JEF-AYLA-TH-169",
+          "type": null,
+          "areaSqm": "169",
+          "priceEGP": "16952000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JEF-VAYA-NEXUS-169",
+          "type": null,
+          "areaSqm": "169",
+          "priceEGP": "15660000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JEF-FURL-CH-168",
+          "type": null,
+          "areaSqm": "168",
+          "priceEGP": "21490000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "la-vista-6": {
+      "slug": "la-vista-6",
+      "project_name": "la-vista-6",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "LV6-RTM-140-CASH",
+          "type": null,
+          "areaSqm": "140",
+          "priceEGP": "9800000",
+          "delivery_note": ""
+        },
+        {
+          "unitNo": "LV6-RTM-140-INST",
+          "type": null,
+          "areaSqm": "140",
+          "priceEGP": "11200000",
+          "delivery_note": ""
+        }
+      ],
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-bay-east": {
+      "slug": "la-vista-bay-east",
+      "project_name": "la-vista-bay-east",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "LVB-RTM-GR-110",
+          "type": null,
+          "areaSqm": "110",
+          "priceEGP": "27500000",
+          "delivery_note": ""
+        },
+        {
+          "unitNo": "LVB-2028-1ST-150",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "19800000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "",
+        "Ready to Move (RTM)"
+      ]
+    },
+    "la-vista-east": {
+      "slug": "la-vista-east",
+      "project_name": "la-vista-east",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "LVBE-RTM-G-110",
+          "type": null,
+          "areaSqm": "110",
+          "priceEGP": "27500000",
+          "delivery_note": ""
+        }
+      ],
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-gardens": {
+      "slug": "la-vista-gardens",
+      "project_name": "la-vista-gardens",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 8,
+      "sample_units": [
+        {
+          "unitNo": "LVG-RTM-CASH-1ST-150",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "14700000",
+          "delivery_note": ""
+        },
+        {
+          "unitNo": "LVG-RTM-CASH-G-150",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "17325000",
+          "delivery_note": ""
+        },
+        {
+          "unitNo": "LVG-RTM-INST-G-140",
+          "type": null,
+          "areaSqm": "140",
+          "priceEGP": "15500000",
+          "delivery_note": ""
+        },
+        {
+          "unitNo": "LVG-RTM-INST-G-150",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "16500000",
+          "delivery_note": ""
+        },
+        {
+          "unitNo": "LVG-RTM-INST-1ST-150",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "14550000",
+          "delivery_note": ""
+        }
+      ],
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-topaz": {
+      "slug": "la-vista-topaz",
+      "project_name": "la-vista-topaz",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "LVT-RTM-G-150",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "16950000",
+          "delivery_note": ""
+        }
+      ],
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "zoya": {
+      "slug": "zoya",
+      "project_name": "zoya",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 8,
+      "sample_units": [
+        {
+          "unitNo": "ZY-RV-2B-93",
+          "type": null,
+          "areaSqm": "93",
+          "priceEGP": "11500000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "ZY-LG2-2B-115",
+          "type": null,
+          "areaSqm": "115",
+          "priceEGP": "20000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "ZY-RV-3B-123",
+          "type": null,
+          "areaSqm": "123",
+          "priceEGP": "15900000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "ZY-LG2-3B-145",
+          "type": null,
+          "areaSqm": "145",
+          "priceEGP": "24100000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "ZY-LG1-TOWN-230",
+          "type": null,
+          "areaSqm": "230",
+          "priceEGP": "39700000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "trio": {
+      "slug": "trio",
+      "project_name": "trio",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 10,
+      "sample_units": [
+        {
+          "unitNo": "E2-102",
+          "type": null,
+          "areaSqm": "130",
+          "priceEGP": "11940085.6",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "E2-301",
+          "type": null,
+          "areaSqm": "130",
+          "priceEGP": "11716237.3",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "E2-401",
+          "type": null,
+          "areaSqm": "130",
+          "priceEGP": "11660276.2",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "E5-101",
+          "type": null,
+          "areaSqm": "130",
+          "priceEGP": "11637890.77",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "E5-103",
+          "type": null,
+          "areaSqm": "130",
+          "priceEGP": "12052009.19",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "31-west": {
+      "slug": "31-west",
+      "project_name": "31-west",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 61,
+      "sample_units": [
+        {
+          "unitNo": "A5A101",
+          "type": null,
+          "areaSqm": "140",
+          "priceEGP": "16664112.5",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A5A106",
+          "type": null,
+          "areaSqm": "140",
+          "priceEGP": "16664112.5",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A5A201",
+          "type": null,
+          "areaSqm": "135",
+          "priceEGP": "16068965.63",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A5A206",
+          "type": null,
+          "areaSqm": "135",
+          "priceEGP": "16068965.63",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A5A301",
+          "type": null,
+          "areaSqm": "130",
+          "priceEGP": "15323587.5",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "business-district": {
+      "slug": "business-district",
+      "project_name": "business-district",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 10,
+      "sample_units": [
+        {
+          "unitNo": "A0401",
+          "type": null,
+          "areaSqm": "195",
+          "priceEGP": "19170937.5",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A0411",
+          "type": null,
+          "areaSqm": "220",
+          "priceEGP": "19519946.6",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A0611",
+          "type": null,
+          "areaSqm": "220",
+          "priceEGP": "18281181.6",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A1001",
+          "type": null,
+          "areaSqm": "180",
+          "priceEGP": "20350687.5",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A1005",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "16245218.95",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "mist": {
+      "slug": "mist",
+      "project_name": "mist",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 111,
+      "sample_units": [
+        {
+          "unitNo": "A1-1-G01",
+          "type": null,
+          "areaSqm": "157",
+          "priceEGP": "16814151.07",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A1-1-G02",
+          "type": null,
+          "areaSqm": "157",
+          "priceEGP": "17291002.67",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A1-1-101",
+          "type": null,
+          "areaSqm": "157",
+          "priceEGP": "15194146",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A1-1-102",
+          "type": null,
+          "areaSqm": "157",
+          "priceEGP": "15332274.6",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "A1-1-201",
+          "type": null,
+          "areaSqm": "157",
+          "priceEGP": "15194146",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "the-hillage": {
+      "slug": "the-hillage",
+      "project_name": "the-hillage",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "HIL-2B-138",
+          "type": null,
+          "areaSqm": "138",
+          "priceEGP": "17000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HIL-3B-190",
+          "type": null,
+          "areaSqm": "190",
+          "priceEGP": "19800000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "sarai": {
+      "slug": "sarai",
+      "project_name": "sarai",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "SAR-S1-TRIPLEX-337",
+          "type": null,
+          "areaSqm": "337",
+          "priceEGP": "30300000",
+          "delivery_note": "RTM"
+        }
+      ],
+      "delivery_notes": [
+        "RTM"
+      ]
+    },
+    "district-5": {
+      "slug": "district-5",
+      "project_name": "district-5",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 51,
+      "sample_units": [
+        {
+          "unitNo": "NHF-1-42",
+          "type": null,
+          "areaSqm": "224",
+          "priceEGP": "28573000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "NHF-3-11",
+          "type": null,
+          "areaSqm": "224",
+          "priceEGP": "29233000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "NHF-5-13",
+          "type": null,
+          "areaSqm": "224",
+          "priceEGP": "27920000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "NHF-5-21",
+          "type": null,
+          "areaSqm": "224",
+          "priceEGP": "27920000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "NHF-5-23",
+          "type": null,
+          "areaSqm": "224",
+          "priceEGP": "27920000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "cali-coast-ras-el-hekma": {
+      "slug": "cali-coast-ras-el-hekma",
+      "project_name": "cali-coast-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 5,
+      "sample_units": [
+        {
+          "unitNo": "CALI-P34-2B-86",
+          "type": null,
+          "areaSqm": "86",
+          "priceEGP": "9985000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CALI-P34-2B-95",
+          "type": null,
+          "areaSqm": "95",
+          "priceEGP": "11476000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CALI-P34-3B-110",
+          "type": null,
+          "areaSqm": "110",
+          "priceEGP": "11750000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CALI-P34-3B-150",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "15928000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CALI-BW-1B-67",
+          "type": null,
+          "areaSqm": "67",
+          "priceEGP": "6590000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "m-apartments": {
+      "slug": "m-apartments",
+      "project_name": "m-apartments",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "MAPT-TYP",
+          "type": null,
+          "areaSqm": "184",
+          "priceEGP": "6177000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "MAPT-PH",
+          "type": null,
+          "areaSqm": "224",
+          "priceEGP": "7616000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "villaria": {
+      "slug": "villaria",
+      "project_name": "villaria",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "VIL-PH",
+          "type": null,
+          "areaSqm": "240",
+          "priceEGP": "7920000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "VIL-DUP",
+          "type": null,
+          "areaSqm": "255",
+          "priceEGP": "8415000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "club-hill-solare": {
+      "slug": "club-hill-solare",
+      "project_name": "club-hill-solare",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 8,
+      "sample_units": [
+        {
+          "unitNo": "SOL-LUM-2B-115",
+          "type": null,
+          "areaSqm": "115",
+          "priceEGP": "12200000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SOL-MAISON-2B-129",
+          "type": null,
+          "areaSqm": "129",
+          "priceEGP": "14800000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SOL-LUM-3B-135",
+          "type": null,
+          "areaSqm": "135",
+          "priceEGP": "15000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SOL-CIELO-TH-174",
+          "type": null,
+          "areaSqm": "174",
+          "priceEGP": "25000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SOL-CIANO-TH-174",
+          "type": null,
+          "areaSqm": "174",
+          "priceEGP": "24000000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "il-bosco-city": {
+      "slug": "il-bosco-city",
+      "project_name": "il-bosco-city",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "BOS-TWIN-316",
+          "type": null,
+          "areaSqm": "316",
+          "priceEGP": "32300000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "BOS-SV-SM-399",
+          "type": null,
+          "areaSqm": "399",
+          "priceEGP": "39000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "BOS-CREEK-V-488",
+          "type": null,
+          "areaSqm": "488",
+          "priceEGP": "57000000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "kai-sokhna": {
+      "slug": "kai-sokhna",
+      "project_name": "kai-sokhna",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "KAI-4B-RTM-223",
+          "type": null,
+          "areaSqm": "223",
+          "priceEGP": "32300000",
+          "delivery_note": ""
+        }
+      ],
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "solare": {
+      "slug": "solare",
+      "project_name": "solare",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 12,
+      "sample_units": [
+        {
+          "unitNo": "SOL-LUM-2B-115",
+          "type": null,
+          "areaSqm": "115",
+          "priceEGP": "12200000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SOL-MAISON-2B-129",
+          "type": null,
+          "areaSqm": "129",
+          "priceEGP": "14800000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SOL-LUM-3B-135",
+          "type": null,
+          "areaSqm": "135",
+          "priceEGP": "15000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SOL-CIELO-TH-174",
+          "type": null,
+          "areaSqm": "174",
+          "priceEGP": "25000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SOL-CIANO-TH-174",
+          "type": null,
+          "areaSqm": "174",
+          "priceEGP": "24000000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "vinci": {
+      "slug": "vinci",
+      "project_name": "vinci",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 5,
+      "sample_units": [
+        {
+          "unitNo": "VIN-3B-CS-172",
+          "type": null,
+          "areaSqm": "172",
+          "priceEGP": "11700000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VIN-3B-FF-156",
+          "type": null,
+          "areaSqm": "156",
+          "priceEGP": "12700000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VIN-SKY-V-318",
+          "type": null,
+          "areaSqm": "318",
+          "priceEGP": "19500000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VIN-TH-255",
+          "type": null,
+          "areaSqm": "255",
+          "priceEGP": "22700000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VIN-SA-510",
+          "type": null,
+          "areaSqm": "510",
+          "priceEGP": "57700000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "modon-ras-el-hekma": {
+      "slug": "modon-ras-el-hekma",
+      "project_name": "modon-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 10,
+      "sample_units": [
+        {
+          "unitNo": "MOD-BP-2B-196",
+          "type": null,
+          "areaSqm": "196",
+          "priceEGP": "36000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MOD-BP-3B-266",
+          "type": null,
+          "areaSqm": "266",
+          "priceEGP": "58000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MOD-BP-4B-320",
+          "type": null,
+          "areaSqm": "320",
+          "priceEGP": "75000000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MOD-BOU-1B-152",
+          "type": null,
+          "areaSqm": "152",
+          "priceEGP": "22600000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "MOD-BOU-2B-176",
+          "type": null,
+          "areaSqm": "176",
+          "priceEGP": "28000000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "lvls": {
+      "slug": "lvls",
+      "project_name": "lvls",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 8,
+      "sample_units": [
+        {
+          "unitNo": "LV-BT-BH-377-04",
+          "type": null,
+          "areaSqm": "122",
+          "priceEGP": "24996867",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "LV-BT-BH-377-12",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "19692375",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "LV-SM-TH-139-C",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "32812400",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "LV-SM-TH-141-B",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "39994615",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "LV-SM-TH-143-A",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "34366576",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "mountain-view-crystal": {
+      "slug": "mountain-view-crystal",
+      "project_name": "mountain-view-crystal",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 129,
+      "sample_units": [
+        {
+          "unitNo": "BI1-87-TH4-B",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "27119741",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "GI3-10-TH4-00-1",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "25142043",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "GI3-10-TH4-00-4",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "24994431",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "GI3-12-TH4-00-2",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "22291933",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "GI3-12-TH4-00-3",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "23816763",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "mountain-view-grand-valley": {
+      "slug": "mountain-view-grand-valley",
+      "project_name": "mountain-view-grand-valley",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 14,
+      "sample_units": [
+        {
+          "unitNo": "V1-GV-18-B",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "30463098",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "V1-GV-19-A",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "30463098",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "V1-GV-19-B",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "30463098",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "V1-GV-22-C",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "37410687",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "V1-GV-22-D",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "36638733",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "mountain-view-icity-new-cairo": {
+      "slug": "mountain-view-icity-new-cairo",
+      "project_name": "mountain-view-icity-new-cairo",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 13,
+      "sample_units": [
+        {
+          "unitNo": "CA-01-03-BG-1",
+          "type": null,
+          "areaSqm": "44.31",
+          "priceEGP": "15682943",
+          "delivery_note": "READY TO MOVE - 3"
+        },
+        {
+          "unitNo": "CA-01-03-CG-1",
+          "type": null,
+          "areaSqm": "75.66",
+          "priceEGP": "17378875",
+          "delivery_note": "READY TO MOVE - 3"
+        },
+        {
+          "unitNo": "CA-01-05-BG-1",
+          "type": null,
+          "areaSqm": "65.15",
+          "priceEGP": "16484278",
+          "delivery_note": "READY TO MOVE - 3"
+        },
+        {
+          "unitNo": "CA-01-14-CG-1",
+          "type": null,
+          "areaSqm": "78.6",
+          "priceEGP": "16650914",
+          "delivery_note": "READY TO MOVE - 3"
+        },
+        {
+          "unitNo": "CA-01-22-AG-6",
+          "type": null,
+          "areaSqm": "88.76",
+          "priceEGP": "19971995",
+          "delivery_note": "READY TO MOVE - 3"
+        }
+      ],
+      "delivery_notes": [
+        "READY TO MOVE - 3",
+        "READY TO MOVE - 9",
+        "Ready to Move (RTM)",
+        "READY TO DELIVER",
+        "READY TO MOVE - 6"
+      ]
+    },
+    "mountain-view-icity-october": {
+      "slug": "mountain-view-icity-october",
+      "project_name": "mountain-view-icity-october",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 200,
+      "sample_units": [
+        {
+          "unitNo": "CA-01-01-B1-01",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "11611287",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CA-01-01-B2-01",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "11611287",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CA-01-03-A1-01",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "11537582",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CA-01-03-A3-02",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "11403573",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CA-01-03-A4-02",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "11403573",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)",
+        "READY TO DELIVER",
+        "READY TO MOVE - 3"
+      ]
+    },
+    "mountain-view-ras-el-hekma": {
+      "slug": "mountain-view-ras-el-hekma",
+      "project_name": "mountain-view-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 14,
+      "sample_units": [
+        {
+          "unitNo": "EV-THL5-081-D-GF",
+          "type": null,
+          "areaSqm": "66.43",
+          "priceEGP": "25315157",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "EV-THL5-090-D-GF",
+          "type": null,
+          "areaSqm": "66.45",
+          "priceEGP": "25622781",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "EV-THL8-080-B-GF",
+          "type": null,
+          "areaSqm": "66.97",
+          "priceEGP": "25429314",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "EV-THL8-080-F-GF",
+          "type": null,
+          "areaSqm": "66.54",
+          "priceEGP": "25419949",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "EV-THL8-080-G-GF",
+          "type": null,
+          "areaSqm": "66.94",
+          "priceEGP": "25428661",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)",
+        "READY TO MOVE - 3"
+      ]
+    },
+    "naia-bay": {
+      "slug": "naia-bay",
+      "project_name": "naia-bay",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "NAIA-P1-1B-65",
+          "type": null,
+          "areaSqm": "65",
+          "priceEGP": "8700000",
+          "delivery_note": "Ready in 1 Month"
+        }
+      ],
+      "delivery_notes": [
+        "Ready in 1 Month"
+      ]
+    },
+    "katameya-gardens": {
+      "slug": "katameya-gardens",
+      "project_name": "katameya-gardens",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 4,
+      "sample_units": [
+        {
+          "unitNo": "KG-2BR",
+          "type": null,
+          "areaSqm": "115",
+          "priceEGP": "7255000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "KG-3BR",
+          "type": null,
+          "areaSqm": "145",
+          "priceEGP": "8580000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "KG-TH",
+          "type": null,
+          "areaSqm": "210",
+          "priceEGP": "57900000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "KG-TW",
+          "type": null,
+          "areaSqm": "270",
+          "priceEGP": "64200000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "golden-heights-1": {
+      "slug": "golden-heights-1",
+      "project_name": "golden-heights-1",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "GH1-SA",
+          "type": null,
+          "areaSqm": "350",
+          "priceEGP": "57641000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "golden-heights-2": {
+      "slug": "golden-heights-2",
+      "project_name": "golden-heights-2",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "GH2-SA",
+          "type": null,
+          "areaSqm": "380",
+          "priceEGP": "60731000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "solana-east": {
+      "slug": "solana-east",
+      "project_name": "solana-east",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "SE-1BR",
+          "type": null,
+          "areaSqm": "99",
+          "priceEGP": "13900000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SE-2BR",
+          "type": null,
+          "areaSqm": "134",
+          "priceEGP": "19500000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "SE-3BR",
+          "type": null,
+          "areaSqm": "181",
+          "priceEGP": "27500000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "97-hills": {
+      "slug": "97-hills",
+      "project_name": "97-hills",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 56,
+      "sample_units": [
+        {
+          "unitNo": "97H-TIN-035-A",
+          "type": null,
+          "areaSqm": "225.5",
+          "priceEGP": "39467000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "97H-TIN-243-A",
+          "type": null,
+          "areaSqm": "225.5",
+          "priceEGP": "39305000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "97H-VLC-006",
+          "type": null,
+          "areaSqm": "206",
+          "priceEGP": "39876000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "97H-VLC-007",
+          "type": null,
+          "areaSqm": "206",
+          "priceEGP": "39876000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "97H-VLC-050",
+          "type": null,
+          "areaSqm": "206",
+          "priceEGP": "41010000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "badya": {
+      "slug": "badya",
+      "project_name": "badya",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 354,
+      "sample_units": [
+        {
+          "unitNo": "D2A8-02-0112",
+          "type": null,
+          "areaSqm": "127.14",
+          "priceEGP": "13367362",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "D2A8-02-0122",
+          "type": null,
+          "areaSqm": "127.14",
+          "priceEGP": "13367362",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "D2A8-02-0211",
+          "type": null,
+          "areaSqm": "131.32",
+          "priceEGP": "13226756",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "D2A8-02-0212",
+          "type": null,
+          "areaSqm": "125.1",
+          "priceEGP": "12533830",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "D2A8-02-0221",
+          "type": null,
+          "areaSqm": "131.32",
+          "priceEGP": "13226756",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "bamboo-iii": {
+      "slug": "bamboo-iii",
+      "project_name": "bamboo-iii",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 43,
+      "sample_units": [
+        {
+          "unitNo": "Bamboo III-FH-39D03",
+          "type": null,
+          "areaSqm": "191",
+          "priceEGP": "28806000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Bamboo III-FH-4003",
+          "type": null,
+          "areaSqm": "191",
+          "priceEGP": "28256000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Bamboo III-FH-4004",
+          "type": null,
+          "areaSqm": "192",
+          "priceEGP": "28371000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Bamboo III-FH-4503",
+          "type": null,
+          "areaSqm": "191",
+          "priceEGP": "29360000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "Bamboo III-FH-46D04",
+          "type": null,
+          "areaSqm": "192",
+          "priceEGP": "29478000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "hacienda-bay": {
+      "slug": "hacienda-bay",
+      "project_name": "hacienda-bay",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "282",
+          "type": null,
+          "areaSqm": "357.59",
+          "priceEGP": "146578000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "hacienda-blue": {
+      "slug": "hacienda-blue",
+      "project_name": "hacienda-blue",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 16,
+      "sample_units": [
+        {
+          "unitNo": "HBLU-SCH-304BF",
+          "type": null,
+          "areaSqm": "154.5",
+          "priceEGP": "28596000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HBLU-SCH-402AF",
+          "type": null,
+          "areaSqm": "154.5",
+          "priceEGP": "29131000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HBLU-SCH-402BF",
+          "type": null,
+          "areaSqm": "154.5",
+          "priceEGP": "29131000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HBLU-SCH-403AF",
+          "type": null,
+          "areaSqm": "154.5",
+          "priceEGP": "29131000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HBLU-SCH-403BF",
+          "type": null,
+          "areaSqm": "154.5",
+          "priceEGP": "29131000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "hacienda-heneish": {
+      "slug": "hacienda-heneish",
+      "project_name": "hacienda-heneish",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 5,
+      "sample_units": [
+        {
+          "unitNo": "HH-MAZ-614D",
+          "type": null,
+          "areaSqm": "67.5",
+          "priceEGP": "15630000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HH-SCH-1010DAF",
+          "type": null,
+          "areaSqm": "155.5",
+          "priceEGP": "28665000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HH-JCH-906BF",
+          "type": null,
+          "areaSqm": "114.5",
+          "priceEGP": "24836000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HH-JCH-907AF",
+          "type": null,
+          "areaSqm": "114.5",
+          "priceEGP": "24958000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HH-TIN-650-A",
+          "type": null,
+          "areaSqm": "253",
+          "priceEGP": "53714000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "hacienda-ras-el-hekma": {
+      "slug": "hacienda-ras-el-hekma",
+      "project_name": "hacienda-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 607,
+      "sample_units": [
+        {
+          "unitNo": "HRH-BHA2-707-51",
+          "type": null,
+          "areaSqm": "230",
+          "priceEGP": "30579000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HRH-BHA2-711-51",
+          "type": null,
+          "areaSqm": "230",
+          "priceEGP": "30205000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HRH-BHA2-741-51-M",
+          "type": null,
+          "areaSqm": "230",
+          "priceEGP": "31186780",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HRH-BHA2-743-51-M",
+          "type": null,
+          "areaSqm": "230",
+          "priceEGP": "30878000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HRH-BHA2-711-14",
+          "type": null,
+          "areaSqm": "143",
+          "priceEGP": "19343000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "hacienda-waters": {
+      "slug": "hacienda-waters",
+      "project_name": "hacienda-waters",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 141,
+      "sample_units": [
+        {
+          "unitNo": "HWS-VLA-101",
+          "type": null,
+          "areaSqm": "374",
+          "priceEGP": "111499000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HWS-VLA-106",
+          "type": null,
+          "areaSqm": "374",
+          "priceEGP": "114007000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HWS-VLA-118",
+          "type": null,
+          "areaSqm": "374",
+          "priceEGP": "113726000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HWS-VLA-119",
+          "type": null,
+          "areaSqm": "374",
+          "priceEGP": "111499000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "HWS-VLB-201",
+          "type": null,
+          "areaSqm": "278",
+          "priceEGP": "74732000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "hacienda-west": {
+      "slug": "hacienda-west",
+      "project_name": "hacienda-west",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 9,
+      "sample_units": [
+        {
+          "unitNo": "WST-LDG-514-M",
+          "type": null,
+          "areaSqm": "112",
+          "priceEGP": "39207600",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "WST-LDG-516",
+          "type": null,
+          "areaSqm": "120",
+          "priceEGP": "40773000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "WST-LDG-517-M",
+          "type": null,
+          "areaSqm": "118",
+          "priceEGP": "40095400",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "WST-LDG-518",
+          "type": null,
+          "areaSqm": "118",
+          "priceEGP": "40095400",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "WST-LDG-519",
+          "type": null,
+          "areaSqm": "179",
+          "priceEGP": "58408040",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "palm-hills-alexandria": {
+      "slug": "palm-hills-alexandria",
+      "project_name": "palm-hills-alexandria",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 43,
+      "sample_units": [
+        {
+          "unitNo": "ALX-PTH-335-2",
+          "type": null,
+          "areaSqm": "194.3",
+          "priceEGP": "32414000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "ALX-PTH-341-2",
+          "type": null,
+          "areaSqm": "194.3",
+          "priceEGP": "32414000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "ALX-PTH-341-3",
+          "type": null,
+          "areaSqm": "194.3",
+          "priceEGP": "32414000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "ALX-PTH-344-3",
+          "type": null,
+          "areaSqm": "194.3",
+          "priceEGP": "31653000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "ALX-PTH-325-2",
+          "type": null,
+          "areaSqm": "194.3",
+          "priceEGP": "30948000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "palm-hills-jirian": {
+      "slug": "palm-hills-jirian",
+      "project_name": "palm-hills-jirian",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 463,
+      "sample_units": [
+        {
+          "unitNo": "JIR-MDN-VLE-7065",
+          "type": null,
+          "areaSqm": "294",
+          "priceEGP": "55488420",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JIR-MDN-VLE-7067",
+          "type": null,
+          "areaSqm": "294",
+          "priceEGP": "55488330",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JIR-MDN-VLE-7068",
+          "type": null,
+          "areaSqm": "294",
+          "priceEGP": "55488330",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JIR-MDN-VLH-6118",
+          "type": null,
+          "areaSqm": "196",
+          "priceEGP": "34324680",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "JIR-NFT-VLC-6155",
+          "type": null,
+          "areaSqm": "283",
+          "priceEGP": "75169190",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "palm-hills-new-cairo": {
+      "slug": "palm-hills-new-cairo",
+      "project_name": "palm-hills-new-cairo",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 110,
+      "sample_units": [
+        {
+          "unitNo": "PNC-69A04-M-M",
+          "type": null,
+          "areaSqm": "114",
+          "priceEGP": "18106000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PNC-69A52-M-M",
+          "type": null,
+          "areaSqm": "131",
+          "priceEGP": "18395000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PNC-69A54-M-M",
+          "type": null,
+          "areaSqm": "115",
+          "priceEGP": "16084000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PNC-69A62-M-M",
+          "type": null,
+          "areaSqm": "131",
+          "priceEGP": "18395000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PNC-69A72-M-M",
+          "type": null,
+          "areaSqm": "131",
+          "priceEGP": "18109000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "palm-hills-one": {
+      "slug": "palm-hills-one",
+      "project_name": "palm-hills-one",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 53,
+      "sample_units": [
+        {
+          "unitNo": "PH One-TIN2-493D-A",
+          "type": null,
+          "areaSqm": "358",
+          "priceEGP": "59122600",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PH One-TIN-122-A",
+          "type": null,
+          "areaSqm": "340",
+          "priceEGP": "71475820",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PH One-TIN-122D-A",
+          "type": null,
+          "areaSqm": "340",
+          "priceEGP": "71475820",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PH One-TIN-122D-B",
+          "type": null,
+          "areaSqm": "340",
+          "priceEGP": "71475820",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PH One-TIN-123-A",
+          "type": null,
+          "areaSqm": "340",
+          "priceEGP": "71475820",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "palm-hills-ritz-carlton": {
+      "slug": "palm-hills-ritz-carlton",
+      "project_name": "palm-hills-ritz-carlton",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "PH-Ritz-L7B04-403/04",
+          "type": null,
+          "areaSqm": "375.5",
+          "priceEGP": "141993000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "palm-parks": {
+      "slug": "palm-parks",
+      "project_name": "palm-parks",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 8,
+      "sample_units": [
+        {
+          "unitNo": "16304-0G",
+          "type": null,
+          "areaSqm": "132.38",
+          "priceEGP": "17886000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "16504-0G",
+          "type": null,
+          "areaSqm": "132.38",
+          "priceEGP": "17886000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "16401-0F",
+          "type": null,
+          "areaSqm": "170.1",
+          "priceEGP": "21387000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "16404-0F",
+          "type": null,
+          "areaSqm": "169.67",
+          "priceEGP": "21342000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "16411-1F",
+          "type": null,
+          "areaSqm": "169.71",
+          "priceEGP": "17619000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "palmet": {
+      "slug": "palmet",
+      "project_name": "palmet",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 18,
+      "sample_units": [
+        {
+          "unitNo": "PAL-B1-FF-06",
+          "type": null,
+          "areaSqm": "168",
+          "priceEGP": "33330000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PAL-B1-FF-07",
+          "type": null,
+          "areaSqm": "126",
+          "priceEGP": "26211000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PAL-B1-FF-09",
+          "type": null,
+          "areaSqm": "155",
+          "priceEGP": "30763000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PAL-B1-FF-10",
+          "type": null,
+          "areaSqm": "185.5",
+          "priceEGP": "36787000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "PAL-B1-FF-12",
+          "type": null,
+          "areaSqm": "178.5",
+          "priceEGP": "35404000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "the-crown-extension": {
+      "slug": "the-crown-extension",
+      "project_name": "the-crown-extension",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 53,
+      "sample_units": [
+        {
+          "unitNo": "CRX-FH-01-1",
+          "type": null,
+          "areaSqm": "217",
+          "priceEGP": "32595000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CRX-FH-01-2",
+          "type": null,
+          "areaSqm": "217",
+          "priceEGP": "32595000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CRX-FH-01-3",
+          "type": null,
+          "areaSqm": "223",
+          "priceEGP": "29997000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CRX-FH-02-1",
+          "type": null,
+          "areaSqm": "217",
+          "priceEGP": "32595000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "CRX-FH-02-2",
+          "type": null,
+          "areaSqm": "217",
+          "priceEGP": "32595000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "village-de-la-capitale": {
+      "slug": "village-de-la-capitale",
+      "project_name": "village-de-la-capitale",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 264,
+      "sample_units": [
+        {
+          "unitNo": "VDLC-BLC-3615",
+          "type": null,
+          "areaSqm": "146",
+          "priceEGP": "14122000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VDLC-BLC-3665",
+          "type": null,
+          "areaSqm": "146",
+          "priceEGP": "14122000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VDLC-BLC-3675",
+          "type": null,
+          "areaSqm": "146",
+          "priceEGP": "14070000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VDLC-BLC-3812",
+          "type": null,
+          "areaSqm": "146",
+          "priceEGP": "14122000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "VDLC-BLC-3815",
+          "type": null,
+          "areaSqm": "146",
+          "priceEGP": "14095000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "ivoire-east": {
+      "slug": "ivoire-east",
+      "project_name": "ivoire-east",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "IE-2BR-117",
+          "type": null,
+          "areaSqm": "117",
+          "priceEGP": "9904000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "IE-3BR-161",
+          "type": null,
+          "areaSqm": "161",
+          "priceEGP": "13475000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "IE-TH-266",
+          "type": null,
+          "areaSqm": "266",
+          "priceEGP": "28998000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "ivoire-west": {
+      "slug": "ivoire-west",
+      "project_name": "ivoire-west",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 4,
+      "sample_units": [
+        {
+          "unitNo": "IW-2BR-132",
+          "type": null,
+          "areaSqm": "132",
+          "priceEGP": "9650000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "IW-DUP-LOFT",
+          "type": null,
+          "areaSqm": "233",
+          "priceEGP": "16830000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "IW-PH-225",
+          "type": null,
+          "areaSqm": "225",
+          "priceEGP": "18050000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "IW-DUP-GARDEN",
+          "type": null,
+          "areaSqm": "240",
+          "priceEGP": "19950000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "stone-residence": {
+      "slug": "stone-residence",
+      "project_name": "stone-residence",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "SR-2BR-140",
+          "type": null,
+          "areaSqm": "140",
+          "priceEGP": "9702000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "SR-3BR-175",
+          "type": null,
+          "areaSqm": "175",
+          "priceEGP": "12312000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "SR-PH-220",
+          "type": null,
+          "areaSqm": "220",
+          "priceEGP": "15708000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "the-brooks": {
+      "slug": "the-brooks",
+      "project_name": "the-brooks",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 7,
+      "sample_units": [
+        {
+          "unitNo": "TB-3BR-145-D4",
+          "type": null,
+          "areaSqm": "145",
+          "priceEGP": "8850000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "TB-PH-216",
+          "type": null,
+          "areaSqm": "216",
+          "priceEGP": "13640000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "TB-2BR-126",
+          "type": null,
+          "areaSqm": "126",
+          "priceEGP": "7444000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "TB-DUP-LOFT",
+          "type": null,
+          "areaSqm": "251",
+          "priceEGP": "17105000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "TB-DUP-GARDEN",
+          "type": null,
+          "areaSqm": "249",
+          "priceEGP": "19031000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "sephora-heights": {
+      "slug": "sephora-heights",
+      "project_name": "sephora-heights",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 3,
+      "sample_units": [
+        {
+          "unitNo": "SH-2BR",
+          "type": null,
+          "areaSqm": "125",
+          "priceEGP": "9000000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "SH-3BR",
+          "type": null,
+          "areaSqm": "155",
+          "priceEGP": "11424000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "SH-SA",
+          "type": null,
+          "areaSqm": "320",
+          "priceEGP": "48665000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "the-estates": {
+      "slug": "the-estates",
+      "project_name": "the-estates",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 4,
+      "sample_units": [
+        {
+          "unitNo": "EST-SV",
+          "type": null,
+          "areaSqm": "308",
+          "priceEGP": "58400400",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "EST-MV",
+          "type": null,
+          "areaSqm": "353",
+          "priceEGP": "72700000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "EST-LV",
+          "type": null,
+          "areaSqm": "444",
+          "priceEGP": "97700000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "EST-FV",
+          "type": null,
+          "areaSqm": "631",
+          "priceEGP": "208000000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "azad": {
+      "slug": "azad",
+      "project_name": "azad",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "AZD-2BR",
+          "type": null,
+          "areaSqm": "130",
+          "priceEGP": "18350000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "AZD-3BR",
+          "type": null,
+          "areaSqm": "160",
+          "priceEGP": "19500000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "d-bay": {
+      "slug": "d-bay",
+      "project_name": "d-bay",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 6,
+      "sample_units": [
+        {
+          "unitNo": "L2-V15",
+          "type": null,
+          "areaSqm": "240",
+          "priceEGP": "54714000",
+          "delivery_note": "Delivery Handed-over-3Month"
+        },
+        {
+          "unitNo": "L2-V16",
+          "type": null,
+          "areaSqm": "240",
+          "priceEGP": "54714000",
+          "delivery_note": "Delivery Handed-over-3Month"
+        },
+        {
+          "unitNo": "L2-V18",
+          "type": null,
+          "areaSqm": "240",
+          "priceEGP": "54714000",
+          "delivery_note": "Delivery Handed-over-3Month"
+        },
+        {
+          "unitNo": "L2-V15",
+          "type": null,
+          "areaSqm": "240",
+          "priceEGP": "54714000",
+          "delivery_note": "Delivery Handed-over-3Month"
+        },
+        {
+          "unitNo": "L2-V16",
+          "type": null,
+          "areaSqm": "240",
+          "priceEGP": "54714000",
+          "delivery_note": "Delivery Handed-over-3Month"
+        }
+      ],
+      "delivery_notes": [
+        "Delivery Handed-over-3Month"
+      ]
+    },
+    "salt": {
+      "slug": "salt",
+      "project_name": "salt",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 445,
+      "sample_units": [
+        {
+          "unitNo": "B3-CH7-401",
+          "type": null,
+          "areaSqm": "100",
+          "priceEGP": "13507000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "B3-CH7-303",
+          "type": null,
+          "areaSqm": "75",
+          "priceEGP": "10680000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "B3-CH7-301",
+          "type": null,
+          "areaSqm": "100",
+          "priceEGP": "13507000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "B3-CH7-203",
+          "type": null,
+          "areaSqm": "75",
+          "priceEGP": "10680000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "B3-CH7-G03",
+          "type": null,
+          "areaSqm": "75",
+          "priceEGP": "11249000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "90-avenue": {
+      "slug": "90-avenue",
+      "project_name": "90-avenue",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "90A-2BR",
+          "type": null,
+          "areaSqm": "125",
+          "priceEGP": "16300000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "90A-3BR",
+          "type": null,
+          "areaSqm": "160",
+          "priceEGP": "19500000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "joya": {
+      "slug": "joya",
+      "project_name": "joya",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 6,
+      "sample_units": [
+        {
+          "unitNo": "JOYA-3BR-G",
+          "type": null,
+          "areaSqm": "240",
+          "priceEGP": "23216500",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "JOYA-3BR-TYP",
+          "type": null,
+          "areaSqm": "375",
+          "priceEGP": "28760000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "JOYA-PH",
+          "type": null,
+          "areaSqm": "325",
+          "priceEGP": "27269500",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "JOYA-THM",
+          "type": null,
+          "areaSqm": "367",
+          "priceEGP": "38108000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "JOYA-THC",
+          "type": null,
+          "areaSqm": "435",
+          "priceEGP": "42191000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "w-signature": {
+      "slug": "w-signature",
+      "project_name": "w-signature",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 2,
+      "sample_units": [
+        {
+          "unitNo": "WS-2BR",
+          "type": null,
+          "areaSqm": "130",
+          "priceEGP": "22000000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "WS-3BR",
+          "type": null,
+          "areaSqm": "170",
+          "priceEGP": "28000000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "waterway-1": {
+      "slug": "waterway-1",
+      "project_name": "waterway-1",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "W1-RTM-23.3M",
+          "type": null,
+          "areaSqm": "165",
+          "priceEGP": "23300000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "the-waterway": {
+      "slug": "the-waterway",
+      "project_name": "the-waterway",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 15,
+      "sample_units": [
+        {
+          "unitNo": "WW-P1-344",
+          "type": null,
+          "areaSqm": "180",
+          "priceEGP": "35136000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "WW-P1-336",
+          "type": null,
+          "areaSqm": "180",
+          "priceEGP": "35136000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "WW-P1-352",
+          "type": null,
+          "areaSqm": "180",
+          "priceEGP": "35424000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "WW-P1-340",
+          "type": null,
+          "areaSqm": "185",
+          "priceEGP": "37592000",
+          "delivery_note": "Ready to Move"
+        },
+        {
+          "unitNo": "WW-P1-345",
+          "type": null,
+          "areaSqm": "185",
+          "priceEGP": "39072000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)",
+        "Ready to Move"
+      ]
+    },
+    "w55": {
+      "slug": "w55",
+      "project_name": "w55",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 55,
+      "sample_units": [
+        {
+          "unitNo": "W55-E-402",
+          "type": null,
+          "areaSqm": "185",
+          "priceEGP": "36561000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "W55-E-302",
+          "type": null,
+          "areaSqm": "185",
+          "priceEGP": "36740000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "W55-E-202",
+          "type": null,
+          "areaSqm": "185",
+          "priceEGP": "36740000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "W55-E-102",
+          "type": null,
+          "areaSqm": "185",
+          "priceEGP": "36920000",
+          "delivery_note": "Ready to Move (RTM)"
+        },
+        {
+          "unitNo": "W55-E-304",
+          "type": null,
+          "areaSqm": "184",
+          "priceEGP": "37076000",
+          "delivery_note": "Ready to Move (RTM)"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move (RTM)"
+      ]
+    },
+    "neopolis": {
+      "slug": "neopolis",
+      "project_name": "neopolis",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "NEO-3BR",
+          "type": null,
+          "areaSqm": "155",
+          "priceEGP": "7200000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    },
+    "promenade": {
+      "slug": "promenade",
+      "project_name": "promenade",
+      "developer": "Unknown Developer",
+      "rtm_units_count": 1,
+      "sample_units": [
+        {
+          "unitNo": "PRO-3BR",
+          "type": null,
+          "areaSqm": "150",
+          "priceEGP": "10700000",
+          "delivery_note": "Ready to Move"
+        }
+      ],
+      "delivery_notes": [
+        "Ready to Move"
+      ]
+    }
+  },
+  "projects_with_offplan_units": {
+    "noll-new-cairo": {
+      "slug": "noll-new-cairo",
+      "project_name": "noll-new-cairo",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 20,
+      "delivery_notes": [
+        "2028"
+      ]
+    },
+    "unknown": {
+      "slug": "unknown",
+      "project_name": "Unknown",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "noll": {
+      "slug": "noll",
+      "project_name": "noll",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "2028"
+      ]
+    },
+    "ever-new-cairo": {
+      "slug": "ever-new-cairo",
+      "project_name": "ever-new-cairo",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 12,
+      "delivery_notes": [
+        "2 Years",
+        "4 Years"
+      ]
+    },
+    "al-east-mostakbal-city": {
+      "slug": "al-east-mostakbal-city",
+      "project_name": "al-east-mostakbal-city",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 11,
+      "delivery_notes": [
+        "4 Years"
+      ]
+    },
+    "keeva-6th-of-october": {
+      "slug": "keeva-6th-of-october",
+      "project_name": "keeva-6th-of-october",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        "2-3 Years"
+      ]
+    },
+    "the-mornings": {
+      "slug": "the-mornings",
+      "project_name": "the-mornings",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        "3 Years"
+      ]
+    },
+    "youd-ras-el-hekma": {
+      "slug": "youd-ras-el-hekma",
+      "project_name": "youd-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 10,
+      "delivery_notes": [
+        "",
+        "4 Years",
+        "Q3 2027"
+      ]
+    },
+    "youd": {
+      "slug": "youd",
+      "project_name": "youd",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        "",
+        "Q3 2027"
+      ]
+    },
+    "marresidence": {
+      "slug": "marresidence",
+      "project_name": "marresidence",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "marville": {
+      "slug": "marville",
+      "project_name": "marville",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "seazen": {
+      "slug": "seazen",
+      "project_name": "seazen",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        "3 Years"
+      ]
+    },
+    "nyoum-pyramids": {
+      "slug": "nyoum-pyramids",
+      "project_name": "nyoum-pyramids",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "6 - 10 Months"
+      ]
+    },
+    "direction-white": {
+      "slug": "direction-white",
+      "project_name": "direction-white",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 15,
+      "delivery_notes": [
+        "",
+        "Aug 2027",
+        "3 Years"
+      ]
+    },
+    "sun-capital": {
+      "slug": "sun-capital",
+      "project_name": "sun-capital",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 9,
+      "delivery_notes": [
+        "6 months"
+      ]
+    },
+    "lake-west-2": {
+      "slug": "lake-west-2",
+      "project_name": "lake-west-2",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "6 Months"
+      ]
+    },
+    "mazarine-apartments-new-alamein": {
+      "slug": "mazarine-apartments-new-alamein",
+      "project_name": "mazarine-apartments-new-alamein",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "address-east": {
+      "slug": "address-east",
+      "project_name": "address-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        "6 months"
+      ]
+    },
+    "the-address-east": {
+      "slug": "the-address-east",
+      "project_name": "the-address-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        "6 months"
+      ]
+    },
+    "village-west": {
+      "slug": "village-west",
+      "project_name": "village-west",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "Delivery 2027"
+      ]
+    },
+    "genova": {
+      "slug": "genova",
+      "project_name": "genova",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        "3 - 6 month"
+      ]
+    },
+    "lac-ville": {
+      "slug": "lac-ville",
+      "project_name": "lac-ville",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "9 Months"
+      ]
+    },
+    "belle-vie-new-zayed": {
+      "slug": "belle-vie-new-zayed",
+      "project_name": "belle-vie-new-zayed",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 39,
+      "delivery_notes": [
+        "31/08/2027",
+        "30/11/2027",
+        "30/04/2027",
+        "31/07/2027",
+        "31/03/2027",
+        "31/05/2027",
+        "30/06/2027"
+      ]
+    },
+    "belle-vie": {
+      "slug": "belle-vie",
+      "project_name": "belle-vie",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 39,
+      "delivery_notes": [
+        "31/08/2027",
+        "30/11/2027",
+        "30/04/2027",
+        "31/07/2027",
+        "31/03/2027",
+        "31/05/2027",
+        "30/06/2027"
+      ]
+    },
+    "soul": {
+      "slug": "soul",
+      "project_name": "soul",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 33,
+      "delivery_notes": [
+        "31/05/2027",
+        "31/07/2027"
+      ]
+    },
+    "montania-park": {
+      "slug": "montania-park",
+      "project_name": "montania-park",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "6 Months"
+      ]
+    },
+    "grova-east-hills": {
+      "slug": "grova-east-hills",
+      "project_name": "grova-east-hills",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 6,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "haptown": {
+      "slug": "haptown",
+      "project_name": "haptown",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "6 months"
+      ]
+    },
+    "park-central-mostakbal-city": {
+      "slug": "park-central-mostakbal-city",
+      "project_name": "park-central-mostakbal-city",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 7,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "swanlake-el-gouna": {
+      "slug": "swanlake-el-gouna",
+      "project_name": "swanlake-el-gouna",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 8,
+      "delivery_notes": [
+        "2 Years",
+        ""
+      ]
+    },
+    "swanlake-residences-new-cairo": {
+      "slug": "swanlake-residences-new-cairo",
+      "project_name": "swanlake-residences-new-cairo",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 11,
+      "delivery_notes": [
+        "",
+        "2 Years",
+        "1.5 Years"
+      ]
+    },
+    "swanlake-west": {
+      "slug": "swanlake-west",
+      "project_name": "swanlake-west",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 11,
+      "delivery_notes": [
+        "",
+        "1.5 Years"
+      ]
+    },
+    "the-valleys-mostakbal-city": {
+      "slug": "the-valleys-mostakbal-city",
+      "project_name": "the-valleys-mostakbal-city",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 7,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "sa-ada-sahel": {
+      "slug": "sa-ada-sahel",
+      "project_name": "sa-ada-sahel",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 7,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "saada-north-coast": {
+      "slug": "saada-north-coast",
+      "project_name": "saada-north-coast",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 14,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "saada": {
+      "slug": "saada",
+      "project_name": "saada",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        "6 months"
+      ]
+    },
+    "garden-lakes": {
+      "slug": "garden-lakes",
+      "project_name": "garden-lakes",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 7,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "hyde-park-new-cairo": {
+      "slug": "hyde-park-new-cairo",
+      "project_name": "hyde-park-new-cairo",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 31,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "hyde-park-central": {
+      "slug": "hyde-park-central",
+      "project_name": "hyde-park-central",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 23,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "hyde-park-north-seashore": {
+      "slug": "hyde-park-north-seashore",
+      "project_name": "hyde-park-north-seashore",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 38,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "one-hyde-park-new-cairo": {
+      "slug": "one-hyde-park-new-cairo",
+      "project_name": "one-hyde-park-new-cairo",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 20,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "c-north": {
+      "slug": "c-north",
+      "project_name": "c-north",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "creek-town": {
+      "slug": "creek-town",
+      "project_name": "creek-town",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 6,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "glen": {
+      "slug": "glen",
+      "project_name": "glen",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "safia": {
+      "slug": "safia",
+      "project_name": "safia",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 6,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "the-crest": {
+      "slug": "the-crest",
+      "project_name": "the-crest",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "vea-new-cairo": {
+      "slug": "vea-new-cairo",
+      "project_name": "vea-new-cairo",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "westdays": {
+      "slug": "westdays",
+      "project_name": "westdays",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-mirada": {
+      "slug": "la-mirada",
+      "project_name": "la-mirada",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        "6 months"
+      ]
+    },
+    "el-patio-riva": {
+      "slug": "el-patio-riva",
+      "project_name": "el-patio-riva",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 25,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "el-patio-sola": {
+      "slug": "el-patio-sola",
+      "project_name": "el-patio-sola",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "el-patio-town": {
+      "slug": "el-patio-town",
+      "project_name": "el-patio-town",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 15,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "el-patio-vera": {
+      "slug": "el-patio-vera",
+      "project_name": "el-patio-vera",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-6": {
+      "slug": "la-vista-6",
+      "project_name": "la-vista-6",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-7": {
+      "slug": "la-vista-7",
+      "project_name": "la-vista-7",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-bay-east": {
+      "slug": "la-vista-bay-east",
+      "project_name": "la-vista-bay-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-cascada": {
+      "slug": "la-vista-cascada",
+      "project_name": "la-vista-cascada",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-east": {
+      "slug": "la-vista-east",
+      "project_name": "la-vista-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-gardens": {
+      "slug": "la-vista-gardens",
+      "project_name": "la-vista-gardens",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 8,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-ras-el-hekma": {
+      "slug": "la-vista-ras-el-hekma",
+      "project_name": "la-vista-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "la-vista-topaz": {
+      "slug": "la-vista-topaz",
+      "project_name": "la-vista-topaz",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "patio-5-east": {
+      "slug": "patio-5-east",
+      "project_name": "patio-5-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "patio-casa": {
+      "slug": "patio-casa",
+      "project_name": "patio-casa",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "patio-hills": {
+      "slug": "patio-hills",
+      "project_name": "patio-hills",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 7,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "patio-jade": {
+      "slug": "patio-jade",
+      "project_name": "patio-jade",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "patio-oro": {
+      "slug": "patio-oro",
+      "project_name": "patio-oro",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 9,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "patio-prime": {
+      "slug": "patio-prime",
+      "project_name": "patio-prime",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "patio-vida": {
+      "slug": "patio-vida",
+      "project_name": "patio-vida",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 27,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "zoya": {
+      "slug": "zoya",
+      "project_name": "zoya",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        "",
+        "Q2 2027"
+      ]
+    },
+    "trio": {
+      "slug": "trio",
+      "project_name": "trio",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        "2/5/2027"
+      ]
+    },
+    "el-masyaf-north-coast": {
+      "slug": "el-masyaf-north-coast",
+      "project_name": "el-masyaf-north-coast",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 39,
+      "delivery_notes": [
+        "",
+        "Aug 2029"
+      ]
+    },
+    "azha-north-coast": {
+      "slug": "azha-north-coast",
+      "project_name": "azha-north-coast",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 10,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "azha-sokhna": {
+      "slug": "azha-sokhna",
+      "project_name": "azha-sokhna",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "elea-azha-north": {
+      "slug": "elea-azha-north",
+      "project_name": "elea-azha-north",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 10,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "the-hillage": {
+      "slug": "the-hillage",
+      "project_name": "the-hillage",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 6,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "elm-tree-park": {
+      "slug": "elm-tree-park",
+      "project_name": "elm-tree-park",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        "4.5 Years"
+      ]
+    },
+    "kinda-residence": {
+      "slug": "kinda-residence",
+      "project_name": "kinda-residence",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "1 Year"
+      ]
+    },
+    "rai-valleys": {
+      "slug": "rai-valleys",
+      "project_name": "rai-valleys",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "2.5 Years"
+      ]
+    },
+    "sarai": {
+      "slug": "sarai",
+      "project_name": "sarai",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 13,
+      "delivery_notes": [
+        "",
+        "4.5 Years",
+        "4 Years",
+        "2.5 Years",
+        "3 Years"
+      ]
+    },
+    "taj-city": {
+      "slug": "taj-city",
+      "project_name": "taj-city",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 6,
+      "delivery_notes": [
+        "",
+        "4 Years",
+        "1 Year"
+      ]
+    },
+    "talala": {
+      "slug": "talala",
+      "project_name": "talala",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 13,
+      "delivery_notes": [
+        "",
+        "5 Years"
+      ]
+    },
+    "the-butterfly": {
+      "slug": "the-butterfly",
+      "project_name": "the-butterfly",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 8,
+      "delivery_notes": [
+        "4.5 Years",
+        "4 Years"
+      ]
+    },
+    "aeon": {
+      "slug": "aeon",
+      "project_name": "aeon",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        "4 Years"
+      ]
+    },
+    "crescent-walk": {
+      "slug": "crescent-walk",
+      "project_name": "crescent-walk",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 141,
+      "delivery_notes": [
+        "",
+        "4 Years"
+      ]
+    },
+    "district-5": {
+      "slug": "district-5",
+      "project_name": "district-5",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 6,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "ramla-north-coast": {
+      "slug": "ramla-north-coast",
+      "project_name": "ramla-north-coast",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 139,
+      "delivery_notes": [
+        "",
+        "4 Years"
+      ]
+    },
+    "cali-coast-ras-el-hekma": {
+      "slug": "cali-coast-ras-el-hekma",
+      "project_name": "cali-coast-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 17,
+      "delivery_notes": [
+        "",
+        "2.5 Years",
+        "1 Year"
+      ]
+    },
+    "kai-sokhna": {
+      "slug": "kai-sokhna",
+      "project_name": "kai-sokhna",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 6,
+      "delivery_notes": [
+        "",
+        "Nov 2027"
+      ]
+    },
+    "vinci": {
+      "slug": "vinci",
+      "project_name": "vinci",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        "",
+        "March 2027"
+      ]
+    },
+    "modon-ras-el-hekma": {
+      "slug": "modon-ras-el-hekma",
+      "project_name": "modon-ras-el-hekma",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 10,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "creekview": {
+      "slug": "creekview",
+      "project_name": "creekview",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 85,
+      "delivery_notes": [
+        "OFF PLAN - 2.5",
+        "OFF PLAN - 4"
+      ]
+    },
+    "icity-new-cairo": {
+      "slug": "icity-new-cairo",
+      "project_name": "icity-new-cairo",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        "6 months"
+      ]
+    },
+    "icity-october": {
+      "slug": "icity-october",
+      "project_name": "icity-october",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        "1 Year"
+      ]
+    },
+    "mountain-view-aliva": {
+      "slug": "mountain-view-aliva",
+      "project_name": "mountain-view-aliva",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 15,
+      "delivery_notes": [
+        "OFF PLAN - 3"
+      ]
+    },
+    "mountain-view-grand-valley": {
+      "slug": "mountain-view-grand-valley",
+      "project_name": "mountain-view-grand-valley",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 19,
+      "delivery_notes": [
+        "EARLY DELIVERY - 12"
+      ]
+    },
+    "mountain-view-hyde-park": {
+      "slug": "mountain-view-hyde-park",
+      "project_name": "mountain-view-hyde-park",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "Immediate \u2013 1 year"
+      ]
+    },
+    "mountain-view-icity-new-cairo": {
+      "slug": "mountain-view-icity-new-cairo",
+      "project_name": "mountain-view-icity-new-cairo",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        "PARTIAL DELIVERY"
+      ]
+    },
+    "mountain-view-jirian": {
+      "slug": "mountain-view-jirian",
+      "project_name": "mountain-view-jirian",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 186,
+      "delivery_notes": [
+        "OFF PLAN - 4"
+      ]
+    },
+    "mountain-view-kingsway": {
+      "slug": "mountain-view-kingsway",
+      "project_name": "mountain-view-kingsway",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        "EARLY DELIVERY - 12"
+      ]
+    },
+    "mountain-view-mv4": {
+      "slug": "mountain-view-mv4",
+      "project_name": "mountain-view-mv4",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 17,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "naia-bay": {
+      "slug": "naia-bay",
+      "project_name": "naia-bay",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 7,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "jirian-nations-of-sky": {
+      "slug": "jirian-nations-of-sky",
+      "project_name": "jirian-nations-of-sky",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 14,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "perla": {
+      "slug": "perla",
+      "project_name": "perla",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 10,
+      "delivery_notes": [
+        "",
+        "Off-Plan"
+      ]
+    },
+    "zomra-east": {
+      "slug": "zomra-east",
+      "project_name": "zomra-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 17,
+      "delivery_notes": [
+        "",
+        "3 years"
+      ]
+    },
+    "silversands": {
+      "slug": "silversands",
+      "project_name": "silversands",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 23,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "solana-east": {
+      "slug": "solana-east",
+      "project_name": "solana-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "solana-west": {
+      "slug": "solana-west",
+      "project_name": "solana-west",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 18,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "solana": {
+      "slug": "solana",
+      "project_name": "solana",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 18,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "zed-east": {
+      "slug": "zed-east",
+      "project_name": "zed-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 14,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "zed-west": {
+      "slug": "zed-west",
+      "project_name": "zed-west",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 7,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "hacienda-waters": {
+      "slug": "hacienda-waters",
+      "project_name": "hacienda-waters",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 72,
+      "delivery_notes": [
+        "2027"
+      ]
+    },
+    "hacienda-west": {
+      "slug": "hacienda-west",
+      "project_name": "hacienda-west",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        "2027"
+      ]
+    },
+    "palm-hills-alexandria": {
+      "slug": "palm-hills-alexandria",
+      "project_name": "palm-hills-alexandria",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        "2027"
+      ]
+    },
+    "palm-hills-new-cairo-commercial": {
+      "slug": "palm-hills-new-cairo-commercial",
+      "project_name": "palm-hills-new-cairo-commercial",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 73,
+      "delivery_notes": [
+        "2028",
+        "2027"
+      ]
+    },
+    "px": {
+      "slug": "px",
+      "project_name": "px",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 270,
+      "delivery_notes": [
+        "2028"
+      ]
+    },
+    "hadaba": {
+      "slug": "hadaba",
+      "project_name": "hadaba",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "6 Months"
+      ]
+    },
+    "ivoire-east": {
+      "slug": "ivoire-east",
+      "project_name": "ivoire-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        "2 Years",
+        ""
+      ]
+    },
+    "jebal-sokhna": {
+      "slug": "jebal-sokhna",
+      "project_name": "jebal-sokhna",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        "2 Years",
+        "6 Months"
+      ]
+    },
+    "point-90-offices-park": {
+      "slug": "point-90-offices-park",
+      "project_name": "point-90-offices-park",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 6,
+      "delivery_notes": [
+        "2 Years"
+      ]
+    },
+    "the-brooks": {
+      "slug": "the-brooks",
+      "project_name": "the-brooks",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        "2 Years"
+      ]
+    },
+    "alam-al-roum": {
+      "slug": "alam-al-roum",
+      "project_name": "alam-al-roum",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 23,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "monte-napoleone": {
+      "slug": "monte-napoleone",
+      "project_name": "monte-napoleone",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        "Immediate \u2013 1 year"
+      ]
+    },
+    "covaya": {
+      "slug": "covaya",
+      "project_name": "covaya",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        "3 Years"
+      ]
+    },
+    "oak-residences": {
+      "slug": "oak-residences",
+      "project_name": "oak-residences",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 5,
+      "delivery_notes": [
+        "3 Years"
+      ]
+    },
+    "telal-east": {
+      "slug": "telal-east",
+      "project_name": "telal-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 9,
+      "delivery_notes": [
+        "3 Years"
+      ]
+    },
+    "telal-shores": {
+      "slug": "telal-shores",
+      "project_name": "telal-shores",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "3 Years"
+      ]
+    },
+    "bloom-island-ogami": {
+      "slug": "bloom-island-ogami",
+      "project_name": "bloom-island-ogami",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 219,
+      "delivery_notes": [
+        "",
+        "2027"
+      ]
+    },
+    "caesar-extension-2": {
+      "slug": "caesar-extension-2",
+      "project_name": "caesar-extension-2",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 21,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "caesar-sodic": {
+      "slug": "caesar-sodic",
+      "project_name": "caesar-sodic",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 29,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "june": {
+      "slug": "june",
+      "project_name": "june",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 83,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "karmell": {
+      "slug": "karmell",
+      "project_name": "karmell",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 231,
+      "delivery_notes": [
+        "",
+        "2027"
+      ]
+    },
+    "ogami": {
+      "slug": "ogami",
+      "project_name": "ogami",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 219,
+      "delivery_notes": [
+        "",
+        "2027"
+      ]
+    },
+    "sky-condos": {
+      "slug": "sky-condos",
+      "project_name": "sky-condos",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 7,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "sodic-east-vale": {
+      "slug": "sodic-east-vale",
+      "project_name": "sodic-east-vale",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 384,
+      "delivery_notes": [
+        "",
+        "2027"
+      ]
+    },
+    "sodic-east": {
+      "slug": "sodic-east",
+      "project_name": "sodic-east",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 155,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "sodic-the-estates": {
+      "slug": "sodic-the-estates",
+      "project_name": "sodic-the-estates",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 9,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "the-estates-residences": {
+      "slug": "the-estates-residences",
+      "project_name": "the-estates-residences",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 114,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "the-portal": {
+      "slug": "the-portal",
+      "project_name": "the-portal",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 7,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "v-editions": {
+      "slug": "v-editions",
+      "project_name": "v-editions",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "villette": {
+      "slug": "villette",
+      "project_name": "villette",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 4,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "vye-sodic": {
+      "slug": "vye-sodic",
+      "project_name": "vye-sodic",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 27,
+      "delivery_notes": [
+        "",
+        "2027"
+      ]
+    },
+    "westown-medical-centre": {
+      "slug": "westown-medical-centre",
+      "project_name": "westown-medical-centre",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 13,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "katameya-creeks": {
+      "slug": "katameya-creeks",
+      "project_name": "katameya-creeks",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 3,
+      "delivery_notes": [
+        "6 months"
+      ]
+    },
+    "la-vista-city": {
+      "slug": "la-vista-city",
+      "project_name": "la-vista-city",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 12,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "mayan-el-shorouk": {
+      "slug": "mayan-el-shorouk",
+      "project_name": "mayan-el-shorouk",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 15,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "mayan-new-cairo": {
+      "slug": "mayan-new-cairo",
+      "project_name": "mayan-new-cairo",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 12,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "bloomfields": {
+      "slug": "bloomfields",
+      "project_name": "bloomfields",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 180,
+      "delivery_notes": [
+        "Delivery 2 Years",
+        "Delivery 4.5 Years",
+        "Delivery 3 Months",
+        "Delivery 1 Year"
+      ]
+    },
+    "d-bay": {
+      "slug": "d-bay",
+      "project_name": "d-bay",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 18,
+      "delivery_notes": [
+        "Delivery 2 Years"
+      ]
+    },
+    "fouka-bay": {
+      "slug": "fouka-bay",
+      "project_name": "fouka-bay",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 8,
+      "delivery_notes": [
+        "Delivery 4.5 Years"
+      ]
+    },
+    "il-monte-galala": {
+      "slug": "il-monte-galala",
+      "project_name": "il-monte-galala",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 936,
+      "delivery_notes": [
+        "Fully Finished by Mona Hussein"
+      ]
+    },
+    "rivers": {
+      "slug": "rivers",
+      "project_name": "rivers",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        "1 Year"
+      ]
+    },
+    "salt": {
+      "slug": "salt",
+      "project_name": "salt",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 445,
+      "delivery_notes": [
+        "Delivery 4 Years"
+      ]
+    },
+    "scenes-mostakbal-city": {
+      "slug": "scenes-mostakbal-city",
+      "project_name": "scenes-mostakbal-city",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 19,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "scenes": {
+      "slug": "scenes",
+      "project_name": "scenes",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 19,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "green-town": {
+      "slug": "green-town",
+      "project_name": "green-town",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 2,
+      "delivery_notes": [
+        "9 Months"
+      ]
+    },
+    "the-waterway": {
+      "slug": "the-waterway",
+      "project_name": "the-waterway",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 10,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "almaza-bay": {
+      "slug": "almaza-bay",
+      "project_name": "almaza-bay",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 7,
+      "delivery_notes": [
+        ""
+      ]
+    },
+    "zg2": {
+      "slug": "zg2",
+      "project_name": "zg2",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 1,
+      "delivery_notes": [
+        "6 months"
+      ]
+    },
+    "one33": {
+      "slug": "one33",
+      "project_name": "one33",
+      "developer": "Unknown Developer",
+      "offplan_units_count": 8,
+      "delivery_notes": [
+        "",
+        "Off-Plan (4 Years)"
+      ]
+    }
+  }
+}
