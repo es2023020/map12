@@ -1628,7 +1628,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     type: "Resort",
     priceFrom: 13.5,
     deliveryYear: 2024,
-    status: "RTM",
+    status: "Off-Plan",
     blurb:
       "Hacienda Ras El Hekma is a 137–140 acre beachfront community by Palm Hills featuring tiered sea-view architecture, crystal lagoons, and boutique beach clubs.",
     paymentPlan: "5%–10% down payment, remaining balance spread over 7 to 8 years",
