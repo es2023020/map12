@@ -293,8 +293,7 @@ export function UnitDetailModal({
     `• Starting Price: ${formatCurrency(unit.minPriceM, currency)}\n` +
     `• Down Payment (${parsedPlan.dp}%): ${formatExactPrice(estimatedDpEgp, currency)}\n` +
     `• Estimated Monthly: ${formatExactPrice(estimatedMonthlyEgp, currency)}/mo\n` +
-    `• Payment Terms: ${unit.paymentPlan || "Flexible Installments"}\n` +
-    `• Delivery Date: ${unit.deliveryNote || (unitRtm ? "Ready to Move" : "4 Years")}\n\n` +
+    `• Payment Terms: ${unit.paymentPlan || "Flexible Installments"}\n\n` +
     `${ctaText}`;
 
   const handleCopyQuote = () => {
@@ -376,11 +375,6 @@ export function UnitDetailModal({
                   ? `${unit.minSqm} m²`
                   : `${unit.minSqm}–${unit.maxSqm} m²`
               }
-            />
-            <DetailChip
-              icon={<CalendarClock className="h-4 w-4 text-accent" />}
-              label="Delivery Timeline"
-              value={unit.deliveryNote || (unitRtm ? "Ready to Move" : "4 Years")}
             />
             {unit.finishing && (
               <DetailChip

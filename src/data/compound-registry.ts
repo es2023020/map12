@@ -2963,7 +2963,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Sheikh Zayed City, Giza, Egypt",
     priceFrom: 11,
     deliveryYear: 2012,
-    status: "RTM",
+    status: "On-Hold",
     blurb:
       "SODIC West is SODIC's flagship 1,500+ acre master-planned city in Sheikh Zayed incorporating Westown, Allegria, Forty West, and EdNC.",
     paymentPlan:
@@ -3053,9 +3053,9 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Talaat Moustafa Group (TMG)",
     beachfront: true,
     type: "Mixed-use",
-    priceFrom: 14.5,
+    priceFrom: 0,
     deliveryYear: 2027,
-    status: "RTM",
+    status: "Off-Plan",
     blurb:
       "SouthMed (South Med) by TMG is a 5,500-acre (23M sqm) smart coastal metropolis at KM 165 Al-Dabaa / Ras El Hekma with 4–5.5km beach, 18-hole golf, and yacht marina.",
     paymentPlan:
@@ -3629,7 +3629,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Golden Square, Fifth Settlement, New Cairo, Egypt",
     priceFrom: 12,
     deliveryYear: 2020,
-    status: "RTM",
+    status: "On-Hold",
     blurb:
       "Eastown by SODIC is a mature, fully operational 200-acre residential and commercial community adjacent to AUC in New Cairo's Golden Square, featuring low-rise apartments and the EDNC commercial hub.",
     paymentPlan:
