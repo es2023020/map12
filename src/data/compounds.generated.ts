@@ -3,6 +3,120 @@ import type { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = [
   {
+    "slug": "noll-new-cairo",
+    "name": "Noll New Cairo",
+    "developer": "Kleek Developments",
+    "developerSlug": "kleek-developments",
+    "destination": "6th-settlement",
+    "city": "6th Settlement, New Cairo, Cairo Governorate, Egypt",
+    "priceFrom": 4.925,
+    "areaSize": "90 Feddans",
+    "unitSizes": "75–280 m²",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "paymentPlan": "0%–10% Down Payment over 6 to 12 years equal installments",
+    "types": [
+      "Studio",
+      "Apartment",
+      "Duplex",
+      "Penthouse"
+    ],
+    "blurb": "Noll New Cairo Compound is a prominent 90-feddan residential development in the 6th Settlement of New Cairo by Kleek Developments (Style Home & Delta Construction partnership). Master-planned by YBA (Yasser El-Beltagy) with 82%-83% green spaces and landscaping, featuring fully finished units with parking and clubhouse included.",
+    "amenities": [
+      "Clubhouse Membership Included",
+      "Included Underground Parking",
+      "82%-83% Green Spaces & Landscaping",
+      "Water Features & Lagoons",
+      "Jogging & Cycling Tracks",
+      "24/7 Security"
+    ],
+    "highlights": [
+      "Designed by YBA (Yasser El-Beltagy)",
+      "Direct Frontage on Middle Ring Road",
+      "Highest elevation in New Cairo",
+      "10 mins from AUC & 10–12 mins from New Capital"
+    ],
+    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80"
+    ],
+    "lat": 29.995,
+    "lng": 31.525
+  },
+  {
+    "slug": "noll",
+    "name": "Noll New Cairo",
+    "developer": "Kleek Developments",
+    "developerSlug": "kleek-developments",
+    "destination": "6th-settlement",
+    "city": "6th Settlement, New Cairo, Cairo Governorate, Egypt",
+    "priceFrom": 4.925,
+    "areaSize": "90 Feddans",
+    "unitSizes": "75–280 m²",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "paymentPlan": "0%–10% Down Payment over 6 to 12 years equal installments",
+    "types": [
+      "Studio",
+      "Apartment",
+      "Duplex",
+      "Penthouse"
+    ],
+    "blurb": "Noll New Cairo Compound is a prominent 90-feddan residential development in the 6th Settlement of New Cairo by Kleek Developments.",
+    "amenities": [
+      "Clubhouse Membership Included",
+      "Included Underground Parking",
+      "82%-83% Green Spaces & Landscaping"
+    ],
+    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
+    ],
+    "lat": 29.995,
+    "lng": 31.525
+  },
+  {
+    "slug": "ever-new-cairo",
+    "name": "Ever New Cairo",
+    "developer": "Cred Developments",
+    "developerSlug": "cred-developments",
+    "destination": "6th-settlement",
+    "city": "6th Settlement, New Cairo, Cairo Governorate, Egypt",
+    "priceFrom": 15.5,
+    "areaSize": "128 Feddans",
+    "unitSizes": "165–423 m²",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "paymentPlan": "Villas 2y Delivery: 5%/8y or 15%+15%/6y (15% Dis) -- Villas 4y Delivery: 5%/10y or 5%/7y (18% Dis)",
+    "types": [
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
+    ],
+    "blurb": "Ever New Cairo (Ever Sixth Settlement) is a premier 128-acre master-planned residential community by Cred Developments situated in Sixth Settlement / South Teseen extension corridor. Features modern & classical architecture, 80% villas footprint, artificial lakes, and a 4.5 km dedicated trail.",
+    "amenities": [
+      "4.5 km Dedicated Cycling & Jogging Trail",
+      "80% Green Spines & Artificial Lakes",
+      "Luxury Clubhouse",
+      "Sports Complex",
+      "24/7 Security"
+    ],
+    "highlights": [
+      "Prime location on South Teseen Corridor & Middle Ring Rd",
+      "5 mins from Ain Sokhna Rd & 12 mins from AUC",
+      "Constructed 2y Delivery Villas & 4y Delivery Villas options",
+      "Spot incentives of 250K EGP for Twinhouses/Standalone and 150K EGP for Townhouses"
+    ],
+    "hero": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=80"
+    ],
+    "lat": 30.003,
+    "lng": 31.535
+  },
+  {
     "slug": "w55",
     "name": "W55",
     "developer": "The Waterway Developments",

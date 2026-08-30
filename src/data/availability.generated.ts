@@ -3,6 +3,772 @@ import type { ProjectAvailability } from "./availability";
 
 export const availability: ProjectAvailability[] = [
   {
+    "slug": "noll-new-cairo",
+    "developer": "Kleek Developments",
+    "totalAvailable": 11,
+    "breakdown": [
+      {
+        "type": "Studio",
+        "beds": 1,
+        "available": 1,
+        "minSqm": 75,
+        "maxSqm": 75,
+        "minPriceM": 4.925,
+        "maxPriceM": 4.925,
+        "units": [
+          {
+            "id": "noll-studio-75",
+            "unitNo": "NOLL-ST-75",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 75,
+            "view": "Landscape & Greenery",
+            "priceEGP": 4925000,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs",
+            "note": "Parking & Clubhouse Included"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 2,
+        "available": 2,
+        "minSqm": 109,
+        "maxSqm": 116,
+        "minPriceM": 7.065344,
+        "maxPriceM": 7.117903,
+        "units": [
+          {
+            "id": "noll-2b-109",
+            "unitNo": "NOLL-2B-109",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 109,
+            "view": "Landscape",
+            "priceEGP": 7117903,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-2b-116",
+            "unitNo": "NOLL-2B-116",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 116,
+            "view": "Landscape & Water Features",
+            "priceEGP": 7065344,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 3,
+        "available": 6,
+        "minSqm": 120,
+        "maxSqm": 209,
+        "minPriceM": 7.4,
+        "maxPriceM": 12.632574,
+        "units": [
+          {
+            "id": "noll-3b-120",
+            "unitNo": "NOLL-3B-120",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 120,
+            "view": "Landscape",
+            "priceEGP": 7400000,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-3b-155",
+            "unitNo": "NOLL-3B-155",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 155,
+            "view": "Park View",
+            "priceEGP": 9887500,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-3b-168",
+            "unitNo": "NOLL-3B-168",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 168,
+            "view": "Water Features",
+            "priceEGP": 10378784,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-3b-174",
+            "unitNo": "NOLL-3B-174",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 174,
+            "view": "Landscape",
+            "priceEGP": 11232818,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-3b-178",
+            "unitNo": "NOLL-3B-178",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 178,
+            "view": "Park & Lake View",
+            "priceEGP": 10788579,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-3b-209",
+            "unitNo": "NOLL-3B-209",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 209,
+            "view": "Panoramic View",
+            "priceEGP": 12632574,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 250,
+        "maxSqm": 250,
+        "minPriceM": 16.17325,
+        "maxPriceM": 16.17325,
+        "units": [
+          {
+            "id": "noll-4b-250",
+            "unitNo": "NOLL-4B-250",
+            "beds": 4,
+            "finishing": "Fully Finished",
+            "areaSqm": 250,
+            "view": "Main Park & Water Feature",
+            "priceEGP": 16173250,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          }
+        ]
+      },
+      {
+        "type": "Duplex",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 280,
+        "maxSqm": 280,
+        "minPriceM": 18.5852,
+        "maxPriceM": 18.5852,
+        "units": [
+          {
+            "id": "noll-dup-280",
+            "unitNo": "NOLL-DUP-280",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 280,
+            "areaNote": "+ 47 m² Roof Area",
+            "view": "Panoramic Open View",
+            "priceEGP": 18585200,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-30"
+  },
+  {
+    "slug": "noll",
+    "developer": "Kleek Developments",
+    "totalAvailable": 11,
+    "breakdown": [
+      {
+        "type": "Studio",
+        "beds": 1,
+        "available": 1,
+        "minSqm": 75,
+        "maxSqm": 75,
+        "minPriceM": 4.925,
+        "maxPriceM": 4.925,
+        "units": [
+          {
+            "id": "noll-alt-studio-75",
+            "unitNo": "NOLL-ST-75",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 75,
+            "view": "Landscape",
+            "priceEGP": 4925000,
+            "status": "Available",
+            "slug": "noll",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-30"
+  },
+  {
+    "slug": "ever-new-cairo",
+    "developer": "Cred Developments",
+    "totalAvailable": 6,
+    "breakdown": [
+      {
+        "type": "Townhouse",
+        "beds": 3,
+        "available": 2,
+        "minSqm": 165,
+        "maxSqm": 210,
+        "minPriceM": 15.5,
+        "maxPriceM": 22.1,
+        "units": [
+          {
+            "id": "ever-th-2y-210",
+            "unitNo": "EVER-TH-210",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 210,
+            "view": "Green Spine",
+            "priceEGP": 22100000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 2y (Constructed)",
+            "delivery_note": "2 Years",
+            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+            "note": "150K Spot Incentive"
+          },
+          {
+            "id": "ever-th-4y-165",
+            "unitNo": "EVER-TH-165",
+            "beds": 3,
+            "finishing": "Semi Finished",
+            "areaSqm": 165,
+            "view": "Park View",
+            "priceEGP": 15500000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 4y",
+            "delivery_note": "4 Years",
+            "payment_plan": "5% DP / 10y or 5% / 7y (18% Dis) or 50% / 4y (32% Dis)",
+            "note": "150K Spot Incentive"
+          }
+        ]
+      },
+      {
+        "type": "Twin House",
+        "beds": 4,
+        "available": 2,
+        "minSqm": 211,
+        "maxSqm": 252,
+        "minPriceM": 22.0,
+        "maxPriceM": 27.0,
+        "units": [
+          {
+            "id": "ever-tw-2y-252",
+            "unitNo": "EVER-TW-252",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 252,
+            "view": "Artificial Lake",
+            "priceEGP": 27000000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 2y (Constructed)",
+            "delivery_note": "2 Years",
+            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+            "note": "250K Spot Incentive"
+          },
+          {
+            "id": "ever-tw-4y-211",
+            "unitNo": "EVER-TW-211",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 211,
+            "view": "Landscape",
+            "priceEGP": 22000000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 4y",
+            "delivery_note": "4 Years",
+            "payment_plan": "5% DP / 10y or 5% / 7y (18% Dis) or 50% / 4y (32% Dis)",
+            "note": "250K Spot Incentive"
+          }
+        ]
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 5,
+        "available": 2,
+        "minSqm": 230,
+        "maxSqm": 423,
+        "minPriceM": 27.5,
+        "maxPriceM": 49.0,
+        "units": [
+          {
+            "id": "ever-sv-2y-423",
+            "unitNo": "EVER-SV-423",
+            "beds": 5,
+            "finishing": "Semi Finished",
+            "areaSqm": 423,
+            "view": "Main Lake & Green Trail",
+            "priceEGP": 49000000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 2y (Constructed)",
+            "delivery_note": "2 Years",
+            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+            "note": "250K Spot Incentive"
+          },
+          {
+            "id": "ever-sv-4y-230",
+            "unitNo": "EVER-SV-230",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 230,
+            "view": "Green Spine",
+            "priceEGP": 27500000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 4y",
+            "delivery_note": "4 Years",
+            "payment_plan": "5% DP / 10y or 5% / 7y (18% Dis) or 50% / 4y (32% Dis)",
+            "note": "250K Spot Incentive"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-30"
+  },
+  {
+    "slug": "noll-new-cairo",
+    "developer": "Kleek Developments",
+    "totalAvailable": 11,
+    "breakdown": [
+      {
+        "type": "Studio",
+        "beds": 1,
+        "available": 1,
+        "minSqm": 75,
+        "maxSqm": 75,
+        "minPriceM": 4.925,
+        "maxPriceM": 4.925,
+        "units": [
+          {
+            "id": "noll-studio-75",
+            "unitNo": "NOLL-ST-75",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 75,
+            "view": "Landscape & Greenery",
+            "priceEGP": 4925000,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs",
+            "note": "Parking & Clubhouse Included"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 2,
+        "available": 2,
+        "minSqm": 109,
+        "maxSqm": 116,
+        "minPriceM": 7.065344,
+        "maxPriceM": 7.117903,
+        "units": [
+          {
+            "id": "noll-2b-109",
+            "unitNo": "NOLL-2B-109",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 109,
+            "view": "Landscape",
+            "priceEGP": 7117903,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-2b-116",
+            "unitNo": "NOLL-2B-116",
+            "beds": 2,
+            "finishing": "Fully Finished",
+            "areaSqm": 116,
+            "view": "Landscape & Water Features",
+            "priceEGP": 7065344,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 3,
+        "available": 6,
+        "minSqm": 120,
+        "maxSqm": 209,
+        "minPriceM": 7.4,
+        "maxPriceM": 12.632574,
+        "units": [
+          {
+            "id": "noll-3b-120",
+            "unitNo": "NOLL-3B-120",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 120,
+            "view": "Landscape",
+            "priceEGP": 7400000,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-3b-155",
+            "unitNo": "NOLL-3B-155",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 155,
+            "view": "Park View",
+            "priceEGP": 9887500,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-3b-168",
+            "unitNo": "NOLL-3B-168",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 168,
+            "view": "Water Features",
+            "priceEGP": 10378784,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-3b-174",
+            "unitNo": "NOLL-3B-174",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 174,
+            "view": "Landscape",
+            "priceEGP": 11232818,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-3b-178",
+            "unitNo": "NOLL-3B-178",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 178,
+            "view": "Park & Lake View",
+            "priceEGP": 10788579,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          },
+          {
+            "id": "noll-3b-209",
+            "unitNo": "NOLL-3B-209",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 209,
+            "view": "Panoramic View",
+            "priceEGP": 12632574,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          }
+        ]
+      },
+      {
+        "type": "Apartment",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 250,
+        "maxSqm": 250,
+        "minPriceM": 16.17325,
+        "maxPriceM": 16.17325,
+        "units": [
+          {
+            "id": "noll-4b-250",
+            "unitNo": "NOLL-4B-250",
+            "beds": 4,
+            "finishing": "Fully Finished",
+            "areaSqm": 250,
+            "view": "Main Park & Water Feature",
+            "priceEGP": 16173250,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          }
+        ]
+      },
+      {
+        "type": "Duplex",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 280,
+        "maxSqm": 280,
+        "minPriceM": 18.5852,
+        "maxPriceM": 18.5852,
+        "units": [
+          {
+            "id": "noll-dup-280",
+            "unitNo": "NOLL-DUP-280",
+            "beds": 3,
+            "finishing": "Fully Finished",
+            "areaSqm": 280,
+            "areaNote": "+ 47 m² Roof Area",
+            "view": "Panoramic Open View",
+            "priceEGP": 18585200,
+            "status": "Available",
+            "slug": "noll-new-cairo",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-30"
+  },
+  {
+    "slug": "noll",
+    "developer": "Kleek Developments",
+    "totalAvailable": 11,
+    "breakdown": [
+      {
+        "type": "Studio",
+        "beds": 1,
+        "available": 1,
+        "minSqm": 75,
+        "maxSqm": 75,
+        "minPriceM": 4.925,
+        "maxPriceM": 4.925,
+        "units": [
+          {
+            "id": "noll-alt-studio-75",
+            "unitNo": "NOLL-ST-75",
+            "beds": 1,
+            "finishing": "Fully Finished",
+            "areaSqm": 75,
+            "view": "Landscape",
+            "priceEGP": 4925000,
+            "status": "Available",
+            "slug": "noll",
+            "cluster": "Main Phase",
+            "delivery_note": "2028",
+            "payment_plan": "0% to 10% over 6 to 12 yrs"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-30"
+  },
+  {
+    "slug": "ever-new-cairo",
+    "developer": "Cred Developments",
+    "totalAvailable": 6,
+    "breakdown": [
+      {
+        "type": "Townhouse",
+        "beds": 3,
+        "available": 2,
+        "minSqm": 165,
+        "maxSqm": 210,
+        "minPriceM": 15.5,
+        "maxPriceM": 22.1,
+        "units": [
+          {
+            "id": "ever-th-2y-210",
+            "unitNo": "EVER-TH-210",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 210,
+            "view": "Green Spine",
+            "priceEGP": 22100000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 2y (Constructed)",
+            "delivery_note": "2 Years",
+            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+            "note": "150K Spot Incentive"
+          },
+          {
+            "id": "ever-th-4y-165",
+            "unitNo": "EVER-TH-165",
+            "beds": 3,
+            "finishing": "Semi Finished",
+            "areaSqm": 165,
+            "view": "Park View",
+            "priceEGP": 15500000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 4y",
+            "delivery_note": "4 Years",
+            "payment_plan": "5% DP / 10y or 5% / 7y (18% Dis) or 50% / 4y (32% Dis)",
+            "note": "150K Spot Incentive"
+          }
+        ]
+      },
+      {
+        "type": "Twin House",
+        "beds": 4,
+        "available": 2,
+        "minSqm": 211,
+        "maxSqm": 252,
+        "minPriceM": 22.0,
+        "maxPriceM": 27.0,
+        "units": [
+          {
+            "id": "ever-tw-2y-252",
+            "unitNo": "EVER-TW-252",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 252,
+            "view": "Artificial Lake",
+            "priceEGP": 27000000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 2y (Constructed)",
+            "delivery_note": "2 Years",
+            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+            "note": "250K Spot Incentive"
+          },
+          {
+            "id": "ever-tw-4y-211",
+            "unitNo": "EVER-TW-211",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 211,
+            "view": "Landscape",
+            "priceEGP": 22000000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 4y",
+            "delivery_note": "4 Years",
+            "payment_plan": "5% DP / 10y or 5% / 7y (18% Dis) or 50% / 4y (32% Dis)",
+            "note": "250K Spot Incentive"
+          }
+        ]
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 5,
+        "available": 2,
+        "minSqm": 230,
+        "maxSqm": 423,
+        "minPriceM": 27.5,
+        "maxPriceM": 49.0,
+        "units": [
+          {
+            "id": "ever-sv-2y-423",
+            "unitNo": "EVER-SV-423",
+            "beds": 5,
+            "finishing": "Semi Finished",
+            "areaSqm": 423,
+            "view": "Main Lake & Green Trail",
+            "priceEGP": 49000000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 2y (Constructed)",
+            "delivery_note": "2 Years",
+            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+            "note": "250K Spot Incentive"
+          },
+          {
+            "id": "ever-sv-4y-230",
+            "unitNo": "EVER-SV-230",
+            "beds": 4,
+            "finishing": "Semi Finished",
+            "areaSqm": 230,
+            "view": "Green Spine",
+            "priceEGP": 27500000,
+            "status": "Available",
+            "slug": "ever-new-cairo",
+            "cluster": "Villas Delivery 4y",
+            "delivery_note": "4 Years",
+            "payment_plan": "5% DP / 10y or 5% / 7y (18% Dis) or 50% / 4y (32% Dis)",
+            "note": "250K Spot Incentive"
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-08-30"
+  },
+  {
     "slug": "amorada",
     "developer": "Afaq",
     "totalAvailable": 2,

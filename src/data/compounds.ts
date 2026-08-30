@@ -2113,7 +2113,6 @@ const newProjects: Compound[] = [
     priceFrom: 15.5,
     deliveryYear: 2028,
     status: "Off-Plan",
-    isNewLaunch: true,
     beachfront: true,
     types: ["Chalet", "Townhouse", "Villa"],
     amenities: ["Private Beach", "Crystal Lagoon", "Beach Bar", "Clubhouse", "Swimming Pools"],

@@ -16,7 +16,7 @@ export type CompoundRegistryEntry = {
   type?: "Residential" | "Mixed-use" | "Resort" | "Coastal";
   priceFrom?: number;
   deliveryYear?: number;
-  status?: "RTM" | "Off-Plan";
+  status?: "RTM" | "Off-Plan" | "On-Hold";
   blurb?: string;
   paymentPlan?: string;
   amenities?: string[];
@@ -27,6 +27,99 @@ export type CompoundRegistryEntry = {
 };
 
 export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
+  "noll-new-cairo": {
+    name: "Noll New Cairo",
+    lat: 29.995,
+    lng: 31.525,
+    developer: "Kleek Developments",
+    city: "6th Settlement, New Cairo, Cairo Governorate, Egypt",
+    destination: "6th-settlement",
+    priceFrom: 4.925,
+    deliveryYear: 2028,
+    status: "Off-Plan",
+    blurb:
+      "Noll New Cairo Compound is a prominent 90-feddan residential development located in the emerging Sixth Settlement of New Cairo by Kleek Developments (a strategic partnership of Style Home and Delta Construction). Master-planned by YBA (Yasser El-Beltagy), Noll is built with a low-density philosophy dedicating 82%-83% to green spaces, landscaping, and water features, with only 17%-18% built-up footprint. Situated on one of New Cairo's highest elevations with direct frontage on the Middle Ring Road, Noll offers open views and seamless connectivity to the New Administrative Capital and key East Cairo hubs.",
+    paymentPlan: "0% to 10% Down Payment over 6 to 12 years equal installments",
+    areaSize: "90 feddan",
+    unitSizes: "75–280 m²",
+    amenities: [
+      "Clubhouse Membership Included",
+      "Included Underground Parking",
+      "82%-83% Green Spaces & Landscaping",
+      "Water Features & Lagoons",
+      "Jogging & Cycling Tracks",
+      "Kids' Play Areas",
+      "Commercial Promenade",
+      "24/7 Security & CCTV Monitoring",
+      "Sports Courts",
+    ],
+    types: ["Studio", "2 Bedrooms", "3 Bedrooms", "4 Bedrooms", "Duplex"],
+    highlights: [
+      "Designed by YBA (Yasser El-Beltagy)",
+      "Direct Frontage on Middle Ring Road",
+      "Highest elevation in New Cairo with cooler climate",
+      "10 mins from AUC & 10–12 mins from New Capital",
+      "Fully finished units with parking & clubhouse included",
+    ],
+  },
+  noll: {
+    name: "Noll New Cairo",
+    lat: 29.995,
+    lng: 31.525,
+    developer: "Kleek Developments",
+    city: "6th Settlement, New Cairo, Cairo Governorate, Egypt",
+    destination: "6th-settlement",
+    priceFrom: 4.925,
+    deliveryYear: 2028,
+    status: "Off-Plan",
+    blurb:
+      "Noll New Cairo Compound is a prominent 90-feddan residential development located in the emerging Sixth Settlement of New Cairo by Kleek Developments (a strategic partnership of Style Home and Delta Construction). Master-planned by YBA (Yasser El-Beltagy), Noll is built with a low-density philosophy dedicating 82%-83% to green spaces, landscaping, and water features, with only 17%-18% built-up footprint.",
+    paymentPlan: "0% to 10% Down Payment over 6 to 12 years equal installments",
+    areaSize: "90 feddan",
+    unitSizes: "75–280 m²",
+    amenities: [
+      "Clubhouse Membership Included",
+      "Included Underground Parking",
+      "82%-83% Green Spaces & Landscaping",
+      "Water Features",
+      "24/7 Security",
+    ],
+    types: ["Studio", "2 Bedrooms", "3 Bedrooms", "4 Bedrooms", "Duplex"],
+  },
+  "ever-new-cairo": {
+    name: "Ever New Cairo",
+    lat: 30.003,
+    lng: 31.535,
+    developer: "Cred Developments",
+    city: "6th Settlement, New Cairo, Cairo Governorate, Egypt",
+    destination: "6th-settlement",
+    priceFrom: 15.5,
+    deliveryYear: 2026,
+    status: "Off-Plan",
+    blurb:
+      "Ever New Cairo (Ever Sixth Settlement) is a premier 128-acre master-planned residential community by Cred Developments situated in the rapidly expanding Sixth Settlement / South Teseen extension corridor. Combining modern and classical architecture with low-density planning (~80% footprint for villas, green spines, artificial lakes, and a 4.5 km dedicated trail), Ever functions as a luxury counterpart to key East Cairo developments with high accessibility to South Teseen Street, the Middle Ring Road, and Ain Sokhna Road.",
+    paymentPlan:
+      "Villas 2y Delivery: 5% DP/8y | 15% DP, 15% Del/6y (15% Dis) | 0% DP/2y (40% Dis) | Cash Dis 42% -- Villas 4y Delivery: 5% DP/10y | 5% DP/7y (18% Dis) | 50% DP/4y (32% Dis) | Spot Incentive up to 250K EGP",
+    areaSize: "128 feddan",
+    unitSizes: "165–423 m²",
+    amenities: [
+      "4.5 km Dedicated Cycling & Jogging Trail",
+      "80% Green Spines & Artificial Lakes",
+      "Luxury Clubhouse",
+      "Sports Complex",
+      "Commercial Hub",
+      "Water Features",
+      "24/7 Security & Gated Entry",
+    ],
+    types: ["Townhouse", "Twin House", "Standalone Villa"],
+    highlights: [
+      "Prime location on South Teseen Corridor & Middle Ring Rd",
+      "5 mins from Ain Sokhna Rd & 12 mins from AUC",
+      "Constructed 2y Delivery Villas & 4y Delivery Villas options",
+      "Massive cash & payment discounts up to 42%",
+      "Spot incentives of 250K EGP for Twinhouses/Standalone and 150K EGP for Townhouses",
+    ],
+  },
   "31-west": {
     lat: 30.0037794,
     lng: 31.0212979,

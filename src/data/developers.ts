@@ -140,6 +140,12 @@ const blurbs: Record<string, string> = {
     "Sky North at km 246 — Diamond Group's Sidi Heneish resort with lagoons, hotel and ~80% green landscape.",
   "Shehab A. Mazhar":
     "Marsa Baghush at km 240 — a premium coastal community developed by Shehab A. Mazhar on Egypt's furthest Sahel stretch.",
+  "Kleek Developments":
+    "Kleek Developments — a strategic partnership involving Style Home and Delta Construction, developing Noll New Cairo compound in the emerging 6th Settlement.",
+  "Cred Developments":
+    "Cred Developments — premier Egyptian real estate developer known for luxury master-planned communities including Ever New Cairo in 6th Settlement, Ever West in 6th of October, and Castle Landmark in the New Capital.",
+  Cred:
+    "Cred Developments — premier Egyptian real estate developer known for luxury master-planned communities including Ever New Cairo in 6th Settlement, Ever West in 6th of October, and Castle Landmark in the New Capital.",
 };
 
 const logoMap: Record<string, string> = {
@@ -220,6 +226,12 @@ const logoMap: Record<string, string> = {
   "g-developments":
     "https://ui-avatars.com/api/?background=def012&color=fff&bold=true&size=128&name=G+Dev",
   "arabella-developments": "https://logo.clearbit.com/arabellagroup.com",
+  "kleek-developments":
+    "https://ui-avatars.com/api/?background=0b5ed7&color=fff&bold=true&size=128&name=Kleek",
+  "cred-developments":
+    "https://ui-avatars.com/api/?background=198754&color=fff&bold=true&size=128&name=Cred",
+  cred:
+    "https://ui-avatars.com/api/?background=198754&color=fff&bold=true&size=128&name=Cred",
 };
 
 const websiteMap: Record<string, string> = {
@@ -267,6 +279,8 @@ const websiteMap: Record<string, string> = {
   "rmc-developments": "https://ghazala-bay.com",
   "g-developments": "https://newgiza.com",
   "arabella-developments": "https://arabellagroup.com",
+  "cred-developments": "https://cred-eg.com",
+  cred: "https://cred-eg.com",
 };
 
 const foundingYears: Record<string, number> = {

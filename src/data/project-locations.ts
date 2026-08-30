@@ -7,6 +7,24 @@ export type ProjectLocation = {
 };
 
 export const projectLocations: Record<string, ProjectLocation> = {
+  "noll-new-cairo": {
+    name: "Noll New Cairo",
+    destination: "6th-settlement",
+    location: "Middle Ring Road, 6th Settlement, New Cairo, Egypt",
+    mapsUrl: "https://maps.google.com/?q=Noll+New+Cairo+Middle+Ring+Road",
+  },
+  noll: {
+    name: "Noll New Cairo",
+    destination: "6th-settlement",
+    location: "Middle Ring Road, 6th Settlement, New Cairo, Egypt",
+    mapsUrl: "https://maps.google.com/?q=Noll+New+Cairo+Middle+Ring+Road",
+  },
+  "ever-new-cairo": {
+    name: "Ever New Cairo",
+    destination: "6th-settlement",
+    location: "South Teseen Corridor & Middle Ring Road, 6th Settlement, New Cairo, Egypt",
+    mapsUrl: "https://maps.google.com/?q=Ever+New+Cairo+Cred+6th+Settlement",
+  },
   "hacienda-west": {
     name: "Hacienda West",
     destination: "ras-el-hekma",
