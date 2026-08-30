@@ -1,0 +1,16 @@
+[
+  {
+    "id": "one33-2",
+    "unitNo": "ONE33-APT-2B-120",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscapes & Water Features",
+    "priceEGP": 7800000,
+    "status": "Available",
+    "slug": "one33",
+    "cluster": "New Release",
+    "delivery_note": "Off-Plan (4 Years)",
+    "payment_plan": "5%+5% over 9 years equal installments"
+  }
+]

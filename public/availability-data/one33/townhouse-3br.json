@@ -1,0 +1,30 @@
+[
+  {
+    "id": "one33-5",
+    "unitNo": "ONE33-TH-MID-183",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 183,
+    "view": "Landscape",
+    "priceEGP": 16000000,
+    "status": "Available",
+    "slug": "one33",
+    "cluster": "Townhouse Middle",
+    "delivery_note": "Off-Plan (4 Years)",
+    "payment_plan": "5%+5% over 9 years equal installments"
+  },
+  {
+    "id": "one33-6",
+    "unitNo": "ONE33-TH-CNR-198",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 198,
+    "view": "Corner Landscape View",
+    "priceEGP": 17500000,
+    "status": "Available",
+    "slug": "one33",
+    "cluster": "Townhouse Corner",
+    "delivery_note": "Off-Plan (4 Years)",
+    "payment_plan": "5%+5% over 9 years equal installments"
+  }
+]
