@@ -924,7 +924,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 27.5273,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
-    "priceFrom": 24.388,
+    "priceFrom": 15.63,
     "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,

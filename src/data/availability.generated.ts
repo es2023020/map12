@@ -61170,8 +61170,8 @@ export const availability: ProjectAvailability[] = [
         "available": 1,
         "minSqm": 67.5,
         "maxSqm": 67.5,
-        "minPriceM": 45.63,
-        "maxPriceM": 45.63,
+        "minPriceM": 15.63,
+        "maxPriceM": 15.63,
         "units": [
           {
             "id": "hacienda-heneish-1",
@@ -61180,7 +61180,7 @@ export const availability: ProjectAvailability[] = [
             "finishing": "Fully Finished",
             "areaSqm": 67.5,
             "view": "Landscape",
-            "priceEGP": 45630000,
+            "priceEGP": 15630000,
             "status": "Available",
             "slug": "hacienda-heneish",
             "cluster": "Phase 1",
