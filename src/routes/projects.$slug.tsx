@@ -1161,8 +1161,135 @@ function CompoundPage() {
             </div>
           </Section>
 
+          {/* Location Highlights & Connectivity */}
+          <Section title="Location Highlights & Connectivity">
+            <div className="space-y-4">
+              {/* Location Metric Badges Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div className="rounded-2xl border border-border/80 bg-card p-4 shadow-xs flex items-start gap-3">
+                  <div className="p-2.5 rounded-xl bg-accent/10 text-accent shrink-0">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">
+                      Destination & City
+                    </div>
+                    <div className="font-semibold text-primary text-sm mt-0.5 truncate">
+                      {destination?.name || c.destination}
+                    </div>
+                    <div className="text-xs text-muted-foreground truncate">
+                      {c.city || destinationLocationString(c.destination)}
+                    </div>
+                  </div>
+                </div>
+
+                {c.km ? (
+                  <div className="rounded-2xl border border-border/80 bg-card p-4 shadow-xs flex items-start gap-3">
+                    <div className="p-2.5 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 shrink-0">
+                      <Sparkles className="h-5 w-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">
+                        Highway Marker
+                      </div>
+                      <div className="font-semibold text-primary text-sm mt-0.5">
+                        Km {c.km} Coastal Corridor
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        Prime Mediterranean shoreline access
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="rounded-2xl border border-border/80 bg-card p-4 shadow-xs flex items-start gap-3">
+                    <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                      <Building2 className="h-5 w-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">
+                        Urban Setting
+                      </div>
+                      <div className="font-semibold text-primary text-sm mt-0.5">
+                        {c.city ? c.city.split(",")[0] : destination?.name}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        Established infrastructure & services
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <div className="rounded-2xl border border-border/80 bg-card p-4 shadow-xs flex items-start gap-3 sm:col-span-2 lg:col-span-1">
+                  <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 shrink-0">
+                    <Globe className="h-5 w-5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">
+                      Coordinates & Maps
+                    </div>
+                    <div className="font-semibold text-primary text-xs mt-0.5 font-mono">
+                      {c.lat.toFixed(4)}° N, {c.lng.toFixed(4)}° E
+                    </div>
+                    <a
+                      href={
+                        c.mapsUrl ||
+                        projectLocations[c.slug]?.mapsUrl ||
+                        `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-accent hover:underline"
+                    >
+                      <ExternalLink className="h-3 w-3" /> Direct Google Maps Link
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Highlights List */}
+              {c.highlights && c.highlights.length > 0 && (
+                <div className="rounded-2xl border border-border/80 bg-secondary/30 p-5 space-y-3">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
+                    <Star className="h-3.5 w-3.5 text-accent fill-accent" /> Key Location & Project Highlights
+                  </h3>
+                  <div className="grid gap-2.5 sm:grid-cols-2">
+                    {c.highlights.map((h: string, idx: number) => {
+                      const isLocation =
+                        /location|km|road|axis|district|settlement|zayed|cairo|coast|ring|corridor|square|pyramid|sea|beach|gulf|bay|gate|street|teseen/i.test(
+                          h
+                        );
+                      return (
+                        <div
+                          key={idx}
+                          className={`flex items-start gap-2.5 p-3 rounded-xl border text-xs leading-relaxed font-medium transition-colors ${
+                            isLocation
+                              ? "bg-accent/5 border-accent/30 text-accent-foreground font-semibold"
+                              : "bg-card border-border/60 text-foreground/90"
+                          }`}
+                        >
+                          <span
+                            className={`mt-0.5 rounded-full p-1 shrink-0 ${
+                              isLocation ? "bg-accent text-accent-foreground" : "bg-primary/10 text-primary"
+                            }`}
+                          >
+                            {isLocation ? (
+                              <MapPin className="h-3 w-3" />
+                            ) : (
+                              <Check className="h-3 w-3" />
+                            )}
+                          </span>
+                          <span>{h}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+          </Section>
+
           {/* Location map */}
-          <Section title="Location">
+          <Section title="Interactive Location Map">
             <div className="h-[300px] md:h-[360px] overflow-hidden rounded-2xl border border-border shadow-soft">
               <MapClient
                 compounds={[c]}

@@ -2812,10 +2812,10 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
   "patio-prime": {},
   "patio-vida": {},
   "patio-zahraa": {
-    lat: 30.086,
-    lng: 31.638,
-    developer: "Memaar Al Morshedy",
-    city: "Zahra, new-cairo",
+    lat: 30.012,
+    lng: 30.985,
+    developer: "La Vista Developments",
+    city: "Sheikh Zayed City",
   },
   playa: {
     destination: "ghazala-bay",

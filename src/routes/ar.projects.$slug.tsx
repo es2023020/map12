@@ -313,6 +313,54 @@ function ArabicCompoundPage() {
               </div>
             </div>
 
+            {/* Location Highlights Section (Arabic) */}
+            <div className="bg-card border border-border rounded-2xl p-6 space-y-5 shadow-sm">
+              <h3 className="font-display text-xl font-bold text-foreground border-b border-border/60 pb-3 flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-accent" /> أبرز مميزات الموقع واللوكيشن
+              </h3>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="bg-secondary/40 p-3.5 rounded-xl border border-border/50">
+                  <span className="text-[10px] uppercase font-bold text-muted-foreground block">الوجهة الرئيسية</span>
+                  <span className="font-bold text-foreground text-sm mt-0.5 block">{destination?.name || c.destination}</span>
+                </div>
+                <div className="bg-secondary/40 p-3.5 rounded-xl border border-border/50">
+                  <span className="text-[10px] uppercase font-bold text-muted-foreground block">المنطقة والحي</span>
+                  <span className="font-bold text-foreground text-sm mt-0.5 block">{c.city || c.destination}</span>
+                </div>
+                <div className="bg-secondary/40 p-3.5 rounded-xl border border-border/50">
+                  <span className="text-[10px] uppercase font-bold text-muted-foreground block">خرائط التوجيه</span>
+                  <a
+                    href={c.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-bold text-accent text-xs mt-1 inline-flex items-center gap-1 hover:underline"
+                  >
+                    خرائط جوجل المباشرة 📍
+                  </a>
+                </div>
+              </div>
+
+              {c.highlights && c.highlights.length > 0 && (
+                <div className="space-y-2 pt-2">
+                  <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+                    نقاط القوة بالموقع والكمبوند:
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {c.highlights.map((h, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-2.5 bg-accent/5 p-3 rounded-xl border border-accent/20 text-xs font-semibold text-foreground"
+                      >
+                        <MapPin className="h-4 w-4 text-accent shrink-0" />
+                        <span>{h}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* Live Availability Section if available */}
             {avail && (
               <div className="space-y-3">

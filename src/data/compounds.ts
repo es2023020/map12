@@ -1257,11 +1257,12 @@ const newProjects: Compound[] = [
     unitSizes: "80–300 m²",
     type: "Residential",
     highlights: [
-      "Belle Vie prime location",
-      "Emaar Misr signature design",
-      "Premium amenities & spaces",
-      "Ready by 2028",
-    ],
+      "Intersections of Dabaa Corridor, Cairo-Alexandria Desert Road, & Rod El Farag Axis",
+      "3 mins from Cairo-Alexandria Desert Road & Rod El Farag Axis",
+      "8 to 10 mins from 26th of July Corridor (Mehwar) & Dabaa Road link",
+      "8 mins from Sphinx International Airport",
+      "15 mins from Mall of Arabia, Cairo Gate, & American International School (AIS)"
+],
   },
   {
     slug: "cairo-gate",
@@ -1294,11 +1295,12 @@ const newProjects: Compound[] = [
     unitSizes: "80–300 m²",
     type: "Residential",
     highlights: [
-      "Cairo Gate prime location",
-      "Emaar Misr signature design",
-      "Premium amenities & spaces",
-      "Ready by 2028",
-    ],
+      "Directly on Cairo-Alexandria Desert Road opposite Smart Village",
+      "5 mins from Sphinx International Airport & 26th of July Corridor (Mehwar)",
+      "Minutes from Arkan Plaza, Dandy Mega Mall, & Mall of Arabia",
+      "Direct transit via Rod El Farag Axis & Dabaa highway connection",
+      "Features Town Square retail, Vida Residences, & open-air plazas"
+],
   },
   {
     slug: "marassi",
@@ -1625,11 +1627,12 @@ const newProjects: Compound[] = [
     unitSizes: "80–300 m²",
     type: "Residential",
     highlights: [
-      "Badya prime location",
-      "Palm Hills Developments signature design",
-      "Premium amenities & spaces",
-      "Ready by 2028",
-    ],
+      "3,000-acre smart city directly on El Wahat Road (Oases Road)",
+      "25 mins from Grand Egyptian Museum (GEM) & Giza Pyramids",
+      "Home to Badya University, international schools, & 'The Core' urban center",
+      "Accessible via Dahshur Road extension & 26th of July Corridor",
+      "35 mins from Sphinx International Airport & near Mall of Egypt"
+],
   },
   {
     slug: "hacienda-blue",
@@ -2066,11 +2069,12 @@ const newProjects: Compound[] = [
     unitSizes: "65–205 m²",
     type: "Residential",
     highlights: [
-      "New Cairo prime location",
-      "Water creeks and lush greenery",
-      "Premium villa designs",
-      "Ready 2028",
-    ],
+      "Positioned opposite Hyde Park with direct access to Middle Ring Road & South 90th St",
+      "3 mins from Mountain View Hyde Park & 5 mins from South 90th St Golden Square",
+      "10 mins from American University in Cairo (AUC) campus",
+      "Short drive to Ain Sokhna Road, East Cairo hubs, & New Capital corridor",
+      "119-acre low-density plan (16% footprint) with creek lagoons & signature iVillas"
+],
   },
   {
     slug: "elea-azha-north",
@@ -2191,11 +2195,12 @@ const newProjects: Compound[] = [
     unitSizes: "100–220 m²",
     type: "Residential",
     highlights: [
-      "Sheikh Zayed center",
-      "Urban-chic architecture",
-      "Premium lifestyle amenities",
-      "Ready 2028",
-    ],
+      "Inside SkyRamp in Sheikh Zayed directly facing Gate 4 near Al-Amal Axis",
+      "Accessible via 26th of July Corridor, Dahshour Road, & Desert Road",
+      "Short drive to Mall of Arabia, Nile University, & Arkan Plaza",
+      "Seamless connectivity to Sphinx International Airport & Smart Village",
+      "Managed by BirdNest Hotels & Residences with full serviced hospitality"
+],
   },
   {
     slug: "the-lynks",
@@ -2372,11 +2377,12 @@ const newProjects: Compound[] = [
     unitSizes: "100–240 m²",
     type: "Residential",
     highlights: [
-      "New Capital R8 district",
-      "Smart community design",
-      "Lush public spaces",
-      "Ready 2028",
-    ],
+      "Plot M5 in R8 Residential District, New Administrative Capital",
+      "5 to 10 mins from CBD, Government District, Green River, & Al Masa Hotel",
+      "Near Southern Bin Zayed Axis & monorail transit stations",
+      "33-acre low-density plan integrating Hotel Indigo (IHG Hotels & Resorts)",
+      "Landscaped green islands, clubhouse, commercial strip, & mosque"
+],
   },
   {
     slug: "vea-new-cairo",
@@ -2517,11 +2523,12 @@ const newProjects: Compound[] = [
     unitSizes: "110–380 m²",
     type: "Resort",
     highlights: [
-      "Red Sea beachfront",
-      "World-class golf and spa",
-      "Exquisite seafront villas",
-      "Ready 2028",
-    ],
+      "Inside Somabay Peninsula with direct Red Sea shoreline & coral reefs",
+      "20 mins from Hurghada International Airport & 45 mins from Hurghada city",
+      "1.5 hours from El Gouna & ~4-hour drive (or 1.5h flight) from Cairo",
+      "Stepped topography ensuring panoramic Red Sea & lagoon views",
+      "Near Cascades Golf Course (Gary Player), Thalasso Spa, & international marina"
+],
   },
   {
     slug: "menorca",
@@ -2626,11 +2633,12 @@ const newProjects: Compound[] = [
     unitSizes: "105–300 m²",
     type: "Resort",
     highlights: [
-      "Ain Sokhna beach front",
-      "Modern coastal architecture",
-      "High-end leisure facilities",
-      "Ready 2028",
-    ],
+      "Positioned inside Telal Ain Sokhna along Ain Sokhna-Zafarana Road",
+      "10 mins from Galala City & Galala Marina; 45 mins from New Capital",
+      "75 mins from Greater Cairo via Ain Sokhna highway",
+      "Tiered G+4 residential blocks with panoramic sea & landscape views",
+      "Fully finished hotel-branded chalets with private beach access & spa"
+],
   },
   {
     slug: "olive-oasis",
@@ -2816,11 +2824,12 @@ const newProjects: Compound[] = [
     unitSizes: "130–280 m²",
     type: "Residential",
     highlights: [
-      "Strategic October location",
-      "Low density 31-acre compound",
-      "High-end commercial integration",
-      "Ready 2028",
-    ],
+      "Directly off 26th of July Corridor (Mehwar) near Bamboo extension",
+      "5 mins from Al Gezira Club (October), Arkan Plaza, & Galleria 40",
+      "10 mins from El Alsson British School & Lycée Albert Camus",
+      "10 mins from Mall of Egypt & 15 mins from Mall of Arabia",
+      "Neighbors New Giza & Palm Hills October; 25 mins to Sphinx Airport"
+],
   },
   {
     slug: "business-district",
@@ -3104,11 +3113,12 @@ const newProjects: Compound[] = [
     unitSizes: "164–230 m²",
     type: "Residential",
     highlights: [
-      "Golden Square premium zone",
-      "Mona Hussein interiors",
-      "Flexible finish options",
-      "Ready 2026",
-    ],
+      "Heart of Golden Square (Fifth Settlement) near Bin Zayed Axis & Middle Ring Road",
+      "7 mins from American University in Cairo (AUC) campus",
+      "10 to 12 mins from North 90th Street & Cairo-Suez Road",
+      "14 to 15 mins from New Administrative Capital & Al-Rehab City",
+      "175-acre master plan with 80%+ green open space ratio & low-rise G+3/4 buildings"
+],
   },
   {
     slug: "patio-vida",
@@ -3835,11 +3845,12 @@ const newProjects: Compound[] = [
     unitSizes: "55–264 m²",
     type: "Mixed-use",
     highlights: [
-      "Gated Business Hub New Cairo",
-      "Hilton Garden Inn hotel",
-      "Underground parking 3500 slots",
-      "Ready 2027",
-    ],
+      "Immediate entry points off Cairo-Suez Road & New Cairo Ring Road",
+      "5 mins from North 90th Street; 10 mins from AUC & Al Rehab City",
+      "15 mins from Cairo International Airport & 30 mins from New Capital",
+      "18-acre gated ecosystem with 42 standalone European-style office buildings",
+      "Centered around 8,700 sqm Central Park, Hilton Garden Inn, & retail strip"
+],
   },
 
   // ══════════════════════════════════════════
@@ -4081,11 +4092,12 @@ const newProjects: Compound[] = [
     type: "Mixed-use",
     flagship: true,
     highlights: [
-      "97 feddan masterplan",
-      "Golf course views",
-      "Mixed-use village center",
-      "53 available units",
-    ],
+      "Heart of Fifth Settlement with swift access to Middle Ring Road & Bin Zayed Axis",
+      "5 mins from Middle Ring Road; 10 mins from AUC & Main Teseen Street",
+      "10 mins from Point 90 Mall & 15 mins from Cairo Festival City (CFC)",
+      "20 mins from New Administrative Capital",
+      "25 mins from Cairo International Airport"
+],
   },
 
   {
@@ -4127,11 +4139,12 @@ const newProjects: Compound[] = [
     unitSizes: "191–222 m²",
     type: "Residential",
     highlights: [
-      "Final phase — limited units",
-      "Large format apartments",
-      "Premium New Cairo location",
-      "43 units available",
-    ],
+      "Elevated terrain within Palm Hills October master plan with scenic views",
+      "Directly beside Gezira Sporting Club (October Branch) & Palm Hills Golf",
+      "Resort-style crystal lagoons, hardscape greenery, & modern clubhouse",
+      "Fully finished townhouses (220–222 m²) & ground-garden family homes",
+      "5% down payment with up to 10-year flexible payment plans"
+],
   },
   {
     slug: "the-crown-extension",
@@ -4711,11 +4724,12 @@ const newProjects: Compound[] = [
     unitSizes: "63–239 m²",
     type: "Residential",
     highlights: [
-      "Clubhouse frontage",
-      "212 units available",
-      "Entry from EGP 5M",
-      "Central park views",
-    ],
+      "Directly on Cairo-Suez Road inside the 450-acre Sarai master plan",
+      "5 mins from New Administrative Capital gateway",
+      "10 mins from American University in Cairo (AUC) campus",
+      "15 mins from Ring Road connecting to Greater Cairo",
+      "Anchored by a 100,000 sqm sports & social clubhouse"
+],
   },
   {
     slug: "talala",
@@ -4987,11 +5001,12 @@ const newProjects: Compound[] = [
     unitSizes: "123–144 m²",
     type: "Residential",
     highlights: [
-      "Botanical garden design",
-      "156 chalets available",
-      "EGP 17–20M range",
-      "Sheikh Zayed location",
-    ],
+      "Heart of R7 Residential District (Plot E2) in New Capital",
+      "Minutes from Green River Central Park, Expo City, & Diplomatic Quarter",
+      "Close to Government District & Nativity Cathedral",
+      "Direct access via Central Axis, Bin Zayed Axis, & Regional Ring Road",
+      "Green eco-architecture with landscaped gardens surrounding low-rise blocks"
+],
   },
 
   // ══════════════════════════════════════════
@@ -5045,11 +5060,12 @@ const newProjects: Compound[] = [
     unitSizes: "45–242 m²",
     type: "Resort",
     highlights: [
-      "28 units available",
-      "Ready-to-move twin house",
-      "From EGP 6.4M",
-      "Boardwalk Condos launch",
-    ],
+      "Km 198 on Alexandria-Marsa Matrouh Coastal Road in Ras El Hekma bay",
+      "Accessible via newly developed Fouka Road extension & Coastal Road",
+      "Easy reach of New Alamein City & Sidi Abdel Rahman",
+      "California-style beach layout with wide sandy shore & crystal lagoons",
+      "Tiered elevation with lazy rivers, boardwalks, & beach clubhouses"
+],
   },
 
   // ══════════════════════════════════════════
@@ -5141,11 +5157,12 @@ const newProjects: Compound[] = [
     unitSizes: "95–210 m²",
     type: "Residential",
     highlights: [
-      "46 units available",
-      "NHF + NHN clusters",
-      "EGP 11.3M–26.1M",
-      "Semi & fully finished",
-    ],
+      "Directly on Ain Sokhna Road corridor bridging New Cairo, Maadi, & New Capital",
+      "7 mins from New Cairo & Fifth Settlement; 8 mins from Maadi",
+      "19 mins from Cairo International Airport & Heliopolis",
+      "200-acre mixed-use master plan anchored by District 5 Mall & sports club",
+      "Low-density layout with open green parks, outdoor plazas, & co-working spaces"
+],
   },
   {
     slug: "crescent-walk",
@@ -5189,11 +5206,12 @@ const newProjects: Compound[] = [
     unitSizes: "75–500 m²",
     type: "Residential",
     highlights: [
-      "74 units available",
-      "PS / PC / PE parcels",
-      "1BR from EGP 8.46M",
-      "Villa up to EGP 72M",
-    ],
+      "Situated in emerging Sixth Settlement (District 6) corridor, next to Zed East",
+      "5 mins from Ring Road & New Administrative Capital",
+      "7 mins from Golden Square & South 90th Street",
+      "12 mins from American University in Cairo (AUC) campus",
+      "118-acre master plan by WATG featuring a Zamalek/Maadi-inspired crescent walkway"
+],
   },
   {
     slug: "ramla",
@@ -5273,11 +5291,12 @@ const newProjects: Compound[] = [
     unitSizes: "220–240 m²",
     type: "Residential",
     highlights: [
-      "Only 4 units remaining",
-      "220–240 m² warm finish",
-      "EGP 36M",
-      "North Tower exclusive",
-    ],
+      "Directly on Gamal Abdel Nasser Street with high-rise contemporary towers",
+      "5 to 10 mins from Arkan Plaza, Mall of Arabia, & Americana Plaza",
+      "10 mins from top international schools, universities, & Sheikh Zayed hospitals",
+      "Direct access to 26th of July Corridor (Mehwar) towards Giza & central Cairo",
+      "Swift access to Cairo-Alexandria Desert Road"
+],
   },
 
   // ══════════════════════════════════════════
@@ -5322,11 +5341,12 @@ const newProjects: Compound[] = [
     unitSizes: "65–370 m²",
     type: "Residential",
     highlights: [
-      "87 units available",
-      "1BR from EGP 5M",
-      "Villas up to EGP 42.75M",
-      "Cash discount up to 50%",
-    ],
+      "Situated in Phase One of Mostakbal City facing main boulevard",
+      "5 to 6 mins from Suez Road & 5 mins from Madinaty Gate 5",
+      "10 mins from New Administrative Capital",
+      "Close to Midtown Ring Road, Canadian University, & New Olympic Village",
+      "Swift transit via Middle Ring Road, Regional Ring Road, & Al Amal Axis to Airport"
+],
   },
   {
     slug: "the-mornings",
@@ -5462,11 +5482,12 @@ const newProjects: Compound[] = [
     unitSizes: "70–170 m²",
     type: "Residential",
     highlights: [
-      "Palm Hills Developments",
-      "Located in Palm Hills New Cairo",
-      "82% open green spaces",
-      "5,000 m² lake & lagoons",
-    ],
+      "Inside Palm Hills New Cairo master plan with direct Middle Ring Road access",
+      "17 km from American University in Cairo (AUC) & German University (GUC)",
+      "Minutes from North 90th Street commercial spine",
+      "30 to 35 mins from Cairo International Airport & easy reach to New Capital",
+      "Centered around a 5,000 sqm crystal lagoon with 80%+ open green spaces"
+],
   },
 
   // ══════════════════════════════════════════
@@ -5854,10 +5875,12 @@ const additionalLaunches: Compound[] = [
     paymentPlan: "5% down payment · 8 years equal installments",
     type: "Mixed-use",
     highlights: [
-      "Prime New Cairo location",
-      "8 Years installment plan",
-      "Premium retail & offices",
-    ],
+      "1.2 km Ring Road frontage in New Cairo with maximum commercial visibility",
+      "5 mins from Cairo-Suez Road; 7 to 10 mins from Cairo Festival City (CFC)",
+      "10 mins from North 90th Street, Mohamed Naguib Axis, & Tantawy Axis",
+      "15 mins from AUC & 20 mins from Cairo International Airport",
+      "72-acre mixed-use development with Fairmont serviced apartments & Park St retail"
+],
   },
   {
     slug: "the-gray-laguna-the-boulevard",
@@ -6012,7 +6035,13 @@ const additionalLaunches: Compound[] = [
       "5% down + 5% after 3 mos, remaining balance spread over up to 10 years in equal, interest-free installments",
     areaSize: "100 feddan",
     type: "Coastal",
-    highlights: ["Overlooking Galala Marina", "Mountain-sea views", "Crystal lagoons"],
+    highlights: [
+      "Directly on Red Sea coast at gates of Galala Marina & Galala City",
+      "Seamless transit via Sokhna Road & Galala Road (1h to 90m from Cairo)",
+      "Close to Red Sea yacht marinas & luxury hospitality resorts",
+      "Stepped mountainside topography ensuring 90%+ sea view ratio",
+      "Private sandy beach, crystal lagoons, cascading waterfalls, & boutique hotel"
+],
   },
   {
     slug: "selina-carnelia",
@@ -6034,7 +6063,13 @@ const additionalLaunches: Compound[] = [
       "Selina is the latest premium launching neighborhood inside Carnelia Ain Sokhna by Ajna Developments.",
     paymentPlan: "5% down payment · 8 years equal installments",
     type: "Coastal",
-    highlights: ["Carnelia premium phase", "8 Years payment plan"],
+    highlights: [
+      "Directly on Red Sea coast at gates of Galala Marina & Galala City",
+      "Seamless transit via Sokhna Road & Galala Road (1h to 90m from Cairo)",
+      "Close to Red Sea yacht marinas & luxury hospitality resorts",
+      "Stepped mountainside topography ensuring 90%+ sea view ratio",
+      "Private sandy beach, crystal lagoons, cascading waterfalls, & boutique hotel"
+],
   },
 ];
 
