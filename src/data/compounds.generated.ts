@@ -4133,7 +4133,7 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "/projects/palm-hills-jirian/1.jpg"
     ],
-    "blurb": "Palm Hills Jirian is an expansive mixed-use community in Mostakbal City, east of New Cairo. With 465 available units across apartments, townhouses and villas, this is Palm Hills' largest current launch. The Jirian lagoon is the centrepiece of a resort-quality master plan.",
+    "blurb": "Palm Hills Jirian is an expansive mixed-use community in New Sheikh Zayed, West Cairo. With 465 available units across apartments, townhouses and villas, this is Palm Hills' largest current launch. The Jirian lagoon is the centrepiece of a resort-quality master plan.",
     "paymentPlan": "10% down · 10 years equal installments",
     "areaSize": "280 feddan",
     "unitSizes": "62–405 m²",

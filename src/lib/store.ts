@@ -1958,6 +1958,7 @@ export const useStore = create<State>()(
                   // Keep static info updated as source of truth
                   name: sc.name,
                   destination: sc.destination,
+                  city: sc.city,
                   km: sc.km,
                   lat: sc.lat,
                   lng: sc.lng,

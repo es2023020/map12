@@ -91974,10 +91974,10 @@
   "mountain view jirian": {
     "id": "mountain-view-jirian",
     "name": "Mountain View Jirian",
-    "lat": 30.079,
-    "lng": 31.662,
-    "destination": "mostakbal-city",
-    "url": "https://wikimapia.org/#lang=en&lat=30.079&lon=31.662&z=16"
+    "lat": 30.0318,
+    "lng": 30.836,
+    "destination": "sheikh-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.0318&lon=30.8360&z=16"
   },
   "mountain view kingsway": {
     "id": "mountain-view-kingsway",
@@ -92878,10 +92878,10 @@
   "mountain-view-jirian": {
     "id": "mountain-view-jirian",
     "name": "Mountain View Jirian",
-    "lat": 30.079,
-    "lng": 31.662,
-    "destination": "mostakbal-city",
-    "url": "https://wikimapia.org/#lang=en&lat=30.079&lon=31.662&z=15"
+    "lat": 30.0318,
+    "lng": 30.836,
+    "destination": "sheikh-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.0318&lon=30.8360&z=15"
   },
   "mountain-view-kingsway": {
     "id": "mountain-view-kingsway",
