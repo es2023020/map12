@@ -735,8 +735,8 @@ export const projectLocations: Record<string, ProjectLocation> = {
   },
   "mountain-view-jirian": {
     name: "Mountain View Jirian",
-    destination: "6th-october",
-    location: "6th of October City, Giza Governorate, Egypt",
+    destination: "sheikh-zayed",
+    location: "Sheikh Zayed, Giza Governorate, Egypt",
     mapsUrl:
       "https://www.google.com/maps/place/%D9%85%D8%A7%D9%88%D9%8BD9%86+%D9%81%D9%8A%D9%88+%D8%AC%D8%B1%D9%8A%D8%A7%D9%86+-+MOUNTAIN+VIEW+JIRIAN%E2%80%AD/@30.0318406,30.8360123,17z",
   },

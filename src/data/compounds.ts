@@ -4352,9 +4352,9 @@ const newProjects: Compound[] = [
   {
     slug: "mountain-view-jirian",
     name: "Mountain View Jirian",
-    destination: "mostakbal-city",
-    lat: 30.079,
-    lng: 31.662,
+    destination: "sheikh-zayed",
+    lat: 30.0318,
+    lng: 30.836,
     developer: "Mountain View",
     developerSlug: "mountain-view",
     priceFrom: 8,
@@ -4377,16 +4377,16 @@ const newProjects: Compound[] = [
     hero: luxuryVillaImgs[5],
     gallery: [luxuryVillaImgs[5]],
     blurb:
-      "Mountain View Jirian brings the award-winning iVilla DNA to Mostakbal City — a vast lagoon-centred community with 188 available units spanning apartments, townhouses and standalone villas. Designed for families who want space without sacrificing proximity to New Cairo.",
+      "Mountain View Jirian brings Mountain View's signature residential design to Sheikh Zayed — a vast lagoon-centred community with units spanning apartments, townhouses and standalone villas in West Cairo.",
     paymentPlan: "10% down · 9 years equal installments",
     areaSize: "250 feddan",
     unitSizes: "60–320 m²",
     type: "Residential",
     highlights: [
-      "Mostakbal City masterplan",
-      "188 available units",
+      "Sheikh Zayed Extension location",
+      "Waterfront flowing promenade",
       "Entry from EGP 8M",
-      "Lagoon-front villas available",
+      "Near Sphinx Airport & Al Dabaa Axis",
     ],
   },
   {

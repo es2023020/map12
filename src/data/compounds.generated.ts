@@ -4295,9 +4295,9 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "mountain-view-jirian",
     "name": "Mountain View Jirian",
-    "destination": "mostakbal-city",
-    "lat": 29.97,
-    "lng": 30.93,
+    "destination": "sheikh-zayed",
+    "lat": 30.0318,
+    "lng": 30.836,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 8.68,
