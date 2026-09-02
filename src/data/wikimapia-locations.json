@@ -91976,7 +91976,7 @@
     "name": "Mountain View Jirian",
     "lat": 30.0318,
     "lng": 30.836,
-    "destination": "sheikh-zayed",
+    "destination": "new-zayed",
     "url": "https://wikimapia.org/#lang=en&lat=30.0318&lon=30.8360&z=16"
   },
   "mountain view kingsway": {
@@ -92142,10 +92142,10 @@
   "dejoya residence": {
     "id": "dejoya-residence",
     "name": "Dejoya Residence",
-    "lat": 30.046,
-    "lng": 30.972,
-    "destination": "sheikh-zayed",
-    "url": "https://wikimapia.org/#lang=en&lat=30.046&lon=30.972&z=16"
+    "lat": 30.0895,
+    "lng": 30.8745,
+    "destination": "new-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.0895&lon=30.8745&z=16"
   },
   "v levels": {
     "id": "v-levels",
@@ -92880,7 +92880,7 @@
     "name": "Mountain View Jirian",
     "lat": 30.0318,
     "lng": 30.836,
-    "destination": "sheikh-zayed",
+    "destination": "new-zayed",
     "url": "https://wikimapia.org/#lang=en&lat=30.0318&lon=30.8360&z=15"
   },
   "mountain-view-kingsway": {
@@ -93067,10 +93067,42 @@
   "dejoya-residence": {
     "id": "dejoya-residence",
     "name": "Dejoya Residence",
-    "lat": 30.046,
-    "lng": 30.972,
-    "destination": "sheikh-zayed",
-    "url": "https://wikimapia.org/#lang=en&lat=30.046&lon=30.972&z=15"
+    "lat": 30.0895,
+    "lng": 30.8745,
+    "destination": "new-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.0895&lon=30.8745&z=15"
+  },
+  "jirian-nations-of-sky": {
+    "id": "jirian-nations-of-sky",
+    "name": "Jiryan Nations of Sky",
+    "lat": 30.095,
+    "lng": 30.875,
+    "destination": "new-zayed",
+    "url": "https://wikimapia.org/#lang=en&lat=30.095&lon=30.875&z=15"
+  },
+  "eastville": {
+    "id": "eastville",
+    "name": "Eastville",
+    "lat": 30.015,
+    "lng": 31.49,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.015&lon=31.490&z=15"
+  },
+  "the-marq-gardens": {
+    "id": "the-marq-gardens",
+    "name": "The Marq Gardens",
+    "lat": 30.045,
+    "lng": 31.52,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.045&lon=31.520&z=15"
+  },
+  "the-water-marq": {
+    "id": "the-water-marq",
+    "name": "The Water MarQ",
+    "lat": 30.025,
+    "lng": 31.46,
+    "destination": "new-cairo",
+    "url": "https://wikimapia.org/#lang=en&lat=30.025&lon=31.460&z=15"
   },
   "salt-marina": {
     "id": "salt-marina",

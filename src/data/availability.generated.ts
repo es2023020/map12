@@ -159326,5 +159326,633 @@ export const availability: ProjectAvailability[] = [
       }
     ],
     "lastUpdated": "2026-08-30"
-  }
+  },
+  {
+    "slug": "eastville",
+    "developer": "Ajna Developments",
+    "totalAvailable": 4,
+    "lastUpdated": "2026-09-03",
+    "breakdown": [
+      {
+        "type": "Townhouse",
+        "beds": 3,
+        "available": 3,
+        "minSqm": 160,
+        "maxSqm": 230,
+        "minPriceM": 12.5,
+        "maxPriceM": 19.8,
+        "units": [
+          {
+            "id": "eastville-1",
+            "unitNo": "EV-TH-160",
+            "beds": 3,
+            "finishing": "Core and Shell",
+            "areaSqm": 160,
+            "view": "Garden and Water Feature",
+            "priceEGP": 12500000,
+            "status": "Sold Out",
+            "slug": "eastville",
+            "cluster": "Phase 1",
+            "delivery_note": "2 Years",
+            "payment_plan": "5%+5% after 3m over 9 yrs"
+          },
+          {
+            "id": "eastville-2",
+            "unitNo": "EV-TH-190",
+            "beds": 3,
+            "finishing": "Core and Shell",
+            "areaSqm": 190,
+            "view": "Landscape and Lakes",
+            "priceEGP": 15900000,
+            "status": "Available",
+            "slug": "eastville",
+            "cluster": "Phase 2",
+            "delivery_note": "4 Years",
+            "payment_plan": "5%+5% after 3m over 9 yrs"
+          },
+          {
+            "id": "eastville-3",
+            "unitNo": "EV-TH-230",
+            "beds": 4,
+            "finishing": "Core and Shell",
+            "areaSqm": 230,
+            "view": "Central Park",
+            "priceEGP": 19800000,
+            "status": "Available",
+            "slug": "eastville",
+            "cluster": "Phase 2",
+            "delivery_note": "4 Years",
+            "payment_plan": "5%+5% after 3m over 9 yrs"
+          }
+        ]
+      },
+      {
+        "type": "Twin House",
+        "beds": 4,
+        "available": 1,
+        "minSqm": 290,
+        "maxSqm": 290,
+        "minPriceM": 29.5,
+        "maxPriceM": 29.5,
+        "units": [
+          {
+            "id": "eastville-4",
+            "unitNo": "EV-TW-290",
+            "beds": 4,
+            "finishing": "Core and Shell",
+            "areaSqm": 290,
+            "view": "Lake View",
+            "priceEGP": 29500000,
+            "status": "Available",
+            "slug": "eastville",
+            "cluster": "Phase 2",
+            "delivery_note": "4 Years",
+            "payment_plan": "5%+5% after 3m over 9 yrs"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "the-marq-gardens",
+    "developer": "The MarQ Communities",
+    "totalAvailable": 5,
+    "lastUpdated": "2026-09-03",
+    "breakdown": [
+      {
+        "type": "Townhouse",
+        "beds": 3,
+        "available": 1,
+        "minSqm": 265,
+        "maxSqm": 265,
+        "minPriceM": 33.38,
+        "maxPriceM": 33.38,
+        "units": [
+          {
+            "id": "the-marq-gardens-1",
+            "unitNo": "MG-TV-265",
+            "beds": 3,
+            "finishing": "Core and Shell",
+            "areaSqm": 265,
+            "view": "Thematic Garden",
+            "priceEGP": 33380000,
+            "status": "Available",
+            "slug": "the-marq-gardens",
+            "cluster": "Moon Garden",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          }
+        ]
+      },
+      {
+        "type": "Twin House",
+        "beds": 4,
+        "available": 2,
+        "minSqm": 270,
+        "maxSqm": 270,
+        "minPriceM": 37.54,
+        "maxPriceM": 38.1,
+        "units": [
+          {
+            "id": "the-marq-gardens-2",
+            "unitNo": "MG-TW-270A",
+            "beds": 4,
+            "finishing": "Core and Shell",
+            "areaSqm": 270,
+            "view": "Water Garden",
+            "priceEGP": 37540000,
+            "status": "Available",
+            "slug": "the-marq-gardens",
+            "cluster": "Water Garden",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          },
+          {
+            "id": "the-marq-gardens-3",
+            "unitNo": "MG-TW-270B",
+            "beds": 4,
+            "finishing": "Core and Shell",
+            "areaSqm": 270,
+            "view": "Aroma Garden",
+            "priceEGP": 38100000,
+            "status": "Available",
+            "slug": "the-marq-gardens",
+            "cluster": "Aroma Garden",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          }
+        ]
+      },
+      {
+        "type": "Standalone Villa",
+        "beds": 4,
+        "available": 2,
+        "minSqm": 265,
+        "maxSqm": 295,
+        "minPriceM": 40.72,
+        "maxPriceM": 50.82,
+        "units": [
+          {
+            "id": "the-marq-gardens-4",
+            "unitNo": "MG-SV-265",
+            "beds": 4,
+            "finishing": "Core and Shell",
+            "areaSqm": 265,
+            "view": "Butterfly Garden",
+            "priceEGP": 40720000,
+            "status": "Available",
+            "slug": "the-marq-gardens",
+            "cluster": "Butterfly Garden",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          },
+          {
+            "id": "the-marq-gardens-5",
+            "unitNo": "MG-SV-295",
+            "beds": 5,
+            "finishing": "Core and Shell",
+            "areaSqm": 295,
+            "view": "Tranquil Garden",
+            "priceEGP": 50820000,
+            "status": "Available",
+            "slug": "the-marq-gardens",
+            "cluster": "Tranquil Garden",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "the-water-marq",
+    "developer": "The MarQ Communities",
+    "totalAvailable": 7,
+    "lastUpdated": "2026-09-03",
+    "breakdown": [
+      {
+        "type": "Water Villa",
+        "beds": 4,
+        "available": 7,
+        "minSqm": 325,
+        "maxSqm": 665,
+        "minPriceM": 60.7185,
+        "maxPriceM": 130.8203,
+        "units": [
+          {
+            "id": "the-water-marq-1",
+            "unitNo": "WM-WV-325",
+            "beds": 4,
+            "finishing": "Fully Finished",
+            "areaSqm": 325,
+            "view": "Crystal Lagoon",
+            "priceEGP": 60718500,
+            "status": "Available",
+            "slug": "the-water-marq",
+            "cluster": "Waterfront Phase",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          },
+          {
+            "id": "the-water-marq-2",
+            "unitNo": "WM-WV-405V",
+            "beds": 4,
+            "finishing": "Fully Finished",
+            "areaSqm": 405,
+            "view": "Lagoon Front",
+            "priceEGP": 78290300,
+            "status": "Available",
+            "slug": "the-water-marq",
+            "cluster": "Waterfront Phase",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          },
+          {
+            "id": "the-water-marq-3",
+            "unitNo": "WM-WV-520",
+            "beds": 5,
+            "finishing": "Fully Finished",
+            "areaSqm": 520,
+            "view": "Panoramic Lagoon",
+            "priceEGP": 92730900,
+            "status": "Available",
+            "slug": "the-water-marq",
+            "cluster": "Lagoon Peninsula",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          },
+          {
+            "id": "the-water-marq-4",
+            "unitNo": "WM-WV-490",
+            "beds": 5,
+            "finishing": "Fully Finished",
+            "areaSqm": 490,
+            "view": "Lagoon Front",
+            "priceEGP": 97592500,
+            "status": "Available",
+            "slug": "the-water-marq",
+            "cluster": "Lagoon Peninsula",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          },
+          {
+            "id": "the-water-marq-5",
+            "unitNo": "WM-WV-460V",
+            "beds": 5,
+            "finishing": "Fully Finished",
+            "areaSqm": 460,
+            "view": "Lagoon Front",
+            "priceEGP": 101352000,
+            "status": "Available",
+            "slug": "the-water-marq",
+            "cluster": "Lagoon Peninsula",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          },
+          {
+            "id": "the-water-marq-6",
+            "unitNo": "WM-WV-665",
+            "beds": 6,
+            "finishing": "Fully Finished",
+            "areaSqm": 665,
+            "view": "Grand Lagoon Estate",
+            "priceEGP": 125021400,
+            "status": "Available",
+            "slug": "the-water-marq",
+            "cluster": "Signature Island",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          },
+          {
+            "id": "the-water-marq-7",
+            "unitNo": "WM-WV-665C",
+            "beds": 6,
+            "finishing": "Fully Finished",
+            "areaSqm": 665,
+            "view": "Lagoon Curve Estate",
+            "priceEGP": 130820300,
+            "status": "Available",
+            "slug": "the-water-marq",
+            "cluster": "Signature Island",
+            "delivery_note": "1 Year",
+            "payment_plan": "10% DP over 7 years"
+          }
+        ]
+      }
+    ]
+  },
+  {
+  "slug": "eastville",
+  "developer": "Ajna Developments",
+  "totalAvailable": 4,
+  "lastUpdated": "2026-09-03",
+  "breakdown": [
+    {
+      "type": "Townhouse",
+      "beds": 3,
+      "available": 3,
+      "minSqm": 160,
+      "maxSqm": 230,
+      "minPriceM": 12.5,
+      "maxPriceM": 19.8,
+      "units": [
+        {
+          "id": "eastville-1",
+          "unitNo": "EV-TH-160",
+          "beds": 3,
+          "finishing": "Core and Shell",
+          "areaSqm": 160,
+          "view": "Garden and Water Feature",
+          "priceEGP": 12500000,
+          "status": "Sold Out",
+          "slug": "eastville",
+          "cluster": "Phase 1",
+          "delivery_note": "2 Years",
+          "payment_plan": "5%+5% after 3m over 9 yrs"
+        },
+        {
+          "id": "eastville-2",
+          "unitNo": "EV-TH-190",
+          "beds": 3,
+          "finishing": "Core and Shell",
+          "areaSqm": 190,
+          "view": "Landscape and Lakes",
+          "priceEGP": 15900000,
+          "status": "Available",
+          "slug": "eastville",
+          "cluster": "Phase 2",
+          "delivery_note": "4 Years",
+          "payment_plan": "5%+5% after 3m over 9 yrs"
+        },
+        {
+          "id": "eastville-3",
+          "unitNo": "EV-TH-230",
+          "beds": 4,
+          "finishing": "Core and Shell",
+          "areaSqm": 230,
+          "view": "Central Park",
+          "priceEGP": 19800000,
+          "status": "Available",
+          "slug": "eastville",
+          "cluster": "Phase 2",
+          "delivery_note": "4 Years",
+          "payment_plan": "5%+5% after 3m over 9 yrs"
+        }
+      ]
+    },
+    {
+      "type": "Twin House",
+      "beds": 4,
+      "available": 1,
+      "minSqm": 290,
+      "maxSqm": 290,
+      "minPriceM": 29.5,
+      "maxPriceM": 29.5,
+      "units": [
+        {
+          "id": "eastville-4",
+          "unitNo": "EV-TW-290",
+          "beds": 4,
+          "finishing": "Core and Shell",
+          "areaSqm": 290,
+          "view": "Lake View",
+          "priceEGP": 29500000,
+          "status": "Available",
+          "slug": "eastville",
+          "cluster": "Phase 2",
+          "delivery_note": "4 Years",
+          "payment_plan": "5%+5% after 3m over 9 yrs"
+        }
+      ]
+    }
+  ]
+},
+  {
+  "slug": "the-marq-gardens",
+  "developer": "The MarQ Communities",
+  "totalAvailable": 5,
+  "lastUpdated": "2026-09-03",
+  "breakdown": [
+    {
+      "type": "Townhouse",
+      "beds": 3,
+      "available": 1,
+      "minSqm": 265,
+      "maxSqm": 265,
+      "minPriceM": 33.38,
+      "maxPriceM": 33.38,
+      "units": [
+        {
+          "id": "the-marq-gardens-1",
+          "unitNo": "MG-TV-265",
+          "beds": 3,
+          "finishing": "Core and Shell",
+          "areaSqm": 265,
+          "view": "Thematic Garden",
+          "priceEGP": 33380000,
+          "status": "Available",
+          "slug": "the-marq-gardens",
+          "cluster": "Moon Garden",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        }
+      ]
+    },
+    {
+      "type": "Twin House",
+      "beds": 4,
+      "available": 2,
+      "minSqm": 270,
+      "maxSqm": 270,
+      "minPriceM": 37.54,
+      "maxPriceM": 38.1,
+      "units": [
+        {
+          "id": "the-marq-gardens-2",
+          "unitNo": "MG-TW-270A",
+          "beds": 4,
+          "finishing": "Core and Shell",
+          "areaSqm": 270,
+          "view": "Water Garden",
+          "priceEGP": 37540000,
+          "status": "Available",
+          "slug": "the-marq-gardens",
+          "cluster": "Water Garden",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        },
+        {
+          "id": "the-marq-gardens-3",
+          "unitNo": "MG-TW-270B",
+          "beds": 4,
+          "finishing": "Core and Shell",
+          "areaSqm": 270,
+          "view": "Aroma Garden",
+          "priceEGP": 38100000,
+          "status": "Available",
+          "slug": "the-marq-gardens",
+          "cluster": "Aroma Garden",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        }
+      ]
+    },
+    {
+      "type": "Standalone Villa",
+      "beds": 4,
+      "available": 2,
+      "minSqm": 265,
+      "maxSqm": 295,
+      "minPriceM": 40.72,
+      "maxPriceM": 50.82,
+      "units": [
+        {
+          "id": "the-marq-gardens-4",
+          "unitNo": "MG-SV-265",
+          "beds": 4,
+          "finishing": "Core and Shell",
+          "areaSqm": 265,
+          "view": "Butterfly Garden",
+          "priceEGP": 40720000,
+          "status": "Available",
+          "slug": "the-marq-gardens",
+          "cluster": "Butterfly Garden",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        },
+        {
+          "id": "the-marq-gardens-5",
+          "unitNo": "MG-SV-295",
+          "beds": 5,
+          "finishing": "Core and Shell",
+          "areaSqm": 295,
+          "view": "Tranquil Garden",
+          "priceEGP": 50820000,
+          "status": "Available",
+          "slug": "the-marq-gardens",
+          "cluster": "Tranquil Garden",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        }
+      ]
+    }
+  ]
+},
+  {
+  "slug": "the-water-marq",
+  "developer": "The MarQ Communities",
+  "totalAvailable": 7,
+  "lastUpdated": "2026-09-03",
+  "breakdown": [
+    {
+      "type": "Water Villa",
+      "beds": 4,
+      "available": 7,
+      "minSqm": 325,
+      "maxSqm": 665,
+      "minPriceM": 60.7185,
+      "maxPriceM": 130.8203,
+      "units": [
+        {
+          "id": "the-water-marq-1",
+          "unitNo": "WM-WV-325",
+          "beds": 4,
+          "finishing": "Fully Finished",
+          "areaSqm": 325,
+          "view": "Crystal Lagoon",
+          "priceEGP": 60718500,
+          "status": "Available",
+          "slug": "the-water-marq",
+          "cluster": "Waterfront Phase",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        },
+        {
+          "id": "the-water-marq-2",
+          "unitNo": "WM-WV-405V",
+          "beds": 4,
+          "finishing": "Fully Finished",
+          "areaSqm": 405,
+          "view": "Lagoon Front",
+          "priceEGP": 78290300,
+          "status": "Available",
+          "slug": "the-water-marq",
+          "cluster": "Waterfront Phase",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        },
+        {
+          "id": "the-water-marq-3",
+          "unitNo": "WM-WV-520",
+          "beds": 5,
+          "finishing": "Fully Finished",
+          "areaSqm": 520,
+          "view": "Panoramic Lagoon",
+          "priceEGP": 92730900,
+          "status": "Available",
+          "slug": "the-water-marq",
+          "cluster": "Lagoon Peninsula",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        },
+        {
+          "id": "the-water-marq-4",
+          "unitNo": "WM-WV-490",
+          "beds": 5,
+          "finishing": "Fully Finished",
+          "areaSqm": 490,
+          "view": "Lagoon Front",
+          "priceEGP": 97592500,
+          "status": "Available",
+          "slug": "the-water-marq",
+          "cluster": "Lagoon Peninsula",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        },
+        {
+          "id": "the-water-marq-5",
+          "unitNo": "WM-WV-460V",
+          "beds": 5,
+          "finishing": "Fully Finished",
+          "areaSqm": 460,
+          "view": "Lagoon Front",
+          "priceEGP": 101352000,
+          "status": "Available",
+          "slug": "the-water-marq",
+          "cluster": "Lagoon Peninsula",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        },
+        {
+          "id": "the-water-marq-6",
+          "unitNo": "WM-WV-665",
+          "beds": 6,
+          "finishing": "Fully Finished",
+          "areaSqm": 665,
+          "view": "Grand Lagoon Estate",
+          "priceEGP": 125021400,
+          "status": "Available",
+          "slug": "the-water-marq",
+          "cluster": "Signature Island",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        },
+        {
+          "id": "the-water-marq-7",
+          "unitNo": "WM-WV-665C",
+          "beds": 6,
+          "finishing": "Fully Finished",
+          "areaSqm": 665,
+          "view": "Lagoon Curve Estate",
+          "priceEGP": 130820300,
+          "status": "Available",
+          "slug": "the-water-marq",
+          "cluster": "Signature Island",
+          "delivery_note": "1 Year",
+          "payment_plan": "10% DP over 7 years"
+        }
+      ]
+    }
+  ]
+}
 ];

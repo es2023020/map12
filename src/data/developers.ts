@@ -16,6 +16,10 @@ export type Developer = {
 const blurbs: Record<string, string> = {
   "Arab Developers Holding":
     "Arab Developers Holding — major master-plan real estate developer behind iconic projects like Nyoum October, Nyoum Pyramids, and Ashrafieh, specializing in Italian-inspired architectures and self-sufficient townships.",
+  "Ajna Developments":
+    "Ajna Developments — premier master-plan real estate developer behind signature residential communities like Eastville in New Cairo, specializing in low-density design and modern architecture.",
+  "The MarQ Communities":
+    "The MarQ Communities — an exclusive ultra-luxury developer (subsidiary of The Address Holding) crafting art-driven, nature-infused villa sanctuaries like The Marq Gardens and The Water MarQ in New Cairo.",
   "New Plan Developments":
     "New Plan Developments — an innovative real estate developer known for luxury resorts and premium residential compounds across Egypt.",
   "Upwyde Developments":

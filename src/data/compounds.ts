@@ -4352,7 +4352,7 @@ const newProjects: Compound[] = [
   {
     slug: "mountain-view-jirian",
     name: "Mountain View Jirian",
-    destination: "sheikh-zayed",
+    destination: "new-zayed",
     lat: 30.0318,
     lng: 30.836,
     developer: "Mountain View",
@@ -4377,13 +4377,13 @@ const newProjects: Compound[] = [
     hero: luxuryVillaImgs[5],
     gallery: [luxuryVillaImgs[5]],
     blurb:
-      "Mountain View Jirian brings Mountain View's signature residential design to Sheikh Zayed — a vast lagoon-centred community with units spanning apartments, townhouses and standalone villas in West Cairo.",
+      "Mountain View Jirian brings Mountain View's signature residential design to New Sheikh Zayed — a vast lagoon-centred community with units spanning apartments, townhouses and standalone villas in West Cairo.",
     paymentPlan: "10% down · 9 years equal installments",
     areaSize: "250 feddan",
     unitSizes: "60–320 m²",
     type: "Residential",
     highlights: [
-      "Sheikh Zayed Extension location",
+      "New Sheikh Zayed location",
       "Waterfront flowing promenade",
       "Entry from EGP 8M",
       "Near Sphinx Airport & Al Dabaa Axis",
@@ -5624,9 +5624,9 @@ const additionalLaunches: Compound[] = [
   {
     slug: "dejoya-residence",
     name: "Dejoya Residence",
-    destination: "sheikh-zayed",
-    lat: 30.046,
-    lng: 30.972,
+    destination: "new-zayed",
+    lat: 30.0895,
+    lng: 30.8745,
     developer: "Taj Misr Developments",
     developerSlug: "taj-misr",
     priceFrom: 5.5,

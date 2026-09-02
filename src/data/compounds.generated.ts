@@ -4295,7 +4295,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "mountain-view-jirian",
     "name": "Mountain View Jirian",
-    "destination": "sheikh-zayed",
+    "destination": "new-zayed",
     "lat": 30.0318,
     "lng": 30.836,
     "developer": "Mountain View",
@@ -4337,7 +4337,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-jirian/7.jpg",
       "/projects/mountain-view-jirian/9.jpg"
     ],
-    "blurb": "Jirian is Mountain View's newest luxury mixed-use development in Sheikh Zayed Extension, centered around a flowing waterway and modern urban living, combining waterfront residences, green spaces, business districts, and entertainment facilities.",
+    "blurb": "Jirian is Mountain View's newest luxury mixed-use development in New Sheikh Zayed, West Cairo, centered around a flowing waterway and modern urban living, combining waterfront residences, green spaces, business districts, and entertainment facilities.",
     "paymentPlan": "5% down, installments up to 8 years",
     "areaSize": "250 feddan",
     "unitSizes": "60–320 m²",
@@ -4347,7 +4347,7 @@ export const compoundsGenerated: Compound[] = [
       "Jirian Corridor prime location",
       "Near Sphinx Airport & Al Dabaa Axis"
     ],
-    "city": "Sheikh Zayed Extension, West Cairo, Egypt",
+    "city": "New Sheikh Zayed, West Cairo, Egypt",
     "masterPlanUrl": "/masterplans/mountain-view-jirian.svg"
   },
   {
@@ -12917,9 +12917,9 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "dejoya-residence",
     "name": "Dejoya Residence",
-    "destination": "sheikh-zayed",
-    "lat": 30.046,
-    "lng": 30.972,
+    "destination": "new-zayed",
+    "lat": 30.0895,
+    "lng": 30.8745,
     "developer": "Taj Misr Developments",
     "developerSlug": "taj-misr-developments",
     "priceFrom": 5.5,
@@ -16716,9 +16716,9 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "jirian-nations-of-sky",
     "name": "Jiryan",
-    "destination": "new-cairo",
-    "lat": 30.035,
-    "lng": 31.62,
+    "destination": "new-zayed",
+    "lat": 30.095,
+    "lng": 30.875,
     "developer": "Nations of Sky",
     "developerSlug": "nations-of-sky",
     "priceFrom": 22,
@@ -16744,13 +16744,14 @@ export const compoundsGenerated: Compound[] = [
       "/projects/jirian-nations-of-sky/4.jpg",
       "/projects/jirian-nations-of-sky/5.jpg"
     ],
-    "blurb": "Jiryan (JIRIAN) by Nations of Sky in New Cairo is an ultra-exclusive luxury villa community featuring Townhouses, Standalone Villas, Grand Villas, and 1000m² Mansions.",
+    "blurb": "Jiryan (JIRIAN) by Nations of Sky in New Sheikh Zayed, West Cairo is an ultra-exclusive luxury villa community featuring Townhouses, Standalone Villas, Grand Villas, and 1000m² Mansions.",
     "highlights": [
       "100% Villas & Mansions",
       "Fully Finished Delivery",
       "5% Down Payment over 10 Years"
     ],
     "paymentPlan": "5% DP + 5% in 6m + 5% on delivery over 10 yrs",
+    "city": "New Sheikh Zayed, West Cairo, Egypt",
     "masterPlanUrl": "/masterplans/jirian-nations-of-sky.svg"
   },
   {
@@ -17242,5 +17243,152 @@ export const compoundsGenerated: Compound[] = [
     ],
     "paymentPlan": "5%+5% DP over 10 yrs",
     "masterPlanUrl": "/masterplans/hyde-park-central.svg"
+  },
+  {
+    "slug": "eastville",
+    "name": "Eastville",
+    "destination": "new-cairo",
+    "lat": 30.015,
+    "lng": 31.49,
+    "developer": "Ajna Developments",
+    "developerSlug": "ajna-developments",
+    "priceFrom": 12.5,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House"
+    ],
+    "amenities": [
+      "Central Clubhouse",
+      "Commercial & Retail Strip",
+      "Artificial Lakes",
+      "Restaurants & Cafes",
+      "Modern Gym & Spa",
+      "Sports Facilities",
+      "Kids Play Area",
+      "Pedestrian Pathways",
+      "24/7 Security"
+    ],
+    "hero": "/projects/eastville/1.jpg",
+    "gallery": [
+      "/projects/eastville/1.jpg",
+      "/projects/eastville/2.jpg",
+      "/projects/eastville/3.jpg"
+    ],
+    "blurb": "Eastville is a modern, 20-acre gated residential compound developed by Ajna Developments in the View Zone / Golden Square area of New Cairo. Featuring low-density living, lush green spaces, artificial lakes, and curated family townhouses and twin houses near AUC and Al Ahly Club.",
+    "paymentPlan": "5% DP + 5% after 3m · 9 years equal installments (Offer: 10% DP · 5 years · 25% discount)",
+    "areaSize": "20 feddan",
+    "unitSizes": "160–290 m²",
+    "type": "Residential",
+    "highlights": [
+      "Prime View Zone / Golden Square location",
+      "Near AUC & Al Ahly Club",
+      "Low-density 20-acre masterplan",
+      "Townhouses & Twin Houses from 12.5M EGP",
+      "Limited time 25% discount offer"
+    ],
+    "city": "New Cairo, Cairo Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/eastville.svg"
+  },
+  {
+    "slug": "the-marq-gardens",
+    "name": "The Marq Gardens",
+    "destination": "new-cairo",
+    "lat": 30.045,
+    "lng": 31.52,
+    "developer": "The MarQ Communities",
+    "developerSlug": "the-marq-communities",
+    "priceFrom": 33.38,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Townhouse",
+      "Twin House",
+      "Villa",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "5 Thematic Gardens",
+      "Walking & Cycling Tracks",
+      "Yoga & Meditation Spaces",
+      "Sports Courts",
+      "Swimming Pools",
+      "Retail Strip",
+      "On-demand Hotel Services",
+      "24/7 Security"
+    ],
+    "hero": "/projects/the-marq-gardens/1.jpg",
+    "gallery": [
+      "/projects/the-marq-gardens/1.jpg",
+      "/projects/the-marq-gardens/2.jpg",
+      "/projects/the-marq-gardens/3.jpg",
+      "/projects/the-marq-gardens/4.jpg",
+      "/projects/the-marq-gardens/5.jpg"
+    ],
+    "blurb": "The Marq Gardens by The MarQ Communities is an exclusive 26-acre luxury villa community in New Cairo centered around 5 thematic gardens (Moon, Butterfly, Aroma, Water, and Tranquil Gardens), offering low-density art-infused Town, Twin, and Signature Villas.",
+    "paymentPlan": "10% down payment over 7 years · Delivery in 1 year",
+    "areaSize": "26 feddan",
+    "unitSizes": "265–295 m²",
+    "type": "Residential",
+    "highlights": [
+      "26-acre low-density villa compound",
+      "5 thematic gardens concept",
+      "Town & Twin Villas from 33.38M EGP",
+      "10% DP over 7 years · 1-year delivery"
+    ],
+    "city": "New Cairo, Cairo Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/the-marq-gardens.svg"
+  },
+  {
+    "slug": "the-water-marq",
+    "name": "The Water MarQ",
+    "destination": "new-cairo",
+    "lat": 30.025,
+    "lng": 31.46,
+    "developer": "The MarQ Communities",
+    "developerSlug": "the-marq-communities",
+    "priceFrom": 60.72,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Villa",
+      "Water Villa",
+      "Standalone Villa"
+    ],
+    "amenities": [
+      "Crystal Lagoons",
+      "Social Clubhouse",
+      "Gym & Spa",
+      "Sauna",
+      "Fine Dining Restaurants & Cafes",
+      "Walking & Cycling Tracks",
+      "On-Demand Hospitality Services",
+      "24/7 Advanced Security"
+    ],
+    "hero": "/projects/the-water-marq/1.jpg",
+    "gallery": [
+      "/projects/the-water-marq/1.jpg",
+      "/projects/the-water-marq/2.jpg",
+      "/projects/the-water-marq/3.jpg",
+      "/projects/the-water-marq/4.jpg"
+    ],
+    "blurb": "The Water MarQ is an ultra-exclusive 20-acre waterfront villa community developed by The MarQ Communities in New Cairo's Fifth Settlement. Comprising ~100 luxury water villas centered around crystal lagoons near AUC and Point 90 Mall.",
+    "paymentPlan": "10% down payment over 7 years · Delivery in 1 year",
+    "areaSize": "20 feddan",
+    "unitSizes": "325–665 m²",
+    "type": "Residential",
+    "highlights": [
+      "Ultra-luxury waterfront lagoon villas",
+      "Only ~100 exclusive residences",
+      "Near AUC, Teseen St & Point 90 Mall",
+      "10% DP over 7 years · 1-year delivery"
+    ],
+    "city": "New Cairo, Cairo Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/the-water-marq.svg"
   }
 ];

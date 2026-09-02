@@ -57,6 +57,24 @@ export const projectLocations: Record<string, ProjectLocation> = {
     mapsUrl:
       "https://www.google.com/maps/place/31%C2%B007'48.0%22N+27%C2%B051'00.0%22E/@31.13,27.85,15z",
   },
+  "eastville": {
+    name: "Eastville",
+    destination: "new-cairo",
+    location: "View Zone, Golden Square, New Cairo, Cairo, Egypt",
+    mapsUrl: "https://maps.google.com/?q=Eastville+Ajna+Developments+New+Cairo",
+  },
+  "the-marq-gardens": {
+    name: "The Marq Gardens",
+    destination: "new-cairo",
+    location: "New Cairo, Cairo Governorate, Egypt",
+    mapsUrl: "https://maps.google.com/?q=The+Marq+Gardens+New+Cairo",
+  },
+  "the-water-marq": {
+    name: "The Water MarQ",
+    destination: "new-cairo",
+    location: "Fifth Settlement, New Cairo, Cairo, Egypt",
+    mapsUrl: "https://maps.google.com/?q=The+Water+MarQ+New+Cairo",
+  },
   "el-patio-vera": {
     name: "El Patio Vera",
     destination: "sheikh-zayed",
@@ -75,6 +93,12 @@ export const projectLocations: Record<string, ProjectLocation> = {
     destination: "new-zayed",
     location: "New Zayed City, Giza, Egypt",
     mapsUrl: "https://www.google.com/maps/place/Dejoya+Residences/@30.0895188,30.8744512,17z",
+  },
+  "jirian-nations-of-sky": {
+    name: "Jiryan Nations of Sky",
+    destination: "new-zayed",
+    location: "New Zayed City, Giza, Egypt",
+    mapsUrl: "https://maps.google.com/?q=Nations+of+Sky+Jiryan+New+Zayed",
   },
   "v-levels": {
     name: "V-Levels",
@@ -735,8 +759,8 @@ export const projectLocations: Record<string, ProjectLocation> = {
   },
   "mountain-view-jirian": {
     name: "Mountain View Jirian",
-    destination: "sheikh-zayed",
-    location: "Sheikh Zayed, Giza Governorate, Egypt",
+    destination: "new-zayed",
+    location: "New Sheikh Zayed, Giza Governorate, Egypt",
     mapsUrl:
       "https://www.google.com/maps/place/%D9%85%D8%A7%D9%88%D9%8BD9%86+%D9%81%D9%8A%D9%88+%D8%AC%D8%B1%D9%8A%D8%A7%D9%86+-+MOUNTAIN+VIEW+JIRIAN%E2%80%AD/@30.0318406,30.8360123,17z",
   },

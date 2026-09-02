@@ -37,6 +37,9 @@ export const brochureMap: Record<string, string> = {
 
   // ─── New Cairo & East Cairo ──────────────────────────────────────────
   "at-east": "at-east.pdf",
+  eastville: "eastville.pdf",
+  "the-marq-gardens": "the-marq-gardens.pdf",
+  "the-water-marq": "the-water-marq.pdf",
   "grova-east-hills": "Grova Easthills.pdf",
   "new-capital-gardens": "New Capital Gardens brochure.pdf",
   "mountain-view-kingsway": "mountain-view-kingsway.pdf",

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "the-marq-gardens-1",
+    "unitNo": "MG-TV-265",
+    "beds": 3,
+    "finishing": "Core and Shell",
+    "areaSqm": 265,
+    "view": "Thematic Garden",
+    "priceEGP": 33380000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Moon Garden",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-marq-gardens-2",
+    "unitNo": "MG-TW-270A",
+    "beds": 4,
+    "finishing": "Core and Shell",
+    "areaSqm": 270,
+    "view": "Water Garden",
+    "priceEGP": 37540000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Water Garden",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-marq-gardens-3",
+    "unitNo": "MG-TW-270B",
+    "beds": 4,
+    "finishing": "Core and Shell",
+    "areaSqm": 270,
+    "view": "Aroma Garden",
+    "priceEGP": 38100000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Aroma Garden",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-marq-gardens-4",
+    "unitNo": "MG-SV-265",
+    "beds": 4,
+    "finishing": "Core and Shell",
+    "areaSqm": 265,
+    "view": "Butterfly Garden",
+    "priceEGP": 40720000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Butterfly Garden",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-marq-gardens-5",
+    "unitNo": "MG-SV-295",
+    "beds": 5,
+    "finishing": "Core and Shell",
+    "areaSqm": 295,
+    "view": "Tranquil Garden",
+    "priceEGP": 50820000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Tranquil Garden",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years"
+  }
+]
