@@ -1,0 +1,17 @@
+[
+  {
+    "id": "hacienda-heneish-1",
+    "unitNo": "HH-MAZ-614D",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 67.5,
+    "view": "Landscape",
+    "priceEGP": 15630000,
+    "status": "Available",
+    "slug": "hacienda-heneish",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 years",
+    "type": "Chalet"
+  }
+]

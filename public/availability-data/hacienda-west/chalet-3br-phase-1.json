@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hacienda-west-11",
+    "unitNo": "WST-CAB-B057",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 127,
+    "view": "Landscape",
+    "priceEGP": 87230450,
+    "status": "Available",
+    "slug": "hacienda-west",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 years",
+    "type": "Chalet"
+  },
+  {
+    "id": "hacienda-west-12",
+    "unitNo": "WST-CAB-B058",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 127,
+    "view": "Landscape",
+    "priceEGP": 87230450,
+    "status": "Available",
+    "slug": "hacienda-west",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 years",
+    "type": "Chalet"
+  }
+]

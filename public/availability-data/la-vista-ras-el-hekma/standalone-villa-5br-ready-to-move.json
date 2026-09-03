@@ -1,0 +1,18 @@
+[
+  {
+    "id": "la-vista-ras-el-hekma-4",
+    "unitNo": "LVR-SA-320",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 320,
+    "view": "Landscape",
+    "priceEGP": 100000000,
+    "status": "Available",
+    "slug": "la-vista-ras-el-hekma",
+    "cluster": "Ready to Move",
+    "area_note": "Plot 100 sqm",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 4 yrs",
+    "type": "Standalone Villa"
+  }
+]

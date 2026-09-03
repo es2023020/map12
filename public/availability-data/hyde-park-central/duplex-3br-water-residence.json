@@ -1,0 +1,42 @@
+[
+  {
+    "id": "hyde-park-central-43",
+    "unitNo": "HPC/WR-8B/G02",
+    "unitName": "HPC/WR-8B/G02",
+    "bldg": "8",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 185.0,
+    "gardenAreaSqm": 54.0,
+    "roofAreaSqm": 0.0,
+    "view": "Central Park / Water View",
+    "priceEGP": 19190000.0,
+    "status": "Available",
+    "slug": "hyde-park-central",
+    "cluster": "Water Residence",
+    "delivery_note": "2026 / 2027",
+    "payment_plan": "5% DP over 8 to 10 Years",
+    "type": "Duplex",
+    "floor": "0"
+  },
+  {
+    "id": "hyde-park-central-62",
+    "unitNo": "HPC/WR-5C/803",
+    "unitName": "HPC/WR-5C/803",
+    "bldg": "5",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 196.0,
+    "gardenAreaSqm": 0.0,
+    "roofAreaSqm": 0.0,
+    "view": "Central Park / Water View",
+    "priceEGP": 16480000.0,
+    "status": "Available",
+    "slug": "hyde-park-central",
+    "cluster": "Water Residence",
+    "delivery_note": "2026 / 2027",
+    "payment_plan": "5% DP over 8 to 10 Years",
+    "type": "Duplex",
+    "floor": "8"
+  }
+]

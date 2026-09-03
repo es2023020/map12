@@ -1,0 +1,62 @@
+[
+  {
+    "id": "belle-vie-new-zayed-21",
+    "unitNo": "Belle Vie Lake Villas P3-V-50",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 384.2,
+    "view": "Landscape & Lakes",
+    "priceEGP": 47705888,
+    "status": "Available",
+    "slug": "belle-vie-new-zayed",
+    "cluster": "Lake Villas P3",
+    "delivery_note": "31/05/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "belle-vie-new-zayed-22",
+    "unitNo": "Belle Vie Lake Villas P3-V-51",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 384.2,
+    "view": "Landscape & Lakes",
+    "priceEGP": 47705888,
+    "status": "Available",
+    "slug": "belle-vie-new-zayed",
+    "cluster": "Lake Villas P3",
+    "delivery_note": "31/05/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "belle-vie-new-zayed-23",
+    "unitNo": "Belle Vie Lake Villas P3-V-53",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 384.2,
+    "view": "Landscape & Lakes",
+    "priceEGP": 47618888,
+    "status": "Available",
+    "slug": "belle-vie-new-zayed",
+    "cluster": "Lake Villas P3",
+    "delivery_note": "31/05/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "belle-vie-new-zayed-24",
+    "unitNo": "Belle Vie Lake Villas P3-V-52",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 384.2,
+    "view": "Landscape & Lakes",
+    "priceEGP": 47705888,
+    "status": "Available",
+    "slug": "belle-vie-new-zayed",
+    "cluster": "Lake Villas P3",
+    "delivery_note": "31/05/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  }
+]

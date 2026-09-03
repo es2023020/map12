@@ -1,0 +1,17 @@
+[
+  {
+    "id": "stone-residence-2",
+    "unitNo": "SR-3BR-175",
+    "beds": 3,
+    "finishing": "Semi-finished",
+    "areaSqm": 175,
+    "view": "Landscape",
+    "priceEGP": 12312000,
+    "status": "Available",
+    "slug": "stone-residence",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 5 yrs",
+    "type": "Apartment"
+  }
+]

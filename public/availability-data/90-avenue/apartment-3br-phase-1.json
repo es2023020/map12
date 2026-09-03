@@ -1,0 +1,17 @@
+[
+  {
+    "id": "90-avenue-2",
+    "unitNo": "90A-3BR",
+    "beds": 3,
+    "finishing": "Full finishing",
+    "areaSqm": 160,
+    "view": "Landscape",
+    "priceEGP": 19500000,
+    "status": "Available",
+    "slug": "90-avenue",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "50% / cash",
+    "type": "Apartment"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "id": "at-east-96",
+    "unitNo": "0 J-C17-J-C17-33",
+    "unitName": "J-C17-33",
+    "bldg": "J-C17",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 160.0,
+    "gardenAreaSqm": 55.0,
+    "view": "Landscape & Greenery",
+    "priceEGP": 12815000.0,
+    "status": "Available",
+    "slug": "at-east",
+    "cluster": "AT-EAST",
+    "delivery_note": "Off-Plan (3-4 Years)",
+    "payment_plan": "10% DP over 7 to 8 Years",
+    "type": "Duplex",
+    "floor": "3rd + 4th + Roof"
+  }
+]

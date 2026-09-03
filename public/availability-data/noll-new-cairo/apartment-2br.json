@@ -1,0 +1,32 @@
+[
+  {
+    "id": "noll-2b-109",
+    "unitNo": "NOLL-2B-109",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 109,
+    "view": "Landscape",
+    "priceEGP": 7117903,
+    "status": "Available",
+    "slug": "noll-new-cairo",
+    "cluster": "Main Phase",
+    "delivery_note": "2028",
+    "payment_plan": "0% to 10% over 6 to 12 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "noll-2b-116",
+    "unitNo": "NOLL-2B-116",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 116,
+    "view": "Landscape & Water Features",
+    "priceEGP": 7065344,
+    "status": "Available",
+    "slug": "noll-new-cairo",
+    "cluster": "Main Phase",
+    "delivery_note": "2028",
+    "payment_plan": "0% to 10% over 6 to 12 yrs",
+    "type": "Apartment"
+  }
+]

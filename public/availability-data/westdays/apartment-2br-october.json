@@ -1,0 +1,18 @@
+[
+  {
+    "id": "westdays-2",
+    "unitNo": "WD-2BR",
+    "beds": 2,
+    "finishing": "Semi-finished",
+    "areaSqm": 100,
+    "view": "Landscape",
+    "priceEGP": 5793562,
+    "status": "Available",
+    "slug": "westdays",
+    "cluster": "October",
+    "area_note": "100 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years; Maintenance 8%",
+    "type": "Apartment"
+  }
+]

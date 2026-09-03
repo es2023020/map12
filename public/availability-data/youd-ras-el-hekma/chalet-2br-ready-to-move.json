@@ -1,0 +1,17 @@
+[
+  {
+    "id": "youd-ras-el-hekma-2",
+    "unitNo": "YOUD-RTM-2B-10",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 85,
+    "view": "Landscape",
+    "priceEGP": 10000000,
+    "status": "Available",
+    "slug": "youd-ras-el-hekma",
+    "cluster": "Ready to Move",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10% DP over 2-8 yrs",
+    "type": "Chalet"
+  }
+]

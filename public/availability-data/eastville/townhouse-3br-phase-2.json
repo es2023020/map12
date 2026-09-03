@@ -1,0 +1,17 @@
+[
+  {
+    "id": "eastville-2",
+    "unitNo": "EV-TH-190",
+    "beds": 3,
+    "finishing": "Core and Shell",
+    "areaSqm": 190,
+    "view": "Landscape and Lakes",
+    "priceEGP": 15900000,
+    "status": "Available",
+    "slug": "eastville",
+    "cluster": "Phase 2",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% after 3m over 9 yrs",
+    "type": "Townhouse"
+  }
+]

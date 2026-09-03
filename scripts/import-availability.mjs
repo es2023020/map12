@@ -11,6 +11,26 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const OUT = path.join(ROOT, "src", "data", "availability.generated.ts");
 
+function normalizeFinishing(raw) {
+  if (!raw) return "Core & Shell";
+  const val = String(raw).trim();
+  const lower = val.toLowerCase();
+  if (lower.includes("unfinished") || lower.includes("red brick") || lower.includes("core") || lower.includes("shell")) {
+    return "Core & Shell";
+  }
+  if (lower.includes("semi")) return "Semi Finished";
+  if (lower.includes("fully finished & furnished") || lower === "furnished/finished") return "Fully Finished & Furnished";
+  if (lower.includes("fully finished") || lower === "full finishing") {
+    if (lower.includes("kitchen")) return "Fully Finished with A/C & Kitchen";
+    if (lower.includes("ac") || lower.includes("a/c")) return "Fully Finished + ACs";
+    return "Fully Finished";
+  }
+  if (lower === "finished") return "Finished";
+  if (lower.includes("flexi")) return "Flexi Finished";
+  if (lower === "furnished") return "Furnished";
+  return val;
+}
+
 function findHeaderRow(rows) {
   const keywords = [
     "type",
@@ -242,9 +262,10 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
     const unitNoKey = findHeaderKey(["unitno", "unitnumber", "unit", "unit_id", "no", "unitcode", "#"]);
     const viewKey = findHeaderKey(["view", "aspect", "unitview"]);
     const statusKey = findHeaderKey(["status", "availability", "unitstatus"]);
+    const finishingKey = findHeaderKey(["finishing", "finish", "finishingtype", "finishingstatus", "specs", "state"]);
 
     const knownKeys = new Set(
-      [typeKey, priceKey, bedsKey, areaKey, unitNoKey, viewKey, statusKey].filter(Boolean),
+      [typeKey, priceKey, bedsKey, areaKey, unitNoKey, viewKey, statusKey, finishingKey].filter(Boolean),
     );
     const dataMatrix = rawMatrix.slice(headerIdx + 1);
 
@@ -295,6 +316,9 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
       const status =
         statusKey && rowObj[statusKey] ? String(rowObj[statusKey]).trim() : "Available";
 
+      const rawFinishing = finishingKey ? rowObj[finishingKey] : (rowObj["finishing"] || rowObj["finish"]);
+      const finishingVal = normalizeFinishing(rawFinishing);
+
       const extraFields = {};
       Object.keys(rowObj).forEach((k) => {
         if (!knownKeys.has(k) && rowObj[k] !== undefined && rowObj[k] !== "") {
@@ -312,6 +336,7 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
           maxSqm: areaRange.max || 120,
           minPriceM: priceRange.min / 1000000,
           maxPriceM: priceRange.max / 1000000,
+          finishing: finishingVal,
           units: [],
         };
       }
@@ -329,7 +354,7 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
         id: `${defaultSlug}-${rIdx + 1}`,
         unitNo,
         beds,
-        finishing: "Finished",
+        finishing: finishingVal,
         areaSqm: areaRange.min || 120,
         view,
         priceEGP: priceRange.min,

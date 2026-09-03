@@ -1,0 +1,18 @@
+[
+  {
+    "id": "zed-west-6",
+    "unitNo": "ZW-E3-2BR",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 125,
+    "view": "Landscape",
+    "priceEGP": 15000000,
+    "status": "Available",
+    "slug": "zed-west",
+    "cluster": "Phase 3 (E3)",
+    "area_note": "125 SQM",
+    "delivery_note": "2027",
+    "payment_plan": "5% + 5%, installments over 10 years",
+    "type": "Apartment"
+  }
+]

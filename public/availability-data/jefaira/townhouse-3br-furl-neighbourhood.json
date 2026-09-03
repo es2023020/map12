@@ -1,0 +1,17 @@
+[
+  {
+    "id": "jefaira-1",
+    "unitNo": "JEF-FURL-ATT-139",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 139,
+    "view": "Sea & Landscape",
+    "priceEGP": 14380000,
+    "status": "Available",
+    "slug": "jefaira",
+    "cluster": "Furl Neighbourhood",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 7 Yrs",
+    "type": "Townhouse"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "aeon-1",
+    "unitNo": "TA-1-1",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 246,
+    "view": "Landscape & Amenities",
+    "priceEGP": 36000000,
+    "status": "Available",
+    "slug": "aeon",
+    "cluster": "Towers",
+    "delivery_note": "4 Years",
+    "payment_plan": "10% DP over 6 Yrs",
+    "type": "Apartment"
+  }
+]

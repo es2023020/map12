@@ -1,0 +1,17 @@
+[
+  {
+    "id": "waterway-1-1",
+    "unitNo": "W1-RTM-23.3M",
+    "beds": 3,
+    "finishing": "Fully Finished & Furnished",
+    "areaSqm": 165,
+    "view": "Panoramic Views",
+    "priceEGP": 23300000,
+    "status": "Available",
+    "slug": "waterway-1",
+    "cluster": "Phase 1 RTM",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 4 Yrs",
+    "type": "Apartment"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "solare-8",
+    "unitNo": "SOL-MAISON-2B-129",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 129,
+    "view": "Landscape",
+    "priceEGP": 14800000,
+    "status": "Available",
+    "slug": "solare",
+    "cluster": "Maison Solare",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+10% over 9 yrs",
+    "type": "Chalet"
+  }
+]

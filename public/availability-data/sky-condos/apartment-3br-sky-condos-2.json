@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sky-condos-5",
+    "unitNo": "S1-1324-03",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 318,
+    "view": "Landscape & City View",
+    "priceEGP": 54607000,
+    "status": "Available",
+    "slug": "sky-condos",
+    "cluster": "SKY CONDOS 2",
+    "area_note": "Floor: G+1 | Garden: 78 sqm",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down \u00b7 7\u20138 years equal installments",
+    "type": "Apartment"
+  },
+  {
+    "id": "sky-condos-6",
+    "unitNo": "S2-1320-12",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 181,
+    "view": "Landscape & City View",
+    "priceEGP": 31926000,
+    "status": "Available",
+    "slug": "sky-condos",
+    "cluster": "SKY CONDOS 2",
+    "area_note": "Floor: 1",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down \u00b7 7\u20138 years equal installments",
+    "type": "Apartment"
+  },
+  {
+    "id": "sky-condos-7",
+    "unitNo": "U1-1310-12",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 181,
+    "view": "Landscape & City View",
+    "priceEGP": 33950000,
+    "status": "Available",
+    "slug": "sky-condos",
+    "cluster": "SKY CONDOS 2",
+    "area_note": "Floor: 1",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down \u00b7 7\u20138 years equal installments",
+    "type": "Apartment"
+  }
+]

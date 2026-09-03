@@ -1,0 +1,17 @@
+[
+  {
+    "id": "haptown-2",
+    "unitNo": "HT-3BR",
+    "beds": 3,
+    "finishing": "Red brick",
+    "areaSqm": 165,
+    "view": "Landscape",
+    "priceEGP": 16000000,
+    "status": "Available",
+    "slug": "haptown",
+    "cluster": "Phase 1",
+    "delivery_note": "6 months",
+    "payment_plan": "15% down / 8 yrs",
+    "type": "Apartment"
+  }
+]

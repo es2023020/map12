@@ -726,19 +726,22 @@ function StripStat({
 }
 
 function FinishingBadge({ label }: { label: string }) {
-  const isFullyFinished =
-    label.toLowerCase().includes("finished") &&
-    !label.toLowerCase().includes("semi") &&
-    !label.toLowerCase().includes("core");
-  const isSemi = label.toLowerCase().includes("semi");
+  if (!label) return <span className="text-border text-xs">—</span>;
+  const lower = label.toLowerCase();
+  const isCore = lower.includes("core") || lower.includes("shell") || lower.includes("unfinished") || lower.includes("red brick");
+  const isSemi = lower.includes("semi");
+  const isFullyFinished = !isCore && !isSemi && (lower.includes("finished") || lower.includes("furnished"));
+
   return (
     <span
       className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
-        isFullyFinished
-          ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-400"
+        isCore
+          ? "bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20"
           : isSemi
-            ? "bg-blue-100 text-blue-700 dark:bg-blue-950/30 dark:text-blue-400"
-            : "bg-secondary text-muted-foreground"
+            ? "bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-500/20"
+            : isFullyFinished
+              ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20"
+              : "bg-secondary text-muted-foreground"
       }`}
     >
       {label}

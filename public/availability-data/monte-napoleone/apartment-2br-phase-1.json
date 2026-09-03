@@ -1,0 +1,17 @@
+[
+  {
+    "id": "monte-napoleone-1",
+    "unitNo": "MN-2BR",
+    "beds": 2,
+    "finishing": "Fully finished",
+    "areaSqm": 110,
+    "view": "Landscape",
+    "priceEGP": 7500000,
+    "status": "Available",
+    "slug": "monte-napoleone",
+    "cluster": "Phase 1",
+    "delivery_note": "Immediate \u2013 1 year",
+    "payment_plan": "10% down / 8 yrs",
+    "type": "Apartment"
+  }
+]

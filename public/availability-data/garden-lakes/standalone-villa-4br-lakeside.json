@@ -1,0 +1,42 @@
+[
+  {
+    "id": "garden-lakes-431",
+    "unitNo": "GL1/SA/24",
+    "unitName": "GL1/SA/24",
+    "bldg": "",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 242.0,
+    "gardenAreaSqm": 0.0,
+    "roofAreaSqm": 0.0,
+    "view": "Central Park / Water View",
+    "priceEGP": 37680000.0,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "Lakeside",
+    "delivery_note": "2026 / 2027",
+    "payment_plan": "5% DP over 8 to 10 Years",
+    "type": "Standalone Villa",
+    "floor": ""
+  },
+  {
+    "id": "garden-lakes-432",
+    "unitNo": "GL1/SA/30",
+    "unitName": "GL1/SA/30",
+    "bldg": "",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 242.0,
+    "gardenAreaSqm": 0.0,
+    "roofAreaSqm": 0.0,
+    "view": "Central Park / Water View",
+    "priceEGP": 39530000.0,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "Lakeside",
+    "delivery_note": "2026 / 2027",
+    "payment_plan": "5% DP over 8 to 10 Years",
+    "type": "Standalone Villa",
+    "floor": ""
+  }
+]

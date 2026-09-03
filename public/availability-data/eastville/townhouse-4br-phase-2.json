@@ -1,0 +1,17 @@
+[
+  {
+    "id": "eastville-3",
+    "unitNo": "EV-TH-230",
+    "beds": 4,
+    "finishing": "Core and Shell",
+    "areaSqm": 230,
+    "view": "Central Park",
+    "priceEGP": 19800000,
+    "status": "Available",
+    "slug": "eastville",
+    "cluster": "Phase 2",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% after 3m over 9 yrs",
+    "type": "Townhouse"
+  }
+]

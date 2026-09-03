@@ -1,0 +1,17 @@
+[
+  {
+    "id": "fifth-square-1",
+    "unitNo": "FS-2BR",
+    "beds": 2,
+    "finishing": "Red brick",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 15000000,
+    "status": "Available",
+    "slug": "fifth-square",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "25% / 6 yrs",
+    "type": "Apartment"
+  }
+]

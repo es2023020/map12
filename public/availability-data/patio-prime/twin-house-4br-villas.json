@@ -1,0 +1,18 @@
+[
+  {
+    "id": "patio-prime-3",
+    "unitNo": "EPP-TW",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 255,
+    "view": "Landscape",
+    "priceEGP": 34000000,
+    "status": "Available",
+    "slug": "patio-prime",
+    "cluster": "Villas",
+    "area_note": "Twin House 222m-288m (Land 275m-344m)",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 4 years",
+    "type": "Twin House"
+  }
+]

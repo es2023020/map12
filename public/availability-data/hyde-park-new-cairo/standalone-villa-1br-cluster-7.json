@@ -1,0 +1,22 @@
+[
+  {
+    "id": "hyde-park-new-cairo-266",
+    "unitNo": "HPDC7/T2/26",
+    "unitName": "HPDC7/T2/26",
+    "bldg": "26",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 370.0,
+    "gardenAreaSqm": 0.0,
+    "roofAreaSqm": 0.0,
+    "view": "Central Park / Water View",
+    "priceEGP": 80000000.0,
+    "status": "Available",
+    "slug": "hyde-park-new-cairo",
+    "cluster": "Cluster 7",
+    "delivery_note": "2026 / 2027",
+    "payment_plan": "5% DP over 8 to 10 Years",
+    "type": "Standalone Villa",
+    "floor": "4"
+  }
+]

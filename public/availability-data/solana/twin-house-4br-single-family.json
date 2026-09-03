@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-7",
+    "unitNo": "SW-SF-TW",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 221,
+    "view": "Landscape",
+    "priceEGP": 44000000,
+    "status": "Available",
+    "slug": "solana",
+    "cluster": "Single Family",
+    "area_note": "Land 334 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "0% DP, installments over 10 years",
+    "type": "Twin House"
+  }
+]

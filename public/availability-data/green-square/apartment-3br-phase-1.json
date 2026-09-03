@@ -1,0 +1,17 @@
+[
+  {
+    "id": "green-square-1",
+    "unitNo": "GS-3BR",
+    "beds": 3,
+    "finishing": "Semi-finished",
+    "areaSqm": 165,
+    "view": "Landscape",
+    "priceEGP": 21000000,
+    "status": "Available",
+    "slug": "green-square",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10% down / 8 yrs",
+    "type": "Apartment"
+  }
+]

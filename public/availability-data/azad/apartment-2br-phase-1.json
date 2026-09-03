@@ -1,0 +1,17 @@
+[
+  {
+    "id": "azad-1",
+    "unitNo": "AZD-2BR",
+    "beds": 2,
+    "finishing": "Semi-finished",
+    "areaSqm": 130,
+    "view": "Landscape",
+    "priceEGP": 18350000,
+    "status": "Available",
+    "slug": "azad",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "5% / 10 yrs",
+    "type": "Apartment"
+  }
+]

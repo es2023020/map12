@@ -1,0 +1,62 @@
+[
+  {
+    "id": "w55-17",
+    "unitNo": "W55-D-108",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 208,
+    "view": "Panoramic Views",
+    "priceEGP": 40703000,
+    "status": "Available",
+    "slug": "w55",
+    "cluster": "Building D (Floor 1)",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "w55-41",
+    "unitNo": "W55-D-107",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 255,
+    "view": "Panoramic Views",
+    "priceEGP": 49901000,
+    "status": "Available",
+    "slug": "w55",
+    "cluster": "Building D (Floor 1)",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "w55-50",
+    "unitNo": "W55-D-111",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 262,
+    "view": "Panoramic Views",
+    "priceEGP": 53301000,
+    "status": "Available",
+    "slug": "w55",
+    "cluster": "Building D (Floor 1)",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "w55-55",
+    "unitNo": "W55-D-112",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 305,
+    "view": "Panoramic Views",
+    "priceEGP": 63231000,
+    "status": "Available",
+    "slug": "w55",
+    "cluster": "Building D (Floor 1)",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 Yrs",
+    "type": "Apartment"
+  }
+]

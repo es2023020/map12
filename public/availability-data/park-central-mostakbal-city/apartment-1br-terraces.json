@@ -1,0 +1,33 @@
+[
+  {
+    "id": "park-central-mostakbal-city-1",
+    "unitNo": "PC-TER-1B-81",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 81,
+    "view": "Landscape",
+    "priceEGP": 8300000,
+    "status": "Available",
+    "slug": "park-central-mostakbal-city",
+    "cluster": "Terraces",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "park-central-mostakbal-city-2",
+    "unitNo": "PC-TER-1B-GR-102",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 102,
+    "view": "Landscape",
+    "priceEGP": 11500000,
+    "status": "Available",
+    "slug": "park-central-mostakbal-city",
+    "cluster": "Terraces",
+    "area_note": "Garden 74 sqm",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Apartment"
+  }
+]

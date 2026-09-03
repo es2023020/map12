@@ -1,0 +1,34 @@
+[
+  {
+    "id": "zomra-east-5",
+    "unitNo": "ZE-SKY-GARDEN-MIN",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 200,
+    "view": "Panoramic View",
+    "priceEGP": 19100000,
+    "status": "Available",
+    "slug": "zomra-east",
+    "cluster": "Phase 1",
+    "area_note": "Garden 40-110 sqm",
+    "delivery_note": "3 years",
+    "payment_plan": "5%+5%+5% over 8-10 yrs",
+    "type": "Duplex"
+  },
+  {
+    "id": "zomra-east-6",
+    "unitNo": "ZE-SKY-GARDEN-MAX",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 220,
+    "view": "Panoramic View",
+    "priceEGP": 26500000,
+    "status": "Available",
+    "slug": "zomra-east",
+    "cluster": "Phase 1",
+    "area_note": "Garden 40-110 sqm",
+    "delivery_note": "3 years",
+    "payment_plan": "5%+5%+5% over 8-10 yrs",
+    "type": "Duplex"
+  }
+]

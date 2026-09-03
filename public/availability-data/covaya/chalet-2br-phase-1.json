@@ -1,0 +1,32 @@
+[
+  {
+    "id": "covaya-1",
+    "unitNo": "COV-STU-56",
+    "beds": 2,
+    "finishing": "Fully finished with A/C & Kitchen",
+    "areaSqm": 56,
+    "view": "Landscape",
+    "priceEGP": 5500000,
+    "status": "Available",
+    "slug": "covaya",
+    "cluster": "Phase 1",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Chalet"
+  },
+  {
+    "id": "covaya-2",
+    "unitNo": "COV-2BR-126",
+    "beds": 2,
+    "finishing": "Fully finished with A/C & Kitchen",
+    "areaSqm": 126,
+    "view": "Landscape",
+    "priceEGP": 13340000,
+    "status": "Available",
+    "slug": "covaya",
+    "cluster": "Phase 1",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Chalet"
+  }
+]

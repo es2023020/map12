@@ -1,0 +1,34 @@
+[
+  {
+    "id": "azha-north-coast-8",
+    "unitNo": "SV-3B-TYP",
+    "beds": 3,
+    "finishing": "Fully Finished with A/C & Kitchen",
+    "areaSqm": 145,
+    "view": "Sea & Lagoon View",
+    "priceEGP": 24500000,
+    "status": "Available",
+    "slug": "azha-north-coast",
+    "cluster": "SEA VEIL",
+    "area_note": "Typical Floors, 70% Sea View",
+    "delivery_note": "4 Years",
+    "payment_plan": "0% DP over 8 yrs",
+    "type": "Chalet"
+  },
+  {
+    "id": "azha-north-coast-9",
+    "unitNo": "SV-SR-CHALET-1ST",
+    "beds": 3,
+    "finishing": "Fully Finished with A/C & Kitchen",
+    "areaSqm": 165,
+    "view": "Sea & Lagoon View",
+    "priceEGP": 31870000,
+    "status": "Available",
+    "slug": "azha-north-coast",
+    "cluster": "SEA VEIL",
+    "area_note": "Senior Chalet First Floor",
+    "delivery_note": "4 Years",
+    "payment_plan": "0% DP over 8 yrs",
+    "type": "Chalet"
+  }
+]

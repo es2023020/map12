@@ -1,0 +1,32 @@
+[
+  {
+    "id": "marassi-red-sea-2",
+    "unitNo": "Marassi Red Marina Views I-B1-G-3B",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape & Lakes",
+    "priceEGP": 32498888,
+    "status": "Available",
+    "slug": "marassi-red-sea",
+    "cluster": "Marina Views I",
+    "delivery_note": "2027-2028 (Off-Plan)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "marassi-red-sea-3",
+    "unitNo": "Marassi Red Marina Views I-B2-2-2",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape & Lakes",
+    "priceEGP": 41750888,
+    "status": "Available",
+    "slug": "marassi-red-sea",
+    "cluster": "Marina Views I",
+    "delivery_note": "2027-2028 (Off-Plan)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Apartment"
+  }
+]

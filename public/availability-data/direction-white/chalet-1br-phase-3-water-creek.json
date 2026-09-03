@@ -1,0 +1,17 @@
+[
+  {
+    "id": "direction-white-12",
+    "unitNo": "DW-P3-1B-65",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 65,
+    "view": "Sea & Landscape",
+    "priceEGP": 10000000,
+    "status": "Available",
+    "slug": "direction-white",
+    "cluster": "Phase 3 (Water Creek)",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7 Yrs",
+    "type": "Chalet"
+  }
+]

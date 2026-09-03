@@ -1,0 +1,17 @@
+[
+  {
+    "id": "monte-napoleone-4",
+    "unitNo": "MN-TH",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 210,
+    "view": "Landscape",
+    "priceEGP": 13700000,
+    "status": "Available",
+    "slug": "monte-napoleone",
+    "cluster": "Phase 1",
+    "delivery_note": "Immediate \u2013 1 year",
+    "payment_plan": "10% down / 8 yrs",
+    "type": "Townhouse"
+  }
+]

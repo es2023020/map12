@@ -1,0 +1,62 @@
+[
+  {
+    "id": "mountain-view-ras-el-hekma-11",
+    "unitNo": "RL-SA-069-C-GF",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 58219581,
+    "status": "Available",
+    "slug": "mountain-view-ras-el-hekma",
+    "cluster": "Phase 1",
+    "delivery_note": "READY TO MOVE - 3",
+    "payment_plan": "5%+5% DP over 8 years",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-12",
+    "unitNo": "RL-SA-070-A-GF",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 58931675,
+    "status": "Available",
+    "slug": "mountain-view-ras-el-hekma",
+    "cluster": "Phase 1",
+    "delivery_note": "READY TO MOVE - 3",
+    "payment_plan": "5%+5% DP over 8 years",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-13",
+    "unitNo": "RL-SA-070-B-GF",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 54567498,
+    "status": "Available",
+    "slug": "mountain-view-ras-el-hekma",
+    "cluster": "Phase 1",
+    "delivery_note": "READY TO MOVE - 3",
+    "payment_plan": "5%+5% DP over 8 years",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-14",
+    "unitNo": "RL-SA-070-C-GF",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 56722932,
+    "status": "Available",
+    "slug": "mountain-view-ras-el-hekma",
+    "cluster": "Phase 1",
+    "delivery_note": "READY TO MOVE - 3",
+    "payment_plan": "5%+5% DP over 8 years",
+    "type": "Standalone Villa"
+  }
+]

@@ -1,4 +1,4 @@
-// Auto-generated from Command Center save action — do not edit by hand.
+// Auto-generated compound data — do not edit manually.
 import type { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = [
@@ -16,10 +16,10 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2028,
     "paymentPlan": "0%\u201310% Down Payment over 6 to 12 years equal installments",
     "types": [
-      "Studio",
       "Apartment",
       "Duplex",
-      "Penthouse"
+      "Penthouse",
+      "Studio"
     ],
     "blurb": "Noll New Cairo Compound is a prominent 90-feddan residential development in the 6th Settlement of New Cairo by Kleek Developments (Style Home & Delta Construction partnership). Master-planned by YBA (Yasser El-Beltagy) with 82%-83% green spaces and landscaping, featuring fully finished units with parking and clubhouse included.",
     "amenities": [
@@ -45,38 +45,6 @@ export const compoundsGenerated: Compound[] = [
     "lng": 31.525
   },
   {
-    "slug": "noll",
-    "name": "Noll New Cairo",
-    "developer": "Kleek Developments",
-    "developerSlug": "kleek-developments",
-    "destination": "6th-settlement",
-    "city": "6th Settlement, New Cairo, Cairo Governorate, Egypt",
-    "priceFrom": 4.925,
-    "areaSize": "90 Feddans",
-    "unitSizes": "75\u2013280 m\u00b2",
-    "status": "Off-Plan",
-    "deliveryYear": 2028,
-    "paymentPlan": "0%\u201310% Down Payment over 6 to 12 years equal installments",
-    "types": [
-      "Studio",
-      "Apartment",
-      "Duplex",
-      "Penthouse"
-    ],
-    "blurb": "Noll New Cairo Compound is a prominent 90-feddan residential development in the 6th Settlement of New Cairo by Kleek Developments.",
-    "amenities": [
-      "Clubhouse Membership Included",
-      "Included Underground Parking",
-      "82%-83% Green Spaces & Landscaping"
-    ],
-    "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
-    ],
-    "lat": 29.995,
-    "lng": 31.525
-  },
-  {
     "slug": "ever-new-cairo",
     "name": "Ever New Cairo",
     "developer": "Cred Developments",
@@ -90,9 +58,9 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2026,
     "paymentPlan": "Villas 2y Delivery: 5%/8y or 15%+15%/6y (15% Dis) -- Villas 4y Delivery: 5%/10y or 5%/7y (18% Dis)",
     "types": [
+      "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Twin House"
     ],
     "blurb": "Ever New Cairo (Ever Sixth Settlement) is a premier 128-acre master-planned residential community by Cred Developments situated in Sixth Settlement / South Teseen extension corridor. Features modern & classical architecture, 80% villas footprint, artificial lakes, and a 4.5 km dedicated trail.",
     "amenities": [
@@ -113,8 +81,8 @@ export const compoundsGenerated: Compound[] = [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80",
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=80"
     ],
-    "lat": 30.003,
-    "lng": 31.535
+    "lat": 29.954167,
+    "lng": 31.560833
   },
   {
     "slug": "w55",
@@ -130,10 +98,10 @@ export const compoundsGenerated: Compound[] = [
     "paymentPlan": "10% DP over 8 Yrs",
     "types": [
       "Admin",
+      "Apartment",
       "Apartments",
       "Commercial",
-      "Medical",
-      "Apartment"
+      "Medical"
     ],
     "blurb": "W55 is a major mixed-use business resort spanning 55 feddans directly fronting North 90th Street in New Cairo by The Waterway Developments.",
     "amenities": [
@@ -198,8 +166,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "belle-vie",
     "name": "Belle Vie",
     "destination": "new-zayed",
-    "lat": 29.97,
-    "lng": 30.93,
+    "lat": 30.061667,
+    "lng": 30.8975,
     "developer": "Emaar Misr",
     "developerSlug": "emaar-misr",
     "priceFrom": 10.65,
@@ -545,8 +513,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "o-west",
     "name": "O West",
     "destination": "6th-of-october-city",
-    "lat": 29.97,
-    "lng": 30.93,
+    "lat": 29.958333,
+    "lng": 30.99,
     "developer": "Orascom",
     "developerSlug": "orascom",
     "priceFrom": 7.3,
@@ -610,8 +578,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "kinda-residence",
     "name": "Kinda Residence",
     "destination": "new-cairo",
-    "lat": 30.03,
-    "lng": 31.47,
+    "lat": 30.063996,
+    "lng": 31.416132,
     "developer": "Madinet Masr",
     "developerSlug": "madinet-masr",
     "priceFrom": 12.4,
@@ -619,9 +587,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Standalone Villa",
-      "Twin House",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -665,8 +633,8 @@ export const compoundsGenerated: Compound[] = [
     "types": [
       "Apartment",
       "Duplex",
-      "Townhouse",
-      "Standalone Villa"
+      "Standalone Villa",
+      "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -717,12 +685,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Beach House",
       "Chalet",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Private beach",
@@ -1087,8 +1055,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "nmq",
     "name": "NMQ",
     "destination": "eastern-expansion",
-    "lat": 30.045,
-    "lng": 30.975,
+    "lat": 30.0238,
+    "lng": 30.9972,
     "developer": "Arkan Palm",
     "developerSlug": "arkan-palm",
     "priceFrom": 3.47,
@@ -1178,8 +1146,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "kynd-residence-gaia",
     "name": "Kynd Residence Gaia",
     "destination": "ras-el-hekma",
-    "lat": 30.92912,
-    "lng": 28.73467,
+    "lat": 31.1343,
+    "lng": 27.8488,
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 12.45,
@@ -1220,8 +1188,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "the-hillage",
     "name": "The Hillage",
     "destination": "sheikh-zayed",
-    "lat": 30.074,
-    "lng": 30.965,
+    "lat": 30.0494,
+    "lng": 30.9708,
     "developer": "Madaar Developments",
     "developerSlug": "madaar-developments",
     "priceFrom": 17,
@@ -1325,8 +1293,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "creekview",
     "name": "Creekview",
     "destination": "new-cairo",
-    "lat": 30.015,
-    "lng": 31.488,
+    "lat": 29.955,
+    "lng": 31.525833,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 6.79,
@@ -1334,11 +1302,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Duplex",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -1382,9 +1350,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": true,
     "types": [
       "Chalet",
+      "Penthouse",
       "Standalone Villa",
-      "Twin House",
-      "Penthouse"
+      "Twin House"
     ],
     "amenities": [
       "Private Beach",
@@ -2088,9 +2056,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": true,
     "types": [
       "Chalet",
+      "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Twin House"
     ],
     "amenities": [
       "Private Beach",
@@ -2228,6 +2196,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Administrative",
       "Administrative Office",
       "Apartment"
     ],
@@ -2245,10 +2214,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/business-district/3.jpg",
       "/projects/business-district/4.jpg",
       "/projects/business-district/5.jpg",
-      "/projects/business-district/6.jpg",
-      "/projects/business-district/7.jpg",
-      "/projects/business-district/8.jpg",
-      "/projects/business-district/9.jpg"
+      "/projects/business-district/6.jpg"
     ],
     "blurb": "Business District is a commercial and retail development by M Squared Developments in New Cairo offering premium office and retail spaces.",
     "paymentPlan": "10% DP over 7 yrs",
@@ -2308,8 +2274,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "trio",
     "name": "Trio",
     "destination": "new-cairo",
-    "lat": 30.038,
-    "lng": 31.498,
+    "lat": 30.056389,
+    "lng": 31.604444,
     "developer": "M Squared Developments",
     "developerSlug": "m-squared-developments",
     "priceFrom": 11.64,
@@ -2399,8 +2365,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "el-patio-vera",
     "name": "El Patio Vera",
     "destination": "sheikh-zayed",
-    "lat": 30.065,
-    "lng": 30.985,
+    "lat": 30.056667,
+    "lng": 30.927778,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
     "priceFrom": 18.3,
@@ -2446,8 +2412,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "patio-hills",
     "name": "Patio Hills",
     "destination": "6th-settlement",
-    "lat": 30.002,
-    "lng": 31.515,
+    "lat": 29.993889,
+    "lng": 31.581944,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
     "priceFrom": 21.68,
@@ -2553,8 +2519,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "patio-oro",
     "name": "El Patio Oro",
     "destination": "new-cairo",
-    "lat": 30.025,
-    "lng": 31.488,
+    "lat": 30.026944,
+    "lng": 31.593889,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
     "priceFrom": 16.55,
@@ -2648,8 +2614,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "patio-zahraa",
     "name": "Patio Zahraa",
     "destination": "sheikh-zayed",
-    "lat": 30.012,
-    "lng": 30.985,
+    "lat": 30.078056,
+    "lng": 30.9775,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
     "priceFrom": 27,
@@ -2754,8 +2720,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "el-patio-town",
     "name": "El Patio Town",
     "destination": "new-cairo",
-    "lat": 30.015,
-    "lng": 31.505,
+    "lat": 29.994167,
+    "lng": 31.491667,
     "developer": "La Vista Developments",
     "developerSlug": "la-vista-developments",
     "priceFrom": 30,
@@ -2825,13 +2791,13 @@ export const compoundsGenerated: Compound[] = [
       "Quadro",
       "Semi Finished. (No Separate Payment Plan / Delivery Specified For This Table.)",
       "Stand Alone",
+      "Standalone Villa",
       "Townhouse",
       "Townhouse Corner",
       "Twin House",
       "Twin Houses",
       "Type",
-      "Villas",
-      "Standalone Villa"
+      "Villas"
     ],
     "amenities": [
       "Clubhouse",
@@ -3163,8 +3129,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "haptown",
     "name": "Haptown",
     "destination": "mostakbal-city",
-    "lat": 30.076,
-    "lng": 31.658,
+    "lat": 30.051667,
+    "lng": 31.657222,
     "developer": "Hassan Allam Properties",
     "developerSlug": "hassan-allam-properties",
     "priceFrom": 15.5,
@@ -3223,10 +3189,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -3275,8 +3241,8 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": true,
     "types": [
       "Chalet",
-      "Standalone Villa",
-      "Penthouse"
+      "Penthouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "Private Beach",
@@ -3308,8 +3274,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "solana-east",
     "name": "Solana East",
     "destination": "new-cairo",
-    "lat": 30.0607554,
-    "lng": 30.8650159,
+    "lat": 29.978333,
+    "lng": 31.537222,
     "developer": "Ora Developers",
     "developerSlug": "ora-developers",
     "priceFrom": 13.9,
@@ -3421,8 +3387,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "the-brooks",
     "name": "The Brooks",
     "destination": "new-cairo",
-    "lat": 30.04,
-    "lng": 31.465,
+    "lat": 29.978611,
+    "lng": 31.373056,
     "developer": "PRE Developments",
     "developerSlug": "pre-developments",
     "priceFrom": 7.44,
@@ -3431,10 +3397,10 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Standalone Villa",
-      "Townhouse",
+      "Duplex",
       "Penthouse",
-      "Duplex"
+      "Standalone Villa",
+      "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -3521,10 +3487,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -3559,8 +3525,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "rivers",
     "name": "Rivers",
     "destination": "new-zayed",
-    "lat": 30.138,
-    "lng": 30.858,
+    "lat": 30.086389,
+    "lng": 30.860833,
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
     "priceFrom": 36.5,
@@ -3611,11 +3577,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Beach House",
       "Chalet",
       "Standalone Villa",
-      "Twin House",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Private beach",
@@ -4059,8 +4025,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "the-crown-extension",
     "name": "The Crown Extension",
     "destination": "eastern-expansion",
-    "lat": 29.97,
-    "lng": 30.93,
+    "lat": 29.989722,
+    "lng": 31.041944,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
     "priceFrom": 30,
@@ -4205,8 +4171,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "px",
     "name": "PX",
     "destination": "eastern-expansion",
-    "lat": 30.03306,
-    "lng": 31.47773,
+    "lat": 29.986111,
+    "lng": 31.052778,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
     "priceFrom": 14.45,
@@ -4215,8 +4181,8 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Townhouse",
-      "Standalone Villa"
+      "Standalone Villa",
+      "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -4363,11 +4329,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
+      "Duplex",
       "Kings Mansion",
       "Lake House",
       "Standalone Villa",
-      "Townhouse",
-      "Duplex"
+      "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -4534,13 +4500,13 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Chalet",
       "Duplex",
       "I-Villa Roof Garden",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Private beachfront",
@@ -4644,7 +4610,8 @@ export const compoundsGenerated: Compound[] = [
     "types": [
       "Apartment",
       "Duplex",
-      "Penthouse"
+      "Penthouse",
+      "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -4745,9 +4712,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Standalone Villa",
-      "Townhouse",
-      "Apartment"
+      "Townhouse"
     ],
     "amenities": [
       "Clubhouse",
@@ -4793,6 +4760,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Standalone Villa",
       "Townhouse"
     ],
@@ -4832,7 +4800,7 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "talala",
     "name": "TALALA",
-    "destination": "heliopolis",
+    "destination": "sarai",
     "lat": 30.094,
     "lng": 31.622,
     "developer": "Madinet Masr",
@@ -4842,6 +4810,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Standalone Villa",
       "Townhouse"
     ],
@@ -5033,7 +5002,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "On-Hold",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Standalone Villa"
     ],
     "amenities": [
       "Golf Course Views",
@@ -5189,12 +5159,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Chalet",
+      "Duplex",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Duplex",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Beach club",
@@ -5250,9 +5220,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Apartment",
+      "Chalet",
       "Standalone Villa",
-      "Twin House",
-      "Chalet"
+      "Twin House"
     ],
     "amenities": [
       "Private Beach",
@@ -5352,9 +5323,9 @@ export const compoundsGenerated: Compound[] = [
       "Apartment",
       "Standalone Villa",
       "Townhome",
-      "Twinhome",
+      "Townhouse",
       "Twin House",
-      "Townhouse"
+      "Twinhome"
     ],
     "amenities": [
       "Central crystal lagoon",
@@ -5516,7 +5487,8 @@ export const compoundsGenerated: Compound[] = [
       "Duplex",
       "Penthouse",
       "Standalone Villa",
-      "Townhouse"
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -5566,7 +5538,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Admin Office",
+      "Administrative",
       "Apartment",
+      "Clinic",
       "Medical Clinic"
     ],
     "amenities": [
@@ -5693,53 +5667,6 @@ export const compoundsGenerated: Compound[] = [
     "masterPlanUrl": "/masterplans/cleo-water-residence.svg"
   },
   {
-    "slug": "diplo-village",
-    "name": "Diplo Village",
-    "destination": "sidi-abdelrahman",
-    "km": 126,
-    "lat": 30.97,
-    "lng": 28.74,
-    "developer": "NCB",
-    "developerSlug": "ncb",
-    "priceFrom": 5,
-    "deliveryYear": 2026,
-    "status": "RTM",
-    "beachfront": false,
-    "types": [
-      "Chalet",
-      "Standalone Villa"
-    ],
-    "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Gym",
-      "Kids Destination",
-      "24/7 Security",
-      "Green Spaces",
-      "Retail Strip"
-    ],
-    "hero": "/projects/diplo-village/1.jpg",
-    "gallery": [
-      "/projects/diplo-village/1.jpg",
-      "/projects/diplo-village/2.jpg",
-      "/projects/diplo-village/3.jpg",
-      "/projects/diplo-village/4.jpg",
-      "/projects/diplo-village/5.jpg"
-    ],
-    "blurb": "Diplo Village by NCB at km 126 Sidi Abdelrahman \u2014 a compact and value-focused North Coast community offering chalets, apartments and townhouses near Egypt's most active Sahel stretch. Affordable entry into the North Coast at competitive price points.",
-    "paymentPlan": "10% down \u00b7 6 years equal installments",
-    "areaSize": "25 feddan",
-    "unitSizes": "65\u2013180 m\u00b2",
-    "type": "Coastal",
-    "highlights": [
-      "Sidi Abdelrahman location",
-      "Value pricing",
-      "Near Marassi & Hacienda Bay",
-      "2026 delivery"
-    ],
-    "masterPlanUrl": "/masterplans/diplo-village.svg"
-  },
-  {
     "slug": "alam-al-roum",
     "name": "Alam Al Roum",
     "destination": "alam-el-roum",
@@ -5858,11 +5785,11 @@ export const compoundsGenerated: Compound[] = [
       "Apartment",
       "Beachfront Villa",
       "Chalet",
+      "Duplex",
+      "Penthouse",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Duplex",
-      "Penthouse"
+      "Twin House"
     ],
     "amenities": [
       "Private beach",
@@ -5943,6 +5870,7 @@ export const compoundsGenerated: Compound[] = [
       "Branded Residence",
       "Bua",
       "Chalet",
+      "Duplex",
       "Duplex Ground",
       "Duplex Upper",
       "Emerald: 5% Down Payment + 5% After 3 Months",
@@ -5952,6 +5880,7 @@ export const compoundsGenerated: Compound[] = [
       "Installments Over 10 Years",
       "Installments Over 10 Years  |  Park Side Residence: 0% Down Payment",
       "Installments Over 8 Years  |  Club Side Residence: 5% Down Payment + 5% After 3 Months",
+      "Penthouse",
       "Phase 3 (E3): 5% + 5%",
       "Silversands - Silvertown",
       "Solana",
@@ -5985,9 +5914,7 @@ export const compoundsGenerated: Compound[] = [
       "Zed East - Csr Building C&D (Serviced Apartments)",
       "Zed East - Emerald",
       "Zed West - E3",
-      "Zed West - Psr",
-      "Duplex",
-      "Penthouse"
+      "Zed West - Psr"
     ],
     "amenities": [
       "1.2 km Beachfront",
@@ -6244,10 +6171,10 @@ export const compoundsGenerated: Compound[] = [
     "types": [
       "Apartment",
       "Chalet",
+      "Duplex",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Duplex"
+      "Twin House"
     ],
     "amenities": [
       "44 km Mediterranean Coastline",
@@ -6640,10 +6567,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Chalet",
       "Standalone Villa",
-      "Twin House",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Private beach access",
@@ -6905,12 +6832,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Chalet",
       "Standalone Villa",
-      "Twin House",
-      "Water Villa Loft",
       "Townhouse",
-      "Apartment"
+      "Twin House",
+      "Water Villa Loft"
     ],
     "amenities": [
       "Club Hill Chalets Phase",
@@ -7119,10 +7046,10 @@ export const compoundsGenerated: Compound[] = [
     "types": [
       "Apartment",
       "Chalet",
+      "Duplex",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Duplex"
+      "Twin House"
     ],
     "amenities": [
       "Private beach",
@@ -7440,11 +7367,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Chalet",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Pristine Beach & Clubhouse",
@@ -7645,8 +7572,8 @@ export const compoundsGenerated: Compound[] = [
     "name": "The Waterway",
     "destination": "al-dabaa",
     "km": 173,
-    "lat": 31.067222,
-    "lng": 28.346944,
+    "lat": 30.041389,
+    "lng": 31.476944,
     "developer": "The Waterway Developments",
     "developerSlug": "equity",
     "priceFrom": 15.61,
@@ -7655,12 +7582,12 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Chalet",
+      "Duplex",
       "Penthouse",
       "Standalone Villa",
-      "Chalet",
       "Townhouse",
-      "Twin House",
-      "Duplex"
+      "Twin House"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -7718,8 +7645,8 @@ export const compoundsGenerated: Compound[] = [
       "Apartment",
       "Chalet",
       "Standalone Villa",
-      "Twin House",
-      "Townhouse"
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "Private Beach",
@@ -8113,8 +8040,8 @@ export const compoundsGenerated: Compound[] = [
       "Apartment",
       "Chalet",
       "Standalone Villa",
-      "Twin House",
-      "Townhouse"
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "Private Beach",
@@ -8636,14 +8563,14 @@ export const compoundsGenerated: Compound[] = [
   },
   {
     "slug": "diplo-3",
-    "name": "Diplo 3",
+    "name": "Diplo 3 (Diplomats Village)",
     "destination": "sidi-abdelrahman",
-    "km": 102,
-    "lat": 30.9560862,
-    "lng": 28.7796456,
-    "developer": "Ahmed Yehia Real Estate Development",
-    "developerSlug": "ahmed-yehia-real-estate-development",
-    "priceFrom": 35,
+    "km": 126,
+    "lat": 30.97,
+    "lng": 28.74,
+    "developer": "Diplomats Real Estate",
+    "developerSlug": "diplomats-real-estate",
+    "priceFrom": 5,
     "deliveryYear": 2024,
     "status": "RTM",
     "beachfront": true,
@@ -8665,13 +8592,17 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/diplo-3/1.jpg",
     "gallery": [
-      "/projects/diplo-3/1.jpg"
+      "/projects/diplo-3/1.jpg",
+      "/projects/diplo-3/2.jpg",
+      "/projects/diplo-3/3.jpg",
+      "/projects/diplo-3/4.jpg",
+      "/projects/diplo-3/5.jpg"
     ],
-    "blurb": "Diplo 3 (Diplomats Village 3) is a classic established Mediterranean summer resort in Sidi Abdel Rahman (km 126) next to Marassi and Amwaj.",
+    "blurb": "Diplo 3 (Diplomats Village 3) is a classic established Mediterranean summer resort in Sidi Abdel Rahman (km 126) next to Marassi and Amwaj, offering prime beachfront chalets, townhouses, and standalone villas.",
     "paymentPlan": "Resale: Cash / secondary market terms",
     "areaSize": "60 feddan",
-    "unitSizes": "139\u2013356 m\u00b2",
-    "city": "Sidi Abdel Rahman, North Coast (km 102), Matrouh Governorate, Egypt",
+    "unitSizes": "65\u2013356 m\u00b2",
+    "city": "Sidi Abdel Rahman, North Coast (km 126), Matrouh Governorate, Egypt",
     "type": "Resort",
     "highlights": [
       "Km 126 on International Coastal Road in heart of Sidi Abdel Rahman bay",
@@ -8680,7 +8611,7 @@ export const compoundsGenerated: Compound[] = [
       "3 hours from Cairo & 2 hours from Alexandria via regional highway network",
       "Nostalgic master plan with private sandy beach, lagoons, & commercial strip"
     ],
-    "masterPlanUrl": "/Masterplans/diplo 3.jpg"
+    "masterPlanUrl": "/masterplans/diplo-3.svg"
   },
   {
     "slug": "zahra",
@@ -9456,8 +9387,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "marville",
     "name": "Marville",
     "destination": "new-zayed",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.083333,
+    "lng": 30.861944,
     "developer": "Al Marasem Developments",
     "developerSlug": "al-marasem-developments",
     "priceFrom": 9.5,
@@ -9514,6 +9445,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Duplex",
+      "Millennial",
+      "Palace",
       "Penthouse",
       "Standalone Villa"
     ],
@@ -9613,8 +9547,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "eastown",
     "name": "Eastown",
     "destination": "new-cairo",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.012222,
+    "lng": 31.514722,
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 9,
@@ -9670,8 +9604,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "villette",
     "name": "Villette",
     "destination": "new-cairo",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.020278,
+    "lng": 31.546389,
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 22.6,
@@ -10073,8 +10007,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "stone-residence",
     "name": "Stone Residence",
     "destination": "new-cairo",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 29.979167,
+    "lng": 31.385556,
     "developer": "PRE Developments",
     "developerSlug": "pre-developments",
     "priceFrom": 9.7,
@@ -10170,8 +10104,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "lake-view-residence",
     "name": "Lake View Residence",
     "destination": "new-cairo",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.024167,
+    "lng": 31.538056,
     "developer": "El Hazek Construction Group",
     "developerSlug": "el-hazek-construction-group",
     "priceFrom": 12,
@@ -10225,8 +10159,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "zed-east",
     "name": "Zed East",
     "destination": "6th-settlement",
-    "lat": 30.012,
-    "lng": 31.528,
+    "lat": 29.983889,
+    "lng": 31.566389,
     "developer": "ORA Developers",
     "developerSlug": "ora-developers",
     "priceFrom": 9.45,
@@ -10260,6 +10194,7 @@ export const compoundsGenerated: Compound[] = [
       "Apartment",
       "Branded Residence",
       "Bua",
+      "Duplex",
       "Duplex Ground",
       "Duplex Upper",
       "Emerald: 5% Down Payment + 5% After 3 Months",
@@ -10303,8 +10238,7 @@ export const compoundsGenerated: Compound[] = [
       "Zed East - Csr Building C&D (Serviced Apartments)",
       "Zed East - Emerald",
       "Zed West - E3",
-      "Zed West - Psr",
-      "Duplex"
+      "Zed West - Psr"
     ],
     "amenities": [
       "Central park",
@@ -10445,8 +10379,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "beverly-hills",
     "name": "Beverly Hills",
     "destination": "sheikh-zayed",
-    "lat": 30.060376,
-    "lng": 30.9486794,
+    "lat": 30.060278,
+    "lng": 30.948611,
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 5,
@@ -10498,8 +10432,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "allegria",
     "name": "Allegria",
     "destination": "sheikh-zayed",
-    "lat": 30.0728823,
-    "lng": 30.959679,
+    "lat": 30.072778,
+    "lng": 30.959444,
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 17,
@@ -10766,9 +10700,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Duplex",
       "Penthouse",
       "Standalone Villa",
-      "Duplex",
       "Townhouse",
       "Twin House"
     ],
@@ -10813,8 +10747,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "karmell",
     "name": "Karmell",
     "destination": "new-zayed",
-    "lat": 30.0625639,
-    "lng": 30.8774882,
+    "lat": 30.0625,
+    "lng": 30.877222,
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 9.78,
@@ -10862,8 +10796,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "mountain-view-icity-october",
     "name": "Mountain View iCity October",
     "destination": "northern-expansion",
-    "lat": 30.0039287,
-    "lng": 30.9289597,
+    "lat": 30.003889,
+    "lng": 30.928889,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 9.9,
@@ -10872,9 +10806,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Duplex",
       "Penthouse",
       "Standalone Villa",
-      "Duplex",
       "Townhouse"
     ],
     "amenities": [
@@ -10956,8 +10890,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "sun-capital",
     "name": "Sun Capital",
     "destination": "6th-october",
-    "lat": 29.932213,
-    "lng": 31.0866736,
+    "lat": 29.931944,
+    "lng": 31.086667,
     "developer": "Arabia Holding",
     "developerSlug": "arabia-holding",
     "priceFrom": 8.33,
@@ -10966,14 +10900,14 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Duplex",
       "Duplexes",
       "Ground Apartment",
       "Penthouse",
       "Penthouses",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Duplex"
+      "Twin House"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -11010,8 +10944,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "bamboo-extension",
     "name": "Bamboo Extension",
     "destination": "6th-october",
-    "lat": 29.97,
-    "lng": 30.93,
+    "lat": 30.0075,
+    "lng": 31.023889,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
     "priceFrom": 8,
@@ -11480,6 +11414,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Duplex",
       "Penthouse",
       "Standalone Villa",
       "Townhouse"
@@ -11525,8 +11460,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "la-vista-city",
     "name": "La Vista City",
     "destination": "new-cairo",
-    "lat": 29.9788,
-    "lng": 31.6415,
+    "lat": 30.003611,
+    "lng": 31.591944,
     "developer": "STM Developments",
     "developerSlug": "stm-developments",
     "priceFrom": 30.07,
@@ -11739,10 +11674,10 @@ export const compoundsGenerated: Compound[] = [
       "Apartment",
       "Chalet",
       "Loft",
+      "Penthouse",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Penthouse"
+      "Twin House"
     ],
     "amenities": [
       "Private beach",
@@ -12625,8 +12560,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "zed-west",
     "name": "ZED West",
     "destination": "sheikh-zayed",
-    "lat": 30.04885,
-    "lng": 30.979200000000002,
+    "lat": 30.045833,
+    "lng": 30.999722,
     "developer": "Ora Developers",
     "developerSlug": "ora-developers",
     "priceFrom": 9,
@@ -12634,9 +12569,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Standalone Villa",
-      "Townhouse",
-      "Apartment"
+      "Townhouse"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -12681,12 +12616,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Standalone Villa",
-      "Townhouse",
-      "Twin House",
       "Apartment",
       "Duplex",
-      "Penthouse"
+      "Penthouse",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -12737,6 +12672,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Standalone Villa",
       "Townhouse"
     ],
@@ -12830,8 +12766,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Standalone Villa",
       "Town House Corner",
       "Town House Middle",
+      "Townhouse",
       "Twin House",
       "Twin House A",
       "Twin House B",
@@ -12840,9 +12778,7 @@ export const compoundsGenerated: Compound[] = [
       "Villa A1",
       "Villa V1",
       "Villa V2",
-      "Villa V3",
-      "Townhouse",
-      "Standalone Villa"
+      "Villa V3"
     ],
     "amenities": [
       "Clubhouse",
@@ -12884,10 +12820,10 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Chalet",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Chalet"
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -13027,10 +12963,13 @@ export const compoundsGenerated: Compound[] = [
       "1 Bedroom Apartment",
       "2 Bedrooms Apartment",
       "3 Bedrooms Apartment",
+      "Apartment",
+      "Duplex",
       "Ground Duplex",
-      "Townhouse Middle",
+      "Standalone Villa",
+      "Townhouse",
       "Townhouse Corner",
-      "Standalone Villa"
+      "Townhouse Middle"
     ],
     "amenities": [
       "Clubhouse",
@@ -13119,8 +13058,8 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Chalet",
-      "Standalone Villa",
-      "Penthouse"
+      "Penthouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "Swimming Pools",
@@ -13156,11 +13095,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Chalet",
       "Standalone Villa",
-      "Twin House",
       "Townhouse",
-      "Apartment"
+      "Twin House"
     ],
     "amenities": [
       "Lagoon",
@@ -13203,10 +13142,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Standalone Villa",
-      "Twin House",
       "Chalet",
-      "Townhouse"
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "Private Beach",
@@ -13406,9 +13345,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Chalet",
-      "Standalone Villa",
-      "Apartment"
+      "Standalone Villa"
     ],
     "amenities": [
       "Sandy Beach",
@@ -13656,8 +13595,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "green-square",
     "name": "Green Square",
     "destination": "mostakbal-city",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.064167,
+    "lng": 31.627778,
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 21,
@@ -13753,8 +13692,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "zizinia",
     "name": "Zizinia",
     "destination": "mostakbal-city",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.05,
+    "lng": 31.623889,
     "developer": "Ardic Developments",
     "developerSlug": "ardic-developments",
     "priceFrom": 6.2,
@@ -13807,8 +13746,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "lavenir",
     "name": "L'AVENIR",
     "destination": "mostakbal-city",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.055556,
+    "lng": 31.620833,
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 17,
@@ -13852,8 +13791,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "neopolis",
     "name": "Neopolis",
     "destination": "mostakbal-city",
-    "lat": 30.0643421,
-    "lng": 31.627894,
+    "lat": 30.064167,
+    "lng": 31.627778,
     "developer": "Wadi Degla",
     "developerSlug": "wadi-degla",
     "priceFrom": 7.2,
@@ -13896,8 +13835,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "beta-greens",
     "name": "Beta Greens",
     "destination": "mostakbal-city",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.0625,
+    "lng": 31.655,
     "developer": "Beta Egypt Developments",
     "developerSlug": "beta-egypt-developments",
     "priceFrom": 5.5,
@@ -13994,8 +13933,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "creek-town",
     "name": "Creek Town",
     "destination": "new-cairo",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.086667,
+    "lng": 31.511944,
     "developer": "IL Cazar Developments",
     "developerSlug": "il-cazar-developments",
     "priceFrom": 11.45,
@@ -14004,10 +13943,10 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Penthouse",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Penthouse"
+      "Twin House"
     ],
     "amenities": [
       "Gated community perimeter with smart electronic gates, 24/7 advanced security, and CCTV surveillance",
@@ -14133,8 +14072,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "mountain-view-hyde-park",
     "name": "Mountain View Hyde Park",
     "destination": "new-cairo",
-    "lat": 29.9841056,
-    "lng": 31.5530816,
+    "lat": 29.986944,
+    "lng": 31.555278,
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 20.34,
@@ -14183,8 +14122,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "amorada",
     "name": "Amorada",
     "destination": "new-cairo",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 29.963333,
+    "lng": 31.538333,
     "developer": "Afaq Developments",
     "developerSlug": "afaq-developments",
     "priceFrom": 12,
@@ -14277,8 +14216,8 @@ export const compoundsGenerated: Compound[] = [
     "types": [
       "Apartment",
       "Standalone Villa",
-      "Twin House",
-      "Townhouse"
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "Gated community perimeter with advanced 24/7 security systems and smart electronic access control",
@@ -14449,8 +14388,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "azad",
     "name": "Azad",
     "destination": "new-cairo",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.010556,
+    "lng": 31.506667,
     "developer": "Tameer Developments",
     "developerSlug": "tameer-developments",
     "priceFrom": 18.35,
@@ -14716,8 +14655,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "90-avenue",
     "name": "90 Avenue",
     "destination": "new-cairo",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.023056,
+    "lng": 31.492778,
     "developer": "TBK Developments",
     "developerSlug": "tbk-developments",
     "priceFrom": 16.3,
@@ -14815,6 +14754,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Standalone Villa"
     ],
     "amenities": [
@@ -14973,12 +14913,12 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Apartment",
       "Cabana",
+      "Duplex",
       "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Apartment",
-      "Duplex"
+      "Twin House"
     ],
     "amenities": [
       "Private Beach & Promenade",
@@ -15021,8 +14961,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "the-crest",
     "name": "The Crest",
     "destination": "new-cairo",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 29.960833,
+    "lng": 31.542222,
     "developer": "IL Cazar Developments",
     "developerSlug": "il-cazar-developments",
     "priceFrom": 4.98,
@@ -15134,11 +15074,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
+      "Penthouse",
       "Quad",
       "Standalone Villa",
-      "Townhouse",
-      "Apartment",
-      "Penthouse"
+      "Townhouse"
     ],
     "amenities": [
       "Central Clubhouse & Social Hub",
@@ -15381,8 +15321,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Townhouse Corner",
-      "Townhouse"
+      "Townhouse",
+      "Townhouse Corner"
     ],
     "amenities": [
       "Clubhouse",
@@ -15670,9 +15610,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Standalone Villa",
       "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -16070,8 +16010,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "scenes",
     "name": "Scenes",
     "destination": "mostakbal-city",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
+    "lat": 30.055833,
+    "lng": 31.650556,
     "developer": "Akam Developments",
     "developerSlug": "akam-developments",
     "priceFrom": 15.16,
@@ -16123,8 +16063,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "nyoum-october",
     "name": "Nyoum October",
     "destination": "6th-october",
-    "lat": 29.9792462,
-    "lng": 30.875498,
+    "lat": 29.979167,
+    "lng": 30.875278,
     "developer": "Arab Developers Holding",
     "developerSlug": "arab-developers-holding",
     "priceFrom": 4.5,
@@ -16237,10 +16177,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Branded Apartment",
       "Penthouse",
-      "Serviced Suite",
-      "Apartment"
+      "Serviced Suite"
     ],
     "amenities": [
       "Direct Ritz-Carlton Hotel Access",
@@ -16275,8 +16215,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "palmet",
     "name": "Palmet October",
     "destination": "6th-october",
-    "lat": 29.97,
-    "lng": 30.93,
+    "lat": 30.008056,
+    "lng": 31.025,
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
     "priceFrom": 25.69,
@@ -16285,9 +16225,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Administrative Office",
+      "Apartment",
       "Branded Serviced Apartment",
-      "Retail Shop",
-      "Apartment"
+      "Retail Shop"
     ],
     "amenities": [
       "Central Landscaped Green Spine",
@@ -16388,7 +16328,10 @@ export const compoundsGenerated: Compound[] = [
     "gallery": [
       "/projects/one-hyde-park-new-cairo/1.jpg",
       "/projects/one-hyde-park-new-cairo/2.jpg",
-      "/projects/one-hyde-park-new-cairo/3.jpg"
+      "/projects/one-hyde-park-new-cairo/3.jpg",
+      "/projects/one-hyde-park-new-cairo/4.jpg",
+      "/projects/one-hyde-park-new-cairo/5.jpg",
+      "/projects/one-hyde-park-new-cairo/6.jpg"
     ],
     "blurb": "One Hyde Park New Cairo is the exclusive new launch phase inside Hyde Park New Cairo. Featuring standalone luxury villas (SV1 to SV6), townhouses, twin houses, sky villas, and apartments with EOI 100,000 EGP, 5% down payment, and 8-year payment plans.",
     "paymentPlan": "5%+5% DP over 8 yrs",
@@ -16611,8 +16554,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "On-Hold",
     "beachfront": false,
     "types": [
-      "Commercial",
-      "Apartment"
+      "Apartment",
+      "Commercial"
     ],
     "amenities": [
       "F&B Promenade",
@@ -16811,8 +16754,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Commercial",
-      "Apartment"
+      "Apartment",
+      "Commercial"
     ],
     "amenities": [
       "Direct on South 90th St",
@@ -16839,8 +16782,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "ivoire-west",
     "name": "Ivoire West",
     "destination": "sheikh-zayed",
-    "lat": 30.045,
-    "lng": 30.985,
+    "lat": 30.061944,
+    "lng": 30.975833,
     "developer": "PRE Developments",
     "developerSlug": "pre-developments",
     "priceFrom": 9.65,
@@ -16881,8 +16824,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "ivoire-east",
     "name": "Ivoire East",
     "destination": "new-cairo",
-    "lat": 30.02,
-    "lng": 31.49,
+    "lat": 29.986944,
+    "lng": 31.535278,
     "developer": "PRE Developments",
     "developerSlug": "pre-developments",
     "priceFrom": 9.9,
@@ -17208,8 +17151,8 @@ export const compoundsGenerated: Compound[] = [
     "slug": "hyde-park-central",
     "name": "Hyde Park Central",
     "destination": "new-cairo",
-    "lat": 30.012,
-    "lng": 31.485,
+    "lat": 29.974722,
+    "lng": 31.564722,
     "developer": "Hyde Park Developments",
     "developerSlug": "hyde-park-developments",
     "priceFrom": 6.43,
@@ -17231,9 +17174,14 @@ export const compoundsGenerated: Compound[] = [
       "Sports Facilities",
       "Commercial Strip"
     ],
-    "hero": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "hero": "/projects/hyde-park-central/1.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80"
+      "/projects/hyde-park-central/1.jpg",
+      "/projects/hyde-park-central/2.jpg",
+      "/projects/hyde-park-central/3.jpg",
+      "/projects/hyde-park-central/4.jpg",
+      "/projects/hyde-park-central/5.jpg",
+      "/projects/hyde-park-central/6.jpg"
     ],
     "blurb": "Hyde Park Central in New Cairo offers luxury Central & Water Residences (1B to 5B & Duplexes) and Central Villas/Quads with 10-year flexible payment terms.",
     "highlights": [
@@ -17306,10 +17254,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Standalone Villa",
       "Townhouse",
       "Twin House",
-      "Villa",
-      "Standalone Villa"
+      "Villa"
     ],
     "amenities": [
       "5 Thematic Gardens",
@@ -17356,9 +17304,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Standalone Villa",
       "Villa",
-      "Water Villa",
-      "Standalone Villa"
+      "Water Villa"
     ],
     "amenities": [
       "Crystal Lagoons",
@@ -17390,5 +17338,330 @@ export const compoundsGenerated: Compound[] = [
     ],
     "city": "New Cairo, Cairo Governorate, Egypt",
     "masterPlanUrl": "/masterplans/the-water-marq.svg"
+  },
+  {
+    "slug": "d2n",
+    "name": "D2N Commercial & Offices",
+    "destination": "sarai",
+    "lat": 30.095,
+    "lng": 31.63,
+    "developer": "Madinet Masr",
+    "developerSlug": "madinet-masr",
+    "priceFrom": 7.404,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Administrative",
+      "Commercial"
+    ],
+    "amenities": [
+      "24/7 Security",
+      "Commercial Strip",
+      "Landscape Parks",
+      "Parking Garage",
+      "Clubhouse"
+    ],
+    "hero": "/projects/sarai/1.jpg",
+    "gallery": [
+      "/projects/sarai/1.jpg"
+    ],
+    "blurb": "D2N by Madinet Masr in Sarai \u2014 modern commercial and administrative spaces offering prime business suites and retail shops along Sarai main boulevard.",
+    "paymentPlan": "5% down payment over 8 years",
+    "areaSize": "50 feddan",
+    "unitSizes": "47\u2013367 m\u00b2",
+    "type": "Mixed-use",
+    "city": "Sarai, New Cairo East, Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/sarai.svg"
+  },
+  {
+    "slug": "d2n2",
+    "name": "D2N2 Clinics & Commercial",
+    "destination": "sarai",
+    "lat": 30.096,
+    "lng": 31.631,
+    "developer": "Madinet Masr",
+    "developerSlug": "madinet-masr",
+    "priceFrom": 7.6905,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Clinic",
+      "Commercial"
+    ],
+    "amenities": [
+      "24/7 Security",
+      "Commercial Strip",
+      "Landscape Parks",
+      "Parking Garage",
+      "Clubhouse"
+    ],
+    "hero": "/projects/sarai/1.jpg",
+    "gallery": [
+      "/projects/sarai/1.jpg"
+    ],
+    "blurb": "D2N2 by Madinet Masr \u2014 fully-equipped medical clinics and retail commercial units in Sarai, New Cairo East.",
+    "paymentPlan": "5% down payment over 8 years",
+    "areaSize": "50 feddan",
+    "unitSizes": "46\u2013597 m\u00b2",
+    "type": "Mixed-use",
+    "city": "Sarai, New Cairo East, Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/sarai.svg"
+  },
+  {
+    "slug": "elan",
+    "name": "Elan Sarai",
+    "destination": "sarai",
+    "lat": 30.094,
+    "lng": 31.628,
+    "developer": "Madinet Masr",
+    "developerSlug": "madinet-masr",
+    "priceFrom": 3.3238,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment"
+    ],
+    "amenities": [
+      "24/7 Security",
+      "Commercial Strip",
+      "Landscape Parks",
+      "Parking Garage",
+      "Clubhouse"
+    ],
+    "hero": "/projects/sarai/1.jpg",
+    "gallery": [
+      "/projects/sarai/1.jpg"
+    ],
+    "blurb": "Elan in Sarai by Madinet Masr \u2014 modern apartments featuring greenery views and comprehensive community amenities.",
+    "paymentPlan": "5% down payment over 10 years",
+    "areaSize": "50 feddan",
+    "unitSizes": "69\u2013155 m\u00b2",
+    "type": "Residential",
+    "city": "Sarai, New Cairo East, Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/sarai.svg"
+  },
+  {
+    "slug": "klok",
+    "name": "KLOK Administrative",
+    "destination": "sarai",
+    "lat": 30.097,
+    "lng": 31.632,
+    "developer": "Madinet Masr",
+    "developerSlug": "madinet-masr",
+    "priceFrom": 12.4163,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Administrative"
+    ],
+    "amenities": [
+      "24/7 Security",
+      "Commercial Strip",
+      "Landscape Parks",
+      "Parking Garage",
+      "Clubhouse"
+    ],
+    "hero": "/projects/sarai/1.jpg",
+    "gallery": [
+      "/projects/sarai/1.jpg"
+    ],
+    "blurb": "KLOK by Madinet Masr \u2014 high-end administrative office spaces and executive business suites in Sarai.",
+    "paymentPlan": "5% down payment over 8 years",
+    "areaSize": "50 feddan",
+    "unitSizes": "57\u2013178 m\u00b2",
+    "type": "Mixed-use",
+    "city": "Sarai, New Cairo East, Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/sarai.svg"
+  },
+  {
+    "slug": "victoria-mall",
+    "name": "Victoria Mall",
+    "destination": "sarai",
+    "lat": 30.098,
+    "lng": 31.633,
+    "developer": "Madinet Masr",
+    "developerSlug": "madinet-masr",
+    "priceFrom": 3.0714,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Commercial"
+    ],
+    "amenities": [
+      "24/7 Security",
+      "Commercial Strip",
+      "Landscape Parks",
+      "Parking Garage",
+      "Clubhouse"
+    ],
+    "hero": "/projects/sarai/1.jpg",
+    "gallery": [
+      "/projects/sarai/1.jpg"
+    ],
+    "blurb": "Victoria Mall by Madinet Masr \u2014 destination retail, dining, and commercial strip serving Sarai and New Cairo East.",
+    "paymentPlan": "5% down payment over 8 years",
+    "areaSize": "50 feddan",
+    "unitSizes": "47\u2013155 m\u00b2",
+    "type": "Mixed-use",
+    "city": "Sarai, New Cairo East, Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/sarai.svg"
+  },
+  {
+    "slug": "ville-avenue",
+    "name": "Ville Avenue",
+    "destination": "sarai",
+    "lat": 30.099,
+    "lng": 31.634,
+    "developer": "Madinet Masr",
+    "developerSlug": "madinet-masr",
+    "priceFrom": 17.0353,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Commercial"
+    ],
+    "amenities": [
+      "24/7 Security",
+      "Commercial Strip",
+      "Landscape Parks",
+      "Parking Garage",
+      "Clubhouse"
+    ],
+    "hero": "/projects/sarai/1.jpg",
+    "gallery": [
+      "/projects/sarai/1.jpg"
+    ],
+    "blurb": "Ville Avenue by Madinet Masr \u2014 upscale lifestyle retail avenue in Sarai.",
+    "paymentPlan": "5% down payment over 8 years",
+    "areaSize": "50 feddan",
+    "unitSizes": "85\u2013685 m\u00b2",
+    "type": "Mixed-use",
+    "city": "Sarai, New Cairo East, Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/sarai.svg"
+  },
+  {
+    "slug": "zahw-assuit",
+    "name": "Zahw Assiut",
+    "destination": "new-cairo",
+    "lat": 27.18,
+    "lng": 31.18,
+    "developer": "Madinet Masr",
+    "developerSlug": "madinet-masr",
+    "priceFrom": 4.6736,
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "amenities": [
+      "24/7 Security",
+      "Commercial Strip",
+      "Landscape Parks",
+      "Parking Garage",
+      "Clubhouse"
+    ],
+    "hero": "/projects/sarai/1.jpg",
+    "gallery": [
+      "/projects/sarai/1.jpg"
+    ],
+    "blurb": "Zahw Assiut by Madinet Masr \u2014 an integrated master-planned township in Upper Egypt offering modern residential apartments and luxury villas.",
+    "paymentPlan": "10% down payment over 7 years",
+    "areaSize": "50 feddan",
+    "unitSizes": "174\u2013351 m\u00b2",
+    "type": "Residential",
+    "city": "Sarai, New Cairo East, Cairo, Egypt",
+    "masterPlanUrl": "/masterplans/sarai.svg"
+  },
+  {
+    "slug": "hyde-park-retail",
+    "name": "Hyde Park Retail",
+    "destination": "new-cairo",
+    "lat": 30.015,
+    "lng": 31.48,
+    "developer": "Hyde Park Developments",
+    "developerSlug": "hyde-park-developments",
+    "priceFrom": 12.12,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Clinic",
+      "Commercial"
+    ],
+    "amenities": [
+      "24/7 Security",
+      "Commercial Promenade",
+      "Medical Hub",
+      "Parking Garage",
+      "Elevators"
+    ],
+    "hero": "/projects/hyde-park-retail/1.jpg",
+    "gallery": [
+      "/projects/hyde-park-retail/1.jpg",
+      "/projects/hyde-park-retail/2.jpg",
+      "/projects/hyde-park-retail/3.jpg",
+      "/projects/hyde-park-retail/4.jpg",
+      "/projects/hyde-park-retail/5.jpg",
+      "/projects/hyde-park-retail/6.jpg"
+    ],
+    "blurb": "Hyde Park Retail by Hyde Park Developments in New Cairo \u2014 prime medical clinics and lifestyle commercial spaces serving the Hyde Park New Cairo master community.",
+    "paymentPlan": "5% DP over 8 years",
+    "areaSize": "20 feddan",
+    "unitSizes": "50\u201390 m\u00b2",
+    "type": "Mixed-use",
+    "city": "New Cairo, Cairo Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/hyde-park-central.svg"
+  },
+  {
+    "slug": "signature-villas",
+    "name": "Signature Villas & Apartments",
+    "destination": "new-cairo",
+    "lat": 30.018,
+    "lng": 31.485,
+    "developer": "Hyde Park Developments",
+    "developerSlug": "hyde-park-developments",
+    "priceFrom": 6.54,
+    "deliveryYear": 2026,
+    "status": "Off-Plan",
+    "beachfront": false,
+    "types": [
+      "Apartment",
+      "Standalone Villa",
+      "Townhouse",
+      "Twin House"
+    ],
+    "amenities": [
+      "Central Park View",
+      "Clubhouse Access",
+      "Swimming Pools",
+      "Sports Courts",
+      "Pedestrian Trails"
+    ],
+    "hero": "/projects/signature-villas/1.jpg",
+    "gallery": [
+      "/projects/signature-villas/1.jpg",
+      "/projects/signature-villas/2.jpg",
+      "/projects/signature-villas/3.jpg",
+      "/projects/signature-villas/4.jpg",
+      "/projects/signature-villas/5.jpg",
+      "/projects/signature-villas/6.jpg"
+    ],
+    "blurb": "Signature by Hyde Park Developments in New Cairo \u2014 an ultra-exclusive collection of luxury apartments, townhouses, twin houses, and signature villas surrounded by manicured parks and lagoons.",
+    "paymentPlan": "5% DP over 8 to 10 years",
+    "areaSize": "45 feddan",
+    "unitSizes": "68\u2013268 m\u00b2",
+    "type": "Residential",
+    "city": "New Cairo, Cairo Governorate, Egypt",
+    "masterPlanUrl": "/masterplans/hyde-park-central.svg"
   }
 ];

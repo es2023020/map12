@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ashrafieh-2",
+    "unitNo": "ASH-3BR",
+    "beds": 3,
+    "finishing": "Furnished",
+    "areaSqm": 140,
+    "view": "Landscape",
+    "priceEGP": 7700000,
+    "status": "Available",
+    "slug": "ashrafieh",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% / 4 yrs",
+    "type": "Apartment"
+  }
+]

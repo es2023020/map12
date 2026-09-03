@@ -1,0 +1,17 @@
+[
+  {
+    "id": "perla-7",
+    "unitNo": "PER-PANO-4BR",
+    "beds": 4,
+    "finishing": "Fully finished",
+    "areaSqm": 320,
+    "view": "Panoramic View",
+    "priceEGP": 130000000,
+    "status": "Available",
+    "slug": "perla",
+    "cluster": "Panorama Villa",
+    "delivery_note": "Off-Plan",
+    "payment_plan": "5%+5% DP over 6-10 yrs",
+    "type": "Standalone Villa"
+  }
+]

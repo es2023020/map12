@@ -1,0 +1,34 @@
+[
+  {
+    "id": "naia-bay-4",
+    "unitNo": "NAIA-P1-SA-2ND-520",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 520,
+    "view": "Sea & Landscape",
+    "priceEGP": 82500000,
+    "status": "Available",
+    "slug": "naia-bay",
+    "cluster": "Phase 1 Villas",
+    "area_note": "670m Land \u00b7 170m Roof \u00b7 2nd Row",
+    "delivery_note": "Ready in 1 Month",
+    "payment_plan": "10% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "naia-bay-5",
+    "unitNo": "NAIA-P1-SA-1ST-520",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 520,
+    "view": "Sea & Landscape",
+    "priceEGP": 123000000,
+    "status": "Available",
+    "slug": "naia-bay",
+    "cluster": "Phase 1 Villas",
+    "area_note": "670m Land \u00b7 170m Roof \u00b7 1st Row",
+    "delivery_note": "Ready in 1 Month",
+    "payment_plan": "10% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  }
+]

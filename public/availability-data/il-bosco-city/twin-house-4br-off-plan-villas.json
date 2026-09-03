@@ -1,0 +1,17 @@
+[
+  {
+    "id": "il-bosco-city-1",
+    "unitNo": "BOS-TWIN-316",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 316,
+    "view": "Landscape",
+    "priceEGP": 32300000,
+    "status": "Available",
+    "slug": "il-bosco-city",
+    "cluster": "Off-Plan Villas",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "2.5% over 10 yrs",
+    "type": "Twin House"
+  }
+]

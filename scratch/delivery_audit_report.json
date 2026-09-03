@@ -1,0 +1,2018 @@
+[
+  {
+    "slug": "noll-new-cairo",
+    "developer": "Kleek Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "ever-new-cairo",
+    "developer": "Cred Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "amorada",
+    "developer": "Afaq",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "al-east-mostakbal-city",
+    "developer": "Al Ahly Sabbour",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "gaia-ras-el-hekma",
+    "developer": "Al Ahly Sabbour",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "green-square",
+    "developer": "Al Ahly Sabbour",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "lavenir",
+    "developer": "Al Ahly Sabbour",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "youd-ras-el-hekma",
+    "developer": "Al Ahly Sabbour",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "fifth-square",
+    "developer": "Al Marasem Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "marbay-ras-el-hekma",
+    "developer": "Al Marasem Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "marresidence",
+    "developer": "Al Marasem Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "marville",
+    "developer": "Al Marasem Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "seazen",
+    "developer": "Al Qamzi Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "nyoum-pyramids",
+    "developer": "Arab Developers Holding",
+    "status": "RTM",
+    "deliveryYear": 2010,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2010"
+  },
+  {
+    "slug": "direction-white",
+    "developer": "Arabella Group",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "ashrafieh",
+    "developer": "Arabia",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "galleria-moon-valley",
+    "developer": "Arabia Holding",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "sun-capital",
+    "developer": "Arabia Holding",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "zizinia",
+    "developer": "Ardic",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "kayan",
+    "developer": "Badreldin Developments",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "beta-greens",
+    "developer": "Beta Egypt",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "midtown-new-cairo",
+    "developer": "Better Home",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "lake-west-1",
+    "developer": "Cairo Capital",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "lake-west-2",
+    "developer": "Cairo Capital",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "beachfront-towers-new-alamein",
+    "developer": "City Edge Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "downtown-new-alamein",
+    "developer": "City Edge Developments",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "il-latini-city-edge",
+    "developer": "City Edge Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "jade-park-al-maqsad",
+    "developer": "City Edge Developments",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "latin-city-new-alamein",
+    "developer": "City Edge Developments",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "mazarine-apartments-new-alamein",
+    "developer": "City Edge Developments",
+    "status": "On-Hold",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "mazarine-hub-new-alamein",
+    "developer": "City Edge Developments",
+    "status": "On-Hold",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "new-garden-city-r5",
+    "developer": "City Edge Developments",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "cleopatra-square",
+    "developer": "Cleopatra Real Estate",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "address-east",
+    "developer": "Dorra Group",
+    "status": "On-Hold",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "the-address-east",
+    "developer": "Dorra Group",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "village-west",
+    "developer": "Dorra Group",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "genova",
+    "developer": "Eastern",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "rock-eden",
+    "developer": "El Batal Developments",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "lac-ville",
+    "developer": "El Gabry",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "belle-vie-new-zayed",
+    "developer": "Emaar Misr",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "belle-vie",
+    "developer": "Emaar Misr",
+    "status": "Off-Plan",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "cairo-gate",
+    "developer": "Emaar Misr",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "marassi-red-sea",
+    "developer": "Emaar Misr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "mivida",
+    "developer": "Emaar Misr",
+    "status": "Off-Plan",
+    "deliveryYear": 2015,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2015"
+  },
+  {
+    "slug": "soul",
+    "developer": "Emaar Misr",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "uptown-cairo",
+    "developer": "Emaar Misr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "montania-park",
+    "developer": "Everest View",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "montania",
+    "developer": "Everest View",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "grova-east-hills",
+    "developer": "Hassan Allam Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "haptown",
+    "developer": "Hassan Allam Properties",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "park-central-mostakbal-city",
+    "developer": "Hassan Allam Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "swanlake-el-gouna",
+    "developer": "Hassan Allam Properties",
+    "status": "On-Hold",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "swanlake-residences-new-cairo",
+    "developer": "Hassan Allam Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "swanlake-west",
+    "developer": "Hassan Allam Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "the-valleys-mostakbal-city",
+    "developer": "Hassan Allam Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "sa-ada-sahel",
+    "developer": "Horizon Egypt Developments",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "saada-boutique",
+    "developer": "Horizon Egypt Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "saada-north-coast",
+    "developer": "Horizon Egypt Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2030,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2030"
+  },
+  {
+    "slug": "saada",
+    "developer": "Horizon Egypt Developments",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "ashgar-city",
+    "developer": "IGI Real Estate",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "c-north",
+    "developer": "IL Cazar Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "creek-town",
+    "developer": "IL Cazar Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "glen",
+    "developer": "IL Cazar Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "safia",
+    "developer": "IL Cazar Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "the-crest",
+    "developer": "IL Cazar Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "vea-new-cairo",
+    "developer": "IL Cazar Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "westdays",
+    "developer": "IL Cazar Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "jefaira",
+    "developer": "Inertia Egypt",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "la-mirada",
+    "developer": "La Mirada",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "el-patio-riva",
+    "developer": "La Vista Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "el-patio-sola",
+    "developer": "La Vista Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "el-patio-town",
+    "developer": "La Vista Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "el-patio-vera",
+    "developer": "La Vista Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "la-vista-6",
+    "developer": "La Vista Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "la-vista-7",
+    "developer": "La Vista Developments",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "la-vista-bay-east",
+    "developer": "La Vista Developments",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "la-vista-cascada",
+    "developer": "La Vista Developments",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "la-vista-east",
+    "developer": "La Vista Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "la-vista-gardens",
+    "developer": "La Vista Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "la-vista-ras-el-hekma",
+    "developer": "La Vista Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "la-vista-topaz",
+    "developer": "La Vista Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "patio-5-east",
+    "developer": "La Vista Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "patio-casa",
+    "developer": "La Vista Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "patio-hills",
+    "developer": "La Vista Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "patio-jade",
+    "developer": "La Vista Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "patio-oro",
+    "developer": "La Vista Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "patio-prime",
+    "developer": "La Vista Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "patio-vida",
+    "developer": "La Vista Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "zoya",
+    "developer": "LMD",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "trio",
+    "developer": "M Squared Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "31-west",
+    "developer": "M Squared Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2030,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2030"
+  },
+  {
+    "slug": "el-masyaf-north-coast",
+    "developer": "M Squared Developments",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "mist",
+    "developer": "M Squared Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2030,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2030"
+  },
+  {
+    "slug": "azha-north-coast",
+    "developer": "Madaar Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "azha-sokhna",
+    "developer": "Madaar Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2024,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2024"
+  },
+  {
+    "slug": "elea-azha-north",
+    "developer": "Madaar Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "the-hillage",
+    "developer": "Madaar Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "taj-city",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "aeon",
+    "developer": "Marakez",
+    "status": "Off-Plan",
+    "deliveryYear": 2024,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2024"
+  },
+  {
+    "slug": "crescent-walk",
+    "developer": "Marakez",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "district-5",
+    "developer": "Marakez",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "ramla-north-coast",
+    "developer": "Marakez",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "cali-coast-ras-el-hekma",
+    "developer": "Maven Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "m-apartments",
+    "developer": "Mirad",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "villaria",
+    "developer": "Mirad",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "club-hill-solare",
+    "developer": "Misr Italia Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "il-bosco-city",
+    "developer": "Misr Italia Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "kai-sokhna",
+    "developer": "Misr Italia Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "solare",
+    "developer": "Misr Italia Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "vinci",
+    "developer": "Misr Italia Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "modon-ras-el-hekma",
+    "developer": "Modon Holding",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "creekview",
+    "developer": "Mountain View",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "icity-new-cairo",
+    "developer": "Mountain View",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "icity-october",
+    "developer": "Mountain View",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "lvls",
+    "developer": "Mountain View",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "mountain-view-aliva",
+    "developer": "Mountain View",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "mountain-view-crystal",
+    "developer": "Mountain View",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "mountain-view-grand-valley",
+    "developer": "Mountain View",
+    "status": "RTM",
+    "deliveryYear": 2012,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2012"
+  },
+  {
+    "slug": "mountain-view-hyde-park",
+    "developer": "Mountain View",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "mountain-view-icity-new-cairo",
+    "developer": "Mountain View",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "mountain-view-icity-october",
+    "developer": "Mountain View",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "mountain-view-jirian",
+    "developer": "Mountain View",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "mountain-view-kingsway",
+    "developer": "Mountain View",
+    "status": "RTM",
+    "deliveryYear": 2012,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2012"
+  },
+  {
+    "slug": "mountain-view-mv4",
+    "developer": "Mountain View",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "mountain-view-ras-el-hekma",
+    "developer": "Mountain View",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "naia-bay",
+    "developer": "Naia Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "jirian-nations-of-sky",
+    "developer": "Nations of Sky",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "perla",
+    "developer": "Nations of Sky",
+    "status": "Off-Plan",
+    "deliveryYear": 2030,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2030"
+  },
+  {
+    "slug": "zomra-east",
+    "developer": "Nations of Sky",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "katameya-gardens",
+    "developer": "North Africa",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "golden-heights-1",
+    "developer": "Novus Stanza",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "golden-heights-2",
+    "developer": "Novus Stanza",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "silversands",
+    "developer": "Ora Developers",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "solana-east",
+    "developer": "Ora Developers",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "solana-west",
+    "developer": "Ora Developers",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "solana",
+    "developer": "Ora Developers",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "zed-east",
+    "developer": "Ora Developers",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "zed-west",
+    "developer": "Ora Developers",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "97-hills",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "badya",
+    "developer": "Palm Hills Developments",
+    "status": "RTM",
+    "deliveryYear": 2024,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2024"
+  },
+  {
+    "slug": "bamboo-iii",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "hacienda-bay",
+    "developer": "Palm Hills Developments",
+    "status": "RTM",
+    "deliveryYear": 2024,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2024"
+  },
+  {
+    "slug": "hacienda-blue",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "hacienda-heneish",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "hacienda-ras-el-hekma",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "hacienda-waters",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "hacienda-west",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "palm-hills-alexandria",
+    "developer": "Palm Hills Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "palm-hills-jirian",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "palm-hills-new-cairo-commercial",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "palm-hills-new-cairo",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "palm-hills-one",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "palm-hills-ritz-carlton",
+    "developer": "Palm Hills Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "palm-parks",
+    "developer": "Palm Hills Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "palmet",
+    "developer": "Palm Hills Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "px",
+    "developer": "Palm Hills Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "the-crown-extension",
+    "developer": "Palm Hills Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "village-de-la-capitale",
+    "developer": "Palm Hills Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "hadaba",
+    "developer": "PRE Developments",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "ivoire-east",
+    "developer": "PRE Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "ivoire-west",
+    "developer": "PRE Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "jebal-sokhna",
+    "developer": "PRE Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "point-90-offices-park",
+    "developer": "PRE Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "stone-residence",
+    "developer": "PRE Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "the-brooks",
+    "developer": "PRE Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "alam-al-roum",
+    "developer": "Qatari Diar",
+    "status": "Off-Plan",
+    "deliveryYear": 2030,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2030"
+  },
+  {
+    "slug": "monte-napoleone",
+    "developer": "Reportage Properties",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "covaya",
+    "developer": "Roya Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "oak-residences",
+    "developer": "Roya Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "telal-east",
+    "developer": "Roya Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "telal-shores",
+    "developer": "Roya Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "sephora-heights",
+    "developer": "Sephora",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "bloom-island-ogami",
+    "developer": "SODIC",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "caesar-extension-2",
+    "developer": "SODIC",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "caesar-sodic",
+    "developer": "SODIC",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "june",
+    "developer": "SODIC",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "karmell",
+    "developer": "SODIC",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "ogami",
+    "developer": "SODIC",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "sky-condos",
+    "developer": "SODIC",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "sodic-east-vale",
+    "developer": "SODIC",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "sodic-east",
+    "developer": "SODIC",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "sodic-the-estates",
+    "developer": "SODIC",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "the-estates-residences",
+    "developer": "SODIC",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "the-estates",
+    "developer": "SODIC",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "the-portal",
+    "developer": "SODIC",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "v-editions",
+    "developer": "SODIC",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "villette",
+    "developer": "SODIC",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "vye-sodic",
+    "developer": "SODIC",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "westown-medical-centre",
+    "developer": "SODIC",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "katameya-creeks",
+    "developer": "Starlight Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "la-vista-city",
+    "developer": "STM",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "mayan-el-shorouk",
+    "developer": "STM Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "mayan-new-cairo",
+    "developer": "STM Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "azad",
+    "developer": "Tameer",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "bloomfields-mostakbal-city",
+    "developer": "Tatweer Misr",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "bloomfields",
+    "developer": "Tatweer Misr",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "d-bay",
+    "developer": "Tatweer Misr",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "dbay",
+    "developer": "Tatweer Misr",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "fouka-bay",
+    "developer": "Tatweer Misr",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "il-monte-galala",
+    "developer": "Tatweer Misr",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "monte-galala",
+    "developer": "Tatweer Misr",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "rivers",
+    "developer": "Tatweer Misr",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "salt-north-coast",
+    "developer": "Tatweer Misr",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "salt",
+    "developer": "Tatweer Misr",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "scenes-mostakbal-city",
+    "developer": "Akam Developments",
+    "status": "Off-Plan",
+    "deliveryYear": null,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "Missing"
+  },
+  {
+    "slug": "scenes",
+    "developer": "Akam Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2030,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2030"
+  },
+  {
+    "slug": "90-avenue",
+    "developer": "Tabarak",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "joya",
+    "developer": "Tcc",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "green-town",
+    "developer": "Tesla",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "w-signature",
+    "developer": "The Waterway",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "waterway-1",
+    "developer": "The Waterway Developments",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "the-waterway",
+    "developer": "The Waterway Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "w55",
+    "developer": "The Waterway Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2030,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2030"
+  },
+  {
+    "slug": "almaza-bay",
+    "developer": "Travco Properties",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "neopolis",
+    "developer": "Wadi Degla",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "promenade",
+    "developer": "Wadi Degla",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "zg2",
+    "developer": "Zg",
+    "status": "RTM",
+    "deliveryYear": 2025,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2025"
+  },
+  {
+    "slug": "one33",
+    "developer": "Arkan Palm",
+    "status": "Off-Plan",
+    "deliveryYear": 2030,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2030"
+  },
+  {
+    "slug": "eastville",
+    "developer": "Ajna Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "the-marq-gardens",
+    "developer": "The MarQ Communities",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "the-water-marq",
+    "developer": "The MarQ Communities",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "club-views",
+    "developer": "Madinet Masr",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "d2n",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "d2n2",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "elan",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "elm-tree-park",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "klok",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "kinda-residence",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "origami",
+    "developer": "Madinet Masr",
+    "status": "RTM",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "origami-golf",
+    "developer": "Madinet Masr",
+    "status": "On-Hold",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "rai-valleys",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "sarai",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "sheya-residence",
+    "developer": "Madinet Masr",
+    "status": "On-Hold",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "talala",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "the-butterfly",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "victoria-mall",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "ville-avenue",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "zahw-assuit",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "esse-residence",
+    "developer": "Madinet Masr",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "at-east",
+    "developer": "Al Ahly Sabbour",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "gaia",
+    "developer": "Al Ahly Sabbour",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "keeva-6th-of-october",
+    "developer": "Al Ahly Sabbour",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "the-mornings",
+    "developer": "Al Ahly Sabbour",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "youd",
+    "developer": "Al Ahly Sabbour",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "business-district",
+    "developer": "Hyde Park Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "hyde-park-central",
+    "developer": "Hyde Park Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2029,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2029"
+  },
+  {
+    "slug": "hyde-park-north-seashore",
+    "developer": "Hyde Park Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2027,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2027"
+  },
+  {
+    "slug": "hyde-park-new-cairo",
+    "developer": "Hyde Park Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "hyde-park-retail",
+    "developer": "Hyde Park Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "one-hyde-park-new-cairo",
+    "developer": "Hyde Park Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2028"
+  },
+  {
+    "slug": "signature-villas",
+    "developer": "Hyde Park Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  },
+  {
+    "slug": "garden-lakes",
+    "developer": "Hyde Park Developments",
+    "status": "Off-Plan",
+    "deliveryYear": 2026,
+    "unitDeliveryNotes": [],
+    "summaryDelivery": "2026"
+  }
+]

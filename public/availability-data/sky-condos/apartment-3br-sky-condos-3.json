@@ -1,0 +1,34 @@
+[
+  {
+    "id": "sky-condos-3",
+    "unitNo": "Q1-1710-22",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 190,
+    "view": "Landscape & City View",
+    "priceEGP": 34196000,
+    "status": "Available",
+    "slug": "sky-condos",
+    "cluster": "SKY CONDOS 3",
+    "area_note": "Floor: 2",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down \u00b7 7\u20138 years equal installments",
+    "type": "Apartment"
+  },
+  {
+    "id": "sky-condos-4",
+    "unitNo": "R1-1716-23",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 190,
+    "view": "Landscape & City View",
+    "priceEGP": 33486000,
+    "status": "Available",
+    "slug": "sky-condos",
+    "cluster": "SKY CONDOS 3",
+    "area_note": "Floor: 2",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down \u00b7 7\u20138 years equal installments",
+    "type": "Apartment"
+  }
+]

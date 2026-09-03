@@ -1,0 +1,48 @@
+[
+  {
+    "id": "mazarine-apartments-new-alamein-5",
+    "unitNo": "MA-CEL-3BR-MIN",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 235,
+    "view": "Sea / Panoramic View",
+    "priceEGP": 10000000,
+    "status": "Available",
+    "slug": "mazarine-apartments-new-alamein",
+    "cluster": "Celeste",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP up to 12 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "mazarine-apartments-new-alamein-6",
+    "unitNo": "MA-CEL-3BR-MAX",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 252,
+    "view": "Sea / Panoramic View",
+    "priceEGP": 11500000,
+    "status": "Available",
+    "slug": "mazarine-apartments-new-alamein",
+    "cluster": "Celeste",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP up to 12 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "mazarine-apartments-new-alamein-7",
+    "unitNo": "MA-CEL-3BR-G",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 235,
+    "view": "Sea / Panoramic View",
+    "priceEGP": 11800000,
+    "status": "Available",
+    "slug": "mazarine-apartments-new-alamein",
+    "cluster": "Celeste",
+    "area_note": "Garden 117 sqm",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP up to 12 yrs",
+    "type": "Apartment"
+  }
+]

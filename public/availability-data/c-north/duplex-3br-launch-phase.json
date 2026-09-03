@@ -1,0 +1,18 @@
+[
+  {
+    "id": "c-north-3",
+    "unitNo": "CN-QVILLA",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 155,
+    "view": "Landscape",
+    "priceEGP": 18000000,
+    "status": "Available",
+    "slug": "c-north",
+    "cluster": "Launch Phase",
+    "area_note": "155 SQM Q Villa",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years",
+    "type": "Duplex"
+  }
+]

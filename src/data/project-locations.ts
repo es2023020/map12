@@ -12,13 +12,7 @@ export const projectLocations: Record<string, ProjectLocation> = {
     destination: "6th-settlement",
     location: "Middle Ring Road, 6th Settlement, New Cairo, Egypt",
     mapsUrl: "https://maps.google.com/?q=Noll+New+Cairo+Middle+Ring+Road",
-  },
-  noll: {
-    name: "Noll New Cairo",
-    destination: "6th-settlement",
-    location: "Middle Ring Road, 6th Settlement, New Cairo, Egypt",
-    mapsUrl: "https://maps.google.com/?q=Noll+New+Cairo+Middle+Ring+Road",
-  },
+  },
   "ever-new-cairo": {
     name: "Ever New Cairo",
     destination: "6th-settlement",
@@ -999,8 +993,8 @@ export const projectLocations: Record<string, ProjectLocation> = {
   },
   talala: {
     name: "TALALA",
-    destination: "heliopolis",
-    location: "New Heliopolis, Cairo Governorate, Egypt",
+    destination: "sarai",
+    location: "Sarai, New Cairo East, Cairo Governorate, Egypt",
     mapsUrl:
       "https://www.google.com/maps/place/Talala+Compound+-+%D9%83%D9%88%D9%85%D8%A8%D8%A7%D9%88%D9%86%D8%AF+%D8%B7%D9%84%D8%A7%D9%84%D9%87%E2%80%AD/@30.162499,31.6822837,17z",
   },

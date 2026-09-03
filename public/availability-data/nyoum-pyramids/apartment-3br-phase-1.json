@@ -1,0 +1,17 @@
+[
+  {
+    "id": "nyoum-pyramids-2",
+    "unitNo": "NP-3BR",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 204,
+    "view": "Landscape",
+    "priceEGP": 9000000,
+    "status": "Available",
+    "slug": "nyoum-pyramids",
+    "cluster": "Phase 1",
+    "delivery_note": "6 - 10 Months",
+    "payment_plan": "25% DP over 5 yrs",
+    "type": "Apartment"
+  }
+]

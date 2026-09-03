@@ -1,0 +1,32 @@
+[
+  {
+    "id": "the-water-marq-6",
+    "unitNo": "WM-WV-665",
+    "beds": 6,
+    "finishing": "Fully Finished",
+    "areaSqm": 665,
+    "view": "Grand Lagoon Estate",
+    "priceEGP": 125021400,
+    "status": "Available",
+    "slug": "the-water-marq",
+    "cluster": "Signature Island",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years",
+    "type": "Water Villa"
+  },
+  {
+    "id": "the-water-marq-7",
+    "unitNo": "WM-WV-665C",
+    "beds": 6,
+    "finishing": "Fully Finished",
+    "areaSqm": 665,
+    "view": "Lagoon Curve Estate",
+    "priceEGP": 130820300,
+    "status": "Available",
+    "slug": "the-water-marq",
+    "cluster": "Signature Island",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years",
+    "type": "Water Villa"
+  }
+]

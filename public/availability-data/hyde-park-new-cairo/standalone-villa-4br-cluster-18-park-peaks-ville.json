@@ -1,0 +1,22 @@
+[
+  {
+    "id": "hyde-park-new-cairo-291",
+    "unitNo": "HPDC18P/G2/30",
+    "unitName": "HPDC18P/G2/30",
+    "bldg": "Cluster 18 Park - Peaks Ville",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 355.0,
+    "gardenAreaSqm": 0.0,
+    "roofAreaSqm": 0.0,
+    "view": "Central Park / Water View",
+    "priceEGP": 94640000.0,
+    "status": "Available",
+    "slug": "hyde-park-new-cairo",
+    "cluster": "Cluster 18 Park - Peaks Ville",
+    "delivery_note": "2026 / 2027",
+    "payment_plan": "5% DP over 8 to 10 Years",
+    "type": "Standalone Villa",
+    "floor": ""
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "direction-white-7",
+    "unitNo": "DW-P2-2B-105",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 105,
+    "view": "Sea & Landscape",
+    "priceEGP": 15000000,
+    "status": "Available",
+    "slug": "direction-white",
+    "cluster": "Phase 2",
+    "delivery_note": "Aug 2027",
+    "payment_plan": "10% DP over 6 Yrs",
+    "type": "Chalet"
+  },
+  {
+    "id": "direction-white-8",
+    "unitNo": "DW-P2-2B-120",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Sea & Landscape",
+    "priceEGP": 16700000,
+    "status": "Available",
+    "slug": "direction-white",
+    "cluster": "Phase 2",
+    "delivery_note": "Aug 2027",
+    "payment_plan": "10% DP over 6 Yrs",
+    "type": "Chalet"
+  }
+]

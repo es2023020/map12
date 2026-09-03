@@ -1,0 +1,48 @@
+[
+  {
+    "id": "cali-coast-ras-el-hekma-13",
+    "unitNo": "CALI-P34-3B-110",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 110,
+    "view": "Sea & Lagoons",
+    "priceEGP": 11750000,
+    "status": "Available",
+    "slug": "cali-coast-ras-el-hekma",
+    "cluster": "Phases 3 & 4",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 9 Yrs",
+    "type": "Chalet"
+  },
+  {
+    "id": "cali-coast-ras-el-hekma-14",
+    "unitNo": "CALI-P34-3B-150",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Sea & Lagoons",
+    "priceEGP": 15928000,
+    "status": "Available",
+    "slug": "cali-coast-ras-el-hekma",
+    "cluster": "Phases 3 & 4",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 9 Yrs",
+    "type": "Chalet"
+  },
+  {
+    "id": "cali-coast-ras-el-hekma-15",
+    "unitNo": "CALI-P34-3B-RF-110",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 110,
+    "view": "Sea & Lagoons",
+    "priceEGP": 12349000,
+    "status": "Available",
+    "slug": "cali-coast-ras-el-hekma",
+    "cluster": "Phases 3 & 4",
+    "area_note": "Roof Access",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 9 Yrs",
+    "type": "Chalet"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "garden-lakes-408",
+    "unitNo": "GL4/4PLEX/21D",
+    "unitName": "GL4/4PLEX/21D",
+    "bldg": "21D",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 215.0,
+    "gardenAreaSqm": 0.0,
+    "roofAreaSqm": 0.0,
+    "view": "Central Park / Water View",
+    "priceEGP": 30480000.0,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "GL4",
+    "delivery_note": "2026 / 2027",
+    "payment_plan": "5% DP over 8 to 10 Years",
+    "type": "Townhouse",
+    "floor": ""
+  },
+  {
+    "id": "garden-lakes-415",
+    "unitNo": "GL4/4PLEX/1D",
+    "unitName": "GL4/4PLEX/1D",
+    "bldg": "1D",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 215.0,
+    "gardenAreaSqm": 0.0,
+    "roofAreaSqm": 0.0,
+    "view": "Central Park / Water View",
+    "priceEGP": 29200000.0,
+    "status": "Available",
+    "slug": "garden-lakes",
+    "cluster": "GL4",
+    "delivery_note": "2026 / 2027",
+    "payment_plan": "5% DP over 8 to 10 Years",
+    "type": "Townhouse",
+    "floor": ""
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "la-vista-topaz-1",
+    "unitNo": "LVT-RTM-G-150",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 16950000,
+    "status": "Available",
+    "slug": "la-vista-topaz",
+    "cluster": "Phase 1",
+    "area_note": "Ground Floor + Garden 60m",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10% downpayment over 5 years",
+    "type": "Chalet"
+  }
+]

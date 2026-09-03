@@ -1,0 +1,18 @@
+[
+  {
+    "id": "el-patio-sola-3",
+    "unitNo": "EPS-PH",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 145,
+    "view": "Landscape",
+    "priceEGP": 12050000,
+    "status": "Available",
+    "slug": "el-patio-sola",
+    "cluster": "El Shorouk",
+    "area_note": "123m - 168m + Penthouse 20m-30m",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 years (31 installments)",
+    "type": "Penthouse"
+  }
+]

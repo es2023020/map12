@@ -1,0 +1,17 @@
+[
+  {
+    "id": "one33-1",
+    "unitNo": "ONE33-APT-1B-85",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 85,
+    "view": "Landscapes & Water Features",
+    "priceEGP": 5500000,
+    "status": "Available",
+    "slug": "one33",
+    "cluster": "New Release",
+    "delivery_note": "Off-Plan (4 Years)",
+    "payment_plan": "5%+5% over 9 years equal installments",
+    "type": "Apartment"
+  }
+]

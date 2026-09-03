@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-marq-gardens-2",
+    "unitNo": "MG-TW-270A",
+    "beds": 4,
+    "finishing": "Core and Shell",
+    "areaSqm": 270,
+    "view": "Water Garden",
+    "priceEGP": 37540000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Water Garden",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years",
+    "type": "Twin House"
+  }
+]

@@ -92961,7 +92961,7 @@
     "name": "TALALA",
     "lat": 30.094,
     "lng": 31.622,
-    "destination": "heliopolis",
+    "destination": "sarai",
     "url": "https://wikimapia.org/#lang=en&lat=30.094&lon=31.622&z=15"
   },
   "sheya-residence": {
@@ -93290,12 +93290,12 @@
   },
   "diplo-3": {
     "id": "diplo-3",
-    "name": "Diplo 3",
-    "lat": 30.832667,
-    "lng": 28.92,
+    "name": "Diplo 3 (Diplomats Village)",
+    "lat": 30.97,
+    "lng": 28.74,
     "destination": "sidi-abdelrahman",
-    "km": 102,
-    "url": "https://wikimapia.org/#lang=en&lat=30.832667&lon=28.92&z=15"
+    "km": 126,
+    "url": "https://wikimapia.org/#lang=en&lat=30.97&lon=28.74&z=15"
   },
   "beachfront-towers": {
     "id": "beachfront-towers",

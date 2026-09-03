@@ -1,0 +1,17 @@
+[
+  {
+    "id": "icity-palace-3",
+    "unitNo": "CV-02-03-00-1",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 250.0,
+    "view": "Central Park",
+    "priceEGP": 87973052,
+    "status": "Available",
+    "slug": "mountain-view-icity-new-cairo",
+    "cluster": "Phase 1",
+    "delivery_note": "READY TO DELIVER",
+    "payment_plan": "5%+5% DP over 8 years",
+    "type": "Palace"
+  }
+]

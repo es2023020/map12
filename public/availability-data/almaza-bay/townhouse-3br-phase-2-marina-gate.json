@@ -1,0 +1,34 @@
+[
+  {
+    "id": "almaza-bay-4",
+    "unitNo": "AB-TH-MID-148",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 148,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 25500000,
+    "status": "Available",
+    "slug": "almaza-bay",
+    "cluster": "Phase 2 (Marina Gate)",
+    "area_note": "Roof 65 sqm, Maid's Room",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 7 yrs",
+    "type": "Townhouse"
+  },
+  {
+    "id": "almaza-bay-5",
+    "unitNo": "AB-TH-CNR-171",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 171,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 29600000,
+    "status": "Available",
+    "slug": "almaza-bay",
+    "cluster": "Phase 2 (Marina Gate)",
+    "area_note": "Roof 58 sqm, Maid's Room",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 7 yrs",
+    "type": "Townhouse"
+  }
+]

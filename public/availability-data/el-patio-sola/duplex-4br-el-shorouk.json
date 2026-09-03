@@ -1,0 +1,34 @@
+[
+  {
+    "id": "el-patio-sola-4",
+    "unitNo": "EPS-DUP-RF",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 310,
+    "view": "Landscape",
+    "priceEGP": 20400000,
+    "status": "Available",
+    "slug": "el-patio-sola",
+    "cluster": "El Shorouk",
+    "area_note": "310m + Penthouse 28m",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 years (31 installments)",
+    "type": "Duplex"
+  },
+  {
+    "id": "el-patio-sola-5",
+    "unitNo": "EPS-DUP-G",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 344,
+    "view": "Landscape",
+    "priceEGP": 21550000,
+    "status": "Available",
+    "slug": "el-patio-sola",
+    "cluster": "El Shorouk",
+    "area_note": "328m - 360m + Garden 40m-75m",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 years (31 installments)",
+    "type": "Duplex"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "silversands-18",
+    "unitNo": "SS-ST-VS",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 190,
+    "view": "Landscape",
+    "priceEGP": 65000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Silvertown",
+    "area_note": "Villa S 190 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5%, installments over 10 years",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "silversands-19",
+    "unitNo": "SS-ST-VM",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 210,
+    "view": "Landscape",
+    "priceEGP": 68000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Silvertown",
+    "area_note": "Villa M 210 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5%, installments over 10 years",
+    "type": "Standalone Villa"
+  }
+]

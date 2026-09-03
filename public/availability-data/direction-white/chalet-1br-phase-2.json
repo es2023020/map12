@@ -1,0 +1,17 @@
+[
+  {
+    "id": "direction-white-6",
+    "unitNo": "DW-P2-1B-65",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 65,
+    "view": "Sea & Landscape",
+    "priceEGP": 9700000,
+    "status": "Available",
+    "slug": "direction-white",
+    "cluster": "Phase 2",
+    "delivery_note": "Aug 2027",
+    "payment_plan": "10% DP over 6 Yrs",
+    "type": "Chalet"
+  }
+]

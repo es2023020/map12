@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-marq-gardens-3",
+    "unitNo": "MG-TW-270B",
+    "beds": 4,
+    "finishing": "Core and Shell",
+    "areaSqm": 270,
+    "view": "Aroma Garden",
+    "priceEGP": 38100000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Aroma Garden",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years",
+    "type": "Twin House"
+  }
+]

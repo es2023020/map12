@@ -1,0 +1,17 @@
+[
+  {
+    "id": "jefaira-13",
+    "unitNo": "JEF-VAYA-3B-117",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 117,
+    "view": "Sea & Landscape",
+    "priceEGP": 11696000,
+    "status": "Available",
+    "slug": "jefaira",
+    "cluster": "Vaya",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 Yrs",
+    "type": "Apartment"
+  }
+]

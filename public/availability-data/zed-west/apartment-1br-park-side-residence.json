@@ -1,0 +1,34 @@
+[
+  {
+    "id": "zed-west-1",
+    "unitNo": "ZW-PSR-STD",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 60,
+    "view": "Landscape",
+    "priceEGP": 9000000,
+    "status": "Available",
+    "slug": "zed-west",
+    "cluster": "Park Side Residence",
+    "area_note": "60 SQM Studio",
+    "delivery_note": "2027",
+    "payment_plan": "0% Down payment, installments over 10 years",
+    "type": "Apartment"
+  },
+  {
+    "id": "zed-west-2",
+    "unitNo": "ZW-PSR-1BR",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 75,
+    "view": "Landscape",
+    "priceEGP": 10400000,
+    "status": "Available",
+    "slug": "zed-west",
+    "cluster": "Park Side Residence",
+    "area_note": "74-76 SQM",
+    "delivery_note": "2027",
+    "payment_plan": "0% Down payment, installments over 10 years",
+    "type": "Apartment"
+  }
+]

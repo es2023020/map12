@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ramla-north-coast-13",
+    "unitNo": "R3-183C",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 132,
+    "view": "Landscape & Amenities",
+    "priceEGP": 23418000,
+    "status": "Available",
+    "slug": "ramla-north-coast",
+    "cluster": "R3",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Chalet"
+  },
+  {
+    "id": "ramla-north-coast-19",
+    "unitNo": "R3-184C",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 132,
+    "view": "Landscape & Amenities",
+    "priceEGP": 23418000,
+    "status": "Available",
+    "slug": "ramla-north-coast",
+    "cluster": "R3",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Chalet"
+  }
+]

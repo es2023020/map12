@@ -1,0 +1,32 @@
+[
+  {
+    "id": "il-latini-city-edge-9",
+    "unitNo": "LC-RS-3BR-MIN",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 174,
+    "view": "Sea / Panoramic View",
+    "priceEGP": 5500000,
+    "status": "Available",
+    "slug": "latin-city-new-alamein",
+    "cluster": "Road Side",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "Cash / Installments up to 10 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "il-latini-city-edge-10",
+    "unitNo": "LC-RS-3BR-MAX",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 231,
+    "view": "Sea / Panoramic View",
+    "priceEGP": 6900000,
+    "status": "Available",
+    "slug": "latin-city-new-alamein",
+    "cluster": "Road Side",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "Cash / Installments up to 10 yrs",
+    "type": "Apartment"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "karmell-202",
+    "unitNo": "464 Acre-Karmell 04-10",
+    "beds": 5,
+    "finishing": "Core and Shell",
+    "areaSqm": 383,
+    "view": "Landscape",
+    "priceEGP": 84365000,
+    "status": "Available",
+    "slug": "karmell",
+    "cluster": "Karmell",
+    "area_note": "Roof 93 sqm",
+    "delivery_note": "2027",
+    "payment_plan": "5% Down Payment \u00b7 8 Years Installments",
+    "type": "Apartment"
+  },
+  {
+    "id": "karmell-203",
+    "unitNo": "464 Acre-Karmell 04-14",
+    "beds": 5,
+    "finishing": "Core and Shell",
+    "areaSqm": 383,
+    "view": "Landscape",
+    "priceEGP": 82589000,
+    "status": "Available",
+    "slug": "karmell",
+    "cluster": "Karmell",
+    "area_note": "Roof 93 sqm",
+    "delivery_note": "2027",
+    "payment_plan": "5% Down Payment \u00b7 8 Years Installments",
+    "type": "Apartment"
+  }
+]

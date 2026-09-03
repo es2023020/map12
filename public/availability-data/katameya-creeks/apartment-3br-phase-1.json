@@ -1,0 +1,17 @@
+[
+  {
+    "id": "katameya-creeks-2",
+    "unitNo": "KC-3BR",
+    "beds": 3,
+    "finishing": "Semi-finished",
+    "areaSqm": 185,
+    "view": "Landscape",
+    "priceEGP": 40500000,
+    "status": "Available",
+    "slug": "katameya-creeks",
+    "cluster": "Phase 1",
+    "delivery_note": "6 months",
+    "payment_plan": "25% / 3 yrs",
+    "type": "Apartment"
+  }
+]

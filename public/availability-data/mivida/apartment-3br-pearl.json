@@ -1,0 +1,47 @@
+[
+  {
+    "id": "mivida-10",
+    "unitNo": "Mivida Gardens Pearl-B8-G-3",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape & Lakes",
+    "priceEGP": 27907888,
+    "status": "Available",
+    "slug": "mivida",
+    "cluster": "Pearl",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "mivida-13",
+    "unitNo": "Mivida Gardens Pearl-B5-2-6",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape & Lakes",
+    "priceEGP": 20686888,
+    "status": "Available",
+    "slug": "mivida",
+    "cluster": "Pearl",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "mivida-25",
+    "unitNo": "Mivida Gardens Pearl-B7-4-2",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape & Lakes",
+    "priceEGP": 23609888,
+    "status": "Available",
+    "slug": "mivida",
+    "cluster": "Pearl",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Apartment"
+  }
+]

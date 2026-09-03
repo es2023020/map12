@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-brooks-6",
+    "unitNo": "TB-2BR-126",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 126,
+    "view": "Landscape",
+    "priceEGP": 7444000,
+    "status": "Available",
+    "slug": "the-brooks",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Apartment"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "sodic-east-2",
+    "unitNo": "03S-082",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 395,
+    "view": "Landscape & City View",
+    "priceEGP": 69639000,
+    "status": "Available",
+    "slug": "sodic-east",
+    "cluster": "03S",
+    "area_note": "Floor: G+1 | Roof: 121 sqm",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% down \u00b7 7\u20138 years equal installments",
+    "type": "Apartment"
+  }
+]

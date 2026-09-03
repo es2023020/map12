@@ -1,0 +1,32 @@
+[
+  {
+    "id": "zomra-east-1",
+    "unitNo": "ZE-1BR-MIN",
+    "beds": 1,
+    "finishing": "Fully finished",
+    "areaSqm": 85,
+    "view": "Panoramic View",
+    "priceEGP": 8900000,
+    "status": "Available",
+    "slug": "zomra-east",
+    "cluster": "Phase 1",
+    "delivery_note": "3 years",
+    "payment_plan": "5%+5%+5% over 8-10 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "zomra-east-2",
+    "unitNo": "ZE-1BR-MAX",
+    "beds": 1,
+    "finishing": "Fully finished",
+    "areaSqm": 90,
+    "view": "Panoramic View",
+    "priceEGP": 9700000,
+    "status": "Available",
+    "slug": "zomra-east",
+    "cluster": "Phase 1",
+    "delivery_note": "3 years",
+    "payment_plan": "5%+5%+5% over 8-10 yrs",
+    "type": "Apartment"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "patio-oro-4",
+    "unitNo": "EPO-P3-3BR-TYP",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 220,
+    "view": "Landscape",
+    "priceEGP": 25850000,
+    "status": "Available",
+    "slug": "patio-oro",
+    "cluster": "Phase 3 (G+6)",
+    "area_note": "220m2 Typical Floor",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% down payment over 7 years (25% Cash Disc)",
+    "type": "Apartment"
+  },
+  {
+    "id": "patio-oro-5",
+    "unitNo": "EPO-P3-3BR-G",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 192,
+    "view": "Landscape",
+    "priceEGP": 24100000,
+    "status": "Available",
+    "slug": "patio-oro",
+    "cluster": "Phase 3 (G+6)",
+    "area_note": "164m2 - 220m2 + Garden 30m-40m",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% down payment over 7 years (25% Cash Disc)",
+    "type": "Apartment"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "hyde-park-north-seashore-163",
+    "unitNo": "HPN1/TW/38A",
+    "unitName": "HPN1/TW/38A",
+    "bldg": "",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 218.0,
+    "gardenAreaSqm": 0.0,
+    "roofAreaSqm": 0.0,
+    "view": "Central Park / Water View",
+    "priceEGP": 75810000.0,
+    "status": "Available",
+    "slug": "hyde-park-north-seashore",
+    "cluster": "HPN1",
+    "delivery_note": "2026 / 2027",
+    "payment_plan": "5% DP over 8 to 10 Years",
+    "type": "Twin House",
+    "floor": ""
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "zed-west-3",
+    "unitNo": "ZW-PSR-2BR",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 106,
+    "view": "Landscape",
+    "priceEGP": 13000000,
+    "status": "Available",
+    "slug": "zed-west",
+    "cluster": "Park Side Residence",
+    "area_note": "106 SQM",
+    "delivery_note": "2027",
+    "payment_plan": "0% Down payment, installments over 10 years",
+    "type": "Apartment"
+  }
+]

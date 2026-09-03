@@ -1,0 +1,18 @@
+[
+  {
+    "id": "silversands-20",
+    "unitNo": "SS-ST-VL",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 250,
+    "view": "Landscape",
+    "priceEGP": 75000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Silvertown",
+    "area_note": "Villa L 250 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5%, installments over 10 years",
+    "type": "Standalone Villa"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "origami-golf-1032",
+    "unitNo": "51B",
+    "unitName": "Origami Golf - 92 - 02 - 51B",
+    "bldg": "02",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 115.13,
+    "gardenAreaSqm": 0.0,
+    "roofAreaSqm": 17.91,
+    "view": "Main Road / Landscape",
+    "priceEGP": 11206518.81,
+    "status": "Available",
+    "slug": "origami-golf",
+    "cluster": "Origami Golf",
+    "delivery_note": "2027 / 2028",
+    "payment_plan": "5.2% - 10 to 15 Yrs",
+    "type": "Apartment",
+    "floor": "5"
+  }
+]

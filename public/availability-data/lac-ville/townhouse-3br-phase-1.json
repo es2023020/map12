@@ -1,0 +1,17 @@
+[
+  {
+    "id": "lac-ville-1",
+    "unitNo": "LV-THC",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 259,
+    "view": "Landscape",
+    "priceEGP": 11836080,
+    "status": "Available",
+    "slug": "lac-ville",
+    "cluster": "Phase 1",
+    "delivery_note": "9 Months",
+    "payment_plan": "80% DP over 5 yrs",
+    "type": "Townhouse"
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "keeva-6th-of-october-229",
+    "unitNo": "R2 H5-H55",
+    "unitName": "H55",
+    "bldg": "H5",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 168.0,
+    "gardenAreaSqm": 0.0,
+    "view": "Landscape & Greenery",
+    "priceEGP": 13806000.0,
+    "status": "Available",
+    "slug": "keeva-6th-of-october",
+    "cluster": "KEEVA",
+    "delivery_note": "Off-Plan (3-4 Years)",
+    "payment_plan": "10% DP over 7 to 8 Years",
+    "type": "Apartment",
+    "floor": "2nd"
+  },
+  {
+    "id": "keeva-6th-of-october-230",
+    "unitNo": "R2 H5-H56",
+    "unitName": "H56",
+    "bldg": "H5",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 190.0,
+    "gardenAreaSqm": 0.0,
+    "view": "Landscape & Greenery",
+    "priceEGP": 15615000.0,
+    "status": "Available",
+    "slug": "keeva-6th-of-october",
+    "cluster": "KEEVA",
+    "delivery_note": "Off-Plan (3-4 Years)",
+    "payment_plan": "10% DP over 7 to 8 Years",
+    "type": "Apartment",
+    "floor": "2nd"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "patio-jade-2",
+    "unitNo": "EPJ-TW",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 210,
+    "view": "Landscape",
+    "priceEGP": 25000000,
+    "status": "Available",
+    "slug": "patio-jade",
+    "cluster": "Villas",
+    "area_note": "Twin House 210m (Land 235m-255m)",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "5% down payment over 8 years",
+    "type": "Twin House"
+  }
+]

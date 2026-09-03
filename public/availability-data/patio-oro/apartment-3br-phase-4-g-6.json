@@ -1,0 +1,34 @@
+[
+  {
+    "id": "patio-oro-7",
+    "unitNo": "EPO-P4-3BR-TYP",
+    "beds": 3,
+    "finishing": "Semi-Finished",
+    "areaSqm": 166,
+    "view": "Landscape",
+    "priceEGP": 16550000,
+    "status": "Available",
+    "slug": "patio-oro",
+    "cluster": "Phase 4 (G+6)",
+    "area_note": "164m2 - 168m2 Typical Floor",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 8 years (25% Cash Disc)",
+    "type": "Apartment"
+  },
+  {
+    "id": "patio-oro-8",
+    "unitNo": "EPO-P4-3BR-G",
+    "beds": 3,
+    "finishing": "Semi-Finished",
+    "areaSqm": 166,
+    "view": "Landscape",
+    "priceEGP": 19150000,
+    "status": "Available",
+    "slug": "patio-oro",
+    "cluster": "Phase 4 (G+6)",
+    "area_note": "164m2 - 168m2 + Garden 25m-40m",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 8 years (25% Cash Disc)",
+    "type": "Apartment"
+  }
+]

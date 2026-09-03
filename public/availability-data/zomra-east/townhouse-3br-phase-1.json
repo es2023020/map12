@@ -1,0 +1,34 @@
+[
+  {
+    "id": "zomra-east-9",
+    "unitNo": "ZE-THM",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 215,
+    "view": "Panoramic View",
+    "priceEGP": 29200000,
+    "status": "Available",
+    "slug": "zomra-east",
+    "cluster": "Phase 1",
+    "area_note": "Land 178 sqm",
+    "delivery_note": "3 years",
+    "payment_plan": "5%+5%+5% over 8-10 yrs",
+    "type": "Townhouse"
+  },
+  {
+    "id": "zomra-east-10",
+    "unitNo": "ZE-THC",
+    "beds": 3,
+    "finishing": "Fully finished",
+    "areaSqm": 210,
+    "view": "Panoramic View",
+    "priceEGP": 31800000,
+    "status": "Available",
+    "slug": "zomra-east",
+    "cluster": "Phase 1",
+    "area_note": "Land 217 sqm",
+    "delivery_note": "3 years",
+    "payment_plan": "5%+5%+5% over 8-10 yrs",
+    "type": "Townhouse"
+  }
+]

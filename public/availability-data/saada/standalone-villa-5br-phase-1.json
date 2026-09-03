@@ -1,0 +1,17 @@
+[
+  {
+    "id": "saada-3",
+    "unitNo": "SAA-SA",
+    "beds": 5,
+    "finishing": "Red brick",
+    "areaSqm": 320,
+    "view": "Landscape",
+    "priceEGP": 55000000,
+    "status": "Available",
+    "slug": "saada",
+    "cluster": "Phase 1",
+    "delivery_note": "6 months",
+    "payment_plan": "20% / 5 yrs",
+    "type": "Standalone Villa"
+  }
+]

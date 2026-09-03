@@ -1,0 +1,18 @@
+[
+  {
+    "id": "safia-2",
+    "unitNo": "SF-2BR",
+    "beds": 2,
+    "finishing": "Fully finished",
+    "areaSqm": 105,
+    "view": "Landscape",
+    "priceEGP": 9967637,
+    "status": "Available",
+    "slug": "safia",
+    "cluster": "Phase 1",
+    "area_note": "105 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years; Maintenance 10%",
+    "type": "Apartment"
+  }
+]

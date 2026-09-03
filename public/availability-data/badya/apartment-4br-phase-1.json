@@ -1,0 +1,47 @@
+[
+  {
+    "id": "badya-222",
+    "unitNo": "D1A1-01-01083",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 252.84,
+    "view": "Landscape",
+    "priceEGP": 21393172,
+    "status": "Available",
+    "slug": "badya",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 years",
+    "type": "Apartment"
+  },
+  {
+    "id": "badya-224",
+    "unitNo": "D1A1-01-01013",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 252.84,
+    "view": "Landscape",
+    "priceEGP": 21577172,
+    "status": "Available",
+    "slug": "badya",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 years",
+    "type": "Apartment"
+  },
+  {
+    "id": "badya-225",
+    "unitNo": "D1A1-01-02013",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 252.84,
+    "view": "Landscape",
+    "priceEGP": 21393172,
+    "status": "Available",
+    "slug": "badya",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 years",
+    "type": "Apartment"
+  }
+]

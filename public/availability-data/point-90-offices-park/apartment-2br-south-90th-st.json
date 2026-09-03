@@ -1,0 +1,47 @@
+[
+  {
+    "id": "point-90-offices-park-4",
+    "unitNo": "P90-ADMIN-82",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 82,
+    "view": "Landscape",
+    "priceEGP": 15420000,
+    "status": "Available",
+    "slug": "point-90-offices-park",
+    "cluster": "South 90th St",
+    "delivery_note": "2 Years",
+    "payment_plan": "10% DP over 7 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "point-90-offices-park-5",
+    "unitNo": "P90-CLINIC-64",
+    "beds": 2,
+    "finishing": "Flexi Finished",
+    "areaSqm": 64,
+    "view": "Landscape",
+    "priceEGP": 12923000,
+    "status": "Available",
+    "slug": "point-90-offices-park",
+    "cluster": "South 90th St",
+    "delivery_note": "2 Years",
+    "payment_plan": "10% DP over 7 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "point-90-offices-park-6",
+    "unitNo": "P90-COMM-116",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 116,
+    "view": "Landscape",
+    "priceEGP": 31306000,
+    "status": "Available",
+    "slug": "point-90-offices-park",
+    "cluster": "South 90th St",
+    "delivery_note": "2 Years",
+    "payment_plan": "10% DP over 7 yrs",
+    "type": "Apartment"
+  }
+]

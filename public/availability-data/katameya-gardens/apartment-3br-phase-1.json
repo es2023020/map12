@@ -1,0 +1,17 @@
+[
+  {
+    "id": "katameya-gardens-2",
+    "unitNo": "KG-3BR",
+    "beds": 3,
+    "finishing": "Red brick",
+    "areaSqm": 145,
+    "view": "Landscape",
+    "priceEGP": 8580000,
+    "status": "Available",
+    "slug": "katameya-gardens",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10% / 7 yrs",
+    "type": "Apartment"
+  }
+]

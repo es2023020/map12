@@ -1,0 +1,21 @@
+[
+  {
+    "id": "keeva-6th-of-october-228",
+    "unitNo": "T.H195 CS-cs92",
+    "unitName": "CS92",
+    "bldg": "CS",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 195.0,
+    "gardenAreaSqm": 158.37,
+    "view": "Landscape & Greenery",
+    "priceEGP": 22900000.0,
+    "status": "Available",
+    "slug": "keeva-6th-of-october",
+    "cluster": "KEEVA",
+    "delivery_note": "Off-Plan (3-4 Years)",
+    "payment_plan": "10% DP over 7 to 8 Years",
+    "type": "Townhouse",
+    "floor": "Ground"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "jebal-sokhna-3",
+    "unitNo": "JEB-2BR-2Y",
+    "beds": 2,
+    "finishing": "Fully finished",
+    "areaSqm": 104,
+    "view": "Landscape",
+    "priceEGP": 7982000,
+    "status": "Available",
+    "slug": "jebal-sokhna",
+    "cluster": "Phase 1",
+    "delivery_note": "2 Years",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Chalet"
+  }
+]

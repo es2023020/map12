@@ -1,0 +1,47 @@
+[
+  {
+    "id": "telal-east-5",
+    "unitNo": "TE-STONE-VILLA",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 253,
+    "view": "Landscape",
+    "priceEGP": 31868100,
+    "status": "Available",
+    "slug": "telal-east",
+    "cluster": "Priv\u00e9",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "telal-east-6",
+    "unitNo": "TE-EXC-VILLA",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 300,
+    "view": "Landscape",
+    "priceEGP": 36958500,
+    "status": "Available",
+    "slug": "telal-east",
+    "cluster": "Priv\u00e9",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "telal-east-7",
+    "unitNo": "TE-TER-VILLA",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 354,
+    "view": "Landscape",
+    "priceEGP": 42367000,
+    "status": "Available",
+    "slug": "telal-east",
+    "cluster": "Priv\u00e9",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Standalone Villa"
+  }
+]

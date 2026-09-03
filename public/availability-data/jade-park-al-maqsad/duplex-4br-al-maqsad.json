@@ -1,0 +1,32 @@
+[
+  {
+    "id": "jade-park-al-maqsad-7",
+    "unitNo": "JP-4BR-DUP-MIN",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 588,
+    "view": "Sea / Panoramic View",
+    "priceEGP": 15200000,
+    "status": "Available",
+    "slug": "jade-park-al-maqsad",
+    "cluster": "Al Maqsad",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP up to 12 yrs",
+    "type": "Duplex"
+  },
+  {
+    "id": "jade-park-al-maqsad-8",
+    "unitNo": "JP-4BR-DUP-MAX",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 692,
+    "view": "Sea / Panoramic View",
+    "priceEGP": 19600000,
+    "status": "Available",
+    "slug": "jade-park-al-maqsad",
+    "cluster": "Al Maqsad",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP up to 12 yrs",
+    "type": "Duplex"
+  }
+]

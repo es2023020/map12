@@ -1,0 +1,17 @@
+[
+  {
+    "id": "jefaira-5",
+    "unitNo": "JEF-QS-3B-103",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 103,
+    "view": "Sea & Landscape",
+    "priceEGP": 12815000,
+    "status": "Available",
+    "slug": "jefaira",
+    "cluster": "Quayside",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 Yrs",
+    "type": "Apartment"
+  }
+]

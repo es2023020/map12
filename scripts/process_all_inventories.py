@@ -69,6 +69,31 @@ def guess_beds(t, beds_val):
 project_units = {}
 seen_units = set() # (slug, unit_id) to avoid duplicates
 
+def normalize_finishing(raw):
+    if not raw:
+        return "Core & Shell"
+    val = str(raw).strip()
+    lower = val.lower()
+    if "unfinished" in lower or "red brick" in lower or "core" in lower or "shell" in lower:
+        return "Core & Shell"
+    if "semi" in lower:
+        return "Semi Finished"
+    if "fully finished & furnished" in lower or lower == "furnished/finished":
+        return "Fully Finished & Furnished"
+    if "fully finished" in lower or lower == "full finishing":
+        if "kitchen" in lower:
+            return "Fully Finished with A/C & Kitchen"
+        if "ac" in lower or "a/c" in lower:
+            return "Fully Finished + ACs"
+        return "Fully Finished"
+    if lower == "finished":
+        return "Finished"
+    if "flexi" in lower:
+        return "Flexi Finished"
+    if lower == "furnished":
+        return "Furnished"
+    return val
+
 def add_unit(slug, type_raw, unit_id, cluster, beds_raw, finishing, area_sqm, area_note, view, price_egp, delivery_note, payment_plan, status="Available"):
     if not slug or slug not in slug_to_comp:
         return
@@ -115,7 +140,7 @@ def add_unit(slug, type_raw, unit_id, cluster, beds_raw, finishing, area_sqm, ar
         "unit_id": uid,
         "cluster": str(cluster).strip() if cluster else "Phase 1",
         "beds": beds,
-        "finishing": str(finishing).strip() if finishing else "Finished",
+        "finishing": normalize_finishing(finishing),
         "area_sqm": area_sqm,
         "area_note": str(area_note).strip() if area_note else "",
         "view": str(view).strip() if view else "Landscape",

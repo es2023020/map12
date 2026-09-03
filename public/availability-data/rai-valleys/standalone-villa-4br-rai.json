@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rai-valleys-1037",
+    "unitNo": "RAI - 72 - SA4 - 18 - 01",
+    "unitName": "RAI - 72 - SA4 - 18 - 01",
+    "bldg": "RAI - 72 - SA4 - 18",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 175.0,
+    "gardenAreaSqm": 175.97,
+    "roofAreaSqm": 53.54,
+    "view": "Landscape",
+    "priceEGP": 24970905.82,
+    "status": "Available",
+    "slug": "rai-valleys",
+    "cluster": "RAI",
+    "delivery_note": "2027 / 2028",
+    "payment_plan": "5.2% - 10 to 15 Yrs",
+    "type": "Standalone Villa",
+    "floor": "Villa"
+  },
+  {
+    "id": "rai-valleys-1038",
+    "unitNo": "RAI - 72 - SA4 - 28 - 01",
+    "unitName": "RAI - 72 - SA4 - 28 - 01",
+    "bldg": "RAI - 72 - SA4 - 28",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 175.0,
+    "gardenAreaSqm": 178.62,
+    "roofAreaSqm": 53.54,
+    "view": "Landscape",
+    "priceEGP": 25009008.43,
+    "status": "Available",
+    "slug": "rai-valleys",
+    "cluster": "RAI",
+    "delivery_note": "2027 / 2028",
+    "payment_plan": "5.2% - 10 to 15 Yrs",
+    "type": "Standalone Villa",
+    "floor": "Villa"
+  }
+]

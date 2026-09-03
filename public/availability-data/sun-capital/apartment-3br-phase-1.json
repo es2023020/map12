@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sun-capital-2",
+    "unitNo": "SC-3BR-TYP",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 140,
+    "view": "Landscape",
+    "priceEGP": 10250000,
+    "status": "Available",
+    "slug": "sun-capital",
+    "cluster": "Phase 1",
+    "delivery_note": "6 months",
+    "payment_plan": "10%+5% over 8 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "sun-capital-4",
+    "unitNo": "SC-3BR-G",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 138,
+    "view": "Landscape",
+    "priceEGP": 11720000,
+    "status": "Available",
+    "slug": "sun-capital",
+    "cluster": "Phase 1",
+    "delivery_note": "6 months",
+    "payment_plan": "10%+5% over 8 yrs",
+    "type": "Apartment"
+  }
+]

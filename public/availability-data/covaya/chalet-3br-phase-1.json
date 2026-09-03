@@ -1,0 +1,17 @@
+[
+  {
+    "id": "covaya-3",
+    "unitNo": "COV-3BR-181",
+    "beds": 3,
+    "finishing": "Fully finished with A/C & Kitchen",
+    "areaSqm": 181,
+    "view": "Landscape",
+    "priceEGP": 16700000,
+    "status": "Available",
+    "slug": "covaya",
+    "cluster": "Phase 1",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Chalet"
+  }
+]

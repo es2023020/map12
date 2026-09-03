@@ -1,0 +1,32 @@
+[
+  {
+    "id": "youd-ras-el-hekma-4",
+    "unitNo": "YOUD-OP-2B-85",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 85,
+    "view": "Landscape",
+    "priceEGP": 8800000,
+    "status": "Available",
+    "slug": "youd-ras-el-hekma",
+    "cluster": "Off-Plan",
+    "delivery_note": "4 Years",
+    "payment_plan": "10% DP over 4-10 yrs",
+    "type": "Chalet"
+  },
+  {
+    "id": "youd-ras-el-hekma-5",
+    "unitNo": "YOUD-OP-2B-105",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 105,
+    "view": "Landscape",
+    "priceEGP": 10200000,
+    "status": "Available",
+    "slug": "youd-ras-el-hekma",
+    "cluster": "Off-Plan",
+    "delivery_note": "4 Years",
+    "payment_plan": "10% DP over 4-10 yrs",
+    "type": "Chalet"
+  }
+]

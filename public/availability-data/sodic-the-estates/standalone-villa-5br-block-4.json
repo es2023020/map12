@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sodic-the-estates-1",
+    "unitNo": "A025-2",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 349,
+    "view": "Landscape & City View",
+    "priceEGP": 208525000,
+    "status": "Available",
+    "slug": "sodic-the-estates",
+    "cluster": "Block 4",
+    "area_note": "Floor: G+1 | Roof: 128 sqm",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down \u00b7 7\u20138 years equal installments",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "sodic-the-estates-8",
+    "unitNo": "E057",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 353,
+    "view": "Landscape & City View",
+    "priceEGP": 87138280,
+    "status": "Available",
+    "slug": "sodic-the-estates",
+    "cluster": "Block 4",
+    "area_note": "Floor: G+1 | Roof: 74 sqm",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down \u00b7 7\u20138 years equal installments",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "sodic-the-estates-9",
+    "unitNo": "E063",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 353,
+    "view": "Landscape & City View",
+    "priceEGP": 77223960,
+    "status": "Available",
+    "slug": "sodic-the-estates",
+    "cluster": "Block 4",
+    "area_note": "Floor: G+1 | Roof: 74 sqm",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down \u00b7 7\u20138 years equal installments",
+    "type": "Standalone Villa"
+  }
+]

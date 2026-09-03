@@ -1,0 +1,18 @@
+[
+  {
+    "id": "silversands-11",
+    "unitNo": "SS-ST-2BR",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 127,
+    "view": "Landscape",
+    "priceEGP": 21000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Silvertown",
+    "area_note": "127 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5%, installments over 10 years",
+    "type": "Apartment"
+  }
+]

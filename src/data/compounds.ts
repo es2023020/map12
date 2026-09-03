@@ -146,7 +146,7 @@ const sahelRaw: SahelInput[] = [
   ["Stella Heights", 133, "sidi-abdelrahman", "Stella Di Mare", 9, 2025, true],
   ["Marassi", 126, "sidi-abdelrahman", "Emaar Misr", 18, 2025, true],
   ["Stella Sidi Abdel Rahman", 125, "sidi-abdelrahman", "Stella Di Mare", 7, 2024, true],
-  ["Diplo 3", 125, "sidi-abdelrahman", "NCB", 6, 2025, false],
+  ["Diplo 3", 126, "sidi-abdelrahman", "Diplomats Real Estate", 5, 2024, true],
   ["Hacienda Bay", 124, "sidi-abdelrahman", "Palm Hills Developments", 16, 2024, true],
   // NEW ALAMEIN
   ["Zahra", 123, "new-alamein", "Morshedy Group", 7, 2026, true],
@@ -5490,53 +5490,7 @@ const newProjects: Compound[] = [
 ],
   },
 
-  // ══════════════════════════════════════════
-  // NCB — DIPLO VILLAGE
-  // ══════════════════════════════════════════
-  {
-    slug: "diplo-village",
-    name: "Diplo Village",
-    destination: "sidi-abdelrahman",
-    km: 126,
-    lat: 30.97,
-    lng: 28.74,
-    developer: "NCB",
-    developerSlug: "ncb",
-    priceFrom: 5,
-    deliveryYear: 2026,
-    status: "RTM",
-    beachfront: false,
-    types: ["Chalet", "Apartment", "Town House"],
-    amenities: [
-      "Clubhouse",
-      "Swimming Pools",
-      "Gym",
-      "Kids Destination",
-      "24/7 Security",
-      "Green Spaces",
-      "Retail Strip",
-    ],
-    hero: "/projects/diplo-village/1.jpg",
-    gallery: [
-      "/projects/diplo-village/1.jpg",
-      "/projects/diplo-village/2.jpg",
-      "/projects/diplo-village/3.jpg",
-      "/projects/diplo-village/4.jpg",
-      "/projects/diplo-village/5.jpg",
-    ],
-    blurb:
-      "Diplo Village by NCB at km 126 Sidi Abdelrahman — a compact and value-focused North Coast community offering chalets, apartments and townhouses near Egypt's most active Sahel stretch. Affordable entry into the North Coast at competitive price points.",
-    paymentPlan: "10% down · 6 years equal installments",
-    areaSize: "25 feddan",
-    unitSizes: "65–180 m²",
-    type: "Coastal",
-    highlights: [
-      "Sidi Abdelrahman location",
-      "Value pricing",
-      "Near Marassi & Hacienda Bay",
-      "2026 delivery",
-    ],
-  },
+
 ];
 
 const additionalLaunches: Compound[] = [

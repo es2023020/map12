@@ -1,0 +1,18 @@
+[
+  {
+    "id": "solana-west-5",
+    "unitNo": "SW-SF-V7",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 196,
+    "view": "Landscape",
+    "priceEGP": 30000000,
+    "status": "Available",
+    "slug": "solana-west",
+    "cluster": "Single Family",
+    "area_note": "Land 305 SQM",
+    "delivery_note": "2028",
+    "payment_plan": "0% DP, installments over 10 years",
+    "type": "Standalone Villa"
+  }
+]

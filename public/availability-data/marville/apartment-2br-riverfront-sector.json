@@ -1,0 +1,18 @@
+[
+  {
+    "id": "marville-2",
+    "unitNo": "MV-2B-118",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 118,
+    "view": "Sea & Lagoons",
+    "priceEGP": 11500000,
+    "status": "Available",
+    "slug": "marville",
+    "cluster": "Riverfront Sector",
+    "area_note": "118\u2013144 sqm",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 Yrs",
+    "type": "Apartment"
+  }
+]

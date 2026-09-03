@@ -1,0 +1,17 @@
+[
+  {
+    "id": "vinci-8",
+    "unitNo": "VIN-SA-510",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 510,
+    "view": "Landscape",
+    "priceEGP": 57700000,
+    "status": "Available",
+    "slug": "vinci",
+    "cluster": "Villas",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "2.5% over 10 yrs",
+    "type": "Standalone Villa"
+  }
+]

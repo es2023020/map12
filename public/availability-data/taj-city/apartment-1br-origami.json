@@ -1,0 +1,18 @@
+[
+  {
+    "id": "taj-city-1",
+    "unitNo": "TAJ-ORI-1B-LOFT",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 75,
+    "view": "Landscape",
+    "priceEGP": 11500000,
+    "status": "Available",
+    "slug": "taj-city",
+    "cluster": "Origami",
+    "area_note": "Loft",
+    "delivery_note": "4 Years",
+    "payment_plan": "5% - 10 Yrs",
+    "type": "Apartment"
+  }
+]

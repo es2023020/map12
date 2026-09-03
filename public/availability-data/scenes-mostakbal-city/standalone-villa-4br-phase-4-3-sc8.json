@@ -1,0 +1,50 @@
+[
+  {
+    "id": "scenes-mostakbal-city-7",
+    "unitNo": "SC8-V3",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 195,
+    "view": "Landscape",
+    "priceEGP": 25720000,
+    "status": "Available",
+    "slug": "scenes-mostakbal-city",
+    "cluster": "Phase 4-3 (SC8)",
+    "area_note": "Plot 313 sqm",
+    "delivery_note": "2 Years",
+    "payment_plan": "5% DP over 5-11 yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "scenes-mostakbal-city-8",
+    "unitNo": "SC8-V6",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 195,
+    "view": "Landscape",
+    "priceEGP": 24574000,
+    "status": "Available",
+    "slug": "scenes-mostakbal-city",
+    "cluster": "Phase 4-3 (SC8)",
+    "area_note": "Plot 313 sqm",
+    "delivery_note": "2 Years",
+    "payment_plan": "5% DP over 5-11 yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "scenes-mostakbal-city-9",
+    "unitNo": "SC8-V8",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 195,
+    "view": "Landscape",
+    "priceEGP": 24574000,
+    "status": "Available",
+    "slug": "scenes-mostakbal-city",
+    "cluster": "Phase 4-3 (SC8)",
+    "area_note": "Plot 313 sqm",
+    "delivery_note": "2 Years",
+    "payment_plan": "5% DP over 5-11 yrs",
+    "type": "Standalone Villa"
+  }
+]

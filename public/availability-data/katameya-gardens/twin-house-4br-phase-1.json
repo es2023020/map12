@@ -1,0 +1,17 @@
+[
+  {
+    "id": "katameya-gardens-4",
+    "unitNo": "KG-TW",
+    "beds": 4,
+    "finishing": "Red brick",
+    "areaSqm": 270,
+    "view": "Landscape",
+    "priceEGP": 64200000,
+    "status": "Available",
+    "slug": "katameya-gardens",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10% / 7 yrs",
+    "type": "Twin House"
+  }
+]

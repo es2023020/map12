@@ -1,0 +1,17 @@
+[
+  {
+    "id": "eastville-4",
+    "unitNo": "EV-TW-290",
+    "beds": 4,
+    "finishing": "Core and Shell",
+    "areaSqm": 290,
+    "view": "Lake View",
+    "priceEGP": 29500000,
+    "status": "Available",
+    "slug": "eastville",
+    "cluster": "Phase 2",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% after 3m over 9 yrs",
+    "type": "Twin House"
+  }
+]

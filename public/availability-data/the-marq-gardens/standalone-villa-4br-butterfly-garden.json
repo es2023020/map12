@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-marq-gardens-4",
+    "unitNo": "MG-SV-265",
+    "beds": 4,
+    "finishing": "Core and Shell",
+    "areaSqm": 265,
+    "view": "Butterfly Garden",
+    "priceEGP": 40720000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Butterfly Garden",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years",
+    "type": "Standalone Villa"
+  }
+]

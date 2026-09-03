@@ -1,0 +1,34 @@
+[
+  {
+    "id": "la-vista-bay-east-2",
+    "unitNo": "LVB-2027-1ST-150",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 22800000,
+    "status": "Available",
+    "slug": "la-vista-bay-east",
+    "cluster": "April 2027",
+    "area_note": "Sea View",
+    "delivery_note": "April 2027",
+    "payment_plan": "10%+5%+5% over 6 yrs",
+    "type": "Chalet"
+  },
+  {
+    "id": "la-vista-bay-east-3",
+    "unitNo": "LVB-2027-GR-150",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 27800000,
+    "status": "Available",
+    "slug": "la-vista-bay-east",
+    "cluster": "April 2027",
+    "area_note": "Garden 60 sqm, Sea View",
+    "delivery_note": "April 2027",
+    "payment_plan": "10%+5%+5% over 6 yrs",
+    "type": "Chalet"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "cairo-gate-1",
+    "unitNo": "Town Square - Office - B4-1-28",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape & Lakes",
+    "priceEGP": 17834888,
+    "status": "Available",
+    "slug": "cairo-gate",
+    "cluster": "Town Square",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "cairo-gate-2",
+    "unitNo": "Town Square - Office - B4-1-12",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape & Lakes",
+    "priceEGP": 11892888,
+    "status": "Available",
+    "slug": "cairo-gate",
+    "cluster": "Town Square",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "cairo-gate-3",
+    "unitNo": "Town Square - Office - B4-4-16",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape & Lakes",
+    "priceEGP": 11368888,
+    "status": "Available",
+    "slug": "cairo-gate",
+    "cluster": "Town Square",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Apartment"
+  }
+]

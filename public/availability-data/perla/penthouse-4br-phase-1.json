@@ -1,0 +1,18 @@
+[
+  {
+    "id": "perla-3",
+    "unitNo": "PER-PH-4BR",
+    "beds": 4,
+    "finishing": "Fully finished",
+    "areaSqm": 150,
+    "view": "Panoramic View",
+    "priceEGP": 18500000,
+    "status": "Available",
+    "slug": "perla",
+    "cluster": "Phase 1",
+    "area_note": "1st floor + Roof",
+    "delivery_note": "Off-Plan",
+    "payment_plan": "5%+5% DP over 6-10 yrs",
+    "type": "Penthouse"
+  }
+]

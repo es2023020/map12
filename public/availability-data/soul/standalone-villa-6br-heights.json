@@ -1,0 +1,32 @@
+[
+  {
+    "id": "soul-33",
+    "unitNo": "Soul Heights-V-V-25",
+    "beds": 6,
+    "finishing": "Fully Finished",
+    "areaSqm": 532.3,
+    "view": "Landscape & Lakes",
+    "priceEGP": 120471888,
+    "status": "Available",
+    "slug": "soul",
+    "cluster": "Heights",
+    "delivery_note": "31/07/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "soul-34",
+    "unitNo": "Soul Heights-V-V-26",
+    "beds": 6,
+    "finishing": "Fully Finished",
+    "areaSqm": 535.1,
+    "view": "Landscape & Lakes",
+    "priceEGP": 121419888,
+    "status": "Available",
+    "slug": "soul",
+    "cluster": "Heights",
+    "delivery_note": "31/07/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  }
+]

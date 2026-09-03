@@ -1,0 +1,47 @@
+[
+  {
+    "id": "il-monte-galala-413",
+    "unitNo": "MT09-01-12",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 60,
+    "view": "Landscape",
+    "priceEGP": 10834000,
+    "status": "Available",
+    "slug": "il-monte-galala",
+    "cluster": "Marina Towers",
+    "delivery_note": "Fully Finished by Mona Hussein",
+    "payment_plan": "5% DP \u00b7 up to 10 years installments",
+    "type": "Apartment"
+  },
+  {
+    "id": "il-monte-galala-414",
+    "unitNo": "MT09-01-11",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 60,
+    "view": "Landscape",
+    "priceEGP": 10834000,
+    "status": "Available",
+    "slug": "il-monte-galala",
+    "cluster": "Marina Towers",
+    "delivery_note": "Fully Finished by Mona Hussein",
+    "payment_plan": "5% DP \u00b7 up to 10 years installments",
+    "type": "Apartment"
+  },
+  {
+    "id": "il-monte-galala-430",
+    "unitNo": "MT05-06-01",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 115,
+    "view": "Landscape",
+    "priceEGP": 18161000,
+    "status": "Available",
+    "slug": "il-monte-galala",
+    "cluster": "Marina Towers",
+    "delivery_note": "Fully Finished by Mona Hussein",
+    "payment_plan": "5% DP \u00b7 up to 10 years installments",
+    "type": "Apartment"
+  }
+]

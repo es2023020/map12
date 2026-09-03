@@ -1,0 +1,32 @@
+[
+  {
+    "id": "park-central-mostakbal-city-8",
+    "unitNo": "PC-GL-3B-171",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 171,
+    "view": "Landscape",
+    "priceEGP": 17100000,
+    "status": "Available",
+    "slug": "park-central-mostakbal-city",
+    "cluster": "The Great Lawn Apartments",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "park-central-mostakbal-city-9",
+    "unitNo": "PC-GL-DUP-253",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 253,
+    "view": "Landscape",
+    "priceEGP": 27700000,
+    "status": "Available",
+    "slug": "park-central-mostakbal-city",
+    "cluster": "The Great Lawn Apartments",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 10 yrs",
+    "type": "Apartment"
+  }
+]

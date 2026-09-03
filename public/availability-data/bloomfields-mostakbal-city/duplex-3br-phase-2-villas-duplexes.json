@@ -1,0 +1,47 @@
+[
+  {
+    "id": "bloomfields-mostakbal-city-13",
+    "unitNo": "TW-101-B",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 260,
+    "view": "Landscape",
+    "priceEGP": 29996000,
+    "status": "Available",
+    "slug": "bloomfields",
+    "cluster": "Phase 2 (Villas & Duplexes)",
+    "delivery_note": "Delivery 2 Years",
+    "payment_plan": "5% DP \u00b7 10 years installments",
+    "type": "Duplex"
+  },
+  {
+    "id": "bloomfields-mostakbal-city-14",
+    "unitNo": "TW-101-A",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 260,
+    "view": "Landscape",
+    "priceEGP": 30516000,
+    "status": "Available",
+    "slug": "bloomfields",
+    "cluster": "Phase 2 (Villas & Duplexes)",
+    "delivery_note": "Delivery 2 Years",
+    "payment_plan": "5% DP \u00b7 10 years installments",
+    "type": "Duplex"
+  },
+  {
+    "id": "bloomfields-mostakbal-city-15",
+    "unitNo": "DU-83-G0A",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 225,
+    "view": "Landscape",
+    "priceEGP": 19313000,
+    "status": "Available",
+    "slug": "bloomfields",
+    "cluster": "Phase 2 (Villas & Duplexes)",
+    "delivery_note": "Delivery 2 Years",
+    "payment_plan": "5% DP \u00b7 10 years installments",
+    "type": "Duplex"
+  }
+]

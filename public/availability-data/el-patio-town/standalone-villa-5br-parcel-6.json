@@ -1,0 +1,34 @@
+[
+  {
+    "id": "el-patio-town-9",
+    "unitNo": "EPT-P6-SA-338",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 338,
+    "view": "Landscape",
+    "priceEGP": 72000000,
+    "status": "Available",
+    "slug": "el-patio-town",
+    "cluster": "Parcel 6",
+    "area_note": "Standalone Villa (Land 438m)",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% after 1m over 7 years",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "el-patio-town-10",
+    "unitNo": "EPT-P6-SA-341",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 341,
+    "view": "Landscape",
+    "priceEGP": 72000000,
+    "status": "Available",
+    "slug": "el-patio-town",
+    "cluster": "Parcel 6",
+    "area_note": "Standalone Villa (Land 420m-438m)",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% after 1m over 7 years",
+    "type": "Standalone Villa"
+  }
+]

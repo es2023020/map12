@@ -1,0 +1,17 @@
+[
+  {
+    "id": "beta-greens-1",
+    "unitNo": "BG-2BR",
+    "beds": 2,
+    "finishing": "Fully finished",
+    "areaSqm": 115,
+    "view": "Landscape",
+    "priceEGP": 5800000,
+    "status": "Available",
+    "slug": "beta-greens",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "50% down / 2 yrs",
+    "type": "Apartment"
+  }
+]

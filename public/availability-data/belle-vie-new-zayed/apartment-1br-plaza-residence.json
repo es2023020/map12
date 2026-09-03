@@ -1,0 +1,32 @@
+[
+  {
+    "id": "belle-vie-new-zayed-1",
+    "unitNo": "BV Plaza Residence-I-G-9",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape & Lakes",
+    "priceEGP": 10881888,
+    "status": "Available",
+    "slug": "belle-vie-new-zayed",
+    "cluster": "Plaza Residence",
+    "delivery_note": "2027-2028 (Off-Plan)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "belle-vie-new-zayed-2",
+    "unitNo": "BV Plaza Residence-I-3-11",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 120,
+    "view": "Landscape & Lakes",
+    "priceEGP": 10648888,
+    "status": "Available",
+    "slug": "belle-vie-new-zayed",
+    "cluster": "Plaza Residence",
+    "delivery_note": "2027-2028 (Off-Plan)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Apartment"
+  }
+]

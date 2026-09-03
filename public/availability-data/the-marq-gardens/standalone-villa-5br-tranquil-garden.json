@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-marq-gardens-5",
+    "unitNo": "MG-SV-295",
+    "beds": 5,
+    "finishing": "Core and Shell",
+    "areaSqm": 295,
+    "view": "Tranquil Garden",
+    "priceEGP": 50820000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Tranquil Garden",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 7 years",
+    "type": "Standalone Villa"
+  }
+]

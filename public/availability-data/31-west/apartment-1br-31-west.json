@@ -1,0 +1,62 @@
+[
+  {
+    "id": "31-west-13",
+    "unitNo": "A7AG06",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 165,
+    "view": "Scenic View",
+    "priceEGP": 24335850,
+    "status": "Available",
+    "slug": "31-west",
+    "cluster": "31 west",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7-8 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "31-west-18",
+    "unitNo": "A7BG06",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 90,
+    "view": "Scenic View",
+    "priceEGP": 13674000,
+    "status": "Available",
+    "slug": "31-west",
+    "cluster": "31 west",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7-8 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "31-west-40",
+    "unitNo": "A6AG02B",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 80,
+    "view": "Scenic View",
+    "priceEGP": 13237120,
+    "status": "Available",
+    "slug": "31-west",
+    "cluster": "31 west",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7-8 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "31-west-41",
+    "unitNo": "A6AG06",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 90,
+    "view": "Scenic View",
+    "priceEGP": 13480930,
+    "status": "Available",
+    "slug": "31-west",
+    "cluster": "31 west",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7-8 yrs",
+    "type": "Apartment"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rai-valleys-1039",
+    "unitNo": "RAI - 72 - TH17 - 06 - D",
+    "unitName": "RAI - 72 - TH17 - 06 - D",
+    "bldg": "RAI - 72 - TH17 - 06",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 160.0,
+    "gardenAreaSqm": 74.96,
+    "roofAreaSqm": 22.0,
+    "view": "Landscape",
+    "priceEGP": 18702649.26,
+    "status": "Available",
+    "slug": "rai-valleys",
+    "cluster": "RAI",
+    "delivery_note": "2027 / 2028",
+    "payment_plan": "5.2% - 10 to 15 Yrs",
+    "type": "Townhouse",
+    "floor": "Villa"
+  }
+]

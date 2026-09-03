@@ -1,0 +1,47 @@
+[
+  {
+    "id": "belle-vie-25",
+    "unitNo": "Belle Vie Lake Villas P3 TH-12-TH-1",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 337,
+    "view": "Landscape & Lakes",
+    "priceEGP": 33457888,
+    "status": "Available",
+    "slug": "belle-vie",
+    "cluster": "Lake Villas P3",
+    "delivery_note": "31/03/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Townhouse"
+  },
+  {
+    "id": "belle-vie-26",
+    "unitNo": "Belle Vie Lake Villas P3 TH-12-TH-4",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 336.6,
+    "view": "Landscape & Lakes",
+    "priceEGP": 33405888,
+    "status": "Available",
+    "slug": "belle-vie",
+    "cluster": "Lake Villas P3",
+    "delivery_note": "31/03/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Townhouse"
+  },
+  {
+    "id": "belle-vie-27",
+    "unitNo": "Belle Vie Lake Villas P3 TH-10-TH-4",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 324.2,
+    "view": "Landscape & Lakes",
+    "priceEGP": 31312888,
+    "status": "Available",
+    "slug": "belle-vie",
+    "cluster": "Lake Villas P3",
+    "delivery_note": "31/03/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Townhouse"
+  }
+]

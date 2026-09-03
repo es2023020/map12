@@ -1,0 +1,22 @@
+[
+  {
+    "id": "esse-residence-3234",
+    "unitNo": "01",
+    "unitName": "esse residence - 90 - 386 - 01",
+    "bldg": "386",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 175.0,
+    "gardenAreaSqm": 162.0,
+    "roofAreaSqm": 54.0,
+    "view": "Landscape",
+    "priceEGP": 25923613.81,
+    "status": "Available",
+    "slug": "esse-residence",
+    "cluster": "esse residence",
+    "delivery_note": "2027 / 2028",
+    "payment_plan": "5.2% - 10 to 15 Yrs",
+    "type": "Townhouse",
+    "floor": "Villa"
+  }
+]

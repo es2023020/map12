@@ -1,0 +1,32 @@
+[
+  {
+    "id": "al-east-mostakbal-city-6",
+    "unitNo": "ALEAST-TWIN-190",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 190,
+    "view": "Landscape",
+    "priceEGP": 21800000,
+    "status": "Available",
+    "slug": "al-east-mostakbal-city",
+    "cluster": "Villas",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 yrs",
+    "type": "Twin House"
+  },
+  {
+    "id": "al-east-mostakbal-city-7",
+    "unitNo": "ALEAST-1SIDED-190",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 190,
+    "view": "Landscape",
+    "priceEGP": 21900000,
+    "status": "Available",
+    "slug": "al-east-mostakbal-city",
+    "cluster": "Villas",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 yrs",
+    "type": "Twin House"
+  }
+]

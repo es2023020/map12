@@ -1,0 +1,32 @@
+[
+  {
+    "id": "w55-47",
+    "unitNo": "W55-E-001",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 252,
+    "view": "Panoramic Views",
+    "priceEGP": 51999000,
+    "status": "Available",
+    "slug": "w55",
+    "cluster": "Building E (Floor 0)",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "w55-52",
+    "unitNo": "W55-E-002",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 291,
+    "view": "Panoramic Views",
+    "priceEGP": 58355000,
+    "status": "Available",
+    "slug": "w55",
+    "cluster": "Building E (Floor 0)",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 8 Yrs",
+    "type": "Apartment"
+  }
+]

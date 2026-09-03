@@ -1,0 +1,32 @@
+[
+  {
+    "id": "belle-vie-new-zayed-39",
+    "unitNo": "Belle Vie Evergreen-V-V-86",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 378.3,
+    "view": "Landscape & Lakes",
+    "priceEGP": 53815888,
+    "status": "Available",
+    "slug": "belle-vie-new-zayed",
+    "cluster": "Evergreen",
+    "delivery_note": "30/11/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "belle-vie-new-zayed-40",
+    "unitNo": "Belle Vie Evergreen-V-V-65",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 375,
+    "view": "Landscape & Lakes",
+    "priceEGP": 50082888,
+    "status": "Available",
+    "slug": "belle-vie-new-zayed",
+    "cluster": "Evergreen",
+    "delivery_note": "30/11/2027",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  }
+]

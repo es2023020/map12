@@ -1,0 +1,18 @@
+[
+  {
+    "id": "the-crest-1",
+    "unitNo": "CR-1BR",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 80,
+    "view": "Landscape",
+    "priceEGP": 4977280,
+    "status": "Available",
+    "slug": "the-crest",
+    "cluster": "New Cairo",
+    "area_note": "80 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years",
+    "type": "Apartment"
+  }
+]

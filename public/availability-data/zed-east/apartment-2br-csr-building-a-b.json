@@ -1,0 +1,18 @@
+[
+  {
+    "id": "zed-east-2",
+    "unitNo": "ZE-CSR-2BR",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "view": "Landscape",
+    "priceEGP": 23500000,
+    "status": "Available",
+    "slug": "zed-east",
+    "cluster": "CSR Building A&B",
+    "area_note": "145 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% \u2013 10 years",
+    "type": "Apartment"
+  }
+]

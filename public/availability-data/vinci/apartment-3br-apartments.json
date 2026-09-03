@@ -1,0 +1,33 @@
+[
+  {
+    "id": "vinci-1",
+    "unitNo": "VIN-3B-CS-172",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 172,
+    "view": "Landscape",
+    "priceEGP": 11700000,
+    "status": "Available",
+    "slug": "vinci",
+    "cluster": "Apartments",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "2.5% over 10 yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "vinci-2",
+    "unitNo": "VIN-3B-GR-177",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 177,
+    "view": "Landscape",
+    "priceEGP": 13481174,
+    "status": "Available",
+    "slug": "vinci",
+    "cluster": "Apartments",
+    "area_note": "37m Garden",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "2.5% over 10 yrs",
+    "type": "Apartment"
+  }
+]

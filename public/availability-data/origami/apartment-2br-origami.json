@@ -1,0 +1,22 @@
+[
+  {
+    "id": "origami-1023",
+    "unitNo": "2C",
+    "unitName": "ORIGAMI - 82 - 275 - 2C",
+    "bldg": "275",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 115.06,
+    "gardenAreaSqm": 60.0,
+    "roofAreaSqm": 0.0,
+    "view": "Main Road / Landscape",
+    "priceEGP": 11664199.72,
+    "status": "Available",
+    "slug": "origami",
+    "cluster": "ORIGAMI",
+    "delivery_note": "2027 / 2028",
+    "payment_plan": "5.2% - 10 to 15 Yrs",
+    "type": "Apartment",
+    "floor": "Ground"
+  }
+]

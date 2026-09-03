@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cairo-gate-4",
+    "unitNo": "Cairo Gate Aspen V-V-82",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 300.6,
+    "view": "Landscape & Lakes",
+    "priceEGP": 36397888,
+    "status": "Available",
+    "slug": "cairo-gate",
+    "cluster": "Cairo Gate Aspen",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "cairo-gate-5",
+    "unitNo": "Cairo Gate Aspen V-V-83",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 300.6,
+    "view": "Landscape & Lakes",
+    "priceEGP": 36397888,
+    "status": "Available",
+    "slug": "cairo-gate",
+    "cluster": "Cairo Gate Aspen",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "cairo-gate-6",
+    "unitNo": "Cairo Gate Aspen V-V-84",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 300.6,
+    "view": "Landscape & Lakes",
+    "priceEGP": 36397888,
+    "status": "Available",
+    "slug": "cairo-gate",
+    "cluster": "Cairo Gate Aspen",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  },
+  {
+    "id": "cairo-gate-7",
+    "unitNo": "Cairo Gate Aspen V-V-85",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 300.6,
+    "view": "Landscape & Lakes",
+    "priceEGP": 37094888,
+    "status": "Available",
+    "slug": "cairo-gate",
+    "cluster": "Cairo Gate Aspen",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 8 Yrs",
+    "type": "Standalone Villa"
+  }
+]

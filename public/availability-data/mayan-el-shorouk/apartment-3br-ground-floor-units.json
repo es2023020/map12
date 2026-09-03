@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mayan-el-shorouk-8",
+    "unitNo": "MAY-SH-3B-GF-121",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 121,
+    "view": "Landscape & Pools",
+    "priceEGP": 7600000,
+    "status": "Available",
+    "slug": "mayan-el-shorouk",
+    "cluster": "Ground Floor Units",
+    "area_note": "Ground Floor",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 10 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "mayan-el-shorouk-9",
+    "unitNo": "MAY-SH-3B-GF-141",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 141,
+    "view": "Landscape & Pools",
+    "priceEGP": 8900000,
+    "status": "Available",
+    "slug": "mayan-el-shorouk",
+    "cluster": "Ground Floor Units",
+    "area_note": "Ground Floor",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 10 Yrs",
+    "type": "Apartment"
+  },
+  {
+    "id": "mayan-el-shorouk-10",
+    "unitNo": "MAY-SH-3B-GF-160",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 160,
+    "view": "Landscape & Pools",
+    "priceEGP": 9500000,
+    "status": "Available",
+    "slug": "mayan-el-shorouk",
+    "cluster": "Ground Floor Units",
+    "area_note": "Ground Floor",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 10 Yrs",
+    "type": "Apartment"
+  }
+]
