@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { destinations } from "@/data/destinations";
 import { compounds as staticCompounds, compoundBySlug } from "@/data/compounds";
-import { isReadyToMove, hasRTMUnits, hasOffPlanUnits } from "@/lib/delivery";
+import { formatDeliveryStatus, isReadyToMove, hasRTMUnits, hasOffPlanUnits } from "@/lib/delivery";
 
 export const Route = createFileRoute("/calculator")({
   validateSearch: (search: Record<string, unknown>): { project?: string; unitId?: string; unitType?: string; price?: string } => ({
@@ -779,9 +779,9 @@ function CalculatorPage() {
                 {p.name}
               </div>
               <div className="text-[9px] text-muted-foreground truncate">{p.developer}</div>
-              <div className="mt-2 flex items-center justify-between">
-                <span className="text-[9px] text-muted-foreground truncate max-w-[50px]">
-                  {p.destination.replace(/-/g, " ")}
+              <div className="mt-2 flex items-center justify-between text-[9px]">
+                <span className="text-muted-foreground font-semibold truncate max-w-[100px]">
+                  {formatDeliveryStatus(p.blurb, p.deliveryYear, p.status).shortLabel}
                 </span>
                 <span className="text-[10px] font-bold text-primary">From {p.priceFrom}M</span>
               </div>
@@ -987,10 +987,14 @@ function CalculatorPage() {
                           {selectedProject.destination.replace(/-/g, " ")}
                         </span>
                       </div>
-                      <div className="flex justify-between">
+                      <div className="flex justify-between items-center">
                         <span className="text-muted-foreground">Delivery</span>
-                        <span className="font-medium text-primary">
-                          {selectedProject.deliveryYear}
+                        <span className="font-medium text-primary text-xs text-right">
+                          {formatDeliveryStatus(
+                            selectedProject.blurb,
+                            selectedProject.deliveryYear,
+                            selectedProject.status
+                          ).label}
                         </span>
                       </div>
                       <div className="flex justify-between">
