@@ -269,7 +269,7 @@ export function MapView({
         <MapClickEvents onMapClick={onMapClick} />
         <FocusedProjectPolygon focused={focused} />
         <LayersControl position="topright">
-          <LayersControl.BaseLayer checked name="Wikimapia Hybrid">
+          <LayersControl.BaseLayer checked name="Wikimapia Satellite Hybrid">
             <LayerGroup>
               <TileLayer
                 attribution="Tiles &copy; Esri"
