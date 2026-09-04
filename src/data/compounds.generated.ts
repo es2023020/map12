@@ -2184,51 +2184,6 @@ export const compoundsGenerated: Compound[] = [
     "masterPlanUrl": "/Masterplans/31 west.jpg"
   },
   {
-    "slug": "business-district",
-    "name": "Business District",
-    "destination": "new-cairo",
-    "lat": 30.045,
-    "lng": 31.475,
-    "developer": "M Squared Developments",
-    "developerSlug": "m-squared-developments",
-    "priceFrom": 13.26,
-    "deliveryYear": 2029,
-    "status": "Off-Plan",
-    "beachfront": false,
-    "types": [
-      "Administrative",
-      "Administrative Office",
-      "Apartment"
-    ],
-    "amenities": [
-      "Office spaces",
-      "Retail spaces",
-      "Restaurants",
-      "Parking",
-      "Security"
-    ],
-    "hero": "/projects/business-district/1.jpg",
-    "gallery": [
-      "/projects/business-district/1.jpg",
-      "/projects/business-district/2.jpg",
-      "/projects/business-district/3.jpg",
-      "/projects/business-district/4.jpg",
-      "/projects/business-district/5.jpg",
-      "/projects/business-district/6.jpg"
-    ],
-    "blurb": "Business District is a commercial and retail development by M Squared Developments in New Cairo offering premium office and retail spaces.",
-    "paymentPlan": "10% DP over 7 yrs",
-    "areaSize": "18 feddan",
-    "unitSizes": "130-220 sqm",
-    "type": "Mixed-use",
-    "highlights": [
-      "Prime New Cairo commercial",
-      "Modern workspaces"
-    ],
-    "city": "New Cairo, Egypt",
-    "masterPlanUrl": "/Masterplans/business-district.jpg"
-  },
-  {
     "slug": "mist",
     "name": "Mist",
     "destination": "new-cairo",
@@ -11294,61 +11249,6 @@ export const compoundsGenerated: Compound[] = [
     "masterPlanUrl": "/masterplans/iconic-tower-district.svg"
   },
   {
-    "slug": "business-district-nac",
-    "name": "Business District NAC",
-    "destination": "new-administrative-capital",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
-    "developer": "ACUD",
-    "developerSlug": "acud",
-    "priceFrom": 5,
-    "deliveryYear": 2025,
-    "status": "RTM",
-    "beachfront": false,
-    "types": [
-      "Clinics",
-      "Hotel Apartments",
-      "Offices",
-      "Retail Units"
-    ],
-    "amenities": [
-      "Office towers",
-      "Hotels",
-      "Retail area",
-      "Restaurants",
-      "Conference centers",
-      "Banks",
-      "Smart infrastructure",
-      "24/7 security",
-      "Parking"
-    ],
-    "hero": "/projects/business-district-nac/1.jpg",
-    "gallery": [
-      "/projects/business-district-nac/1.jpg",
-      "/projects/business-district-nac/2.jpg",
-      "/projects/business-district-nac/3.jpg",
-      "/projects/business-district-nac/4.jpg",
-      "/projects/business-district-nac/5.jpg",
-      "/projects/business-district-nac/6.jpg",
-      "/projects/business-district-nac/7.jpg",
-      "/projects/business-district-nac/8.jpg",
-      "/projects/business-district-nac/9.jpg"
-    ],
-    "blurb": "The Central Business District (CBD) is the premier commercial landmark of the New Administrative Capital, featuring 20 skyscrapers including the Iconic Tower.",
-    "paymentPlan": "5%–10% down payment, remaining balance spread over 7 to 10 years in equal installments",
-    "areaSize": "464 feddan",
-    "unitSizes": "124–309 m²",
-    "type": "Mixed-use",
-    "city": "New Administrative Capital, Egypt",
-    "highlights": [
-      "Egypt's premier financial hub",
-      "Adjacent to Government District & towers",
-      "World-class commercial infrastructure",
-      "Mixed-use business center"
-    ],
-    "masterPlanUrl": "/Masterplans/business-district-nac.jpg"
-  },
-  {
     "slug": "bloomfields",
     "name": "Bloomfields",
     "destination": "mostakbal-city",
@@ -14031,42 +13931,6 @@ export const compoundsGenerated: Compound[] = [
     ],
     "paymentPlan": "15% / 4 yrs or 15% / 5 yrs",
     "masterPlanUrl": "/masterplans/address-east.svg"
-  },
-  {
-    "slug": "m-squared",
-    "name": "M Squared",
-    "destination": "new-cairo",
-    "lat": 30.0527971,
-    "lng": 31.6809331,
-    "developer": "M Squared",
-    "developerSlug": "m-squared",
-    "priceFrom": 14.283,
-    "deliveryYear": 2027,
-    "status": "Off-Plan",
-    "beachfront": false,
-    "types": [
-      "Apartment"
-    ],
-    "amenities": [
-      "Clubhouse",
-      "Swimming Pools",
-      "Green Areas",
-      "24/7 Security",
-      "Kids Play Area"
-    ],
-    "hero": "/projects/m-squared/1.jpg",
-    "gallery": [
-      "/projects/m-squared/1.jpg",
-      "/projects/m-squared/2.jpg"
-    ],
-    "blurb": "M Squared is a premium completed development by M Squared in New Cairo.",
-    "highlights": [
-      "Immediate handover options",
-      "Premium construction quality",
-      "Highly accessible location"
-    ],
-    "paymentPlan": "30% / 7 yrs",
-    "masterPlanUrl": "/masterplans/m-squared.svg"
   },
   {
     "slug": "mountain-view-hyde-park",

@@ -31,7 +31,6 @@ export const brochureMap: Record<string, string> = {
   "mivida-gardens": "Mivida-Gardens.pdf",
   "uptown-cairo": "Uptown-Cairo.pdf",
   aeon: "aeon.pdf",
-  "business-district": "business-district.pdf",
   safia: "Safia-Brochure-IL-Cazar.pdf",
   zoya: "zoya-brochure.pdf",
 
