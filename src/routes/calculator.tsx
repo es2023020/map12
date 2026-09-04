@@ -18,6 +18,7 @@ import {
   Tag,
 } from "lucide-react";
 import { destinations } from "@/data/destinations";
+import { compounds as staticCompounds, compoundBySlug } from "@/data/compounds";
 import { isReadyToMove, hasRTMUnits, hasOffPlanUnits } from "@/lib/delivery";
 
 export const Route = createFileRoute("/calculator")({
@@ -213,8 +214,13 @@ function CalculatorPage() {
   const compoundsList = useStore((s) => s.compoundsList) || [];
   const availabilityList = useStore((s) => s.availabilityList) || [];
 
+  const allCompounds = useMemo(() => {
+    if (compoundsList && compoundsList.length > 0) return compoundsList;
+    return staticCompounds;
+  }, [compoundsList]);
+
   const mainCompounds = useMemo(() => {
-    return compoundsList.filter((c) => {
+    return allCompounds.filter((c) => {
       if (c.parentSlug) return false;
       const avail = availabilityList.find((a) => a.slug === c.slug);
       if (!avail) return false;
@@ -228,7 +234,7 @@ function CalculatorPage() {
       if (!hasPricing) return false;
       return true;
     });
-  }, [compoundsList, availabilityList]);
+  }, [allCompounds, availabilityList]);
 
   const { project: projectParam, unitId: unitIdParam, unitType: unitTypeParam, price: priceParam } = Route.useSearch();
   const [mode, setMode] = useState<"project" | "budget">(
@@ -236,13 +242,12 @@ function CalculatorPage() {
   );
 
   const initialProjectSlug = useMemo(() => {
-    if (projectParam && mainCompounds.some((c) => c.slug === projectParam)) {
-      return projectParam;
-    }
-    return mainCompounds[0]?.slug ?? "";
-  }, [projectParam, mainCompounds]);
+    if (projectParam) return projectParam;
+    return mainCompounds[0]?.slug ?? allCompounds[0]?.slug ?? "";
+  }, [projectParam, mainCompounds, allCompounds]);
 
   const [projectSlug, setProjectSlug] = useState(projectParam || initialProjectSlug);
+
   // Directly sync projectParam from URL query to projectSlug and force mode="project"
   useEffect(() => {
     if (projectParam) {
@@ -250,18 +255,32 @@ function CalculatorPage() {
       setMode("project");
     }
   }, [projectParam]);
+
   const [projectSearchQuery, setProjectSearchQuery] = useState("");
 
+  const selectedProject = useMemo(() => {
+    if (!projectSlug) return null;
+    const match = allCompounds.find((c) => c.slug === projectSlug);
+    if (match) return match;
+    return compoundBySlug(projectSlug) ?? null;
+  }, [projectSlug, allCompounds]);
+
   const filteredMainCompounds = useMemo(() => {
-    if (!projectSearchQuery.trim()) return mainCompounds;
-    const q = projectSearchQuery.toLowerCase().trim();
-    return mainCompounds.filter(
-      (c) =>
-        c.name.toLowerCase().includes(q) ||
-        c.developer.toLowerCase().includes(q) ||
-        c.destination.toLowerCase().includes(q),
-    );
-  }, [mainCompounds, projectSearchQuery]);
+    let list = allCompounds.length > 0 ? allCompounds : mainCompounds;
+    if (projectSearchQuery.trim()) {
+      const q = projectSearchQuery.toLowerCase().trim();
+      list = list.filter(
+        (c) =>
+          c.name.toLowerCase().includes(q) ||
+          c.developer.toLowerCase().includes(q) ||
+          c.destination.toLowerCase().includes(q),
+      );
+    }
+    if (selectedProject && !list.some((c) => c.slug === selectedProject.slug)) {
+      list = [selectedProject, ...list];
+    }
+    return list;
+  }, [allCompounds, mainCompounds, projectSearchQuery, selectedProject]);
 
   useEffect(() => {
     if (projectSearchQuery.trim() && filteredMainCompounds.length > 0) {
@@ -270,18 +289,6 @@ function CalculatorPage() {
       }
     }
   }, [filteredMainCompounds, projectSearchQuery, projectSlug]);
-
-  // Sync state if initialProjectSlug changes (e.g. when mainCompounds loads)
-  useEffect(() => {
-    if (initialProjectSlug) {
-      setProjectSlug((prev: string) => {
-        if (!prev || !mainCompounds.some((c) => c.slug === prev)) {
-          return initialProjectSlug;
-        }
-        return prev;
-      });
-    }
-  }, [initialProjectSlug, mainCompounds]);
 
   const [budgetText, setBudgetText] = useState("15,000,000");
   const [dpPct, setDpPct] = useState(10);
@@ -292,9 +299,6 @@ function CalculatorPage() {
   // New unit selector state
   const [selectedUnitId, setSelectedUnitId] = useState("");
 
-
-
-
   // Advanced filters for "Find by Budget" mode
   const [budgetDestFilters, setBudgetDestFilters] = useState<string[]>([]);
   const [budgetTypeFilter, setBudgetTypeFilter] = useState("");
@@ -304,10 +308,6 @@ function CalculatorPage() {
   const [visibleUnitsLimit, setVisibleUnitsLimit] = useState(8);
   const [visibleProjectsLimit, setVisibleProjectsLimit] = useState(6);
 
-  const selectedProject = useMemo(
-    () => compoundsList.find((c) => c.slug === projectSlug),
-    [projectSlug, compoundsList],
-  );
   const projectAvail = useMemo(
     () => availabilityList.find((a) => a.slug === projectSlug),
     [projectSlug, availabilityList],

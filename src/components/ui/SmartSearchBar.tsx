@@ -12,6 +12,7 @@ import {
 import { compounds } from "@/data/compounds";
 import { developers } from "@/data/developers";
 import { destinations } from "@/data/destinations";
+import { formatDeliveryStatus } from "@/lib/delivery";
 
 export interface SmartSearchBarProps {
   value: string;
@@ -110,7 +111,8 @@ export function SmartSearchBar({
           c.name.toLowerCase().includes(q) ||
           c.developer.toLowerCase().includes(q) ||
           c.destination.toLowerCase().includes(q) ||
-          (c.types && c.types.some((t) => t.toLowerCase().includes(q))),
+          (c.types && c.types.some((t) => t.toLowerCase().includes(q))) ||
+          formatDeliveryStatus(undefined, c.deliveryYear, c.status).label.toLowerCase().includes(q),
       )
       .slice(0, 5);
 

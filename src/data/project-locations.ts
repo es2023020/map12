@@ -1142,8 +1142,15 @@ export const projectLocations: Record<string, ProjectLocation> = {
   },
   vea: {
     name: "Vea",
-    destination: "new-cairo",
-    location: "New Cairo, Cairo Governorate, Egypt",
+    destination: "6th-settlement",
+    location: "6th Settlement, New Cairo, Cairo Governorate, Egypt",
+    mapsUrl:
+      "https://www.google.com/maps/place/Vea+%7C+Ilcazar+development/@29.9595082,31.575679,17z",
+  },
+  "vea-new-cairo": {
+    name: "Vea",
+    destination: "6th-settlement",
+    location: "6th Settlement, New Cairo, Cairo Governorate, Egypt",
     mapsUrl:
       "https://www.google.com/maps/place/Vea+%7C+Ilcazar+development/@29.9595082,31.575679,17z",
   },

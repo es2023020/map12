@@ -77,7 +77,9 @@ function projectIcon(c: Compound, active: boolean) {
     avail > 0 ? `<span class="pt-dot-avail">${avail > 99 ? "99+" : avail}</span>` : "";
   const star = c.flagship ? `<span class="pt-dot-star">★</span>` : "";
   const sizeClass = active ? "pt-dot-lg" : "pt-dot-sm";
+  const pulse = active ? `<div class="pt-dot-pulse"></div>` : "";
   const html = `<div class="pt-dot-wrap">
+    ${pulse}
     <div class="pt-dot ${sizeClass} ${active ? "active" : ""}" style="background:${color}"></div>
     ${star}
     ${availBadge}
@@ -85,9 +87,35 @@ function projectIcon(c: Compound, active: boolean) {
   return L.divIcon({
     html,
     className: "pt-dot-icon",
-    iconSize: active ? [22, 22] : [14, 14],
-    iconAnchor: active ? [11, 11] : [7, 7],
+    iconSize: active ? [28, 28] : [14, 14],
+    iconAnchor: active ? [14, 14] : [7, 7],
   });
+}
+
+function FocusedProjectPolygon({ focused }: { focused: any }) {
+  if (!focused) return null;
+  const wmLoc = resolveWikimapiaLocation(focused.slug) || resolveWikimapiaLocation(focused.name);
+  const polygon = wmLoc?.polygon || focused.polygon;
+  if (!polygon || polygon.length <= 2) return null;
+
+  const positions = polygon.map((p: any) => [p.y, p.x] as [number, number]);
+
+  return (
+    <Polygon
+      positions={positions}
+      pathOptions={{
+        color: "#ea580c",
+        fillColor: "#f97316",
+        fillOpacity: 0.35,
+        weight: 3.5,
+        dashArray: "6, 6",
+      }}
+    >
+      <Tooltip permanent direction="center" opacity={0.9}>
+        <span style={{ fontWeight: 800, color: "#9a3412", fontSize: "11px" }}>📍 {focused.name} Plot</span>
+      </Tooltip>
+    </Polygon>
+  );
 }
 
 function landmarkIcon(l: Landmark) {
@@ -213,37 +241,65 @@ export function MapView({
         .leaflet-popup-tip-container { margin-top: -1px; }
         .pt-wm-pin { width: 12px; height: 12px; display: flex; align-items: center; justify-center: center; }
         .pt-wm-dot { width: 8px; height: 8px; background: #f97316; border: 1.5px solid #ffffff; border-radius: 99px; box-shadow: 0 0 6px rgba(249, 115, 22, 0.6); }
+        @keyframes pt-pulse-beacon {
+          0% { transform: scale(0.6); opacity: 0.9; }
+          100% { transform: scale(2.8); opacity: 0; }
+        }
+        .pt-dot-pulse {
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          width: 28px;
+          height: 28px;
+          border-radius: 9999px;
+          background: #f97316;
+          animation: pt-pulse-beacon 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+          pointer-events: none;
+          z-index: 0;
+        }
       `}</style>
       <MapContainer
         center={focused ? [focused.lat, focused.lng] : initialCenter}
-        zoom={focused ? Math.max(13, initialZoom) : initialZoom}
+        zoom={focused ? Math.max(14, initialZoom) : initialZoom}
         zoomControl={false}
         scrollWheelZoom
         preferCanvas={false}
         style={{ height: "100%", width: "100%" }}
       >
         <MapClickEvents onMapClick={onMapClick} />
+        <FocusedProjectPolygon focused={focused} />
         <LayersControl position="topright">
-          <LayersControl.BaseLayer checked name="Satellite (Default)">
-            <TileLayer
-              attribution="Tiles &copy; Esri"
-              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-              maxZoom={19}
-            />
-          </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Wikimapia Only">
-            <CustomWikimapiaTileLayer opacity={1.0} />
-          </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Wikimapia Hybrid">
+          <LayersControl.BaseLayer checked name="Wikimapia Hybrid">
             <LayerGroup>
               <TileLayer
                 attribution="Tiles &copy; Esri"
                 url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
                 maxZoom={19}
               />
-              <CustomWikimapiaTileLayer opacity={0.75} />
+              <CustomWikimapiaTileLayer opacity={0.85} />
             </LayerGroup>
           </LayersControl.BaseLayer>
+
+          <LayersControl.BaseLayer name="Wikimapia Only">
+            <LayerGroup>
+              <TileLayer
+                attribution="&copy; OpenStreetMap &copy; CARTO"
+                url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
+                subdomains={["a", "b", "c", "d"]}
+                maxZoom={19}
+              />
+              <CustomWikimapiaTileLayer opacity={1.0} />
+            </LayerGroup>
+          </LayersControl.BaseLayer>
+
+          <LayersControl.BaseLayer name="Satellite">
+            <TileLayer
+              attribution="Tiles &copy; Esri"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+              maxZoom={19}
+            />
+          </LayersControl.BaseLayer>
+
           <LayersControl.BaseLayer name="Light Street Map">
             <TileLayer
               attribution="&copy; OpenStreetMap &copy; CARTO"
@@ -252,7 +308,8 @@ export function MapView({
               maxZoom={19}
             />
           </LayersControl.BaseLayer>
-          <LayersControl.Overlay name="Wikimapia Outlines &amp; Polygons">
+
+          <LayersControl.Overlay name="Wikimapia Outlines &amp; Polygons" checked>
             <WikimapiaPlacesOverlay />
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Project Markers &amp; Pins">
@@ -311,7 +368,7 @@ export function MapView({
                     <Popup closeButton={true} maxWidth={220} minWidth={220}>
                       <div dangerouslySetInnerHTML={{ __html: popupHtml }} />
                     </Popup>
-                    <Tooltip direction="top" offset={[0, -8]} opacity={0.96} permanent={false}>
+                    <Tooltip direction="top" offset={[0, -8]} opacity={0.96} permanent={c.slug === activeId}>
                       <div style={{ fontSize: 11, fontWeight: 700, marginBottom: 1 }}>
                         {c.name} {c.km ? `(km ${c.km})` : ""}
                       </div>

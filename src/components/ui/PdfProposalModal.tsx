@@ -3,6 +3,7 @@ import { compounds } from "@/data/compounds";
 import { useState, useEffect, useRef } from "react";
 import { useStore } from "@/lib/store";
 import { formatCurrency, formatExactPrice } from "@/lib/currency";
+import { formatDeliveryStatus } from "@/lib/delivery";
 import mediaRegistry from "@/data/media-registry.json";
 import {
   X,
@@ -165,7 +166,9 @@ export function PdfProposalModal({ data, onClose }: Props) {
   const [dpPct, setDpPct] = useState(data.dpPct || 10);
   const [durationYrs, setDurationYrs] = useState(data.durationYrs || 8);
   const [paymentPlanStr, setPaymentPlanStr] = useState(data.paymentPlanStr);
-  const [deliveryNote, setDeliveryNote] = useState(data.deliveryNote || "Q4 2028");
+  const [deliveryNote, setDeliveryNote] = useState(
+    data.deliveryNote ? formatDeliveryStatus(data.deliveryNote).label : "Off-Plan (In 2.5 Years)"
+  );
   const [finishingStatus, setFinishingStatus] = useState(data.finishing || "Fully Finished");
 
   const [maintenanceFee, setMaintenanceFee] = useState(data.maintenanceFee || "8% Maintenance Deposit");

@@ -282,7 +282,7 @@ export const availability: ProjectAvailability[] = [
         "maxPriceM": 22.1,
         "units": [
           {
-            "id": "ever-th-2y-210",
+            "id": "ever-th-3y-210",
             "unitNo": "EVER-TH-210",
             "beds": 4,
             "finishing": "Semi Finished",
@@ -291,16 +291,16 @@ export const availability: ProjectAvailability[] = [
             "priceEGP": 22100000,
             "status": "Available",
             "slug": "ever-new-cairo",
-            "cluster": "Villas Delivery 2y (Constructed)",
-            "delivery_note": "2 Years",
-            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+            "cluster": "Villas Delivery 3y",
+            "delivery_note": "3 Years",
+            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 3y (40% Dis)",
             "note": "150K Spot Incentive",
             "type": "Townhouse"
           }
         ],
-        "cluster": "Villas Delivery 2y (Constructed)",
-        "deliveryNote": "2 Years",
-        "paymentPlan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+        "cluster": "Villas Delivery 3y",
+        "deliveryNote": "3 Years",
+        "paymentPlan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 3y (40% Dis)",
         "finishing": "Semi Finished"
       },
       {
@@ -344,7 +344,7 @@ export const availability: ProjectAvailability[] = [
         "maxPriceM": 27,
         "units": [
           {
-            "id": "ever-tw-2y-252",
+            "id": "ever-tw-3y-252",
             "unitNo": "EVER-TW-252",
             "beds": 4,
             "finishing": "Semi Finished",
@@ -353,16 +353,16 @@ export const availability: ProjectAvailability[] = [
             "priceEGP": 27000000,
             "status": "Available",
             "slug": "ever-new-cairo",
-            "cluster": "Villas Delivery 2y (Constructed)",
-            "delivery_note": "2 Years",
-            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+            "cluster": "Villas Delivery 3y",
+            "delivery_note": "3 Years",
+            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 3y (40% Dis)",
             "note": "250K Spot Incentive",
             "type": "Twin House"
           }
         ],
-        "cluster": "Villas Delivery 2y (Constructed)",
-        "deliveryNote": "2 Years",
-        "paymentPlan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+        "cluster": "Villas Delivery 3y",
+        "deliveryNote": "3 Years",
+        "paymentPlan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 3y (40% Dis)",
         "finishing": "Semi Finished"
       },
       {
@@ -406,7 +406,7 @@ export const availability: ProjectAvailability[] = [
         "maxPriceM": 49,
         "units": [
           {
-            "id": "ever-sv-2y-423",
+            "id": "ever-sv-3y-423",
             "unitNo": "EVER-SV-423",
             "beds": 5,
             "finishing": "Semi Finished",
@@ -415,16 +415,16 @@ export const availability: ProjectAvailability[] = [
             "priceEGP": 49000000,
             "status": "Available",
             "slug": "ever-new-cairo",
-            "cluster": "Villas Delivery 2y (Constructed)",
-            "delivery_note": "2 Years",
-            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+            "cluster": "Villas Delivery 3y",
+            "delivery_note": "3 Years",
+            "payment_plan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 3y (40% Dis)",
             "note": "250K Spot Incentive",
             "type": "Standalone Villa"
           }
         ],
-        "cluster": "Villas Delivery 2y (Constructed)",
-        "deliveryNote": "2 Years",
-        "paymentPlan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 2y (40% Dis)",
+        "cluster": "Villas Delivery 3y",
+        "deliveryNote": "3 Years",
+        "paymentPlan": "5% DP / 8y or 15%+15% / 6y (15% Dis) or 0% / 3y (40% Dis)",
         "finishing": "Semi Finished"
       },
       {

@@ -55,8 +55,8 @@ export const compoundsGenerated: Compound[] = [
     "areaSize": "128 Feddans",
     "unitSizes": "165\u2013423 m\u00b2",
     "status": "Off-Plan",
-    "deliveryYear": 2026,
-    "paymentPlan": "Villas 2y Delivery: 5%/8y or 15%+15%/6y (15% Dis) -- Villas 4y Delivery: 5%/10y or 5%/7y (18% Dis)",
+    "deliveryYear": 2029,
+    "paymentPlan": "Villas 3y Delivery: 5%/8y or 15%+15%/6y (15% Dis) -- Villas 4y Delivery: 5%/10y or 5%/7y (18% Dis)",
     "types": [
       "Standalone Villa",
       "Townhouse",
@@ -73,7 +73,7 @@ export const compoundsGenerated: Compound[] = [
     "highlights": [
       "Prime location on South Teseen Corridor & Middle Ring Rd",
       "5 mins from Ain Sokhna Rd & 12 mins from AUC",
-      "Constructed 2y Delivery Villas & 4y Delivery Villas options",
+      "Villas Delivery in 3 Years & 4 Years options",
       "Spot incentives of 250K EGP for Twinhouses/Standalone and 150K EGP for Townhouses"
     ],
     "hero": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80",
@@ -681,8 +681,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 18.84,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -1737,9 +1737,9 @@ export const compoundsGenerated: Compound[] = [
   {
     "slug": "vea-new-cairo",
     "name": "Vea New Cairo",
-    "destination": "new-cairo",
-    "lat": 30.025,
-    "lng": 31.48,
+    "destination": "6th-settlement",
+    "lat": 29.9595,
+    "lng": 31.5757,
     "developer": "IL Cazar Developments",
     "developerSlug": "il-cazar-developments",
     "priceFrom": 18.23,
@@ -4030,8 +4030,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
     "priceFrom": 30,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2030,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4176,8 +4176,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Palm Hills Developments",
     "developerSlug": "palm-hills-developments",
     "priceFrom": 14.45,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -4267,7 +4267,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 8.68,
-    "deliveryYear": 2028,
+    "deliveryYear": 2029,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
@@ -4325,8 +4325,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 27.03,
-    "deliveryYear": 2012,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Duplex",
@@ -4496,8 +4496,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 9.76,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2027,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -5049,7 +5049,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 26.87,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -5216,7 +5216,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Al Ahly Sabbour",
     "developerSlug": "al-ahly-sabbour",
     "priceFrom": 6.6,
-    "deliveryYear": 2026,
+    "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
@@ -6385,7 +6385,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
     "priceFrom": 12,
-    "deliveryYear": 2025,
+    "deliveryYear": 2022,
     "status": "RTM",
     "beachfront": true,
     "types": [
@@ -6563,8 +6563,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 50.26,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -6660,7 +6660,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mediterranean Tourism Investment Company",
     "developerSlug": "mediterranean-tourism-investment-company",
     "priceFrom": 37,
-    "deliveryYear": 2026,
+    "deliveryYear": 2022,
     "status": "RTM",
     "beachfront": true,
     "types": [
@@ -6980,8 +6980,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 28.02,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2025,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -7418,8 +7418,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Mountain View",
     "developerSlug": "mountain-view",
     "priceFrom": 19.69,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2027,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -7466,8 +7466,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Tatweer Misr",
     "developerSlug": "tatweer-misr",
     "priceFrom": 54.71,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2027,
+    "status": "Off-Plan",
     "beachfront": true,
     "types": [
       "Apartment",
@@ -10332,7 +10332,7 @@ export const compoundsGenerated: Compound[] = [
     "developerSlug": "sodic",
     "priceFrom": 13.53,
     "deliveryYear": 2026,
-    "status": "RTM",
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -10752,8 +10752,8 @@ export const compoundsGenerated: Compound[] = [
     "developer": "SODIC",
     "developerSlug": "sodic",
     "priceFrom": 9.78,
-    "deliveryYear": 2026,
-    "status": "RTM",
+    "deliveryYear": 2028,
+    "status": "Off-Plan",
     "beachfront": false,
     "types": [
       "Apartment",
@@ -14750,7 +14750,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "Starlight Developments",
     "developerSlug": "starlight-developments",
     "priceFrom": 30,
-    "deliveryYear": 2026,
+    "deliveryYear": 2024,
     "status": "RTM",
     "beachfront": false,
     "types": [
@@ -16829,7 +16829,7 @@ export const compoundsGenerated: Compound[] = [
     "developer": "PRE Developments",
     "developerSlug": "pre-developments",
     "priceFrom": 9.9,
-    "deliveryYear": 2026,
+    "deliveryYear": 2028,
     "status": "Off-Plan",
     "beachfront": false,
     "types": [

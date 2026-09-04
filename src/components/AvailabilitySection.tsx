@@ -23,7 +23,7 @@ function parsePaymentPlan(plan?: string): { dp: number; duration: number } {
 
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import type { ProjectAvailability, UnitBreakdown } from "@/data/availability";
+import { getGardenInfo, type ProjectAvailability, type UnitBreakdown } from "@/data/availability";
 import {
   Phone,
   TrendingUp,
@@ -42,8 +42,10 @@ import {
   Paintbrush2,
   MapPin,
   Calculator,
+  Calendar,
+  Trees,
 } from "lucide-react";
-import { isReadyToMove } from "@/lib/delivery";
+import { formatDeliveryStatus, isReadyToMove } from "@/lib/delivery";
 
 interface Props {
   data: ProjectAvailability;
@@ -376,6 +378,16 @@ export function UnitDetailModal({
                   : `${unit.minSqm}–${unit.maxSqm} m²`
               }
             />
+            {(() => {
+              const g = getGardenInfo(unit);
+              return (
+                <DetailChip
+                  icon={g.hasGarden ? <Trees className="h-4 w-4 text-emerald-600" /> : <Building className="h-4 w-4 text-accent" />}
+                  label="Garden / Unit Type"
+                  value={g.hasGarden ? g.label : "Millennial"}
+                />
+              );
+            })()}
             {unit.finishing && (
               <DetailChip
                 icon={<Paintbrush2 className="h-4 w-4 text-accent" />}
@@ -383,6 +395,11 @@ export function UnitDetailModal({
                 value={unit.finishing}
               />
             )}
+            <DetailChip
+              icon={<Calendar className="h-4 w-4 text-accent" />}
+              label="Delivery Timeline"
+              value={formatDeliveryStatus(unit.deliveryNote, deliveryYear, compoundStatus).label}
+            />
             {unit.available > 0 && (
               <DetailChip
                 icon={<Layers className="h-4 w-4 text-accent" />}

@@ -2387,9 +2387,9 @@ const newProjects: Compound[] = [
   {
     slug: "vea-new-cairo",
     name: "Vea New Cairo",
-    destination: "new-cairo",
-    lat: 30.025,
-    lng: 31.48,
+    destination: "6th-settlement",
+    lat: 29.9595,
+    lng: 31.5757,
     developer: "IL Cazar Developments",
     developerSlug: "il-cazar-developments",
     priceFrom: 14,
@@ -2408,13 +2408,13 @@ const newProjects: Compound[] = [
     hero: "/projects/vea-new-cairo/1.jpg",
     gallery: ["/projects/vea-new-cairo/1.jpg"],
     blurb:
-      "Vea New Cairo by IL Cazar Developments is an exclusive sanctuary offering luxurious residential units seamlessly integrated with serene nature and modern amenities.",
+      "Vea by IL Cazar Developments is an exclusive sanctuary located in the 6th Settlement, offering luxurious residential units seamlessly integrated with serene nature and modern amenities.",
     paymentPlan: "10% down · 8 years equal installments",
     areaSize: "70 feddan",
     unitSizes: "110–300 m²",
     type: "Residential",
     highlights: [
-      "New Cairo prime location",
+      "6th Settlement prime location",
       "Serene natural integration",
       "Luxury lifestyle amenities",
       "Ready 2028",

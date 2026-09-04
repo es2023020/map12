@@ -6,6 +6,7 @@ import { Shell } from "@/components/layout/Shell";
 import { compounds, compoundBySlug, Compound } from "@/data/compounds";
 import { availabilityBySlug } from "@/data/availability";
 import { useStore } from "@/lib/store";
+import { formatDeliveryStatus } from "@/lib/delivery";
 import {
   GitCompareArrows,
   Search,
@@ -160,9 +161,7 @@ export function ComparePage() {
           : null;
 
       const price = bd ? bd.minPriceM : comp?.priceFrom ?? 0;
-      const delivery = bd
-        ? bd.deliveryNote || comp?.deliveryYear.toString() || "—"
-        : comp?.deliveryYear.toString() || "—";
+      const delivery = formatDeliveryStatus(bd?.deliveryNote, comp?.deliveryYear, comp?.status).label;
       const area = bd
         ? bd.minSqm === bd.maxSqm
           ? `${bd.minSqm} m²`

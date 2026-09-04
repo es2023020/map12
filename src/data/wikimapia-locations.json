@@ -91670,10 +91670,10 @@
   "vea new cairo": {
     "id": "vea-new-cairo",
     "name": "Vea New Cairo",
-    "lat": 30.025,
-    "lng": 31.48,
-    "destination": "new-cairo",
-    "url": "https://wikimapia.org/#lang=en&lat=30.025&lon=31.48&z=16"
+    "lat": 29.9595,
+    "lng": 31.5757,
+    "destination": "6th-settlement",
+    "url": "https://wikimapia.org/#lang=en&lat=29.9595&lon=31.5757&z=16"
   },
   "vie collective": {
     "id": "vie-collective",
@@ -92510,10 +92510,10 @@
   "vea-new-cairo": {
     "id": "vea-new-cairo",
     "name": "Vea New Cairo",
-    "lat": 30.025,
-    "lng": 31.48,
-    "destination": "new-cairo",
-    "url": "https://wikimapia.org/#lang=en&lat=30.025&lon=31.48&z=15"
+    "lat": 29.9595,
+    "lng": 31.5757,
+    "destination": "6th-settlement",
+    "url": "https://wikimapia.org/#lang=en&lat=29.9595&lon=31.5757&z=15"
   },
   "vie-collective": {
     "id": "vie-collective",

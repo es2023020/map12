@@ -5,7 +5,7 @@ import { useStore } from "@/lib/store";
 import { destinationBySlug } from "@/data/destinations";
 import { developers } from "@/data/developers";
 import type { Compound } from "@/data/compounds";
-import { isReadyToMove, hasRTMUnits, hasOffPlanUnits } from "@/lib/delivery";
+import { isReadyToMove, hasRTMUnits, hasOffPlanUnits, formatDeliveryStatus } from "@/lib/delivery";
 
 export function CompoundCard({ c }: { c: Compound }) {
   const isFav = useStore((s) => s.favorites.includes(c.slug));
@@ -127,9 +127,7 @@ export function CompoundCard({ c }: { c: Compound }) {
           </span>
           <span className="inline-flex items-center gap-1.5">
             <Calendar className="h-3.5 w-3.5 text-muted-foreground/50" />
-            {c.deliveryYear === new Date().getFullYear()
-              ? "Ready Now"
-              : `Delivery ${c.deliveryYear}`}
+            {formatDeliveryStatus(undefined, c.deliveryYear, c.status, hasRtm && hasOffPlan).label}
           </span>
         </div>
 

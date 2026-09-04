@@ -50,6 +50,47 @@ export function unitTypeSlug(b: UnitBreakdown): string {
   return parts.join("-").replace(/-+/g, "-").replace(/^-|-$/g, "");
 }
 
+/** Check if a unit has a garden, get its garden size, or mark it as Millennial */
+export function getGardenInfo(unit: any): { hasGarden: boolean; gardenSize?: number; label: string } {
+  if (!unit) return { hasGarden: false, label: "Millennial" };
+  let size = 0;
+  if (typeof unit.gardenAreaSqm === "number" && unit.gardenAreaSqm > 0) {
+    size = unit.gardenAreaSqm;
+  } else if (typeof unit.gardenSqm === "number" && unit.gardenSqm > 0) {
+    size = unit.gardenSqm;
+  } else if (typeof unit.garden === "number" && unit.garden > 0) {
+    size = unit.garden;
+  } else if (typeof unit.gardenArea === "number" && unit.gardenArea > 0) {
+    size = unit.gardenArea;
+  } else if (typeof unit.areaNote === "string") {
+    const match = unit.areaNote.match(/garden\s*[:\+]?\s*(\d+(?:\.\d+)?)\s*m/i);
+    if (match) {
+      size = parseFloat(match[1]);
+    }
+  }
+
+  if (size > 0) {
+    return {
+      hasGarden: true,
+      gardenSize: size,
+      label: `Garden: ${size} m²`,
+    };
+  }
+
+  const noteStr = `${unit.areaNote || ""} ${unit.type || ""}`.toLowerCase();
+  if (noteStr.includes("garden") && !noteStr.includes("view")) {
+    return {
+      hasGarden: true,
+      label: "Has Garden",
+    };
+  }
+
+  return {
+    hasGarden: false,
+    label: "Millennial",
+  };
+}
+
 // ─── Asynchronous Lazy Loading ────────────────────────────────────────────────
 
 let loadedAvailability: ProjectAvailability[] | null = null;

@@ -1292,9 +1292,10 @@ function CompoundPage() {
           <Section title="Interactive Location Map">
             <div className="h-[300px] md:h-[360px] overflow-hidden rounded-2xl border border-border shadow-soft">
               <MapClient
-                compounds={[c]}
+                compounds={compoundsByDestination(c.destination)}
                 focus={c}
-                showLandmarks={false}
+                activeSlug={c.slug}
+                showLandmarks={true}
                 className="h-full w-full"
               />
             </div>

@@ -1,0 +1,1058 @@
+[
+  {
+    "slug": "ever-new-cairo",
+    "name": "Ever New Cairo",
+    "developer": "Cred Developments",
+    "destination": "6th-settlement",
+    "deliveryYear": 2026,
+    "unitsAvailable": 6
+  },
+  {
+    "slug": "amorada",
+    "name": "Amorada",
+    "developer": "Afaq",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "green-square",
+    "name": "Green Square",
+    "developer": "Al Ahly Sabbour",
+    "destination": "mostakbal-city",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "lavenir",
+    "name": "L'AVENIR",
+    "developer": "Al Ahly Sabbour",
+    "destination": "mostakbal-city",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "fifth-square",
+    "name": "Fifth Square",
+    "developer": "Al Marasem Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "seazen",
+    "name": "Seazen",
+    "developer": "Al Qamzi Developments",
+    "destination": "al-dabaa",
+    "deliveryYear": 2026,
+    "unitsAvailable": 6
+  },
+  {
+    "slug": "nyoum-pyramids",
+    "name": "Nyoum Pyramids",
+    "developer": "Arab Developers Holding",
+    "destination": "6th-october",
+    "deliveryYear": 2010,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "direction-white",
+    "name": "Direction White",
+    "developer": "Arabella Group",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 17
+  },
+  {
+    "slug": "ashrafieh",
+    "name": "Ashrafieh",
+    "developer": "Arabia",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 3
+  },
+  {
+    "slug": "galleria-moon-valley",
+    "name": "Galleria Moon Valley",
+    "developer": "Arabia Holding",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "sun-capital",
+    "name": "Sun Capital",
+    "developer": "Arabia Holding",
+    "destination": "6th-october",
+    "deliveryYear": 2025,
+    "unitsAvailable": 9
+  },
+  {
+    "slug": "zizinia",
+    "name": "Zizinia",
+    "developer": "Ardic",
+    "destination": "mostakbal-city",
+    "deliveryYear": 2026,
+    "unitsAvailable": 3
+  },
+  {
+    "slug": "kayan",
+    "name": "Kayan",
+    "developer": "Badreldin Developments",
+    "destination": "northern-expansion",
+    "deliveryYear": 2025,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "beta-greens",
+    "name": "Beta Greens",
+    "developer": "Beta Egypt",
+    "destination": "mostakbal-city",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "midtown-new-cairo",
+    "name": "Midtown New Cairo",
+    "developer": "Better Home",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "lake-west-1",
+    "name": "LAKE WEST 1",
+    "developer": "Cairo Capital",
+    "destination": "northern-expansion",
+    "deliveryYear": 2025,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "lake-west-2",
+    "name": "LAKE WEST 2",
+    "developer": "Cairo Capital",
+    "destination": "new-zayed",
+    "deliveryYear": 2025,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "beachfront-towers-new-alamein",
+    "name": "Beachfront Towers (Tower B1)",
+    "developer": "City Edge Developments",
+    "destination": "new-alamein",
+    "deliveryYear": 2026,
+    "unitsAvailable": 8
+  },
+  {
+    "slug": "downtown-new-alamein",
+    "name": "Downtown New Alamein",
+    "developer": "City Edge Developments",
+    "destination": "new-alamein",
+    "deliveryYear": 2025,
+    "unitsAvailable": 3
+  },
+  {
+    "slug": "il-latini-city-edge",
+    "name": "Il Latini / Latin City",
+    "developer": "City Edge Developments",
+    "destination": "new-alamein",
+    "deliveryYear": 2026,
+    "unitsAvailable": 12
+  },
+  {
+    "slug": "jade-park-al-maqsad",
+    "name": "Jade Park (Al Maqsad)",
+    "developer": "City Edge Developments",
+    "destination": "new-administrative-capital",
+    "deliveryYear": 2025,
+    "unitsAvailable": 8
+  },
+  {
+    "slug": "mazarine-apartments-new-alamein",
+    "name": "Mazarine Apartments",
+    "developer": "City Edge Developments",
+    "destination": "new-alamein",
+    "deliveryYear": 2026,
+    "unitsAvailable": 13
+  },
+  {
+    "slug": "mazarine-hub-new-alamein",
+    "name": "Mazarine HUB",
+    "developer": "City Edge Developments",
+    "destination": "new-alamein",
+    "deliveryYear": 2026,
+    "unitsAvailable": 6
+  },
+  {
+    "slug": "new-garden-city-r5",
+    "name": "New Garden City (R5)",
+    "developer": "City Edge Developments",
+    "destination": "new-administrative-capital",
+    "deliveryYear": 2025,
+    "unitsAvailable": 6
+  },
+  {
+    "slug": "cleopatra-square",
+    "name": "Cleopatra Square",
+    "developer": "Cleopatra Real Estate",
+    "destination": "6th-october",
+    "deliveryYear": 2025,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "address-east",
+    "name": "Address East",
+    "developer": "Dorra Group",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "genova",
+    "name": "Genova",
+    "developer": "Eastern",
+    "destination": "sheikh-zayed",
+    "deliveryYear": 2025,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "rock-eden",
+    "name": "Rock Eden",
+    "developer": "El Batal Developments",
+    "destination": "6th-october",
+    "deliveryYear": 2025,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "lac-ville",
+    "name": "Lac Ville",
+    "developer": "El Gabry",
+    "destination": "northern-expansion",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "belle-vie-new-zayed",
+    "name": "Belle Vie New Zayed",
+    "developer": "Emaar Misr",
+    "destination": "new-zayed",
+    "deliveryYear": 2026,
+    "unitsAvailable": 97
+  },
+  {
+    "slug": "belle-vie",
+    "name": "Belle Vie",
+    "developer": "Emaar Misr",
+    "destination": "new-zayed",
+    "deliveryYear": 2025,
+    "unitsAvailable": 97
+  },
+  {
+    "slug": "cairo-gate",
+    "name": "Cairo Gate",
+    "developer": "Emaar Misr",
+    "destination": "sheikh-zayed",
+    "deliveryYear": 2026,
+    "unitsAvailable": 92
+  },
+  {
+    "slug": "mivida",
+    "name": "Mivida",
+    "developer": "Emaar Misr",
+    "destination": "new-cairo",
+    "deliveryYear": 2015,
+    "unitsAvailable": 88
+  },
+  {
+    "slug": "montania-park",
+    "name": "Montania Park",
+    "developer": "Everest View",
+    "destination": "northern-expansion",
+    "deliveryYear": 2025,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "montania",
+    "name": "Montania",
+    "developer": "Everest View",
+    "destination": "northern-expansion",
+    "deliveryYear": 2025,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "haptown",
+    "name": "Haptown",
+    "developer": "Hassan Allam Properties",
+    "destination": "mostakbal-city",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "swanlake-residences-new-cairo",
+    "name": "SwanLake Residences (New Cairo)",
+    "developer": "Hassan Allam Properties",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 13
+  },
+  {
+    "slug": "ashgar-city",
+    "name": "Ashgar city",
+    "developer": "IGI Real Estate",
+    "destination": "6th-october",
+    "deliveryYear": 2025,
+    "unitsAvailable": 3
+  },
+  {
+    "slug": "creek-town",
+    "name": "Creek Town",
+    "developer": "IL Cazar Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 6
+  },
+  {
+    "slug": "jefaira",
+    "name": "Jefaira",
+    "developer": "Inertia Egypt",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 16
+  },
+  {
+    "slug": "la-mirada",
+    "name": "La Mirada",
+    "developer": "La Mirada",
+    "destination": "mostakbal-city",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "el-patio-vera",
+    "name": "El Patio Vera",
+    "developer": "La Vista Developments",
+    "destination": "sheikh-zayed",
+    "deliveryYear": 2026,
+    "unitsAvailable": 5
+  },
+  {
+    "slug": "la-vista-6",
+    "name": "La Vista 6",
+    "developer": "La Vista Developments",
+    "destination": "ain-sokhna",
+    "deliveryYear": 2026,
+    "unitsAvailable": 6
+  },
+  {
+    "slug": "la-vista-7",
+    "name": "La Vista 7",
+    "developer": "La Vista Developments",
+    "destination": "ain-sokhna",
+    "deliveryYear": 2025,
+    "unitsAvailable": 4
+  },
+  {
+    "slug": "la-vista-bay-east",
+    "name": "La Vista Bay East",
+    "developer": "La Vista Developments",
+    "destination": "al-dabaa",
+    "deliveryYear": 2025,
+    "unitsAvailable": 5
+  },
+  {
+    "slug": "la-vista-cascada",
+    "name": "La Vista Cascada",
+    "developer": "La Vista Developments",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2025,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "la-vista-east",
+    "name": "La Vista East",
+    "developer": "La Vista Developments",
+    "destination": "6th-settlement",
+    "deliveryYear": 2026,
+    "unitsAvailable": 5
+  },
+  {
+    "slug": "la-vista-gardens",
+    "name": "La Vista Gardens",
+    "developer": "La Vista Developments",
+    "destination": "ain-sokhna",
+    "deliveryYear": 2026,
+    "unitsAvailable": 16
+  },
+  {
+    "slug": "la-vista-ras-el-hekma",
+    "name": "La Vista Ras El Hekma",
+    "developer": "La Vista Developments",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 4
+  },
+  {
+    "slug": "la-vista-topaz",
+    "name": "La Vista Topaz",
+    "developer": "La Vista Developments",
+    "destination": "ain-sokhna",
+    "deliveryYear": 2026,
+    "unitsAvailable": 6
+  },
+  {
+    "slug": "patio-5-east",
+    "name": "Patio 5 East",
+    "developer": "La Vista Developments",
+    "destination": "shorouk",
+    "deliveryYear": 2026,
+    "unitsAvailable": 4
+  },
+  {
+    "slug": "patio-casa",
+    "name": "Patio Casa",
+    "developer": "La Vista Developments",
+    "destination": "shorouk",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "patio-oro",
+    "name": "El Patio Oro",
+    "developer": "La Vista Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 9
+  },
+  {
+    "slug": "patio-prime",
+    "name": "Patio Prime",
+    "developer": "La Vista Developments",
+    "destination": "shorouk",
+    "deliveryYear": 2026,
+    "unitsAvailable": 4
+  },
+  {
+    "slug": "azha-north-coast",
+    "name": "Azha North Coast",
+    "developer": "Madaar Developments",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 10
+  },
+  {
+    "slug": "azha-sokhna",
+    "name": "Azha Sokhna",
+    "developer": "Madaar Developments",
+    "destination": "ain-sokhna",
+    "deliveryYear": 2024,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "taj-city",
+    "name": "Taj City",
+    "developer": "Madinet Masr",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 6
+  },
+  {
+    "slug": "aeon",
+    "name": "Aeon",
+    "developer": "Marakez",
+    "destination": "6th-october",
+    "deliveryYear": 2024,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "district-5",
+    "name": "District 5",
+    "developer": "Marakez",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 57
+  },
+  {
+    "slug": "m-apartments",
+    "name": "M Apartments",
+    "developer": "Mirad",
+    "destination": "northern-expansion",
+    "deliveryYear": 2025,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "villaria",
+    "name": "Villaria",
+    "developer": "Mirad",
+    "destination": "northern-expansion",
+    "deliveryYear": 2025,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "il-bosco-city",
+    "name": "Il Bosco City",
+    "developer": "Misr Italia Properties",
+    "destination": "new-administrative-capital",
+    "deliveryYear": 2026,
+    "unitsAvailable": 3
+  },
+  {
+    "slug": "vinci",
+    "name": "Vinci",
+    "developer": "Misr Italia Properties",
+    "destination": "new-administrative-capital",
+    "deliveryYear": 2026,
+    "unitsAvailable": 8
+  },
+  {
+    "slug": "lvls",
+    "name": "LVLS",
+    "developer": "Mountain View",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 8
+  },
+  {
+    "slug": "mountain-view-crystal",
+    "name": "Mountain View Crystal",
+    "developer": "Mountain View",
+    "destination": "sidi-abdelrahman",
+    "deliveryYear": 2026,
+    "unitsAvailable": 129
+  },
+  {
+    "slug": "mountain-view-grand-valley",
+    "name": "Mountain View Grand Valley",
+    "developer": "Mountain View",
+    "destination": "6th-october",
+    "deliveryYear": 2012,
+    "unitsAvailable": 33
+  },
+  {
+    "slug": "mountain-view-hyde-park",
+    "name": "Mountain View Hyde Park",
+    "developer": "Mountain View",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "mountain-view-icity-new-cairo",
+    "name": "I City New Cairo",
+    "developer": "Mountain View",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 15
+  },
+  {
+    "slug": "mountain-view-icity-october",
+    "name": "Mountain View iCity October",
+    "developer": "Mountain View",
+    "destination": "northern-expansion",
+    "deliveryYear": 2026,
+    "unitsAvailable": 200
+  },
+  {
+    "slug": "mountain-view-kingsway",
+    "name": "Mountain View Kingsway",
+    "developer": "Mountain View",
+    "destination": "6th-october",
+    "deliveryYear": 2012,
+    "unitsAvailable": 4
+  },
+  {
+    "slug": "mountain-view-mv4",
+    "name": "Mountain View MV4",
+    "developer": "Mountain View",
+    "destination": "6th-october",
+    "deliveryYear": 2026,
+    "unitsAvailable": 17
+  },
+  {
+    "slug": "mountain-view-ras-el-hekma",
+    "name": "Mountain View Ras El Hekma",
+    "developer": "Mountain View",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 14
+  },
+  {
+    "slug": "naia-bay",
+    "name": "Naia Bay",
+    "developer": "Naia Developments",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 8
+  },
+  {
+    "slug": "jirian-nations-of-sky",
+    "name": "Jiryan",
+    "developer": "Nations of Sky",
+    "destination": "new-zayed",
+    "deliveryYear": 2026,
+    "unitsAvailable": 14
+  },
+  {
+    "slug": "katameya-gardens",
+    "name": "Katameya Gardens",
+    "developer": "North Africa",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 4
+  },
+  {
+    "slug": "golden-heights-1",
+    "name": "Golden Heights 1",
+    "developer": "Novus Stanza",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "golden-heights-2",
+    "name": "Golden Heights 2",
+    "developer": "Novus Stanza",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "zed-east",
+    "name": "Zed East",
+    "developer": "Ora Developers",
+    "destination": "6th-settlement",
+    "deliveryYear": 2026,
+    "unitsAvailable": 14
+  },
+  {
+    "slug": "badya",
+    "name": "Badya",
+    "developer": "Palm Hills Developments",
+    "destination": "6th-october",
+    "deliveryYear": 2024,
+    "unitsAvailable": 354
+  },
+  {
+    "slug": "hacienda-bay",
+    "name": "Hacienda Bay",
+    "developer": "Palm Hills Developments",
+    "destination": "sidi-abdelrahman",
+    "deliveryYear": 2024,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "hacienda-west",
+    "name": "Hacienda West",
+    "developer": "Palm Hills Developments",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2025,
+    "unitsAvailable": 14
+  },
+  {
+    "slug": "palm-hills-alexandria",
+    "name": "Palm Hills Alexandria",
+    "developer": "Palm Hills Developments",
+    "destination": "alexandria",
+    "deliveryYear": 2026,
+    "unitsAvailable": 48
+  },
+  {
+    "slug": "palm-parks",
+    "name": "Palm Parks",
+    "developer": "Palm Hills Developments",
+    "destination": "eastern-expansion",
+    "deliveryYear": 2026,
+    "unitsAvailable": 8
+  },
+  {
+    "slug": "palmet",
+    "name": "Palmet October",
+    "developer": "Palm Hills Developments",
+    "destination": "6th-october",
+    "deliveryYear": 2026,
+    "unitsAvailable": 18
+  },
+  {
+    "slug": "px",
+    "name": "PX",
+    "developer": "Palm Hills Developments",
+    "destination": "eastern-expansion",
+    "deliveryYear": 2026,
+    "unitsAvailable": 270
+  },
+  {
+    "slug": "the-crown-extension",
+    "name": "The Crown Extension",
+    "developer": "Palm Hills Developments",
+    "destination": "eastern-expansion",
+    "deliveryYear": 2026,
+    "unitsAvailable": 53
+  },
+  {
+    "slug": "village-de-la-capitale",
+    "name": "Village de la Capitale",
+    "developer": "Palm Hills Developments",
+    "destination": "new-administrative-capital",
+    "deliveryYear": 2026,
+    "unitsAvailable": 264
+  },
+  {
+    "slug": "hadaba",
+    "name": "Hadaba",
+    "developer": "PRE Developments",
+    "destination": "northern-expansion",
+    "deliveryYear": 2025,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "ivoire-east",
+    "name": "Ivoire East",
+    "developer": "PRE Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 7
+  },
+  {
+    "slug": "jebal-sokhna",
+    "name": "Jebal Sokhna",
+    "developer": "PRE Developments",
+    "destination": "ain-sokhna",
+    "deliveryYear": 2026,
+    "unitsAvailable": 4
+  },
+  {
+    "slug": "point-90-offices-park",
+    "name": "Point 90 Offices Park",
+    "developer": "PRE Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 6
+  },
+  {
+    "slug": "stone-residence",
+    "name": "Stone Residence",
+    "developer": "PRE Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 3
+  },
+  {
+    "slug": "monte-napoleone",
+    "name": "Monte Napoleone",
+    "developer": "Reportage Properties",
+    "destination": "mostakbal-city",
+    "deliveryYear": 2026,
+    "unitsAvailable": 4
+  },
+  {
+    "slug": "sephora-heights",
+    "name": "Sephora Heights",
+    "developer": "Sephora",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 3
+  },
+  {
+    "slug": "caesar-extension-2",
+    "name": "Caesar Extension 2",
+    "developer": "SODIC",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 21
+  },
+  {
+    "slug": "caesar-sodic",
+    "name": "Caesar Sodic",
+    "developer": "SODIC",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 29
+  },
+  {
+    "slug": "june",
+    "name": "June",
+    "developer": "SODIC",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 83
+  },
+  {
+    "slug": "karmell",
+    "name": "Karmell",
+    "developer": "SODIC",
+    "destination": "new-zayed",
+    "deliveryYear": 2026,
+    "unitsAvailable": 231
+  },
+  {
+    "slug": "ogami",
+    "name": "Ogami",
+    "developer": "SODIC",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 219
+  },
+  {
+    "slug": "sky-condos",
+    "name": "Sky Condos",
+    "developer": "SODIC",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 7
+  },
+  {
+    "slug": "sodic-east",
+    "name": "Sodic East",
+    "developer": "SODIC",
+    "destination": "heliopolis",
+    "deliveryYear": 2026,
+    "unitsAvailable": 155
+  },
+  {
+    "slug": "sodic-the-estates",
+    "name": "SODIC The Estates",
+    "developer": "SODIC",
+    "destination": "new-zayed",
+    "deliveryYear": 2026,
+    "unitsAvailable": 9
+  },
+  {
+    "slug": "villette",
+    "name": "Villette",
+    "developer": "SODIC",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 4
+  },
+  {
+    "slug": "vye-sodic",
+    "name": "VYE SODIC",
+    "developer": "SODIC",
+    "destination": "new-zayed",
+    "deliveryYear": 2026,
+    "unitsAvailable": 27
+  },
+  {
+    "slug": "katameya-creeks",
+    "name": "Katameya Creeks",
+    "developer": "Starlight Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 3
+  },
+  {
+    "slug": "la-vista-city",
+    "name": "La Vista City",
+    "developer": "STM",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 12
+  },
+  {
+    "slug": "azad",
+    "name": "Azad",
+    "developer": "Tameer",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "d-bay",
+    "name": "D-Bay",
+    "developer": "Tatweer Misr",
+    "destination": "al-dabaa",
+    "deliveryYear": 2026,
+    "unitsAvailable": 12
+  },
+  {
+    "slug": "fouka-bay",
+    "name": "Fouka Bay North Coast",
+    "developer": "Tatweer Misr",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2025,
+    "unitsAvailable": 8
+  },
+  {
+    "slug": "rivers",
+    "name": "Rivers",
+    "developer": "Tatweer Misr",
+    "destination": "new-zayed",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "90-avenue",
+    "name": "90 Avenue",
+    "developer": "Tabarak",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "joya",
+    "name": "Joya",
+    "developer": "Tcc",
+    "destination": "6th-october",
+    "deliveryYear": 2025,
+    "unitsAvailable": 6
+  },
+  {
+    "slug": "green-town",
+    "name": "Green Town",
+    "developer": "Tesla",
+    "destination": "6th-october",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "w-signature",
+    "name": "W Signature",
+    "developer": "The Waterway",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 2
+  },
+  {
+    "slug": "waterway-1",
+    "name": "Waterway 1",
+    "developer": "The Waterway Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "the-waterway",
+    "name": "The Waterway",
+    "developer": "The Waterway Developments",
+    "destination": "al-dabaa",
+    "deliveryYear": 2026,
+    "unitsAvailable": 25
+  },
+  {
+    "slug": "neopolis",
+    "name": "Neopolis",
+    "developer": "Wadi Degla",
+    "destination": "mostakbal-city",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "promenade",
+    "name": "Promenade",
+    "developer": "Wadi Degla",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "zg2",
+    "name": "Zg2",
+    "developer": "Zg",
+    "destination": "northern-expansion",
+    "deliveryYear": 2025,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "the-marq-gardens",
+    "name": "The Marq Gardens",
+    "developer": "The MarQ Communities",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 5
+  },
+  {
+    "slug": "the-water-marq",
+    "name": "The Water MarQ",
+    "developer": "The MarQ Communities",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 7
+  },
+  {
+    "slug": "club-views",
+    "name": "Club Views",
+    "developer": "Madinet Masr",
+    "destination": "sarai",
+    "deliveryYear": 2026,
+    "unitsAvailable": 264
+  },
+  {
+    "slug": "kinda-residence",
+    "name": "Kinda Residence",
+    "developer": "Madinet Masr",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 4
+  },
+  {
+    "slug": "origami",
+    "name": "ORIGAMI",
+    "developer": "Madinet Masr",
+    "destination": "sarai",
+    "deliveryYear": 2026,
+    "unitsAvailable": 10
+  },
+  {
+    "slug": "sarai",
+    "name": "Sarai",
+    "developer": "Madinet Masr",
+    "destination": "sarai",
+    "deliveryYear": 2026,
+    "unitsAvailable": 433
+  },
+  {
+    "slug": "gaia",
+    "name": "Gaia",
+    "developer": "Al Ahly Sabbour",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 1
+  },
+  {
+    "slug": "keeva-6th-of-october",
+    "name": "KEEVA",
+    "developer": "Al Ahly Sabbour",
+    "destination": "6th-october",
+    "deliveryYear": 2026,
+    "unitsAvailable": 3
+  },
+  {
+    "slug": "youd",
+    "name": "Youd",
+    "developer": "Al Ahly Sabbour",
+    "destination": "ras-el-hekma",
+    "deliveryYear": 2026,
+    "unitsAvailable": 137
+  },
+  {
+    "slug": "hyde-park-new-cairo",
+    "name": "Hyde Park New Cairo",
+    "developer": "Hyde Park Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 45
+  },
+  {
+    "slug": "hyde-park-retail",
+    "name": "Hyde Park Retail",
+    "developer": "Hyde Park Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 17
+  },
+  {
+    "slug": "signature-villas",
+    "name": "Signature Villas & Apartments",
+    "developer": "Hyde Park Developments",
+    "destination": "new-cairo",
+    "deliveryYear": 2026,
+    "unitsAvailable": 55
+  },
+  {
+    "slug": "garden-lakes",
+    "name": "Garden Lakes",
+    "developer": "Hyde Park Developments",
+    "destination": "6th-october",
+    "deliveryYear": 2026,
+    "unitsAvailable": 47
+  }
+]

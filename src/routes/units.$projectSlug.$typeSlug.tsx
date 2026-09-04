@@ -2,10 +2,11 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { compoundBySlug } from "@/data/compounds";
-import { breakdownByTypeSlug, unitTypeSlug } from "@/data/availability";
+import { breakdownByTypeSlug, unitTypeSlug, getGardenInfo } from "@/data/availability";
 import type { UnitListing, ProjectAvailability } from "@/data/availability";
 import type { Compound } from "@/data/compounds";
 import { useStore } from "@/lib/store";
+import { formatDeliveryStatus } from "@/lib/delivery";
 import {
   ArrowLeft,
   Phone,
@@ -447,6 +448,9 @@ function UnitTypePage() {
                           Delivery
                         </th>
                         <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                          Garden / Type
+                        </th>
+                        <th className="px-4 py-3.5 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                           Finishing
                         </th>
                         {extraKeys.map((key) => (
@@ -499,21 +503,35 @@ function UnitTypePage() {
                             )}
                           </td>
                           <td className="px-4 py-3.5 hidden lg:table-cell">
-                            {unit.deliveryNote ? (
-                              <span
-                                className={`text-xs font-bold ${
-                                  unit.deliveryNote === "Ready to Move"
-                                    ? "text-emerald-600"
-                                    : unit.deliveryNote.includes("1 ")
-                                      ? "text-amber-600"
+                            {(() => {
+                              const delInfo = formatDeliveryStatus(unit.deliveryNote);
+                              const isRtm = delInfo.category === "rtm" || delInfo.category === "delivered";
+                              return (
+                                <span
+                                  className={`text-xs font-bold ${
+                                    isRtm
+                                      ? "text-emerald-600 dark:text-emerald-400"
                                       : "text-muted-foreground"
-                                }`}
-                              >
-                                {unit.deliveryNote}
-                              </span>
-                            ) : (
-                              <span className="text-border text-xs">—</span>
-                            )}
+                                  }`}
+                                >
+                                  {delInfo.label}
+                                </span>
+                              );
+                            })()}
+                          </td>
+                          <td className="px-4 py-3.5">
+                            {(() => {
+                              const g = getGardenInfo(unit);
+                              return g.hasGarden ? (
+                                <span className="inline-flex items-center gap-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-400">
+                                  🏡 {g.label}
+                                </span>
+                              ) : (
+                                <span className="inline-flex items-center gap-1 rounded-md bg-slate-500/10 border border-slate-500/20 px-2.5 py-1 text-xs font-semibold text-slate-600 dark:text-slate-400">
+                                  🏢 Millennial
+                                </span>
+                              );
+                            })()}
                           </td>
                           <td className="px-4 py-3.5">
                             <FinishingBadge label={unit.finishing} />
@@ -804,6 +822,21 @@ function UnitCard({ unit, index }: { unit: UnitListing; index: number }) {
           <span className="text-muted-foreground">Finishing</span>
           <div className="font-medium text-primary">{unit.finishing}</div>
         </div>
+        {(() => {
+          const g = getGardenInfo(unit);
+          return (
+            <div>
+              <span className="text-muted-foreground">Garden / Type</span>
+              <div
+                className={`font-semibold ${
+                  g.hasGarden ? "text-emerald-600 dark:text-emerald-400" : "text-primary"
+                }`}
+              >
+                {g.hasGarden ? `🏡 ${g.label}` : "🏢 Millennial"}
+              </div>
+            </div>
+          );
+        })()}
         {Object.keys(unit)
           .filter(
             (k) =>

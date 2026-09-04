@@ -1,150 +1,150 @@
-/**
- * Smart Ready to Move (RTM) determination utility.
- * RTM is defined strictly as delivery within 9 months or less from today's date (August 2026 => delivery <= 2027 / May 2027).
- * Any unit or project with deliveryYear > 2027 (e.g. 2028, 2029, 2030) or relative delivery > 1 year is NOT RTM (it is Off-Plan).
- */
-
-export const MAX_RTM_DELIVERY_YEAR = 2027;
-
-export function parseYearFromNote(note?: string): number | null {
-  if (!note) return null;
-
-  const lower = note.toLowerCase();
-
-  // Match 4-digit years (e.g. 2026, 2027, 2028, 2029, 2030)
-  const yearMatch = note.match(/\b(20\d{2})\b/);
-  if (yearMatch) {
-    return parseInt(yearMatch[1], 10);
-  }
-
-  // Match explicit RTM phrases
-  if (
-    lower.includes("ready") ||
-    lower.includes("rtm") ||
-    lower.includes("immediate")
-  ) {
-    return 2026;
-  }
-
-  // Match relative months (e.g. "1 month", "6 months", "Ready in 1 Month")
-  const monthMatch = lower.match(/(\d+)\s*(?:months?|mos?)/);
-  if (monthMatch) {
-    const relMonths = parseInt(monthMatch[1], 10);
-    return relMonths <= 18 ? 2026 : 2026 + Math.ceil(relMonths / 12);
-  }
-
-  // Match relative years (e.g. "3 years", "4 yrs") -> current year (2026) + relative years
-  const relMatch = lower.match(/(\d+)\s*(?:years?|yrs?)/);
-  if (relMatch) {
-    const relYears = parseInt(relMatch[1], 10);
-    return 2026 + relYears;
-  }
-
-  return null;
+export interface DeliveryInfo {
+  label: string; // "Delivered" | "RTM (Immediate)" | "Off-Plan (In 2 Years / 2028)" | etc.
+  category: "delivered" | "rtm" | "offplan" | "mixed";
+  shortLabel: string; // "Delivered" | "RTM (Immediate)" | "Off-Plan (2028)"
+  yearsRemaining?: number;
 }
+
+const CURRENT_YEAR = 2026;
 
 export function isReadyToMove(
   deliveryYear?: number,
   deliveryNote?: string,
-  status?: string
+  compoundStatus?: string
 ): boolean {
-  const noteYear = parseYearFromNote(deliveryNote);
-
-  // If delivery note explicitly states delivery > 2027 (e.g. 2028, 2029, 2030, 3-4 years), strictly NOT RTM
-  if (noteYear !== null && noteYear > MAX_RTM_DELIVERY_YEAR) {
-    return false;
-  }
-
-  // If explicit deliveryYear is specified and > 2027, strictly NOT RTM
-  if (typeof deliveryYear === "number" && deliveryYear > MAX_RTM_DELIVERY_YEAR) {
-    return false;
-  }
-
-  // Check if deliveryNote explicitly mentions RTM / Immediate / Ready to Move
-  if (deliveryNote) {
-    const lowerNote = deliveryNote.toLowerCase();
-    if (
-      lowerNote.includes("rtm") ||
-      lowerNote.includes("ready to move") ||
-      lowerNote.includes("immediate")
-    ) {
-      return true;
-    }
-  }
-
-  // If status is Off-Plan and no explicit RTM note, it is strictly OFF-PLAN
-  if (status === "Off-Plan") {
-    if (noteYear !== null && noteYear <= MAX_RTM_DELIVERY_YEAR) {
-      return true;
-    }
-    return false;
-  }
-
-  // If status is RTM and noteYear is not > 2027, return true
-  if (status === "RTM") {
+  if (compoundStatus?.toLowerCase() === "rtm") return true;
+  const note = (deliveryNote || "").toLowerCase();
+  if (note.includes("rtm") || note.includes("ready to move") || note.includes("immediate") || note.includes("ready")) {
     return true;
   }
-
-  // Fallback to deliveryYear check
-  if (typeof deliveryYear === "number" && deliveryYear > 0) {
-    return deliveryYear <= MAX_RTM_DELIVERY_YEAR;
-  }
-
+  if (deliveryYear && deliveryYear <= CURRENT_YEAR) return true;
   return false;
 }
 
 export function hasRTMUnits(
-  c: { deliveryYear?: number; status?: string },
-  avail?: { breakdown?: any[] }
+  compound?: { deliveryYear?: number; status?: string },
+  availability?: { breakdown?: { deliveryNote?: string; units?: { deliveryNote?: string }[] }[] }
 ): boolean {
-  if (avail && avail.breakdown && avail.breakdown.length > 0) {
-    let checkedAny = false;
-    for (const b of avail.breakdown) {
-      if (b.units && b.units.length > 0) {
-        for (const u of b.units) {
-          checkedAny = true;
-          const note = u.deliveryNote || u.delivery_note || b.deliveryNote || b.delivery_note;
-          if (isReadyToMove(c.deliveryYear, note, c.status)) {
-            return true;
-          }
-        }
-      } else {
-        checkedAny = true;
-        const note = b.deliveryNote || b.delivery_note;
-        if (isReadyToMove(c.deliveryYear, note, c.status)) {
-          return true;
-        }
-      }
-    }
-    if (checkedAny) return false;
-  }
-  return isReadyToMove(c.deliveryYear, undefined, c.status);
+  if (compound?.status?.toLowerCase() === "rtm") return true;
+  if (compound?.deliveryYear && compound.deliveryYear <= CURRENT_YEAR) return true;
+  if (!availability?.breakdown) return false;
+  return availability.breakdown.some((b) =>
+    (b.units || []).some((u) => isReadyToMove(compound?.deliveryYear, u.deliveryNote, compound?.status))
+  );
 }
 
 export function hasOffPlanUnits(
-  c: { deliveryYear?: number; status?: string },
-  avail?: { breakdown?: any[] }
+  compound?: { deliveryYear?: number; status?: string },
+  availability?: { breakdown?: { deliveryNote?: string; units?: { deliveryNote?: string }[] }[] }
 ): boolean {
-  if (avail && avail.breakdown && avail.breakdown.length > 0) {
-    let checkedAny = false;
-    for (const b of avail.breakdown) {
-      if (b.units && b.units.length > 0) {
-        for (const u of b.units) {
-          checkedAny = true;
-          const note = u.deliveryNote || u.delivery_note || b.deliveryNote || b.delivery_note;
-          if (!isReadyToMove(c.deliveryYear, note, c.status)) {
-            return true;
-          }
-        }
-      } else {
-        checkedAny = true;
-        const note = b.deliveryNote || b.delivery_note;
-        if (!isReadyToMove(c.deliveryYear, note, c.status)) {
-          return true;
-        }
+  if (compound?.status?.toLowerCase() === "off-plan") return true;
+  if (compound?.deliveryYear && compound.deliveryYear > CURRENT_YEAR) return true;
+  if (!availability?.breakdown) return false;
+  return availability.breakdown.some((b) =>
+    (b.units || []).some((u) => !isReadyToMove(compound?.deliveryYear, u.deliveryNote, compound?.status))
+  );
+}
+
+export function formatDeliveryStatus(
+  deliveryNote?: string,
+  deliveryYear?: number,
+  compoundStatus?: string,
+  hasMixedAvailability?: boolean
+): DeliveryInfo {
+  if (hasMixedAvailability) {
+    return {
+      label: "RTM & Off-Plan Available",
+      category: "mixed",
+      shortLabel: "RTM & Off-Plan",
+    };
+  }
+
+  const noteLower = (deliveryNote || "").toLowerCase().trim();
+  const statusLower = (compoundStatus || "").toLowerCase().trim();
+
+  // Check Delivered status
+  if (
+    noteLower.includes("delivered") ||
+    statusLower.includes("delivered") ||
+    (deliveryYear && deliveryYear <= 2025)
+  ) {
+    return {
+      label: "Delivered (Handed Over)",
+      category: "delivered",
+      shortLabel: "Delivered",
+      yearsRemaining: 0,
+    };
+  }
+
+  // Check Ready to Move (RTM)
+  if (
+    statusLower === "rtm" ||
+    noteLower.includes("rtm") ||
+    noteLower.includes("ready to move") ||
+    noteLower.includes("immediate") ||
+    noteLower.includes("ready") ||
+    (deliveryYear && deliveryYear === CURRENT_YEAR)
+  ) {
+    if (noteLower.includes("month")) {
+      const match = noteLower.match(/(\d+)\s*month/);
+      if (match) {
+        const months = match[1];
+        return {
+          label: `RTM (In ${months} Months)`,
+          category: "rtm",
+          shortLabel: `RTM (${months} Mo)`,
+          yearsRemaining: 0,
+        };
       }
     }
-    if (checkedAny) return false;
+    return {
+      label: "RTM (Immediate Delivery)",
+      category: "rtm",
+      shortLabel: "RTM (Immediate)",
+      yearsRemaining: 0,
+    };
   }
-  return !isReadyToMove(c.deliveryYear, undefined, c.status);
+
+  // Check Off-Plan delivery year / note
+  let targetYear = deliveryYear;
+
+  if (!targetYear && deliveryNote) {
+    const yearMatch = deliveryNote.match(/\b(202[6-9]|203[0-5])\b/);
+    if (yearMatch) {
+      targetYear = parseInt(yearMatch[1], 10);
+    } else {
+      const yearCountMatch = deliveryNote.match(/(\d+(\.\d+)?)\s*year/i);
+      if (yearCountMatch) {
+        const numYears = Math.round(parseFloat(yearCountMatch[1]));
+        targetYear = CURRENT_YEAR + numYears;
+      }
+    }
+  }
+
+  if (targetYear && targetYear > CURRENT_YEAR) {
+    const yearsRemaining = targetYear - CURRENT_YEAR;
+    const yearText = yearsRemaining === 1 ? "1 Year" : `${yearsRemaining} Years`;
+    return {
+      label: `Off-Plan (In ${yearText} / ${targetYear})`,
+      category: "offplan",
+      shortLabel: `Off-Plan (${targetYear})`,
+      yearsRemaining,
+    };
+  }
+
+  if (targetYear && targetYear <= CURRENT_YEAR) {
+    return {
+      label: "RTM (Immediate Delivery)",
+      category: "rtm",
+      shortLabel: "RTM (Immediate)",
+      yearsRemaining: 0,
+    };
+  }
+
+  // Default fallback if unknown
+  return {
+    label: "Off-Plan (Schedule Pending)",
+    category: "offplan",
+    shortLabel: "Off-Plan",
+  };
 }

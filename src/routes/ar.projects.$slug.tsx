@@ -359,6 +359,40 @@ function ArabicCompoundPage() {
                   </div>
                 </div>
               )}
+
+              {/* Interactive Location Map (Arabic) */}
+              <div className="pt-2 space-y-3">
+                <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+                  خريطة الموقع التفاعلية (Wikimapia Hybrid):
+                </h4>
+                <div className="h-[300px] md:h-[360px] overflow-hidden rounded-2xl border border-border shadow-soft">
+                  <MapClient
+                    compounds={compoundsByDestination(c.destination)}
+                    focus={c}
+                    activeSlug={c.slug}
+                    showLandmarks={true}
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                  <span className="inline-flex items-center gap-1.5 text-muted-foreground font-medium">
+                    <MapPin className="h-4 w-4 text-accent" />
+                    {c.city ?? c.destination}
+                    {c.km ? ` · كيلو ${c.km}` : ""}
+                  </span>
+                  <a
+                    href={
+                      c.mapsUrl ||
+                      `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`
+                    }
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-accent font-bold hover:underline"
+                  >
+                    فتح في خرائط جوجل المباشرة 📍
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Live Availability Section if available */}

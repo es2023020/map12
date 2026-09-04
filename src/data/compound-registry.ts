@@ -70,12 +70,12 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "6th Settlement, New Cairo, Cairo Governorate, Egypt",
     destination: "6th-settlement",
     priceFrom: 15.5,
-    deliveryYear: 2026,
+    deliveryYear: 2029,
     status: "Off-Plan",
     blurb:
       "Ever New Cairo (Ever Sixth Settlement) is a premier 128-acre master-planned residential community by Cred Developments situated in the rapidly expanding Sixth Settlement / South Teseen extension corridor. Combining modern and classical architecture with low-density planning (~80% footprint for villas, green spines, artificial lakes, and a 4.5 km dedicated trail), Ever functions as a luxury counterpart to key East Cairo developments with high accessibility to South Teseen Street, the Middle Ring Road, and Ain Sokhna Road.",
     paymentPlan:
-      "Villas 2y Delivery: 5% DP/8y | 15% DP, 15% Del/6y (15% Dis) | 0% DP/2y (40% Dis) | Cash Dis 42% -- Villas 4y Delivery: 5% DP/10y | 5% DP/7y (18% Dis) | 50% DP/4y (32% Dis) | Spot Incentive up to 250K EGP",
+      "Villas 3y Delivery: 5% DP/8y | 15% DP, 15% Del/6y (15% Dis) | 0% DP/3y (40% Dis) | Cash Dis 42% -- Villas 4y Delivery: 5% DP/10y | 5% DP/7y (18% Dis) | 50% DP/4y (32% Dis) | Spot Incentive up to 250K EGP",
     areaSize: "128 feddan",
     unitSizes: "165–423 m²",
     amenities: [
@@ -91,7 +91,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     highlights: [
       "Prime location on South Teseen Corridor & Middle Ring Rd",
       "5 mins from Ain Sokhna Rd & 12 mins from AUC",
-      "Constructed 2y Delivery Villas & 4y Delivery Villas options",
+      "Villas Delivery in 3 Years & 4 Years options",
       "Massive cash & payment discounts up to 42%",
       "Spot incentives of 250K EGP for Twinhouses/Standalone and 150K EGP for Townhouses",
     ],
@@ -799,7 +799,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     beachfront: true,
     type: "Resort",
     priceFrom: 8.6,
-    deliveryYear: 2026,
+    deliveryYear: 2022,
+    status: "RTM",
     blurb:
       "Caesar Bay is a luxury beachfront resort by Mediterranean Tourism Investment Company in Ras El Hekma, featuring over 1.2 km of private white sandy beach across 192 feddans.",
     paymentPlan:
@@ -835,7 +836,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     beachfront: true,
     type: "Resort",
     priceFrom: 8.6,
-    deliveryYear: 2026,
+    deliveryYear: 2028,
+    status: "Off-Plan",
     blurb:
       "Caesar Sodic is a premium coastal neighborhood inside the master-planned 192-feddan Caesar Ras El Hekma community.",
     paymentPlan:
@@ -1071,7 +1073,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     beachfront: true,
     type: "Resort",
     priceFrom: 14,
-    deliveryYear: 2026,
+    deliveryYear: 2027,
+    status: "Off-Plan",
     blurb:
       "D-Bay is Tatweer Misr's luxury coastal destination spanning 200 acres in Dabaa with an 800-meter beachfront and 25 feddans of swimmable crystal lagoons.",
     paymentPlan:
@@ -1390,7 +1393,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     beachfront: true,
     type: "Resort",
     priceFrom: 13,
-    deliveryYear: 2026,
+    deliveryYear: 2022,
     status: "RTM",
     blurb:
       "Fouka Bay is Tatweer Misr's flagship 220-acre coastal resort in Ras El Hekma, featuring an 800m private sandy beach, crystal lagoons, and terraced levels for sea views.",
@@ -2114,7 +2117,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     beachfront: true,
     type: "Resort",
     priceFrom: 11,
-    deliveryYear: 2028,
+    deliveryYear: 2027,
     status: "Off-Plan",
     blurb:
       "LVLS by Mountain View is a premier coastal resort at KM 179 Ras El Hekma designed across 5–6 terraced levels (up to 40m high) ensuring 100% panoramic sea views and 600m sandy beach.",
@@ -2421,6 +2424,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     city: "Sidi Abdel Rahman, North Coast, Matrouh Governorate, Egypt",
     beachfront: true,
     type: "Resort",
+    deliveryYear: 2027,
+    status: "Off-Plan",
     blurb:
       "Crysta is Mountain View's newest luxury beachfront community centered around crystal lagoons and premium Mediterranean-inspired residences, featuring modern coastal architecture, lush landscaping, and waterfront promenades.",
     paymentPlan: "5% down, installments up to 8 years",
@@ -2476,6 +2481,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 30.93,
     developer: "Mountain View",
     city: "Sheikh Zayed Extension, West Cairo, Egypt",
+    deliveryYear: 2029,
+    status: "Off-Plan",
     blurb:
       "Jirian is Mountain View's newest luxury mixed-use development in Sheikh Zayed Extension, centered around a flowing waterway and modern urban living, combining waterfront residences, green spaces, business districts, and entertainment facilities.",
     paymentPlan: "5% down, installments up to 8 years",
@@ -2504,7 +2511,7 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "Mountain View / Palm Hills / Nations of Sky",
     city: "New Zayed, 6th of October City, Giza, Egypt",
     priceFrom: 7.4,
-    deliveryYear: 2028,
+    deliveryYear: 2029,
     status: "Off-Plan",
     blurb:
       "Jirian is a 1,400-acre city-scale masterplan in New Zayed along Sheikh Zayed Axis inspired by water flow design with central waterways and lagoons.",
@@ -2675,6 +2682,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     lng: 27.9602,
     beachfront: true,
     type: "Resort",
+    deliveryYear: 2028,
+    status: "Off-Plan",
     blurb:
       "Ogami is SODIC's Japanese-inspired beachfront destination spanning approximately 440 acres in Ras El Hekma, designed around islands, lagoons, and pristine Mediterranean beaches, combining minimalist architecture with wellness-centered coastal living.",
     paymentPlan: "5% down, installments up to 8 years",
@@ -2974,8 +2983,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
     developer: "SODIC",
     city: "New Heliopolis, East Cairo, Egypt",
     priceFrom: 13.5,
-    deliveryYear: 2027,
-    status: "RTM",
+    deliveryYear: 2026,
+    status: "Off-Plan",
     blurb:
       "SODIC East by SODIC (Sasaki masterplan) is a 655-acre smart city in New Heliopolis with 84% greenery, 40-acre SODIC Sports Club, and 2 km Green Spine.",
     paymentPlan: "0%–5% down payment, remaining balance spread over 7 to 10 years interest-free",

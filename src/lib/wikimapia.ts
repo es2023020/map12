@@ -34,7 +34,7 @@ export const wikimapiaLocations = wikimapiaLocationsRaw as Record<string, any>;
 /**
  * Resolve project slug or name to exact Wikimapia location metadata
  */
-export function resolveWikimapiaLocation(query: string): { lat: number; lng: number; name?: string; url?: string } | null {
+export function resolveWikimapiaLocation(query: string): { lat: number; lng: number; name?: string; url?: string; polygon?: Array<{ x: number; y: number }> } | null {
   if (!query) return null;
   const clean = query.toLowerCase().trim().replace(/-/g, " ");
   
@@ -46,6 +46,7 @@ export function resolveWikimapiaLocation(query: string): { lat: number; lng: num
         lng: val.lng,
         name: val.name,
         url: val.url,
+        polygon: val.polygon,
       };
     }
   }
