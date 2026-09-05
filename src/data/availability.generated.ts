@@ -43659,8 +43659,8 @@ export const availability: ProjectAvailability[] = [
         "type": "Apartment",
         "beds": 2,
         "available": 7,
-        "minSqm": 36.8,
-        "maxSqm": 88.8,
+        "minSqm": 125,
+        "maxSqm": 125,
         "minPriceM": 15.593,
         "maxPriceM": 19.972,
         "units": [
@@ -43669,7 +43669,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-01-03-BG-1",
             "beds": 2,
             "finishing": "Finished",
-            "areaSqm": 44.31,
+            "areaSqm": 125,
             "view": "Landscape",
             "priceEGP": 15682943,
             "status": "Available",
@@ -43678,14 +43678,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "READY TO MOVE - 3",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 44.31,
+            "area_note": "Garden: 44.31 m²"
           },
           {
             "id": "icity-apt-2b-2",
             "unitNo": "CA-01-03-CG-1",
             "beds": 2,
             "finishing": "Finished",
-            "areaSqm": 75.66,
+            "areaSqm": 125,
             "view": "Landscape",
             "priceEGP": 17378875,
             "status": "Available",
@@ -43694,14 +43696,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "READY TO MOVE - 3",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 75.66,
+            "area_note": "Garden: 75.66 m²"
           },
           {
             "id": "icity-apt-2b-3",
             "unitNo": "CA-01-05-BG-1",
             "beds": 2,
             "finishing": "Finished",
-            "areaSqm": 65.15,
+            "areaSqm": 125,
             "view": "Landscape",
             "priceEGP": 16484278,
             "status": "Available",
@@ -43710,14 +43714,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "READY TO MOVE - 3",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 65.15,
+            "area_note": "Garden: 65.15 m²"
           },
           {
             "id": "icity-apt-2b-4",
             "unitNo": "CA-01-14-CG-1",
             "beds": 2,
             "finishing": "Finished",
-            "areaSqm": 78.6,
+            "areaSqm": 125,
             "view": "Landscape",
             "priceEGP": 16650914,
             "status": "Available",
@@ -43726,14 +43732,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "READY TO MOVE - 3",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 78.6,
+            "area_note": "Garden: 78.6 m²"
           },
           {
             "id": "icity-apt-2b-5",
             "unitNo": "CA-01-22-AG-6",
             "beds": 2,
             "finishing": "Finished",
-            "areaSqm": 88.76,
+            "areaSqm": 125,
             "view": "Landscape",
             "priceEGP": 19971995,
             "status": "Available",
@@ -43742,14 +43750,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "READY TO MOVE - 3",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 88.76,
+            "area_note": "Garden: 88.76 m²"
           },
           {
             "id": "icity-apt-2b-6",
             "unitNo": "CA-01-27-CG-1",
             "beds": 2,
             "finishing": "Finished",
-            "areaSqm": 36.76,
+            "areaSqm": 125,
             "view": "Landscape",
             "priceEGP": 15593030,
             "status": "Available",
@@ -43758,7 +43768,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "READY TO MOVE - 3",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 36.76,
+            "area_note": "Garden: 36.76 m²"
           },
           {
             "id": "icity-new-cairo-1",
@@ -43786,8 +43798,8 @@ export const availability: ProjectAvailability[] = [
         "type": "Apartment",
         "beds": 3,
         "available": 2,
-        "minSqm": 87.4,
-        "maxSqm": 87.4,
+        "minSqm": 155,
+        "maxSqm": 165,
         "minPriceM": 19.6139,
         "maxPriceM": 19.6139,
         "units": [
@@ -43796,7 +43808,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-01-15-BG-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 87.42,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 19613852,
             "status": "Available",
@@ -43805,7 +43817,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "READY TO MOVE - 6",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 87.42,
+            "area_note": "Garden: 87.42 m²"
           },
           {
             "id": "icity-new-cairo-2",
@@ -43833,8 +43847,8 @@ export const availability: ProjectAvailability[] = [
         "type": "Apartment",
         "beds": 3,
         "available": 1,
-        "minSqm": 64.1,
-        "maxSqm": 64.1,
+        "minSqm": 155,
+        "maxSqm": 155,
         "minPriceM": 18.6191,
         "maxPriceM": 18.6191,
         "units": [
@@ -43843,7 +43857,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-01-33-AG-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 64.12,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 18619063,
             "status": "Available",
@@ -43852,7 +43866,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "READY TO MOVE - 3",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 64.12,
+            "area_note": "Garden: 64.12 m²"
           }
         ],
         "cluster": "Phase 1",
@@ -43864,8 +43880,8 @@ export const availability: ProjectAvailability[] = [
         "type": "Apartment",
         "beds": 3,
         "available": 1,
-        "minSqm": 25.2,
-        "maxSqm": 25.2,
+        "minSqm": 155,
+        "maxSqm": 155,
         "minPriceM": 18.8676,
         "maxPriceM": 18.8676,
         "units": [
@@ -43874,7 +43890,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-01-34-AG-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 25.25,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 18867589,
             "status": "Available",
@@ -43883,7 +43899,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "READY TO DELIVER",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 25.25,
+            "area_note": "Garden: 25.25 m²"
           }
         ],
         "cluster": "Phase 1",
@@ -43895,8 +43913,8 @@ export const availability: ProjectAvailability[] = [
         "type": "Standalone Villa",
         "beds": 4,
         "available": 1,
-        "minSqm": 261.6,
-        "maxSqm": 261.6,
+        "minSqm": 261.56,
+        "maxSqm": 261.56,
         "minPriceM": 50.1696,
         "maxPriceM": 50.1696,
         "units": [
@@ -43926,8 +43944,8 @@ export const availability: ProjectAvailability[] = [
         "type": "Palace",
         "beds": 5,
         "available": 1,
-        "minSqm": 253.6,
-        "maxSqm": 253.6,
+        "minSqm": 253.64,
+        "maxSqm": 253.64,
         "minPriceM": 83.6086,
         "maxPriceM": 83.6086,
         "units": [
@@ -43957,8 +43975,8 @@ export const availability: ProjectAvailability[] = [
         "type": "Palace",
         "beds": 5,
         "available": 1,
-        "minSqm": 484.2,
-        "maxSqm": 484.2,
+        "minSqm": 484.21,
+        "maxSqm": 484.21,
         "minPriceM": 84.7997,
         "maxPriceM": 84.7997,
         "units": [
@@ -44056,7 +44074,7 @@ export const availability: ProjectAvailability[] = [
         "type": "Apartment",
         "beds": 3,
         "available": 56,
-        "minSqm": 17.1,
+        "minSqm": 108.79,
         "maxSqm": 273,
         "minPriceM": 10.0568,
         "maxPriceM": 18.4861,
@@ -44146,7 +44164,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-01-03-AG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 72.84,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 14196290,
             "status": "Available",
@@ -44155,14 +44173,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 72.84,
+            "area_note": "Garden: 72.84 m²"
           },
           {
             "id": "mountain-view-icity-october-7",
             "unitNo": "CA-01-03-AG-03",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 61.56,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 12704208,
             "status": "Available",
@@ -44171,14 +44191,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 61.56,
+            "area_note": "Garden: 61.56 m²"
           },
           {
             "id": "mountain-view-icity-october-8",
             "unitNo": "CA-01-03-BG-01",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 64.71,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 12214540,
             "status": "Available",
@@ -44187,7 +44209,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 64.71,
+            "area_note": "Garden: 64.71 m²"
           },
           {
             "id": "mountain-view-icity-october-9",
@@ -44242,7 +44266,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-01-05-AG-03",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 87.79,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 12647549,
             "status": "Available",
@@ -44251,7 +44275,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 87.79,
+            "area_note": "Garden: 87.79 m²"
           },
           {
             "id": "mountain-view-icity-october-13",
@@ -44290,7 +44316,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-01-05-BG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 97.73,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 12834036,
             "status": "Available",
@@ -44299,14 +44325,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 97.73,
+            "area_note": "Garden: 97.73 m²"
           },
           {
             "id": "mountain-view-icity-october-16",
             "unitNo": "CA-01-07-AG-04",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 49.12,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 15299076,
             "status": "Available",
@@ -44315,14 +44343,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 49.12,
+            "area_note": "Garden: 49.12 m²"
           },
           {
             "id": "mountain-view-icity-october-17",
             "unitNo": "CA-01-07-AG-05",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 60.33,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13032905,
             "status": "Available",
@@ -44331,7 +44361,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 60.33,
+            "area_note": "Garden: 60.33 m²"
           },
           {
             "id": "mountain-view-icity-october-18",
@@ -44354,7 +44386,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-01-09-AG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 61.27,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13557094,
             "status": "Available",
@@ -44363,14 +44395,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 61.27,
+            "area_note": "Garden: 61.27 m²"
           },
           {
             "id": "mountain-view-icity-october-21",
             "unitNo": "CA-01-09-AG-03",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 51.22,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13213763,
             "status": "Available",
@@ -44379,14 +44413,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 51.22,
+            "area_note": "Garden: 51.22 m²"
           },
           {
             "id": "mountain-view-icity-october-22",
             "unitNo": "CA-03-15-AG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 52.84,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 12765745,
             "status": "Available",
@@ -44395,14 +44431,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 52.84,
+            "area_note": "Garden: 52.84 m²"
           },
           {
             "id": "mountain-view-icity-october-23",
             "unitNo": "CA-03-17-AG-04",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 85.95,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13386930,
             "status": "Available",
@@ -44411,14 +44449,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 85.95,
+            "area_note": "Garden: 85.95 m²"
           },
           {
             "id": "mountain-view-icity-october-24",
             "unitNo": "CA-03-17-BG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 85.36,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 12813023,
             "status": "Available",
@@ -44427,14 +44467,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 85.36,
+            "area_note": "Garden: 85.36 m²"
           },
           {
             "id": "mountain-view-icity-october-25",
             "unitNo": "CA-03-19-AG-01",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 49.41,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 12616968,
             "status": "Available",
@@ -44443,14 +44485,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 49.41,
+            "area_note": "Garden: 49.41 m²"
           },
           {
             "id": "mountain-view-icity-october-26",
             "unitNo": "CA-04-12-AG-03",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 92.98,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 11605174,
             "status": "Available",
@@ -44459,7 +44503,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 92.98,
+            "area_note": "Garden: 92.98 m²"
           },
           {
             "id": "mountain-view-icity-october-27",
@@ -44482,7 +44528,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-04-12-BG-01",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 74.85,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13234964,
             "status": "Available",
@@ -44491,7 +44537,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 74.85,
+            "area_note": "Garden: 74.85 m²"
           },
           {
             "id": "mountain-view-icity-october-30",
@@ -44514,7 +44562,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-04-14-AG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 77.79,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13655966,
             "status": "Available",
@@ -44523,14 +44571,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 77.79,
+            "area_note": "Garden: 77.79 m²"
           },
           {
             "id": "mountain-view-icity-october-32",
             "unitNo": "CA-04-14-AG-04",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 78.03,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13294624,
             "status": "Available",
@@ -44539,7 +44589,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 78.03,
+            "area_note": "Garden: 78.03 m²"
           },
           {
             "id": "mountain-view-icity-october-34",
@@ -44578,7 +44630,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-04-18-AG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 77.46,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13649775,
             "status": "Available",
@@ -44587,14 +44639,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 77.46,
+            "area_note": "Garden: 77.46 m²"
           },
           {
             "id": "mountain-view-icity-october-37",
             "unitNo": "CA-04-18-AG-04",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 56.6,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 12892571,
             "status": "Available",
@@ -44603,7 +44657,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 56.6,
+            "area_note": "Garden: 56.6 m²"
           },
           {
             "id": "mountain-view-icity-october-38",
@@ -44626,7 +44682,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-04-20-AG-05",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 62.3,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13703057,
             "status": "Available",
@@ -44635,14 +44691,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 62.3,
+            "area_note": "Garden: 62.3 m²"
           },
           {
             "id": "mountain-view-icity-october-41",
             "unitNo": "CA-04-20-BG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 72.91,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13494056,
             "status": "Available",
@@ -44651,7 +44709,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 72.91,
+            "area_note": "Garden: 72.91 m²"
           },
           {
             "id": "mountain-view-icity-october-42",
@@ -44674,7 +44734,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-04-22-AG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 68.93,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13264606,
             "status": "Available",
@@ -44683,14 +44743,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 68.93,
+            "area_note": "Garden: 68.93 m²"
           },
           {
             "id": "mountain-view-icity-october-44",
             "unitNo": "CA-04-22-AG-04",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 66.75,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13026714,
             "status": "Available",
@@ -44699,14 +44761,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 66.75,
+            "area_note": "Garden: 66.75 m²"
           },
           {
             "id": "mountain-view-icity-october-46",
             "unitNo": "CA-05-21-AG-04",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 64.1,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 15214945,
             "status": "Available",
@@ -44715,14 +44779,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 64.1,
+            "area_note": "Garden: 64.1 m²"
           },
           {
             "id": "mountain-view-icity-october-47",
             "unitNo": "CA-05-21-AG-05",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 53.43,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 12960406,
             "status": "Available",
@@ -44731,7 +44797,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 53.43,
+            "area_note": "Garden: 53.43 m²"
           },
           {
             "id": "mountain-view-icity-october-48",
@@ -44770,7 +44838,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-05-23-AG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 52.22,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13022131,
             "status": "Available",
@@ -44779,14 +44847,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 52.22,
+            "area_note": "Garden: 52.22 m²"
           },
           {
             "id": "mountain-view-icity-october-54",
             "unitNo": "CA-05-23-BG-01",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 17.15,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 11519975,
             "status": "Available",
@@ -44795,14 +44865,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 17.15,
+            "area_note": "Garden: 17.15 m²"
           },
           {
             "id": "mountain-view-icity-october-55",
             "unitNo": "CA-05-23-BG-02",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 29.91,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 11759312,
             "status": "Available",
@@ -44811,7 +44883,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 29.91,
+            "area_note": "Garden: 29.91 m²"
           },
           {
             "id": "mountain-view-icity-october-57",
@@ -44866,7 +44940,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-05-25-BG-01",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 43.56,
+            "areaSqm": 155,
             "view": "Landscape",
             "priceEGP": 13528033,
             "status": "Available",
@@ -44875,7 +44949,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 43.56,
+            "area_note": "Garden: 43.56 m²"
           },
           {
             "id": "mountain-view-icity-october-66",
@@ -44967,7 +45043,7 @@ export const availability: ProjectAvailability[] = [
         "type": "Duplex",
         "beds": 3,
         "available": 128,
-        "minSqm": 22,
+        "minSqm": 100,
         "maxSqm": 227,
         "minPriceM": 17.1027,
         "maxPriceM": 31.3742,
@@ -44993,7 +45069,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVLA-76-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 25152857,
             "status": "Available",
@@ -45002,7 +45078,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-82",
@@ -45601,7 +45679,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-15-B0-4",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 92,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21642328,
             "status": "Available",
@@ -45610,14 +45688,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 92,
+            "area_note": "Garden: 92 m²"
           },
           {
             "id": "mountain-view-icity-october-146",
             "unitNo": "L-IVPA-16-A0-1",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 93,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21654407,
             "status": "Available",
@@ -45626,14 +45706,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 93,
+            "area_note": "Garden: 93 m²"
           },
           {
             "id": "mountain-view-icity-october-155",
             "unitNo": "L-IVPA-18-A0-1",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 95,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20689029,
             "status": "Available",
@@ -45642,7 +45724,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 95,
+            "area_note": "Garden: 95 m²"
           },
           {
             "id": "mountain-view-icity-october-157",
@@ -45665,7 +45749,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-18-B0-4",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 85,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20568244,
             "status": "Available",
@@ -45674,7 +45758,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 85,
+            "area_note": "Garden: 85 m²"
           },
           {
             "id": "mountain-view-icity-october-162",
@@ -45697,7 +45783,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-19-A0-1",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 88,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20604479,
             "status": "Available",
@@ -45706,7 +45792,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 88,
+            "area_note": "Garden: 88 m²"
           },
           {
             "id": "mountain-view-icity-october-167",
@@ -45729,7 +45817,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-20-A0-1",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 88,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20263261,
             "status": "Available",
@@ -45738,7 +45826,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 88,
+            "area_note": "Garden: 88 m²"
           },
           {
             "id": "mountain-view-icity-october-176",
@@ -45873,7 +45963,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-01-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20438523,
             "status": "Available",
@@ -45882,7 +45972,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-91",
@@ -45921,7 +46013,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-02-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21389346,
             "status": "Available",
@@ -45930,7 +46022,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-98",
@@ -45953,7 +46047,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-02-BL-1",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 60,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 23462145,
             "status": "Available",
@@ -45962,7 +46056,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 60,
+            "area_note": "Garden: 60 m²"
           },
           {
             "id": "mountain-view-icity-october-100",
@@ -45985,7 +46081,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-03-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21023645,
             "status": "Available",
@@ -45994,14 +46090,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-102",
             "unitNo": "L-IVPA-03-A0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 35,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 18790852,
             "status": "Available",
@@ -46010,7 +46108,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 35,
+            "area_note": "Garden: 35 m²"
           },
           {
             "id": "mountain-view-icity-october-103",
@@ -46033,7 +46133,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-03-B0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 35,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 18790852,
             "status": "Available",
@@ -46042,14 +46142,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 35,
+            "area_note": "Garden: 35 m²"
           },
           {
             "id": "mountain-view-icity-october-105",
             "unitNo": "L-IVPA-03-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21023645,
             "status": "Available",
@@ -46058,7 +46160,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-106",
@@ -46081,7 +46185,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-04-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21243066,
             "status": "Available",
@@ -46090,14 +46194,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-108",
             "unitNo": "L-IVPA-04-A0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 35,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 18790852,
             "status": "Available",
@@ -46106,7 +46212,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 35,
+            "area_note": "Garden: 35 m²"
           },
           {
             "id": "mountain-view-icity-october-111",
@@ -46129,7 +46237,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-04-AL-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 60,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 23462145,
             "status": "Available",
@@ -46138,14 +46246,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 60,
+            "area_note": "Garden: 60 m²"
           },
           {
             "id": "mountain-view-icity-october-113",
             "unitNo": "L-IVPA-04-B0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 35,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 18790852,
             "status": "Available",
@@ -46154,14 +46264,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 35,
+            "area_note": "Garden: 35 m²"
           },
           {
             "id": "mountain-view-icity-october-114",
             "unitNo": "L-IVPA-04-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 22120749,
             "status": "Available",
@@ -46170,14 +46282,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-117",
             "unitNo": "L-IVPA-04-BL-1",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 60,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 23462145,
             "status": "Available",
@@ -46186,7 +46300,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 60,
+            "area_note": "Garden: 60 m²"
           },
           {
             "id": "mountain-view-icity-october-118",
@@ -46225,7 +46341,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-05-AL-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 60,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 24635818,
             "status": "Available",
@@ -46234,14 +46350,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 60,
+            "area_note": "Garden: 60 m²"
           },
           {
             "id": "mountain-view-icity-october-124",
             "unitNo": "L-IVPA-05-BL-1",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 60,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 24635818,
             "status": "Available",
@@ -46250,7 +46368,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 60,
+            "area_note": "Garden: 60 m²"
           },
           {
             "id": "mountain-view-icity-october-125",
@@ -46273,7 +46393,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-06-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21950088,
             "status": "Available",
@@ -46282,14 +46402,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-127",
             "unitNo": "L-IVPA-06-A0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 35,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19010273,
             "status": "Available",
@@ -46298,14 +46420,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 35,
+            "area_note": "Garden: 35 m²"
           },
           {
             "id": "mountain-view-icity-october-129",
             "unitNo": "L-IVPA-06-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20511664,
             "status": "Available",
@@ -46314,7 +46438,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-130",
@@ -46337,7 +46463,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-07-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20511664,
             "status": "Available",
@@ -46346,7 +46472,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-134",
@@ -46369,7 +46497,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-07-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20511664,
             "status": "Available",
@@ -46378,7 +46506,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-137",
@@ -46401,7 +46531,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-08-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20292243,
             "status": "Available",
@@ -46410,7 +46540,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-140",
@@ -46433,7 +46565,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-08-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21389346,
             "status": "Available",
@@ -46442,7 +46574,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-142",
@@ -46465,7 +46599,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-15-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20731084,
             "status": "Available",
@@ -46474,7 +46608,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-145",
@@ -46497,7 +46633,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-16-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19926542,
             "status": "Available",
@@ -46506,7 +46642,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-148",
@@ -46561,7 +46699,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-17-AL-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 69,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21913629,
             "status": "Available",
@@ -46570,14 +46708,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 69,
+            "area_note": "Garden: 69 m²"
           },
           {
             "id": "mountain-view-icity-october-152",
             "unitNo": "L-IVPA-17-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19560840,
             "status": "Available",
@@ -46586,14 +46726,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-153",
             "unitNo": "L-IVPA-17-BL-1",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 69,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21913629,
             "status": "Available",
@@ -46602,7 +46744,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 69,
+            "area_note": "Garden: 69 m²"
           },
           {
             "id": "mountain-view-icity-october-154",
@@ -46625,7 +46769,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-18-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19560840,
             "status": "Available",
@@ -46634,7 +46778,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-158",
@@ -46657,7 +46803,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-18-AL-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 65,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21799348,
             "status": "Available",
@@ -46666,14 +46812,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 65,
+            "area_note": "Garden: 65 m²"
           },
           {
             "id": "mountain-view-icity-october-160",
             "unitNo": "L-IVPA-18-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19926542,
             "status": "Available",
@@ -46682,14 +46830,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-163",
             "unitNo": "L-IVPA-18-BL-1",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 65,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21799348,
             "status": "Available",
@@ -46698,7 +46848,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 65,
+            "area_note": "Garden: 65 m²"
           },
           {
             "id": "mountain-view-icity-october-164",
@@ -46721,7 +46873,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-19-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19926542,
             "status": "Available",
@@ -46730,14 +46882,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-168",
             "unitNo": "L-IVPA-19-AL-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 61,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 21685066,
             "status": "Available",
@@ -46746,14 +46900,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 61,
+            "area_note": "Garden: 61 m²"
           },
           {
             "id": "mountain-view-icity-october-169",
             "unitNo": "L-IVPA-19-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19560840,
             "status": "Available",
@@ -46762,7 +46918,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-170",
@@ -46801,7 +46959,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-20-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19560840,
             "status": "Available",
@@ -46810,14 +46968,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-174",
             "unitNo": "L-IVPA-21-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19780261,
             "status": "Available",
@@ -46826,14 +46986,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-175",
             "unitNo": "L-IVPA-21-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19780261,
             "status": "Available",
@@ -46842,7 +47004,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-177",
@@ -46865,7 +47029,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-22-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19780261,
             "status": "Available",
@@ -46874,14 +47038,16 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-179",
             "unitNo": "L-IVPA-22-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20145962,
             "status": "Available",
@@ -46890,7 +47056,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-180",
@@ -46913,7 +47081,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-23-A0-2",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 19926542,
             "status": "Available",
@@ -46922,7 +47090,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-182",
@@ -46945,7 +47115,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "L-IVPA-23-B0-3",
             "beds": 3,
             "finishing": "Finished",
-            "areaSqm": 22,
+            "areaSqm": 195,
             "view": "Landscape",
             "priceEGP": 20657944,
             "status": "Available",
@@ -46954,7 +47124,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Duplex",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 22,
+            "area_note": "Garden: 22 m²"
           },
           {
             "id": "mountain-view-icity-october-185",
@@ -47030,8 +47202,8 @@ export const availability: ProjectAvailability[] = [
         "type": "Apartment",
         "beds": 2,
         "available": 1,
-        "minSqm": 47.5,
-        "maxSqm": 47.5,
+        "minSqm": 125,
+        "maxSqm": 125,
         "minPriceM": 9.8957,
         "maxPriceM": 9.8957,
         "units": [
@@ -47040,7 +47212,7 @@ export const availability: ProjectAvailability[] = [
             "unitNo": "CA-01-07-BG-01",
             "beds": 2,
             "finishing": "Finished",
-            "areaSqm": 47.54,
+            "areaSqm": 125,
             "view": "Landscape",
             "priceEGP": 9895677,
             "status": "Available",
@@ -47049,7 +47221,9 @@ export const availability: ProjectAvailability[] = [
             "delivery_note": "Ready to Move (RTM)",
             "payment_plan": "5%+5% DP over 8 years",
             "type": "Apartment",
-            "deliveryNote": "Partially Delivered / Active Expansions"
+            "deliveryNote": "Partially Delivered / Active Expansions",
+            "gardenSqm": 47.54,
+            "area_note": "Garden: 47.54 m²"
           }
         ],
         "cluster": "Phase 1",
@@ -47314,8 +47488,8 @@ export const availability: ProjectAvailability[] = [
         "type": "Standalone Villa",
         "beds": 2,
         "available": 1,
-        "minSqm": 101.5,
-        "maxSqm": 101.5,
+        "minSqm": 101.51,
+        "maxSqm": 101.51,
         "minPriceM": 17.5225,
         "maxPriceM": 17.5225,
         "units": [

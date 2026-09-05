@@ -9424,10 +9424,10 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-icity-new-cairo/6.jpg",
       "/projects/mountain-view-icity-new-cairo/7.jpg"
     ],
-    "blurb": "Mountain View iCity New Cairo is a flagship development in New Cairo (Tagamo3) by Mountain View, offering modern residences with full amenities for year-round living.",
+    "blurb": "Mountain View iCity New Cairo is a flagship development in New Cairo (Tagamo3) featuring smart 4D urban design, Crystal Lagoons, and modern residences from 125m² apartments to 485m² palaces with private gardens and parks.",
     "paymentPlan": "5% / 8 yrs",
     "areaSize": "214 feddan",
-    "unitSizes": "144–356 m²",
+    "unitSizes": "125–485 m² (Garden 25–88 m²)",
     "type": "Residential",
     "flagship": true,
     "highlights": [
@@ -10782,10 +10782,10 @@ export const compoundsGenerated: Compound[] = [
       "/projects/mountain-view-icity-october/3.jpg",
       "/projects/mountain-view-icity-october/4.jpg"
     ],
-    "blurb": "Mountain View iCity October by Mountain View — a Residential community offering refined living with full amenities and strong location advantages.",
+    "blurb": "Mountain View iCity October is a 500-acre master-planned smart city in 6th of October City featuring multi-level parks, sports club, and luxury residences ranging from 125m² apartments to 350m² villas with private gardens.",
     "paymentPlan": "10% down payment over 8 years equal installments",
     "areaSize": "89 feddan",
-    "unitSizes": "209+ m²",
+    "unitSizes": "125–350 m² (Garden 17–98 m²)",
     "type": "Residential",
     "highlights": [
       "Crystal Lagoon",
