@@ -1,0 +1,62 @@
+[
+  {
+    "id": "v-editions-1",
+    "unitNo": "F-3C-24",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 228,
+    "view": "Landscape & City View",
+    "priceEGP": 54952000,
+    "status": "Available",
+    "slug": "v-editions",
+    "cluster": "Block 1",
+    "area_note": "Floor: 2",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
+    "id": "v-editions-2",
+    "unitNo": "F-3E-12",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 219,
+    "view": "Landscape & City View",
+    "priceEGP": 53047000,
+    "status": "Available",
+    "slug": "v-editions",
+    "cluster": "Block 1",
+    "area_note": "Floor: 1",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
+    "id": "v-editions-3",
+    "unitNo": "F-3E-22",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 218,
+    "view": "Landscape & City View",
+    "priceEGP": 53044000,
+    "status": "Available",
+    "slug": "v-editions",
+    "cluster": "Block 1",
+    "area_note": "Floor: 2",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  },
+  {
+    "id": "v-editions-4",
+    "unitNo": "F-3F-31",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 233,
+    "view": "Landscape & City View",
+    "priceEGP": 55894000,
+    "status": "Available",
+    "slug": "v-editions",
+    "cluster": "Block 1",
+    "area_note": "Floor: 3",
+    "delivery_note": "Ready / 2027",
+    "payment_plan": "5% down · 7–8 years equal installments"
+  }
+]

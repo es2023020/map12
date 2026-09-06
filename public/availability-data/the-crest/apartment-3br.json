@@ -1,0 +1,17 @@
+[
+  {
+    "id": "the-crest-3",
+    "unitNo": "CR-3BR",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 135,
+    "view": "Landscape",
+    "priceEGP": 8704584,
+    "status": "Available",
+    "slug": "the-crest",
+    "cluster": "New Cairo",
+    "area_note": "135 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "2.5+2.5+2.5+2.5 over 10 years"
+  }
+]

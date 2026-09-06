@@ -1,0 +1,47 @@
+[
+  {
+    "id": "silversands-1",
+    "unitNo": "SS-CR-2BR",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 151,
+    "view": "Landscape",
+    "priceEGP": 29000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Crystalline",
+    "area_note": "148-154 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5% + 5%, installments over 8 years"
+  },
+  {
+    "id": "silversands-11",
+    "unitNo": "SS-ST-2BR",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 127,
+    "view": "Landscape",
+    "priceEGP": 21000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Silvertown",
+    "area_note": "127 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5%, installments over 10 years"
+  },
+  {
+    "id": "silversands-23",
+    "unitNo": "SS-BR-2BR",
+    "beds": 2,
+    "finishing": "Finished",
+    "areaSqm": 130,
+    "view": "Landscape",
+    "priceEGP": 38000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Branded Residence",
+    "area_note": "125/135 SQM Branded Apartment",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5% + 5% – 6 years"
+  }
+]

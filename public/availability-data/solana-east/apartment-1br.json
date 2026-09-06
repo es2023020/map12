@@ -1,0 +1,16 @@
+[
+  {
+    "id": "solana-east-1",
+    "unitNo": "SE-1BR",
+    "beds": 1,
+    "finishing": "Fully Finished + ACs",
+    "areaSqm": 99,
+    "view": "Landscape",
+    "priceEGP": 13900000,
+    "status": "Available",
+    "slug": "solana-east",
+    "cluster": "Residential",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5% – 8 years equal installments"
+  }
+]

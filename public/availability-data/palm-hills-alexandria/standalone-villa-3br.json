@@ -1,0 +1,72 @@
+[
+  {
+    "id": "palm-hills-alexandria-44",
+    "unitNo": "ALX-VL1-279-B",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 376.65,
+    "view": "Landscape",
+    "priceEGP": 67332000,
+    "status": "Available",
+    "slug": "palm-hills-alexandria",
+    "cluster": "Phase 1",
+    "delivery_note": "2027",
+    "payment_plan": "10% DP over 8 years"
+  },
+  {
+    "id": "palm-hills-alexandria-45",
+    "unitNo": "ALX-VL1-296-B",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 376.65,
+    "view": "Landscape",
+    "priceEGP": 67332000,
+    "status": "Available",
+    "slug": "palm-hills-alexandria",
+    "cluster": "Phase 1",
+    "delivery_note": "2027",
+    "payment_plan": "10% DP over 8 years"
+  },
+  {
+    "id": "palm-hills-alexandria-46",
+    "unitNo": "ALX-VL1-300-P",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 383.83,
+    "view": "Landscape",
+    "priceEGP": 80905000,
+    "status": "Available",
+    "slug": "palm-hills-alexandria",
+    "cluster": "Phase 1",
+    "delivery_note": "2027",
+    "payment_plan": "10% DP over 8 years"
+  },
+  {
+    "id": "palm-hills-alexandria-47",
+    "unitNo": "ALX-VL1-305-P",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 383.83,
+    "view": "Landscape",
+    "priceEGP": 80905000,
+    "status": "Available",
+    "slug": "palm-hills-alexandria",
+    "cluster": "Phase 1",
+    "delivery_note": "2027",
+    "payment_plan": "10% DP over 8 years"
+  },
+  {
+    "id": "palm-hills-alexandria-48",
+    "unitNo": "ALX-VL1-306-P",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 383.83,
+    "view": "Landscape",
+    "priceEGP": 80905000,
+    "status": "Available",
+    "slug": "palm-hills-alexandria",
+    "cluster": "Phase 1",
+    "delivery_note": "2027",
+    "payment_plan": "10% DP over 8 years"
+  }
+]

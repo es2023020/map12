@@ -1,0 +1,16 @@
+[
+  {
+    "id": "katameya-creeks-3",
+    "unitNo": "KC-SA",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 420,
+    "view": "Landscape",
+    "priceEGP": 111000000,
+    "status": "Available",
+    "slug": "katameya-creeks",
+    "cluster": "Phase 1",
+    "delivery_note": "6 months",
+    "payment_plan": "25% / 3 yrs"
+  }
+]

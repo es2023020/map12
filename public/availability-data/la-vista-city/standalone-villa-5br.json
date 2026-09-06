@@ -1,0 +1,47 @@
+[
+  {
+    "id": "la-vista-city-5",
+    "unitNo": "LV-P1-V450",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 450,
+    "view": "Green River & Landscape",
+    "priceEGP": 66580000,
+    "status": "Available",
+    "slug": "la-vista-city",
+    "cluster": "P1 Classic",
+    "area_note": "Large Standalone Villa",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% down · 8 years equal installments"
+  },
+  {
+    "id": "la-vista-city-11",
+    "unitNo": "LV-P5-V432",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 432,
+    "view": "Green River & Landscape",
+    "priceEGP": 63920000,
+    "status": "Available",
+    "slug": "la-vista-city",
+    "cluster": "P5 Modern",
+    "area_note": "Standalone Villa",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% down · 8 years equal installments"
+  },
+  {
+    "id": "la-vista-city-12",
+    "unitNo": "LV-P5-V450",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 450,
+    "view": "Green River & Landscape",
+    "priceEGP": 70280000,
+    "status": "Available",
+    "slug": "la-vista-city",
+    "cluster": "P5 Modern",
+    "area_note": "Large Standalone Villa",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% down · 8 years equal installments"
+  }
+]

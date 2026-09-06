@@ -1,0 +1,45 @@
+[
+  {
+    "id": "sarai-6",
+    "unitNo": "SAR-ELM-TH-180",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 180,
+    "view": "Landscape",
+    "priceEGP": 23100000,
+    "status": "Available",
+    "slug": "sarai",
+    "cluster": "Elm Tree Park",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "1.5% - 12Y Backloaded"
+  },
+  {
+    "id": "sarai-8",
+    "unitNo": "SAR-CV-TH-152",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 152,
+    "view": "Landscape",
+    "priceEGP": 17500000,
+    "status": "Available",
+    "slug": "sarai",
+    "cluster": "Club Views",
+    "area_note": "Corner",
+    "delivery_note": "4 Years",
+    "payment_plan": "1.5% - 12Y Backloaded"
+  },
+  {
+    "id": "sarai-10",
+    "unitNo": "SAR-RAI-TH-160",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 160,
+    "view": "Landscape",
+    "priceEGP": 16200000,
+    "status": "Available",
+    "slug": "sarai",
+    "cluster": "Rai",
+    "delivery_note": "2.5 Years",
+    "payment_plan": "10% - 8 Yrs"
+  }
+]

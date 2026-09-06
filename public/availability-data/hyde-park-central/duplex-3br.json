@@ -1,0 +1,44 @@
+[
+  {
+    "id": "hyde-park-central-26",
+    "unitNo": "HPC/WR-3C/G02",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 183,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 18560000,
+    "status": "Available",
+    "slug": "hyde-park-central",
+    "cluster": "Water Residence",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 yrs"
+  },
+  {
+    "id": "hyde-park-central-29",
+    "unitNo": "HPC/WR-8B/G02",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 19190000,
+    "status": "Available",
+    "slug": "hyde-park-central",
+    "cluster": "Water Residence",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 yrs"
+  },
+  {
+    "id": "hyde-park-central-34",
+    "unitNo": "HPC/WR-3C/606",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "Landscape & Lagoon",
+    "priceEGP": 15240000,
+    "status": "Available",
+    "slug": "hyde-park-central",
+    "cluster": "Water Residence",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 yrs"
+  }
+]

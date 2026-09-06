@@ -1,0 +1,16 @@
+[
+  {
+    "id": "marville-1",
+    "unitNo": "MV-1B-96",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 96,
+    "view": "Sea & Lagoons",
+    "priceEGP": 9500000,
+    "status": "Available",
+    "slug": "marville",
+    "cluster": "Riverfront Sector",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 Yrs"
+  }
+]

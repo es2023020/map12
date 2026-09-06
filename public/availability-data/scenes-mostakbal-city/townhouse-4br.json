@@ -1,0 +1,32 @@
+[
+  {
+    "id": "scenes-mostakbal-city-18",
+    "unitNo": "SC8-TH10-A",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 168,
+    "view": "Landscape",
+    "priceEGP": 17918000,
+    "status": "Available",
+    "slug": "scenes-mostakbal-city",
+    "cluster": "Phase 4-3 (SC8)",
+    "area_note": "Plot 246 sqm",
+    "delivery_note": "2 Years",
+    "payment_plan": "5% DP over 5-11 yrs"
+  },
+  {
+    "id": "scenes-mostakbal-city-19",
+    "unitNo": "SC8-TH10-F",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 168,
+    "view": "Landscape",
+    "priceEGP": 16838000,
+    "status": "Available",
+    "slug": "scenes-mostakbal-city",
+    "cluster": "Phase 4-3 (SC8)",
+    "area_note": "Plot 189 sqm",
+    "delivery_note": "2 Years",
+    "payment_plan": "5% DP over 5-11 yrs"
+  }
+]

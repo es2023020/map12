@@ -1,0 +1,16 @@
+[
+  {
+    "id": "lake-west-2-1",
+    "unitNo": "LW2-THM",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 211,
+    "view": "Landscape",
+    "priceEGP": 13750000,
+    "status": "Available",
+    "slug": "lake-west-2",
+    "cluster": "Phase 1",
+    "delivery_note": "6 Months",
+    "payment_plan": "94% DP over 1.5 yrs"
+  }
+]

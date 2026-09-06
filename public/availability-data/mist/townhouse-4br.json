@@ -1,0 +1,58 @@
+[
+  {
+    "id": "mist-90",
+    "unitNo": "B1-01",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "view": "Scenic View",
+    "priceEGP": 32405573.76,
+    "status": "Available",
+    "slug": "mist",
+    "cluster": "Mist",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "mist-91",
+    "unitNo": "B1-05",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "view": "Scenic View",
+    "priceEGP": 28323178.8,
+    "status": "Available",
+    "slug": "mist",
+    "cluster": "Mist",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "mist-92",
+    "unitNo": "B1-06",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "view": "Scenic View",
+    "priceEGP": 28573826.4,
+    "status": "Available",
+    "slug": "mist",
+    "cluster": "Mist",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "mist-93",
+    "unitNo": "B1-07",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "view": "Scenic View",
+    "priceEGP": 33902870.4,
+    "status": "Available",
+    "slug": "mist",
+    "cluster": "Mist",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7-8 yrs"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "fifth-square-2",
+    "unitNo": "FS-3BR",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 17300000,
+    "status": "Available",
+    "slug": "fifth-square",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "25% / 6 yrs"
+  }
+]

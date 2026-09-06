@@ -1,0 +1,62 @@
+[
+  {
+    "id": "la-vista-topaz-1",
+    "unitNo": "LVT-RTM-G-150",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 16950000,
+    "status": "Available",
+    "slug": "la-vista-topaz",
+    "cluster": "Phase 1",
+    "area_note": "Ground Floor + Garden 60m",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10% downpayment over 5 years"
+  },
+  {
+    "id": "la-vista-topaz-2",
+    "unitNo": "LVT-2029-1ST-150",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 14550000,
+    "status": "Available",
+    "slug": "la-vista-topaz",
+    "cluster": "New Phase",
+    "area_note": "1st Floor (Not Sea View)",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+2.5%+2.5% over 8 years"
+  },
+  {
+    "id": "la-vista-topaz-4",
+    "unitNo": "LVT-2029-G-150",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 16950000,
+    "status": "Available",
+    "slug": "la-vista-topaz",
+    "cluster": "New Phase",
+    "area_note": "Ground Floor + Garden 60m",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+2.5%+2.5% over 8 years"
+  },
+  {
+    "id": "la-vista-topaz-6",
+    "unitNo": "LVT-2028-G-150",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 16950000,
+    "status": "Available",
+    "slug": "la-vista-topaz",
+    "cluster": "Phase 2",
+    "area_note": "Ground Floor + Garden 50m",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+2.5%+2.5% over 7 years"
+  }
+]

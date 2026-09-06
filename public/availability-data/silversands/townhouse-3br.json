@@ -1,0 +1,32 @@
+[
+  {
+    "id": "silversands-15",
+    "unitNo": "SS-ST-THS",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 150,
+    "view": "Landscape",
+    "priceEGP": 38000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Silvertown",
+    "area_note": "Townhouse S 150 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5%, installments over 10 years"
+  },
+  {
+    "id": "silversands-16",
+    "unitNo": "SS-ST-THM",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 170,
+    "view": "Landscape",
+    "priceEGP": 42000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Silvertown",
+    "area_note": "Townhouse M 170 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5%, installments over 10 years"
+  }
+]

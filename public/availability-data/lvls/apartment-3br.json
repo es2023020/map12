@@ -1,0 +1,30 @@
+[
+  {
+    "id": "lvls-1",
+    "unitNo": "LV-BT-BH-377-04",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 122,
+    "view": "Landscape",
+    "priceEGP": 24996867,
+    "status": "Available",
+    "slug": "lvls",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP over 8 years"
+  },
+  {
+    "id": "lvls-2",
+    "unitNo": "LV-BT-BH-377-12",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 19692375,
+    "status": "Available",
+    "slug": "lvls",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% DP over 8 years"
+  }
+]

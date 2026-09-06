@@ -1,0 +1,32 @@
+[
+  {
+    "id": "the-valleys-mostakbal-city-5",
+    "unitNo": "VAL-SVA-G-240",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 240,
+    "view": "Landscape",
+    "priceEGP": 42400000,
+    "status": "Available",
+    "slug": "the-valleys-mostakbal-city",
+    "cluster": "Phase III",
+    "area_note": "Land 365 sqm",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 9 yrs"
+  },
+  {
+    "id": "the-valleys-mostakbal-city-7",
+    "unitNo": "VAL-SVA-B-300",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 300,
+    "view": "Landscape",
+    "priceEGP": 57000000,
+    "status": "Available",
+    "slug": "the-valleys-mostakbal-city",
+    "cluster": "Phase III",
+    "area_note": "Land 386 sqm",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 9 yrs"
+  }
+]

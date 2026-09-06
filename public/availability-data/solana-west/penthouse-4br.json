@@ -1,0 +1,17 @@
+[
+  {
+    "id": "solana-west-18",
+    "unitNo": "SW-MF-4BR-PH",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 232,
+    "view": "Landscape",
+    "priceEGP": 28000000,
+    "status": "Available",
+    "slug": "solana-west",
+    "cluster": "Multiple Family",
+    "area_note": "232 + Roof 60 SQM",
+    "delivery_note": "2028",
+    "payment_plan": "5% DP + 5% after 3 months, installments over 10 years"
+  }
+]

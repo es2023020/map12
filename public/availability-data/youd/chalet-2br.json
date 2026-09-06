@@ -1,0 +1,72 @@
+[
+  {
+    "id": "youd-2",
+    "unitNo": "YOUD-RTM-2B-10",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 85,
+    "view": "Landscape",
+    "priceEGP": 10000000,
+    "status": "Available",
+    "slug": "youd",
+    "cluster": "Ready to Move",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "10% DP over 2-8 yrs"
+  },
+  {
+    "id": "youd-4",
+    "unitNo": "YOUD-OP-2B-85",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 85,
+    "view": "Landscape",
+    "priceEGP": 8800000,
+    "status": "Available",
+    "slug": "youd",
+    "cluster": "Off-Plan",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 4-10 yrs"
+  },
+  {
+    "id": "youd-5",
+    "unitNo": "YOUD-OP-2B-105",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 105,
+    "view": "Landscape",
+    "priceEGP": 10200000,
+    "status": "Available",
+    "slug": "youd",
+    "cluster": "Off-Plan",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 4-10 yrs"
+  },
+  {
+    "id": "youd-11",
+    "unitNo": "YOUD-SERV-2B",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 90,
+    "view": "Landscape",
+    "priceEGP": 13500000,
+    "status": "Available",
+    "slug": "youd",
+    "cluster": "Serviced 1st Row",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 4-10 yrs"
+  },
+  {
+    "id": "youd-12",
+    "unitNo": "YOUD-1Y-105",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 105,
+    "view": "Landscape",
+    "priceEGP": 11621000,
+    "status": "Available",
+    "slug": "youd",
+    "cluster": "1 Year Delivery",
+    "delivery_note": "Q3 2027",
+    "payment_plan": "10% DP over 4-10 yrs"
+  }
+]

@@ -220,10 +220,18 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
 
     const findHeaderKey = (options) => {
       for (const opt of options) {
+        const cleanedOpt = opt.toLowerCase().replace(/[^a-z0-9]+/g, "");
         const idx = headers.findIndex(
           (h) =>
-            h.toLowerCase().replace(/[^a-z0-9]+/g, "") ===
-            opt.toLowerCase().replace(/[^a-z0-9]+/g, ""),
+            h.toLowerCase().replace(/[^a-z0-9]+/g, "") === cleanedOpt,
+        );
+        if (idx >= 0) return headers[idx];
+      }
+      for (const opt of options) {
+        const cleanedOpt = opt.toLowerCase().replace(/[^a-z0-9]+/g, "");
+        const idx = headers.findIndex(
+          (h) =>
+            h.toLowerCase().replace(/[^a-z0-9]+/g, "").includes(cleanedOpt),
         );
         if (idx >= 0) return headers[idx];
       }
@@ -233,6 +241,9 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
     const typeKey =
       findHeaderKey(["type", "layout", "layouttype", "unittype", "category"]) || headers[0];
     const priceKey = findHeaderKey([
+      "sellingtotalprice",
+      "totalprice",
+      "sellingprice",
       "price",
       "priceegp",
       "price_egp",
@@ -249,6 +260,7 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
     ]);
     const bedsKey = findHeaderKey(["beds", "bedrooms", "bedcount", "roomcount"]);
     const areaKey = findHeaderKey([
+      "grossarea",
       "area",
       "size",
       "sqm",
@@ -259,7 +271,7 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
       "aream2",
       "builtarea",
     ]);
-    const unitNoKey = findHeaderKey(["unitno", "unitnumber", "unit", "unit_id", "no", "unitcode", "#"]);
+    const unitNoKey = findHeaderKey(["unitcode", "unitno", "unitnumber", "unit", "unit_id", "no", "#"]);
     const viewKey = findHeaderKey(["view", "aspect", "unitview"]);
     const statusKey = findHeaderKey(["status", "availability", "unitstatus"]);
     const finishingKey = findHeaderKey(["finishing", "finish", "finishingtype", "finishingstatus", "specs", "state"]);

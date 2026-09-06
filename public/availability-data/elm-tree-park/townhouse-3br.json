@@ -1,0 +1,16 @@
+[
+  {
+    "id": "elm-tree-park-2",
+    "unitNo": "SAR-ELM-TH-180",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 180,
+    "view": "Landscape",
+    "priceEGP": 23100000,
+    "status": "Available",
+    "slug": "elm-tree-park",
+    "cluster": "Elm Tree Park",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "1.5% - 12Y Backloaded"
+  }
+]

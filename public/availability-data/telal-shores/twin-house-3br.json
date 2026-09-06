@@ -1,0 +1,16 @@
+[
+  {
+    "id": "telal-shores-2",
+    "unitNo": "TS-TW-140",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 140,
+    "view": "Landscape",
+    "priceEGP": 22700000,
+    "status": "Available",
+    "slug": "telal-shores",
+    "cluster": "Phase 1",
+    "delivery_note": "3 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  }
+]

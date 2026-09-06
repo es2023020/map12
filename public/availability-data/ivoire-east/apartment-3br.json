@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ivoire-east-6",
+    "unitNo": "IE-3BR-161",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 161,
+    "view": "Landscape",
+    "priceEGP": 13475000,
+    "status": "Available",
+    "slug": "ivoire-east",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 10 yrs"
+  }
+]

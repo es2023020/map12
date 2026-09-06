@@ -1,0 +1,31 @@
+[
+  {
+    "id": "swanlake-residences-new-cairo-7",
+    "unitNo": "PHX-3B-155",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 155,
+    "view": "Landscape",
+    "priceEGP": 27400000,
+    "status": "Available",
+    "slug": "swanlake-residences-new-cairo",
+    "cluster": "The Phoenix",
+    "delivery_note": "2 Years",
+    "payment_plan": "5%+5% over 10 yrs"
+  },
+  {
+    "id": "swanlake-residences-new-cairo-8",
+    "unitNo": "PHX-3B-GR-155",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 155,
+    "view": "Landscape",
+    "priceEGP": 34800000,
+    "status": "Available",
+    "slug": "swanlake-residences-new-cairo",
+    "cluster": "The Phoenix",
+    "area_note": "Garden 107 sqm",
+    "delivery_note": "2 Years",
+    "payment_plan": "5%+5% over 10 yrs"
+  }
+]

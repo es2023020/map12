@@ -1,0 +1,16 @@
+[
+  {
+    "id": "sun-capital-9",
+    "unitNo": "SC-SA",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 267,
+    "view": "Landscape",
+    "priceEGP": 31112484,
+    "status": "Available",
+    "slug": "sun-capital",
+    "cluster": "Phase 1",
+    "delivery_note": "6 months",
+    "payment_plan": "10% DP over 7 yrs"
+  }
+]
