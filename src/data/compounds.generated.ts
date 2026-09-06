@@ -3696,7 +3696,9 @@ export const compoundsGenerated: Compound[] = [
     ],
     "hero": "/projects/rock-vera/1.jpg",
     "gallery": [
-      "/projects/rock-vera/1.jpg"
+      "/projects/rock-vera/1.jpg",
+      "/projects/rock-vera/2.jpg",
+      "/projects/rock-vera/3.jpg"
 ],
     "blurb": "Rock Vera by El Batal Developments (Rock Developments) is an Italian-inspired residential compound in New Cairo. Spanning a boutique layout with classical streets and plazas, it offers premium homes.",
     "paymentPlan": "15% / 6 yrs",

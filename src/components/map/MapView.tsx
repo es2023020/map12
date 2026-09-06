@@ -280,7 +280,7 @@ export function MapView({
             </LayerGroup>
           </LayersControl.BaseLayer>
 
-          <LayersControl.BaseLayer name="Wikimapia Only">
+          <LayersControl.BaseLayer name="Real Wikimapia (Wikimapia Only)">
             <LayerGroup>
               <TileLayer
                 attribution="&copy; OpenStreetMap &copy; CARTO"
@@ -312,7 +312,7 @@ export function MapView({
           <LayersControl.Overlay name="Wikimapia Outlines &amp; Polygons" checked>
             <WikimapiaPlacesOverlay />
           </LayersControl.Overlay>
-          <LayersControl.Overlay name="Project Markers &amp; Pins">
+          <LayersControl.Overlay name="Project Markers &amp; Pins" checked>
             <LayerGroup>
               {compounds.map((c) => {
                 if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;

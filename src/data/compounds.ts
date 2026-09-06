@@ -6348,7 +6348,25 @@ const vieParent: Compound = {
 
 import { compoundsGenerated } from "./compounds.generated";
 
-export const staticCompounds: Compound[] = compoundsGenerated;
+const generatedSlugs = new Set(compoundsGenerated.map((c) => c.slug));
+const enrichedGenerated: Compound[] = compoundsGenerated.map((c) => {
+  const enriched = applyOfficialData(c);
+  const normalizedDev = normalizeDeveloperName(enriched.developer);
+  return {
+    ...enriched,
+    developer: normalizedDev,
+    developerSlug: slugify(normalizedDev),
+    hero: heroFor(enriched.slug, enriched.hero),
+    gallery: galleryFor(enriched.slug, enriched.gallery),
+    type: enriched.type ?? (enriched.beachfront ? "Coastal" : "Residential"),
+    flagship: enriched.flagship ?? (FLAGSHIPS.has(enriched.slug) || undefined),
+    highlights: enriched.highlights ?? enriched.amenities,
+    parentSlug: parentChildMap[enriched.slug] || undefined,
+  };
+});
+const extraFromBase = baseStaticCompounds.filter((c) => !generatedSlugs.has(c.slug));
+
+export const staticCompounds: Compound[] = [...enrichedGenerated, ...extraFromBase];
 
 let cachedCompounds: Compound[] | null = null;
 let lastCompoundsRead = 0;
