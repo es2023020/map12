@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { formatCurrency } from "@/lib/currency";
 import { Link } from "@tanstack/react-router";
-import { Heart, MapPin, Waves, Calendar, GitCompareArrows } from "lucide-react";
+import { Heart, MapPin, Waves, Calendar, GitCompareArrows, FileText } from "lucide-react";
 import { useStore } from "@/lib/store";
 import { destinationBySlug } from "@/data/destinations";
 import { developers } from "@/data/developers";
 import type { Compound } from "@/data/compounds";
 import { isReadyToMove, hasRTMUnits, hasOffPlanUnits, formatDeliveryStatus } from "@/lib/delivery";
+import { ProposalSetupDialog, type ProposalAgentClientDetails } from "@/components/ui/ProposalSetupDialog";
+import { PdfProposalModal } from "@/components/ui/PdfProposalModal";
 
 export function CompoundCard({ c }: { c: Compound }) {
   const isFav = useStore((s) => s.favorites.includes(c.slug));
@@ -15,142 +18,205 @@ export function CompoundCard({ c }: { c: Compound }) {
   const availabilityList = useStore((s) => s.availabilityList);
   const currency = useStore((s) => s.currency);
 
+  const [showProposalSetup, setShowProposalSetup] = useState(false);
+  const [showPdfModal, setShowPdfModal] = useState(false);
+  const [proposalDetails, setProposalDetails] = useState<ProposalAgentClientDetails | null>(null);
+
   const developerInfo = developers.find((d) => d.slug === c.developerSlug);
   const avail = availabilityList.find((a) => a.slug === c.slug);
   const hasRtm = hasRTMUnits(c, avail);
   const hasOffPlan = hasOffPlanUnits(c, avail);
 
   return (
-    <div className="group flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card shadow-soft hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 bg-gradient-to-b from-card to-background/5">
-      <Link to="/projects/$slug" params={{ slug: c.slug }} className="relative block">
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-secondary">
-          <img
-            src={c.hero}
-            alt={c.name}
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
+    <>
+      <div className="group flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card shadow-soft hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 bg-gradient-to-b from-card to-background/5">
+        <Link to="/projects/$slug" params={{ slug: c.slug }} className="relative block">
+          <div className="relative aspect-[4/3] w-full overflow-hidden bg-secondary">
+            <img
+              src={c.hero}
+              alt={c.name}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
 
-          {/* Gradient Overlay for badge readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 transition-opacity duration-300" />
+            {/* Gradient Overlay for badge readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 transition-opacity duration-300" />
 
-          {/* Floating Badges */}
-          <div className="absolute left-3 top-3 flex flex-wrap gap-1.5 z-10">
-            {c.beachfront && (
-              <span className="inline-flex items-center gap-1 rounded-full bg-sunset/90 backdrop-blur-xs px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white shadow-2xs">
-                <Waves className="h-2.5 w-2.5" /> Beachfront
-              </span>
-            )}
-            <span
-              className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider shadow-2xs border ${
-                hasRtm && hasOffPlan
-                  ? "bg-gradient-to-r from-emerald-500/90 to-blue-600/90 text-white border-emerald-400/20"
+            {/* Floating Badges */}
+            <div className="absolute left-3 top-3 flex flex-wrap gap-1.5 z-10">
+              {c.beachfront && (
+                <span className="inline-flex items-center gap-1 rounded-full bg-sunset/90 backdrop-blur-xs px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white shadow-2xs">
+                  <Waves className="h-2.5 w-2.5" /> Beachfront
+                </span>
+              )}
+              <span
+                className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider shadow-2xs border ${
+                  hasRtm && hasOffPlan
+                    ? "bg-gradient-to-r from-emerald-500/90 to-blue-600/90 text-white border-emerald-400/20"
+                    : hasRtm
+                    ? "bg-emerald-500/90 text-white border-emerald-400/20"
+                    : "bg-primary/95 text-white border-primary-foreground/15"
+                }`}
+              >
+                {hasRtm && hasOffPlan
+                  ? "RTM & Off-Plan"
                   : hasRtm
-                  ? "bg-emerald-500/90 text-white border-emerald-400/20"
-                  : "bg-primary/95 text-white border-primary-foreground/15"
-              }`}
-            >
-              {hasRtm && hasOffPlan
-                ? "RTM & Off-Plan"
-                : hasRtm
-                ? "Ready to Move"
-                : "Off-Plan"}
-            </span>
-          </div>
-
-          {c.km !== undefined && (
-            <div className="absolute right-3 top-3 z-10">
-              <span className="inline-flex items-center gap-1 rounded-full bg-primary/90 backdrop-blur-xs px-2.5 py-0.5 text-[9px] font-bold text-white shadow-sm border border-white/10 tracking-wider">
-                <MapPin className="h-2.5 w-2.5 text-accent" /> KM {c.km}
+                  ? "Ready to Move"
+                  : "Off-Plan"}
               </span>
             </div>
-          )}
 
-          {/* Floating Developer Logo */}
-          {developerInfo?.logo && (
-            <div className="absolute bottom-3 right-3 h-9 w-9 rounded-xl bg-white/95 p-1.5 shadow-md border border-border/40 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 backdrop-blur-xs z-10">
-              <img
-                src={developerInfo.logo}
-                alt={developerInfo.name}
-                className="h-full w-full object-contain"
-              />
+            {c.km !== undefined && (
+              <div className="absolute right-3 top-3 z-10">
+                <span className="inline-flex items-center gap-1 rounded-full bg-primary/90 backdrop-blur-xs px-2.5 py-0.5 text-[9px] font-bold text-white shadow-sm border border-white/10 tracking-wider">
+                  <MapPin className="h-2.5 w-2.5 text-accent" /> KM {c.km}
+                </span>
+              </div>
+            )}
+
+            {/* Floating Developer Logo */}
+            {developerInfo?.logo && (
+              <div className="absolute bottom-3 right-3 h-9 w-9 rounded-xl bg-white/95 p-1.5 shadow-md border border-border/40 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 backdrop-blur-xs z-10">
+                <img
+                  src={developerInfo.logo}
+                  alt={developerInfo.name}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+            )}
+          </div>
+        </Link>
+
+        <div className="flex flex-col flex-1 p-5">
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0 flex-1">
+              <Link to="/projects/$slug" params={{ slug: c.slug }}>
+                <h3 className="font-display text-lg font-bold leading-tight text-primary truncate hover:text-accent transition-colors duration-200">
+                  {c.name}
+                </h3>
+              </Link>
+              <p className="mt-1 text-[10px] font-bold text-muted-foreground/75 tracking-wider uppercase truncate">
+                {c.developer}
+              </p>
             </div>
-          )}
-        </div>
-      </Link>
 
-      <div className="flex flex-col flex-1 p-5">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0 flex-1">
-            <Link to="/projects/$slug" params={{ slug: c.slug }}>
-              <h3 className="font-display text-lg font-bold leading-tight text-primary truncate hover:text-accent transition-colors duration-200">
-                {c.name}
-              </h3>
-            </Link>
-            <p className="mt-1 text-[10px] font-bold text-muted-foreground/75 tracking-wider uppercase truncate">
-              {c.developer}
-            </p>
+            {/* Compare, Favorite & Proposal Buttons */}
+            <div className="flex shrink-0 gap-1.5">
+              <button
+                onClick={() => setShowProposalSetup(true)}
+                title="Create Client Proposal PDF"
+                aria-label="Create Client Proposal PDF"
+                className="rounded-full border border-border/80 p-2 text-muted-foreground hover:border-amber-500/50 hover:bg-amber-500/10 hover:text-amber-400 transition-all duration-200 cursor-pointer"
+              >
+                <FileText className="h-3.5 w-3.5" />
+              </button>
+              <button
+                onClick={() => toggleCmp(c.slug)}
+                aria-label="Compare"
+                className={`rounded-full border p-2 transition-all duration-200 cursor-pointer ${
+                  isCmp
+                    ? "border-accent bg-accent text-accent-foreground shadow-2xs"
+                    : "border-border/80 text-muted-foreground hover:bg-secondary/50 hover:text-primary"
+                }`}
+              >
+                <GitCompareArrows className="h-3.5 w-3.5" />
+              </button>
+              <button
+                onClick={() => toggleFav(c.slug)}
+                aria-label="Favorite"
+                className={`rounded-full border p-2 transition-all duration-200 cursor-pointer ${
+                  isFav
+                    ? "border-sunset bg-sunset text-white shadow-2xs"
+                    : "border-border/80 text-muted-foreground hover:bg-secondary/50 hover:text-primary"
+                }`}
+              >
+                <Heart className={`h-3.5 w-3.5 ${isFav ? "fill-current" : ""}`} />
+              </button>
+            </div>
           </div>
 
-          {/* Compare & Favorite Buttons */}
-          <div className="flex shrink-0 gap-1.5">
-            <button
-              onClick={() => toggleCmp(c.slug)}
-              aria-label="Compare"
-              className={`rounded-full border p-2 transition-all duration-200 cursor-pointer ${
-                isCmp
-                  ? "border-accent bg-accent text-accent-foreground shadow-2xs"
-                  : "border-border/80 text-muted-foreground hover:bg-secondary/50 hover:text-primary"
-              }`}
-            >
-              <GitCompareArrows className="h-3.5 w-3.5" />
-            </button>
-            <button
-              onClick={() => toggleFav(c.slug)}
-              aria-label="Favorite"
-              className={`rounded-full border p-2 transition-all duration-200 cursor-pointer ${
-                isFav
-                  ? "border-sunset bg-sunset text-white shadow-2xs"
-                  : "border-border/80 text-muted-foreground hover:bg-secondary/50 hover:text-primary"
-              }`}
-            >
-              <Heart className={`h-3.5 w-3.5 ${isFav ? "fill-current" : ""}`} />
-            </button>
-          </div>
-        </div>
-
-        {/* Location & Year details */}
-        <div className="mt-4 flex flex-wrap items-center gap-y-1.5 gap-x-4 text-xs font-semibold text-muted-foreground/75">
-          <span className="inline-flex items-center gap-1.5">
-            <MapPin className="h-3.5 w-3.5 text-muted-foreground/50" />
-            {destinationBySlug(c.destination)?.name ?? c.destination}
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <Calendar className="h-3.5 w-3.5 text-muted-foreground/50" />
-            {formatDeliveryStatus(undefined, c.deliveryYear, c.status, hasRtm && hasOffPlan).label}
-          </span>
-        </div>
-
-        {/* Card Footer pricing & details CTA */}
-        <div className="mt-6 flex items-end justify-between border-t border-border/40 pt-4 mt-auto">
-          <div className="flex flex-col">
-            <span className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground/60">
-              Starting From
+          {/* Location & Year details */}
+          <div className="mt-4 flex flex-wrap items-center gap-y-1.5 gap-x-4 text-xs font-semibold text-muted-foreground/75">
+            <span className="inline-flex items-center gap-1.5">
+              <MapPin className="h-3.5 w-3.5 text-muted-foreground/50" />
+              {destinationBySlug(c.destination)?.name ?? c.destination}
             </span>
-            <span className="font-display text-lg font-bold text-primary tracking-tight">
-              {formatCurrency(c.priceFrom, currency)}
+            <span className="inline-flex items-center gap-1.5">
+              <Calendar className="h-3.5 w-3.5 text-muted-foreground/50" />
+              {formatDeliveryStatus(undefined, c.deliveryYear, c.status, hasRtm && hasOffPlan).label}
             </span>
           </div>
-          <Link
-            to="/projects/$slug"
-            params={{ slug: c.slug }}
-            className="inline-flex items-center gap-1 rounded-xl bg-accent/10 hover:bg-accent px-4 py-2 text-xs font-bold text-accent hover:text-white transition-all duration-200"
-          >
-            Details{" "}
-            <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
-          </Link>
+
+          {/* Card Footer pricing & details CTA */}
+          <div className="mt-6 flex items-end justify-between border-t border-border/40 pt-4 mt-auto">
+            <div className="flex flex-col">
+              <span className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground/60">
+                Starting From
+              </span>
+              <span className="font-display text-lg font-bold text-primary tracking-tight">
+                {formatCurrency(c.priceFrom, currency)}
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setShowProposalSetup(true)}
+                className="inline-flex items-center gap-1.5 rounded-xl border border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20 px-3 py-2 text-xs font-bold text-amber-400 transition-all duration-200 cursor-pointer"
+              >
+                <FileText className="h-3.5 w-3.5" /> Proposal
+              </button>
+              <Link
+                to="/projects/$slug"
+                params={{ slug: c.slug }}
+                className="inline-flex items-center gap-1 rounded-xl bg-accent/10 hover:bg-accent px-3 py-2 text-xs font-bold text-accent hover:text-white transition-all duration-200"
+              >
+                Details{" "}
+                <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Pre-Proposal Agent & Client Setup Dialog */}
+      <ProposalSetupDialog
+        isOpen={showProposalSetup}
+        projectName={c.name}
+        projectSlug={c.slug}
+        onClose={() => setShowProposalSetup(false)}
+        onConfirm={(details) => {
+          setProposalDetails(details);
+          setShowProposalSetup(false);
+          setShowPdfModal(true);
+        }}
+      />
+
+      {/* Proposal PDF Modal */}
+      {showPdfModal && (
+        <PdfProposalModal
+          data={{
+            projectName: c.name,
+            projectSlug: c.slug,
+            developerName: c.developer,
+            location: `${c.destination.replace("-", " ").toUpperCase()}, Egypt`,
+            unitCode: proposalDetails?.unitCode,
+            unitType: proposalDetails?.unitType || (c.types && c.types.length > 0 ? c.types[0] : "Luxury Layout"),
+            areaSqm: proposalDetails?.areaSqm || c.unitSizes || "145",
+            startingPriceEgp: proposalDetails?.startingPriceEgp || (c.priceFrom || 10) * 1000000,
+            paymentPlanStr: proposalDetails?.paymentPlanStr || c.paymentPlan || "10% DP over 8 Yrs",
+            dpPct: 10,
+            durationYrs: 8,
+            deliveryNote: proposalDetails?.deliveryNote || String(c.deliveryYear),
+            finishing: proposalDetails?.finishing,
+            amenities: c.amenities,
+            description: c.blurb,
+            clientName: proposalDetails?.clientName,
+            agentName: proposalDetails?.agentName,
+            agentPhone: proposalDetails?.agentPhone,
+            agentTitle: proposalDetails?.agentTitle,
+          }}
+          onClose={() => setShowPdfModal(false)}
+        />
+      )}
+    </>
   );
 }

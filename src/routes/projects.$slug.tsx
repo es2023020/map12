@@ -1685,6 +1685,7 @@ function CompoundPage() {
       <ProposalSetupDialog
         isOpen={proposalSetupOpen}
         projectName={c.name}
+        projectSlug={c.slug}
         onClose={() => setProposalSetupOpen(false)}
         onConfirm={(details) => {
           setProposalDetails(details);
@@ -1701,13 +1702,15 @@ function CompoundPage() {
             projectSlug: c.slug,
             developerName: c.developer,
             location: destination ? `${destination.name}, Egypt` : `${c.destination.replace("-", " ").toUpperCase()}, Egypt`,
-            unitType: c.types && c.types.length > 0 ? c.types[0] : "Luxury Layout",
-            areaSqm: c.unitSizes || "145",
-            startingPriceEgp: (c.priceFrom || 10) * 1000000,
-            paymentPlanStr: c.paymentPlan || "10% DP over 8 Yrs",
+            unitCode: proposalDetails?.unitCode,
+            unitType: proposalDetails?.unitType || (c.types && c.types.length > 0 ? c.types[0] : "Luxury Layout"),
+            areaSqm: proposalDetails?.areaSqm || c.unitSizes || "145",
+            startingPriceEgp: proposalDetails?.startingPriceEgp || (c.priceFrom || 10) * 1000000,
+            paymentPlanStr: proposalDetails?.paymentPlanStr || c.paymentPlan || "10% DP over 8 Yrs",
             dpPct: 10,
             durationYrs: 8,
-            deliveryNote: String(c.deliveryYear),
+            deliveryNote: proposalDetails?.deliveryNote || String(c.deliveryYear),
+            finishing: proposalDetails?.finishing,
             amenities: c.amenities,
             description: c.blurb,
             clientName: proposalDetails?.clientName,

@@ -484,6 +484,8 @@ export function UnitDetailModal({
       <ProposalSetupDialog
         isOpen={showSetupDialog}
         projectName={projectSlug ? projectSlug.replace(/-/g, " ").toUpperCase() : "Property"}
+        projectSlug={projectSlug}
+        initialUnit={unit}
         onClose={() => setShowSetupDialog(false)}
         onConfirm={(details) => {
           setAgentClientInfo(details);
@@ -498,14 +500,15 @@ export function UnitDetailModal({
             projectName: projectSlug ? projectSlug.replace(/-/g, " ").toUpperCase() : "Property Atlas",
             projectSlug: projectSlug || "",
             developerName: "Developer",
-            unitType: unit.type,
-            areaSqm: unit.minSqm === unit.maxSqm ? unit.minSqm : `${unit.minSqm}–${unit.maxSqm}`,
-            startingPriceEgp: unit.minPriceM * 1000000,
-            paymentPlanStr: unit.paymentPlan || "Flexible Installments",
+            unitCode: agentClientInfo?.unitCode,
+            unitType: agentClientInfo?.unitType || unit.type,
+            areaSqm: agentClientInfo?.areaSqm || (unit.minSqm === unit.maxSqm ? unit.minSqm : `${unit.minSqm}–${unit.maxSqm}`),
+            startingPriceEgp: agentClientInfo?.startingPriceEgp || unit.minPriceM * 1000000,
+            paymentPlanStr: agentClientInfo?.paymentPlanStr || unit.paymentPlan || "Flexible Installments",
             dpPct: parsedPlan.dp,
             durationYrs: parsedPlan.duration,
-            deliveryNote: unit.deliveryNote || (unitRtm ? "Ready to Move" : "4 Years"),
-            finishing: unit.finishing,
+            deliveryNote: agentClientInfo?.deliveryNote || unit.deliveryNote || (unitRtm ? "Ready to Move" : "4 Years"),
+            finishing: agentClientInfo?.finishing || unit.finishing,
             clientName: agentClientInfo?.clientName,
             agentName: agentClientInfo?.agentName,
             agentPhone: agentClientInfo?.agentPhone,
