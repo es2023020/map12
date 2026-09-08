@@ -1,0 +1,24 @@
+[
+  {
+    "id": "bluetree-1",
+    "unitNo": "BT-1BR-75",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 75,
+    "view": "Scenic View",
+    "priceEGP": 6042000,
+    "status": "Available",
+    "Delivery": "4 Years (Off-Plan)"
+  },
+  {
+    "id": "bluetree-2",
+    "unitNo": "BT-1BR-85",
+    "beds": 1,
+    "finishing": "Semi Finished",
+    "areaSqm": 85,
+    "view": "Scenic View",
+    "priceEGP": 6771000,
+    "status": "Available",
+    "Delivery": "4 Years (Off-Plan)"
+  }
+]

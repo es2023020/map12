@@ -150,6 +150,12 @@ const blurbs: Record<string, string> = {
     "Cred Developments — premier Egyptian real estate developer known for luxury master-planned communities including Ever New Cairo in 6th Settlement, Ever West in 6th of October, and Castle Landmark in the New Capital.",
   Cred:
     "Cred Developments — premier Egyptian real estate developer known for luxury master-planned communities including Ever New Cairo in 6th Settlement, Ever West in 6th of October, and Castle Landmark in the New Capital.",
+  "Sky AD Developments":
+    "Sky AD Developments (Sky Abu Dhabi) — premier UAE-backed real estate developer (subsidiary of Diamond Group UAE) bringing international master-planning standards to East Cairo with flagship projects like Bluetree in Golden Square, New Cairo.",
+  "Sky Abu Dhabi Developments":
+    "Sky AD Developments (Sky Abu Dhabi) — premier UAE-backed real estate developer (subsidiary of Diamond Group UAE) bringing international master-planning standards to East Cairo with flagship projects like Bluetree in Golden Square, New Cairo.",
+  SkyAD:
+    "Sky AD Developments (Sky Abu Dhabi) — premier UAE-backed real estate developer (subsidiary of Diamond Group UAE) bringing international master-planning standards to East Cairo with flagship projects like Bluetree in Golden Square, New Cairo.",
 };
 
 const logoMap: Record<string, string> = {
@@ -236,6 +242,10 @@ const logoMap: Record<string, string> = {
     "https://ui-avatars.com/api/?background=198754&color=fff&bold=true&size=128&name=Cred",
   cred:
     "https://ui-avatars.com/api/?background=198754&color=fff&bold=true&size=128&name=Cred",
+  "sky-ad-developments":
+    "https://ui-avatars.com/api/?background=003366&color=fff&bold=true&size=128&name=Sky+AD",
+  "sky-ad":
+    "https://ui-avatars.com/api/?background=003366&color=fff&bold=true&size=128&name=Sky+AD",
 };
 
 const websiteMap: Record<string, string> = {
@@ -285,6 +295,8 @@ const websiteMap: Record<string, string> = {
   "arabella-developments": "https://arabellagroup.com",
   "cred-developments": "https://cred-eg.com",
   cred: "https://cred-eg.com",
+  "sky-ad-developments": "https://skyabudhabi.com",
+  "sky-ad": "https://skyabudhabi.com",
 };
 
 const foundingYears: Record<string, number> = {
@@ -300,6 +312,7 @@ const foundingYears: Record<string, number> = {
   "misr-italia": 1998,
   "ora-developers": 2016,
   "the-waterway-developments": 2010,
+  "sky-ad-developments": 2021,
 };
 
 const landBanks: Record<string, string> = {
@@ -314,6 +327,7 @@ const landBanks: Record<string, string> = {
   "la-vista-developments": "9,500,000 m²",
   "the-waterway-developments": "2,200,000 m²",
   "misr-italia": "6,000,000 m²",
+  "sky-ad-developments": "500,000 m²",
 };
 
 const unitsDeliveredMap: Record<string, string> = {
@@ -326,6 +340,7 @@ const unitsDeliveredMap: Record<string, string> = {
   lmd: "5,000+",
   "la-vista-developments": "10,000+",
   "tatweer-misr": "8,500+",
+  "sky-ad-developments": "1,200+",
 };
 
 const structures: Record<string, string> = {
@@ -341,6 +356,7 @@ const structures: Record<string, string> = {
   "misr-italia": "Private Shareholding (Mohamed Hany El Assal & Mohamed Khaled El Assal, CEOs)",
   "ora-developers": "Private (Naguib Sawiris)",
   "the-waterway-developments": "Private (Founded by Hossam Hassan & Ahmed El Sewedy)",
+  "sky-ad-developments": "Subsidiary of Diamond Group UAE - Eng. Abdelrahman Ajamia, CEO",
 };
 
 function fallbackLogo(name: string) {

@@ -12712,53 +12712,6 @@ export const compoundsGenerated: Compound[] = [
     "city": "6th Settlement, New Cairo, Cairo, Egypt"
   },
   {
-    "slug": "la-vista-east",
-    "name": "La Vista East",
-    "destination": "6th-settlement",
-    "lat": 29.9788,
-    "lng": 31.6415,
-    "developer": "La Vista Developments",
-    "developerSlug": "la-vista-developments",
-    "priceFrom": 19.8,
-    "deliveryYear": 2024,
-    "status": "RTM",
-    "beachfront": false,
-    "types": [
-      "Apartment",
-      "Chalet",
-      "Standalone Villa",
-      "Townhouse",
-      "Twin House"
-    ],
-    "amenities": [
-      "Clubhouse",
-      "Swimming pools",
-      "Sports club",
-      "Parks",
-      "Walking & cycling trails",
-      "Restaurants & cafés",
-      "Retail area",
-      "Medical center",
-      "Kids' areas",
-      "24/7 security"
-    ],
-    "hero": "/projects/la-vista-east/1.jpg",
-    "gallery": [
-      "/projects/la-vista-east/1.jpg",
-      "/projects/la-vista-east/2.jpg"
-],
-    "blurb": "La Vista East is a luxury residential compound by La Vista spanning approximately 310 acres in the Sixth Settlement, designed around large green landscapes and contemporary architecture with integrated leisure, commercial, and educational facilities. Fully completed, mature, and inhabited community.",
-    "paymentPlan": "10% down, installments up to 8 years",
-    "type": "Residential",
-    "highlights": [
-      "310 acres of green luxury living",
-      "Sixth Settlement prime location",
-      "Close to New Administrative Capital"
-    ],
-    "city": "Sixth Settlement, New Cairo, Cairo, Egypt",
-    "masterPlanUrl": "/masterplans/la-vista-east.svg"
-  },
-  {
     "slug": "dejoya-residence",
     "name": "Dejoya Residence",
     "destination": "new-zayed",
@@ -15528,7 +15481,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/nyoum-pyramids/2.jpg",
       "/projects/nyoum-pyramids/3.jpg",
       "/projects/nyoum-pyramids/4.jpg",
-      "/projects/nyoum-pyramids/5.jpg"
+      "/projects/nyoum-pyramids/5.jpg",
+      "/projects/nyoum-pyramids/WhatsApp Image 2026-09-08 at 9.40.21 PM.jpeg"
 ],
     "blurb": "Nyoum Pyramids is a ready-to-move residential project by Arab Developers Holding in Eastern Expansions, offering Apartment units from 170+ m².",
     "paymentPlan": "25% DP / over 5 Years 50% DP / over 5 Years",

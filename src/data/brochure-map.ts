@@ -113,4 +113,13 @@ export const brochureMap: Record<string, string> = {
 
   // ─── Seashell ────────────────────────────────────────────────────────
   seashell: "SEASHELL REH LAGOON CHALET  brochure.pdf",
+
+  // ─── New Additions ───────────────────────────────────────────────────
+  bluetree: "bluetree.pdf",
+  "el-patio-townside": "el-patio-townside.pdf",
+  "rock-green": "rock-green.pdf",
+  "rock-white": "rock-white.pdf",
+  "rock-yard": "rock-yard.pdf",
+  "rock-eden": "rock-eden.pdf",
+  "rock-vera": "rock-vera.pdf",
 };

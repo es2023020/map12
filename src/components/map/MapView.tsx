@@ -269,7 +269,15 @@ export function MapView({
         <MapClickEvents onMapClick={onMapClick} />
         <FocusedProjectPolygon focused={focused} />
         <LayersControl position="topright">
-          <LayersControl.BaseLayer checked name="Wikimapia Satellite Hybrid">
+          <LayersControl.BaseLayer checked name="Satellite">
+            <TileLayer
+              attribution="Tiles &copy; Esri"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+              maxZoom={19}
+            />
+          </LayersControl.BaseLayer>
+
+          <LayersControl.BaseLayer name="Wikimapia Satellite Hybrid">
             <LayerGroup>
               <TileLayer
                 attribution="Tiles &copy; Esri"
@@ -292,14 +300,6 @@ export function MapView({
             </LayerGroup>
           </LayersControl.BaseLayer>
 
-          <LayersControl.BaseLayer name="Satellite">
-            <TileLayer
-              attribution="Tiles &copy; Esri"
-              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-              maxZoom={19}
-            />
-          </LayersControl.BaseLayer>
-
           <LayersControl.BaseLayer name="Light Street Map">
             <TileLayer
               attribution="&copy; OpenStreetMap &copy; CARTO"
@@ -312,7 +312,7 @@ export function MapView({
           <LayersControl.Overlay name="Wikimapia Outlines &amp; Polygons" checked>
             <WikimapiaPlacesOverlay />
           </LayersControl.Overlay>
-          <LayersControl.Overlay name="Project Markers &amp; Pins" checked>
+          <LayersControl.Overlay name="Project Markers &amp; Pins">
             <LayerGroup>
               {compounds.map((c) => {
                 if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;
