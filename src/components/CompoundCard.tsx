@@ -212,6 +212,7 @@ export function CompoundCard({ c }: { c: Compound }) {
             clientName: proposalDetails?.clientName,
             agentName: proposalDetails?.agentName,
             agentPhone: proposalDetails?.agentPhone,
+            agentEmail: proposalDetails?.agentEmail,
             agentTitle: proposalDetails?.agentTitle,
           }}
           onClose={() => setShowPdfModal(false)}

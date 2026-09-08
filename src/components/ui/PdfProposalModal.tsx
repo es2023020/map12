@@ -10,7 +10,6 @@ import {
   X,
   ZoomIn,
   ZoomOut,
-  RotateCcw,
   Download,
   Share2,
   Building2,
@@ -27,6 +26,7 @@ import {
   Trees,
   Briefcase,
   Phone,
+  Mail,
   User,
   FileText,
   DollarSign,
@@ -34,12 +34,14 @@ import {
   Grid,
   Image as ImageIcon,
   Check,
+  Layers3,
 } from "lucide-react";
 
 export interface OfferProposalData {
   clientName?: string;
   agentName?: string;
   agentPhone?: string;
+  agentEmail?: string;
   agentTitle?: string;
   unitCode?: string;
   projectName: string;
@@ -72,34 +74,51 @@ export function PdfProposalModal({ data, onClose }: Props) {
   const user = useStore((s) => s.user);
 
   const docRef = useRef<HTMLDivElement>(null);
+  const slide1Ref = useRef<HTMLDivElement>(null);
+  const slide2Ref = useRef<HTMLDivElement>(null);
+  const slide3Ref = useRef<HTMLDivElement>(null);
+  const slide4Ref = useRef<HTMLDivElement>(null);
+  const slide5Ref = useRef<HTMLDivElement>(null);
+  const slide6Ref = useRef<HTMLDivElement>(null);
+
   const [downloading, setDownloading] = useState(false);
   const [editMode, setEditMode] = useState(false);
   const [zoomScale, setZoomScale] = useState(100);
+  const [activeSlideTab, setActiveSlideTab] = useState<number | "all">("all");
 
   const handleZoomIn = () => setZoomScale((z) => Math.min(z + 20, 200));
   const handleZoomOut = () => setZoomScale((z) => Math.max(z - 20, 50));
-  const handleResetZoom = () => setZoomScale(100);
 
-  // Theme & Accent Color Presets
+  // Theme & Accent Presets
   const [docMode, setDocMode] = useState<"dark" | "light">("dark");
   const [accentColor, setAccentColor] = useState<"gold" | "emerald" | "indigo" | "rose">("gold");
-  const [variationIndex, setVariationIndex] = useState(0);
 
   // Agent & Client State
   const [clientName, setClientName] = useState(data.clientName || "Valued Client");
   const [agentName, setAgentName] = useState(data.agentName || user?.name || "Senior Property Consultant");
   const [agentTitle, setAgentTitle] = useState(data.agentTitle || "Luxury Real Estate Advisor");
   const [agentPhone, setAgentPhone] = useState(data.agentPhone || "+20 102 932 4783");
-  const [agentEmail, setAgentEmail] = useState(user?.email || "advisor@realestate.eg");
+  const [agentEmail, setAgentEmail] = useState(data.agentEmail || user?.email || "advisor@propertyatlas.eg");
   const [agencyName, setAgencyName] = useState("Exclusive Real Estate Advisory");
 
   // Property Details State
   const [unitCode, setUnitCode] = useState(data.unitCode || `UN-${Math.floor(100 + Math.random() * 900)}`);
   const [projectName, setProjectName] = useState(data.projectName);
   const [developerName, setDeveloperName] = useState(data.developerName);
-  const [developerBrief, setDeveloperBrief] = useState(
-    `${data.developerName} is a premier master-plan developer in Egypt with a proven track record of delivering luxury residential and commercial destinations with high capital appreciation.`
+
+  // Compound Lookup for real delivery date & details
+  const foundComp = compounds.find(
+    (c) => c.slug === data.projectSlug || c.name.toLowerCase() === data.projectName.toLowerCase()
   );
+
+  // Delivery Resolution: Match unit deliveryNote or website project deliveryYear/status
+  const resolvedDeliveryDate =
+    data.deliveryNote ||
+    (foundComp
+      ? formatDeliveryStatus(undefined, foundComp.deliveryYear, foundComp.status).label
+      : "Off-Plan (In 2.5 Years)");
+
+  const [deliveryNote, setDeliveryNote] = useState(resolvedDeliveryDate);
   const [locationStr, setLocationStr] = useState(data.location || "North Coast, Egypt");
   const [locationHighlights, setLocationHighlights] = useState([
     "Direct Access to International Coastal Highway & Main Arteries",
@@ -114,9 +133,6 @@ export function PdfProposalModal({ data, onClose }: Props) {
   const [dpPct, setDpPct] = useState(data.dpPct || 10);
   const [durationYrs, setDurationYrs] = useState(data.durationYrs || 8);
   const [paymentPlanStr, setPaymentPlanStr] = useState(data.paymentPlanStr);
-  const [deliveryNote, setDeliveryNote] = useState(
-    data.deliveryNote ? formatDeliveryStatus(data.deliveryNote).label : "Off-Plan (In 2.5 Years)"
-  );
   const [finishingStatus, setFinishingStatus] = useState(data.finishing || "Fully Finished w/ ACs");
 
   // Maintenance & Fees
@@ -141,22 +157,15 @@ export function PdfProposalModal({ data, onClose }: Props) {
         ]
   );
 
-  // Strategic Partners State
+  // Strategic Partners
   const [masterplanner, setMasterplanner] = useState("WATG / Sasaki International");
-  const [architectFirm, setArchitectFirm] = useState("CallisonRTKL Architects");
   const [mainContractor, setMainContractor] = useState("Orascom Construction / Hassan Allam");
   const [landscapePartner, setLandscapePartner] = useState("Sites International Landscape");
-  const [facilityManager, setFacilityManager] = useState("EnviroFix & Luxury Hospitality Ops");
 
   // Project Masterplan & Photos Gathering
-  const foundComp = compounds.find(
-    (c) => c.slug === data.projectSlug || c.name.toLowerCase() === data.projectName.toLowerCase()
-  );
-
   const realMasterplanUrl =
     foundComp?.masterPlanUrl || (foundComp as any)?.masterplanUrl || null;
 
-  // Gather pictures from projectImages, compound gallery, hero, and mediaRegistry
   const localProjImages = projectImages[data.projectSlug] || projectImages[foundComp?.slug || ""] || [];
   const registryMedia = ((mediaRegistry.projects_media as any)?.[data.projectSlug] || [])
     .filter((m: any) => m.type === "image")
@@ -181,7 +190,6 @@ export function PdfProposalModal({ data, onClose }: Props) {
         ]
   );
 
-  // Auto-resolve developer & location details
   useEffect(() => {
     if (foundComp) {
       if (!data.developerName || data.developerName.toLowerCase().includes("atlas") || data.developerName === "Developer") {
@@ -193,9 +201,6 @@ export function PdfProposalModal({ data, onClose }: Props) {
       if (foundComp.blurb) {
         setProjectDescription(foundComp.blurb);
       }
-      setDeveloperBrief(
-        `${foundComp.developer} is one of Egypt's premier master-plan real estate developers with a top-tier portfolio of delivered communities in ${foundComp.destination.replace("-", " ").toUpperCase()}.`
-      );
     }
   }, [data, foundComp]);
 
@@ -214,51 +219,26 @@ export function PdfProposalModal({ data, onClose }: Props) {
   const quarterlyInstallment = remainingEgp / totalQuarters;
   const annualInstallment = remainingEgp / totalYears;
 
-  const cashDiscountEgp = totalPriceEgp * 0.3; // 30% cash discount estimate
+  const cashDiscountEgp = totalPriceEgp * 0.3;
   const cashPriceEgp = totalPriceEgp - cashDiscountEgp;
 
-  // Theme styling helpers
+  // Theme styling
   const getThemeClasses = () => {
     const isDark = docMode === "dark";
-    let accentText = "text-amber-400";
-    let accentBg = "bg-amber-500/15";
-    let accentBorder = "border-amber-500/30";
-
-    if (accentColor === "emerald") {
-      accentText = isDark ? "text-emerald-400" : "text-emerald-700";
-      accentBg = isDark ? "bg-emerald-500/15" : "bg-emerald-50";
-      accentBorder = isDark ? "border-emerald-500/30" : "border-emerald-200";
-    } else if (accentColor === "indigo") {
-      accentText = isDark ? "text-indigo-400" : "text-indigo-700";
-      accentBg = isDark ? "bg-indigo-500/15" : "bg-indigo-50";
-      accentBorder = isDark ? "border-indigo-500/30" : "border-indigo-200";
-    } else if (accentColor === "rose") {
-      accentText = isDark ? "text-rose-400" : "text-rose-700";
-      accentBg = isDark ? "bg-rose-500/15" : "bg-rose-50";
-      accentBorder = isDark ? "border-rose-500/30" : "border-rose-200";
-    }
-
     return {
       canvasBg: isDark ? "bg-slate-950 text-white" : "bg-slate-50 text-slate-900",
       cardBg: isDark ? "bg-slate-900/90 border-white/15 shadow-2xl" : "bg-white border-slate-200 shadow-xl",
       subCardBg: isDark ? "bg-slate-950 border-white/10" : "bg-slate-100/80 border-slate-200",
-      textPrimary: isDark ? "text-white" : "text-slate-900",
-      textSecondary: isDark ? "text-slate-300" : "text-slate-700",
-      textMuted: isDark ? "text-slate-400" : "text-slate-500",
-      borderSubtle: isDark ? "border-white/10" : "border-slate-200",
-      accentText,
-      accentBg,
-      accentBorder,
     };
   };
 
   const theme = getThemeClasses();
 
-  // Multi-Page PDF Download using html2canvas & jsPDF
+  // Pure Direct PDF Download (NO window.print popup)
   const handleDownloadPdf = async () => {
     if (!docRef.current) return;
     setDownloading(true);
-    toast.info("Generating multi-page high resolution PDF proposal...");
+    toast.info("Generating multi-page high resolution PDF file...");
     try {
       // @ts-ignore
       const html2canvasModule = await import(/* @vite-ignore */ "html2canvas");
@@ -300,34 +280,61 @@ export function PdfProposalModal({ data, onClose }: Props) {
       }
 
       pdf.save(`${projectName.replace(/[^a-zA-Z0-9]/g, "_")}_Proposal_${unitCode}.pdf`);
-      toast.success("Executive PDF Proposal downloaded successfully!");
+      toast.success("PDF Proposal downloaded directly to your device!");
     } catch (e) {
-      console.error("PDF export fallback", e);
-      window.print();
+      console.error("PDF export error", e);
+      toast.error("Failed to generate PDF. Please try again.");
     } finally {
       setDownloading(false);
     }
   };
 
-  // Quick WhatsApp Share
-  const handleShareWhatsApp = () => {
-    const text = `Hello ${clientName},\n\n` +
-      `Official Executive Offer: ${projectName} (${developerName})\n` +
+  // Share via WhatsApp with direct PDF download prompt
+  const handleShareWhatsApp = async () => {
+    // 1. Trigger PDF download first
+    await handleDownloadPdf();
+
+    // 2. Open WhatsApp Web/App with personalized text
+    const text =
+      `Hello ${clientName},\n\n` +
+      `Official Executive Portfolio & Proposal\n` +
+      `Project: ${projectName} by ${developerName}\n` +
+      `Location: ${locationStr}\n\n` +
+      `Selected Property Specifications:\n` +
       `• Unit Code: ${unitCode}\n` +
-      `• Type: ${unitType} (${areaSqm} m²)\n` +
+      `• Unit Type: ${unitType}\n` +
+      `• Indoor BUA: ${areaSqm} m²\n` +
       `• Starting Base Price: ${formatExactPrice(totalPriceEgp, currency)}\n` +
       `• Maintenance Fee (${maintenancePct}%): ${formatExactPrice(maintenanceFeeEgp, currency)}\n` +
       `• Base Total Price (incl. Maint.): ${formatExactPrice(baseTotalPriceInclMaint, currency)}\n` +
       `• Down Payment (${dpPct}%): ${formatExactPrice(dpAmountEgp, currency)}\n` +
-      `• Est. Monthly: ${formatExactPrice(monthlyInstallment, currency)}/mo (${durationYrs} Yrs)\n` +
-      `• Delivery: ${deliveryNote}\n\n` +
-      `Representative: ${agentName} (${agentTitle})\nDirect Phone: ${agentPhone}`;
+      `• Est. Monthly: ${formatExactPrice(monthlyInstallment, currency)}/mo (${durationYrs} Years)\n` +
+      `• Guaranteed Delivery Timeline: ${deliveryNote}\n\n` +
+      `Prepared & Provided Exclusively By Your Personal Advisor:\n` +
+      `• Name: ${agentName}\n` +
+      `• Title: ${agentTitle}\n` +
+      `• Phone: ${agentPhone}\n` +
+      `• Email: ${agentEmail}\n` +
+      `• Agency: ${agencyName}\n\n` +
+      `📎 (Note: I have attached the official multi-page PDF proposal file for your review below.)`;
+
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
   };
 
-  // Calculate page count estimate (5 core sections + photo gallery pages)
+  // Total pages calculation
   const galleryPages = Math.ceil(selectedPhotoPaths.length / 4);
   const totalPagesEstimate = 5 + galleryPages;
+
+  // Scroll to slide helper
+  const scrollToSlide = (slideNum: number | "all") => {
+    setActiveSlideTab(slideNum);
+    if (slideNum === 1 && slide1Ref.current) slide1Ref.current.scrollIntoView({ behavior: "smooth" });
+    if (slideNum === 2 && slide2Ref.current) slide2Ref.current.scrollIntoView({ behavior: "smooth" });
+    if (slideNum === 3 && slide3Ref.current) slide3Ref.current.scrollIntoView({ behavior: "smooth" });
+    if (slideNum === 4 && slide4Ref.current) slide4Ref.current.scrollIntoView({ behavior: "smooth" });
+    if (slideNum === 5 && slide5Ref.current) slide5Ref.current.scrollIntoView({ behavior: "smooth" });
+    if (slideNum === 6 && slide6Ref.current) slide6Ref.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-2 sm:p-6 overflow-y-auto print:p-0 print:bg-white print:static">
@@ -341,20 +348,19 @@ export function PdfProposalModal({ data, onClose }: Props) {
             </div>
             <div>
               <div className="font-display text-base font-bold text-white leading-tight flex items-center gap-2">
-                <span>Executive {totalPagesEstimate}-Page Proposal Editor</span>
+                <span>Executive {totalPagesEstimate}-Slide Proposal Editor</span>
                 <span className="rounded-full bg-amber-500/20 px-2.5 py-0.5 text-[10px] font-bold text-amber-400 border border-amber-500/30">
                   Unit: {unitCode}
                 </span>
               </div>
               <div className="text-[10px] text-slate-400 font-medium">
-                Client: <strong className="text-amber-400">{clientName}</strong> • Advisor: <strong className="text-white">{agentName}</strong> ({agentPhone})
+                Client: <strong className="text-amber-400">{clientName}</strong> • Advisor: <strong className="text-white">{agentName}</strong> ({agentEmail})
               </div>
             </div>
           </div>
 
-          {/* Action Control Buttons */}
+          {/* Controls */}
           <div className="flex items-center gap-2 flex-wrap">
-            {/* Mode Switcher */}
             <div className="flex items-center gap-1 rounded-2xl bg-slate-800 p-1 border border-white/10 text-xs">
               <button
                 onClick={() => setDocMode("dark")}
@@ -374,49 +380,6 @@ export function PdfProposalModal({ data, onClose }: Props) {
               </button>
             </div>
 
-            {/* Accent Color Palette */}
-            <div className="flex items-center gap-1 rounded-2xl bg-slate-800 p-1 border border-white/10 text-xs">
-              <button
-                onClick={() => setAccentColor("gold")}
-                className={`h-4 w-4 rounded-full bg-amber-400 border-2 cursor-pointer transition-transform ${
-                  accentColor === "gold" ? "border-white scale-110" : "border-transparent opacity-60"
-                }`}
-                title="Gold Accent"
-              />
-              <button
-                onClick={() => setAccentColor("emerald")}
-                className={`h-4 w-4 rounded-full bg-emerald-400 border-2 cursor-pointer transition-transform ${
-                  accentColor === "emerald" ? "border-white scale-110" : "border-transparent opacity-60"
-                }`}
-                title="Emerald Accent"
-              />
-              <button
-                onClick={() => setAccentColor("indigo")}
-                className={`h-4 w-4 rounded-full bg-indigo-400 border-2 cursor-pointer transition-transform ${
-                  accentColor === "indigo" ? "border-white scale-110" : "border-transparent opacity-60"
-                }`}
-                title="Indigo Accent"
-              />
-              <button
-                onClick={() => setAccentColor("rose")}
-                className={`h-4 w-4 rounded-full bg-rose-400 border-2 cursor-pointer transition-transform ${
-                  accentColor === "rose" ? "border-white scale-110" : "border-transparent opacity-60"
-                }`}
-                title="Rose Accent"
-              />
-            </div>
-
-            {/* Zoom Controls */}
-            <div className="flex items-center gap-1 rounded-2xl bg-slate-800 p-1 border border-white/10 text-xs text-white">
-              <button onClick={handleZoomOut} className="rounded-xl p-1 hover:bg-slate-700 cursor-pointer">
-                <ZoomOut className="h-3.5 w-3.5" />
-              </button>
-              <span className="px-1 font-mono font-bold text-amber-400 text-xs">{zoomScale}%</span>
-              <button onClick={handleZoomIn} className="rounded-xl p-1 hover:bg-slate-700 cursor-pointer">
-                <ZoomIn className="h-3.5 w-3.5" />
-              </button>
-            </div>
-
             <button
               onClick={() => setEditMode(!editMode)}
               className={`inline-flex items-center gap-2 rounded-2xl px-3.5 py-2 text-xs font-black transition-all border cursor-pointer ${
@@ -426,7 +389,7 @@ export function PdfProposalModal({ data, onClose }: Props) {
               }`}
             >
               <Edit3 className="h-3.5 w-3.5" />
-              <span>{editMode ? "Hide Editor" : "EDIT ALL DETAILS"}</span>
+              <span>{editMode ? "Hide Field Editor" : "EDIT ALL DETAILS"}</span>
             </button>
 
             <button
@@ -435,14 +398,14 @@ export function PdfProposalModal({ data, onClose }: Props) {
               className="inline-flex items-center gap-1.5 rounded-2xl bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow hover:bg-emerald-500 transition-all cursor-pointer disabled:opacity-50"
             >
               <Download className="h-3.5 w-3.5" />
-              {downloading ? "Generating PDF..." : "Download PDF"}
+              {downloading ? "Downloading PDF..." : "Download PDF"}
             </button>
 
             <button
               onClick={handleShareWhatsApp}
-              className="inline-flex items-center gap-1.5 rounded-2xl bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 px-3 py-2 text-xs font-bold border border-emerald-500/30 transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 rounded-2xl bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 px-3.5 py-2 text-xs font-bold border border-emerald-500/30 transition-all cursor-pointer"
             >
-              <Share2 className="h-3.5 w-3.5" /> WhatsApp
+              <Share2 className="h-3.5 w-3.5" /> WhatsApp PDF
             </button>
 
             <button
@@ -454,11 +417,76 @@ export function PdfProposalModal({ data, onClose }: Props) {
           </div>
         </div>
 
-        {/* In-App Live Editor Panel Drawer */}
+        {/* 🌟 SLIDE NAVIGATOR TABS BAR (Ensures Slides 1, 2, 3, 4, 5, 6 are clearly accessible) */}
+        <div className="flex items-center gap-1.5 overflow-x-auto bg-slate-950 px-6 py-2 border-b border-white/10 text-xs print:hidden">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400 shrink-0 mr-1 flex items-center gap-1">
+            <Layers3 className="h-3.5 w-3.5" /> Slide Navigator:
+          </span>
+          <button
+            onClick={() => scrollToSlide(1)}
+            className={`rounded-xl px-3 py-1 font-bold whitespace-nowrap transition-colors cursor-pointer ${
+              activeSlideTab === 1 ? "bg-amber-500 text-slate-950" : "bg-slate-900 text-slate-300 hover:text-white"
+            }`}
+          >
+            Slide 1: Intro &amp; Client Greeting
+          </button>
+          <button
+            onClick={() => scrollToSlide(2)}
+            className={`rounded-xl px-3 py-1 font-bold whitespace-nowrap transition-colors cursor-pointer ${
+              activeSlideTab === 2 ? "bg-amber-500 text-slate-950" : "bg-slate-900 text-slate-300 hover:text-white"
+            }`}
+          >
+            Slide 2: Master Plan &amp; Amenities
+          </button>
+          <button
+            onClick={() => scrollToSlide(3)}
+            className={`rounded-xl px-3 py-1 font-bold whitespace-nowrap transition-colors cursor-pointer ${
+              activeSlideTab === 3 ? "bg-amber-500 text-slate-950" : "bg-slate-900 text-slate-300 hover:text-white"
+            }`}
+          >
+            Slide 3: Unit Specs &amp; Pricing
+          </button>
+          <button
+            onClick={() => scrollToSlide(4)}
+            className={`rounded-xl px-3 py-1 font-bold whitespace-nowrap transition-colors cursor-pointer ${
+              activeSlideTab === 4 ? "bg-amber-500 text-slate-950" : "bg-slate-900 text-slate-300 hover:text-white"
+            }`}
+          >
+            Slide 4: Payment Schedule
+          </button>
+          <button
+            onClick={() => scrollToSlide(5)}
+            className={`rounded-xl px-3 py-1 font-bold whitespace-nowrap transition-colors cursor-pointer ${
+              activeSlideTab === 5 ? "bg-amber-500 text-slate-950" : "bg-slate-900 text-slate-300 hover:text-white"
+            }`}
+          >
+            Slide 5: Partners &amp; Agent Info
+          </button>
+          {selectedPhotoPaths.length > 0 && (
+            <button
+              onClick={() => scrollToSlide(6)}
+              className={`rounded-xl px-3 py-1 font-bold whitespace-nowrap transition-colors cursor-pointer ${
+                activeSlideTab === 6 ? "bg-amber-500 text-slate-950" : "bg-slate-900 text-slate-300 hover:text-white"
+              }`}
+            >
+              Slide 6+: Photo Gallery
+            </button>
+          )}
+          <button
+            onClick={() => scrollToSlide("all")}
+            className={`rounded-xl px-3 py-1 font-bold whitespace-nowrap transition-colors cursor-pointer ${
+              activeSlideTab === "all" ? "bg-emerald-600 text-white" : "bg-slate-900 text-slate-300 hover:text-white"
+            }`}
+          >
+            View All Slides
+          </button>
+        </div>
+
+        {/* Live Field Editor Drawer */}
         {editMode && (
           <div className="bg-slate-950 border-b border-white/10 p-6 space-y-4 print:hidden animate-in fade-in-50 duration-200">
             <div className="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
-              <Edit3 className="h-4 w-4" /> Comprehensive In-App Proposal Field Editor
+              <Edit3 className="h-4 w-4" /> Live In-App Proposal Field Editor
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 text-xs">
@@ -472,12 +500,12 @@ export function PdfProposalModal({ data, onClose }: Props) {
                 />
               </div>
               <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Client Name</label>
+                <label className="text-[10px] font-bold text-amber-400 uppercase">Client Name (Recipient)</label>
                 <input
                   type="text"
                   value={clientName}
                   onChange={(e) => setClientName(e.target.value)}
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
+                  className="mt-1 w-full rounded-xl border border-amber-500/40 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
                 />
               </div>
               <div>
@@ -500,57 +528,29 @@ export function PdfProposalModal({ data, onClose }: Props) {
               </div>
 
               <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Unit Type</label>
+                <label className="text-[10px] font-bold text-amber-400 uppercase">Agent Email</label>
+                <input
+                  type="email"
+                  value={agentEmail}
+                  onChange={(e) => setAgentEmail(e.target.value)}
+                  className="mt-1 w-full rounded-xl border border-amber-500/40 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="text-[10px] font-bold text-slate-400 uppercase">Agent Title</label>
+                <input
+                  type="text"
+                  value={agentTitle}
+                  onChange={(e) => setAgentTitle(e.target.value)}
+                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="text-[10px] font-bold text-slate-400 uppercase">Unit Type Layout</label>
                 <input
                   type="text"
                   value={unitType}
                   onChange={(e) => setUnitType(e.target.value)}
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
-                />
-              </div>
-              <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Indoor Area BUA (m²)</label>
-                <input
-                  type="text"
-                  value={areaSqm}
-                  onChange={(e) => setAreaSqm(e.target.value)}
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
-                />
-              </div>
-              <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Base Unit Price (EGP)</label>
-                <input
-                  type="number"
-                  value={totalPriceEgp}
-                  onChange={(e) => setTotalPriceEgp(parseFloat(e.target.value) || 0)}
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
-                />
-              </div>
-              <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Maintenance Deposit (%)</label>
-                <input
-                  type="number"
-                  value={maintenancePct}
-                  onChange={(e) => setMaintenancePct(parseFloat(e.target.value) || 0)}
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Down Payment (%)</label>
-                <input
-                  type="number"
-                  value={dpPct}
-                  onChange={(e) => setDpPct(parseFloat(e.target.value) || 0)}
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
-                />
-              </div>
-              <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Duration (Years)</label>
-                <input
-                  type="number"
-                  value={durationYrs}
-                  onChange={(e) => setDurationYrs(parseInt(e.target.value, 10) || 0)}
                   className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
                 />
               </div>
@@ -561,46 +561,6 @@ export function PdfProposalModal({ data, onClose }: Props) {
                   value={deliveryNote}
                   onChange={(e) => setDeliveryNote(e.target.value)}
                   className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
-                />
-              </div>
-              <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Finishing Spec</label>
-                <input
-                  type="text"
-                  value={finishingStatus}
-                  onChange={(e) => setFinishingStatus(e.target.value)}
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-bold text-white focus:border-amber-500 focus:outline-none"
-                />
-              </div>
-            </div>
-
-            {/* Strategic Partners Inputs */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-2 border-t border-white/10">
-              <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Masterplanner &amp; Architect</label>
-                <input
-                  type="text"
-                  value={masterplanner}
-                  onChange={(e) => setMasterplanner(e.target.value)}
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white"
-                />
-              </div>
-              <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Main Construction Contractor</label>
-                <input
-                  type="text"
-                  value={mainContractor}
-                  onChange={(e) => setMainContractor(e.target.value)}
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white"
-                />
-              </div>
-              <div>
-                <label className="text-[10px] font-bold text-slate-400 uppercase">Landscape &amp; Facility Ops</label>
-                <input
-                  type="text"
-                  value={landscapePartner}
-                  onChange={(e) => setLandscapePartner(e.target.value)}
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white"
                 />
               </div>
             </div>
@@ -614,29 +574,31 @@ export function PdfProposalModal({ data, onClose }: Props) {
           style={{ transform: `scale(${zoomScale / 100})`, transformOrigin: "top center" }}
         >
           {/* ══════════════════════════════════════════════════════════════
-              SECTION 1: EXECUTIVE SUMMARY & LOCATION ADVANTAGE
+              SLIDE 1: PERSONALIZED CLIENT COVER & EXECUTIVE INTRO LETTER
              ══════════════════════════════════════════════════════════════ */}
-          <div className={`rounded-3xl border p-8 space-y-6 ${theme.cardBg} print:break-after-page`}>
-            {/* Agency Header */}
+          <div ref={slide1Ref} className={`rounded-3xl border p-8 space-y-6 ${theme.cardBg} print:break-after-page`}>
+            {/* Header Badge */}
             <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-5">
               <div className="flex items-center gap-3">
                 <span className="h-3.5 w-3.5 rounded-full bg-amber-400 animate-pulse" />
                 <span className="text-xs font-extrabold uppercase tracking-widest text-amber-400">
-                  {agencyName} • Official Proposal
+                  {agencyName} • Official Proposal Portfolio
                 </span>
               </div>
               <div className="text-xs text-slate-400 font-semibold flex items-center gap-2">
-                <span>Unit Code: <strong className="text-white">{unitCode}</strong></span>
+                <span className="rounded-full bg-amber-500/20 px-2.5 py-0.5 text-[10px] font-bold text-amber-400 border border-amber-500/30">
+                  Slide 1 of {totalPagesEstimate}
+                </span>
                 <span>•</span>
                 <span>Date: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}</span>
               </div>
             </div>
 
-            {/* Title Section */}
+            {/* Project Title & Location */}
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <span className="rounded-full bg-amber-500/15 px-3 py-1 text-[10px] font-bold text-amber-400 border border-amber-500/30">
-                  1. Executive Summary &amp; Location Advantage
+                  Section 1: Personalized Executive Overview
                 </span>
               </div>
               <h1 className="font-display text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
@@ -653,27 +615,46 @@ export function PdfProposalModal({ data, onClose }: Props) {
               </p>
             </div>
 
-            {/* Client Prepared Card */}
-            <div className="rounded-2xl bg-slate-950 p-6 border border-white/10 space-y-3">
-              <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                <div className="font-bold text-white text-sm flex items-center gap-2">
-                  <User className="h-4 w-4 text-amber-400" /> Prepared Exclusively For: <span className="text-amber-400">{clientName}</span>
+            {/* 🌟 PERSONALIZED CLIENT INTRO LETTER */}
+            <div className="rounded-3xl bg-slate-950 p-6 sm:p-8 border border-white/15 space-y-4 shadow-xl">
+              <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                <div className="font-display text-base font-bold text-amber-400 flex items-center gap-2">
+                  <User className="h-5 w-5 text-amber-400" /> Dear {clientName},
                 </div>
-                <span className="text-[10px] uppercase font-bold text-slate-400">Confidential Offer</span>
+                <span className="text-[10px] uppercase font-bold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-white/10">
+                  Exclusively Prepared For You
+                </span>
               </div>
+
+              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
+                We are delighted to present this customized executive proposal for <strong>{projectName}</strong> developed by <strong>{developerName}</strong>. Located strategically in <strong>{locationStr}</strong>, this presentation has been specifically prepared for you by your luxury property advisor, <strong>{agentName}</strong> ({agentTitle} at <em>{agencyName}</em>).
+              </p>
+
               <p className="text-xs text-slate-300 leading-relaxed">
-                {projectDescription}
+                Inside this portfolio, you will find tailored details for <strong>Unit Code {unitCode}</strong> ({unitType}, {areaSqm} m² BUA), masterplan layout zoning, comprehensive amenities, payment schedules, and strategic developer credentials.
               </p>
             </div>
 
-            {/* Developer Reputation Brief */}
-            <div className="rounded-2xl bg-amber-500/10 p-5 border border-amber-500/25 space-y-2">
+            {/* Agent Representative Card on Page 1 */}
+            <div className="rounded-2xl bg-amber-500/10 p-6 border border-amber-500/30 space-y-3">
               <div className="text-[11px] font-extrabold uppercase tracking-widest text-amber-400 flex items-center gap-2">
-                <Award className="h-4.5 w-4.5 text-amber-400" /> Developer Reputation &amp; Portfolio Track Record ({developerName})
+                <ShieldCheck className="h-4.5 w-4.5 text-amber-400" /> Provided By Your Official Representative
               </div>
-              <p className="text-xs text-slate-200 leading-relaxed">
-                {developerBrief}
-              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-200 pt-1">
+                <div>
+                  <div className="font-bold text-white text-base">{agentName}</div>
+                  <div className="text-slate-300 text-xs mt-0.5">{agentTitle} • <strong>{agencyName}</strong></div>
+                </div>
+                <div className="space-y-1 text-slate-300">
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-3.5 w-3.5 text-amber-400" /> Direct Phone: <strong className="text-white">{agentPhone}</strong>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail className="h-3.5 w-3.5 text-amber-400" /> Email: <strong className="text-amber-300">{agentEmail}</strong>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Strategic Location Advantage Grid */}
@@ -693,14 +674,19 @@ export function PdfProposalModal({ data, onClose }: Props) {
           </div>
 
           {/* ══════════════════════════════════════════════════════════════
-              SECTION 2: PROJECT MASTER PLAN & KEY AMENITIES
+              SLIDE 2: PROJECT MASTER PLAN & KEY AMENITIES
              ══════════════════════════════════════════════════════════════ */}
-          <div className={`rounded-3xl border p-8 space-y-6 ${theme.cardBg} print:break-after-page`}>
-            <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 border-b border-white/10 pb-3 flex items-center gap-2">
-              <Layers className="h-4 w-4" /> 2. Project Master Plan &amp; Key Lifestyle Amenities
+          <div ref={slide2Ref} className={`rounded-3xl border p-8 space-y-6 ${theme.cardBg} print:break-after-page`}>
+            <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 border-b border-white/10 pb-3 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Layers className="h-4 w-4" /> Slide 2: Project Master Plan &amp; Key Lifestyle Amenities
+              </div>
+              <span className="rounded-full bg-amber-500/20 px-2.5 py-0.5 text-[10px] font-bold text-amber-400 border border-amber-500/30">
+                Slide 2 of {totalPagesEstimate}
+              </span>
             </div>
 
-            {/* REAL MASTERPLAN IMAGE EMBEDDED DIRECTLY IN SECTION 2 */}
+            {/* REAL MASTERPLAN IMAGE */}
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <div className="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2">
@@ -711,7 +697,7 @@ export function PdfProposalModal({ data, onClose }: Props) {
                 </span>
               </div>
 
-              <div className="relative rounded-2xl border border-white/15 bg-slate-950 p-4 overflow-hidden group shadow-inner">
+              <div className="relative rounded-2xl border border-white/15 bg-slate-950 p-4 overflow-hidden shadow-inner">
                 {realMasterplanUrl ? (
                   <div className="aspect-[16/9] w-full overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center">
                     <img
@@ -721,7 +707,6 @@ export function PdfProposalModal({ data, onClose }: Props) {
                     />
                   </div>
                 ) : (
-                  // Elegant SVG Masterplan Layout Diagram Fallback
                   <div className="aspect-[16/9] w-full rounded-xl bg-slate-900/90 border border-white/10 p-6 flex flex-col justify-between relative overflow-hidden">
                     <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fbbf24_1px,transparent_1px)] [background-size:16px_16px]" />
                     <div className="flex items-center justify-between relative z-10">
@@ -775,11 +760,16 @@ export function PdfProposalModal({ data, onClose }: Props) {
           </div>
 
           {/* ══════════════════════════════════════════════════════════════
-              SECTION 3: UNIT SPECIFICATIONS & TOTAL PRICING
+              SLIDE 3: UNIT SPECIFICATIONS & TOTAL PRICING
              ══════════════════════════════════════════════════════════════ */}
-          <div className={`rounded-3xl border p-8 space-y-6 ${theme.cardBg} print:break-after-page`}>
-            <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 border-b border-white/10 pb-3 flex items-center gap-2">
-              <FileText className="h-4 w-4" /> 3. Unit Specifications &amp; Comprehensive Pricing Breakdown
+          <div ref={slide3Ref} className={`rounded-3xl border p-8 space-y-6 ${theme.cardBg} print:break-after-page`}>
+            <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 border-b border-white/10 pb-3 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <FileText className="h-4 w-4" /> Slide 3: Unit Specifications &amp; Pricing Breakdown
+              </div>
+              <span className="rounded-full bg-amber-500/20 px-2.5 py-0.5 text-[10px] font-bold text-amber-400 border border-amber-500/30">
+                Slide 3 of {totalPagesEstimate}
+              </span>
             </div>
 
             {/* Main Specs Grid */}
@@ -835,19 +825,32 @@ export function PdfProposalModal({ data, onClose }: Props) {
               </div>
             </div>
 
-            {/* Extras Note */}
-            <div className="rounded-xl bg-slate-950 p-4 border border-white/10 text-xs text-slate-300 flex items-center justify-between">
-              <span className="font-medium">Included Extras &amp; Amenities:</span>
-              <span className="font-bold text-amber-400">{otherFees}</span>
+            {/* Delivery Note & Extras */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+              <div className="rounded-2xl bg-slate-950 p-4 border border-amber-500/30">
+                <div className="text-[9px] font-bold text-amber-400 uppercase">Guaranteed Delivery Timeline</div>
+                <div className="font-bold text-white text-sm mt-1 flex items-center gap-2">
+                  <Calendar className="h-4 w-4 text-amber-400" /> {deliveryNote}
+                </div>
+              </div>
+              <div className="rounded-2xl bg-slate-950 p-4 border border-white/10">
+                <div className="text-[9px] font-bold text-slate-400 uppercase">Included Amenities &amp; Extras</div>
+                <div className="font-bold text-white text-xs mt-1">{otherFees}</div>
+              </div>
             </div>
           </div>
 
           {/* ══════════════════════════════════════════════════════════════
-              SECTION 4: PAYMENT PLAN OPTIONS
+              SLIDE 4: PAYMENT PLAN OPTIONS
              ══════════════════════════════════════════════════════════════ */}
-          <div className={`rounded-3xl border p-8 space-y-6 ${theme.cardBg} print:break-after-page`}>
-            <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 border-b border-white/10 pb-3 flex items-center gap-2">
-              <DollarSign className="h-4 w-4" /> 4. Payment Plan Options &amp; Detailed Financial Schedule
+          <div ref={slide4Ref} className={`rounded-3xl border p-8 space-y-6 ${theme.cardBg} print:break-after-page`}>
+            <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 border-b border-white/10 pb-3 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <DollarSign className="h-4 w-4" /> Slide 4: Payment Plan Options &amp; Financial Schedules
+              </div>
+              <span className="rounded-full bg-amber-500/20 px-2.5 py-0.5 text-[10px] font-bold text-amber-400 border border-amber-500/30">
+                Slide 4 of {totalPagesEstimate}
+              </span>
             </div>
 
             {/* Core Schedule Summary Card */}
@@ -865,55 +868,46 @@ export function PdfProposalModal({ data, onClose }: Props) {
               </div>
 
               <div className="rounded-2xl bg-slate-950 p-5 border border-white/10 text-center">
-                <div className="text-[10px] font-bold text-slate-400 uppercase">Target Delivery Date</div>
+                <div className="text-[10px] font-bold text-slate-400 uppercase">Delivery Date Timeline</div>
                 <div className="font-display text-lg font-bold text-white mt-1">{deliveryNote}</div>
                 <div className="text-[10px] text-emerald-400 font-semibold mt-1">Guaranteed Delivery Key</div>
               </div>
             </div>
 
-            {/* Comprehensive Payment Schedule Table */}
+            {/* Breakdown Tables */}
             <div className="space-y-3">
               <div className="text-xs font-bold text-white uppercase tracking-wider">
                 Installment Breakdown Schedules
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                {/* Monthly Option */}
                 <div className="rounded-2xl bg-slate-950 p-5 border border-white/15 space-y-2">
                   <div className="text-[10px] font-extrabold uppercase text-amber-400">Option A: Monthly Installments</div>
                   <div className="font-display text-xl font-black text-white">
                     {formatExactPrice(monthlyInstallment, currency)}
                   </div>
-                  <div className="text-[10px] text-slate-400">
-                    Payable every month for {totalMonths} months
-                  </div>
+                  <div className="text-[10px] text-slate-400">Payable every month for {totalMonths} months</div>
                 </div>
 
-                {/* Quarterly Option */}
                 <div className="rounded-2xl bg-slate-950 p-5 border border-amber-500/40 space-y-2 bg-amber-500/5">
                   <div className="text-[10px] font-extrabold uppercase text-amber-400">Option B: Quarterly Installments</div>
                   <div className="font-display text-xl font-black text-white">
                     {formatExactPrice(quarterlyInstallment, currency)}
                   </div>
-                  <div className="text-[10px] text-slate-400">
-                    Payable every 3 months ({totalQuarters} installments)
-                  </div>
+                  <div className="text-[10px] text-slate-400">Payable every 3 months ({totalQuarters} installments)</div>
                 </div>
 
-                {/* Annual Option */}
                 <div className="rounded-2xl bg-slate-950 p-5 border border-white/15 space-y-2">
                   <div className="text-[10px] font-extrabold uppercase text-amber-400">Option C: Annual Installments</div>
                   <div className="font-display text-xl font-black text-white">
                     {formatExactPrice(annualInstallment, currency)}
                   </div>
-                  <div className="text-[10px] text-slate-400">
-                    Payable every 12 months ({totalYears} installments)
-                  </div>
+                  <div className="text-[10px] text-slate-400">Payable every 12 months ({totalYears} installments)</div>
                 </div>
               </div>
             </div>
 
-            {/* Cash Discount & Payment Notes */}
+            {/* Upfront Cash Discount */}
             <div className="rounded-2xl bg-emerald-500/10 p-5 border border-emerald-500/30 flex items-center justify-between text-xs text-slate-200">
               <div>
                 <div className="font-bold text-emerald-400 uppercase tracking-wider text-[11px]">
@@ -933,15 +927,20 @@ export function PdfProposalModal({ data, onClose }: Props) {
           </div>
 
           {/* ══════════════════════════════════════════════════════════════
-              SECTION 5: STRATEGIC PARTNERS & REPRESENTATIVE DETAILS
+              SLIDE 5: STRATEGIC PARTNERS & AGENT DETAILS
              ══════════════════════════════════════════════════════════════ */}
-          <div className={`rounded-3xl border p-8 space-y-6 ${theme.cardBg} print:break-after-page`}>
-            <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 border-b border-white/10 pb-3 flex items-center gap-2">
-              <Landmark className="h-4 w-4" /> 5. Strategic Partners &amp; Representative Credentials
+          <div ref={slide5Ref} className={`rounded-3xl border p-8 space-y-6 ${theme.cardBg} print:break-after-page`}>
+            <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 border-b border-white/10 pb-3 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Landmark className="h-4 w-4" /> Slide 5: Strategic Partners &amp; Agent Representative
+              </div>
+              <span className="rounded-full bg-amber-500/20 px-2.5 py-0.5 text-[10px] font-bold text-amber-400 border border-amber-500/30">
+                Slide 5 of {totalPagesEstimate}
+              </span>
             </div>
 
             {/* Strategic Partners Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
               <div className="rounded-2xl bg-slate-950 p-4 border border-white/10 space-y-1">
                 <div className="text-[10px] font-extrabold text-amber-400 uppercase flex items-center gap-1.5">
                   <Compass className="h-3.5 w-3.5" /> Masterplanner &amp; Architect
@@ -967,7 +966,7 @@ export function PdfProposalModal({ data, onClose }: Props) {
               </div>
             </div>
 
-            {/* Official Agent Representative Badge */}
+            {/* Official Agent Representative Badge (Including Agent Email) */}
             <div className="rounded-3xl border-2 border-amber-500/50 bg-gradient-to-r from-slate-950 to-slate-900 p-6 sm:p-8 space-y-4 shadow-2xl">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
                 <div>
@@ -984,27 +983,27 @@ export function PdfProposalModal({ data, onClose }: Props) {
 
                 <div className="text-right text-xs text-slate-300 space-y-1">
                   <div>Direct Phone: <strong className="text-white text-sm">{agentPhone}</strong></div>
-                  <div>Email: <span className="text-amber-400 font-semibold">{agentEmail}</span></div>
+                  <div>Email: <strong className="text-amber-300 text-sm">{agentEmail}</strong></div>
                 </div>
               </div>
 
               <div className="flex items-center justify-between text-xs text-slate-300">
-                <span>To schedule a private viewing or site presentation for <strong>{projectName}</strong>, contact your advisor above.</span>
+                <span>To schedule a private viewing for <strong>{projectName}</strong>, contact your advisor above.</span>
                 <button
                   onClick={handleShareWhatsApp}
                   className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 px-4 py-2 text-xs font-bold text-white hover:bg-emerald-500 transition-all cursor-pointer shadow"
                 >
-                  <Share2 className="h-3.5 w-3.5" /> Contact via WhatsApp
+                  <Share2 className="h-3.5 w-3.5" /> Send PDF via WhatsApp
                 </button>
               </div>
             </div>
           </div>
 
           {/* ══════════════════════════════════════════════════════════════
-              PAGES 6+: ARCHITECTURAL PROJECT RENDERS & PICTURES GALLERY
+              SLIDES 6+: ARCHITECTURAL PHOTO GALLERY
              ══════════════════════════════════════════════════════════════ */}
           {selectedPhotoPaths.length > 0 && (
-            <div className="space-y-12">
+            <div ref={slide6Ref} className="space-y-12">
               {Array.from({ length: Math.ceil(selectedPhotoPaths.length / 4) }).map((_, pageIdx) => {
                 const pagePhotos = selectedPhotoPaths.slice(pageIdx * 4, pageIdx * 4 + 4);
                 return (
@@ -1014,10 +1013,10 @@ export function PdfProposalModal({ data, onClose }: Props) {
                   >
                     <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 border-b border-white/10 pb-3 flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <ImageIcon className="h-4 w-4" /> Page {6 + pageIdx}: {projectName} Architectural Gallery
+                        <ImageIcon className="h-4 w-4" /> Slide {6 + pageIdx}: {projectName} Architectural Renders
                       </div>
-                      <span className="text-[10px] text-slate-400 font-semibold">
-                        Real Project Renders &amp; Visuals
+                      <span className="rounded-full bg-amber-500/20 px-2.5 py-0.5 text-[10px] font-bold text-amber-400 border border-amber-500/30">
+                        Slide {6 + pageIdx} of {totalPagesEstimate}
                       </span>
                     </div>
 
@@ -1044,10 +1043,10 @@ export function PdfProposalModal({ data, onClose }: Props) {
 
         </div>
 
-        {/* Bottom Sticky Action Footer Bar */}
+        {/* Bottom Sticky Action Bar */}
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 bg-slate-950 px-6 py-4 print:hidden">
           <div className="text-xs text-slate-400">
-            Client: <strong className="text-white">{clientName}</strong> • Unit: <strong className="text-amber-400">{unitCode}</strong> • Total Pages: <strong className="text-white">{totalPagesEstimate} Pages</strong>
+            Client: <strong className="text-white">{clientName}</strong> • Unit: <strong className="text-amber-400">{unitCode}</strong> • Advisor: <strong className="text-white">{agentName}</strong> ({agentEmail})
           </div>
 
           <div className="flex items-center gap-2">
@@ -1056,7 +1055,7 @@ export function PdfProposalModal({ data, onClose }: Props) {
               disabled={downloading}
               className="inline-flex items-center gap-1.5 rounded-2xl bg-emerald-600 px-5 py-2 text-xs font-bold text-white shadow hover:bg-emerald-500 transition-all cursor-pointer disabled:opacity-50"
             >
-              <Download className="h-3.5 w-3.5" /> {downloading ? "Generating Multi-Page PDF..." : "Download Multi-Page PDF"}
+              <Download className="h-3.5 w-3.5" /> {downloading ? "Downloading PDF..." : "Download PDF File"}
             </button>
 
             <button

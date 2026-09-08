@@ -512,6 +512,7 @@ export function UnitDetailModal({
             clientName: agentClientInfo?.clientName,
             agentName: agentClientInfo?.agentName,
             agentPhone: agentClientInfo?.agentPhone,
+            agentEmail: agentClientInfo?.agentEmail,
             agentTitle: agentClientInfo?.agentTitle,
           }}
           onClose={() => setShowPdfModal(false)}

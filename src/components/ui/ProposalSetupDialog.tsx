@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { User, Phone, Briefcase, FileText, Sparkles, X, Home, Layers, Check } from "lucide-react";
+import { User, Phone, Mail, Briefcase, FileText, Sparkles, X, Home, Layers, Check } from "lucide-react";
 import { availabilityBySlug } from "@/data/availability";
 import { formatExactPrice } from "@/lib/currency";
 
 export interface ProposalAgentClientDetails {
   agentName: string;
   agentPhone: string;
+  agentEmail: string;
   agentTitle: string;
   clientName: string;
   unitCode?: string;
@@ -40,6 +41,7 @@ export function ProposalSetupDialog({
 }: Props) {
   const [agentName, setAgentName] = useState("");
   const [agentPhone, setAgentPhone] = useState("");
+  const [agentEmail, setAgentEmail] = useState("");
   const [agentTitle, setAgentTitle] = useState("");
   const [clientName, setClientName] = useState(defaultClientName);
 
@@ -111,15 +113,18 @@ export function ProposalSetupDialog({
         const parsed = JSON.parse(saved);
         if (parsed.agentName) setAgentName(parsed.agentName);
         if (parsed.agentPhone) setAgentPhone(parsed.agentPhone);
+        if (parsed.agentEmail) setAgentEmail(parsed.agentEmail);
         if (parsed.agentTitle) setAgentTitle(parsed.agentTitle);
       } else {
         setAgentName("Senior Property Consultant");
         setAgentPhone("+20 102 932 4783");
+        setAgentEmail("advisor@propertyatlas.eg");
         setAgentTitle("Luxury Real Estate Advisor");
       }
     } catch {
       setAgentName("Senior Property Consultant");
       setAgentPhone("+20 102 932 4783");
+      setAgentEmail("advisor@propertyatlas.eg");
       setAgentTitle("Luxury Real Estate Advisor");
     }
 
@@ -166,6 +171,7 @@ export function ProposalSetupDialog({
     const details: ProposalAgentClientDetails = {
       agentName: agentName.trim() || "Senior Property Consultant",
       agentPhone: agentPhone.trim() || "+20 102 932 4783",
+      agentEmail: agentEmail.trim() || "advisor@propertyatlas.eg",
       agentTitle: agentTitle.trim() || "Luxury Real Estate Advisor",
       clientName: clientName.trim() || "Valued Client",
       unitCode: unitCode.trim() || `UN-${Math.floor(100 + Math.random() * 900)}`,
@@ -184,6 +190,7 @@ export function ProposalSetupDialog({
         JSON.stringify({
           agentName: details.agentName,
           agentPhone: details.agentPhone,
+          agentEmail: details.agentEmail,
           agentTitle: details.agentTitle,
         })
       );
@@ -311,10 +318,10 @@ export function ProposalSetupDialog({
           </div>
 
           {/* Agent Contact Details Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="space-y-1.5">
               <label className="text-[11px] font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-                <User className="h-3.5 w-3.5 text-amber-400" /> Agent Full Name
+                <User className="h-3.5 w-3.5 text-amber-400" /> Agent Name
               </label>
               <input
                 type="text"
@@ -328,7 +335,7 @@ export function ProposalSetupDialog({
 
             <div className="space-y-1.5">
               <label className="text-[11px] font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-                <Phone className="h-3.5 w-3.5 text-amber-400" /> Agent Phone Number
+                <Phone className="h-3.5 w-3.5 text-amber-400" /> Phone Number
               </label>
               <input
                 type="text"
@@ -336,6 +343,20 @@ export function ProposalSetupDialog({
                 placeholder="e.g. +20 102 932 4783"
                 value={agentPhone}
                 onChange={(e) => setAgentPhone(e.target.value)}
+                className="w-full rounded-2xl border border-white/15 bg-slate-950 px-4 py-2.5 text-xs font-semibold text-white focus:border-amber-500 focus:outline-none"
+              />
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+                <Mail className="h-3.5 w-3.5 text-amber-400" /> Agent Email
+              </label>
+              <input
+                type="email"
+                required
+                placeholder="e.g. advisor@realestate.eg"
+                value={agentEmail}
+                onChange={(e) => setAgentEmail(e.target.value)}
                 className="w-full rounded-2xl border border-white/15 bg-slate-950 px-4 py-2.5 text-xs font-semibold text-white focus:border-amber-500 focus:outline-none"
               />
             </div>

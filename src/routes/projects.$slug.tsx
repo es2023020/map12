@@ -1716,6 +1716,7 @@ function CompoundPage() {
             clientName: proposalDetails?.clientName,
             agentName: proposalDetails?.agentName,
             agentPhone: proposalDetails?.agentPhone,
+            agentEmail: proposalDetails?.agentEmail,
             agentTitle: proposalDetails?.agentTitle,
           }}
           onClose={() => setProposalModalOpen(false)}
