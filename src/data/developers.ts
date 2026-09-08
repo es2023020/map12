@@ -152,8 +152,6 @@ const blurbs: Record<string, string> = {
     "Cred Developments — premier Egyptian real estate developer known for luxury master-planned communities including Ever New Cairo in 6th Settlement, Ever West in 6th of October, and Castle Landmark in the New Capital.",
   "Sky AD Developments":
     "Sky AD Developments (Sky Abu Dhabi) — premier UAE-backed real estate developer (subsidiary of Diamond Group UAE) bringing international master-planning standards to East Cairo with flagship projects like Bluetree in Golden Square, New Cairo.",
-  "Sky Abu Dhabi Developments":
-    "Sky AD Developments (Sky Abu Dhabi) — premier UAE-backed real estate developer (subsidiary of Diamond Group UAE) bringing international master-planning standards to East Cairo with flagship projects like Bluetree in Golden Square, New Cairo.",
   SkyAD:
     "Sky AD Developments (Sky Abu Dhabi) — premier UAE-backed real estate developer (subsidiary of Diamond Group UAE) bringing international master-planning standards to East Cairo with flagship projects like Bluetree in Golden Square, New Cairo.",
 };

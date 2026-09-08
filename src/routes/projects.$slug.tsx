@@ -1,4 +1,5 @@
 import { PdfProposalModal } from "@/components/ui/PdfProposalModal";
+import { ProposalSetupDialog, type ProposalAgentClientDetails } from "@/components/ui/ProposalSetupDialog";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
@@ -403,6 +404,8 @@ function CompoundPage() {
   const [masterPlanOpen, setMasterPlanOpen] = useState(false);
   // Proposal PDF modal state
   const [proposalModalOpen, setProposalModalOpen] = useState(false);
+  const [proposalSetupOpen, setProposalSetupOpen] = useState(false);
+  const [proposalDetails, setProposalDetails] = useState<ProposalAgentClientDetails | null>(null);
   // Read live compound data from the store to get admin-updated fields
   const storeCompounds = useStore((s) => s.compoundsList);
   const liveProject = storeCompounds?.find((p: any) => p.slug === c.slug);
@@ -630,7 +633,7 @@ function CompoundPage() {
             </button>
 
             <button
-              onClick={() => setProposalModalOpen(true)}
+              onClick={() => setProposalSetupOpen(true)}
               className="inline-flex items-center gap-2 rounded-xl bg-slate-900 border border-white/10 px-4 py-2.5 text-sm font-bold text-white shadow-md hover:bg-slate-800 hover:border-amber-500/50 transition-all duration-200 cursor-pointer"
             >
               <FileText className="h-4 w-4 text-amber-400" />
@@ -1678,6 +1681,18 @@ function CompoundPage() {
         </DialogContent>
       </Dialog>
     
+      {/* Pre-Proposal Agent & Client Setup Dialog */}
+      <ProposalSetupDialog
+        isOpen={proposalSetupOpen}
+        projectName={c.name}
+        onClose={() => setProposalSetupOpen(false)}
+        onConfirm={(details) => {
+          setProposalDetails(details);
+          setProposalSetupOpen(false);
+          setProposalModalOpen(true);
+        }}
+      />
+
       {/* Client Proposal PDF Modal */}
       {proposalModalOpen && (
         <PdfProposalModal
@@ -1695,6 +1710,10 @@ function CompoundPage() {
             deliveryNote: String(c.deliveryYear),
             amenities: c.amenities,
             description: c.blurb,
+            clientName: proposalDetails?.clientName,
+            agentName: proposalDetails?.agentName,
+            agentPhone: proposalDetails?.agentPhone,
+            agentTitle: proposalDetails?.agentTitle,
           }}
           onClose={() => setProposalModalOpen(false)}
         />

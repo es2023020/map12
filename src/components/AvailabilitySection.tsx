@@ -1,4 +1,5 @@
 import { PdfProposalModal, type OfferProposalData } from "@/components/ui/PdfProposalModal";
+import { ProposalSetupDialog, type ProposalAgentClientDetails } from "@/components/ui/ProposalSetupDialog";
 import { useStore } from "@/lib/store";
 import { formatCurrency, formatExactPrice } from "@/lib/currency";
 import { Share2, Copy, Check, Printer, FileText } from "lucide-react";
@@ -276,6 +277,8 @@ export function UnitDetailModal({
   const currency = useStore((s) => s.currency);
   const [copied, setCopied] = useState(false);
   const [showPdfModal, setShowPdfModal] = useState(false);
+  const [showSetupDialog, setShowSetupDialog] = useState(false);
+  const [agentClientInfo, setAgentClientInfo] = useState<ProposalAgentClientDetails | null>(null);
 
   const unitRtm = isReadyToMove(deliveryYear, unit.deliveryNote, compoundStatus);
   const parsedPlan = parsePaymentPlan(unit.paymentPlan || "");
@@ -457,7 +460,7 @@ export function UnitDetailModal({
             {/* PDF Proposal & WhatsApp Sharing Tools */}
             <div className="grid grid-cols-2 gap-2 pt-2 border-t border-border/40">
               <button
-                onClick={() => setShowPdfModal(true)}
+                onClick={() => setShowSetupDialog(true)}
                 className="rounded-xl bg-accent hover:bg-accent/90 py-2.5 px-3 text-xs font-bold text-accent-foreground shadow-sm transition-all flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <FileText className="h-3.5 w-3.5" />
@@ -478,6 +481,17 @@ export function UnitDetailModal({
         </div>
       </div>
 
+      <ProposalSetupDialog
+        isOpen={showSetupDialog}
+        projectName={projectSlug ? projectSlug.replace(/-/g, " ").toUpperCase() : "Property"}
+        onClose={() => setShowSetupDialog(false)}
+        onConfirm={(details) => {
+          setAgentClientInfo(details);
+          setShowSetupDialog(false);
+          setShowPdfModal(true);
+        }}
+      />
+
       {showPdfModal && (
         <PdfProposalModal
           data={{
@@ -491,7 +505,11 @@ export function UnitDetailModal({
             dpPct: parsedPlan.dp,
             durationYrs: parsedPlan.duration,
             deliveryNote: unit.deliveryNote || (unitRtm ? "Ready to Move" : "4 Years"),
-            finishing: unit.finishing
+            finishing: unit.finishing,
+            clientName: agentClientInfo?.clientName,
+            agentName: agentClientInfo?.agentName,
+            agentPhone: agentClientInfo?.agentPhone,
+            agentTitle: agentClientInfo?.agentTitle,
           }}
           onClose={() => setShowPdfModal(false)}
         />
