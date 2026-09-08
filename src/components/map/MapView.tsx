@@ -277,6 +277,17 @@ export function MapView({
             />
           </LayersControl.BaseLayer>
 
+          <LayersControl.BaseLayer name="Wikimapia Map (Real Wikimapia)">
+            <LayerGroup>
+              <TileLayer
+                attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                maxZoom={19}
+              />
+              <CustomWikimapiaTileLayer opacity={1.0} />
+            </LayerGroup>
+          </LayersControl.BaseLayer>
+
           <LayersControl.BaseLayer name="Wikimapia Satellite Hybrid">
             <LayerGroup>
               <TileLayer
@@ -288,28 +299,15 @@ export function MapView({
             </LayerGroup>
           </LayersControl.BaseLayer>
 
-          <LayersControl.BaseLayer name="Real Wikimapia (Wikimapia Only)">
-            <LayerGroup>
-              <TileLayer
-                attribution="&copy; OpenStreetMap &copy; CARTO"
-                url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
-                subdomains={["a", "b", "c", "d"]}
-                maxZoom={19}
-              />
-              <CustomWikimapiaTileLayer opacity={1.0} />
-            </LayerGroup>
-          </LayersControl.BaseLayer>
-
-          <LayersControl.BaseLayer name="Light Street Map">
+          <LayersControl.BaseLayer name="OpenStreetMap">
             <TileLayer
-              attribution="&copy; OpenStreetMap &copy; CARTO"
-              url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-              subdomains={["a", "b", "c", "d"]}
+              attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               maxZoom={19}
             />
           </LayersControl.BaseLayer>
 
-          <LayersControl.Overlay name="Wikimapia Outlines &amp; Polygons" checked>
+          <LayersControl.Overlay name="Wikimapia Outlines &amp; Polygons">
             <WikimapiaPlacesOverlay />
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Project Markers &amp; Pins">
