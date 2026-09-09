@@ -489,7 +489,7 @@ function main() {
             try {
               existingList = JSON.parse(`[${existingContent}]`);
             } catch (e) {}
-            const combined = Array.from(new Set([...existingList, ...availTypes]));
+            const combined = availTypes;
             const formatted = combined.map(t => `\n      "${t}"`).join(",");
             return `${prefix}${formatted}\n    ${suffix}`;
           });

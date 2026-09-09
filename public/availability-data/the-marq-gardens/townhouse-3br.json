@@ -1,0 +1,58 @@
+[
+  {
+    "id": "the-marq-gardens-1",
+    "unitNo": "TMG-TH-1",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 266.2,
+    "view": "Garden",
+    "priceEGP": 34130000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Thematic Gardens",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-marq-gardens-2",
+    "unitNo": "TMG-TH-2",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 267.4,
+    "view": "Garden",
+    "priceEGP": 34880000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Thematic Gardens",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-marq-gardens-3",
+    "unitNo": "TMG-TH-3",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 268.6,
+    "view": "Garden",
+    "priceEGP": 35630000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Thematic Gardens",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-marq-gardens-4",
+    "unitNo": "TMG-TH-4",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 269.8,
+    "view": "Garden",
+    "priceEGP": 36380000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Thematic Gardens",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  }
+]
