@@ -4441,6 +4441,8 @@ const newProjects: Compound[] = [
     status: "Off-Plan",
     beachfront: false,
     types: ["Apartment", "Villa", "Town House"],
+    hero: "/projects/palm-hills-jirian/1.jpg",
+    gallery: ["/projects/palm-hills-jirian/1.jpg"],
     amenities: [
       "Clubhouse",
       "Crystal Lagoon",
@@ -4454,8 +4456,6 @@ const newProjects: Compound[] = [
       "Mosque",
       "Co-working",
     ],
-    hero: luxuryVillaImgs[3],
-    gallery: [luxuryVillaImgs[3]],
     blurb:
       "Palm Hills Jirian is an expansive mixed-use community in New Sheikh Zayed, West Cairo. With 465 available units across apartments, townhouses and villas, this is Palm Hills' largest current launch. The Jirian lagoon is the centrepiece of a resort-quality master plan.",
     paymentPlan: "10% down · 10 years equal installments",

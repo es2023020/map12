@@ -12,7 +12,8 @@ export const projectLocations: Record<string, ProjectLocation> = {
     destination: "6th-settlement",
     location: "Middle Ring Road, 6th Settlement, New Cairo, Egypt",
     mapsUrl: "https://maps.google.com/?q=Noll+New+Cairo+Middle+Ring+Road",
-  },
+  },
+
   "ever-new-cairo": {
     name: "Ever New Cairo",
     destination: "6th-settlement",

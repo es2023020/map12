@@ -109,7 +109,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
       "10 mins from AUC & 10–12 mins from New Capital",
       "Fully finished units with parking & clubhouse included",
     ],
-  },
+  },
+
   "ever-new-cairo": {
     name: "Ever New Cairo",
     lat: 30.003,
@@ -790,7 +791,9 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
       "Lush botanical gardens",
       "Low-density planning",
     ],
-  },
+  },
+
+
   "caesar-bay": {
     destination: "ras-el-hekma",
     km: 201,
@@ -2814,12 +2817,40 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
       "Offers full range of housing: 1-3BR apartments, townhouses, twin houses, and standalone villas."
 ],
   },
-  "palm-hills-jirian": {
+"palm-hills-jirian": {
     destination: "new-zayed",
-    lat: 29.95333,
-    lng: 30.9215,
+    lat: 30.0940,
+    lng: 30.8700,
     developer: "Palm Hills Developments",
     city: "New Zayed, Giza Governorate, Egypt",
+    priceFrom: 8,
+    deliveryYear: 2028,
+    status: "Off-Plan",
+    blurb:
+      "Palm Hills Jirian is an expansive mixed-use community in New Sheikh Zayed, West Cairo. Featuring apartments, townhouses, and villas centered around a signature crystal lagoon.",
+    paymentPlan: "10% down · 10 years equal installments",
+    areaSize: "280 feddan",
+    unitSizes: "62–405 m²",
+    types: ["Apartment", "Villa", "Townhouse"],
+    amenities: [
+      "Clubhouse",
+      "Crystal Lagoon",
+      "Swimming Pools",
+      "Gym & Spa",
+      "Kids Destination",
+      "24/7 Security",
+      "Cycling Track",
+      "Restaurants Strip",
+      "Smart Home",
+      "Mosque",
+      "Co-working",
+    ],
+    highlights: [
+      "280 feddan masterplan",
+      "Crystal Lagoon centrepiece",
+      "465 available units",
+      "Entry from EGP 7.9M",
+    ],
   },
   "palm-hills-new-alamein": {
     destination: "new-alamein",
@@ -3219,7 +3250,8 @@ export const compoundRegistry: Record<string, CompoundRegistryEntry> = {
       "Pioneering West Cairo masterplan",
       "Integrates Allegria Greg Norman golf",
     ],
-  },
+  },
+
   soul: {
     destination: "ras-el-hekma",
     km: 180,
