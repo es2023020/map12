@@ -9,77 +9,152 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SitemapProjectsDotxmlRouteImport } from './routes/sitemap-projects[.]xml'
-import { Route as SitemapDevelopersDotxmlRouteImport } from './routes/sitemap-developers[.]xml'
-import { Route as SitemapDestinationsDotxmlRouteImport } from './routes/sitemap-destinations[.]xml'
-import { Route as SitemapBlogDotxmlRouteImport } from './routes/sitemap-blog[.]xml'
-import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as PricingRouteImport } from './routes/pricing'
-import { Route as NewLaunchesRouteImport } from './routes/new-launches'
-import { Route as MapRouteImport } from './routes/map'
-import { Route as DevelopersRouteImport } from './routes/developers'
-import { Route as DeveloperPartnershipRouteImport } from './routes/developer-partnership'
-import { Route as DeveloperAnnouncementsRouteImport } from './routes/developer-announcements'
-import { Route as DestinationsRouteImport } from './routes/destinations'
-import { Route as DashboardRouteImport } from './routes/dashboard'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CompareRouteImport } from './routes/compare'
-import { Route as CalculatorRouteImport } from './routes/calculator'
-import { Route as AuthRouteImport } from './routes/auth'
-import { Route as AgencyPartnershipRouteImport } from './routes/agency-partnership'
-import { Route as AdminRouteImport } from './routes/admin'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
-import { Route as DevelopersIndexRouteImport } from './routes/developers.index'
-import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
-import { Route as DashboardIndexRouteImport } from './routes/dashboard.index'
-import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as ArIndexRouteImport } from './routes/ar.index'
-import { Route as SeoSlugRouteImport } from './routes/seo.$slug'
-import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
-import { Route as DevelopersSlugRouteImport } from './routes/developers.$slug'
-import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
-import { Route as DashboardTeamRouteImport } from './routes/dashboard.team'
-import { Route as DashboardProfileRouteImport } from './routes/dashboard.profile'
-import { Route as DashboardMapsRouteImport } from './routes/dashboard.maps'
-import { Route as DashboardLeadsRouteImport } from './routes/dashboard.leads'
-import { Route as DashboardFavoritesRouteImport } from './routes/dashboard.favorites'
-import { Route as DashboardCompareRouteImport } from './routes/dashboard.compare'
-import { Route as DashboardCampaignsRouteImport } from './routes/dashboard.campaigns'
-import { Route as DashboardBillingRouteImport } from './routes/dashboard.billing'
-import { Route as DashboardAnnouncementsRouteImport } from './routes/dashboard.announcements'
-import { Route as DashboardAiAssistantRouteImport } from './routes/dashboard.ai-assistant'
-import { Route as ComparePairRouteImport } from './routes/compare.$pair'
-import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
-import { Route as ApiWhatsappInventoryRouteImport } from './routes/api.whatsapp-inventory'
-import { Route as ApiUploadAssetRouteImport } from './routes/api.upload-asset'
-import { Route as ApiSaveUsersRouteImport } from './routes/api.save-users'
-import { Route as ApiSaveLeadRouteImport } from './routes/api.save-lead'
-import { Route as ApiSaveDatabaseRouteImport } from './routes/api.save-database'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as AgencyPartnershipRouteImport } from './routes/agency-partnership'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as CalculatorRouteImport } from './routes/calculator'
+import { Route as CompareRouteImport } from './routes/compare'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DestinationsRouteImport } from './routes/destinations'
+import { Route as DeveloperAnnouncementsRouteImport } from './routes/developer-announcements'
+import { Route as DeveloperPartnershipRouteImport } from './routes/developer-partnership'
+import { Route as DevelopersRouteImport } from './routes/developers'
+import { Route as MapRouteImport } from './routes/map'
+import { Route as NewLaunchesRouteImport } from './routes/new-launches'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as SitemapBlogDotxmlRouteImport } from './routes/sitemap-blog[.]xml'
+import { Route as SitemapDestinationsDotxmlRouteImport } from './routes/sitemap-destinations[.]xml'
+import { Route as SitemapDevelopersDotxmlRouteImport } from './routes/sitemap-developers[.]xml'
+import { Route as SitemapProjectsDotxmlRouteImport } from './routes/sitemap-projects[.]xml'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ApiBrochuresMatchRouteImport } from './routes/api.brochures-match'
-import { Route as UnitsProjectSlugTypeSlugRouteImport } from './routes/units.$projectSlug.$typeSlug'
-import { Route as DestinationsSlugFilterRouteImport } from './routes/destinations.$slug.$filter'
-import { Route as ArProjectsSlugRouteImport } from './routes/ar.projects.$slug'
-import { Route as ArDevelopersSlugRouteImport } from './routes/ar.developers.$slug'
-import { Route as ArDestinationsSlugRouteImport } from './routes/ar.destinations.$slug'
+import { Route as ApiSaveDatabaseRouteImport } from './routes/api.save-database'
+import { Route as ApiSaveLeadRouteImport } from './routes/api.save-lead'
+import { Route as ApiSaveUsersRouteImport } from './routes/api.save-users'
+import { Route as ApiUploadAssetRouteImport } from './routes/api.upload-asset'
+import { Route as ApiWhatsappInventoryRouteImport } from './routes/api.whatsapp-inventory'
+import { Route as ArIndexRouteImport } from './routes/ar.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ComparePairRouteImport } from './routes/compare.$pair'
+import { Route as DashboardIndexRouteImport } from './routes/dashboard.index'
+import { Route as DashboardAiAssistantRouteImport } from './routes/dashboard.ai-assistant'
+import { Route as DashboardAnnouncementsRouteImport } from './routes/dashboard.announcements'
+import { Route as DashboardBillingRouteImport } from './routes/dashboard.billing'
+import { Route as DashboardCampaignsRouteImport } from './routes/dashboard.campaigns'
+import { Route as DashboardCompareRouteImport } from './routes/dashboard.compare'
+import { Route as DashboardFavoritesRouteImport } from './routes/dashboard.favorites'
+import { Route as DashboardLeadsRouteImport } from './routes/dashboard.leads'
+import { Route as DashboardMapsRouteImport } from './routes/dashboard.maps'
+import { Route as DashboardProfileRouteImport } from './routes/dashboard.profile'
+import { Route as DashboardTeamRouteImport } from './routes/dashboard.team'
+import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
+import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
+import { Route as DevelopersIndexRouteImport } from './routes/developers.index'
+import { Route as DevelopersSlugRouteImport } from './routes/developers.$slug'
+import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
+import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
+import { Route as SeoSlugRouteImport } from './routes/seo.$slug'
 import { Route as ArComparePairRouteImport } from './routes/ar.compare.$pair'
+import { Route as ArDestinationsSlugRouteImport } from './routes/ar.destinations.$slug'
+import { Route as ArDevelopersSlugRouteImport } from './routes/ar.developers.$slug'
+import { Route as ArProjectsSlugRouteImport } from './routes/ar.projects.$slug'
+import { Route as DestinationsSlugFilterRouteImport } from './routes/destinations.$slug.$filter'
+import { Route as UnitsProjectSlugTypeSlugRouteImport } from './routes/units.$projectSlug.$typeSlug'
 import { Route as ArDestinationsSlugFilterRouteImport } from './routes/ar.destinations.$slug.$filter'
 
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapProjectsDotxmlRoute = SitemapProjectsDotxmlRouteImport.update({
-  id: '/sitemap-projects.xml',
-  path: '/sitemap-projects.xml',
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapDevelopersDotxmlRoute = SitemapDevelopersDotxmlRouteImport.update({
-  id: '/sitemap-developers.xml',
-  path: '/sitemap-developers.xml',
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgencyPartnershipRoute = AgencyPartnershipRouteImport.update({
+  id: '/agency-partnership',
+  path: '/agency-partnership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CalculatorRoute = CalculatorRouteImport.update({
+  id: '/calculator',
+  path: '/calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompareRoute = CompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsRoute = DestinationsRouteImport.update({
+  id: '/destinations',
+  path: '/destinations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeveloperAnnouncementsRoute = DeveloperAnnouncementsRouteImport.update({
+  id: '/developer-announcements',
+  path: '/developer-announcements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeveloperPartnershipRoute = DeveloperPartnershipRouteImport.update({
+  id: '/developer-partnership',
+  path: '/developer-partnership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevelopersRoute = DevelopersRouteImport.update({
+  id: '/developers',
+  path: '/developers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapRoute = MapRouteImport.update({
+  id: '/map',
+  path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewLaunchesRoute = NewLaunchesRouteImport.update({
+  id: '/new-launches',
+  path: '/new-launches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapBlogDotxmlRoute = SitemapBlogDotxmlRouteImport.update({
+  id: '/sitemap-blog.xml',
+  path: '/sitemap-blog.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDestinationsDotxmlRoute =
@@ -88,229 +163,19 @@ const SitemapDestinationsDotxmlRoute =
     path: '/sitemap-destinations.xml',
     getParentRoute: () => rootRouteImport,
   } as any)
-const SitemapBlogDotxmlRoute = SitemapBlogDotxmlRouteImport.update({
-  id: '/sitemap-blog.xml',
-  path: '/sitemap-blog.xml',
+const SitemapDevelopersDotxmlRoute = SitemapDevelopersDotxmlRouteImport.update({
+  id: '/sitemap-developers.xml',
+  path: '/sitemap-developers.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
+const SitemapProjectsDotxmlRoute = SitemapProjectsDotxmlRouteImport.update({
+  id: '/sitemap-projects.xml',
+  path: '/sitemap-projects.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PricingRoute = PricingRouteImport.update({
-  id: '/pricing',
-  path: '/pricing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const NewLaunchesRoute = NewLaunchesRouteImport.update({
-  id: '/new-launches',
-  path: '/new-launches',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MapRoute = MapRouteImport.update({
-  id: '/map',
-  path: '/map',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DevelopersRoute = DevelopersRouteImport.update({
-  id: '/developers',
-  path: '/developers',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DeveloperPartnershipRoute = DeveloperPartnershipRouteImport.update({
-  id: '/developer-partnership',
-  path: '/developer-partnership',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DeveloperAnnouncementsRoute = DeveloperAnnouncementsRouteImport.update({
-  id: '/developer-announcements',
-  path: '/developer-announcements',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DestinationsRoute = DestinationsRouteImport.update({
-  id: '/destinations',
-  path: '/destinations',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DashboardRoute = DashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CompareRoute = CompareRouteImport.update({
-  id: '/compare',
-  path: '/compare',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CalculatorRoute = CalculatorRouteImport.update({
-  id: '/calculator',
-  path: '/calculator',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AuthRoute = AuthRouteImport.update({
-  id: '/auth',
-  path: '/auth',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AgencyPartnershipRoute = AgencyPartnershipRouteImport.update({
-  id: '/agency-partnership',
-  path: '/agency-partnership',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AdminRoute = AdminRouteImport.update({
-  id: '/admin',
-  path: '/admin',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ProjectsRoute,
-} as any)
-const DevelopersIndexRoute = DevelopersIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => DevelopersRoute,
-} as any)
-const DestinationsIndexRoute = DestinationsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => DestinationsRoute,
-} as any)
-const DashboardIndexRoute = DashboardIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const BlogIndexRoute = BlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ArIndexRoute = ArIndexRouteImport.update({
-  id: '/ar/',
-  path: '/ar/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SeoSlugRoute = SeoSlugRouteImport.update({
-  id: '/seo/$slug',
-  path: '/seo/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => ProjectsRoute,
-} as any)
-const DevelopersSlugRoute = DevelopersSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => DevelopersRoute,
-} as any)
-const DestinationsSlugRoute = DestinationsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => DestinationsRoute,
-} as any)
-const DashboardTeamRoute = DashboardTeamRouteImport.update({
-  id: '/team',
-  path: '/team',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardProfileRoute = DashboardProfileRouteImport.update({
-  id: '/profile',
-  path: '/profile',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardMapsRoute = DashboardMapsRouteImport.update({
-  id: '/maps',
-  path: '/maps',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardLeadsRoute = DashboardLeadsRouteImport.update({
-  id: '/leads',
-  path: '/leads',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardFavoritesRoute = DashboardFavoritesRouteImport.update({
-  id: '/favorites',
-  path: '/favorites',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardCompareRoute = DashboardCompareRouteImport.update({
-  id: '/compare',
-  path: '/compare',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardCampaignsRoute = DashboardCampaignsRouteImport.update({
-  id: '/campaigns',
-  path: '/campaigns',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardBillingRoute = DashboardBillingRouteImport.update({
-  id: '/billing',
-  path: '/billing',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardAnnouncementsRoute = DashboardAnnouncementsRouteImport.update({
-  id: '/announcements',
-  path: '/announcements',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardAiAssistantRoute = DashboardAiAssistantRouteImport.update({
-  id: '/ai-assistant',
-  path: '/ai-assistant',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const ComparePairRoute = ComparePairRouteImport.update({
-  id: '/$pair',
-  path: '/$pair',
-  getParentRoute: () => CompareRoute,
-} as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiWhatsappInventoryRoute = ApiWhatsappInventoryRouteImport.update({
-  id: '/api/whatsapp-inventory',
-  path: '/api/whatsapp-inventory',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiUploadAssetRoute = ApiUploadAssetRouteImport.update({
-  id: '/api/upload-asset',
-  path: '/api/upload-asset',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiSaveUsersRoute = ApiSaveUsersRouteImport.update({
-  id: '/api/save-users',
-  path: '/api/save-users',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiSaveLeadRoute = ApiSaveLeadRouteImport.update({
-  id: '/api/save-lead',
-  path: '/api/save-lead',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiSaveDatabaseRoute = ApiSaveDatabaseRouteImport.update({
-  id: '/api/save-database',
-  path: '/api/save-database',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiBrochuresMatchRoute = ApiBrochuresMatchRouteImport.update({
@@ -318,30 +183,139 @@ const ApiBrochuresMatchRoute = ApiBrochuresMatchRouteImport.update({
   path: '/api/brochures-match',
   getParentRoute: () => rootRouteImport,
 } as any)
-const UnitsProjectSlugTypeSlugRoute =
-  UnitsProjectSlugTypeSlugRouteImport.update({
-    id: '/units/$projectSlug/$typeSlug',
-    path: '/units/$projectSlug/$typeSlug',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DestinationsSlugFilterRoute = DestinationsSlugFilterRouteImport.update({
-  id: '/$filter',
-  path: '/$filter',
-  getParentRoute: () => DestinationsSlugRoute,
-} as any)
-const ArProjectsSlugRoute = ArProjectsSlugRouteImport.update({
-  id: '/ar/projects/$slug',
-  path: '/ar/projects/$slug',
+const ApiSaveDatabaseRoute = ApiSaveDatabaseRouteImport.update({
+  id: '/api/save-database',
+  path: '/api/save-database',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ArDevelopersSlugRoute = ArDevelopersSlugRouteImport.update({
-  id: '/ar/developers/$slug',
-  path: '/ar/developers/$slug',
+const ApiSaveLeadRoute = ApiSaveLeadRouteImport.update({
+  id: '/api/save-lead',
+  path: '/api/save-lead',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ArDestinationsSlugRoute = ArDestinationsSlugRouteImport.update({
-  id: '/ar/destinations/$slug',
-  path: '/ar/destinations/$slug',
+const ApiSaveUsersRoute = ApiSaveUsersRouteImport.update({
+  id: '/api/save-users',
+  path: '/api/save-users',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiUploadAssetRoute = ApiUploadAssetRouteImport.update({
+  id: '/api/upload-asset',
+  path: '/api/upload-asset',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiWhatsappInventoryRoute = ApiWhatsappInventoryRouteImport.update({
+  id: '/api/whatsapp-inventory',
+  path: '/api/whatsapp-inventory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArIndexRoute = ArIndexRouteImport.update({
+  id: '/ar/',
+  path: '/ar/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComparePairRoute = ComparePairRouteImport.update({
+  id: '/$pair',
+  path: '/$pair',
+  getParentRoute: () => CompareRoute,
+} as any)
+const DashboardIndexRoute = DashboardIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardAiAssistantRoute = DashboardAiAssistantRouteImport.update({
+  id: '/ai-assistant',
+  path: '/ai-assistant',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardAnnouncementsRoute = DashboardAnnouncementsRouteImport.update({
+  id: '/announcements',
+  path: '/announcements',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardBillingRoute = DashboardBillingRouteImport.update({
+  id: '/billing',
+  path: '/billing',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardCampaignsRoute = DashboardCampaignsRouteImport.update({
+  id: '/campaigns',
+  path: '/campaigns',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardCompareRoute = DashboardCompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardFavoritesRoute = DashboardFavoritesRouteImport.update({
+  id: '/favorites',
+  path: '/favorites',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardLeadsRoute = DashboardLeadsRouteImport.update({
+  id: '/leads',
+  path: '/leads',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardMapsRoute = DashboardMapsRouteImport.update({
+  id: '/maps',
+  path: '/maps',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardProfileRoute = DashboardProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardTeamRoute = DashboardTeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DestinationsIndexRoute = DestinationsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DestinationsRoute,
+} as any)
+const DestinationsSlugRoute = DestinationsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => DestinationsRoute,
+} as any)
+const DevelopersIndexRoute = DevelopersIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DevelopersRoute,
+} as any)
+const DevelopersSlugRoute = DevelopersSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => DevelopersRoute,
+} as any)
+const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProjectsRoute,
+} as any)
+const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ProjectsRoute,
+} as any)
+const SeoSlugRoute = SeoSlugRouteImport.update({
+  id: '/seo/$slug',
+  path: '/seo/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArComparePairRoute = ArComparePairRouteImport.update({
@@ -349,6 +323,32 @@ const ArComparePairRoute = ArComparePairRouteImport.update({
   path: '/ar/compare/$pair',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArDestinationsSlugRoute = ArDestinationsSlugRouteImport.update({
+  id: '/ar/destinations/$slug',
+  path: '/ar/destinations/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArDevelopersSlugRoute = ArDevelopersSlugRouteImport.update({
+  id: '/ar/developers/$slug',
+  path: '/ar/developers/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArProjectsSlugRoute = ArProjectsSlugRouteImport.update({
+  id: '/ar/projects/$slug',
+  path: '/ar/projects/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsSlugFilterRoute = DestinationsSlugFilterRouteImport.update({
+  id: '/$filter',
+  path: '/$filter',
+  getParentRoute: () => DestinationsSlugRoute,
+} as any)
+const UnitsProjectSlugTypeSlugRoute =
+  UnitsProjectSlugTypeSlugRouteImport.update({
+    id: '/units/$projectSlug/$typeSlug',
+    path: '/units/$projectSlug/$typeSlug',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ArDestinationsSlugFilterRoute =
   ArDestinationsSlugFilterRouteImport.update({
     id: '/$filter',
@@ -748,144 +748,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap-projects.xml': {
-      id: '/sitemap-projects.xml'
-      path: '/sitemap-projects.xml'
-      fullPath: '/sitemap-projects.xml'
-      preLoaderRoute: typeof SitemapProjectsDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap-developers.xml': {
-      id: '/sitemap-developers.xml'
-      path: '/sitemap-developers.xml'
-      fullPath: '/sitemap-developers.xml'
-      preLoaderRoute: typeof SitemapDevelopersDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap-destinations.xml': {
-      id: '/sitemap-destinations.xml'
-      path: '/sitemap-destinations.xml'
-      fullPath: '/sitemap-destinations.xml'
-      preLoaderRoute: typeof SitemapDestinationsDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap-blog.xml': {
-      id: '/sitemap-blog.xml'
-      path: '/sitemap-blog.xml'
-      fullPath: '/sitemap-blog.xml'
-      preLoaderRoute: typeof SitemapBlogDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pricing': {
-      id: '/pricing'
-      path: '/pricing'
-      fullPath: '/pricing'
-      preLoaderRoute: typeof PricingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/new-launches': {
-      id: '/new-launches'
-      path: '/new-launches'
-      fullPath: '/new-launches'
-      preLoaderRoute: typeof NewLaunchesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/map': {
-      id: '/map'
-      path: '/map'
-      fullPath: '/map'
-      preLoaderRoute: typeof MapRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/developers': {
-      id: '/developers'
-      path: '/developers'
-      fullPath: '/developers'
-      preLoaderRoute: typeof DevelopersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/developer-partnership': {
-      id: '/developer-partnership'
-      path: '/developer-partnership'
-      fullPath: '/developer-partnership'
-      preLoaderRoute: typeof DeveloperPartnershipRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/developer-announcements': {
-      id: '/developer-announcements'
-      path: '/developer-announcements'
-      fullPath: '/developer-announcements'
-      preLoaderRoute: typeof DeveloperAnnouncementsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/destinations': {
-      id: '/destinations'
-      path: '/destinations'
-      fullPath: '/destinations'
-      preLoaderRoute: typeof DestinationsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dashboard': {
-      id: '/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof DashboardRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/compare': {
-      id: '/compare'
-      path: '/compare'
-      fullPath: '/compare'
-      preLoaderRoute: typeof CompareRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/calculator': {
-      id: '/calculator'
-      path: '/calculator'
-      fullPath: '/calculator'
-      preLoaderRoute: typeof CalculatorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/auth': {
-      id: '/auth'
-      path: '/auth'
-      fullPath: '/auth'
-      preLoaderRoute: typeof AuthRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/agency-partnership': {
-      id: '/agency-partnership'
-      path: '/agency-partnership'
-      fullPath: '/agency-partnership'
-      preLoaderRoute: typeof AgencyPartnershipRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/admin': {
-      id: '/admin'
-      path: '/admin'
-      fullPath: '/admin'
-      preLoaderRoute: typeof AdminRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -895,200 +762,144 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects/': {
-      id: '/projects/'
-      path: '/'
-      fullPath: '/projects/'
-      preLoaderRoute: typeof ProjectsIndexRouteImport
-      parentRoute: typeof ProjectsRoute
-    }
-    '/developers/': {
-      id: '/developers/'
-      path: '/'
-      fullPath: '/developers/'
-      preLoaderRoute: typeof DevelopersIndexRouteImport
-      parentRoute: typeof DevelopersRoute
-    }
-    '/destinations/': {
-      id: '/destinations/'
-      path: '/'
-      fullPath: '/destinations/'
-      preLoaderRoute: typeof DestinationsIndexRouteImport
-      parentRoute: typeof DestinationsRoute
-    }
-    '/dashboard/': {
-      id: '/dashboard/'
-      path: '/'
-      fullPath: '/dashboard/'
-      preLoaderRoute: typeof DashboardIndexRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/blog/': {
-      id: '/blog/'
-      path: '/blog'
-      fullPath: '/blog/'
-      preLoaderRoute: typeof BlogIndexRouteImport
+    '/agency-partnership': {
+      id: '/agency-partnership'
+      path: '/agency-partnership'
+      fullPath: '/agency-partnership'
+      preLoaderRoute: typeof AgencyPartnershipRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ar/': {
-      id: '/ar/'
-      path: '/ar'
-      fullPath: '/ar/'
-      preLoaderRoute: typeof ArIndexRouteImport
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/seo/$slug': {
-      id: '/seo/$slug'
-      path: '/seo/$slug'
-      fullPath: '/seo/$slug'
-      preLoaderRoute: typeof SeoSlugRouteImport
+    '/calculator': {
+      id: '/calculator'
+      path: '/calculator'
+      fullPath: '/calculator'
+      preLoaderRoute: typeof CalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects/$slug': {
-      id: '/projects/$slug'
-      path: '/$slug'
-      fullPath: '/projects/$slug'
-      preLoaderRoute: typeof ProjectsSlugRouteImport
-      parentRoute: typeof ProjectsRoute
-    }
-    '/developers/$slug': {
-      id: '/developers/$slug'
-      path: '/$slug'
-      fullPath: '/developers/$slug'
-      preLoaderRoute: typeof DevelopersSlugRouteImport
-      parentRoute: typeof DevelopersRoute
-    }
-    '/destinations/$slug': {
-      id: '/destinations/$slug'
-      path: '/$slug'
-      fullPath: '/destinations/$slug'
-      preLoaderRoute: typeof DestinationsSlugRouteImport
-      parentRoute: typeof DestinationsRoute
-    }
-    '/dashboard/team': {
-      id: '/dashboard/team'
-      path: '/team'
-      fullPath: '/dashboard/team'
-      preLoaderRoute: typeof DashboardTeamRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/profile': {
-      id: '/dashboard/profile'
-      path: '/profile'
-      fullPath: '/dashboard/profile'
-      preLoaderRoute: typeof DashboardProfileRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/maps': {
-      id: '/dashboard/maps'
-      path: '/maps'
-      fullPath: '/dashboard/maps'
-      preLoaderRoute: typeof DashboardMapsRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/leads': {
-      id: '/dashboard/leads'
-      path: '/leads'
-      fullPath: '/dashboard/leads'
-      preLoaderRoute: typeof DashboardLeadsRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/favorites': {
-      id: '/dashboard/favorites'
-      path: '/favorites'
-      fullPath: '/dashboard/favorites'
-      preLoaderRoute: typeof DashboardFavoritesRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/compare': {
-      id: '/dashboard/compare'
+    '/compare': {
+      id: '/compare'
       path: '/compare'
-      fullPath: '/dashboard/compare'
-      preLoaderRoute: typeof DashboardCompareRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/campaigns': {
-      id: '/dashboard/campaigns'
-      path: '/campaigns'
-      fullPath: '/dashboard/campaigns'
-      preLoaderRoute: typeof DashboardCampaignsRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/billing': {
-      id: '/dashboard/billing'
-      path: '/billing'
-      fullPath: '/dashboard/billing'
-      preLoaderRoute: typeof DashboardBillingRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/announcements': {
-      id: '/dashboard/announcements'
-      path: '/announcements'
-      fullPath: '/dashboard/announcements'
-      preLoaderRoute: typeof DashboardAnnouncementsRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/ai-assistant': {
-      id: '/dashboard/ai-assistant'
-      path: '/ai-assistant'
-      fullPath: '/dashboard/ai-assistant'
-      preLoaderRoute: typeof DashboardAiAssistantRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/compare/$pair': {
-      id: '/compare/$pair'
-      path: '/$pair'
-      fullPath: '/compare/$pair'
-      preLoaderRoute: typeof ComparePairRouteImport
-      parentRoute: typeof CompareRoute
-    }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
+      fullPath: '/compare'
+      preLoaderRoute: typeof CompareRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/whatsapp-inventory': {
-      id: '/api/whatsapp-inventory'
-      path: '/api/whatsapp-inventory'
-      fullPath: '/api/whatsapp-inventory'
-      preLoaderRoute: typeof ApiWhatsappInventoryRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/upload-asset': {
-      id: '/api/upload-asset'
-      path: '/api/upload-asset'
-      fullPath: '/api/upload-asset'
-      preLoaderRoute: typeof ApiUploadAssetRouteImport
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/save-users': {
-      id: '/api/save-users'
-      path: '/api/save-users'
-      fullPath: '/api/save-users'
-      preLoaderRoute: typeof ApiSaveUsersRouteImport
+    '/destinations': {
+      id: '/destinations'
+      path: '/destinations'
+      fullPath: '/destinations'
+      preLoaderRoute: typeof DestinationsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/save-lead': {
-      id: '/api/save-lead'
-      path: '/api/save-lead'
-      fullPath: '/api/save-lead'
-      preLoaderRoute: typeof ApiSaveLeadRouteImport
+    '/developer-announcements': {
+      id: '/developer-announcements'
+      path: '/developer-announcements'
+      fullPath: '/developer-announcements'
+      preLoaderRoute: typeof DeveloperAnnouncementsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/save-database': {
-      id: '/api/save-database'
-      path: '/api/save-database'
-      fullPath: '/api/save-database'
-      preLoaderRoute: typeof ApiSaveDatabaseRouteImport
+    '/developer-partnership': {
+      id: '/developer-partnership'
+      path: '/developer-partnership'
+      fullPath: '/developer-partnership'
+      preLoaderRoute: typeof DeveloperPartnershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/developers': {
+      id: '/developers'
+      path: '/developers'
+      fullPath: '/developers'
+      preLoaderRoute: typeof DevelopersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map': {
+      id: '/map'
+      path: '/map'
+      fullPath: '/map'
+      preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new-launches': {
+      id: '/new-launches'
+      path: '/new-launches'
+      fullPath: '/new-launches'
+      preLoaderRoute: typeof NewLaunchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-blog.xml': {
+      id: '/sitemap-blog.xml'
+      path: '/sitemap-blog.xml'
+      fullPath: '/sitemap-blog.xml'
+      preLoaderRoute: typeof SitemapBlogDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-destinations.xml': {
+      id: '/sitemap-destinations.xml'
+      path: '/sitemap-destinations.xml'
+      fullPath: '/sitemap-destinations.xml'
+      preLoaderRoute: typeof SitemapDestinationsDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-developers.xml': {
+      id: '/sitemap-developers.xml'
+      path: '/sitemap-developers.xml'
+      fullPath: '/sitemap-developers.xml'
+      preLoaderRoute: typeof SitemapDevelopersDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-projects.xml': {
+      id: '/sitemap-projects.xml'
+      path: '/sitemap-projects.xml'
+      fullPath: '/sitemap-projects.xml'
+      preLoaderRoute: typeof SitemapProjectsDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/brochures-match': {
@@ -1098,32 +909,200 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiBrochuresMatchRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/units/$projectSlug/$typeSlug': {
-      id: '/units/$projectSlug/$typeSlug'
-      path: '/units/$projectSlug/$typeSlug'
-      fullPath: '/units/$projectSlug/$typeSlug'
-      preLoaderRoute: typeof UnitsProjectSlugTypeSlugRouteImport
+    '/api/save-database': {
+      id: '/api/save-database'
+      path: '/api/save-database'
+      fullPath: '/api/save-database'
+      preLoaderRoute: typeof ApiSaveDatabaseRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/destinations/$slug/$filter': {
-      id: '/destinations/$slug/$filter'
-      path: '/$filter'
-      fullPath: '/destinations/$slug/$filter'
-      preLoaderRoute: typeof DestinationsSlugFilterRouteImport
-      parentRoute: typeof DestinationsSlugRoute
-    }
-    '/ar/projects/$slug': {
-      id: '/ar/projects/$slug'
-      path: '/ar/projects/$slug'
-      fullPath: '/ar/projects/$slug'
-      preLoaderRoute: typeof ArProjectsSlugRouteImport
+    '/api/save-lead': {
+      id: '/api/save-lead'
+      path: '/api/save-lead'
+      fullPath: '/api/save-lead'
+      preLoaderRoute: typeof ApiSaveLeadRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ar/developers/$slug': {
-      id: '/ar/developers/$slug'
-      path: '/ar/developers/$slug'
-      fullPath: '/ar/developers/$slug'
-      preLoaderRoute: typeof ArDevelopersSlugRouteImport
+    '/api/save-users': {
+      id: '/api/save-users'
+      path: '/api/save-users'
+      fullPath: '/api/save-users'
+      preLoaderRoute: typeof ApiSaveUsersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/upload-asset': {
+      id: '/api/upload-asset'
+      path: '/api/upload-asset'
+      fullPath: '/api/upload-asset'
+      preLoaderRoute: typeof ApiUploadAssetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/whatsapp-inventory': {
+      id: '/api/whatsapp-inventory'
+      path: '/api/whatsapp-inventory'
+      fullPath: '/api/whatsapp-inventory'
+      preLoaderRoute: typeof ApiWhatsappInventoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/': {
+      id: '/ar/'
+      path: '/ar'
+      fullPath: '/ar/'
+      preLoaderRoute: typeof ArIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare/$pair': {
+      id: '/compare/$pair'
+      path: '/$pair'
+      fullPath: '/compare/$pair'
+      preLoaderRoute: typeof ComparePairRouteImport
+      parentRoute: typeof CompareRoute
+    }
+    '/dashboard/': {
+      id: '/dashboard/'
+      path: '/'
+      fullPath: '/dashboard/'
+      preLoaderRoute: typeof DashboardIndexRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/ai-assistant': {
+      id: '/dashboard/ai-assistant'
+      path: '/ai-assistant'
+      fullPath: '/dashboard/ai-assistant'
+      preLoaderRoute: typeof DashboardAiAssistantRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/announcements': {
+      id: '/dashboard/announcements'
+      path: '/announcements'
+      fullPath: '/dashboard/announcements'
+      preLoaderRoute: typeof DashboardAnnouncementsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/billing': {
+      id: '/dashboard/billing'
+      path: '/billing'
+      fullPath: '/dashboard/billing'
+      preLoaderRoute: typeof DashboardBillingRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/campaigns': {
+      id: '/dashboard/campaigns'
+      path: '/campaigns'
+      fullPath: '/dashboard/campaigns'
+      preLoaderRoute: typeof DashboardCampaignsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/compare': {
+      id: '/dashboard/compare'
+      path: '/compare'
+      fullPath: '/dashboard/compare'
+      preLoaderRoute: typeof DashboardCompareRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/favorites': {
+      id: '/dashboard/favorites'
+      path: '/favorites'
+      fullPath: '/dashboard/favorites'
+      preLoaderRoute: typeof DashboardFavoritesRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/leads': {
+      id: '/dashboard/leads'
+      path: '/leads'
+      fullPath: '/dashboard/leads'
+      preLoaderRoute: typeof DashboardLeadsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/maps': {
+      id: '/dashboard/maps'
+      path: '/maps'
+      fullPath: '/dashboard/maps'
+      preLoaderRoute: typeof DashboardMapsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/profile': {
+      id: '/dashboard/profile'
+      path: '/profile'
+      fullPath: '/dashboard/profile'
+      preLoaderRoute: typeof DashboardProfileRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/team': {
+      id: '/dashboard/team'
+      path: '/team'
+      fullPath: '/dashboard/team'
+      preLoaderRoute: typeof DashboardTeamRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/destinations/': {
+      id: '/destinations/'
+      path: '/'
+      fullPath: '/destinations/'
+      preLoaderRoute: typeof DestinationsIndexRouteImport
+      parentRoute: typeof DestinationsRoute
+    }
+    '/destinations/$slug': {
+      id: '/destinations/$slug'
+      path: '/$slug'
+      fullPath: '/destinations/$slug'
+      preLoaderRoute: typeof DestinationsSlugRouteImport
+      parentRoute: typeof DestinationsRoute
+    }
+    '/developers/': {
+      id: '/developers/'
+      path: '/'
+      fullPath: '/developers/'
+      preLoaderRoute: typeof DevelopersIndexRouteImport
+      parentRoute: typeof DevelopersRoute
+    }
+    '/developers/$slug': {
+      id: '/developers/$slug'
+      path: '/$slug'
+      fullPath: '/developers/$slug'
+      preLoaderRoute: typeof DevelopersSlugRouteImport
+      parentRoute: typeof DevelopersRoute
+    }
+    '/projects/': {
+      id: '/projects/'
+      path: '/'
+      fullPath: '/projects/'
+      preLoaderRoute: typeof ProjectsIndexRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
+    '/projects/$slug': {
+      id: '/projects/$slug'
+      path: '/$slug'
+      fullPath: '/projects/$slug'
+      preLoaderRoute: typeof ProjectsSlugRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
+    '/seo/$slug': {
+      id: '/seo/$slug'
+      path: '/seo/$slug'
+      fullPath: '/seo/$slug'
+      preLoaderRoute: typeof SeoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/compare/$pair': {
+      id: '/ar/compare/$pair'
+      path: '/ar/compare/$pair'
+      fullPath: '/ar/compare/$pair'
+      preLoaderRoute: typeof ArComparePairRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ar/destinations/$slug': {
@@ -1133,11 +1112,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArDestinationsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ar/compare/$pair': {
-      id: '/ar/compare/$pair'
-      path: '/ar/compare/$pair'
-      fullPath: '/ar/compare/$pair'
-      preLoaderRoute: typeof ArComparePairRouteImport
+    '/ar/developers/$slug': {
+      id: '/ar/developers/$slug'
+      path: '/ar/developers/$slug'
+      fullPath: '/ar/developers/$slug'
+      preLoaderRoute: typeof ArDevelopersSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/projects/$slug': {
+      id: '/ar/projects/$slug'
+      path: '/ar/projects/$slug'
+      fullPath: '/ar/projects/$slug'
+      preLoaderRoute: typeof ArProjectsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destinations/$slug/$filter': {
+      id: '/destinations/$slug/$filter'
+      path: '/$filter'
+      fullPath: '/destinations/$slug/$filter'
+      preLoaderRoute: typeof DestinationsSlugFilterRouteImport
+      parentRoute: typeof DestinationsSlugRoute
+    }
+    '/units/$projectSlug/$typeSlug': {
+      id: '/units/$projectSlug/$typeSlug'
+      path: '/units/$projectSlug/$typeSlug'
+      fullPath: '/units/$projectSlug/$typeSlug'
+      preLoaderRoute: typeof UnitsProjectSlugTypeSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ar/destinations/$slug/$filter': {

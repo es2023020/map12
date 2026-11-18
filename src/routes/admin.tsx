@@ -466,8 +466,8 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
       compoundsList.filter(
         (c) =>
           !paymentsSearch ||
-          c.name.toLowerCase().includes(paymentsSearch.toLowerCase()) ||
-          c.developer.toLowerCase().includes(paymentsSearch.toLowerCase()) ||
+          (c.name || "").toLowerCase().includes(paymentsSearch.toLowerCase()) ||
+          (c.developer || "").toLowerCase().includes(paymentsSearch.toLowerCase()) ||
           (c.destination || "").toLowerCase().includes(paymentsSearch.toLowerCase()),
       ),
     [compoundsList, paymentsSearch],

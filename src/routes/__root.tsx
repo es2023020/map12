@@ -41,9 +41,18 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error);
+function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
+  console.error("[Route Error]", error);
   const router = useRouter();
+
+  const errorMessage =
+    error instanceof Error
+      ? error.message
+      : typeof error === "object" && error !== null && "message" in error
+      ? String((error as any).message)
+      : String(error || "Unknown error");
+
+  const errorStack = error instanceof Error ? error.stack : undefined;
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -54,6 +63,23 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <p className="mt-2 text-sm text-muted-foreground">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
+
+        {errorMessage && errorMessage !== "Unknown error" && (
+          <div className="mt-4 rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-left">
+            <p className="font-mono text-xs font-semibold text-destructive break-words">
+              {errorMessage}
+            </p>
+            {errorStack && (
+              <details className="mt-2 text-[10px] text-muted-foreground">
+                <summary className="cursor-pointer hover:underline">Stack Trace</summary>
+                <pre className="mt-1 max-h-36 overflow-auto whitespace-pre-wrap font-mono p-1 bg-black/5 rounded">
+                  {errorStack}
+                </pre>
+              </details>
+            )}
+          </div>
+        )}
+
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => {

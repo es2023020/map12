@@ -271,7 +271,7 @@ export function ComparePage() {
 
     const scopeVals = validSlots.map((s) => s.specs.scopeLabel);
     const developerVals = validSlots.map((s) => s.comp?.developer || "—");
-    const destVals = validSlots.map((s) => s.comp?.destination.replace(/-/g, " ").toUpperCase() || "—");
+    const destVals = validSlots.map((s) => (s.comp?.destination || "").replace(/-/g, " ").toUpperCase() || "—");
     const statusVals = validSlots.map((s) => s.comp?.status || "—");
     const typeVals = validSlots.map((s) => s.specs.unitTypeDisplay);
     const clusterVals = validSlots.map((s) => s.specs.cluster);
@@ -306,7 +306,7 @@ export function ComparePage() {
         icon: MapPin,
         isDifferent: getRowIsDifferent(destVals),
         values: validSlots.map((s) => ({
-          text: s.comp?.destination.replace(/-/g, " ").toUpperCase() || "—",
+          text: (s.comp?.destination || "").replace(/-/g, " ").toUpperCase() || "—",
           isHighlight: false,
         })),
       },
@@ -316,7 +316,7 @@ export function ComparePage() {
         icon: MapPin,
         isDifferent: true,
         values: validSlots.map((s) => ({
-          text: (s.avail as any)?.city || s.comp?.city || `${s.comp?.destination.replace(/-/g, " ")} Region, Egypt`,
+          text: (s.avail as any)?.city || s.comp?.city || `${(s.comp?.destination || "").replace(/-/g, " ")} Region, Egypt`,
           isHighlight: false,
         })),
       },
@@ -620,7 +620,7 @@ export function ComparePage() {
                               className="w-full text-left px-2.5 py-1.5 text-xs rounded-md hover:bg-accent/10 hover:text-accent font-medium text-foreground transition-colors flex flex-col"
                             >
                               <span className="font-bold">{c.name}</span>
-                              <span className="text-[10px] text-muted-foreground">{c.developer} • {c.destination.replace(/-/g, " ")}</span>
+                              <span className="text-[10px] text-muted-foreground">{c.developer} • {(c.destination || "").replace(/-/g, " ")}</span>
                             </button>
                           ))}
                         </div>
@@ -639,7 +639,7 @@ export function ComparePage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent pointer-events-none" />
                       <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-white text-[10px] pointer-events-none">
                         <span className="font-semibold truncate text-white/90">{comp.developer}</span>
-                        <span className="font-bold text-accent capitalize">{comp.destination.replace(/-/g, " ")}</span>
+                        <span className="font-bold text-accent capitalize">{(comp.destination || "").replace(/-/g, " ")}</span>
                       </div>
                     </div>
                   ) : (
