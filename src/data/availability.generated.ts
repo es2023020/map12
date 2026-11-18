@@ -20923,6 +20923,38 @@ export const availability: ProjectAvailability[] = [
     lastUpdated: "2026-11-18",
   },
   {
+    slug: "origami",
+    developer: "General Developer",
+    totalAvailable: 1,
+    breakdown: [
+        {
+        type: "Standalone Villa",
+        beds: 5,
+        available: 1,
+        minSqm: 239,
+        maxSqm: 239,
+        minPriceM: 111.23734,
+        maxPriceM: 111.23734,
+        finishing: "Core & Shell",
+        units: [
+            {
+            id: "origami-1",
+            unitNo: "CORNER",
+            beds: 5,
+            finishing: "Core & Shell",
+            areaSqm: 239,
+            view: "Landscape",
+            priceEGP: 111237340,
+            status: "Available",
+            slug: "origami",
+            payment_plan: "3 years payment plan",
+          },
+          ],
+      },
+      ],
+    lastUpdated: "2026-11-18",
+  },
+  {
     slug: "grova-east-hills",
     developer: "Hassan Allam Properties",
     totalAvailable: 6,

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Fragment } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { useStore } from "@/lib/store";
 import { useDebounce } from "@/lib/useDebounce";
@@ -84,6 +84,7 @@ type TabType =
   | "audit"
   | "brochures"
   | "review"
+  | "payments"
   | "whatsapp";
 
 function AdminPage() {
@@ -240,6 +241,15 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
 
   const [leadSearch, setLeadSearch] = useState("");
   const [leadStageFilter, setLeadStageFilter] = useState("");
+
+  // ── Payment Plans Manager state ──────────────────────────────────────────
+  const [paymentsSearch, setPaymentsSearch] = useState("");
+  const [editingPaymentSlug, setEditingPaymentSlug] = useState<string | null>(null);
+  const [paymentFormDp, setPaymentFormDp] = useState("10");
+  const [paymentFormDuration, setPaymentFormDuration] = useState("8");
+  const [paymentFormMaintenance, setPaymentFormMaintenance] = useState("8%");
+  const [paymentFormExtra, setPaymentFormExtra] = useState("");
+  const [paymentFormCustomStr, setPaymentFormCustomStr] = useState("");
   const updateLeadStage = useStore((s) => s.updateLeadStage);
   const deleteLead = useStore((s) => s.deleteLead);
 
@@ -450,8 +460,49 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     setShowAddProjectModal(true);
   };
 
-  const handleSaveProject = (e: React.FormEvent) => {
-    e.preventDefault();
+  // ── Payment Plans Manager: computed list ─────────────────────────────────
+  const filteredPaymentsCompounds = useMemo(
+    () =>
+      compoundsList.filter(
+        (c) =>
+          !paymentsSearch ||
+          c.name.toLowerCase().includes(paymentsSearch.toLowerCase()) ||
+          c.developer.toLowerCase().includes(paymentsSearch.toLowerCase()) ||
+          (c.destination || "").toLowerCase().includes(paymentsSearch.toLowerCase()),
+      ),
+    [compoundsList, paymentsSearch],
+  );
+
+  const handleEditPayment = (comp: any) => {
+    setEditingPaymentSlug(comp.slug);
+    const plan: string = comp.paymentPlan || "";
+    setPaymentFormCustomStr(plan);
+    const dpMatch = plan.match(/(\d+)%?\s*(?:down|dp|DP)/i);
+    const durMatch = plan.match(/(\d+)\s*(?:year|yr)/i);
+    const maintMatch = plan.match(/(\d+%?)\s*(?:maintenance|maint)/i);
+    setPaymentFormDp(dpMatch ? dpMatch[1] : "10");
+    setPaymentFormDuration(durMatch ? durMatch[1] : "8");
+    setPaymentFormMaintenance(maintMatch ? maintMatch[1] : "8%");
+    setPaymentFormExtra("");
+  };
+
+  const handleSavePayment = (slug: string) => {
+    const formatted =
+      paymentFormCustomStr.trim() ||
+      [
+        `${paymentFormDp}% down`,
+        `${paymentFormDuration} years installments`,
+        paymentFormMaintenance ? `${paymentFormMaintenance} maintenance` : "",
+        paymentFormExtra,
+      ]
+        .filter(Boolean)
+        .join(" · ");
+    updateProject(slug, { paymentPlan: formatted });
+    setEditingPaymentSlug(null);
+    setPaymentFormCustomStr("");
+  };
+
+  const handleSaveProject = (e: React.FormEvent) => {    e.preventDefault();
     const resolvedName = pName.trim() || "Untitled Project";
     const slug = editingItem
       ? editingItem.slug
@@ -1827,6 +1878,7 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     { id: "launches", label: "New Launches Manager", icon: Sparkles },
     { id: "availability", label: "Availability Manager", icon: LayoutGrid },
     { id: "review", label: "Pending Reviews", icon: CheckCircle },
+    { id: "payments", label: "Payment Plans Manager", icon: CreditCard },
     { id: "whatsapp", label: "WhatsApp Live Hub", icon: MessageSquare },
     { id: "map", label: "Map Control", icon: Layers },
     { id: "tools", label: "Engine Tools", icon: Calculator },
@@ -4522,6 +4574,248 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                         })}
                       </div>
                     )}
+                  </div>
+                )}
+
+
+                {/* ─── Payment Plans Manager ─────────────────────────── */}
+                {activeTab === "payments" && (
+                  <div className="space-y-6">
+                    {/* Header */}
+                    <div className="flex flex-col gap-1">
+                      <h2 className="font-display text-2xl font-bold text-primary">
+                        Payment Plans Manager
+                      </h2>
+                      <p className="text-sm text-muted-foreground">
+                        Edit payment plans per project. Changes take effect immediately in this browser session.
+                        Go to <strong>Engine Tools → Save to Source Code</strong> to persist globally for all users.
+                      </p>
+                    </div>
+
+                    {/* Info banner */}
+                    <div className="flex items-start gap-3 rounded-xl border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-accent">
+                      <CreditCard className="mt-0.5 h-4 w-4 shrink-0" />
+                      <span>
+                        Each project has a <strong>Payment Plan</strong> string shown on its detail page, the compare page, and unit cards.
+                        You can build it from fields below or enter a custom string directly.
+                      </span>
+                    </div>
+
+                    {/* Search */}
+                    <div className="flex items-center gap-3">
+                      <div className="relative flex-1">
+                        <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                        <input
+                          type="text"
+                          placeholder="Search by project name, developer or destination…"
+                          value={paymentsSearch}
+                          onChange={(e) => setPaymentsSearch(e.target.value)}
+                          className="w-full rounded-lg border border-border bg-card pl-9 pr-4 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground whitespace-nowrap">
+                        {filteredPaymentsCompounds.length} project{filteredPaymentsCompounds.length !== 1 ? "s" : ""}
+                      </span>
+                    </div>
+
+                    {/* Table */}
+                    <div className="overflow-x-auto rounded-xl border border-border">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="border-b border-border bg-primary/90 text-left text-xs font-semibold uppercase tracking-wider text-white">
+                            <th className="px-4 py-3">Project</th>
+                            <th className="px-4 py-3">Developer</th>
+                            <th className="px-4 py-3">Destination</th>
+                            <th className="px-4 py-3">Delivery</th>
+                            <th className="px-4 py-3">Current Payment Plan</th>
+                            <th className="px-4 py-3 text-right">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border">
+                          {filteredPaymentsCompounds.map((comp) => (
+                            <Fragment key={comp.slug}>
+                              {/* Main row */}
+                              <tr className={`group transition-colors ${editingPaymentSlug === comp.slug ? "bg-accent/5" : "hover:bg-muted/30"}`}>
+                                <td className="px-4 py-3 font-medium text-foreground">{comp.name}</td>
+                                <td className="px-4 py-3 text-muted-foreground">{comp.developer}</td>
+                                <td className="px-4 py-3 text-muted-foreground">{comp.destination || "—"}</td>
+                                <td className="px-4 py-3 text-muted-foreground">{comp.deliveryYear || "—"}</td>
+                                <td className="px-4 py-3">
+                                  {comp.paymentPlan ? (
+                                    <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
+                                      <CreditCard className="h-3 w-3" />
+                                      {comp.paymentPlan}
+                                    </span>
+                                  ) : (
+                                    <span className="text-xs text-muted-foreground italic">Not set</span>
+                                  )}
+                                </td>
+                                <td className="px-4 py-3 text-right">
+                                  {editingPaymentSlug === comp.slug ? (
+                                    <button
+                                      onClick={() => setEditingPaymentSlug(null)}
+                                      className="rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground hover:bg-muted transition-colors"
+                                    >
+                                      Cancel
+                                    </button>
+                                  ) : (
+                                    <button
+                                      onClick={() => handleEditPayment(comp)}
+                                      className="rounded-lg border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs font-medium text-accent hover:bg-accent/20 transition-colors"
+                                    >
+                                      Edit Plan
+                                    </button>
+                                  )}
+                                </td>
+                              </tr>
+
+                              {/* Inline edit form row */}
+                              {editingPaymentSlug === comp.slug && (
+                                <tr>
+                                  <td colSpan={6} className="bg-accent/5 px-4 pb-5 pt-2">
+                                    <div className="rounded-xl border border-accent/20 bg-card p-4 shadow-soft space-y-4">
+                                      <p className="text-xs font-semibold text-accent uppercase tracking-wider">
+                                        Edit Payment Plan — {comp.name}
+                                      </p>
+
+                                      {/* Structured fields */}
+                                      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                                        <div className="space-y-1">
+                                          <label className="text-[11px] font-medium text-muted-foreground uppercase tracking-wide">
+                                            Down Payment %
+                                          </label>
+                                          <input
+                                            type="number"
+                                            min="0"
+                                            max="100"
+                                            value={paymentFormDp}
+                                            onChange={(e) => setPaymentFormDp(e.target.value)}
+                                            placeholder="10"
+                                            className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
+                                          />
+                                        </div>
+                                        <div className="space-y-1">
+                                          <label className="text-[11px] font-medium text-muted-foreground uppercase tracking-wide">
+                                            Duration (years)
+                                          </label>
+                                          <input
+                                            type="number"
+                                            min="1"
+                                            max="20"
+                                            value={paymentFormDuration}
+                                            onChange={(e) => setPaymentFormDuration(e.target.value)}
+                                            placeholder="8"
+                                            className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
+                                          />
+                                        </div>
+                                        <div className="space-y-1">
+                                          <label className="text-[11px] font-medium text-muted-foreground uppercase tracking-wide">
+                                            Maintenance Fee
+                                          </label>
+                                          <input
+                                            type="text"
+                                            value={paymentFormMaintenance}
+                                            onChange={(e) => setPaymentFormMaintenance(e.target.value)}
+                                            placeholder="e.g. 8% / 150 EGP/m²"
+                                            className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
+                                          />
+                                        </div>
+                                        <div className="space-y-1">
+                                          <label className="text-[11px] font-medium text-muted-foreground uppercase tracking-wide">
+                                            Special Terms
+                                          </label>
+                                          <input
+                                            type="text"
+                                            value={paymentFormExtra}
+                                            onChange={(e) => setPaymentFormExtra(e.target.value)}
+                                            placeholder="e.g. No interest"
+                                            className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
+                                          />
+                                        </div>
+                                      </div>
+
+                                      {/* Preview */}
+                                      {!paymentFormCustomStr && (
+                                        <div className="rounded-lg border border-dashed border-accent/30 bg-accent/5 px-3 py-2 text-xs text-accent">
+                                          <span className="font-medium">Preview: </span>
+                                          {[
+                                            paymentFormDp ? `${paymentFormDp}% down` : "",
+                                            paymentFormDuration ? `${paymentFormDuration} years installments` : "",
+                                            paymentFormMaintenance ? `${paymentFormMaintenance} maintenance` : "",
+                                            paymentFormExtra,
+                                          ]
+                                            .filter(Boolean)
+                                            .join(" · ") || "—"}
+                                        </div>
+                                      )}
+
+                                      {/* Custom override */}
+                                      <div className="space-y-1">
+                                        <label className="text-[11px] font-medium text-muted-foreground uppercase tracking-wide">
+                                          Custom Override (overrides fields above when filled)
+                                        </label>
+                                        <input
+                                          type="text"
+                                          value={paymentFormCustomStr}
+                                          onChange={(e) => setPaymentFormCustomStr(e.target.value)}
+                                          placeholder='e.g. "10% down · 7 years · 0% interest · delivery in 2026"'
+                                          className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
+                                        />
+                                      </div>
+
+                                      {/* Actions */}
+                                      <div className="flex items-center gap-3 pt-1">
+                                        <button
+                                          onClick={() => handleSavePayment(comp.slug)}
+                                          className="flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white shadow hover:bg-accent/90 transition-colors"
+                                        >
+                                          <CheckCircle className="h-4 w-4" />
+                                          Save Payment Plan
+                                        </button>
+                                        <button
+                                          onClick={() => setEditingPaymentSlug(null)}
+                                          className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-muted-foreground hover:bg-muted transition-colors"
+                                        >
+                                          Cancel
+                                        </button>
+                                        {comp.paymentPlan && (
+                                          <button
+                                            onClick={() => { updateProject(comp.slug, { paymentPlan: "" }); setEditingPaymentSlug(null); }}
+                                            className="ml-auto rounded-lg border border-destructive/30 bg-destructive/5 px-3 py-2 text-xs font-medium text-destructive hover:bg-destructive/10 transition-colors"
+                                          >
+                                            Clear Plan
+                                          </button>
+                                        )}
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              )}
+                            </Fragment>
+                          ))}
+                          {filteredPaymentsCompounds.length === 0 && (
+                            <tr>
+                              <td colSpan={6} className="px-4 py-10 text-center text-sm text-muted-foreground">
+                                No projects match your search.
+                              </td>
+                            </tr>
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
+
+                    {/* Footer note */}
+                    <p className="text-[11px] text-muted-foreground">
+                      ✦ Changes update the Zustand store and are reflected immediately on project detail pages, the compare page, unit cards, and the calculator —{" "}
+                      <strong>in this browser session only</strong>. To persist changes for all users, go to{" "}
+                      <button
+                        className="font-semibold text-accent underline underline-offset-2 hover:text-accent/80"
+                        onClick={() => setActiveTab("tools")}
+                      >
+                        Engine Tools
+                      </button>{" "}
+                      and click <strong>Save to Source Code</strong>.
+                    </p>
                   </div>
                 )}
 
