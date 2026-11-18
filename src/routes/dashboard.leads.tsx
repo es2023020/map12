@@ -1,4 +1,3 @@
-import { useOfferStore } from "@/lib/offerStore";
 import mediaRegistry from "@/data/media-registry.json";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
@@ -67,10 +66,6 @@ const stages: Array<{ id: LeadStage; label: string; color: string; border: strin
 
 function LeadsPage() {
 
-  // Trackable Offer Store hook
-  const createOffer = useOfferStore((s) => s.createOffer);
-  const offers = useOfferStore((s) => s.offers);
-
   // Bulk CSV Import Modal State
   const [importOpen, setImportOpen] = useState(false);
   const [csvText, setCsvText] = useState("");
@@ -134,38 +129,6 @@ function LeadsPage() {
     setCsvText("");
   };
 
-  // Generate 1-Click Trackable Offer Link for a Lead
-  const handleGenerateTrackableOffer = (lead: Lead) => {
-    const compoundObj = compounds.find((c) => c.slug === lead.interest);
-    const newOffer = createOffer({
-      clientName: lead.name,
-      projectName: compoundObj ? compoundObj.name : (lead.interest || "Featured Luxury Project"),
-      projectSlug: compoundObj ? compoundObj.slug : "zoya",
-      developerName: compoundObj ? compoundObj.developer : "Premium Developer",
-      location: compoundObj ? compoundObj.destination : "North Coast, Egypt",
-      unitType: "Selected Luxury Layout",
-      areaSqm: 145,
-      totalPriceEgp: (lead.budget || 15) * 1000000,
-      dpPct: 10,
-      durationYrs: 8,
-      deliveryNote: compoundObj ? `Q4 ${compoundObj.deliveryYear}` : "Ready to Move",
-      finishingStatus: "Fully Finished",
-      maintenanceFee: "8% Maintenance Deposit",
-      otherFees: "Clubhouse Included",
-      projectDescription: compoundObj ? compoundObj.blurb : "Exclusive coastal development with world-class master plan.",
-      amenities: compoundObj ? compoundObj.amenities : ["24/7 Security", "Crystal Lagoons", "Private Beachfront"],
-      photoPaths: compoundObj ? [compoundObj.hero, ...(compoundObj.gallery || [])] : ["/projects/zoya/1.jpg"],
-      agentName: user ? user.name : "Senior Property Advisor",
-      agentTitle: "Luxury Advisory Division",
-      agentPhone: lead.phone,
-      agentEmail: user ? user.email : "consultant@realestate.eg",
-      agencyName: "Exclusive Real Estate Advisory",
-    });
-
-    const offerUrl = `${window?.location?.origin || "https://propertyatlas.eg"}/offer/${newOffer.id}`;
-    navigator.clipboard.writeText(offerUrl);
-    alert(`Trackable Offer Link Created! Link copied to clipboard:\n${offerUrl}`);
-  };
   const leads = useStore((s) => s.leads);
   const addLead = useStore((s) => s.addLead);
   const updateStage = useStore((s) => s.updateLeadStage);
@@ -209,7 +172,7 @@ function LeadsPage() {
   // Form templates handler
   const applyTemplate = (
     lead: Lead,
-    templateType: "welcome" | "followup" | "offer",
+    templateType: "welcome" | "followup" | "details",
     customText?: string,
   ) => {
     const brokerName = user ? user.name : "your Property Atlas broker partner";
@@ -228,9 +191,9 @@ function LeadsPage() {
       setCustomMsg(
         `Hi ${lead.name},\n\nJust following up on our discussion regarding ${compoundName}. We have just received an updated release list with highly flexible payment terms. Let me know if you would like me to send it over.\n\nWarm regards,\n${brokerName}`,
       );
-    } else if (templateType === "offer") {
+    } else if (templateType === "details") {
       setCustomMsg(
-        `Dear ${lead.name},\n\nI have compiled the official proposal for ${compoundName}. The starting entry price for this layout is EGP ${lead.budget}M. Please review the attached document and let me know if we can schedule a site visit.\n\nBest regards,\n${brokerName}`,
+        `Dear ${lead.name},\n\nI have compiled the latest details for ${compoundName}. The starting entry price is approx. EGP ${lead.budget}M. Please review and let me know if we can schedule a site visit.\n\nBest regards,\n${brokerName}`,
       );
     }
   };
@@ -1122,10 +1085,10 @@ function LeadsPage() {
                   Followup
                 </button>
                 <button
-                  onClick={() => applyTemplate(whatsappLead, "offer")}
+                  onClick={() => applyTemplate(whatsappLead, "details")}
                   className="rounded bg-secondary px-2.5 py-1 text-[10px] font-bold text-primary hover:bg-secondary/80"
                 >
-                  Proposal
+                  Details
                 </button>
               </div>
 

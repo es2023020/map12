@@ -1,8 +1,6 @@
-import { PdfProposalModal, type OfferProposalData } from "@/components/ui/PdfProposalModal";
-import { ProposalSetupDialog, type ProposalAgentClientDetails } from "@/components/ui/ProposalSetupDialog";
 import { useStore } from "@/lib/store";
 import { formatCurrency, formatExactPrice } from "@/lib/currency";
-import { Share2, Copy, Check, Printer, FileText } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 function parsePaymentPlan(plan?: string): { dp: number; duration: number } {
   if (!plan) return { dp: 10, duration: 8 };
   const lower = plan.toLowerCase();
@@ -276,9 +274,6 @@ export function UnitDetailModal({
   const avgPriceM = (unit.minPriceM + unit.maxPriceM) / 2;
   const currency = useStore((s) => s.currency);
   const [copied, setCopied] = useState(false);
-  const [showPdfModal, setShowPdfModal] = useState(false);
-  const [showSetupDialog, setShowSetupDialog] = useState(false);
-  const [agentClientInfo, setAgentClientInfo] = useState<ProposalAgentClientDetails | null>(null);
 
   const unitRtm = isReadyToMove(deliveryYear, unit.deliveryNote, compoundStatus);
   const parsedPlan = parsePaymentPlan(unit.paymentPlan || "");
@@ -456,68 +451,9 @@ export function UnitDetailModal({
               <Phone className="h-4 w-4 text-accent" />
               Speak with Property Representative
             </a>
-
-            {/* PDF Proposal & WhatsApp Sharing Tools */}
-            <div className="grid grid-cols-2 gap-2 pt-2 border-t border-border/40">
-              <button
-                onClick={() => setShowSetupDialog(true)}
-                className="rounded-xl bg-accent hover:bg-accent/90 py-2.5 px-3 text-xs font-bold text-accent-foreground shadow-sm transition-all flex items-center justify-center gap-1.5 cursor-pointer"
-              >
-                <FileText className="h-3.5 w-3.5" />
-                Generate PDF Offer
-              </button>
-
-              <a
-                href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl bg-emerald-600 hover:bg-emerald-700 py-2.5 px-3 text-xs font-bold text-white shadow-sm transition-all flex items-center justify-center gap-1.5 cursor-pointer"
-              >
-                <Share2 className="h-3.5 w-3.5" />
-                WhatsApp Offer
-              </a>
-            </div>
           </div>
         </div>
       </div>
-
-      <ProposalSetupDialog
-        isOpen={showSetupDialog}
-        projectName={projectSlug ? projectSlug.replace(/-/g, " ").toUpperCase() : "Property"}
-        projectSlug={projectSlug}
-        initialUnit={unit}
-        onClose={() => setShowSetupDialog(false)}
-        onConfirm={(details) => {
-          setAgentClientInfo(details);
-          setShowSetupDialog(false);
-          setShowPdfModal(true);
-        }}
-      />
-
-      {showPdfModal && (
-        <PdfProposalModal
-          data={{
-            projectName: projectSlug ? projectSlug.replace(/-/g, " ").toUpperCase() : "Property Atlas",
-            projectSlug: projectSlug || "",
-            developerName: "Developer",
-            unitCode: agentClientInfo?.unitCode,
-            unitType: agentClientInfo?.unitType || unit.type,
-            areaSqm: agentClientInfo?.areaSqm || (unit.minSqm === unit.maxSqm ? unit.minSqm : `${unit.minSqm}–${unit.maxSqm}`),
-            startingPriceEgp: agentClientInfo?.startingPriceEgp || unit.minPriceM * 1000000,
-            paymentPlanStr: agentClientInfo?.paymentPlanStr || unit.paymentPlan || "Flexible Installments",
-            dpPct: parsedPlan.dp,
-            durationYrs: parsedPlan.duration,
-            deliveryNote: agentClientInfo?.deliveryNote || unit.deliveryNote || (unitRtm ? "Ready to Move" : "4 Years"),
-            finishing: agentClientInfo?.finishing || unit.finishing,
-            clientName: agentClientInfo?.clientName,
-            agentName: agentClientInfo?.agentName,
-            agentPhone: agentClientInfo?.agentPhone,
-            agentEmail: agentClientInfo?.agentEmail,
-            agentTitle: agentClientInfo?.agentTitle,
-          }}
-          onClose={() => setShowPdfModal(false)}
-        />
-      )}
     </div>
   );
 }

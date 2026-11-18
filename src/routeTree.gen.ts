@@ -39,7 +39,6 @@ import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ArIndexRouteImport } from './routes/ar.index'
 import { Route as SeoSlugRouteImport } from './routes/seo.$slug'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
-import { Route as OfferIdRouteImport } from './routes/offer.$id'
 import { Route as DevelopersSlugRouteImport } from './routes/developers.$slug'
 import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
 import { Route as DashboardTeamRouteImport } from './routes/dashboard.team'
@@ -54,6 +53,7 @@ import { Route as DashboardAnnouncementsRouteImport } from './routes/dashboard.a
 import { Route as DashboardAiAssistantRouteImport } from './routes/dashboard.ai-assistant'
 import { Route as ComparePairRouteImport } from './routes/compare.$pair'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ApiWhatsappInventoryRouteImport } from './routes/api.whatsapp-inventory'
 import { Route as ApiUploadAssetRouteImport } from './routes/api.upload-asset'
 import { Route as ApiSaveUsersRouteImport } from './routes/api.save-users'
 import { Route as ApiSaveLeadRouteImport } from './routes/api.save-lead'
@@ -218,11 +218,6 @@ const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => ProjectsRoute,
 } as any)
-const OfferIdRoute = OfferIdRouteImport.update({
-  id: '/offer/$id',
-  path: '/offer/$id',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const DevelopersSlugRoute = DevelopersSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -291,6 +286,11 @@ const ComparePairRoute = ComparePairRouteImport.update({
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/blog/$slug',
   path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiWhatsappInventoryRoute = ApiWhatsappInventoryRouteImport.update({
+  id: '/api/whatsapp-inventory',
+  path: '/api/whatsapp-inventory',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiUploadAssetRoute = ApiUploadAssetRouteImport.update({
@@ -384,6 +384,7 @@ export interface FileRoutesByFullPath {
   '/api/save-lead': typeof ApiSaveLeadRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
+  '/api/whatsapp-inventory': typeof ApiWhatsappInventoryRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
@@ -398,7 +399,6 @@ export interface FileRoutesByFullPath {
   '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
   '/developers/$slug': typeof DevelopersSlugRoute
-  '/offer/$id': typeof OfferIdRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/seo/$slug': typeof SeoSlugRoute
   '/ar/': typeof ArIndexRoute
@@ -439,6 +439,7 @@ export interface FileRoutesByTo {
   '/api/save-lead': typeof ApiSaveLeadRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
+  '/api/whatsapp-inventory': typeof ApiWhatsappInventoryRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
@@ -453,7 +454,6 @@ export interface FileRoutesByTo {
   '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
   '/developers/$slug': typeof DevelopersSlugRoute
-  '/offer/$id': typeof OfferIdRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/seo/$slug': typeof SeoSlugRoute
   '/ar': typeof ArIndexRoute
@@ -499,6 +499,7 @@ export interface FileRoutesById {
   '/api/save-lead': typeof ApiSaveLeadRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
+  '/api/whatsapp-inventory': typeof ApiWhatsappInventoryRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
@@ -513,7 +514,6 @@ export interface FileRoutesById {
   '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
   '/developers/$slug': typeof DevelopersSlugRoute
-  '/offer/$id': typeof OfferIdRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/seo/$slug': typeof SeoSlugRoute
   '/ar/': typeof ArIndexRoute
@@ -560,6 +560,7 @@ export interface FileRouteTypes {
     | '/api/save-lead'
     | '/api/save-users'
     | '/api/upload-asset'
+    | '/api/whatsapp-inventory'
     | '/blog/$slug'
     | '/compare/$pair'
     | '/dashboard/ai-assistant'
@@ -574,7 +575,6 @@ export interface FileRouteTypes {
     | '/dashboard/team'
     | '/destinations/$slug'
     | '/developers/$slug'
-    | '/offer/$id'
     | '/projects/$slug'
     | '/seo/$slug'
     | '/ar/'
@@ -615,6 +615,7 @@ export interface FileRouteTypes {
     | '/api/save-lead'
     | '/api/save-users'
     | '/api/upload-asset'
+    | '/api/whatsapp-inventory'
     | '/blog/$slug'
     | '/compare/$pair'
     | '/dashboard/ai-assistant'
@@ -629,7 +630,6 @@ export interface FileRouteTypes {
     | '/dashboard/team'
     | '/destinations/$slug'
     | '/developers/$slug'
-    | '/offer/$id'
     | '/projects/$slug'
     | '/seo/$slug'
     | '/ar'
@@ -674,6 +674,7 @@ export interface FileRouteTypes {
     | '/api/save-lead'
     | '/api/save-users'
     | '/api/upload-asset'
+    | '/api/whatsapp-inventory'
     | '/blog/$slug'
     | '/compare/$pair'
     | '/dashboard/ai-assistant'
@@ -688,7 +689,6 @@ export interface FileRouteTypes {
     | '/dashboard/team'
     | '/destinations/$slug'
     | '/developers/$slug'
-    | '/offer/$id'
     | '/projects/$slug'
     | '/seo/$slug'
     | '/ar/'
@@ -734,8 +734,8 @@ export interface RootRouteChildren {
   ApiSaveLeadRoute: typeof ApiSaveLeadRoute
   ApiSaveUsersRoute: typeof ApiSaveUsersRoute
   ApiUploadAssetRoute: typeof ApiUploadAssetRoute
+  ApiWhatsappInventoryRoute: typeof ApiWhatsappInventoryRoute
   BlogSlugRoute: typeof BlogSlugRoute
-  OfferIdRoute: typeof OfferIdRoute
   SeoSlugRoute: typeof SeoSlugRoute
   ArIndexRoute: typeof ArIndexRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -958,13 +958,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsSlugRouteImport
       parentRoute: typeof ProjectsRoute
     }
-    '/offer/$id': {
-      id: '/offer/$id'
-      path: '/offer/$id'
-      fullPath: '/offer/$id'
-      preLoaderRoute: typeof OfferIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/developers/$slug': {
       id: '/developers/$slug'
       path: '/$slug'
@@ -1061,6 +1054,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/whatsapp-inventory': {
+      id: '/api/whatsapp-inventory'
+      path: '/api/whatsapp-inventory'
+      fullPath: '/api/whatsapp-inventory'
+      preLoaderRoute: typeof ApiWhatsappInventoryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/upload-asset': {
@@ -1285,8 +1285,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiSaveLeadRoute: ApiSaveLeadRoute,
   ApiSaveUsersRoute: ApiSaveUsersRoute,
   ApiUploadAssetRoute: ApiUploadAssetRoute,
+  ApiWhatsappInventoryRoute: ApiWhatsappInventoryRoute,
   BlogSlugRoute: BlogSlugRoute,
-  OfferIdRoute: OfferIdRoute,
   SeoSlugRoute: SeoSlugRoute,
   ArIndexRoute: ArIndexRoute,
   BlogIndexRoute: BlogIndexRoute,

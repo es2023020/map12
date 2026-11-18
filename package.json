@@ -13,6 +13,9 @@
     "sync-data": "python scripts/build-locations.py && python scripts/extract-images.py && python scripts/fetch-nawy-search.py",
     "export-availability": "npx tsx scripts/export-availability.ts",
     "import-availability": "node scripts/import-availability.mjs",
+    "inventory:listen": "npx tsx services/whatsapp-listener/cli.ts listen",
+    "inventory:process": "npx tsx services/whatsapp-listener/cli.ts process-file",
+    "inventory:text": "npx tsx services/whatsapp-listener/cli.ts process-text",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
@@ -85,6 +88,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.4",
+    "@whiskeysockets/baileys": "^7.0.0-rc14",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.6",
@@ -92,7 +96,9 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^15.15.0",
     "nitro": "3.0.260603-beta",
+    "pino": "^10.4.0",
     "prettier": "^3.7.3",
+    "qrcode-terminal": "^0.12.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
     "vite": "^7.3.1"

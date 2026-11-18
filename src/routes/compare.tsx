@@ -1,14 +1,13 @@
 import { toast } from "sonner";
-import mediaRegistry from "@/data/media-registry.json";
-import { formatCurrency, formatExactPrice } from "@/lib/currency";
+import { formatExactPrice } from "@/lib/currency";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { Shell } from "@/components/layout/Shell";
-import { compounds, compoundBySlug, Compound } from "@/data/compounds";
+import { compounds, compoundBySlug } from "@/data/compounds";
 import { availabilityBySlug } from "@/data/availability";
 import { useStore } from "@/lib/store";
 import { formatDeliveryStatus } from "@/lib/delivery";
-import { CompareSetupDialog, type CompareMetadata } from "@/components/ui/CompareSetupDialog";
+import { Button } from "@/components/ui/button";
 import {
   GitCompareArrows,
   Search,
@@ -18,25 +17,19 @@ import {
   Calendar,
   Building2,
   Wallet,
-  Waves,
-  Info,
   ShieldCheck,
   ArrowUpDown,
   Sliders,
-  Download,
   Plus,
   X,
   Layers,
   Sparkles,
   Share2,
   Copy,
-  Edit3,
-  Eye,
-  User,
-  Phone,
-  Briefcase,
   Printer,
-  FileCode,
+  ExternalLink,
+  ArrowRight,
+  Filter,
 } from "lucide-react";
 
 export const Route = createFileRoute("/compare")({
@@ -46,7 +39,7 @@ export const Route = createFileRoute("/compare")({
       {
         name: "description",
         content:
-          "Compare 2 up to 10 Egyptian real estate compounds side-by-side. Compare whole project feddan specs or unit-level layouts, indoor BUA vs terrace areas, prices per sqm, payment terms, and cash discounts.",
+          "Compare 2 up to 10 Egyptian real estate compounds side-by-side. Compare masterplan feddan specs or unit-level layouts, indoor BUA, prices per sqm, payment terms, and delivery timelines.",
       },
     ],
   }),
@@ -61,8 +54,9 @@ interface SelectedSlot {
 
 export function ComparePage() {
   const compareList = useStore((s) => s.compareList);
+  const currency = useStore((s) => s.currency);
 
-  // Initialize slots with store items or 2 default slots
+  // Initialize slots with store items or 2 default flagship projects
   const [slots, setSlots] = useState<SelectedSlot[]>(() => {
     if (compareList.length >= 2) {
       return compareList.map((slug, idx) => ({
@@ -85,20 +79,11 @@ export function ComparePage() {
 
   const [activeSearchSlotId, setActiveSearchSlotId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-
   const [highlightDiffs, setHighlightDiffs] = useState(true);
   const [showDiffsOnly, setShowDiffsOnly] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
 
-  // Pre-generation questionnaire dialog state
-  const [questionnaireOpen, setQuestionnaireOpen] = useState(false);
-  const [metadata, setMetadata] = useState<CompareMetadata>({
-    agentName: "Sayed Shoeip",
-    agentTitle: "Senior Real Estate Consultant",
-    agentPhone: "+20 102 932 4783",
-    clientName: "Valuation & Investment Committee",
-  });
-
-  // Expand slots scalability: 2 up to 10 projects/units
+  // Slot management (2 up to 10 slots)
   const handleAddSlot = () => {
     if (slots.length >= 10) return;
     setSlots((prev) => [
@@ -131,22 +116,22 @@ export function ComparePage() {
     );
   };
 
-  // Preset comparisons
+  // Curated presets tailored to Egyptian luxury markets
   const QUICK_PRESETS = [
     {
-      label: "SAADA vs EVER NEW CAIRO",
+      label: "Saada vs Ever New Cairo",
       slugs: ["horizon-by-saada", "ever-new-cairo"],
     },
     {
-      label: "Saada New Cairo vs Badya vs Solana",
+      label: "New Cairo: Saada vs Badya vs Solana",
       slugs: ["horizon-by-saada", "badya", "solana"],
     },
     {
-      label: "Nyoum October vs Creekview vs Direction White",
+      label: "West Cairo: Nyoum October vs Creekview vs Direction White",
       slugs: ["nyoum-october", "creekview", "direction-white"],
     },
     {
-      label: "Marassi vs Solare vs Ogami",
+      label: "North Coast: Marassi vs Solare vs Ogami",
       slugs: ["marassi", "solare", "ogami"],
     },
   ];
@@ -159,6 +144,7 @@ export function ComparePage() {
         selectedTypeIdx: "all",
       }))
     );
+    toast.success("Applied comparison preset");
   };
 
   // Resolved Slots Data & Dynamic Specs Scope Engine
@@ -184,17 +170,16 @@ export function ComparePage() {
 
       const delivery = formatDeliveryStatus(bd?.deliveryNote, comp?.deliveryYear, comp?.status).label;
 
-      // Granularity Adaptation: Whole Project vs Specific Unit
       const areaDisplay = isAll
         ? comp?.areaSize || "— (Feddan Masterplan)"
         : bd
-        ? `Indoor BUA: ${bd.minSqm} m²${bd.maxSqm > bd.minSqm ? `–${bd.maxSqm} m²` : ""} (+ Outdoor Terrace / Garden)`
+        ? `${bd.minSqm} m²${bd.maxSqm > bd.minSqm ? `–${bd.maxSqm} m²` : ""} BUA (+ Terrace/Garden)`
         : "—";
 
       const unitTypeDisplay = isAll
         ? comp?.types?.join(", ") || "Standalone Villa, Townhouse, Twin House"
         : bd
-        ? `Unit Layout: ${bd.type}${bd.beds ? ` (${bd.beds} Bedrooms)` : ""}`
+        ? `${bd.type}${bd.beds ? ` (${bd.beds} Beds)` : ""}`
         : "Standard Layout";
 
       const paymentPlanDisplay = bd
@@ -202,7 +187,7 @@ export function ComparePage() {
         : comp?.paymentPlan || "5% DP / 8 Years Equal Installments";
 
       const maintenanceFeeStr = isAll ? "8% Maintenance Deposit" : "8% Maintenance Deposit upon Delivery";
-      const scopeLabel = isAll ? "Whole Project Specs" : `Unit Layout: ${bd?.type || "Specific Unit"}`;
+      const scopeLabel = isAll ? "Whole Project Masterplan" : `Unit Layout: ${bd?.type || "Specific Unit"}`;
 
       return {
         slot,
@@ -250,19 +235,18 @@ export function ComparePage() {
   }, [validSlots]);
 
   const filteredCompounds = useMemo(() => {
-    if (!searchQuery) return compounds.slice(0, 12);
+    if (!searchQuery) return compounds.slice(0, 15);
     return compounds
       .filter(
         (c) =>
           c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          c.developer.toLowerCase().includes(searchQuery.toLowerCase())
+          c.developer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          c.destination.toLowerCase().includes(searchQuery.toLowerCase())
       )
-      .slice(0, 12);
+      .slice(0, 15);
   }, [searchQuery]);
 
-  const currency = useStore((s) => s.currency);
-
-  // Table rows with explicit dual/multi column attribute structure
+  // Table rows with clean attribute mapping
   const tableRows = useMemo(() => {
     if (validSlots.length === 0) return [];
 
@@ -278,6 +262,7 @@ export function ComparePage() {
     }
 
     interface TableRowItem {
+      category: string;
       label: string;
       icon: any;
       isDifferent: boolean;
@@ -298,31 +283,25 @@ export function ComparePage() {
 
     const rows: TableRowItem[] = [
       {
+        category: "Scope & Status",
         label: "Comparison Scope",
         icon: Layers,
         isDifferent: getRowIsDifferent(scopeVals),
         values: validSlots.map((s) => ({
           text: s.specs.scopeLabel,
-          badge: s.specs.isSpecificUnit ? "Unit Level" : "Whole Project",
+          badge: s.specs.isSpecificUnit ? "Unit Layout" : "Masterplan",
           isHighlight: s.specs.isSpecificUnit,
         })),
       },
       {
+        category: "Identity",
         label: "Developer",
         icon: Building2,
         isDifferent: getRowIsDifferent(developerVals),
         values: validSlots.map((s) => ({ text: s.comp?.developer || "—", isHighlight: false })),
       },
       {
-        label: "Developer Profile",
-        icon: Building2,
-        isDifferent: getRowIsDifferent(developerVals),
-        values: validSlots.map((s) => ({
-          text: `Leading footprint in Egyptian real estate with high build standards (${s.comp?.developer}).`,
-          isHighlight: false,
-        })),
-      },
-      {
+        category: "Identity",
         label: "Destination",
         icon: MapPin,
         isDifferent: getRowIsDifferent(destVals),
@@ -332,7 +311,8 @@ export function ComparePage() {
         })),
       },
       {
-        label: "Exact Location Details",
+        category: "Identity",
+        label: "Location Details",
         icon: MapPin,
         isDifferent: true,
         values: validSlots.map((s) => ({
@@ -341,40 +321,46 @@ export function ComparePage() {
         })),
       },
       {
-        label: "Compound Status",
+        category: "Scope & Status",
+        label: "Development Status",
         icon: ShieldCheck,
         isDifferent: getRowIsDifferent(statusVals),
         values: validSlots.map((s) => ({
-          text: s.specs.isRtm ? "RTM (Ready To Move) ★" : s.comp?.status || "Off-Plan",
-          badge: s.specs.isRtm ? "★ Ready To Move" : undefined,
+          text: s.specs.isRtm ? "Ready to Move (RTM)" : s.comp?.status || "Under Construction",
+          badge: s.specs.isRtm ? "Ready to Move" : undefined,
           isHighlight: s.specs.isRtm,
         })),
       },
       {
-        label: "Unit Types Available / Floor Plan",
+        category: "Layout & Specs",
+        label: "Unit Types / Layout",
         icon: Sliders,
         isDifferent: getRowIsDifferent(typeVals),
         values: validSlots.map((s) => ({ text: s.specs.unitTypeDisplay, isHighlight: false })),
       },
       {
+        category: "Layout & Specs",
         label: "Phase / Cluster",
-        icon: Info,
+        icon: Layers,
         isDifferent: getRowIsDifferent(clusterVals),
         values: validSlots.map((s) => ({ text: s.specs.cluster, isHighlight: false })),
       },
       {
-        label: "Finishing Type",
+        category: "Layout & Specs",
+        label: "Finishing Standard",
         icon: ShieldCheck,
         isDifferent: getRowIsDifferent(finishingVals),
         values: validSlots.map((s) => ({ text: s.specs.finishing, isHighlight: false })),
       },
       {
-        label: "Project / Unit Area",
+        category: "Layout & Specs",
+        label: "Built-Up Area (BUA)",
         icon: ArrowUpDown,
         isDifferent: getRowIsDifferent(areaVals),
         values: validSlots.map((s) => ({ text: s.specs.areaDisplay, isHighlight: false })),
       },
       {
+        category: "Financials",
         label: "Starting Price",
         icon: Wallet,
         isDifferent: getRowIsDifferent(priceVals),
@@ -382,13 +368,14 @@ export function ComparePage() {
           const isLowest = minPriceVal !== null && s.specs.priceEgpM === minPriceVal;
           return {
             text: formatExactPrice(s.specs.priceEgpExact, currency),
-            badge: isLowest ? "★ Lowest Starting Price" : undefined,
+            badge: isLowest ? "★ Lowest Price" : undefined,
             isHighlight: isLowest,
           };
         }),
       },
       {
-        label: "Price per m² (Est.)",
+        category: "Financials",
+        label: "Est. Price per m²",
         icon: Wallet,
         isDifferent: true,
         values: validSlots.map((s) => ({
@@ -397,6 +384,7 @@ export function ComparePage() {
         })),
       },
       {
+        category: "Timeline",
         label: "Delivery Timeline",
         icon: Calendar,
         isDifferent: getRowIsDifferent(deliveryVals),
@@ -417,12 +405,13 @@ export function ComparePage() {
         }),
       },
       {
-        label: "Payment Terms & Discounts",
+        category: "Financials",
+        label: "Payment Terms",
         icon: Calendar,
         isDifferent: getRowIsDifferent(payVals),
         values: validSlots.map((s) => ({
-          text: `${s.specs.paymentPlanDisplay} • Up to 40% Cash Discount`,
-          badge: s.specs.paymentPlanDisplay.includes("0%") ? "★ 0% Down Payment" : undefined,
+          text: s.specs.paymentPlanDisplay,
+          badge: s.specs.paymentPlanDisplay.includes("0%") ? "0% Down Payment" : undefined,
           isHighlight: false,
         })),
       },
@@ -437,292 +426,201 @@ export function ComparePage() {
     return tableRows;
   }, [tableRows, showDiffsOnly]);
 
-  const [downloadingPdf, setDownloadingPdf] = useState(false);
-  const [copiedCode, setCopiedCode] = useState(false);
-
-  // Direct PDF Download
-  const handleGeneratePDF = () => {
-    setQuestionnaireOpen(true);
+  const handleShareLink = () => {
+    if (typeof window === "undefined") return;
+    const slugs = validSlots.map((s) => s.comp?.slug).filter(Boolean);
+    const url = `${window.location.origin}/compare?projects=${slugs.join(",")}`;
+    navigator.clipboard.writeText(url);
+    setCopiedLink(true);
+    toast.success("Comparison link copied to clipboard!");
+    setTimeout(() => setCopiedLink(false), 2500);
   };
 
-  const executeDownloadPDF = async (customMeta: CompareMetadata) => {
-    const targetEl = document.getElementById("comparison-report-container");
-    if (!targetEl) return;
-    setDownloadingPdf(true);
-    toast.info("Generating high-resolution Comparison PDF...");
-    try {
-      // @ts-ignore
-      const html2canvasModule = await import(/* @vite-ignore */ "html2canvas");
-      // @ts-ignore
-      const jsPdfModule = await import(/* @vite-ignore */ "jspdf");
-
-      const html2canvas = html2canvasModule.default || html2canvasModule;
-      const jsPDF = jsPdfModule.jsPDF || jsPdfModule.default || jsPdfModule;
-
-      const canvas = await html2canvas(targetEl, {
-        scale: 2,
-        useCORS: true,
-        logging: false,
-        backgroundColor: "#090d16",
-      });
-
-      const imgData = canvas.toDataURL("image/jpeg", 0.95);
-      const pdf = new jsPDF({
-        orientation: "landscape",
-        unit: "mm",
-        format: "a4",
-      });
-
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = pdf.internal.pageSize.getHeight();
-      const imgHeight = (canvas.height * pdfWidth) / canvas.width;
-
-      let heightLeft = imgHeight;
-      let position = 0;
-
-      pdf.addImage(imgData, "JPEG", 0, position, pdfWidth, imgHeight);
-      heightLeft -= pdfHeight;
-
-      while (heightLeft > 0) {
-        position = heightLeft - imgHeight;
-        pdf.addPage();
-        pdf.addImage(imgData, "JPEG", 0, position, pdfWidth, imgHeight);
-        heightLeft -= pdfHeight;
-      }
-
-      const names = validSlots.map((s) => s.comp?.name || "Project").join("_vs_");
-      pdf.save(`Comparison_${names.replace(/[^a-zA-Z0-9_]/g, "")}.pdf`);
-      toast.success("Comparison PDF downloaded directly to your device!");
-    } catch (e) {
-      console.error("Comparison PDF export error", e);
-      toast.error("Failed to generate PDF. Please try again.");
-    } finally {
-      setDownloadingPdf(false);
+  const handlePrint = () => {
+    if (typeof window !== "undefined") {
+      window.print();
     }
-  };
-
-  // Standalone HTML/CSS code generator for offline sharing
-  const handleCopyStandaloneHTML = () => {
-    const htmlCode = `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Side-by-Side Property Comparison Matrix</title>
-  <style>
-    body { font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #fff; padding: 30px; }
-    .card { background: #1e293b; border-radius: 16px; padding: 24px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px; }
-    h1 { color: #fbbf24; margin-top: 0; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; font-size: 13px; }
-    th { background: #090d16; color: #fbbf24; text-transform: uppercase; font-size: 11px; }
-    .badge { background: rgba(251, 191, 36, 0.2); color: #fbbf24; padding: 2px 8px; border-radius: 99px; font-weight: bold; font-size: 10px; }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h1>Side-by-Side Technical Comparison Matrix</h1>
-    <p>Prepared for: <strong>${metadata.clientName}</strong> | Representative: <strong>${metadata.agentName}</strong> (${metadata.agentPhone})</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Attribute</th>
-          ${validSlots.map((s) => `<th>${s.comp?.name} (${s.comp?.developer})</th>`).join("")}
-        </tr>
-      </thead>
-      <tbody>
-        ${tableRows
-          .map(
-            (row) => `
-          <tr>
-            <td><strong>${row.label}</strong></td>
-            ${row.values.map((v) => `<td>${v.text} ${v.badge ? `<span class="badge">${v.badge}</span>` : ""}</td>`).join("")}
-          </tr>`
-          )
-          .join("")}
-      </tbody>
-    </table>
-  </div>
-</body>
-</html>`;
-    navigator.clipboard.writeText(htmlCode);
-    setCopiedCode(true);
-    setTimeout(() => setCopiedCode(false), 2000);
   };
 
   return (
     <Shell>
-      {/* Questionnaire Modal */}
-      <CompareSetupDialog
-        isOpen={questionnaireOpen}
-        onClose={() => setQuestionnaireOpen(false)}
-        onConfirm={(meta) => {
-          setMetadata(meta);
-          setQuestionnaireOpen(false);
-          executeDownloadPDF(meta);
-        }}
-      />
+      {/* ─── BRAND HERO SECTION ─────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-primary text-primary-foreground py-10 sm:py-14 print:py-4">
+        {/* Ambient Gradient Mesh Background */}
+        <div
+          className="absolute inset-0 opacity-40 mix-blend-screen pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(ellipse at 20% 0%, oklch(0.72 0.12 195 / .45), transparent 50%), radial-gradient(ellipse at 80% 100%, oklch(0.7 0.18 40 / .3), transparent 60%)",
+          }}
+        />
 
-      {/* Header Banner */}
-      <div className="bg-slate-950 text-white border-b border-white/10 py-8 md:py-12">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-            <div>
-              <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/15 px-3 py-1 text-xs font-bold text-amber-400 border border-amber-500/30">
-                <GitCompareArrows className="h-3.5 w-3.5" /> Side-by-Side Multi-Project Comparison Matrix
+            <div className="space-y-3">
+              <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/15 px-3.5 py-1 text-xs font-semibold text-accent shadow-soft backdrop-blur-md">
+                <GitCompareArrows className="h-3.5 w-3.5" />
+                <span>Side-by-Side Property Matrix</span>
               </div>
-              <h1 className="mt-2 font-display text-3xl md:text-4xl font-black tracking-tight">
-                Technical Comparison &amp; Specification Engine
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+                Technical Property Comparison
               </h1>
-              <p className="mt-2 text-sm text-slate-300 max-w-2xl">
-                Compare <strong className="text-amber-400">2 up to 10 projects/units</strong> side-by-side. Dynamically adapt metrics between whole project feddan masterplans and unit-level floor plan specifications.
+              <p className="text-sm sm:text-base text-primary-foreground/80 max-w-2xl leading-relaxed">
+                Compare <strong className="text-accent font-bold">2 up to 10 Egyptian compounds</strong> side-by-side. 
+                Evaluate masterplan feddan footprint, floor plan BUA, starting prices, delivery schedules, and payment structures.
               </p>
             </div>
 
-            {/* Top Toolbar Actions */}
-            <div className="flex items-center gap-2 flex-wrap">
-              <button
-                onClick={handleGeneratePDF}
-                disabled={downloadingPdf}
-                className="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-5 py-2.5 text-xs font-bold text-white shadow-lg hover:bg-emerald-500 transition-all cursor-pointer disabled:opacity-50"
+            {/* Quick Action Buttons */}
+            <div className="flex items-center gap-2.5 flex-wrap print:hidden">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleShareLink}
+                className="rounded-full border-white/20 bg-white/5 text-white hover:bg-white/15 hover:text-white backdrop-blur-md text-xs font-semibold h-9.5 px-4 cursor-pointer transition-all"
               >
-                <Download className="h-4 w-4" />
-                {downloadingPdf ? "Generating PDF..." : "Export Comparison PDF"}
-              </button>
+                {copiedLink ? <Check className="h-3.5 w-3.5 text-accent mr-1.5" /> : <Share2 className="h-3.5 w-3.5 mr-1.5 text-accent" />}
+                {copiedLink ? "Link Copied" : "Share Comparison"}
+              </Button>
 
-              <button
-                onClick={handleCopyStandaloneHTML}
-                className="inline-flex items-center gap-1.5 rounded-2xl border border-white/15 bg-slate-800 px-4 py-2.5 text-xs font-bold text-slate-200 hover:bg-slate-700 transition-all cursor-pointer"
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handlePrint}
+                className="rounded-full border-white/20 bg-white/5 text-white hover:bg-white/15 hover:text-white backdrop-blur-md text-xs font-semibold h-9.5 px-4 cursor-pointer transition-all"
               >
-                <FileCode className="h-4 w-4 text-amber-400" />
-                {copiedCode ? "Copied Code!" : "Copy Standalone HTML"}
-              </button>
+                <Printer className="h-3.5 w-3.5 mr-1.5 text-accent" />
+                Print / Save PDF
+              </Button>
             </div>
           </div>
 
-          {/* Quick Preset Selector */}
-          <div className="mt-6 border-t border-white/10 pt-4 flex items-center gap-2 flex-wrap text-xs">
-            <span className="font-bold text-slate-400 uppercase tracking-wider">Quick Presets:</span>
+          {/* Quick Preset Chips */}
+          <div className="mt-8 border-t border-white/10 pt-4 flex items-center gap-2 flex-wrap text-xs print:hidden">
+            <span className="font-semibold text-primary-foreground/60 uppercase tracking-wider text-[11px] mr-1">
+              Popular Comparisons:
+            </span>
             {QUICK_PRESETS.map((p, i) => (
               <button
                 key={i}
                 onClick={() => handleApplyPreset(p.slugs)}
-                className="rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 font-medium text-slate-300 hover:border-amber-500/50 hover:text-white transition-all cursor-pointer"
+                className="rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-xs font-medium text-white/90 hover:border-accent hover:text-accent hover:bg-accent/10 transition-all cursor-pointer backdrop-blur-sm"
               >
                 ⚡ {p.label}
               </button>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Main Container */}
-      <div id="comparison-report-container" className="mx-auto max-w-7xl px-4 py-8 lg:px-8 space-y-10 bg-slate-950 text-white min-h-screen">
-        
-        {/* Branding Header Card */}
-        <div className="rounded-3xl border border-white/15 bg-slate-900 p-6 flex flex-wrap items-center justify-between gap-4">
-          <div className="space-y-1">
-            <div className="text-[10px] font-extrabold uppercase tracking-widest text-amber-400">
-              Official Property Atlas Comparison Sheet
-            </div>
-            <div className="font-display text-xl font-bold text-white">
-              Prepared for: <span className="text-amber-400">{metadata.clientName}</span>
-            </div>
-          </div>
-          <div className="text-right text-xs text-slate-300 space-y-0.5">
-            <div>Advisor: <strong className="text-white">{metadata.agentName}</strong> ({metadata.agentTitle})</div>
-            <div>Direct Phone: <strong className="text-amber-400">{metadata.agentPhone}</strong></div>
-          </div>
-        </div>
+      {/* ─── MAIN CONTENT AREA ──────────────────────────────────── */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-10">
 
-        {/* Slot Controls Bar (2 to 10 Slots) */}
-        <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4 flex-wrap">
-          <div className="flex items-center gap-2">
-            <span className="rounded-full bg-amber-500/20 px-3 py-1 text-xs font-bold text-amber-400 border border-amber-500/30">
-              Comparing {validSlots.length} of {slots.length} Slots (Max 10)
+        {/* ─── CONTROLS BAR ─────────────────────────────────────── */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border pb-5 print:hidden">
+          <div className="flex items-center gap-3 flex-wrap">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/15 px-3 py-1 text-xs font-bold text-accent border border-accent/25">
+              Comparing {validSlots.length} of {slots.length} Projects
+            </span>
+            <span className="text-xs text-muted-foreground hidden sm:inline">
+              (Add up to 10 compounds simultaneously)
             </span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <label className="flex items-center gap-2 text-xs font-bold text-slate-300 cursor-pointer">
+          <div className="flex items-center gap-4 flex-wrap">
+            <label className="flex items-center gap-2 text-xs font-semibold text-foreground cursor-pointer select-none">
               <input
                 type="checkbox"
                 checked={showDiffsOnly}
                 onChange={(e) => setShowDiffsOnly(e.target.checked)}
-                className="rounded border-white/20 bg-slate-900 text-amber-500 focus:ring-amber-500"
+                className="rounded border-border text-accent focus:ring-accent"
               />
+              <Filter className="h-3.5 w-3.5 text-muted-foreground" />
               Show Differences Only
             </label>
 
             {slots.length < 10 && (
-              <button
+              <Button
+                size="sm"
                 onClick={handleAddSlot}
-                className="inline-flex items-center gap-1.5 rounded-xl bg-amber-500/20 text-amber-300 hover:bg-amber-500/30 px-3.5 py-1.5 text-xs font-bold border border-amber-500/30 transition-all cursor-pointer"
+                className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 text-xs font-bold h-8.5 px-3.5 cursor-pointer shadow-soft"
               >
-                <Plus className="h-4 w-4" /> Add Project Slot
-              </button>
+                <Plus className="h-3.5 w-3.5 mr-1 text-accent" />
+                Add Project Slot
+              </Button>
             )}
           </div>
         </div>
 
-        {/* ══════════════════════════════════════════════════════════════
-            SECTION 1: PROJECT OVERVIEW & VISUAL COMPARISON
-           ══════════════════════════════════════════════════════════════ */}
+        {/* ─── SECTION 1: PROJECT SLOTS OVERVIEW ─────────────────── */}
         <div className="space-y-4">
-          <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 flex items-center gap-2">
-            <Eye className="h-4 w-4" /> Section 1: Project Overview &amp; Visual Comparison
+          <div className="flex items-center justify-between">
+            <div className="text-xs font-extrabold uppercase tracking-widest text-primary flex items-center gap-2">
+              <Building2 className="h-4 w-4 text-accent" />
+              <span>Compared Projects ({validSlots.length})</span>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             {slots.map((slot, idx) => {
               const comp = compoundBySlug(slot.slug);
               const avail = availabilityBySlug(slot.slug);
+              const isSearchOpen = activeSearchSlotId === slot.id;
+
               return (
-                <div key={slot.id} className="rounded-3xl border border-white/15 bg-slate-900 overflow-hidden flex flex-col p-4 space-y-3 relative group">
-                  {/* Slot Header & Dropdown */}
-                  <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-amber-400">
-                      PROJECT #{idx + 1}
+                <div
+                  key={slot.id}
+                  className="rounded-2xl border border-border bg-card shadow-soft p-4 flex flex-col space-y-3 relative transition-all duration-200 hover:border-accent/40"
+                >
+                  {/* Slot Header */}
+                  <div className="flex items-center justify-between border-b border-border/60 pb-2">
+                    <span className="text-[10px] font-black uppercase tracking-wider text-accent">
+                      Slot #{idx + 1}
                     </span>
                     {slots.length > 2 && (
                       <button
                         onClick={() => handleRemoveSlot(slot.id)}
-                        className="rounded-full p-1 text-slate-400 hover:bg-rose-600 hover:text-white transition-colors"
-                        title="Remove Slot"
+                        className="rounded-full p-1 text-muted-foreground hover:bg-destructive/10 hover:text-destructive transition-colors cursor-pointer"
+                        title="Remove this slot"
                       >
                         <X className="h-3.5 w-3.5" />
                       </button>
                     )}
                   </div>
 
-                  {/* Project Selector Input */}
+                  {/* Project Selector Trigger */}
                   <div className="relative">
                     <button
-                      onClick={() => setActiveSearchSlotId(activeSearchSlotId === slot.id ? null : slot.id)}
-                      className="w-full rounded-2xl border border-white/15 bg-slate-950 px-3.5 py-2 text-left text-xs font-bold text-white flex items-center justify-between hover:border-amber-500/50 transition-colors"
+                      onClick={() => setActiveSearchSlotId(isSearchOpen ? null : slot.id)}
+                      className="w-full rounded-xl border border-border bg-background px-3 py-2 text-left text-xs font-bold text-foreground flex items-center justify-between hover:border-accent transition-colors shadow-2xs"
                     >
-                      <span className="truncate">{comp ? comp.name : "Select Project..."}</span>
-                      <ChevronDown className="h-4 w-4 shrink-0 text-slate-400" />
+                      <span className="truncate">{comp ? comp.name : "Select Compound..."}</span>
+                      <ChevronDown className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
                     </button>
 
                     {/* Dropdown Popup */}
-                    {activeSearchSlotId === slot.id && (
-                      <div className="absolute top-full left-0 right-0 z-50 mt-1 rounded-2xl border border-white/20 bg-slate-950 p-2 shadow-2xl space-y-2">
-                        <input
-                          type="text"
-                          placeholder="Search project..."
-                          value={searchQuery}
-                          onChange={(e) => setSearchQuery(e.target.value)}
-                          className="w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-1.5 text-xs text-white focus:outline-none"
-                        />
-                        <div className="max-h-48 overflow-y-auto space-y-1">
+                    {isSearchOpen && (
+                      <div className="absolute top-full left-0 right-0 z-50 mt-1 rounded-xl border border-border bg-popover p-2 shadow-xl space-y-2">
+                        <div className="relative">
+                          <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-muted-foreground" />
+                          <input
+                            type="text"
+                            placeholder="Type compound or developer..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            autoFocus
+                            className="w-full rounded-lg border border-border bg-background pl-8 pr-3 py-1.5 text-xs text-foreground focus:outline-none focus:border-accent"
+                          />
+                        </div>
+                        <div className="max-h-52 overflow-y-auto space-y-1 divide-y divide-border/30">
                           {filteredCompounds.map((c) => (
                             <button
                               key={c.slug}
                               onClick={() => handleSelectCompound(slot.id, c.slug)}
-                              className="w-full rounded-xl px-3 py-1.5 text-left text-xs font-semibold text-slate-200 hover:bg-amber-500/20 hover:text-amber-300 transition-colors truncate"
+                              className="w-full text-left px-2.5 py-1.5 text-xs rounded-md hover:bg-accent/10 hover:text-accent font-medium text-foreground transition-colors flex flex-col"
                             >
-                              {c.name} ({c.developer})
+                              <span className="font-bold">{c.name}</span>
+                              <span className="text-[10px] text-muted-foreground">{c.developer} • {c.destination.replace(/-/g, " ")}</span>
                             </button>
                           ))}
                         </div>
@@ -730,31 +628,39 @@ export function ComparePage() {
                     )}
                   </div>
 
-                  {/* High-Res Visual Asset Placeholder / Render */}
+                  {/* Visual Project Thumbnail */}
                   {comp ? (
-                    <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-950 border border-white/10 relative">
-                      <img src={comp.hero} alt={comp.name} className="w-full h-full object-cover" />
-                      <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent p-2 text-[10px] font-bold text-white">
-                        [Visual Render: {comp.name}]
+                    <div className="aspect-16/10 w-full rounded-xl overflow-hidden bg-muted relative group">
+                      <img
+                        src={comp.hero}
+                        alt={comp.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent pointer-events-none" />
+                      <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-white text-[10px] pointer-events-none">
+                        <span className="font-semibold truncate text-white/90">{comp.developer}</span>
+                        <span className="font-bold text-accent capitalize">{comp.destination.replace(/-/g, " ")}</span>
                       </div>
                     </div>
                   ) : (
-                    <div className="aspect-[4/3] w-full rounded-2xl border border-dashed border-white/20 bg-slate-950 flex flex-col items-center justify-center p-4 text-center text-slate-500">
-                      <Building2 className="h-8 w-8 mb-2 opacity-50" />
-                      <span className="text-[10px]">Select project above to load visual renders</span>
+                    <div className="aspect-16/10 w-full rounded-xl border border-dashed border-border bg-muted/30 flex flex-col items-center justify-center p-4 text-center text-muted-foreground">
+                      <Building2 className="h-6 w-6 mb-1 opacity-40 text-primary" />
+                      <span className="text-[11px] font-medium">Select a compound above</span>
                     </div>
                   )}
 
-                  {/* Scope Selector: Whole Project vs Specific Unit Layout */}
+                  {/* Comparison Granularity Selector */}
                   {avail && avail.breakdown.length > 0 && (
                     <div className="space-y-1 pt-1">
-                      <label className="text-[9px] font-bold uppercase text-slate-400">Comparison Granularity</label>
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                        Granularity:
+                      </label>
                       <select
                         value={slot.selectedTypeIdx}
                         onChange={(e) => handleSelectUnitType(slot.id, e.target.value)}
-                        className="w-full rounded-xl border border-white/10 bg-slate-950 px-2.5 py-1.5 text-[11px] font-bold text-amber-300 focus:outline-none cursor-pointer"
+                        className="w-full rounded-lg border border-border bg-background px-2.5 py-1.5 text-xs font-semibold text-foreground focus:outline-none focus:border-accent cursor-pointer"
                       >
-                        <option value="all">Whole Project Specs</option>
+                        <option value="all">Whole Masterplan</option>
                         {avail.breakdown.map((b, bIdx) => (
                           <option key={bIdx} value={bIdx}>
                             Unit: {b.type} ({b.minSqm}m²)
@@ -763,84 +669,137 @@ export function ComparePage() {
                       </select>
                     </div>
                   )}
+
+                  {comp && (
+                    <div className="pt-1">
+                      <Link
+                        to="/projects/$slug"
+                        params={{ slug: comp.slug }}
+                        target="_blank"
+                        className="text-[11px] font-bold text-accent hover:underline inline-flex items-center gap-1"
+                      >
+                        View full project details <ExternalLink className="h-3 w-3" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
               );
             })}
           </div>
         </div>
 
-        {/* ══════════════════════════════════════════════════════════════
-            SECTION 2: SIDE-BY-SIDE SPECIFICATION MATRIX
-           ══════════════════════════════════════════════════════════════ */}
-        <div className="space-y-4 pt-4">
-          <div className="text-xs font-extrabold uppercase tracking-widest text-amber-400 flex items-center gap-2">
-            <Sliders className="h-4 w-4" /> Section 2: Side-by-Side Specification Matrix
+        {/* ─── SECTION 2: SPECIFICATION MATRIX TABLE ──────────────── */}
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <div className="text-xs font-extrabold uppercase tracking-widest text-primary flex items-center gap-2">
+              <Sliders className="h-4 w-4 text-accent" />
+              <span>Technical Specification Matrix</span>
+            </div>
+            {showDiffsOnly && (
+              <span className="text-xs text-accent font-semibold">
+                Filtering: Showing differences only ({visibleRows.length} attributes)
+              </span>
+            )}
           </div>
 
-          <div className="rounded-3xl border border-white/15 bg-slate-900 overflow-x-auto shadow-2xl">
-            <table className="w-full text-left border-collapse min-w-[700px]">
-              <thead>
-                <tr className="border-b border-white/15 bg-slate-950">
-                  <th className="p-4 text-xs font-extrabold uppercase tracking-wider text-amber-400 w-48 shrink-0">
-                    Attribute
-                  </th>
-                  {validSlots.map((s, idx) => (
-                    <th key={s.slot.id} className="p-4 text-xs font-bold text-white min-w-[200px]">
-                      <div className="text-[10px] text-amber-400 font-extrabold">PROJECT #{idx + 1}</div>
-                      <div className="text-sm font-black mt-0.5">{s.comp?.name}</div>
-                      <div className="text-[10px] text-slate-400 font-medium">{s.comp?.developer}</div>
+          <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-soft">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse min-w-[700px]">
+                {/* Header Row */}
+                <thead>
+                  <tr className="border-b border-border bg-primary text-primary-foreground">
+                    <th className="p-4 text-xs font-extrabold uppercase tracking-wider text-accent w-56 shrink-0">
+                      Specification
                     </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-white/10 text-xs">
-                {visibleRows.map((row, rIdx) => {
-                  const RowIcon = row.icon;
-                  return (
-                    <tr key={rIdx} className="hover:bg-slate-800/50 transition-colors">
-                      <td className="p-4 font-bold text-slate-300 flex items-center gap-2 bg-slate-950/40">
-                        <RowIcon className="h-4 w-4 text-amber-400 shrink-0" />
-                        <span>{row.label}</span>
-                      </td>
-                      {row.values.map((valObj, vIdx) => (
-                        <td key={vIdx} className={`p-4 font-medium ${valObj.isHighlight ? "bg-amber-500/10 font-bold text-white" : "text-slate-200"}`}>
-                          <div className="space-y-1">
-                            <div>{valObj.text}</div>
-                            {valObj.badge && (
-                              <span className="inline-block rounded-full bg-amber-500/20 px-2.5 py-0.5 text-[9px] font-black text-amber-300 border border-amber-500/40">
-                                {valObj.badge}
-                              </span>
-                            )}
-                          </div>
+                    {validSlots.map((s, idx) => (
+                      <th key={s.slot.id} className="p-4 text-xs font-bold text-white min-w-[200px]">
+                        <div className="text-[10px] text-accent font-black uppercase tracking-wider">
+                          Project #{idx + 1}
+                        </div>
+                        <div className="font-display text-base font-bold mt-0.5 text-white">
+                          {s.comp?.name}
+                        </div>
+                        <div className="text-[11px] text-primary-foreground/75 font-normal">
+                          {s.comp?.developer}
+                        </div>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+
+                {/* Table Body */}
+                <tbody className="divide-y divide-border text-xs">
+                  {visibleRows.map((row, rIdx) => {
+                    const RowIcon = row.icon;
+                    return (
+                      <tr
+                        key={rIdx}
+                        className="hover:bg-muted/40 transition-colors"
+                      >
+                        <td className="p-4 font-semibold text-foreground flex items-center gap-2.5 bg-muted/20">
+                          <RowIcon className="h-4 w-4 text-accent shrink-0" />
+                          <span>{row.label}</span>
                         </td>
-                      ))}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+                        {row.values.map((valObj, vIdx) => (
+                          <td
+                            key={vIdx}
+                            className={`p-4 font-medium transition-colors ${
+                              valObj.isHighlight
+                                ? "bg-accent/10 font-bold text-foreground"
+                                : "text-foreground"
+                            }`}
+                          >
+                            <div className="space-y-1">
+                              <div>{valObj.text}</div>
+                              {valObj.badge && (
+                                <span className="inline-block rounded-full bg-accent/15 px-2 py-0.5 text-[10px] font-bold text-accent border border-accent/25">
+                                  {valObj.badge}
+                                </span>
+                              )}
+                            </div>
+                          </td>
+                        ))}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
 
-        {/* Advisor Badge Footer */}
-        <div className="rounded-3xl border-2 border-amber-500/40 bg-gradient-to-r from-slate-950 to-slate-900 p-6 flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <div className="text-[10px] font-extrabold uppercase tracking-widest text-amber-400">
-              Official Property Atlas Advisory Sheet
+        {/* ─── FOOTER BRANDING CARD ─────────────────────────────── */}
+        <div className="rounded-2xl border border-border bg-card p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-soft">
+          <div className="space-y-1 text-center sm:text-left">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-accent">
+              Property Atlas Comparison Engine
             </div>
-            <div className="font-display text-xl font-bold text-white mt-1">
-              Representative: {metadata.agentName}
+            <div className="font-display text-lg font-bold text-foreground">
+              Egypt's Most Comprehensive Compound Atlas
             </div>
-            <div className="text-xs text-slate-300">{metadata.agentTitle}</div>
+            <p className="text-xs text-muted-foreground">
+              Data verified across 380+ residential and coastal masterplans.
+            </p>
           </div>
-          <div className="text-right text-xs text-slate-300 space-y-1">
-            <div>Direct Phone: <strong className="text-white text-sm">{metadata.agentPhone}</strong></div>
-            <button
-              onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(validSlots.map(s => s.comp?.name).join(" vs "))}`, "_blank")}
-              className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 px-4 py-1.5 text-xs font-bold text-white hover:bg-emerald-500 transition-all cursor-pointer"
-            >
-              <Share2 className="h-3.5 w-3.5" /> Share Matrix via WhatsApp
-            </button>
+
+          <div className="flex items-center gap-3">
+            <Link to="/map" search={{ destination: "", dev: "", q: "" }}>
+              <Button
+                variant="outline"
+                size="sm"
+                className="rounded-full border-border text-xs font-bold cursor-pointer"
+              >
+                Open Map View
+              </Button>
+            </Link>
+            <Link to="/projects" search={{ destination: "", dev: "", q: "" }}>
+              <Button
+                size="sm"
+                className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 text-xs font-bold cursor-pointer"
+              >
+                Browse All Compounds
+              </Button>
+            </Link>
           </div>
         </div>
 

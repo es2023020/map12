@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { formatCurrency } from "@/lib/currency";
 import { Link } from "@tanstack/react-router";
-import { Heart, MapPin, Waves, Calendar, GitCompareArrows, FileText } from "lucide-react";
+import { Heart, MapPin, Waves, Calendar, GitCompareArrows } from "lucide-react";
 import { useStore } from "@/lib/store";
 import { destinationBySlug } from "@/data/destinations";
 import { developers } from "@/data/developers";
 import type { Compound } from "@/data/compounds";
 import { isReadyToMove, hasRTMUnits, hasOffPlanUnits, formatDeliveryStatus } from "@/lib/delivery";
-import { ProposalSetupDialog, type ProposalAgentClientDetails } from "@/components/ui/ProposalSetupDialog";
-import { PdfProposalModal } from "@/components/ui/PdfProposalModal";
 
 export function CompoundCard({ c }: { c: Compound }) {
   const isFav = useStore((s) => s.favorites.includes(c.slug));
@@ -17,10 +15,6 @@ export function CompoundCard({ c }: { c: Compound }) {
   const toggleCmp = useStore((s) => s.toggleCompare);
   const availabilityList = useStore((s) => s.availabilityList);
   const currency = useStore((s) => s.currency);
-
-  const [showProposalSetup, setShowProposalSetup] = useState(false);
-  const [showPdfModal, setShowPdfModal] = useState(false);
-  const [proposalDetails, setProposalDetails] = useState<ProposalAgentClientDetails | null>(null);
 
   const developerInfo = developers.find((d) => d.slug === c.developerSlug);
   const avail = availabilityList.find((a) => a.slug === c.slug);
@@ -100,16 +94,8 @@ export function CompoundCard({ c }: { c: Compound }) {
               </p>
             </div>
 
-            {/* Compare, Favorite & Proposal Buttons */}
+            {/* Compare & Favorite Buttons */}
             <div className="flex shrink-0 gap-1.5">
-              <button
-                onClick={() => setShowProposalSetup(true)}
-                title="Create Client Proposal PDF"
-                aria-label="Create Client Proposal PDF"
-                className="rounded-full border border-border/80 p-2 text-muted-foreground hover:border-amber-500/50 hover:bg-amber-500/10 hover:text-amber-400 transition-all duration-200 cursor-pointer"
-              >
-                <FileText className="h-3.5 w-3.5" />
-              </button>
               <button
                 onClick={() => toggleCmp(c.slug)}
                 aria-label="Compare"
@@ -158,12 +144,6 @@ export function CompoundCard({ c }: { c: Compound }) {
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <button
-                onClick={() => setShowProposalSetup(true)}
-                className="inline-flex items-center gap-1.5 rounded-xl border border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20 px-3 py-2 text-xs font-bold text-amber-400 transition-all duration-200 cursor-pointer"
-              >
-                <FileText className="h-3.5 w-3.5" /> Proposal
-              </button>
               <Link
                 to="/projects/$slug"
                 params={{ slug: c.slug }}
@@ -177,47 +157,6 @@ export function CompoundCard({ c }: { c: Compound }) {
         </div>
       </div>
 
-      {/* Pre-Proposal Agent & Client Setup Dialog */}
-      <ProposalSetupDialog
-        isOpen={showProposalSetup}
-        projectName={c.name}
-        projectSlug={c.slug}
-        onClose={() => setShowProposalSetup(false)}
-        onConfirm={(details) => {
-          setProposalDetails(details);
-          setShowProposalSetup(false);
-          setShowPdfModal(true);
-        }}
-      />
-
-      {/* Proposal PDF Modal */}
-      {showPdfModal && (
-        <PdfProposalModal
-          data={{
-            projectName: c.name,
-            projectSlug: c.slug,
-            developerName: c.developer,
-            location: `${c.destination.replace("-", " ").toUpperCase()}, Egypt`,
-            unitCode: proposalDetails?.unitCode,
-            unitType: proposalDetails?.unitType || (c.types && c.types.length > 0 ? c.types[0] : "Luxury Layout"),
-            areaSqm: proposalDetails?.areaSqm || c.unitSizes || "145",
-            startingPriceEgp: proposalDetails?.startingPriceEgp || (c.priceFrom || 10) * 1000000,
-            paymentPlanStr: proposalDetails?.paymentPlanStr || c.paymentPlan || "10% DP over 8 Yrs",
-            dpPct: 10,
-            durationYrs: 8,
-            deliveryNote: proposalDetails?.deliveryNote || String(c.deliveryYear),
-            finishing: proposalDetails?.finishing,
-            amenities: c.amenities,
-            description: c.blurb,
-            clientName: proposalDetails?.clientName,
-            agentName: proposalDetails?.agentName,
-            agentPhone: proposalDetails?.agentPhone,
-            agentEmail: proposalDetails?.agentEmail,
-            agentTitle: proposalDetails?.agentTitle,
-          }}
-          onClose={() => setShowPdfModal(false)}
-        />
-      )}
     </>
   );
 }

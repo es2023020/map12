@@ -1,0 +1,611 @@
+[
+  {
+    "group_name": "Akam Al raghi",
+    "matched_slug": "akam-alrajhi",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "cred",
+    "matched_slug": "cred-developments",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 1
+  },
+  {
+    "group_name": "M squared",
+    "matched_slug": "m-squared",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 1
+  },
+  {
+    "group_name": "city edge",
+    "matched_slug": "city-edge-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 13
+  },
+  {
+    "group_name": "hydepark",
+    "matched_slug": "hyde-park-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 9
+  },
+  {
+    "group_name": "ADH",
+    "matched_slug": "arab-developers-holding",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 3
+  },
+  {
+    "group_name": "biography",
+    "matched_slug": "biography-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "MNHD",
+    "matched_slug": "madinet-masr",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 15
+  },
+  {
+    "group_name": "Eagles",
+    "matched_slug": "eagles-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "Imkan misr",
+    "matched_slug": "imkan-misr",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "kleek",
+    "matched_slug": "kleek-developments",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 1
+  },
+  {
+    "group_name": "modon",
+    "matched_slug": "modon-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "azha",
+    "matched_slug": "madaar-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 3
+  },
+  {
+    "group_name": "ora",
+    "matched_slug": "ora-developers",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 7
+  },
+  {
+    "group_name": "nations of the sky",
+    "matched_slug": "sky-ad-developments",
+    "in_compounds": false,
+    "in_existing_dirs": true,
+    "projects_count": 0
+  },
+  {
+    "group_name": "katameya",
+    "matched_slug": "starlight-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 4
+  },
+  {
+    "group_name": "via",
+    "matched_slug": "via-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "concrete",
+    "matched_slug": "concrete-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "egygab",
+    "matched_slug": "egygab-holding",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "mv",
+    "matched_slug": "mountain-view",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 14
+  },
+  {
+    "group_name": "captain",
+    "matched_slug": "captain-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "khaled sabry",
+    "matched_slug": "khaled-sabry-holding",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "palmhills",
+    "matched_slug": "palm-hills-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 27
+  },
+  {
+    "group_name": "tharaa glee",
+    "matched_slug": "tharaa-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "al marasem",
+    "matched_slug": "al-marasem-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 5
+  },
+  {
+    "group_name": "dubai misr",
+    "matched_slug": "dubai-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "naia",
+    "matched_slug": "naia-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 1
+  },
+  {
+    "group_name": "mip",
+    "matched_slug": "misr-italia-properties",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 6
+  },
+  {
+    "group_name": "gro developments",
+    "matched_slug": "gro-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "al ahly sabbour",
+    "matched_slug": "al-ahly-sabbour",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 9
+  },
+  {
+    "group_name": "age",
+    "matched_slug": "age-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "times",
+    "matched_slug": "times-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "PRE group",
+    "matched_slug": "pre-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 6
+  },
+  {
+    "group_name": "horizon",
+    "matched_slug": "horizon-egypt-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 3
+  },
+  {
+    "group_name": "sodic",
+    "matched_slug": "sodic",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 17
+  },
+  {
+    "group_name": "tatweer",
+    "matched_slug": "tatweer-misr",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 8
+  },
+  {
+    "group_name": "beta",
+    "matched_slug": "beta-egypt",
+    "in_compounds": false,
+    "in_existing_dirs": true,
+    "projects_count": 0
+  },
+  {
+    "group_name": "sam development",
+    "matched_slug": "sam-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "DMP",
+    "matched_slug": "dmp-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "better home",
+    "matched_slug": "better-home",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 1
+  },
+  {
+    "group_name": "RNA dev",
+    "matched_slug": "rna-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "ardic",
+    "matched_slug": "ardic",
+    "in_compounds": false,
+    "in_existing_dirs": true,
+    "projects_count": 0
+  },
+  {
+    "group_name": "babylon",
+    "matched_slug": "babylon-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "arabella",
+    "matched_slug": "arabella-group",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 1
+  },
+  {
+    "group_name": "jadeer",
+    "matched_slug": "jadeer-developments",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 1
+  },
+  {
+    "group_name": "STM",
+    "matched_slug": "stm-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 3
+  },
+  {
+    "group_name": "salam properties",
+    "matched_slug": "salam-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "el nakheel",
+    "matched_slug": "el-nakheel-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "atric",
+    "matched_slug": "atric-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "catalyst",
+    "matched_slug": "catalyst-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "wealth plus",
+    "matched_slug": "wealth-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "amer group",
+    "matched_slug": "amer-group",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "jawad",
+    "matched_slug": "jawad-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "k development",
+    "matched_slug": "kleek-developments",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 1
+  },
+  {
+    "group_name": "modon emirates",
+    "matched_slug": "modon-properties",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "DIG",
+    "matched_slug": "g-developments",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 1
+  },
+  {
+    "group_name": "il cazar",
+    "matched_slug": "il-cazar-developments",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 11
+  },
+  {
+    "group_name": "badreldin",
+    "matched_slug": "badreldin-developments",
+    "in_compounds": false,
+    "in_existing_dirs": true,
+    "projects_count": 0
+  },
+  {
+    "group_name": "ajna",
+    "matched_slug": "ajna-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 3
+  },
+  {
+    "group_name": "winvestor",
+    "matched_slug": "winvestor-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "manaj",
+    "matched_slug": "manaj-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "doja",
+    "matched_slug": "doja-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "dahab",
+    "matched_slug": "dahab-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "marakez",
+    "matched_slug": "marakez",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 3
+  },
+  {
+    "group_name": "waterway",
+    "matched_slug": "the-waterway-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 4
+  },
+  {
+    "group_name": "the marq",
+    "matched_slug": "the-marq-communities",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 2
+  },
+  {
+    "group_name": "lavista",
+    "matched_slug": "la-vista-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 20
+  },
+  {
+    "group_name": "cornerstone",
+    "matched_slug": "cornerstone-development",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "pyramids",
+    "matched_slug": "pyramids-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "al qamzi",
+    "matched_slug": "al-qamzi-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 1
+  },
+  {
+    "group_name": "hassan allam holding",
+    "matched_slug": "hassan-allam-properties",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 7
+  },
+  {
+    "group_name": "hassan allam",
+    "matched_slug": "hassan-allam-properties",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 7
+  },
+  {
+    "group_name": "dorra",
+    "matched_slug": "dorra-group",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 2
+  },
+  {
+    "group_name": "arkan palm",
+    "matched_slug": "arkan-palm",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 2
+  },
+  {
+    "group_name": "amorada",
+    "matched_slug": "ora",
+    "in_compounds": false,
+    "in_existing_dirs": true,
+    "projects_count": 0
+  },
+  {
+    "group_name": "liberty",
+    "matched_slug": "liberty-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "rock/elbatal",
+    "matched_slug": "el-batal-developments",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 5
+  },
+  {
+    "group_name": "karma",
+    "matched_slug": "karma-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "aljazi",
+    "matched_slug": "aljazi-egypt",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "HDP",
+    "matched_slug": "hdp-housing-and-development-properties",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "Morshedy group",
+    "matched_slug": "morshedy-group",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 1
+  },
+  {
+    "group_name": "arabia dev",
+    "matched_slug": "arabia-holding",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 2
+  },
+  {
+    "group_name": "el ezz",
+    "matched_slug": "el-ezz-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "borouj misr",
+    "matched_slug": "al-borouj-misr-developments",
+    "in_compounds": true,
+    "in_existing_dirs": false,
+    "projects_count": 1
+  },
+  {
+    "group_name": "qatari diar",
+    "matched_slug": "qatari-diar",
+    "in_compounds": true,
+    "in_existing_dirs": true,
+    "projects_count": 2
+  },
+  {
+    "group_name": "golden view",
+    "matched_slug": "golden-view-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  },
+  {
+    "group_name": "ADC",
+    "matched_slug": "adc-developments",
+    "in_compounds": false,
+    "in_existing_dirs": false,
+    "projects_count": 0
+  }
+]

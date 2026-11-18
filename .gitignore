@@ -52,3 +52,8 @@ public/**/*.avi
 
 # Verified coordinates JSON (generated at build time)
 src/data/verified-coordinates.json
+
+# WhatsApp Auth Session & Inbox
+services/whatsapp-listener/session/
+data/availability/inbox/
+data/availability/staged/

@@ -1,0 +1,26 @@
+{
+  "description": "Mapping of WhatsApp Group IDs (JID) and names to developers in Property Atlas",
+  "groups": {
+    "sample-group-id@g.us": {
+      "name": "Al Ahly Sabbour Official Brokers",
+      "developer_slug": "al-ahly-sabbour",
+      "developer_name": "Al Ahly Sabbour",
+      "is_master_group": true,
+      "auto_apply": false,
+      "notes": "Sends weekly master stock and flash releases"
+    },
+    "sample-group-madinet@g.us": {
+      "name": "Madinet Masr Sales & Brokers",
+      "developer_slug": "madinet-masr",
+      "developer_name": "Madinet Masr",
+      "is_master_group": true,
+      "auto_apply": false,
+      "notes": "Daily units availability report"
+    }
+  },
+  "default_settings": {
+    "auto_apply": false,
+    "require_admin_approval_if_drop_percent": 30,
+    "notify_on_change": true
+  }
+}

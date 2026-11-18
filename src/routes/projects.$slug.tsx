@@ -1,6 +1,4 @@
-import { PdfProposalModal } from "@/components/ui/PdfProposalModal";
-import { ProposalSetupDialog, type ProposalAgentClientDetails } from "@/components/ui/ProposalSetupDialog";
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+﻿import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/layout/Shell";
 import { MapClient } from "@/components/map/MapClient";
@@ -17,7 +15,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import {
-  FileText,
   ZoomOut,
   RotateCcw,
   Minimize2,
@@ -402,10 +399,6 @@ function CompoundPage() {
 
   // Master plan popup state
   const [masterPlanOpen, setMasterPlanOpen] = useState(false);
-  // Proposal PDF modal state
-  const [proposalModalOpen, setProposalModalOpen] = useState(false);
-  const [proposalSetupOpen, setProposalSetupOpen] = useState(false);
-  const [proposalDetails, setProposalDetails] = useState<ProposalAgentClientDetails | null>(null);
   // Read live compound data from the store to get admin-updated fields
   const storeCompounds = useStore((s) => s.compoundsList);
   const liveProject = storeCompounds?.find((p: any) => p.slug === c.slug);
@@ -632,13 +625,7 @@ function CompoundPage() {
               )}
             </button>
 
-            <button
-              onClick={() => setProposalSetupOpen(true)}
-              className="inline-flex items-center gap-2 rounded-xl bg-slate-900 border border-white/10 px-4 py-2.5 text-sm font-bold text-white shadow-md hover:bg-slate-800 hover:border-amber-500/50 transition-all duration-200 cursor-pointer"
-            >
-              <FileText className="h-4 w-4 text-amber-400" />
-              Create Client Proposal PDF
-            </button>
+
           </div>
 
           {/* Master Plan Popup — always available, shows image or coming-soon */}
@@ -1680,48 +1667,6 @@ function CompoundPage() {
           </form>
         </DialogContent>
       </Dialog>
-    
-      {/* Pre-Proposal Agent & Client Setup Dialog */}
-      <ProposalSetupDialog
-        isOpen={proposalSetupOpen}
-        projectName={c.name}
-        projectSlug={c.slug}
-        onClose={() => setProposalSetupOpen(false)}
-        onConfirm={(details) => {
-          setProposalDetails(details);
-          setProposalSetupOpen(false);
-          setProposalModalOpen(true);
-        }}
-      />
-
-      {/* Client Proposal PDF Modal */}
-      {proposalModalOpen && (
-        <PdfProposalModal
-          data={{
-            projectName: c.name,
-            projectSlug: c.slug,
-            developerName: c.developer,
-            location: destination ? `${destination.name}, Egypt` : `${c.destination.replace("-", " ").toUpperCase()}, Egypt`,
-            unitCode: proposalDetails?.unitCode,
-            unitType: proposalDetails?.unitType || (c.types && c.types.length > 0 ? c.types[0] : "Luxury Layout"),
-            areaSqm: proposalDetails?.areaSqm || c.unitSizes || "145",
-            startingPriceEgp: proposalDetails?.startingPriceEgp || (c.priceFrom || 10) * 1000000,
-            paymentPlanStr: proposalDetails?.paymentPlanStr || c.paymentPlan || "10% DP over 8 Yrs",
-            dpPct: 10,
-            durationYrs: 8,
-            deliveryNote: proposalDetails?.deliveryNote || String(c.deliveryYear),
-            finishing: proposalDetails?.finishing,
-            amenities: c.amenities,
-            description: c.blurb,
-            clientName: proposalDetails?.clientName,
-            agentName: proposalDetails?.agentName,
-            agentPhone: proposalDetails?.agentPhone,
-            agentEmail: proposalDetails?.agentEmail,
-            agentTitle: proposalDetails?.agentTitle,
-          }}
-          onClose={() => setProposalModalOpen(false)}
-        />
-      )}
     </Shell>
   );
 }
