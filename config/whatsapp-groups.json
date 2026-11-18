@@ -4,7 +4,7 @@
     "sample-group-id@g.us": {
       "name": "Al Ahly Sabbour Official Brokers",
       "developer_slug": "al-ahly-sabbour",
-      "developer_name": "Al Ahly Sabbour",
+      "developer_name": "Al Ahly Sabbour Developments",
       "is_master_group": true,
       "auto_apply": false,
       "notes": "Sends weekly master stock and flash releases"
@@ -12,7 +12,7 @@
     "sample-group-madinet@g.us": {
       "name": "Madinet Masr Sales & Brokers",
       "developer_slug": "madinet-masr",
-      "developer_name": "Madinet Masr",
+      "developer_name": "Madinet Masr (MNHD)",
       "is_master_group": true,
       "auto_apply": false,
       "notes": "Daily units availability report"
@@ -99,9 +99,9 @@
     },
     "120363049213674680@g.us": {
       "name": "Akadia - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Akadia - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "akadia-developments",
+      "developer_name": "Akadia Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 11
     },
@@ -115,9 +115,9 @@
     },
     "120363039557827991@g.us": {
       "name": "Arco - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Arco - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "arco",
+      "developer_name": "Arco Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 13
     },
@@ -139,9 +139,9 @@
     },
     "120363411646743724@g.us": {
       "name": "Remal Developments - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Remal Developments - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "remal-developments",
+      "developer_name": "Remal Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 7
     },
@@ -283,9 +283,9 @@
     },
     "120363038306713373@g.us": {
       "name": "Edge Holding-TAI- Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Edge Holding-TAI- Premium",
-      "is_master_group": false,
+      "developer_slug": "edge-holding",
+      "developer_name": "Edge Holding",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 13
     },
@@ -315,9 +315,9 @@
     },
     "120363048452187340@g.us": {
       "name": "Diar2 - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Diar2 - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "diar-developments",
+      "developer_name": "Diar Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 15
     },
@@ -355,9 +355,9 @@
     },
     "120363412853441389@g.us": {
       "name": "Gro Development - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Gro Development - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "gro-development",
+      "developer_name": "Gro Development",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 8
     },
@@ -371,9 +371,9 @@
     },
     "120363335088194152@g.us": {
       "name": "Torec - TAI - Premium ",
-      "developer_slug": "general-developer",
-      "developer_name": "Torec - TAI - Premium ",
-      "is_master_group": false,
+      "developer_slug": "torec-developments",
+      "developer_name": "Torec Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 15
     },
@@ -435,9 +435,9 @@
     },
     "120363429716805179@g.us": {
       "name": "Najma - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Najma - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "najma-developments",
+      "developer_name": "Najma Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 12
     },
@@ -523,8 +523,8 @@
     },
     "120363023735207113@g.us": {
       "name": "Amorada - TAI - Premium",
-      "developer_slug": "ora-developers",
-      "developer_name": "Ora Developers",
+      "developer_slug": "amorada-developments",
+      "developer_name": "Amorada Developments",
       "is_master_group": true,
       "auto_apply": false,
       "participant_count": 18
@@ -611,9 +611,9 @@
     },
     "120363046256579158@g.us": {
       "name": "EG Towers🇩🇪EINS - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "EG Towers🇩🇪EINS - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "eg-towers",
+      "developer_name": "EG Towers",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 9
     },
@@ -699,9 +699,9 @@
     },
     "120363191320527362@g.us": {
       "name": "Amazon | TAI-Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Amazon | TAI-Premium",
-      "is_master_group": false,
+      "developer_slug": "amazon-developments",
+      "developer_name": "Amazon Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 17
     },
@@ -715,9 +715,9 @@
     },
     "120363032137628704@g.us": {
       "name": "AlAssema - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "AlAssema - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "al-assema-developments",
+      "developer_name": "Al Assema Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 11
     },
@@ -755,9 +755,9 @@
     },
     "120363040404281299@g.us": {
       "name": "Developer X-TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Developer X-TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "developer-x",
+      "developer_name": "Developer X",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 16
     },
@@ -883,9 +883,9 @@
     },
     "120363042337183143@g.us": {
       "name": "El Baron - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "El Baron - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "el-baron-developments",
+      "developer_name": "El Baron Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 8
     },
@@ -963,9 +963,9 @@
     },
     "120363308000704566@g.us": {
       "name": "Koora",
-      "developer_slug": "ora-developers",
-      "developer_name": "Ora Developers",
-      "is_master_group": true,
+      "developer_slug": "general-developer",
+      "developer_name": "Koora",
+      "is_master_group": false,
       "auto_apply": false,
       "participant_count": 7
     },
@@ -1003,9 +1003,9 @@
     },
     "120363031016740167@g.us": {
       "name": "Rock/ElBatal -Premium TAI",
-      "developer_slug": "general-developer",
-      "developer_name": "Rock/ElBatal -Premium TAI",
-      "is_master_group": false,
+      "developer_slug": "el-batal-developments",
+      "developer_name": "El Batal Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 15
     },
@@ -1107,17 +1107,17 @@
     },
     "120363419792531664@g.us": {
       "name": "El borouj 2 - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "El borouj 2 - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "imkan-misr",
+      "developer_name": "Imkan Misr (Al Burouj)",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 10
     },
     "120363376209406883@g.us": {
       "name": "Centrada - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Centrada - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "centrada-developments",
+      "developer_name": "Centrada Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 15
     },
@@ -1187,9 +1187,9 @@
     },
     "120363045346817803@g.us": {
       "name": "El Morshedy-TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "El Morshedy-TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "morshedy-group",
+      "developer_name": "El Morshedy Group",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 10
     },
@@ -1363,17 +1363,17 @@
     },
     "120363029905214155@g.us": {
       "name": "Bonyan - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Bonyan - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "bonyan-developments",
+      "developer_name": "Bonyan Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 10
     },
     "120363338691577696@g.us": {
       "name": "DAIMA & TAI premium ",
-      "developer_slug": "general-developer",
-      "developer_name": "DAIMA & TAI premium ",
-      "is_master_group": false,
+      "developer_slug": "daima-developments",
+      "developer_name": "Daima Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 11
     },
@@ -1499,9 +1499,9 @@
     },
     "120363024932111809@g.us": {
       "name": "Cleopatra - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Cleopatra - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "cleopatra-developments",
+      "developer_name": "Cleopatra Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 15
     },
@@ -1595,17 +1595,17 @@
     },
     "120363231902535672@g.us": {
       "name": "CapitalHills & Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "CapitalHills & Premium",
-      "is_master_group": false,
+      "developer_slug": "capital-hills-developments",
+      "developer_name": "Capital Hills Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 13
     },
     "120363338399135680@g.us": {
       "name": "Dal Developments - TAI - Premium ",
-      "developer_slug": "general-developer",
-      "developer_name": "Dal Developments - TAI - Premium ",
-      "is_master_group": false,
+      "developer_slug": "dal-developments",
+      "developer_name": "DAL Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 11
     },
@@ -1643,25 +1643,25 @@
     },
     "120363026523741027@g.us": {
       "name": "Eco West - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Eco West - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "new-city-developments",
+      "developer_name": "New City Developments (Eco West)",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 10
     },
     "120363024172628969@g.us": {
       "name": "Al Dau - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Al Dau - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "al-dau-development",
+      "developer_name": "Al Dau Development",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 12
     },
     "120363045999283899@g.us": {
       "name": "CPD - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "CPD - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "cpd-developments",
+      "developer_name": "CPD Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 14
     },
@@ -1699,9 +1699,9 @@
     },
     "120363426835563146@g.us": {
       "name": "Paragon - TAI - premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Paragon - TAI - premium",
-      "is_master_group": false,
+      "developer_slug": "paragon-developments",
+      "developer_name": "Paragon Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 10
     },
@@ -1715,9 +1715,9 @@
     },
     "120363397732222324@g.us": {
       "name": "Dal Dev - TAI -Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Dal Dev - TAI -Premium",
-      "is_master_group": false,
+      "developer_slug": "dal-developments",
+      "developer_name": "DAL Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 14
     },
@@ -1731,9 +1731,9 @@
     },
     "120363138417041275@g.us": {
       "name": "Royal-tai- premium ",
-      "developer_slug": "general-developer",
-      "developer_name": "Royal-tai- premium ",
-      "is_master_group": false,
+      "developer_slug": "royal-developments",
+      "developer_name": "Royal Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 36
     },
@@ -1763,17 +1763,17 @@
     },
     "120363046303914864@g.us": {
       "name": "Areej - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Areej - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "areej-developments",
+      "developer_name": "Areej Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 21
     },
     "120363372257957585@g.us": {
       "name": "Premium-TAI - Abyat El kuwteya",
-      "developer_slug": "general-developer",
-      "developer_name": "Premium-TAI - Abyat El kuwteya",
-      "is_master_group": false,
+      "developer_slug": "abyat-el-kuwteya",
+      "developer_name": "Abyat El Kuwteya",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 21
     },
@@ -1811,9 +1811,9 @@
     },
     "120363430075107811@g.us": {
       "name": "Amad -TAI -premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Amad -TAI -premium",
-      "is_master_group": false,
+      "developer_slug": "amad-developments",
+      "developer_name": "Amad Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 10
     },
@@ -1851,9 +1851,9 @@
     },
     "120363045289327201@g.us": {
       "name": "Dolmen (R3)-TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Dolmen (R3)-TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "dolmen-developments",
+      "developer_name": "Dolmen Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 5
     },
@@ -1883,9 +1883,9 @@
     },
     "120363414062441721@g.us": {
       "name": "Koora",
-      "developer_slug": "ora-developers",
-      "developer_name": "Ora Developers",
-      "is_master_group": true,
+      "developer_slug": "general-developer",
+      "developer_name": "Koora",
+      "is_master_group": false,
       "auto_apply": false,
       "participant_count": 5
     },
@@ -1955,9 +1955,9 @@
     },
     "120363020551024280@g.us": {
       "name": "Palm Hills- TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Palm Hills- TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "palm-hills-developments",
+      "developer_name": "Palm Hills Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 44
     },
@@ -1987,9 +1987,9 @@
     },
     "120363419145731168@g.us": {
       "name": "Nations Of Sky - TAI Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Nations Of Sky - TAI Premium",
-      "is_master_group": false,
+      "developer_slug": "sky-ad-developments",
+      "developer_name": "Sky AD Developments (Nations of Sky)",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 73
     },
@@ -2075,17 +2075,17 @@
     },
     "120363149190679013@g.us": {
       "name": "Address Exclusive - TAI Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Address Exclusive - TAI Premium",
-      "is_master_group": false,
+      "developer_slug": "the-address-investments",
+      "developer_name": "The Address Investments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 13
     },
     "120363030099287607@g.us": {
       "name": "Wadi Degla - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Wadi Degla - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "wadi-degla-developments",
+      "developer_name": "Wadi Degla Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 18
     },
@@ -2099,9 +2099,9 @@
     },
     "120363047129345445@g.us": {
       "name": "Anchor - TAI - Premium",
-      "developer_slug": "general-developer",
-      "developer_name": "Anchor - TAI - Premium",
-      "is_master_group": false,
+      "developer_slug": "anchor-developments",
+      "developer_name": "Anchor Developments",
+      "is_master_group": true,
       "auto_apply": false,
       "participant_count": 13
     },
@@ -2151,7 +2151,7 @@
     "require_admin_approval_if_drop_percent": 30,
     "notify_on_change": true
   },
-  "last_synced_at": "2026-11-18T21:58:27.849Z",
-  "total_groups": 266,
-  "matched_count": 91
+  "last_synced_at": "2026-11-18T23:59:02.715Z",
+  "total_groups": 268,
+  "matched_count": 133
 }
