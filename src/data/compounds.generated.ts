@@ -1,4 +1,4 @@
-// Auto-generated from Command Center save action — do not edit by hand.
+﻿// Auto-generated from Command Center save action — do not edit by hand.
 import type { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = [
@@ -15809,7 +15809,7 @@ export const compoundsGenerated: Compound[] = [
       "Ready to Move & Ready to Deliver",
       "French Parisian Design"
     ],
-    "paymentPlan": "5%+5% DP over 3 to 12 years",
+    "paymentPlan": "5% DP / 8 years | 10% DP / 10 years | 4-year plan available",
     "masterPlanUrl": "/masterplans/new-garden-city-r5.svg"
   },
   {
