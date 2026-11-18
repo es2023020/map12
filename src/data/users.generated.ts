@@ -16,6 +16,6 @@ export const usersGenerated: any[] = [
     "tier": "BrokerageAdmin",
     "whatsappSendsCount": 0,
     "lastLoginAt": 1795038362439,
-    "timeSpent": 7200
+    "timeSpent": 7215
   }
 ];
