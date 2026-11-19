@@ -78,22 +78,32 @@ export function extractAllPropertyTypes(text: string): string[] {
  * Extracts price in EGP from text
  */
 export function extractPriceEGP(text: string): number {
-  // Check millions notation (e.g. "10.5m", "10.5 m", "10.5 million", "10.5 مليون")
-  const millionMatch = text.match(/(\d+(?:\.\d+)?)\s*(?:m|million|مليون)/i);
-  if (millionMatch) {
-    const val = parseFloat(millionMatch[1]);
-    if (!isNaN(val) && val > 0 && val < 5000) {
-      return Math.round(val * 1000000);
-    }
+  // 1. Check explicit price prefix with formatted number e.g. "السعر: 14,800,000" or "price: 15000000"
+  const explicitFormatted = text.match(/(?:سعر|price|egp|جنيه|total|tot)\s*[:=]?\s*(\d{1,3}(?:,\d{3})+|\d{7,10})/i);
+  if (explicitFormatted) {
+    const num = parseFloat(explicitFormatted[1].replace(/,/g, ""));
+    if (!isNaN(num) && num >= 500000) return Math.round(num);
   }
 
-  // Check direct full numbers e.g. "10,500,000" or "10500000"
-  const fullPriceMatch = text.match(/(?:سعر|price|egp|جنيه)?\s*[:=]?\s*(\d{1,3}(?:,\d{3})+|\d{7,10})/i);
+  // 2. Check explicit price prefix with millions e.g. "السعر: 14.5 مليون" or "price: 14m"
+  const explicitMillion = text.match(/(?:سعر|price|egp|جنيه|starts?\s*from|تبدأ\s*من|يبدأ\s*من)\s*[:=]?\s*(\d+(?:\.\d+)?)\s*(?:million|مليون|m\b)/i);
+  if (explicitMillion) {
+    const val = parseFloat(explicitMillion[1]);
+    if (!isNaN(val) && val > 0 && val < 5000) return Math.round(val * 1000000);
+  }
+
+  // 3. Check any 7+ digit number or comma-separated number (e.g. "14,800,000")
+  const fullPriceMatch = text.match(/(\d{1,3}(?:,\d{3}){2,})/);
   if (fullPriceMatch) {
     const num = parseFloat(fullPriceMatch[1].replace(/,/g, ""));
-    if (!isNaN(num) && num >= 500000) {
-      return Math.round(num);
-    }
+    if (!isNaN(num) && num >= 500000) return Math.round(num);
+  }
+
+  // 4. Check word "مليون" or "million" with number (e.g. "14 مليون", "14.5 million")
+  const wordMillionMatch = text.match(/(\d+(?:\.\d+)?)\s*(?:million|مليون)/i);
+  if (wordMillionMatch) {
+    const val = parseFloat(wordMillionMatch[1]);
+    if (!isNaN(val) && val > 0 && val < 5000) return Math.round(val * 1000000);
   }
 
   return 0;
@@ -244,7 +254,45 @@ export function extractCandidateProjectName(text: string): string {
 
   const lines = text.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
 
-  // 1. Check explicit prefix markers anywhere in text: "Compound: XYZ", "كمبوند كذا", "مشروع كذا"
+  // 0. Check bold markdown tokens e.g. *Jadie Residence* or *Riza 2 Compound*
+  const starMatches = text.match(/\*([^*]{3,40})\*/g);
+  if (starMatches) {
+    for (const sm of starMatches) {
+      const clean = sm.replace(/[*📍✨🔥🚀⭐💎🌟#_]/g, "").trim();
+      const lowerClean = clean.toLowerCase();
+      if (
+        lowerClean.startsWith("شقة") ||
+        lowerClean.startsWith("شقه") ||
+        lowerClean.startsWith("فيلا") ||
+        lowerClean.startsWith("المساحة") ||
+        lowerClean.startsWith("السعر") ||
+        lowerClean.startsWith("مقدم") ||
+        lowerClean.includes("خصم") ||
+        lowerClean.includes("discount") ||
+        genericKeywords.some((k) => lowerClean.includes(k))
+      ) {
+        continue;
+      }
+      if (clean.length >= 3 && !lowerClean.includes("سنين") && !lowerClean.includes("years")) {
+        return clean.replace(/\s+(?:by|من شركة|شركة)\s+.*$/i, "").trim();
+      }
+    }
+  }
+
+  // 1. Check "XYZ Compound" or "XYZ Residence" or "XYZ Project" (Name before suffix)
+  for (const line of lines) {
+    const cleaned = line.replace(/[📍✨🔥🚀⭐💎🌟*#_]/g, "").trim();
+    const suffixMatch = cleaned.match(/^([A-Za-z0-9\u0600-\u06FF\s-]{2,30})\s+(?:compound|residence|project|heights|hills|views|park|district|city|plaza|mall|resort|tower|towers|كمبوند|مشروع)/i);
+    if (suffixMatch && suffixMatch[1].trim().length >= 2) {
+      const candidate = suffixMatch[1].trim();
+      const lower = candidate.toLowerCase();
+      if (!genericKeywords.some((k) => lower === k)) {
+        return candidate.replace(/\s+(?:by|من شركة|شركة)\s+.*$/i, "").trim();
+      }
+    }
+  }
+
+  // 1b. Check explicit prefix markers: "Compound: XYZ", "كمبوند كذا", "مشروع كذا" (Name after prefix)
   for (const line of lines) {
     const cleaned = line.replace(/[📍✨🔥🚀⭐💎🌟*#_]/g, "").trim();
     const prefixMatch = cleaned.match(/(?:compound|project|كمبوند|مشروع)\s*[:=]?\s*([A-Za-z0-9\u0600-\u06FF\s-]+)/i);
@@ -252,7 +300,10 @@ export function extractCandidateProjectName(text: string): string {
       const candidate = prefixMatch[1].trim().split(/\s{2,}|[|–-]/)[0].trim();
       const lower = candidate.toLowerCase();
       if (!genericKeywords.some((k) => lower === k)) {
-        return candidate.replace(/(بالساحل|بالشيخ|بالتجمع|بالعاصمة|في الساحل|في زايد).*$/, "").trim();
+        return candidate
+          .replace(/(بالساحل|بالشيخ|بالتجمع|بالعاصمة|في الساحل|في زايد|في قلب).*$/, "")
+          .replace(/\s+(?:by|من شركة|شركة)\s+.*$/i, "")
+          .trim();
       }
     }
   }
@@ -352,6 +403,9 @@ export function parseWhatsAppTextMessage(rawText: string, groupDevSlug?: string)
   const isNewLaunch =
     lower.includes("new launch") ||
     lower.includes("launching") ||
+    lower.includes("launch") ||
+    lower.includes("لونش") ||
+    lower.includes("لانش") ||
     lower.includes("opening soon") ||
     lower.includes("exclusive launch") ||
     lower.includes("now launching") ||
@@ -427,7 +481,30 @@ export function parseWhatsAppTextMessage(rawText: string, groupDevSlug?: string)
   }
 
   // 3. Detect Unit Release or Inventory Listing (for groups without sheets)
+  const hasUnitType =
+    lower.includes("شقة") ||
+    lower.includes("شقه") ||
+    lower.includes("فيلا") ||
+    lower.includes("تاون") ||
+    lower.includes("توين") ||
+    lower.includes("شاليه") ||
+    lower.includes("مكتب") ||
+    lower.includes("عيادة") ||
+    lower.includes("عياده") ||
+    lower.includes("دوبلكس") ||
+    lower.includes("بنتهاوس") ||
+    lower.includes("apartment") ||
+    lower.includes("villa") ||
+    lower.includes("townhouse") ||
+    lower.includes("twin house") ||
+    lower.includes("chalet") ||
+    lower.includes("office") ||
+    lower.includes("clinic") ||
+    lower.includes("duplex") ||
+    lower.includes("penthouse");
+
   const isRelease =
+    hasUnitType ||
     lower.includes("متاح") ||
     lower.includes("available") ||
     lower.includes("release") ||
@@ -435,6 +512,7 @@ export function parseWhatsAppTextMessage(rawText: string, groupDevSlug?: string)
     lower.includes("back on market") ||
     lower.includes("last unit") ||
     lower.includes("فرصة") ||
+    lower.includes("فرصه") ||
     lower.includes("وحدة مميزة") ||
     lower.includes("عرض") ||
     lower.includes("inventory") ||

@@ -4328,8 +4328,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Standalone Villa"
+      "Standalone Villa",
+      "Apartment"
     ],
     "amenities": [
       "Clubhouse",

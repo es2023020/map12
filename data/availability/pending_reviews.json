@@ -1,5 +1,81 @@
 {
   "autonomous_mode": true,
   "pending_updates": [],
-  "discovered_projects": []
+  "discovered_projects": [
+    {
+      "id": "inventory_1795080753833_jadie-residence",
+      "timestamp": "2026-11-19T09:32:33.833Z",
+      "source": "WHATSAPP_TEXT_INVENTORY",
+      "developerSlug": "concrete-developments",
+      "developerName": "Concrete Developments",
+      "suggestedName": "Jadie Residence",
+      "suggestedSlug": "jadie-residence",
+      "destination": "new-cairo",
+      "priceFromM": 14.8,
+      "types": [
+        "Apartment"
+      ],
+      "unitSizes": "169 m²",
+      "paymentPlan": "Up to 8 Years Installments",
+      "blurb": "*شقه 4 غرف بقلب التـجمع الخامس* *Jadie Residence* 4 Bedroom *المساحة :169m* *السعر : 14,800,000* مقدم 10% واقساط على 8 سنين...",
+      "rawText": "*شقه 4 غرف بقلب التـجمع الخامس* *Jadie Residence* 4 Bedroom *المساحة :169m* *السعر : 14,800,000* مقدم 10% واقساط على 8 سنين",
+      "units": [
+        {
+          "id": "",
+          "type": "Apartment",
+          "beds": 4,
+          "areaSqm": 169,
+          "priceEGP": 14800000,
+          "status": "Available"
+        }
+      ],
+      "status": "PENDING_APPROVAL"
+    },
+    {
+      "id": "inventory_1795080753797_v40-district",
+      "timestamp": "2026-11-19T09:32:33.797Z",
+      "source": "WHATSAPP_TEXT_INVENTORY",
+      "developerSlug": "city-edge-developments",
+      "developerName": "City Edge Developments",
+      "suggestedName": "\udfe2 V40 DISTRICT",
+      "suggestedSlug": "v40-district",
+      "destination": "new-cairo",
+      "priceFromM": 12,
+      "types": [
+        "Office"
+      ],
+      "unitSizes": "85 m²",
+      "blurb": "🏢 V40 DISTRICT | NEW CAIRO By City Edge Developments  🔥  مكتب إداري على شارع التسعين! مساحة 85م بسعر 12 مليون استلام 2027...",
+      "rawText": "🏢 V40 DISTRICT | NEW CAIRO By City Edge Developments  🔥  مكتب إداري على شارع التسعين! مساحة 85م بسعر 12 مليون استلام 2027",
+      "units": [
+        {
+          "id": "",
+          "type": "Office",
+          "beds": 2,
+          "areaSqm": 85,
+          "priceEGP": 12000000,
+          "status": "Available"
+        }
+      ],
+      "status": "PENDING_APPROVAL"
+    },
+    {
+      "id": "launch_1795080753705_riza-2-compound",
+      "timestamp": "2026-11-19T09:32:33.705Z",
+      "source": "WHATSAPP_TEXT",
+      "developerSlug": "eagles-developments",
+      "developerName": "Eagles Developments",
+      "suggestedName": "Riza 2️⃣ Compound",
+      "suggestedSlug": "riza-2-compound",
+      "destination": "sheikh-zayed",
+      "priceFromM": 6.5,
+      "types": [
+        "Apartment"
+      ],
+      "paymentPlan": "Up to 8 Years Installments",
+      "blurb": "*Riza 2️⃣ Compound* 🍂🍂 في قلب الشيخ زايد القديمه 😍 *لونش جديد 🚨* *Discount 7%* اسعار تبدا من 6.5 مليون ومقدم 10% وتقسيط 8 سنوات...",
+      "rawText": "*Riza 2️⃣ Compound* 🍂🍂 في قلب الشيخ زايد القديمه 😍 *لونش جديد 🚨* *Discount 7%* اسعار تبدا من 6.5 مليون ومقدم 10% وتقسيط 8 سنوات",
+      "status": "PENDING_APPROVAL"
+    }
+  ]
 }

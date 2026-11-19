@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
 import { fileURLToPath } from "url";
-import { evaluateIncomingDocument, markHashProcessed, calculateFileHash } from "./gatekeeper";
+import { evaluateIncomingDocument, markHashProcessed, calculateFileHash, getDeveloperSlugForProject } from "./gatekeeper";
 import { parseExcelWorkbook } from "./parsers/excel-parser";
 import { reconcileDeveloperMasterInventory, reconcileSingleProject, markProjectAsSoldOut, appendUnitToProject, ReconcileResult } from "./reconciliation";
 import { parseWhatsAppTextMessage } from "./chat-parser";
@@ -127,7 +127,8 @@ export async function processIncomingDocument(
       );
     } else {
       for (const [slug, units] of parsed.projectUnits.entries()) {
-        const res = reconcileSingleProject(devSlug, slug, units, filename, overrideTarget);
+        const targetDev = getDeveloperSlugForProject(slug) || devSlug;
+        const res = reconcileSingleProject(targetDev, slug, units, filename, overrideTarget);
         reconcileResults.push(res);
       }
     }

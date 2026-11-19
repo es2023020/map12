@@ -7,6 +7,7 @@ import { fileURLToPath } from "url";
 import { NormalizedUnit, DiffReport, AnomalyWarning } from "./types";
 import { deduplicateUnits, computeUnitFingerprint } from "./dedup";
 import { validateUnitsSanity, checkInventoryDropRisk } from "./quality-guard";
+import { getDeveloperSlugForProject } from "./gatekeeper";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..", "..");
@@ -207,7 +208,8 @@ export function reconcileDeveloperMasterInventory(
 
   // 1. Reconcile projects present in this master sheet
   for (const [projSlug, units] of parsedProjectUnits.entries()) {
-    const res = reconcileSingleProject(developerSlug, projSlug, units, sourceDesc, overrideTargetDir);
+    const targetDev = getDeveloperSlugForProject(projSlug) || developerSlug;
+    const res = reconcileSingleProject(targetDev, projSlug, units, sourceDesc, overrideTargetDir);
     results.push(res);
   }
 
