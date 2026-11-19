@@ -54,9 +54,10 @@ export function normalizeUnitId(raw?: string | number): string {
  * If unit has no ID: combines (projectSlug, type, beds, rounded area, cluster, price rounded to 100K).
  */
 export function computeUnitFingerprint(projectSlug: string, unit: Partial<NormalizedUnit>): string {
+  const safeProj = (projectSlug || "general").toLowerCase();
   const normId = normalizeUnitId(unit.rawUnitId || unit.id);
   if (normId && normId.length > 1) {
-    return `${projectSlug.toLowerCase()}::ID::${normId}`;
+    return `${safeProj}::ID::${normId}`;
   }
 
   const typeSlug = (unit.type || "Apartment").toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -65,7 +66,7 @@ export function computeUnitFingerprint(projectSlug: string, unit: Partial<Normal
   const cluster = (unit.cluster || "GEN").toLowerCase().replace(/[^a-z0-9]+/g, "-");
   const price100k = Math.round((unit.priceEGP || 0) / 100000);
 
-  return `${projectSlug.toLowerCase()}::SYN::${typeSlug}::${beds}BR::${area}SQM::${cluster}::${price100k}`;
+  return `${safeProj}::SYN::${typeSlug}::${beds}BR::${area}SQM::${cluster}::${price100k}`;
 }
 
 /**

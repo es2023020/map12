@@ -65,7 +65,11 @@ export function approveAndAddDiscoveredProject(
     }
 
     const compounds = JSON.parse(jsonMatch[1]);
-    const slug = discovered.suggestedSlug || discovered.suggestedName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    const slug =
+      discovered.suggestedSlug ||
+      (discovered.suggestedName
+        ? discovered.suggestedName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        : "new-project");
 
     // Check if already exists
     if (compounds.some((c: any) => c.slug === slug)) {
@@ -75,7 +79,7 @@ export function approveAndAddDiscoveredProject(
 
     const newCompound: any = {
       slug,
-      name: discovered.suggestedName,
+      name: discovered.suggestedName || slug,
       developer: discovered.developerName,
       developerSlug: discovered.developerSlug,
       destination: discovered.destination || "new-cairo",
@@ -88,7 +92,7 @@ export function approveAndAddDiscoveredProject(
       paymentPlan: discovered.paymentPlan || "10% Down Payment over 8 years equal installments",
       types: discovered.types && discovered.types.length > 0 ? discovered.types : ["Apartment", "Standalone Villa"],
       isNewLaunch: asNewLaunch,
-      blurb: discovered.blurb || `${discovered.suggestedName} is an exclusive new development by ${discovered.developerName}.`,
+      blurb: discovered.blurb || `${discovered.suggestedName || slug} is an exclusive new development by ${discovered.developerName}.`,
       amenities: [
         "Green Spaces & Landscaping",
         "Clubhouse & Commercial Hub",
@@ -108,7 +112,9 @@ export function approveAndAddDiscoveredProject(
       try {
         const aliases = JSON.parse(fs.readFileSync(ALIASES_FILE, "utf8"));
         aliases.compounds = aliases.compounds || {};
-        aliases.compounds[discovered.suggestedName.toLowerCase().trim()] = slug;
+        if (discovered.suggestedName) {
+          aliases.compounds[discovered.suggestedName.toLowerCase().trim()] = slug;
+        }
         aliases.compounds[slug.replace(/-/g, " ")] = slug;
         fs.writeFileSync(ALIASES_FILE, JSON.stringify(aliases, null, 2), "utf8");
       } catch {}

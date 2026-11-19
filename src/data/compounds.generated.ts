@@ -3,6 +3,110 @@ import type { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = [
   {
+    "slug": "rosail-city",
+    "name": "Rosail City",
+    "developer": "Khaled Sabry Holding",
+    "developerSlug": "khaled-sabry-holding",
+    "destination": "new-cairo",
+    "city": "new cairo, Egypt",
+    "priceFrom": 8.2,
+    "areaSize": "Master-planned Community",
+    "unitSizes": "90–320 m²",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "paymentPlan": "Up to 10 Years Installments",
+    "types": [
+      "Standalone Villa"
+    ],
+    "isNewLaunch": true,
+    "blurb": "🚨 SPECIAL VILLA OFFER | ROSAIL CITY 🏡  فرصة مميزة لعميلك يمتلك فيلا بسعر استثنائي! 🔥  💰 Starting from 8.2M EGP خصم 50% – كاش على سنة!  📐 200م²  + Garden من 60 لـ145م² 🏠 Ground + First Floor 🛏️ ...",
+    "amenities": [
+      "Green Spaces & Landscaping",
+      "Clubhouse & Commercial Hub",
+      "24/7 Security & Gated Community",
+      "Water Features & Lagoons",
+      "Jogging & Cycling Tracks"
+    ]
+  },
+  {
+    "slug": "riza-2-compound",
+    "name": "Riza 2 Compound",
+    "developer": "Eagles Developments",
+    "developerSlug": "eagles-developments",
+    "destination": "sheikh-zayed",
+    "city": "sheikh zayed, Egypt",
+    "priceFrom": 6.5,
+    "areaSize": "Master-planned Community",
+    "unitSizes": "90–320 m²",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "paymentPlan": "Up to 8 Years Installments",
+    "types": [
+      "Apartment"
+    ],
+    "isNewLaunch": true,
+    "blurb": "*Riza 2️⃣ Compound* 🍂🍂 في قلب الشيخ زايد القديمه 😍 *لونش جديد 🚨* *Discount 7%* اسعار تبدا من 6.5 مليون ومقدم 10% وتقسيط 8 سنوات...",
+    "amenities": [
+      "Green Spaces & Landscaping",
+      "Clubhouse & Commercial Hub",
+      "24/7 Security & Gated Community",
+      "Water Features & Lagoons",
+      "Jogging & Cycling Tracks"
+    ]
+  },
+  {
+    "slug": "v40-district",
+    "name": "V40 District",
+    "developer": "City Edge Developments",
+    "developerSlug": "city-edge-developments",
+    "destination": "new-cairo",
+    "city": "new cairo, Egypt",
+    "priceFrom": 12,
+    "areaSize": "Master-planned Community",
+    "unitSizes": "85 m²",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "paymentPlan": "10% Down Payment over 8 years equal installments",
+    "types": [
+      "Office"
+    ],
+    "isNewLaunch": true,
+    "blurb": "🏢 V40 DISTRICT | NEW CAIRO By City Edge Developments  🔥  مكتب إداري على شارع التسعين! مساحة 85م بسعر 12 مليون استلام 2027...",
+    "amenities": [
+      "Green Spaces & Landscaping",
+      "Clubhouse & Commercial Hub",
+      "24/7 Security & Gated Community",
+      "Water Features & Lagoons",
+      "Jogging & Cycling Tracks"
+    ]
+  },
+  {
+    "slug": "jadie-residence",
+    "name": "Jadie Residence",
+    "developer": "Concrete Developments",
+    "developerSlug": "concrete-developments",
+    "destination": "new-cairo",
+    "city": "new cairo, Egypt",
+    "priceFrom": 14.8,
+    "areaSize": "Master-planned Community",
+    "unitSizes": "169 m²",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "paymentPlan": "Up to 8 Years Installments",
+    "types": [
+      "Apartment"
+    ],
+    "isNewLaunch": true,
+    "blurb": "*شقه 4 غرف بقلب التـجمع الخامس* *Jadie Residence* 4 Bedroom *المساحة :169m* *السعر : 14,800,000* مقدم 10% واقساط على 8 سنين...",
+    "amenities": [
+      "Green Spaces & Landscaping",
+      "Clubhouse & Commercial Hub",
+      "24/7 Security & Gated Community",
+      "Water Features & Lagoons",
+      "Jogging & Cycling Tracks"
+    ]
+  },
+  {
     "slug": "noll-new-cairo",
     "name": "Noll New Cairo",
     "developer": "Kleek Developments",
@@ -4070,7 +4174,10 @@ export const compoundsGenerated: Compound[] = [
     "types": [
       "Standalone Villa",
       "Townhouse",
-      "Duplex"
+      "Duplex",
+      "Apartment",
+      "Twin House",
+      "Chalet"
     ],
     "amenities": [
       "Clubhouse",
@@ -16342,7 +16449,6 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Duplex",
       "Townhouse",
       "Standalone Villa"
     ],
@@ -16769,8 +16875,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Clinic",
-      "Commercial"
+      "Apartment",
+      "Penthouse"
     ],
     "amenities": [
       "24/7 Security",
