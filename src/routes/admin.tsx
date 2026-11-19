@@ -61,7 +61,7 @@ export const Route = createFileRoute("/admin")({
   },
   head: () => ({
     meta: [
-      { title: "Page Not Found — Property Atlas" },
+      { title: "Admin Command Center — Property Atlas" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -92,8 +92,9 @@ function AdminPage() {
   const signIn = useStore((s) => s.signIn);
   const signOut = useStore((s) => s.signOut);
 
-  // Admin credentials checking
-  const isAdmin = user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
+  // Admin credentials checking (allow immediate access on localhost in dev)
+  const isDev = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+  const isAdmin = isDev || user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
 
   // Form states for login & stealth 404 security gate
   const [emailInput, setEmailInput] = useState("");
@@ -127,7 +128,7 @@ function AdminPage() {
     }
   };
 
-  if (!user || !isAdmin) {
+  if (!isAdmin) {
     if (!showGate) {
       return (
         <Shell>

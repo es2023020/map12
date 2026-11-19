@@ -78,10 +78,8 @@ export async function startWhatsAppListener() {
     }
   });
 
-  // Handle incoming messages
+  // Handle incoming messages (both live notifications and backlog append events)
   sock.ev.on("messages.upsert", async ({ messages, type }) => {
-    if (type !== "notify") return;
-
     for (const msg of messages) {
       if (!msg.message) continue;
       const jid = msg.key.remoteJid;
@@ -90,6 +88,8 @@ export async function startWhatsAppListener() {
       const groupsConfig = loadGroupsConfig();
       const groupInfo = groupsConfig[jid];
       const devSlug = groupInfo?.developer_slug;
+      const groupName = groupInfo?.developer_name || groupInfo?.name || jid.split("@")[0];
+      const sender = msg.pushName || "Broker";
 
       const messageType = Object.keys(msg.message)[0];
       const caption = msg.message.documentMessage?.caption || msg.message.imageMessage?.caption || "";
@@ -99,14 +99,20 @@ export async function startWhatsAppListener() {
         caption ||
         "";
 
-      // 1. Handle Document Attachments (.xlsx, .xls, .pdf)
+      // Real-time visibility: log every incoming group message
+      if (textBody && !msg.message.documentMessage) {
+        const preview = textBody.length > 90 ? textBody.slice(0, 90).replace(/\r?\n/g, " ") + "..." : textBody.replace(/\r?\n/g, " ");
+        console.log(`[WA] 👥 [${groupName}] ${sender}: ${preview}`);
+      }
+
+      // 1. Handle Document Attachments (.xlsx, .xls, .pdf, .csv)
       if (msg.message.documentMessage) {
         const doc = msg.message.documentMessage;
         const filename = doc.fileName || `doc_${Date.now()}.bin`;
         const ext = path.extname(filename).toLowerCase();
 
-        if ([".xlsx", ".xls", ".pdf"].includes(ext)) {
-          console.log(`\n📥 Received document '${filename}' from group ${jid} (${groupInfo?.developer_name || "Unmapped"})`);
+        if ([".xlsx", ".xls", ".pdf", ".csv"].includes(ext)) {
+          console.log(`\n📥 [DOCUMENT ARRIVED] '${filename}' from group [${groupName}]`);
           try {
             const buffer = await downloadMediaMessage(msg, "buffer", {});
             const todayStr = new Date().toISOString().slice(0, 10);
@@ -131,7 +137,7 @@ export async function startWhatsAppListener() {
         try {
           const result = await processIncomingTextMessage(textBody, devSlug);
           if (result.success) {
-            console.log(`\n💬 Actionable WhatsApp text update detected:\n${result.formattedMarkdown}`);
+            console.log(`\n🎯 [INVENTORY AUTO-UPDATE APPLIED]\n${result.formattedMarkdown}\n`);
           }
         } catch (err: any) {
           console.error(`Error processing text message:`, err.message);

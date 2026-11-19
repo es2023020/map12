@@ -259,14 +259,14 @@ export function evaluateIncomingDocument(
     };
   }
 
-  // Even if no inventory keyword, if it's an Excel sheet sent in a developer group with a date and project name, accept it
-  if ([".xlsx", ".xls"].includes(ext) && (projectSlug || effectiveDevSlug) && detectedDate) {
+  // Even if no keyword in filename, if it's an Excel sheet sent in a recognized developer group, accept for table inspection
+  if ([".xlsx", ".xls"].includes(ext) && (projectSlug || (effectiveDevSlug && effectiveDevSlug !== "general-developer"))) {
     return {
       accepted: true,
       documentType: projectSlug ? "PROJECT_INVENTORY" : "MASTER_INVENTORY",
       developerSlug: effectiveDevSlug,
       projectSlug,
-      detectedDate,
+      detectedDate: detectedDate || new Date().toISOString().slice(0, 10),
       confidence: 0.85,
     };
   }
