@@ -15,7 +15,7 @@ export const usersGenerated: any[] = [
     "password": "Sayed@shoeip8",
     "tier": "BrokerageAdmin",
     "whatsappSendsCount": 0,
-    "lastLoginAt": 1795038099598,
+    "lastLoginAt": 1795073552909,
     "timeSpent": 7335
   }
 ];
