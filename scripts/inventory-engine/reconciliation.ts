@@ -268,6 +268,68 @@ export function markProjectAsSoldOut(
 }
 
 /**
+ * Appends or updates a single unit in an existing project WITHOUT marking other units as sold.
+ * This is used for text-flash releases where only 1–5 units are mentioned;
+ * the reconciler must NOT treat absent units as sold (they are still available from the master sheet).
+ */
+export function appendUnitToProject(
+  developerSlug: string,
+  projectSlug: string,
+  incomingUnit: NormalizedUnit,
+  sourceDesc: string,
+  overrideTargetDir?: string
+): ReconcileResult {
+  const { existingUnits, previousAvailable } = loadExistingProjectWorkbook(developerSlug, projectSlug);
+
+  const fp = incomingUnit.fingerprint || computeUnitFingerprint(projectSlug, incomingUnit);
+
+  // Check if this unit already exists (by fingerprint)
+  const existingIdx = existingUnits.findIndex(
+    (u) => (u.fingerprint || computeUnitFingerprint(projectSlug, u)) === fp
+  );
+
+  let addedCount = 0;
+  let updatedCount = 0;
+  const finalUnits = [...existingUnits];
+
+  if (existingIdx >= 0) {
+    // Update the existing unit's details but keep all other units intact
+    finalUnits[existingIdx] = { ...finalUnits[existingIdx], ...incomingUnit, fingerprint: fp };
+    updatedCount = 1;
+  } else {
+    // Add the new unit — don't touch any existing units
+    finalUnits.push({ ...incomingUnit, fingerprint: fp, status: "Available" });
+    addedCount = 1;
+  }
+
+  const currentlyAvailable = finalUnits.filter(
+    (u) => u.status === "Available" || u.status === "Last Unit"
+  ).length;
+
+  const report: DiffReport = {
+    developerSlug,
+    projectSlug,
+    sourceFileOrMsg: sourceDesc,
+    timestamp: new Date().toISOString(),
+    totalPreviouslyAvailable: previousAvailable,
+    totalCurrentlyAvailable: currentlyAvailable,
+    unitsAdded: addedCount,
+    unitsUpdated: updatedCount,
+    unitsMarkedSold: 0, // NEVER mark sold from text flash
+    isProjectSoldOut: false,
+    anomalies: [],
+    passedSanityCheck: true,
+  };
+
+  const targetDir = overrideTargetDir || path.join(PROJECTS_BASE, developerSlug);
+  fs.mkdirSync(targetDir, { recursive: true });
+  const targetFile = path.join(targetDir, `${projectSlug}.xlsx`);
+  writeStandardProjectWorkbook(targetFile, developerSlug, projectSlug, finalUnits, currentlyAvailable);
+
+  return { developerSlug, projectSlug, report, savedFilePath: targetFile };
+}
+
+/**
  * Writes the standardized 3-sheet Excel file matching import-availability requirements
  */
 function writeStandardProjectWorkbook(

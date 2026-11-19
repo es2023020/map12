@@ -71,11 +71,16 @@ async function main() {
 
   // 4. Update pending_reviews.json
   console.log("\n4️⃣ Updating pending_reviews.json to autonomous mode...");
-  fs.writeFileSync(
-    PENDING_FILE,
-    JSON.stringify({ autonomous_mode: true, pending_updates: [] }, null, 2),
-    "utf8"
-  );
+  let existingPending: any = { autonomous_mode: true, pending_updates: [], discovered_projects: [] };
+  if (fs.existsSync(PENDING_FILE)) {
+    try {
+      existingPending = JSON.parse(fs.readFileSync(PENDING_FILE, "utf8"));
+    } catch {}
+  }
+  existingPending.autonomous_mode = true;
+  existingPending.pending_updates = [];
+  existingPending.discovered_projects = existingPending.discovered_projects || [];
+  fs.writeFileSync(PENDING_FILE, JSON.stringify(existingPending, null, 2), "utf8");
 
   // 5. Trigger Property Atlas Availability Sync
   console.log("\n5️⃣ Compiling availability data into Property Atlas...");

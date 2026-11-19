@@ -4,10 +4,11 @@ import { execSync } from "child_process";
 import { fileURLToPath } from "url";
 import { evaluateIncomingDocument, markHashProcessed, calculateFileHash } from "./gatekeeper";
 import { parseExcelWorkbook } from "./parsers/excel-parser";
-import { reconcileDeveloperMasterInventory, reconcileSingleProject, markProjectAsSoldOut, ReconcileResult } from "./reconciliation";
+import { reconcileDeveloperMasterInventory, reconcileSingleProject, markProjectAsSoldOut, appendUnitToProject, ReconcileResult } from "./reconciliation";
 import { parseWhatsAppTextMessage } from "./chat-parser";
 import { formatDiffReportMarkdown } from "./quality-guard";
-import { AuditLogEntry, DiffReport } from "./types";
+import { AuditLogEntry, DiffReport, DiscoveredProject } from "./types";
+import { updateKnownCompoundLaunch, stageDiscoveredProject } from "./compounds-sync";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..", "..");
@@ -231,15 +232,66 @@ export async function processIncomingTextMessage(
   const projSlug = action.projectSlug || "general";
   const reports: DiffReport[] = [];
 
+  // 1. Unregistered Project Discovered -> Stage for Admin Review
+  if (action.intent === "UNREGISTERED_PROJECT_DISCOVERY" && action.discoveredProject) {
+    stageDiscoveredProject(action.discoveredProject);
+
+    appendAuditLog({
+      timestamp: new Date().toISOString(),
+      source: "WHATSAPP_TEXT",
+      sourceId: action.discoveredProject.suggestedName,
+      developerSlug: devSlug,
+      projectsAffected: [action.discoveredProject.suggestedSlug],
+      diffs: [],
+      status: "QUARANTINED",
+    });
+
+    return {
+      success: true,
+      message: `Discovered new project '${action.discoveredProject.suggestedName}'. Staged in Admin Command Center for your review.`,
+      reports: [],
+      formattedMarkdown: `🌟 **New Project Discovered from WhatsApp**\n\n- **Project**: ${action.discoveredProject.suggestedName}\n- **Developer**: ${action.discoveredProject.developerName}\n- **Destination**: ${action.discoveredProject.destination}\n- **Price Starting**: ${action.discoveredProject.priceFromM ? action.discoveredProject.priceFromM + "M EGP" : "TBD"}\n- **Types**: ${action.discoveredProject.types.join(", ")}\n\n⏳ *Staged in Admin Dashboard for your approval.*`,
+      isStagedForApproval: true,
+    };
+  }
+
+  // 2. New Launch / Phase for Known Project
+  if (action.intent === "NEW_LAUNCH") {
+    const updated = updateKnownCompoundLaunch(projSlug, action.launchData || {});
+    if (updated) {
+      triggerAppAvailabilitySync();
+
+      appendAuditLog({
+        timestamp: new Date().toISOString(),
+        source: "WHATSAPP_TEXT",
+        sourceId: `New Launch: ${action.projectName || projSlug}`,
+        developerSlug: devSlug,
+        projectsAffected: [projSlug],
+        diffs: [],
+        status: "APPLIED",
+      });
+
+      return {
+        success: true,
+        message: `Updated project '${projSlug}' as New Launch in Property Atlas!`,
+        reports: [],
+        formattedMarkdown: `🚀 **New Launch Activated for ${action.projectName || projSlug}**\n\nMarked as active New Launch with updated pricing and payment terms.`,
+      };
+    }
+  }
+
+  // 3. Mark Sold Out
   if (action.intent === "MARK_PROJECT_SOLD_OUT") {
     const res = markProjectAsSoldOut(devSlug, projSlug, `WhatsApp Text: "${rawText}"`);
     reports.push(res.report);
   } else if (action.intent === "ADD_OR_UPDATE_UNIT" && action.unitData) {
-    const res = reconcileSingleProject(
+    // ⚠️ IMPORTANT: use appendUnitToProject (not reconcileSingleProject) for text flash releases
+    // so we only ADD the new unit and never mark existing inventory as sold.
+    const res = appendUnitToProject(
       devSlug,
       projSlug,
-      [action.unitData as any],
-      `WhatsApp Flash Release: "${rawText.slice(0, 40)}..."`
+      action.unitData as any,
+      `WhatsApp Flash Release: "${rawText.slice(0, 60)}..."`
     );
     reports.push(res.report);
   }

@@ -150,7 +150,11 @@ function unitTypeSlug(b) {
 }
 
 function esc(s) {
-  return String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+  return String(s)
+    .replace(/\\/g, "\\\\")
+    .replace(/"/g, '\\"')
+    .replace(/\r/g, "\\r")
+    .replace(/\n/g, "\\n");
 }
 
 function fmtVal(v, indent = "      ") {
@@ -323,7 +327,9 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
           ? parseInt(String(rowObj[bedsKey]))
           : parseBedsFromType(rawType) || 2;
       const unitNo =
-        unitNoKey && rowObj[unitNoKey] ? String(rowObj[unitNoKey]).trim() : `U-${rIdx + 1}`;
+        unitNoKey && rowObj[unitNoKey]
+          ? String(rowObj[unitNoKey]).replace(/[\r\n]+/g, "").trim()
+          : `U-${rIdx + 1}`;
       const view = viewKey && rowObj[viewKey] ? String(rowObj[viewKey]).trim() : "Scenic View";
       const status =
         statusKey && rowObj[statusKey] ? String(rowObj[statusKey]).trim() : "Available";

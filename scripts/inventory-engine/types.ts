@@ -39,15 +39,42 @@ export type TextActionIntent =
   | "MARK_PROJECT_SOLD_OUT"
   | "MARK_UNITS_SOLD"
   | "ADD_OR_UPDATE_UNIT"
+  | "BULK_TEXT_INVENTORY"
+  | "NEW_LAUNCH"
+  | "UNREGISTERED_PROJECT_DISCOVERY"
   | "PAYMENT_PLAN_UPDATE"
   | "IRRELEVANT";
+
+export interface DiscoveredProject {
+  id: string;
+  timestamp: string;
+  source: string;
+  developerSlug: string;
+  developerName: string;
+  suggestedName: string;
+  suggestedSlug: string;
+  destination: string;
+  priceFromM?: number;
+  types: string[];
+  unitSizes?: string;
+  paymentPlan?: string;
+  deliveryYear?: number;
+  blurb?: string;
+  rawText: string;
+  units?: Partial<NormalizedUnit>[];
+  status: "PENDING_APPROVAL" | "APPROVED" | "DISMISSED";
+}
 
 export interface TextMessageAction {
   intent: TextActionIntent;
   developerSlug?: string;
   projectSlug?: string;
+  projectName?: string;
   unitIds: string[];
   unitData?: Partial<NormalizedUnit>;
+  unitsData?: Partial<NormalizedUnit>[];
+  launchData?: Partial<DiscoveredProject>;
+  discoveredProject?: DiscoveredProject;
   confidence: number;
   rawText: string;
   reason?: string;

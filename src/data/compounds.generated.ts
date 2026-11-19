@@ -1,4 +1,4 @@
-﻿// Auto-generated from Command Center save action — do not edit by hand.
+// Auto-generated from Command Center save action — do not edit by hand.
 import type { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = [
@@ -1160,7 +1160,7 @@ export const compoundsGenerated: Compound[] = [
     "lng": 30.9708,
     "developer": "Madaar Developments",
     "developerSlug": "madaar-developments",
-    "priceFrom": 17,
+    "priceFrom": 14.5,
     "deliveryYear": 2030,
     "status": "Off-Plan",
     "beachfront": true,
@@ -1186,7 +1186,7 @@ export const compoundsGenerated: Compound[] = [
       "/projects/the-hillage/5.jpg"
 ],
     "blurb": "The Hillage is a premium development by Madaar in Ras El Hekma, presenting high-end unit designs and world-class compound amenities. Scheduled for Q4 2030 (December 2030) delivery in New Zayed.",
-    "paymentPlan": "5%+5% DP over 10 yrs",
+    "paymentPlan": "Up to 8 Years Installments",
     "areaSize": "100 feddan",
     "unitSizes": "80–300 m²",
     "type": "Resort",
@@ -1196,7 +1196,8 @@ export const compoundsGenerated: Compound[] = [
       "Premium amenities & spaces",
       "Ready by 2028"
     ],
-    "masterPlanUrl": "/masterplans/the-hillage.svg"
+    "masterPlanUrl": "/masterplans/the-hillage.svg",
+    "isNewLaunch": true
   },
   {
     "slug": "gaia",
@@ -4328,9 +4329,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Duplex",
-      "Penthouse",
-      "Townhouse"
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -4480,8 +4479,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Standalone Villa",
-      "Townhouse"
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -4717,8 +4715,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "On-Hold",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Standalone Villa"
+      "Apartment"
     ],
     "amenities": [
       "Golf Course Views",
@@ -16531,8 +16528,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Administrative",
-      "Commercial"
+      "Apartment"
     ],
     "amenities": [
       "24/7 Security",
@@ -16566,8 +16562,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Clinic",
-      "Commercial"
+      "Apartment"
     ],
     "amenities": [
       "24/7 Security",
@@ -16635,7 +16630,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Administrative"
+      "Apartment"
     ],
     "amenities": [
       "24/7 Security",
@@ -16669,7 +16664,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Commercial"
+      "Apartment"
     ],
     "amenities": [
       "24/7 Security",
@@ -16703,7 +16698,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Commercial"
+      "Apartment"
     ],
     "amenities": [
       "24/7 Security",

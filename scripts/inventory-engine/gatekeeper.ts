@@ -9,6 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..", "..");
 const HASHES_FILE = path.join(ROOT, "data", "availability", "processed_hashes.json");
 const ALIASES_FILE = path.join(ROOT, "config", "project-aliases.json");
+const COMPOUNDS_FILE = path.join(ROOT, "src", "data", "compounds.generated.ts");
 
 // Ensure hashes file exists
 if (!fs.existsSync(HASHES_FILE)) {
@@ -23,6 +24,26 @@ let projectAliases: { compounds: Record<string, string>; developers: Record<stri
 
 let sortedCompoundAliases: [string, string][] = [];
 let sortedDeveloperAliases: [string, string][] = [];
+let compoundDevMap: Record<string, string> = {};
+
+function loadCompoundDevMap() {
+  if (fs.existsSync(COMPOUNDS_FILE)) {
+    try {
+      const content = fs.readFileSync(COMPOUNDS_FILE, "utf8");
+      const match = content.match(/export const compoundsGenerated: Compound\[\] = (\[[\s\S]*\]);/);
+      if (match) {
+        const compounds = JSON.parse(match[1]);
+        for (const c of compounds) {
+          if (c.slug && (c.developerSlug || c.developer)) {
+            compoundDevMap[c.slug] = c.developerSlug || c.developer;
+          }
+        }
+      }
+    } catch (err) {
+      console.error("Failed to load compound dev map:", err);
+    }
+  }
+}
 
 function loadAliases() {
   if (fs.existsSync(ALIASES_FILE)) {
@@ -40,12 +61,14 @@ function loadAliases() {
   }
 }
 loadAliases();
+loadCompoundDevMap();
 
 /**
  * Returns canonical developer slug for a project slug
  */
 export function getDeveloperSlugForProject(projectSlug?: string): string | undefined {
   if (!projectSlug) return undefined;
+  if (compoundDevMap[projectSlug]) return compoundDevMap[projectSlug];
   const reg = compoundRegistry[projectSlug];
   if (reg && reg.developer) {
     const devLower = reg.developer.toLowerCase();

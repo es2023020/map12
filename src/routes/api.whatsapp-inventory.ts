@@ -3,6 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { execSync } from "child_process";
 import { processIncomingTextMessage } from "../../scripts/inventory-engine/orchestrator";
+import { approveAndAddDiscoveredProject } from "../../scripts/inventory-engine/compounds-sync";
 
 const ROOT = process.cwd();
 const PENDING_FILE = path.join(ROOT, "data", "availability", "pending_reviews.json");
@@ -59,6 +60,7 @@ export const Route = createFileRoute("/api/whatsapp-inventory")({
             JSON.stringify({
               autonomous_mode: pending.autonomous_mode ?? false,
               pending_updates: pending.pending_updates ?? [],
+              discovered_projects: pending.discovered_projects ?? [],
               developers_matrix: matrix,
               recent_audit: audit,
             }),
@@ -166,6 +168,46 @@ export const Route = createFileRoute("/api/whatsapp-inventory")({
               fs.appendFileSync(AUDIT_FILE, JSON.stringify(auditEntry) + "\n", "utf8");
             }
             return new Response(JSON.stringify({ success: true, message: "Update rejected." }), {
+              headers: { "Content-Type": "application/json" },
+            });
+          }
+
+          if (action === "approve-discovered-project") {
+            const { projectId, asNewLaunch } = body;
+            pendingData.discovered_projects = pendingData.discovered_projects || [];
+            const idx = pendingData.discovered_projects.findIndex((p: any) => p.id === projectId);
+            if (idx === -1) {
+              return new Response(JSON.stringify({ error: "Discovered project not found" }), {
+                status: 404,
+                headers: { "Content-Type": "application/json" },
+              });
+            }
+
+            const discovered = pendingData.discovered_projects[idx];
+            const result = approveAndAddDiscoveredProject(discovered, asNewLaunch !== false);
+            if (result.success) {
+              pendingData.discovered_projects.splice(idx, 1);
+              savePending(pendingData);
+              return new Response(JSON.stringify({ success: true, message: result.message }), {
+                headers: { "Content-Type": "application/json" },
+              });
+            } else {
+              return new Response(JSON.stringify({ error: result.message }), {
+                status: 500,
+                headers: { "Content-Type": "application/json" },
+              });
+            }
+          }
+
+          if (action === "dismiss-discovered-project") {
+            const { projectId } = body;
+            pendingData.discovered_projects = pendingData.discovered_projects || [];
+            const idx = pendingData.discovered_projects.findIndex((p: any) => p.id === projectId);
+            if (idx !== -1) {
+              pendingData.discovered_projects.splice(idx, 1);
+              savePending(pendingData);
+            }
+            return new Response(JSON.stringify({ success: true, message: "Project dismissed" }), {
               headers: { "Content-Type": "application/json" },
             });
           }

@@ -125,6 +125,50 @@ function findHeaderRow(rows: any[][]): { headerIdx: number; headers: string[] } 
   return { headerIdx: bestIdx, headers };
 }
 
+function cleanCluster(raw: any, sheetName?: string): string | undefined {
+  if (!raw) return undefined;
+  const str = String(raw).trim();
+  // Strip GUIDs (e.g. {364867a2-4a0f-4889-b1d6-88fe0b9d7990})
+  if (/^\{?[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\}?$/.test(str)) {
+    return undefined;
+  }
+  if (str.toLowerCase() === "sheet1" || (sheetName && str.toLowerCase() === sheetName.toLowerCase())) {
+    return undefined;
+  }
+  return str || undefined;
+}
+
+function cleanFinishing(raw: any): string {
+  if (!raw) return "Core & Shell";
+  const str = String(raw).trim();
+  // If it's a numeric value or serial (like 1478400), return default
+  if (!isNaN(Number(str)) && Number(str) > 0) return "Core & Shell";
+  return str || "Core & Shell";
+}
+
+function cleanDeliveryNote(raw: any): string {
+  if (!raw) return "Ready to Move / 3-4 Years";
+  const num = typeof raw === "number" ? raw : Number(String(raw).trim());
+  if (!isNaN(num) && num >= 40000 && num <= 65000) {
+    const jsDate = new Date((num - 25569) * 86400 * 1000);
+    const year = jsDate.getFullYear();
+    const month = jsDate.getMonth() + 1;
+    const quarter = Math.ceil(month / 3);
+    return `Q${quarter} ${year}`;
+  }
+  const str = String(raw).trim();
+  if (/^\d{5}$/.test(str)) {
+    const n = parseInt(str, 10);
+    if (n >= 40000 && n <= 65000) {
+      const jsDate = new Date((n - 25569) * 86400 * 1000);
+      const year = jsDate.getFullYear();
+      const quarter = Math.ceil((jsDate.getMonth() + 1) / 3);
+      return `Q${quarter} ${year}`;
+    }
+  }
+  return str || "Ready to Move / 3-4 Years";
+}
+
 /**
  * Parses an Excel Workbook into normalized unit maps grouped by project slug
  */
@@ -142,7 +186,7 @@ export function parseExcelWorkbook(
   // Filter sheets
   const ignoredSheetNames = ["overview", "summary", "instructions", "index", "breakdown", "cover"];
   const sheetsToProcess = wb.SheetNames.filter(
-    (sn) => !ignoredSheetNames.includes(sn.toLowerCase().trim())
+    (sn: string) => !ignoredSheetNames.includes(sn.toLowerCase().trim())
   );
 
   for (const sheetName of sheetsToProcess) {
@@ -235,14 +279,14 @@ export function parseExcelWorkbook(
         id: cleanId,
         projectSlug: rowProjectSlug,
         developerSlug: effectiveDevSlug,
-        cluster: String(rawCluster || "").trim() || undefined,
+        cluster: cleanCluster(rawCluster, sheetName),
         type: propType,
         beds,
-        finishing: colMap.finishing !== undefined && row[colMap.finishing] ? String(row[colMap.finishing]).trim() : "Core & Shell",
+        finishing: colMap.finishing !== undefined ? cleanFinishing(row[colMap.finishing]) : "Core & Shell",
         areaSqm: bua,
         view: colMap.view !== undefined && row[colMap.view] ? String(row[colMap.view]).trim() : "Landscape",
         priceEGP: price,
-        deliveryNote: colMap.delivery !== undefined && row[colMap.delivery] ? String(row[colMap.delivery]).trim() : "Ready to Move / 3-4 Years",
+        deliveryNote: colMap.delivery !== undefined ? cleanDeliveryNote(row[colMap.delivery]) : "Ready to Move / 3-4 Years",
         paymentPlan: colMap.payment !== undefined && row[colMap.payment] ? String(row[colMap.payment]).trim() : "10% DP · 8 years",
         status: isSold ? "Sold" : "Available",
         rawUnitId: String(rawId),

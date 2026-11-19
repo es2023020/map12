@@ -15,6 +15,11 @@ import {
   Clock,
   ArrowRight,
   Database,
+  Sparkles,
+  MapPin,
+  Calendar,
+  CreditCard,
+  Tag,
 } from "lucide-react";
 
 interface DeveloperGroupEntry {
@@ -24,6 +29,26 @@ interface DeveloperGroupEntry {
   has_folder_in_availability: boolean;
   projects: string[];
   projects_count: number;
+}
+
+interface DiscoveredProjectItem {
+  id: string;
+  timestamp: string;
+  source: string;
+  developerSlug: string;
+  developerName: string;
+  suggestedName: string;
+  suggestedSlug: string;
+  destination: string;
+  priceFromM?: number;
+  types: string[];
+  unitSizes?: string;
+  paymentPlan?: string;
+  deliveryYear?: number;
+  blurb?: string;
+  rawText: string;
+  units?: any[];
+  status: string;
 }
 
 interface StagedUpdate {
@@ -41,6 +66,7 @@ export function WhatsAppInventoryHub() {
   const [loading, setLoading] = useState(true);
   const [autonomousMode, setAutonomousMode] = useState(false);
   const [pendingUpdates, setPendingUpdates] = useState<StagedUpdate[]>([]);
+  const [discoveredProjects, setDiscoveredProjects] = useState<DiscoveredProjectItem[]>([]);
   const [developersMatrix, setDevelopersMatrix] = useState<DeveloperGroupEntry[]>([]);
   const [auditLog, setAuditLog] = useState<any[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -57,6 +83,7 @@ export function WhatsAppInventoryHub() {
         const data = await res.json();
         setAutonomousMode(data.autonomous_mode ?? false);
         setPendingUpdates(data.pending_updates ?? []);
+        setDiscoveredProjects(data.discovered_projects ?? []);
         setDevelopersMatrix(data.developers_matrix ?? []);
         setAuditLog(data.recent_audit ?? []);
       }
@@ -119,6 +146,44 @@ export function WhatsAppInventoryHub() {
       });
       if (res.ok) {
         setActionMessage({ text: "Update discarded.", type: "success" });
+        fetchData();
+      }
+    } catch (err: any) {
+      setActionMessage({ text: err.message, type: "error" });
+    }
+  };
+
+  const handleApproveDiscovered = async (projectId: string, asNewLaunch = true) => {
+    try {
+      const res = await fetch("/api/whatsapp-inventory", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "approve-discovered-project", projectId, asNewLaunch }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setActionMessage({
+          text: `🚀 ${data.message || "Project approved & added to Property Atlas!"}`,
+          type: "success",
+        });
+        fetchData();
+      } else {
+        setActionMessage({ text: data.error || "Failed to approve project", type: "error" });
+      }
+    } catch (err: any) {
+      setActionMessage({ text: err.message, type: "error" });
+    }
+  };
+
+  const handleDismissDiscovered = async (projectId: string) => {
+    try {
+      const res = await fetch("/api/whatsapp-inventory", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "dismiss-discovered-project", projectId }),
+      });
+      if (res.ok) {
+        setActionMessage({ text: "Project announcement dismissed.", type: "success" });
         fetchData();
       }
     } catch (err: any) {
@@ -334,7 +399,132 @@ export function WhatsAppInventoryHub() {
         )}
       </div>
 
-      {/* ── 2. LIVE ANNOUNCEMENT TESTER ── */}
+      {/* ── 2. DISCOVERED PROJECTS & NEW LAUNCHES QUEUE ── */}
+      <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
+        <div className="flex justify-between items-center">
+          <div>
+            <h3 className="font-display text-sm font-bold text-primary flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-amber-500" />
+              Discovered Projects &amp; New Launches ({discoveredProjects.length})
+            </h3>
+            <p className="text-[11px] text-muted-foreground">
+              New compounds or phases discovered from WhatsApp text announcements. Review and approve to add them to Property Atlas.
+            </p>
+          </div>
+          <button
+            onClick={fetchData}
+            className="rounded-lg border border-border p-1.5 hover:bg-secondary/40 text-muted-foreground hover:text-primary transition-colors"
+            title="Refresh"
+          >
+            <RefreshCw className="h-4 w-4" />
+          </button>
+        </div>
+
+        {discoveredProjects.length === 0 ? (
+          <div className="rounded-xl border border-dashed border-border/80 p-8 text-center bg-secondary/5">
+            <CheckCircle2 className="h-7 w-7 text-emerald-500 mx-auto mb-2 opacity-80" />
+            <h4 className="text-xs font-bold text-primary">No Unregistered Projects</h4>
+            <p className="text-[11px] text-muted-foreground mt-0.5">
+              All projects announced in your developer groups are currently registered in Property Atlas.
+            </p>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            {discoveredProjects.map((item) => (
+              <div
+                key={item.id}
+                className="rounded-xl border border-border/80 bg-secondary/10 p-5 space-y-3 hover:border-accent/40 transition-colors"
+              >
+                <div className="flex flex-col lg:flex-row justify-between lg:items-start gap-3">
+                  <div className="space-y-1.5 flex-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="font-display text-base font-bold text-primary flex items-center gap-1.5">
+                        <Building2 className="h-4 w-4 text-accent" />
+                        {item.suggestedName}
+                      </span>
+                      <span className="text-[10px] bg-accent/10 border border-accent/20 text-accent font-bold px-2 py-0.5 rounded-full">
+                        {item.developerName}
+                      </span>
+                      <span className="text-[10px] bg-secondary border border-border/60 text-muted-foreground font-mono px-2 py-0.5 rounded">
+                        slug: {item.suggestedSlug}
+                      </span>
+                      <span className="text-[10px] text-muted-foreground font-mono">
+                        {new Date(item.timestamp).toLocaleTimeString()}
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-xs">
+                      <div className="flex items-center gap-1.5 text-muted-foreground">
+                        <MapPin className="h-3.5 w-3.5 text-rose-400" />
+                        <span className="capitalize">{item.destination.replace(/-/g, " ")}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-muted-foreground">
+                        <Tag className="h-3.5 w-3.5 text-emerald-400" />
+                        <span>Starting: <strong className="text-primary">{item.priceFromM ? `${item.priceFromM}M EGP` : "TBD"}</strong></span>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-muted-foreground">
+                        <CreditCard className="h-3.5 w-3.5 text-blue-400" />
+                        <span className="truncate" title={item.paymentPlan || "Standard"}>{item.paymentPlan || "10% DP · 8 yrs"}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-muted-foreground">
+                        <Calendar className="h-3.5 w-3.5 text-amber-400" />
+                        <span>Delivery: {item.deliveryYear || 2028}</span>
+                      </div>
+                    </div>
+
+                    {item.types && item.types.length > 0 && (
+                      <div className="flex flex-wrap gap-1 pt-1">
+                        {item.types.map((t, idx) => (
+                          <span key={idx} className="text-[10px] bg-card border border-border/60 text-primary px-2 py-0.5 rounded">
+                            {t}
+                          </span>
+                        ))}
+                        {item.unitSizes && (
+                          <span className="text-[10px] bg-accent/5 border border-accent/20 text-accent px-2 py-0.5 rounded">
+                            {item.unitSizes}
+                          </span>
+                        )}
+                      </div>
+                    )}
+
+                    <div className="mt-2 p-2.5 rounded-lg bg-card/60 border border-border/40 text-[11px] text-muted-foreground font-sans italic max-h-24 overflow-y-auto">
+                      &ldquo;{item.rawText}&rdquo;
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row lg:flex-col gap-2 shrink-0">
+                    <button
+                      onClick={() => handleApproveDiscovered(item.id, true)}
+                      className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold shadow-soft transition-colors flex items-center justify-center gap-1.5"
+                      title="Add to app and feature on New Launches page"
+                    >
+                      <Sparkles className="h-3.5 w-3.5" />
+                      <span>Approve as New Launch</span>
+                    </button>
+                    <button
+                      onClick={() => handleApproveDiscovered(item.id, false)}
+                      className="px-4 py-2 rounded-xl border border-border bg-card hover:bg-secondary/40 text-xs font-bold text-primary transition-colors flex items-center justify-center gap-1.5"
+                      title="Add to app as standard compound"
+                    >
+                      <Building2 className="h-3.5 w-3.5 text-accent" />
+                      <span>Approve Compound</span>
+                    </button>
+                    <button
+                      onClick={() => handleDismissDiscovered(item.id)}
+                      className="px-3 py-1.5 rounded-xl border border-border/80 bg-card hover:bg-destructive/10 hover:text-destructive hover:border-destructive/30 text-xs font-bold text-muted-foreground transition-colors flex items-center justify-center gap-1"
+                    >
+                      <XCircle className="h-3.5 w-3.5" />
+                      <span>Dismiss</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* ── 3. LIVE ANNOUNCEMENT TESTER ── */}
       <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
         <h3 className="font-display text-sm font-bold text-primary flex items-center gap-2">
           <Send className="h-4 w-4 text-accent" />
@@ -365,7 +555,7 @@ export function WhatsAppInventoryHub() {
         </form>
       </div>
 
-      {/* ── 3. DEVELOPER GROUPS MATRIX (87 GROUPS) ── */}
+      {/* ── 4. DEVELOPER GROUPS MATRIX (128 GROUPS) ── */}
       <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
         <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
           <div>
@@ -374,7 +564,7 @@ export function WhatsAppInventoryHub() {
               Connected Developer Groups ({developersMatrix.length})
             </h3>
             <p className="text-[11px] text-muted-foreground">
-              The 87 developer groups monitored by your WhatsApp automation listener.
+              The 128 authorized developer groups monitored by your WhatsApp automation listener.
             </p>
           </div>
 
