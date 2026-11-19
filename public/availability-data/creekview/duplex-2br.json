@@ -1,0 +1,44 @@
+[
+  {
+    "id": "creekview-2",
+    "unitNo": "CV-H-IV-40-A0-1",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 105.71,
+    "view": "Landscape",
+    "priceEGP": 18432724,
+    "status": "Available",
+    "slug": "creekview",
+    "cluster": "Phase-0",
+    "delivery_note": "OFF PLAN - 2.5",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "creekview-3",
+    "unitNo": "CV-I-IV-50-A0-1",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 106.2,
+    "view": "Landscape",
+    "priceEGP": 19512654,
+    "status": "Available",
+    "slug": "creekview",
+    "cluster": "Phase-1",
+    "delivery_note": "OFF PLAN - 4",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "creekview-4",
+    "unitNo": "CV-I-IV-50-B0-3",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 115.19,
+    "view": "Landscape",
+    "priceEGP": 17642972,
+    "status": "Available",
+    "slug": "creekview",
+    "cluster": "Phase-1",
+    "delivery_note": "OFF PLAN - 4",
+    "payment_plan": "10% DP · 8 years"
+  }
+]

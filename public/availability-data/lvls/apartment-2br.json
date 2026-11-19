@@ -1,0 +1,72 @@
+[
+  {
+    "id": "lvls-1",
+    "unitNo": "LV-BT-BH-345-01",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 97,
+    "view": "Landscape",
+    "priceEGP": 33255994,
+    "status": "Available",
+    "slug": "lvls",
+    "cluster": "Phase-1",
+    "delivery_note": "OFF PLAN - 2.5",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "lvls-2",
+    "unitNo": "LV-BT-BH-354-04",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 116,
+    "view": "Landscape",
+    "priceEGP": 24801769,
+    "status": "Available",
+    "slug": "lvls",
+    "cluster": "Phase-1",
+    "delivery_note": "OFF PLAN - 2.5",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "lvls-3",
+    "unitNo": "LV-BT-BH-377-04",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 122,
+    "view": "Landscape",
+    "priceEGP": 24996867,
+    "status": "Available",
+    "slug": "lvls",
+    "cluster": "Phase-1",
+    "delivery_note": "OFF PLAN - 2.5",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "lvls-4",
+    "unitNo": "LV-BT-BH-387-01",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 121,
+    "view": "Landscape",
+    "priceEGP": 24314026,
+    "status": "Available",
+    "slug": "lvls",
+    "cluster": "Phase-1",
+    "delivery_note": "OFF PLAN - 2.5",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "lvls-5",
+    "unitNo": "LV-BT-BH-402-04",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 129,
+    "view": "Landscape",
+    "priceEGP": 34526838,
+    "status": "Available",
+    "slug": "lvls",
+    "cluster": "Phase-1",
+    "delivery_note": "OFF PLAN - 2.5",
+    "payment_plan": "10% DP · 8 years"
+  }
+]

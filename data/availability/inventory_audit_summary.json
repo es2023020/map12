@@ -1,0 +1,3868 @@
+[
+  {
+    "developerSlug": "afaq",
+    "developerName": "Afaq",
+    "projectCount": 1,
+    "totalAvailableUnits": 2,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "afaq",
+        "projectSlug": "amorada",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 12,
+        "maxPriceM": 20,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for amorada",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "ajna-developments",
+    "developerName": "Ajna Developments",
+    "projectCount": 2,
+    "totalAvailableUnits": 97,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "ajna-developments",
+        "projectSlug": "carnelia",
+        "totalAvailable": 87,
+        "totalUnitsInFile": 87,
+        "unitsWithPrice": 87,
+        "minPriceM": 4.435,
+        "maxPriceM": 14.92,
+        "lastUpdated": "2026-09-10",
+        "note": "Inventory for Carnelia Ain Sokhna",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ajna-developments",
+        "projectSlug": "eastville",
+        "totalAvailable": 10,
+        "totalUnitsInFile": 10,
+        "unitsWithPrice": 10,
+        "minPriceM": 13.6,
+        "maxPriceM": 26,
+        "lastUpdated": "2026-09-09",
+        "note": "Inventory for eastville",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Ajna - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "al-ahly-sabbour",
+    "developerName": "Al Ahly Sabbour",
+    "projectCount": 9,
+    "totalAvailableUnits": 49,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "al-ahly-sabbour",
+        "projectSlug": "al-east-mostakbal-city",
+        "totalAvailable": 11,
+        "totalUnitsInFile": 11,
+        "unitsWithPrice": 11,
+        "minPriceM": 5,
+        "maxPriceM": 42.75,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for al-east-mostakbal-city",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-ahly-sabbour",
+        "projectSlug": "gaia-ras-el-hekma",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 47.6,
+        "maxPriceM": 47.6,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for gaia-ras-el-hekma",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-ahly-sabbour",
+        "projectSlug": "gaia",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 10.5,
+        "maxPriceM": 47.6,
+        "lastUpdated": "2026-11-18",
+        "note": "Updated inventory for gaia",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-ahly-sabbour",
+        "projectSlug": "green-square",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 21,
+        "maxPriceM": 21,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for green-square",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-ahly-sabbour",
+        "projectSlug": "keeva-6th-of-october",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 15.615,
+        "maxPriceM": 33.92,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for keeva-6th-of-october",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-ahly-sabbour",
+        "projectSlug": "lavenir",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 17,
+        "maxPriceM": 17,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for lavenir",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-ahly-sabbour",
+        "projectSlug": "the-mornings",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 4.7,
+        "maxPriceM": 11.8,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for the-mornings",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-ahly-sabbour",
+        "projectSlug": "youd-ras-el-hekma",
+        "totalAvailable": 13,
+        "totalUnitsInFile": 13,
+        "unitsWithPrice": 13,
+        "minPriceM": 6.6,
+        "maxPriceM": 68.3,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for youd-ras-el-hekma",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-ahly-sabbour",
+        "projectSlug": "youd",
+        "totalAvailable": 13,
+        "totalUnitsInFile": 13,
+        "unitsWithPrice": 13,
+        "minPriceM": 6.6,
+        "maxPriceM": 68.3,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for youd-ras-el-hekma",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Al Ahly Sabbour | TAI Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "al-marasem-developments",
+    "developerName": "Al Marasem Developments",
+    "projectCount": 4,
+    "totalAvailableUnits": 14,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "al-marasem-developments",
+        "projectSlug": "fifth-square",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 15,
+        "maxPriceM": 17.3,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for fifth-square",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-marasem-developments",
+        "projectSlug": "marbay-ras-el-hekma",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 13.1,
+        "maxPriceM": 34.7,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for marbay-ras-el-hekma",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-marasem-developments",
+        "projectSlug": "marresidence",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 8.8,
+        "maxPriceM": 19.7,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for marresidence",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "al-marasem-developments",
+        "projectSlug": "marville",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 9.5,
+        "maxPriceM": 23,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for marville",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Al Marasem - TAI Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "al-qamzi-developments",
+    "developerName": "Al Qamzi Developments",
+    "projectCount": 1,
+    "totalAvailableUnits": 6,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "al-qamzi-developments",
+        "projectSlug": "seazen",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 6.9,
+        "maxPriceM": 32,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for seazen",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Al Qamzi - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "arab-developers-holding",
+    "developerName": "Arab Developers Holding",
+    "projectCount": 1,
+    "totalAvailableUnits": 2,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "arab-developers-holding",
+        "projectSlug": "nyoum-pyramids",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 7.156,
+        "maxPriceM": 9,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for nyoum-pyramids",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "ADH / TAI- Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "arabella-group",
+    "developerName": "Arabella Group",
+    "projectCount": 1,
+    "totalAvailableUnits": 17,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "arabella-group",
+        "projectSlug": "direction-white",
+        "totalAvailable": 17,
+        "totalUnitsInFile": 17,
+        "unitsWithPrice": 17,
+        "minPriceM": 8.1,
+        "maxPriceM": 82,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for direction-white",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Arabella - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "arabia",
+    "developerName": "Arabia",
+    "projectCount": 1,
+    "totalAvailableUnits": 3,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "arabia",
+        "projectSlug": "ashrafieh",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 5.3,
+        "maxPriceM": 8.92,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for ashrafieh",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "arabia-holding",
+    "developerName": "Arabia Holding",
+    "projectCount": 2,
+    "totalAvailableUnits": 11,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "arabia-holding",
+        "projectSlug": "galleria-moon-valley",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 12.5,
+        "maxPriceM": 15.5,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for galleria-moon-valley",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "arabia-holding",
+        "projectSlug": "sun-capital",
+        "totalAvailable": 9,
+        "totalUnitsInFile": 9,
+        "unitsWithPrice": 9,
+        "minPriceM": 8.333,
+        "maxPriceM": 31.112484,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for sun-capital",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Arabia Dev- TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "ardic",
+    "developerName": "Ardic",
+    "projectCount": 1,
+    "totalAvailableUnits": 3,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "ardic",
+        "projectSlug": "zizinia",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 6.2,
+        "maxPriceM": 10.2,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for zizinia",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "ARDIC 🤝 TAI - Premium A-1222",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "badreldin-developments",
+    "developerName": "Badreldin Developments",
+    "projectCount": 1,
+    "totalAvailableUnits": 1,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "badreldin-developments",
+        "projectSlug": "kayan",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 8.920755,
+        "maxPriceM": 8.920755,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for kayan",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Badreldin - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "beta-egypt",
+    "developerName": "Beta Egypt",
+    "projectCount": 1,
+    "totalAvailableUnits": 2,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "beta-egypt",
+        "projectSlug": "beta-greens",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 5.5,
+        "maxPriceM": 5.8,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for beta-greens",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Beta - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "better-home",
+    "developerName": "Better Home",
+    "projectCount": 1,
+    "totalAvailableUnits": 1,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "better-home",
+        "projectSlug": "midtown-new-cairo",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 17.6,
+        "maxPriceM": 17.6,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for midtown-new-cairo",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Better Home - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "cairo-capital",
+    "developerName": "Cairo Capital",
+    "projectCount": 2,
+    "totalAvailableUnits": 3,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "cairo-capital",
+        "projectSlug": "lake-west-1",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 17.97429,
+        "maxPriceM": 17.97429,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for lake-west-1",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "cairo-capital",
+        "projectSlug": "lake-west-2",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 13.75,
+        "maxPriceM": 19.751522,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for lake-west-2",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "city-edge-developments",
+    "developerName": "City Edge Developments",
+    "projectCount": 8,
+    "totalAvailableUnits": 68,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "city-edge-developments",
+        "projectSlug": "beachfront-towers-new-alamein",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 8,
+        "unitsWithPrice": 8,
+        "minPriceM": 17.1,
+        "maxPriceM": 35.6,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for beachfront-towers-new-alamein",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "city-edge-developments",
+        "projectSlug": "downtown-new-alamein",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 9.4,
+        "maxPriceM": 70.4,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for downtown-new-alamein",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "city-edge-developments",
+        "projectSlug": "il-latini-city-edge",
+        "totalAvailable": 12,
+        "totalUnitsInFile": 12,
+        "unitsWithPrice": 12,
+        "minPriceM": 4.3,
+        "maxPriceM": 8.9,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for latin-city-new-alamein",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "city-edge-developments",
+        "projectSlug": "jade-park-al-maqsad",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 8,
+        "unitsWithPrice": 8,
+        "minPriceM": 3.8,
+        "maxPriceM": 19.6,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for jade-park-al-maqsad",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "city-edge-developments",
+        "projectSlug": "latin-city-new-alamein",
+        "totalAvailable": 12,
+        "totalUnitsInFile": 12,
+        "unitsWithPrice": 12,
+        "minPriceM": 4.3,
+        "maxPriceM": 8.9,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for latin-city-new-alamein",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "city-edge-developments",
+        "projectSlug": "mazarine-apartments-new-alamein",
+        "totalAvailable": 13,
+        "totalUnitsInFile": 13,
+        "unitsWithPrice": 13,
+        "minPriceM": 7.3,
+        "maxPriceM": 23.3,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for mazarine-apartments-new-alamein",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "city-edge-developments",
+        "projectSlug": "mazarine-hub-new-alamein",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 5.8,
+        "maxPriceM": 12.6,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for mazarine-hub-new-alamein",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "city-edge-developments",
+        "projectSlug": "new-garden-city-r5",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 4.1,
+        "maxPriceM": 11.1,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for new-garden-city-r5",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "City Edge Alamein - TAI Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "cleopatra-real-estate",
+    "developerName": "Cleopatra Real Estate",
+    "projectCount": 1,
+    "totalAvailableUnits": 2,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "cleopatra-real-estate",
+        "projectSlug": "cleopatra-square",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 39.085,
+        "maxPriceM": 52.531,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for cleopatra-square",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "dorra",
+    "developerName": "Dorra",
+    "projectCount": 3,
+    "totalAvailableUnits": 54,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "dorra",
+        "projectSlug": "address-east",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 9.5,
+        "maxPriceM": 9.5,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for address-east",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "dorra",
+        "projectSlug": "the-address-east",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 9.5,
+        "maxPriceM": 9.5,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for the-address-east",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "dorra",
+        "projectSlug": "village-west",
+        "totalAvailable": 52,
+        "totalUnitsInFile": 52,
+        "unitsWithPrice": 52,
+        "minPriceM": 7,
+        "maxPriceM": 28,
+        "lastUpdated": "2026-08-24",
+        "note": "Village West latest availability",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "eastern",
+    "developerName": "Eastern",
+    "projectCount": 1,
+    "totalAvailableUnits": 1,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "eastern",
+        "projectSlug": "genova",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 15.375,
+        "maxPriceM": 15.375,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for genova",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "el-batal-developments",
+    "developerName": "El Batal Developments",
+    "projectCount": 5,
+    "totalAvailableUnits": 0,
+    "hasPricedUnits": false,
+    "projects": [
+      {
+        "developerSlug": "el-batal-developments",
+        "projectSlug": "rock-eden",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 82,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "",
+        "note": "",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "el-batal-developments",
+        "projectSlug": "rock-green",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 123,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "",
+        "note": "",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "el-batal-developments",
+        "projectSlug": "rock-vera",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 9,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "",
+        "note": "",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "el-batal-developments",
+        "projectSlug": "rock-white",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 101,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "",
+        "note": "",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "el-batal-developments",
+        "projectSlug": "rock-yard",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 94,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "",
+        "note": "",
+        "status": "SOLD_OUT"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Rock/ElBatal -Premium TAI",
+    "needsUpdate": true,
+    "reason": "All projects currently marked Sold Out (0 units available)"
+  },
+  {
+    "developerSlug": "el-gabry",
+    "developerName": "El Gabry",
+    "projectCount": 1,
+    "totalAvailableUnits": 2,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "el-gabry",
+        "projectSlug": "lac-ville",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 11.83608,
+        "maxPriceM": 15.5,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for lac-ville",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "emaar-misr",
+    "developerName": "Emaar Misr",
+    "projectCount": 7,
+    "totalAvailableUnits": 544,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "emaar-misr",
+        "projectSlug": "belle-vie-new-zayed",
+        "totalAvailable": 97,
+        "totalUnitsInFile": 97,
+        "unitsWithPrice": 97,
+        "minPriceM": 10.648888,
+        "maxPriceM": 378.449888,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for belle-vie-new-zayed",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "emaar-misr",
+        "projectSlug": "belle-vie",
+        "totalAvailable": 97,
+        "totalUnitsInFile": 97,
+        "unitsWithPrice": 97,
+        "minPriceM": 10.648888,
+        "maxPriceM": 378.449888,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for belle-vie",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "emaar-misr",
+        "projectSlug": "cairo-gate",
+        "totalAvailable": 92,
+        "totalUnitsInFile": 92,
+        "unitsWithPrice": 92,
+        "minPriceM": 11.368888,
+        "maxPriceM": 167.305888,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for cairo-gate",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "emaar-misr",
+        "projectSlug": "marassi-red-sea",
+        "totalAvailable": 77,
+        "totalUnitsInFile": 77,
+        "unitsWithPrice": 77,
+        "minPriceM": 27.848888,
+        "maxPriceM": 236.597888,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for marassi-red-sea",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "emaar-misr",
+        "projectSlug": "mivida",
+        "totalAvailable": 88,
+        "totalUnitsInFile": 88,
+        "unitsWithPrice": 88,
+        "minPriceM": 9.665888,
+        "maxPriceM": 117.027888,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for mivida",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "emaar-misr",
+        "projectSlug": "soul",
+        "totalAvailable": 86,
+        "totalUnitsInFile": 86,
+        "unitsWithPrice": 86,
+        "minPriceM": 46.322888,
+        "maxPriceM": 318.843888,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for soul",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "emaar-misr",
+        "projectSlug": "uptown-cairo",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 46.294888,
+        "maxPriceM": 101.187888,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for uptown-cairo",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "everest-view",
+    "developerName": "Everest View",
+    "projectCount": 2,
+    "totalAvailableUnits": 4,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "everest-view",
+        "projectSlug": "montania-park",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 17.5,
+        "maxPriceM": 24.5,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for montania-park",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "everest-view",
+        "projectSlug": "montania",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 23.5,
+        "maxPriceM": 23.85,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for montania",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "general-developer",
+    "developerName": "General Developer",
+    "projectCount": 1,
+    "totalAvailableUnits": 1,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "general-developer",
+        "projectSlug": "origami",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 111.23734,
+        "maxPriceM": 111.23734,
+        "lastUpdated": "2026-11-18",
+        "note": "Updated inventory for origami",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "hassan-allam-properties",
+    "developerName": "Hassan Allam Properties",
+    "projectCount": 7,
+    "totalAvailableUnits": 64,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "hassan-allam-properties",
+        "projectSlug": "grova-east-hills",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 31,
+        "maxPriceM": 78,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for grova-east-hills",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hassan-allam-properties",
+        "projectSlug": "haptown",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 15.5,
+        "maxPriceM": 16,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for haptown",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hassan-allam-properties",
+        "projectSlug": "park-central-mostakbal-city",
+        "totalAvailable": 14,
+        "totalUnitsInFile": 14,
+        "unitsWithPrice": 14,
+        "minPriceM": 8.3,
+        "maxPriceM": 52,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for park-central-mostakbal-city",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hassan-allam-properties",
+        "projectSlug": "swanlake-el-gouna",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 8,
+        "unitsWithPrice": 8,
+        "minPriceM": 27.9,
+        "maxPriceM": 47.7,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for swanlake-el-gouna",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hassan-allam-properties",
+        "projectSlug": "swanlake-residences-new-cairo",
+        "totalAvailable": 13,
+        "totalUnitsInFile": 13,
+        "unitsWithPrice": 13,
+        "minPriceM": 15.7,
+        "maxPriceM": 228.5,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for swanlake-residences-new-cairo",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hassan-allam-properties",
+        "projectSlug": "swanlake-west",
+        "totalAvailable": 14,
+        "totalUnitsInFile": 14,
+        "unitsWithPrice": 14,
+        "minPriceM": 24.2,
+        "maxPriceM": 129,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for swanlake-west",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hassan-allam-properties",
+        "projectSlug": "the-valleys-mostakbal-city",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 26.4,
+        "maxPriceM": 57,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for the-valleys-mostakbal-city",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Hassan Allam / TAI Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "horizon-egypt-developments",
+    "developerName": "Horizon Egypt Developments",
+    "projectCount": 4,
+    "totalAvailableUnits": 29,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "horizon-egypt-developments",
+        "projectSlug": "sa-ada-sahel",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 21.5,
+        "maxPriceM": 320,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for sa-ada-sahel (KM 183 Ras El Hekma)",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "horizon-egypt-developments",
+        "projectSlug": "saada-boutique",
+        "totalAvailable": 12,
+        "totalUnitsInFile": 12,
+        "unitsWithPrice": 12,
+        "minPriceM": 7.7,
+        "maxPriceM": 63.6,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for Saada Boutique New Cairo",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "horizon-egypt-developments",
+        "projectSlug": "saada-north-coast",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 14,
+        "unitsWithPrice": 14,
+        "minPriceM": 21.5,
+        "maxPriceM": 320,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for saada-north-coast (KM 183 Ras El Hekma)",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "horizon-egypt-developments",
+        "projectSlug": "saada",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 33,
+        "maxPriceM": 56,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for saada",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Horizon - Tai - premium ",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "hyde-park",
+    "developerName": "Hyde Park",
+    "projectCount": 2,
+    "totalAvailableUnits": 11,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "hyde-park",
+        "projectSlug": "garden-lakes",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 6.8,
+        "maxPriceM": 32.58,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for garden-lakes",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hyde-park",
+        "projectSlug": "hyde-park-new-cairo",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 13.94,
+        "maxPriceM": 80,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for hyde-park-new-cairo",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "hyde-park-developments",
+    "developerName": "Hyde Park Developments",
+    "projectCount": 5,
+    "totalAvailableUnits": 456,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "hyde-park-developments",
+        "projectSlug": "garden-lakes",
+        "totalAvailable": 44,
+        "totalUnitsInFile": 44,
+        "unitsWithPrice": 44,
+        "minPriceM": 6.8,
+        "maxPriceM": 37.68,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory export for garden-lakes",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hyde-park-developments",
+        "projectSlug": "hyde-park-central",
+        "totalAvailable": 117,
+        "totalUnitsInFile": 117,
+        "unitsWithPrice": 117,
+        "minPriceM": 6.43,
+        "maxPriceM": 50.14,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory export for hyde-park-central",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hyde-park-developments",
+        "projectSlug": "hyde-park-new-cairo",
+        "totalAvailable": 138,
+        "totalUnitsInFile": 138,
+        "unitsWithPrice": 138,
+        "minPriceM": 6.54,
+        "maxPriceM": 385,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory export for hyde-park-new-cairo",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hyde-park-developments",
+        "projectSlug": "hyde-park-north-seashore",
+        "totalAvailable": 137,
+        "totalUnitsInFile": 137,
+        "unitsWithPrice": 137,
+        "minPriceM": 8.48,
+        "maxPriceM": 198.99,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory export for hyde-park-north-seashore",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "hyde-park-developments",
+        "projectSlug": "one-hyde-park-new-cairo",
+        "totalAvailable": 20,
+        "totalUnitsInFile": 20,
+        "unitsWithPrice": 20,
+        "minPriceM": 26.73,
+        "maxPriceM": 94.59,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory export for one-hyde-park-new-cairo",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "HydePark-TAIPremium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "igi-real-estate",
+    "developerName": "Igi Real Estate",
+    "projectCount": 1,
+    "totalAvailableUnits": 3,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "igi-real-estate",
+        "projectSlug": "ashgar-city",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 4.4,
+        "maxPriceM": 5.85,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for ashgar-city",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "ilcazar",
+    "developerName": "Ilcazar",
+    "projectCount": 7,
+    "totalAvailableUnits": 30,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "ilcazar",
+        "projectSlug": "c-north",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 8.5,
+        "maxPriceM": 28,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for c-north",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ilcazar",
+        "projectSlug": "creek-town",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 11.448396,
+        "maxPriceM": 75,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for creek-town",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ilcazar",
+        "projectSlug": "glen",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 8.303412,
+        "maxPriceM": 13.606093,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for glen",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ilcazar",
+        "projectSlug": "safia",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 6.913764,
+        "maxPriceM": 28.24825,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for safia",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ilcazar",
+        "projectSlug": "the-crest",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 4.97728,
+        "maxPriceM": 28.733288,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for the-crest",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ilcazar",
+        "projectSlug": "vea-new-cairo",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 18.227343,
+        "maxPriceM": 26.037598,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for vea-new-cairo",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ilcazar",
+        "projectSlug": "westdays",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 4.496712,
+        "maxPriceM": 7.610713,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for westdays",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "inertia-egypt",
+    "developerName": "Inertia Egypt",
+    "projectCount": 1,
+    "totalAvailableUnits": 16,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "inertia-egypt",
+        "projectSlug": "jefaira",
+        "totalAvailable": 16,
+        "totalUnitsInFile": 16,
+        "unitsWithPrice": 16,
+        "minPriceM": 8.431,
+        "maxPriceM": 36.191,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for jefaira",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "la-mirada",
+    "developerName": "La Mirada",
+    "projectCount": 1,
+    "totalAvailableUnits": 1,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "la-mirada",
+        "projectSlug": "la-mirada",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 7.89,
+        "maxPriceM": 7.89,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for la-mirada",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "la-vista-developments",
+    "developerName": "La Vista Developments",
+    "projectCount": 20,
+    "totalAvailableUnits": 154,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "el-patio-riva",
+        "totalAvailable": 25,
+        "totalUnitsInFile": 25,
+        "unitsWithPrice": 25,
+        "minPriceM": 5.9775,
+        "maxPriceM": 18.79,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for el-patio-riva",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "el-patio-sola",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 11.65,
+        "maxPriceM": 21.55,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for el-patio-sola",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "el-patio-town",
+        "totalAvailable": 15,
+        "totalUnitsInFile": 15,
+        "unitsWithPrice": 15,
+        "minPriceM": 30,
+        "maxPriceM": 78.65,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for el-patio-town",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "el-patio-townside",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "",
+        "note": "",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "el-patio-vera",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 18.3,
+        "maxPriceM": 39.4,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for el-patio-vera",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "la-vista-6",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 9.8,
+        "maxPriceM": 21.5,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for la-vista-6",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "la-vista-7",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 9.6,
+        "maxPriceM": 44,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for la-vista-7",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "la-vista-bay-east",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 19.8,
+        "maxPriceM": 27.8,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for la-vista-bay-east",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "la-vista-cascada",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 27.8,
+        "maxPriceM": 27.8,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for la-vista-cascada",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "la-vista-east",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 19.8,
+        "maxPriceM": 27.8,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for la-vista-east",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "la-vista-gardens",
+        "totalAvailable": 16,
+        "totalUnitsInFile": 16,
+        "unitsWithPrice": 16,
+        "minPriceM": 11.7,
+        "maxPriceM": 20.79,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for la-vista-gardens",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "la-vista-ras-el-hekma",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 20.8,
+        "maxPriceM": 100,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for la-vista-ras-el-hekma",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "la-vista-topaz",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 13.8,
+        "maxPriceM": 16.95,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for la-vista-topaz",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "patio-5-east",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 24.1,
+        "maxPriceM": 34.1,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for patio-5-east",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "patio-casa",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 22.8,
+        "maxPriceM": 29.85,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for patio-casa",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "patio-hills",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 21.68,
+        "maxPriceM": 66.35,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for patio-hills",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "patio-jade",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 21.25,
+        "maxPriceM": 41.8,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for patio-jade",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "patio-oro",
+        "totalAvailable": 9,
+        "totalUnitsInFile": 9,
+        "unitsWithPrice": 9,
+        "minPriceM": 16.55,
+        "maxPriceM": 29.65,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for patio-oro",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "patio-prime",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 24.45,
+        "maxPriceM": 41.1,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for patio-prime",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "la-vista-developments",
+        "projectSlug": "patio-vida",
+        "totalAvailable": 27,
+        "totalUnitsInFile": 27,
+        "unitsWithPrice": 27,
+        "minPriceM": 11.56,
+        "maxPriceM": 27.69,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for patio-vida",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Lavista - TAI - premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "lmd",
+    "developerName": "Lmd",
+    "projectCount": 1,
+    "totalAvailableUnits": 13,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "lmd",
+        "projectSlug": "zoya",
+        "totalAvailable": 13,
+        "totalUnitsInFile": 13,
+        "unitsWithPrice": 13,
+        "minPriceM": 11.5,
+        "maxPriceM": 230,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for zoya",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "m-squared",
+    "developerName": "M Squared",
+    "projectCount": 5,
+    "totalAvailableUnits": 123,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "m-squared",
+        "projectSlug": "31-west",
+        "totalAvailable": 36,
+        "totalUnitsInFile": 36,
+        "unitsWithPrice": 36,
+        "minPriceM": 13.52694,
+        "maxPriceM": 59.269021,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for 31-west",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "m-squared",
+        "projectSlug": "business-district",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 13.264691,
+        "maxPriceM": 21.682668,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for business-district",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "m-squared",
+        "projectSlug": "el-masyaf",
+        "totalAvailable": 21,
+        "totalUnitsInFile": 21,
+        "unitsWithPrice": 21,
+        "minPriceM": 15.427454,
+        "maxPriceM": 55.59636,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for el-masyaf",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "m-squared",
+        "projectSlug": "mist",
+        "totalAvailable": 51,
+        "totalUnitsInFile": 51,
+        "unitsWithPrice": 51,
+        "minPriceM": 6.683841,
+        "maxPriceM": 33.90287,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mist",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "m-squared",
+        "projectSlug": "trio",
+        "totalAvailable": 10,
+        "totalUnitsInFile": 13,
+        "unitsWithPrice": 13,
+        "minPriceM": 11.637891,
+        "maxPriceM": 31.641967,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for trio",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "M Squared | (TAI) - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "m-squared-developments",
+    "developerName": "M Squared Developments",
+    "projectCount": 5,
+    "totalAvailableUnits": 235,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "m-squared-developments",
+        "projectSlug": "31-west",
+        "totalAvailable": 61,
+        "totalUnitsInFile": 61,
+        "unitsWithPrice": 61,
+        "minPriceM": 13.23712,
+        "maxPriceM": 59.267264,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for 31-west",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "m-squared-developments",
+        "projectSlug": "business-district",
+        "totalAvailable": 10,
+        "totalUnitsInFile": 10,
+        "unitsWithPrice": 10,
+        "minPriceM": 13.26469117,
+        "maxPriceM": 21.68266825,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for business-district",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "m-squared-developments",
+        "projectSlug": "el-masyaf-north-coast",
+        "totalAvailable": 39,
+        "totalUnitsInFile": 39,
+        "unitsWithPrice": 39,
+        "minPriceM": 15.42745406,
+        "maxPriceM": 55.596359840000005,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for el-masyaf-north-coast",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "m-squared-developments",
+        "projectSlug": "mist",
+        "totalAvailable": 111,
+        "totalUnitsInFile": 111,
+        "unitsWithPrice": 111,
+        "minPriceM": 6.6838406,
+        "maxPriceM": 33.9028704,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for mist",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "m-squared-developments",
+        "projectSlug": "trio",
+        "totalAvailable": 14,
+        "totalUnitsInFile": 14,
+        "unitsWithPrice": 14,
+        "minPriceM": 11.63789077,
+        "maxPriceM": 31.6419672,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for trio",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "madaar-developments",
+    "developerName": "Madaar Developments",
+    "projectCount": 4,
+    "totalAvailableUnits": 29,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "madaar-developments",
+        "projectSlug": "azha-north-coast",
+        "totalAvailable": 10,
+        "totalUnitsInFile": 10,
+        "unitsWithPrice": 10,
+        "minPriceM": 14,
+        "maxPriceM": 32.247,
+        "lastUpdated": "2026-08-25",
+        "note": "ELEA & SEA VEIL Inventory for azha-north-coast",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "madaar-developments",
+        "projectSlug": "azha-sokhna",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 40,
+        "maxPriceM": 40,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for azha-sokhna",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "madaar-developments",
+        "projectSlug": "elea-azha-north",
+        "totalAvailable": 10,
+        "totalUnitsInFile": 10,
+        "unitsWithPrice": 10,
+        "minPriceM": 14,
+        "maxPriceM": 32.247,
+        "lastUpdated": "2026-08-25",
+        "note": "ELEA & SEA VEIL Inventory for elea-azha-north",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "madaar-developments",
+        "projectSlug": "the-hillage",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 8,
+        "unitsWithPrice": 8,
+        "minPriceM": 17,
+        "maxPriceM": 50.8,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for the-hillage",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Azha - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "madinet-masr",
+    "developerName": "Madinet Masr",
+    "projectCount": 8,
+    "totalAvailableUnits": 48,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "madinet-masr",
+        "projectSlug": "elm-tree-park",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 18.2,
+        "maxPriceM": 23.6,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for elm-tree-park",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "madinet-masr",
+        "projectSlug": "esse-residence",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 0,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for esse-residence",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "madinet-masr",
+        "projectSlug": "kinda-residence",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 12.4,
+        "maxPriceM": 53,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for kinda-residence",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "madinet-masr",
+        "projectSlug": "rai-valleys",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 16.2,
+        "maxPriceM": 25,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for rai-valleys",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "madinet-masr",
+        "projectSlug": "sarai",
+        "totalAvailable": 14,
+        "totalUnitsInFile": 14,
+        "unitsWithPrice": 14,
+        "minPriceM": 3.6,
+        "maxPriceM": 30.3,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for sarai",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "madinet-masr",
+        "projectSlug": "taj-city",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 7.7,
+        "maxPriceM": 53,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for taj-city",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "madinet-masr",
+        "projectSlug": "talala",
+        "totalAvailable": 13,
+        "totalUnitsInFile": 13,
+        "unitsWithPrice": 13,
+        "minPriceM": 4.5,
+        "maxPriceM": 41.2,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for talala",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "madinet-masr",
+        "projectSlug": "the-butterfly",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 8,
+        "unitsWithPrice": 8,
+        "minPriceM": 3,
+        "maxPriceM": 32.6,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for the-butterfly",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "MNHD - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "marakez",
+    "developerName": "Marakez",
+    "projectCount": 4,
+    "totalAvailableUnits": 338,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "marakez",
+        "projectSlug": "aeon",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 36,
+        "maxPriceM": 36,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for aeon",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "marakez",
+        "projectSlug": "crescent-walk",
+        "totalAvailable": 141,
+        "totalUnitsInFile": 141,
+        "unitsWithPrice": 141,
+        "minPriceM": 8.464,
+        "maxPriceM": 126.049,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for crescent-walk",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "marakez",
+        "projectSlug": "district-5",
+        "totalAvailable": 57,
+        "totalUnitsInFile": 57,
+        "unitsWithPrice": 57,
+        "minPriceM": 11.285,
+        "maxPriceM": 49.83,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for district-5",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "marakez",
+        "projectSlug": "ramla-north-coast",
+        "totalAvailable": 139,
+        "totalUnitsInFile": 139,
+        "unitsWithPrice": 139,
+        "minPriceM": 22.176,
+        "maxPriceM": 105.761,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for ramla-north-coast",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Marakez - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "maven-developments",
+    "developerName": "Maven Developments",
+    "projectCount": 1,
+    "totalAvailableUnits": 22,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "maven-developments",
+        "projectSlug": "cali-coast-ras-el-hekma",
+        "totalAvailable": 22,
+        "totalUnitsInFile": 22,
+        "unitsWithPrice": 22,
+        "minPriceM": 6.59,
+        "maxPriceM": 35.922,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for cali-coast-ras-el-hekma",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "mirad",
+    "developerName": "Mirad",
+    "projectCount": 2,
+    "totalAvailableUnits": 4,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "mirad",
+        "projectSlug": "m-apartments",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 6.177,
+        "maxPriceM": 7.616,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for m-apartments",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mirad",
+        "projectSlug": "villaria",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 7.92,
+        "maxPriceM": 8.415,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for villaria",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "misr-italia-properties",
+    "developerName": "Misr Italia Properties",
+    "projectCount": 5,
+    "totalAvailableUnits": 34,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "misr-italia-properties",
+        "projectSlug": "club-hill-solare",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 8,
+        "unitsWithPrice": 8,
+        "minPriceM": 12,
+        "maxPriceM": 35,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for club-hill-solare",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "misr-italia-properties",
+        "projectSlug": "il-bosco-city",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 32.3,
+        "maxPriceM": 57,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for il-bosco-city",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "misr-italia-properties",
+        "projectSlug": "kai-sokhna",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 8,
+        "maxPriceM": 60.3,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for kai-sokhna",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "misr-italia-properties",
+        "projectSlug": "solare",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 12,
+        "unitsWithPrice": 12,
+        "minPriceM": 12,
+        "maxPriceM": 35,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for solare",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "misr-italia-properties",
+        "projectSlug": "vinci",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 8,
+        "unitsWithPrice": 8,
+        "minPriceM": 11.7,
+        "maxPriceM": 57.7,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for vinci",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "MIP - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "modon-holding",
+    "developerName": "Modon Holding",
+    "projectCount": 1,
+    "totalAvailableUnits": 20,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "modon-holding",
+        "projectSlug": "modon-ras-el-hekma",
+        "totalAvailable": 20,
+        "totalUnitsInFile": 20,
+        "unitsWithPrice": 20,
+        "minPriceM": 20.7,
+        "maxPriceM": 203.6,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for modon-ras-el-hekma",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "mountain-view",
+    "developerName": "Mountain View",
+    "projectCount": 12,
+    "totalAvailableUnits": 330,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "creekview",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 8.211882,
+        "maxPriceM": 19.512654,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for creekview",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "lvls",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 24.314026,
+        "maxPriceM": 34.526838,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for lvls",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "mountain-view-aliva",
+        "totalAvailable": 76,
+        "totalUnitsInFile": 76,
+        "unitsWithPrice": 76,
+        "minPriceM": 15.406402,
+        "maxPriceM": 28.909964,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mountain-view-aliva",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "mountain-view-chillout",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 49,
+        "maxPriceM": 49,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mountain-view-chillout",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "mountain-view-crystal",
+        "totalAvailable": 99,
+        "totalUnitsInFile": 99,
+        "unitsWithPrice": 99,
+        "minPriceM": 11.969886,
+        "maxPriceM": 21.513367,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mountain-view-crystal",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "mountain-view-grand-valley",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 0,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mountain-view-grand-valley",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "mountain-view-icity-new-cairo",
+        "totalAvailable": 11,
+        "totalUnitsInFile": 11,
+        "unitsWithPrice": 11,
+        "minPriceM": 15.59303,
+        "maxPriceM": 84.799701,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mountain-view-icity-new-cairo",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "mountain-view-icity-october",
+        "totalAvailable": 54,
+        "totalUnitsInFile": 54,
+        "unitsWithPrice": 54,
+        "minPriceM": 10.1921,
+        "maxPriceM": 63.159269,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mountain-view-icity-october",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "mountain-view-jirian",
+        "totalAvailable": 22,
+        "totalUnitsInFile": 22,
+        "unitsWithPrice": 22,
+        "minPriceM": 12.164653,
+        "maxPriceM": 29.220153,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mountain-view-jirian",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "mountain-view-kingsway",
+        "totalAvailable": 35,
+        "totalUnitsInFile": 35,
+        "unitsWithPrice": 35,
+        "minPriceM": 27.162404,
+        "maxPriceM": 212.111972,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mountain-view-kingsway",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "mountain-view-mv4",
+        "totalAvailable": 9,
+        "totalUnitsInFile": 9,
+        "unitsWithPrice": 9,
+        "minPriceM": 24.315239,
+        "maxPriceM": 26.761244,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mountain-view-mv4",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "mountain-view",
+        "projectSlug": "mountain-view-ras-el-hekma",
+        "totalAvailable": 13,
+        "totalUnitsInFile": 13,
+        "unitsWithPrice": 13,
+        "minPriceM": 16.798712,
+        "maxPriceM": 64.380926,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for mountain-view-ras-el-hekma",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "MV-TAI Premuim DG- Nazly",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "naia-developments",
+    "developerName": "Naia Developments",
+    "projectCount": 1,
+    "totalAvailableUnits": 8,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "naia-developments",
+        "projectSlug": "naia-bay",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 8,
+        "unitsWithPrice": 8,
+        "minPriceM": 8.7,
+        "maxPriceM": 123,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for naia-bay",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Naia Dev. - TAI Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "nations-of-sky",
+    "developerName": "Nations Of Sky",
+    "projectCount": 3,
+    "totalAvailableUnits": 42,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "nations-of-sky",
+        "projectSlug": "jirian-nations-of-sky",
+        "totalAvailable": 14,
+        "totalUnitsInFile": 14,
+        "unitsWithPrice": 14,
+        "minPriceM": 22,
+        "maxPriceM": 285,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for jirian-nations-of-sky",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "nations-of-sky",
+        "projectSlug": "perla",
+        "totalAvailable": 10,
+        "totalUnitsInFile": 10,
+        "unitsWithPrice": 10,
+        "minPriceM": 12.9,
+        "maxPriceM": 275,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for perla",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "nations-of-sky",
+        "projectSlug": "zomra-east",
+        "totalAvailable": 18,
+        "totalUnitsInFile": 17,
+        "unitsWithPrice": 17,
+        "minPriceM": 8.9,
+        "maxPriceM": 65,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for zomra-east",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "north-africa",
+    "developerName": "North Africa",
+    "projectCount": 1,
+    "totalAvailableUnits": 4,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "north-africa",
+        "projectSlug": "katameya-gardens",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 7.255,
+        "maxPriceM": 64.2,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for katameya-gardens",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "novus-stanza",
+    "developerName": "Novus Stanza",
+    "projectCount": 2,
+    "totalAvailableUnits": 2,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "novus-stanza",
+        "projectSlug": "golden-heights-1",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 57.641,
+        "maxPriceM": 57.641,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for golden-heights-1",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "novus-stanza",
+        "projectSlug": "golden-heights-2",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 60.731,
+        "maxPriceM": 60.731,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for golden-heights-2",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "ora",
+    "developerName": "Ora",
+    "projectCount": 6,
+    "totalAvailableUnits": 87,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "ora",
+        "projectSlug": "silversands",
+        "totalAvailable": 23,
+        "totalUnitsInFile": 23,
+        "unitsWithPrice": 23,
+        "minPriceM": 21,
+        "maxPriceM": 180,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for silversands",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ora",
+        "projectSlug": "solana-east",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 13.9,
+        "maxPriceM": 119,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for solana-east",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ora",
+        "projectSlug": "solana-west",
+        "totalAvailable": 18,
+        "totalUnitsInFile": 18,
+        "unitsWithPrice": 18,
+        "minPriceM": 17.3,
+        "maxPriceM": 76,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for solana-west",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ora",
+        "projectSlug": "solana",
+        "totalAvailable": 18,
+        "totalUnitsInFile": 18,
+        "unitsWithPrice": 18,
+        "minPriceM": 17.3,
+        "maxPriceM": 76,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for solana",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ora",
+        "projectSlug": "zed-east",
+        "totalAvailable": 14,
+        "totalUnitsInFile": 14,
+        "unitsWithPrice": 14,
+        "minPriceM": 9.45,
+        "maxPriceM": 73,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for zed-east",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "ora",
+        "projectSlug": "zed-west",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 9,
+        "maxPriceM": 27,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for zed-west",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "palm-hills-developments",
+    "developerName": "Palm Hills Developments",
+    "projectCount": 19,
+    "totalAvailableUnits": 2496,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "97-hills",
+        "totalAvailable": 60,
+        "totalUnitsInFile": 60,
+        "unitsWithPrice": 60,
+        "minPriceM": 29.189,
+        "maxPriceM": 69.038,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for 97-hills",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "badya",
+        "totalAvailable": 470,
+        "totalUnitsInFile": 470,
+        "unitsWithPrice": 470,
+        "minPriceM": 5.661,
+        "maxPriceM": 63.509,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for badya",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "bamboo-iii",
+        "totalAvailable": 43,
+        "totalUnitsInFile": 43,
+        "unitsWithPrice": 43,
+        "minPriceM": 29.767,
+        "maxPriceM": 38.14,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for bamboo-iii",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "capital-gardens",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 11.884,
+        "maxPriceM": 16.489,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for capital-gardens",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "hacienda-blue",
+        "totalAvailable": 10,
+        "totalUnitsInFile": 10,
+        "unitsWithPrice": 10,
+        "minPriceM": 25.409,
+        "maxPriceM": 30.689,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for hacienda-blue",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "hacienda-heneish",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 28.091,
+        "maxPriceM": 77.265,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for hacienda-heneish",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "hacienda-ras-el-hekma",
+        "totalAvailable": 347,
+        "totalUnitsInFile": 347,
+        "unitsWithPrice": 347,
+        "minPriceM": 12.243,
+        "maxPriceM": 213.808,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for hacienda-ras-el-hekma",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "hacienda-waters",
+        "totalAvailable": 209,
+        "totalUnitsInFile": 209,
+        "unitsWithPrice": 209,
+        "minPriceM": 14.752,
+        "maxPriceM": 120.105,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for hacienda-waters",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "palm-hills-alexandria",
+        "totalAvailable": 44,
+        "totalUnitsInFile": 44,
+        "unitsWithPrice": 44,
+        "minPriceM": 11.317,
+        "maxPriceM": 34.802,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for palm-hills-alexandria",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "palm-hills-jirian",
+        "totalAvailable": 460,
+        "totalUnitsInFile": 460,
+        "unitsWithPrice": 460,
+        "minPriceM": 7.874,
+        "maxPriceM": 95.012,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for palm-hills-jirian",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "palm-hills-new-cairo",
+        "totalAvailable": 121,
+        "totalUnitsInFile": 121,
+        "unitsWithPrice": 121,
+        "minPriceM": 10.465,
+        "maxPriceM": 33.924,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for palm-hills-new-cairo",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "palm-hills-one",
+        "totalAvailable": 93,
+        "totalUnitsInFile": 93,
+        "unitsWithPrice": 93,
+        "minPriceM": 47.549,
+        "maxPriceM": 340.405,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for palm-hills-one",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "palm-hills-ritz-carlton",
+        "totalAvailable": 60,
+        "totalUnitsInFile": 60,
+        "unitsWithPrice": 60,
+        "minPriceM": 64.937,
+        "maxPriceM": 132.191,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for palm-hills-ritz-carlton",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "palm-parks",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 18.446,
+        "maxPriceM": 22.499,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for palm-parks",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "palmet",
+        "totalAvailable": 16,
+        "totalUnitsInFile": 16,
+        "unitsWithPrice": 16,
+        "minPriceM": 25.694,
+        "maxPriceM": 48.794,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for palmet",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "phnc-commercial",
+        "totalAvailable": 72,
+        "totalUnitsInFile": 72,
+        "unitsWithPrice": 72,
+        "minPriceM": 13.03,
+        "maxPriceM": 36.774,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for phnc-commercial",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "px",
+        "totalAvailable": 187,
+        "totalUnitsInFile": 187,
+        "unitsWithPrice": 187,
+        "minPriceM": 15.226,
+        "maxPriceM": 68.88,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for px",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "the-crown-extension",
+        "totalAvailable": 44,
+        "totalUnitsInFile": 44,
+        "unitsWithPrice": 44,
+        "minPriceM": 31.599,
+        "maxPriceM": 39.579,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for the-crown-extension",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "palm-hills-developments",
+        "projectSlug": "village-de-la-capitale",
+        "totalAvailable": 246,
+        "totalUnitsInFile": 246,
+        "unitsWithPrice": 246,
+        "minPriceM": 7.127,
+        "maxPriceM": 45.509,
+        "lastUpdated": "2026-11-19",
+        "note": "Updated inventory for village-de-la-capitale",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Palm Hills- TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "pre-developments",
+    "developerName": "Pre Developments",
+    "projectCount": 7,
+    "totalAvailableUnits": 38,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "pre-developments",
+        "projectSlug": "hadaba",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 26.9,
+        "maxPriceM": 32.9,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for hadaba",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "pre-developments",
+        "projectSlug": "ivoire-east",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 9.904,
+        "maxPriceM": 42.187,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for ivoire-east",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "pre-developments",
+        "projectSlug": "ivoire-west",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 9.65,
+        "maxPriceM": 19.95,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for ivoire-west",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "pre-developments",
+        "projectSlug": "jebal-sokhna",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 7.755,
+        "maxPriceM": 9.989,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for jebal-sokhna",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "pre-developments",
+        "projectSlug": "point-90-offices-park",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 11,
+        "maxPriceM": 44,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for point-90-offices-park",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "pre-developments",
+        "projectSlug": "stone-residence",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 9.702,
+        "maxPriceM": 15.708,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for stone-residence",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "pre-developments",
+        "projectSlug": "the-brooks",
+        "totalAvailable": 12,
+        "totalUnitsInFile": 12,
+        "unitsWithPrice": 12,
+        "minPriceM": 7.444,
+        "maxPriceM": 33.7,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for the-brooks",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "PRE Group / TAI Premuim",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "qatari-diar",
+    "developerName": "Qatari Diar",
+    "projectCount": 1,
+    "totalAvailableUnits": 23,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "qatari-diar",
+        "projectSlug": "alam-al-roum",
+        "totalAvailable": 23,
+        "totalUnitsInFile": 23,
+        "unitsWithPrice": 23,
+        "minPriceM": 15.6,
+        "maxPriceM": 227,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for alam-al-roum",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Qatari Diar - TAI - premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "reportage-properties",
+    "developerName": "Reportage Properties",
+    "projectCount": 1,
+    "totalAvailableUnits": 4,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "reportage-properties",
+        "projectSlug": "monte-napoleone",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 7.5,
+        "maxPriceM": 13.7,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for monte-napoleone",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "roya-developments",
+    "developerName": "Roya Developments",
+    "projectCount": 4,
+    "totalAvailableUnits": 19,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "roya-developments",
+        "projectSlug": "covaya",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 5.5,
+        "maxPriceM": 16.7,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for covaya",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "roya-developments",
+        "projectSlug": "oak-residences",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 5,
+        "unitsWithPrice": 5,
+        "minPriceM": 10.6,
+        "maxPriceM": 19.8,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for oak-residences",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "roya-developments",
+        "projectSlug": "telal-east",
+        "totalAvailable": 9,
+        "totalUnitsInFile": 9,
+        "unitsWithPrice": 9,
+        "minPriceM": 8.7053,
+        "maxPriceM": 54.0006,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for telal-east",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "roya-developments",
+        "projectSlug": "telal-shores",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 20.78,
+        "maxPriceM": 22.7,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for telal-shores",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "sephora",
+    "developerName": "Sephora",
+    "projectCount": 1,
+    "totalAvailableUnits": 3,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "sephora",
+        "projectSlug": "sephora-heights",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 9,
+        "maxPriceM": 48.665,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for sephora-heights",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "sky-ad-developments",
+    "developerName": "Sky Ad Developments",
+    "projectCount": 1,
+    "totalAvailableUnits": 0,
+    "hasPricedUnits": false,
+    "projects": [
+      {
+        "developerSlug": "sky-ad-developments",
+        "projectSlug": "bluetree",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 13,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "",
+        "note": "",
+        "status": "SOLD_OUT"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Nations Of Sky - TAI Premium",
+    "needsUpdate": true,
+    "reason": "All projects currently marked Sold Out (0 units available)"
+  },
+  {
+    "developerSlug": "sodic",
+    "developerName": "Sodic",
+    "projectCount": 24,
+    "totalAvailableUnits": 1540,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "allegria",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 0,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "2026-08-19",
+        "note": "Sold out - allegria",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "aqua-lagoons-june",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 0,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "2026-08-19",
+        "note": "Sold out - aqua-lagoons-june",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "beverly-hills",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 0,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "2026-08-19",
+        "note": "Sold out - beverly-hills",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "bloom-island-ogami",
+        "totalAvailable": 219,
+        "totalUnitsInFile": 219,
+        "unitsWithPrice": 219,
+        "minPriceM": 18.8433,
+        "maxPriceM": 245.949,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for bloom-island-ogami",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "caesar-bay",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 0,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "2026-08-19",
+        "note": "Sold out - caesar-bay",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "caesar-extension-2",
+        "totalAvailable": 21,
+        "totalUnitsInFile": 21,
+        "unitsWithPrice": 21,
+        "minPriceM": 42.32,
+        "maxPriceM": 62.102,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for caesar-extension-2",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "caesar-sodic",
+        "totalAvailable": 30,
+        "totalUnitsInFile": 29,
+        "unitsWithPrice": 29,
+        "minPriceM": 50.263,
+        "maxPriceM": 121.67528,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for caesar-sodic",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "eastown",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 0,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "2026-08-19",
+        "note": "Sold out - eastown",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "june",
+        "totalAvailable": 84,
+        "totalUnitsInFile": 83,
+        "unitsWithPrice": 83,
+        "minPriceM": 28.016,
+        "maxPriceM": 240.392,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for june",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "karmell",
+        "totalAvailable": 231,
+        "totalUnitsInFile": 231,
+        "unitsWithPrice": 231,
+        "minPriceM": 9.777,
+        "maxPriceM": 84.365,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for karmell",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "ogami",
+        "totalAvailable": 219,
+        "totalUnitsInFile": 219,
+        "unitsWithPrice": 219,
+        "minPriceM": 18.8433,
+        "maxPriceM": 245.949,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for ogami",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "sky-condos",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 29.185,
+        "maxPriceM": 54.607,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for sky-condos",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "sodic-east-vale",
+        "totalAvailable": 384,
+        "totalUnitsInFile": 384,
+        "unitsWithPrice": 384,
+        "minPriceM": 9.361,
+        "maxPriceM": 78.172,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for sodic-east-vale",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "sodic-east",
+        "totalAvailable": 156,
+        "totalUnitsInFile": 155,
+        "unitsWithPrice": 155,
+        "minPriceM": 13.53,
+        "maxPriceM": 72.7,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for sodic-east",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "sodic-the-estates",
+        "totalAvailable": 10,
+        "totalUnitsInFile": 9,
+        "unitsWithPrice": 9,
+        "minPriceM": 73.24284,
+        "maxPriceM": 208.525,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for sodic-the-estates",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "sodic-west",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 0,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "2026-08-19",
+        "note": "Sold out - sodic-west",
+        "status": "SOLD_OUT"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "the-estates-residences",
+        "totalAvailable": 115,
+        "totalUnitsInFile": 114,
+        "unitsWithPrice": 114,
+        "minPriceM": 19.135,
+        "maxPriceM": 101.128,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for the-estates-residences",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "the-estates",
+        "totalAvailable": 4,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 58.4004,
+        "maxPriceM": 208,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for the-estates",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "the-portal",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 23.835,
+        "maxPriceM": 77.093,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for the-portal",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "v-editions",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 53.044,
+        "maxPriceM": 55.894,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for v-editions",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "villette",
+        "totalAvailable": 5,
+        "totalUnitsInFile": 4,
+        "unitsWithPrice": 4,
+        "minPriceM": 22.602,
+        "maxPriceM": 51.426,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for villette",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "vye-sodic",
+        "totalAvailable": 27,
+        "totalUnitsInFile": 27,
+        "unitsWithPrice": 27,
+        "minPriceM": 26.868,
+        "maxPriceM": 46.537,
+        "lastUpdated": "2026-08-25",
+        "note": "Updated inventory for vye-sodic",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "westown-medical-centre",
+        "totalAvailable": 14,
+        "totalUnitsInFile": 13,
+        "unitsWithPrice": 13,
+        "minPriceM": 12.275,
+        "maxPriceM": 30.314,
+        "lastUpdated": "2026-08-19",
+        "note": "Live inventory for westown-medical-centre",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "sodic",
+        "projectSlug": "westown-residences",
+        "totalAvailable": 0,
+        "totalUnitsInFile": 0,
+        "unitsWithPrice": 0,
+        "minPriceM": 0,
+        "maxPriceM": 0,
+        "lastUpdated": "2026-08-19",
+        "note": "Sold out - westown-residences",
+        "status": "SOLD_OUT"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Sodic - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "starlight-developments",
+    "developerName": "Starlight Developments",
+    "projectCount": 1,
+    "totalAvailableUnits": 3,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "starlight-developments",
+        "projectSlug": "katameya-creeks",
+        "totalAvailable": 3,
+        "totalUnitsInFile": 3,
+        "unitsWithPrice": 3,
+        "minPriceM": 30,
+        "maxPriceM": 111,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for katameya-creeks",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "KATAMEYA- TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "stm",
+    "developerName": "Stm",
+    "projectCount": 1,
+    "totalAvailableUnits": 12,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "stm",
+        "projectSlug": "la-vista-city",
+        "totalAvailable": 12,
+        "totalUnitsInFile": 12,
+        "unitsWithPrice": 12,
+        "minPriceM": 30.07,
+        "maxPriceM": 70.28,
+        "lastUpdated": "2026-08-24",
+        "note": "La Vista City live inventory",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "stm-developments",
+    "developerName": "Stm Developments",
+    "projectCount": 2,
+    "totalAvailableUnits": 27,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "stm-developments",
+        "projectSlug": "mayan-el-shorouk",
+        "totalAvailable": 15,
+        "totalUnitsInFile": 15,
+        "unitsWithPrice": 15,
+        "minPriceM": 5.6,
+        "maxPriceM": 10.1,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for mayan-el-shorouk",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "stm-developments",
+        "projectSlug": "mayan-new-cairo",
+        "totalAvailable": 12,
+        "totalUnitsInFile": 12,
+        "unitsWithPrice": 12,
+        "minPriceM": 8.6,
+        "maxPriceM": 15.3,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for mayan-new-cairo",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "STM - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "tameer",
+    "developerName": "Tameer",
+    "projectCount": 1,
+    "totalAvailableUnits": 2,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "tameer",
+        "projectSlug": "azad",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 18.35,
+        "maxPriceM": 19.5,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for azad",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "tatweer-misr",
+    "developerName": "Tatweer Misr",
+    "projectCount": 12,
+    "totalAvailableUnits": 2113,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "bloomfields-mostakbal-city",
+        "totalAvailable": 90,
+        "totalUnitsInFile": 90,
+        "unitsWithPrice": 90,
+        "minPriceM": 5.845,
+        "maxPriceM": 30.516,
+        "lastUpdated": "2026-08-24",
+        "note": "Bloomfields latest availability",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "bloomfields",
+        "totalAvailable": 90,
+        "totalUnitsInFile": 90,
+        "unitsWithPrice": 90,
+        "minPriceM": 5.845,
+        "maxPriceM": 30.516,
+        "lastUpdated": "2026-08-24",
+        "note": "Bloomfields latest availability",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "d-bay",
+        "totalAvailable": 12,
+        "totalUnitsInFile": 12,
+        "unitsWithPrice": 12,
+        "minPriceM": 54.714,
+        "maxPriceM": 54.714,
+        "lastUpdated": "2026-08-24",
+        "note": "D-Bay latest availability",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "dbay",
+        "totalAvailable": 12,
+        "totalUnitsInFile": 12,
+        "unitsWithPrice": 12,
+        "minPriceM": 54.714,
+        "maxPriceM": 54.714,
+        "lastUpdated": "2026-08-24",
+        "note": "D-Bay latest availability",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "fouka-bay",
+        "totalAvailable": 44,
+        "totalUnitsInFile": 8,
+        "unitsWithPrice": 8,
+        "minPriceM": 12,
+        "maxPriceM": 12,
+        "lastUpdated": "2026-08-24",
+        "note": "Fouka Bay latest availability",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "il-monte-galala",
+        "totalAvailable": 468,
+        "totalUnitsInFile": 468,
+        "unitsWithPrice": 468,
+        "minPriceM": 5.603,
+        "maxPriceM": 91.015,
+        "lastUpdated": "2026-08-24",
+        "note": "Il Monte Galala latest availability",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "monte-galala",
+        "totalAvailable": 468,
+        "totalUnitsInFile": 468,
+        "unitsWithPrice": 468,
+        "minPriceM": 5.603,
+        "maxPriceM": 91.015,
+        "lastUpdated": "2026-08-24",
+        "note": "Il Monte Galala latest availability",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "rivers",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 36.5,
+        "maxPriceM": 36.5,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for rivers",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "salt-north-coast",
+        "totalAvailable": 445,
+        "totalUnitsInFile": 445,
+        "unitsWithPrice": 445,
+        "minPriceM": 9.461,
+        "maxPriceM": 101.212,
+        "lastUpdated": "2026-08-24",
+        "note": "Salt North Coast latest availability",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "salt",
+        "totalAvailable": 445,
+        "totalUnitsInFile": 445,
+        "unitsWithPrice": 445,
+        "minPriceM": 9.461,
+        "maxPriceM": 101.212,
+        "lastUpdated": "2026-08-24",
+        "note": "Salt North Coast latest availability",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "scenes-mostakbal-city",
+        "totalAvailable": 19,
+        "totalUnitsInFile": 19,
+        "unitsWithPrice": 19,
+        "minPriceM": 15.159,
+        "maxPriceM": 27.266,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for scenes-mostakbal-city",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "tatweer-misr",
+        "projectSlug": "scenes",
+        "totalAvailable": 19,
+        "totalUnitsInFile": 19,
+        "unitsWithPrice": 19,
+        "minPriceM": 15.159,
+        "maxPriceM": 27.266,
+        "lastUpdated": "2026-08-25",
+        "note": "Inventory for scenes",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "Tatweer - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "tbk-developments",
+    "developerName": "Tbk Developments",
+    "projectCount": 1,
+    "totalAvailableUnits": 2,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "tbk-developments",
+        "projectSlug": "90-avenue",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 16.3,
+        "maxPriceM": 19.5,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for 90-avenue",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "tcc",
+    "developerName": "Tcc",
+    "projectCount": 1,
+    "totalAvailableUnits": 6,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "tcc",
+        "projectSlug": "joya",
+        "totalAvailable": 6,
+        "totalUnitsInFile": 6,
+        "unitsWithPrice": 6,
+        "minPriceM": 23.2165,
+        "maxPriceM": 48.981,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for joya",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "tesla",
+    "developerName": "Tesla",
+    "projectCount": 1,
+    "totalAvailableUnits": 2,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "tesla",
+        "projectSlug": "green-town",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 5.7005,
+        "maxPriceM": 5.7505,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for green-town",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "the-marq-communities",
+    "developerName": "The Marq Communities",
+    "projectCount": 2,
+    "totalAvailableUnits": 20,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "the-marq-communities",
+        "projectSlug": "the-marq-gardens",
+        "totalAvailable": 12,
+        "totalUnitsInFile": 12,
+        "unitsWithPrice": 12,
+        "minPriceM": 34.13,
+        "maxPriceM": 58,
+        "lastUpdated": "2026-09-09",
+        "note": "Inventory for the-marq-gardens",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "the-marq-communities",
+        "projectSlug": "the-water-marq",
+        "totalAvailable": 8,
+        "totalUnitsInFile": 8,
+        "unitsWithPrice": 8,
+        "minPriceM": 64.22,
+        "maxPriceM": 110,
+        "lastUpdated": "2026-09-09",
+        "note": "Inventory for the-water-marq",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "The MarQ - Premium 'Diana' TAI",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "the-waterway",
+    "developerName": "The Waterway",
+    "projectCount": 2,
+    "totalAvailableUnits": 3,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "the-waterway",
+        "projectSlug": "w-signature",
+        "totalAvailable": 2,
+        "totalUnitsInFile": 2,
+        "unitsWithPrice": 2,
+        "minPriceM": 22,
+        "maxPriceM": 28,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for w-signature",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "the-waterway",
+        "projectSlug": "waterway-1",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 35,
+        "maxPriceM": 35,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for waterway-1",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "the-waterway-developments",
+    "developerName": "The Waterway Developments",
+    "projectCount": 3,
+    "totalAvailableUnits": 81,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "the-waterway-developments",
+        "projectSlug": "the-waterway",
+        "totalAvailable": 25,
+        "totalUnitsInFile": 25,
+        "unitsWithPrice": 25,
+        "minPriceM": 15.606,
+        "maxPriceM": 100.233,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for the-waterway",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "the-waterway-developments",
+        "projectSlug": "w55",
+        "totalAvailable": 55,
+        "totalUnitsInFile": 55,
+        "unitsWithPrice": 55,
+        "minPriceM": 36.561,
+        "maxPriceM": 63.231,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for w55",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "the-waterway-developments",
+        "projectSlug": "waterway-1",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 23.3,
+        "maxPriceM": 23.3,
+        "lastUpdated": "2026-08-26",
+        "note": "Inventory for waterway-1",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": true,
+    "groupName": "WaterWay - TAI - Premium",
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "travco-properties",
+    "developerName": "Travco Properties",
+    "projectCount": 1,
+    "totalAvailableUnits": 7,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "travco-properties",
+        "projectSlug": "almaza-bay",
+        "totalAvailable": 7,
+        "totalUnitsInFile": 7,
+        "unitsWithPrice": 7,
+        "minPriceM": 18.59,
+        "maxPriceM": 46.13,
+        "lastUpdated": "2026-08-25",
+        "note": "Phase 2 Marina Gate Inventory for Almaza Bay",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "wadi-degla",
+    "developerName": "Wadi Degla",
+    "projectCount": 2,
+    "totalAvailableUnits": 2,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "wadi-degla",
+        "projectSlug": "neopolis",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 7.2,
+        "maxPriceM": 7.2,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for neopolis",
+        "status": "ACTIVE_PRICED"
+      },
+      {
+        "developerSlug": "wadi-degla",
+        "projectSlug": "promenade",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 10.7,
+        "maxPriceM": 10.7,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for promenade",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  },
+  {
+    "developerSlug": "zg",
+    "developerName": "Zg",
+    "projectCount": 1,
+    "totalAvailableUnits": 1,
+    "hasPricedUnits": true,
+    "projects": [
+      {
+        "developerSlug": "zg",
+        "projectSlug": "zg2",
+        "totalAvailable": 1,
+        "totalUnitsInFile": 1,
+        "unitsWithPrice": 1,
+        "minPriceM": 22.25,
+        "maxPriceM": 22.25,
+        "lastUpdated": "2026-08-25",
+        "note": "Fact sheet inventory for zg2",
+        "status": "ACTIVE_PRICED"
+      }
+    ],
+    "hasWhatsAppGroup": false,
+    "needsUpdate": false
+  }
+]

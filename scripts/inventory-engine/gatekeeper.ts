@@ -21,13 +21,25 @@ let projectAliases: { compounds: Record<string, string>; developers: Record<stri
   developers: {},
 };
 
-if (fs.existsSync(ALIASES_FILE)) {
-  try {
-    projectAliases = JSON.parse(fs.readFileSync(ALIASES_FILE, "utf8"));
-  } catch (err) {
-    console.error("Failed to parse project aliases:", err);
+let sortedCompoundAliases: [string, string][] = [];
+let sortedDeveloperAliases: [string, string][] = [];
+
+function loadAliases() {
+  if (fs.existsSync(ALIASES_FILE)) {
+    try {
+      projectAliases = JSON.parse(fs.readFileSync(ALIASES_FILE, "utf8"));
+      sortedCompoundAliases = Object.entries(projectAliases.compounds || {}).sort(
+        (a, b) => b[0].length - a[0].length
+      );
+      sortedDeveloperAliases = Object.entries(projectAliases.developers || {}).sort(
+        (a, b) => b[0].length - a[0].length
+      );
+    } catch (err) {
+      console.error("Failed to parse project aliases:", err);
+    }
   }
 }
+loadAliases();
 
 /**
  * Returns canonical developer slug for a project slug
@@ -94,8 +106,8 @@ export function matchProjectAndDeveloper(text: string): { projectSlug?: string; 
   let foundProject: string | undefined;
   let foundDeveloper: string | undefined;
 
-  // Check compounds/projects
-  for (const [alias, slug] of Object.entries(projectAliases.compounds)) {
+  // Check compounds/projects (longest match first)
+  for (const [alias, slug] of sortedCompoundAliases) {
     const regex = new RegExp(`(^|\\s)${alias.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(\\s|$)`, "i");
     if (regex.test(lower)) {
       foundProject = slug;
@@ -103,8 +115,8 @@ export function matchProjectAndDeveloper(text: string): { projectSlug?: string; 
     }
   }
 
-  // Check developers
-  for (const [alias, devSlug] of Object.entries(projectAliases.developers)) {
+  // Check developers (longest match first)
+  for (const [alias, devSlug] of sortedDeveloperAliases) {
     const regex = new RegExp(`(^|\\s)${alias.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(\\s|$)`, "i");
     if (regex.test(lower)) {
       foundDeveloper = devSlug;

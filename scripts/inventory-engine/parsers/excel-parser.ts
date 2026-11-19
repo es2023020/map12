@@ -157,13 +157,17 @@ export function parseExcelWorkbook(
 
     headers.forEach((h, idx) => {
       const lower = h.toLowerCase().replace(/[^a-z0-9\u0600-\u06FF]+/g, "");
-      if (!colMap.unitId && (lower.includes("unit") || lower.includes("code") || lower.includes("كود") || lower === "id" || lower === "#")) {
+      const isType = lower.includes("type") || lower.includes("category") || lower.includes("layout") || lower.includes("نوع");
+      const isSubFee = lower.includes("finishing") || lower.includes("club") || lower.includes("maintenance") || lower.includes("deposit");
+      const isLand = lower.includes("land") || lower.includes("garden") || lower.includes("roof") || lower.includes("outdoor") || lower.includes("pergola") || lower.includes("garage") || lower.includes("storage");
+
+      if (!colMap.unitId && !isType && (lower.includes("code") || lower.includes("unitcode") || lower.includes("unitno") || lower.includes("كود") || lower === "unit" || lower === "id" || lower === "#")) {
         colMap.unitId = idx;
-      } else if (!colMap.type && (lower.includes("type") || lower.includes("category") || lower.includes("layout") || lower.includes("نوع"))) {
+      } else if (!colMap.type && isType) {
         colMap.type = idx;
-      } else if (!colMap.price && (lower.includes("price") || lower.includes("cost") || lower.includes("value") || lower.includes("egp") || lower.includes("سعر") || lower.includes("اجمالي"))) {
+      } else if (!colMap.price && !isSubFee && (lower.includes("unittotal") || lower.includes("grandtotal") || lower.includes("price") || lower.includes("total") || lower.includes("value") || lower.includes("cost") || lower.includes("egp") || lower.includes("سعر") || lower.includes("اجمالي"))) {
         colMap.price = idx;
-      } else if (!colMap.bua && (lower.includes("bua") || lower.includes("area") || lower.includes("sqm") || lower.includes("مساحة"))) {
+      } else if (!colMap.bua && !isLand && (lower.includes("built") || lower.includes("bua") || lower.includes("area") || lower.includes("sqm") || lower.includes("مساحة"))) {
         colMap.bua = idx;
       } else if (!colMap.beds && (lower.includes("bed") || lower.includes("rooms") || lower.includes("غرف"))) {
         colMap.beds = idx;
