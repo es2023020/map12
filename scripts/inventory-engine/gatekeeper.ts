@@ -137,6 +137,17 @@ export function extractDateFromText(text: string): string | undefined {
     return `${monthYearMatch[1]} ${monthYearMatch[2]}`;
   }
 
+  // Support day-month e.g. 19-Nov, 19_Nov, 19-11
+  const dayMonthNameMatch = text.match(/\b((0?[1-9]|[12]\d|3[01])[-_.](jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*)\b/i);
+  if (dayMonthNameMatch) {
+    return `${dayMonthNameMatch[1]}-${new Date().getFullYear()}`;
+  }
+
+  const dayMonthNumMatch = text.match(/\b((0?[1-9]|[12]\d|3[01])[-_.](0?[1-9]|1[0-2]))\b/);
+  if (dayMonthNumMatch) {
+    return `${new Date().getFullYear()}-${dayMonthNumMatch[1].replace(/[_.]/g, "-")}`;
+  }
+
   return undefined;
 }
 
@@ -259,15 +270,15 @@ export function evaluateIncomingDocument(
     };
   }
 
-  // Even if no keyword in filename, if it's an Excel sheet sent in a recognized developer group, accept for table inspection
-  if ([".xlsx", ".xls"].includes(ext) && (projectSlug || (effectiveDevSlug && effectiveDevSlug !== "general-developer"))) {
+  // Any Excel spreadsheet with an inventory signal, date, project, or developer is accepted for table inspection
+  if ([".xlsx", ".xls"].includes(ext) && (detectedDate || hasInventorySignal || projectSlug || effectiveDevSlug)) {
     return {
       accepted: true,
-      documentType: projectSlug ? "PROJECT_INVENTORY" : "MASTER_INVENTORY",
+      documentType: isMaster ? "MASTER_INVENTORY" : (projectSlug ? "PROJECT_INVENTORY" : "MASTER_INVENTORY"),
       developerSlug: effectiveDevSlug,
       projectSlug,
       detectedDate: detectedDate || new Date().toISOString().slice(0, 10),
-      confidence: 0.85,
+      confidence: 0.9,
     };
   }
 

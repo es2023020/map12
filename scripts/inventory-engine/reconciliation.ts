@@ -1,6 +1,8 @@
 import fs from "fs";
 import path from "path";
-import * as XLSX from "xlsx";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const XLSX = require("xlsx");
 import { fileURLToPath } from "url";
 import { NormalizedUnit, DiffReport, AnomalyWarning } from "./types";
 import { deduplicateUnits, computeUnitFingerprint } from "./dedup";

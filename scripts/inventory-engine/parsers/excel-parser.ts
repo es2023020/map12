@@ -1,4 +1,6 @@
-import * as XLSX from "xlsx";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const XLSX = require("xlsx");
 import path from "path";
 import { NormalizedUnit } from "../types";
 import { normalizeUnitId, computeUnitFingerprint } from "../dedup";
