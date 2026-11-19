@@ -1,0 +1,17 @@
+[
+  {
+    "id": "creek-town-2",
+    "unitNo": "CT-3BD",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 165,
+    "view": "Landscape",
+    "priceEGP": 12375000,
+    "status": "Available",
+    "slug": "creek-town",
+    "cluster": "New Cairo",
+    "area_note": "165 SQM",
+    "delivery_note": "Ready To Move",
+    "payment_plan": "10% over 8 years; Maintenance: 10%"
+  }
+]

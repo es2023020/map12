@@ -1,0 +1,16 @@
+[
+  {
+    "id": "kinda-residence-1",
+    "unitNo": "TAJ-KINDA-TWIN-392",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 392,
+    "view": "Landscape",
+    "priceEGP": 53000000,
+    "status": "Available",
+    "slug": "kinda-residence",
+    "cluster": "Kinda",
+    "delivery_note": "1 Year",
+    "payment_plan": "15% - 7 Yrs"
+  }
+]

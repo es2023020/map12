@@ -1,0 +1,16 @@
+[
+  {
+    "id": "perla-4",
+    "unitNo": "PER-LAG-HOUSE-3BR",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 175,
+    "view": "Panoramic View",
+    "priceEGP": 29000000,
+    "status": "Available",
+    "slug": "perla",
+    "cluster": "Lagoon House 1st Row",
+    "delivery_note": "Off-Plan",
+    "payment_plan": "5%+5% DP over 6-10 yrs"
+  }
+]

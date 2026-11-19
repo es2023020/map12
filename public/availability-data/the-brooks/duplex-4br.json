@@ -1,0 +1,30 @@
+[
+  {
+    "id": "the-brooks-9",
+    "unitNo": "TB-DUP-LOFT",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 251,
+    "view": "Landscape",
+    "priceEGP": 17105000,
+    "status": "Available",
+    "slug": "the-brooks",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 10 yrs"
+  },
+  {
+    "id": "the-brooks-10",
+    "unitNo": "TB-DUP-GARDEN",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 249,
+    "view": "Landscape",
+    "priceEGP": 19031000,
+    "status": "Available",
+    "slug": "the-brooks",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% DP over 10 yrs"
+  }
+]

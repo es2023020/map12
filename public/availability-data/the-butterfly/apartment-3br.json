@@ -1,0 +1,16 @@
+[
+  {
+    "id": "the-butterfly-4",
+    "unitNo": "BUT-3B-120",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 10600000,
+    "status": "Available",
+    "slug": "the-butterfly",
+    "cluster": "Apartments",
+    "delivery_note": "4.5 Years",
+    "payment_plan": "1.5% - 12Y Backloaded"
+  }
+]

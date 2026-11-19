@@ -1,0 +1,32 @@
+[
+  {
+    "id": "kai-sokhna-6",
+    "unitNo": "KAI-4B-RTM-223",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 223,
+    "view": "Landscape",
+    "priceEGP": 32300000,
+    "status": "Available",
+    "slug": "kai-sokhna",
+    "cluster": "Kai Can Limon",
+    "area_note": "Near Delivery",
+    "delivery_note": "March 2027",
+    "payment_plan": "10%+5% over 6 yrs"
+  },
+  {
+    "id": "kai-sokhna-7",
+    "unitNo": "KAI-4B-BEACH-272",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 272,
+    "view": "Landscape",
+    "priceEGP": 60300000,
+    "status": "Available",
+    "slug": "kai-sokhna",
+    "cluster": "Kai Can Limon",
+    "area_note": "Beach Villa",
+    "delivery_note": "March 2027",
+    "payment_plan": "10%+5% over 6 yrs"
+  }
+]

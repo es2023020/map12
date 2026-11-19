@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ashgar-city-3",
+    "unitNo": "AC-PH-125",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 125,
+    "view": "Landscape",
+    "priceEGP": 5850000,
+    "status": "Available",
+    "slug": "ashgar-city",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 8 yrs"
+  }
+]

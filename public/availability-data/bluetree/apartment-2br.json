@@ -1,0 +1,46 @@
+[
+  {
+    "id": "bluetree-3",
+    "unitNo": "BT-2BR-G115",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 115,
+    "view": "Scenic View",
+    "priceEGP": 12090000,
+    "status": "Available",
+    "Delivery": "2.5 Years (Early)"
+  },
+  {
+    "id": "bluetree-4",
+    "unitNo": "BT-2BR-G130",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 130,
+    "view": "Scenic View",
+    "priceEGP": 16530000,
+    "status": "Available",
+    "Delivery": "2.5 Years (Early)"
+  },
+  {
+    "id": "bluetree-5",
+    "unitNo": "BT-2BR-105",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 105,
+    "view": "Scenic View",
+    "priceEGP": 8315000,
+    "status": "Available",
+    "Delivery": "4 Years (Off-Plan)"
+  },
+  {
+    "id": "bluetree-6",
+    "unitNo": "BT-2BR-115",
+    "beds": 2,
+    "finishing": "Semi Finished",
+    "areaSqm": 115,
+    "view": "Scenic View",
+    "priceEGP": 9154000,
+    "status": "Available",
+    "Delivery": "4 Years (Off-Plan)"
+  }
+]

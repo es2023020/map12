@@ -1,0 +1,16 @@
+[
+  {
+    "id": "vinci-7",
+    "unitNo": "VIN-TWIN-316",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 316,
+    "view": "Landscape",
+    "priceEGP": 28200000,
+    "status": "Available",
+    "slug": "vinci",
+    "cluster": "Villas",
+    "delivery_note": "March 2027",
+    "payment_plan": "2.5% over 10 yrs"
+  }
+]

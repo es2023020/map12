@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ivoire-east-4",
+    "unitNo": "IE-SA-312",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 312,
+    "view": "Landscape",
+    "priceEGP": 42187000,
+    "status": "Available",
+    "slug": "ivoire-east",
+    "cluster": "Phase 1",
+    "delivery_note": "2 Years",
+    "payment_plan": "5% DP over 10 yrs"
+  }
+]

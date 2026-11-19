@@ -1,0 +1,16 @@
+[
+  {
+    "id": "hadaba-2",
+    "unitNo": "HAD-TW",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 331,
+    "view": "Landscape",
+    "priceEGP": 32900000,
+    "status": "Available",
+    "slug": "hadaba",
+    "cluster": "Phase 1",
+    "delivery_note": "6 Months",
+    "payment_plan": "15%+10% over 5 yrs"
+  }
+]

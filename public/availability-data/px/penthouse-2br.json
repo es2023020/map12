@@ -1,0 +1,93 @@
+[
+  {
+    "id": "px-94",
+    "unitNo": "PX-1218-32",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 119.16,
+    "view": "Landscape",
+    "priceEGP": 23948000,
+    "status": "Available",
+    "slug": "px",
+    "delivery_note": "Q2 2028",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "px-109",
+    "unitNo": "PX-1228-32-M",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 119.16,
+    "view": "Landscape",
+    "priceEGP": 23948000,
+    "status": "Available",
+    "slug": "px",
+    "delivery_note": "Q2 2028",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "px-116",
+    "unitNo": "PX-1231-31",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 122.05,
+    "view": "Landscape",
+    "priceEGP": 27778000,
+    "status": "Available",
+    "slug": "px",
+    "delivery_note": "Q2 2028",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "px-117",
+    "unitNo": "PX-1232-31",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 122.05,
+    "view": "Landscape",
+    "priceEGP": 27778000,
+    "status": "Available",
+    "slug": "px",
+    "delivery_note": "Q2 2028",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "px-118",
+    "unitNo": "PX-1234-32-M",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 119.16,
+    "view": "Landscape",
+    "priceEGP": 23948000,
+    "status": "Available",
+    "slug": "px",
+    "delivery_note": "Q2 2028",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "px-132",
+    "unitNo": "PX-1258-32",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 119.16,
+    "view": "Landscape",
+    "priceEGP": 20510000,
+    "status": "Available",
+    "slug": "px",
+    "delivery_note": "Q2 2028",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "px-139",
+    "unitNo": "PX-1272-32-M",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 119.16,
+    "view": "Landscape",
+    "priceEGP": 24815000,
+    "status": "Available",
+    "slug": "px",
+    "delivery_note": "Q2 2028",
+    "payment_plan": "10% DP · 8 years"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "joya-3",
+    "unitNo": "JOYA-PH",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 325,
+    "view": "Landscape",
+    "priceEGP": 27269500,
+    "status": "Available",
+    "slug": "joya",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 6 yrs"
+  }
+]

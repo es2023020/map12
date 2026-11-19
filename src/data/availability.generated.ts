@@ -30579,6 +30579,37 @@ export const availability: ProjectAvailability[] = [
     lastUpdated: "2026-11-19",
   },
   {
+    slug: "alburouj",
+    developer: "Imkan Misr",
+    totalAvailable: 1,
+    breakdown: [
+        {
+        type: "Standalone Villa",
+        beds: 4,
+        available: 1,
+        minSqm: 263,
+        maxSqm: 263,
+        minPriceM: 28,
+        maxPriceM: 28,
+        finishing: "Core & Shell",
+        units: [
+            {
+            id: "alburouj-1",
+            unitNo: "SA",
+            beds: 4,
+            finishing: "Core & Shell",
+            areaSqm: 263,
+            view: "Landscape",
+            priceEGP: 28000000,
+            status: "Available",
+            slug: "alburouj",
+          },
+          ],
+      },
+      ],
+    lastUpdated: "2026-11-19",
+  },
+  {
     slug: "jefaira",
     developer: "Inertia Egypt",
     totalAvailable: 16,

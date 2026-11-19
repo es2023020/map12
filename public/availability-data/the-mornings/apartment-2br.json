@@ -1,0 +1,44 @@
+[
+  {
+    "id": "the-mornings-2",
+    "unitNo": "TM-2B-83",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 83,
+    "view": "Landscape",
+    "priceEGP": 7100000,
+    "status": "Available",
+    "slug": "the-mornings",
+    "cluster": "Residential",
+    "delivery_note": "3 Years",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "the-mornings-4",
+    "unitNo": "TM-CLINIC-43",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 43,
+    "view": "Landscape",
+    "priceEGP": 7725000,
+    "status": "Available",
+    "slug": "the-mornings",
+    "cluster": "The Mornings Commercial",
+    "delivery_note": "3 Years",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "the-mornings-5",
+    "unitNo": "TM-ADMIN-55",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 55,
+    "view": "Landscape",
+    "priceEGP": 8516000,
+    "status": "Available",
+    "slug": "the-mornings",
+    "cluster": "The Mornings Commercial",
+    "delivery_note": "3 Years",
+    "payment_plan": "5%+5% over 8 yrs"
+  }
+]

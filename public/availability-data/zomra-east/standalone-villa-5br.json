@@ -1,0 +1,47 @@
+[
+  {
+    "id": "zomra-east-15",
+    "unitNo": "ZE-STB-MIN",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 315,
+    "view": "Panoramic View",
+    "priceEGP": 55800000,
+    "status": "Available",
+    "slug": "zomra-east",
+    "cluster": "Phase 1",
+    "area_note": "Land 418 sqm",
+    "delivery_note": "3 years",
+    "payment_plan": "5%+5%+5% over 8-10 yrs"
+  },
+  {
+    "id": "zomra-east-16",
+    "unitNo": "ZE-STB-MAX",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 315,
+    "view": "Panoramic View",
+    "priceEGP": 59000000,
+    "status": "Available",
+    "slug": "zomra-east",
+    "cluster": "Phase 1",
+    "area_note": "Land 418 sqm",
+    "delivery_note": "3 years",
+    "payment_plan": "5%+5%+5% over 8-10 yrs"
+  },
+  {
+    "id": "zomra-east-17",
+    "unitNo": "ZE-STA",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 370,
+    "view": "Panoramic View",
+    "priceEGP": 65000000,
+    "status": "Available",
+    "slug": "zomra-east",
+    "cluster": "Phase 1",
+    "area_note": "Land 720 sqm",
+    "delivery_note": "3 years",
+    "payment_plan": "5%+5%+5% over 8-10 yrs"
+  }
+]

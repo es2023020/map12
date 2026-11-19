@@ -1,0 +1,16 @@
+[
+  {
+    "id": "rivers-1",
+    "unitNo": "RIV-SA",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 300,
+    "view": "Landscape",
+    "priceEGP": 36500000,
+    "status": "Available",
+    "slug": "rivers",
+    "cluster": "Phase 1",
+    "delivery_note": "1 Year",
+    "payment_plan": "5% DP over 8 Years"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "al-east-mostakbal-city-8",
+    "unitNo": "ALEAST-SA-210",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 210,
+    "view": "Landscape",
+    "priceEGP": 24200000,
+    "status": "Available",
+    "slug": "al-east-mostakbal-city",
+    "cluster": "Villas",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "al-east-mostakbal-city-9",
+    "unitNo": "ALEAST-SA-250",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 250,
+    "view": "Landscape",
+    "priceEGP": 31000000,
+    "status": "Available",
+    "slug": "al-east-mostakbal-city",
+    "cluster": "Villas",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 yrs"
+  },
+  {
+    "id": "al-east-mostakbal-city-10",
+    "unitNo": "ALEAST-1STORY-220",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 220,
+    "view": "Landscape",
+    "priceEGP": 33300000,
+    "status": "Available",
+    "slug": "al-east-mostakbal-city",
+    "cluster": "Villas",
+    "delivery_note": "4 Years",
+    "payment_plan": "5%+5% over 8 yrs"
+  }
+]

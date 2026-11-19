@@ -1,0 +1,58 @@
+[
+  {
+    "id": "mountain-view-icity-october-11",
+    "unitNo": "CA-04-22-B0-03",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 140.47,
+    "view": "Landscape",
+    "priceEGP": 18406118,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Feb 2026 (Value Offer)",
+    "delivery_note": "OFF PLAN - 2.5",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "mountain-view-icity-october-12",
+    "unitNo": "CA-05-21-B0-02",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 59.06,
+    "view": "Landscape",
+    "priceEGP": 17148390,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Feb 2026 (Value Offer)",
+    "delivery_note": "OFF PLAN - 2.5",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "mountain-view-icity-october-13",
+    "unitNo": "CA-05-25-B0-01",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 101.51,
+    "view": "Landscape",
+    "priceEGP": 18381353,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Feb 2026 (Value Offer)",
+    "delivery_note": "OFF PLAN - 2.5",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "mountain-view-icity-october-14",
+    "unitNo": "CA-09-45-B0-1",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 145,
+    "view": "Landscape",
+    "priceEGP": 22865210,
+    "status": "Available",
+    "slug": "mountain-view-icity-october",
+    "cluster": "Phase 1a-Apr 2026",
+    "delivery_note": "READY TO DELIVER",
+    "payment_plan": "10% DP · 8 years"
+  }
+]

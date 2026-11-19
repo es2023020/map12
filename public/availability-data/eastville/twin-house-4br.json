@@ -1,0 +1,72 @@
+[
+  {
+    "id": "eastville-6",
+    "unitNo": "EV-TW-1",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 242,
+    "view": "Lakes & Greenery",
+    "priceEGP": 21200000,
+    "status": "Available",
+    "slug": "eastville",
+    "cluster": "View Zone",
+    "delivery_note": "2028 (Off-Plan)",
+    "payment_plan": "5% DP + 5% after 3m over 9 yrs"
+  },
+  {
+    "id": "eastville-7",
+    "unitNo": "EV-TW-2",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 254,
+    "view": "Lakes & Greenery",
+    "priceEGP": 22400000,
+    "status": "Available",
+    "slug": "eastville",
+    "cluster": "View Zone",
+    "delivery_note": "2028 (Off-Plan)",
+    "payment_plan": "5% DP + 5% after 3m over 9 yrs"
+  },
+  {
+    "id": "eastville-8",
+    "unitNo": "EV-TW-3",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 266,
+    "view": "Lakes & Greenery",
+    "priceEGP": 23600000,
+    "status": "Available",
+    "slug": "eastville",
+    "cluster": "View Zone",
+    "delivery_note": "2028 (Off-Plan)",
+    "payment_plan": "5% DP + 5% after 3m over 9 yrs"
+  },
+  {
+    "id": "eastville-9",
+    "unitNo": "EV-TW-4",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 278,
+    "view": "Lakes & Greenery",
+    "priceEGP": 24800000,
+    "status": "Available",
+    "slug": "eastville",
+    "cluster": "View Zone",
+    "delivery_note": "2028 (Off-Plan)",
+    "payment_plan": "5% DP + 5% after 3m over 9 yrs"
+  },
+  {
+    "id": "eastville-10",
+    "unitNo": "EV-TW-5",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 290,
+    "view": "Lakes & Greenery",
+    "priceEGP": 26000000,
+    "status": "Available",
+    "slug": "eastville",
+    "cluster": "View Zone",
+    "delivery_note": "2028 (Off-Plan)",
+    "payment_plan": "5% DP + 5% after 3m over 9 yrs"
+  }
+]

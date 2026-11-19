@@ -1,0 +1,68 @@
+[
+  {
+    "id": "bluetree-7",
+    "unitNo": "BT-3BR-135",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 135,
+    "view": "Scenic View",
+    "priceEGP": 10280000,
+    "status": "Available",
+    "Delivery": "2.5 Years (Early)"
+  },
+  {
+    "id": "bluetree-8",
+    "unitNo": "BT-3BR-200",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "view": "Scenic View",
+    "priceEGP": 16700000,
+    "status": "Available",
+    "Delivery": "2.5 Years (Early)"
+  },
+  {
+    "id": "bluetree-9",
+    "unitNo": "BT-3BR-145",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 145,
+    "view": "Scenic View",
+    "priceEGP": 10234000,
+    "status": "Available",
+    "Delivery": "4 Years (Off-Plan)"
+  },
+  {
+    "id": "bluetree-10",
+    "unitNo": "BT-3BR-170",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 170,
+    "view": "Scenic View",
+    "priceEGP": 15576000,
+    "status": "Available",
+    "Delivery": "4 Years (Off-Plan)"
+  },
+  {
+    "id": "bluetree-11",
+    "unitNo": "BT-3BR-PLUS-185",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 185,
+    "view": "Scenic View",
+    "priceEGP": 14110000,
+    "status": "Available",
+    "Delivery": "2.5 Years (Early)"
+  },
+  {
+    "id": "bluetree-12",
+    "unitNo": "BT-3BR-PLUS-210",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 210,
+    "view": "Scenic View",
+    "priceEGP": 19440000,
+    "status": "Available",
+    "Delivery": "4 Years (Off-Plan)"
+  }
+]

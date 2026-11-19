@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cali-coast-ras-el-hekma-6",
+    "unitNo": "CALI-P2-3B-112",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 112,
+    "view": "Sea & Lagoons",
+    "priceEGP": 13376000,
+    "status": "Available",
+    "slug": "cali-coast-ras-el-hekma",
+    "cluster": "Phase 2",
+    "delivery_note": "2.5 Years",
+    "payment_plan": "3.5%+3.5% over 9 Yrs"
+  },
+  {
+    "id": "cali-coast-ras-el-hekma-7",
+    "unitNo": "CALI-P2-3B-130",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 130,
+    "view": "Sea & Lagoons",
+    "priceEGP": 15177000,
+    "status": "Available",
+    "slug": "cali-coast-ras-el-hekma",
+    "cluster": "Phase 2",
+    "delivery_note": "2.5 Years",
+    "payment_plan": "3.5%+3.5% over 9 Yrs"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "perla-1",
+    "unitNo": "PER-CHALET-2BR",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 100,
+    "view": "Panoramic View",
+    "priceEGP": 12900000,
+    "status": "Available",
+    "slug": "perla",
+    "cluster": "Phase 1",
+    "delivery_note": "Off-Plan",
+    "payment_plan": "5%+5% DP over 6-10 yrs"
+  }
+]

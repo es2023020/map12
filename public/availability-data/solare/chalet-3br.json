@@ -1,0 +1,16 @@
+[
+  {
+    "id": "solare-2",
+    "unitNo": "SOL-LUM-3B-135",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 135,
+    "view": "Landscape",
+    "priceEGP": 15000000,
+    "status": "Available",
+    "slug": "solare",
+    "cluster": "Lumera Phase",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 yrs"
+  }
+]

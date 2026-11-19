@@ -1,0 +1,58 @@
+[
+  {
+    "id": "the-water-marq-5",
+    "unitNo": "TWM-WV5-1",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 540,
+    "view": "Lagoon",
+    "priceEGP": 87500000,
+    "status": "Available",
+    "slug": "the-water-marq",
+    "cluster": "Water Lagoon",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-water-marq-6",
+    "unitNo": "TWM-WV5-2",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 580,
+    "view": "Lagoon",
+    "priceEGP": 95000000,
+    "status": "Available",
+    "slug": "the-water-marq",
+    "cluster": "Water Lagoon",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-water-marq-7",
+    "unitNo": "TWM-WV5-3",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 620,
+    "view": "Lagoon",
+    "priceEGP": 102500000,
+    "status": "Available",
+    "slug": "the-water-marq",
+    "cluster": "Water Lagoon",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-water-marq-8",
+    "unitNo": "TWM-WV5-4",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 660,
+    "view": "Lagoon",
+    "priceEGP": 110000000,
+    "status": "Available",
+    "slug": "the-water-marq",
+    "cluster": "Water Lagoon",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  }
+]

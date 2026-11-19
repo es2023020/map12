@@ -1,0 +1,47 @@
+[
+  {
+    "id": "the-waterway-10",
+    "unitNo": "WW-P1-75",
+    "beds": 4,
+    "finishing": "Fully Finished + ACs",
+    "areaSqm": 320,
+    "view": "Panoramic Views",
+    "priceEGP": 60928000,
+    "status": "Available",
+    "slug": "the-waterway",
+    "cluster": "Phase 1A (RTM)",
+    "area_note": "320 sqm Land",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 4 Yrs"
+  },
+  {
+    "id": "the-waterway-11",
+    "unitNo": "WW-P1-16",
+    "beds": 4,
+    "finishing": "Fully Finished + ACs",
+    "areaSqm": 320,
+    "view": "Panoramic Views",
+    "priceEGP": 61440000,
+    "status": "Available",
+    "slug": "the-waterway",
+    "cluster": "Phase 1A (RTM)",
+    "area_note": "320 sqm Land",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 4 Yrs"
+  },
+  {
+    "id": "the-waterway-12",
+    "unitNo": "WW-P1-6",
+    "beds": 4,
+    "finishing": "Fully Finished + ACs",
+    "areaSqm": 320,
+    "view": "Panoramic Views",
+    "priceEGP": 65024000,
+    "status": "Available",
+    "slug": "the-waterway",
+    "cluster": "Phase 1A (RTM)",
+    "area_note": "320 sqm Land",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "20% DP over 4 Yrs"
+  }
+]

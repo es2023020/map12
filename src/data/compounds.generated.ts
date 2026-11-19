@@ -3,6 +3,58 @@ import type { Compound } from "./compounds";
 
 export const compoundsGenerated: Compound[] = [
   {
+    "slug": "101-premium-compound",
+    "name": "101 Premium Compound",
+    "developer": "Biography Developments",
+    "developerSlug": "biography-developments",
+    "destination": "mostakbal-city",
+    "city": "mostakbal city, Egypt",
+    "priceFrom": 3,
+    "areaSize": "Master-planned Community",
+    "unitSizes": "90–320 m²",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "paymentPlan": "5% Down Payment · 10 Years Equal Installments",
+    "types": [
+      "Apartment"
+    ],
+    "isNewLaunch": true,
+    "blurb": "Serviced Apartments – ElMostakbel City  101 Premium Compound   - Operated by U Hotels & Resorts https://www.uhotelsresorts.com/  فرصة مميزة لامتلاك وحدة فندقية في أول قطعة أرض بالمرحلة الأولى من مستقب...",
+    "amenities": [
+      "Green Spaces & Landscaping",
+      "Clubhouse & Commercial Hub",
+      "24/7 Security & Gated Community",
+      "Water Features & Lagoons",
+      "Jogging & Cycling Tracks"
+    ]
+  },
+  {
+    "slug": "alburouj",
+    "name": "Alburouj",
+    "developer": "Imkan Misr",
+    "developerSlug": "imkan-misr",
+    "destination": "shorouk",
+    "city": "shorouk, Egypt",
+    "priceFrom": 28,
+    "areaSize": "Master-planned Community",
+    "unitSizes": "263 m²",
+    "status": "Off-Plan",
+    "deliveryYear": 2028,
+    "paymentPlan": "0% Down Payment · 4 Years Equal Installments",
+    "types": [
+      "Standalone Villa"
+    ],
+    "isNewLaunch": true,
+    "blurb": "‼️ *Villa standalone @ Alburouj by Imkan Misr*❌❌  • BUA: 263 sqm 4 bedrooms  • Land Area: 259 sqm • Total Price: EGP 28M • Delivery: 4 years • ⁠Core and shell   ‼️Payment Plan: • 0% Down Payment over ...",
+    "amenities": [
+      "Green Spaces & Landscaping",
+      "Clubhouse & Commercial Hub",
+      "24/7 Security & Gated Community",
+      "Water Features & Lagoons",
+      "Jogging & Cycling Tracks"
+    ]
+  },
+  {
     "slug": "rosail-city",
     "name": "Rosail City",
     "developer": "Khaled Sabry Holding",

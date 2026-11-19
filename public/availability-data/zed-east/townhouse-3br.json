@@ -1,0 +1,32 @@
+[
+  {
+    "id": "zed-east-12",
+    "unitNo": "ZE-EM-THM",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 215,
+    "view": "Landscape",
+    "priceEGP": 38000000,
+    "status": "Available",
+    "slug": "zed-east",
+    "cluster": "Emerald",
+    "area_note": "Townhouse Middle 215 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5% – 8 years"
+  },
+  {
+    "id": "zed-east-13",
+    "unitNo": "ZE-EM-THC",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 215,
+    "view": "Landscape",
+    "priceEGP": 41000000,
+    "status": "Available",
+    "slug": "zed-east",
+    "cluster": "Emerald",
+    "area_note": "Townhouse Corner 215 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5% – 8 years"
+  }
+]

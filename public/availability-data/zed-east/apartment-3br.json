@@ -1,0 +1,47 @@
+[
+  {
+    "id": "zed-east-3",
+    "unitNo": "ZE-CSR-3BR",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 193,
+    "view": "Landscape",
+    "priceEGP": 32500000,
+    "status": "Available",
+    "slug": "zed-east",
+    "cluster": "CSR Building A&B",
+    "area_note": "193 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% – 10 years"
+  },
+  {
+    "id": "zed-east-4",
+    "unitNo": "ZE-CSR-3BR-LOFT",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 300,
+    "view": "Landscape",
+    "priceEGP": 46000000,
+    "status": "Available",
+    "slug": "zed-east",
+    "cluster": "CSR Building A&B",
+    "area_note": "300 SQM Loft",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% – 10 years"
+  },
+  {
+    "id": "zed-east-8",
+    "unitNo": "ZE-SRV-3BR",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "view": "Landscape",
+    "priceEGP": 23500000,
+    "status": "Available",
+    "slug": "zed-east",
+    "cluster": "CSR Building C&D",
+    "area_note": "145 SQM Serviced",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% – 10 years"
+  }
+]

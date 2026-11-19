@@ -1,0 +1,30 @@
+[
+  {
+    "id": "saada-boutique-10",
+    "unitNo": "SB-CLUB-V-315",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 315,
+    "view": "Lagoon & Greenery",
+    "priceEGP": 51500000,
+    "status": "Available",
+    "slug": "saada-boutique",
+    "cluster": "Club-V",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 9 yrs"
+  },
+  {
+    "id": "saada-boutique-11",
+    "unitNo": "SB-GRAND-V-278",
+    "beds": 5,
+    "finishing": "Fully Finished",
+    "areaSqm": 278,
+    "view": "Lagoon & Greenery",
+    "priceEGP": 57500000,
+    "status": "Available",
+    "slug": "saada-boutique",
+    "cluster": "Grand-V",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 9 yrs"
+  }
+]

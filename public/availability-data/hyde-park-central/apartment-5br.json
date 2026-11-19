@@ -1,0 +1,30 @@
+[
+  {
+    "id": "hyde-park-central-61",
+    "unitNo": "U-61",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 178,
+    "view": "Landscape",
+    "priceEGP": 16240000,
+    "status": "Available",
+    "slug": "hyde-park-central",
+    "cluster": "Water Residence",
+    "delivery_note": "Ready to Move / 3-4 Years",
+    "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "hyde-park-central-62",
+    "unitNo": "U-62",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 178,
+    "view": "Landscape",
+    "priceEGP": 16470000,
+    "status": "Available",
+    "slug": "hyde-park-central",
+    "cluster": "Water Residence",
+    "delivery_note": "Ready to Move / 3-4 Years",
+    "payment_plan": "10% DP · 8 years"
+  }
+]

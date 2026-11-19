@@ -429,7 +429,11 @@ function main() {
   // Clear previous public/availability-data folder to completely delete old units
   const availabilityDataDir = path.join(ROOT, "public", "availability-data");
   if (fs.existsSync(availabilityDataDir)) {
-    fs.rmSync(availabilityDataDir, { recursive: true, force: true });
+    try {
+      fs.rmSync(availabilityDataDir, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
+    } catch {
+      // If Windows file watcher holds a lock, proceed — files will be overwritten in place
+    }
   }
   fs.mkdirSync(availabilityDataDir, { recursive: true });
 
@@ -475,7 +479,16 @@ function main() {
     "",
   ].join("\n");
 
-  fs.writeFileSync(OUT, outContent, "utf8");
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      fs.writeFileSync(OUT, outContent, "utf8");
+      break;
+    } catch (err) {
+      if (attempt === 4) throw err;
+      const start = Date.now();
+      while (Date.now() - start < 150) {}
+    }
+  }
   console.log(
     `Wrote ${projectsList.length} projects & ${unitFilesCount} unit JSON files. Wiped old availability data.`,
   );
@@ -503,7 +516,16 @@ function main() {
         }
       }
     });
-    fs.writeFileSync(compoundsFile, compContent, "utf8");
+    for (let attempt = 0; attempt < 5; attempt++) {
+      try {
+        fs.writeFileSync(compoundsFile, compContent, "utf8");
+        break;
+      } catch (err) {
+        if (attempt === 4) throw err;
+        const start = Date.now();
+        while (Date.now() - start < 150) {}
+      }
+    }
     console.log(`Synced unit types for ${updatedTypesCount} compound(s) in compounds.generated.ts`);
   }
 }
@@ -560,7 +582,16 @@ function syncProjectImages() {
   }
 
   if (updatedCount > 0) {
-    fs.writeFileSync(compoundsFile, compContent, "utf8");
+    for (let attempt = 0; attempt < 5; attempt++) {
+      try {
+        fs.writeFileSync(compoundsFile, compContent, "utf8");
+        break;
+      } catch (err) {
+        if (attempt === 4) throw err;
+        const start = Date.now();
+        while (Date.now() - start < 150) {}
+      }
+    }
     console.log(`Auto-synced local images for ${updatedCount} compound(s) in compounds.generated.ts`);
   }
 }

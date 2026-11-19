@@ -1,0 +1,32 @@
+[
+  {
+    "id": "swanlake-residences-new-cairo-3",
+    "unitNo": "AMAIA-SOLOS-GR",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 265,
+    "view": "Landscape",
+    "priceEGP": 89000000,
+    "status": "Available",
+    "slug": "swanlake-residences-new-cairo",
+    "cluster": "The Amaia",
+    "area_note": "Garden 310 sqm",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "5%+5% over 6 yrs"
+  },
+  {
+    "id": "swanlake-residences-new-cairo-9",
+    "unitNo": "SEL-TWIN-LARGE",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 311,
+    "view": "Landscape",
+    "priceEGP": 105000000,
+    "status": "Available",
+    "slug": "swanlake-residences-new-cairo",
+    "cluster": "The Selina",
+    "area_note": "Land 327 sqm",
+    "delivery_note": "2.5 Years",
+    "payment_plan": "5%+5% over 6 yrs"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "general-1",
+    "unitNo": "S",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 220,
+    "view": "Landscape",
+    "priceEGP": 10900000,
+    "status": "Available",
+    "slug": "general",
+    "payment_plan": "0% down · 4 years"
+  }
+]

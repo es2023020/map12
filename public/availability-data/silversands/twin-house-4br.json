@@ -1,0 +1,32 @@
+[
+  {
+    "id": "silversands-6",
+    "unitNo": "SS-CR-TWH",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 202,
+    "view": "Landscape",
+    "priceEGP": 47000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Crystalline",
+    "area_note": "Twin House 202 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5% + 5%, installments over 8 years"
+  },
+  {
+    "id": "silversands-7",
+    "unitNo": "SS-CR-TWH-L",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 307,
+    "view": "Landscape",
+    "priceEGP": 76000000,
+    "status": "Available",
+    "slug": "silversands",
+    "cluster": "Crystalline",
+    "area_note": "Twin House L 307 SQM",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5% + 5% + 5%, installments over 8 years"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "villaria-1",
+    "unitNo": "VIL-PH",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 240,
+    "view": "Landscape",
+    "priceEGP": 7920000,
+    "status": "Available",
+    "slug": "villaria",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "35% DP over 5 yrs"
+  }
+]

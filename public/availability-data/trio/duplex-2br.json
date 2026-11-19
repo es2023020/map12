@@ -1,0 +1,29 @@
+[
+  {
+    "id": "trio-9",
+    "unitNo": "QS05-V43",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 145,
+    "view": "Scenic View",
+    "priceEGP": 16299184.02,
+    "status": "Sold",
+    "slug": "trio",
+    "cluster": "Trio",
+    "delivery_note": "2/5/2027",
+    "payment_plan": "10% DP over 7-8 yrs"
+  },
+  {
+    "id": "trio-20",
+    "unitNo": "U-20",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 145,
+    "view": "Landscape",
+    "priceEGP": 16299184,
+    "status": "Available",
+    "slug": "trio",
+    "delivery_note": "05/05/2027",
+    "payment_plan": "10% DP · 8 years"
+  }
+]

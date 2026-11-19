@@ -1,0 +1,17 @@
+[
+  {
+    "id": "swanlake-west-10",
+    "unitNo": "SLW-SV-A-300",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 300,
+    "view": "Landscape",
+    "priceEGP": 60000000,
+    "status": "Available",
+    "slug": "swanlake-west",
+    "cluster": "Villas",
+    "area_note": "Land 640 sqm, One Storey",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 yrs"
+  }
+]

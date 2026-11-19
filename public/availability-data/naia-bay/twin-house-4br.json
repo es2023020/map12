@@ -1,0 +1,32 @@
+[
+  {
+    "id": "naia-bay-3",
+    "unitNo": "NAIA-P1-TWIN-B-370",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 370,
+    "view": "Sea & Landscape",
+    "priceEGP": 52600000,
+    "status": "Available",
+    "slug": "naia-bay",
+    "cluster": "Phase 1 Villas",
+    "area_note": "450m Land · 120m Roof",
+    "delivery_note": "Ready in 1 Month",
+    "payment_plan": "10% DP over 8 Yrs"
+  },
+  {
+    "id": "naia-bay-8",
+    "unitNo": "NAIA-P2-TWIN-C-300",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 300,
+    "view": "Sea & Landscape",
+    "priceEGP": 38000000,
+    "status": "Available",
+    "slug": "naia-bay",
+    "cluster": "Phase 2 Villas",
+    "area_note": "500m Land · 95m Roof",
+    "delivery_note": "1 Year",
+    "payment_plan": "10% DP over 10 Yrs"
+  }
+]

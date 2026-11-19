@@ -1,0 +1,16 @@
+[
+  {
+    "id": "neopolis-1",
+    "unitNo": "NEO-3BR",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 155,
+    "view": "Landscape",
+    "priceEGP": 7200000,
+    "status": "Available",
+    "slug": "neopolis",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "40% down / 4 yrs"
+  }
+]

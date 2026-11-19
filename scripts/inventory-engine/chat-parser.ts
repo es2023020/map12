@@ -269,6 +269,20 @@ export function extractCandidateProjectName(text: string): string {
         lowerClean.startsWith("مقدم") ||
         lowerClean.includes("خصم") ||
         lowerClean.includes("discount") ||
+        lowerClean.includes("دقائق") ||
+        lowerClean.includes("دقيقة") ||
+        lowerClean.includes("minutes") ||
+        lowerClean.includes(" mins") ||
+        lowerClean.includes("متر") ||
+        lowerClean.includes("غرف") ||
+        lowerClean.includes("bedroom") ||
+        lowerClean.includes("استلام") ||
+        lowerClean.includes("تقسيط") ||
+        lowerClean.includes("موقع") ||
+        lowerClean.includes("بوابة") ||
+        lowerClean.includes("ارقام") ||
+        lowerClean.includes("أرض") ||
+        lowerClean.includes("ارض") ||
         genericKeywords.some((k) => lowerClean.includes(k))
       ) {
         continue;
@@ -279,10 +293,10 @@ export function extractCandidateProjectName(text: string): string {
     }
   }
 
-  // 1. Check "XYZ Compound" or "XYZ Residence" or "XYZ Project" (Name before suffix)
+  // 1. Check "XYZ Compound" or "XYZ Residence" or "XYZ Project" (Name with suffix)
   for (const line of lines) {
     const cleaned = line.replace(/[📍✨🔥🚀⭐💎🌟*#_]/g, "").trim();
-    const suffixMatch = cleaned.match(/^([A-Za-z0-9\u0600-\u06FF\s-]{2,30})\s+(?:compound|residence|project|heights|hills|views|park|district|city|plaza|mall|resort|tower|towers|كمبوند|مشروع)/i);
+    const suffixMatch = cleaned.match(/^([A-Za-z0-9\u0600-\u06FF\s-]{2,30}\s+(?:compound|residence|project|heights|hills|views|park|district|city|plaza|mall|resort|tower|towers|كمبوند|مشروع))/i);
     if (suffixMatch && suffixMatch[1].trim().length >= 2) {
       const candidate = suffixMatch[1].trim();
       const lower = candidate.toLowerCase();

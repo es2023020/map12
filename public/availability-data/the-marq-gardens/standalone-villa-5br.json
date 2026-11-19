@@ -1,0 +1,58 @@
+[
+  {
+    "id": "the-marq-gardens-9",
+    "unitNo": "TMG-V-1",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 291.2,
+    "view": "Garden",
+    "priceEGP": 53500000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Signature Gardens",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-marq-gardens-10",
+    "unitNo": "TMG-V-2",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 292.4,
+    "view": "Garden",
+    "priceEGP": 55000000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Signature Gardens",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-marq-gardens-11",
+    "unitNo": "TMG-V-3",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 293.6,
+    "view": "Garden",
+    "priceEGP": 56500000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Signature Gardens",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  },
+  {
+    "id": "the-marq-gardens-12",
+    "unitNo": "TMG-V-4",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 294.8,
+    "view": "Garden",
+    "priceEGP": 58000000,
+    "status": "Available",
+    "slug": "the-marq-gardens",
+    "cluster": "Signature Gardens",
+    "delivery_note": "Delivery in 1 Year",
+    "payment_plan": "10% DP over 7 years"
+  }
+]

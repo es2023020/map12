@@ -1,0 +1,16 @@
+[
+  {
+    "id": "azad-2",
+    "unitNo": "AZD-3BR",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 160,
+    "view": "Landscape",
+    "priceEGP": 19500000,
+    "status": "Available",
+    "slug": "azad",
+    "cluster": "Phase 1",
+    "delivery_note": "Ready to Move",
+    "payment_plan": "5% / 10 yrs"
+  }
+]

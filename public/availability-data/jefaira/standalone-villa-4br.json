@@ -1,0 +1,30 @@
+[
+  {
+    "id": "jefaira-11",
+    "unitNo": "JEF-AYLA-SA-201",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 201,
+    "view": "Sea & Landscape",
+    "priceEGP": 25917000,
+    "status": "Available",
+    "slug": "jefaira",
+    "cluster": "Ayla Lagoon",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 Yrs"
+  },
+  {
+    "id": "jefaira-16",
+    "unitNo": "JEF-VAYA-UNA-191",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 191,
+    "view": "Sea & Landscape",
+    "priceEGP": 20012000,
+    "status": "Available",
+    "slug": "jefaira",
+    "cluster": "Vaya Una",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 Yrs"
+  }
+]

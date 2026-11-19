@@ -1,0 +1,32 @@
+[
+  {
+    "id": "direction-white-3",
+    "unitNo": "DW-P2-THB-130",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 130,
+    "view": "Sea & Landscape",
+    "priceEGP": 21000000,
+    "status": "Available",
+    "slug": "direction-white",
+    "cluster": "Phase 2 (Oyster & Velour)",
+    "area_note": "60m Garden",
+    "delivery_note": "Aug 2027",
+    "payment_plan": "10% DP over 6 Yrs"
+  },
+  {
+    "id": "direction-white-10",
+    "unitNo": "DW-P3-THB-130",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 130,
+    "view": "Sea & Landscape",
+    "priceEGP": 17900000,
+    "status": "Available",
+    "slug": "direction-white",
+    "cluster": "Phase 3 (Water Creek)",
+    "area_note": "60m Garden",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "10% DP over 7 Yrs"
+  }
+]

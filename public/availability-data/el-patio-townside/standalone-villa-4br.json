@@ -1,0 +1,41 @@
+[
+  {
+    "id": "el-patio-townside-2",
+    "unitNo": "TOWNSIDE-SA-225",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 225,
+    "view": "Scenic View",
+    "priceEGP": 35800000,
+    "status": "Available",
+    "Land Area": 262,
+    "EOI EGP": 400000,
+    "Delivery": "4 Years (Off-Plan)"
+  },
+  {
+    "id": "el-patio-townside-3",
+    "unitNo": "TOWNSIDE-SA-265",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 265,
+    "view": "Scenic View",
+    "priceEGP": 40190000,
+    "status": "Available",
+    "Land Area": 299,
+    "EOI EGP": 400000,
+    "Delivery": "4 Years (Off-Plan)"
+  },
+  {
+    "id": "el-patio-townside-4",
+    "unitNo": "TOWNSIDE-SA-310",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 310,
+    "view": "Scenic View",
+    "priceEGP": 49430000,
+    "status": "Available",
+    "Land Area": 349,
+    "EOI EGP": 400000,
+    "Delivery": "4 Years (Off-Plan)"
+  }
+]

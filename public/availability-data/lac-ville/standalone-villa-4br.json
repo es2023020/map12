@@ -1,0 +1,16 @@
+[
+  {
+    "id": "lac-ville-2",
+    "unitNo": "LV-SA",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 290,
+    "view": "Landscape",
+    "priceEGP": 15500000,
+    "status": "Available",
+    "slug": "lac-ville",
+    "cluster": "Phase 1",
+    "delivery_note": "9 Months",
+    "payment_plan": "80% DP over 5 yrs"
+  }
+]

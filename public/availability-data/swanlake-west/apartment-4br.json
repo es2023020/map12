@@ -1,0 +1,45 @@
+[
+  {
+    "id": "swanlake-west-4",
+    "unitNo": "SLW-SHIM-4B-348",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 348,
+    "view": "Landscape",
+    "priceEGP": 57500000,
+    "status": "Available",
+    "slug": "swanlake-west",
+    "cluster": "Shimmers Apartments",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 yrs"
+  },
+  {
+    "id": "swanlake-west-5",
+    "unitNo": "SLW-SOLOS-GR-265",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 265,
+    "view": "Landscape",
+    "priceEGP": 53000000,
+    "status": "Available",
+    "slug": "swanlake-west",
+    "cluster": "Solos Apartments",
+    "area_note": "Garden 345 sqm",
+    "delivery_note": "Ready to Move (RTM)",
+    "payment_plan": "5%+5% over 10 yrs"
+  },
+  {
+    "id": "swanlake-west-6",
+    "unitNo": "SLW-MONOS-373",
+    "beds": 4,
+    "finishing": "Fully Finished + ACs",
+    "areaSqm": 373,
+    "view": "Landscape",
+    "priceEGP": 60600000,
+    "status": "Available",
+    "slug": "swanlake-west",
+    "cluster": "Monos Apartments",
+    "delivery_note": "1.5 Years",
+    "payment_plan": "5%+5% over 7 yrs"
+  }
+]
