@@ -88,6 +88,12 @@ export async function startWhatsAppListener() {
       const groupsConfig = loadGroupsConfig();
       const groupInfo = groupsConfig[jid];
       const devSlug = groupInfo?.developer_slug;
+
+      // STRICT FILTER: Focus only on the 128 authorized developer groups
+      if (!groupInfo || !devSlug || devSlug === "general-developer") {
+        continue;
+      }
+
       const groupName = groupInfo?.developer_name || groupInfo?.name || jid.split("@")[0];
       const sender = msg.pushName || "Broker";
 
