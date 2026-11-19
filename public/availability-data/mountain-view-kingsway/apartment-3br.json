@@ -908,5 +908,17 @@
     "cluster": "Hyde Park Greens - Cluster 23",
     "delivery_note": "Ready to Move / 3-4 Years",
     "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "mountain-view-kingsway-316",
+    "unitNo": "U-316",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 211,
+    "view": "Landscape",
+    "priceEGP": 11858448,
+    "status": "Available",
+    "slug": "mountain-view-kingsway",
+    "payment_plan": "Up to 10 Years Installments"
   }
 ]

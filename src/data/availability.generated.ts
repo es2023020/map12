@@ -1585,6 +1585,38 @@ export const availability: ProjectAvailability[] = [
     lastUpdated: "2026-11-19",
   },
   {
+    slug: "d-o-s-e",
+    developer: "Akam Al Rajhi Developments",
+    totalAvailable: 1,
+    breakdown: [
+        {
+        type: "Townhouse",
+        beds: 4,
+        available: 1,
+        minSqm: 184,
+        maxSqm: 184,
+        minPriceM: 25.2,
+        maxPriceM: 25.2,
+        finishing: "Core & Shell",
+        units: [
+            {
+            id: "d-o-s-e-1",
+            unitNo: "U-1",
+            beds: 4,
+            finishing: "Core & Shell",
+            areaSqm: 184,
+            view: "Landscape",
+            priceEGP: 25200000,
+            status: "Available",
+            slug: "d-o-s-e",
+            payment_plan: "5% Down Payment · 5 Years Equal Installments",
+          },
+          ],
+      },
+      ],
+    lastUpdated: "2026-11-19",
+  },
+  {
     slug: "al-east-mostakbal-city",
     developer: "Al Ahly Sabbour",
     totalAvailable: 11,
@@ -5568,7 +5600,7 @@ export const availability: ProjectAvailability[] = [
   {
     slug: "new-garden-city-r5",
     developer: "City Edge Developments",
-    totalAvailable: 6,
+    totalAvailable: 7,
     breakdown: [
         {
         type: "Apartment",
@@ -5613,10 +5645,10 @@ export const availability: ProjectAvailability[] = [
         {
         type: "Apartment",
         beds: 2,
-        available: 2,
+        available: 3,
         minSqm: 123,
         maxSqm: 190,
-        minPriceM: 5.6,
+        minPriceM: 4.464304,
         maxPriceM: 8.6,
         finishing: "Fully Finished",
         units: [
@@ -5647,6 +5679,18 @@ export const availability: ProjectAvailability[] = [
             cluster: "R5 Verandas & Centria",
             delivery_note: "Ready to Move",
             payment_plan: "5%+5% DP up to 12 yrs",
+          },
+            {
+            id: "new-garden-city-r5-7",
+            unitNo: "Y",
+            beds: 2,
+            finishing: "Core & Shell",
+            areaSqm: 120,
+            view: "Landscape",
+            priceEGP: 4464304,
+            status: "Available",
+            slug: "new-garden-city-r5",
+            payment_plan: "Up to 3 Years Installments",
           },
           ],
       },
@@ -47511,7 +47555,7 @@ export const availability: ProjectAvailability[] = [
   {
     slug: "kai-sokhna",
     developer: "Misr Italia Properties",
-    totalAvailable: 7,
+    totalAvailable: 8,
     breakdown: [
         {
         type: "Apartment",
@@ -47683,6 +47727,30 @@ export const availability: ProjectAvailability[] = [
             area_note: "Beach Villa",
             delivery_note: "March 2027",
             payment_plan: "10%+5% over 6 yrs",
+          },
+          ],
+      },
+        {
+        type: "Standalone Villa",
+        beds: 2,
+        available: 1,
+        minSqm: 78,
+        maxSqm: 78,
+        minPriceM: 9.561377,
+        maxPriceM: 9.561377,
+        finishing: "Core & Shell",
+        units: [
+            {
+            id: "kai-sokhna-8",
+            unitNo: "U-8",
+            beds: 2,
+            finishing: "Core & Shell",
+            areaSqm: 78,
+            view: "Landscape",
+            priceEGP: 9561377,
+            status: "Available",
+            slug: "kai-sokhna",
+            payment_plan: "5% Down Payment · 10 Years Equal Installments",
           },
           ],
       },
@@ -52912,7 +52980,7 @@ export const availability: ProjectAvailability[] = [
   {
     slug: "mountain-view-kingsway",
     developer: "Mountain View",
-    totalAvailable: 280,
+    totalAvailable: 282,
     breakdown: [
         {
         type: "Standalone Villa",
@@ -55077,10 +55145,10 @@ export const availability: ProjectAvailability[] = [
         {
         type: "Apartment",
         beds: 2,
-        available: 76,
-        minSqm: 96,
+        available: 77,
+        minSqm: 75,
         maxSqm: 135,
-        minPriceM: 9.54,
+        minPriceM: 3.583333,
         maxPriceM: 17.79,
         finishing: "Core & Shell",
         units: [
@@ -56148,15 +56216,27 @@ export const availability: ProjectAvailability[] = [
             delivery_note: "Ready to Move / 3-4 Years",
             payment_plan: "10% DP · 8 years",
           },
+            {
+            id: "mountain-view-kingsway-317",
+            unitNo: "S",
+            beds: 2,
+            finishing: "Fully Finished",
+            areaSqm: 75,
+            view: "Landscape",
+            priceEGP: 3583333,
+            status: "Available",
+            slug: "mountain-view-kingsway",
+            payment_plan: "5% Down Payment · 8 Years Equal Installments",
+          },
           ],
       },
         {
         type: "Apartment",
         beds: 3,
-        available: 65,
+        available: 66,
         minSqm: 104,
         maxSqm: 267,
-        minPriceM: 12.78,
+        minPriceM: 11.858448,
         maxPriceM: 23.28,
         finishing: "Core & Shell",
         units: [
@@ -57070,6 +57150,18 @@ export const availability: ProjectAvailability[] = [
             delivery_note: "Ready to Move / 3-4 Years",
             payment_plan: "10% DP · 8 years",
           },
+            {
+            id: "mountain-view-kingsway-316",
+            unitNo: "U-316",
+            beds: 3,
+            finishing: "Core & Shell",
+            areaSqm: 211,
+            view: "Landscape",
+            priceEGP: 11858448,
+            status: "Available",
+            slug: "mountain-view-kingsway",
+            payment_plan: "Up to 10 Years Installments",
+          },
           ],
       },
         {
@@ -57608,7 +57700,7 @@ export const availability: ProjectAvailability[] = [
   {
     slug: "mountain-view-ras-el-hekma",
     developer: "Mountain View",
-    totalAvailable: 13,
+    totalAvailable: 14,
     breakdown: [
         {
         type: "Twin House",
@@ -57825,6 +57917,30 @@ export const availability: ProjectAvailability[] = [
             cluster: "Garden Loft A-Oct 2026",
             delivery_note: "OFF PLAN - 2.5",
             payment_plan: "10% DP · 8 years",
+          },
+          ],
+      },
+        {
+        type: "Townhouse",
+        beds: 4,
+        available: 1,
+        minSqm: 184,
+        maxSqm: 184,
+        minPriceM: 35,
+        maxPriceM: 35,
+        finishing: "Fully Finished",
+        units: [
+            {
+            id: "mountain-view-ras-el-hekma-14",
+            unitNo: "U-14",
+            beds: 4,
+            finishing: "Fully Finished",
+            areaSqm: 184,
+            view: "Landscape",
+            priceEGP: 35000000,
+            status: "Available",
+            slug: "mountain-view-ras-el-hekma",
+            payment_plan: "10% Down Payment · 5 Years Equal Installments",
           },
           ],
       },
@@ -90880,7 +90996,7 @@ export const availability: ProjectAvailability[] = [
   {
     slug: "village-de-la-capitale",
     developer: "Palm Hills Developments",
-    totalAvailable: 246,
+    totalAvailable: 247,
     breakdown: [
         {
         type: "Apartment",
@@ -93523,10 +93639,10 @@ export const availability: ProjectAvailability[] = [
         {
         type: "Standalone Villa",
         beds: 5,
-        available: 41,
-        minSqm: 185,
+        available: 42,
+        minSqm: 176,
         maxSqm: 262,
-        minPriceM: 31.844,
+        minPriceM: 24.315,
         maxPriceM: 45.509,
         finishing: "Core & Shell",
         units: [
@@ -94062,6 +94178,18 @@ export const availability: ProjectAvailability[] = [
             slug: "village-de-la-capitale",
             delivery_note: "Q2 2031",
             payment_plan: "10% DP · 8 years",
+          },
+            {
+            id: "village-de-la-capitale-247",
+            unitNo: "GE",
+            beds: 5,
+            finishing: "Core & Shell",
+            areaSqm: 176,
+            view: "Landscape",
+            priceEGP: 24315000,
+            status: "Available",
+            slug: "village-de-la-capitale",
+            payment_plan: "Up to 12 Years Installments",
           },
           ],
       },

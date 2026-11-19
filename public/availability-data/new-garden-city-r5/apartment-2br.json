@@ -26,5 +26,17 @@
     "cluster": "R5 Verandas & Centria",
     "delivery_note": "Ready to Move",
     "payment_plan": "5%+5% DP up to 12 yrs"
+  },
+  {
+    "id": "new-garden-city-r5-7",
+    "unitNo": "Y",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 120,
+    "view": "Landscape",
+    "priceEGP": 4464304,
+    "status": "Available",
+    "slug": "new-garden-city-r5",
+    "payment_plan": "Up to 3 Years Installments"
   }
 ]

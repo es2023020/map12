@@ -1,0 +1,14 @@
+[
+  {
+    "id": "d-o-s-e-1",
+    "unitNo": "U-1",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 184,
+    "view": "Landscape",
+    "priceEGP": 25200000,
+    "status": "Available",
+    "slug": "d-o-s-e",
+    "payment_plan": "5% Down Payment · 5 Years Equal Installments"
+  }
+]

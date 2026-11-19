@@ -6530,7 +6530,8 @@ export const compoundsGenerated: Compound[] = [
     "types": [
       "Twin House",
       "Chalet",
-      "Apartment"
+      "Apartment",
+      "Townhouse"
     ],
     "amenities": [
       "Private beach",
@@ -7259,11 +7260,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet",
-      "Hotel Apartment",
-      "Standalone Villa",
-      "Townhouse",
-      "Twin House"
+      "Townhouse"
     ],
     "amenities": [
       "Private Beach",
@@ -14448,7 +14445,7 @@ export const compoundsGenerated: Compound[] = [
       "Ain Sokhna & E-Ring Access: Just 1 minute from Sokhna Road and 4 minutes from the East Ring Road.",
       "Flexible Payment Options: Extended repayment programs starting with a minimal 5% downpayment."
     ],
-    "paymentPlan": "5% down payment · 5% after 3 months · 7 years equal installments",
+    "paymentPlan": "Up to 10 Years Installments",
     "areaSize": "200 feddan",
     "unitSizes": "180–275 m²",
     "type": "Residential",
@@ -14465,7 +14462,8 @@ export const compoundsGenerated: Compound[] = [
       "/projects/glen/8.jpg",
       "/projects/glen/9.jpg"
 ],
-    "masterPlanUrl": "/Masterplans/glen.jpg"
+    "masterPlanUrl": "/Masterplans/glen.jpg",
+    "isNewLaunch": true
   },
   {
     "slug": "stoda",

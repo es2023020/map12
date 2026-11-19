@@ -531,5 +531,17 @@
     "slug": "village-de-la-capitale",
     "delivery_note": "Q2 2031",
     "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "village-de-la-capitale-247",
+    "unitNo": "GE",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 176,
+    "view": "Landscape",
+    "priceEGP": 24315000,
+    "status": "Available",
+    "slug": "village-de-la-capitale",
+    "payment_plan": "Up to 12 Years Installments"
   }
 ]

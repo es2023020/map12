@@ -1062,5 +1062,17 @@
     "cluster": "Hyde Park Greens - Cluster 23",
     "delivery_note": "Ready to Move / 3-4 Years",
     "payment_plan": "10% DP · 8 years"
+  },
+  {
+    "id": "mountain-view-kingsway-317",
+    "unitNo": "S",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 75,
+    "view": "Landscape",
+    "priceEGP": 3583333,
+    "status": "Available",
+    "slug": "mountain-view-kingsway",
+    "payment_plan": "5% Down Payment · 8 Years Equal Installments"
   }
 ]
