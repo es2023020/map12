@@ -4,7 +4,6 @@ import { Shell } from "@/components/layout/Shell";
 import { useStore } from "@/lib/store";
 import { useDebounce } from "@/lib/useDebounce";
 import { BrochuresMatcherTab } from "@/components/admin/BrochuresMatcherTab";
-import { WhatsAppInventoryHub } from "@/components/admin/WhatsAppInventoryHub";
 import { MapClient } from "@/components/map/MapClient";
 import { compounds } from "@/data/compounds";
 import { availability } from "@/data/availability";
@@ -84,8 +83,7 @@ type TabType =
   | "audit"
   | "brochures"
   | "review"
-  | "payments"
-  | "whatsapp";
+  | "payments";
 
 function AdminPage() {
   const user = useStore((s) => s.user);
@@ -1880,7 +1878,6 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
     { id: "availability", label: "Availability Manager", icon: LayoutGrid },
     { id: "review", label: "Pending Reviews", icon: CheckCircle },
     { id: "payments", label: "Payment Plans Manager", icon: CreditCard },
-    { id: "whatsapp", label: "WhatsApp Live Hub", icon: MessageSquare },
     { id: "map", label: "Map Control", icon: Layers },
     { id: "tools", label: "Engine Tools", icon: Calculator },
     { id: "people", label: "Agents & RBAC", icon: Users },
@@ -4819,9 +4816,6 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                     </p>
                   </div>
                 )}
-
-                {/* WhatsApp Inventory Live Hub */}
-                {activeTab === "whatsapp" && <WhatsAppInventoryHub />}
               </>
             )}
           </main>

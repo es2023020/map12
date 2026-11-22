@@ -36,7 +36,6 @@ import { Route as ApiSaveDatabaseRouteImport } from './routes/api.save-database'
 import { Route as ApiSaveLeadRouteImport } from './routes/api.save-lead'
 import { Route as ApiSaveUsersRouteImport } from './routes/api.save-users'
 import { Route as ApiUploadAssetRouteImport } from './routes/api.upload-asset'
-import { Route as ApiWhatsappInventoryRouteImport } from './routes/api.whatsapp-inventory'
 import { Route as ArIndexRouteImport } from './routes/ar.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -201,11 +200,6 @@ const ApiSaveUsersRoute = ApiSaveUsersRouteImport.update({
 const ApiUploadAssetRoute = ApiUploadAssetRouteImport.update({
   id: '/api/upload-asset',
   path: '/api/upload-asset',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiWhatsappInventoryRoute = ApiWhatsappInventoryRouteImport.update({
-  id: '/api/whatsapp-inventory',
-  path: '/api/whatsapp-inventory',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArIndexRoute = ArIndexRouteImport.update({
@@ -384,7 +378,6 @@ export interface FileRoutesByFullPath {
   '/api/save-lead': typeof ApiSaveLeadRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
-  '/api/whatsapp-inventory': typeof ApiWhatsappInventoryRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
@@ -439,7 +432,6 @@ export interface FileRoutesByTo {
   '/api/save-lead': typeof ApiSaveLeadRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
-  '/api/whatsapp-inventory': typeof ApiWhatsappInventoryRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
@@ -499,7 +491,6 @@ export interface FileRoutesById {
   '/api/save-lead': typeof ApiSaveLeadRoute
   '/api/save-users': typeof ApiSaveUsersRoute
   '/api/upload-asset': typeof ApiUploadAssetRoute
-  '/api/whatsapp-inventory': typeof ApiWhatsappInventoryRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$pair': typeof ComparePairRoute
   '/dashboard/ai-assistant': typeof DashboardAiAssistantRoute
@@ -560,7 +551,6 @@ export interface FileRouteTypes {
     | '/api/save-lead'
     | '/api/save-users'
     | '/api/upload-asset'
-    | '/api/whatsapp-inventory'
     | '/blog/$slug'
     | '/compare/$pair'
     | '/dashboard/ai-assistant'
@@ -615,7 +605,6 @@ export interface FileRouteTypes {
     | '/api/save-lead'
     | '/api/save-users'
     | '/api/upload-asset'
-    | '/api/whatsapp-inventory'
     | '/blog/$slug'
     | '/compare/$pair'
     | '/dashboard/ai-assistant'
@@ -674,7 +663,6 @@ export interface FileRouteTypes {
     | '/api/save-lead'
     | '/api/save-users'
     | '/api/upload-asset'
-    | '/api/whatsapp-inventory'
     | '/blog/$slug'
     | '/compare/$pair'
     | '/dashboard/ai-assistant'
@@ -734,7 +722,6 @@ export interface RootRouteChildren {
   ApiSaveLeadRoute: typeof ApiSaveLeadRoute
   ApiSaveUsersRoute: typeof ApiSaveUsersRoute
   ApiUploadAssetRoute: typeof ApiUploadAssetRoute
-  ApiWhatsappInventoryRoute: typeof ApiWhatsappInventoryRoute
   BlogSlugRoute: typeof BlogSlugRoute
   SeoSlugRoute: typeof SeoSlugRoute
   ArIndexRoute: typeof ArIndexRoute
@@ -935,13 +922,6 @@ declare module '@tanstack/react-router' {
       path: '/api/upload-asset'
       fullPath: '/api/upload-asset'
       preLoaderRoute: typeof ApiUploadAssetRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/whatsapp-inventory': {
-      id: '/api/whatsapp-inventory'
-      path: '/api/whatsapp-inventory'
-      fullPath: '/api/whatsapp-inventory'
-      preLoaderRoute: typeof ApiWhatsappInventoryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ar/': {
@@ -1285,7 +1265,6 @@ const rootRouteChildren: RootRouteChildren = {
   ApiSaveLeadRoute: ApiSaveLeadRoute,
   ApiSaveUsersRoute: ApiSaveUsersRoute,
   ApiUploadAssetRoute: ApiUploadAssetRoute,
-  ApiWhatsappInventoryRoute: ApiWhatsappInventoryRoute,
   BlogSlugRoute: BlogSlugRoute,
   SeoSlugRoute: SeoSlugRoute,
   ArIndexRoute: ArIndexRoute,
