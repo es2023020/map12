@@ -61,7 +61,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "carnelia",
@@ -1410,7 +1410,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "eastville",
@@ -1582,7 +1582,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "d-o-s-e",
@@ -1614,7 +1614,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "al-east-mostakbal-city",
@@ -1872,7 +1872,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "gaia-ras-el-hekma",
@@ -1906,7 +1906,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "gaia",
@@ -1964,7 +1964,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "green-square",
@@ -1998,7 +1998,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "keeva-6th-of-october",
@@ -2084,7 +2084,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "lavenir",
@@ -2118,7 +2118,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-mornings",
@@ -2232,7 +2232,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "youd-ras-el-hekma",
@@ -2484,7 +2484,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "youd",
@@ -2736,7 +2736,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "fifth-square",
@@ -2796,7 +2796,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "marbay-ras-el-hekma",
@@ -2934,7 +2934,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "marresidence",
@@ -3011,7 +3011,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "marville",
@@ -3138,7 +3138,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "seazen",
@@ -3302,7 +3302,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "nyoum-pyramids",
@@ -3362,7 +3362,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "direction-white",
@@ -3713,7 +3713,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "ashrafieh",
@@ -3799,7 +3799,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "galleria-moon-valley",
@@ -3859,7 +3859,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "sun-capital",
@@ -4077,7 +4077,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "zizinia",
@@ -4163,7 +4163,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "kayan",
@@ -4197,7 +4197,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "beta-greens",
@@ -4257,7 +4257,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "midtown-new-cairo",
@@ -4291,7 +4291,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "general",
@@ -4323,7 +4323,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "lake-west-1",
@@ -4357,7 +4357,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "lake-west-2",
@@ -4417,7 +4417,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "beachfront-towers-new-alamein",
@@ -4597,7 +4597,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "downtown-new-alamein",
@@ -4659,7 +4659,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "il-latini-city-edge",
@@ -4871,7 +4871,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "jade-park-al-maqsad",
@@ -5051,7 +5051,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "latin-city-new-alamein",
@@ -5263,7 +5263,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mazarine-apartments-new-alamein",
@@ -5491,7 +5491,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mazarine-hub-new-alamein",
@@ -5595,7 +5595,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "new-garden-city-r5",
@@ -5735,7 +5735,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "cleopatra-square",
@@ -5795,7 +5795,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "address-east",
@@ -5829,7 +5829,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-address-east",
@@ -5863,7 +5863,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "village-west",
@@ -6707,7 +6707,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "genova",
@@ -6741,7 +6741,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "rock-eden",
@@ -7827,7 +7827,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "rock-green",
@@ -9581,7 +9581,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "rock-vera",
@@ -9736,7 +9736,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "rock-white",
@@ -11299,7 +11299,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "rock-yard",
@@ -12580,7 +12580,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "lac-ville",
@@ -12640,7 +12640,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "belle-vie-new-zayed",
@@ -14114,7 +14114,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "belle-vie",
@@ -15588,7 +15588,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "cairo-gate",
@@ -16956,7 +16956,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "marassi-red-sea",
@@ -18114,7 +18114,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mivida",
@@ -19462,7 +19462,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "soul",
@@ -20746,7 +20746,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "uptown-cairo",
@@ -20900,7 +20900,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "montania-park",
@@ -20960,7 +20960,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "montania",
@@ -21008,7 +21008,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "origami",
@@ -21040,7 +21040,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "grova-east-hills",
@@ -21210,7 +21210,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "haptown",
@@ -21270,7 +21270,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "park-central-mostakbal-city",
@@ -21577,7 +21577,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "swanlake-el-gouna",
@@ -21762,7 +21762,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "swanlake-residences-new-cairo",
@@ -22029,7 +22029,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "swanlake-west",
@@ -22327,7 +22327,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-valleys-mostakbal-city",
@@ -22488,7 +22488,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "sa-ada-sahel",
@@ -22661,7 +22661,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "saada-boutique",
@@ -22933,7 +22933,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "saada-north-coast",
@@ -23211,7 +23211,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "saada",
@@ -23297,7 +23297,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "garden-lakes",
@@ -23965,7 +23965,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "hyde-park-new-cairo",
@@ -26020,7 +26020,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "hyde-park-central",
@@ -27288,7 +27288,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "hyde-park-north-seashore",
@@ -29348,7 +29348,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "one-hyde-park-new-cairo",
@@ -29692,7 +29692,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "ashgar-city",
@@ -29766,7 +29766,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "glen",
@@ -29855,7 +29855,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "c-north",
@@ -29998,7 +29998,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "creek-town",
@@ -30168,7 +30168,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "safia",
@@ -30326,7 +30326,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-crest",
@@ -30469,7 +30469,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "vea-new-cairo",
@@ -30531,7 +30531,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "westdays",
@@ -30620,7 +30620,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "alburouj",
@@ -30651,7 +30651,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "jefaira",
@@ -30967,7 +30967,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "la-mirada",
@@ -31001,7 +31001,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "el-patio-riva",
@@ -31432,7 +31432,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "el-patio-sola",
@@ -31551,7 +31551,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "el-patio-town",
@@ -31832,7 +31832,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "el-patio-townside",
@@ -31941,7 +31941,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "el-patio-vera",
@@ -32060,7 +32060,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "la-vista-6",
@@ -32182,7 +32182,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "la-vista-7",
@@ -32286,7 +32286,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "la-vista-bay-east",
@@ -32392,7 +32392,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "la-vista-cascada",
@@ -32427,7 +32427,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "la-vista-east",
@@ -32534,7 +32534,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "la-vista-gardens",
@@ -32806,7 +32806,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "la-vista-ras-el-hekma",
@@ -32910,7 +32910,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "la-vista-topaz",
@@ -33032,7 +33032,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "patio-5-east",
@@ -33136,7 +33136,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "patio-casa",
@@ -33198,7 +33198,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "patio-hills",
@@ -33359,7 +33359,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "patio-jade",
@@ -33475,7 +33475,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "patio-oro",
@@ -33642,7 +33642,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "patio-prime",
@@ -33758,7 +33758,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "patio-vida",
@@ -34231,7 +34231,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "zoya",
@@ -34533,7 +34533,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "31-west",
@@ -35935,7 +35935,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "business-district",
@@ -36123,7 +36123,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "el-masyaf",
@@ -36428,7 +36428,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mist",
@@ -38701,7 +38701,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "trio",
@@ -39083,7 +39083,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "el-masyaf-north-coast",
@@ -39716,7 +39716,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "azha-north-coast",
@@ -39922,7 +39922,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "azha-sokhna",
@@ -39957,7 +39957,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "elea-azha-north",
@@ -40163,7 +40163,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-hillage",
@@ -40483,7 +40483,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "elm-tree-park",
@@ -40569,7 +40569,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "kinda-residence",
@@ -40629,7 +40629,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "rai-valleys",
@@ -40689,7 +40689,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "sarai",
@@ -40990,7 +40990,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "taj-city",
@@ -41131,7 +41131,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "talala",
@@ -41397,7 +41397,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-butterfly",
@@ -41589,7 +41589,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "aeon",
@@ -41623,7 +41623,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "crescent-walk",
@@ -43749,7 +43749,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "district-5",
@@ -44597,7 +44597,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "ramla-north-coast",
@@ -46714,7 +46714,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "cali-coast-ras-el-hekma",
@@ -47164,7 +47164,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "m-apartments",
@@ -47224,7 +47224,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "villaria",
@@ -47284,7 +47284,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "club-hill-solare",
@@ -47476,7 +47476,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "il-bosco-city",
@@ -47550,7 +47550,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "kai-sokhna",
@@ -47755,7 +47755,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "solare",
@@ -48051,7 +48051,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "vinci",
@@ -48245,7 +48245,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "modon-ras-el-hekma",
@@ -48711,7 +48711,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "creekview",
@@ -48813,7 +48813,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "hyde-park-retail",
@@ -48999,7 +48999,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "lvls",
@@ -49089,7 +49089,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mountain-view-aliva",
@@ -50185,7 +50185,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mountain-view-chillout",
@@ -50219,7 +50219,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mountain-view-crystal",
@@ -51637,7 +51637,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mountain-view-icity-new-cairo",
@@ -51835,7 +51835,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mountain-view-icity-october",
@@ -52635,7 +52635,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mountain-view-jirian",
@@ -52975,7 +52975,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mountain-view-kingsway",
@@ -57549,7 +57549,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mountain-view-mv4",
@@ -57695,7 +57695,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mountain-view-ras-el-hekma",
@@ -57945,7 +57945,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "naia-bay",
@@ -58120,7 +58120,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "jirian-nations-of-sky",
@@ -58398,7 +58398,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "perla",
@@ -58632,7 +58632,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "zomra-east",
@@ -58987,7 +58987,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "katameya-gardens",
@@ -59099,7 +59099,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "golden-heights-1",
@@ -59133,7 +59133,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "golden-heights-2",
@@ -59167,7 +59167,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "silversands",
@@ -59664,7 +59664,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "solana-east",
@@ -59846,7 +59846,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "solana-west",
@@ -60232,7 +60232,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "solana",
@@ -60630,7 +60630,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "zed-east",
@@ -60920,7 +60920,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "zed-west",
@@ -61081,7 +61081,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "97-hills",
@@ -61917,7 +61917,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "badya",
@@ -68131,7 +68131,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "bamboo-iii",
@@ -68722,7 +68722,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "capital-gardens",
@@ -68794,7 +68794,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "hacienda-blue",
@@ -68944,7 +68944,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "hacienda-heneish",
@@ -69028,7 +69028,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "hacienda-ras-el-hekma",
@@ -73595,7 +73595,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "hacienda-waters",
@@ -76344,7 +76344,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "palm-hills-alexandria",
@@ -76948,7 +76948,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "palm-hills-jirian",
@@ -82984,7 +82984,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "palm-hills-new-cairo",
@@ -84577,7 +84577,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "palm-hills-one",
@@ -85806,7 +85806,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "palm-hills-ritz-carlton",
@@ -86606,7 +86606,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "palm-parks",
@@ -86704,7 +86704,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "palmet",
@@ -86932,7 +86932,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "phnc-commercial",
@@ -87888,7 +87888,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "px",
@@ -90375,7 +90375,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-crown-extension",
@@ -90991,7 +90991,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "village-de-la-capitale",
@@ -94245,7 +94245,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "hadaba",
@@ -94305,7 +94305,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "ivoire-east",
@@ -94485,7 +94485,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "ivoire-west",
@@ -94597,7 +94597,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "jebal-sokhna",
@@ -94685,7 +94685,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "point-90-offices-park",
@@ -94789,7 +94789,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "stone-residence",
@@ -94875,7 +94875,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-brooks",
@@ -95123,7 +95123,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "alam-al-roum",
@@ -95584,7 +95584,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "monte-napoleone",
@@ -95696,7 +95696,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "covaya",
@@ -95770,7 +95770,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "oak-residences",
@@ -95872,7 +95872,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "telal-east",
@@ -96066,7 +96066,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "telal-shores",
@@ -96126,7 +96126,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "sephora-heights",
@@ -96212,7 +96212,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "bluetree",
@@ -96411,7 +96411,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "bloom-island-ogami",
@@ -99628,7 +99628,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "caesar-extension-2",
@@ -99987,7 +99987,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "caesar-sodic",
@@ -100478,7 +100478,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "june",
@@ -101779,7 +101779,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "karmell",
@@ -105226,7 +105226,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "ogami",
@@ -108443,7 +108443,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "sky-condos",
@@ -108580,7 +108580,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "sodic-east-vale",
@@ -114206,7 +114206,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "sodic-east",
@@ -116587,7 +116587,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "sodic-the-estates",
@@ -116754,7 +116754,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-estates-residences",
@@ -118520,7 +118520,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-estates",
@@ -118620,7 +118620,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-portal",
@@ -118745,7 +118745,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "v-editions",
@@ -118825,7 +118825,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "villette",
@@ -118917,7 +118917,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "vye-sodic",
@@ -119336,7 +119336,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "westown-medical-centre",
@@ -119551,7 +119551,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "katameya-creeks",
@@ -119637,7 +119637,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "la-vista-city",
@@ -119873,7 +119873,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mayan-el-shorouk",
@@ -120130,7 +120130,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "mayan-new-cairo",
@@ -120342,7 +120342,39 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
+  },
+  {
+    slug: "madinaty",
+    developer: "Talaat Moustafa Group",
+    totalAvailable: 1,
+    breakdown: [
+        {
+        type: "Apartment",
+        beds: 2,
+        available: 1,
+        minSqm: 120,
+        maxSqm: 120,
+        minPriceM: 3.8961,
+        maxPriceM: 3.8961,
+        finishing: "Fully Finished",
+        units: [
+            {
+            id: "madinaty-1",
+            unitNo: "U-1",
+            beds: 2,
+            finishing: "Fully Finished",
+            areaSqm: 120,
+            view: "Landscape",
+            priceEGP: 3896100,
+            status: "Available",
+            slug: "madinaty",
+            payment_plan: "10% Down Payment · 10 Years Equal Installments",
+          },
+          ],
+      },
+      ],
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "azad",
@@ -120402,7 +120434,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "bloomfields-mostakbal-city",
@@ -121730,7 +121762,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "bloomfields",
@@ -123058,7 +123090,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "d-bay",
@@ -123258,7 +123290,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "dbay",
@@ -123458,7 +123490,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "fouka-bay",
@@ -123590,7 +123622,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "il-monte-galala",
@@ -130210,7 +130242,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "monte-galala",
@@ -136830,7 +136862,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "rivers",
@@ -136864,7 +136896,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "salt-north-coast",
@@ -143162,7 +143194,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "salt",
@@ -149460,7 +149492,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "scenes-mostakbal-city",
@@ -149789,7 +149821,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "scenes",
@@ -150118,7 +150150,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "90-avenue",
@@ -150178,7 +150210,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "joya",
@@ -150318,7 +150350,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "green-town",
@@ -150366,7 +150398,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-marq-gardens",
@@ -150578,7 +150610,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-water-marq",
@@ -150722,7 +150754,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "w-signature",
@@ -150782,7 +150814,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "waterway-1",
@@ -150816,7 +150848,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "the-waterway",
@@ -151268,7 +151300,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "w55",
@@ -152058,7 +152090,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "almaza-bay",
@@ -152243,7 +152275,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "neopolis",
@@ -152277,7 +152309,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "promenade",
@@ -152311,7 +152343,7 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
   {
     slug: "zg2",
@@ -152345,6 +152377,6 @@ export const availability: ProjectAvailability[] = [
           ],
       },
       ],
-    lastUpdated: "2026-11-19",
+    lastUpdated: "2026-11-22",
   },
 ];
