@@ -19,13 +19,14 @@ import {
   X,
 } from "lucide-react";
 
-import { notFound } from "@tanstack/react-router";
-
 export const Route = createFileRoute("/dashboard/ai-assistant")({
-  loader: () => {
-    throw notFound();
-  },
-  component: () => null,
+  head: () => ({
+    meta: [
+      { title: "AI Lead Matcher & Client Assistant — Dashboard" },
+      { name: "description", content: "Smart portfolio matching and priority lead intelligence for real estate brokers." },
+    ],
+  }),
+  component: AIAssistantPage,
 });
 
 function AIAssistantPage() {

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/api/upload-asset")({
       GET: async (event: any) => {
         try {
           const { compounds } = require("../data/compounds");
-          const brochuresDir = "D:\\map12\\public\\brochures";
+          const brochuresDir = path.join(process.cwd(), "public", "brochures");
           const waitingDir = path.join(brochuresDir, "_waiting_to_be_uploaded");
 
           if (!fs.existsSync(waitingDir)) {
@@ -29,11 +29,14 @@ export const Route = createFileRoute("/api/upload-asset")({
             }
           });
 
-          exec("python D:\\map12\\scripts\\sync-media.py", (err, stdout, stderr) => {
-            if (err) {
-              console.error("Failed to run sync-media script in GET:", err);
-            }
-          });
+          const syncScript = path.join(process.cwd(), "scripts", "sync-media.py");
+          if (fs.existsSync(syncScript)) {
+            exec(`python "${syncScript}"`, (err, stdout, stderr) => {
+              if (err) {
+                console.error("Failed to run sync-media script in GET:", err);
+              }
+            });
+          }
 
           return new Response(JSON.stringify({ success: true, created }), {
             status: 200,
@@ -65,11 +68,12 @@ export const Route = createFileRoute("/api/upload-asset")({
           const arrayBuffer = await (file as any).arrayBuffer();
           const buffer = Buffer.from(arrayBuffer);
 
+          const safeFileName = path.basename(String(fileName));
           let targetPath = "";
           if (type === "brochure") {
-            targetPath = path.join("D:\\map12\\public\\brochures", String(fileName));
+            targetPath = path.join(process.cwd(), "public", "brochures", safeFileName);
           } else if (type === "profile") {
-            targetPath = path.join("D:\\map12\\public\\profiles", String(fileName));
+            targetPath = path.join(process.cwd(), "public", "profiles", safeFileName);
           } else {
             return new Response(JSON.stringify({ error: "Invalid type" }), {
               status: 400,
@@ -84,10 +88,12 @@ export const Route = createFileRoute("/api/upload-asset")({
           }
 
           // If it was in the waiting folder, let's delete it there to clean up
-          const brochureName = String(fileName);
           const waitingFile = path.join(
-            "D:\\map12\\public\\brochures\\_waiting_to_be_uploaded",
-            brochureName,
+            process.cwd(),
+            "public",
+            "brochures",
+            "_waiting_to_be_uploaded",
+            safeFileName,
           );
           if (fs.existsSync(waitingFile)) {
             try {
@@ -102,14 +108,17 @@ export const Route = createFileRoute("/api/upload-asset")({
           fs.writeFileSync(targetPath, buffer);
           console.log(`Saved file to ${targetPath}`);
 
-          // Trigger sync-media script to rebuild registry and copy files
-          exec("python D:\\map12\\scripts\\sync-media.py", (err, stdout, stderr) => {
-            if (err) {
-              console.error("Failed to run sync-media script:", err);
-            } else {
-              console.log("sync-media output:", stdout);
-            }
-          });
+          // Trigger sync-media script to rebuild registry and copy files if script exists
+          const syncScript = path.join(process.cwd(), "scripts", "sync-media.py");
+          if (fs.existsSync(syncScript)) {
+            exec(`python "${syncScript}"`, (err, stdout, stderr) => {
+              if (err) {
+                console.error("Failed to run sync-media script:", err);
+              } else {
+                console.log("sync-media output:", stdout);
+              }
+            });
+          }
 
           return new Response(JSON.stringify({ success: true, path: targetPath }), {
             status: 200,

@@ -17,6 +17,15 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/seo/$slug")({
+  head: ({ params }) => {
+    const data = SEO_PAGES_DATA[params.slug] || SEO_PAGES_DATA["ras-el-hekma-rtm-villas"];
+    return {
+      meta: [
+        { title: data.title },
+        { name: "description", content: data.metaDesc },
+      ],
+    };
+  },
   component: SeoLandingPage,
 });
 

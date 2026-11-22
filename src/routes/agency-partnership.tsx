@@ -3,13 +3,14 @@ import { Shell } from "@/components/layout/Shell";
 import { Users, BarChart2, Shield, Zap, Check, ArrowRight, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import { notFound } from "@tanstack/react-router";
-
 export const Route = createFileRoute("/agency-partnership")({
-  loader: () => {
-    throw notFound();
-  },
-  component: () => null,
+  head: () => ({
+    meta: [
+      { title: "Agency Partnerships & Multi-Seat Brokerage — Property Atlas" },
+      { name: "description", content: "Empower your entire brokerage team with centralized lead management and real estate intelligence." },
+    ],
+  }),
+  component: AgencyPartnershipPage,
 });
 
 const agencyBenefits = [

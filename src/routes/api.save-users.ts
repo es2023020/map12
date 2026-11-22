@@ -19,28 +19,32 @@ export const Route = createFileRoute("/api/save-users")({
             });
           }
 
-          const usersPath = path.join(process.cwd(), "src", "data", "users.generated.ts");
-          const usersContent = `// Auto-generated from user signup/activity actions — do not edit by hand.
+          try {
+            const usersPath = path.join(process.cwd(), "src", "data", "users.generated.ts");
+            const usersContent = `// Auto-generated from user signup/activity actions — do not edit by hand.
 export const usersGenerated: any[] = ${JSON.stringify(usersList, null, 2)};
 `;
-          fs.writeFileSync(usersPath, usersContent, "utf-8");
-          console.log("Successfully wrote save-users payload to users.generated.ts");
+            fs.writeFileSync(usersPath, usersContent, "utf-8");
+            console.log("Successfully wrote save-users payload to users.generated.ts");
 
-          // Auto-commit and push if in development local environment
-          if (
-            process.env.NODE_ENV !== "production" &&
-            fs.existsSync(path.join(process.cwd(), ".git"))
-          ) {
-            exec(
-              'git add src/data/users.generated.ts && git commit -m "Auto-sync users database from activity" && git push origin main',
-              (err, stdout, stderr) => {
-                if (err) {
-                  console.error("Git auto-push error for users:", err);
-                } else {
-                  console.log("Git auto-push success for users:", stdout);
-                }
-              },
-            );
+            // Auto-commit and push if in development local environment
+            if (
+              process.env.NODE_ENV !== "production" &&
+              fs.existsSync(path.join(process.cwd(), ".git"))
+            ) {
+              exec(
+                'git add src/data/users.generated.ts && git commit -m "Auto-sync users database from activity" && git push origin main',
+                (err, stdout) => {
+                  if (err) {
+                    console.error("Git auto-push error for users:", err);
+                  } else {
+                    console.log("Git auto-push success for users:", stdout);
+                  }
+                },
+              );
+            }
+          } catch (writeErr) {
+            console.warn("Notice: Server filesystem is read-only (user stored in session):", writeErr);
           }
 
           return new Response(JSON.stringify({ success: true }), {

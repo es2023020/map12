@@ -46,6 +46,7 @@ export const Route = createFileRoute("/dashboard")({
 const tabs = [
   { to: "/dashboard" as const, label: "Workspace Home", icon: LayoutDashboard, exact: true },
   { to: "/dashboard/leads" as const, label: "CRM Lead Pipeline", icon: ListChecks },
+  { to: "/dashboard/ai-assistant" as const, label: "AI Lead Matcher", icon: Sparkles },
   { to: "/dashboard/campaigns" as const, label: "WhatsApp Campaigns", icon: Megaphone },
   { to: "/dashboard/favorites" as const, label: "Favorites Library", icon: Heart },
   { to: "/dashboard/compare" as const, label: "Unit Compare Engine", icon: GitCompareArrows },
@@ -81,7 +82,7 @@ function DashboardLayout() {
   const clearLimitHitError = useStore((s) => s.clearLimitHitError);
 
   const isAdmin = user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
-  const visibleTabs = isAdmin ? tabs : tabs.filter((t) => t.to !== "/dashboard/maps");
+  const visibleTabs = tabs;
 
   // Custom shortcuts state
   const customShortcuts = useStore((s) => s.customShortcuts) || [];

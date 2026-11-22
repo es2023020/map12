@@ -44,6 +44,8 @@ export function Footer() {
             { to: "/pricing", label: "Pricing" },
             { to: "/about", label: "About" },
             { to: "/contact", label: "Contact" },
+            { to: "/agency-partnership", label: "For Agencies" },
+            { to: "/developer-partnership", label: "For Developers" },
           ]}
         />
       </div>

@@ -3,13 +3,14 @@ import { Shell } from "@/components/layout/Shell";
 import { Building2, TrendingUp, Users, MapPin, Check, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import { notFound } from "@tanstack/react-router";
-
 export const Route = createFileRoute("/developer-partnership")({
-  loader: () => {
-    throw notFound();
-  },
-  component: () => null,
+  head: () => ({
+    meta: [
+      { title: "Developer Partnerships & Listings — Property Atlas" },
+      { name: "description", content: "Showcase your real estate masterplans and developments directly to Egypt's active brokerage network." },
+    ],
+  }),
+  component: DeveloperPartnershipPage,
 });
 
 const benefits = [
