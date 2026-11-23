@@ -24,7 +24,7 @@ export const destinationsGenerated: Destination[] = [
     "color": "#D946EF",
     "city": "Cairo",
     "blurb": "New Cairo's newest 6th Settlement expansion zone — Hassan Allam's Grova East Hills & La Vista's El Patio master-plans.",
-    "hero": "/destinations/new cairo.jpg",
+    "hero": "/destinations/new-cairo.jpg",
     "center": [
       30.008,
       31.542
@@ -71,7 +71,7 @@ export const destinationsGenerated: Destination[] = [
     "city": "North Coast",
     "kmRange": "155–177 km",
     "blurb": "Quiet bays, established families, mature delivered communities.",
-    "hero": "/destinations/el dab3aa.webp",
+    "hero": "/destinations/el-dab3aa.webp",
     "center": [
       31.01,
       28.15
@@ -134,7 +134,7 @@ export const destinationsGenerated: Destination[] = [
     "color": "#8B5CF6",
     "city": "Cairo",
     "blurb": "Tagamo3 El-Khames — Cairo's biggest premium suburb. Mature schools, malls, compounds.",
-    "hero": "/destinations/new cairo.jpg",
+    "hero": "/destinations/new-cairo.jpg",
     "center": [
       30.03,
       31.47
@@ -162,7 +162,7 @@ export const destinationsGenerated: Destination[] = [
     "color": "#6366F1",
     "city": "Giza",
     "blurb": "The newest western extension — large-plot villas, lower density, premium master-plans.",
-    "hero": "/destinations/new zayed.jpg",
+    "hero": "/destinations/new-zayed.jpg",
     "center": [
       30.08,
       30.88
@@ -344,7 +344,7 @@ export const destinationsGenerated: Destination[] = [
     "color": "#EC4899",
     "city": "Cairo",
     "blurb": "East Cairo's new expansion corridors — New Heliopolis, Shorouk, and East Cairo developments.",
-    "hero": "/destinations/new cairo.jpg",
+    "hero": "/destinations/new-cairo.jpg",
     "center": [
       30.125,
       31.625
@@ -358,7 +358,7 @@ export const destinationsGenerated: Destination[] = [
     "color": "#3B82F6",
     "city": "Giza",
     "blurb": "West Cairo's Northern Expansion zone — newest phases of premium master-plans near Zayed.",
-    "hero": "/destinations/new zayed.jpg",
+    "hero": "/destinations/new-zayed.jpg",
     "center": [
       30.07,
       31

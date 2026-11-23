@@ -6348,6 +6348,15 @@ function applyOfficialData(c: Compound): Compound {
     };
   }
 
+  // Guarantee valid numeric coordinates for every project
+  if (typeof next.lat !== "number" || typeof next.lng !== "number" || !Number.isFinite(next.lat) || !Number.isFinite(next.lng)) {
+    const dest = next.destination || "new-cairo";
+    const base = areaCenters[dest] || areaCenters["new-cairo"] || [30.02, 31.45];
+    const [dx, dy] = coordOffset(next.slug || c.slug);
+    next.lat = base[0] + dx;
+    next.lng = base[1] + dy;
+  }
+
   return next;
 }
 
@@ -6522,14 +6531,23 @@ function getActiveCompounds(): Compound[] {
   }
 
   const updatedResult = result.map((c) => {
+    let lat = c.lat;
+    let lng = c.lng;
+    if (typeof lat !== "number" || typeof lng !== "number" || !Number.isFinite(lat) || !Number.isFinite(lng)) {
+      const dest = c.destination || "new-cairo";
+      const base = areaCenters[dest] || areaCenters["new-cairo"] || [30.02, 31.45];
+      const [dx, dy] = coordOffset(c.slug);
+      lat = base[0] + dx;
+      lng = base[1] + dy;
+    }
     const a = availMap.get(c.slug);
     if (a) {
       const lowestUnit = getLowestPriceFromAvailability(a);
       if (lowestUnit !== null && lowestUnit > 0) {
-        return { ...c, priceFrom: lowestUnit };
+        return { ...c, lat, lng, priceFrom: lowestUnit };
       }
     }
-    return c;
+    return { ...c, lat, lng };
   });
 
   cachedCompounds = updatedResult;

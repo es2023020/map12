@@ -178,12 +178,15 @@ export function MapView({
   const focused = useMemo(() => {
     if (!rawFocused) return null;
     const wmLoc = resolveWikimapiaLocation(rawFocused.slug) || resolveWikimapiaLocation(rawFocused.name);
-    if (wmLoc) {
+    if (wmLoc && typeof wmLoc.lat === "number" && typeof wmLoc.lng === "number" && Number.isFinite(wmLoc.lat) && Number.isFinite(wmLoc.lng)) {
       return {
         ...rawFocused,
         lat: wmLoc.lat,
         lng: wmLoc.lng,
       };
+    }
+    if (typeof rawFocused.lat !== "number" || typeof rawFocused.lng !== "number" || !Number.isFinite(rawFocused.lat) || !Number.isFinite(rawFocused.lng)) {
+      return null;
     }
     return rawFocused;
   }, [rawFocused]);
@@ -259,7 +262,13 @@ export function MapView({
         }
       `}</style>
       <MapContainer
-        center={focused ? [focused.lat, focused.lng] : initialCenter}
+        center={
+          focused && typeof focused.lat === "number" && typeof focused.lng === "number" && Number.isFinite(focused.lat) && Number.isFinite(focused.lng)
+            ? [focused.lat, focused.lng]
+            : (Array.isArray(initialCenter) && Number.isFinite(initialCenter[0]) && Number.isFinite(initialCenter[1])
+                ? initialCenter
+                : [29.5, 31.0])
+        }
         zoom={focused ? Math.max(14, initialZoom) : initialZoom}
         zoomControl={false}
         scrollWheelZoom
@@ -313,7 +322,7 @@ export function MapView({
           <LayersControl.Overlay name="Project Markers &amp; Pins">
             <LayerGroup>
               {compounds.map((c) => {
-                if (Number.isNaN(c.lat) || Number.isNaN(c.lng)) return null;
+                if (typeof c.lat !== "number" || typeof c.lng !== "number" || !Number.isFinite(c.lat) || !Number.isFinite(c.lng)) return null;
                 const areaColor_ = destinationColor(c.destination);
                 const avail = getAvailableCount(c.slug);
                 const availStr =
@@ -384,13 +393,17 @@ export function MapView({
         <ZoomControl position="bottomright" />
         <ScaleControl position="bottomleft" metric imperial={false} />
         <FlyTo
-          center={focused ? [focused.lat, focused.lng] : undefined}
+          center={
+            focused && typeof focused.lat === "number" && typeof focused.lng === "number" && Number.isFinite(focused.lat) && Number.isFinite(focused.lng)
+              ? [focused.lat, focused.lng]
+              : undefined
+          }
           zoom={focused ? Math.max(14, initialZoom) : undefined}
         />
 
         {showLandmarks &&
           lmList.map((l) => {
-            if (Number.isNaN(l.lat) || Number.isNaN(l.lng)) return null;
+            if (typeof l.lat !== "number" || typeof l.lng !== "number" || !Number.isFinite(l.lat) || !Number.isFinite(l.lng)) return null;
             return (
               <Marker
                 key={l.id}

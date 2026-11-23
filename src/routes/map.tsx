@@ -845,18 +845,21 @@ function DetailPanel({
           </div>
 
           {/* Location */}
-          <div>
-            <SectionLabel>Location</SectionLabel>
-            <a
-              href={`https://www.google.com/maps/search/?api=1&query=${active.lat},${active.lng}`}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-accent hover:underline"
-            >
-              <MapPin className="h-3 w-3" />
-              {active.lat.toFixed(4)}, {active.lng.toFixed(4)} — Open in Maps
-            </a>
-          </div>
+          {active.lat != null && active.lng != null && (
+            <div>
+              <SectionLabel>Location</SectionLabel>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${active.lat},${active.lng}`}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-accent hover:underline"
+              >
+                <MapPin className="h-3 w-3" />
+                {typeof active.lat === "number" ? active.lat.toFixed(4) : active.lat},{" "}
+                {typeof active.lng === "number" ? active.lng.toFixed(4) : active.lng} — Open in Maps
+              </a>
+            </div>
+          )}
 
           {/* Developer card */}
           {activeDev && (

@@ -1218,7 +1218,9 @@ function CompoundPage() {
                       Coordinates & Maps
                     </div>
                     <div className="font-semibold text-primary text-xs mt-0.5 font-mono">
-                      {c.lat.toFixed(4)}° N, {c.lng.toFixed(4)}° E
+                      {typeof c.lat === "number" && typeof c.lng === "number"
+                        ? `${c.lat.toFixed(4)}° N, ${c.lng.toFixed(4)}° E`
+                        : "Location Pinned"}
                     </div>
                     <a
                       href={
@@ -1299,7 +1301,9 @@ function CompoundPage() {
                 href={
                   c.mapsUrl ||
                   projectLocations[c.slug]?.mapsUrl ||
-                  `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`
+                  (c.lat != null && c.lng != null
+                    ? `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`
+                    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.name)}`)
                 }
                 target="_blank"
                 rel="noreferrer"

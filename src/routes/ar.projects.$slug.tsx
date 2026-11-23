@@ -331,7 +331,12 @@ function ArabicCompoundPage() {
                 <div className="bg-secondary/40 p-3.5 rounded-xl border border-border/50">
                   <span className="text-[10px] uppercase font-bold text-muted-foreground block">خرائط التوجيه</span>
                   <a
-                    href={c.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`}
+                    href={
+                      c.mapsUrl ||
+                      (c.lat != null && c.lng != null
+                        ? `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`
+                        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.name)}`)
+                    }
                     target="_blank"
                     rel="noreferrer"
                     className="font-bold text-accent text-xs mt-1 inline-flex items-center gap-1 hover:underline"
@@ -383,7 +388,9 @@ function ArabicCompoundPage() {
                   <a
                     href={
                       c.mapsUrl ||
-                      `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`
+                      (c.lat != null && c.lng != null
+                        ? `https://www.google.com/maps/search/?api=1&query=${c.lat},${c.lng}`
+                        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.name)}`)
                     }
                     target="_blank"
                     rel="noreferrer"
