@@ -46,6 +46,7 @@ import { Route as DashboardAnnouncementsRouteImport } from './routes/dashboard.a
 import { Route as DashboardBillingRouteImport } from './routes/dashboard.billing'
 import { Route as DashboardCampaignsRouteImport } from './routes/dashboard.campaigns'
 import { Route as DashboardCompareRouteImport } from './routes/dashboard.compare'
+import { Route as DashboardDeveloperRouteImport } from './routes/dashboard.developer'
 import { Route as DashboardFavoritesRouteImport } from './routes/dashboard.favorites'
 import { Route as DashboardLeadsRouteImport } from './routes/dashboard.leads'
 import { Route as DashboardMapsRouteImport } from './routes/dashboard.maps'
@@ -252,6 +253,11 @@ const DashboardCompareRoute = DashboardCompareRouteImport.update({
   path: '/compare',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardDeveloperRoute = DashboardDeveloperRouteImport.update({
+  id: '/developer',
+  path: '/developer',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardFavoritesRoute = DashboardFavoritesRouteImport.update({
   id: '/favorites',
   path: '/favorites',
@@ -385,6 +391,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
   '/dashboard/compare': typeof DashboardCompareRoute
+  '/dashboard/developer': typeof DashboardDeveloperRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
   '/dashboard/leads': typeof DashboardLeadsRoute
   '/dashboard/maps': typeof DashboardMapsRoute
@@ -439,6 +446,7 @@ export interface FileRoutesByTo {
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
   '/dashboard/compare': typeof DashboardCompareRoute
+  '/dashboard/developer': typeof DashboardDeveloperRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
   '/dashboard/leads': typeof DashboardLeadsRoute
   '/dashboard/maps': typeof DashboardMapsRoute
@@ -498,6 +506,7 @@ export interface FileRoutesById {
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
   '/dashboard/compare': typeof DashboardCompareRoute
+  '/dashboard/developer': typeof DashboardDeveloperRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
   '/dashboard/leads': typeof DashboardLeadsRoute
   '/dashboard/maps': typeof DashboardMapsRoute
@@ -558,6 +567,7 @@ export interface FileRouteTypes {
     | '/dashboard/billing'
     | '/dashboard/campaigns'
     | '/dashboard/compare'
+    | '/dashboard/developer'
     | '/dashboard/favorites'
     | '/dashboard/leads'
     | '/dashboard/maps'
@@ -612,6 +622,7 @@ export interface FileRouteTypes {
     | '/dashboard/billing'
     | '/dashboard/campaigns'
     | '/dashboard/compare'
+    | '/dashboard/developer'
     | '/dashboard/favorites'
     | '/dashboard/leads'
     | '/dashboard/maps'
@@ -670,6 +681,7 @@ export interface FileRouteTypes {
     | '/dashboard/billing'
     | '/dashboard/campaigns'
     | '/dashboard/compare'
+    | '/dashboard/developer'
     | '/dashboard/favorites'
     | '/dashboard/leads'
     | '/dashboard/maps'
@@ -994,6 +1006,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardCompareRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/developer': {
+      id: '/dashboard/developer'
+      path: '/developer'
+      fullPath: '/dashboard/developer'
+      preLoaderRoute: typeof DashboardDeveloperRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/favorites': {
       id: '/dashboard/favorites'
       path: '/favorites'
@@ -1147,6 +1166,7 @@ interface DashboardRouteChildren {
   DashboardBillingRoute: typeof DashboardBillingRoute
   DashboardCampaignsRoute: typeof DashboardCampaignsRoute
   DashboardCompareRoute: typeof DashboardCompareRoute
+  DashboardDeveloperRoute: typeof DashboardDeveloperRoute
   DashboardFavoritesRoute: typeof DashboardFavoritesRoute
   DashboardLeadsRoute: typeof DashboardLeadsRoute
   DashboardMapsRoute: typeof DashboardMapsRoute
@@ -1161,6 +1181,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardBillingRoute: DashboardBillingRoute,
   DashboardCampaignsRoute: DashboardCampaignsRoute,
   DashboardCompareRoute: DashboardCompareRoute,
+  DashboardDeveloperRoute: DashboardDeveloperRoute,
   DashboardFavoritesRoute: DashboardFavoritesRoute,
   DashboardLeadsRoute: DashboardLeadsRoute,
   DashboardMapsRoute: DashboardMapsRoute,

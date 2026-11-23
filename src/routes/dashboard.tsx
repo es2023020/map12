@@ -26,6 +26,7 @@ import {
   PlusCircle,
   Menu,
   KeyRound,
+  Building2,
   User,
 } from "lucide-react";
 
@@ -45,6 +46,7 @@ export const Route = createFileRoute("/dashboard")({
 
 const tabs = [
   { to: "/dashboard" as const, label: "Workspace Home", icon: LayoutDashboard, exact: true },
+  { to: "/dashboard/developer" as const, label: "Developer Portal", icon: Building2 },
   { to: "/dashboard/leads" as const, label: "CRM Lead Pipeline", icon: ListChecks },
   { to: "/dashboard/ai-assistant" as const, label: "AI Lead Matcher", icon: Sparkles },
   { to: "/dashboard/campaigns" as const, label: "WhatsApp Campaigns", icon: Megaphone },
@@ -81,7 +83,10 @@ function DashboardLayout() {
   const limitHitError = useStore((s) => s.limitHitError);
   const clearLimitHitError = useStore((s) => s.clearLimitHitError);
 
-  const isAdmin = user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
+  const isAdmin =
+    user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com" ||
+    user?.email?.toLowerCase() === "admin@propertyatlas.com" ||
+    user?.role === "admin";
   const visibleTabs = tabs;
 
   // Custom shortcuts state
