@@ -1,0 +1,717 @@
+[
+  {
+    "name": "Palm Hills Developments",
+    "slug": "palm-hills-developments",
+    "count": 42
+  },
+  {
+    "name": "La Vista Developments",
+    "slug": "la-vista-developments",
+    "count": 37
+  },
+  {
+    "name": "Madinet Masr",
+    "slug": "madinet-masr",
+    "count": 26
+  },
+  {
+    "name": "SODIC",
+    "slug": "sodic",
+    "count": 22
+  },
+  {
+    "name": "Al Ahly Sabbour",
+    "slug": "mountain-view",
+    "count": 21
+  },
+  {
+    "name": "Al Ahly Sabbour",
+    "slug": "al-ahly-sabbour",
+    "count": 15
+  },
+  {
+    "name": "City Edge Developments",
+    "slug": "city-edge-developments",
+    "count": 14
+  },
+  {
+    "name": "Emaar Misr",
+    "slug": "emaar-misr",
+    "count": 14
+  },
+  {
+    "name": "El Batal Developments",
+    "slug": "el-batal-developments",
+    "count": 14
+  },
+  {
+    "name": "IL Cazar Developments",
+    "slug": "il-cazar-developments",
+    "count": 13
+  },
+  {
+    "name": "Hassan Allam Properties",
+    "slug": "hassan-allam-properties",
+    "count": 10
+  },
+  {
+    "name": "Tatweer Misr",
+    "slug": "tatweer-misr",
+    "count": 10
+  },
+  {
+    "name": "Ora Developers",
+    "slug": "ora-developers",
+    "count": 9
+  },
+  {
+    "name": "Roya Developments",
+    "slug": "roya-developments",
+    "count": 9
+  },
+  {
+    "name": "Hyde Park Developments",
+    "slug": "hyde-park-developments",
+    "count": 9
+  },
+  {
+    "name": "PRE Developments",
+    "slug": "pre-developments",
+    "count": 8
+  },
+  {
+    "name": "Misr Italia Properties",
+    "slug": "misr-italia-properties",
+    "count": 7
+  },
+  {
+    "name": "Horizon Egypt Developments",
+    "slug": "horizon-egypt-developments",
+    "count": 6
+  },
+  {
+    "name": "Al Marasem Developments",
+    "slug": "al-marasem-developments",
+    "count": 6
+  },
+  {
+    "name": "Vie Communities",
+    "slug": "vie-communities",
+    "count": 6
+  },
+  {
+    "name": "Marakez",
+    "slug": "marakez-properties",
+    "count": 5
+  },
+  {
+    "name": "Starlight Developments",
+    "slug": "starlight-developments",
+    "count": 5
+  },
+  {
+    "name": "EgyGab Developments",
+    "slug": "m-squared",
+    "count": 5
+  },
+  {
+    "name": "Hyde Park",
+    "slug": "hyde-park",
+    "count": 5
+  },
+  {
+    "name": "Ajna Developments",
+    "slug": "ajna-developments",
+    "count": 5
+  },
+  {
+    "name": "The Waterway Developments",
+    "slug": "the-waterway-developments",
+    "count": 4
+  },
+  {
+    "name": "Orascom",
+    "slug": "orascom",
+    "count": 4
+  },
+  {
+    "name": "Arkan Palm",
+    "slug": "arkan-palm",
+    "count": 4
+  },
+  {
+    "name": "M Squared Developments",
+    "slug": "m-squared-developments",
+    "count": 4
+  },
+  {
+    "name": "Wadi Degla",
+    "slug": "wadi-degla",
+    "count": 4
+  },
+  {
+    "name": "Nations Of Sky",
+    "slug": "nations-of-sky",
+    "count": 4
+  },
+  {
+    "name": "Madaar Developments",
+    "slug": "madaar-developments",
+    "count": 3
+  },
+  {
+    "name": "Marakez",
+    "slug": "marakez",
+    "count": 3
+  },
+  {
+    "name": "Talaat Moustafa Group",
+    "slug": "talaat-moustafa-group",
+    "count": 3
+  },
+  {
+    "name": "Stella Di Mare",
+    "slug": "stella-di-mare",
+    "count": 3
+  },
+  {
+    "name": "STM Developments",
+    "slug": "stm-developments",
+    "count": 3
+  },
+  {
+    "name": "Novus Stanza",
+    "slug": "novus-stanza",
+    "count": 3
+  },
+  {
+    "name": "Arab Developers Holding",
+    "slug": "arab-developers-holding",
+    "count": 3
+  },
+  {
+    "name": "Misr Italia",
+    "slug": "misr-italia",
+    "count": 3
+  },
+  {
+    "name": "New Plan Developments",
+    "slug": "new-plan-developments",
+    "count": 2
+  },
+  {
+    "name": "Upwyde Developments",
+    "slug": "upwyde-developments",
+    "count": 2
+  },
+  {
+    "name": "Living Yards Developments",
+    "slug": "living-yards-developments",
+    "count": 2
+  },
+  {
+    "name": "Jadeer Developments",
+    "slug": "jadeer-developments",
+    "count": 2
+  },
+  {
+    "name": "Somabay Developments",
+    "slug": "somabay-developments",
+    "count": 2
+  },
+  {
+    "name": "Mardev Developments",
+    "slug": "mardev-developments",
+    "count": 2
+  },
+  {
+    "name": "Maven Developments",
+    "slug": "maven-developments",
+    "count": 2
+  },
+  {
+    "name": "Al Ahly Sabbour Developments",
+    "slug": "al-ahly-sabbour-developments",
+    "count": 2
+  },
+  {
+    "name": "Qatari Diar",
+    "slug": "qatari-diar",
+    "count": 2
+  },
+  {
+    "name": "New Giza Developments",
+    "slug": "new-giza-developments",
+    "count": 2
+  },
+  {
+    "name": "Inertia Egypt",
+    "slug": "inertia-egypt",
+    "count": 2
+  },
+  {
+    "name": "Al Qamzi Developments",
+    "slug": "al-qamzi-developments",
+    "count": 2
+  },
+  {
+    "name": "Wadi Degla Developments",
+    "slug": "wadi-degla-developments",
+    "count": 2
+  },
+  {
+    "name": "Arabia Holding",
+    "slug": "arabia-holding",
+    "count": 2
+  },
+  {
+    "name": "Hassan Allam Holding",
+    "slug": "hassan-allam-holding",
+    "count": 2
+  },
+  {
+    "name": "Dunes Development",
+    "slug": "dunes-development",
+    "count": 2
+  },
+  {
+    "name": "Sky Innovo Developments",
+    "slug": "sky-innovo-developments",
+    "count": 2
+  },
+  {
+    "name": "People & Places",
+    "slug": "people-places",
+    "count": 2
+  },
+  {
+    "name": "Dorra Group",
+    "slug": "dorra-group",
+    "count": 2
+  },
+  {
+    "name": "Everst View",
+    "slug": "everst-view",
+    "count": 2
+  },
+  {
+    "name": "Mirad",
+    "slug": "mirad",
+    "count": 2
+  },
+  {
+    "name": "The MarQ Communities",
+    "slug": "the-marq-communities",
+    "count": 2
+  },
+  {
+    "name": "Madaar",
+    "slug": "madaar",
+    "count": 2
+  },
+  {
+    "name": "Biography Developments",
+    "slug": "biography-developments",
+    "count": 1
+  },
+  {
+    "name": "Imkan Misr",
+    "slug": "imkan-misr",
+    "count": 1
+  },
+  {
+    "name": "Khaled Sabry Holding",
+    "slug": "khaled-sabry-holding",
+    "count": 1
+  },
+  {
+    "name": "Eagles Developments",
+    "slug": "eagles-developments",
+    "count": 1
+  },
+  {
+    "name": "Concrete Developments",
+    "slug": "concrete-developments",
+    "count": 1
+  },
+  {
+    "name": "Kleek Developments",
+    "slug": "kleek-developments",
+    "count": 1
+  },
+  {
+    "name": "Cred Developments",
+    "slug": "cred-developments",
+    "count": 1
+  },
+  {
+    "name": "Madaar Development",
+    "slug": "madaar-development",
+    "count": 1
+  },
+  {
+    "name": "The C",
+    "slug": "the-c",
+    "count": 1
+  },
+  {
+    "name": "Club Views",
+    "slug": "club-views",
+    "count": 1
+  },
+  {
+    "name": "Origami",
+    "slug": "origami",
+    "count": 1
+  },
+  {
+    "name": "New Generation Development",
+    "slug": "new-generation-development",
+    "count": 1
+  },
+  {
+    "name": "Al Ahly Sabbour",
+    "slug": "the-mornings",
+    "count": 1
+  },
+  {
+    "name": "New Jersey Developments",
+    "slug": "new-jersey-developments",
+    "count": 1
+  },
+  {
+    "name": "Travco Properties",
+    "slug": "travco-properties",
+    "count": 1
+  },
+  {
+    "name": "Shehab Mazhar / SQM Developments",
+    "slug": "shehab-mazhar-sqm-developments",
+    "count": 1
+  },
+  {
+    "name": "Beit Al Bahr Developments",
+    "slug": "beit-al-bahr-developments",
+    "count": 1
+  },
+  {
+    "name": "Modon Holding",
+    "slug": "modon-holding",
+    "count": 1
+  },
+  {
+    "name": "Naia Developments",
+    "slug": "naia-developments",
+    "count": 1
+  },
+  {
+    "name": "Mabany Edris",
+    "slug": "mabany-edris",
+    "count": 1
+  },
+  {
+    "name": "Mediterranean Tourism Investment Company",
+    "slug": "mediterranean-tourism-investment-company",
+    "count": 1
+  },
+  {
+    "name": "Gates Developments",
+    "slug": "gates-developments",
+    "count": 1
+  },
+  {
+    "name": "Arabella Group",
+    "slug": "arabella-group",
+    "count": 1
+  },
+  {
+    "name": "People and Places",
+    "slug": "people-and-places",
+    "count": 1
+  },
+  {
+    "name": "Akam Al Rajhi Developments",
+    "slug": "akam-al-rajhi-developments",
+    "count": 1
+  },
+  {
+    "name": "The Waterway Developments",
+    "slug": "equity",
+    "count": 1
+  },
+  {
+    "name": "Lasirena Group",
+    "slug": "lasirena-group",
+    "count": 1
+  },
+  {
+    "name": "G Developments",
+    "slug": "g-developments",
+    "count": 1
+  },
+  {
+    "name": "LMD",
+    "slug": "lmd",
+    "count": 1
+  },
+  {
+    "name": "Al Borouj Misr Developments",
+    "slug": "al-borouj-misr-developments",
+    "count": 1
+  },
+  {
+    "name": "Serac Developments",
+    "slug": "mqr-developments",
+    "count": 1
+  },
+  {
+    "name": "Diplomats Real Estate",
+    "slug": "diplomats-real-estate",
+    "count": 1
+  },
+  {
+    "name": "Morshedy Group",
+    "slug": "morshedy-group",
+    "count": 1
+  },
+  {
+    "name": "Mercon",
+    "slug": "mercon",
+    "count": 1
+  },
+  {
+    "name": "ETAMDA",
+    "slug": "etamda",
+    "count": 1
+  },
+  {
+    "name": "Tameer",
+    "slug": "tameer",
+    "count": 1
+  },
+  {
+    "name": "Al-Futtaim",
+    "slug": "al-futtaim",
+    "count": 1
+  },
+  {
+    "name": "El Hazek Construction Group",
+    "slug": "el-hazek-construction-group",
+    "count": 1
+  },
+  {
+    "name": "La Verde Developments",
+    "slug": "la-verde-developments",
+    "count": 1
+  },
+  {
+    "name": "Aqar Misr Developments",
+    "slug": "aqar-misr-developments",
+    "count": 1
+  },
+  {
+    "name": "Safwa Urban Development",
+    "slug": "safwa-urban-development",
+    "count": 1
+  },
+  {
+    "name": "Master Group Developments",
+    "slug": "master-group-developments",
+    "count": 1
+  },
+  {
+    "name": "ACUD",
+    "slug": "acud",
+    "count": 1
+  },
+  {
+    "name": "Heliopolis Housing & Development",
+    "slug": "heliopolis-housing-development",
+    "count": 1
+  },
+  {
+    "name": "Heliopolis Company for Housing and Development",
+    "slug": "heliopolis-company-for-housing-and-development",
+    "count": 1
+  },
+  {
+    "name": "Reedy Group",
+    "slug": "reedy-group",
+    "count": 1
+  },
+  {
+    "name": "Abu Soma Development",
+    "slug": "abu-soma-development",
+    "count": 1
+  },
+  {
+    "name": "ERC Egypt",
+    "slug": "erc-egypt",
+    "count": 1
+  },
+  {
+    "name": "Pickalbatros",
+    "slug": "pickalbatros",
+    "count": 1
+  },
+  {
+    "name": "Al Attal Holding",
+    "slug": "al-attal-holding",
+    "count": 1
+  },
+  {
+    "name": "Lazib",
+    "slug": "lazib",
+    "count": 1
+  },
+  {
+    "name": "Westway Developments",
+    "slug": "westway-developments",
+    "count": 1
+  },
+  {
+    "name": "Taj Misr Developments",
+    "slug": "taj-misr-developments",
+    "count": 1
+  },
+  {
+    "name": "Reportage Properties",
+    "slug": "reportage-properties",
+    "count": 1
+  },
+  {
+    "name": "Ardic Developments",
+    "slug": "ardic-developments",
+    "count": 1
+  },
+  {
+    "name": "Beta Egypt Developments",
+    "slug": "beta-egypt-developments",
+    "count": 1
+  },
+  {
+    "name": "Grand Plaza",
+    "slug": "la-mirada-developments",
+    "count": 1
+  },
+  {
+    "name": "Afaq Developments",
+    "slug": "afaq-developments",
+    "count": 1
+  },
+  {
+    "name": "North Africa Developments",
+    "slug": "north-africa-developments",
+    "count": 1
+  },
+  {
+    "name": "Sephora Developments",
+    "slug": "sephora-developments",
+    "count": 1
+  },
+  {
+    "name": "Better Home",
+    "slug": "better-home",
+    "count": 1
+  },
+  {
+    "name": "Tameer Developments",
+    "slug": "tameer-developments",
+    "count": 1
+  },
+  {
+    "name": "TBK Developments",
+    "slug": "tbk-developments",
+    "count": 1
+  },
+  {
+    "name": "Eastern",
+    "slug": "eastern",
+    "count": 1
+  },
+  {
+    "name": "Cairo Capital",
+    "slug": "cairo-capital",
+    "count": 1
+  },
+  {
+    "name": "Unknown",
+    "slug": "unknown",
+    "count": 1
+  },
+  {
+    "name": "El Gabry",
+    "slug": "el-gabry",
+    "count": 1
+  },
+  {
+    "name": "Zg",
+    "slug": "zg",
+    "count": 1
+  },
+  {
+    "name": "Tcc",
+    "slug": "tcc",
+    "count": 1
+  },
+  {
+    "name": "Cleopatra",
+    "slug": "cleopatra",
+    "count": 1
+  },
+  {
+    "name": "Pre",
+    "slug": "pre",
+    "count": 1
+  },
+  {
+    "name": "badreldin",
+    "slug": "badreldin",
+    "count": 1
+  },
+  {
+    "name": "Igi",
+    "slug": "igi",
+    "count": 1
+  },
+  {
+    "name": "Tesla",
+    "slug": "tesla",
+    "count": 1
+  },
+  {
+    "name": "Al Batal",
+    "slug": "al-batal",
+    "count": 1
+  },
+  {
+    "name": "Orascom Development",
+    "slug": "orascom-development",
+    "count": 1
+  },
+  {
+    "name": "Melee",
+    "slug": "melee",
+    "count": 1
+  },
+  {
+    "name": "Melee Development",
+    "slug": "melee-development",
+    "count": 1
+  },
+  {
+    "name": "Sky AD Developments",
+    "slug": "sky-ad-developments",
+    "count": 1
+  },
+  {
+    "name": "New Generation Developments",
+    "slug": "new-generation-developments",
+    "count": 1
+  },
+  {
+    "name": "Taj Misr Developments",
+    "slug": "taj-misr",
+    "count": 1
+  }
+]

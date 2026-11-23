@@ -80,7 +80,12 @@ const supabaseAnonKey =
 
 export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 
+const supabaseServiceKey =
+  (typeof process !== "undefined" && process.env?.SUPABASE_SERVICE_ROLE_KEY) ||
+  "";
+
 let _supabaseClient: SupabaseClient | null = null;
+let _supabaseAdminClient: SupabaseClient | null = null;
 
 export function getSupabaseClient(): SupabaseClient | null {
   if (!isSupabaseConfigured) return null;
@@ -93,6 +98,19 @@ export function getSupabaseClient(): SupabaseClient | null {
     });
   }
   return _supabaseClient;
+}
+
+export function getSupabaseAdminClient(): SupabaseClient | null {
+  if (!supabaseUrl || !supabaseServiceKey) return null;
+  if (!_supabaseAdminClient) {
+    _supabaseAdminClient = createClient(supabaseUrl, supabaseServiceKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+    });
+  }
+  return _supabaseAdminClient;
 }
 
 export const supabase = getSupabaseClient();

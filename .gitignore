@@ -57,3 +57,6 @@ src/data/verified-coordinates.json
 services/whatsapp-listener/session/
 data/availability/inbox/
 data/availability/staged/
+
+# Supabase CLI temp files
+supabase/.temp/

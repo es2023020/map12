@@ -53,7 +53,7 @@ function AuthPage() {
       const res = loginAsDeveloper(codeOrSlug);
       if (res.success && res.developer) {
         setSuccessMsg(`Welcome, ${res.developer.name}! Opening Developer Portal...`);
-        setTimeout(() => navigate({ to: "/dashboard" }), 800);
+        setTimeout(() => navigate({ to: `/dashboard/developer?slug=${res.developer.slug}` as any }), 600);
       } else {
         setErrorMsg(res.error || "Invalid developer access code or company identifier.");
       }
