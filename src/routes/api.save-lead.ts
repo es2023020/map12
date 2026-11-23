@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as fs from "fs";
 import * as path from "path";
+import { getSupabaseClient } from "@/lib/supabase";
 
 // @ts-ignore
 export const Route = createFileRoute("/api/save-lead")({
@@ -16,6 +17,49 @@ export const Route = createFileRoute("/api/save-lead")({
               status: 400,
               headers: { "Content-Type": "application/json" },
             });
+          }
+
+          const leadRecord = {
+            id: lead.id || `lead-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+            name: lead.name,
+            phone: lead.phone,
+            email: lead.email || "",
+            projectSlug: lead.projectSlug || lead.project || "",
+            projectName: lead.projectName || lead.project || "",
+            developerSlug: lead.developerSlug || "",
+            destination: lead.destination || "",
+            budget: lead.budget || "",
+            notes: lead.notes || lead.message || "",
+            timestamp: lead.timestamp || new Date().toISOString(),
+            status: lead.status || "new",
+          };
+
+          // 1. Persist to Supabase if configured
+          const supabase = getSupabaseClient();
+          if (supabase) {
+            try {
+              const { error: sbErr } = await supabase.from("leads").insert([
+                {
+                  id: leadRecord.id,
+                  name: leadRecord.name,
+                  phone: leadRecord.phone,
+                  email: leadRecord.email,
+                  project_slug: leadRecord.projectSlug,
+                  project_name: leadRecord.projectName,
+                  developer_slug: leadRecord.developerSlug,
+                  destination: leadRecord.destination,
+                  budget: leadRecord.budget,
+                  notes: leadRecord.notes,
+                  status: leadRecord.status,
+                  created_at: leadRecord.timestamp,
+                },
+              ]);
+              if (sbErr) {
+                console.warn("Supabase lead insertion notice:", sbErr.message);
+              }
+            } catch (err) {
+              console.warn("Error inserting lead to Supabase:", err);
+            }
           }
 
           // Persist to local filesystem when writable (development or stateful servers)

@@ -5,13 +5,14 @@ import { Shell } from "@/components/layout/Shell";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Compass, Sparkles, AlertCircle, CheckCircle2 } from "lucide-react";
+import { Compass, Sparkles, AlertCircle, CheckCircle2, Building2, ShieldCheck, KeyRound } from "lucide-react";
+import { developerAccounts } from "@/data/developer-accounts";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
       { title: "Sign in — Property Atlas" },
-      { name: "description", content: "Sign in or sign up to your Property Atlas broker workspace." },
+      { name: "description", content: "Sign in to your Property Atlas broker workspace or official developer portal." },
     ],
   }),
   component: AuthPage,
@@ -21,14 +22,19 @@ function AuthPage() {
   const navigate = useNavigate();
   const signIn = useStore((s) => s.signIn);
   const signUp = useStore((s) => s.signUp);
+  const loginAsDeveloper = useStore((s) => s.loginAsDeveloper);
   const signOut = useStore((s) => s.signOut);
   const user = useStore((s) => s.user);
 
-  const [mode, setMode] = useState<"signin" | "signup">("signin");
+  const [mode, setMode] = useState<"signin" | "developer" | "signup">("signin");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [tier, setTier] = useState<SubscriptionTier>("Pro");
+
+  // Developer Login State
+  const [devIdentifier, setDevIdentifier] = useState("");
+  const [selectedDevSlug, setSelectedDevSlug] = useState("");
 
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
@@ -38,11 +44,27 @@ function AuthPage() {
     setErrorMsg("");
     setSuccessMsg("");
 
+    if (mode === "developer") {
+      const codeOrSlug = devIdentifier || selectedDevSlug;
+      if (!codeOrSlug) {
+        setErrorMsg("Please select your developer or enter your developer access code.");
+        return;
+      }
+      const res = loginAsDeveloper(codeOrSlug);
+      if (res.success && res.developer) {
+        setSuccessMsg(`Welcome, ${res.developer.name}! Opening Developer Portal...`);
+        setTimeout(() => navigate({ to: "/dashboard" }), 800);
+      } else {
+        setErrorMsg(res.error || "Invalid developer access code or company identifier.");
+      }
+      return;
+    }
+
     if (mode === "signin") {
       const success = signIn(email, password);
       if (success) {
         setSuccessMsg("Success! Redirecting to workspace...");
-        setTimeout(() => navigate({ to: "/dashboard" }), 1000);
+        setTimeout(() => navigate({ to: "/dashboard" }), 800);
       } else {
         setErrorMsg("Invalid credentials. Try admin@propertyatlas.com / Team1");
       }
@@ -54,7 +76,7 @@ function AuthPage() {
       const success = signUp(email, name, password, tier);
       if (success) {
         setSuccessMsg("Account created! Logging in...");
-        setTimeout(() => navigate({ to: "/dashboard" }), 1000);
+        setTimeout(() => navigate({ to: "/dashboard" }), 800);
       } else {
         setErrorMsg("Email already registered");
       }
@@ -97,25 +119,52 @@ function AuthPage() {
 
         {/* Form Card Pane */}
         <div className="rounded-3xl border border-border bg-card p-8 shadow-soft-xl max-w-md mx-auto w-full">
-          <div className="flex gap-2 rounded-full bg-secondary/60 p-1.5 text-sm mb-6">
-            {(["signin", "signup"] as const).map((m) => (
-              <button
-                key={m}
-                type="button"
-                onClick={() => {
-                  setMode(m);
-                  setErrorMsg("");
-                  setSuccessMsg("");
-                }}
-                className={`flex-1 rounded-full py-2 font-bold transition-all ${
-                  mode === m
-                    ? "bg-primary text-primary-foreground shadow"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {m === "signin" ? "Sign In" : "Sign Up"}
-              </button>
-            ))}
+          <div className="flex gap-1.5 rounded-2xl bg-secondary/60 p-1.5 text-xs mb-6">
+            <button
+              type="button"
+              onClick={() => {
+                setMode("signin");
+                setErrorMsg("");
+                setSuccessMsg("");
+              }}
+              className={`flex-1 rounded-xl py-2 font-bold transition-all ${
+                mode === "signin"
+                  ? "bg-primary text-primary-foreground shadow"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Broker Sign In
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setMode("developer");
+                setErrorMsg("");
+                setSuccessMsg("");
+              }}
+              className={`flex-1 rounded-xl py-2 font-bold transition-all flex items-center justify-center gap-1 ${
+                mode === "developer"
+                  ? "bg-accent text-accent-foreground shadow"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Building2 className="h-3.5 w-3.5" /> Developer Portal
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setMode("signup");
+                setErrorMsg("");
+                setSuccessMsg("");
+              }}
+              className={`flex-1 rounded-xl py-2 font-bold transition-all ${
+                mode === "signup"
+                  ? "bg-primary text-primary-foreground shadow"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Sign Up
+            </button>
           </div>
 
           {user ? (
@@ -125,6 +174,11 @@ function AuthPage() {
                 <p className="text-sm font-semibold text-primary">
                   You are logged in as {user.name} ({user.email}).
                 </p>
+                {user.role === "developer" && (
+                  <p className="text-xs text-accent font-bold mt-1">
+                    🏢 Developer Account: {user.developerName || user.name}
+                  </p>
+                )}
               </div>
               <Button
                 className="w-full rounded-xl bg-accent text-accent-foreground hover:bg-accent/90 py-2.5 font-bold"
@@ -149,6 +203,56 @@ function AuthPage() {
                 <div className="rounded-xl bg-emerald-500/10 border border-emerald-500/20 p-3 text-xs text-emerald-600 flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 shrink-0" />
                   <span>{successMsg}</span>
+                </div>
+              )}
+
+              {mode === "developer" && (
+                <div className="space-y-4">
+                  <div className="rounded-2xl bg-accent/10 border border-accent/20 p-3.5 text-xs text-primary space-y-1">
+                    <div className="font-bold flex items-center gap-1.5 text-accent">
+                      <ShieldCheck className="h-4 w-4" /> Official Master Developer Access
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Select your company or enter your official Developer Access Passcode to unlock your private portfolio portal.
+                    </p>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="dev-select">Select Developer Entity</Label>
+                    <select
+                      id="dev-select"
+                      value={selectedDevSlug}
+                      onChange={(e) => {
+                        setSelectedDevSlug(e.target.value);
+                        setDevIdentifier(e.target.value);
+                      }}
+                      className="mt-1.5 flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="">— Select your company (148 developers) —</option>
+                      {developerAccounts.map((d) => (
+                        <option key={d.slug} value={d.slug}>
+                          {d.name} ({d.accessCode})
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="dev-code">Or Enter Developer Access Passcode</Label>
+                    <div className="relative mt-1.5">
+                      <KeyRound className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                      <Input
+                        id="dev-code"
+                        value={devIdentifier}
+                        onChange={(e) => setDevIdentifier(e.target.value)}
+                        placeholder="e.g. DEV_EMAAR_MISR_2026 or DEV_SODIC_2026"
+                        className="pl-9 rounded-xl font-mono text-xs uppercase"
+                      />
+                    </div>
+                    <p className="text-[10px] text-muted-foreground mt-1">
+                      Tip: You can use format <code>DEV_[DEVELOPER_SLUG]_2026</code> or select from the dropdown above.
+                    </p>
+                  </div>
                 </div>
               )}
 
@@ -192,48 +296,58 @@ function AuthPage() {
                 </div>
               )}
 
-              <div className="space-y-3.5">
-                <div>
-                  <Label htmlFor="email">Work Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="you@brokerage.com"
-                    className="mt-1.5 rounded-xl"
-                    required
-                  />
+              {mode !== "developer" && (
+                <div className="space-y-3.5">
+                  <div>
+                    <Label htmlFor="email">Work Email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="you@brokerage.com"
+                      className="mt-1.5 rounded-xl"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="pw">Account Password</Label>
+                    <Input
+                      id="pw"
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Enter password"
+                      className="mt-1.5 rounded-xl"
+                      required
+                    />
+                  </div>
                 </div>
-                <div>
-                  <Label htmlFor="pw">Account Password</Label>
-                  <Input
-                    id="pw"
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Enter password"
-                    className="mt-1.5 rounded-xl"
-                    required
-                  />
-                </div>
-              </div>
+              )}
 
               <Button
                 type="submit"
                 className="w-full rounded-xl bg-accent text-accent-foreground hover:bg-accent/90 py-2.5 font-bold"
                 size="lg"
               >
-                {mode === "signin" ? "Sign In" : "Register Workspace"}
+                {mode === "developer"
+                  ? "Access Developer Portal"
+                  : mode === "signin"
+                    ? "Sign In"
+                    : "Register Workspace"}
               </Button>
 
               <div className="text-center text-xs text-muted-foreground mt-3">
-                {mode === "signin" ? (
+                {mode === "developer" ? (
                   <span>
-                    Demo Admin login: <strong>admin@propertyatlas.com</strong> / <strong>Team1</strong>
+                    Need custom developer API access? Email: <strong>dev@propertyatlas.eg</strong>
+                  </span>
+                ) : mode === "signin" ? (
+                  <span>
+                    Master Admin: <strong>admin@propertyatlas.com</strong> / <strong>Team1</strong>
                   </span>
                 ) : (
-                  <span>Demo databases store sessions locally in this browser.</span>
+                  <span>Demo databases store sessions securely in this browser.</span>
                 )}
               </div>
             </form>

@@ -7,6 +7,7 @@ import { availability as generatedAvailability } from "@/data/availability.gener
 import { destinations, staticDestinations } from "@/data/destinations";
 import { brochureMap } from "@/data/brochure-map";
 import type { AnalyticsEvent } from "@/lib/analytics";
+import { validateDeveloperAccess } from "@/data/developer-accounts";
 
 // Session-scoped login: on every page load we check if a browser session is still active.
 // sessionStorage is cleared when the browser tab/window is fully closed, so this
@@ -154,6 +155,9 @@ export type BrokerUser = {
   email: string;
   name: string;
   tier: SubscriptionTier;
+  role?: "admin" | "broker" | "developer" | "client";
+  developerSlug?: string;
+  developerName?: string;
   avatar?: string;
   billingDate: string; // ISO YYYY-MM-DD
   lastCounterResetDate?: string; // ISO YYYY-MM-DD
@@ -271,6 +275,7 @@ type State = {
   // Actions
   signIn: (email: string, password?: string) => boolean;
   signUp: (email: string, name: string, password?: string, tier?: SubscriptionTier) => boolean;
+  loginAsDeveloper: (identifier: string) => { success: boolean; developer?: any; error?: string };
   signOut: () => void;
   toggleFavorite: (slug: string) => void;
   toggleCompare: (slug: string) => void;
@@ -683,6 +688,9 @@ export const useStore = create<State>()(
               user: {
                 email: user.email,
                 name: user.name,
+                role: isSeedAdmin ? "admin" : (user.role || "broker"),
+                developerSlug: user.developerSlug,
+                developerName: user.developerName,
                 tier: mappedTier,
                 avatar: user.avatar,
                 billingDate,
@@ -807,6 +815,29 @@ export const useStore = create<State>()(
           // Auto sign-in after signup
           const success = get().signIn(email, password);
           return success;
+        },
+
+        loginAsDeveloper: (identifier: string) => {
+          const dev = validateDeveloperAccess(identifier);
+          if (!dev) {
+            return { success: false, error: "Invalid developer access code or company identifier" };
+          }
+          markSessionActive();
+          const devUser: BrokerUser = {
+            email: dev.email,
+            name: dev.name,
+            tier: "BrokerageAdmin",
+            role: "developer",
+            developerSlug: dev.slug,
+            developerName: dev.name,
+            avatar: dev.logo,
+            billingDate: "2026-01-01",
+            whatsappSendsCount: 0,
+          };
+          originalSet({
+            user: devUser,
+          });
+          return { success: true, developer: dev };
         },
 
         signOut: () => {
