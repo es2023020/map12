@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as fs from "fs";
 import * as path from "path";
-import { getSupabaseClient } from "@/lib/supabase";
+import { getSupabaseClient, getSupabaseAdminClient } from "@/lib/supabase";
 
 // @ts-ignore
 export const Route = createFileRoute("/api/save-lead")({
@@ -34,8 +34,8 @@ export const Route = createFileRoute("/api/save-lead")({
             status: lead.status || "new",
           };
 
-          // 1. Persist to Supabase if configured
-          const supabase = getSupabaseClient();
+          // 1. Persist to Supabase if configured (prefer admin client for server-side persistence)
+          const supabase = getSupabaseAdminClient() || getSupabaseClient();
           if (supabase) {
             try {
               const { error: sbErr } = await supabase.from("leads").insert([

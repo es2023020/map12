@@ -1,10 +1,11 @@
 import { createFileRoute, Link, useSearch } from "@tanstack/react-router";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useStore } from "@/lib/store";
 import { developers } from "@/data/developers";
 import { compounds } from "@/data/compounds";
 import { developerAccounts } from "@/data/developer-accounts";
 import { availability } from "@/data/availability";
+import { supabase } from "@/lib/supabase";
 import {
   Building2,
   MapPin,
@@ -77,14 +78,51 @@ export default function DeveloperDashboardPage() {
     return compounds.filter((c) => c.developerSlug === selectedDevSlug && !c.parentSlug);
   }, [selectedDevSlug]);
 
-  // Active Developer Inquiries / Leads
+  // Active Developer Inquiries / Leads (Local + Supabase live)
+  const [supabaseLeads, setSupabaseLeads] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (!supabase || !selectedDevSlug) return;
+    let isMounted = true;
+    supabase
+      .from("leads")
+      .select("*")
+      .eq("developer_slug", selectedDevSlug)
+      .order("created_at", { ascending: false })
+      .then(({ data, error }) => {
+        if (!error && data && isMounted) {
+          const mapped = data.map((d: any) => ({
+            id: d.id,
+            name: d.name,
+            phone: d.phone,
+            email: d.email,
+            projectName: d.project_name,
+            projectSlug: d.project_slug,
+            developerSlug: d.developer_slug,
+            destination: d.destination,
+            budget: d.budget,
+            notes: d.notes,
+            status: d.status,
+            timestamp: d.created_at,
+          }));
+          setSupabaseLeads(mapped);
+        }
+      });
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedDevSlug]);
+
   const devLeads = useMemo(() => {
-    return leads.filter(
+    const localFiltered = leads.filter(
       (l) =>
         (l.developerSlug && l.developerSlug === selectedDevSlug) ||
         (l.projectName && devCompounds.some((c) => c.name.toLowerCase().includes(l.projectName.toLowerCase()))),
     );
-  }, [leads, selectedDevSlug, devCompounds]);
+    const seenIds = new Set(localFiltered.map((l) => l.id));
+    const uniqueSb = supabaseLeads.filter((l) => !seenIds.has(l.id));
+    return [...uniqueSb, ...localFiltered];
+  }, [leads, selectedDevSlug, devCompounds, supabaseLeads]);
 
   // Announcements State
   const [announcements, setAnnouncements] = useState<Array<{
@@ -113,6 +151,37 @@ export default function DeveloperDashboardPage() {
     },
   ]);
 
+  // Load live announcements from Supabase
+  useEffect(() => {
+    if (!supabase || !selectedDevSlug) return;
+    let isMounted = true;
+    supabase
+      .from("developer_announcements")
+      .select("*")
+      .eq("developer_slug", selectedDevSlug)
+      .order("created_at", { ascending: false })
+      .then(({ data, error }) => {
+        if (!error && data && data.length > 0 && isMounted) {
+          const mapped = data.map((d: any) => ({
+            id: d.id,
+            title: d.title,
+            category: d.category,
+            date: new Date(d.created_at).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
+            content: d.content,
+            badge: d.badge || (d.category === "launch" ? "New Launch" : "Bulletin"),
+          }));
+          setAnnouncements((prev) => {
+            const existingIds = new Set(mapped.map((m: any) => m.id));
+            const retained = prev.filter((p) => !existingIds.has(p.id));
+            return [...mapped, ...retained];
+          });
+        }
+      });
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedDevSlug]);
+
   const [newTitle, setNewTitle] = useState("");
   const [newContent, setNewContent] = useState("");
   const [newCategory, setNewCategory] = useState("launch");
@@ -138,7 +207,7 @@ export default function DeveloperDashboardPage() {
     }, 0);
   }, [devCompounds]);
 
-  const handlePostAnnouncement = (e: React.FormEvent) => {
+  const handlePostAnnouncement = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newTitle.trim() || !newContent.trim()) return;
     const item = {
@@ -153,6 +222,22 @@ export default function DeveloperDashboardPage() {
     setNewTitle("");
     setNewContent("");
     setShowAnnouncementModal(false);
+
+    // Persist to Supabase developer_announcements
+    if (supabase) {
+      try {
+        await supabase.from("developer_announcements").insert({
+          developer_slug: selectedDevSlug,
+          developer_name: activeDev.name,
+          title: item.title,
+          content: item.content,
+          category: item.category,
+          badge: item.badge,
+        });
+      } catch (err) {
+        console.warn("Could not sync announcement to Supabase:", err);
+      }
+    }
   };
 
   return (
