@@ -5,6 +5,7 @@ import { projectLocations } from "./project-locations";
 import { sahelDetails } from "./sahel-details";
 import { destinations } from "./destinations";
 import { availability } from "./availability";
+import { startingPricesFromAvailability } from "./starting-prices.generated";
 import { paymentPlansBySlug, type PaymentPlan } from "./payment-plans";
 
 export type Compound = {
@@ -6419,7 +6420,10 @@ const vieParent: Compound = {
 
 import { compoundsGenerated } from "./compounds.generated";
 
-function withPlans<T extends Compound>(c: T): T {
+function withPlans<T extends Compound>(base: T): T {
+  const c: T = startingPricesFromAvailability[base.slug]
+    ? { ...base, priceFrom: startingPricesFromAvailability[base.slug] }
+    : base;
   const g = paymentPlansBySlug[c.slug];
   if (!g || !g.plans.length) return c;
   return {
