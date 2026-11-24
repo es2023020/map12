@@ -236,6 +236,12 @@ export const Route = createFileRoute("/api/brochures-match")({
           });
         }
       },
+      POST: async () => {
+        return new Response(JSON.stringify({ error: "Method Not Allowed" }), {
+          status: 405,
+          headers: { "Content-Type": "application/json" },
+        });
+      },
     },
   },
 });
