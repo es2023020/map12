@@ -155,7 +155,7 @@ export type BrokerUser = {
   email: string;
   name: string;
   tier: SubscriptionTier;
-  role?: "admin" | "broker" | "developer" | "client";
+  role?: "admin" | "broker" | "agent" | "developer" | "client";
   developerSlug?: string;
   developerName?: string;
   avatar?: string;
@@ -192,6 +192,9 @@ export type RegisteredUser = {
   email: string;
   name: string;
   password?: string;
+  role?: "admin" | "broker" | "agent" | "developer" | "client";
+  developerSlug?: string;
+  developerName?: string;
   tier: SubscriptionTier;
   avatar?: string;
   billingDate?: string;
@@ -274,7 +277,7 @@ type State = {
 
   // Actions
   signIn: (email: string, password?: string) => boolean;
-  signUp: (email: string, name: string, password?: string, tier?: SubscriptionTier) => boolean;
+  signUp: (email: string, name: string, password?: string, tier?: SubscriptionTier, role?: "broker" | "agent") => boolean;
   loginAsDeveloper: (identifier: string, passcode?: string) => { success: boolean; developer?: any; error?: string };
   signOut: () => void;
   toggleFavorite: (slug: string) => void;
@@ -636,6 +639,15 @@ export const useStore = create<State>()(
         ],
 
         signIn: (email, password) => {
+          // 1. Check if identifier/credentials match a developer account
+          const dev = validateDeveloperAccess(email, password);
+          if (dev) {
+            const devRes = get().loginAsDeveloper(dev.slug, password);
+            if (devRes.success) {
+              return true;
+            }
+          }
+
           const user = get().usersDatabase.find(
             (u) => u.email.toLowerCase() === email.toLowerCase(),
           );
@@ -693,11 +705,15 @@ export const useStore = create<State>()(
             const lastReset = user.lastCounterResetDate || todayStr;
             const whatsappSends = user.whatsappSendsCount || 0;
 
+            const determinedRole = isSeedAdmin
+              ? "admin"
+              : user.role || (user.tier === "Starter" ? "agent" : "broker");
+
             originalSet({
               user: {
                 email: user.email,
                 name: user.name,
-                role: isSeedAdmin ? "admin" : (user.role || "broker"),
+                role: determinedRole,
                 developerSlug: user.developerSlug,
                 developerName: user.developerName,
                 tier: mappedTier,
@@ -754,7 +770,7 @@ export const useStore = create<State>()(
           return false;
         },
 
-        signUp: (email, name, password, tier) => {
+        signUp: (email, name, password, tier, role) => {
           const exists = get().usersDatabase.some(
             (u) => u.email.toLowerCase() === email.toLowerCase(),
           );
@@ -762,12 +778,14 @@ export const useStore = create<State>()(
 
           const todayStr = new Date().toISOString().split("T")[0];
           const chosenTier = tier || "Explorer";
+          const chosenRole = role || (chosenTier === "Starter" ? "agent" : "broker");
 
           const newUser: RegisteredUser = {
             email,
             name,
             password,
             tier: chosenTier,
+            role: chosenRole,
             billingDate: todayStr,
             lastCounterResetDate: todayStr,
             whatsappSendsCount: 0,

@@ -147,10 +147,16 @@ function DashboardLayout() {
             )}
             <div className="min-w-0">
               <h2 className="truncate text-sm font-semibold text-primary">
-                {user ? user.name : "Guest Broker"}
+                {user ? user.name : "Guest User"}
               </h2>
               <p className="text-xs text-muted-foreground">
-                {user ? `${user.tier} Partner` : "Standard Plan"}
+                {user
+                  ? user.role === "agent"
+                    ? `${user.tier} Agent`
+                    : user.role === "admin"
+                      ? "System Administrator"
+                      : `${user.tier} Broker`
+                  : "Standard Plan"}
               </p>
             </div>
           </div>

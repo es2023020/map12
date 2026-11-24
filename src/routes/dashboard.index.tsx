@@ -378,7 +378,12 @@ function DashboardOverview() {
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border/40 pb-5">
         <div>
           <h1 className="font-display text-3xl font-bold tracking-tight text-primary flex items-center gap-2">
-            <Compass className="h-7 w-7 text-accent" /> Agent Notion Workspace
+            <Compass className="h-7 w-7 text-accent" />{" "}
+            {user?.role === "agent"
+              ? "Agent Workspace"
+              : user?.role === "admin"
+                ? "Brokerage Admin Command Center"
+                : "Broker Workspace"}
           </h1>
           <p className="mt-1.5 text-sm text-muted-foreground">
             A comprehensive, offline-ready central command center for real estate professionals.

@@ -22,6 +22,7 @@ const moreLinks = [
 ];
 
 const brokerLinks = [{ to: "/dashboard" as const, label: "Broker" }];
+const agentLinks = [{ to: "/dashboard" as const, label: "Agent" }];
 const developerLinks = [{ to: "/developer-portal" as const, label: "Developer Portal" }];
 
 export function Navbar() {
@@ -36,7 +37,12 @@ export function Navbar() {
   const userMenuRef = useRef<HTMLDivElement>(null);
   const avatarInputRef = useRef<HTMLInputElement>(null);
 
-  const userLinks = user?.role === "developer" ? developerLinks : brokerLinks;
+  const userLinks =
+    user?.role === "developer"
+      ? developerLinks
+      : user?.role === "agent"
+        ? agentLinks
+        : brokerLinks;
   const links = user ? [...publicLinks, ...userLinks] : publicLinks;
 
   useEffect(() => {
@@ -300,7 +306,9 @@ export function Navbar() {
                     )}
                     <div>
                       <div className="text-xs font-bold text-primary">{user.name}</div>
-                      <div className="text-[10px] text-muted-foreground">{user.tier} Partner</div>
+                      <div className="text-[10px] text-muted-foreground">
+                        {user.role === "agent" ? "Agent Workspace" : user.role === "developer" ? "Developer Account" : `${user.tier} Broker`}
+                      </div>
                     </div>
                   </div>
                   <button
