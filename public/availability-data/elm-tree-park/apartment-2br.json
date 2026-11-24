@@ -1,0 +1,148 @@
+[
+  {
+    "id": "elm-tree-park-127",
+    "unitNo": "ELM TREE PARK - 21 - 23 - 12",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 101.3,
+    "view": "",
+    "priceEGP": 8404352,
+    "status": "Available",
+    "floor": "1"
+  },
+  {
+    "id": "elm-tree-park-128",
+    "unitNo": "ELM TREE PARK - 21 - 24 - 52",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 101.3,
+    "view": "",
+    "priceEGP": 8248716,
+    "status": "Available",
+    "floor": "5"
+  },
+  {
+    "id": "elm-tree-park-129",
+    "unitNo": "ELM TREE PARK - 21 - 36 - 03",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 102,
+    "view": "",
+    "priceEGP": 9817951,
+    "status": "Available",
+    "gardenAreaSqm": 70,
+    "floor": "Ground"
+  },
+  {
+    "id": "elm-tree-park-130",
+    "unitNo": "ELM TREE PARK - 21 - 36 - 12",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 101.3,
+    "view": "",
+    "priceEGP": 8404352,
+    "status": "Available",
+    "floor": "1"
+  },
+  {
+    "id": "elm-tree-park-131",
+    "unitNo": "ELM TREE PARK - 21 - 54 - 52",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 101.3,
+    "view": "",
+    "priceEGP": 8637807,
+    "status": "Available",
+    "floor": "5"
+  },
+  {
+    "id": "elm-tree-park-132",
+    "unitNo": "ELM TREE PARK - 21 - 02 - 22",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 101.3,
+    "view": "",
+    "priceEGP": 8170898,
+    "status": "Available",
+    "floor": "2"
+  },
+  {
+    "id": "elm-tree-park-133",
+    "unitNo": "ELM TREE PARK - 21 - 02 - 42",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 101.3,
+    "view": "",
+    "priceEGP": 8170898,
+    "status": "Available",
+    "floor": "4"
+  },
+  {
+    "id": "elm-tree-park-134",
+    "unitNo": "ELM TREE PARK - 21 - 03 - 52",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 101.3,
+    "view": "",
+    "priceEGP": 8404352,
+    "status": "Available",
+    "floor": "5"
+  },
+  {
+    "id": "elm-tree-park-135",
+    "unitNo": "ELM TREE PARK - 21 - 04 - 12",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 101.3,
+    "view": "",
+    "priceEGP": 8404352,
+    "status": "Available",
+    "floor": "1"
+  },
+  {
+    "id": "elm-tree-park-136",
+    "unitNo": "ELM TREE PARK - 21 - 04 - 52",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 101.3,
+    "view": "",
+    "priceEGP": 8404352,
+    "status": "Available",
+    "floor": "5"
+  },
+  {
+    "id": "elm-tree-park-137",
+    "unitNo": "ELM TREE PARK - 21 - 06 - 52",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 101.3,
+    "view": "",
+    "priceEGP": 8015262,
+    "status": "Available",
+    "floor": "5"
+  },
+  {
+    "id": "elm-tree-park-138",
+    "unitNo": "ELM TREE PARK - 21 - 10 - 03",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 102,
+    "view": "",
+    "priceEGP": 10050867,
+    "status": "Available",
+    "gardenAreaSqm": 68,
+    "floor": "Ground"
+  },
+  {
+    "id": "elm-tree-park-139",
+    "unitNo": "ELM TREE PARK - 21 - 11 - 03",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 102,
+    "view": "",
+    "priceEGP": 9371989,
+    "status": "Available",
+    "gardenAreaSqm": 72,
+    "floor": "Ground"
+  }
+]

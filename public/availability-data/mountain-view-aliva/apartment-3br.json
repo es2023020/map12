@@ -1,0 +1,41 @@
+[
+  {
+    "id": "mountain-view-aliva-6",
+    "unitNo": "L-M2-04-A0-4",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 115,
+    "view": "North",
+    "priceEGP": 14113831.48,
+    "status": "Available",
+    "cluster": "Lagoon Park M2",
+    "deliveryNote": "OFF PLAN - 3",
+    "gardenAreaSqm": 69.29
+  },
+  {
+    "id": "mountain-view-aliva-7",
+    "unitNo": "L-M2-04-B0-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 115,
+    "view": "North",
+    "priceEGP": 14298834.11,
+    "status": "Available",
+    "cluster": "Lagoon Park M2",
+    "deliveryNote": "OFF PLAN - 3",
+    "gardenAreaSqm": 69.29
+  },
+  {
+    "id": "mountain-view-aliva-9",
+    "unitNo": "L-M2-04-B0-4",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 115,
+    "view": "North",
+    "priceEGP": 15406401.64,
+    "status": "Available",
+    "cluster": "Lagoon Park M2",
+    "deliveryNote": "OFF PLAN - 3",
+    "gardenAreaSqm": 125.54
+  }
+]

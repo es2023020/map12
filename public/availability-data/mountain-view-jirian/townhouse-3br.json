@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mountain-view-jirian-134",
+    "unitNo": "IV2-TH-8-70-00-8",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 165,
+    "view": "North",
+    "priceEGP": 24170130.06,
+    "status": "Available",
+    "cluster": "IV2 TH-8",
+    "deliveryNote": "OFF PLAN - 4",
+    "roofAreaSqm": 30,
+    "landAreaSqm": 184.54
+  },
+  {
+    "id": "mountain-view-jirian-135",
+    "unitNo": "IV2-TH-8-10-00-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 165,
+    "view": "North",
+    "priceEGP": 24370462.74,
+    "status": "Available",
+    "cluster": "IV2 TH-8",
+    "deliveryNote": "OFF PLAN - 4",
+    "roofAreaSqm": 30,
+    "landAreaSqm": 204.84
+  }
+]

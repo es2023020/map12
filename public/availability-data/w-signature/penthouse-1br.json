@@ -1,0 +1,26 @@
+[
+  {
+    "id": "w-signature-25",
+    "unitNo": "S21G - 41",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 106,
+    "view": "",
+    "priceEGP": 13719000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "floor": "4"
+  },
+  {
+    "id": "w-signature-28",
+    "unitNo": "S32H' - 41",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 10523000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "floor": "4"
+  }
+]

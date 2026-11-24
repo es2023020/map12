@@ -1,0 +1,83 @@
+[
+  {
+    "id": "mountain-view-icity-new-cairo-1",
+    "unitNo": "CA-01-26-E4-2",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 130,
+    "view": "West",
+    "priceEGP": 11631029.6,
+    "status": "Available",
+    "cluster": "Club SD",
+    "deliveryNote": "READY TO MOVE - 3",
+    "landAreaSqm": 5812.47
+  },
+  {
+    "id": "mountain-view-icity-new-cairo-2",
+    "unitNo": "CA-01-27-CG-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "North",
+    "priceEGP": 15593030.4,
+    "status": "Available",
+    "cluster": "Club Residences",
+    "deliveryNote": "READY TO MOVE - 3",
+    "gardenAreaSqm": 36.76
+  },
+  {
+    "id": "mountain-view-icity-new-cairo-3",
+    "unitNo": "CA-01-05-BG-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "West",
+    "priceEGP": 16484278.26,
+    "status": "Available",
+    "cluster": "Club Residences",
+    "deliveryNote": "READY TO MOVE - 3",
+    "gardenAreaSqm": 65.15,
+    "landAreaSqm": 5022.6
+  },
+  {
+    "id": "mountain-view-icity-new-cairo-4",
+    "unitNo": "CA-01-14-CG-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "West",
+    "priceEGP": 16650913.58,
+    "status": "Available",
+    "cluster": "Club CA",
+    "deliveryNote": "READY TO MOVE - 3",
+    "gardenAreaSqm": 78.6
+  },
+  {
+    "id": "mountain-view-icity-new-cairo-5",
+    "unitNo": "CA-01-36-BG-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "West",
+    "priceEGP": 16812685.85,
+    "status": "Available",
+    "cluster": "Club Residences",
+    "deliveryNote": "READY TO DELIVER",
+    "gardenAreaSqm": 33.32,
+    "landAreaSqm": 4896.24
+  },
+  {
+    "id": "mountain-view-icity-new-cairo-7",
+    "unitNo": "CA-01-03-CG-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "South",
+    "priceEGP": 17378874.83,
+    "status": "Available",
+    "cluster": "Club Residences",
+    "deliveryNote": "READY TO MOVE - 3",
+    "gardenAreaSqm": 75.66,
+    "landAreaSqm": 5425.64
+  }
+]

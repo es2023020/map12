@@ -1,0 +1,110 @@
+[
+  {
+    "id": "one-hyde-park-new-cairo-9",
+    "unitNo": "OHPC1/SV4/19",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 270,
+    "view": "",
+    "priceEGP": 55070000,
+    "status": "Available",
+    "cluster": "Cluster 1",
+    "landAreaSqm": 405
+  },
+  {
+    "id": "one-hyde-park-new-cairo-10",
+    "unitNo": "OHPC1/SV5/22",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 240,
+    "view": "",
+    "priceEGP": 52240000,
+    "status": "Available",
+    "cluster": "Cluster 1",
+    "landAreaSqm": 370
+  },
+  {
+    "id": "one-hyde-park-new-cairo-11",
+    "unitNo": "OHPC1/SV6/35",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 220,
+    "view": "",
+    "priceEGP": 48420000,
+    "status": "Available",
+    "cluster": "Cluster 1",
+    "landAreaSqm": 311
+  },
+  {
+    "id": "one-hyde-park-new-cairo-12",
+    "unitNo": "OHPC1/SV6/41",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 220,
+    "view": "",
+    "priceEGP": 50340000,
+    "status": "Available",
+    "cluster": "Cluster 1",
+    "landAreaSqm": 318
+  },
+  {
+    "id": "one-hyde-park-new-cairo-13",
+    "unitNo": "OHPC1/SV2/46",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 350,
+    "view": "",
+    "priceEGP": 94260000,
+    "status": "Available",
+    "cluster": "Cluster 1",
+    "landAreaSqm": 593
+  },
+  {
+    "id": "one-hyde-park-new-cairo-14",
+    "unitNo": "OHPC1/SV2/47",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 350,
+    "view": "",
+    "priceEGP": 92090000,
+    "status": "Available",
+    "cluster": "Cluster 1",
+    "landAreaSqm": 617
+  },
+  {
+    "id": "one-hyde-park-new-cairo-15",
+    "unitNo": "OHPC1/SV2/48",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 350,
+    "view": "",
+    "priceEGP": 94590000,
+    "status": "Available",
+    "cluster": "Cluster 1",
+    "landAreaSqm": 667
+  },
+  {
+    "id": "one-hyde-park-new-cairo-16",
+    "unitNo": "OHPC1/SV3/49",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 285,
+    "view": "",
+    "priceEGP": 75200000,
+    "status": "Available",
+    "cluster": "Cluster 1",
+    "landAreaSqm": 430
+  },
+  {
+    "id": "one-hyde-park-new-cairo-17",
+    "unitNo": "OHPC1/SV5/53",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 240,
+    "view": "",
+    "priceEGP": 59960000,
+    "status": "Available",
+    "cluster": "Cluster 1",
+    "landAreaSqm": 367
+  }
+]

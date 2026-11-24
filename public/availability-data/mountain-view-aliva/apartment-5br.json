@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mountain-view-aliva-181",
+    "unitNo": "CP-MVP-23-00-1",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 525,
+    "view": "East",
+    "priceEGP": 98831750.81,
+    "status": "Available",
+    "cluster": "Central Park MVP",
+    "deliveryNote": "OFF PLAN - 3",
+    "roofAreaSqm": 95,
+    "landAreaSqm": 607.12
+  },
+  {
+    "id": "mountain-view-aliva-182",
+    "unitNo": "CP-MVP-79-00-1",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 525,
+    "view": "West",
+    "priceEGP": 102905350.04,
+    "status": "Available",
+    "cluster": "Central Park MVP",
+    "deliveryNote": "OFF PLAN - 3",
+    "roofAreaSqm": 95,
+    "landAreaSqm": 577.28
+  }
+]

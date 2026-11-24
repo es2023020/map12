@@ -1,0 +1,98 @@
+[
+  {
+    "id": "talala-100",
+    "unitNo": "TALALA - 15 - 572 - 02",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 200.4,
+    "view": "",
+    "priceEGP": 20408687,
+    "status": "Available",
+    "gardenAreaSqm": 117.4,
+    "floor": "Ground"
+  },
+  {
+    "id": "talala-101",
+    "unitNo": "TALALA - 15 - 572 - 03",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 166.7,
+    "view": "",
+    "priceEGP": 19589239,
+    "status": "Available",
+    "gardenAreaSqm": 284.5,
+    "floor": "Ground"
+  },
+  {
+    "id": "talala-102",
+    "unitNo": "TALALA - 15 - 573 - 02",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 200.4,
+    "view": "",
+    "priceEGP": 20408687,
+    "status": "Available",
+    "gardenAreaSqm": 117.4,
+    "floor": "Ground"
+  },
+  {
+    "id": "talala-103",
+    "unitNo": "TALALA - 15 - 573 - 03",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 166.7,
+    "view": "",
+    "priceEGP": 17808057,
+    "status": "Available",
+    "gardenAreaSqm": 152.4,
+    "floor": "Ground"
+  },
+  {
+    "id": "talala-107",
+    "unitNo": "TALALA - 15 - 569 - 02",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 200.4,
+    "view": "",
+    "priceEGP": 20631464,
+    "status": "Available",
+    "gardenAreaSqm": 117.8,
+    "floor": "Ground"
+  },
+  {
+    "id": "talala-108",
+    "unitNo": "TALALA - 15 - 569 - 03",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 166.7,
+    "view": "",
+    "priceEGP": 19565939,
+    "status": "Available",
+    "gardenAreaSqm": 267.6,
+    "floor": "Ground"
+  },
+  {
+    "id": "talala-109",
+    "unitNo": "TALALA - 15 - 570 - 02",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 200.4,
+    "view": "",
+    "priceEGP": 20415750,
+    "status": "Available",
+    "gardenAreaSqm": 117.8,
+    "floor": "Ground"
+  },
+  {
+    "id": "talala-110",
+    "unitNo": "TALALA - 15 - 570 - 03",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 166.7,
+    "view": "",
+    "priceEGP": 19420694,
+    "status": "Available",
+    "gardenAreaSqm": 272,
+    "floor": "Ground"
+  }
+]

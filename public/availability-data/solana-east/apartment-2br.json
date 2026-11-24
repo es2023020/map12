@@ -1,0 +1,178 @@
+[
+  {
+    "id": "solana-east-4",
+    "unitNo": "SE-C7-25-41",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 95,
+    "view": "",
+    "priceEGP": 16340000,
+    "status": "Available",
+    "cluster": "2 BR FLAT C"
+  },
+  {
+    "id": "solana-east-5",
+    "unitNo": "SE-C7-01-11",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 93,
+    "view": "",
+    "priceEGP": 16606000,
+    "status": "Available",
+    "cluster": "2 BR FLAT B"
+  },
+  {
+    "id": "solana-east-6",
+    "unitNo": "SE-C7-22-13",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 103,
+    "view": "",
+    "priceEGP": 16726000,
+    "status": "Available",
+    "cluster": "2 BR + M FLAT B-M"
+  },
+  {
+    "id": "solana-east-7",
+    "unitNo": "SE-C7-02-11",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 93,
+    "view": "",
+    "priceEGP": 16756000,
+    "status": "Available",
+    "cluster": "2 BR FLAT B"
+  },
+  {
+    "id": "solana-east-8",
+    "unitNo": "SE-C7-01-31",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 93,
+    "view": "",
+    "priceEGP": 16830000,
+    "status": "Available",
+    "cluster": "2 BR FLAT B"
+  },
+  {
+    "id": "solana-east-9",
+    "unitNo": "SE-C7-02-24",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 93,
+    "view": "",
+    "priceEGP": 16830000,
+    "status": "Available",
+    "cluster": "2 BR FLAT B-M"
+  },
+  {
+    "id": "solana-east-10",
+    "unitNo": "SE-C7-02-34",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 93,
+    "view": "",
+    "priceEGP": 16830000,
+    "status": "Available",
+    "cluster": "2 BR FLAT B-M"
+  },
+  {
+    "id": "solana-east-11",
+    "unitNo": "SE-C7-22-23",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 103,
+    "view": "",
+    "priceEGP": 16967000,
+    "status": "Available",
+    "cluster": "2 BR + M FLAT B-M"
+  },
+  {
+    "id": "solana-east-12",
+    "unitNo": "SE-C7-02-31",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 93,
+    "view": "",
+    "priceEGP": 16979000,
+    "status": "Available",
+    "cluster": "2 BR FLAT B"
+  },
+  {
+    "id": "solana-east-13",
+    "unitNo": "SE-C7-01-14",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 93,
+    "view": "",
+    "priceEGP": 17055000,
+    "status": "Available",
+    "cluster": "2 BR FLAT B-M"
+  },
+  {
+    "id": "solana-east-14",
+    "unitNo": "SE-C7-02-04",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 92,
+    "view": "",
+    "priceEGP": 17755000,
+    "status": "Available",
+    "cluster": "2 BR FLAT A-M"
+  },
+  {
+    "id": "solana-east-15",
+    "unitNo": "SE-C7-02-41",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 95,
+    "view": "",
+    "priceEGP": 18370000,
+    "status": "Available",
+    "cluster": "2 BR FLAT C"
+  },
+  {
+    "id": "solana-east-16",
+    "unitNo": "SE-C5-04-31",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 128,
+    "view": "",
+    "priceEGP": 18707000,
+    "status": "Available",
+    "cluster": "2 BED FLAT A1"
+  },
+  {
+    "id": "solana-east-17",
+    "unitNo": "SE-C5-04-51",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 128,
+    "view": "",
+    "priceEGP": 19627000,
+    "status": "Available",
+    "cluster": "2 BED FLAT A2"
+  },
+  {
+    "id": "solana-east-18",
+    "unitNo": "SE-C5-10-31",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 132,
+    "view": "",
+    "priceEGP": 20378000,
+    "status": "Available",
+    "cluster": "2 BED FLAT A1"
+  },
+  {
+    "id": "solana-east-19",
+    "unitNo": "SE-C5-09-41",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 132,
+    "view": "",
+    "priceEGP": 20564000,
+    "status": "Available",
+    "cluster": "2 BED FLAT A1"
+  }
+]

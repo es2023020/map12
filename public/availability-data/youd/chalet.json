@@ -1,0 +1,27 @@
+[
+  {
+    "id": "youd-65",
+    "unitNo": "G19-G19-203",
+    "beds": 0,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "view": "",
+    "priceEGP": 22727000,
+    "status": "Available",
+    "cluster": "G19",
+    "floor": "1st"
+  },
+  {
+    "id": "youd-108",
+    "unitNo": "C99-C99-102",
+    "beds": 0,
+    "finishing": "Finished",
+    "areaSqm": 85,
+    "view": "Corner",
+    "priceEGP": 11727000,
+    "status": "Available",
+    "cluster": "C99",
+    "gardenAreaSqm": 35,
+    "floor": "ground"
+  }
+]

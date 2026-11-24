@@ -1,0 +1,98 @@
+[
+  {
+    "id": "the-waterway-6",
+    "unitNo": "7",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 320,
+    "view": "",
+    "priceEGP": 65024000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 320
+  },
+  {
+    "id": "the-waterway-7",
+    "unitNo": "6",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 320,
+    "view": "",
+    "priceEGP": 65024000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 320
+  },
+  {
+    "id": "the-waterway-8",
+    "unitNo": "8",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 320,
+    "view": "",
+    "priceEGP": 65024000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 320
+  },
+  {
+    "id": "the-waterway-9",
+    "unitNo": "16",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 320,
+    "view": "",
+    "priceEGP": 61440000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 320
+  },
+  {
+    "id": "the-waterway-10",
+    "unitNo": "75",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 320,
+    "view": "",
+    "priceEGP": 60928000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 320
+  },
+  {
+    "id": "the-waterway-11",
+    "unitNo": "76",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 320,
+    "view": "",
+    "priceEGP": 60928000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 320
+  },
+  {
+    "id": "the-waterway-14",
+    "unitNo": "76A",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 320,
+    "view": "",
+    "priceEGP": 60928000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 320
+  },
+  {
+    "id": "the-waterway-15",
+    "unitNo": "76C",
+    "beds": 4,
+    "finishing": "Fully Finished",
+    "areaSqm": 320,
+    "view": "",
+    "priceEGP": 60928000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 320
+  }
+]

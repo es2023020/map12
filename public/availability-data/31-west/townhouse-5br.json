@@ -1,0 +1,58 @@
+[
+  {
+    "id": "31-west-24",
+    "unitNo": "TH1102",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 225,
+    "view": "",
+    "priceEGP": 25484443.67,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "roofAreaSqm": 80,
+    "landAreaSqm": 210.66,
+    "floor": "أرضي و أول وغرف سطح"
+  },
+  {
+    "id": "31-west-25",
+    "unitNo": "TH1103",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 225,
+    "view": "",
+    "priceEGP": 25316958.17,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "roofAreaSqm": 80,
+    "landAreaSqm": 206.57,
+    "floor": "أرضي و أول وغرف سطح"
+  },
+  {
+    "id": "31-west-26",
+    "unitNo": "TH1201",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 225,
+    "view": "",
+    "priceEGP": 29204127.17,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "roofAreaSqm": 80,
+    "landAreaSqm": 288.85,
+    "floor": "أرضي و أول وغرف سطح"
+  },
+  {
+    "id": "31-west-27",
+    "unitNo": "TH1305",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 225,
+    "view": "",
+    "priceEGP": 25514746.67,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "roofAreaSqm": 80,
+    "landAreaSqm": 211.4,
+    "floor": "أرضي و أول وغرف سطح"
+  }
+]

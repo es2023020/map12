@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mountain-view-ras-el-hekma-1",
+    "unitNo": "IN-B4-8-A0-3",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 72,
+    "view": "North",
+    "priceEGP": 16798711.64,
+    "status": "Available",
+    "cluster": "Indigo Garden Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 18
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-2",
+    "unitNo": "IN-B5-9-A0-2",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 72,
+    "view": "North",
+    "priceEGP": 16798711.64,
+    "status": "Available",
+    "cluster": "Indigo Garden Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 18
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-3",
+    "unitNo": "IN-B5-9-A0-3",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 72,
+    "view": "North",
+    "priceEGP": 16798711.64,
+    "status": "Available",
+    "cluster": "Indigo Garden Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 18
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-4",
+    "unitNo": "IN-B3-7-A0-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 104,
+    "view": "North West",
+    "priceEGP": 27836957.02,
+    "status": "Available",
+    "cluster": "Indigo Garden Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 26,
+    "roofAreaSqm": 17
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-5",
+    "unitNo": "IN-B3-7-A1-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 104,
+    "view": "North West",
+    "priceEGP": 30480888.26,
+    "status": "Available",
+    "cluster": "Indigo Typical Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "roofAreaSqm": 17
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-8",
+    "unitNo": "IN-B3-7-A0-2",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 104,
+    "view": "North West",
+    "priceEGP": 31542294.54,
+    "status": "Available",
+    "cluster": "Indigo Garden Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 26,
+    "roofAreaSqm": 17
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "village-de-la-capitale-3",
+    "unitNo": "VDLC-BLC-3803",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 61.5,
+    "view": "",
+    "priceEGP": 7791000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "deliveryNote": "Jun 2031",
+    "gardenAreaSqm": 17.5
+  },
+  {
+    "id": "village-de-la-capitale-4",
+    "unitNo": "VDLC-BLC-3808",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 62.5,
+    "view": "",
+    "priceEGP": 7999000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "deliveryNote": "Jun 2031",
+    "gardenAreaSqm": 16
+  },
+  {
+    "id": "village-de-la-capitale-6",
+    "unitNo": "VDLC-BLC-3813",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 61.5,
+    "view": "",
+    "priceEGP": 7145000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "deliveryNote": "Jun 2031"
+  },
+  {
+    "id": "village-de-la-capitale-10",
+    "unitNo": "VDLC-BLC-3823",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 61.5,
+    "view": "",
+    "priceEGP": 7145000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "deliveryNote": "Jun 2031"
+  },
+  {
+    "id": "village-de-la-capitale-14",
+    "unitNo": "VDLC-BLC-3843",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 61.5,
+    "view": "",
+    "priceEGP": 7145000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "deliveryNote": "Jun 2031"
+  },
+  {
+    "id": "village-de-la-capitale-17",
+    "unitNo": "VDLC-BLC-3853",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 61.5,
+    "view": "",
+    "priceEGP": 7145000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "deliveryNote": "Jun 2031"
+  },
+  {
+    "id": "village-de-la-capitale-21",
+    "unitNo": "VDLC-BLC-3863",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 61.5,
+    "view": "",
+    "priceEGP": 7145000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "deliveryNote": "Jun 2031"
+  },
+  {
+    "id": "village-de-la-capitale-25",
+    "unitNo": "VDLC-BLC-3873",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 61.5,
+    "view": "",
+    "priceEGP": 7127000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "deliveryNote": "Jun 2031"
+  }
+]

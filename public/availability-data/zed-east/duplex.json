@@ -1,0 +1,167 @@
+[
+  {
+    "id": "zed-east-63",
+    "unitNo": "C14-DP-20-22",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 188,
+    "view": "",
+    "priceEGP": 26326000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-64",
+    "unitNo": "C14-DP-20-23",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 188,
+    "view": "",
+    "priceEGP": 27080000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-65",
+    "unitNo": "C14-DP-03-23",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 188,
+    "view": "",
+    "priceEGP": 27458000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-66",
+    "unitNo": "C14-DP-19-23",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 188,
+    "view": "",
+    "priceEGP": 27458000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-70",
+    "unitNo": "C14-DP-02-22",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 188,
+    "view": "",
+    "priceEGP": 28335000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-74",
+    "unitNo": "C14-DP-20-03",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 191,
+    "view": "",
+    "priceEGP": 29220000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-76",
+    "unitNo": "C14-DP-19-02",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 191,
+    "view": "",
+    "priceEGP": 29628000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-77",
+    "unitNo": "C14-DP-19-03",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 191,
+    "view": "",
+    "priceEGP": 29628000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-82",
+    "unitNo": "C14-DP-18-01",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 191,
+    "view": "",
+    "priceEGP": 29936000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-83",
+    "unitNo": "C14-DP-18-02",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 191,
+    "view": "",
+    "priceEGP": 30033000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-84",
+    "unitNo": "C14-DP-02-02",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 191,
+    "view": "",
+    "priceEGP": 30575000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-85",
+    "unitNo": "C14-DP-02-03",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 191,
+    "view": "",
+    "priceEGP": 30575000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-93",
+    "unitNo": "C14-DP-18-24",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 206,
+    "view": "",
+    "priceEGP": 32035000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-94",
+    "unitNo": "C14-DP-03-21",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 207,
+    "view": "",
+    "priceEGP": 32038000,
+    "status": "Available",
+    "cluster": "Duplex"
+  },
+  {
+    "id": "zed-east-95",
+    "unitNo": "C14-DP-01-21",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 207,
+    "view": "",
+    "priceEGP": 32323000,
+    "status": "Available",
+    "cluster": "Duplex"
+  }
+]

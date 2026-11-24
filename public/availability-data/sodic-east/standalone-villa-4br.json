@@ -1,0 +1,58 @@
+[
+  {
+    "id": "sodic-east-35",
+    "unitNo": "09S-088",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 326,
+    "view": "",
+    "priceEGP": 58901000,
+    "status": "Available",
+    "cluster": "09S",
+    "deliveryNote": "30/09/2027",
+    "landAreaSqm": 517.95,
+    "floor": "G+1"
+  },
+  {
+    "id": "sodic-east-36",
+    "unitNo": "09S-097",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 326,
+    "view": "",
+    "priceEGP": 59322000,
+    "status": "Available",
+    "cluster": "09S",
+    "deliveryNote": "30/09/2027",
+    "landAreaSqm": 515.53,
+    "floor": "G+1"
+  },
+  {
+    "id": "sodic-east-37",
+    "unitNo": "09S-104",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 326,
+    "view": "",
+    "priceEGP": 60802000,
+    "status": "Available",
+    "cluster": "09S",
+    "deliveryNote": "30/09/2027",
+    "landAreaSqm": 557.93,
+    "floor": "G+1"
+  },
+  {
+    "id": "sodic-east-250",
+    "unitNo": "SE-19S-45",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 326,
+    "view": "",
+    "priceEGP": 64182000,
+    "status": "Available",
+    "cluster": "19S",
+    "deliveryNote": "30/12/2028",
+    "landAreaSqm": 505.88,
+    "floor": "G+1"
+  }
+]

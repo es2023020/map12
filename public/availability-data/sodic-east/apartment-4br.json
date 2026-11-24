@@ -1,0 +1,28 @@
+[
+  {
+    "id": "sodic-east-49",
+    "unitNo": "SE-11M-B105-51",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 199,
+    "view": "",
+    "priceEGP": 21939000,
+    "status": "Available",
+    "cluster": "11M",
+    "deliveryNote": "30/12/2030",
+    "floor": "G"
+  },
+  {
+    "id": "sodic-east-84",
+    "unitNo": "SE-13M-B03-51",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 199,
+    "view": "",
+    "priceEGP": 21639000,
+    "status": "Available",
+    "cluster": "13M",
+    "deliveryNote": "30/12/2030",
+    "floor": "G"
+  }
+]

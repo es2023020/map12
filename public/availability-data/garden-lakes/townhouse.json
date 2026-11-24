@@ -1,0 +1,38 @@
+[
+  {
+    "id": "garden-lakes-19",
+    "unitNo": "GL2/6PLEX/14A",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "view": "",
+    "priceEGP": 28530000,
+    "status": "Available",
+    "cluster": "GL2",
+    "landAreaSqm": 285.11
+  },
+  {
+    "id": "garden-lakes-20",
+    "unitNo": "GL2/6PLEX/13E",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "view": "",
+    "priceEGP": 24440000,
+    "status": "Available",
+    "cluster": "GL2",
+    "landAreaSqm": 187.44
+  },
+  {
+    "id": "garden-lakes-21",
+    "unitNo": "GL4/4PLEX/21D",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "view": "",
+    "priceEGP": 30480000,
+    "status": "Available",
+    "cluster": "GL4",
+    "landAreaSqm": 300.12
+  }
+]

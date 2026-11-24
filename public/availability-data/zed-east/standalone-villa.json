@@ -1,0 +1,46 @@
+[
+  {
+    "id": "zed-east-99",
+    "unitNo": "C14-VL1-43A",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 235,
+    "view": "",
+    "priceEGP": 57812000,
+    "status": "Available",
+    "cluster": "Villa 1"
+  },
+  {
+    "id": "zed-east-100",
+    "unitNo": "C14-VL1-41",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 235,
+    "view": "",
+    "priceEGP": 62689000,
+    "status": "Available",
+    "cluster": "Villa 1"
+  },
+  {
+    "id": "zed-east-101",
+    "unitNo": "C14-VL2-17B",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 284,
+    "view": "",
+    "priceEGP": 75990000,
+    "status": "Available",
+    "cluster": "Villa 2"
+  },
+  {
+    "id": "zed-east-102",
+    "unitNo": "C14-VL2-24",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 284,
+    "view": "",
+    "priceEGP": 89377000,
+    "status": "Available",
+    "cluster": "Villa 2"
+  }
+]

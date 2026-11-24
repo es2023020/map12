@@ -1,0 +1,63 @@
+[
+  {
+    "id": "trio-1",
+    "unitNo": "E2-102",
+    "beds": 2,
+    "finishing": "Flexi Finished",
+    "areaSqm": 130,
+    "view": "",
+    "priceEGP": 11940085.6,
+    "status": "Available",
+    "deliveryNote": "Nov 2028",
+    "floor": "الأول"
+  },
+  {
+    "id": "trio-2",
+    "unitNo": "E2-301",
+    "beds": 2,
+    "finishing": "Flexi Finished",
+    "areaSqm": 130,
+    "view": "",
+    "priceEGP": 11716237.3,
+    "status": "Available",
+    "deliveryNote": "Nov 2028",
+    "floor": "الثالث"
+  },
+  {
+    "id": "trio-4",
+    "unitNo": "E5-101",
+    "beds": 2,
+    "finishing": "Flexi Finished",
+    "areaSqm": 130,
+    "view": "",
+    "priceEGP": 11637890.77,
+    "status": "Available",
+    "deliveryNote": "Nov 2028",
+    "floor": "الأول"
+  },
+  {
+    "id": "trio-7",
+    "unitNo": "TL03-A21",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 135,
+    "view": "",
+    "priceEGP": 15498335.81,
+    "status": "Available",
+    "deliveryNote": "May 2027",
+    "gardenAreaSqm": 47,
+    "floor": "الثاني"
+  },
+  {
+    "id": "trio-8",
+    "unitNo": "TL05-A31",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 135,
+    "view": "",
+    "priceEGP": 14282963.85,
+    "status": "Available",
+    "deliveryNote": "May 2027",
+    "floor": "الثالث"
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "lvls-1",
+    "unitNo": "LV-BT-BH-377-14",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 145,
+    "view": "West",
+    "priceEGP": 21469929.21,
+    "status": "Available",
+    "cluster": "Beach Top BH",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "roofAreaSqm": 62
+  },
+  {
+    "id": "lvls-2",
+    "unitNo": "LV-BT-BH-387-01",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 150,
+    "view": "East",
+    "priceEGP": 24314025.6,
+    "status": "Available",
+    "cluster": "Beach Top BH",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 121
+  },
+  {
+    "id": "lvls-3",
+    "unitNo": "LV-BT-BH-354-04",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 150,
+    "view": "West",
+    "priceEGP": 24801769.32,
+    "status": "Available",
+    "cluster": "Beach Top BH",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 116
+  },
+  {
+    "id": "lvls-4",
+    "unitNo": "LV-BT-BH-377-04",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 150,
+    "view": "West",
+    "priceEGP": 24996866.84,
+    "status": "Available",
+    "cluster": "Beach Top BH",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 122
+  },
+  {
+    "id": "lvls-10",
+    "unitNo": "LV-BT-BH-345-01",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 150,
+    "view": "West",
+    "priceEGP": 33255994.12,
+    "status": "Available",
+    "cluster": "Beach Top BH",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 97
+  },
+  {
+    "id": "lvls-11",
+    "unitNo": "LV-BT-BH-402-04",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 150,
+    "view": "South",
+    "priceEGP": 34526837.67,
+    "status": "Available",
+    "cluster": "Beach Top BH",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 129
+  }
+]

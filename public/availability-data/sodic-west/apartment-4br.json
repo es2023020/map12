@@ -1,0 +1,42 @@
+[
+  {
+    "id": "sodic-west-1",
+    "unitNo": "FW-B6-H-01",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 462.37,
+    "view": "",
+    "priceEGP": 122933000,
+    "status": "Available",
+    "cluster": "40",
+    "deliveryNote": "30/12/2027",
+    "gardenAreaSqm": 185.61,
+    "floor": "G"
+  },
+  {
+    "id": "sodic-west-2",
+    "unitNo": "FW-B6-H-11",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 571.22,
+    "view": "",
+    "priceEGP": 141871000,
+    "status": "Available",
+    "cluster": "40",
+    "deliveryNote": "30/12/2027",
+    "floor": "1"
+  },
+  {
+    "id": "sodic-west-3",
+    "unitNo": "FW-B6-H-21",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 571.22,
+    "view": "",
+    "priceEGP": 143276000,
+    "status": "Available",
+    "cluster": "40",
+    "deliveryNote": "30/12/2027",
+    "floor": "2"
+  }
+]

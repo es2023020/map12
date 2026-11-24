@@ -1,0 +1,28 @@
+[
+  {
+    "id": "club-views-1",
+    "unitNo": "Club Views - 13 - 119 - B",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 239,
+    "view": "",
+    "priceEGP": 24369814,
+    "status": "Available",
+    "gardenAreaSqm": 54.1,
+    "roofAreaSqm": 72.1,
+    "floor": "V"
+  },
+  {
+    "id": "club-views-2",
+    "unitNo": "Club Views - 13 - 125 - B",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 239,
+    "view": "",
+    "priceEGP": 23220599,
+    "status": "Available",
+    "gardenAreaSqm": 54.7,
+    "roofAreaSqm": 72.1,
+    "floor": "V"
+  }
+]

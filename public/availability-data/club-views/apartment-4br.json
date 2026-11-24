@@ -1,0 +1,57 @@
+[
+  {
+    "id": "club-views-3",
+    "unitNo": "Club Views - 13 - 106 - 71",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 208,
+    "view": "",
+    "priceEGP": 15816630,
+    "status": "Available",
+    "floor": "7"
+  },
+  {
+    "id": "club-views-4",
+    "unitNo": "Club Views - 13 - 107 - 71",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 208,
+    "view": "",
+    "priceEGP": 15816630,
+    "status": "Available",
+    "floor": "7"
+  },
+  {
+    "id": "club-views-11",
+    "unitNo": "Club Views - 13 - 98 - 71",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 208,
+    "view": "",
+    "priceEGP": 15816630,
+    "status": "Available",
+    "floor": "7"
+  },
+  {
+    "id": "club-views-12",
+    "unitNo": "Club Views - 13 - 101 - 71",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 208,
+    "view": "",
+    "priceEGP": 15816630,
+    "status": "Available",
+    "floor": "7"
+  },
+  {
+    "id": "club-views-13",
+    "unitNo": "Club Views - 13 - 105 - 71",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 208,
+    "view": "",
+    "priceEGP": 15816630,
+    "status": "Available",
+    "floor": "7"
+  }
+]

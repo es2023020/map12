@@ -1,0 +1,28 @@
+[
+  {
+    "id": "sodic-the-estates-80",
+    "unitNo": "A025-2",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 349,
+    "view": "",
+    "priceEGP": 208525000,
+    "status": "Available",
+    "cluster": "Block 4",
+    "landAreaSqm": 1036,
+    "floor": "G+1"
+  },
+  {
+    "id": "sodic-the-estates-81",
+    "unitNo": "E029",
+    "beds": 5,
+    "finishing": "Core & Shell",
+    "areaSqm": 353,
+    "view": "",
+    "priceEGP": 92011720,
+    "status": "Available",
+    "cluster": "Block 1",
+    "landAreaSqm": 634,
+    "floor": "G+1"
+  }
+]

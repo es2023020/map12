@@ -1,0 +1,72 @@
+[
+  {
+    "id": "karmell-189",
+    "unitNo": "464 Acre-Karmell 04-20",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 287.29,
+    "view": "",
+    "priceEGP": 59476000,
+    "status": "Available",
+    "cluster": "Karmell 04",
+    "deliveryNote": "30/11/2026",
+    "landAreaSqm": 427.42,
+    "floor": "G+1+R"
+  },
+  {
+    "id": "karmell-191",
+    "unitNo": "464 Acre-Karmell 04-24",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 287.29,
+    "view": "",
+    "priceEGP": 59368000,
+    "status": "Available",
+    "cluster": "Karmell 04",
+    "deliveryNote": "30/11/2026",
+    "landAreaSqm": 409.4,
+    "floor": "G+1+R"
+  },
+  {
+    "id": "karmell-192",
+    "unitNo": "464 Acre-Karmell 04-30",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 287.29,
+    "view": "",
+    "priceEGP": 62650000,
+    "status": "Available",
+    "cluster": "Karmell 04",
+    "deliveryNote": "30/11/2026",
+    "landAreaSqm": 479.07,
+    "floor": "G+1+R"
+  },
+  {
+    "id": "karmell-198",
+    "unitNo": "464-KRM05-05",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 258.8,
+    "view": "",
+    "priceEGP": 54874000,
+    "status": "Available",
+    "cluster": "Karmell 05",
+    "deliveryNote": "30/09/2030",
+    "landAreaSqm": 397,
+    "floor": "G+1+R"
+  },
+  {
+    "id": "karmell-199",
+    "unitNo": "464-KRM05-09",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 258.8,
+    "view": "",
+    "priceEGP": 57083000,
+    "status": "Available",
+    "cluster": "Karmell 05",
+    "deliveryNote": "30/09/2030",
+    "landAreaSqm": 427,
+    "floor": "G+1+R"
+  }
+]

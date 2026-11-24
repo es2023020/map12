@@ -5,6 +5,8 @@ import { projectLocations } from "./project-locations";
 import { sahelDetails } from "./sahel-details";
 import { destinations } from "./destinations";
 import { availability } from "./availability";
+import { startingPricesFromAvailability } from "./starting-prices.generated";
+import { paymentPlansBySlug, type PaymentPlan } from "./payment-plans";
 
 export type Compound = {
   slug: string;
@@ -25,6 +27,8 @@ export type Compound = {
   gallery: string[];
   blurb: string;
   paymentPlan: string;
+  paymentPlans?: PaymentPlan[]; // all known plans (Nawy), see payment-plans.ts
+  paymentPlanSource?: string;
   areaSize?: string; // total feddan
   unitSizes?: string;
   city?: string;
@@ -6375,7 +6379,7 @@ export function normalizeDeveloperName(name: string): string {
 const baseStaticCompounds: Compound[] = merged.map((c) => {
   const enriched = applyOfficialData(c);
   const normalizedDev = normalizeDeveloperName(enriched.developer);
-  return {
+  return withPlans({
     ...enriched,
     developer: normalizedDev,
     developerSlug: slugify(normalizedDev),
@@ -6385,7 +6389,7 @@ const baseStaticCompounds: Compound[] = merged.map((c) => {
     flagship: enriched.flagship ?? (FLAGSHIPS.has(enriched.slug) || undefined),
     highlights: enriched.highlights ?? enriched.amenities,
     parentSlug: parentChildMap[enriched.slug] || undefined,
-  };
+  });
 });
 
 // Append Vie parent compound if not present
@@ -6416,11 +6420,25 @@ const vieParent: Compound = {
 
 import { compoundsGenerated } from "./compounds.generated";
 
+function withPlans<T extends Compound>(base: T): T {
+  const c: T = startingPricesFromAvailability[base.slug]
+    ? { ...base, priceFrom: startingPricesFromAvailability[base.slug] }
+    : base;
+  const g = paymentPlansBySlug[c.slug];
+  if (!g || !g.plans.length) return c;
+  return {
+    ...c,
+    paymentPlan: g.text || c.paymentPlan,
+    paymentPlans: g.plans,
+    paymentPlanSource: `Nawy, ${g.verifiedAt}`,
+  };
+}
+
 const generatedSlugs = new Set(compoundsGenerated.map((c) => c.slug));
 const enrichedGenerated: Compound[] = compoundsGenerated.map((c) => {
   const enriched = applyOfficialData(c);
   const normalizedDev = normalizeDeveloperName(enriched.developer);
-  return {
+  return withPlans({
     ...enriched,
     developer: normalizedDev,
     developerSlug: slugify(normalizedDev),
@@ -6430,9 +6448,9 @@ const enrichedGenerated: Compound[] = compoundsGenerated.map((c) => {
     flagship: enriched.flagship ?? (FLAGSHIPS.has(enriched.slug) || undefined),
     highlights: enriched.highlights ?? enriched.amenities,
     parentSlug: parentChildMap[enriched.slug] || undefined,
-  };
+  });
 });
-const extraFromBase = baseStaticCompounds.filter((c) => !generatedSlugs.has(c.slug));
+const extraFromBase = baseStaticCompounds.filter((c) => !generatedSlugs.has(c.slug)).map(withPlans);
 
 export const staticCompounds: Compound[] = [...enrichedGenerated, ...extraFromBase];
 

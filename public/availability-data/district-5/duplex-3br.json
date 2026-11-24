@@ -1,0 +1,56 @@
+[
+  {
+    "id": "district-5-6",
+    "unitNo": "NHF-1-53",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 343,
+    "view": "",
+    "priceEGP": 44672000,
+    "status": "Available",
+    "cluster": "NHF",
+    "roofAreaSqm": 45,
+    "landAreaSqm": 645,
+    "floor": "FIFTH"
+  },
+  {
+    "id": "district-5-7",
+    "unitNo": "NHF-3-52",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 322,
+    "view": "",
+    "priceEGP": 41100000,
+    "status": "Available",
+    "cluster": "NHF",
+    "landAreaSqm": 645,
+    "floor": "FIFTH"
+  },
+  {
+    "id": "district-5-10",
+    "unitNo": "NHF-11-51",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 343,
+    "view": "",
+    "priceEGP": 43764000,
+    "status": "Available",
+    "cluster": "NHF",
+    "roofAreaSqm": 56,
+    "landAreaSqm": 645,
+    "floor": "FIFTH"
+  },
+  {
+    "id": "district-5-17",
+    "unitNo": "NHF-15B-22",
+    "beds": 3,
+    "finishing": "Semi Finished",
+    "areaSqm": 218,
+    "view": "",
+    "priceEGP": 24051000,
+    "status": "Available",
+    "cluster": "NHF",
+    "landAreaSqm": 714,
+    "floor": "SECOND"
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "youd-72",
+    "unitNo": "G36-G36-203",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "view": "",
+    "priceEGP": 17539000,
+    "status": "Available",
+    "cluster": "G36",
+    "floor": "1st"
+  },
+  {
+    "id": "youd-78",
+    "unitNo": "A111-A111-102",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "",
+    "priceEGP": 16875000,
+    "status": "Available",
+    "cluster": "A111",
+    "gardenAreaSqm": 44.23,
+    "floor": "Ground"
+  },
+  {
+    "id": "youd-131",
+    "unitNo": "0 A7-A7-306",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "",
+    "priceEGP": 16380000,
+    "status": "Available",
+    "cluster": "A7",
+    "floor": "2nd floor"
+  },
+  {
+    "id": "youd-134",
+    "unitNo": "0 A62-A62-204",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "",
+    "priceEGP": 14206000,
+    "status": "Available",
+    "cluster": "A62",
+    "floor": "1st Floor"
+  },
+  {
+    "id": "youd-135",
+    "unitNo": "0 A62-A62-305",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 120,
+    "view": "",
+    "priceEGP": 15466000,
+    "status": "Available",
+    "cluster": "A62",
+    "floor": "2nd floor"
+  }
+]

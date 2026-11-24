@@ -1,0 +1,87 @@
+[
+  {
+    "id": "creekview-1",
+    "unitNo": "CV-H-iV-41-A2-2",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 70,
+    "view": "North West",
+    "priceEGP": 6909057.89,
+    "status": "Available",
+    "cluster": "Heights iV",
+    "deliveryNote": "OFF PLAN - 2.5"
+  },
+  {
+    "id": "creekview-2",
+    "unitNo": "CV-H-iV-31-A2-2",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 70,
+    "view": "North",
+    "priceEGP": 7002846.01,
+    "status": "Available",
+    "cluster": "Heights iV",
+    "deliveryNote": "OFF PLAN - 2.5"
+  },
+  {
+    "id": "creekview-3",
+    "unitNo": "CV-H-iV-38-B2-3",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 70,
+    "view": "South",
+    "priceEGP": 7065371.42,
+    "status": "Available",
+    "cluster": "Heights iV",
+    "deliveryNote": "OFF PLAN - 2.5"
+  },
+  {
+    "id": "creekview-4",
+    "unitNo": "CV-H-iV-40-A3-2",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 70,
+    "view": "North West",
+    "priceEGP": 7284210.36,
+    "status": "Available",
+    "cluster": "Heights iV",
+    "deliveryNote": "OFF PLAN - 2.5"
+  },
+  {
+    "id": "creekview-5",
+    "unitNo": "CV-H-iV-42-B2-3",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 70,
+    "view": "North West",
+    "priceEGP": 7733073.68,
+    "status": "Available",
+    "cluster": "Heights iV",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "creekview-6",
+    "unitNo": "CV-I-iV-62-A2-2",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 70,
+    "view": "North West",
+    "priceEGP": 7733073.68,
+    "status": "Available",
+    "cluster": "Islands iV",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "creekview-7",
+    "unitNo": "CV-H-MD-25-A0-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 70,
+    "view": "North West",
+    "priceEGP": 8211881.91,
+    "status": "Available",
+    "cluster": "Heights MD",
+    "deliveryNote": "OFF PLAN - 4",
+    "gardenAreaSqm": 33.97
+  }
+]

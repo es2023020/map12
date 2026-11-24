@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sky-condos-1",
+    "unitNo": "P1-1321-31",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 159,
+    "view": "",
+    "priceEGP": 29235000,
+    "status": "Available",
+    "cluster": "SKY CONDOS 1",
+    "floor": "3"
+  },
+  {
+    "id": "sky-condos-2",
+    "unitNo": "P1-1325-33",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 159,
+    "view": "",
+    "priceEGP": 30237000,
+    "status": "Available",
+    "cluster": "SKY CONDOS 1",
+    "floor": "3"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hyde-park-new-cairo-23",
+    "unitNo": "HPDC18P/G2/30",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 355,
+    "view": "",
+    "priceEGP": 94640000,
+    "status": "Available",
+    "cluster": "Cluster 18 Park - Peaks Ville",
+    "landAreaSqm": 559.05
+  },
+  {
+    "id": "hyde-park-new-cairo-24",
+    "unitNo": "HPDC9/B2/11",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 926,
+    "view": "",
+    "priceEGP": 249900000,
+    "status": "Available",
+    "cluster": "Cluster 9 Royal",
+    "landAreaSqm": 1168
+  },
+  {
+    "id": "hyde-park-new-cairo-25",
+    "unitNo": "HPDC9/B2/10",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 926,
+    "view": "",
+    "priceEGP": 244500000,
+    "status": "Available",
+    "cluster": "Cluster 9 Royal",
+    "landAreaSqm": 1130.5
+  },
+  {
+    "id": "hyde-park-new-cairo-26",
+    "unitNo": "HPDC1/A3/18",
+    "beds": 0,
+    "finishing": "Semi Finished",
+    "areaSqm": 1287,
+    "view": "",
+    "priceEGP": 385000000,
+    "status": "Available",
+    "cluster": "Cluster 1 Royal",
+    "landAreaSqm": 1879.44
+  },
+  {
+    "id": "hyde-park-new-cairo-27",
+    "unitNo": "HPDC17/V/89",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 327.7,
+    "view": "",
+    "priceEGP": 80750000,
+    "status": "Available",
+    "cluster": "Cluster 17",
+    "landAreaSqm": 538
+  }
+]

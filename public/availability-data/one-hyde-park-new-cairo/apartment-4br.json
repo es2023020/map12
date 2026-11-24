@@ -1,0 +1,88 @@
+[
+  {
+    "id": "one-hyde-park-new-cairo-30",
+    "unitNo": "OHC/11A-G/3",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "",
+    "priceEGP": 17840000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "gardenAreaSqm": 82,
+    "floor": "0"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-33",
+    "unitNo": "OHC/11A-2/4",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "",
+    "priceEGP": 15740000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "2"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-94",
+    "unitNo": "OHC/5A-5/3",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "",
+    "priceEGP": 16200000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "5"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-95",
+    "unitNo": "OHC/6A-G/3",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "",
+    "priceEGP": 18010000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "gardenAreaSqm": 82,
+    "floor": "0"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-120",
+    "unitNo": "OHC/12A-4/5",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "",
+    "priceEGP": 16050000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "4"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-131",
+    "unitNo": "OHC/17A-3/3",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "",
+    "priceEGP": 15810000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "3"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-133",
+    "unitNo": "OHC/17A-4/5",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "",
+    "priceEGP": 15970000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "4"
+  }
+]

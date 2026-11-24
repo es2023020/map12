@@ -20,6 +20,7 @@ import {
 import { destinations } from "@/data/destinations";
 import { compounds as staticCompounds, compoundBySlug } from "@/data/compounds";
 import { formatDeliveryStatus, isReadyToMove, hasRTMUnits, hasOffPlanUnits } from "@/lib/delivery";
+import { getPaymentPlans, defaultPlan, parseLegacyPlan, isVerified, type PaymentPlan } from "@/data/payment-plans";
 
 export const Route = createFileRoute("/calculator")({
   validateSearch: (search: Record<string, unknown>): { project?: string; unitId?: string; unitType?: string; price?: string } => ({
@@ -74,30 +75,6 @@ function parseBudgetInput(input: string): number {
   return val;
 }
 
-function parsePaymentPlan(plan?: string): { dp: number; duration: number } {
-  if (!plan) return { dp: 10, duration: 8 };
-
-  const lower = plan.toLowerCase();
-
-  // Try matching down payment: e.g. "5% down", "10% down", "5% downpayment"
-  let dp = 10;
-  const dpMatch = lower.match(/(\d+)%\s*(?:down|dp|payment)/);
-  if (dpMatch) {
-    dp = parseInt(dpMatch[1]);
-  }
-
-  // Try matching installment years: e.g. "8 years", "10 years equal installments"
-  let duration = 8;
-  const durMatch = lower.match(/(\d+)\s*years/);
-  if (durMatch) {
-    duration = parseInt(durMatch[1]);
-  } else {
-    const durMatch2 = lower.match(/(\d+)\s*yr/);
-    if (durMatch2) duration = parseInt(durMatch2[1]);
-  }
-
-  return { dp, duration };
-}
 
 function matchDestination(compDest: string, filterVal: string | string[]): boolean {
   if (!filterVal || (Array.isArray(filterVal) && filterVal.length === 0)) return true;
@@ -293,6 +270,7 @@ function CalculatorPage() {
   const [budgetText, setBudgetText] = useState("15,000,000");
   const [dpPct, setDpPct] = useState(10);
   const [duration, setDuration] = useState(8);
+  const [selectedPlanId, setSelectedPlanId] = useState<string | null>(null);
   const [unitType, setUnitType] = useState("");
   const [tab, setTab] = useState<"monthly" | "quarterly" | "annual">("monthly");
 
@@ -372,14 +350,42 @@ function CalculatorPage() {
   }, [selectedUnitId, selectableItems]);
 
   // Dynamically update payment plan values based on selected project or selected unit
+  // Plans come from real plan data (Nawy) via payment-plans.ts. A unit that carries its own
+  // plan text overrides the project plans.
+  const projectPlans: PaymentPlan[] = useMemo(() => {
+    if (mode !== "project" || !selectedProject) return [];
+    if (activeUnitItem?.paymentPlan) return [parseLegacyPlan(activeUnitItem.paymentPlan)];
+    return getPaymentPlans(selectedProject);
+  }, [mode, selectedProject, activeUnitItem]);
+
   useEffect(() => {
-    if (mode === "project" && selectedProject) {
-      const activePlan = activeUnitItem?.paymentPlan || selectedProject.paymentPlan;
-      const parsed = parsePaymentPlan(activePlan);
-      setDpPct(parsed.dp);
-      setDuration(parsed.duration);
+    if (projectPlans.length) {
+      const d = defaultPlan(projectPlans);
+      setSelectedPlanId(d.id);
+      setDpPct(d.kind === "cash" ? 100 : d.downPaymentPct);
+      setDuration(d.kind === "cash" ? 1 : Math.min(Math.max(d.years, 1), Math.max(...DURATIONS)));
+    } else {
+      setSelectedPlanId(null);
     }
-  }, [mode, projectSlug, selectedProject, activeUnitItem]);
+  }, [projectPlans]);
+
+  const selectedPlan = projectPlans.find((p) => p.id === selectedPlanId) ?? null;
+  const isCashPlan = selectedPlan?.kind === "cash";
+  // Lump sums only apply while dp/duration still match the plan (manual tweaks make it a custom plan)
+  const planMatches =
+    !!selectedPlan &&
+    (isCashPlan ||
+      (dpPct === selectedPlan.downPaymentPct &&
+        duration === Math.min(Math.max(selectedPlan.years, 1), Math.max(...DURATIONS))));
+  const lumpPct = planMatches && !isCashPlan
+    ? (selectedPlan!.month3Pct ?? 0) + (selectedPlan!.month6Pct ?? 0) + (selectedPlan!.deliveryPct ?? 0)
+    : 0;
+
+  const pickPlan = (p: PaymentPlan) => {
+    setSelectedPlanId(p.id);
+    setDpPct(p.kind === "cash" ? 100 : p.downPaymentPct);
+    setDuration(p.kind === "cash" ? 1 : Math.min(Math.max(p.years, 1), Math.max(...DURATIONS)));
+  };
 
   // Reset selected unit when project changes (except on initial load with URL params)
   const [prevProjectSlug, setPrevProjectSlug] = useState(projectSlug);
@@ -401,8 +407,15 @@ function CalculatorPage() {
         : (selectedProject?.priceFrom ?? 5)
       : parsedPrice || 5;
 
-  const downPayment = basePrice * (dpPct / 100);
-  const remaining = basePrice - downPayment;
+  const cashDiscount = isCashPlan ? (selectedPlan!.cashDiscountPct ?? 0) : 0;
+  const downPayment = isCashPlan
+    ? basePrice * (1 - cashDiscount / 100)
+    : basePrice * (dpPct / 100);
+  const month3Amt = planMatches && !isCashPlan ? basePrice * ((selectedPlan!.month3Pct ?? 0) / 100) : 0;
+  const month6Amt = planMatches && !isCashPlan ? basePrice * ((selectedPlan!.month6Pct ?? 0) / 100) : 0;
+  const deliveryAmt = planMatches && !isCashPlan ? basePrice * ((selectedPlan!.deliveryPct ?? 0) / 100) : 0;
+  // Balance spread over the installments (price minus down payment minus lump sums)
+  const remaining = isCashPlan ? 0 : Math.max(basePrice - downPayment - month3Amt - month6Amt - deliveryAmt, 0);
   const totalMonths = duration * 12;
   const monthly = remaining / totalMonths;
   const quarterly = remaining / (duration * 4);
@@ -410,13 +423,13 @@ function CalculatorPage() {
 
   const schedule = useMemo(() => {
     return DURATIONS.map((yr) => {
-      const rem = basePrice - downPayment;
+      const rem = remaining;
       const mo = rem / (yr * 12);
       const qt = rem / (yr * 4);
       const an = rem / yr;
       return { yr, mo, qt, an };
     });
-  }, [basePrice, downPayment]);
+  }, [basePrice, remaining]);
 
   const suitableUnits = useMemo(() => {
     const list: Array<{
@@ -661,7 +674,7 @@ function CalculatorPage() {
           <div className="grid gap-3 sm:grid-cols-2">
             {suitableUnits.slice(0, visibleUnitsLimit).map((u, i) => {
               const uDp = u.priceEGP * (dpPct / 100);
-              const uRem = u.priceEGP - uDp;
+              const uRem = isCashPlan ? 0 : u.priceEGP * (1 - dpPct / 100 - lumpPct / 100);
               const uMonthly = uRem / (duration * 12);
               return (
                 <div
@@ -1087,6 +1100,63 @@ function CalculatorPage() {
               )}
             </div>
 
+            {/* Payment plan selector */}
+            {mode === "project" && projectPlans.length > 0 && (
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
+                <h2 className="mb-1 font-display text-lg font-semibold text-primary flex items-center gap-2">
+                  <Wallet className="h-5 w-5 text-accent" /> Payment Plan
+                </h2>
+                <p className="mb-4 text-xs text-muted-foreground">
+                  {projectPlans.length} plan{projectPlans.length > 1 ? "s" : ""} for this project.
+                  {selectedPlan && isVerified(selectedPlan)
+                    ? ` Source: ${selectedPlan.source}.`
+                    : " Indicative only, not verified against the developer."}
+                </p>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {projectPlans.map((p) => {
+                    const extras = [
+                      p.month3Pct ? `${p.month3Pct}% at 3 mo` : "",
+                      p.month6Pct ? `${p.month6Pct}% at 6 mo` : "",
+                      p.deliveryPct ? `${p.deliveryPct}% on delivery` : "",
+                      p.cashDiscountPct ? `${p.cashDiscountPct}% cash discount` : "",
+                    ].filter(Boolean);
+                    const active = p.id === selectedPlanId;
+                    return (
+                      <button
+                        key={p.id}
+                        onClick={() => pickPlan(p)}
+                        className={`rounded-xl border p-3 text-left transition-all ${
+                          active
+                            ? "border-accent bg-accent/10 shadow-sm"
+                            : "border-border hover:border-accent"
+                        }`}
+                      >
+                        <div className="text-sm font-semibold text-primary">
+                          {p.kind === "cash"
+                            ? "Cash"
+                            : `${p.approximate ? "~" : ""}${p.downPaymentPct}% down · ${p.years} yrs`}
+                        </div>
+                        <div className="mt-0.5 text-[11px] text-muted-foreground">
+                          {p.kind === "developer" && "Developer plan"}
+                          {p.kind === "resale" && "Resale-style plan"}
+                          {p.kind === "launch" && "Launch plan (previous site data)"}
+                          {p.kind === "legacy" && "Indicative"}
+                          {p.kind === "cash" && "Pay in full"}
+                          {extras.length ? ` · ${extras.join(" · ")}` : ""}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+                {selectedPlan && !planMatches && (
+                  <p className="mt-3 text-xs text-amber-600">
+                    Custom terms: you changed the down payment or duration, so the plan's extra
+                    payments are not applied.
+                  </p>
+                )}
+              </div>
+            )}
+
             {/* Down payment */}
             <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
               <h2 className="mb-4 font-display text-lg font-semibold text-primary flex items-center gap-2">
@@ -1302,10 +1372,19 @@ function CalculatorPage() {
                 {[
                   { label: "Unit price", value: fmtEGP(basePrice * 1_000_000) },
                   {
-                    label: `Down payment (${dpPct}%)`,
+                    label: isCashPlan ? `Cash price (${cashDiscount}% discount)` : `Down payment (${dpPct}%)`,
                     value: fmtEGP(downPayment * 1_000_000),
                     accent: true,
                   },
+                  ...(month3Amt > 0
+                    ? [{ label: `At 3 months (${selectedPlan?.month3Pct}%)`, value: fmtEGP(month3Amt * 1_000_000) }]
+                    : []),
+                  ...(month6Amt > 0
+                    ? [{ label: `At 6 months (${selectedPlan?.month6Pct}%)`, value: fmtEGP(month6Amt * 1_000_000) }]
+                    : []),
+                  ...(deliveryAmt > 0
+                    ? [{ label: `On delivery (${selectedPlan?.deliveryPct}%)`, value: fmtEGP(deliveryAmt * 1_000_000) }]
+                    : []),
                   { label: "Remaining balance", value: fmtEGP(remaining * 1_000_000) },
                   {
                     label: `Monthly installment (${duration} yrs)`,
@@ -1322,7 +1401,7 @@ function CalculatorPage() {
                   },
                   {
                     label: "Total investment",
-                    value: fmtEGP(basePrice * 1_000_000),
+                    value: fmtEGP((isCashPlan ? downPayment : basePrice) * 1_000_000),
                     total: true,
                   },
                 ].map(({ label, value, accent, total }) => (

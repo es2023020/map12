@@ -2032,6 +2032,8 @@ export const useStore = create<State>()(
                   gallery: sc.gallery || localComp.gallery,
                   blurb: sc.blurb || localComp.blurb,
                   paymentPlan: sc.paymentPlan || localComp.paymentPlan,
+                  paymentPlans: sc.paymentPlans ?? localComp.paymentPlans,
+                  paymentPlanSource: sc.paymentPlanSource ?? localComp.paymentPlanSource,
                   areaSize: sc.areaSize || localComp.areaSize,
                   unitSizes: sc.unitSizes || localComp.unitSizes,
                   highlights: sc.highlights || localComp.highlights,

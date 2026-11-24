@@ -1,0 +1,80 @@
+[
+  {
+    "id": "rai-valleys-1",
+    "unitNo": "Rai Valleys - 88 - 130 - D",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 206,
+    "view": "",
+    "priceEGP": 19290433.51,
+    "status": "Available",
+    "gardenAreaSqm": 53.3,
+    "roofAreaSqm": 14.9,
+    "floor": "V"
+  },
+  {
+    "id": "rai-valleys-2",
+    "unitNo": "Rai Valleys - 88 - 130 - E",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 206,
+    "view": "",
+    "priceEGP": 19290433.51,
+    "status": "Available",
+    "gardenAreaSqm": 53.3,
+    "roofAreaSqm": 14.9,
+    "floor": "V"
+  },
+  {
+    "id": "rai-valleys-3",
+    "unitNo": "Rai Valleys - 88 - 131 - E",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 206,
+    "view": "",
+    "priceEGP": 20748461.65,
+    "status": "Available",
+    "gardenAreaSqm": 54.6,
+    "roofAreaSqm": 14.9,
+    "floor": "V"
+  },
+  {
+    "id": "rai-valleys-4",
+    "unitNo": "Rai Valleys - 88 - 133 - B",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 206,
+    "view": "",
+    "priceEGP": 20203657.02,
+    "status": "Available",
+    "gardenAreaSqm": 54.3,
+    "roofAreaSqm": 14.9,
+    "floor": "V"
+  },
+  {
+    "id": "rai-valleys-5",
+    "unitNo": "Rai Valleys - 88 - 133 - C",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 206,
+    "view": "",
+    "priceEGP": 20200116.6,
+    "status": "Available",
+    "gardenAreaSqm": 54,
+    "roofAreaSqm": 14.9,
+    "floor": "V"
+  },
+  {
+    "id": "rai-valleys-6",
+    "unitNo": "Rai Valleys - 88 - 133 - D",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 206,
+    "view": "",
+    "priceEGP": 20196576.19,
+    "status": "Available",
+    "gardenAreaSqm": 53.7,
+    "roofAreaSqm": 14.9,
+    "floor": "V"
+  }
+]

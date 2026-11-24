@@ -1,0 +1,24 @@
+[
+  {
+    "id": "w-signature-22",
+    "unitNo": "SC1 - 05",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 268,
+    "view": "View/Street",
+    "priceEGP": 73700000,
+    "status": "Available",
+    "floor": "1"
+  },
+  {
+    "id": "w-signature-23",
+    "unitNo": "SC1 - 06",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 263,
+    "view": "Street/Compound",
+    "priceEGP": 72325000,
+    "status": "Available",
+    "floor": "1"
+  }
+]

@@ -307,7 +307,7 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2030,
     "paymentPlan": "10% DP over 8 Yrs",
     "types": [
-      "Apartment"
+      "Office"
     ],
     "blurb": "W55 is a major mixed-use business resort spanning 55 feddans directly fronting North 90th Street in New Cairo by The Waterway Developments.",
     "amenities": [
@@ -781,8 +781,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Twin House",
-      "Apartment"
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -824,10 +823,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Standalone Villa",
-      "Townhouse",
-      "Duplex"
+      "Apartment"
     ],
     "amenities": [
       "Clubhouse",
@@ -878,11 +874,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Standalone Villa",
-      "Twin House",
+      "Apartment",
       "Townhouse",
+      "Twin House",
       "Chalet",
-      "Apartment"
+      "Standalone Villa"
     ],
     "amenities": [
       "Private beach",
@@ -938,9 +934,8 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Penthouse",
-      "Standalone Villa",
-      "Townhouse"
+      "Townhouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "Sports club",
@@ -1046,8 +1041,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Standalone Villa",
-      "Apartment"
+      "Chalet",
+      "Standalone Villa"
     ],
     "amenities": [
       "Crystal lagoons",
@@ -1195,8 +1190,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Apartment",
-      "Penthouse"
+      "Chalet",
+      "Standalone Villa"
     ],
     "amenities": [
       "5-star Hotel",
@@ -1479,7 +1474,8 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Duplex"
+      "Duplex",
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -2311,9 +2307,8 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Standalone Villa",
-      "Twin House",
-      "Townhouse"
+      "Townhouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -2407,7 +2402,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Duplex",
+      "Penthouse",
       "Townhouse"
     ],
     "amenities": [
@@ -3310,9 +3305,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Townhouse",
-      "Twin House",
-      "Standalone Villa"
+      "Office"
     ],
     "amenities": [
       "Clubhouse",
@@ -3879,10 +3872,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Standalone Villa",
       "Apartment",
-      "Penthouse",
-      "Townhouse"
+      "Townhouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -3937,7 +3929,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Penthouse",
+      "Apartment",
       "Townhouse"
     ],
     "amenities": [
@@ -3987,7 +3979,6 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Penthouse",
       "Twin House"
     ],
     "amenities": [
@@ -4034,8 +4025,7 @@ export const compoundsGenerated: Compound[] = [
     "types": [
       "Apartment",
       "Townhouse",
-      "Penthouse",
-      "Duplex"
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -4082,7 +4072,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Penthouse"
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
     ],
     "amenities": [
       "Private Clubhouse",
@@ -4133,10 +4125,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Standalone Villa",
-      "Townhouse",
       "Apartment",
-      "Penthouse"
+      "Townhouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -4181,8 +4172,8 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Standalone Villa",
-      "Townhouse"
+      "Townhouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -4226,8 +4217,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Duplex",
-      "Apartment"
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
     ],
     "amenities": [
       "Water promenade",
@@ -4441,6 +4435,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": true,
     "types": [
       "Apartment",
+      "Townhouse",
       "Chalet"
     ],
     "amenities": [
@@ -4491,7 +4486,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Townhouse"
+      "Townhouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "Swimming pools",
@@ -4541,8 +4537,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Standalone Villa",
-      "Apartment"
+      "Apartment",
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -4596,7 +4592,6 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Townhouse",
       "Standalone Villa"
     ],
     "amenities": [
@@ -4644,8 +4639,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Standalone Villa",
-      "Townhouse"
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -4740,8 +4734,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Standalone Villa",
-      "Townhouse"
+      "Apartment",
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -4835,8 +4829,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Standalone Villa",
-      "Townhouse"
+      "Apartment",
+      "Standalone Villa"
     ],
     "amenities": [
       "Crystal lagoons",
@@ -4879,7 +4873,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Standalone Villa"
+      "Apartment"
     ],
     "amenities": [
       "Clubhouse",
@@ -4977,7 +4971,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Townhouse",
+      "Twin House"
     ],
     "amenities": [
       "Clubhouse",
@@ -5143,8 +5139,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Chalet",
+      "Apartment",
       "Twin House",
+      "Chalet",
       "Standalone Villa"
     ],
     "amenities": [
@@ -5195,7 +5192,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Duplex",
+      "Office"
     ],
     "amenities": [
       "Commercial D5M",
@@ -5239,9 +5238,10 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Duplex",
+      "Townhouse",
       "Twin House",
-      "Standalone Villa",
-      "Townhouse"
+      "Standalone Villa"
     ],
     "amenities": [
       "Central crystal lagoon",
@@ -5289,11 +5289,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
+      "Apartment",
+      "Townhouse",
+      "Twin House",
       "Chalet",
-      "Duplex",
-      "Penthouse",
-      "Standalone Villa",
-      "Twin House"
+      "Standalone Villa"
     ],
     "amenities": [
       "1.4 km Beachfront",
@@ -5398,11 +5398,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Duplex",
       "Penthouse",
-      "Standalone Villa",
       "Townhouse",
-      "Twin House"
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -5451,7 +5449,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Office",
+      "Clinic"
     ],
     "amenities": [
       "Green spaces",
@@ -5960,10 +5960,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Apartment",
-      "Standalone Villa",
+      "Twin House",
       "Chalet",
-      "Twin House"
+      "Standalone Villa"
     ],
     "amenities": [
       "4.8 km Beachfront",
@@ -6375,7 +6374,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Apartment"
+      "Twin House",
+      "Standalone Villa"
     ],
     "amenities": [
       "Private beach access",
@@ -6580,10 +6580,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": true,
     "types": [
-      "Twin House",
-      "Chalet",
       "Apartment",
-      "Townhouse"
+      "Penthouse",
+      "Twin House",
+      "Chalet"
     ],
     "amenities": [
       "Private beach",
@@ -6788,7 +6788,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Twin House",
+      "Chalet"
     ],
     "amenities": [
       "Private beach",
@@ -7213,7 +7215,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Apartment"
+      "Townhouse",
+      "Twin House",
+      "Chalet",
+      "Standalone Villa"
     ],
     "amenities": [
       "Private beach",
@@ -7359,11 +7364,11 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Chalet",
+      "Apartment",
+      "Duplex",
       "Townhouse",
       "Twin House",
-      "Standalone Villa",
-      "Duplex"
+      "Chalet"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -8997,9 +9002,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Penthouse",
-      "Standalone Villa"
+      "Apartment"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -9195,8 +9198,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Standalone Villa",
-      "Twin House"
+      "Duplex",
+      "Townhouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -9242,10 +9246,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Twin House",
-      "Standalone Villa",
-      "Townhouse",
-      "Apartment"
+      "Apartment",
+      "Standalone Villa"
     ],
     "amenities": [
       "Egypt's largest landscaped park",
@@ -9358,7 +9360,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Duplex"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -9411,7 +9414,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Duplex"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -9909,7 +9913,8 @@ export const compoundsGenerated: Compound[] = [
       "Apartment",
       "Duplex",
       "Townhouse",
-      "Standalone Villa"
+      "Standalone Villa",
+      "Office"
     ],
     "amenities": [
       "Central park",
@@ -10004,7 +10009,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Townhouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "SODIC Sports Club",
@@ -10210,9 +10217,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Penthouse",
-      "Standalone Villa"
+      "Apartment"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -10423,6 +10428,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Duplex",
       "Standalone Villa"
     ],
     "amenities": [
@@ -10471,8 +10477,8 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Standalone Villa",
-      "Duplex"
+      "Duplex",
+      "Standalone Villa"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -11012,8 +11018,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
+      "Apartment",
       "Duplex",
-      "Apartment"
+      "Townhouse",
+      "Chalet"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -12093,6 +12101,10 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
+      "Apartment",
+      "Duplex",
+      "Townhouse",
+      "Twin House",
       "Standalone Villa"
     ],
     "amenities": [
@@ -12139,7 +12151,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Standalone Villa"
+      "Retail"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -12184,12 +12196,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Standalone Villa",
-      "Twin House",
-      "Townhouse",
       "Apartment",
-      "Duplex",
-      "Penthouse"
+      "Standalone Villa"
     ],
     "amenities": [
       "Crystal Lagoon",
@@ -12608,11 +12616,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Standalone Villa",
-      "Twin House",
-      "Townhouse",
-      "Chalet",
-      "Apartment"
+      "Standalone Villa"
     ],
     "amenities": [
       "Lagoon",
@@ -12857,7 +12861,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": true,
     "types": [
-      "Apartment"
+      "Townhouse",
+      "Twin House",
+      "Standalone Villa"
     ],
     "amenities": [
       "Sandy Beach",
@@ -13816,7 +13822,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Townhouse"
+      "Townhouse",
+      "Standalone Villa"
     ],
     "amenities": [
       "Gated perimeter with smart electronic access gates, 24/7 advanced security guards, and comprehensive CCTV surveillance",
@@ -14175,7 +14182,9 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Penthouse",
+      "Office"
     ],
     "amenities": [
       "Gated perimeter with smart electronic access control gates, 24/7 advanced security personnel, and comprehensive CCTV monitoring",
@@ -15011,8 +15020,8 @@ export const compoundsGenerated: Compound[] = [
     "types": [
       "Apartment",
       "Townhouse",
-      "Standalone Villa",
-      "Twin House"
+      "Twin House",
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -15383,7 +15392,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Apartment",
+      "Standalone Villa"
     ],
     "amenities": [
       "Clubhouse",
@@ -15531,8 +15541,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "RTM",
     "beachfront": false,
     "types": [
-      "Townhouse",
-      "Apartment"
+      "Apartment",
+      "Townhouse"
     ],
     "amenities": [
       "The Green Spine Corridor",
@@ -15577,7 +15587,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Penthouse"
+      "Apartment"
     ],
     "amenities": [
       "Direct Ritz-Carlton Hotel Access",
@@ -15621,7 +15631,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Office"
     ],
     "amenities": [
       "Central Landscaped Green Spine",
@@ -15666,7 +15676,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Office"
     ],
     "amenities": [
       "Corporate Hub",
@@ -15704,6 +15714,8 @@ export const compoundsGenerated: Compound[] = [
     "isNewLaunch": true,
     "beachfront": false,
     "types": [
+      "Apartment",
+      "Duplex",
       "Townhouse",
       "Twin House",
       "Standalone Villa"
@@ -16556,6 +16568,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
+      "Duplex",
       "Townhouse",
       "Standalone Villa"
     ],
@@ -16741,7 +16754,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Office",
+      "Retail"
     ],
     "amenities": [
       "24/7 Security",
@@ -16775,7 +16789,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Retail",
+      "Clinic"
     ],
     "amenities": [
       "24/7 Security",
@@ -16843,7 +16858,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Office"
     ],
     "amenities": [
       "24/7 Security",
@@ -16877,7 +16892,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Retail"
     ],
     "amenities": [
       "24/7 Security",
@@ -16911,7 +16926,7 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment"
+      "Retail"
     ],
     "amenities": [
       "24/7 Security",
@@ -16946,9 +16961,7 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Standalone Villa",
-      "Townhouse",
-      "Twin House"
+      "Standalone Villa"
     ],
     "amenities": [
       "24/7 Security",
@@ -16982,8 +16995,8 @@ export const compoundsGenerated: Compound[] = [
     "status": "Off-Plan",
     "beachfront": false,
     "types": [
-      "Apartment",
-      "Penthouse"
+      "Office",
+      "Clinic"
     ],
     "amenities": [
       "24/7 Security",
@@ -17023,9 +17036,9 @@ export const compoundsGenerated: Compound[] = [
     "beachfront": false,
     "types": [
       "Apartment",
-      "Standalone Villa",
       "Townhouse",
-      "Twin House"
+      "Twin House",
+      "Standalone Villa"
     ],
     "amenities": [
       "Central Park View",
@@ -17065,12 +17078,10 @@ export const compoundsGenerated: Compound[] = [
     "deliveryYear": 2026,
     "paymentPlan": "10% down + 5% over 8 yrs (Apartments/iVillas) · 20% down + 5% over 7 yrs (Villas)",
     "types": [
-      "Millennial Apartment",
+      "Apartment",
+      "Duplex",
       "Townhouse",
-      "iVilla Garden",
-      "iVilla Roof",
-      "Luxury Villa",
-      "Crown Palace"
+      "Standalone Villa"
     ],
     "blurb": "Mountain View 1.1 is a boutique luxury residential compound in New Cairo developed by Mountain View (DMG) in collaboration with DMA Engineering Consultants. Spanning approximately 130 feddans directly overlooking the Royal Valley, it serves as an exclusive, updated extension to Mountain View 1.",
     "amenities": [

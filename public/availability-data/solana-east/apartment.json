@@ -1,0 +1,123 @@
+[
+  {
+    "id": "solana-east-41",
+    "unitNo": "SE-C4-024-C",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 198,
+    "view": "",
+    "priceEGP": 44094000,
+    "status": "Available",
+    "cluster": "TH Middle"
+  },
+  {
+    "id": "solana-east-42",
+    "unitNo": "SE-C4-006-C",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 198,
+    "view": "",
+    "priceEGP": 44714000,
+    "status": "Available",
+    "cluster": "TH Middle"
+  },
+  {
+    "id": "solana-east-43",
+    "unitNo": "SE-C2-024-B",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 198,
+    "view": "",
+    "priceEGP": 45176000,
+    "status": "Available",
+    "cluster": "TH Middle"
+  },
+  {
+    "id": "solana-east-44",
+    "unitNo": "SE-C2-021-B",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 198,
+    "view": "",
+    "priceEGP": 45311000,
+    "status": "Available",
+    "cluster": "TH Middle"
+  },
+  {
+    "id": "solana-east-45",
+    "unitNo": "SE-C3-029-C",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 198,
+    "view": "",
+    "priceEGP": 45916000,
+    "status": "Available",
+    "cluster": "TH Middle"
+  },
+  {
+    "id": "solana-east-46",
+    "unitNo": "SE-C3-030-B",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 198,
+    "view": "",
+    "priceEGP": 45916000,
+    "status": "Available",
+    "cluster": "TH Middle"
+  },
+  {
+    "id": "solana-east-47",
+    "unitNo": "SE-C2-018-B",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 198,
+    "view": "",
+    "priceEGP": 46170000,
+    "status": "Available",
+    "cluster": "TH Middle"
+  },
+  {
+    "id": "solana-east-48",
+    "unitNo": "SE-C2-018-C",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 198,
+    "view": "",
+    "priceEGP": 46170000,
+    "status": "Available",
+    "cluster": "TH Middle"
+  },
+  {
+    "id": "solana-east-49",
+    "unitNo": "SE-C4-002-A",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 221,
+    "view": "",
+    "priceEGP": 54602000,
+    "status": "Available",
+    "cluster": "TW"
+  },
+  {
+    "id": "solana-east-50",
+    "unitNo": "SE-C4-003-A",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 221,
+    "view": "",
+    "priceEGP": 54602000,
+    "status": "Available",
+    "cluster": "TW"
+  },
+  {
+    "id": "solana-east-51",
+    "unitNo": "SE-C3-040-B",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 221,
+    "view": "",
+    "priceEGP": 57072000,
+    "status": "Available",
+    "cluster": "TW"
+  }
+]

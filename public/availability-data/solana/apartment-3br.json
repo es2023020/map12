@@ -1,0 +1,79 @@
+[
+  {
+    "id": "solana-7",
+    "unitNo": "C06-095-32",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 131,
+    "view": "",
+    "priceEGP": 16049000,
+    "status": "Available",
+    "cluster": "3 Bedroom Flat L"
+  },
+  {
+    "id": "solana-8",
+    "unitNo": "C06-096-31",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 131,
+    "view": "",
+    "priceEGP": 16049000,
+    "status": "Available",
+    "cluster": "3 Bedroom Flat L"
+  },
+  {
+    "id": "solana-9",
+    "unitNo": "C06-095-11",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 135,
+    "view": "",
+    "priceEGP": 16463000,
+    "status": "Available",
+    "cluster": "3 Bedroom Flat K2"
+  },
+  {
+    "id": "solana-10",
+    "unitNo": "C06-095-21",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 135,
+    "view": "",
+    "priceEGP": 16578000,
+    "status": "Available",
+    "cluster": "3 Bedroom Flat K3"
+  },
+  {
+    "id": "solana-11",
+    "unitNo": "C06-096-23",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 135,
+    "view": "",
+    "priceEGP": 16578000,
+    "status": "Available",
+    "cluster": "3 Bedroom Flat K3"
+  },
+  {
+    "id": "solana-12",
+    "unitNo": "C06-095-01",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 136,
+    "view": "",
+    "priceEGP": 18148000,
+    "status": "Available",
+    "cluster": "3 Bedroom Flat K1"
+  },
+  {
+    "id": "solana-13",
+    "unitNo": "C06-096-03",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 136,
+    "view": "",
+    "priceEGP": 18148000,
+    "status": "Available",
+    "cluster": "3 Bedroom Flat K1"
+  }
+]

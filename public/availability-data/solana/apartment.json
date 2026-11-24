@@ -1,0 +1,57 @@
+[
+  {
+    "id": "solana-14",
+    "unitNo": "C06-013-C",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 168,
+    "view": "",
+    "priceEGP": 22636000,
+    "status": "Available",
+    "cluster": "TH Middle Type B"
+  },
+  {
+    "id": "solana-15",
+    "unitNo": "C06-021-B",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 168,
+    "view": "",
+    "priceEGP": 22850000,
+    "status": "Available",
+    "cluster": "TH Middle Type B"
+  },
+  {
+    "id": "solana-16",
+    "unitNo": "C06-065-C",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 168,
+    "view": "",
+    "priceEGP": 23646000,
+    "status": "Available",
+    "cluster": "TH Middle Type B"
+  },
+  {
+    "id": "solana-17",
+    "unitNo": "C06-065-A",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 169,
+    "view": "",
+    "priceEGP": 28066000,
+    "status": "Available",
+    "cluster": "TH Corner Type B"
+  },
+  {
+    "id": "solana-18",
+    "unitNo": "C06-071-D",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 169,
+    "view": "",
+    "priceEGP": 28655000,
+    "status": "Available",
+    "cluster": "TH Corner Type B"
+  }
+]

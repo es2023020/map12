@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mountain-view-ras-el-hekma-9",
+    "unitNo": "IN-B4-8-A0-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 150,
+    "view": "North",
+    "priceEGP": 36030914.15,
+    "status": "Available",
+    "cluster": "Indigo Garden Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 37,
+    "roofAreaSqm": 17
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-10",
+    "unitNo": "IN-B5-9-A0-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 150,
+    "view": "North",
+    "priceEGP": 36030914.15,
+    "status": "Available",
+    "cluster": "Indigo Garden Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 37,
+    "roofAreaSqm": 17
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-11",
+    "unitNo": "IN-B5-9-A0-4",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 150,
+    "view": "North",
+    "priceEGP": 36030914.15,
+    "status": "Available",
+    "cluster": "Indigo Garden Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 37,
+    "roofAreaSqm": 17
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-14",
+    "unitNo": "IN-A3-3-A0-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 150,
+    "view": "North",
+    "priceEGP": 52673158.53,
+    "status": "Available",
+    "cluster": "Indigo First Row Garden Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 37,
+    "roofAreaSqm": 17
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-15",
+    "unitNo": "IN-A3-3-A0-4",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 150,
+    "view": "North",
+    "priceEGP": 52673158.53,
+    "status": "Available",
+    "cluster": "Indigo First Row Garden Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 37,
+    "roofAreaSqm": 17
+  }
+]

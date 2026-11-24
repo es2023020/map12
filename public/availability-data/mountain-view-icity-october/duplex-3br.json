@@ -1,0 +1,28 @@
+[
+  {
+    "id": "mountain-view-icity-october-43",
+    "unitNo": "CF-AL-08-AG-03",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 219,
+    "view": "East",
+    "priceEGP": 19066923.1,
+    "status": "Available",
+    "cluster": "Club CF-AL",
+    "deliveryNote": "PARTIAL DELIVERY",
+    "gardenAreaSqm": 72.21
+  },
+  {
+    "id": "mountain-view-icity-october-67",
+    "unitNo": "CV-01-01-00-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 230,
+    "view": "East",
+    "priceEGP": 26504466.31,
+    "status": "Available",
+    "cluster": "Club Villas",
+    "deliveryNote": "READY TO MOVE - 3",
+    "gardenAreaSqm": 238
+  }
+]

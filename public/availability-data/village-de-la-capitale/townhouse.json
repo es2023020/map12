@@ -1,0 +1,44 @@
+[
+  {
+    "id": "village-de-la-capitale-49",
+    "unitNo": "VDLC-TH1-2111-4",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 176.5,
+    "view": "",
+    "priceEGP": 27284000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "deliveryNote": "Jun 2031",
+    "roofAreaSqm": 59.5,
+    "landAreaSqm": 186
+  },
+  {
+    "id": "village-de-la-capitale-50",
+    "unitNo": "VDLC-TH1-2113-1",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 176.5,
+    "view": "",
+    "priceEGP": 27284000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 2",
+    "deliveryNote": "Jun 2031",
+    "roofAreaSqm": 59.5,
+    "landAreaSqm": 186
+  },
+  {
+    "id": "village-de-la-capitale-214",
+    "unitNo": "VDLC-TH2-1200-5",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 176.5,
+    "view": "",
+    "priceEGP": 24783000,
+    "status": "Available",
+    "cluster": "VDLC_Phase 1",
+    "deliveryNote": "Jun 2031",
+    "roofAreaSqm": 59.5,
+    "landAreaSqm": 186
+  }
+]

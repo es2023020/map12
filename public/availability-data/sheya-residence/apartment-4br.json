@@ -1,0 +1,132 @@
+[
+  {
+    "id": "sheya-residence-1",
+    "unitNo": "Sheya Residence - 86 - 216 - 43A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 218.68,
+    "view": "",
+    "priceEGP": 19976023.1,
+    "status": "Available",
+    "roofAreaSqm": 74.45,
+    "floor": "4"
+  },
+  {
+    "id": "sheya-residence-2",
+    "unitNo": "Sheya Residence - 86 - 216 - 43B",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 217.8,
+    "view": "",
+    "priceEGP": 19208931.23,
+    "status": "Available",
+    "roofAreaSqm": 74.45,
+    "floor": "4"
+  },
+  {
+    "id": "sheya-residence-3",
+    "unitNo": "Sheya Residence - 86 - 213 - 23B",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 205.64,
+    "view": "",
+    "priceEGP": 18406249.09,
+    "status": "Available",
+    "floor": "2"
+  },
+  {
+    "id": "sheya-residence-4",
+    "unitNo": "Sheya Residence - 86 - 213 - 43A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 218.68,
+    "view": "",
+    "priceEGP": 19976023.1,
+    "status": "Available",
+    "roofAreaSqm": 74.45,
+    "floor": "4"
+  },
+  {
+    "id": "sheya-residence-5",
+    "unitNo": "Sheya Residence - 86 - 213 - 43B",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 217.8,
+    "view": "",
+    "priceEGP": 19208931.23,
+    "status": "Available",
+    "roofAreaSqm": 74.45,
+    "floor": "4"
+  },
+  {
+    "id": "sheya-residence-6",
+    "unitNo": "Sheya Residence - 86 - 214 - 42A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 218.68,
+    "view": "",
+    "priceEGP": 20878187.57,
+    "status": "Available",
+    "roofAreaSqm": 127.73,
+    "floor": "4"
+  },
+  {
+    "id": "sheya-residence-7",
+    "unitNo": "Sheya Residence - 86 - 214 - 43A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 218.68,
+    "view": "",
+    "priceEGP": 19976023.1,
+    "status": "Available",
+    "roofAreaSqm": 74.45,
+    "floor": "4"
+  },
+  {
+    "id": "sheya-residence-8",
+    "unitNo": "Sheya Residence - 86 - 214 - 43B",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 217.8,
+    "view": "",
+    "priceEGP": 19208931.23,
+    "status": "Available",
+    "roofAreaSqm": 74.45,
+    "floor": "4"
+  },
+  {
+    "id": "sheya-residence-9",
+    "unitNo": "Sheya Residence - 86 - 215 - 23B",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 205.64,
+    "view": "",
+    "priceEGP": 18406249.09,
+    "status": "Available",
+    "floor": "2"
+  },
+  {
+    "id": "sheya-residence-10",
+    "unitNo": "Sheya Residence - 86 - 215 - 43A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 218.68,
+    "view": "",
+    "priceEGP": 19976023.1,
+    "status": "Available",
+    "roofAreaSqm": 74.45,
+    "floor": "4"
+  },
+  {
+    "id": "sheya-residence-11",
+    "unitNo": "Sheya Residence - 86 - 216 - 2A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 206.38,
+    "view": "",
+    "priceEGP": 19799190.89,
+    "status": "Available",
+    "gardenAreaSqm": 119.292,
+    "floor": "Ground"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "el-masyaf-1",
+    "unitNo": "ATOH5A01",
+    "beds": 0,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "view": "",
+    "priceEGP": 51692253.32,
+    "status": "Available",
+    "deliveryNote": "Nov 2028",
+    "landAreaSqm": 373.1,
+    "floor": "ارضي و أول"
+  },
+  {
+    "id": "el-masyaf-2",
+    "unitNo": "ATOH5A02",
+    "beds": 0,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "view": "",
+    "priceEGP": 42457614.98,
+    "status": "Available",
+    "deliveryNote": "Nov 2028",
+    "landAreaSqm": 255.2,
+    "floor": "ارضي و أول"
+  },
+  {
+    "id": "el-masyaf-3",
+    "unitNo": "ATOH5A04",
+    "beds": 0,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "view": "",
+    "priceEGP": 55596359.84,
+    "status": "Available",
+    "deliveryNote": "Nov 2028",
+    "landAreaSqm": 445.9,
+    "floor": "ارضي و أول"
+  },
+  {
+    "id": "el-masyaf-4",
+    "unitNo": "ATOH5B08",
+    "beds": 0,
+    "finishing": "Fully Finished",
+    "areaSqm": 232,
+    "view": "",
+    "priceEGP": 52332578.21,
+    "status": "Available",
+    "deliveryNote": "Nov 2028",
+    "landAreaSqm": 389.7,
+    "floor": "ارضي و أول"
+  }
+]

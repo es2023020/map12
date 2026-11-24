@@ -1,0 +1,28 @@
+[
+  {
+    "id": "mountain-view-ras-el-hekma-13",
+    "unitNo": "IN-B5-9-A1-2",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 269,
+    "view": "North",
+    "priceEGP": 50716868.07,
+    "status": "Available",
+    "cluster": "Indigo Penthouse Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "roofAreaSqm": 88
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-18",
+    "unitNo": "IN-A3-3-A1-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 411,
+    "view": "North",
+    "priceEGP": 78633748.89,
+    "status": "Available",
+    "cluster": "Indigo First Row Penthouse Chalet",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "roofAreaSqm": 230
+  }
+]

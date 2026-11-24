@@ -1,0 +1,30 @@
+[
+  {
+    "id": "the-crown-extension-44",
+    "unitNo": "CRX-TIN-33B",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 225.5,
+    "view": "",
+    "priceEGP": 39579000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "deliveryNote": "Dec 2030",
+    "roofAreaSqm": 74.5,
+    "landAreaSqm": 281
+  },
+  {
+    "id": "the-crown-extension-45",
+    "unitNo": "CRX-TIN-61A",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 225.5,
+    "view": "",
+    "priceEGP": 39713000,
+    "status": "Available",
+    "cluster": "The Crown Ext.",
+    "deliveryNote": "Dec 2030",
+    "roofAreaSqm": 74.5,
+    "landAreaSqm": 281
+  }
+]

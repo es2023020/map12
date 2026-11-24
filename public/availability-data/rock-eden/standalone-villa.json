@@ -1,0 +1,38 @@
+[
+  {
+    "id": "rock-eden-5",
+    "unitNo": "ED-V09-G-1",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 564,
+    "view": "Corner & Street",
+    "priceEGP": 28511202.47,
+    "status": "Available",
+    "cluster": "V09",
+    "floor": "G"
+  },
+  {
+    "id": "rock-eden-6",
+    "unitNo": "ED-V10-G-1",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 552,
+    "view": "Extended View",
+    "priceEGP": 29339131.7,
+    "status": "Available",
+    "cluster": "V10",
+    "floor": "G"
+  },
+  {
+    "id": "rock-eden-7",
+    "unitNo": "ED-V11-G-5",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 487,
+    "view": "Street & Garden",
+    "priceEGP": 26617396.89,
+    "status": "Available",
+    "cluster": "V11",
+    "floor": "G"
+  }
+]

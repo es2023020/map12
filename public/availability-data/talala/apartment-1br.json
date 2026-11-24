@@ -1,0 +1,72 @@
+[
+  {
+    "id": "talala-884",
+    "unitNo": "TALALA - 15 - 530 - 54",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 48.1,
+    "view": "",
+    "priceEGP": 4647815,
+    "status": "Available",
+    "floor": "5"
+  },
+  {
+    "id": "talala-885",
+    "unitNo": "TALALA - 15 - 575 - 3B",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 76.7,
+    "view": "",
+    "priceEGP": 8470181,
+    "status": "Available",
+    "gardenAreaSqm": 46.9,
+    "floor": "Ground"
+  },
+  {
+    "id": "talala-886",
+    "unitNo": "TALALA - 15 - 575 - 11B",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 86.1,
+    "view": "",
+    "priceEGP": 7734028,
+    "status": "Available",
+    "floor": "1"
+  },
+  {
+    "id": "talala-887",
+    "unitNo": "TALALA - 15 - 576 - 3B",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 76.7,
+    "view": "",
+    "priceEGP": 8470181,
+    "status": "Available",
+    "gardenAreaSqm": 46.9,
+    "floor": "Ground"
+  },
+  {
+    "id": "talala-888",
+    "unitNo": "TALALA - 15 - 577 - 3B",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 76.7,
+    "view": "",
+    "priceEGP": 8470181,
+    "status": "Available",
+    "gardenAreaSqm": 46.9,
+    "floor": "Ground"
+  },
+  {
+    "id": "talala-889",
+    "unitNo": "TALALA - 15 - 577 - 1C",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 72.2,
+    "view": "",
+    "priceEGP": 9875705,
+    "status": "Available",
+    "gardenAreaSqm": 117,
+    "floor": "Ground"
+  }
+]

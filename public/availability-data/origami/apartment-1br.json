@@ -1,0 +1,50 @@
+[
+  {
+    "id": "origami-5",
+    "unitNo": "ORIGAMI - 82 - 296 - 51B",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 115.13,
+    "view": "",
+    "priceEGP": 11732885.68,
+    "status": "Available",
+    "roofAreaSqm": 17.91,
+    "floor": "5"
+  },
+  {
+    "id": "origami-6",
+    "unitNo": "ORIGAMI - 82 - 298 - 51A",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 115.13,
+    "view": "",
+    "priceEGP": 11716432.24,
+    "status": "Available",
+    "roofAreaSqm": 16.81,
+    "floor": "5"
+  },
+  {
+    "id": "origami-7",
+    "unitNo": "ORIGAMI - 82 - 298 - 51B",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 115.13,
+    "view": "",
+    "priceEGP": 11732885.68,
+    "status": "Available",
+    "roofAreaSqm": 17.91,
+    "floor": "5"
+  },
+  {
+    "id": "origami-8",
+    "unitNo": "ORIGAMI - 82 - 299 - 51A",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 115.13,
+    "view": "",
+    "priceEGP": 11716432.24,
+    "status": "Available",
+    "roofAreaSqm": 16.81,
+    "floor": "5"
+  }
+]

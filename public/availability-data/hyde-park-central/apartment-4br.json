@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hyde-park-central-59",
+    "unitNo": "HPC/WR-33D/806",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 155,
+    "view": "",
+    "priceEGP": 15680000,
+    "status": "Available",
+    "cluster": "Water Residence",
+    "floor": "8"
+  },
+  {
+    "id": "hyde-park-central-60",
+    "unitNo": "HPC/WR-33D/901",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 155,
+    "view": "",
+    "priceEGP": 15680000,
+    "status": "Available",
+    "cluster": "Water Residence",
+    "floor": "9"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "garden-lakes-44",
+    "unitNo": "GL1/SA/10",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 242,
+    "view": "",
+    "priceEGP": 46740000,
+    "status": "Available",
+    "cluster": "Lakeside",
+    "landAreaSqm": 495.0323
+  },
+  {
+    "id": "garden-lakes-45",
+    "unitNo": "GL1/SA/24",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 242,
+    "view": "",
+    "priceEGP": 37680000,
+    "status": "Available",
+    "cluster": "Lakeside",
+    "landAreaSqm": 388.7995
+  },
+  {
+    "id": "garden-lakes-46",
+    "unitNo": "GL1/SA/31",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 242,
+    "view": "",
+    "priceEGP": 39800000,
+    "status": "Available",
+    "cluster": "Lakeside",
+    "landAreaSqm": 386.7109
+  }
+]

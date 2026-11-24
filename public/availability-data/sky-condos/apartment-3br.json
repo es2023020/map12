@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sky-condos-3",
+    "unitNo": "Q1-1710-22",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 190,
+    "view": "",
+    "priceEGP": 34246000,
+    "status": "Available",
+    "cluster": "SKY CONDOS 3",
+    "floor": "2"
+  },
+  {
+    "id": "sky-condos-4",
+    "unitNo": "R1-1716-23",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 190,
+    "view": "",
+    "priceEGP": 33536000,
+    "status": "Available",
+    "cluster": "SKY CONDOS 3",
+    "floor": "2"
+  },
+  {
+    "id": "sky-condos-6",
+    "unitNo": "S2-1320-12",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 181,
+    "view": "",
+    "priceEGP": 31976000,
+    "status": "Available",
+    "cluster": "SKY CONDOS 2",
+    "floor": "1"
+  },
+  {
+    "id": "sky-condos-7",
+    "unitNo": "U1-1310-12",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 181,
+    "view": "",
+    "priceEGP": 34000000,
+    "status": "Available",
+    "cluster": "SKY CONDOS 2",
+    "floor": "1"
+  }
+]

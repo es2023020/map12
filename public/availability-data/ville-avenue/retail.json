@@ -1,0 +1,90 @@
+[
+  {
+    "id": "ville-avenue-1",
+    "unitNo": "Ville Avenue - 26 - 01 - 16",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 684.8,
+    "view": "",
+    "priceEGP": 145177600,
+    "status": "Available",
+    "floor": "1"
+  },
+  {
+    "id": "ville-avenue-2",
+    "unitNo": "Ville Avenue - 26 - 01 - 22",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 184.3,
+    "view": "",
+    "priceEGP": 28798080,
+    "status": "Available",
+    "floor": "2"
+  },
+  {
+    "id": "ville-avenue-3",
+    "unitNo": "Ville Avenue - 26 - 01 - 26",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 170.5,
+    "view": "",
+    "priceEGP": 26012400,
+    "status": "Available",
+    "floor": "2"
+  },
+  {
+    "id": "ville-avenue-4",
+    "unitNo": "Ville Avenue - 26 - 01 - 03",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 253.3,
+    "view": "",
+    "priceEGP": 55062230,
+    "status": "Available",
+    "floor": "Ground"
+  },
+  {
+    "id": "ville-avenue-5",
+    "unitNo": "Ville Avenue - 26 - 01 - 010",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 85.1,
+    "view": "",
+    "priceEGP": 17035260,
+    "status": "Available",
+    "floor": "Ground"
+  },
+  {
+    "id": "ville-avenue-6",
+    "unitNo": "Ville Avenue - 26 - 01 - 012",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 85.1,
+    "view": "",
+    "priceEGP": 23453560,
+    "status": "Available",
+    "floor": "Ground"
+  },
+  {
+    "id": "ville-avenue-7",
+    "unitNo": "Ville Avenue - 26 - 01 - 14",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 159.9,
+    "view": "",
+    "priceEGP": 30500440,
+    "status": "Available",
+    "floor": "1"
+  },
+  {
+    "id": "ville-avenue-8",
+    "unitNo": "Ville Avenue - 26 - 01 - 15",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 198.5,
+    "view": "",
+    "priceEGP": 31100400,
+    "status": "Available",
+    "floor": "1"
+  }
+]

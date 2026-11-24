@@ -1,0 +1,200 @@
+[
+  {
+    "id": "zed-west-1",
+    "unitNo": "PSR-6-3-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 74,
+    "view": "",
+    "priceEGP": 11173000,
+    "status": "Available",
+    "cluster": "1 Bed Type 2"
+  },
+  {
+    "id": "zed-west-2",
+    "unitNo": "PSR-6-4-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 74,
+    "view": "",
+    "priceEGP": 11173000,
+    "status": "Available",
+    "cluster": "1 Bed Type 2"
+  },
+  {
+    "id": "zed-west-3",
+    "unitNo": "PSR-6-5-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 74,
+    "view": "",
+    "priceEGP": 11173000,
+    "status": "Available",
+    "cluster": "1 Bed Type 2"
+  },
+  {
+    "id": "zed-west-4",
+    "unitNo": "PSR-6-6-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 74,
+    "view": "",
+    "priceEGP": 11396000,
+    "status": "Available",
+    "cluster": "1 Bed Type 2"
+  },
+  {
+    "id": "zed-west-5",
+    "unitNo": "PSR-6-8-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 74,
+    "view": "",
+    "priceEGP": 11396000,
+    "status": "Available",
+    "cluster": "1 Bed Type 2"
+  },
+  {
+    "id": "zed-west-6",
+    "unitNo": "PSR-3-9-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 75,
+    "view": "",
+    "priceEGP": 11413000,
+    "status": "Available",
+    "cluster": "1 Bed A2"
+  },
+  {
+    "id": "zed-west-7",
+    "unitNo": "PSR-6-9-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 74,
+    "view": "",
+    "priceEGP": 11506000,
+    "status": "Available",
+    "cluster": "1 Bed Type 2"
+  },
+  {
+    "id": "zed-west-8",
+    "unitNo": "PSR-6-10-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 74,
+    "view": "",
+    "priceEGP": 11506000,
+    "status": "Available",
+    "cluster": "1 Bed Type 2"
+  },
+  {
+    "id": "zed-west-9",
+    "unitNo": "PSR-3-9-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 75,
+    "view": "",
+    "priceEGP": 11526000,
+    "status": "Available",
+    "cluster": "1 Bed A2"
+  },
+  {
+    "id": "zed-west-11",
+    "unitNo": "PSR-6-1-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 11919000,
+    "status": "Available",
+    "cluster": "1 Bed Type 1C"
+  },
+  {
+    "id": "zed-west-12",
+    "unitNo": "PSR-6-2-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 11919000,
+    "status": "Available",
+    "cluster": "1 Bed Type 1E"
+  },
+  {
+    "id": "zed-west-13",
+    "unitNo": "PSR-6-G-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 11992000,
+    "status": "Available",
+    "cluster": "1 Bed Type 1A"
+  },
+  {
+    "id": "zed-west-14",
+    "unitNo": "PSR-6-3-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 12161000,
+    "status": "Available",
+    "cluster": "1 Bed Type 1E"
+  },
+  {
+    "id": "zed-west-15",
+    "unitNo": "PSR-6-4-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 12161000,
+    "status": "Available",
+    "cluster": "1 Bed Type 1E"
+  },
+  {
+    "id": "zed-west-16",
+    "unitNo": "PSR-6-5-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 12161000,
+    "status": "Available",
+    "cluster": "1 Bed Type 1E"
+  },
+  {
+    "id": "zed-west-17",
+    "unitNo": "PSR-6-5-6",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 12161000,
+    "status": "Available",
+    "cluster": "1 Bed Type 1F"
+  },
+  {
+    "id": "zed-west-18",
+    "unitNo": "PSR-6-9-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 12525000,
+    "status": "Available",
+    "cluster": "1 Bed Type 1E"
+  },
+  {
+    "id": "zed-west-19",
+    "unitNo": "PSR-6-10-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 12525000,
+    "status": "Available",
+    "cluster": "1 Bed Type 1E"
+  }
+]

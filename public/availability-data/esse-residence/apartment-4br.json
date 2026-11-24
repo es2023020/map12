@@ -1,0 +1,38 @@
+[
+  {
+    "id": "esse-residence-14",
+    "unitNo": "esse residence - 90 - 220 - 2B",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 205.52,
+    "view": "",
+    "priceEGP": 19246705.93,
+    "status": "Available",
+    "gardenAreaSqm": 125.723,
+    "floor": "Ground"
+  },
+  {
+    "id": "esse-residence-15",
+    "unitNo": "esse residence - 90 - 220 - 42B",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 220.34,
+    "view": "",
+    "priceEGP": 19965169.9,
+    "status": "Available",
+    "roofAreaSqm": 127.73,
+    "floor": "4"
+  },
+  {
+    "id": "esse-residence-16",
+    "unitNo": "esse residence - 90 - 220 - 43B",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 217.81,
+    "view": "",
+    "priceEGP": 19644398.67,
+    "status": "Available",
+    "roofAreaSqm": 74.45,
+    "floor": "4"
+  }
+]

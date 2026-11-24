@@ -1,0 +1,44 @@
+[
+  {
+    "id": "caesar-sodic-4",
+    "unitNo": "C-009-A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 305,
+    "view": "",
+    "priceEGP": 75492000,
+    "status": "Available",
+    "cluster": "Extension 1 - 1",
+    "deliveryNote": "30/12/2027",
+    "landAreaSqm": 760,
+    "floor": "G"
+  },
+  {
+    "id": "caesar-sodic-26",
+    "unitNo": "C-156-A",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 305,
+    "view": "",
+    "priceEGP": 92027000,
+    "status": "Available",
+    "cluster": "Extension 1 - 1",
+    "deliveryNote": "30/06/2028",
+    "landAreaSqm": 760,
+    "floor": "G"
+  },
+  {
+    "id": "caesar-sodic-27",
+    "unitNo": "C-156-B",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 305,
+    "view": "",
+    "priceEGP": 88401000,
+    "status": "Available",
+    "cluster": "Extension 1 - 1",
+    "deliveryNote": "30/06/2028",
+    "landAreaSqm": 760,
+    "floor": "G"
+  }
+]
