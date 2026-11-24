@@ -3,7 +3,6 @@ export const usersGenerated: any[] = [
   {
     "email": "admin@propertyatlas.com",
     "name": "Property Atlas Admin",
-    "password": "Team1",
     "tier": "BrokerageAdmin",
     "whatsappSendsCount": 0,
     "lastLoginAt": 1795475922159,
@@ -12,7 +11,6 @@ export const usersGenerated: any[] = [
   {
     "email": "elsayedshoeip70@gmail.com",
     "name": "Elsayed Shoeip (Admin)",
-    "password": "Sayed@shoeip8",
     "tier": "BrokerageAdmin",
     "whatsappSendsCount": 0,
     "lastLoginAt": 1795073552909,

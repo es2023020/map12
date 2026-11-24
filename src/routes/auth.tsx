@@ -45,17 +45,17 @@ function AuthPage() {
     setSuccessMsg("");
 
     if (mode === "developer") {
-      const codeOrSlug = devIdentifier || selectedDevSlug;
-      if (!codeOrSlug) {
-        setErrorMsg("Please select your developer or enter your developer access code.");
+      const passcode = devIdentifier.trim();
+      if (!passcode) {
+        setErrorMsg("Please enter your official developer access passcode (DEV_[SLUG]_2026).");
         return;
       }
-      const res = loginAsDeveloper(codeOrSlug);
+      const res = loginAsDeveloper(selectedDevSlug || passcode, passcode);
       if (res.success && res.developer) {
         setSuccessMsg(`Welcome, ${res.developer.name}! Opening Developer Portal...`);
         setTimeout(() => navigate({ to: `/developer-portal?dev=${res.developer.slug}` as any }), 600);
       } else {
-        setErrorMsg(res.error || "Invalid developer access code or company identifier.");
+        setErrorMsg(res.error || "Invalid developer access passcode.");
       }
       return;
     }
@@ -225,39 +225,38 @@ function AuthPage() {
                   </div>
 
                   <div>
-                    <Label htmlFor="dev-select">Select Developer Entity</Label>
+                    <Label htmlFor="dev-select">Select Developer Entity (Optional)</Label>
                     <select
                       id="dev-select"
                       value={selectedDevSlug}
-                      onChange={(e) => {
-                        setSelectedDevSlug(e.target.value);
-                        setDevIdentifier(e.target.value);
-                      }}
+                      onChange={(e) => setSelectedDevSlug(e.target.value)}
                       className="mt-1.5 flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     >
                       <option value="">— Select your company (148 developers) —</option>
                       {developerAccounts.map((d) => (
                         <option key={d.slug} value={d.slug}>
-                          {d.name} ({d.accessCode})
+                          {d.name}
                         </option>
                       ))}
                     </select>
                   </div>
 
                   <div>
-                    <Label htmlFor="dev-code">Or Enter Developer Access Passcode</Label>
+                    <Label htmlFor="dev-code">Official Developer Access Passcode</Label>
                     <div className="relative mt-1.5">
                       <KeyRound className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="dev-code"
+                        type="password"
                         value={devIdentifier}
                         onChange={(e) => setDevIdentifier(e.target.value)}
-                        placeholder="e.g. DEV_EMAAR_MISR_2026 or DEV_SODIC_2026"
+                        placeholder="Enter secret passcode: DEV_[SLUG]_2026"
                         className="pl-9 rounded-xl font-mono text-xs uppercase"
+                        required
                       />
                     </div>
                     <p className="text-[10px] text-muted-foreground mt-1">
-                      Tip: You can use format <code>DEV_[DEVELOPER_SLUG]_2026</code> or select from the dropdown above.
+                      Enter the confidential access passcode issued to your development entity.
                     </p>
                   </div>
                 </div>

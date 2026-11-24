@@ -8,6 +8,7 @@ import { MapClient } from "@/components/map/MapClient";
 import { compounds } from "@/data/compounds";
 import { availability } from "@/data/availability";
 import { destinations } from "@/data/destinations";
+import { supabase } from "@/lib/supabase";
 import * as XLSX from "xlsx";
 import { projectLocations } from "@/data/project-locations";
 import {
@@ -90,14 +91,16 @@ function AdminPage() {
   const signIn = useStore((s) => s.signIn);
   const signOut = useStore((s) => s.signOut);
 
-  // Admin credentials checking (allow immediate access on localhost in dev)
-  const isDev = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
-  const isAdmin = isDev || user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com";
+  // Secure Admin check: Authenticated admin email or admin role
+  const isAdmin =
+    user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com" ||
+    user?.role === "admin";
 
   // Form states for login & stealth 404 security gate
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [loginError, setLoginError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [showGate, setShowGate] = useState(false);
   const [clickCount, setClickCount] = useState(0);
 
@@ -109,20 +112,50 @@ function AdminPage() {
     }
   }, []);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (
-      emailInput.toLowerCase() === "elsayedshoeip70@gmail.com" &&
-      passwordInput === "Sayed@shoeip8"
-    ) {
-      const success = signIn(emailInput, passwordInput);
-      if (success) {
+    setLoginError("");
+    setIsSubmitting(true);
+    const email = emailInput.trim().toLowerCase();
+
+    try {
+      if (supabase) {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email,
+          password: passwordInput,
+        });
+
+        if (error || !data?.user) {
+          setLoginError(error?.message || "Invalid administrator credentials.");
+          setIsSubmitting(false);
+          return;
+        }
+
+        // Verify role in profiles table
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("role")
+          .eq("id", data.user.id)
+          .single();
+
+        if (profile?.role !== "admin" && email !== "elsayedshoeip70@gmail.com") {
+          setLoginError("Access denied: Account does not have administrator privileges.");
+          setIsSubmitting(false);
+          return;
+        }
+
+        signIn(email, passwordInput);
         setLoginError("");
       } else {
-        setLoginError("Login handler failed. Verify store configurations.");
+        const success = signIn(email, passwordInput);
+        if (!success) {
+          setLoginError("Invalid Administrator credentials.");
+        }
       }
-    } else {
-      setLoginError("Invalid Administrator credentials.");
+    } catch (err: any) {
+      setLoginError(err?.message || "Authentication error occurred.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -1579,8 +1612,17 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
           formData.append("type", "brochure");
           formData.append("fileName", fileName);
 
+          const headers: Record<string, string> = {};
+          if (supabase) {
+            const { data } = await supabase.auth.getSession();
+            if (data?.session?.access_token) {
+              headers["Authorization"] = `Bearer ${data.session.access_token}`;
+            }
+          }
+
           const res = await fetch("/api/upload-asset", {
             method: "POST",
+            headers,
             body: formData,
           });
 
@@ -3983,9 +4025,16 @@ function AdminDashboardPanel({ onLogout }: { onLogout: () => void }) {
                           onClick={async () => {
                             try {
                               const backupStr = exportDatabaseBackup();
+                              const headers: Record<string, string> = { "Content-Type": "application/json" };
+                              if (supabase) {
+                                const { data } = await supabase.auth.getSession();
+                                if (data?.session?.access_token) {
+                                  headers["Authorization"] = `Bearer ${data.session.access_token}`;
+                                }
+                              }
                               const res = await fetch("/api/save-database", {
                                 method: "POST",
-                                headers: { "Content-Type": "application/json" },
+                                headers,
                                 body: backupStr,
                               });
                               const resData = await res.json();

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import * as fs from "fs";
 import * as path from "path";
 import { exec } from "child_process";
+import { verifyAdminRequest } from "@/lib/server-auth";
 
 export const Route = createFileRoute("/api/save-database")({
   server: {
@@ -9,6 +10,16 @@ export const Route = createFileRoute("/api/save-database")({
       POST: async (event: any) => {
         try {
           const request = event.request;
+
+          // Enforce Administrator Authorization
+          const authCheck = await verifyAdminRequest(request);
+          if (!authCheck.authorized) {
+            return new Response(JSON.stringify({ error: authCheck.error || "Unauthorized" }), {
+              status: 401,
+              headers: { "Content-Type": "application/json" },
+            });
+          }
+
           const body = await request.json();
           const { compoundsList, destinationsList, availabilityList } = body;
 

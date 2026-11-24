@@ -3,6 +3,15 @@ import * as fs from "fs";
 import * as path from "path";
 import { getSupabaseClient, getSupabaseAdminClient } from "@/lib/supabase";
 
+function sanitizeString(val: any, maxLength = 255): string {
+  if (typeof val !== "string") return "";
+  return val
+    .trim()
+    .replace(/<[^>]*>?/gm, "") // Strip HTML tags
+    .replace(/[\u0000-\u0008\u000B-\u000C\u000E-\u001F]/g, "") // Strip control characters
+    .slice(0, maxLength);
+}
+
 // @ts-ignore
 export const Route = createFileRoute("/api/save-lead")({
   server: {
@@ -12,6 +21,15 @@ export const Route = createFileRoute("/api/save-lead")({
           const request = event.request;
           const lead = await request.json();
 
+          // 1. Bot Honeypot Defense: Silent drop if bot filled honeypot fields
+          if (lead?.website_hp || lead?.fax_hp || lead?.company_hp) {
+            console.warn("Spam bot submission caught by honeypot field. Dropped silently.");
+            return new Response(JSON.stringify({ success: true }), {
+              status: 200,
+              headers: { "Content-Type": "application/json" },
+            });
+          }
+
           if (!lead || !lead.name || !lead.phone) {
             return new Response(JSON.stringify({ error: "Invalid lead payload. Name and phone required." }), {
               status: 400,
@@ -19,17 +37,30 @@ export const Route = createFileRoute("/api/save-lead")({
             });
           }
 
+          const cleanName = sanitizeString(lead.name, 100);
+          const cleanPhone = sanitizeString(lead.phone, 35);
+          const cleanEmail = sanitizeString(lead.email, 120);
+          const cleanNotes = sanitizeString(lead.notes || lead.message, 1000);
+          const cleanBudget = sanitizeString(lead.budget, 60);
+
+          if (cleanName.length < 2 || cleanPhone.length < 6) {
+            return new Response(JSON.stringify({ error: "Please provide a valid name and phone number." }), {
+              status: 400,
+              headers: { "Content-Type": "application/json" },
+            });
+          }
+
           const leadRecord = {
             id: lead.id || `lead-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
-            name: lead.name,
-            phone: lead.phone,
-            email: lead.email || "",
-            projectSlug: lead.projectSlug || lead.project || "",
-            projectName: lead.projectName || lead.project || "",
-            developerSlug: lead.developerSlug || "",
-            destination: lead.destination || "",
-            budget: lead.budget || "",
-            notes: lead.notes || lead.message || "",
+            name: cleanName,
+            phone: cleanPhone,
+            email: cleanEmail,
+            projectSlug: sanitizeString(lead.projectSlug || lead.project, 100),
+            projectName: sanitizeString(lead.projectName || lead.project, 120),
+            developerSlug: sanitizeString(lead.developerSlug, 100),
+            destination: sanitizeString(lead.destination, 100),
+            budget: cleanBudget,
+            notes: cleanNotes,
             timestamp: lead.timestamp || new Date().toISOString(),
             status: lead.status || "new",
           };

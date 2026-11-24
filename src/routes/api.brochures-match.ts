@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as fs from "fs";
 import * as path from "path";
+import { verifyAdminRequest } from "@/lib/server-auth";
 
 // Levenshtein distance
 function getLevenshteinDistance(a: string, b: string): number {
@@ -46,9 +47,18 @@ export const Route = createFileRoute("/api/brochures-match")({
     handlers: {
       GET: async (event: any) => {
         try {
+          const request = event.request;
+          const authCheck = await verifyAdminRequest(request);
+          if (!authCheck.authorized) {
+            return new Response(JSON.stringify({ error: authCheck.error || "Unauthorized" }), {
+              status: 401,
+              headers: { "Content-Type": "application/json" },
+            });
+          }
+
           // Read project names from compounds.ts
           const { compounds } = require("../data/compounds");
-          const brochuresDir = "D:\\map12\\public\\brochures";
+          const brochuresDir = path.join(process.cwd(), "public", "brochures");
 
           if (!fs.existsSync(brochuresDir)) {
             return new Response(JSON.stringify({ error: "Brochures directory not found" }), {

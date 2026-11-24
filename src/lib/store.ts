@@ -275,7 +275,7 @@ type State = {
   // Actions
   signIn: (email: string, password?: string) => boolean;
   signUp: (email: string, name: string, password?: string, tier?: SubscriptionTier) => boolean;
-  loginAsDeveloper: (identifier: string) => { success: boolean; developer?: any; error?: string };
+  loginAsDeveloper: (identifier: string, passcode?: string) => { success: boolean; developer?: any; error?: string };
   signOut: () => void;
   toggleFavorite: (slug: string) => void;
   toggleCompare: (slug: string) => void;
@@ -506,15 +506,24 @@ const seedLeads: Lead[] = [
 import { usersGenerated } from "@/data/users.generated";
 const seedUsers: RegisteredUser[] = usersGenerated;
 
+import { supabase } from "@/lib/supabase";
+
 const syncUsersToServer = async (usersList: RegisteredUser[]) => {
   try {
+    const headers: Record<string, string> = { "Content-Type": "application/json" };
+    if (supabase) {
+      const { data } = await supabase.auth.getSession();
+      if (data?.session?.access_token) {
+        headers["Authorization"] = `Bearer ${data.session.access_token}`;
+      }
+    }
     await fetch("/api/save-users", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers,
       body: JSON.stringify({ usersList }),
     });
   } catch (e) {
-    console.error("Failed to sync users to server:", e);
+    // Graceful fallback for client-side storage
   }
 };
 
@@ -817,10 +826,10 @@ export const useStore = create<State>()(
           return success;
         },
 
-        loginAsDeveloper: (identifier: string) => {
-          const dev = validateDeveloperAccess(identifier);
+        loginAsDeveloper: (identifier: string, passcode?: string) => {
+          const dev = validateDeveloperAccess(identifier, passcode);
           if (!dev) {
-            return { success: false, error: "Invalid developer access code or company identifier" };
+            return { success: false, error: "Invalid developer access code. Access denied." };
           }
           markSessionActive();
           const devUser: BrokerUser = {

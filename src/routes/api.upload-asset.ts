@@ -2,12 +2,22 @@ import { createFileRoute } from "@tanstack/react-router";
 import * as fs from "fs";
 import * as path from "path";
 import { exec } from "child_process";
+import { verifyAdminRequest } from "@/lib/server-auth";
 
 export const Route = createFileRoute("/api/upload-asset")({
   server: {
     handlers: {
       GET: async (event: any) => {
         try {
+          const request = event.request;
+          const authCheck = await verifyAdminRequest(request);
+          if (!authCheck.authorized) {
+            return new Response(JSON.stringify({ error: authCheck.error || "Unauthorized" }), {
+              status: 401,
+              headers: { "Content-Type": "application/json" },
+            });
+          }
+
           const { compounds } = require("../data/compounds");
           const brochuresDir = path.join(process.cwd(), "public", "brochures");
           const waitingDir = path.join(brochuresDir, "_waiting_to_be_uploaded");
@@ -53,6 +63,14 @@ export const Route = createFileRoute("/api/upload-asset")({
       POST: async (event: any) => {
         try {
           const request = event.request;
+          const authCheck = await verifyAdminRequest(request);
+          if (!authCheck.authorized) {
+            return new Response(JSON.stringify({ error: authCheck.error || "Unauthorized" }), {
+              status: 401,
+              headers: { "Content-Type": "application/json" },
+            });
+          }
+
           const formData = await request.formData();
           const file = formData.get("file");
           const type = formData.get("type");

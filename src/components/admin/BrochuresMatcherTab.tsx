@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { supabase } from "@/lib/supabase";
 import {
   FileText,
   RefreshCw,
@@ -33,7 +34,14 @@ export function BrochuresMatcherTab({ compoundsList, updateProject }: BrochuresM
   const runScanner = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/brochures-match");
+      const headers: Record<string, string> = {};
+      if (supabase) {
+        const { data } = await supabase.auth.getSession();
+        if (data?.session?.access_token) {
+          headers["Authorization"] = `Bearer ${data.session.access_token}`;
+        }
+      }
+      const res = await fetch("/api/brochures-match", { headers });
       if (!res.ok) throw new Error("Scanner API failed");
       const data = await res.json();
       setSummary(data.summary);

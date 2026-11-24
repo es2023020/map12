@@ -30,31 +30,31 @@ export function getDeveloperAccount(slug: string): DeveloperAccount | undefined 
   return developerAccountsBySlug.get(slug);
 }
 
-export function validateDeveloperAccess(identifier: string): DeveloperAccount | null {
-  if (!identifier) return null;
-  const trimmed = identifier.trim();
-  const upper = trimmed.toUpperCase();
+export function validateDeveloperAccess(
+  identifierOrPasscode: string,
+  optionalPasscode?: string,
+): DeveloperAccount | null {
+  if (!identifierOrPasscode) return null;
+  const trimmed = identifierOrPasscode.trim();
 
-  // Check by Access Code
+  // If a separate passcode was provided (e.g. from developer selection dropdown + passcode input)
+  if (optionalPasscode) {
+    const cleanPass = optionalPasscode.trim().toUpperCase();
+    const cleanId = trimmed.toLowerCase();
+    const account =
+      developerAccountsBySlug.get(cleanId) ||
+      developerAccounts.find((d) => d.email.toLowerCase() === cleanId);
+    if (account && account.accessCode.toUpperCase() === cleanPass) {
+      return account;
+    }
+    return null;
+  }
+
+  // Strictly verify against secret access passcode (DEV_[SLUG]_2026)
+  const upper = trimmed.toUpperCase();
   if (developerAccountsByCode.has(upper)) {
     return developerAccountsByCode.get(upper)!;
   }
-
-  // Check by direct slug
-  const lower = trimmed.toLowerCase();
-  if (developerAccountsBySlug.has(lower)) {
-    return developerAccountsBySlug.get(lower)!;
-  }
-
-  // Check by email
-  const byEmail = developerAccounts.find((d) => d.email.toLowerCase() === lower);
-  if (byEmail) return byEmail;
-
-  // Check by developer name
-  const byName = developerAccounts.find(
-    (d) => d.name.toLowerCase() === lower || d.name.toLowerCase().includes(lower),
-  );
-  if (byName) return byName;
 
   return null;
 }

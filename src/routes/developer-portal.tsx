@@ -324,9 +324,10 @@ export default function DeveloperPortalPage() {
                   <KeyRound className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="gate-passcode"
+                    type="password"
                     value={passcodeIdentifier}
                     onChange={(e) => setPasscodeIdentifier(e.target.value)}
-                    placeholder="e.g. DEV_EMAAR_MISR_2026 or Company Name"
+                    placeholder="Enter confidential passcode: DEV_[SLUG]_2026"
                     className="pl-9 rounded-xl font-mono text-xs uppercase"
                     autoFocus
                   />

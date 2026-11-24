@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import * as fs from "fs";
 import * as path from "path";
 import { exec } from "child_process";
+import { verifyAdminRequest } from "@/lib/server-auth";
 
 export const Route = createFileRoute("/api/save-users")({
   server: {
@@ -9,20 +10,33 @@ export const Route = createFileRoute("/api/save-users")({
       POST: async (event: any) => {
         try {
           const request = event.request;
+
+          // Enforce Administrator Authorization
+          const authCheck = await verifyAdminRequest(request);
+          if (!authCheck.authorized) {
+            return new Response(JSON.stringify({ error: authCheck.error || "Unauthorized" }), {
+              status: 401,
+              headers: { "Content-Type": "application/json" },
+            });
+          }
+
           const body = await request.json();
           const { usersList } = body;
 
-          if (!usersList) {
-            return new Response(JSON.stringify({ error: "Missing usersList in request body" }), {
+          if (!usersList || !Array.isArray(usersList)) {
+            return new Response(JSON.stringify({ error: "Missing or invalid usersList in request body" }), {
               status: 400,
               headers: { "Content-Type": "application/json" },
             });
           }
 
+          // Strip any sensitive fields before persisting
+          const sanitizedUsers = usersList.map(({ password, ...user }: any) => user);
+
           try {
             const usersPath = path.join(process.cwd(), "src", "data", "users.generated.ts");
             const usersContent = `// Auto-generated from user signup/activity actions — do not edit by hand.
-export const usersGenerated: any[] = ${JSON.stringify(usersList, null, 2)};
+export const usersGenerated: any[] = ${JSON.stringify(sanitizedUsers, null, 2)};
 `;
             fs.writeFileSync(usersPath, usersContent, "utf-8");
             console.log("Successfully wrote save-users payload to users.generated.ts");
