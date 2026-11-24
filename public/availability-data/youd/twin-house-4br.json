@@ -1,0 +1,28 @@
+[
+  {
+    "id": "youd-20",
+    "unitNo": "WT-WT-50",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "view": "",
+    "priceEGP": 50429000,
+    "status": "Available",
+    "cluster": "WT",
+    "gardenAreaSqm": 200,
+    "floor": "G+One"
+  },
+  {
+    "id": "youd-21",
+    "unitNo": "WT-WT-39",
+    "beds": 4,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "view": "",
+    "priceEGP": 47356000,
+    "status": "Available",
+    "cluster": "WT",
+    "gardenAreaSqm": 204,
+    "floor": "G+One"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "zed-west-29",
+    "unitNo": "PSR-7-8-7",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 146,
+    "view": "",
+    "priceEGP": 20164000,
+    "status": "Available",
+    "cluster": "3 Bedroom Type 1"
+  },
+  {
+    "id": "zed-west-30",
+    "unitNo": "PSR-7-9-7",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 146,
+    "view": "",
+    "priceEGP": 20353000,
+    "status": "Available",
+    "cluster": "3 Bedroom Type 1"
+  }
+]

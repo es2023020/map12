@@ -1,0 +1,112 @@
+[
+  {
+    "id": "solana-east-23",
+    "unitNo": "SE-C6-06-105",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 92,
+    "view": "",
+    "priceEGP": 22045000,
+    "status": "Available",
+    "cluster": "Office"
+  },
+  {
+    "id": "solana-east-24",
+    "unitNo": "SE-C6-06-205",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 92,
+    "view": "",
+    "priceEGP": 22257000,
+    "status": "Available",
+    "cluster": "Office"
+  },
+  {
+    "id": "solana-east-27",
+    "unitNo": "SE-C6-07-205",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 92,
+    "view": "",
+    "priceEGP": 22893000,
+    "status": "Available",
+    "cluster": "Office"
+  },
+  {
+    "id": "solana-east-28",
+    "unitNo": "SE-C6-07-305",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 92,
+    "view": "",
+    "priceEGP": 22893000,
+    "status": "Available",
+    "cluster": "Office"
+  },
+  {
+    "id": "solana-east-31",
+    "unitNo": "SE-C6-08-305",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 95,
+    "view": "",
+    "priceEGP": 23640000,
+    "status": "Available",
+    "cluster": "Office"
+  },
+  {
+    "id": "solana-east-32",
+    "unitNo": "SE-C6-06-101",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 102,
+    "view": "",
+    "priceEGP": 24441000,
+    "status": "Available",
+    "cluster": "Office"
+  },
+  {
+    "id": "solana-east-33",
+    "unitNo": "SE-C6-06-201",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 102,
+    "view": "",
+    "priceEGP": 24676000,
+    "status": "Available",
+    "cluster": "Office"
+  },
+  {
+    "id": "solana-east-34",
+    "unitNo": "SE-C6-07-201",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 102,
+    "view": "",
+    "priceEGP": 25381000,
+    "status": "Available",
+    "cluster": "Office"
+  },
+  {
+    "id": "solana-east-35",
+    "unitNo": "SE-C6-07-301",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 102,
+    "view": "",
+    "priceEGP": 25381000,
+    "status": "Available",
+    "cluster": "Office"
+  },
+  {
+    "id": "solana-east-36",
+    "unitNo": "SE-C6-08-101",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 104,
+    "view": "",
+    "priceEGP": 25640000,
+    "status": "Available",
+    "cluster": "Office"
+  }
+]

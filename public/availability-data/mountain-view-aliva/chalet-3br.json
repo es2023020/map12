@@ -1,0 +1,54 @@
+[
+  {
+    "id": "mountain-view-aliva-82",
+    "unitNo": "L-iV-54-A0-3",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 190,
+    "view": "East",
+    "priceEGP": 22066307.37,
+    "status": "Available",
+    "cluster": "Lagoon Park iV",
+    "deliveryNote": "OFF PLAN - 3",
+    "gardenAreaSqm": 38
+  },
+  {
+    "id": "mountain-view-aliva-94",
+    "unitNo": "L-iV-34-B0-2",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 190,
+    "view": "North",
+    "priceEGP": 22421705.34,
+    "status": "Available",
+    "cluster": "Lagoon Park iV",
+    "deliveryNote": "OFF PLAN - 3",
+    "gardenAreaSqm": 56.05
+  },
+  {
+    "id": "mountain-view-aliva-135",
+    "unitNo": "L-iVGR2-42-A0-3",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 230,
+    "view": "West",
+    "priceEGP": 26270876.38,
+    "status": "Available",
+    "cluster": "Lagoon Park iVGR2",
+    "deliveryNote": "OFF PLAN - 3",
+    "gardenAreaSqm": 71.7
+  },
+  {
+    "id": "mountain-view-aliva-137",
+    "unitNo": "L-iVGR2-39-A0-3",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 230,
+    "view": "North",
+    "priceEGP": 27339834.57,
+    "status": "Available",
+    "cluster": "Lagoon Park iVGR2",
+    "deliveryNote": "OFF PLAN - 3",
+    "gardenAreaSqm": 71.7
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "mountain-view-icity-october-1",
+    "unitNo": "CA-01-01-A2-02",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 105,
+    "view": "East",
+    "priceEGP": 7337642.7,
+    "status": "Available",
+    "cluster": "Club AL",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "mountain-view-icity-october-2",
+    "unitNo": "CA-01-09-B4-01",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 115,
+    "view": "South East",
+    "priceEGP": 8507288.95,
+    "status": "Available",
+    "cluster": "Club DR",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "mountain-view-icity-october-3",
+    "unitNo": "CA-01-09-B3-01",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 115,
+    "view": "South East",
+    "priceEGP": 8507288.95,
+    "status": "Available",
+    "cluster": "Club DR",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "mountain-view-icity-october-4",
+    "unitNo": "CA-01-09-B4-04",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 115,
+    "view": "North",
+    "priceEGP": 9625928.06,
+    "status": "Available",
+    "cluster": "Club DR",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "mountain-view-icity-october-5",
+    "unitNo": "CA-01-05-AG-01",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 110,
+    "view": "North West",
+    "priceEGP": 10192099.75,
+    "status": "Available",
+    "cluster": "Club CR",
+    "deliveryNote": "OFF PLAN - 4",
+    "gardenAreaSqm": 31.6
+  }
+]

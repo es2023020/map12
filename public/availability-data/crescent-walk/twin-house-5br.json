@@ -1,0 +1,41 @@
+[
+  {
+    "id": "crescent-walk-2",
+    "unitNo": "PC-08B",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 244,
+    "view": "",
+    "priceEGP": 38363000,
+    "status": "Available",
+    "cluster": "Single Family",
+    "landAreaSqm": 293,
+    "floor": "Ground+First+Second"
+  },
+  {
+    "id": "crescent-walk-46",
+    "unitNo": "PE-18B",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 244,
+    "view": "",
+    "priceEGP": 36943000,
+    "status": "Available",
+    "cluster": "Single Family",
+    "landAreaSqm": 284,
+    "floor": "Ground+First+Second"
+  },
+  {
+    "id": "crescent-walk-47",
+    "unitNo": "PE-20B",
+    "beds": 5,
+    "finishing": "Semi Finished",
+    "areaSqm": 244,
+    "view": "",
+    "priceEGP": 37475000,
+    "status": "Available",
+    "cluster": "Single Family",
+    "landAreaSqm": 349,
+    "floor": "Ground+First"
+  }
+]

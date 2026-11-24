@@ -1,0 +1,87 @@
+[
+  {
+    "id": "signature-villas-22",
+    "unitNo": "HPS/4B/101",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 68.20878826,
+    "view": "",
+    "priceEGP": 6770000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "floor": "1"
+  },
+  {
+    "id": "signature-villas-23",
+    "unitNo": "HPS/4B/201",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 68.20878826,
+    "view": "",
+    "priceEGP": 6820000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "floor": "2"
+  },
+  {
+    "id": "signature-villas-24",
+    "unitNo": "HPS/8B/101",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 68.20878826,
+    "view": "",
+    "priceEGP": 6820000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "floor": "1"
+  },
+  {
+    "id": "signature-villas-27",
+    "unitNo": "HPS/11B/G01",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 68.20878826,
+    "view": "",
+    "priceEGP": 7940000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "gardenAreaSqm": 27.69,
+    "floor": "0"
+  },
+  {
+    "id": "signature-villas-28",
+    "unitNo": "HPS/11B/201",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 68.20878826,
+    "view": "",
+    "priceEGP": 7340000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "floor": "2"
+  },
+  {
+    "id": "signature-villas-29",
+    "unitNo": "HPS/12B/301",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 68.20878826,
+    "view": "",
+    "priceEGP": 6880000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "floor": "3"
+  },
+  {
+    "id": "signature-villas-33",
+    "unitNo": "HPS/15A/103",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 68.20878826,
+    "view": "",
+    "priceEGP": 6650000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "floor": "1"
+  }
+]

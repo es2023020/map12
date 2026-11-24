@@ -1,0 +1,26 @@
+[
+  {
+    "id": "mountain-view-jirian-1",
+    "unitNo": "NV1-CA-17-A5-4",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 75,
+    "view": "West",
+    "priceEGP": 8681153.46,
+    "status": "Available",
+    "cluster": "NV1 CA",
+    "deliveryNote": "OFF PLAN - 4"
+  },
+  {
+    "id": "mountain-view-jirian-2",
+    "unitNo": "NV1-CA-13-A1-4",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 75,
+    "view": "West",
+    "priceEGP": 8681153.46,
+    "status": "Available",
+    "cluster": "NV1 CA",
+    "deliveryNote": "OFF PLAN - 4"
+  }
+]

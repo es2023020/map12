@@ -1,0 +1,80 @@
+[
+  {
+    "id": "zahw-assuit-60",
+    "unitNo": "ZAHW - 74 - TW - 29 - B",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 222.55,
+    "view": "",
+    "priceEGP": 8304459.6,
+    "status": "Available",
+    "gardenAreaSqm": 161.3,
+    "roofAreaSqm": 33.8,
+    "floor": "V"
+  },
+  {
+    "id": "zahw-assuit-61",
+    "unitNo": "ZAHW - 74 - TW - 30 - B",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 222.55,
+    "view": "",
+    "priceEGP": 8728691.92,
+    "status": "Available",
+    "gardenAreaSqm": 157.3,
+    "roofAreaSqm": 33.8,
+    "floor": "V"
+  },
+  {
+    "id": "zahw-assuit-62",
+    "unitNo": "ZAHW - 74 - TW - 31 - B",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 222.55,
+    "view": "",
+    "priceEGP": 8561622.44,
+    "status": "Available",
+    "gardenAreaSqm": 139.3,
+    "roofAreaSqm": 33.8,
+    "floor": "V"
+  },
+  {
+    "id": "zahw-assuit-63",
+    "unitNo": "ZAHW - 74 - TW - 33 - B",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 222.55,
+    "view": "",
+    "priceEGP": 8538418.35,
+    "status": "Available",
+    "gardenAreaSqm": 136.8,
+    "roofAreaSqm": 33.8,
+    "floor": "V"
+  },
+  {
+    "id": "zahw-assuit-64",
+    "unitNo": "ZAHW - 74 - TW - 34 - B",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 222.55,
+    "view": "",
+    "priceEGP": 8673002.09,
+    "status": "Available",
+    "gardenAreaSqm": 151.3,
+    "roofAreaSqm": 33.8,
+    "floor": "V"
+  },
+  {
+    "id": "zahw-assuit-65",
+    "unitNo": "ZAHW - 74 - TW - 24 - B",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 222.55,
+    "view": "",
+    "priceEGP": 7982269.71,
+    "status": "Available",
+    "gardenAreaSqm": 146.8,
+    "roofAreaSqm": 33.8,
+    "floor": "V"
+  }
+]

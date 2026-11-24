@@ -1,0 +1,51 @@
+[
+  {
+    "id": "palm-parks-2",
+    "unitNo": "16404-0F",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 169.67,
+    "view": "",
+    "priceEGP": 22499000,
+    "status": "Available",
+    "cluster": "Palm Parks Zone C",
+    "deliveryNote": "Jun 2029",
+    "gardenAreaSqm": 120.73
+  },
+  {
+    "id": "palm-parks-3",
+    "unitNo": "16411-1F",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 169.71,
+    "view": "",
+    "priceEGP": 18573000,
+    "status": "Available",
+    "cluster": "Palm Parks Zone C",
+    "deliveryNote": "Jun 2029"
+  },
+  {
+    "id": "palm-parks-4",
+    "unitNo": "16424-2F",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 168.52,
+    "view": "",
+    "priceEGP": 18446000,
+    "status": "Available",
+    "cluster": "Palm Parks Zone C",
+    "deliveryNote": "Jun 2029"
+  },
+  {
+    "id": "palm-parks-6",
+    "unitNo": "16531-3G",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 169.26,
+    "view": "",
+    "priceEGP": 18523000,
+    "status": "Available",
+    "cluster": "Palm Parks Zone C",
+    "deliveryNote": "Jun 2029"
+  }
+]

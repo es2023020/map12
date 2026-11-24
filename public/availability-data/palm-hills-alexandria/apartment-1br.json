@@ -1,0 +1,74 @@
+[
+  {
+    "id": "palm-hills-alexandria-6",
+    "unitNo": "ALX-2001-D",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 89.86,
+    "view": "",
+    "priceEGP": 11317000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "deliveryNote": "Dec 2030"
+  },
+  {
+    "id": "palm-hills-alexandria-7",
+    "unitNo": "ALX-2201-D",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 89.86,
+    "view": "",
+    "priceEGP": 12565000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "deliveryNote": "Dec 2030"
+  },
+  {
+    "id": "palm-hills-alexandria-11",
+    "unitNo": "ALX-2401-D",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 89.86,
+    "view": "",
+    "priceEGP": 13327000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "deliveryNote": "Dec 2030"
+  },
+  {
+    "id": "palm-hills-alexandria-19",
+    "unitNo": "ALX-2901-D",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 89.86,
+    "view": "",
+    "priceEGP": 13327000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "deliveryNote": "Dec 2030"
+  },
+  {
+    "id": "palm-hills-alexandria-29",
+    "unitNo": "ALX-2101-D",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 89.86,
+    "view": "",
+    "priceEGP": 11968000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "deliveryNote": "Dec 2030"
+  },
+  {
+    "id": "palm-hills-alexandria-30",
+    "unitNo": "ALX-2301-D",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 89.86,
+    "view": "",
+    "priceEGP": 12878000,
+    "status": "Available",
+    "cluster": "Palm Hills Alexandria",
+    "deliveryNote": "Dec 2030"
+  }
+]

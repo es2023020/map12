@@ -1,0 +1,57 @@
+[
+  {
+    "id": "the-waterway-new-cairo-1",
+    "unitNo": "3 - 41",
+    "beds": 2,
+    "finishing": "Fully Finished & Furnished",
+    "areaSqm": 167,
+    "view": "Back",
+    "priceEGP": 22963000,
+    "status": "Available",
+    "floor": "4"
+  },
+  {
+    "id": "the-waterway-new-cairo-2",
+    "unitNo": "20 - 15",
+    "beds": 2,
+    "finishing": "Fully Finished & Furnished",
+    "areaSqm": 175,
+    "view": "Back",
+    "priceEGP": 24813000,
+    "status": "Available",
+    "floor": "1"
+  },
+  {
+    "id": "the-waterway-new-cairo-3",
+    "unitNo": "20 - 24",
+    "beds": 2,
+    "finishing": "Fully Finished & Furnished",
+    "areaSqm": 170,
+    "view": "Back",
+    "priceEGP": 23375000,
+    "status": "Available",
+    "floor": "2"
+  },
+  {
+    "id": "the-waterway-new-cairo-4",
+    "unitNo": "20 - 31",
+    "beds": 2,
+    "finishing": "Fully Finished & Furnished",
+    "areaSqm": 163,
+    "view": "Back",
+    "priceEGP": 22413000,
+    "status": "Available",
+    "floor": "3"
+  },
+  {
+    "id": "the-waterway-new-cairo-5",
+    "unitNo": "20 - 34",
+    "beds": 2,
+    "finishing": "Fully Finished & Furnished",
+    "areaSqm": 170,
+    "view": "Back",
+    "priceEGP": 23375000,
+    "status": "Available",
+    "floor": "3"
+  }
+]

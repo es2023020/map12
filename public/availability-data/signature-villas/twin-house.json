@@ -1,0 +1,38 @@
+[
+  {
+    "id": "signature-villas-5",
+    "unitNo": "HPS/TW/32A",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "view": "",
+    "priceEGP": 32820000,
+    "status": "Available",
+    "cluster": "Signature Villas",
+    "landAreaSqm": 300
+  },
+  {
+    "id": "signature-villas-6",
+    "unitNo": "HPS/TW/32B",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "view": "",
+    "priceEGP": 32340000,
+    "status": "Available",
+    "cluster": "Signature Villas",
+    "landAreaSqm": 290
+  },
+  {
+    "id": "signature-villas-13",
+    "unitNo": "HPS/TW/49A",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 215,
+    "view": "",
+    "priceEGP": 32090000,
+    "status": "Available",
+    "cluster": "Signature Villas",
+    "landAreaSqm": 320
+  }
+]

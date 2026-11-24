@@ -1,0 +1,45 @@
+[
+  {
+    "id": "mountain-view-icity-new-cairo-12",
+    "unitNo": "CV-01-03-00-1",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 520,
+    "view": "North",
+    "priceEGP": 83608608.69,
+    "status": "Available",
+    "cluster": "Club Palace",
+    "deliveryNote": "READY TO MOVE - 9",
+    "gardenAreaSqm": 253.64,
+    "roofAreaSqm": 68.27,
+    "landAreaSqm": 650.49
+  },
+  {
+    "id": "mountain-view-icity-new-cairo-13",
+    "unitNo": "CV-01-09-00-1",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 520,
+    "view": "West",
+    "priceEGP": 84799700.74,
+    "status": "Available",
+    "cluster": "Club Palace",
+    "deliveryNote": "PARTIAL DELIVERY",
+    "gardenAreaSqm": 484.21,
+    "roofAreaSqm": 68.27,
+    "landAreaSqm": 689.65
+  },
+  {
+    "id": "mountain-view-icity-new-cairo-14",
+    "unitNo": "CV-02-03-00-1",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 565,
+    "view": "East",
+    "priceEGP": 87973052.31,
+    "status": "Available",
+    "cluster": "Club Palace",
+    "deliveryNote": "READY TO DELIVER",
+    "landAreaSqm": 641.5
+  }
+]

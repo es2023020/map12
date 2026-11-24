@@ -1,0 +1,50 @@
+[
+  {
+    "id": "w-signature-18",
+    "unitNo": "S24H' - 02",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 119,
+    "view": "Main View",
+    "priceEGP": 15751000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "floor": "0"
+  },
+  {
+    "id": "w-signature-19",
+    "unitNo": "S30E' - 02",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 118,
+    "view": "View",
+    "priceEGP": 14451000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "floor": "0"
+  },
+  {
+    "id": "w-signature-20",
+    "unitNo": "S31E - 01",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 118,
+    "view": "View",
+    "priceEGP": 14827000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "floor": "0"
+  },
+  {
+    "id": "w-signature-21",
+    "unitNo": "S57E - 01",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 118,
+    "view": "Small View",
+    "priceEGP": 13726000,
+    "status": "Available",
+    "cluster": "Phase 2",
+    "floor": "0"
+  }
+]

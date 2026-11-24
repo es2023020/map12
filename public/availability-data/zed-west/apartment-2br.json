@@ -1,0 +1,101 @@
+[
+  {
+    "id": "zed-west-20",
+    "unitNo": "PSR-4-1-2",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 96,
+    "view": "",
+    "priceEGP": 13675000,
+    "status": "Available",
+    "cluster": "2 Bedroom Type 3B"
+  },
+  {
+    "id": "zed-west-21",
+    "unitNo": "PSR-4-2-2",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 96,
+    "view": "",
+    "priceEGP": 13808000,
+    "status": "Available",
+    "cluster": "2 Bedroom Type 3B"
+  },
+  {
+    "id": "zed-west-22",
+    "unitNo": "E3-O-5-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 129,
+    "view": "",
+    "priceEGP": 17255000,
+    "status": "Available",
+    "cluster": "2 BED FLAT C1"
+  },
+  {
+    "id": "zed-west-23",
+    "unitNo": "E3-O-4-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 129,
+    "view": "",
+    "priceEGP": 17320000,
+    "status": "Available",
+    "cluster": "2 BED FLAT C2"
+  },
+  {
+    "id": "zed-west-24",
+    "unitNo": "E3-O-6-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 129,
+    "view": "",
+    "priceEGP": 17320000,
+    "status": "Available",
+    "cluster": "2 BED FLAT C2"
+  },
+  {
+    "id": "zed-west-25",
+    "unitNo": "E3-Q-4-2",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 129,
+    "view": "",
+    "priceEGP": 17320000,
+    "status": "Available",
+    "cluster": "2 BED FLAT C2"
+  },
+  {
+    "id": "zed-west-26",
+    "unitNo": "PSR-4-1-4",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 121,
+    "view": "",
+    "priceEGP": 18869000,
+    "status": "Available",
+    "cluster": "2 Bedroom Type 2B"
+  },
+  {
+    "id": "zed-west-27",
+    "unitNo": "PSR-4-1-7",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 121,
+    "view": "",
+    "priceEGP": 18869000,
+    "status": "Available",
+    "cluster": "2 Bedroom Type 2B"
+  },
+  {
+    "id": "zed-west-28",
+    "unitNo": "PSR-4-2-7",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 121,
+    "view": "",
+    "priceEGP": 19039000,
+    "status": "Available",
+    "cluster": "2 Bedroom Type 2B"
+  }
+]

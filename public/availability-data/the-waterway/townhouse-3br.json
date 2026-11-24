@@ -1,0 +1,74 @@
+[
+  {
+    "id": "the-waterway-1",
+    "unitNo": "223",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 280,
+    "view": "",
+    "priceEGP": 53700000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 195
+  },
+  {
+    "id": "the-waterway-16",
+    "unitNo": "217A",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 275,
+    "view": "",
+    "priceEGP": 47453000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 145
+  },
+  {
+    "id": "the-waterway-17",
+    "unitNo": "218A",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 275,
+    "view": "",
+    "priceEGP": 47453000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 145
+  },
+  {
+    "id": "the-waterway-18",
+    "unitNo": "219A",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 275,
+    "view": "",
+    "priceEGP": 47453000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 145
+  },
+  {
+    "id": "the-waterway-19",
+    "unitNo": "220A",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 275,
+    "view": "",
+    "priceEGP": 47453000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 145
+  },
+  {
+    "id": "the-waterway-20",
+    "unitNo": "223A",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 280,
+    "view": "",
+    "priceEGP": 53253000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "landAreaSqm": 195
+  }
+]

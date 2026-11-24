@@ -1,0 +1,24 @@
+[
+  {
+    "id": "kinda-residence-1",
+    "unitNo": "Kinda - 75 - MH13 - 01",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 460,
+    "view": "",
+    "priceEGP": 77861337,
+    "status": "Available",
+    "floor": "V"
+  },
+  {
+    "id": "kinda-residence-2",
+    "unitNo": "Kinda - 75 - MT05 - 01",
+    "beds": 5,
+    "finishing": "Not specified",
+    "areaSqm": 392.3,
+    "view": "",
+    "priceEGP": 53028424,
+    "status": "Available",
+    "floor": "V"
+  }
+]

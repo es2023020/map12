@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mountain-view-jirian-132",
+    "unitNo": "BIV-TW-34-00-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 180,
+    "view": "West",
+    "priceEGP": 23755780.78,
+    "status": "Available",
+    "cluster": "BIV TW",
+    "deliveryNote": "OFF PLAN - 4",
+    "roofAreaSqm": 55,
+    "landAreaSqm": 341.49
+  },
+  {
+    "id": "mountain-view-jirian-133",
+    "unitNo": "IV1-TW-05-00-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 180,
+    "view": "North",
+    "priceEGP": 23916836.91,
+    "status": "Available",
+    "cluster": "IV1 TW",
+    "deliveryNote": "OFF PLAN - 4",
+    "roofAreaSqm": 55,
+    "landAreaSqm": 342.5
+  }
+]

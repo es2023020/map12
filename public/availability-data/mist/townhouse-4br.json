@@ -1,0 +1,44 @@
+[
+  {
+    "id": "mist-83",
+    "unitNo": "B1-01",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "view": "",
+    "priceEGP": 32405573.76,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "roofAreaSqm": 75,
+    "landAreaSqm": 295,
+    "floor": "أرضي وأول وغرف سطح"
+  },
+  {
+    "id": "mist-84",
+    "unitNo": "B1-05",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "view": "",
+    "priceEGP": 28323178.8,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "roofAreaSqm": 75,
+    "landAreaSqm": 188,
+    "floor": "أرضي وأول وغرف سطح"
+  },
+  {
+    "id": "mist-85",
+    "unitNo": "B1-07",
+    "beds": 4,
+    "finishing": "Semi Finished",
+    "areaSqm": 200,
+    "view": "",
+    "priceEGP": 33902870.4,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "roofAreaSqm": 75,
+    "landAreaSqm": 293,
+    "floor": "أرضي وأول وغرف سطح"
+  }
+]

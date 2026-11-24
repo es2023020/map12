@@ -1,0 +1,28 @@
+[
+  {
+    "id": "crescent-walk-57",
+    "unitNo": "PS-02-42",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 208,
+    "view": "",
+    "priceEGP": 23957000,
+    "status": "Available",
+    "cluster": "Apartments",
+    "landAreaSqm": 5600,
+    "floor": "Fourth"
+  },
+  {
+    "id": "crescent-walk-90",
+    "unitNo": "PS-13-41",
+    "beds": 3,
+    "finishing": "Finished",
+    "areaSqm": 208,
+    "view": "",
+    "priceEGP": 24381000,
+    "status": "Available",
+    "cluster": "Apartments",
+    "landAreaSqm": 5640,
+    "floor": "Fourth"
+  }
+]

@@ -1,0 +1,189 @@
+[
+  {
+    "id": "zed-east-1",
+    "unitNo": "C12-D-1-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 59,
+    "view": "",
+    "priceEGP": 8915000,
+    "status": "Available",
+    "cluster": "STUDIO A3"
+  },
+  {
+    "id": "zed-east-2",
+    "unitNo": "C12-C-1-2",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 59,
+    "view": "",
+    "priceEGP": 9045000,
+    "status": "Available",
+    "cluster": "STUDIO A3"
+  },
+  {
+    "id": "zed-east-3",
+    "unitNo": "C12-D-2-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 59,
+    "view": "",
+    "priceEGP": 9087000,
+    "status": "Available",
+    "cluster": "STUDIO A3"
+  },
+  {
+    "id": "zed-east-4",
+    "unitNo": "C12-D-2-2",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 59,
+    "view": "",
+    "priceEGP": 9130000,
+    "status": "Available",
+    "cluster": "STUDIO A3"
+  },
+  {
+    "id": "zed-east-5",
+    "unitNo": "C12-D-3-2",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 59,
+    "view": "",
+    "priceEGP": 9216000,
+    "status": "Available",
+    "cluster": "STUDIO A3"
+  },
+  {
+    "id": "zed-east-6",
+    "unitNo": "C12-D-5-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 59,
+    "view": "",
+    "priceEGP": 9259000,
+    "status": "Available",
+    "cluster": "STUDIO A3"
+  },
+  {
+    "id": "zed-east-7",
+    "unitNo": "C12-D-6-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 59,
+    "view": "",
+    "priceEGP": 9259000,
+    "status": "Available",
+    "cluster": "STUDIO A3"
+  },
+  {
+    "id": "zed-east-8",
+    "unitNo": "C12-C-3-2",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 59,
+    "view": "",
+    "priceEGP": 9302000,
+    "status": "Available",
+    "cluster": "STUDIO A3"
+  },
+  {
+    "id": "zed-east-9",
+    "unitNo": "C12-D-G-7",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 59,
+    "view": "",
+    "priceEGP": 10154000,
+    "status": "Available",
+    "cluster": "STUDIO A2"
+  },
+  {
+    "id": "zed-east-10",
+    "unitNo": "C12-D-2-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 76,
+    "view": "",
+    "priceEGP": 11679000,
+    "status": "Available",
+    "cluster": "1 BED FLAT C2"
+  },
+  {
+    "id": "zed-east-11",
+    "unitNo": "C12-D-1-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 78,
+    "view": "",
+    "priceEGP": 11712000,
+    "status": "Available",
+    "cluster": "1 BED FLAT C1"
+  },
+  {
+    "id": "zed-east-12",
+    "unitNo": "C12-C-G-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 12624000,
+    "status": "Available",
+    "cluster": "1 BED FLAT A1"
+  },
+  {
+    "id": "zed-east-13",
+    "unitNo": "C12-D-G-1",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 81,
+    "view": "",
+    "priceEGP": 12959000,
+    "status": "Available",
+    "cluster": "1 BED FLAT A1"
+  },
+  {
+    "id": "zed-east-14",
+    "unitNo": "C12-C-2-6",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 86,
+    "view": "",
+    "priceEGP": 13762000,
+    "status": "Available",
+    "cluster": "1 BED FLAT B3"
+  },
+  {
+    "id": "zed-east-15",
+    "unitNo": "C12-D-2-6",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 86,
+    "view": "",
+    "priceEGP": 13762000,
+    "status": "Available",
+    "cluster": "1 BED FLAT B3"
+  },
+  {
+    "id": "zed-east-16",
+    "unitNo": "C12-C-1-6",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 88,
+    "view": "",
+    "priceEGP": 13823000,
+    "status": "Available",
+    "cluster": "1 BED FLAT B2"
+  },
+  {
+    "id": "zed-east-17",
+    "unitNo": "C12-C-5-6",
+    "beds": 1,
+    "finishing": "Not specified",
+    "areaSqm": 86,
+    "view": "",
+    "priceEGP": 14011000,
+    "status": "Available",
+    "cluster": "1 BED FLAT B3"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "garden-lakes-1",
+    "unitNo": "GL5/9-4/403",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 73.5,
+    "view": "",
+    "priceEGP": 7630000,
+    "status": "Available",
+    "cluster": "Garden Side",
+    "floor": "4"
+  },
+  {
+    "id": "garden-lakes-4",
+    "unitNo": "GL5/8A-4/402",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 71,
+    "view": "",
+    "priceEGP": 6870000,
+    "status": "Available",
+    "cluster": "Garden Side",
+    "floor": "4"
+  },
+  {
+    "id": "garden-lakes-10",
+    "unitNo": "GL5/6-2/204",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 68,
+    "view": "",
+    "priceEGP": 7200000,
+    "status": "Available",
+    "cluster": "Garden Side",
+    "floor": "2"
+  },
+  {
+    "id": "garden-lakes-13",
+    "unitNo": "GL5/4-G/G03",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 69,
+    "view": "",
+    "priceEGP": 8210000,
+    "status": "Available",
+    "cluster": "Garden Side",
+    "gardenAreaSqm": 24.4
+  },
+  {
+    "id": "garden-lakes-15",
+    "unitNo": "GL5/3B-1/105",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 71,
+    "view": "",
+    "priceEGP": 6800000,
+    "status": "Available",
+    "cluster": "Garden Side",
+    "floor": "1"
+  },
+  {
+    "id": "garden-lakes-18",
+    "unitNo": "GL5/1-G/G04",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 68,
+    "view": "",
+    "priceEGP": 9010000,
+    "status": "Available",
+    "cluster": "Garden Side",
+    "gardenAreaSqm": 45.3
+  }
+]

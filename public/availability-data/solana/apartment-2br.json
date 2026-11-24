@@ -1,0 +1,68 @@
+[
+  {
+    "id": "solana-1",
+    "unitNo": "C06-096-12",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 88,
+    "view": "",
+    "priceEGP": 11072000,
+    "status": "Available",
+    "cluster": "2 Bedroom Flat G2"
+  },
+  {
+    "id": "solana-2",
+    "unitNo": "C06-095-02",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 88,
+    "view": "",
+    "priceEGP": 11736000,
+    "status": "Available",
+    "cluster": "2 Bedroom Flat G1"
+  },
+  {
+    "id": "solana-3",
+    "unitNo": "C06-095-13",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 96,
+    "view": "",
+    "priceEGP": 11759000,
+    "status": "Available",
+    "cluster": "2 Bedroom Flat I"
+  },
+  {
+    "id": "solana-4",
+    "unitNo": "C06-095-23",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 106,
+    "view": "",
+    "priceEGP": 12905000,
+    "status": "Available",
+    "cluster": "2 Bedroom Flat J"
+  },
+  {
+    "id": "solana-5",
+    "unitNo": "C06-095-03",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 94,
+    "view": "",
+    "priceEGP": 13134000,
+    "status": "Available",
+    "cluster": "2 Bedroom Flat H"
+  },
+  {
+    "id": "solana-6",
+    "unitNo": "C06-096-01",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 94,
+    "view": "",
+    "priceEGP": 13134000,
+    "status": "Available",
+    "cluster": "2 Bedroom Flat H"
+  }
+]

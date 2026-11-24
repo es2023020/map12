@@ -1,0 +1,99 @@
+[
+  {
+    "id": "one-hyde-park-new-cairo-22",
+    "unitNo": "OHC/16B-G/4",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 208,
+    "view": "",
+    "priceEGP": 21210000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "gardenAreaSqm": 100,
+    "floor": "0"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-63",
+    "unitNo": "OCR/10B-4/3",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 267,
+    "view": "",
+    "priceEGP": 23280000,
+    "status": "Available",
+    "cluster": "Courtyard Residence",
+    "floor": "4"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-70",
+    "unitNo": "OHC/1A-4/3",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 270,
+    "view": "",
+    "priceEGP": 25250000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "4"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-71",
+    "unitNo": "OHC/1B-4/2",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 267,
+    "view": "",
+    "priceEGP": 24520000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "4"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-80",
+    "unitNo": "OHC/3-5/3",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 234,
+    "view": "",
+    "priceEGP": 23290000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "5"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-81",
+    "unitNo": "OHC/3-5/5",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 240,
+    "view": "",
+    "priceEGP": 23380000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "5"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-111",
+    "unitNo": "OHC/9A-4/3",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 270,
+    "view": "",
+    "priceEGP": 25500000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "4"
+  },
+  {
+    "id": "one-hyde-park-new-cairo-112",
+    "unitNo": "OHC/9B-4/2",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 267,
+    "view": "",
+    "priceEGP": 25360000,
+    "status": "Available",
+    "cluster": "Horizon Courts",
+    "floor": "4"
+  }
+]

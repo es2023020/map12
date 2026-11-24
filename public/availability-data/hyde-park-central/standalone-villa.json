@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hyde-park-central-74",
+    "unitNo": "HPC/SA2/20",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 265,
+    "view": "",
+    "priceEGP": 50140000,
+    "status": "Available",
+    "cluster": "Hyde Park Central - Villas",
+    "landAreaSqm": 552.1
+  },
+  {
+    "id": "hyde-park-central-75",
+    "unitNo": "HPC/SA2/16",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 265,
+    "view": "",
+    "priceEGP": 50140000,
+    "status": "Available",
+    "cluster": "Hyde Park Central - Villas",
+    "landAreaSqm": 552.1
+  }
+]

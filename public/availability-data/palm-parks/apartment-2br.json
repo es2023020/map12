@@ -1,0 +1,28 @@
+[
+  {
+    "id": "palm-parks-1",
+    "unitNo": "16304-0G",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 132.38,
+    "view": "",
+    "priceEGP": 18855000,
+    "status": "Available",
+    "cluster": "Palm Parks Zone C",
+    "deliveryNote": "Jun 2029",
+    "gardenAreaSqm": 133.12
+  },
+  {
+    "id": "palm-parks-5",
+    "unitNo": "16504-0G",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 132.38,
+    "view": "",
+    "priceEGP": 18855000,
+    "status": "Available",
+    "cluster": "Palm Parks Zone C",
+    "deliveryNote": "Jun 2029",
+    "gardenAreaSqm": 133.12
+  }
+]

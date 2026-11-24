@@ -1,0 +1,89 @@
+[
+  {
+    "id": "mountain-view-aliva-1",
+    "unitNo": "C-iVGR2P-05-A2-2",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 115,
+    "view": "East",
+    "priceEGP": 12320725.18,
+    "status": "Available",
+    "cluster": "Club Park iVGR2P",
+    "deliveryNote": "OFF PLAN - 3"
+  },
+  {
+    "id": "mountain-view-aliva-2",
+    "unitNo": "C-iVGR2P-35-A2-2",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 115,
+    "view": "West",
+    "priceEGP": 12468733.12,
+    "status": "Available",
+    "cluster": "Club Park iVGR2P",
+    "deliveryNote": "OFF PLAN - 3"
+  },
+  {
+    "id": "mountain-view-aliva-3",
+    "unitNo": "L-iV-50-A2-2",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 120,
+    "view": "North",
+    "priceEGP": 13585680.14,
+    "status": "Available",
+    "cluster": "Lagoon Park iV",
+    "deliveryNote": "OFF PLAN - 3"
+  },
+  {
+    "id": "mountain-view-aliva-4",
+    "unitNo": "L-iVGR2P-81-A2-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 130,
+    "view": "North",
+    "priceEGP": 13945588.32,
+    "status": "Available",
+    "cluster": "Lagoon Park iVGR2P",
+    "deliveryNote": "OFF PLAN - 3"
+  },
+  {
+    "id": "mountain-view-aliva-5",
+    "unitNo": "C-M-12-A0-1",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 110,
+    "view": "North",
+    "priceEGP": 14069960.63,
+    "status": "Available",
+    "cluster": "Club Park M",
+    "deliveryNote": "OFF PLAN - 3",
+    "gardenAreaSqm": 122.49
+  },
+  {
+    "id": "mountain-view-aliva-8",
+    "unitNo": "C-M-12-A0-4",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 120,
+    "view": "North",
+    "priceEGP": 14904424.93,
+    "status": "Available",
+    "cluster": "Club Park M",
+    "deliveryNote": "OFF PLAN - 3",
+    "gardenAreaSqm": 131.87
+  },
+  {
+    "id": "mountain-view-aliva-10",
+    "unitNo": "L-M-08-A0-4",
+    "beds": 2,
+    "finishing": "Not specified",
+    "areaSqm": 130,
+    "view": "North",
+    "priceEGP": 15699918.04,
+    "status": "Available",
+    "cluster": "Lagoon Park M",
+    "deliveryNote": "OFF PLAN - 3",
+    "gardenAreaSqm": 66.4
+  }
+]

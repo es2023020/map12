@@ -1,0 +1,41 @@
+[
+  {
+    "id": "31-west-15",
+    "unitNo": "A7BG06",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 90,
+    "view": "",
+    "priceEGP": 13901900,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "gardenAreaSqm": 35,
+    "floor": "أرضي"
+  },
+  {
+    "id": "31-west-34",
+    "unitNo": "A6AG02B",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 80,
+    "view": "",
+    "priceEGP": 13550160,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "gardenAreaSqm": 63,
+    "floor": "أرضي"
+  },
+  {
+    "id": "31-west-35",
+    "unitNo": "A6AG06",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 90,
+    "view": "",
+    "priceEGP": 13526940,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "gardenAreaSqm": 24,
+    "floor": "أرضي"
+  }
+]

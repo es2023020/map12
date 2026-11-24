@@ -1,0 +1,41 @@
+[
+  {
+    "id": "ramla-51",
+    "unitNo": "R4-9A",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 313,
+    "view": "",
+    "priceEGP": 75979000,
+    "status": "Available",
+    "cluster": "R4",
+    "landAreaSqm": 788,
+    "floor": "Ground+First"
+  },
+  {
+    "id": "ramla-56",
+    "unitNo": "R4-15",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 313,
+    "view": "",
+    "priceEGP": 79108000,
+    "status": "Available",
+    "cluster": "R4",
+    "landAreaSqm": 741,
+    "floor": "Ground+First"
+  },
+  {
+    "id": "ramla-130",
+    "unitNo": "R5-49",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 279,
+    "view": "",
+    "priceEGP": 105761000,
+    "status": "Available",
+    "cluster": "R5",
+    "landAreaSqm": 786,
+    "floor": "Ground"
+  }
+]

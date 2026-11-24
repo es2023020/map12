@@ -1,0 +1,51 @@
+[
+  {
+    "id": "hyde-park-central-48",
+    "unitNo": "HPC/WR-33D/201",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "",
+    "priceEGP": 16860000,
+    "status": "Available",
+    "cluster": "Water Residence",
+    "floor": "2"
+  },
+  {
+    "id": "hyde-park-central-50",
+    "unitNo": "HPC/WR-33D/205",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 185,
+    "view": "",
+    "priceEGP": 16860000,
+    "status": "Available",
+    "cluster": "Water Residence",
+    "floor": "2"
+  },
+  {
+    "id": "hyde-park-central-57",
+    "unitNo": "HPC/WR-33D/803",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 211,
+    "view": "",
+    "priceEGP": 18860000,
+    "status": "Available",
+    "cluster": "Water Residence",
+    "floor": "8"
+  },
+  {
+    "id": "hyde-park-central-58",
+    "unitNo": "HPC/WR-33D/805",
+    "beds": 4,
+    "finishing": "Core & Shell",
+    "areaSqm": 192,
+    "view": "",
+    "priceEGP": 21070000,
+    "status": "Available",
+    "cluster": "Water Residence",
+    "roofAreaSqm": 31,
+    "floor": "8"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "creekview-59",
+    "unitNo": "CV-I-iV-50-B0-3",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 190,
+    "view": "South",
+    "priceEGP": 17642971.9,
+    "status": "Available",
+    "cluster": "Islands iV",
+    "deliveryNote": "OFF PLAN - 4",
+    "gardenAreaSqm": 115.19
+  },
+  {
+    "id": "creekview-60",
+    "unitNo": "CV-H-iV-40-A0-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 200,
+    "view": "East",
+    "priceEGP": 18432723.84,
+    "status": "Available",
+    "cluster": "Heights iV",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 105.71
+  },
+  {
+    "id": "creekview-61",
+    "unitNo": "CV-H-iV-11-A0-3",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 175,
+    "view": "North",
+    "priceEGP": 19345242.3,
+    "status": "Available",
+    "cluster": "Heights iV",
+    "deliveryNote": "OFF PLAN - 4",
+    "gardenAreaSqm": 53.33
+  },
+  {
+    "id": "creekview-62",
+    "unitNo": "CV-I-iV-50-A0-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 200,
+    "view": "North",
+    "priceEGP": 19512653.92,
+    "status": "Available",
+    "cluster": "Islands iV",
+    "deliveryNote": "OFF PLAN - 4",
+    "gardenAreaSqm": 106.2
+  }
+]

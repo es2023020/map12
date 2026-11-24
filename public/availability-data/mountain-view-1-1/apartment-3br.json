@@ -1,0 +1,122 @@
+[
+  {
+    "id": "mountain-view-1-1-1",
+    "unitNo": "M-iV-A-212-C2-4",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "SW",
+    "priceEGP": 16906343.12,
+    "status": "Available",
+    "cluster": "MV The Park 2 iVilla Park",
+    "deliveryNote": "READY TO MOVE - 9"
+  },
+  {
+    "id": "mountain-view-1-1-2",
+    "unitNo": "M-iV-A-219-A2-4",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "W",
+    "priceEGP": 17415570.32,
+    "status": "Available",
+    "cluster": "MV The Park 2 iVilla Park",
+    "deliveryNote": "READY TO MOVE - 9"
+  },
+  {
+    "id": "mountain-view-1-1-3",
+    "unitNo": "M-iV-A-219-B2-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "W",
+    "priceEGP": 17415570.32,
+    "status": "Available",
+    "cluster": "MV The Park 2 iVilla Park",
+    "deliveryNote": "READY TO MOVE - 9"
+  },
+  {
+    "id": "mountain-view-1-1-4",
+    "unitNo": "M-iV-A-219-B3-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "W",
+    "priceEGP": 17415570.32,
+    "status": "Available",
+    "cluster": "MV The Park 2 iVilla Park",
+    "deliveryNote": "READY TO MOVE - 9"
+  },
+  {
+    "id": "mountain-view-1-1-5",
+    "unitNo": "M-iV-A-219-C2-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "W",
+    "priceEGP": 17415570.32,
+    "status": "Available",
+    "cluster": "MV The Park 2 iVilla Park",
+    "deliveryNote": "READY TO MOVE - 9"
+  },
+  {
+    "id": "mountain-view-1-1-6",
+    "unitNo": "M-iV-A-219-C3-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "W",
+    "priceEGP": 17415570.32,
+    "status": "Available",
+    "cluster": "MV The Park 2 iVilla Park",
+    "deliveryNote": "READY TO MOVE - 9"
+  },
+  {
+    "id": "mountain-view-1-1-7",
+    "unitNo": "M-iV-A-238-A2-4",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "E",
+    "priceEGP": 17755055.13,
+    "status": "Available",
+    "cluster": "MV The Park 2 iVilla Park",
+    "deliveryNote": "READY TO MOVE - 9"
+  },
+  {
+    "id": "mountain-view-1-1-8",
+    "unitNo": "M-iV-A-214-C2-4",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "SW",
+    "priceEGP": 18009668.73,
+    "status": "Available",
+    "cluster": "MV The Park 2 iVilla Park",
+    "deliveryNote": "READY TO MOVE - 9"
+  },
+  {
+    "id": "mountain-view-1-1-9",
+    "unitNo": "M-iV-B-234-B2-4",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "NE",
+    "priceEGP": 18603767.13,
+    "status": "Available",
+    "cluster": "MV The Park 2 iVilla Park",
+    "deliveryNote": "READY TO MOVE - 9"
+  },
+  {
+    "id": "mountain-view-1-1-10",
+    "unitNo": "M-iV-B-234-A3-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 140,
+    "view": "NE",
+    "priceEGP": 20335139.62,
+    "status": "Available",
+    "cluster": "MV The Park 2 iVilla Park",
+    "deliveryNote": "READY TO MOVE - 9"
+  }
+]

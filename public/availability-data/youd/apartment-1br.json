@@ -1,0 +1,62 @@
+[
+  {
+    "id": "youd-1",
+    "unitNo": "0 SA5-SA5001",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 60,
+    "view": "",
+    "priceEGP": 11907000,
+    "status": "Available",
+    "cluster": "SA5",
+    "floor": "Ground"
+  },
+  {
+    "id": "youd-5",
+    "unitNo": "0 SA5-SA5109",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 58,
+    "view": "",
+    "priceEGP": 9809000,
+    "status": "Available",
+    "cluster": "SA5",
+    "floor": "1st Floor"
+  },
+  {
+    "id": "youd-7",
+    "unitNo": "0 SA5-SA5206",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 57,
+    "view": "",
+    "priceEGP": 13374000,
+    "status": "Available",
+    "cluster": "SA5",
+    "floor": "2nd floor"
+  },
+  {
+    "id": "youd-11",
+    "unitNo": "0 SA5-SA5309",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 58,
+    "view": "",
+    "priceEGP": 10781000,
+    "status": "Available",
+    "cluster": "SA5",
+    "floor": "3rd floor"
+  },
+  {
+    "id": "youd-12",
+    "unitNo": "0 SA5-SA5310",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 59,
+    "view": "",
+    "priceEGP": 10967000,
+    "status": "Available",
+    "cluster": "SA5",
+    "floor": "3rd floor"
+  }
+]

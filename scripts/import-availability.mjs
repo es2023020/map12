@@ -12,7 +12,7 @@ const ROOT = path.resolve(__dirname, "..");
 const OUT = path.join(ROOT, "src", "data", "availability.generated.ts");
 
 function normalizeFinishing(raw) {
-  if (!raw) return "Core & Shell";
+  if (!raw) return "Not specified";
   const val = String(raw).trim();
   const lower = val.toLowerCase();
   if (lower.includes("unfinished") || lower.includes("red brick") || lower.includes("core") || lower.includes("shell")) {
@@ -128,8 +128,15 @@ function parseBedsFromType(typeStr) {
   return match ? parseInt(match[1], 10) : undefined;
 }
 
+const CANONICAL_TYPES = [
+  "Apartment", "Penthouse", "Duplex", "Townhouse", "Twin House", "Chalet", "Standalone Villa",
+  "Office", "Retail", "Clinic",
+];
+
 function cleanType(t, cluster = "") {
   const str = String(t || "").toLowerCase().trim();
+  const canon = CANONICAL_TYPES.find((c) => c.toLowerCase() === str);
+  if (canon) return canon;
   const cl = String(cluster || "").toLowerCase().trim();
   if (cl === "apartments" || cl === "private residences" || cl.endsWith("apartments") || str.includes("apartment") || str.includes("flat") || str.includes("studio")) {
     return "Apartment";
@@ -146,7 +153,8 @@ function cleanType(t, cluster = "") {
 function unitTypeSlug(b) {
   const cleanT = cleanType(b.type, b.cluster);
   const tSlug = cleanT.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  return `${tSlug}-${b.beds || 1}br`;
+  // Must match unitTypeSlug() in src/data/availability.ts (the route looks the JSON file up by it)
+  return b.beds ? `${tSlug}-${b.beds}br` : tSlug;
 }
 
 function esc(s) {
@@ -172,7 +180,7 @@ function fmtVal(v, indent = "      ") {
 
 function fmtObj(obj, indent = "      ") {
   const lines = Object.entries(obj)
-    .filter(([, v]) => v !== undefined && v !== "units")
+    .filter(([k, v]) => v !== undefined && k !== "units")
     .map(([k, v]) => {
       const safeKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(k) ? k : JSON.stringify(k);
       if (Array.isArray(v) || (typeof v === "object" && v !== null)) {
@@ -323,14 +331,14 @@ function parseUniversalWorkbook(filePath, defaultSlug, defaultDev) {
 
       const areaRange = areaKey ? parseAreaRange(rowObj[areaKey]) : { min: 120, max: 120 };
       const beds =
-        bedsKey && rowObj[bedsKey]
+        bedsKey && rowObj[bedsKey] !== undefined && !isNaN(parseInt(String(rowObj[bedsKey])))
           ? parseInt(String(rowObj[bedsKey]))
-          : parseBedsFromType(rawType) || 2;
+          : parseBedsFromType(rawType) || 0;
       const unitNo =
         unitNoKey && rowObj[unitNoKey]
           ? String(rowObj[unitNoKey]).replace(/[\r\n]+/g, "").trim()
           : `U-${rIdx + 1}`;
-      const view = viewKey && rowObj[viewKey] ? String(rowObj[viewKey]).trim() : "Scenic View";
+      const view = viewKey && rowObj[viewKey] ? String(rowObj[viewKey]).trim() : "";
       const status =
         statusKey && rowObj[statusKey] ? String(rowObj[statusKey]).trim() : "Available";
 

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "the-waterway-2",
+    "unitNo": "F2 - G9",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 145,
+    "view": "U1",
+    "priceEGP": 27189000,
+    "status": "Available",
+    "cluster": "Phase 2A",
+    "gardenAreaSqm": 10,
+    "floor": "G"
+  },
+  {
+    "id": "the-waterway-26",
+    "unitNo": "F4 - G5",
+    "beds": 2,
+    "finishing": "Fully Finished",
+    "areaSqm": 145,
+    "view": "U1",
+    "priceEGP": 27189000,
+    "status": "Available",
+    "cluster": "Phase 2A",
+    "gardenAreaSqm": 10,
+    "floor": "G"
+  }
+]

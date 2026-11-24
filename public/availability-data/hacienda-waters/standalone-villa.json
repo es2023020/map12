@@ -1,0 +1,68 @@
+[
+  {
+    "id": "hacienda-waters-1",
+    "unitNo": "HWS-VLA-101",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 374,
+    "view": "",
+    "priceEGP": 117463000,
+    "status": "Available",
+    "cluster": "HWS-Phase 1",
+    "deliveryNote": "Jun 2029",
+    "landAreaSqm": 549
+  },
+  {
+    "id": "hacienda-waters-2",
+    "unitNo": "HWS-VLA-106",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 374,
+    "view": "",
+    "priceEGP": 120105000,
+    "status": "Available",
+    "cluster": "HWS-Phase 1",
+    "deliveryNote": "Jun 2029",
+    "landAreaSqm": 549
+  },
+  {
+    "id": "hacienda-waters-3",
+    "unitNo": "HWS-VLA-118",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 374,
+    "view": "",
+    "priceEGP": 119809000,
+    "status": "Available",
+    "cluster": "HWS-Phase 1",
+    "deliveryNote": "Jun 2029",
+    "landAreaSqm": 549
+  },
+  {
+    "id": "hacienda-waters-4",
+    "unitNo": "HWS-VLA-119",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 374,
+    "view": "",
+    "priceEGP": 117463000,
+    "status": "Available",
+    "cluster": "HWS-Phase 1",
+    "deliveryNote": "Jun 2029",
+    "landAreaSqm": 549
+  },
+  {
+    "id": "hacienda-waters-5",
+    "unitNo": "HWS-VLB-201",
+    "beds": 0,
+    "finishing": "Core & Shell",
+    "areaSqm": 278,
+    "view": "",
+    "priceEGP": 78729000,
+    "status": "Available",
+    "cluster": "HWS-Phase 1",
+    "deliveryNote": "Jun 2029",
+    "roofAreaSqm": 88.5,
+    "landAreaSqm": 420.5
+  }
+]

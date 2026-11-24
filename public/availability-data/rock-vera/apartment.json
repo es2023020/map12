@@ -1,0 +1,86 @@
+[
+  {
+    "id": "rock-vera-1",
+    "unitNo": "VR-06-G-1",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 158,
+    "view": "Street & Garden",
+    "priceEGP": 11754442.971008,
+    "status": "Available",
+    "cluster": "6",
+    "floor": "G"
+  },
+  {
+    "id": "rock-vera-2",
+    "unitNo": "VR-07-G-1",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 153,
+    "view": "",
+    "priceEGP": 11140809.789076,
+    "status": "Available",
+    "cluster": "7",
+    "floor": "G"
+  },
+  {
+    "id": "rock-vera-3",
+    "unitNo": "VR-10-G-4",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 162,
+    "view": "Garden & Wall",
+    "priceEGP": 13513493.248468,
+    "status": "Available",
+    "cluster": "10",
+    "floor": "G"
+  },
+  {
+    "id": "rock-vera-4",
+    "unitNo": "VR-11-D-1",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 206,
+    "view": "Street & Garden",
+    "priceEGP": 15666424.6346,
+    "status": "Available",
+    "cluster": "11",
+    "floor": "D"
+  },
+  {
+    "id": "rock-vera-5",
+    "unitNo": "VR-22-G-1",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 158,
+    "view": "Corner, Garden, Street",
+    "priceEGP": 11670199.553938,
+    "status": "Available",
+    "cluster": "22",
+    "floor": "G"
+  },
+  {
+    "id": "rock-vera-6",
+    "unitNo": "VR-27-1-2",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 234,
+    "view": "",
+    "priceEGP": 16343196.900117,
+    "status": "Available",
+    "cluster": "27",
+    "floor": "1"
+  },
+  {
+    "id": "rock-vera-7",
+    "unitNo": "VR-27-2-2",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 234,
+    "view": "",
+    "priceEGP": 16593170.943848,
+    "status": "Available",
+    "cluster": "27",
+    "floor": "2"
+  }
+]

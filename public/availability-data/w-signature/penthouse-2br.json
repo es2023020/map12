@@ -1,0 +1,38 @@
+[
+  {
+    "id": "w-signature-24",
+    "unitNo": "S17I' - 41",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 130,
+    "view": "",
+    "priceEGP": 15520000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "floor": "4"
+  },
+  {
+    "id": "w-signature-26",
+    "unitNo": "S22I - 41",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 130,
+    "view": "",
+    "priceEGP": 15757000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "floor": "4"
+  },
+  {
+    "id": "w-signature-27",
+    "unitNo": "S30E' - 41",
+    "beds": 2,
+    "finishing": "Core & Shell",
+    "areaSqm": 130,
+    "view": "",
+    "priceEGP": 15342000,
+    "status": "Available",
+    "cluster": "Phase 1",
+    "floor": "4"
+  }
+]

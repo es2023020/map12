@@ -1,0 +1,110 @@
+[
+  {
+    "id": "elm-tree-park-81",
+    "unitNo": "ELM TREE PARK - 21 - 117 - A",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 23198148,
+    "status": "Available",
+    "gardenAreaSqm": 113,
+    "floor": "V"
+  },
+  {
+    "id": "elm-tree-park-82",
+    "unitNo": "ELM TREE PARK - 21 - 121 - A",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 20295681,
+    "status": "Available",
+    "gardenAreaSqm": 67,
+    "floor": "V"
+  },
+  {
+    "id": "elm-tree-park-83",
+    "unitNo": "ELM TREE PARK - 21 - 131 - A",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 20369554,
+    "status": "Available",
+    "gardenAreaSqm": 71,
+    "floor": "V"
+  },
+  {
+    "id": "elm-tree-park-84",
+    "unitNo": "ELM TREE PARK - 21 - 184 - A",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 23238670,
+    "status": "Available",
+    "gardenAreaSqm": 115,
+    "floor": "V"
+  },
+  {
+    "id": "elm-tree-park-85",
+    "unitNo": "ELM TREE PARK - 21 - 192 - A",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 20147937,
+    "status": "Available",
+    "gardenAreaSqm": 59,
+    "floor": "V"
+  },
+  {
+    "id": "elm-tree-park-86",
+    "unitNo": "ELM TREE PARK - 21 - 196 - A",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 23076581,
+    "status": "Available",
+    "gardenAreaSqm": 107,
+    "floor": "V"
+  },
+  {
+    "id": "elm-tree-park-87",
+    "unitNo": "ELM TREE PARK - 21 - 206 - A",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 22824945,
+    "status": "Available",
+    "gardenAreaSqm": 55,
+    "floor": "V"
+  },
+  {
+    "id": "elm-tree-park-88",
+    "unitNo": "ELM TREE PARK - 21 - 219 - A",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 23258931,
+    "status": "Available",
+    "gardenAreaSqm": 116,
+    "floor": "V"
+  },
+  {
+    "id": "elm-tree-park-89",
+    "unitNo": "ELM TREE PARK - 21 - 231 - A",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 23431928,
+    "status": "Available",
+    "gardenAreaSqm": 85,
+    "floor": "V"
+  }
+]

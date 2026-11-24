@@ -1,0 +1,98 @@
+[
+  {
+    "id": "31-west-21",
+    "unitNo": "A7A105",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 165,
+    "view": "",
+    "priceEGP": 20486812.5,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "floor": "أول"
+  },
+  {
+    "id": "31-west-22",
+    "unitNo": "A7A305",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 155,
+    "view": "",
+    "priceEGP": 19420143.75,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "floor": "ثالث"
+  },
+  {
+    "id": "31-west-45",
+    "unitNo": "A4C105",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 165,
+    "view": "",
+    "priceEGP": 19156500,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "floor": "أول"
+  },
+  {
+    "id": "31-west-46",
+    "unitNo": "A4C106",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 165,
+    "view": "",
+    "priceEGP": 18979125,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "floor": "أول"
+  },
+  {
+    "id": "31-west-48",
+    "unitNo": "A4C205",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 160,
+    "view": "",
+    "priceEGP": 18576000,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "floor": "ثاني"
+  },
+  {
+    "id": "31-west-49",
+    "unitNo": "A4C206",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 160,
+    "view": "",
+    "priceEGP": 18404000,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "floor": "ثاني"
+  },
+  {
+    "id": "31-west-51",
+    "unitNo": "A4C305",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 155,
+    "view": "",
+    "priceEGP": 17828875,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "floor": "ثالث"
+  },
+  {
+    "id": "31-west-52",
+    "unitNo": "A4C306",
+    "beds": 3,
+    "finishing": "Fully Finished",
+    "areaSqm": 155,
+    "view": "",
+    "priceEGP": 17662250,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "floor": "ثالث"
+  }
+]

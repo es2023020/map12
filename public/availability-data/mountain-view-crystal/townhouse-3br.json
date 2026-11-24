@@ -1,0 +1,58 @@
+[
+  {
+    "id": "mountain-view-crystal-201",
+    "unitNo": "GI3-12-TH4-00-3",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 185,
+    "view": "West",
+    "priceEGP": 23816762.57,
+    "status": "Available",
+    "cluster": "GI3 TH4",
+    "deliveryNote": "OFF PLAN - 3",
+    "roofAreaSqm": 15,
+    "landAreaSqm": 122.44
+  },
+  {
+    "id": "mountain-view-crystal-202",
+    "unitNo": "GI3-10-TH4-00-4",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 190,
+    "view": "West",
+    "priceEGP": 24994430.62,
+    "status": "Available",
+    "cluster": "GI3 TH4",
+    "deliveryNote": "OFF PLAN - 3",
+    "roofAreaSqm": 15,
+    "landAreaSqm": 201.12
+  },
+  {
+    "id": "mountain-view-crystal-203",
+    "unitNo": "GI3-13-TH4-00-2",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 185,
+    "view": "West",
+    "priceEGP": 25233472.72,
+    "status": "Available",
+    "cluster": "GI3 TH4",
+    "deliveryNote": "OFF PLAN - 3",
+    "roofAreaSqm": 15,
+    "landAreaSqm": 121.87
+  },
+  {
+    "id": "mountain-view-crystal-204",
+    "unitNo": "GI3-9-TH4-00-1",
+    "beds": 3,
+    "finishing": "Not specified",
+    "areaSqm": 190,
+    "view": "North",
+    "priceEGP": 25921160.12,
+    "status": "Available",
+    "cluster": "GI3 TH4",
+    "deliveryNote": "OFF PLAN - 3",
+    "roofAreaSqm": 15,
+    "landAreaSqm": 205.04
+  }
+]

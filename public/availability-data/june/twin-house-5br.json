@@ -1,0 +1,47 @@
+[
+  {
+    "id": "june-68",
+    "unitNo": "P7-54A",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 237.93,
+    "view": "",
+    "priceEGP": 54294000,
+    "status": "Available",
+    "cluster": "Block 7",
+    "deliveryNote": "30/03/2027",
+    "roofAreaSqm": 30,
+    "landAreaSqm": 365.71,
+    "floor": "G+1"
+  },
+  {
+    "id": "june-69",
+    "unitNo": "P7-57A",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 237.93,
+    "view": "",
+    "priceEGP": 56975000,
+    "status": "Available",
+    "cluster": "Block 7",
+    "deliveryNote": "30/03/2027",
+    "roofAreaSqm": 30,
+    "landAreaSqm": 388.53,
+    "floor": "G+1"
+  },
+  {
+    "id": "june-70",
+    "unitNo": "P7-59B",
+    "beds": 5,
+    "finishing": "Finished",
+    "areaSqm": 237.93,
+    "view": "",
+    "priceEGP": 56747000,
+    "status": "Available",
+    "cluster": "Block 7",
+    "deliveryNote": "30/03/2027",
+    "roofAreaSqm": 30,
+    "landAreaSqm": 383.58,
+    "floor": "G+1"
+  }
+]

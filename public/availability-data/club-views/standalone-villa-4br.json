@@ -1,0 +1,74 @@
+[
+  {
+    "id": "club-views-5",
+    "unitNo": "Club Views - 13 - 123 - A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 23495021,
+    "status": "Available",
+    "gardenAreaSqm": 92.2,
+    "floor": "V"
+  },
+  {
+    "id": "club-views-6",
+    "unitNo": "Club Views - 13 - 142 - A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 23398792,
+    "status": "Available",
+    "gardenAreaSqm": 94.1,
+    "floor": "V"
+  },
+  {
+    "id": "club-views-7",
+    "unitNo": "Club Views - 13 - 154 - A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 24568731,
+    "status": "Available",
+    "gardenAreaSqm": 94.1,
+    "floor": "V"
+  },
+  {
+    "id": "club-views-8",
+    "unitNo": "Club Views - 13 - 157 - A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 20328034,
+    "status": "Available",
+    "gardenAreaSqm": 46.5,
+    "floor": "V"
+  },
+  {
+    "id": "club-views-9",
+    "unitNo": "Club Views - 13 - 273 - A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 21022865,
+    "status": "Available",
+    "gardenAreaSqm": 46.7,
+    "floor": "V"
+  },
+  {
+    "id": "club-views-10",
+    "unitNo": "Club Views - 13 - 346 - A",
+    "beds": 4,
+    "finishing": "Not specified",
+    "areaSqm": 212,
+    "view": "",
+    "priceEGP": 20359541,
+    "status": "Available",
+    "gardenAreaSqm": 48.1,
+    "floor": "V"
+  }
+]

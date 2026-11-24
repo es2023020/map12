@@ -1,0 +1,90 @@
+[
+  {
+    "id": "solana-19",
+    "unitNo": "C06-024",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 190,
+    "view": "",
+    "priceEGP": 31513000,
+    "status": "Available",
+    "cluster": "Villa 7"
+  },
+  {
+    "id": "solana-20",
+    "unitNo": "C06-025",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 190,
+    "view": "",
+    "priceEGP": 31513000,
+    "status": "Available",
+    "cluster": "Villa 7"
+  },
+  {
+    "id": "solana-21",
+    "unitNo": "C06-026",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 190,
+    "view": "",
+    "priceEGP": 31513000,
+    "status": "Available",
+    "cluster": "Villa 7"
+  },
+  {
+    "id": "solana-22",
+    "unitNo": "C06-051",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 190,
+    "view": "",
+    "priceEGP": 33313000,
+    "status": "Available",
+    "cluster": "Villa 7-M"
+  },
+  {
+    "id": "solana-23",
+    "unitNo": "C06-052",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 190,
+    "view": "",
+    "priceEGP": 33313000,
+    "status": "Available",
+    "cluster": "Villa 7-M"
+  },
+  {
+    "id": "solana-24",
+    "unitNo": "C06-037",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 239,
+    "view": "",
+    "priceEGP": 40773000,
+    "status": "Available",
+    "cluster": "Villa 8"
+  },
+  {
+    "id": "solana-25",
+    "unitNo": "C06-033",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 239,
+    "view": "",
+    "priceEGP": 44535000,
+    "status": "Available",
+    "cluster": "Villa 8"
+  },
+  {
+    "id": "solana-26",
+    "unitNo": "C06-034",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 239,
+    "view": "",
+    "priceEGP": 44926000,
+    "status": "Available",
+    "cluster": "Villa 8"
+  }
+]

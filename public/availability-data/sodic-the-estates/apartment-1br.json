@@ -1,0 +1,54 @@
+[
+  {
+    "id": "sodic-the-estates-4",
+    "unitNo": "30-21",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 86.4,
+    "view": "",
+    "priceEGP": 11220000,
+    "status": "Available",
+    "cluster": "MF 4",
+    "deliveryNote": "30/12/2030",
+    "floor": "2"
+  },
+  {
+    "id": "sodic-the-estates-5",
+    "unitNo": "30-22",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 83.6,
+    "view": "",
+    "priceEGP": 11220000,
+    "status": "Available",
+    "cluster": "MF 4",
+    "deliveryNote": "30/12/2030",
+    "floor": "2"
+  },
+  {
+    "id": "sodic-the-estates-11",
+    "unitNo": "31-21",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 86.4,
+    "view": "",
+    "priceEGP": 11020000,
+    "status": "Available",
+    "cluster": "MF 4",
+    "deliveryNote": "30/12/2030",
+    "floor": "2"
+  },
+  {
+    "id": "sodic-the-estates-19",
+    "unitNo": "32-22",
+    "beds": 1,
+    "finishing": "Finished",
+    "areaSqm": 83.6,
+    "view": "",
+    "priceEGP": 9880000,
+    "status": "Available",
+    "cluster": "MF 4",
+    "deliveryNote": "30/12/2030",
+    "floor": "2"
+  }
+]

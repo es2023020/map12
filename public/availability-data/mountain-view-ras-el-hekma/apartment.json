@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mountain-view-ras-el-hekma-16",
+    "unitNo": "IN-A4-4-A0-1",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 181,
+    "view": "North",
+    "priceEGP": 64380926.06,
+    "status": "Available",
+    "cluster": "Indigo First Row Loft",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 28,
+    "roofAreaSqm": 26
+  },
+  {
+    "id": "mountain-view-ras-el-hekma-17",
+    "unitNo": "IN-A4-4-A0-2",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 181,
+    "view": "North",
+    "priceEGP": 64380926.06,
+    "status": "Available",
+    "cluster": "Indigo First Row Loft",
+    "deliveryNote": "OFF PLAN - 2.5",
+    "gardenAreaSqm": 28,
+    "roofAreaSqm": 26
+  }
+]

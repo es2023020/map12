@@ -1,0 +1,24 @@
+[
+  {
+    "id": "zed-east-97",
+    "unitNo": "C14-TH-55-03",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 202,
+    "view": "",
+    "priceEGP": 38254000,
+    "status": "Available",
+    "cluster": "Town House"
+  },
+  {
+    "id": "zed-east-98",
+    "unitNo": "C14-TH-55-01",
+    "beds": 0,
+    "finishing": "Not specified",
+    "areaSqm": 202,
+    "view": "",
+    "priceEGP": 53347000,
+    "status": "Available",
+    "cluster": "Town House"
+  }
+]

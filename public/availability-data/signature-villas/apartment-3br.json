@@ -1,0 +1,91 @@
+[
+  {
+    "id": "signature-villas-20",
+    "unitNo": "HPS/4B/G03",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 148.4040581,
+    "view": "",
+    "priceEGP": 15950000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "gardenAreaSqm": 56.43,
+    "landAreaSqm": 253,
+    "floor": "0"
+  },
+  {
+    "id": "signature-villas-26",
+    "unitNo": "HPS/11A/G01",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 148.4040581,
+    "view": "",
+    "priceEGP": 16970000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "gardenAreaSqm": 59.23,
+    "floor": "0"
+  },
+  {
+    "id": "signature-villas-30",
+    "unitNo": "HPS/13/G03",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 131,
+    "view": "",
+    "priceEGP": 17300000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "gardenAreaSqm": 129.65,
+    "floor": "0"
+  },
+  {
+    "id": "signature-villas-40",
+    "unitNo": "HPS/18/G02",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 131,
+    "view": "",
+    "priceEGP": 17370000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "gardenAreaSqm": 130,
+    "floor": "0"
+  },
+  {
+    "id": "signature-villas-44",
+    "unitNo": "HPS/18/102",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 132,
+    "view": "",
+    "priceEGP": 13570000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "floor": "1"
+  },
+  {
+    "id": "signature-villas-47",
+    "unitNo": "HPS/18/202",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 132,
+    "view": "",
+    "priceEGP": 13700000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "floor": "2"
+  },
+  {
+    "id": "signature-villas-51",
+    "unitNo": "HPS/18/302",
+    "beds": 3,
+    "finishing": "Core & Shell",
+    "areaSqm": 132,
+    "view": "",
+    "priceEGP": 13430000,
+    "status": "Available",
+    "cluster": "Signature APT",
+    "floor": "3"
+  }
+]

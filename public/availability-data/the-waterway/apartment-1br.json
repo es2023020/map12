@@ -1,0 +1,26 @@
+[
+  {
+    "id": "the-waterway-64",
+    "unitNo": "OR-B04",
+    "beds": 1,
+    "finishing": "Fully Finished & Furnished",
+    "areaSqm": 50,
+    "view": "O Residence",
+    "priceEGP": 15999000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "floor": "B"
+  },
+  {
+    "id": "the-waterway-65",
+    "unitNo": "OR-C05",
+    "beds": 1,
+    "finishing": "Fully Finished & Furnished",
+    "areaSqm": 50,
+    "view": "O Residence",
+    "priceEGP": 16078000,
+    "status": "Available",
+    "cluster": "Phase 1A",
+    "floor": "C"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "mist-3",
+    "unitNo": "A1-1-G03",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 80,
+    "view": "",
+    "priceEGP": 8786269.33,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "gardenAreaSqm": 40,
+    "floor": "أرضي"
+  },
+  {
+    "id": "mist-4",
+    "unitNo": "A1-1-G05",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 63,
+    "view": "",
+    "priceEGP": 6683840.6,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "gardenAreaSqm": 24,
+    "floor": "أرضي"
+  },
+  {
+    "id": "mist-16",
+    "unitNo": "A1-2-G03",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 88,
+    "view": "",
+    "priceEGP": 9539378.13,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "gardenAreaSqm": 40,
+    "floor": "أرضي"
+  },
+  {
+    "id": "mist-54",
+    "unitNo": "A3-2-G03",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 88,
+    "view": "",
+    "priceEGP": 9539378.13,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "gardenAreaSqm": 40,
+    "floor": "أرضي"
+  },
+  {
+    "id": "mist-77",
+    "unitNo": "A4-2-G03",
+    "beds": 1,
+    "finishing": "Fully Finished",
+    "areaSqm": 88,
+    "view": "",
+    "priceEGP": 9917387.14,
+    "status": "Available",
+    "deliveryNote": "Nov 2030",
+    "gardenAreaSqm": 40,
+    "floor": "أرضي"
+  }
+]

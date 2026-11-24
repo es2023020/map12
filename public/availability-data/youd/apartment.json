@@ -1,0 +1,80 @@
+[
+  {
+    "id": "youd-3",
+    "unitNo": "SA5-SA5004",
+    "beds": 0,
+    "finishing": "Finished",
+    "areaSqm": 55,
+    "view": "",
+    "priceEGP": 12234000,
+    "status": "Available",
+    "cluster": "SA5",
+    "gardenAreaSqm": 46,
+    "floor": "Ground"
+  },
+  {
+    "id": "youd-17",
+    "unitNo": "WS-WS-30",
+    "beds": 0,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "view": "",
+    "priceEGP": 75157000,
+    "status": "Available",
+    "cluster": "WS",
+    "gardenAreaSqm": 400,
+    "floor": "G+One"
+  },
+  {
+    "id": "youd-19",
+    "unitNo": "WS-WS-43",
+    "beds": 0,
+    "finishing": "Finished",
+    "areaSqm": 220,
+    "view": "",
+    "priceEGP": 60731000,
+    "status": "Available",
+    "cluster": "WS",
+    "gardenAreaSqm": 407.1,
+    "floor": "G+One"
+  },
+  {
+    "id": "youd-73",
+    "unitNo": "G38-G38-101",
+    "beds": 0,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "view": "",
+    "priceEGP": 20193000,
+    "status": "Available",
+    "cluster": "G38",
+    "gardenAreaSqm": 56.55,
+    "floor": "Ground"
+  },
+  {
+    "id": "youd-75",
+    "unitNo": "G42-G42-101",
+    "beds": 0,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "view": "",
+    "priceEGP": 20193000,
+    "status": "Available",
+    "cluster": "G42",
+    "gardenAreaSqm": 56.85,
+    "floor": "Ground"
+  },
+  {
+    "id": "youd-76",
+    "unitNo": "G42-G42-102",
+    "beds": 0,
+    "finishing": "Finished",
+    "areaSqm": 145,
+    "view": "",
+    "priceEGP": 20336000,
+    "status": "Available",
+    "cluster": "G42",
+    "gardenAreaSqm": 57.85,
+    "floor": "Ground"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hacienda-heneish-1",
+    "unitNo": "HH-CAB-110-M",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 42,
+    "view": "",
+    "priceEGP": 28091000,
+    "status": "Available",
+    "cluster": "HH-Phase 1",
+    "deliveryNote": "Jun 2026"
+  },
+  {
+    "id": "hacienda-heneish-2",
+    "unitNo": "HH-CAB-111",
+    "beds": 1,
+    "finishing": "Core & Shell",
+    "areaSqm": 42,
+    "view": "",
+    "priceEGP": 28091000,
+    "status": "Available",
+    "cluster": "HH-Phase 1",
+    "deliveryNote": "Jun 2026"
+  }
+]
