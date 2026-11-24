@@ -180,7 +180,7 @@ function fmtVal(v, indent = "      ") {
 
 function fmtObj(obj, indent = "      ") {
   const lines = Object.entries(obj)
-    .filter(([k, v]) => v !== undefined && k !== "units")
+    .filter(([, v]) => v !== undefined)
     .map(([k, v]) => {
       const safeKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(k) ? k : JSON.stringify(k);
       if (Array.isArray(v) || (typeof v === "object" && v !== null)) {
