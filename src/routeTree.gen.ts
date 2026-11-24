@@ -21,6 +21,7 @@ import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as DestinationsRouteImport } from './routes/destinations'
 import { Route as DeveloperAnnouncementsRouteImport } from './routes/developer-announcements'
 import { Route as DeveloperPartnershipRouteImport } from './routes/developer-partnership'
+import { Route as DeveloperPortalRouteImport } from './routes/developer-portal'
 import { Route as DevelopersRouteImport } from './routes/developers'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as NewLaunchesRouteImport } from './routes/new-launches'
@@ -46,10 +47,8 @@ import { Route as DashboardAnnouncementsRouteImport } from './routes/dashboard.a
 import { Route as DashboardBillingRouteImport } from './routes/dashboard.billing'
 import { Route as DashboardCampaignsRouteImport } from './routes/dashboard.campaigns'
 import { Route as DashboardCompareRouteImport } from './routes/dashboard.compare'
-import { Route as DashboardDeveloperRouteImport } from './routes/dashboard.developer'
 import { Route as DashboardFavoritesRouteImport } from './routes/dashboard.favorites'
 import { Route as DashboardLeadsRouteImport } from './routes/dashboard.leads'
-import { Route as DashboardMapsRouteImport } from './routes/dashboard.maps'
 import { Route as DashboardProfileRouteImport } from './routes/dashboard.profile'
 import { Route as DashboardTeamRouteImport } from './routes/dashboard.team'
 import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
@@ -125,6 +124,11 @@ const DeveloperAnnouncementsRoute = DeveloperAnnouncementsRouteImport.update({
 const DeveloperPartnershipRoute = DeveloperPartnershipRouteImport.update({
   id: '/developer-partnership',
   path: '/developer-partnership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeveloperPortalRoute = DeveloperPortalRouteImport.update({
+  id: '/developer-portal',
+  path: '/developer-portal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DevelopersRoute = DevelopersRouteImport.update({
@@ -253,11 +257,6 @@ const DashboardCompareRoute = DashboardCompareRouteImport.update({
   path: '/compare',
   getParentRoute: () => DashboardRoute,
 } as any)
-const DashboardDeveloperRoute = DashboardDeveloperRouteImport.update({
-  id: '/developer',
-  path: '/developer',
-  getParentRoute: () => DashboardRoute,
-} as any)
 const DashboardFavoritesRoute = DashboardFavoritesRouteImport.update({
   id: '/favorites',
   path: '/favorites',
@@ -266,11 +265,6 @@ const DashboardFavoritesRoute = DashboardFavoritesRouteImport.update({
 const DashboardLeadsRoute = DashboardLeadsRouteImport.update({
   id: '/leads',
   path: '/leads',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardMapsRoute = DashboardMapsRouteImport.update({
-  id: '/maps',
-  path: '/maps',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardProfileRoute = DashboardProfileRouteImport.update({
@@ -369,6 +363,7 @@ export interface FileRoutesByFullPath {
   '/destinations': typeof DestinationsRouteWithChildren
   '/developer-announcements': typeof DeveloperAnnouncementsRoute
   '/developer-partnership': typeof DeveloperPartnershipRoute
+  '/developer-portal': typeof DeveloperPortalRoute
   '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
   '/new-launches': typeof NewLaunchesRoute
@@ -391,10 +386,8 @@ export interface FileRoutesByFullPath {
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
   '/dashboard/compare': typeof DashboardCompareRoute
-  '/dashboard/developer': typeof DashboardDeveloperRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
   '/dashboard/leads': typeof DashboardLeadsRoute
-  '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
@@ -426,6 +419,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/developer-announcements': typeof DeveloperAnnouncementsRoute
   '/developer-partnership': typeof DeveloperPartnershipRoute
+  '/developer-portal': typeof DeveloperPortalRoute
   '/map': typeof MapRoute
   '/new-launches': typeof NewLaunchesRoute
   '/pricing': typeof PricingRoute
@@ -446,10 +440,8 @@ export interface FileRoutesByTo {
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
   '/dashboard/compare': typeof DashboardCompareRoute
-  '/dashboard/developer': typeof DashboardDeveloperRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
   '/dashboard/leads': typeof DashboardLeadsRoute
-  '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
@@ -484,6 +476,7 @@ export interface FileRoutesById {
   '/destinations': typeof DestinationsRouteWithChildren
   '/developer-announcements': typeof DeveloperAnnouncementsRoute
   '/developer-partnership': typeof DeveloperPartnershipRoute
+  '/developer-portal': typeof DeveloperPortalRoute
   '/developers': typeof DevelopersRouteWithChildren
   '/map': typeof MapRoute
   '/new-launches': typeof NewLaunchesRoute
@@ -506,10 +499,8 @@ export interface FileRoutesById {
   '/dashboard/billing': typeof DashboardBillingRoute
   '/dashboard/campaigns': typeof DashboardCampaignsRoute
   '/dashboard/compare': typeof DashboardCompareRoute
-  '/dashboard/developer': typeof DashboardDeveloperRoute
   '/dashboard/favorites': typeof DashboardFavoritesRoute
   '/dashboard/leads': typeof DashboardLeadsRoute
-  '/dashboard/maps': typeof DashboardMapsRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/team': typeof DashboardTeamRoute
   '/destinations/$slug': typeof DestinationsSlugRouteWithChildren
@@ -545,6 +536,7 @@ export interface FileRouteTypes {
     | '/destinations'
     | '/developer-announcements'
     | '/developer-partnership'
+    | '/developer-portal'
     | '/developers'
     | '/map'
     | '/new-launches'
@@ -567,10 +559,8 @@ export interface FileRouteTypes {
     | '/dashboard/billing'
     | '/dashboard/campaigns'
     | '/dashboard/compare'
-    | '/dashboard/developer'
     | '/dashboard/favorites'
     | '/dashboard/leads'
-    | '/dashboard/maps'
     | '/dashboard/profile'
     | '/dashboard/team'
     | '/destinations/$slug'
@@ -602,6 +592,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/developer-announcements'
     | '/developer-partnership'
+    | '/developer-portal'
     | '/map'
     | '/new-launches'
     | '/pricing'
@@ -622,10 +613,8 @@ export interface FileRouteTypes {
     | '/dashboard/billing'
     | '/dashboard/campaigns'
     | '/dashboard/compare'
-    | '/dashboard/developer'
     | '/dashboard/favorites'
     | '/dashboard/leads'
-    | '/dashboard/maps'
     | '/dashboard/profile'
     | '/dashboard/team'
     | '/destinations/$slug'
@@ -659,6 +648,7 @@ export interface FileRouteTypes {
     | '/destinations'
     | '/developer-announcements'
     | '/developer-partnership'
+    | '/developer-portal'
     | '/developers'
     | '/map'
     | '/new-launches'
@@ -681,10 +671,8 @@ export interface FileRouteTypes {
     | '/dashboard/billing'
     | '/dashboard/campaigns'
     | '/dashboard/compare'
-    | '/dashboard/developer'
     | '/dashboard/favorites'
     | '/dashboard/leads'
-    | '/dashboard/maps'
     | '/dashboard/profile'
     | '/dashboard/team'
     | '/destinations/$slug'
@@ -719,6 +707,7 @@ export interface RootRouteChildren {
   DestinationsRoute: typeof DestinationsRouteWithChildren
   DeveloperAnnouncementsRoute: typeof DeveloperAnnouncementsRoute
   DeveloperPartnershipRoute: typeof DeveloperPartnershipRoute
+  DeveloperPortalRoute: typeof DeveloperPortalRoute
   DevelopersRoute: typeof DevelopersRouteWithChildren
   MapRoute: typeof MapRoute
   NewLaunchesRoute: typeof NewLaunchesRoute
@@ -829,6 +818,13 @@ declare module '@tanstack/react-router' {
       path: '/developer-partnership'
       fullPath: '/developer-partnership'
       preLoaderRoute: typeof DeveloperPartnershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/developer-portal': {
+      id: '/developer-portal'
+      path: '/developer-portal'
+      fullPath: '/developer-portal'
+      preLoaderRoute: typeof DeveloperPortalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/developers': {
@@ -1006,13 +1002,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardCompareRouteImport
       parentRoute: typeof DashboardRoute
     }
-    '/dashboard/developer': {
-      id: '/dashboard/developer'
-      path: '/developer'
-      fullPath: '/dashboard/developer'
-      preLoaderRoute: typeof DashboardDeveloperRouteImport
-      parentRoute: typeof DashboardRoute
-    }
     '/dashboard/favorites': {
       id: '/dashboard/favorites'
       path: '/favorites'
@@ -1025,13 +1014,6 @@ declare module '@tanstack/react-router' {
       path: '/leads'
       fullPath: '/dashboard/leads'
       preLoaderRoute: typeof DashboardLeadsRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/maps': {
-      id: '/dashboard/maps'
-      path: '/maps'
-      fullPath: '/dashboard/maps'
-      preLoaderRoute: typeof DashboardMapsRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/profile': {
@@ -1166,10 +1148,8 @@ interface DashboardRouteChildren {
   DashboardBillingRoute: typeof DashboardBillingRoute
   DashboardCampaignsRoute: typeof DashboardCampaignsRoute
   DashboardCompareRoute: typeof DashboardCompareRoute
-  DashboardDeveloperRoute: typeof DashboardDeveloperRoute
   DashboardFavoritesRoute: typeof DashboardFavoritesRoute
   DashboardLeadsRoute: typeof DashboardLeadsRoute
-  DashboardMapsRoute: typeof DashboardMapsRoute
   DashboardProfileRoute: typeof DashboardProfileRoute
   DashboardTeamRoute: typeof DashboardTeamRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
@@ -1181,10 +1161,8 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardBillingRoute: DashboardBillingRoute,
   DashboardCampaignsRoute: DashboardCampaignsRoute,
   DashboardCompareRoute: DashboardCompareRoute,
-  DashboardDeveloperRoute: DashboardDeveloperRoute,
   DashboardFavoritesRoute: DashboardFavoritesRoute,
   DashboardLeadsRoute: DashboardLeadsRoute,
-  DashboardMapsRoute: DashboardMapsRoute,
   DashboardProfileRoute: DashboardProfileRoute,
   DashboardTeamRoute: DashboardTeamRoute,
   DashboardIndexRoute: DashboardIndexRoute,
@@ -1271,6 +1249,7 @@ const rootRouteChildren: RootRouteChildren = {
   DestinationsRoute: DestinationsRouteWithChildren,
   DeveloperAnnouncementsRoute: DeveloperAnnouncementsRoute,
   DeveloperPartnershipRoute: DeveloperPartnershipRoute,
+  DeveloperPortalRoute: DeveloperPortalRoute,
   DevelopersRoute: DevelopersRouteWithChildren,
   MapRoute: MapRoute,
   NewLaunchesRoute: NewLaunchesRoute,

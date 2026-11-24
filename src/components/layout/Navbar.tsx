@@ -2,7 +2,7 @@ import { CurrencySelector } from "@/components/ui/CurrencySelector";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
-import { Heart, Menu, X, ChevronDown, User, Settings, LogOut, Upload } from "lucide-react";
+import { Heart, Menu, X, ChevronDown, User, Settings, LogOut, Upload, Building2 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 const publicLinks = [
@@ -22,6 +22,7 @@ const moreLinks = [
 ];
 
 const brokerLinks = [{ to: "/dashboard" as const, label: "Broker" }];
+const developerLinks = [{ to: "/developer-portal" as const, label: "Developer Portal" }];
 
 export function Navbar() {
   const user = useStore((s) => s.user);
@@ -35,7 +36,8 @@ export function Navbar() {
   const userMenuRef = useRef<HTMLDivElement>(null);
   const avatarInputRef = useRef<HTMLInputElement>(null);
 
-  const links = user ? [...publicLinks, ...brokerLinks] : publicLinks;
+  const userLinks = user?.role === "developer" ? developerLinks : brokerLinks;
+  const links = user ? [...publicLinks, ...userLinks] : publicLinks;
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -215,13 +217,23 @@ export function Navbar() {
                     <Upload className="h-3.5 w-3.5 text-accent" /> Change Profile Picture
                   </button>
 
-                  <Link
-                    to="/dashboard/profile"
-                    onClick={() => setUserMenuOpen(false)}
-                    className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-semibold text-foreground/80 hover:bg-secondary/60 hover:text-primary transition-all text-left"
-                  >
-                    <Settings className="h-3.5 w-3.5 text-accent" /> Profile Settings
-                  </Link>
+                  {user.role === "developer" ? (
+                    <Link
+                      to="/developer-portal"
+                      onClick={() => setUserMenuOpen(false)}
+                      className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-semibold text-foreground/80 hover:bg-secondary/60 hover:text-primary transition-all text-left"
+                    >
+                      <Building2 className="h-3.5 w-3.5 text-accent" /> Developer Portal
+                    </Link>
+                  ) : (
+                    <Link
+                      to="/dashboard/profile"
+                      onClick={() => setUserMenuOpen(false)}
+                      className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-semibold text-foreground/80 hover:bg-secondary/60 hover:text-primary transition-all text-left"
+                    >
+                      <Settings className="h-3.5 w-3.5 text-accent" /> Profile Settings
+                    </Link>
+                  )}
 
                   <button
                     onClick={handleSignOut}

@@ -53,7 +53,7 @@ function AuthPage() {
       const res = loginAsDeveloper(codeOrSlug);
       if (res.success && res.developer) {
         setSuccessMsg(`Welcome, ${res.developer.name}! Opening Developer Portal...`);
-        setTimeout(() => navigate({ to: `/dashboard/developer?slug=${res.developer.slug}` as any }), 600);
+        setTimeout(() => navigate({ to: `/developer-portal?dev=${res.developer.slug}` as any }), 600);
       } else {
         setErrorMsg(res.error || "Invalid developer access code or company identifier.");
       }
@@ -148,7 +148,7 @@ function AuthPage() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              <Building2 className="h-3.5 w-3.5" /> Developer Portal
+              <Building2 className="h-3.5 w-3.5" /> Developer Login
             </button>
             <button
               type="button"
@@ -163,7 +163,7 @@ function AuthPage() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Sign Up
+              Broker Sign Up
             </button>
           </div>
 
@@ -182,9 +182,16 @@ function AuthPage() {
               </div>
               <Button
                 className="w-full rounded-xl bg-accent text-accent-foreground hover:bg-accent/90 py-2.5 font-bold"
-                onClick={() => navigate({ to: "/dashboard" })}
+                onClick={() =>
+                  navigate({
+                    to:
+                      user.role === "developer"
+                        ? (`/developer-portal?dev=${user.developerSlug || ""}` as any)
+                        : "/dashboard",
+                  })
+                }
               >
-                Go to Workspace
+                {user.role === "developer" ? "Open Developer Portal" : "Go to Broker Workspace"}
               </Button>
               <Button variant="outline" className="w-full rounded-xl py-2.5" onClick={signOut}>
                 Sign Out
@@ -210,10 +217,10 @@ function AuthPage() {
                 <div className="space-y-4">
                   <div className="rounded-2xl bg-accent/10 border border-accent/20 p-3.5 text-xs text-primary space-y-1">
                     <div className="font-bold flex items-center gap-1.5 text-accent">
-                      <ShieldCheck className="h-4 w-4" /> Official Master Developer Access
+                      <ShieldCheck className="h-4 w-4" /> Official Master Developer Login (Login Only)
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
-                      Select your company or enter your official Developer Access Passcode to unlock your private portfolio portal.
+                      Developer accounts are pre-created by Property Atlas. Select your company entity or enter your official Developer Access Passcode (<code>DEV_[SLUG]_2026</code>) to log into your portal. No registration needed.
                     </p>
                   </div>
 

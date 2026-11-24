@@ -26,7 +26,6 @@ import {
   PlusCircle,
   Menu,
   KeyRound,
-  Building2,
   User,
 } from "lucide-react";
 
@@ -46,13 +45,11 @@ export const Route = createFileRoute("/dashboard")({
 
 const tabs = [
   { to: "/dashboard" as const, label: "Workspace Home", icon: LayoutDashboard, exact: true },
-  { to: "/dashboard/developer" as const, label: "Developer Portal", icon: Building2 },
   { to: "/dashboard/leads" as const, label: "CRM Lead Pipeline", icon: ListChecks },
   { to: "/dashboard/ai-assistant" as const, label: "AI Lead Matcher", icon: Sparkles },
   { to: "/dashboard/campaigns" as const, label: "WhatsApp Campaigns", icon: Megaphone },
   { to: "/dashboard/favorites" as const, label: "Favorites Library", icon: Heart },
   { to: "/dashboard/compare" as const, label: "Unit Compare Engine", icon: GitCompareArrows },
-  { to: "/dashboard/maps" as const, label: "Maps Library", icon: Map },
   { to: "/dashboard/profile" as const, label: "My Profile Details", icon: User },
 ];
 

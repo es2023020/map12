@@ -75,7 +75,7 @@ async function seed() {
             developer_name: name,
             access_code: accessCode,
             compounds_count: d.count,
-            portal_url: `/dashboard/developer?slug=${slug}`
+            portal_url: `/developer-portal?dev=${slug}`
           }
         });
 
