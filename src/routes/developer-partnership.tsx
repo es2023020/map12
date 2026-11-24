@@ -206,6 +206,21 @@ function DeveloperPartnershipPage() {
           </div>
         </section>
 
+        {/* Already Registered Developer CTA */}
+        <section className="rounded-3xl border border-border/80 bg-secondary/30 p-8 text-center">
+          <h3 className="font-display text-lg font-bold text-primary mb-2">
+            Already a Registered Developer Partner?
+          </h3>
+          <p className="text-xs text-muted-foreground mb-4 max-w-md mx-auto">
+            Accounts for all 143 master developers in Egypt are pre-provisioned on Property Atlas. Log in with your confidential developer passcode to access your real-time portfolio inquiries, inventory, and launch bulletin publisher.
+          </p>
+          <Link to="/developer-portal">
+            <Button variant="outline" className="rounded-full border-primary/30 font-semibold hover:bg-primary hover:text-white">
+              Open Developer Portal Login <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+            </Button>
+          </Link>
+        </section>
+
         {/* CTA */}
         <section className="rounded-3xl bg-gradient-to-br from-emerald-900 via-primary to-accent/80 p-10 text-center text-primary-foreground">
           <h2 className="font-display text-2xl font-bold mb-2">

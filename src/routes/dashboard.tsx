@@ -1,7 +1,7 @@
-import { createFileRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useRouterState, useNavigate } from "@tanstack/react-router";
 import { Shell } from "@/components/layout/Shell";
 import { useStore } from "@/lib/store";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   LayoutDashboard,
@@ -76,9 +76,19 @@ const connectors = [
 
 function DashboardLayout() {
   const user = useStore((s) => s.user);
+  const navigate = useNavigate();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const limitHitError = useStore((s) => s.limitHitError);
   const clearLimitHitError = useStore((s) => s.clearLimitHitError);
+
+  // If a developer visits the broker dashboard, redirect immediately to their dedicated developer portal
+  useEffect(() => {
+    if (user?.role === "developer") {
+      navigate({
+        to: (`/developer-portal${user.developerSlug ? `?dev=${user.developerSlug}` : ""}` as any),
+      });
+    }
+  }, [user, navigate]);
 
   const isAdmin =
     user?.email?.toLowerCase() === "elsayedshoeip70@gmail.com" ||

@@ -52,6 +52,7 @@ export const Route = createFileRoute("/developer-portal")({
         content:
           "Official Property Atlas Master Developer Portal — private portfolio command center, customer inquiries pipeline, and official launch bulletin publisher.",
       },
+      { name: "robots", content: "noindex, nofollow" },
     ],
   }),
   component: DeveloperPortalPage,

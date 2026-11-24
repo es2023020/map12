@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import * as fs from "fs";
 import * as path from "path";
 import { getSupabaseClient, getSupabaseAdminClient } from "@/lib/supabase";
+import { compounds } from "@/data/compounds";
 
 function sanitizeString(val: any, maxLength = 255): string {
   if (typeof val !== "string") return "";
@@ -50,15 +51,40 @@ export const Route = createFileRoute("/api/save-lead")({
             });
           }
 
+          const projectSlug = sanitizeString(lead.projectSlug || lead.project, 100);
+          let developerSlug = sanitizeString(lead.developerSlug, 100);
+          let destination = sanitizeString(lead.destination, 100);
+          let projectName = sanitizeString(lead.projectName || lead.project, 120);
+
+          // Infer developer and destination from project database if not explicitly provided
+          if (projectSlug && (!developerSlug || !destination || !projectName)) {
+            const matchedCompound = compounds.find(
+              (c) =>
+                c.slug === projectSlug ||
+                c.name.toLowerCase() === projectSlug.toLowerCase(),
+            );
+            if (matchedCompound) {
+              if (!developerSlug && matchedCompound.developerSlug) {
+                developerSlug = matchedCompound.developerSlug;
+              }
+              if (!destination && matchedCompound.destination) {
+                destination = matchedCompound.destination;
+              }
+              if (!projectName && matchedCompound.name) {
+                projectName = matchedCompound.name;
+              }
+            }
+          }
+
           const leadRecord = {
             id: lead.id || `lead-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
             name: cleanName,
             phone: cleanPhone,
             email: cleanEmail,
-            projectSlug: sanitizeString(lead.projectSlug || lead.project, 100),
-            projectName: sanitizeString(lead.projectName || lead.project, 120),
-            developerSlug: sanitizeString(lead.developerSlug, 100),
-            destination: sanitizeString(lead.destination, 100),
+            projectSlug,
+            projectName,
+            developerSlug,
+            destination,
             budget: cleanBudget,
             notes: cleanNotes,
             timestamp: lead.timestamp || new Date().toISOString(),
